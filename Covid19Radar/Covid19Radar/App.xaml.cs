@@ -120,6 +120,10 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
             containerRegistry.RegisterForNavigation<SplashPage>();
 
+            // News Page
+            containerRegistry.RegisterForNavigation<NewsPage>();
+            containerRegistry.RegisterForNavigation<WebViewerPage>();
+
             // Services
             containerRegistry.RegisterSingleton<ILoggerService, LoggerService>();
             containerRegistry.RegisterSingleton<ILogFileService, LogFileService>();

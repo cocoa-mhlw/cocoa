@@ -928,4 +928,37 @@ Storage :</value>
     <value>https://www.mhlw.go.jp/cocoa/kiyaku_english.html</value>
     <comment>利用規約URL</comment>
   </data>
+  <data name="CoronaGoJPUrl" xml:space="preserve">
+    <value>https://corona.go.jp/en/</value>
+  </data>
+  <data name="GoogleSearchUrl" xml:space="preserve">
+    <value>https://www.google.us/search?hl=en&amp;amp;q=Coronavirus+disease+2019</value>
+  </data>
+  <data name="NewsPageButton_ShowCoronaGoJP" xml:space="preserve">
+    <value>Data by Cabinet Secretariat</value>
+  </data>
+  <data name="NewsPageButton_ShowGoogle" xml:space="preserve">
+    <value>Search News on Google</value>
+  </data>
+  <data name="NewsPageButton_ShowStopCOVID19JP" xml:space="preserve">
+    <value>Anti-Coronavirus Dashboard</value>
+  </data>
+  <data name="NewsPageLabel_Links" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="NewsPageLabel_LinksDescription" xml:space="preserve">
+    <value>You can search information about the new corona.</value>
+  </data>
+  <data name="NewsPageTitle" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="StopCOVID19JPUrl" xml:space="preserve">
+    <value>https://www.stopcovid19.jp/#en</value>
+  </data>
+  <data name="WikipediaUrl" xml:space="preserve">
+    <value>https://en.wikipedia.org/wiki/COVID-19_pandemic</value>
+  </data>
+  <data name="NewsPageButton_ShowWikipedia" xml:space="preserve">
+    <value>See Wikipedia</value>
+  </data>
 </root>

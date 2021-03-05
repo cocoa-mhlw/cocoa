@@ -33,6 +33,14 @@ namespace Covid19Radar.ViewModels
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uF0C0",
+                PageName = nameof(NewsPage),
+                Title = Resources.AppResources.NewsPageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
+            });
 
             MenuItems.Add(new MainMenuModel()
             {

@@ -1162,6 +1162,50 @@ Storage :</target>
           <target state="translated">https://www.mhlw.go.jp/cocoa/kiyaku_english.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約URL</note>
         </trans-unit>
+        <trans-unit id="CoronaGoJPUrl" translate="yes" xml:space="preserve">
+          <source>https://corona.go.jp/en/</source>
+          <target state="translated">https://corona.go.jp/en/</target>
+        </trans-unit>
+        <trans-unit id="GoogleSearchUrl" translate="yes" xml:space="preserve">
+          <source>https://www.google.us/search?hl=en&amp;amp;q=Coronavirus+disease+2019</source>
+          <target state="translated">https://www.google.us/search?hl=en&amp;amp;q=Coronavirus+disease+2019</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowCoronaGoJP" translate="yes" xml:space="preserve">
+          <source>Data by Cabinet Secretariat</source>
+          <target state="translated">Data by Cabinet Secretariat</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowGoogle" translate="yes" xml:space="preserve">
+          <source>Search News on Google</source>
+          <target state="translated">Search News on Google</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowStopCOVID19JP" translate="yes" xml:space="preserve">
+          <source>Anti-Coronavirus Dashboard</source>
+          <target state="translated">Anti-Coronavirus Dashboard</target>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_Links" translate="yes" xml:space="preserve">
+          <source>Links</source>
+          <target state="translated">Links</target>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_LinksDescription" translate="yes" xml:space="preserve">
+          <source>You can search information about the new corona.</source>
+          <target state="translated">You can search information about the new corona.</target>
+        </trans-unit>
+        <trans-unit id="NewsPageTitle" translate="yes" xml:space="preserve">
+          <source>News</source>
+          <target state="translated">News</target>
+        </trans-unit>
+        <trans-unit id="StopCOVID19JPUrl" translate="yes" xml:space="preserve">
+          <source>https://www.stopcovid19.jp/#en</source>
+          <target state="translated">https://www.stopcovid19.jp/#en</target>
+        </trans-unit>
+        <trans-unit id="WikipediaUrl" translate="yes" xml:space="preserve">
+          <source>https://en.wikipedia.org/wiki/COVID-19_pandemic</source>
+          <target state="translated">https://en.wikipedia.org/wiki/COVID-19_pandemic</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowWikipedia" translate="yes" xml:space="preserve">
+          <source>See Wikipedia</source>
+          <target state="translated">See Wikipedia</target>
+        </trans-unit>
       </group>
     </body>
   </file>

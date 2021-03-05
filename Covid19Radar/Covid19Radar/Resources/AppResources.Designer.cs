@@ -234,6 +234,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   https://corona.go.jp/en/ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CoronaGoJPUrl {
+            get {
+                return ResourceManager.GetString("CoronaGoJPUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogExposureNotificationStartupError {
@@ -428,6 +437,15 @@ namespace Covid19Radar.Resources {
         internal static string FailedMessageToSendOperatingInformation {
             get {
                 return ResourceManager.GetString("FailedMessageToSendOperatingInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://www.google.us/search?hl=en&amp;amp;q=Coronavirus+disease+2019 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string GoogleSearchUrl {
+            get {
+                return ResourceManager.GetString("GoogleSearchUrl", resourceCulture);
             }
         }
         
@@ -968,6 +986,69 @@ namespace Covid19Radar.Resources {
         internal static string MenuPageTitle {
             get {
                 return ResourceManager.GetString("MenuPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Data by Cabinet Secretariat に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowCoronaGoJP {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowCoronaGoJP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Search News on Google に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowGoogle {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowGoogle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Anti-Coronavirus Dashboard に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowStopCOVID19JP {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowStopCOVID19JP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   See Wikipedia に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowWikipedia {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowWikipedia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Links に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_Links {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_Links", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can search information about the new corona. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_LinksDescription {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_LinksDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   News に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageTitle {
+            get {
+                return ResourceManager.GetString("NewsPageTitle", resourceCulture);
             }
         }
         
@@ -1657,6 +1738,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   https://www.stopcovid19.jp/#en に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string StopCOVID19JPUrl {
+            get {
+                return ResourceManager.GetString("StopCOVID19JPUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Agree and register に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SubmitConsentPageButton {
@@ -2159,6 +2249,15 @@ namespace Covid19Radar.Resources {
         internal static string VersionText {
             get {
                 return ResourceManager.GetString("VersionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://en.wikipedia.org/wiki/COVID-19_pandemic に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string WikipediaUrl {
+            get {
+                return ResourceManager.GetString("WikipediaUrl", resourceCulture);
             }
         }
     }

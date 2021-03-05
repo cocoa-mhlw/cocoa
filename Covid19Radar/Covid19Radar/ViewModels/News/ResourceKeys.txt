@@ -1,0 +1,43 @@
+﻿NewsPageTitle
+ja: 最新情報ページ
+en: News
+
+NewsPageLabel_Links
+ja: リンク集
+en: Links
+
+NewsPageLabel_LinksDescription
+ja: 新型コロナに関する情報を調べる事ができます。
+en: You can search information about the new corona.
+
+NewsPageButton_ShowGoogle
+ja: 最新情報をGoogleで検索
+en: Search News on Google
+
+NewsPageButton_ShowCoronaGoJP
+ja: 内閣官房のデータ
+en: Data by Cabinet Secretariat
+
+NewsPageButton_ShowStopCOVID19JP
+ja: 対策ダッシュボード
+en: Anti-Coronavirus Dashboard
+
+NewsPageButton_ShowWikipedia
+ja: ウィキペディアの情報
+en: See Wikipedia
+
+GoogleSearchUrl
+ja: https://www.google.co.jp/search?hl=ja&amp;q=2019年新型コロナウイルス感染症
+en: https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019
+
+CoronaGoJPUrl
+ja: https://corona.go.jp/dashboard/
+en: https://corona.go.jp/en/
+
+StopCOVID19JPUrl
+ja: https://www.stopcovid19.jp/#ja
+en: https://www.stopcovid19.jp/#en
+
+WikipediaUrl
+ja: https://ja.wikipedia.org/wiki/新型コロナウイルス感染症の世界的流行
+en: https://en.wikipedia.org/wiki/COVID-19_pandemic

@@ -1,0 +1,88 @@
+﻿<ContentPage
+	x:Class="Covid19Radar.Views.NewsPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+	xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+	mc:Ignorable="d"
+	Title="{Binding Title}"
+	ios:Page.UseSafeArea="true"
+	prism:ViewModelLocator.AutowireViewModel="True"
+	Style="{StaticResource DefaultPageStyle}"
+	Visual="Material">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="BackgroundGrid" TargetType="Grid">
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+				<Setter Property="ColumnSpacing"   Value="15" />
+				<Setter Property="RowSpacing"      Value="15" />
+				<Setter Property="Margin"          Value="0" />
+				<Setter Property="Padding"         Value="15" />
+				<Setter Property="BackgroundColor" Value="#EEEEEE" />
+			</Style>
+			<Style x:Key="ForegroundFrame" TargetType="Frame">
+				<Setter Property="Padding"      Value="10" />
+				<Setter Property="CornerRadius" Value="10" />
+				<Setter Property="HasShadow"    Value="False" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<Grid Style="{StaticResource BackgroundGrid}">
+			<ScrollView>
+				<StackLayout Margin="0" Padding="0" Spacing="15">
+					<Frame Style="{StaticResource ForegroundFrame}">
+						<StackLayout Style="{StaticResource DefaultStackLayout}">
+							<Label
+								Style="{StaticResource DefaultLabelLarge}"
+								Text="{x:Static resources:AppResources.NewsPageButton_ShowGoogle}" />
+							<SearchBar
+								Text="{Binding GSearch}"
+								SearchCommand="{Binding OnSearch}" />
+						</StackLayout>
+					</Frame>
+					<Frame Style="{StaticResource ForegroundFrame}">
+						<StackLayout Style="{StaticResource DefaultStackLayout}">
+							<!-- TODO: ここに統計情報を取得して表示するコードを追加 -->
+							<Label Text="Now developing..." />
+							<!--
+								参考：https://corona.go.jp/dashboard/
+								オープンデータ：https://opendata.corona.go.jp/api/Covid19JapanAll
+							-->
+						</StackLayout>
+					</Frame>
+					<Frame Style="{StaticResource ForegroundFrame}">
+						<StackLayout Style="{StaticResource DefaultStackLayout}">
+							<Label
+								Style="{StaticResource DefaultLabelLarge}"
+								Text="{x:Static resources:AppResources.NewsPageLabel_Links}" />
+							<Label
+								Style="{StaticResource DefaultLabel}"
+								Text="{x:Static resources:AppResources.NewsPageLabel_LinksDescription}" />
+							<Button
+								x:Name="GSearchButton"
+								Command="{Binding OnClick_ShowGoogle}"
+								Style="{StaticResource DefaultButton}"
+								Text="{x:Static resources:AppResources.NewsPageButton_ShowGoogle}" />
+							<Button
+								Command="{Binding OnClick_ShowCoronaGoJP}"
+								Style="{StaticResource DefaultButton}"
+								Text="{x:Static resources:AppResources.NewsPageButton_ShowCoronaGoJP}" />
+							<Button
+								Command="{Binding OnClick_ShowStopCOVID19JP}"
+								Style="{StaticResource DefaultButton}"
+								Text="{x:Static resources:AppResources.NewsPageButton_ShowStopCOVID19JP}" />
+							<Button
+								Command="{Binding OnClick_ShowWikipedia}"
+								Style="{StaticResource DefaultButton}"
+								Text="{x:Static resources:AppResources.NewsPageButton_ShowWikipedia}" />
+						</StackLayout>
+					</Frame>
+				</StackLayout>
+			</ScrollView>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
