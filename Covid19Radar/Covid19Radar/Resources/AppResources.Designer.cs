@@ -990,6 +990,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   The URL was empty. This problem is maybe a bug. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPage_UrlWasEmpty {
+            get {
+                return ResourceManager.GetString("NewsPage_UrlWasEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Data by Cabinet Secretariat に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NewsPageButton_ShowCoronaGoJP {

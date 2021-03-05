@@ -1205,6 +1205,10 @@ Storage :</source>
           <source>See Wikipedia</source>
           <target state="translated">ウィキペディアの情報</target>
         </trans-unit>
+        <trans-unit id="NewsPage_UrlWasEmpty" translate="yes" xml:space="preserve">
+          <source>The URL was empty. This problem is maybe a bug.</source>
+          <target state="translated">URLが空です。不具合が発生している可能性があります。</target>
+        </trans-unit>
       </group>
     </body>
   </file>

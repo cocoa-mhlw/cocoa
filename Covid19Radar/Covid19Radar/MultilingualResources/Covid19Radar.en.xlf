@@ -1206,6 +1206,10 @@ Storage :</target>
           <source>See Wikipedia</source>
           <target state="translated">See Wikipedia</target>
         </trans-unit>
+        <trans-unit id="NewsPage_UrlWasEmpty" translate="yes" xml:space="preserve">
+          <source>The URL was empty. This problem is maybe a bug.</source>
+          <target state="translated">The URL was empty. This problem is maybe a bug.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -26,6 +26,10 @@ NewsPageButton_ShowWikipedia
 ja: ウィキペディアの情報
 en: See Wikipedia
 
+NewsPage_UrlWasEmpty
+ja: URLが空です。不具合が発生している可能性があります。
+en: The URL was empty. This problem is maybe a bug.
+
 GoogleSearchUrl
 ja: https://www.google.co.jp/search?hl=ja&amp;q=2019年新型コロナウイルス感染症
 en: https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019

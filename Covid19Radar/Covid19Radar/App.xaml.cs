@@ -122,7 +122,6 @@ namespace Covid19Radar
 
             // News Page
             containerRegistry.RegisterForNavigation<NewsPage>();
-            containerRegistry.RegisterForNavigation<WebViewerPage>();
 
             // Services
             containerRegistry.RegisterSingleton<ILoggerService, LoggerService>();

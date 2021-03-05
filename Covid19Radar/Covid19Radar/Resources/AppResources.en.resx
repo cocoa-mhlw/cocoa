@@ -961,4 +961,7 @@ Storage :</value>
   <data name="NewsPageButton_ShowWikipedia" xml:space="preserve">
     <value>See Wikipedia</value>
   </data>
+  <data name="NewsPage_UrlWasEmpty" xml:space="preserve">
+    <value>The URL was empty. This problem is maybe a bug.</value>
+  </data>
 </root>

@@ -1,10 +1,10 @@
 ﻿#nullable enable
 
 using System;
+using Acr.UserDialogs;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
-using Covid19Radar.Views;
-using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -27,11 +27,8 @@ namespace Covid19Radar.ViewModels
 		public Command OnClick_ShowStopCOVID19JP => new Command(() => this.ShowPage(AppResources.StopCOVID19JPUrl));
 		public Command OnClick_ShowWikipedia     => new Command(() => this.ShowPage(AppResources.WikipediaUrl));
 
-		public NewsPageViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		public NewsPageViewModel(ILoggerService logger)
 		{
-			if (this.NavigationService is null) {
-				throw new ArgumentNullException(nameof(navigationService));
-			}
 			_logger    = logger ?? throw new ArgumentNullException(nameof(logger));
 			this.Title = AppResources.NewsPageTitle;
 		}
@@ -39,10 +36,13 @@ namespace Covid19Radar.ViewModels
 		private async void ShowPage(string url)
 		{
 			_logger.StartMethod();
-			_logger.Info($"The URL: {url}");
-			await this.NavigationService.NavigateAsync(nameof(WebViewerPage), new NavigationParameters() {
-				{ "url", url }
-			});
+			if (string.IsNullOrEmpty(url)) {
+				_logger.Warning("The URL was null or empty.");
+				await UserDialogs.Instance.AlertAsync(AppResources.NewsPage_UrlWasEmpty);
+			} else {
+				_logger.Info($"The URL: {url}");
+				await Browser.OpenAsync(url);
+			}
 			_logger.EndMethod();
 		}
 	}
