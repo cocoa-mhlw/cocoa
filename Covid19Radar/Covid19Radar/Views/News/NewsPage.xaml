@@ -63,11 +63,6 @@
 								Style="{StaticResource DefaultLabel}"
 								Text="{x:Static resources:AppResources.NewsPageLabel_LinksDescription}" />
 							<Button
-								x:Name="GSearchButton"
-								Command="{Binding OnClick_ShowGoogle}"
-								Style="{StaticResource DefaultButton}"
-								Text="{x:Static resources:AppResources.NewsPageButton_ShowGoogle}" />
-							<Button
 								Command="{Binding OnClick_ShowCoronaGoJP}"
 								Style="{StaticResource DefaultButton}"
 								Text="{x:Static resources:AppResources.NewsPageButton_ShowCoronaGoJP}" />
