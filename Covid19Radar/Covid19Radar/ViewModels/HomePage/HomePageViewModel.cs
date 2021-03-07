@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -15,6 +16,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService loggerService;
         private readonly IUserDataService userDataService;
         private readonly IExposureNotificationService exposureNotificationService;
+        private readonly IApplicationPropertyService applicationPropertyService;
 
         private string _startDate;
         private string _pastDate;
@@ -30,17 +32,34 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _pastDate, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IExposureNotificationService exposureNotificationService, IApplicationPropertyService applicationPropertyService) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
+            this.applicationPropertyService = applicationPropertyService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
         {
             loggerService.StartMethod();
+
+            { // This block is for test use only
+                var testUserData = new UserDataModel();
+                testUserData.StartDateTime = DateTime.Now;
+                var testUserDataAsJsonString = Utils.SerializeToJson(testUserData);
+                await applicationPropertyService.SavePropertiesAsync("UserData", testUserDataAsJsonString);
+
+                var userDataFromApplicationPropertyAsJsonString = (await applicationPropertyService.GetPropertiesAsync("UserData")).ToString();
+                var userDataFromApplicationProperty = Utils.DeserializeFromJson<UserDataModel>(userDataFromApplicationPropertyAsJsonString);
+
+                if(testUserData.StartDateTime.Equals(userDataFromApplicationProperty.StartDateTime))
+                {
+                    loggerService.Debug("testUserData.StartDateTime == userDataFromApplicationProperty.StartDateTime," +
+                        $" {userDataFromApplicationProperty.StartDateTime}");
+                }
+            }
 
             var startDate = userDataService.GetStartDate();
             StartDate = startDate.ToLocalTime().ToString("D");
