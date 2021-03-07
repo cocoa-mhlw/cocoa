@@ -65,6 +65,7 @@ namespace Covid19Radar.iOS
             containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceIos>();
             containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
             containerRegistry.Register<ICloseApplication, CloseApplication>();
+            containerRegistry.Register<IDeviceVerifier, DeviceCheckService>();
         }
     }
 
