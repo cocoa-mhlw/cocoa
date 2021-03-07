@@ -390,7 +390,7 @@ namespace Covid19Radar.Services
             };
 
             // See if we can add the device verification
-            if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
+            if (ContainerLocator.Current.Resolve(typeof(IDeviceVerifier)) is IDeviceVerifier verifier)
             {
                 submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
             }

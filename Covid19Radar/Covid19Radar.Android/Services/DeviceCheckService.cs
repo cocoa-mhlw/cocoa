@@ -1,22 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using System.Threading.Tasks;
 using Covid19Radar.Services;
-using Covid19Radar.Droid.Services;
-using Xamarin.Forms;
 using Covid19Radar.Model;
-using Covid19Radar.Common;
 using Android.Gms.SafetyNet;
 
-[assembly: Dependency(typeof(DeviceCheckService))]
 namespace Covid19Radar.Droid.Services
 {
     public class DeviceCheckService : IDeviceVerifier
