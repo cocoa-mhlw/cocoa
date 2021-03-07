@@ -26,14 +26,14 @@ namespace Covid19Radar.Services
 
         public async Task<bool> ContainsKeyAsync(string key)
         {
-            properties = await LoadPropertiesAsync();
-            return properties.ContainsKey(key);
+            var prop = await LoadPropertiesAsync();
+            return prop.ContainsKey(key);
         }
 
         public async Task<object> GetPropertiesAsync(string key)
         {
-            properties = await LoadPropertiesAsync();
-            return properties[key];
+            var prop = await LoadPropertiesAsync();
+            return prop[key];
         }
         　
         public Task SavePropertiesAsync(string key, object property)
