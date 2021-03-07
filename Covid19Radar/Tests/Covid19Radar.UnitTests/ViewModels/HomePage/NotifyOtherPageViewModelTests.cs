@@ -13,6 +13,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IExposureNotificationService> mockExposureNotificationService;
+        private readonly Mock<ICloseApplication> mockCloseApplication;
 
         public NotifyOtherPageViewModelTests()
         {
@@ -20,6 +21,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockExposureNotificationService = mockRepository.Create<IExposureNotificationService>();
+            mockCloseApplication = mockRepository.Create<ICloseApplication>();
         }
 
         private NotifyOtherPageViewModel CreateViewModel()
@@ -27,7 +29,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new NotifyOtherPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockExposureNotificationService.Object);
+                mockExposureNotificationService.Object,
+                mockCloseApplication.Object);
         }
 
         [Theory]
