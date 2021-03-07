@@ -125,7 +125,6 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<ILoggerService, LoggerService>();
             containerRegistry.RegisterSingleton<ILogFileService, LogFileService>();
             containerRegistry.RegisterSingleton<ILogPathService, LogPathService>();
-            containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteService>();
             containerRegistry.RegisterSingleton<ILogUploadService, LogUploadService>();
             containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
             containerRegistry.RegisterSingleton<IUserDataService, UserDataService>();
