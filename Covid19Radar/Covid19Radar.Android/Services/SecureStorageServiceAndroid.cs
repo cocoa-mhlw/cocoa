@@ -7,9 +7,7 @@ using Java.Security;
 using Javax.Crypto;
 using Javax.Crypto.Spec;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(SecureStorageServiceAndroid))]
 namespace Covid19Radar.Droid.Services
 {
     public class SecureStorageServiceAndroid : ISecureStorageDependencyService
