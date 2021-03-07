@@ -6,6 +6,7 @@ using Covid19Radar.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DryIoc;
+using DryIoc.CommonServiceLocator;
 using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
@@ -140,6 +141,8 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<IStorageService, StorageService>();
 #endif
             containerRegistry.RegisterSingleton<ISecureStorageService, SecureStorageService>();
+
+            CommonServiceLocator.ServiceLocator.SetLocatorProvider(() => new DryIocServiceLocator(containerRegistry.GetContainer()));
         }
 
         protected override void OnStart()
