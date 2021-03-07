@@ -1,13 +1,10 @@
 ﻿using System;
 using Android.App;
 using Android.Content;
-using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(LogPeriodicDeleteServiceAndroid))]
 namespace Covid19Radar.Droid.Services.Logs
 {
     public class LogPeriodicDeleteServiceAndroid : ILogPeriodicDeleteService
@@ -17,9 +14,9 @@ namespace Covid19Radar.Droid.Services.Logs
 
         private readonly ILoggerService loggerService;
 
-        public LogPeriodicDeleteServiceAndroid()
+        public LogPeriodicDeleteServiceAndroid(ILoggerService loggerService)
         {
-            loggerService = DependencyService.Resolve<ILoggerService>();
+            this.loggerService = loggerService;
         }
 
         public void Init()

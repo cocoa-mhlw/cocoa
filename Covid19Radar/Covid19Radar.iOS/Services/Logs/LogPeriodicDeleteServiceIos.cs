@@ -1,11 +1,8 @@
 ﻿using BackgroundTasks;
-using Covid19Radar.iOS.Services.Logs;
 using Covid19Radar.Services.Logs;
 using Foundation;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(LogPeriodicDeleteServiceIos))]
 namespace Covid19Radar.iOS.Services.Logs
 {
     public class LogPeriodicDeleteServiceIos : ILogPeriodicDeleteService
@@ -25,10 +22,10 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Constructors
 
-        public LogPeriodicDeleteServiceIos()
+        public LogPeriodicDeleteServiceIos(ILoggerService loggerService, ILogFileService logFileService)
         {
-            loggerService = DependencyService.Resolve<ILoggerService>();
-            logFileService = DependencyService.Resolve<ILogFileService>();
+            this.loggerService = loggerService;
+            this.logFileService = logFileService;
         }
 
         #endregion
