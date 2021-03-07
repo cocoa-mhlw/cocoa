@@ -9,7 +9,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.ExposureNotifications;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
