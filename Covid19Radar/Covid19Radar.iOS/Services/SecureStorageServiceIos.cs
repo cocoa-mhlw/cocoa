@@ -4,9 +4,7 @@ using Covid19Radar.Services;
 using Foundation;
 using Security;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(SecureStorageServiceIos))]
 namespace Covid19Radar.iOS.Services
 {
     public class SecureStorageServiceIos : ISecureStorageDependencyService
