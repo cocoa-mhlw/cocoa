@@ -55,7 +55,8 @@ namespace Covid19Radar.Droid.Services.Logs
             var essensialService = new EssentialsService();
             var logPathService = new LogPathService(new LogPathServiceAndroid());
             loggerService = new LoggerService(logPathService, essensialService);
-            logFileService = new Covid19Radar.Services.Logs.LogFileService(loggerService, logPathService);
+            var logFileDependencyService = new LogFileServiceAndroid();
+            logFileService = new Covid19Radar.Services.Logs.LogFileService(loggerService, logPathService, logFileDependencyService);
         }
 
         public override void OnReceive(Context context, Intent intent)
