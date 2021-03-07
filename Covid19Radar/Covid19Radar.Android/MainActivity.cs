@@ -58,6 +58,7 @@ namespace Covid19Radar.Droid
                 containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
                 containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceAndroid>();
                 containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
+                containerRegistry.Register<ICloseApplication, CloseApplication>();
             }
         }
 
