@@ -9,7 +9,7 @@ namespace Covid19Radar.Services
 {
     public interface IUserDataService
     {
-        Task Migrate();
+        Task MigrateAsync();
 
         Task<bool> RegisterUserAsync();
 
@@ -43,13 +43,13 @@ namespace Covid19Radar.Services
 
         private readonly SemaphoreSlim _semaphoreForMigrage = new SemaphoreSlim(1, 1);
 
-        public async Task Migrate()
+        public async Task MigrateAsync()
         {
             await _semaphoreForMigrage.WaitAsync();
             loggerService.StartMethod();
             try
             {
-                var userData = GetFromApplicationProperties();
+                var userData = await GetFromApplicationPropertiesAsync();
                 if (userData == null)
                 {
                     return;
@@ -75,7 +75,7 @@ namespace Covid19Radar.Services
 
                 await exposureNotificationService.MigrateFromUserData(userData);
 
-                await applicationPropertyService.Remove("UserData");
+                await applicationPropertyService.RemoveAsync("UserData");
             }
             catch (Exception ex)
             {
@@ -88,16 +88,16 @@ namespace Covid19Radar.Services
             }
         }
 
-        private UserDataModel GetFromApplicationProperties()
+        private async Task<UserDataModel> GetFromApplicationPropertiesAsync()
         {
             loggerService.StartMethod();
 
-            var existsUserData = applicationPropertyService.ContainsKey("UserData");
+            var existsUserData = await applicationPropertyService.ContainsKeyAsync("UserData");
             loggerService.Info($"existsUserData: {existsUserData}");
             if (existsUserData)
             {
                 loggerService.EndMethod();
-                return Utils.DeserializeFromJson<UserDataModel>(applicationPropertyService.GetProperties("UserData").ToString());
+                return Utils.DeserializeFromJson<UserDataModel>(applicationPropertyService.GetPropertiesAsync("UserData").ToString());
             }
 
             loggerService.EndMethod();

@@ -54,9 +54,9 @@ namespace Covid19Radar.Services
 
             if (isAgree)
             {
-                if (applicationPropertyService.ContainsKey(applicationPropertyKey))
+                if (await applicationPropertyService.ContainsKeyAsync(applicationPropertyKey))
                 {
-                    var lastUpdateDate = (DateTime)applicationPropertyService.GetProperties(applicationPropertyKey);
+                    var lastUpdateDate = (DateTime) await applicationPropertyService.GetPropertiesAsync(applicationPropertyKey);
                     preferencesService.SetValue(preferenceKey, lastUpdateDate);
                 }
                 else
@@ -65,7 +65,7 @@ namespace Covid19Radar.Services
                 }
             }
 
-            await applicationPropertyService.Remove(applicationPropertyKey);
+            await applicationPropertyService.RemoveAsync(applicationPropertyKey);
 
             loggerService.EndMethod();
         }

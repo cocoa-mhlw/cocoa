@@ -1,39 +1,72 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.Services
 {
+
+#nullable enable
     public interface IApplicationPropertyService
     {
-        bool ContainsKey(string key);
-        object GetProperties(string key);
+        Task<bool> ContainsKeyAsync(string key);
+        Task<object> GetPropertiesAsync(string key);
         Task SavePropertiesAsync(string key, object property);
-        Task Remove(string key);
+        Task RemoveAsync(string key);
     }
 
     public class ApplicationPropertyService : IApplicationPropertyService
     {
-        public bool ContainsKey(string key)
+        private readonly IDeserializer deserializer;
+        private IDictionary<string, object>? properties = null;
+
+        public ApplicationPropertyService(IDeserializer deserializer)
         {
-            return Application.Current.Properties.ContainsKey(key);
+            this.deserializer = deserializer;
         }
 
-        public object GetProperties(string key)
+        public async Task<bool> ContainsKeyAsync(string key)
         {
-            return Application.Current.Properties[key];
+            properties = await LoadPropertiesAsync();
+            return properties.ContainsKey(key);
         }
 
-        public async Task SavePropertiesAsync(string key, object property)
+        public async Task<object> GetPropertiesAsync(string key)
         {
-            Application.Current.Properties[key] = property;
-            await Application.Current.SavePropertiesAsync();
+            properties = await LoadPropertiesAsync();
+            return properties[key];
+        }
+        　
+        public Task SavePropertiesAsync(string key, object property)
+        {
+            if (properties == null)
+            {
+                return Task.CompletedTask;
+            }
+            properties[key] = property;
+            return deserializer.SerializePropertiesAsync(properties);
         }
 
-        public async Task Remove(string key)
+        public Task RemoveAsync(string key)
         {
-            Application.Current.Properties.Remove(key);
-            await Application.Current.SavePropertiesAsync();
+            if (properties == null)
+            {
+                return Task.CompletedTask;
+            }
+            properties.Remove(key);
+            return deserializer.SerializePropertiesAsync(properties);
         }
+
+        private async Task<IDictionary<string, object>> LoadPropertiesAsync()
+        {
+            if (properties != null)
+            {
+                return properties;
+            }
+
+            var prop = await deserializer.DeserializePropertiesAsync();
+            properties = prop != null ? prop : new Dictionary<string, object>();
+            return properties;
+        }
+
     }
 }

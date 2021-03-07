@@ -144,7 +144,7 @@ namespace Covid19Radar.Services
                 // Migrate from UserData.
                 // Since it may be executed during the migration when the application starts, execute it here as well.
                 var userDataService = DependencyService.Resolve<IUserDataService>();
-                await userDataService.Migrate();
+                await userDataService.MigrateAsync();
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {

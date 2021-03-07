@@ -25,7 +25,7 @@ namespace Covid19Radar.ViewModels
 
             base.OnNavigatedTo(parameters);
 
-            await _userDataService.Migrate();
+            await _userDataService.MigrateAsync();
 
             if (_termsUpdateService.IsAllAgreed())
             {

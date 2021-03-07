@@ -6,6 +6,7 @@ using Foundation;
 using Prism;
 using Prism.Ioc;
 using UIKit;
+using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.iOS
 {
@@ -64,6 +65,7 @@ namespace Covid19Radar.iOS
             containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceIos>();
             containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceIos>();
             containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
+            containerRegistry.RegisterSingleton<IDeserializer, PropertyStoreDeserializer>();
         }
     }
 

@@ -10,7 +10,9 @@ using Covid19Radar.Services.Logs;
 using Acr.UserDialogs;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
+using Xamarin.Forms.Internals;
 //using Plugin.LocalNotification;
+using Xamarin.Forms.Platform.Android;
 
 namespace Covid19Radar.Droid
 {
@@ -58,6 +60,7 @@ namespace Covid19Radar.Droid
                 containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
                 containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceAndroid>();
                 containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
+                containerRegistry.RegisterSingleton<IDeserializer, PropertyStoreDeserializer>();
             }
         }
 
