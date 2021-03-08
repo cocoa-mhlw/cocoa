@@ -30,7 +30,7 @@ assignees: ""
 ## スクリーンショット / Screenshots
 
 <!--
-  スクリーンショットがありますと，不具合の説明がより分かりやすくなります。
+  スクリーンショットがありますと、不具合の説明がより分かりやすくなります。
   If applicable, add screenshots to help explain your problem.
 -->
 

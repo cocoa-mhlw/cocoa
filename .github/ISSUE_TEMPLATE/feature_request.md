@@ -9,7 +9,7 @@ assignees: ""
 ## その機能リクエストは何らかの問題に関連しますか / Is your feature request related to a problem?
 
 <!--
-  その問題がどのようなものか簡潔明瞭に記述してください。（例）私は，～な時はいつも不満を抱えています。
+  その問題がどのようなものか簡潔明瞭に記述してください。（例）私は、～な時はいつも不満を抱えています。
   A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 -->
 
@@ -30,6 +30,6 @@ assignees: ""
 ## その他 / Additional context
 
 <!--
-  上記以外に述べたいことやスクリーンショットがありましたら，こちらに追加してください。
+  上記以外に述べたいことやスクリーンショットがありましたら、こちらに追加してください。
   Add any other context or screenshots about the feature request here.
 -->
