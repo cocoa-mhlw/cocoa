@@ -52,7 +52,7 @@
 git clone [repo-address]
 cd [repo-name]
 git checkout [branch-name]
-npm install
+dotnet restore
 ```
 
 ### コードの検証 / Test the code
