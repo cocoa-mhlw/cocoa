@@ -1,3 +1,12 @@
+## Issue 番号 / Issue ID
+
+<!--
+  Issue 番号なき PR は受け付けません。
+  PRs without the issue IDs are never accepted.
+-->
+
+- Close #
+
 ## 目的 / Purpose
 
 <!--
