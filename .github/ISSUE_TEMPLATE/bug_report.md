@@ -1,6 +1,6 @@
 ---
 name: "不具合報告 / Bug report"
-about: "不具合を報告してアプリをより良いものにしましょう / Create a report to help us improve"
+about: "アプリの改善のための不具合を報告する / Create a report to help us improve"
 title: ""
 labels: ""
 assignees: ""
@@ -15,10 +15,10 @@ assignees: ""
 
 ## 再現手順 / Steps to reproduce
 
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+1. '....' に行き、
+2. '....' をクリックし、
+3. '....' へスクロールすると、
+4. エラーが発生します。
 
 ## 期待される挙動 / Expected behavior
 
@@ -36,10 +36,9 @@ assignees: ""
 
 ## 動作環境 / Environments
 
-- Device: [e.g. iPhone6]
-- OS: [e.g. iOS8.1]
-- Browser: [e.g. stock browser, safari]
-- Version: [e.g. 22]
+- デバイス：（例：Pixel 5、iPhone 6 等）
+- OS：（例：Android、iOS）
+- バージョン：(例：1.2.2)
 
 ## その他 / Additional context
 
