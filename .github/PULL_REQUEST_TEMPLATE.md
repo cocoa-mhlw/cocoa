@@ -1,23 +1,30 @@
-## Purpose
+## 目的 / Purpose
 
-<!-- Describe the intention of the changes being proposed. What problem does it solve or functionality does it add? -->
+<!--
+  その変更を提案する意図をご説明ください。どの問題が解決したり，機能的な追加がなされたりしますか。
+  Describe the intention of the changes being proposed. What problem does it solve or functionality does it add?
+-->
 
-- ...
+-
 
-## Does this introduce a breaking change?
+## 破壊的変更をもたらしますか / Does this introduce a breaking change?
 
-<!-- Mark one with an "x". -->
+<!--
+  当てはまるもの 1 つに「x」とマークしてください。
+  Mark one with an "x".
+-->
 
 ```
 [ ] Yes
 [ ] No
 ```
 
-## Pull Request Type
+## Pull Request の種類 / Pull Request type
 
-What kind of change does this Pull Request introduce?
-
-<!-- Please check the one that applies to this PR using "x". -->
+<!--
+  この PR は，どのような類の変更をもたらしますか。当てはまるもの 1 つに「x」でチェックしてください。
+  What kind of change does this Pull Request introduce? Please check the one that applies to this PR using "x".
+-->
 
 ```
 [ ] Bugfix
@@ -28,9 +35,9 @@ What kind of change does this Pull Request introduce?
 [ ] Other... Please describe:
 ```
 
-## How to Test
+## 検証方法 / How to test
 
-- Get the code
+### コードの入手 / Get the code
 
 ```
 git clone [repo-address]
@@ -39,19 +46,24 @@ git checkout [branch-name]
 npm install
 ```
 
-- Test the code
-<!-- Add steps to run the tests suite and/or manually test -->
+### コードの検証 / Test the code
+
+<!--
+  テスト環境やマニュアルテストの実行手順をお書きください。
+  Add steps to run the tests suite and/or manually test
+-->
 
 ```
 
 ```
 
-## What to Check
+## 確認事項 / What to check
 
-Verify that the following are valid
+-
 
-- ...
+## その他 / Other information
 
-## Other Information
-
-<!-- Add any other helpful information that may be needed here. -->
+<!--
+  そのほかに，必要かもしれない有用な情報がありましたらご記入ください。
+  Add any other helpful information that may be needed here.
+-->
