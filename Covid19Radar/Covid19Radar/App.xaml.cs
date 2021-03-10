@@ -1,4 +1,4 @@
-using Prism;
+ï»¿using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Covid19Radar.ViewModels;
@@ -25,7 +25,7 @@ namespace Covid19Radar
     public partial class App : PrismApplication
     {
         /// <summary>
-        /// Android ‚©‚çQÆ‚Å‚«‚é‚æ‚¤‚É public static ‚É•ÏX
+        /// Android ã‹ã‚‰å‚ç…§ã§ãã‚‹ã‚ˆã†ã« public static ã«å¤‰æ›´
         /// </summary>
         public static ILoggerService LoggerService { get; set; }
         public static ILogFileService LogFileService { get; set; }
