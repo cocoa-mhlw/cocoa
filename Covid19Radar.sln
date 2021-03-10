@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.UITest", "Covi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.ExposureNotification", "Covid19Radar\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj", "{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.UnitTests", "Covid19Radar\Tests\Covid19Radar.UnitTests\Covid19Radar.UnitTests.csproj", "{464E6973-C26D-45DF-808D-D89F9F7BFCA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covid19Radar.UnitTests", "Covid19Radar\Tests\Covid19Radar.UnitTests\Covid19Radar.UnitTests.csproj", "{464E6973-C26D-45DF-808D-D89F9F7BFCA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +27,9 @@ Global
 		AppStore|Any CPU = AppStore|Any CPU
 		AppStore|iPhone = AppStore|iPhone
 		AppStore|iPhoneSimulator = AppStore|iPhoneSimulator
+		Debug_BackTask|Any CPU = Debug_BackTask|Any CPU
+		Debug_BackTask|iPhone = Debug_BackTask|iPhone
+		Debug_BackTask|iPhoneSimulator = Debug_BackTask|iPhoneSimulator
 		Debug_Mock|Any CPU = Debug_Mock|Any CPU
 		Debug_Mock|iPhone = Debug_Mock|iPhone
 		Debug_Mock|iPhoneSimulator = Debug_Mock|iPhoneSimulator
@@ -50,6 +53,12 @@ Global
 		{554EE1AB-B447-480C-90E5-C4F040891DE6}.AppStore|iPhone.Build.0 = Debug|Any CPU
 		{554EE1AB-B447-480C-90E5-C4F040891DE6}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{554EE1AB-B447-480C-90E5-C4F040891DE6}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_BackTask|Any CPU.ActiveCfg = Debug_BackTask|Any CPU
+		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_BackTask|Any CPU.Build.0 = Debug_BackTask|Any CPU
+		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_BackTask|iPhone.ActiveCfg = Debug_BackTask|Any CPU
+		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_BackTask|iPhone.Build.0 = Debug_BackTask|Any CPU
+		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_BackTask|iPhoneSimulator.ActiveCfg = Debug_BackTask|Any CPU
+		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_BackTask|iPhoneSimulator.Build.0 = Debug_BackTask|Any CPU
 		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_Mock|Any CPU.ActiveCfg = Debug_Mock|Any CPU
 		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_Mock|Any CPU.Build.0 = Debug_Mock|Any CPU
 		{554EE1AB-B447-480C-90E5-C4F040891DE6}.Debug_Mock|iPhone.ActiveCfg = Debug_Mock|Any CPU
@@ -82,6 +91,15 @@ Global
 		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
 		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.AppStore|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|Any CPU.ActiveCfg = Debug_BackTask|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|Any CPU.Build.0 = Debug_BackTask|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|Any CPU.Deploy.0 = Debug_BackTask|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|iPhone.ActiveCfg = Debug_BackTask|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|iPhone.Build.0 = Debug_BackTask|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|iPhone.Deploy.0 = Debug_BackTask|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|iPhoneSimulator.ActiveCfg = Debug_BackTask|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|iPhoneSimulator.Build.0 = Debug_BackTask|Any CPU
+		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_BackTask|iPhoneSimulator.Deploy.0 = Debug_BackTask|Any CPU
 		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_Mock|Any CPU.ActiveCfg = Debug_Mock|Any CPU
 		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_Mock|Any CPU.Build.0 = Debug_Mock|Any CPU
 		{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}.Debug_Mock|Any CPU.Deploy.0 = Debug_Mock|Any CPU
@@ -125,6 +143,9 @@ Global
 		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.AppStore|iPhone.Deploy.0 = AppStore|iPhone
 		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
 		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.Debug_BackTask|Any CPU.ActiveCfg = Debug_BackTask|iPhoneSimulator
+		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.Debug_BackTask|iPhone.ActiveCfg = Debug_BackTask|iPhone
+		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.Debug_BackTask|iPhoneSimulator.ActiveCfg = Debug_BackTask|iPhoneSimulator
 		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.Debug_Mock|Any CPU.ActiveCfg = Debug_Mock|iPhone
 		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.Debug_Mock|iPhone.ActiveCfg = Debug_Mock|iPhone
 		{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}.Debug_Mock|iPhone.Build.0 = Debug_Mock|iPhone
@@ -154,6 +175,11 @@ Global
 		{4223EE63-A661-4465-BBB0-08DD80DB2256}.AppStore|iPhone.Build.0 = Release|Any CPU
 		{4223EE63-A661-4465-BBB0-08DD80DB2256}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{4223EE63-A661-4465-BBB0-08DD80DB2256}.AppStore|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4223EE63-A661-4465-BBB0-08DD80DB2256}.Debug_BackTask|Any CPU.ActiveCfg = Debug_BackTask|Any CPU
+		{4223EE63-A661-4465-BBB0-08DD80DB2256}.Debug_BackTask|iPhone.ActiveCfg = Debug_BackTask|Any CPU
+		{4223EE63-A661-4465-BBB0-08DD80DB2256}.Debug_BackTask|iPhone.Build.0 = Debug_BackTask|Any CPU
+		{4223EE63-A661-4465-BBB0-08DD80DB2256}.Debug_BackTask|iPhoneSimulator.ActiveCfg = Debug_BackTask|Any CPU
+		{4223EE63-A661-4465-BBB0-08DD80DB2256}.Debug_BackTask|iPhoneSimulator.Build.0 = Debug_BackTask|Any CPU
 		{4223EE63-A661-4465-BBB0-08DD80DB2256}.Debug_Mock|Any CPU.ActiveCfg = Debug_Mock|Any CPU
 		{4223EE63-A661-4465-BBB0-08DD80DB2256}.Debug_Mock|iPhone.ActiveCfg = Debug_Mock|Any CPU
 		{4223EE63-A661-4465-BBB0-08DD80DB2256}.Debug_Mock|iPhone.Build.0 = Debug_Mock|Any CPU
@@ -181,6 +207,12 @@ Global
 		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.AppStore|iPhone.Build.0 = Debug|Any CPU
 		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_BackTask|Any CPU.ActiveCfg = Debug_BackTask|Any CPU
+		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_BackTask|Any CPU.Build.0 = Debug_BackTask|Any CPU
+		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_BackTask|iPhone.ActiveCfg = Debug_BackTask|Any CPU
+		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_BackTask|iPhone.Build.0 = Debug_BackTask|Any CPU
+		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_BackTask|iPhoneSimulator.ActiveCfg = Debug_BackTask|Any CPU
+		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_BackTask|iPhoneSimulator.Build.0 = Debug_BackTask|Any CPU
 		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_Mock|Any CPU.ActiveCfg = Debug|Any CPU
 		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_Mock|Any CPU.Build.0 = Debug|Any CPU
 		{83AF4C2E-22F8-4DAB-B993-BE6ABB3E56A1}.Debug_Mock|iPhone.ActiveCfg = Debug|Any CPU
@@ -211,6 +243,11 @@ Global
 		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.AppStore|iPhone.Build.0 = Debug|Any CPU
 		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.Debug_BackTask|Any CPU.ActiveCfg = Debug_BackTask|Any CPU
+		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.Debug_BackTask|iPhone.ActiveCfg = Debug_BackTask|Any CPU
+		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.Debug_BackTask|iPhone.Build.0 = Debug_BackTask|Any CPU
+		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.Debug_BackTask|iPhoneSimulator.ActiveCfg = Debug_BackTask|Any CPU
+		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.Debug_BackTask|iPhoneSimulator.Build.0 = Debug_BackTask|Any CPU
 		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.Debug_Mock|Any CPU.ActiveCfg = Debug|Any CPU
 		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.Debug_Mock|Any CPU.Build.0 = Debug|Any CPU
 		{464E6973-C26D-45DF-808D-D89F9F7BFCA7}.Debug_Mock|iPhone.ActiveCfg = Debug|Any CPU
