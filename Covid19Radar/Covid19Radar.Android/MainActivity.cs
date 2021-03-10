@@ -10,6 +10,13 @@ using Covid19Radar.Services.Logs;
 using Acr.UserDialogs;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
+using System;
+using System.IO;
+using AndroidX.Core.Content;
+using Android;
+using AndroidX.Core.App;
+using System.Collections.Generic;
+using System.Diagnostics;
 //using Plugin.LocalNotification;
 
 namespace Covid19Radar.Droid
@@ -35,6 +42,29 @@ namespace Covid19Radar.Droid
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
             UserDialogs.Init(this);
+
+            /*
+
+            var permission = ContextCompat.CheckSelfPermission(this, Manifest.Permission.WriteExternalStorage);
+            if (permission != (int)Permission.Granted)
+            {
+                // We don't have permission so prompt the user
+                ActivityCompat.RequestPermissions(this, new String[] { Manifest.Permission.WriteExternalStorage },1);
+            }
+            */
+
+
+            // ログ用のパスを一度取得する
+            // こうしないと files フォルダが作られない
+            var contextRef = new System.WeakReference<Context>(this);
+            contextRef.TryGetTarget(out var c);
+            var dir = c.GetExternalFilesDir(null).AbsolutePath;
+            var filename = Path.Combine(dir, $"trace-droid-{DateTime.Now.ToString("yyyyMMdd-HHmm")}.txt");
+            var tw = System.IO.File.OpenWrite(filename);
+            var tr1 = new System.Diagnostics.TextWriterTraceListener(tw);
+            DroidTrace.AutoFlush = true;
+            DroidTrace.Listeners.Add(tr1);
+            DroidTrace.WriteLine("START: " + DateTime.Now.ToString());
 
             //NotificationCenter.CreateNotificationChannel();
             LoadApplication(new App(new AndroidInitializer()));
@@ -89,6 +119,26 @@ namespace Covid19Radar.Droid
         //    base.OnNewIntent(intent);
         //}
 
+    }
+    /// <summary>
+    /// 自前の Andorid版 Trace
+    /// </summary>
+    public class DroidTrace
+    {
+        static DroidTrace()
+        {
+            Listeners = new List<TraceListener>();
+        }
+        public static List<TraceListener> Listeners { get; }
+        public static bool AutoFlush { get; set; } = true;
+        public static void WriteLine(string message)
+        {
+            foreach (var it in Listeners)
+            {
+                it.WriteLine(message);
+                if (AutoFlush == true) it.Flush();
+            }
+        }
     }
 }
 

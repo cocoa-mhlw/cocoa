@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using System;
+using System.Diagnostics;
 
 /*
  * Our mission...is
@@ -22,8 +24,12 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
-        private ILoggerService LoggerService;
-        private ILogFileService LogFileService;
+        /// <summary>
+        /// Android Ç©ÇÁéQè∆Ç≈Ç´ÇÈÇÊÇ§Ç… public static Ç…ïœçX
+        /// </summary>
+        public static ILoggerService LoggerService { get; set; }
+        public static ILogFileService LogFileService { get; set; }
+
 
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -147,7 +153,6 @@ namespace Covid19Radar
             // Initialize periodic log delete service
             var logPeriodicDeleteService = Container.Resolve<ILogPeriodicDeleteService>();
             logPeriodicDeleteService.Init();
-
             LogFileService.Rotate();
         }
 

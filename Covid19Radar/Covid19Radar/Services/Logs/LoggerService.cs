@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -34,6 +35,22 @@ namespace Covid19Radar.Services.Logs
         {
             this.logPathService = logPathService;
             this.essentialsService = essentialsService;
+
+#if TEST_BACKTASK
+            var dir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android)
+            {
+                // Android の場合は決め打ちにする
+                var packagename = "net.moonmile.sample.opencacao.backtask";
+                dir = $"/storage/emulated/0/Android/data/{packagename}/files";
+            }
+            var filename = Path.Combine(dir, $"trace-log-{DateTime.Now.ToString("yyyyMMdd-HHmm")}.txt");
+            var tw = System.IO.File.OpenWrite(filename);
+            var tr1 = new System.Diagnostics.TextWriterTraceListener(tw);
+            Trace.Listeners.Add(tr1);
+            Trace.AutoFlush = true;
+            Trace.WriteLine("START: " + DateTime.Now.ToString());
+#endif
         }
 
         #endregion
@@ -117,6 +134,12 @@ namespace Covid19Radar.Services.Logs
 
         private void Output(string message, string method, string filePath, int lineNumber, LogLevel logLevel)
         {
+#if TEST_BACKTASK
+            var line = CreateLogContentRow(message, method, filePath, lineNumber, logLevel, Utils.JstNow());
+            System.Diagnostics.Trace.WriteLine(line);
+            return;
+# endif
+
 #if !DEBUG
             if (logLevel == LogLevel.Verbose || logLevel == LogLevel.Debug)
             {
