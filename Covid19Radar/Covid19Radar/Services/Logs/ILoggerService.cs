@@ -3,6 +3,11 @@ using System.Runtime.CompilerServices;
 
 namespace Covid19Radar.Services.Logs
 {
+#if TEST_BACKTASK
+    // インターフェースを切り替えてしまう
+    // これは ILoggerService を別アセンブリにしたほうが良い
+    public interface ILoggerService : Xamarin.ExposureNotifications.ILoggerServiceInner { }
+#else
     public interface ILoggerService
     {
         void StartMethod(
@@ -45,4 +50,6 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0);
     }
+#endif
+
 }
