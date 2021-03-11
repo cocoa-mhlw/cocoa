@@ -43,8 +43,8 @@ namespace Covid19Radar.Droid
 
             UserDialogs.Init(this);
 
+            // files へのファイルアクセスに必要かもしれない
             /*
-
             var permission = ContextCompat.CheckSelfPermission(this, Manifest.Permission.WriteExternalStorage);
             if (permission != (int)Permission.Granted)
             {
@@ -53,7 +53,7 @@ namespace Covid19Radar.Droid
             }
             */
 
-
+            /*
             // ログ用のパスを一度取得する
             // こうしないと files フォルダが作られない
             var contextRef = new System.WeakReference<Context>(this);
@@ -65,10 +65,16 @@ namespace Covid19Radar.Droid
             DroidTrace.AutoFlush = true;
             DroidTrace.Listeners.Add(tr1);
             DroidTrace.WriteLine("START: " + DateTime.Now.ToString());
+            */
+
 
             //NotificationCenter.CreateNotificationChannel();
             LoadApplication(new App(new AndroidInitializer()));
             //NotificationCenter.NotifyNotificationTapped(base.Intent);
+
+
+            // Appの初期化以降は、App.LoggerService.Debug が使える
+            App.LoggerService.Info("START in Android: ");
         }
 
 
