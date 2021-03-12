@@ -53,7 +53,11 @@ namespace Xamarin.ExposureNotifications
 
 		static async Task<ExposureConfiguration> GetConfigurationAsync()
 		{
+			// ログを入れる
+			LoggerService.StartMethod();
+
 			var c = await Handler.GetConfigurationAsync();
+
 
 			return new ExposureConfiguration.ExposureConfigurationBuilder()
 				.SetAttenuationScores(c.AttenuationScores)
@@ -89,6 +93,8 @@ namespace Xamarin.ExposureNotifications
 
 		static async Task<T> ResolveApi<T>(int requestCode, Func<Task<T>> apiCall)
 		{
+			// ログを入れる
+			LoggerService.StartMethod();
 			try
 			{
 				return await apiCall();
@@ -361,6 +367,8 @@ namespace Xamarin.ExposureNotifications
 
 		static async Task<Status> PlatformGetStatusAsync()
 		{
+			// ログを入れる
+			LoggerService.StartMethod();
 			var bt = BluetoothAdapter.DefaultAdapter;
 
 			if (bt == null || !bt.IsEnabled)

@@ -19,7 +19,9 @@ namespace Covid19Radar.Droid.Services.Logs
 
         public LogPeriodicDeleteServiceAndroid()
         {
-            loggerService = DependencyService.Resolve<ILoggerService>();
+            // loggerService = DependencyService.Resolve<ILoggerService>();
+            // App から直接参照する
+            loggerService = App.LoggerService;
         }
 
         public void Init()

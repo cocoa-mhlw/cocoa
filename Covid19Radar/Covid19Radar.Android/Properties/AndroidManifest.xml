@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="5" android:versionName="APP_VERSION" package="APP_PACKAGE_NAME" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="5" android:versionName="APP_VERSION" package="net.moonmile.sample.opencacao.backtask" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="29" />
 	<application android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:fullBackupContent="@xml/backup_settings"></application>
 	<uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
@@ -9,4 +9,5 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>

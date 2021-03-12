@@ -7,6 +7,7 @@
 		<AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
 		<Version>1.0.0</Version>
 		<LangVersion>8.0</LangVersion>
+		<Configurations>Debug;Release;Debug_BackTask</Configurations>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -23,6 +24,10 @@
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<PackageProjectUrl>https://go.microsoft.com/fwlink/?linkid=2129007</PackageProjectUrl>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug_BackTask|netstandard2.0|AnyCPU'">
+	  <DefineConstants>DEBUG;TRACE;TEST_BACKTASK</DefineConstants>
 	</PropertyGroup>
 
 	<ItemGroup>

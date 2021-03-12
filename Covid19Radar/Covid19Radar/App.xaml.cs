@@ -1,4 +1,4 @@
-using Prism;
+﻿using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Covid19Radar.ViewModels;
@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using System;
+using System.Diagnostics;
 
 /*
  * Our mission...is
@@ -22,8 +24,12 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
-        private ILoggerService LoggerService;
-        private ILogFileService LogFileService;
+        /// <summary>
+        /// Android から参照できるように public static に変更
+        /// </summary>
+        public static ILoggerService LoggerService { get; set; }
+        public static ILogFileService LogFileService { get; set; }
+
 
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -49,6 +55,10 @@ namespace Covid19Radar
             Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
+            Xamarin.ExposureNotifications.LoggerService.Instance = LoggerService;
+
+            var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+            App.LoggerService.Info($"IsEnabledAsync is {enabled}");
 
             // Local Notification tap event listener
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
@@ -147,7 +157,6 @@ namespace Covid19Radar
             // Initialize periodic log delete service
             var logPeriodicDeleteService = Container.Resolve<ILogPeriodicDeleteService>();
             logPeriodicDeleteService.Init();
-
             LogFileService.Rotate();
         }
 
