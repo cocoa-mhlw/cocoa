@@ -45,7 +45,7 @@
 
 		<PackageReference Include="Xamarin.GooglePlayServices.Basement" Version="117.2.1-preview01" />
 		<PackageReference Include="Xamarin.GooglePlayServices.Tasks" Version="117.0.2-preview01" />
-		<PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification" Version="18.0.2-eap.6" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification" Version="19.7.1-eap.1" />
 		<PackageReference Include="Xamarin.AndroidX.Core" Version="1.2.0" />
 		<PackageReference Include="Xamarin.AndroidX.Work.Runtime" Version="2.3.4.1" />
 	</ItemGroup>
@@ -55,7 +55,7 @@
 		<Compile Include="*.ios.*.cs" />
 
 		<PackageReference Include="System.IO.Compression" Version="4.3.0" />
-		<PackageReference Include="Xamarin.iOS.ExposureNotification" Version="1.0.0" />
-	</ItemGroup>
+    <PackageReference Include="Xamarin.iOS.ExposureNotification" Version="1.2.2-preview1" />
+  </ItemGroup>
 
 </Project>

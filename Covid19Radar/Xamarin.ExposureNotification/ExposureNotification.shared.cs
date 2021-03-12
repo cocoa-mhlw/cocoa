@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,15 +8,19 @@ namespace Xamarin.ExposureNotifications
 {
 	public static partial class ExposureNotification
 	{
-		static INativeImplementation nativeImplementation;
+		// native implementation
 
-		public static void OverrideNativeImplementation(INativeImplementation nativeImplementation)
+		static INativeImplementation? nativeImplementation;
+
+		public static void OverrideNativeImplementation(INativeImplementation? nativeImplementation)
 			=> ExposureNotification.nativeImplementation = nativeImplementation;
-
-		static IExposureNotificationHandler handler;
 
 		public static bool OverridesNativeImplementation
 			=> ExposureNotification.nativeImplementation != null;
+
+		// handler
+
+		static IExposureNotificationHandler? handler;
 
 		internal static IExposureNotificationHandler Handler
 		{
@@ -58,6 +61,22 @@ namespace Xamarin.ExposureNotifications
 			}
 		}
 
+		// support checks
+
+		public static bool IsSupported => Instance != null;
+
+		internal static void EnsureSupported()
+		{
+			if (!IsSupported)
+				throw new PlatformNotSupportedException("Exposure notifications are not supported on this device.");
+		}
+
+		// the app supports the v2 API
+		internal static IExposureNotificationDailySummaryHandler? DailySummaryHandler
+			=> Handler as IExposureNotificationDailySummaryHandler;
+
+		// methods
+
 		public static void Init()
 			=> PlatformInit();
 
@@ -77,6 +96,7 @@ namespace Xamarin.ExposureNotifications
 		public static async Task SubmitSelfDiagnosisAsync()
 		{
 			var selfKeys = await GetSelfTemporaryExposureKeysAsync();
+
 			await Handler.UploadSelfExposureKeysToServerAsync(selfKeys);
 		}
 
@@ -85,7 +105,7 @@ namespace Xamarin.ExposureNotifications
 		{
 			var processedAnyFiles = false;
 
-			await Handler?.FetchExposureKeyBatchFilesFromServerAsync(async downloadedFiles =>
+			await Handler.FetchExposureKeyBatchFilesFromServerAsync(async downloadedFiles =>
 			{
 				cancellationToken.ThrowIfCancellationRequested();
 
@@ -96,24 +116,14 @@ namespace Xamarin.ExposureNotifications
 				{
 					var r = await nativeImplementation.DetectExposuresAsync(downloadedFiles);
 
-					var hasMatches = (r.summary?.MatchedKeyCount ?? 0) > 0;
-
-					if (hasMatches)
+					if (r.summary?.MatchedKeyCount > 0)
 						await Handler.ExposureDetectedAsync(r.summary, r.getInfo);
 				}
 				else
 				{
-#if __IOS__
-					// On iOS we need to check this ourselves and invoke the handler
-					var (summary, info) = await PlatformDetectExposuresAsync(downloadedFiles, cancellationToken);
-
-					// Check that the summary has any matches before notifying the callback
-					if (summary?.MatchedKeyCount > 0)
-						await Handler.ExposureDetectedAsync(summary, info);
-#elif __ANDROID__
-					// on Android this will happen in the broadcast receiver
+					// On Android this will happen in the broadcast receiver
+					// On iOS this will complete the operation directly
 					await PlatformDetectExposuresAsync(downloadedFiles, cancellationToken);
-#endif
 				}
 
 				processedAnyFiles = true;
