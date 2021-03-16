@@ -1,7 +1,7 @@
 ﻿using System;
 using Android.App;
 using Android.Content;
-using Covid19Radar.Services;
+using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
 
@@ -47,27 +47,18 @@ namespace Covid19Radar.Droid.Services.Logs
     [IntentFilter(new[] { Intent.ActionBootCompleted })]
     public class LogPeriodicDeleteReceiver : BroadcastReceiver
     {
-        private readonly ILoggerService loggerService;
-        private readonly ILogFileService logFileService;
-
-        public LogPeriodicDeleteReceiver()
-        {
-            var essensialService = new EssentialsService();
-            var logPathService = new LogPathService(new LogPathServiceAndroid());
-            loggerService = new LoggerService(logPathService, essensialService);
-            var logFileDependencyService = new LogFileServiceAndroid();
-            logFileService = new Covid19Radar.Services.Logs.LogFileService(loggerService, logPathService, logFileDependencyService);
-        }
+        private ILoggerService LoggerService => (ILoggerService)ContainerLocator.Current.Resolve(typeof(ILoggerService));
+        private ILogFileService LogFileService => (ILogFileService)ContainerLocator.Current.Resolve(typeof(ILogFileService));
 
         public override void OnReceive(Context context, Intent intent)
         {
             try
             {
-                loggerService.Info($"Action: {intent.Action}");
-                logFileService.Rotate();
-                loggerService.Info("Periodic deletion of old logs.");
+                LoggerService.Info($"Action: {intent.Action}");
+                LogFileService.Rotate();
+                LoggerService.Info("Periodic deletion of old logs.");
                 var nextScheduledTime = LogPeriodicDeleteServiceAndroid.SetNextSchedule();
-                loggerService.Info($"Next scheduled time: {DateTimeOffset.FromUnixTimeMilliseconds(nextScheduledTime).ToOffset(new TimeSpan(9, 0, 0))}");
+                LoggerService.Info($"Next scheduled time: {DateTimeOffset.FromUnixTimeMilliseconds(nextScheduledTime).ToOffset(new TimeSpan(9, 0, 0))}");
             }
             catch
             {
