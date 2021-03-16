@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Common;
 
 /*
  * Our mission...is
@@ -140,6 +141,8 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<IStorageService, StorageService>();
 #endif
             containerRegistry.RegisterSingleton<ISecureStorageService, SecureStorageService>();
+
+            ContainerLocator.SetContainerExtension(CreateContainerExtension);
         }
 
         protected override void OnStart()
