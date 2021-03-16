@@ -37,7 +37,7 @@ namespace Covid19Radar.Droid
             UserDialogs.Init(this);
 
             //NotificationCenter.CreateNotificationChannel();
-            LoadApplication(new App(new AndroidInitializer()));
+            LoadApplication(new App(new FormsAndroidInitializer()));
             //NotificationCenter.NotifyNotificationTapped(base.Intent);
         }
 
@@ -50,18 +50,11 @@ namespace Covid19Radar.Droid
         }
 
 
-        public class AndroidInitializer : IPlatformInitializer
+        public class FormsAndroidInitializer : IPlatformInitializer
         {
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
-                // Services
-                containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
-                containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteServiceAndroid>();
-                containerRegistry.RegisterSingleton<ILogFileDependencyService, LogFileServiceAndroid>();
-                containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceAndroid>();
-                containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
-                containerRegistry.Register<ICloseApplication, CloseApplication>();
-                containerRegistry.Register<IDeviceVerifier, DeviceCheckService>();
+                // register Xamarin.Forms dependent service, if any
             }
         }
 

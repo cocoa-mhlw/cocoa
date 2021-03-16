@@ -2,6 +2,7 @@
 using Covid19Radar.iOS.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Common;
 using Foundation;
 using Prism;
 using Prism.Ioc;
@@ -31,6 +32,8 @@ namespace Covid19Radar.iOS
         {
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
+            ContainerInitializer.Initialize(new iOSInitializer());
+
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
 
             global::Xamarin.Forms.Forms.Init();
@@ -44,7 +47,7 @@ namespace Covid19Radar.iOS
 
             //Plugin.LocalNotification.NotificationCenter.AskPermission();
 
-            LoadApplication(new App(new iOSInitializer()));
+            LoadApplication(new App(new FormsiOSInitializer()));
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
@@ -71,6 +74,12 @@ namespace Covid19Radar.iOS
         }
     }
 
-
+    public class FormsiOSInitializer : IPlatformInitializer
+    {
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            // register Xamarin.Forms dependent service, if any
+        }
+    }
 
 }

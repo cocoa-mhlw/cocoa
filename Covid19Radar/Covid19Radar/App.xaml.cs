@@ -120,28 +120,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ReAgreePrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
             containerRegistry.RegisterForNavigation<SplashPage>();
-
-            // Services
-            containerRegistry.RegisterSingleton<ILoggerService, LoggerService>();
-            containerRegistry.RegisterSingleton<ILogFileService, LogFileService>();
-            containerRegistry.RegisterSingleton<ILogPathService, LogPathService>();
-            containerRegistry.RegisterSingleton<ILogUploadService, LogUploadService>();
-            containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
-            containerRegistry.RegisterSingleton<IUserDataService, UserDataService>();
-            containerRegistry.RegisterSingleton<IExposureNotificationService, ExposureNotificationService>();
-            containerRegistry.RegisterSingleton<ITermsUpdateService, TermsUpdateService>();
-            containerRegistry.RegisterSingleton<IApplicationPropertyService, ApplicationPropertyService>();
-            containerRegistry.RegisterSingleton<IHttpClientService, HttpClientService>();
-#if USE_MOCK
-            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
-            containerRegistry.RegisterSingleton<IStorageService, StorageServiceMock>();
-#else            
-            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataService>();
-            containerRegistry.RegisterSingleton<IStorageService, StorageService>();
-#endif
-            containerRegistry.RegisterSingleton<ISecureStorageService, SecureStorageService>();
-
-            ContainerLocator.SetContainerExtension(CreateContainerExtension);
         }
 
         protected override void OnStart()
@@ -167,6 +145,11 @@ namespace Covid19Radar
         */
         protected override void OnSleep()
         {
+        }
+
+        protected override IContainerExtension CreateContainerExtension()
+        {
+            return new DryIocContainerExtension(ContainerLocator.Container.GetContainer());
         }
 
         private void LogUnobservedTaskExceptions()

@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.App;
-using Android.Content;
-using Android.OS;
 using Android.Runtime;
-using Android.Util;
-using Android.Views;
-using Android.Widget;
-using Android.Support.V4.App;
 using Covid19Radar.Common;
+using Prism;
+using Prism.Ioc;
+using Covid19Radar.Services.Logs;
+using Covid19Radar.Droid.Services.Logs;
+using Covid19Radar.Services;
+using Covid19Radar.Droid.Services;
 
 namespace Covid19Radar.Droid
 {
@@ -23,6 +20,28 @@ namespace Covid19Radar.Droid
     {
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
+        }
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
+
+            ContainerInitializer.Initialize(new AndroidInitializer());
+        }
+    }
+
+    public class AndroidInitializer : IPlatformInitializer
+    {
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            // Services
+            containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
+            containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteServiceAndroid>();
+            containerRegistry.RegisterSingleton<ILogFileDependencyService, LogFileServiceAndroid>();
+            containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceAndroid>();
+            containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
+            containerRegistry.Register<ICloseApplication, CloseApplication>();
+            containerRegistry.Register<IDeviceVerifier, DeviceCheckService>();
         }
     }
 }
