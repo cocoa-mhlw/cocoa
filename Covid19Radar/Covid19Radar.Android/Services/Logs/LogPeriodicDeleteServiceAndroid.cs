@@ -4,6 +4,7 @@ using Android.Content;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
+using Prism.Ioc;
 
 namespace Covid19Radar.Droid.Services.Logs
 {
@@ -47,8 +48,8 @@ namespace Covid19Radar.Droid.Services.Logs
     [IntentFilter(new[] { Intent.ActionBootCompleted })]
     public class LogPeriodicDeleteReceiver : BroadcastReceiver
     {
-        private ILoggerService LoggerService => (ILoggerService)ContainerLocator.Current.Resolve(typeof(ILoggerService));
-        private ILogFileService LogFileService => (ILogFileService)ContainerLocator.Current.Resolve(typeof(ILogFileService));
+        private ILoggerService LoggerService => ContainerLocator.Current.Resolve<ILoggerService>();
+        private ILogFileService LogFileService => ContainerLocator.Current.Resolve<ILogFileService>();
 
         public override void OnReceive(Context context, Intent intent)
         {

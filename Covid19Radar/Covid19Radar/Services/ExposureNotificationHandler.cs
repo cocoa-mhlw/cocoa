@@ -14,15 +14,16 @@ using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
+using Prism.Ioc;
 
 namespace Covid19Radar.Services
 {
     [Xamarin.Forms.Internals.Preserve] // Ensure this isn't linked out
     public class ExposureNotificationHandler : IExposureNotificationHandler
     {
-        private ILoggerService LoggerService => (ILoggerService)ContainerLocator.Current.Resolve(typeof(ILoggerService));
-        private IHttpDataService HttpDataService => (IHttpDataService)ContainerLocator.Current.Resolve(typeof(IHttpDataService));
-        private IExposureNotificationService ExposureNotificationService => (IExposureNotificationService)ContainerLocator.Current.Resolve(typeof(IExposureNotificationService));
+        private ILoggerService LoggerService => ContainerLocator.Current.Resolve<ILoggerService>();
+        private IHttpDataService HttpDataService => ContainerLocator.Current.Resolve<IHttpDataService>();
+        private IExposureNotificationService ExposureNotificationService => ContainerLocator.Current.Resolve< IExposureNotificationService>();
 
         public ExposureNotificationHandler()
         {
@@ -143,7 +144,7 @@ namespace Covid19Radar.Services
             {
                 // Migrate from UserData.
                 // Since it may be executed during the migration when the application starts, execute it here as well.
-                var userDataService = (IUserDataService)ContainerLocator.Current.Resolve(typeof(IUserDataService));
+                var userDataService = ContainerLocator.Current.Resolve<IUserDataService>();
                 await userDataService.Migrate();
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
@@ -390,7 +391,7 @@ namespace Covid19Radar.Services
             };
 
             // See if we can add the device verification
-            if (ContainerLocator.Current.Resolve(typeof(IDeviceVerifier)) is IDeviceVerifier verifier)
+            if (ContainerLocator.Current.Resolve<IDeviceVerifier>() is IDeviceVerifier verifier)
             {
                 submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
             }
