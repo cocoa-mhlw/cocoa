@@ -44,11 +44,6 @@ namespace Covid19Radar
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.AddSkipBackupAttribute();
 
-#if USE_MOCK
-            // For debug mode, set the mock api provider to interact
-            // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
-#endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
             // Local Notification tap event listener

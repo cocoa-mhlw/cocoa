@@ -11,6 +11,12 @@ namespace Covid19Radar.Common
     {
         public static void Initialize(IPlatformInitializer platformInitializer)
         {
+#if USE_MOCK
+            // For debug mode, set the mock api provider to interact
+            // with some fake data
+            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+#endif
+
             InitializeContainerLocator(platformInitializer);
         }
 
