@@ -1,4 +1,9 @@
-﻿using Foundation;
+﻿using Covid19Radar.iOS.Services;
+using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
+using DryIoc;
+using Foundation;
 using UIKit;
 
 namespace Covid19Radar.iOS
@@ -38,6 +43,10 @@ namespace Covid19Radar.iOS
 
             //Plugin.LocalNotification.NotificationCenter.AskPermission();
 
+            App.InitializeServiceLocator(RegisterPlatformTypes);
+
+            App.UseMockExposureNotificationImplementationIfNeeded();
+
             LoadApplication(new App());
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
@@ -48,6 +57,13 @@ namespace Covid19Radar.iOS
         //{
         //    Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
         //}
+
+        private static void RegisterPlatformTypes(IContainer container)
+        {
+            container.Register<ILogPathDependencyService, LogPathServiceIos>(Reuse.Singleton);
+            container.Register<ISecureStorageDependencyService, SecureStorageServiceIos>(Reuse.Singleton);
+            container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
+        }
     }
 
 }
