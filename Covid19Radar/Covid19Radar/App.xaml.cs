@@ -12,7 +12,7 @@ using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using System;
 using CommonServiceLocator;
-using System.Collections.Generic;
+using Covid19Radar.Common;
 
 /*
  * Our mission...is
@@ -210,33 +210,6 @@ namespace Covid19Radar
             {
                 // maybe think local only logger
             };
-        }
-    }
-
-    class ContainerServiceLocator : ServiceLocatorImplBase
-    {
-        private readonly Container Container;
-
-        internal IContainer CopyContainerWithRegistrations()
-        {
-            return Container.WithRegistrationsCopy();
-        }
-
-        public ContainerServiceLocator(Container container)
-        {
-            this.Container = container;
-        }
-
-        protected override object DoGetInstance(Type serviceType, string key)
-        {
-            if (Container == null) throw new ObjectDisposedException("container");
-            return Container.Resolve(serviceType, key);
-        }
-
-        protected override IEnumerable<object> DoGetAllInstances(Type serviceType)
-        {
-            if (Container == null) throw new ObjectDisposedException("container");
-            return Container.ResolveMany(serviceType);
         }
     }
 }

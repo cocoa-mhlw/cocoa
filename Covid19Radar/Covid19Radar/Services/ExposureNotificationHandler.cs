@@ -96,24 +96,20 @@ namespace Covid19Radar.Services
                 var exposureInfo = await getExposureInfo();
                 loggerService.Info($"ExposureInfo: {exposureInfo.Count()}");
 
-                // Add these on main thread in case the UI is visible so it can update
-                await Device.InvokeOnMainThreadAsync(() =>
+                foreach (var exposure in exposureInfo)
                 {
-                    foreach (var exposure in exposureInfo)
-                    {
-                        loggerService.Info($"Exposure.Timestamp: {exposure.Timestamp}");
-                        loggerService.Info($"Exposure.Duration: {exposure.Duration}");
-                        loggerService.Info($"Exposure.AttenuationValue: {exposure.AttenuationValue}");
-                        loggerService.Info($"Exposure.TotalRiskScore: {exposure.TotalRiskScore}");
-                        loggerService.Info($"Exposure.TransmissionRiskLevel: {exposure.TransmissionRiskLevel}");
+                    loggerService.Info($"Exposure.Timestamp: {exposure.Timestamp}");
+                    loggerService.Info($"Exposure.Duration: {exposure.Duration}");
+                    loggerService.Info($"Exposure.AttenuationValue: {exposure.AttenuationValue}");
+                    loggerService.Info($"Exposure.TotalRiskScore: {exposure.TotalRiskScore}");
+                    loggerService.Info($"Exposure.TransmissionRiskLevel: {exposure.TransmissionRiskLevel}");
 
-                        if (exposure.TotalRiskScore >= config.MinimumRiskScore)
-                        {
-                            UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
-                            exposureInformationList.Add(userExposureInfo);
-                        }
+                    if (exposure.TotalRiskScore >= config.MinimumRiskScore)
+                    {
+                        UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
+                        exposureInformationList.Add(userExposureInfo);
                     }
-                });
+                }
             }
 
             exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
