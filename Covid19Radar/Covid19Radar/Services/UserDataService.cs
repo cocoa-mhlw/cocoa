@@ -49,7 +49,7 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
             try
             {
-                var userData = await GetFromApplicationPropertiesAsync();
+                var userData = GetFromApplicationProperties();
                 if (userData == null)
                 {
                     return;
@@ -88,16 +88,16 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task<UserDataModel> GetFromApplicationPropertiesAsync()
+        private UserDataModel GetFromApplicationProperties()
         {
             loggerService.StartMethod();
 
-            var existsUserData = await applicationPropertyService.ContainsKeyAsync("UserData");
+            var existsUserData = applicationPropertyService.ContainsKey("UserData");
             loggerService.Info($"existsUserData: {existsUserData}");
             if (existsUserData)
             {
                 loggerService.EndMethod();
-                return Utils.DeserializeFromJson<UserDataModel>(applicationPropertyService.GetPropertiesAsync("UserData").ToString());
+                return Utils.DeserializeFromJson<UserDataModel>(applicationPropertyService.GetProperties("UserData").ToString());
             }
 
             loggerService.EndMethod();

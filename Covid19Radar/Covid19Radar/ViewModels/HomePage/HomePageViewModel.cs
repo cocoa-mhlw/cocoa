@@ -51,7 +51,7 @@ namespace Covid19Radar.ViewModels
                 var testUserDataAsJsonString = Utils.SerializeToJson(testUserData);
                 await applicationPropertyService.SavePropertiesAsync("UserData", testUserDataAsJsonString);
 
-                var userDataFromApplicationPropertyAsJsonString = (await applicationPropertyService.GetPropertiesAsync("UserData")).ToString();
+                var userDataFromApplicationPropertyAsJsonString = applicationPropertyService.GetProperties("UserData").ToString();
                 var userDataFromApplicationProperty = Utils.DeserializeFromJson<UserDataModel>(userDataFromApplicationPropertyAsJsonString);
 
                 if(testUserData.StartDateTime.Equals(userDataFromApplicationProperty.StartDateTime))

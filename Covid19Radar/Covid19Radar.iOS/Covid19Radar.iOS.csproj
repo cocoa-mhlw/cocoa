@@ -280,7 +280,7 @@
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
     <Compile Include="Services\SecureStorageServiceIos.cs" />
-    <Compile Include="Services\PropertyStoreDeserializer.cs" />
+    <Compile Include="Services\ApplicationPropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

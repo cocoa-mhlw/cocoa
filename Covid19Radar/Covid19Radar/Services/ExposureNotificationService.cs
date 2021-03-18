@@ -76,9 +76,9 @@ namespace Covid19Radar.Services
                 loggerService.Info("Migrated LastProcessTekTimestamp");
             }
 
-            if (await applicationPropertyService.ContainsKeyAsync(ConfigurationPropertyKey))
+            if (applicationPropertyService.ContainsKey(ConfigurationPropertyKey))
             {
-                var configuration = await applicationPropertyService.GetPropertiesAsync(ConfigurationPropertyKey) as string;
+                var configuration = applicationPropertyService.GetProperties(ConfigurationPropertyKey) as string;
                 if (!string.IsNullOrEmpty(configuration))
                 {
                     preferencesService.SetValue(PreferenceKey.ExposureNotificationConfiguration, configuration);

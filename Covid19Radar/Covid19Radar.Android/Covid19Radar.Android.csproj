@@ -196,7 +196,7 @@
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
     <Compile Include="Services\SecureStorageServiceAndroid.cs" />
-    <Compile Include="Services\PropertyStoreDeserializer.cs" />
+    <Compile Include="Services\ApplicationPropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
