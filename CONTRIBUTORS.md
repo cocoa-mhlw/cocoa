@@ -75,6 +75,7 @@
 - Tassana Thaveeteeratham (Thai Translation)
 - Kotaro Sakamoto
 - Koichi Yokota (Documentation)
+- Takym (LogWriter)
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji
