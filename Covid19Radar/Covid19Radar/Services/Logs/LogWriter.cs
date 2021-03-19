@@ -24,7 +24,10 @@ namespace Covid19Radar.Services.Logs
 		public void Write(string message, string method, string filePath, int lineNumber, LogLevel logLevel);
 	}
 
-	internal sealed class LogWriter : ILogWriter
+	/// <summary>
+	///  <see cref="Covid19Radar.Services.Logs.ILogWriter"/>の実装です。
+	/// </summary>
+	public sealed class LogWriter : ILogWriter
 	{
 		private const    string             _dt_format = "yyyy/MM/dd HH:mm:ss.fffffff";
 		private readonly ILogPathService    _log_path;
@@ -35,6 +38,11 @@ namespace Covid19Radar.Services.Logs
 		private          StreamWriter?      _sw;
 		private readonly string             _header;
 
+		/// <summary>
+		///  型'<see cref="Covid19Radar.Services.Logs.LogWriter"/>'の新しいインスタンスを生成します。
+		/// </summary>
+		/// <param name="logPath">ログファイルのパスを提供するサービスを指定します。</param>
+		/// <param name="essentials">環境情報を提供するサービスを指定します。</param>
 		public LogWriter(ILogPathService logPath, IEssentialsService essentials)
 		{
 			_log_path   = logPath    ?? throw new ArgumentNullException(nameof(logPath));
@@ -43,6 +51,7 @@ namespace Covid19Radar.Services.Logs
 			_header     = CreateLogHeaderRow();
 		}
 
+		/// <inheritdoc/>
 		public void Write(string message, string method, string filePath, int lineNumber, LogLevel logLevel)
 		{
 #if !DEBUG
@@ -71,7 +80,7 @@ namespace Covid19Radar.Services.Logs
 					if (!Directory.Exists(_log_path.LogsDirPath)) {
 						Directory.CreateDirectory(_log_path.LogsDirPath);
 					}
-					_fs = new FileStream(filename, FileMode.Append, FileAccess.Write, FileShare.Read);
+					_fs = new FileStream(filename, FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
 					_sw = new StreamWriter(_fs, _enc);
 					_sw.AutoFlush = true;
 					_sw.WriteLine(_header);
@@ -80,6 +89,7 @@ namespace Covid19Radar.Services.Logs
 			}
 		}
 
+		/// <inheritdoc/>
 		public void Dispose()
 		{
 			lock (this) {

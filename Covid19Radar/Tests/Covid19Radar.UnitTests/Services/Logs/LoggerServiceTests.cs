@@ -686,7 +686,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
         private LoggerService CreateDefaultLoggerService(ILogPathService logPathService, IEssentialsService essentialsService)
         {
-            return new LoggerService(logPathService, essentialsService);
+            return new LoggerService(new LogWriter(logPathService, essentialsService));
         }
 
         private ILogPathService CreateDefaultMockILogPathService()
