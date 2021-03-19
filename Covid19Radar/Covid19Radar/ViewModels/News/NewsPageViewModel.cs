@@ -72,7 +72,7 @@ namespace Covid19Radar.ViewModels
 			this.Title = AppResources.NewsPageTitle;
 
 			_blo = new BrowserLaunchOptions() {
-				LaunchMode            = BrowserLaunchMode .SystemPreferred,
+				LaunchMode            = BrowserLaunchMode .External,
 				Flags                 = BrowserLaunchFlags.None,
 				TitleMode             = BrowserTitleMode  .Show,
 				PreferredControlColor = SysColor.FromArgb(0xCC, 0xCC, 0xCC, 0xCC),
