@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using Covid19Radar.Common;
 
 namespace Covid19Radar.Services.Logs
 {
-    enum LogLevel
+	public enum LogLevel
     {
         Verbose,
         Debug,
@@ -21,19 +16,15 @@ namespace Covid19Radar.Services.Logs
     {
         #region Instance Fields
 
-        private readonly ILogPathService logPathService;
-        private readonly IEssentialsService essentialsService;
-
-        private readonly object lockObject = new object();
+        private readonly ILogWriter _writer;
 
         #endregion
 
         #region Constructors
 
-        public LoggerService(ILogPathService logPathService, IEssentialsService essentialsService)
+        public LoggerService(ILogWriter logWriter)
         {
-            this.logPathService = logPathService;
-            this.essentialsService = essentialsService;
+            _writer = logWriter ?? throw new ArgumentNullException(nameof(logWriter));
         }
 
         #endregion
@@ -45,7 +36,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            Output("Start", method, filePath, lineNumber, LogLevel.Info);
+            _writer.Write("Start", method, filePath, lineNumber, LogLevel.Info);
         }
 
         public void EndMethod(
@@ -53,7 +44,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            Output("End", method, filePath, lineNumber, LogLevel.Info);
+            _writer.Write("End", method, filePath, lineNumber, LogLevel.Info);
         }
 
         public void Verbose(
@@ -62,7 +53,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            Output(message, method, filePath, lineNumber, LogLevel.Verbose);
+            _writer.Write(message, method, filePath, lineNumber, LogLevel.Verbose);
         }
 
         public void Debug(
@@ -71,7 +62,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            Output(message, method, filePath, lineNumber, LogLevel.Debug);
+            _writer.Write(message, method, filePath, lineNumber, LogLevel.Debug);
         }
 
         public void Info(
@@ -80,7 +71,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            Output(message, method, filePath, lineNumber, LogLevel.Info);
+            _writer.Write(message, method, filePath, lineNumber, LogLevel.Info);
         }
 
         public void Warning(
@@ -89,7 +80,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            Output(message, method, filePath, lineNumber, LogLevel.Warning);
+            _writer.Write(message, method, filePath, lineNumber, LogLevel.Warning);
         }
 
         public void Error(
@@ -98,7 +89,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            Output(message, method, filePath, lineNumber, LogLevel.Error);
+            _writer.Write(message, method, filePath, lineNumber, LogLevel.Error);
         }
 
         public void Exception(
@@ -108,120 +99,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            Output(message + ", Exception: " + ex.ToString(), method, filePath, lineNumber, LogLevel.Error);
-        }
-
-        #endregion
-
-        #region Other Private Methods
-
-        private void Output(string message, string method, string filePath, int lineNumber, LogLevel logLevel)
-        {
-#if !DEBUG
-            if (logLevel == LogLevel.Verbose || logLevel == LogLevel.Debug)
-            {
-                return;
-            }
-#endif
-            try
-            {
-                lock (lockObject)
-                {
-                    CreateLogsDirIfNotExists();
-
-                    var jstNow = Utils.JstNow();
-                    var logFilePath = logPathService.LogFilePath(jstNow);
-
-                    CreateLogFileIfNotExists(logFilePath);
-
-                    var row = CreateLogContentRow(message, method, filePath, lineNumber, logLevel, jstNow);
-                    System.Diagnostics.Debug.WriteLine(row);
-                    using (var sw = new StreamWriter(logFilePath, true, Encoding.UTF8))
-                    {
-                        sw.WriteLine(row);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
-            }
-        }
-
-        private void CreateLogsDirIfNotExists()
-        {
-            if (Directory.Exists(logPathService.LogsDirPath))
-            {
-                return;
-            }
-            Directory.CreateDirectory(logPathService.LogsDirPath);
-        }
-
-        private void CreateLogFileIfNotExists(string logFilePath)
-        {
-            if (File.Exists(logFilePath))
-            {
-                return;
-            }
-            File.Create(logFilePath).Close();
-
-            using (var sw = new StreamWriter(logFilePath, true, Encoding.UTF8))
-            {
-                sw.WriteLine(CreateLogHeaderRow());
-            }
-        }
-
-        private string CreateLogHeaderRow()
-        {
-            var columnNames = new List<string>
-            {
-                "output_date",
-                "log_level",
-                "message",
-                "method",
-                "file_path",
-                "line_number",
-                "platform",
-                "platform_version",
-                "model",
-                "device_type",
-                "app_version",
-                "build_number"
-            };
-
-            return CreateLogRow(columnNames);
-        }
-
-        private string CreateLogContentRow(string message, string method, string filePath, int lineNumber, LogLevel logLevel, DateTime jstDateTime)
-        {
-            var columns = new List<string>
-            {
-                jstDateTime.ToString("yyyy/MM/dd HH:mm:ss"),
-                logLevel.ToString(),
-                message,
-                method,
-                filePath,
-                lineNumber.ToString(),
-                essentialsService.Platform,
-                essentialsService.PlatformVersion,
-                essentialsService.Model,
-                essentialsService.DeviceType,
-                essentialsService.AppVersion,
-                essentialsService.BuildNumber
-            };
-
-            return CreateLogRow(columns);
-        }
-
-        private string CreateLogRow(List<string> columns)
-        {
-            var convertedColumns = columns
-                .Select(column => column ?? string.Empty)
-                .Select(column => column.Replace("\r", "").Replace("\n", ""))
-                .Select(column => column.Replace("\"", "\"\""))
-                .Select(column => "\"" + column + "\"");
-
-            return string.Join(",", convertedColumns);
+            _writer.Write(message + ", Exception: " + ex.ToString(), method, filePath, lineNumber, LogLevel.Error);
         }
 
         #endregion
