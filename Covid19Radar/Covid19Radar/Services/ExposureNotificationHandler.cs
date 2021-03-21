@@ -199,7 +199,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task<(int, long, List<string>)> DownloadBatchAsync(string region, long lastCreated, CancellationToken cancellationToken)
+        private async Task<(int, long, List<string>)> DownloadBatchAsync(string region, long startTimestamp, CancellationToken cancellationToken)
         {
             var loggerService = LoggerService;
             loggerService.StartMethod();
@@ -219,7 +219,7 @@ namespace Covid19Radar.Services
             {
                 loggerService.Exception("Failed to create directory", ex);
                 loggerService.EndMethod();
-                // catch error return batchnumber 0 / fileList 0
+                // catch error return batchnumber 0 / newCreated -1 /  fileList 0
                 return (batchNumber, -1, downloadedFiles);
             }
 
@@ -233,11 +233,11 @@ namespace Covid19Radar.Services
             }
             Debug.WriteLine("C19R Fetch Exposure Key");
 
-            var newCreated = lastCreated;
+            var newCreated = startTimestamp;
             foreach (var tekItem in tekList)
             {
                 loggerService.Info($"tekItem.Created: {tekItem.Created}");
-                if (tekItem.Created > newCreated || newCreated == 0)
+                if (tekItem.Created > startTimestamp || newCreated == 0)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
                     Debug.WriteLine(Utils.SerializeToJson(tekItem));
