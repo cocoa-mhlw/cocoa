@@ -130,6 +130,7 @@ namespace Covid19Radar.Services
         public async Task FetchExposureKeyBatchFilesFromServerAsync(Func<IEnumerable<string>, Task> submitBatches, CancellationToken cancellationToken)
         {
             var loggerService = LoggerService;
+            var exposureNotificationService = ExposureNotificationService;
 
             if (Interlocked.Exchange(ref fetchExposureKeysIsRunning, 1) == 1)
             {
@@ -148,35 +149,40 @@ namespace Covid19Radar.Services
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
+                    var lastCreated = exposureNotificationService.GetLastProcessTekTimestamp(serverRegion);
+                    loggerService.Info($"region: {serverRegion}, lastCreated: {lastCreated}");
+
                     cancellationToken.ThrowIfCancellationRequested();
 
                     loggerService.Info("Start download files");
-                    var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion, cancellationToken);
-                    loggerService.Info("End to download files");
-                    loggerService.Info($"Batch number: {batchNumber}, Downloaded files: {downloadedFiles.Count}");
 
-                    if (batchNumber == 0)
+                    var (batchNumber, newCreated, downloadedFiles) = await DownloadBatchAsync(serverRegion, lastCreated, cancellationToken);
+                    loggerService.Info("End to download files");
+                    loggerService.Info($"Batch number: {batchNumber}, Downloaded files: {downloadedFiles.Count}, newCreated: {newCreated}");
+
+                    if (batchNumber == 0 || newCreated == -1 || downloadedFiles.Count == 0)
                     {
                         continue;
                     }
 
-                    if (downloadedFiles.Count > 0)
-                    {
-                        loggerService.Info("C19R Submit Batches");
-                        await submitBatches(downloadedFiles);
+                    loggerService.Info("C19R Submit Batches");
+                    await submitBatches(downloadedFiles);
 
-                        // delete all temporary files
-                        foreach (var file in downloadedFiles)
+                    lastCreated = newCreated;
+                    exposureNotificationService.SetLastProcessTekTimestamp(serverRegion, lastCreated);
+                    loggerService.Info($"region: {serverRegion}, lastCreated: {lastCreated}");
+
+                    // delete all temporary files
+                    foreach (var file in downloadedFiles)
+                    {
+                        try
                         {
-                            try
-                            {
-                                File.Delete(file);
-                            }
-                            catch (Exception ex)
-                            {
-                                // no-op
-                                loggerService.Exception("Fail to delete downloaded files", ex);
-                            }
+                            File.Delete(file);
+                        }
+                        catch (Exception ex)
+                        {
+                            // no-op
+                            loggerService.Exception("Fail to delete downloaded files", ex);
                         }
                     }
                 }
@@ -193,7 +199,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task<(int, List<string>)> DownloadBatchAsync(string region, CancellationToken cancellationToken)
+        private async Task<(int, long, List<string>)> DownloadBatchAsync(string region, long lastCreated, CancellationToken cancellationToken)
         {
             var loggerService = LoggerService;
             loggerService.StartMethod();
@@ -214,28 +220,24 @@ namespace Covid19Radar.Services
                 loggerService.Exception("Failed to create directory", ex);
                 loggerService.EndMethod();
                 // catch error return batchnumber 0 / fileList 0
-                return (batchNumber, downloadedFiles);
+                return (batchNumber, -1, downloadedFiles);
             }
 
             var httpDataService = HttpDataService;
-            var exposureNotificationService = ExposureNotificationService;
 
             List<TemporaryExposureKeyExportFileModel> tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
             if (tekList.Count == 0)
             {
                 loggerService.EndMethod();
-                return (batchNumber, downloadedFiles);
+                return (batchNumber, -1, downloadedFiles);
             }
             Debug.WriteLine("C19R Fetch Exposure Key");
-
-            var lastCreated = exposureNotificationService.GetLastProcessTekTimestamp(region);
-            loggerService.Info($"lastCreated: {lastCreated}");
 
             var newCreated = lastCreated;
             foreach (var tekItem in tekList)
             {
                 loggerService.Info($"tekItem.Created: {tekItem.Created}");
-                if (tekItem.Created > lastCreated || lastCreated == 0)
+                if (tekItem.Created > newCreated || newCreated == 0)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
                     Debug.WriteLine(Utils.SerializeToJson(tekItem));
@@ -263,12 +265,9 @@ namespace Covid19Radar.Services
             }
             loggerService.Info($"Batch number: {batchNumber}, Downloaded files: {downloadedFiles.Count()}");
 
-            exposureNotificationService.SetLastProcessTekTimestamp(region, newCreated);
-            loggerService.Info($"region: {region}, newCreated: {newCreated}");
-
             loggerService.EndMethod();
 
-            return (batchNumber, downloadedFiles);
+            return (batchNumber, newCreated, downloadedFiles);
         }
 
         // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
