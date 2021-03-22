@@ -156,11 +156,11 @@ namespace Covid19Radar.Services
 
                     loggerService.Info("Start download files");
 
-                    var (batchNumber, newCreated, downloadedFiles) = await DownloadBatchAsync(serverRegion, lastCreated, cancellationToken);
+                    var (newCreated, downloadedFiles) = await DownloadBatchAsync(serverRegion, lastCreated, cancellationToken);
                     loggerService.Info("End to download files");
-                    loggerService.Info($"Batch number: {batchNumber}, Downloaded files: {downloadedFiles.Count}, newCreated: {newCreated}");
+                    loggerService.Info($"Downloaded files: {downloadedFiles.Count}, newCreated: {newCreated}");
 
-                    if (batchNumber == 0 || newCreated == -1 || downloadedFiles.Count == 0)
+                    if (newCreated == -1 || downloadedFiles.Count == 0)
                     {
                         continue;
                     }
@@ -168,9 +168,8 @@ namespace Covid19Radar.Services
                     loggerService.Info("C19R Submit Batches");
                     await submitBatches(downloadedFiles);
 
-                    lastCreated = newCreated;
-                    exposureNotificationService.SetLastProcessTekTimestamp(serverRegion, lastCreated);
-                    loggerService.Info($"region: {serverRegion}, lastCreated: {lastCreated}");
+                    exposureNotificationService.SetLastProcessTekTimestamp(serverRegion, newCreated);
+                    loggerService.Info($"region: {serverRegion}, lastCreated: {newCreated}");
 
                     // delete all temporary files
                     foreach (var file in downloadedFiles)
@@ -199,13 +198,12 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task<(int, long, List<string>)> DownloadBatchAsync(string region, long startTimestamp, CancellationToken cancellationToken)
+        private async Task<(long, List<string>)> DownloadBatchAsync(string region, long startTimestamp, CancellationToken cancellationToken)
         {
             var loggerService = LoggerService;
             loggerService.StartMethod();
 
             var downloadedFiles = new List<string>();
-            var batchNumber = 0;
             var tmpDir = Path.Combine(FileSystem.CacheDirectory, region);
 
             try
@@ -220,7 +218,7 @@ namespace Covid19Radar.Services
                 loggerService.Exception("Failed to create directory", ex);
                 loggerService.EndMethod();
                 // catch error return batchnumber 0 / newCreated -1 /  fileList 0
-                return (batchNumber, -1, downloadedFiles);
+                return (-1, downloadedFiles);
             }
 
             var httpDataService = HttpDataService;
@@ -229,7 +227,7 @@ namespace Covid19Radar.Services
             if (tekList.Count == 0)
             {
                 loggerService.EndMethod();
-                return (batchNumber, -1, downloadedFiles);
+                return (-1, downloadedFiles);
             }
             Debug.WriteLine("C19R Fetch Exposure Key");
 
@@ -260,14 +258,13 @@ namespace Covid19Radar.Services
                     newCreated = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
                     Debug.WriteLine($"C19R FETCH DIAGKEY {tmpFile}");
-                    batchNumber++;
                 }
             }
-            loggerService.Info($"Batch number: {batchNumber}, Downloaded files: {downloadedFiles.Count()}");
+            loggerService.Info($"Downloaded files: {downloadedFiles.Count()}");
 
             loggerService.EndMethod();
 
-            return (batchNumber, newCreated, downloadedFiles);
+            return (newCreated, downloadedFiles);
         }
 
         // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
