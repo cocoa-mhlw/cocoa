@@ -55,8 +55,6 @@ namespace Covid19Radar
             Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
-            Xamarin.ExposureNotifications.LoggerService.Instance = LoggerService;
-
             var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
             App.LoggerService.Info($"IsEnabledAsync is {enabled}");
 
