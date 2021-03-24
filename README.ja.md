@@ -17,10 +17,10 @@ COCOAの利用方法で不明な点につきましては、厚生労働省の[Q&
 
 技術的な点以外のご要望については、大変お手数ですが、 [Q&Aページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html)に記載がありますお問い合わせメールアドレスにご連絡いただきますようお願い致します。  
 
-## ライセンス
+## ライセンスについて
 
-COCOA is licensed under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE.md) for the full license text.
+COCOAは Mozilla Public License Version 2.0 でライセンスされています。ライセンスの全文は[ライセンス](LICENSE.md)をご確認ください。
 
 ## サードパーティーソフトウェアについて
 
-This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
+このファイルには[ドキュメント](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md)に列挙されたプロジェクトに由来するコンポーネントが組み込まれています。
