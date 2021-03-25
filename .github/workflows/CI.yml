@@ -1,0 +1,53 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    name: Build
+    runs-on: macos-latest
+    steps:
+    - name: setup-xamarin
+      uses: maxim-lobanov/setup-xamarin@v1
+      with:
+        mono-version: 6.12 # specify version in '<major>.<minor>' format
+        xamarin-ios-version: 14 # specify version in '<major>' format
+        xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
+        xamarin-android-version: 11.2 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
+        xcode-version: 12 # set the latest available Xcode 11
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Prepare
+      run: |
+        nuget restore Covid19Radar.sln
+    - name: Android.Debug
+      run: |
+        cd Covid19Radar
+        msbuild ./Covid19Radar.Android/Covid19Radar.Android.csproj /t:Rebuild /p:Configuration=Debug
+    - name: Android.Debug_Mock
+      run: |
+        cd Covid19Radar
+        msbuild ./Covid19Radar.Android/Covid19Radar.Android.csproj /t:Rebuild /p:Configuration=Debug_Mock
+    - name: Android.Release
+      run: |
+        cd Covid19Radar
+        msbuild ./Covid19Radar.Android/Covid19Radar.Android.csproj /t:Rebuild /p:Configuration=Release
+    #- name: iOS.Debug
+    #  run: |
+    #    cd Covid19Radar
+    #    msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Debug /p:Platform=iPhoneSimulator
+    #- name: iOS.Debug_Mock
+    #  run: |
+    #    cd Covid19Radar
+    #    msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Debug_Mock /p:Platform=iPhoneSimulator
+    #- name: iOS.Release
+    #  run: |
+    #    cd Covid19Radar
+    #    msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Release /p:Platform=iPhoneSimulator
+        
