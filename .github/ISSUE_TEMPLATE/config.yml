@@ -2,4 +2,4 @@ blank_issues_enabled: false
 contact_links:
   - name: 技術的な内容以外のご要望・ご提案
     url: https://github.com/cocoa-mhlw/cocoa/blob/master/CONTRIBUTING.md
-    about: 技術的な点以外のご要望は厚生労働省のメールアドレスへお願いいたします
+    about: 技術的な内容以外のご要望については、本リポジトリでは扱いません。詳しくは CONTRIBUTING.md をご確認ください。
