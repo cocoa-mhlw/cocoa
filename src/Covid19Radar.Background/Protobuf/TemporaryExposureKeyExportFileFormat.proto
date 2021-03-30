@@ -1,4 +1,6 @@
-﻿syntax = "proto2";
+﻿// https://developers.google.com/android/exposure-notifications/exposure-key-file-format
+
+syntax = "proto2";
 
 option csharp_namespace = "Covid19Radar.Background.Protobuf"; 
 
