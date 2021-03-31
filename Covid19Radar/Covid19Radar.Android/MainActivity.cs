@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-﻿using Android.App;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Prism;

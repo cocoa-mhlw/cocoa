@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-﻿using Covid19Radar.Api.DataAccess;
+using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Extensions;
 using Covid19Radar.Background.Services;
