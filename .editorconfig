@@ -10,3 +10,6 @@ trim_trailing_whitespace = true
 
 [*.{axml,cs,css,html,proto,storyboard,xaml,storyboard,proto}]
 indent_size = 4
+
+[*.cs]
+charset = utf-8-bom
