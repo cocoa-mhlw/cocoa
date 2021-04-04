@@ -81,7 +81,7 @@
     <comment>アプリの設定</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>削除しています</value>

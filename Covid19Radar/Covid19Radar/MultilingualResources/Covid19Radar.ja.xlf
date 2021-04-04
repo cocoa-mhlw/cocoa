@@ -95,7 +95,7 @@
         </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="translated">Cancel</target>
+          <target state="translated">キャンセル</target>
         </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
