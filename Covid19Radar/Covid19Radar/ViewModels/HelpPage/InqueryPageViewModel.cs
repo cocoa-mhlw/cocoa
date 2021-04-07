@@ -22,6 +22,7 @@ namespace Covid19Radar.ViewModels
 
         public InqueryPageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
         {
+            Title = AppResources.InqueryPageTitle;
             this.loggerService = loggerService;
         }
 
