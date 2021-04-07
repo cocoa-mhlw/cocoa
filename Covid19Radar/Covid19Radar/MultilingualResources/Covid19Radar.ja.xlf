@@ -93,8 +93,8 @@
           <target state="translated">診断を提出します。</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
-          <source>App Settings</source>
-          <target state="translated">アプリの設定</target>
+          <source>Settings</source>
+          <target state="translated">設定</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
         </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
@@ -375,6 +375,11 @@
           <source>Support</source>
           <target state="translated">アプリに関するお問い合わせ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageTitle_Menu" translate="yes" xml:space="preserve">
+          <source>Support</source>
+          <target state="translated">お問い合わせ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">お問い合わせ（メニュー）</note>
         </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
           <source>in use</source>

@@ -51,7 +51,7 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf0e0",
                 PageName = nameof(InqueryPage),
-                Title = Resources.AppResources.InqueryPageTitle,
+                Title = Resources.AppResources.InqueryPageTitle_Menu,
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });
