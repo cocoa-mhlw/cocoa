@@ -411,6 +411,11 @@
           <target state="translated">帮助与反馈</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
         </trans-unit>
+        <trans-unit id="InqueryPageTitle_Menu" translate="yes" xml:space="preserve">
+          <source>Support</source>
+          <target state="translated">帮助与反馈</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">お問い合わせ（メニュー）</note>
+        </trans-unit>
         <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
           <source>in use</source>
           <target state="translated">使用</target>
