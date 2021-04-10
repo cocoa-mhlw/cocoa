@@ -30,3 +30,9 @@
 
 * [デフォルトで対応しているエディタの一覧](https://editorconfig.org/#pre-installed)
 * [プラグインのインストールが必要なエディタの一覧](https://editorconfig.org/#download)
+
+### プロジェクトボード
+
+本プロジェクトの状況については、[プロジェクトボード](https://github.com/cocoa-mhlw/cocoa/projects)を参照してください。
+
+プロジェクトボードの内容は確定ではありません。状況に応じて変更する場合があります。
