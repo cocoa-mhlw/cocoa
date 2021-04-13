@@ -57,14 +57,7 @@
 		<string>APP_PACKAGE_NAME.delete-old-logs</string>
 	</array>
 	<key>UIAppFonts</key>
-	<array>
-		<string>fa-brands-400.otf</string>
-		<string>fa-regular-400.otf</string>
-		<string>fa-solid-900.otf</string>
-		<string>NotoSansCJKjp-Medium.otf</string>
-		<string>NotoSansCJKjp-Regular.otf</string>
-		<string>Roboto-Regular.ttf</string>
-	</array>
+	<array/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIBackgroundModes</key>
