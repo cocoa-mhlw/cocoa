@@ -11,6 +11,7 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
@@ -24,9 +25,10 @@ namespace Covid19Radar.Services
     [Xamarin.Forms.Internals.Preserve] // Ensure this isn't linked out
     public class ExposureNotificationHandler : IExposureNotificationHandler
     {
-        private ILoggerService LoggerService => DependencyService.Resolve<ILoggerService>();
-        private IHttpDataService HttpDataService => DependencyService.Resolve<IHttpDataService>();
-        private IExposureNotificationService ExposureNotificationService => DependencyService.Resolve<IExposureNotificationService>();
+        private ILoggerService LoggerService => ServiceLocator.Current.GetInstance<ILoggerService>();
+        private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
+        private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
+        private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
 
         public ExposureNotificationHandler()
         {
@@ -99,24 +101,20 @@ namespace Covid19Radar.Services
                 var exposureInfo = await getExposureInfo();
                 loggerService.Info($"ExposureInfo: {exposureInfo.Count()}");
 
-                // Add these on main thread in case the UI is visible so it can update
-                await Device.InvokeOnMainThreadAsync(() =>
+                foreach (var exposure in exposureInfo)
                 {
-                    foreach (var exposure in exposureInfo)
-                    {
-                        loggerService.Info($"Exposure.Timestamp: {exposure.Timestamp}");
-                        loggerService.Info($"Exposure.Duration: {exposure.Duration}");
-                        loggerService.Info($"Exposure.AttenuationValue: {exposure.AttenuationValue}");
-                        loggerService.Info($"Exposure.TotalRiskScore: {exposure.TotalRiskScore}");
-                        loggerService.Info($"Exposure.TransmissionRiskLevel: {exposure.TransmissionRiskLevel}");
+                    loggerService.Info($"Exposure.Timestamp: {exposure.Timestamp}");
+                    loggerService.Info($"Exposure.Duration: {exposure.Duration}");
+                    loggerService.Info($"Exposure.AttenuationValue: {exposure.AttenuationValue}");
+                    loggerService.Info($"Exposure.TotalRiskScore: {exposure.TotalRiskScore}");
+                    loggerService.Info($"Exposure.TransmissionRiskLevel: {exposure.TransmissionRiskLevel}");
 
-                        if (exposure.TotalRiskScore >= config.MinimumRiskScore)
-                        {
-                            UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
-                            exposureInformationList.Add(userExposureInfo);
-                        }
+                    if (exposure.TotalRiskScore >= config.MinimumRiskScore)
+                    {
+                        UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
+                        exposureInformationList.Add(userExposureInfo);
                     }
-                });
+                }
             }
 
             exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
@@ -134,6 +132,7 @@ namespace Covid19Radar.Services
         public async Task FetchExposureKeyBatchFilesFromServerAsync(Func<IEnumerable<string>, Task> submitBatches, CancellationToken cancellationToken)
         {
             var loggerService = LoggerService;
+            var exposureNotificationService = ExposureNotificationService;
 
             if (Interlocked.Exchange(ref fetchExposureKeysIsRunning, 1) == 1)
             {
@@ -147,40 +146,43 @@ namespace Covid19Radar.Services
             {
                 // Migrate from UserData.
                 // Since it may be executed during the migration when the application starts, execute it here as well.
-                var userDataService = DependencyService.Resolve<IUserDataService>();
-                await userDataService.Migrate();
+                await UserDataService.Migrate();
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
+                    var lastCreated = exposureNotificationService.GetLastProcessTekTimestamp(serverRegion);
+                    loggerService.Info($"region: {serverRegion}, lastCreated: {lastCreated}");
+
                     cancellationToken.ThrowIfCancellationRequested();
 
                     loggerService.Info("Start download files");
-                    var (batchNumber, downloadedFiles) = await DownloadBatchAsync(serverRegion, cancellationToken);
-                    loggerService.Info("End to download files");
-                    loggerService.Info($"Batch number: {batchNumber}, Downloaded files: {downloadedFiles.Count}");
 
-                    if (batchNumber == 0)
+                    var (newCreated, downloadedFiles) = await DownloadBatchAsync(serverRegion, lastCreated, cancellationToken);
+                    loggerService.Info("End to download files");
+                    loggerService.Info($"Downloaded files: {downloadedFiles.Count}, newCreated: {newCreated}");
+
+                    if (newCreated == -1 || downloadedFiles.Count == 0)
                     {
                         continue;
                     }
 
-                    if (downloadedFiles.Count > 0)
-                    {
-                        loggerService.Info("C19R Submit Batches");
-                        await submitBatches(downloadedFiles);
+                    loggerService.Info("C19R Submit Batches");
+                    await submitBatches(downloadedFiles);
 
-                        // delete all temporary files
-                        foreach (var file in downloadedFiles)
+                    exposureNotificationService.SetLastProcessTekTimestamp(serverRegion, newCreated);
+                    loggerService.Info($"region: {serverRegion}, lastCreated: {newCreated}");
+
+                    // delete all temporary files
+                    foreach (var file in downloadedFiles)
+                    {
+                        try
                         {
-                            try
-                            {
-                                File.Delete(file);
-                            }
-                            catch (Exception ex)
-                            {
-                                // no-op
-                                loggerService.Exception("Fail to delete downloaded files", ex);
-                            }
+                            File.Delete(file);
+                        }
+                        catch (Exception ex)
+                        {
+                            // no-op
+                            loggerService.Exception("Fail to delete downloaded files", ex);
                         }
                     }
                 }
@@ -197,13 +199,12 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task<(int, List<string>)> DownloadBatchAsync(string region, CancellationToken cancellationToken)
+        private async Task<(long, List<string>)> DownloadBatchAsync(string region, long startTimestamp, CancellationToken cancellationToken)
         {
             var loggerService = LoggerService;
             loggerService.StartMethod();
 
             var downloadedFiles = new List<string>();
-            var batchNumber = 0;
             var tmpDir = Path.Combine(FileSystem.CacheDirectory, region);
 
             try
@@ -217,29 +218,25 @@ namespace Covid19Radar.Services
             {
                 loggerService.Exception("Failed to create directory", ex);
                 loggerService.EndMethod();
-                // catch error return batchnumber 0 / fileList 0
-                return (batchNumber, downloadedFiles);
+                // catch error return newCreated -1 / downloadedFiles 0
+                return (-1, downloadedFiles);
             }
 
             var httpDataService = HttpDataService;
-            var exposureNotificationService = ExposureNotificationService;
 
             List<TemporaryExposureKeyExportFileModel> tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
             if (tekList.Count == 0)
             {
                 loggerService.EndMethod();
-                return (batchNumber, downloadedFiles);
+                return (-1, downloadedFiles);
             }
             Debug.WriteLine("C19R Fetch Exposure Key");
 
-            var lastCreated = exposureNotificationService.GetLastProcessTekTimestamp(region);
-            loggerService.Info($"lastCreated: {lastCreated}");
-
-            var newCreated = lastCreated;
+            var newCreated = startTimestamp;
             foreach (var tekItem in tekList)
             {
                 loggerService.Info($"tekItem.Created: {tekItem.Created}");
-                if (tekItem.Created > lastCreated || lastCreated == 0)
+                if (tekItem.Created > startTimestamp)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
                     Debug.WriteLine(Utils.SerializeToJson(tekItem));
@@ -262,17 +259,13 @@ namespace Covid19Radar.Services
                     newCreated = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
                     Debug.WriteLine($"C19R FETCH DIAGKEY {tmpFile}");
-                    batchNumber++;
                 }
             }
-            loggerService.Info($"Batch number: {batchNumber}, Downloaded files: {downloadedFiles.Count()}");
-
-            exposureNotificationService.SetLastProcessTekTimestamp(region, newCreated);
-            loggerService.Info($"region: {region}, newCreated: {newCreated}");
+            loggerService.Info($"Downloaded files: {downloadedFiles.Count()}");
 
             loggerService.EndMethod();
 
-            return (batchNumber, downloadedFiles);
+            return (newCreated, downloadedFiles);
         }
 
         // this will be called when the user is submitting a diagnosis and the local keys need to go to the server

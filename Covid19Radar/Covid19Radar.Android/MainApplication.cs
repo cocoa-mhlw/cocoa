@@ -3,18 +3,13 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.App;
-using Android.Content;
-using Android.OS;
 using Android.Runtime;
-using Android.Util;
-using Android.Views;
-using Android.Widget;
-using Android.Support.V4.App;
-using Covid19Radar.Common;
+using DryIoc;
+using Covid19Radar.Services.Logs;
+using Covid19Radar.Droid.Services.Logs;
+using Covid19Radar.Services;
+using Covid19Radar.Droid.Services;
 
 namespace Covid19Radar.Droid
 {
@@ -27,6 +22,23 @@ namespace Covid19Radar.Droid
     {
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
+        }
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
+
+            App.InitializeServiceLocator(RegisterPlatformTypes);
+            App.UseMockExposureNotificationImplementationIfNeeded();
+        }
+
+        private void RegisterPlatformTypes(IContainer container)
+        {
+            // Services
+            container.Register<ILogPathDependencyService, LogPathServiceAndroid>(Reuse.Singleton);
+            container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
+            container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
+            container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
         }
     }
 }

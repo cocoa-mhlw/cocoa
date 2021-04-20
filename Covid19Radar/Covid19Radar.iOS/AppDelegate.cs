@@ -6,9 +6,8 @@ using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using DryIoc;
 using Foundation;
-using Prism;
-using Prism.Ioc;
 using UIKit;
 
 namespace Covid19Radar.iOS
@@ -35,6 +34,9 @@ namespace Covid19Radar.iOS
         {
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
+            App.InitializeServiceLocator(RegisterPlatformTypes);
+            App.UseMockExposureNotificationImplementationIfNeeded();
+
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
 
             global::Xamarin.Forms.Forms.Init();
@@ -48,7 +50,7 @@ namespace Covid19Radar.iOS
 
             //Plugin.LocalNotification.NotificationCenter.AskPermission();
 
-            LoadApplication(new App(new iOSInitializer()));
+            LoadApplication(new App());
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
@@ -58,19 +60,14 @@ namespace Covid19Radar.iOS
         //{
         //    Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
         //}
-    }
 
-    public class iOSInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IContainerRegistry containerRegistry)
+        private void RegisterPlatformTypes(IContainer container)
         {
             // Services
-            containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceIos>();
-            containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceIos>();
-            containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
+            container.Register<ILogPathDependencyService, LogPathServiceIos>(Reuse.Singleton);
+            container.Register<ISecureStorageDependencyService, SecureStorageServiceIos>(Reuse.Singleton);
+            container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
+            container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
         }
     }
-
-
-
 }
