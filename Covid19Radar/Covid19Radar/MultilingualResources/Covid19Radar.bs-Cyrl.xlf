@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-
 <xliff xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd" version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file build-num="n/a" product-version="n/a" product-name="n/a" tool-id="MultilingualAppToolkit" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" target-language="is" source-language="en-US" datatype="xml">
     <header>
@@ -96,7 +95,7 @@
           <target state-qualifier="mt-suggestion" state="needs-review-translation">Slanje dijagnoze ...</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="SettingsPageTitle">
-          <source>App Settings</source>
+          <source>Settings</source>
           <target state-qualifier="mt-suggestion" state="needs-review-translation">Postavke aplikacije</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
@@ -1185,6 +1184,11 @@ Storage :</target>
           <source>https://www.mhlw.go.jp/cocoa/kiyaku_english.html</source>
           <target state="new">https://www.mhlw.go.jp/cocoa/kiyaku_english.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約URL</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageTitle_Menu" translate="yes" xml:space="preserve">
+          <source>Support</source>
+          <target state="new">Support</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">お問い合わせ（メニュー）</note>
         </trans-unit>
       </group>
     </body>

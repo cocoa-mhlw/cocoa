@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
@@ -334,6 +334,10 @@
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>帮助与反馈</value>
     <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="InqueryPageTitle_Menu" xml:space="preserve">
+    <value>帮助与反馈</value>
+    <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
     <value>使用</value>
