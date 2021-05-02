@@ -38,16 +38,16 @@ jobs:
       run: |
         cd Covid19Radar
         msbuild ./Covid19Radar.Android/Covid19Radar.Android.csproj /t:Rebuild /p:Configuration=Release
-    #- name: iOS.Debug
-    #  run: |
-    #    cd Covid19Radar
-    #    msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Debug /p:Platform=iPhoneSimulator
-    #- name: iOS.Debug_Mock
-    #  run: |
-    #    cd Covid19Radar
-    #    msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Debug_Mock /p:Platform=iPhoneSimulator
-    #- name: iOS.Release
-    #  run: |
-    #    cd Covid19Radar
-    #    msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Release /p:Platform=iPhoneSimulator
+    - name: iOS.Debug
+      run: |
+        cd Covid19Radar
+        msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Debug /p:Platform=iPhoneSimulator
+    - name: iOS.Debug_Mock
+      run: |
+        cd Covid19Radar
+        msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Debug_Mock /p:Platform=iPhoneSimulator
+    - name: iOS.Release
+      run: |
+        cd Covid19Radar
+        msbuild ./Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=Release /p:Platform=iPhoneSimulator
         
