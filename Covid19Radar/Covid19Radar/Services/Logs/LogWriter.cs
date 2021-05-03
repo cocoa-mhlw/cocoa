@@ -4,6 +4,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Threading;
 using Covid19Radar.Common;
 
 namespace Covid19Radar.Services.Logs
@@ -33,9 +34,7 @@ namespace Covid19Radar.Services.Logs
 		private readonly ILogPathService    _log_path;
 		private readonly IEssentialsService _essentials;
 		private readonly Encoding           _enc;
-		private          string?            _path;
-		private          FileStream?        _fs;
-		private          StreamWriter?      _sw;
+		private          File?              _file;
 		private readonly string             _header;
 
 		/// <summary>
@@ -71,31 +70,35 @@ namespace Covid19Radar.Services.Logs
 
 		private void WriteLine(DateTime jstNow, string line)
 		{
-			string filename = _log_path.LogFilePath(jstNow);
-			lock (this) {
-				if (_path != filename || _sw is null) {
-					_path = filename;
-					_sw?.Dispose();
-					_fs?.Dispose();
-					if (!Directory.Exists(_log_path.LogsDirPath)) {
-						Directory.CreateDirectory(_log_path.LogsDirPath);
+			var    file  = _file;
+			string fname = _log_path.LogFilePath(jstNow);
+			if (file is null || file._path != fname) {
+				var newFile = new File(fname, _enc);
+				while (true) {
+					if (Interlocked.CompareExchange(ref _file, newFile, file) == file) {
+						file?.Dispose();
+						break;
 					}
-					_fs = new FileStream(filename, FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
-					_sw = new StreamWriter(_fs, _enc);
-					_sw.AutoFlush = true;
-					_sw.WriteLine(_header);
+					Thread.Yield();
+					file = _file;
 				}
-				_sw.WriteLine(line);
+				file = newFile;
+				file._sw.WriteLine(_header);
 			}
+			file._sw.WriteLine(line);
 		}
 
 		/// <inheritdoc/>
 		public void Dispose()
 		{
-			lock (this) {
-				_path = null;
-				_sw?.Dispose();
-				_fs?.Dispose();
+			File? file;
+			while (true) {
+				file = _file;
+				if (Interlocked.CompareExchange(ref _file, null, file) == file) {
+					file?.Dispose();
+					break;
+				}
+				Thread.Yield();
 			}
 		}
 
@@ -179,6 +182,29 @@ namespace Covid19Radar.Services.Logs
 				sb.Append('\"');
 			}
 			return sb.ToString();
+		}
+
+		private sealed class File : IDisposable
+		{
+			internal readonly string       _path;
+			internal readonly StreamWriter _sw;
+
+			internal File(string path, Encoding enc)
+			{
+				string dir = Path.GetDirectoryName(path);
+				if (!Directory.Exists(dir)) {
+					Directory.CreateDirectory(dir);
+				}
+
+				_path = path;
+				_sw   = new StreamWriter(new FileStream(path, FileMode.Append, FileAccess.Write, FileShare.ReadWrite), enc);
+				_sw.AutoFlush = true;
+			}
+
+			public void Dispose()
+			{
+				_sw.Dispose();
+			}
 		}
 	}
 }
