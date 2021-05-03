@@ -132,25 +132,6 @@ namespace Xamarin.ExposureNotifications
 
 		static TimeSpan bgRepeatInterval = TimeSpan.FromHours(6);
 
-		static Task PlatformScheduleFetch()
-		{
-			var workManager = WorkManager.GetInstance(Essentials.Platform.AppContext);
-
-			var workRequestBuilder = new PeriodicWorkRequest.Builder(
-				typeof(BackgroundFetchWorker),
-				bgRepeatInterval);
-
-			bgRequestBuilder.Invoke(workRequestBuilder);
-
-			var workRequest = workRequestBuilder.Build();
-
-			workManager.EnqueueUniquePeriodicWork("exposurenotification",
-				ExistingPeriodicWorkPolicy.Replace,
-				workRequest);
-
-			return Task.CompletedTask;
-		}
-
 		// Tells the local API when new diagnosis keys have been obtained from the server
 		static async Task PlatformDetectExposuresAsync(IEnumerable<string> keyFiles, System.Threading.CancellationToken cancellationToken)
 		{

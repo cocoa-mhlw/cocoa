@@ -1,4 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -77,11 +83,11 @@
     <value>診断を提出します。</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>アプリの設定</value>
+    <value>設定</value>
     <comment>アプリの設定</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>削除しています</value>
@@ -300,6 +306,10 @@
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>アプリに関するお問い合わせ</value>
     <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="InqueryPageTitle_Menu" xml:space="preserve">
+    <value>お問い合わせ</value>
+    <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
     <value>使用中</value>

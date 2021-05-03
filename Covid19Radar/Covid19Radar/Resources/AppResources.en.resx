@@ -1,4 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
 <root>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
@@ -77,7 +83,7 @@
     <value>Submitting Diagnosis...</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>App Settings</value>
+    <value>Settings</value>
     <comment>アプリの設定</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
@@ -328,6 +334,10 @@
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Support</value>
     <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="InqueryPageTitle_Menu" xml:space="preserve">
+    <value>Support</value>
+    <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription1" xml:space="preserve">
     <value>in use</value>
@@ -638,7 +648,7 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
+    <value>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19,
 please follow the app. guidance and check the Consultation Centers List to receive a consultation.
 ・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</value>
     <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
@@ -843,7 +853,7 @@ Storage :</value>
     <comment>登録すると</comment>
   </data>
   <data name="NotifyOtherPageDescription6" xml:space="preserve">
-    <value>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
+    <value>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed
 ＊No record of where the close contact happened will be disclosed</value>
     <comment>※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
 ※接触した場所がどこなのか記録されたり、他の人に知られることもありません</comment>

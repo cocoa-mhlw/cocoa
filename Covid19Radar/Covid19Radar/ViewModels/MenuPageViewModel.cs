@@ -1,4 +1,8 @@
-﻿using Prism.Commands;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using Prism.Commands;
 using Prism.Navigation;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
@@ -55,7 +59,7 @@ namespace Covid19Radar.ViewModels
             {
                 Icon = "\uf0e0",
                 PageName = nameof(InqueryPage),
-                Title = Resources.AppResources.InqueryPageTitle,
+                Title = Resources.AppResources.InqueryPageTitle_Menu,
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });

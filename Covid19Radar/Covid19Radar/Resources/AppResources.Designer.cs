@@ -882,6 +882,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Support に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageTitle_Menu {
+            get {
+                return ResourceManager.GetString("InqueryPageTitle_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Content of inquiry：\r\n\r\n\r\n\r\n※You do not need to enter personal information such as your name and phone number.\r\n に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InquiryMailBody {
@@ -1738,7 +1747,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   App Settings に類似しているローカライズされた文字列を検索します。
+        ///   Settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageTitle {
             get {
