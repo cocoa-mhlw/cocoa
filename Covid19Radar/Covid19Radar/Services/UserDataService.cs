@@ -1,10 +1,13 @@
-﻿using Covid19Radar.Common;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
@@ -30,14 +33,16 @@ namespace Covid19Radar.Services
         private readonly IPreferencesService preferencesService;
         private readonly ITermsUpdateService termsUpdateService;
         private readonly IExposureNotificationService exposureNotificationService;
+        private readonly IApplicationPropertyService applicationPropertyService;
 
-        public UserDataService(IHttpDataService httpDataService, ILoggerService loggerService, IPreferencesService preferencesService, ITermsUpdateService termsUpdateService, IExposureNotificationService exposureNotificationService)
+        public UserDataService(IHttpDataService httpDataService, ILoggerService loggerService, IPreferencesService preferencesService, ITermsUpdateService termsUpdateService, IExposureNotificationService exposureNotificationService, IApplicationPropertyService applicationPropertyService)
         {
             this.httpDataService = httpDataService;
             this.loggerService = loggerService;
             this.preferencesService = preferencesService;
             this.termsUpdateService = termsUpdateService;
             this.exposureNotificationService = exposureNotificationService;
+            this.applicationPropertyService = applicationPropertyService;
         }
 
         private readonly SemaphoreSlim _semaphoreForMigrage = new SemaphoreSlim(1, 1);
@@ -74,8 +79,7 @@ namespace Covid19Radar.Services
 
                 await exposureNotificationService.MigrateFromUserData(userData);
 
-                Application.Current.Properties.Remove("UserData");
-                await Application.Current.SavePropertiesAsync();
+                await applicationPropertyService.Remove("UserData");
             }
             catch (Exception ex)
             {
@@ -92,12 +96,13 @@ namespace Covid19Radar.Services
         {
             loggerService.StartMethod();
 
-            var existsUserData = Application.Current.Properties.ContainsKey("UserData");
+            var existsUserData = applicationPropertyService.ContainsKey("UserData");
             loggerService.Info($"existsUserData: {existsUserData}");
             if (existsUserData)
             {
                 loggerService.EndMethod();
-                return Utils.DeserializeFromJson<UserDataModel>(Application.Current.Properties["UserData"].ToString());
+                var userData = applicationPropertyService.GetProperties("UserData");
+                return Utils.DeserializeFromJson<UserDataModel>(userData.ToString());
             }
 
             loggerService.EndMethod();
