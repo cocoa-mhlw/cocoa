@@ -152,9 +152,13 @@ namespace Covid19Radar.Services.Logs
 				string s = cols[i];
 				sb.Append('\"');
 				for (int j = 0; j < s.Length; ++j) {
-					char c = s[j];
-					switch (c) {
-					case '\0':
+					char ch = s[j];
+					switch (ch) {
+					case '\t':
+						sb.Append("\\t");
+						break;
+					case '\v':
+						sb.Append("\\v");
 						break;
 					case '\r':
 						sb.Append("\\r");
@@ -162,16 +166,13 @@ namespace Covid19Radar.Services.Logs
 					case '\n':
 						sb.Append("\\n");
 						break;
-					case '\t':
-						sb.Append("\\t");
-						break;
 					case '\\':
 					case '\"':
-						sb.Append(c);
-						sb.Append(c);
+						sb.Append(ch);
+						sb.Append(ch);
 						break;
 					default:
-						sb.Append(c);
+						sb.Append(ch);
 						break;
 					}
 				}
