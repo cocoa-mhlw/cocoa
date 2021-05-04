@@ -10,16 +10,16 @@ using Covid19Radar.Model;
 
 namespace Covid19Radar.Droid
 {
-    public static class DSPExtensions
+    public static class DiagnosisSubmissionParameterExtensions
     {
-        public static byte[] GetAndroidNonce(this DiagnosisSubmissionParameter submission)
+        public static byte[] GetNonce(this DiagnosisSubmissionParameter submission)
         {
-            var cleartext = GetAndroidNonceClearText(submission);
+            var cleartext = GetNonceClearText(submission);
             var nonce = GetSha256(cleartext);
             return nonce;
         }
 
-        static string GetAndroidNonceClearText(this DiagnosisSubmissionParameter submission) =>
+        static string GetNonceClearText(this DiagnosisSubmissionParameter submission) =>
             string.Join("|", submission.AppPackageName, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
 
         static string GetKeyString(IEnumerable<DiagnosisSubmissionParameter.Key> keys) =>
