@@ -16,17 +16,6 @@ namespace Covid19Radar.Common
 {
     static class AppUtils
     {
-#if REMOVED
-        public static async void CheckPermission()
-        {
-            var status = await Permissions.CheckStatusAsync<Permissions.LocationAlways>();
-            if (status != PermissionStatus.Granted)
-            {
-                status = await Permissions.RequestAsync<Permissions.LocationAlways>();
-            }
-        }
-#endif
-
         public static async void PopUpShare()
         {
             if (Device.RuntimePlatform == Device.iOS)

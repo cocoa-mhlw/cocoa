@@ -88,11 +88,7 @@ namespace Covid19Radar.Services
                     loggerService.Info($"uri: {uri}");
                     loggerService.Info($"TermsUpdateInfo: {json}");
 
-#if REMOVED
-                    var deserializedJson = Utils.DeserializeFromJson<TermsUpdateInfoModel>(json);
-#else
                     var deserializedJson = JsonConvert.DeserializeObject<TermsUpdateInfoModel>(json);
-#endif
 
                     loggerService.EndMethod();
 

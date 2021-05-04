@@ -103,11 +103,7 @@ namespace Covid19Radar.Services
             {
                 loggerService.EndMethod();
                 var userData = applicationPropertyService.GetProperties("UserData");
-#if REMOVED
-                return Utils.DeserializeFromJson<UserDataModel>(userData.ToString());
-#else
                 return JsonConvert.DeserializeObject<UserDataModel>(userData.ToString());
-#endif
             }
 
             loggerService.EndMethod();

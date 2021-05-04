@@ -72,11 +72,7 @@ namespace Covid19Radar.Services
             loggerService.Info("Get default configuration");
 
             var defaultConfiguration = Task.FromResult(configuration);
-#if REMOVED
-            loggerService.Info($"configuration: {Utils.SerializeToJson(configuration)}");
-#else
             loggerService.Info($"configuration: {JsonConvert.SerializeObject(configuration)}");
-#endif
 
             loggerService.EndMethod();
             return defaultConfiguration;
@@ -244,11 +240,7 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > startTimestamp)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-#if REMOVED
-                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
-#else
                     Debug.WriteLine(JsonConvert.SerializeObject(tekItem));
-#endif
                     Debug.WriteLine(tmpFile);
 
                     loggerService.Info($"Download TEK file. url: {tekItem.Url}");
@@ -368,13 +360,8 @@ namespace Covid19Radar.Services
                 RollingPeriod = (uint)(k.RollingDuration.TotalMinutes / 10),
             });
 
-#if REMOVED
-            var beforeKey = Utils.SerializeToJson(temporaryExposureKeys.ToList());
-            var afterKey = Utils.SerializeToJson(keys.ToList());
-#else
             var beforeKey = JsonConvert.SerializeObject(temporaryExposureKeys.ToList());
             var afterKey = JsonConvert.SerializeObject(keys.ToList());
-#endif
             Debug.WriteLine($"C19R {beforeKey}");
             Debug.WriteLine($"C19R {afterKey}");
 

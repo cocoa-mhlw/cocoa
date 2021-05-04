@@ -11,12 +11,6 @@ namespace Covid19Radar.Common
     {
         #region Other Public Methods
 
-#if REMOVED
-        public static string SerializeToJson(object obj) => JsonConvert.SerializeObject(obj);
-
-        public static T DeserializeFromJson<T>(string jsonObj) => JsonConvert.DeserializeObject<T>(jsonObj);
-#endif
-
         public static DateTime JstNow()
         {
             return TimeZoneInfo.ConvertTime(DateTime.Now, JstTimeZoneInfo());
