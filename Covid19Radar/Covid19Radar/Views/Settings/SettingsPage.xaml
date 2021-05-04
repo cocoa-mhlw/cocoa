@@ -109,6 +109,35 @@
                         VerticalOptions="Start" />
                 </Grid>
             </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="15" HasShadow="False">
+                <StackLayout>
+                    <Label
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        Text="開発に参加する" />
+                    <Label Style="{StaticResource DefaultLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="本アプリは有志により開発されています。" />
+                                <Span Text="貴方も一緒に COCOA を開発しませんか？" />
+                                <Span Text="下記の GitHub リポジトリから開発に参加する事ができます。" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Style="{StaticResource DefaultLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="リポジトリ：" />
+                                <Span Text="https://github.com/cocoa-mhlw/cocoa" TextColor="{StaticResource Primary}">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ScrollView>
 </ContentPage>
