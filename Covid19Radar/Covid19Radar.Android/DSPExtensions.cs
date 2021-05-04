@@ -10,7 +10,7 @@ using Covid19Radar.Model;
 
 namespace Covid19Radar.Droid
 {
-    public static class AndroidExtensions
+    public static class DSPExtensions
     {
         public static byte[] GetAndroidNonce(this DiagnosisSubmissionParameter submission)
         {
