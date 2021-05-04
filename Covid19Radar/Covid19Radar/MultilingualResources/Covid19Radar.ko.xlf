@@ -1175,6 +1175,31 @@ Storage :</target>
           <target state="new">Support</target>
           <note from="MultilingualBuild" annotates="source" priority="2">お問い合わせ（メニュー）</note>
         </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop0" translate="yes" xml:space="preserve">
+          <source>Join us to develop</source>
+          <target state="new">Join us to develop</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">開発に参加する</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop1" translate="yes" xml:space="preserve">
+          <source>This app is developing with volunteers.</source>
+          <target state="new">This app is developing with volunteers.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリは有志により開発されています。</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop2" translate="yes" xml:space="preserve">
+          <source>Let's do you develop COCOA together?</source>
+          <target state="new">Let's do you develop COCOA together?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">貴方も一緒に COCOA を開発しませんか？</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop3" translate="yes" xml:space="preserve">
+          <source>You can join us to develop in the GitHub repository below:</source>
+          <target state="new">You can join us to develop in the GitHub repository below:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">下記の GitHub リポジトリから開発に参加する事ができます。</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop4" translate="yes" xml:space="preserve">
+          <source>The repository:</source>
+          <target state="new">The repository:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">リポジトリ：</note>
+        </trans-unit>
       </group>
     </body>
   </file>
