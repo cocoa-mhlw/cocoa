@@ -119,7 +119,9 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop1}" />
+                                <Span Text=" " />
                                 <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop2}" />
+                                <Span Text=" " />
                                 <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop3}" />
                             </FormattedString>
                         </Label.FormattedText>
