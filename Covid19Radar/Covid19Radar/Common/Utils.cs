@@ -11,9 +11,11 @@ namespace Covid19Radar.Common
     {
         #region Other Public Methods
 
+#if REMOVED
         public static string SerializeToJson(object obj) => JsonConvert.SerializeObject(obj);
 
         public static T DeserializeFromJson<T>(string jsonObj) => JsonConvert.DeserializeObject<T>(jsonObj);
+#endif
 
         public static DateTime JstNow()
         {
@@ -34,9 +36,9 @@ namespace Covid19Radar.Common
             return dateTimes;
         }
 
-        #endregion
+#endregion
 
-        #region Other Private Methods
+#region Other Private Methods
 
         private static TimeZoneInfo JstTimeZoneInfo()
         {
@@ -64,6 +66,6 @@ namespace Covid19Radar.Common
             return TimeZoneInfo.CreateCustomTimeZone("JST", new TimeSpan(9, 0, 0), "(GMT+09:00) JST", "JST");
         }
 
-        #endregion
+#endregion
     }
 }
