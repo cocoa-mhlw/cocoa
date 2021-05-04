@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
@@ -1169,6 +1169,31 @@ Storage :</target>
           <source>https://www.mhlw.go.jp/cocoa/kiyaku_english.html</source>
           <target state="translated">https://www.mhlw.go.jp/cocoa/kiyaku_english.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約URL</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop0" translate="yes" xml:space="preserve">
+          <source>Join us to develop</source>
+          <target state="translated">Join us to develop</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">開発に参加する</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop1" translate="yes" xml:space="preserve">
+          <source>This app is developing with volunteers.</source>
+          <target state="translated">This app is developing with volunteers.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリは有志により開発されています。</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop2" translate="yes" xml:space="preserve">
+          <source>Let's do you develop COCOA together?</source>
+          <target state="translated">Let's do you develop COCOA together?</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">貴方も一緒に COCOA を開発しませんか？</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop3" translate="yes" xml:space="preserve">
+          <source>You can join us to develop in the GitHub repository below:</source>
+          <target state="translated">You can join us to develop in the GitHub repository below:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">下記の GitHub リポジトリから開発に参加する事ができます。</note>
+        </trans-unit>
+        <trans-unit id="SettingsPage_JoinToDevelop4" translate="yes" xml:space="preserve">
+          <source>The repository:</source>
+          <target state="translated">The repository:</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">リポジトリ：</note>
         </trans-unit>
       </group>
     </body>

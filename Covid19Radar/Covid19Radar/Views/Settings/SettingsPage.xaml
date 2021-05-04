@@ -114,20 +114,21 @@
                 <StackLayout>
                     <Label
                         Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="開発に参加する" />
+                        Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop0}" />
                     <Label Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="本アプリは有志により開発されています。" />
-                                <Span Text="貴方も一緒に COCOA を開発しませんか？" />
-                                <Span Text="下記の GitHub リポジトリから開発に参加する事ができます。" />
+                                <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop1}" />
+                                <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop2}" />
+                                <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop3}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
                     <Label Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="リポジトリ：" />
+                                <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop4}" />
+                                <Span Text=" " />
                                 <Span Text="{Binding RepoLink}" TextColor="{StaticResource Primary}">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding OnTapRepoLink}" />

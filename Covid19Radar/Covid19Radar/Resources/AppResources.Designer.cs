@@ -1567,6 +1567,51 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Join us to develop に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPage_JoinToDevelop0 {
+            get {
+                return ResourceManager.GetString("SettingsPage_JoinToDevelop0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   This app is developing with volunteers. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPage_JoinToDevelop1 {
+            get {
+                return ResourceManager.GetString("SettingsPage_JoinToDevelop1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Let&apos;s do you develop COCOA together? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPage_JoinToDevelop2 {
+            get {
+                return ResourceManager.GetString("SettingsPage_JoinToDevelop2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can join us to develop in the GitHub repository below: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPage_JoinToDevelop3 {
+            get {
+                return ResourceManager.GetString("SettingsPage_JoinToDevelop3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The repository: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPage_JoinToDevelop4 {
+            get {
+                return ResourceManager.GetString("SettingsPage_JoinToDevelop4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   License に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageButton1 {
