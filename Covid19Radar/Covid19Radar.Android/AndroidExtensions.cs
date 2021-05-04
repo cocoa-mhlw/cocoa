@@ -2,13 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-#if REMOVED
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using Covid19Radar.Model;
 
-namespace Covid19Radar.Model
+namespace Covid19Radar.Droid
 {
     public static class AndroidExtensions
     {
@@ -39,4 +39,3 @@ namespace Covid19Radar.Model
         }
     }
 }
-#endif
