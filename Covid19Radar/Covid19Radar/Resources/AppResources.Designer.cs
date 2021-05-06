@@ -999,6 +999,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Failed to download the latest information. Please retry later on. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPage_FailedToDownload {
+            get {
+                return ResourceManager.GetString("NewsPage_FailedToDownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   The URL was empty. This problem is maybe a bug. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NewsPage_UrlWasEmpty {
@@ -1058,6 +1067,33 @@ namespace Covid19Radar.Resources {
         internal static string NewsPageLabel_LinksDescription {
             get {
                 return ResourceManager.GetString("NewsPageLabel_LinksDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   There is no latest information yet. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_NoData {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_NoData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Posted date/time: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_Posted {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_Posted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   yyyy/MM/dd HH:mm に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_Posted_Format {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_Posted_Format", resourceCulture);
             }
         }
         

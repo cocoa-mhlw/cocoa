@@ -1079,4 +1079,16 @@ Storage :</value>
   <data name="NewsPage_UrlWasEmpty" xml:space="preserve">
     <value>The URL was empty. This problem is maybe a bug.</value>
   </data>
+  <data name="NewsPageLabel_Posted" xml:space="preserve">
+    <value>Posted date/time:</value>
+  </data>
+  <data name="NewsPageLabel_Posted_Format" xml:space="preserve">
+    <value>yyyy/MM/dd HH:mm</value>
+  </data>
+  <data name="NewsPageLabel_NoData" xml:space="preserve">
+    <value>There is no latest information yet.</value>
+  </data>
+  <data name="NewsPage_FailedToDownload" xml:space="preserve">
+    <value>Failed to download the latest information. Please retry later on.</value>
+  </data>
 </root>

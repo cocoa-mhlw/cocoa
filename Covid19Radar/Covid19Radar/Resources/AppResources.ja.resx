@@ -968,4 +968,16 @@
   <data name="NewsPage_UrlWasEmpty" xml:space="preserve">
     <value>URLが空です。不具合が発生している可能性があります。</value>
   </data>
+  <data name="NewsPageLabel_Posted" xml:space="preserve">
+    <value>投稿日時：</value>
+  </data>
+  <data name="NewsPageLabel_Posted_Format" xml:space="preserve">
+    <value>yyyy'年'MM'月'dd'日' HH'時'mm'分'</value>
+  </data>
+  <data name="NewsPageLabel_NoData" xml:space="preserve">
+    <value>まだ最新情報はありません。</value>
+  </data>
+  <data name="NewsPage_FailedToDownload" xml:space="preserve">
+    <value>最新情報のダウンロードに失敗しました。時間をおいてから再度実行してください。</value>
+  </data>
 </root>

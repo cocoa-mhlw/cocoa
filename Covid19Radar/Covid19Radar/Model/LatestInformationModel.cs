@@ -5,6 +5,7 @@
 #nullable enable
 
 using System;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.Model
 {
@@ -26,7 +27,7 @@ namespace Covid19Radar.Model
         /// <summary>
         ///  最新情報の投稿日時を文字列として取得します。
         /// </summary>
-        public string PostedAsString => this.Posted.ToString();
+        public string PostedAsString => this.Posted.ToString(AppResources.NewsPageLabel_Posted_Format);
 
         /// <summary>
         ///  最新情報の内容を取得または設定します。

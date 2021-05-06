@@ -1217,6 +1217,22 @@ Storage :</source>
           <source>The URL was empty. This problem is maybe a bug.</source>
           <target state="translated">URLが空です。不具合が発生している可能性があります。</target>
         </trans-unit>
+        <trans-unit id="NewsPageLabel_Posted" translate="yes" xml:space="preserve">
+          <source>Posted date/time:</source>
+          <target state="translated">投稿日時：</target>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_Posted_Format" translate="yes" xml:space="preserve">
+          <source>yyyy/MM/dd HH:mm</source>
+          <target state="translated">yyyy'年'MM'月'dd'日' HH'時'mm'分'</target>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_NoData" translate="yes" xml:space="preserve">
+          <source>There is no latest information yet.</source>
+          <target state="translated">まだ最新情報はありません。</target>
+        </trans-unit>
+        <trans-unit id="NewsPage_FailedToDownload" translate="yes" xml:space="preserve">
+          <source>Failed to download the latest information. Please retry later on.</source>
+          <target state="translated">最新情報のダウンロードに失敗しました。時間をおいてから再度実行してください。</target>
+        </trans-unit>
       </group>
     </body>
   </file>

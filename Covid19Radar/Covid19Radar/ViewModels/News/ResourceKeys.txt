@@ -1,6 +1,23 @@
-﻿NewsPageTitle
+NewsPageTitle
 ja: 最新情報ページ
 en: News
+
+NewsPageLabel_Posted
+ja: 投稿日時：
+en: Posted date/time:
+
+NewsPageLabel_Posted_Format
+ja: yyyy'年'MM'月'dd'日' HH'時'mm'分'
+xx: yyyy/MM/dd HH:mm
+en: MMM dd, yyyy tthh:mm
+
+NewsPageLabel_NoData
+ja: まだ最新情報はありません。
+en: There is no latest information yet.
+
+NewsPage_FailedToDownload
+ja: 最新情報のダウンロードに失敗しました。時間をおいてから再度実行してください。
+en: Failed to download the latest information. Please retry later on.
 
 NewsPageLabel_Links
 ja: リンク集

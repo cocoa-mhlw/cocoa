@@ -67,7 +67,8 @@
                                             <Label Style="{StaticResource DefaultLabel}">
                                                 <Label.FormattedText>
                                                     <FormattedString>
-                                                        <Span Text="投稿日時：" />
+                                                        <Span Text="{x:Static resources:AppResources.NewsPageLabel_Posted}" />
+                                                        <Span Text=" " />
                                                         <Span Text="{Binding PostedAsString}" />
                                                     </FormattedString>
                                                 </Label.FormattedText>
@@ -79,7 +80,7 @@
                                 <CollectionView.EmptyView>
                                     <Label
                                         Style="{StaticResource DefaultLabel}"
-                                        Text="まだ最新情報はありません。" />
+                                        Text="{x:Static resources:AppResources.NewsPageLabel_NoData}" />
                                 </CollectionView.EmptyView>
                             </CollectionView>
                         </StackLayout>

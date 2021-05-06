@@ -126,7 +126,7 @@ namespace Covid19Radar.ViewModels
             } else {
                 this.LatestInformation = new ObservableCollection<LatestInformationModel>();
                 this.LatestInformation.Add(new LatestInformationModel() {
-                    Title = "最新情報のダウンロードに失敗しました。時間をおいてから再度実行してください。"
+                    Title = AppResources.NewsPage_FailedToDownload
                 });
             }
             _logger.EndMethod();

@@ -1218,6 +1218,22 @@ Storage :</target>
           <source>The URL was empty. This problem is maybe a bug.</source>
           <target state="new">The URL was empty. This problem is maybe a bug.</target>
         </trans-unit>
+        <trans-unit id="NewsPageLabel_Posted" translate="yes" xml:space="preserve">
+          <source>Posted date/time:</source>
+          <target state="new">Posted date/time:</target>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_Posted_Format" translate="yes" xml:space="preserve">
+          <source>yyyy/MM/dd HH:mm</source>
+          <target state="new">yyyy/MM/dd HH:mm</target>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_NoData" translate="yes" xml:space="preserve">
+          <source>There is no latest information yet.</source>
+          <target state="new">There is no latest information yet.</target>
+        </trans-unit>
+        <trans-unit id="NewsPage_FailedToDownload" translate="yes" xml:space="preserve">
+          <source>Failed to download the latest information. Please retry later on.</source>
+          <target state="new">Failed to download the latest information. Please retry later on.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
