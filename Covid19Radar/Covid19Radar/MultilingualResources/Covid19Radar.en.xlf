@@ -804,7 +804,7 @@
           <note from="MultilingualBuild" annotates="source" priority="2">検査等の相談先を探す</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
-          <source>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19,
+          <source>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
 please follow the app. guidance and check the Consultation Centers List to receive a consultation.
 ・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</source>
           <target state="needs-review-translation">・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
@@ -1064,7 +1064,7 @@ Storage :</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録すると</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription6" translate="yes" xml:space="preserve">
-          <source>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed
+          <source>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
 ＊No record of where the close contact happened will be disclosed</source>
           <target state="needs-review-translation">＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
 ＊No record of where the close contact happened will be disclosed</target>

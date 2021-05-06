@@ -825,10 +825,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">検査等の相談先を探す</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
-          <source>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19,
+          <source>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
 please follow the app. guidance and check the Consultation Centers List to receive a consultation.
 ・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</source>
-          <target state="new">・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19,
+          <target state="new">・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
 please follow the app. guidance and check the Consultation Centers List to receive a consultation.
 ・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</target>
           <note from="MultilingualBuild" annotates="source" priority="2">・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
@@ -1084,9 +1084,9 @@ Storage :</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録すると</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription6" translate="yes" xml:space="preserve">
-          <source>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed
+          <source>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
 ＊No record of where the close contact happened will be disclosed</source>
-          <target state="new">＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed
+          <target state="new">＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
 ＊No record of where the close contact happened will be disclosed</target>
           <note from="MultilingualBuild" annotates="source" priority="2">※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
 ※接触した場所がどこなのか記録されたり、他の人に知られることもありません</note>
