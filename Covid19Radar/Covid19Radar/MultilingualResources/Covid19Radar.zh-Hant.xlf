@@ -805,10 +805,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">検査等の相談先を探す</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
-          <source>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
+          <source>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19,
 please follow the app. guidance and check the Consultation Centers List to receive a consultation.
 ・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</source>
-          <target state="new">・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
+          <target state="new">・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19,
 please follow the app. guidance and check the Consultation Centers List to receive a consultation.
 ・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</target>
           <note from="MultilingualBuild" annotates="source" priority="2">・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
@@ -1064,9 +1064,9 @@ Storage :</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録すると</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription6" translate="yes" xml:space="preserve">
-          <source>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
+          <source>＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed
 ＊No record of where the close contact happened will be disclosed</source>
-          <target state="new">＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed 
+          <target state="new">＊Registration is completely anonymous and no personal information such as name or contact information will be disclosed
 ＊No record of where the close contact happened will be disclosed</target>
           <note from="MultilingualBuild" annotates="source" priority="2">※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
 ※接触した場所がどこなのか記録されたり、他の人に知られることもありません</note>
@@ -1170,6 +1170,54 @@ Storage :</target>
           <source>https://www.mhlw.go.jp/cocoa/kiyaku_english.html</source>
           <target state="new">https://www.mhlw.go.jp/cocoa/kiyaku_english.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約URL</note>
+        </trans-unit>
+        <trans-unit id="CoronaGoJPUrl" translate="yes" xml:space="preserve">
+          <source>https://corona.go.jp/en/</source>
+          <target state="new">https://corona.go.jp/en/</target>
+        </trans-unit>
+        <trans-unit id="GoogleSearchUrl" translate="yes" xml:space="preserve">
+          <source>https://www.google.us/search?hl=en&amp;amp;q=Coronavirus+disease+2019</source>
+          <target state="new">https://www.google.us/search?hl=en&amp;amp;q=Coronavirus+disease+2019</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowCoronaGoJP" translate="yes" xml:space="preserve">
+          <source>Data by Cabinet Secretariat</source>
+          <target state="new">Data by Cabinet Secretariat</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowGoogle" translate="yes" xml:space="preserve">
+          <source>Search News on Google</source>
+          <target state="new">Search News on Google</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowStopCOVID19JP" translate="yes" xml:space="preserve">
+          <source>Anti-Coronavirus Dashboard</source>
+          <target state="new">Anti-Coronavirus Dashboard</target>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_Links" translate="yes" xml:space="preserve">
+          <source>Links</source>
+          <target state="new">Links</target>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_LinksDescription" translate="yes" xml:space="preserve">
+          <source>You can search information about the new corona.</source>
+          <target state="new">You can search information about the new corona.</target>
+        </trans-unit>
+        <trans-unit id="NewsPageTitle" translate="yes" xml:space="preserve">
+          <source>News</source>
+          <target state="new">News</target>
+        </trans-unit>
+        <trans-unit id="StopCOVID19JPUrl" translate="yes" xml:space="preserve">
+          <source>https://www.stopcovid19.jp/#en</source>
+          <target state="new">https://www.stopcovid19.jp/#en</target>
+        </trans-unit>
+        <trans-unit id="WikipediaUrl" translate="yes" xml:space="preserve">
+          <source>https://en.wikipedia.org/wiki/COVID-19_pandemic</source>
+          <target state="new">https://en.wikipedia.org/wiki/COVID-19_pandemic</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowWikipedia" translate="yes" xml:space="preserve">
+          <source>See Wikipedia</source>
+          <target state="new">See Wikipedia</target>
+        </trans-unit>
+        <trans-unit id="NewsPage_UrlWasEmpty" translate="yes" xml:space="preserve">
+          <source>The URL was empty. This problem is maybe a bug.</source>
+          <target state="new">The URL was empty. This problem is maybe a bug.</target>
         </trans-unit>
       </group>
     </body>
