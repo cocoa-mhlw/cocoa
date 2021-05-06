@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -32,7 +32,7 @@ namespace Covid19Radar
         private ILoggerService LoggerService;
         private ILogFileService LogFileService;
 
-        /*
+        /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor.
          * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
