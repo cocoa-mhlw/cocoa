@@ -24,12 +24,17 @@ namespace Covid19Radar.Model
         public DateTime Posted { get; set; }
 
         /// <summary>
+        ///  最新情報の投稿日時を文字列として取得します。
+        /// </summary>
+        public string PostedAsString => this.Posted.ToString();
+
+        /// <summary>
         ///  最新情報の内容を取得または設定します。
         /// </summary>
         public string? Contents { get; set; }
 
         /// <summary>
-        ///  最新情報のタグを取得または設定します。
+        ///  最新情報のタグを含む配列を取得または設定します。
         /// </summary>
         public string?[]? Tags { get; set; }
     }

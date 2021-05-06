@@ -5,11 +5,15 @@
 #nullable enable
 
 using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Acr.UserDialogs;
+using Covid19Radar.Model;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Prism.Navigation;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using SysColor = System.Drawing.Color;
@@ -21,12 +25,20 @@ namespace Covid19Radar.ViewModels
     /// </summary>
     public class NewsPageViewModel : ViewModelBase
     {
-        private static readonly Uri                  CoronaGoJPUrl    = new Uri(AppResources.CoronaGoJPUrl);
-        private static readonly Uri                  StopCOVID19JPUrl = new Uri(AppResources.StopCOVID19JPUrl);
-        private static readonly Uri                  WikipediaUrl     = new Uri(AppResources.WikipediaUrl);
-        private        readonly ILoggerService       _logger;
-        private                 string?              _g_search;
-        private                 BrowserLaunchOptions _blo;
+        private static readonly Uri                                           CoronaGoJPUrl    = new Uri(AppResources.CoronaGoJPUrl);
+        private static readonly Uri                                           StopCOVID19JPUrl = new Uri(AppResources.StopCOVID19JPUrl);
+        private static readonly Uri                                           WikipediaUrl     = new Uri(AppResources.WikipediaUrl);
+        private        readonly ILoggerService                                _logger;
+        private        readonly ILatestInformationService                     _lis;
+        private                 ObservableCollection<LatestInformationModel>? _lim;
+        private                 string?                                       _g_search;
+        private                 BrowserLaunchOptions                          _blo;
+
+        public ObservableCollection<LatestInformationModel>? LatestInformation
+        {
+            get => _lim;
+            set => this.SetProperty(ref _lim, value);
+        }
 
         /// <summary>
         ///  Google 検索する内容を取得または設定します。
@@ -70,9 +82,11 @@ namespace Covid19Radar.ViewModels
         ///  型'<see cref="Covid19Radar.ViewModels.NewsPageViewModel"/>'の新しいインスタンスを生成します。
         /// </summary>
         /// <param name="logger">ログの出力先を指定します。</param>
-        public NewsPageViewModel(ILoggerService logger)
+        /// <param name="lis">最新情報の取得に利用するサービスを指定します。</param>
+        public NewsPageViewModel(ILoggerService logger, ILatestInformationService lis)
         {
             _logger    = logger ?? throw new ArgumentNullException(nameof(logger));
+            _lis       = lis    ?? throw new ArgumentNullException(nameof(lis));
             this.Title = AppResources.NewsPageTitle;
 
             _blo = new BrowserLaunchOptions() {
@@ -98,6 +112,24 @@ namespace Covid19Radar.ViewModels
             this.OnClick_ShowCoronaGoJP    = new Command(async () => await this.ShowPage(CoronaGoJPUrl));
             this.OnClick_ShowStopCOVID19JP = new Command(async () => await this.ShowPage(StopCOVID19JPUrl));
             this.OnClick_ShowWikipedia     = new Command(async () => await this.ShowPage(WikipediaUrl));
+        }
+
+        /// <inheritdoc/>
+        public override async void Initialize(INavigationParameters parameters)
+        {
+            _logger.StartMethod();
+            base.Initialize(parameters);
+
+            var data = await _lis.DownloadAsync();
+            if (!(data is null)) {
+                this.LatestInformation = new ObservableCollection<LatestInformationModel>(data);
+            } else {
+                this.LatestInformation = new ObservableCollection<LatestInformationModel>();
+                this.LatestInformation.Add(new LatestInformationModel() {
+                    Title = "最新情報のダウンロードに失敗しました。時間をおいてから再度実行してください。"
+                });
+            }
+            _logger.EndMethod();
         }
 
         /// <summary>

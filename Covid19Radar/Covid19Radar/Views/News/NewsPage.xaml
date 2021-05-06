@@ -51,6 +51,41 @@
                     </Frame>
                     <Frame Style="{StaticResource ForegroundFrame}">
                         <StackLayout Style="{StaticResource DefaultStackLayout}">
+                            <CollectionView ItemsSource="{Binding LatestInformation}">
+                                <CollectionView.ItemsLayout>
+                                    <LinearItemsLayout Orientation="Vertical" />
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout>
+                                            <Label
+                                                Style="{StaticResource DefaultLabelLarge}"
+                                                Text="{Binding Title}" />
+                                            <Label
+                                                Style="{StaticResource DefaultLabel}"
+                                                Text="{Binding Contents}" />
+                                            <Label Style="{StaticResource DefaultLabel}">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="投稿日時：" />
+                                                        <Span Text="{Binding PostedAsString}" />
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                            <BoxView Style="{StaticResource DefaultLineStyle}" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                                <CollectionView.EmptyView>
+                                    <Label
+                                        Style="{StaticResource DefaultLabel}"
+                                        Text="まだ最新情報はありません。" />
+                                </CollectionView.EmptyView>
+                            </CollectionView>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Style="{StaticResource ForegroundFrame}">
+                        <StackLayout Style="{StaticResource DefaultStackLayout}">
                             <!-- TODO: ここに統計情報を取得して表示するコードを追加 -->
                             <Label Text="Now developing..." />
                             <!--
