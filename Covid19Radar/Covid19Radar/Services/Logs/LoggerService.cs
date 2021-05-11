@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 
 namespace Covid19Radar.Services.Logs
 {
-	public enum LogLevel
+    public enum LogLevel
     {
         Verbose,
         Debug,
@@ -20,7 +20,7 @@ namespace Covid19Radar.Services.Logs
     {
         #region Instance Fields
 
-        private readonly ILogWriter _writer;
+        private readonly ILogWriter lw;
 
         #endregion
 
@@ -28,7 +28,7 @@ namespace Covid19Radar.Services.Logs
 
         public LoggerService(ILogWriter logWriter)
         {
-            _writer = logWriter ?? throw new ArgumentNullException(nameof(logWriter));
+            lw = logWriter ?? throw new ArgumentNullException(nameof(logWriter));
         }
 
         #endregion
@@ -40,7 +40,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            _writer.Write("Start", method, filePath, lineNumber, LogLevel.Info);
+            lw.Write("Start", method, filePath, lineNumber, LogLevel.Info);
         }
 
         public void EndMethod(
@@ -48,7 +48,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            _writer.Write("End", method, filePath, lineNumber, LogLevel.Info);
+            lw.Write("End", method, filePath, lineNumber, LogLevel.Info);
         }
 
         public void Verbose(
@@ -57,7 +57,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            _writer.Write(message, method, filePath, lineNumber, LogLevel.Verbose);
+            lw.Write(message, method, filePath, lineNumber, LogLevel.Verbose);
         }
 
         public void Debug(
@@ -66,7 +66,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            _writer.Write(message, method, filePath, lineNumber, LogLevel.Debug);
+            lw.Write(message, method, filePath, lineNumber, LogLevel.Debug);
         }
 
         public void Info(
@@ -75,7 +75,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            _writer.Write(message, method, filePath, lineNumber, LogLevel.Info);
+            lw.Write(message, method, filePath, lineNumber, LogLevel.Info);
         }
 
         public void Warning(
@@ -84,7 +84,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            _writer.Write(message, method, filePath, lineNumber, LogLevel.Warning);
+            lw.Write(message, method, filePath, lineNumber, LogLevel.Warning);
         }
 
         public void Error(
@@ -93,7 +93,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            _writer.Write(message, method, filePath, lineNumber, LogLevel.Error);
+            lw.Write(message, method, filePath, lineNumber, LogLevel.Error);
         }
 
         public void Exception(
@@ -103,7 +103,7 @@ namespace Covid19Radar.Services.Logs
             [CallerFilePath] string filePath = "",
             [CallerLineNumber] int lineNumber = 0)
         {
-            _writer.Write(message + ", Exception: " + ex.ToString(), method, filePath, lineNumber, LogLevel.Error);
+            lw.Write(message + ", Exception: " + ex.ToString(), method, filePath, lineNumber, LogLevel.Error);
         }
 
         #endregion
