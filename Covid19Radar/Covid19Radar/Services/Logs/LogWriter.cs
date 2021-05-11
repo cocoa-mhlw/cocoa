@@ -171,8 +171,8 @@ namespace Covid19Radar.Services.Logs
 						break;
 					case '\\':
 					case '\"':
-						sb.Append(ch);
-						sb.Append(ch);
+						sb.Append(ch)
+						    .Append(ch);
 						break;
 					default:
 						sb.Append(ch);
