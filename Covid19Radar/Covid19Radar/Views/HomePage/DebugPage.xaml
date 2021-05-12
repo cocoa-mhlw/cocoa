@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+    - License, v. 2.0. If a copy of the MPL was not distributed with this
+    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    x:Class="Covid19Radar.Views.DebugPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="DebugPage"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout
+            Padding="15"
+            BackgroundColor="#EEEEEE"
+            Spacing="15">
+            <Frame
+                Padding="10"
+                CornerRadius="10"
+                HasShadow="False">
+                <StackLayout Spacing="0">
+                    <Button
+                    Command="{Binding Path=OnClickReload}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="Reload" />
+                    <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
+                    <Label.FormattedText>
+                    <FormattedString>
+                <Span Text="DEBUG INFO&#xa;"/>
+                <Span Text="{Binding StringAppSettings}" />
+                    </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button
+                    Command="{Binding Path=OnClickRemove}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="Reset LastProcessTekTimestamp" />
+                </StackLayout>
+            </Frame>
+            <Frame
+                Padding="10"
+                CornerRadius="10"
+                HasShadow="False">
+                <StackLayout Spacing="0">
+                <Button
+                    Command="{prism:NavigateTo '/MenuPage/NavigationPage/HomePage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.TutorialPage6ButtonText1}" />
+                <Button
+                    Command="{prism:NavigateTo '/MenuPage/NavigationPage/HelpMenuPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.TutorialPage6ButtonText2}" />
+
+                <Button
+                    Command="{prism:NavigateTo 'NavigationPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="NavigationPage" />
+                <Button
+                    Command="{prism:NavigateTo 'MenuPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="MenuPage" />
+                <Button
+                    Command="{prism:NavigateTo 'HomePage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="HomePage" />
+                <Button
+                    Command="{prism:NavigateTo 'DebugPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="DebugPage" />
+                <Button
+                    Command="{prism:NavigateTo 'SettingsPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="SettingsPage" />
+                <Button
+                    Command="{prism:NavigateTo 'LicenseAgreementPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="LicenseAgreementPage" />
+                <Button
+                    Command="{prism:NavigateTo 'TutorialPage1'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="TutorialPage1" />
+                <Button
+                    Command="{prism:NavigateTo 'TutorialPage2'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="TutorialPage2" />
+                <Button
+                    Command="{prism:NavigateTo 'TutorialPage3'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="TutorialPage3" />
+                <Button
+                    Command="{prism:NavigateTo 'PrivacyPolicyPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="PrivacyPolicyPage" />
+                <Button
+                    Command="{prism:NavigateTo 'TutorialPage4'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="TutorialPage4" />
+                <Button
+                    Command="{prism:NavigateTo 'TutorialPage5'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="TutorialPage5" />
+                <Button
+                    Command="{prism:NavigateTo 'TutorialPage6'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="TutorialPage6" />
+                <Button
+                    Command="{prism:NavigateTo 'HelpMenuPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="HelpMenuPage" />
+                <Button
+                    Command="{prism:NavigateTo 'HelpPage1'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="HelpPage1" />
+                <Button
+                    Command="{prism:NavigateTo 'HelpPage2'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="HelpPage2" />
+                <Button
+                    Command="{prism:NavigateTo 'HelpPage3'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="HelpPage3" />
+                <Button
+                    Command="{prism:NavigateTo 'HelpPage4'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="HelpPage4" />
+                <Button
+                    Command="{prism:NavigateTo 'SendLogConfirmationPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="SendLogConfirmationPage" />
+                <Button
+                    Command="{prism:NavigateTo 'SendLogCompletePage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="SendLogCompletePage" />
+                <Button
+                    Command="{prism:NavigateTo 'PrivacyPolicyPage2'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="PrivacyPolicyPage2" />
+                <Button
+                    Command="{prism:NavigateTo 'InqueryPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="InqueryPage" />
+                <Button
+                    Command="{prism:NavigateTo 'TermsofservicePage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="TermsofservicePage" />
+                <Button
+                    Command="{prism:NavigateTo 'ThankYouNotifyOtherPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="ThankYouNotifyOtherPage" />
+                <Button
+                    Command="{prism:NavigateTo 'NotifyOtherPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="NotifyOtherPage" />
+                <Button
+                    Command="{prism:NavigateTo 'NotContactPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="NotContactPage" />
+                <Button
+                    Command="{prism:NavigateTo 'ContactedNotifyPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="ContactedNotifyPage" />
+                <Button
+                    Command="{prism:NavigateTo 'SubmitConsentPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="SubmitConsentPage" />
+                <Button
+                    Command="{prism:NavigateTo 'ExposuresPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="ExposuresPage" />
+                <Button
+                    Command="{prism:NavigateTo 'ReAgreePrivacyPolicyPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="ReAgreePrivacyPolicyPage" />
+                <Button
+                    Command="{prism:NavigateTo 'ReAgreeTermsOfServicePage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="ReAgreeTermsOfServicePage" />
+                <Button
+                    Command="{prism:NavigateTo 'SplashPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="SplashPage" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
