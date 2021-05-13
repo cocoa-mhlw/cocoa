@@ -20,7 +20,6 @@ namespace Covid19Radar.Services
 
     public interface ITermsUpdateService
     {
-        Task Migrate(TermsType termsType, bool isAgree);
         Task<TermsUpdateInfoModel> GetTermsUpdateInfo();
         bool IsReAgree(TermsType termsType, TermsUpdateInfoModel privacyUpdateInfo);
         void SaveLastUpdateDate(TermsType termsType, DateTime updateDate);
@@ -31,47 +30,12 @@ namespace Covid19Radar.Services
     public class TermsUpdateService : ITermsUpdateService
     {
         private readonly ILoggerService loggerService;
-        private readonly IApplicationPropertyService applicationPropertyService;
         private readonly IPreferencesService preferencesService;
 
-        private static readonly string TermsOfServiceLastUpdateDateKey = "TermsOfServiceLastUpdateDateTime";
-        private static readonly string PrivacyPolicyLastUpdateDateKey = "PrivacyPolicyLastUpdateDateTime";
-
-        public TermsUpdateService(ILoggerService loggerService, IApplicationPropertyService applicationPropertyService, IPreferencesService preferencesService)
+        public TermsUpdateService(ILoggerService loggerService, IPreferencesService preferencesService)
         {
             this.loggerService = loggerService;
-            this.applicationPropertyService = applicationPropertyService;
             this.preferencesService = preferencesService;
-        }
-
-        public async Task Migrate(TermsType termsType, bool isAgree)
-        {
-            loggerService.StartMethod();
-
-            var applicationPropertyKey = termsType == TermsType.TermsOfService ? TermsOfServiceLastUpdateDateKey : PrivacyPolicyLastUpdateDateKey;
-            var preferenceKey = termsType == TermsType.TermsOfService ? PreferenceKey.TermsOfServiceLastUpdateDateTime : PreferenceKey.PrivacyPolicyLastUpdateDateTime;
-
-            if (preferencesService.ContainsKey(applicationPropertyKey))
-            {
-                return;
-            }
-
-            if (isAgree)
-            {
-                if (applicationPropertyService.ContainsKey(applicationPropertyKey))
-                {
-                    var lastUpdateDate = (DateTime)applicationPropertyService.GetProperties(applicationPropertyKey);
-                    preferencesService.SetValue(preferenceKey, lastUpdateDate);
-                }
-                else
-                {
-                    preferencesService.SetValue(preferenceKey, new DateTime());
-                }
-            }
-
-            await applicationPropertyService.Remove(applicationPropertyKey);
-
-            loggerService.EndMethod();
         }
 
         public async Task<TermsUpdateInfoModel> GetTermsUpdateInfo()

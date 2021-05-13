@@ -10,6 +10,8 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
+using Covid19Radar.Services.Migration;
+using Covid19Radar.Droid.Services.Migration;
 
 namespace Covid19Radar.Droid
 {
@@ -39,7 +41,7 @@ namespace Covid19Radar.Droid
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
-
+            container.Register<IVersionMigration, PlatformVersionMigrationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

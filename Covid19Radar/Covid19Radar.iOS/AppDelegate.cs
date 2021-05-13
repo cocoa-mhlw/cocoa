@@ -5,8 +5,10 @@
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.iOS.Services.Migration;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Services.Migration;
 using DryIoc;
 using Foundation;
 using UIKit;
@@ -76,7 +78,7 @@ namespace Covid19Radar.iOS
             container.Register<ISecureStorageDependencyService, SecureStorageServiceIos>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
-
+            container.Register<IVersionMigration, PlatformVersionMigrationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else
