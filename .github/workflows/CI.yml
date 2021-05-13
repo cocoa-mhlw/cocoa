@@ -20,8 +20,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with: 
-        clean: false
     - name: setup-xamarin
       uses: maxim-lobanov/setup-xamarin@v1
       with:
@@ -35,15 +33,13 @@ jobs:
         msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator -r
   build_android:
     name: Build-Android
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         Configuration: [Debug, Debug_Mock, Release]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with: 
-        clean: false
     - name: setup-xamarin
       uses: maxim-lobanov/setup-xamarin@v1
       with:
@@ -57,12 +53,10 @@ jobs:
         msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /t:Rebuild /p:Configuration=${{ matrix.Configuration }} -r
   test:
     name: Test
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with: 
-        clean: false
     - name: setup-xamarin
       uses: maxim-lobanov/setup-xamarin@v1
       with:
