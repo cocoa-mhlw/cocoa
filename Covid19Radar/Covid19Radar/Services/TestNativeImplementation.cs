@@ -26,7 +26,7 @@ namespace Covid19Radar.Services
 		public async Task StopAsync()
 		{
 			await WaitRandom();
-			Preferences.Set("fake_enabled", true);
+			Preferences.Set("fake_enabled", false);
 		}
 
 		public async Task<bool> IsEnabledAsync()
