@@ -21,7 +21,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: setup-xamarin
-      uses: maxim-lobanov/setup-xamarin@v1
+      uses: maxim-lobanov/setup-xamarin@v1.2.1
       with:
         mono-version: 6.12 # specify version in '<major>.<minor>' format
         xamarin-ios-version: 14 # specify version in '<major>' format
@@ -41,7 +41,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: setup-xamarin
-      uses: maxim-lobanov/setup-xamarin@v1
+      uses: maxim-lobanov/setup-xamarin@v1.2.1
       with:
         mono-version: 6.12 # specify version in '<major>.<minor>' format
         xamarin-ios-version: 14 # specify version in '<major>' format
@@ -58,7 +58,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: setup-xamarin
-      uses: maxim-lobanov/setup-xamarin@v1
+      uses: maxim-lobanov/setup-xamarin@v1.2.1
       with:
         mono-version: 6.12 # specify version in '<major>.<minor>' format
         xamarin-ios-version: 14 # specify version in '<major>' format
