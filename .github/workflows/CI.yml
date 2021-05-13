@@ -30,12 +30,9 @@ jobs:
         xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
         xamarin-android-version: 11.2 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
         xcode-version: 12 # set the latest available Xcode 11
-    - name: Prepare Xamarin
-      run: |
-        dotnet restore ${{ github.workspace }}/Covid19Radar.sln
     - name: iOS.${{ matrix.Configuration }}
       run: |
-        msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator
+        msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj /t:Rebuild /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator -r
   build_android:
     name: Build-Android
     runs-on: macos-latest
@@ -55,12 +52,9 @@ jobs:
         xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
         xamarin-android-version: 11.2 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
         xcode-version: 12 # set the latest available Xcode 11
-    - name: Prepare Xamarin
-      run: |
-        dotnet restore ${{ github.workspace }}/Covid19Radar.sln
     - name: Android.${{ matrix.Configuration }}
       run: |
-        msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /t:Rebuild /p:Configuration=${{ matrix.Configuration }}
+        msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /t:Rebuild /p:Configuration=${{ matrix.Configuration }} -r
   test:
     name: Test
     runs-on: macos-latest
