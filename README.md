@@ -1,4 +1,4 @@
-# COVID-19 Contact-Confirming Application COCOA (English)/([Japanese](README.ja.md))
+# COVID-19 Contact-Confirming Application COCOA (English)/([Japanese](README.ja.md)) ![COCOA flow](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CI.yml/badge.svg)
 
 This is the official repository for the COVID-19 Contact-Confirming Application(COCOA).  
 COCOA has been developed from [Project Covid19Radar](https://github.com/Covid-19Radar).
