@@ -91,7 +91,7 @@ namespace Covid19Radar.Services
             loggerService.Info($"ExposureSummary.MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
             loggerService.Info($"ExposureSummary.DaysSinceLastExposure: {userExposureSummary.DaysSinceLastExposure}");
             loggerService.Info($"ExposureSummary.HighestRiskScore: {userExposureSummary.HighestRiskScore}");
-            loggerService.Info($"ExposureSummary.AttenuationDurations: {((userExposureSummary.AttenuationDurations==null) ? "null" : string.Join(",", userExposureSummary.AttenuationDurations))}");
+            loggerService.Info($"ExposureSummary.AttenuationDurations: {((userExposureSummary.AttenuationDurations == null) ? "null" : string.Join(",", userExposureSummary.AttenuationDurations))}");
             loggerService.Info($"ExposureSummary.SummationRiskScore: {userExposureSummary.SummationRiskScore}");
 
             var config = await GetConfigurationAsync();
