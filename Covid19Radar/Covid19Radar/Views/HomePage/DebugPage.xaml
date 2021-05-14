@@ -26,22 +26,54 @@
                 CornerRadius="10"
                 HasShadow="False">
                 <StackLayout Spacing="0">
-                    <Button
-                    Command="{Binding Path=OnClickReload}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="Reload" />
-                    <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
+                    <Label HorizontalTextAlignment="Start" Style="{StaticResource DefaultWebView}">
                     <Label.FormattedText>
                     <FormattedString>
-                <Span Text="DEBUG INFO&#xa;"/>
-                <Span Text="{Binding StringAppSettings}" />
+                      <Span Text="DEBUG INFO&#xa;"/>
+                      <Span Text="{Binding DebugInfo}" />
                     </FormattedString>
                     </Label.FormattedText>
-                </Label>
-                <Button
-                    Command="{Binding Path=OnClickRemove}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="Reset LastProcessTekTimestamp" />
+                    </Label>
+                    <Button
+                        Command="{Binding Path=OnClickReload}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Reload" />
+                    <Button
+                        Command="{Binding Path=OnClickStartExposureNotification}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="StartExposureNotification" />
+                    <Button
+                        Command="{Binding Path=OnClickFetchExposureKeyAsync}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="FetchExposureKeyAsync" />
+                    <Button
+                        Command="{Binding Path=OnClickStopExposureNotification}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="StopExposureNotification" />
+                    <Button
+                        Command="{Binding Path=OnClickRemoveStartDate}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="RemoveStartDate" />
+                    <Button
+                        Command="{Binding Path=OnClickRemoveExposureInformation}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="RemoveExposureInformation" />
+                    <Button
+                        Command="{Binding Path=OnClickRemoveConfiguration}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="RemoveConfiguration" />
+                    <Button
+                        Command="{Binding Path=OnClickRemoveLastProcessTekTimestamp}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="RemoveLastProcessTekTimestamp" />
+                    <Button
+                        Command="{Binding Path=OnClickRemoveAllUpdateDate}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="RemoveAllUpdateDate" />
+                    <Button
+                        Command="{Binding Path=OnClickQuit}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Quit" />
                 </StackLayout>
             </Frame>
             <Frame
@@ -57,7 +89,7 @@
                     Command="{prism:NavigateTo '/MenuPage/NavigationPage/HelpMenuPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.TutorialPage6ButtonText2}" />
-
+                <!-- see ../../App.xaml.cs -->
                 <Button
                     Command="{prism:NavigateTo 'NavigationPage'}"
                     Style="{StaticResource DefaultButton}"
