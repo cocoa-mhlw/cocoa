@@ -93,7 +93,7 @@ namespace Covid19Radar.ViewModels
             this.termsUpdateService = termsUpdateService;
             this.exposureNotificationService = exposureNotificationService;
         }
-        public override async void Initialize(INavigationParameters parameters)
+        public override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
             info("Initialize");
