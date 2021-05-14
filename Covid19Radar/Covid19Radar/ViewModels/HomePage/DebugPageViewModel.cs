@@ -19,11 +19,9 @@ namespace Covid19Radar.ViewModels
 {
     public class DebugPageViewModel : ViewModelBase
     {
-        private readonly ILoggerService loggerService;
         private readonly IUserDataService userDataService;
         private readonly ITermsUpdateService termsUpdateService;
         private readonly IExposureNotificationService exposureNotificationService;
-        private readonly IHttpDataService httpDataService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -85,10 +83,9 @@ namespace Covid19Radar.ViewModels
             var str = new[] { "Build: " + os, "Ver: " + AppSettings.Instance.AppVersion, "Region: " + string.Join(",", AppSettings.Instance.SupportedRegions), "CdnUrl: " + AppSettings.Instance.CdnUrlBase, "ApiUrl: " + AppSettings.Instance.ApiUrlBase, "Agree: " + agree, "StartDate: " + userDataService.GetStartDate().ToLocalTime().ToString("F"), "DaysOfUse: " + userDataService.GetDaysOfUse(), "ExposureCount: " + exposureNotificationService.GetExposureCount(), "LastProcessTek: " + LastProcessTekTimestamp, " (long): " + ticks, "EN: " + en, "ENS: " + status, "Now: " + DateTime.Now.ToLocalTime().ToString("F"), ex};
             DebugInfo = string.Join(Environment.NewLine, str);
         }
-        public DebugPageViewModel(IHttpDataService httpDataService, INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ITermsUpdateService termsUpdateService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+        public DebugPageViewModel(INavigationService navigationService, IUserDataService userDataService, ITermsUpdateService termsUpdateService, IExposureNotificationService exposureNotificationService) : base(navigationService)
         {
             Title = "Title:DebugPage";
-            this.loggerService = loggerService;
             this.userDataService = userDataService;
             this.termsUpdateService = termsUpdateService;
             this.exposureNotificationService = exposureNotificationService;
