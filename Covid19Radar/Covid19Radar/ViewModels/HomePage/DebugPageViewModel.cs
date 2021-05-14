@@ -114,7 +114,7 @@ namespace Covid19Radar.ViewModels
         });
         public Command OnClickFetchExposureKeyAsync => new Command(async () =>
         {
-            string exLog = "FetchExposureKeyAsync";
+            var exLog = "FetchExposureKeyAsync";
             try { await exposureNotificationService.FetchExposureKeyAsync(); }
             catch (Exception ex) { exLog += ":Exception: " + ex.ToString(); }
             info(exLog);
