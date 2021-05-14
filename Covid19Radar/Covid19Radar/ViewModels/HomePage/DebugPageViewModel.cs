@@ -75,12 +75,17 @@ namespace Covid19Radar.ViewModels
             DateTimeOffset dt = DateTimeOffset.FromUnixTimeMilliseconds(ticks).ToOffset(new TimeSpan(9, 0, 0));
             //please check : offset is correct or not
             //cf: ../../../Covid19Radar.Android/Services/Logs/LogPeriodicDeleteServiceAndroid.cs
-            string LastProcessTekTimestamp = dt.ToLocalTime().ToString("F");
+            string lastProcessTekTimestamp = dt.ToLocalTime().ToString("F");
 
-            var en = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
-            var status = await exposureNotificationService.UpdateStatusMessageAsync();
+            var exposureNotificationStatus = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
+            var exposureNotificationMessage = await exposureNotificationService.UpdateStatusMessageAsync();
             // ../../settings.json
-            var str = new[] { "Build: " + os, "Ver: " + AppSettings.Instance.AppVersion, "Region: " + string.Join(",", AppSettings.Instance.SupportedRegions), "CdnUrl: " + AppSettings.Instance.CdnUrlBase, "ApiUrl: " + AppSettings.Instance.ApiUrlBase, "Agree: " + agree, "StartDate: " + userDataService.GetStartDate().ToLocalTime().ToString("F"), "DaysOfUse: " + userDataService.GetDaysOfUse(), "ExposureCount: " + exposureNotificationService.GetExposureCount(), "LastProcessTek: " + LastProcessTekTimestamp, " (long): " + ticks, "EN: " + en, "ENS: " + status, "Now: " + DateTime.Now.ToLocalTime().ToString("F"), ex};
+            var str = new[] { "Build: " + os, "Ver: " + AppSettings.Instance.AppVersion,
+                "Region: " + string.Join(",", AppSettings.Instance.SupportedRegions), "CdnUrl: " + AppSettings.Instance.CdnUrlBase,
+                "ApiUrl: " + AppSettings.Instance.ApiUrlBase, "Agree: " + agree, "StartDate: " + userDataService.GetStartDate().ToLocalTime().ToString("F"),
+                "DaysOfUse: " + userDataService.GetDaysOfUse(), "ExposureCount: " + exposureNotificationService.GetExposureCount(),
+                "LastProcessTek: " + lastProcessTekTimestamp, " (long): " + ticks, "ENstatus: " + exposureNotificationStatus,
+                "ENmessage: " + exposureNotificationMessage, "Now: " + DateTime.Now.ToLocalTime().ToString("F"), ex};
             DebugInfo = string.Join(Environment.NewLine, str);
         }
         public DebugPageViewModel(INavigationService navigationService, IUserDataService userDataService, ITermsUpdateService termsUpdateService, IExposureNotificationService exposureNotificationService) : base(navigationService)
