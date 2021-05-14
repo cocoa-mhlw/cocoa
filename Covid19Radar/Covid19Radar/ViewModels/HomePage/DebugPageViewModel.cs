@@ -116,7 +116,7 @@ namespace Covid19Radar.ViewModels
         {
             var exLog = "FetchExposureKeyAsync";
             try { await exposureNotificationService.FetchExposureKeyAsync(); }
-            catch (Exception ex) { exLog += ":Exception: " + ex.ToString(); }
+            catch (Exception ex) { exLog += $":Exception: {ex}"; }
             info(exLog);
         });
 
