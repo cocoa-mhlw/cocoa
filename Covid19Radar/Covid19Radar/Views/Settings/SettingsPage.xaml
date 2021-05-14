@@ -131,7 +131,7 @@
                             <FormattedString>
                                 <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop4}" />
                                 <Span Text=" " />
-                                <Span Text="{Binding RepoLink}" TextColor="{StaticResource Primary}">
+                                <Span Text="{Binding RepoLink}" TextColor="{StaticResource Primary}" TextDecorations="Underline">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding OnTapRepoLink}" />
                                     </Span.GestureRecognizers>
