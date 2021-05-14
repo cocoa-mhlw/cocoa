@@ -19,7 +19,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: setup-xamarin
-      uses: maxim-lobanov/setup-xamarin@v1.2.1
+      uses: maxim-lobanov/setup-xamarin@v1
       with:
         mono-version: 6.12 # specify version in '<major>.<minor>' format
         xamarin-ios-version: 14 # specify version in '<major>' format
@@ -39,7 +39,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.0.2
+      uses: microsoft/setup-msbuild@v1
     - name: Build Solution
       run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
   test:
