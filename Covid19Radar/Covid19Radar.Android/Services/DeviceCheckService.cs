@@ -28,7 +28,7 @@ namespace Covid19Radar.Droid.Services
         /// Verification device information required for positive submissions
         /// </summary>
         /// <returns>Device Verification Payload</returns>
-        private async Task<string> GetSafetyNetAttestationAsync(byte[] nonce)
+        private static async Task<string> GetSafetyNetAttestationAsync(byte[] nonce)
         {
             using var client = SafetyNetClass.GetClient(Android.App.Application.Context);
             using var response = await client.AttestAsync(nonce, AppSettings.Instance.AndroidSafetyNetApiKey);
