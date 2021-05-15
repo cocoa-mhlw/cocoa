@@ -28,14 +28,14 @@ namespace Covid19Radar.Droid.Services
         /// Verification device information required for positive submissions
         /// </summary>
         /// <returns>Device Verification Payload</returns>
-        async Task<string> GetSafetyNetAttestationAsync(byte[] nonce)
+        private async Task<string> GetSafetyNetAttestationAsync(byte[] nonce)
         {
             using var client = SafetyNetClass.GetClient(Android.App.Application.Context);
             using var response = await client.AttestAsync(nonce, AppSettings.Instance.AndroidSafetyNetApiKey);
             return response.JwsResult;
         }
 
-        public static byte[] GetNonce(DiagnosisSubmissionParameter submission)
+        private static byte[] GetNonce(DiagnosisSubmissionParameter submission)
         {
             var cleartext = GetNonceClearText(submission);
             var nonce = GetSha256(cleartext);
