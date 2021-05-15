@@ -5,6 +5,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.Linq;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 
@@ -50,16 +52,71 @@ namespace Covid19Radar.Services
 		public Task<Status> GetStatusAsync()
 			=> Task.FromResult(Preferences.Get("fake_enabled", true) ? Status.Active : Status.Disabled);
 
+		private ushort[] DataPreset(int dataVer)
+		{
+			/* DataPreset for ExposureDetection
+			   0(default): two low-risk matches (default for v1.2.3)
+			   1: one high-risk match and 2 low-risk matches 
+			   2: no match
+			 */
+			switch (dataVer)
+			{
+				case 1:
+					return (
+						new ushort[] {10, 3, 27, 0, 0, // ExposureDetectionSummary
+									   13, 15, 65, 27, (ushort)RiskLevel.High, // ExposureInfo 1st
+									   10, 15, 65, 5, (ushort)RiskLevel.Medium, // ExposureInfo 2st
+									   11,  5, 40, 3, (ushort)RiskLevel.Low, // ExposureInfo  3nd
+						});
+				case 2:
+					return (
+						new ushort[] {0, 0, 0, 0, 0, // ExposureDetectionSummary
+						});
+				case 0:
+				default:
+					return (
+						new ushort[] {10, 2, 5, 0, 0, // ExposureDetectionSummary
+									   10, 15, 65, 5, (ushort)RiskLevel.Medium, // ExposureInfo 1st (RiskLevel.Medium=4)
+									   11,  5, 40, 3, (ushort)RiskLevel.Low, // ExposureInfo  2nd(RiskLevel.Low=2)
+						});
+			}
+		}
+
+		private ushort[] Data()
+		{
+			string url = AppSettings.Instance.ApiUrlBase;
+			if (Regex.IsMatch(url, @"^(\d+,)+\d+,*$"))
+			{
+				return (url.Split(",").ToList().Select(x => Convert.ToUInt16(x)).ToArray());
+			}
+			int dataVer = -1;
+			Match match = Regex.Match(url, @"https://API_URL_BASE/api/(?<d>\d+?)");
+			if (match.Success)
+			{
+				dataVer = Convert.ToUInt16(match.Groups["d"].Value);
+			}
+			return (DataPreset(dataVer));
+
+		}
+
 		public Task<(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getInfo)> DetectExposuresAsync(IEnumerable<string> files)
 		{
-			var summary = new ExposureDetectionSummary(10, 2, 5);
+			/* ApiUrlBase trick for Debug_Mock
+			"10,2,5,0,0,10,15,65,5,4,11,5,40,3,2" -> direct input (the same with default)
+			"https://API_URL_BASE/api/2" -> dataVer = 2
+			"https://API_URL_BASE/api" -> dataVer = 0 (default)
+			others -> dataVer = 0
+			*/
+			var d = Data();
+			int i = 0;
+			var summary = new ExposureDetectionSummary(d[i++], d[i++], d[i++], new TimeSpan[d[i++]], d[i++]);
 
 			Task<IEnumerable<ExposureInfo>> GetInfo()
 			{
-				var info = new List<ExposureInfo>
+				var info = new List<ExposureInfo>();
+				while (i < d.Length)
 				{
-					new ExposureInfo (DateTime.UtcNow.AddDays(-10), TimeSpan.FromMinutes(15), 65, 5, RiskLevel.Medium),
-					new ExposureInfo (DateTime.UtcNow.AddDays(-11), TimeSpan.FromMinutes(5), 40, 3, RiskLevel.Low),
+					info.Add(new ExposureInfo(DateTime.UtcNow.AddDays(-d[i++]), TimeSpan.FromMinutes(d[i++]), d[i++], d[i++], (Xamarin.ExposureNotifications.RiskLevel)d[i++]));
 				};
 				return Task.FromResult<IEnumerable<ExposureInfo>>(info);
 			}
