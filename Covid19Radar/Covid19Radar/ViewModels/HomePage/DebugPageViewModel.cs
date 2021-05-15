@@ -109,7 +109,7 @@ namespace Covid19Radar.ViewModels
         {
             UserDialogs.Instance.ShowLoading("Starting ExposureNotification...");
             var result = await exposureNotificationService.StartExposureNotification();
-            string str = "StartExposureNotification: " + result.ToString();
+            var str = $"StartExposureNotification: {result}";
             UserDialogs.Instance.HideLoading();
             await UserDialogs.Instance.AlertAsync(str, str, Resources.AppResources.ButtonOk);
             info("StartExposureNotification");
