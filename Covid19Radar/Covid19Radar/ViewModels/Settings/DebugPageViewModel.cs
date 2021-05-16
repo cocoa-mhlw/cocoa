@@ -22,7 +22,7 @@ namespace Covid19Radar.ViewModels
             get { return _debugInfo; }
             set { SetProperty(ref _debugInfo, value); }
         }
-        public async void info(string ex = "")
+        public async void Info(string ex = "")
         {
             string os;
             switch (Device.RuntimePlatform)
@@ -91,11 +91,11 @@ namespace Covid19Radar.ViewModels
         public override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
-            info("Initialize");
+            Info("Initialize");
         }
         public Command OnClickReload => new Command(async () =>
         {
-            info("Reload");
+            Info("Reload");
         });
 
         public Command OnClickStartExposureNotification => new Command(async () =>
@@ -105,14 +105,14 @@ namespace Covid19Radar.ViewModels
             var str = $"StartExposureNotification: {result}";
             UserDialogs.Instance.HideLoading();
             await UserDialogs.Instance.AlertAsync(str, str, Resources.AppResources.ButtonOk);
-            info("StartExposureNotification");
+            Info("StartExposureNotification");
         });
         public Command OnClickFetchExposureKeyAsync => new Command(async () =>
         {
             var exLog = "FetchExposureKeyAsync";
             try { await exposureNotificationService.FetchExposureKeyAsync(); }
             catch (Exception ex) { exLog += $":Exception: {ex}"; }
-            info(exLog);
+            Info(exLog);
         });
 
         // see ../Settings/SettingsPageViewModel.cs
@@ -123,33 +123,33 @@ namespace Covid19Radar.ViewModels
             string str = "StopExposureNotification: " + result.ToString();
             UserDialogs.Instance.HideLoading();
             await UserDialogs.Instance.AlertAsync(str, str, Resources.AppResources.ButtonOk);
-            info("StopExposureNotification");
+            Info("StopExposureNotification");
         });
 
         public Command OnClickRemoveStartDate => new Command(async () =>
         {
             userDataService.RemoveStartDate();
-            info("RemoveStartDate");
+            Info("RemoveStartDate");
         });
         public Command OnClickRemoveExposureInformation => new Command(async () =>
         {
             exposureNotificationService.RemoveExposureInformation();
-            info("RemoveExposureInformation");
+            Info("RemoveExposureInformation");
         });
         public Command OnClickRemoveConfiguration => new Command(async () =>
         {
             exposureNotificationService.RemoveConfiguration();
-            info("RemoveConfiguration");
+            Info("RemoveConfiguration");
         });
         public Command OnClickRemoveLastProcessTekTimestamp => new Command(async () =>
         {
             exposureNotificationService.RemoveLastProcessTekTimestamp();
-            info("RemoveLastProcessTekTimestamp");
+            Info("RemoveLastProcessTekTimestamp");
         });
         public Command OnClickRemoveAllUpdateDate => new Command(async () =>
         {
             termsUpdateService.RemoveAllUpdateDate();
-            info("RemoveAllUpdateDate");
+            Info("RemoveAllUpdateDate");
         });
         public Command OnClickQuit => new Command(async () =>
         {
