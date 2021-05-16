@@ -202,6 +202,6 @@
   <ItemGroup Condition="'$(Configuration)'=='Release'">
     <Compile Remove="ViewModels/HomePage/DebugPageViewModel.cs" />
     <Compile Remove="Views/HomePage/DebugPage.xaml.cs" />
-    <Page Remove="Views/HomePage/DebugPage.xaml" />
+    <EmbeddedResource Remove="Views/HomePage/DebugPage.xaml" />
   </ItemGroup>
 </Project>
