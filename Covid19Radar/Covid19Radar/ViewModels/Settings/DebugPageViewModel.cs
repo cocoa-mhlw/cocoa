@@ -65,7 +65,7 @@ namespace Covid19Radar.ViewModels
             }
 
             long ticks = exposureNotificationService.GetLastProcessTekTimestamp(AppSettings.Instance.SupportedRegions[0]);
-            DateTimeOffset dt = DateTimeOffset.FromUnixTimeMilliseconds(ticks).ToOffset(new TimeSpan(9, 0, 0));
+            var dt = DateTimeOffset.FromUnixTimeMilliseconds(ticks).ToOffset(new TimeSpan(9, 0, 0));
             //please check : offset is correct or not
             //cf: ../../../Covid19Radar.Android/Services/Logs/LogPeriodicDeleteServiceAndroid.cs
             var lastProcessTekTimestamp = dt.ToLocalTime().ToString("F");
