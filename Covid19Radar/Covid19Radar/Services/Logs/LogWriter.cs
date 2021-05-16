@@ -37,10 +37,10 @@ namespace Covid19Radar.Services.Logs
     {
         private const string DATETIME_FORMAT = "yyyy/MM/dd HH:mm:ss.fffffff";
         private static readonly string HEADER = CreateLogHeaderRow();
-        private readonly ILogPathService logPath;
-        private readonly IEssentialsService essentials;
-        private readonly Encoding enc;
-        private File? file;
+        private readonly ILogPathService _log_path;
+        private readonly IEssentialsService _essentials;
+        private readonly Encoding _enc;
+        private File? _file;
 
         /// <summary>
         ///  型'<see cref="Covid19Radar.Services.Logs.LogWriter"/>'の新しいインスタンスを生成します。
@@ -49,9 +49,9 @@ namespace Covid19Radar.Services.Logs
         /// <param name="essentials">環境情報を提供するサービスを指定します。</param>
         public LogWriter(ILogPathService logPath, IEssentialsService essentials)
         {
-            this.logPath    = logPath    ?? throw new ArgumentNullException(nameof(logPath));
-            this.essentials = essentials ?? throw new ArgumentNullException(nameof(essentials));
-            enc = Encoding.UTF8;
+            _log_path   = logPath    ?? throw new ArgumentNullException(nameof(logPath));
+            _essentials = essentials ?? throw new ArgumentNullException(nameof(essentials));
+            _enc        = Encoding.UTF8;
         }
 
         /// <inheritdoc/>
@@ -64,7 +64,7 @@ namespace Covid19Radar.Services.Logs
 #endif
             try {
                 var    jstNow = Utils.JstNow();
-                string row    = CreateLogContentRow(message, method, filePath, lineNumber, logLevel, jstNow, essentials);
+                string row    = CreateLogContentRow(message, method, filePath, lineNumber, logLevel, jstNow, _essentials);
                 Debug.WriteLine(row);
                 this.WriteLine(jstNow, row);
             } catch (Exception e) {
@@ -74,11 +74,11 @@ namespace Covid19Radar.Services.Logs
 
         private void WriteLine(DateTime jstNow, string line)
         {
-            var    file  = this.file;
-            string fname = logPath.LogFilePath(jstNow);
+            var    file  = _file;
+            string fname = _log_path.LogFilePath(jstNow);
             if (file is null || file.FileName != fname) {
-                var newFile = new File(fname, enc);
-                RewriteField(ref this.file, newFile, ref file);
+                var newFile = new File(fname, _enc);
+                RewriteField(ref _file, newFile, ref file);
                 file?.Dispose();
                 file = newFile;
                 file.Writer.WriteLine(HEADER);
@@ -89,8 +89,8 @@ namespace Covid19Radar.Services.Logs
         /// <inheritdoc/>
         public void Dispose()
         {
-            var file = this.file;
-            RewriteField(ref this.file, null, ref file);
+            var file = _file;
+            RewriteField(ref _file, null, ref file);
             file?.Dispose();
         }
 
