@@ -68,7 +68,7 @@ namespace Covid19Radar.ViewModels
             DateTimeOffset dt = DateTimeOffset.FromUnixTimeMilliseconds(ticks).ToOffset(new TimeSpan(9, 0, 0));
             //please check : offset is correct or not
             //cf: ../../../Covid19Radar.Android/Services/Logs/LogPeriodicDeleteServiceAndroid.cs
-            string lastProcessTekTimestamp = dt.ToLocalTime().ToString("F");
+            var lastProcessTekTimestamp = dt.ToLocalTime().ToString("F");
 
             var exposureNotificationStatus = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
             var exposureNotificationMessage = await exposureNotificationService.UpdateStatusMessageAsync();
