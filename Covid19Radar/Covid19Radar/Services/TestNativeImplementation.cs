@@ -58,6 +58,7 @@ namespace Covid19Radar.Services
 			   0(default): two low-risk matches (default for v1.2.3)
 			   1: one high-risk match and 2 low-risk matches 
 			   2: no match
+			   3+: please add
 			 */
 			switch (dataVer)
 			{
@@ -82,20 +83,40 @@ namespace Covid19Radar.Services
 			}
 		}
 
-		private ushort[] Data()
+		public string[] UrlApi()
 		{
+			// "UrlApi" -> UrlApi=
+			// ".../api1/register1/" -> UrlApi=
 			string url = AppSettings.Instance.ApiUrlBase;
-			if (Regex.IsMatch(url, @"^(\d+,)+\d+,*$"))
-			{
-				return (url.Split(",").ToList().Select(x => Convert.ToUInt16(x)).ToArray());
-			}
-			int dataVer = -1;
-			Match match = Regex.Match(url, @"https://API_URL_BASE/api/(?<d>\d+?)");
+			Regex r = new Regex("/r(egister)?[0-9]+");
+			Regex d = new Regex("/d(iagnosis)?[0-9]+");
+			string urlRegister = r.Match(url).Value;
+			url = r.Replace(url, "");
+			string urlDiagnosis = d.Match(url).Value;
+			url = d.Replace(url, "");
+			string urlApi = url;
+			return (new string[] { urlApi, urlRegister, urlDiagnosis });
+		}
+
+		public ushort NumberEndofSentence(string url)
+		{
+			Match match = Regex.Match(url, @"(?<d>\d+)$");
+			ushort dataVer = 0;
 			if (match.Success)
 			{
 				dataVer = Convert.ToUInt16(match.Groups["d"].Value);
 			}
-			return (DataPreset(dataVer));
+			return (dataVer);
+		}
+
+		private ushort[] Data()
+		{
+			string url = UrlApi()[0];
+			if (Regex.IsMatch(url, @"^(\d+,)+\d+,?$"))
+			{
+				return (url.Split(",").ToList().Select(x => Convert.ToUInt16(x)).ToArray());
+			}
+			return (DataPreset(NumberEndofSentence(url)));
 
 		}
 
@@ -103,9 +124,9 @@ namespace Covid19Radar.Services
 		{
 			/* ApiUrlBase trick for Debug_Mock
 			"10,2,5,0,0,10,15,65,5,4,11,5,40,3,2" -> direct input (the same with default)
-			"https://API_URL_BASE/api/2" -> dataVer = 2
+			"https://API_URL_BASE/api2" -> dataVer = 2
 			"https://API_URL_BASE/api" -> dataVer = 0 (default)
-			others -> dataVer = 0
+			others -> dataVer is the number at the end of the sentence
 			*/
 			var d = Data();
 			int i = 0;

@@ -157,18 +157,68 @@ namespace Covid19Radar.Services
             return Data();
         }
 
+        // copy ./TestNativeImplementation.cs
+        private string[] UrlApi()
+        {
+            // "UrlApi" -> UrlApi=
+            // ".../api1/register1/" -> UrlApi=
+            string url = AppSettings.Instance.ApiUrlBase;
+            Regex r = new Regex("/r(egister)?[0-9]+");
+            Regex d = new Regex("/d(iagnosis)?[0-9]+");
+            string urlRegister = r.Match(url).Value;
+            url = r.Replace(url, "");
+            string urlDiagnosis = d.Match(url).Value;
+            url = d.Replace(url, "");
+            string urlApi = url;
+            return (new string[] { urlApi, urlRegister, urlDiagnosis });
+        }
+
+        // copy ./TestNativeImplementation.cs
+        private ushort NumberEndofSentence(string url)
+        {
+            Match match = Regex.Match(url, @"(?<d>\d+)$");
+            ushort dataVer = 0;
+            if (match.Success)
+            {
+                dataVer = Convert.ToUInt16(match.Groups["d"].Value);
+            }
+            return (dataVer);
+        }
+
         async Task<bool> IHttpDataService.PostRegisterUserAsync()
         {
             Debug.WriteLine("HttpDataServiceMock::PostRegisterUserAsync called");
-            return await Task.FromResult(true);
+            switch (NumberEndofSentence(UrlApi()[1]))
+            {
+                case 1:
+                    return await Task.FromResult(false);
+                case 0:
+                default:
+                    return await Task.FromResult(true);
+            }
         }
 
         Task<HttpStatusCode> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
+            var code = HttpStatusCode.OK; // default. for PutSelfExposureKeys NG
+            var dataVer = NumberEndofSentence(UrlApi()[2]);
+            if (dataVer >= 100)
+            {
+                code = (HttpStatusCode)dataVer;
+            }
+            else
+            {
+                switch (dataVer)
+                {
+                    case 1:
+                        code = HttpStatusCode.NoContent; //  for Successful PutSelfExposureKeys 
+                        break;
+                }
+            }
             return Task.Factory.StartNew<HttpStatusCode>(() =>
             {
                 Debug.WriteLine("HttpDataServiceMock::PutSelfExposureKeysAsync called");
-                return HttpStatusCode.OK;
+                return code;
             });
         }
 

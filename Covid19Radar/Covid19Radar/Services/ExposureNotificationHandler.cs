@@ -389,7 +389,11 @@ namespace Covid19Radar.Services
             // See if we can add the device verification
             if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
             {
+#if USE_MOCK
+                //nop
+#else
                 submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
+#endif
             }
 
             loggerService.Info($"DeviceVerificationPayload is {(string.IsNullOrEmpty(submission.DeviceVerificationPayload) ? "null or empty" : "set")}.");
