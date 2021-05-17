@@ -104,23 +104,6 @@ namespace Covid19Radar.Services
                     return new List<TemporaryExposureKeyExportFileModel>();
             }
         }
-
-        private List<TemporaryExposureKeyExportFileModel> Data()
-        {
-            int dataVer = -1;
-            string url = AppSettings.Instance.CdnUrlBase;
-            if (Regex.IsMatch(url, @"^(\d+,)+\d+,*$"))
-            {
-                return (url.Split(",").ToList().Select(x => TestDat(Convert.ToInt64(x))).ToList());
-            }
-            Match match = Regex.Match(url, @"https://CDN_URL_BASE/(?<d>\d+?)");
-            if (match.Success)
-            {
-                dataVer = Convert.ToUInt16(match.Groups["d"].Value);
-            }
-            return (DataPreset(dataVer));
-        }
-
         private static bool DownloadRequired()
         {
             string url = AppSettings.Instance.CdnUrlBase;
@@ -135,12 +118,13 @@ namespace Covid19Radar.Services
                "https://CDN_URL_BASE/2" -> dataVer = 2
                "https://CDN_URL_BASE/" -> dataVer = 0 (default)
             */
+            string url = AppSettings.Instance.CdnUrlBase;
             if (DownloadRequired())
             {
                 // copy from GetTemporaryExposureKeyList @ ./HttpDataService.cs and delete logger part
-                string container = AppSettings.Instance.BlobStorageContainerName;
-                string url = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
-                var result = await GetCdnAsync(url, cancellationToken);
+                var container = AppSettings.Instance.BlobStorageContainerName;
+                var urlJson = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
+                var result = await GetCdnAsync(urlJson, cancellationToken);
                 if (result != null)
                 {
                     Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList downloaded");
@@ -152,16 +136,21 @@ namespace Covid19Radar.Services
                     return new List<TemporaryExposureKeyExportFileModel>();
                 }
             }
-
-            Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList called");
-            return Data();
+            else if (Regex.IsMatch(url, @"^(\d+,)+\d+,*$"))
+            {
+                Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList direct data called");
+                return (url.Split(",").ToList().Select(x => TestDat(Convert.ToInt64(x))).ToList());
+            }
+            else
+            {
+                Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList preset data called");
+                return (DataPreset(NumberEndofSentence(url)));
+            }
         }
 
-        // copy ./TestNativeImplementation.cs
+        // copy from ./TestNativeImplementation.cs
         private string[] UrlApi()
         {
-            // "UrlApi" -> UrlApi=
-            // ".../api1/register1/" -> UrlApi=
             string url = AppSettings.Instance.ApiUrlBase;
             Regex r = new Regex("/r(egister)?[0-9]+");
             Regex d = new Regex("/d(iagnosis)?[0-9]+");
@@ -173,7 +162,7 @@ namespace Covid19Radar.Services
             return (new string[] { urlApi, urlRegister, urlDiagnosis });
         }
 
-        // copy ./TestNativeImplementation.cs
+        // copy from ./TestNativeImplementation.cs
         private ushort NumberEndofSentence(string url)
         {
             Match match = Regex.Match(url, @"(?<d>\d+)$");

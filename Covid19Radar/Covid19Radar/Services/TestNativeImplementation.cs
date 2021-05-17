@@ -85,22 +85,22 @@ namespace Covid19Radar.Services
 
 		public string[] UrlApi()
 		{
-			// "UrlApi" -> UrlApi=
-			// ".../api1/register1/" -> UrlApi=
-			string url = AppSettings.Instance.ApiUrlBase;
-			Regex r = new Regex("/r(egister)?[0-9]+");
-			Regex d = new Regex("/d(iagnosis)?[0-9]+");
-			string urlRegister = r.Match(url).Value;
+			// "url/api" -> { "url/api", "", "" }
+			// "url/api1/register1/diagnosis2" -> { "url/api1", "/register1", "/diagnosis2" } 
+			var url = AppSettings.Instance.ApiUrlBase;
+			var r = new Regex("/r(egister)?[0-9]+");
+			var d = new Regex("/d(iagnosis)?[0-9]+");
+			var urlRegister = r.Match(url).Value;
 			url = r.Replace(url, "");
-			string urlDiagnosis = d.Match(url).Value;
+			var urlDiagnosis = d.Match(url).Value;
 			url = d.Replace(url, "");
-			string urlApi = url;
+			var urlApi = url;
 			return (new string[] { urlApi, urlRegister, urlDiagnosis });
 		}
 
 		public ushort NumberEndofSentence(string url)
 		{
-			Match match = Regex.Match(url, @"(?<d>\d+)$");
+			var match = Regex.Match(url, @"(?<d>\d+)$");
 			ushort dataVer = 0;
 			if (match.Success)
 			{
