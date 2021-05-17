@@ -55,17 +55,5 @@ namespace Covid19Radar.Droid.Services.Migration
             _loggerService.EndMethod();
         }
 
-        public Task MigrateTo122Async()
-        {
-            // nothing to do
-            return Task.CompletedTask;
-        }
-
-        public Task Initialize100Async()
-        {
-            // nothing to do
-            return Task.CompletedTask;
-        }
-
     }
 }

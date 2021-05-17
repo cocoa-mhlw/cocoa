@@ -12,9 +12,9 @@ namespace Covid19Radar.Services.Migration
 {
     public interface IVersionMigration
     {
-        public Task Initialize100Async();
-        public Task MigrateTo122Async();
-        public Task MigrateTo123Async();
+        public Task Initialize100Async() => Task.CompletedTask;
+        public Task MigrateTo122Async() => Task.CompletedTask;
+        public Task MigrateTo123Async() => Task.CompletedTask;
     }
 
     public abstract class IVersionMigrationService
@@ -26,6 +26,7 @@ namespace Covid19Radar.Services.Migration
     {
         protected const string DEFAULT_VERSION = "1.0.0";
 
+        private static readonly Version VERSION_1_0_0 = new Version("1.0.0");
         private static readonly Version VERSION_1_2_2 = new Version("1.2.2");
         private static readonly Version VERSION_1_2_3 = new Version("1.2.3");
 
@@ -81,6 +82,16 @@ namespace Covid19Radar.Services.Migration
             return new Version(appVersion);
         }
 
+        private Task<bool> DetectDowngradeAsync()
+        {
+            var fromVersion = GetAppVersionFromPreference();
+
+            fromVersion = fromVersion is null ? GuessVersion() : fromVersion;
+            var currentAppVersion = GetAppVersion();
+
+            return Task.FromResult((fromVersion.CompareTo(currentAppVersion) > 0));
+        }
+
         private void UpdateAppVersionPreference(Version version)
             => _preferencesService.SetValue(PreferenceKey.AppVersion, version.ToString());
 
@@ -100,22 +111,64 @@ namespace Covid19Radar.Services.Migration
             }
         }
 
+        private async Task ClearAllDataAsync()
+        {
+            _loggerService.StartMethod();
+
+            const string applicationPropertyUserDataKey = "UserData";
+            const string applicationPropertyTermsOfServiceLastUpdateDateKey = "TermsOfServiceLastUpdateDateTime";
+            const string applicationPropertyPrivacyPolicyLastUpdateDateKey = "PrivacyPolicyLastUpdateDateTime";
+
+            // Remove all ApplicationProperties
+            await _applicationPropertyService.Remove(applicationPropertyUserDataKey);
+            await _applicationPropertyService.Remove(applicationPropertyTermsOfServiceLastUpdateDateKey);
+            await _applicationPropertyService.Remove(applicationPropertyPrivacyPolicyLastUpdateDateKey);
+            await _applicationPropertyService.Remove(PreferenceKey.ExposureNotificationConfiguration);
+
+            // Remove all Preferences
+            _preferencesService.RemoveValue(PreferenceKey.AppVersion);
+            _preferencesService.RemoveValue(PreferenceKey.StartDateTime);
+            _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTime);
+            _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
+            _preferencesService.RemoveValue(PreferenceKey.ExposureNotificationConfiguration);
+            _preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
+
+            // Do not remove Exposure informations from SecureStorage
+            //_secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
+            //_secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
+
+            _loggerService.EndMethod();
+        }
+
+        private Version GuessVersion()
+        {
+            if (_preferencesService.ContainsKey(PreferenceKey.StartDateTime))
+            {
+                return VERSION_1_2_2;
+            }
+            return VERSION_1_0_0;
+        }
+
         private async Task MigrateAsync(Version? fromVersion)
         {
             _loggerService.StartMethod();
 
-            var currentAppVersion = GetAppVersion();
+            if (await DetectDowngradeAsync())
+            {
+                await ClearAllDataAsync();
+            }
 
             if (fromVersion is null)
             {
-                if (!_preferencesService.ContainsKey(PreferenceKey.StartDateTime))
+                fromVersion = GuessVersion();
+                if (fromVersion.CompareTo(VERSION_1_0_0) == 0)
                 {
                     await Initialize100Async();
-                    await _platformVersionMigrationService.Initialize100Async();
+                    UpdateAppVersionPreference(fromVersion);
                 }
-                fromVersion = new Version(DEFAULT_VERSION);
-                UpdateAppVersionPreference(fromVersion);
             }
+
+            var currentAppVersion = GetAppVersion();
 
             if (fromVersion.CompareTo(currentAppVersion) == 0)
             {
@@ -127,15 +180,11 @@ namespace Covid19Radar.Services.Migration
             if (fromVersion.CompareTo(VERSION_1_2_2) < 0)
             {
                 await MigrateTo122Async();
-                await _platformVersionMigrationService.MigrateTo122Async();
-                UpdateAppVersionPreference(VERSION_1_2_2);
             }
 
             if (fromVersion.CompareTo(VERSION_1_2_3) < 0)
             {
                 await MigrateTo123Async();
-                await _platformVersionMigrationService.MigrateTo123Async();
-                UpdateAppVersionPreference(VERSION_1_2_3);
             }
 
             UpdateAppVersionPreference(currentAppVersion);
@@ -166,19 +215,22 @@ namespace Covid19Radar.Services.Migration
                 _loggerService
                 ).MigrateAsync();
 
+            await _platformVersionMigrationService.MigrateTo122Async();
+
+            UpdateAppVersionPreference(VERSION_1_2_2);
+
             _loggerService.EndMethod();
         }
 
-        public Task MigrateTo123Async()
+        public async Task MigrateTo123Async()
         {
             _loggerService.StartMethod();
 
-            // nothing to do
+            await _platformVersionMigrationService.MigrateTo122Async();
+
+            UpdateAppVersionPreference(VERSION_1_2_3);
 
             _loggerService.EndMethod();
-
-            return Task.CompletedTask;
         }
-
     }
 }

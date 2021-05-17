@@ -472,6 +472,86 @@ namespace Covid19Radar.UnitTests.Services.Migration
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
 
+        class UserDataModelForTest
+        {
+            public string StartDateTime { get; set; }
+            public bool IsOptined { get; set; } = false;
+            public bool IsPolicyAccepted { get; set; } = false;
+            public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
+            public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
+            public UserExposureSummary ExposureSummary { get; set; }
+        }
+
+        [Fact]
+        public async Task Migrate_Corrupt100to123Async()
+        {
+            var (
+                startDateTime,
+                termsOfServiceLastUpdateDate, privacyPolicyLastUpdateDate,
+                lastProcesTekTimestamp,
+                userExposureInfo1, userExposureInfo2, userExposureSummary
+            ) = await SetUpVersion100(hasAppVersionAtPreference: false);
+
+            // Save corrupted datetime
+            string userDataString = (string)_dummyApplicationPropertyService.GetProperties(APPLICATION_PROPERTY_USER_DATA_KEY);
+            var userData = JsonConvert.DeserializeObject<UserDataModelForTest>(userDataString);
+            userData.StartDateTime = "Corrupted Datetime Format";
+            userDataString = JsonConvert.SerializeObject(userData);
+            await _dummyApplicationPropertyService.SavePropertiesAsync(APPLICATION_PROPERTY_USER_DATA_KEY, userDataString);
+
+            _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.2.3");
+
+            await CreateService()
+                .MigrateAsync();
+
+            var preferenceAppVersion = _dummyPreferencesService.GetValue<string>(PreferenceKey.AppVersion, null);
+            Assert.Equal("1.2.3", preferenceAppVersion);
+
+            // Application-properties must not be exist
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_USER_DATA_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
+
+            // StartDateTime
+            var startDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.StartDateTime, new DateTime());
+            Assert.NotEqual(startDateTime, startDateTimePref);
+
+            // TermsOfServiceLastUpdateDateTime
+            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTime, new DateTime());
+            Assert.Equal(new DateTime(), termsOfServiceLastUpdateDateTimePref);
+
+            // PrivacyPolicyLastUpdateDateTime
+            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime, new DateTime());
+            Assert.Equal(new DateTime(), privacyPolicyLastUpdateDateTimePref);
+
+            // LastProcessTekTimestamp
+            Assert.True(_dummyPreferencesService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            var lastProcessTekTimestampPrefString = _dummyPreferencesService.GetValue(PreferenceKey.LastProcessTekTimestamp, "{}");
+            var lastProcessTekTimestampPref = JsonConvert.DeserializeObject<IDictionary<string, long>>(lastProcessTekTimestampPrefString);
+            Assert.Equal(lastProcesTekTimestamp, lastProcessTekTimestampPref);
+
+            // ExposureNotificationConfiguration
+            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+
+            // ExposureInformation
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
+            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
+            Assert.Equal(2, userExposureInfosPref.Count);
+            AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
+            AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
+
+            // ExposureSummary
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
+            AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
+        }
+
         private async Task<(DateTime, DateTime, DateTime, Dictionary<string, long>, UserExposureInfo, UserExposureInfo, UserExposureSummary)> SetUpVersion122(
             bool isOptIned = true,
             bool isPrivaryPolicyAgreed = true,
