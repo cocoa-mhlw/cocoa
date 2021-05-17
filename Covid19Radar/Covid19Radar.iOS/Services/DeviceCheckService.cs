@@ -5,11 +5,8 @@
 using System;
 using System.Threading.Tasks;
 using Covid19Radar.Services;
-using Covid19Radar.iOS.Services;
-using Xamarin.Forms;
 using Covid19Radar.Model;
 
-[assembly: Dependency(typeof(DeviceCheckService))]
 namespace Covid19Radar.iOS.Services
 {
     public class DeviceCheckService : IDeviceVerifier

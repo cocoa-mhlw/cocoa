@@ -18,7 +18,6 @@ using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
@@ -29,6 +28,7 @@ namespace Covid19Radar.Services
         private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
         private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
+        private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
 
         public ExposureNotificationHandler()
         {
@@ -386,11 +386,7 @@ namespace Covid19Radar.Services
                 Padding = padding
             };
 
-            // See if we can add the device verification
-            if (DependencyService.Get<IDeviceVerifier>() is IDeviceVerifier verifier)
-            {
-                submission.DeviceVerificationPayload = await verifier?.VerifyAsync(submission);
-            }
+            submission.DeviceVerificationPayload = await DeviceVerifier.VerifyAsync(submission);
 
             loggerService.Info($"DeviceVerificationPayload is {(string.IsNullOrEmpty(submission.DeviceVerificationPayload) ? "null or empty" : "set")}.");
             loggerService.Info($"VerificationPayload is {(string.IsNullOrEmpty(submission.VerificationPayload) ? "null or empty" : "set")}.");
