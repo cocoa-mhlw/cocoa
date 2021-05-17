@@ -557,7 +557,7 @@ limitations under the License.
 ---
 ## (Font) Material Design Icons
 ---
-Copyright (c) 2014 Google Inc, with Reserved Font Name Material Design Icons.
+Copyright (c) 2014, Austin Andrews (http://materialdesignicons.com/), with Reserved Font Name Material Design Icons.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
