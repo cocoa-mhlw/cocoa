@@ -79,7 +79,6 @@ namespace Covid19Radar.Services.Logs
             if (file is null || file.FileName != fname) {
                 var newFile = new File(fname, _enc);
                 do {
-                    file = _file;
                     if (Interlocked.CompareExchange(ref _file, newFile, file) == file) {
                         file?.Dispose();
                         file = newFile;
@@ -87,6 +86,7 @@ namespace Covid19Radar.Services.Logs
                         break;
                     }
                     Thread.Yield();
+                    file = _file;
                 } while (file is null || file.FileName != fname);
             }
             file.Writer.WriteLine(line);
