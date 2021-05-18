@@ -78,8 +78,7 @@ namespace Covid19Radar.Services.Logs
             string fname = _log_path.LogFilePath(jstNow);
             if (file is null || file.FileName != fname) {
                 var newFile = new File(fname, _enc);
-                RewriteField(ref _file, newFile, ref file);
-                file?.Dispose();
+                RewriteFileField(ref _file, newFile);
                 file = newFile;
                 file.Writer.WriteLine(HEADER);
             }
@@ -89,18 +88,17 @@ namespace Covid19Radar.Services.Logs
         /// <inheritdoc/>
         public void Dispose()
         {
-            var file = _file;
-            RewriteField(ref _file, null, ref file);
-            file?.Dispose();
+            RewriteFileField(ref _file, null);
         }
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void RewriteField<T>(ref T field, T newValue, ref T oldValue) where T: class?
+        private static void RewriteFileField(ref File? field, File? newValue)
         {
+            var oldValue = field;
             while (Interlocked.CompareExchange(ref field, newValue, oldValue) != oldValue) {
                 Thread.Yield();
                 oldValue = field;
             }
+            oldValue?.Dispose();
         }
 
         private static string CreateLogHeaderRow()
