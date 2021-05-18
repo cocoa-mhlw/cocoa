@@ -17,7 +17,7 @@ namespace Covid19Radar.Services.Logs
     /// <summary>
     ///  ログの書き込みを行う機能を提供します。
     /// </summary>
-    public interface ILogWriter : IDisposable
+    public interface ILogWriter
     {
         /// <summary>
         ///  ログを出力します。
@@ -78,27 +78,18 @@ namespace Covid19Radar.Services.Logs
             string fname = _log_path.LogFilePath(jstNow);
             if (file is null || file.FileName != fname) {
                 var newFile = new File(fname, _enc);
-                RewriteFileField(ref _file, newFile);
-                file = newFile;
-                file.Writer.WriteLine(HEADER);
+                do {
+                    file = _file;
+                    if (Interlocked.CompareExchange(ref _file, newFile, file) == file) {
+                        file?.Dispose();
+                        file = newFile;
+                        file.Writer.WriteLine(HEADER);
+                        break;
+                    }
+                    Thread.Yield();
+                } while (file is null || file.FileName != fname);
             }
             file.Writer.WriteLine(line);
-        }
-
-        /// <inheritdoc/>
-        public void Dispose()
-        {
-            RewriteFileField(ref _file, null);
-        }
-
-        private static void RewriteFileField(ref File? field, File? newValue)
-        {
-            var oldValue = field;
-            while (Interlocked.CompareExchange(ref field, newValue, oldValue) != oldValue) {
-                Thread.Yield();
-                oldValue = field;
-            }
-            oldValue?.Dispose();
         }
 
         private static string CreateLogHeaderRow()
@@ -184,8 +175,11 @@ namespace Covid19Radar.Services.Logs
 
         private sealed class File : IDisposable
         {
+            private readonly Encoding           _enc;
+            private readonly Lazy<StreamWriter> _sw;
+
             internal string       FileName { get; }
-            internal StreamWriter Writer   { get; }
+            internal StreamWriter Writer   => _sw.Value;
 
             internal File(string path, Encoding enc)
             {
@@ -195,8 +189,15 @@ namespace Covid19Radar.Services.Logs
                 }
 
                 this.FileName = path;
-                this.Writer   = new StreamWriter(new FileStream(path, FileMode.Append, FileAccess.Write, FileShare.ReadWrite), enc);
-                this.Writer.AutoFlush = true;
+                _enc = enc;
+                _sw  = new Lazy<StreamWriter>(this.OpenFile, LazyThreadSafetyMode.PublicationOnly);
+            }
+
+            private StreamWriter OpenFile()
+            {
+                var sw = new StreamWriter(new FileStream(this.FileName, FileMode.Append, FileAccess.Write, FileShare.ReadWrite), _enc);
+                sw.AutoFlush = true;
+                return sw;
             }
 
             public void Dispose()
