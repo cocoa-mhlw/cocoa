@@ -7,7 +7,6 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using Covid19Radar.Common;
@@ -27,7 +26,7 @@ namespace Covid19Radar.Services.Logs
         /// <param name="filePath">実行中の関数を格納しているソースファイルの名前です。</param>
         /// <param name="lineNumber">実行中の関数のソースファイル内での行番号です。</param>
         /// <param name="logLevel">ログレベルです。</param>
-        public void Write(string message, string method, string filePath, int lineNumber, LogLevel logLevel);
+        public void Write(string? message, string method, string filePath, int lineNumber, LogLevel logLevel);
     }
 
     /// <summary>
@@ -55,7 +54,7 @@ namespace Covid19Radar.Services.Logs
         }
 
         /// <inheritdoc/>
-        public void Write(string message, string method, string filePath, int lineNumber, LogLevel logLevel)
+        public void Write(string? message, string method, string filePath, int lineNumber, LogLevel logLevel)
         {
 #if !DEBUG
             if (logLevel == LogLevel.Verbose || logLevel == LogLevel.Debug) {
@@ -64,7 +63,7 @@ namespace Covid19Radar.Services.Logs
 #endif
             try {
                 var    jstNow = Utils.JstNow();
-                string row    = CreateLogContentRow(message, method, filePath, lineNumber, logLevel, jstNow, _essentials);
+                string row    = CreateLogContentRow(message ?? string.Empty, method, filePath, lineNumber, logLevel, jstNow, _essentials);
                 Debug.WriteLine(row);
                 this.WriteLine(jstNow, row);
             } catch (Exception e) {
