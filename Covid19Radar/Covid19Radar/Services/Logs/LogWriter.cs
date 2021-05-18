@@ -80,9 +80,9 @@ namespace Covid19Radar.Services.Logs
                 var newFile = new File(fname, _enc);
                 do {
                     if (Interlocked.CompareExchange(ref _file, newFile, file) == file) {
+                        newFile.Writer.WriteLine(HEADER);
                         file?.Dispose();
                         file = newFile;
-                        file.Writer.WriteLine(HEADER);
                         break;
                     }
                     Thread.Yield();
