@@ -34,6 +34,8 @@ namespace Covid19Radar.Services.Logs
     /// </summary>
     public sealed class LogWriter : ILogWriter
     {
+        [ThreadStatic()]
+        private static StringBuilder? _sb;
         private const string DATETIME_FORMAT = "yyyy/MM/dd HH:mm:ss.fffffff";
         private static readonly string HEADER = CreateLogHeaderRow();
         private readonly ILogPathService _log_path;
@@ -136,40 +138,27 @@ namespace Covid19Radar.Services.Logs
 
         private static string CreateLogRow(params string[] cols)
         {
-            var sb = new StringBuilder();
+            _ = _sb is null ? _sb = new StringBuilder()
+                            : _sb.Clear();
+
             for (int i = 0; i < cols.Length; ++i) {
-                if (i != 0) {
-                    sb.Append(',');
+                string col = cols[i];
+                _sb.Append(",\"");
+                for (int j = 0; j < col.Length; ++j) {
+                    char ch = col[j];
+                    string? escaped = ch switch {
+                        '\t' => "\\t",  '\v' => "\\v",
+                        '\r' => "\\r",  '\n' => "\\n",
+                        '\\' => "\\\\", '\"' => "\"\"",
+                        _ => null
+                    };
+                    _ = escaped is null ? _sb.Append(ch)
+                                        : _sb.Append(escaped);
                 }
-                string s = cols[i];
-                sb.Append('\"');
-                for (int j = 0; j < s.Length; ++j) {
-                    char ch = s[j];
-                    switch (ch) {
-                    case '\t':
-                        sb.Append("\\t");
-                        break;
-                    case '\v':
-                        sb.Append("\\v");
-                        break;
-                    case '\r':
-                        sb.Append("\\r");
-                        break;
-                    case '\n':
-                        sb.Append("\\n");
-                        break;
-                    case '\\':
-                    case '\"':
-                        sb.Append(ch).Append(ch);
-                        break;
-                    default:
-                        sb.Append(ch);
-                        break;
-                    }
-                }
-                sb.Append('\"');
+                _sb.Append('\"');
             }
-            return sb.ToString();
+            _sb.Remove(0, 1);
+            return _sb.ToString();
         }
 
         private sealed class File : IDisposable
