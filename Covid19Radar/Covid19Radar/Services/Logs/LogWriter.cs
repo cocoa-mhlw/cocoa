@@ -141,11 +141,9 @@ namespace Covid19Radar.Services.Logs
             _ = _sb is null ? _sb = new StringBuilder()
                             : _sb.Clear();
 
-            for (int i = 0; i < cols.Length; ++i) {
-                string col = cols[i];
+            foreach (string col in cols) {
                 _sb.Append(",\"");
-                for (int j = 0; j < col.Length; ++j) {
-                    char ch = col[j];
+                foreach (char ch in col) {
                     string? escaped = ch switch {
                         '\t' => "\\t",  '\v' => "\\v",
                         '\r' => "\\r",  '\n' => "\\n",
