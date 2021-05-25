@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup Label="MultilingualAppToolkit">
     <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
@@ -198,5 +198,10 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Release'">
+    <Compile Remove="ViewModels/HomePage/DebugPageViewModel.cs" />
+    <Compile Remove="Views/HomePage/DebugPage.xaml.cs" />
+    <EmbeddedResource Remove="Views/HomePage/DebugPage.xaml" />
   </ItemGroup>
 </Project>
