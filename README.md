@@ -1,5 +1,7 @@
 # COVID-19 Contact-Confirming Application COCOA (English)/([Japanese](README.ja.md))
 
+[![CI](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CI.yml)
+
 This is the official repository for the COVID-19 Contact-Confirming Application(COCOA).  
 COCOA has been developed from [Project Covid19Radar](https://github.com/Covid-19Radar).
 
@@ -11,8 +13,10 @@ If you have any questions about how to use COCOA, please check the MHLW [Q&A web
 
 ## Regarding requests for COCOA
 
-You can find the email address in the [Q&A Website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html), so please contact us from there.  
-For PullRequest and Issues, please be aware that we may not be able to respond.
+We welcome PullRequest and Issues to this repository. Please check [CONTRIBUTING.md](CONTRIBUTING.md) in advance before submitting.
+Please note that due to our resources and decision making process, it may take some time to respond. We would appreciate your understanding.
+
+If you have any non-technical requests, please contact us from email address in [Q&A Website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html).
 
 ## License.
 

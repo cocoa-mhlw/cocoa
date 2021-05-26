@@ -1,3 +1,7 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
@@ -10,6 +14,9 @@ using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using System;
+using CommonServiceLocator;
+using Covid19Radar.Common;
 
 /*
  * Our mission...is
@@ -43,11 +50,6 @@ namespace Covid19Radar
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.AddSkipBackupAttribute();
 
-#if USE_MOCK
-            // For debug mode, set the mock api provider to interact
-            // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
-#endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
             // Local Notification tap event listener
@@ -73,6 +75,41 @@ namespace Covid19Radar
             LoggerService.EndMethod();
         }
 
+        public static void UseMockExposureNotificationImplementationIfNeeded()
+        {
+#if USE_MOCK
+            // For debug mode, set the mock api provider to interact
+            // with some fake data
+            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+#endif
+        }
+
+        // Initialize IOC container
+        public static void InitializeServiceLocator(Action<IContainer> registerPlatformTypes)
+        {
+            var container = new Container(GetContainerRules());
+
+            registerPlatformTypes(container);
+            RegisterCommonTypes(container);
+
+            var serviceLocator = new ContainerServiceLocator(container);
+            ServiceLocator.SetLocatorProvider(() => serviceLocator);
+        }
+
+        private static Rules GetContainerRules()
+        {
+            return Rules.Default.WithAutoConcreteTypeResolution()
+                    .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
+                    .WithoutFastExpressionCompiler()
+                    .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Throw);
+        }
+
+        protected override IContainerExtension CreateContainerExtension()
+        {
+            var container = (ServiceLocator.Current as ContainerServiceLocator).CopyContainerWithRegistrations();
+            return new DryIocContainerExtension(container);
+        }
+
         //protected void OnNotificationTapped(NotificationTappedEventArgs e)
         //{
         //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
@@ -84,7 +121,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MenuPage>();
             containerRegistry.RegisterForNavigation<HomePage>();
-
 
             // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
@@ -98,6 +134,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage4>();
             containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
+
             // Help
             containerRegistry.RegisterForNavigation<HelpMenuPage>();
             containerRegistry.RegisterForNavigation<HelpPage1>();
@@ -119,27 +156,29 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ReAgreePrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
             containerRegistry.RegisterForNavigation<SplashPage>();
+        }
 
+        private static void RegisterCommonTypes(IContainer container)
+        {
             // Services
-            containerRegistry.RegisterSingleton<ILoggerService, LoggerService>();
-            containerRegistry.RegisterSingleton<ILogFileService, LogFileService>();
-            containerRegistry.RegisterSingleton<ILogPathService, LogPathService>();
-            containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteService>();
-            containerRegistry.RegisterSingleton<ILogUploadService, LogUploadService>();
-            containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
-            containerRegistry.RegisterSingleton<IUserDataService, UserDataService>();
-            containerRegistry.RegisterSingleton<IExposureNotificationService, ExposureNotificationService>();
-            containerRegistry.RegisterSingleton<ITermsUpdateService, TermsUpdateService>();
-            containerRegistry.RegisterSingleton<IApplicationPropertyService, ApplicationPropertyService>();
-            containerRegistry.RegisterSingleton<IHttpClientService, HttpClientService>();
+            container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
+            container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
+            container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
+            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
+            container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
+            container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
+            container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
+            container.Register<IExposureNotificationService, ExposureNotificationService>(Reuse.Singleton);
+            container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
+            container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
 #if USE_MOCK
-            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
-            containerRegistry.RegisterSingleton<IStorageService, StorageServiceMock>();
-#else            
-            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataService>();
-            containerRegistry.RegisterSingleton<IStorageService, StorageService>();
+            container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
+            container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
+#else
+            container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
+            container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
-            containerRegistry.RegisterSingleton<ISecureStorageService, SecureStorageService>();
+            container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
         }
 
         protected override void OnStart()

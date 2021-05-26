@@ -1,38 +1,48 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
-
+name: "不具合報告 / Bug report"
+about: "アプリの改善のための不具合を報告する / Create a report to help us improve"
+title: ""
+labels: ""
+assignees: ""
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## 不具合の内容 / Describe the bug
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+<!--
+  不具合がどのようなものであるか簡潔明瞭に記述してください。
+  A clear and concise description of what the bug is.
+-->
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## 再現手順 / Steps to reproduce
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+1. '....' に行き、
+2. '....' をクリックし、
+3. '....' へスクロールすると、
+4. エラーが発生します。
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## 期待される挙動 / Expected behavior
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+<!--
+  どのような動作がなされるべきかご説明ください。
+  A clear and concise description of what you expected to happen.
+-->
 
-**Additional context**
-Add any other context about the problem here.
+## スクリーンショット / Screenshots
+
+<!--
+  スクリーンショットがありますと、不具合の説明がより分かりやすくなります。
+  If applicable, add screenshots to help explain your problem.
+-->
+
+## 動作環境 / Environments
+
+- デバイス：（例：Pixel 5、iPhone 6 等）
+- OS：（例：Android、iOS）
+- バージョン：(例：1.2.2)
+
+## その他 / Additional context
+
+<!--
+  そのほかに補足情報がありましたらこちらに記述してください。
+  Add any other context about the problem here.
+-->

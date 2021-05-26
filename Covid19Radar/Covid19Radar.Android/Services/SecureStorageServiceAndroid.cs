@@ -1,15 +1,16 @@
-﻿using System;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using System;
 using Android.Content;
 using Android.Security.Keystore;
-using Covid19Radar.Droid.Services;
 using Covid19Radar.Services;
 using Java.Security;
 using Javax.Crypto;
 using Javax.Crypto.Spec;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(SecureStorageServiceAndroid))]
 namespace Covid19Radar.Droid.Services
 {
     public class SecureStorageServiceAndroid : ISecureStorageDependencyService

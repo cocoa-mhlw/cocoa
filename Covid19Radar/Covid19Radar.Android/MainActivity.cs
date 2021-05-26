@@ -1,16 +1,16 @@
-﻿using Android.App;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Prism;
-using Prism.Ioc;
 using Android.Runtime;
 using Android.Content;
-using Covid19Radar.Droid.Services.Logs;
-using Covid19Radar.Services.Logs;
 using Acr.UserDialogs;
-using Covid19Radar.Services;
-using Covid19Radar.Droid.Services;
-//using Plugin.LocalNotification;
+using Xamarin.ExposureNotifications;
+using System;
+using AndroidX.Work;
 
 namespace Covid19Radar.Droid
 {
@@ -26,6 +26,16 @@ namespace Covid19Radar.Droid
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
 
+            // Override WorkRequest configuration
+            // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
+            var repeatInterval = TimeSpan.FromHours(6);
+            Action<PeriodicWorkRequest.Builder> requestBuilder = b =>
+               b.SetConstraints(new Constraints.Builder()
+                   .SetRequiresBatteryNotLow(true)
+                   .SetRequiredNetworkType(NetworkType.Connected)
+                   .Build());
+            ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
+
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -37,28 +47,15 @@ namespace Covid19Radar.Droid
             UserDialogs.Init(this);
 
             //NotificationCenter.CreateNotificationChannel();
-            LoadApplication(new App(new AndroidInitializer()));
+            LoadApplication(new App());
             //NotificationCenter.NotifyNotificationTapped(base.Intent);
         }
-
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-
-        public class AndroidInitializer : IPlatformInitializer
-        {
-            public void RegisterTypes(IContainerRegistry containerRegistry)
-            {
-                // Services
-                containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
-                containerRegistry.RegisterSingleton<ISecureStorageDependencyService, SecureStorageServiceAndroid>();
-                containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
-            }
         }
 
         private void RequestPermission()
@@ -91,4 +88,3 @@ namespace Covid19Radar.Droid
 
     }
 }
-
