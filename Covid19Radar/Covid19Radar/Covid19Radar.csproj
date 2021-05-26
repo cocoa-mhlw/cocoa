@@ -200,8 +200,8 @@
     <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)'=='Release'">
-    <Compile Remove="ViewModels/HomePage/DebugPageViewModel.cs" />
-    <Compile Remove="Views/HomePage/DebugPage.xaml.cs" />
-    <EmbeddedResource Remove="Views/HomePage/DebugPage.xaml" />
+    <Compile Remove="ViewModels/Settings/DebugPageViewModel.cs" />
+    <Compile Remove="Views/Settings/DebugPage.xaml.cs" />
+    <EmbeddedResource Remove="Views/Settings/DebugPage.xaml" />
   </ItemGroup>
 </Project>
