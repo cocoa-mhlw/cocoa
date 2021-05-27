@@ -27,6 +27,8 @@
                 <Label HorizontalOptions="Center" Style="{StaticResource DefaultTitleLabel}">
                     <Label.FormattedText>
                         <FormattedString>
+                            <Span Text="{Binding NowDate}" />
+                            <Span Text="&#xa;" />
                             <Span Text="{x:Static resources:AppResources.NotContactPageLabel1}" />
                         </FormattedString>
                     </Label.FormattedText>
