@@ -80,6 +80,20 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
+            try // almost the same as try-catch in Initialize()
+            {
+                await exposureNotificationService.StartExposureNotification();
+                await exposureNotificationService.FetchExposureKeyAsync();
+
+                var statusMessage = await exposureNotificationService.UpdateStatusMessageAsync();
+                loggerService.Info($"Exposure notification status: {statusMessage}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                loggerService.Exception("Failed to exposure notification status.", ex);
+            }
+
             var count = exposureNotificationService.GetExposureCount();
             loggerService.Info($"Exposure count: {count}");
             if (count > 0)
