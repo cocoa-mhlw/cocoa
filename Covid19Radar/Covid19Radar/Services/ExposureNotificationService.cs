@@ -26,6 +26,8 @@ namespace Covid19Radar.Services
 
         long GetLastProcessTekTimestamp(string region);
         void SetLastProcessTekTimestamp(string region, long created);
+        string GetETag(string region);
+        void SetETag(string region, string etag);
         void RemoveLastProcessTekTimestamp();
 
         Task FetchExposureKeyAsync();
@@ -161,12 +163,22 @@ namespace Covid19Radar.Services
 
         public long GetLastProcessTekTimestamp(string region)
         {
+            return GetKey<long>(region, PreferenceKey.LastProcessTekTimestamp, 0L);
+        }
+
+        public string GetETag(string region)
+        {
+            return GetKey<string>(region, PreferenceKey.ETag, "");
+        }
+
+        public T GetKey<T>(string region, string key, T def)
+        {
             loggerService.StartMethod();
-            var result = 0L;
-            var jsonString = preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+            var result = def;
+            var jsonString = preferencesService.GetValue<string>(key, null);
             if (!string.IsNullOrEmpty(jsonString))
             {
-                var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
+                var dict = JsonConvert.DeserializeObject<Dictionary<string, T>>(jsonString);
                 if (dict.ContainsKey(region))
                 {
                     result = dict[region];
@@ -178,19 +190,29 @@ namespace Covid19Radar.Services
 
         public void SetLastProcessTekTimestamp(string region, long created)
         {
+            SetKey<long>(region, PreferenceKey.LastProcessTekTimestamp, created);
+        }
+
+        public void SetETag(string region, string etag)
+        {
+            SetKey<string>(region, PreferenceKey.ETag, etag);
+        }
+
+        public void SetKey<T>(string region, string key, T created)
+        {
             loggerService.StartMethod();
-            var jsonString = preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
-            Dictionary<string, long> newDict;
+            var jsonString = preferencesService.GetValue<string>(key, null);
+            Dictionary<string, T> newDict;
             if (!string.IsNullOrEmpty(jsonString))
             {
-                newDict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
+                newDict = JsonConvert.DeserializeObject<Dictionary<string, T>>(jsonString);
             }
             else
             {
-                newDict = new Dictionary<string, long>();
+                newDict = new Dictionary<string, T>();
             }
             newDict[region] = created;
-            preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
+            preferencesService.SetValue(key, JsonConvert.SerializeObject(newDict));
             loggerService.EndMethod();
         }
 
@@ -198,6 +220,7 @@ namespace Covid19Radar.Services
         {
             loggerService.StartMethod();
             preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
+            preferencesService.RemoveValue(PreferenceKey.ETag);
             loggerService.EndMethod();
         }
 

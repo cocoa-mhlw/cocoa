@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Net;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
@@ -169,11 +170,22 @@ namespace Covid19Radar.Services
         }
         private async Task<string> GetCdnAsync(string url)
         {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
+            var etag = Xamarin.Essentials.Preferences.Get("ETag", "");
+            var request = new HttpRequestMessage(HttpMethod.Get, url);
+            if (! string.IsNullOrEmpty(etag))
+            {
+                request.Headers.TryAddWithoutValidation("If-None-Match", etag);
+            }
+            var result = await downloadClient.SendAsync(request);
+            var status = result.StatusCode;
+            var headers = result.Headers;
+            var etags = headers.GetValues("ETag");
+            etag = etags.First();
+            Xamarin.Essentials.Preferences.Set("ETag", etag);
 
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            await result.Content.ReadAsStringAsync(); // Is this line important?
+
+            if (status == System.Net.HttpStatusCode.OK)
             {
                 return await result.Content.ReadAsStringAsync();
             }
