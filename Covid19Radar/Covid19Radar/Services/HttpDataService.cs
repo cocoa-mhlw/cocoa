@@ -189,6 +189,10 @@ namespace Covid19Radar.Services
             {
                 return await result.Content.ReadAsStringAsync();
             }
+            else if (status == System.Net.HttpStatusCode.NotModified)
+            {
+                return "[]";
+            }
             return null;
         }
         private async Task<string> GetCdnAsync(string url, CancellationToken cancellationToken)
