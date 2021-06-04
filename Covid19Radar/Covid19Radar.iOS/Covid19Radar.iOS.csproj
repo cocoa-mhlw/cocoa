@@ -1176,8 +1176,6 @@
     <EmbeddedResource Include="fa-brands-400.otf" />
     <EmbeddedResource Include="fa-regular-400.otf" />
     <EmbeddedResource Include="fa-solid-900.otf" />
-    <EmbeddedResource Include="NotoSansCJKjp-Medium.otf" />
-    <EmbeddedResource Include="NotoSansCJKjp-Regular.otf" />
     <EmbeddedResource Include="Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>

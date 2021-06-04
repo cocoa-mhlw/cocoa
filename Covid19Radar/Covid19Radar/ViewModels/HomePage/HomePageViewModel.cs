@@ -46,12 +46,18 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
+            // It seems the life cycle methods are not called after background fetch in iOS.
+            // The days of use will be updated at this time.
+            MessagingCenter.Unsubscribe<object>(this, AppConstants.IosOnActivatedMessage);
+            MessagingCenter.Subscribe<object>(this, AppConstants.IosOnActivatedMessage, (sender) =>
+            {
+                SettingDaysOfUse();
+            });
+
             var startDate = userDataService.GetStartDate();
             StartDate = startDate.ToLocalTime().ToString("D");
 
-            var daysOfUse = userDataService.GetDaysOfUse();
-            PastDate = daysOfUse.ToString();
-
+            SettingDaysOfUse();
 
             // Check Version
             AppUtils.CheckVersion(loggerService);
@@ -80,7 +86,7 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var count = exposureNotificationService.GetExposureCount();
+            var count = exposureNotificationService.GetExposureCountToDisplay();
             loggerService.Info($"Exposure count: {count}");
             if (count > 0)
             {
@@ -104,5 +110,25 @@ namespace Covid19Radar.ViewModels
 
            loggerService.EndMethod();
        });
+
+        private void SettingDaysOfUse()
+        {
+            loggerService.StartMethod();
+            var daysOfUse = userDataService.GetDaysOfUse();
+            PastDate = daysOfUse.ToString();
+            loggerService.EndMethod();
+        }
+
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
+            SettingDaysOfUse();
+        }
+
+        public override void OnResume()
+        {
+            base.OnResume();
+            SettingDaysOfUse();
+        }
     }
 }
