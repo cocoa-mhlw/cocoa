@@ -76,10 +76,10 @@ namespace Covid19Radar.Services.Logs
 
         private void WriteLine(DateTime jstNow, string line)
         {
-            var    file  = _log_file;
-            string fname = _log_path.LogFilePath(jstNow);
-            if (file is null || file.FileName != fname) {
-                var newFile = new LogFile(fname, _encoding);
+            var    file = _log_file;
+            string path = _log_path.LogFilePath(jstNow);
+            if (file is null || file.FileName != path) {
+                var newFile = new LogFile(path, _encoding);
                 do {
                     if (Interlocked.CompareExchange(ref _log_file, newFile, file) == file) {
                         newFile.WriteLine(HEADER);
@@ -89,7 +89,7 @@ namespace Covid19Radar.Services.Logs
                     }
                     Thread.Yield();
                     file = _log_file;
-                } while (file is null || file.FileName != fname);
+                } while (file is null || file.FileName != path);
             }
             file.WriteLine(line);
         }
