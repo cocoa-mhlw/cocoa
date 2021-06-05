@@ -40,8 +40,8 @@ namespace Covid19Radar.Services.Logs
         private static readonly string HEADER = CreateLogHeaderRow();
         private readonly ILogPathService _log_path;
         private readonly IEssentialsService _essentials;
-        private readonly Encoding _enc;
-        private LogFile? _file;
+        private readonly Encoding _encoding;
+        private LogFile? _log_file;
 
         /// <summary>
         ///  型'<see cref="Covid19Radar.Services.Logs.LogWriter"/>'の新しいインスタンスを生成します。
@@ -52,7 +52,7 @@ namespace Covid19Radar.Services.Logs
         {
             _log_path   = logPath    ?? throw new ArgumentNullException(nameof(logPath));
             _essentials = essentials ?? throw new ArgumentNullException(nameof(essentials));
-            _enc        = Encoding.UTF8;
+            _encoding   = Encoding.UTF8; // 文字コードを変更する必要性が出た場合は、外部から注入できる様にする。
         }
 
         /// <inheritdoc/>
@@ -75,19 +75,19 @@ namespace Covid19Radar.Services.Logs
 
         private void WriteLine(DateTime jstNow, string line)
         {
-            var    file  = _file;
+            var    file  = _log_file;
             string fname = _log_path.LogFilePath(jstNow);
             if (file is null || file.FileName != fname) {
-                var newFile = new LogFile(fname, _enc);
+                var newFile = new LogFile(fname, _encoding);
                 do {
-                    if (Interlocked.CompareExchange(ref _file, newFile, file) == file) {
+                    if (Interlocked.CompareExchange(ref _log_file, newFile, file) == file) {
                         newFile.Writer.WriteLine(HEADER);
                         file?.Dispose();
                         file = newFile;
                         break;
                     }
                     Thread.Yield();
-                    file = _file;
+                    file = _log_file;
                 } while (file is null || file.FileName != fname);
             }
             file.Writer.WriteLine(line);
