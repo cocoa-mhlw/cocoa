@@ -78,7 +78,7 @@ namespace Covid19Radar.Services.Logs
         {
             var    file = _log_file;
             string path = _log_path.LogFilePath(jstNow);
-            if (file is null || file.FileName != path) {
+            if (file is null || file.Path != path) {
                 var newFile = new LogFile(path, _encoding);
                 do {
                     if (Interlocked.CompareExchange(ref _log_file, newFile, file) == file) {
@@ -89,7 +89,7 @@ namespace Covid19Radar.Services.Logs
                     }
                     Thread.Yield();
                     file = _log_file;
-                } while (file is null || file.FileName != path);
+                } while (file is null || file.Path != path);
             }
             file.WriteLine(line);
         }
@@ -165,23 +165,23 @@ namespace Covid19Radar.Services.Logs
             private readonly Encoding           _encoding;
             private readonly Lazy<StreamWriter> _writer;
 
-            internal string FileName { get; }
+            internal string Path { get; }
 
             internal LogFile(string path, Encoding enc)
             {
-                string dir = Path.GetDirectoryName(path);
+                string dir = System.IO.Path.GetDirectoryName(path);
                 if (!Directory.Exists(dir)) {
                     Directory.CreateDirectory(dir);
                 }
 
-                this.FileName = path;
-                _encoding     = enc;
-                _writer       = new Lazy<StreamWriter>(this.OpenFile, LazyThreadSafetyMode.PublicationOnly);
+                this.Path = path;
+                _encoding = enc;
+                _writer   = new Lazy<StreamWriter>(this.OpenFile, LazyThreadSafetyMode.PublicationOnly);
             }
 
             private StreamWriter OpenFile()
             {
-                return new StreamWriter(new FileStream(this.FileName, FileMode.Append, FileAccess.Write, FileShare.ReadWrite), _encoding) {
+                return new StreamWriter(new FileStream(this.Path, FileMode.Append, FileAccess.Write, FileShare.ReadWrite), _encoding) {
                     AutoFlush = true
                 };
             }
