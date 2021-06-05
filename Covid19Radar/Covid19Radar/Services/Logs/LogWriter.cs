@@ -41,7 +41,7 @@ namespace Covid19Radar.Services.Logs
         private readonly ILogPathService _log_path;
         private readonly IEssentialsService _essentials;
         private readonly Encoding _enc;
-        private File? _file;
+        private LogFile? _file;
 
         /// <summary>
         ///  型'<see cref="Covid19Radar.Services.Logs.LogWriter"/>'の新しいインスタンスを生成します。
@@ -78,7 +78,7 @@ namespace Covid19Radar.Services.Logs
             var    file  = _file;
             string fname = _log_path.LogFilePath(jstNow);
             if (file is null || file.FileName != fname) {
-                var newFile = new File(fname, _enc);
+                var newFile = new LogFile(fname, _enc);
                 do {
                     if (Interlocked.CompareExchange(ref _file, newFile, file) == file) {
                         newFile.Writer.WriteLine(HEADER);
@@ -159,7 +159,7 @@ namespace Covid19Radar.Services.Logs
             return _sb.ToString();
         }
 
-        private sealed class File : IDisposable
+        private sealed class LogFile : IDisposable
         {
             private readonly Encoding           _enc;
             private readonly Lazy<StreamWriter> _sw;
@@ -167,7 +167,7 @@ namespace Covid19Radar.Services.Logs
             internal string       FileName { get; }
             internal StreamWriter Writer   => _sw.Value;
 
-            internal File(string path, Encoding enc)
+            internal LogFile(string path, Encoding enc)
             {
                 string dir = Path.GetDirectoryName(path);
                 if (!Directory.Exists(dir)) {
