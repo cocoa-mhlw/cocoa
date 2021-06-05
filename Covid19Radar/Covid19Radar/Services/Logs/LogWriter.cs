@@ -7,6 +7,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using Covid19Radar.Common;
@@ -81,7 +82,7 @@ namespace Covid19Radar.Services.Logs
                 var newFile = new LogFile(fname, _encoding);
                 do {
                     if (Interlocked.CompareExchange(ref _log_file, newFile, file) == file) {
-                        newFile.Writer.WriteLine(HEADER);
+                        newFile.WriteLine(HEADER);
                         file?.Dispose();
                         file = newFile;
                         break;
@@ -90,7 +91,7 @@ namespace Covid19Radar.Services.Logs
                     file = _log_file;
                 } while (file is null || file.FileName != fname);
             }
-            file.Writer.WriteLine(line);
+            file.WriteLine(line);
         }
 
         private static string CreateLogHeaderRow()
@@ -161,11 +162,10 @@ namespace Covid19Radar.Services.Logs
 
         private sealed class LogFile : IDisposable
         {
-            private readonly Encoding           _enc;
-            private readonly Lazy<StreamWriter> _sw;
+            private readonly Encoding           _encoding;
+            private readonly Lazy<StreamWriter> _writer;
 
-            internal string       FileName { get; }
-            internal StreamWriter Writer   => _sw.Value;
+            internal string FileName { get; }
 
             internal LogFile(string path, Encoding enc)
             {
@@ -175,20 +175,28 @@ namespace Covid19Radar.Services.Logs
                 }
 
                 this.FileName = path;
-                _enc = enc;
-                _sw  = new Lazy<StreamWriter>(this.OpenFile, LazyThreadSafetyMode.PublicationOnly);
+                _encoding     = enc;
+                _writer       = new Lazy<StreamWriter>(this.OpenFile, LazyThreadSafetyMode.PublicationOnly);
             }
 
             private StreamWriter OpenFile()
             {
-                var sw = new StreamWriter(new FileStream(this.FileName, FileMode.Append, FileAccess.Write, FileShare.ReadWrite), _enc);
-                sw.AutoFlush = true;
-                return sw;
+                return new StreamWriter(new FileStream(this.FileName, FileMode.Append, FileAccess.Write, FileShare.ReadWrite), _encoding) {
+                    AutoFlush = true
+                };
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            internal void WriteLine(string line)
+            {
+                _writer.Value.WriteLine(line);
             }
 
             public void Dispose()
             {
-                this.Writer.Dispose();
+                if (_writer.IsValueCreated) {
+                    _writer.Value.Dispose();
+                }
             }
         }
     }
