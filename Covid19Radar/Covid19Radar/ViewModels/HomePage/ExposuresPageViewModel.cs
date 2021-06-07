@@ -25,7 +25,7 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.MainExposures;
             _exposures = new ObservableCollection<ExposureSummary>();
 
-            var exposureInformationList = exposureNotificationService.GetExposureInformationList();
+            var exposureInformationList = exposureNotificationService.GetExposureInformationListToDisplay();
             if (exposureInformationList != null)
             {
                 foreach (var en in exposureInformationList.GroupBy(eni => eni.Timestamp))

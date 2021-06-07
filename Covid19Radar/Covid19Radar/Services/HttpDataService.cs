@@ -67,7 +67,7 @@ namespace Covid19Radar.Services
                     return true;
                 }
             }
-            catch (HttpRequestException ex)
+            catch (Exception ex)
             {
                 loggerService.Exception("Failed to register user.", ex);
             }
