@@ -2,18 +2,18 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Services;
-using Covid19Radar.Services.Logs;
-using Prism.Navigation;
-using Xamarin.Forms;
 using System;
-using Acr.UserDialogs;
-using Covid19Radar.Views;
+using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
-using System.Threading.Tasks;
-using System.IO;
+using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
+using Covid19Radar.Views;
+using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {

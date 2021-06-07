@@ -26,9 +26,11 @@ namespace Covid19Radar.Renderers
             set => SetValue(BorderColorProperty, value);
         }
 
+        /*
         public void TriggerDeleteClicked()
         {
             DeleteClicked?.Invoke(this, null);
         }
+        //*/
     }
 }

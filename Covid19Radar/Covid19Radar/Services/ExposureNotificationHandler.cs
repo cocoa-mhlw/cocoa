@@ -12,7 +12,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CommonServiceLocator;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;

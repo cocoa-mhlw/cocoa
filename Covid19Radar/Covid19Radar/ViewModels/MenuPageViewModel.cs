@@ -2,13 +2,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Prism.Commands;
-using Prism.Navigation;
 using System.Collections.ObjectModel;
-using Xamarin.Forms;
 using Covid19Radar.Model;
 using Covid19Radar.Views;
-using System.Diagnostics;
+using Prism.Commands;
+using Prism.Navigation;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.ViewModels
@@ -92,6 +91,5 @@ namespace Covid19Radar.ViewModels
                 item.TextColor = "#000";
             });
         }
-
     }
 }

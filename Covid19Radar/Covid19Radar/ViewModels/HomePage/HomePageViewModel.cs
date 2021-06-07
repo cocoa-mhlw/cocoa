@@ -102,14 +102,14 @@ namespace Covid19Radar.ViewModels
             }
         });
 
-        public Command OnClickShareApp => new Command(() =>
+       public Command OnClickShareApp => new Command(() =>
        {
            loggerService.StartMethod();
 
            AppUtils.PopUpShare();
 
            loggerService.EndMethod();
-       });
+        });
 
         private void SettingDaysOfUse()
         {

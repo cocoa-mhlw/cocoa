@@ -62,8 +62,5 @@ namespace Covid19Radar
         public string LogStorageEndpoint { get; }
         public string LogStorageContainerName { get; }
         public string LogStorageAccountName { get; }
-
-        internal Dictionary<string, ulong> GetDefaultBatch() =>
-            Instance.SupportedRegions.ToDictionary(r => r, r => (ulong)0);
     }
 }

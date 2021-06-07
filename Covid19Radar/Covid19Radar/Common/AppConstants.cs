@@ -23,7 +23,6 @@ namespace Covid19Radar.Common
 
         public const string positiveRegex = @"\b[0-9]{8}\b";
 
-        // TODO: Need to check
         /// <summary>
         /// Number of days of exposure information to display
         /// </summary>
