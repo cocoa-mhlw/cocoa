@@ -2,13 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Services;
+using Prism.AppModel;
 using Prism.Mvvm;
 using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
+    public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible, IPageLifecycleAware, IApplicationLifecycleAware
     {
 
         // Navigation
@@ -50,6 +50,22 @@ namespace Covid19Radar.ViewModels
         public virtual void Destroy()
         {
 
+        }
+
+        public virtual void OnAppearing()
+        {
+        }
+
+        public virtual void OnDisappearing()
+        {
+        }
+
+        public virtual void OnResume()
+        {
+        }
+
+        public virtual void OnSleep()
+        {
         }
     }
 }
