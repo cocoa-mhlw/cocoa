@@ -76,7 +76,7 @@ namespace Covid19Radar.ViewModels
             var str = new[] { "Build: " + os, "Ver: " + AppSettings.Instance.AppVersion,
                 "Region: " + string.Join(",", AppSettings.Instance.SupportedRegions), "CdnUrl: " + AppSettings.Instance.CdnUrlBase,
                 "ApiUrl: " + AppSettings.Instance.ApiUrlBase, "Agree: " + agree, "StartDate: " + userDataService.GetStartDate().ToLocalTime().ToString("F"),
-                "DaysOfUse: " + userDataService.GetDaysOfUse(), "ExposureCount: " + exposureNotificationService.GetExposureCount(),
+                "DaysOfUse: " + userDataService.GetDaysOfUse(), "ExposureCount: " + exposureNotificationService.GetExposureCountToDisplay(),
                 "LastProcessTek: " + lastProcessTekTimestamp, " (long): " + ticks, "ENstatus: " + exposureNotificationStatus,
                 "ENmessage: " + exposureNotificationMessage, "Now: " + DateTime.Now.ToLocalTime().ToString("F"), ex};
             DebugInfo = string.Join(Environment.NewLine, str);
