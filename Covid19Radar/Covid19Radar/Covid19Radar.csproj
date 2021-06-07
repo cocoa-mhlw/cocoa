@@ -79,8 +79,6 @@
     <None Remove="Resources\Fonts\fa-regular-400.otf" />
     <None Remove="Resources\Fonts\fa-solid-900.otf" />
     <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
-    <None Remove="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
-    <None Remove="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
     <None Remove="Services\ExposureNotificationHandler.cs.txt" />
     <None Remove="settings.json" />
@@ -92,8 +90,6 @@
     <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-solid-900.otf" />
     <EmbeddedResource Include="Resources\Fonts\materialdesignicons-webfont.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
-    <EmbeddedResource Include="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
     <EmbeddedResource Include="Resources\Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
