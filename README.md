@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CI.yml)
 
+[![CIserver](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CIserver.yml/badge.svg?branch=master)](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CIserver.yml)
+
 This is the official repository for the COVID-19 Contact-Confirming Application(COCOA).  
 COCOA has been developed from [Project Covid19Radar](https://github.com/Covid-19Radar).
 
