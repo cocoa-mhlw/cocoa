@@ -22,5 +22,16 @@ namespace Covid19Radar.Common
         public const int MaxDiagnosisUidCount = 8;
 
         public const string positiveRegex = @"\b[0-9]{8}\b";
+
+        // TODO: Need to check
+        /// <summary>
+        /// Number of days of exposure information to display
+        /// </summary>
+        public const int DaysOfExposureInformationToDisplay = -15;
+
+        /// <summary>
+        /// Message when `AppDelagate.OnActivated()` occurs on iOS.
+        /// </summary>
+        public const string IosOnActivatedMessage = "IosOnActivatedMessage";
     }
 }

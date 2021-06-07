@@ -49,6 +49,7 @@
     <BundleAssemblies>true</BundleAssemblies>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     <AndroidDexTool>d8</AndroidDexTool>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -72,6 +73,8 @@
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -80,7 +83,7 @@
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>default</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
@@ -94,8 +97,7 @@
     <EnableLLVM>false</EnableLLVM>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <MandroidI18n>CJK</MandroidI18n>
-    <AndroidHttpClientHandlerType>
-    </AndroidHttpClientHandlerType>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
@@ -106,7 +108,7 @@
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>default</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
@@ -115,6 +117,7 @@
     <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <MandroidI18n>CJK</MandroidI18n>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -176,7 +179,7 @@
       <Version>4.6.0.967</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification">
-      <Version>18.0.2-eap.6</Version>
+      <Version>19.7.1-eap.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
       <Version>117.0.0-preview03</Version>
