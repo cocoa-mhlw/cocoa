@@ -451,6 +451,21 @@
     <BundleResource Include="Resources\zh.lproj\arrow_icon%403x.png" />
     <BundleResource Include="Resources\zh.lproj\arrow_icon%402x.png" />
     <BundleResource Include="Resources\zh.lproj\arrow_icon.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage50%401x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage50%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage50%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\Nocontact10%401x.png" />
+    <BundleResource Include="Resources\Base.lproj\Nocontact10%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\Nocontact10%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage20%401x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage20%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage20%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage21%401x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage21%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage21%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage22%401x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage22%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage22%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
