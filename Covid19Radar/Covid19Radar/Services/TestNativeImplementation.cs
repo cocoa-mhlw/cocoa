@@ -116,7 +116,7 @@ namespace Covid19Radar.Services
 			{
 				return url.Split(",").ToList().Select(x => Convert.ToUInt16(x)).ToArray();
 			}
-			return (DataPreset(NumberEndofSentence(url)));
+			return DataPreset(NumberEndofSentence(url));
 
 		}
 
