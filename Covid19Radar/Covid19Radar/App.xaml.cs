@@ -161,7 +161,6 @@ namespace Covid19Radar
         private static void RegisterCommonTypes(IContainer container)
         {
             // Services
-            container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
@@ -180,6 +179,9 @@ namespace Covid19Radar
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
+
+            // Utilities
+            container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
         }
 
         protected override void OnStart()
