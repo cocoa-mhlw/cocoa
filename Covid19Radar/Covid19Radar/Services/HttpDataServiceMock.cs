@@ -175,14 +175,12 @@ namespace Covid19Radar.Services
         async Task<bool> IHttpDataService.PostRegisterUserAsync()
         {
             Debug.WriteLine("HttpDataServiceMock::PostRegisterUserAsync called");
-            switch (NumberEndofSentence(UrlApi()[1]))
+            var result = NumberEndofSentence(UrlApi()[1]) switch
             {
-                case 1:
-                    return await Task.FromResult(false);
-                case 0:
-                default:
-                    return await Task.FromResult(true);
-            }
+                1 => false,
+                _ => true
+            };
+            return await Task.FromResult(result);
         }
 
         Task<HttpStatusCode> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
