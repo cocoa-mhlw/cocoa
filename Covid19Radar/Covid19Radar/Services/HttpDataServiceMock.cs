@@ -66,11 +66,12 @@ namespace Covid19Radar.Services
 
         private TemporaryExposureKeyExportFileModel TestDat(long created)
         {
-            var tmp = new TemporaryExposureKeyExportFileModel();
-            tmp.Region = "440";
-            tmp.Url = "testUrl";
-            tmp.Created = created;
-            return (tmp);
+            return new TemporaryExposureKeyExportFileModel()
+            {
+                Region = "440",
+                Url = "testUrl",
+                Created = created
+            };
         }
 
         private long TimeBefore(int day)
