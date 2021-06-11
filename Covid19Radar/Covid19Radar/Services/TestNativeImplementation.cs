@@ -128,7 +128,7 @@ namespace Covid19Radar.Services
 			"https://API_URL_BASE/api" -> dataVer = 0 (default)
 			others -> dataVer is the number at the end of the sentence
 			*/
-			var d = Data();
+			var dataPreset = Data();
 			int i = 0;
 			var summary = new ExposureDetectionSummary(d[i++], d[i++], d[i++], new TimeSpan[d[i++]], d[i++]);
 
