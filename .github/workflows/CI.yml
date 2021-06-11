@@ -44,6 +44,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    needs: [build_ios, build_android]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
