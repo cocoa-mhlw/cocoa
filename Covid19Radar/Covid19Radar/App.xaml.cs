@@ -204,10 +204,16 @@ namespace Covid19Radar
 
             container.Register<IDialogService, DialogService>(Reuse.Singleton);
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
+<<<<<<< HEAD
             container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
+=======
+
+            // Utilities
+            container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
+>>>>>>> 02d65cb1 (`RegisterCommonTypes` 登録順並び替え)
         }
 
         protected override void OnStart()
