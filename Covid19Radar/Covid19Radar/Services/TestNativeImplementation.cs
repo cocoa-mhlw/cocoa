@@ -114,7 +114,7 @@ namespace Covid19Radar.Services
 			string url = UrlApi()[0];
 			if (Regex.IsMatch(url, @"^(\d+,)+\d+,?$"))
 			{
-				return (url.Split(",").ToList().Select(x => Convert.ToUInt16(x)).ToArray());
+				return url.Split(",").ToList().Select(x => Convert.ToUInt16(x)).ToArray();
 			}
 			return (DataPreset(NumberEndofSentence(url)));
 
