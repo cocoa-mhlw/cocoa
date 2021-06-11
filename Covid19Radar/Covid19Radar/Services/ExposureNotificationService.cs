@@ -58,7 +58,13 @@ namespace Covid19Radar.Services
         public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
-        public ExposureNotificationService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IPreferencesService preferencesService, IApplicationPropertyService applicationPropertyService, IDateTimeUtility dateTimeUtility)
+        public ExposureNotificationService(
+            ILoggerService loggerService,
+            IHttpClientService httpClientService,
+            ISecureStorageService secureStorageService,
+            IPreferencesService preferencesService,
+            IApplicationPropertyService applicationPropertyService,
+            IDateTimeUtility dateTimeUtility)
         {
             this.loggerService = loggerService;
             this.httpClientService = httpClientService;
