@@ -67,6 +67,7 @@ namespace Covid19Radar.Droid.Services.Logs
 
         public override void OnReceive(Context context, Intent intent)
         {
+            loggerService.StartMethod();
             try
             {
                 loggerService.Info($"Action: {intent.Action}");
@@ -75,9 +76,13 @@ namespace Covid19Radar.Droid.Services.Logs
                 var nextScheduledTime = LogPeriodicDeleteServiceAndroid.SetNextSchedule();
                 loggerService.Info($"Next scheduled time: {DateTimeOffset.FromUnixTimeMilliseconds(nextScheduledTime).ToOffset(new TimeSpan(9, 0, 0))}");
             }
-            catch
+            catch (Exception e)
             {
-                // do nothing
+                loggerService.Exception("Failed to rotate logs.", e);
+            }
+            finally
+            {
+                loggerService.EndMethod();
             }
         }
     }

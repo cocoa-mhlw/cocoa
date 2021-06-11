@@ -31,20 +31,19 @@ namespace Covid19Radar.Services.Logs
         public async Task<bool> UploadAsync(string zipFileName)
         {
             loggerService.StartMethod();
-
-            var result = false;
-
             try
             {
                 // Get the storage SAS Token for upload.
                 var logStorageSasResponse = await httpDataService.GetLogStorageSas();
                 if (logStorageSasResponse.StatusCode != (int)HttpStatusCode.OK)
                 {
-                    throw new Exception("Status is error.");
+                    loggerService.Error("Failed upload. Status is error.");
+                    return false;
                 }
                 if (string.IsNullOrEmpty(logStorageSasResponse.Result.SasToken))
                 {
-                    throw new Exception("Storage SAS Token is null or empty.");
+                    loggerService.Error("Failed upload. Storage SAS Token is null or empty.");
+                    return false;
                 }
 
                 // Upload to storage.
@@ -60,18 +59,21 @@ namespace Covid19Radar.Services.Logs
                 var uploadResult = await storageService.UploadAsync(endpoint, uploadPath, accountName, sasToken, logZipPath);
                 if (!uploadResult)
                 {
-                    throw new Exception("Failed to upload to storage.");
+                    loggerService.Error("Failed to upload to storage.");
+                    return false;
                 }
 
-                result = true;
+                return true;
             }
             catch (Exception ex)
             {
                 loggerService.Exception("Failed upload.", ex);
+                return false;
             }
-
-            loggerService.EndMethod();
-            return result;
+            finally
+            {
+                loggerService.EndMethod();
+            }
         }
     }
 }

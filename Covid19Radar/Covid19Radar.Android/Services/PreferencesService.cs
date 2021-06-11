@@ -75,9 +75,9 @@ namespace Covid19Radar.Droid.Services
                     loggerService.EndMethod();
                     return (T)value;
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    loggerService.Error($"Failed to get value of {key}");
+                    loggerService.Exception($"Failed to get value of {key}", e);
                     loggerService.EndMethod();
                     return defaultValue;
                 }
