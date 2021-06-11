@@ -75,9 +75,7 @@ namespace Covid19Radar.Services
         }
 
         private long TimeBefore(int day)
-        {
-            return (new DateTimeOffset(DateTime.UtcNow.ToLocalTime().AddDays(day)).ToUnixTimeMilliseconds());
-        }
+            => new DateTimeOffset(DateTime.UtcNow.ToLocalTime().AddDays(day)).ToUnixTimeMilliseconds();
 
         private long NightBefore(int day)
         {
