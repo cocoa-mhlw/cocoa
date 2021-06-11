@@ -2,25 +2,58 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
+using Covid19Radar.Services.Logs;
 using FFImageLoading.Helpers;
 using Prism.Logging;
-using System;
-using static System.Diagnostics.Debug;
 
 namespace Covid19Radar.Services
 {
     public class DebugLogger : ILoggerFacade, IMiniLogger
     {
-        public void Debug(string message) =>
-            WriteLine($"Debug: {message}");
+        private readonly ILoggerService _logger;
 
-        public void Error(string errorMessage) =>
-            WriteLine($"Error: {errorMessage}");
+        public DebugLogger(ILoggerService logger)
+        {
+            _logger = logger;
+        }
 
-        public void Error(string errorMessage, Exception ex) =>
-            WriteLine($"Error: {errorMessage}\n{ex.GetType().Name}: {ex}");
+        public void Debug(string message)
+        {
+            _logger.Debug(message);
+        }
 
-        public void Log(string message, Category category, Priority priority) =>
-            WriteLine($"{category} - {priority}: {message}");
+        public void Error(string errorMessage)
+        {
+            _logger.Error(errorMessage);
+        }
+
+        public void Error(string errorMessage, Exception ex)
+        {
+            _logger.Exception(errorMessage, ex);
+        }
+
+        public void Log(string message, Category category, Priority priority)
+        {
+            message = $"{nameof(Priority)}.{priority} - {message}";
+
+            switch (category) {
+            case Category.Debug:
+                _logger.Debug(message);
+                break;
+            case Category.Info:
+                _logger.Info(message);
+                break;
+            case Category.Warn:
+                _logger.Warning(message);
+                break;
+            case Category.Exception:
+                _logger.Error(message);
+                break;
+            default:
+                _logger.Verbose(message);
+                break;
+            }
+        }
     }
 }
