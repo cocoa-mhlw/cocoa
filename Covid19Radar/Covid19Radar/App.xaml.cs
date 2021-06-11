@@ -193,6 +193,7 @@ namespace Covid19Radar
 
         protected override void OnResume()
         {
+            base.OnResume();
             LogFileService.Rotate();
         }
 
@@ -205,6 +206,7 @@ namespace Covid19Radar
         */
         protected override void OnSleep()
         {
+            base.OnSleep();
         }
 
         private void LogUnobservedTaskExceptions()
