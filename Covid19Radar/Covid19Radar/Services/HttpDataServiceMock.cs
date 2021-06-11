@@ -31,8 +31,7 @@ namespace Covid19Radar.Services
         // copy from ./HttpDataService.cs
         private async Task<string> GetCdnAsync(string url, CancellationToken cancellationToken)
         {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
-            HttpResponseMessage result = await response;
+            HttpResponseMessage result = await downloadClient.GetAsync(url, cancellationToken);
             await result.Content.ReadAsStringAsync();
 
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
