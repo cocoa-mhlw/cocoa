@@ -53,17 +53,19 @@ namespace Covid19Radar.Services
         private readonly ISecureStorageService secureStorageService;
         private readonly IPreferencesService preferencesService;
         private readonly IApplicationPropertyService applicationPropertyService;
+        private readonly IDateTimeUtility dateTimeUtility;
 
         public string CurrentStatusMessage { get; set; } = "初期状態";
         public Status ExposureNotificationStatus { get; set; }
 
-        public ExposureNotificationService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IPreferencesService preferencesService, IApplicationPropertyService applicationPropertyService)
+        public ExposureNotificationService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IPreferencesService preferencesService, IApplicationPropertyService applicationPropertyService, IDateTimeUtility dateTimeUtility)
         {
             this.loggerService = loggerService;
             this.httpClientService = httpClientService;
             this.secureStorageService = secureStorageService;
             this.preferencesService = preferencesService;
             this.applicationPropertyService = applicationPropertyService;
+            this.dateTimeUtility = dateTimeUtility;
 
             _ = GetExposureNotificationConfig();
         }
@@ -246,7 +248,7 @@ namespace Covid19Radar.Services
         {
             loggerService.StartMethod();
             var list = GetExposureInformationList()?
-                .Where(x => x.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(AppConstants.DaysOfExposureInformationToDisplay)) >= 0)
+                .Where(x => x.Timestamp.CompareTo(dateTimeUtility.UtcNow.AddDays(AppConstants.DaysOfExposureInformationToDisplay)) >= 0)
                 .ToList();
             loggerService.EndMethod();
             return list;

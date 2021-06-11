@@ -38,7 +38,6 @@ namespace Covid19Radar.UnitTests.Services
             mockPreferencesService = mockRepository.Create<IPreferencesService>();
             mockApplicationPropertyService = mockRepository.Create<IApplicationPropertyService>();
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
-            DateTimeUtility.Instance = mockDateTimeUtility.Object;
         }
 
         private ExposureNotificationService CreateService()
@@ -48,7 +47,8 @@ namespace Covid19Radar.UnitTests.Services
                 mockHttpClientService.Object,
                 mockSecureStorageService.Object,
                 mockPreferencesService.Object,
-                mockApplicationPropertyService.Object);
+                mockApplicationPropertyService.Object,
+                mockDateTimeUtility.Object);
         }
 
         [Theory]
