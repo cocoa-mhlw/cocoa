@@ -4,7 +4,6 @@
 
 using System.Windows.Input;
 using Acr.UserDialogs;
-using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -28,7 +27,6 @@ namespace Covid19Radar.ViewModels
 
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly IUserDataService userDataService;
-        private readonly IHttpDataService httpDataService;
         private readonly ILogFileService logFileService;
         private readonly ITermsUpdateService termsUpdateService;
 
@@ -38,7 +36,6 @@ namespace Covid19Radar.ViewModels
             AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
-            this.httpDataService = httpDataService;
             this.exposureNotificationService = exposureNotificationService;
             this.logFileService = logFileService;
             this.termsUpdateService = termsUpdateService;

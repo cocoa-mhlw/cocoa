@@ -12,6 +12,5 @@ namespace Covid19Radar.ViewModels
         {
             Title = Resources.AppResources.HelpPage1Title;
         }
-
     }
 }

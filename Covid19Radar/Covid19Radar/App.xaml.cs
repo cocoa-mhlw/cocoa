@@ -1,22 +1,22 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
+using System.Threading.Tasks;
+using CommonServiceLocator;
+using Covid19Radar.Common;
+using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
+using Covid19Radar.ViewModels;
+using Covid19Radar.Views;
+using DryIoc;
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
-using Covid19Radar.ViewModels;
-using Covid19Radar.Views;
+using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using DryIoc;
-using System.Threading.Tasks;
-using Prism.Navigation;
-using Covid19Radar.Services;
-using Covid19Radar.Services.Logs;
-using System;
-using CommonServiceLocator;
-using Covid19Radar.Common;
 
 /*
  * Our mission...is

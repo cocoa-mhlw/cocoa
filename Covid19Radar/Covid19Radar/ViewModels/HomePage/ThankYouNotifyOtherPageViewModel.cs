@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Common;
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -27,6 +26,5 @@ namespace Covid19Radar.ViewModels
 
             loggerService.EndMethod();
         });
-
     }
 }

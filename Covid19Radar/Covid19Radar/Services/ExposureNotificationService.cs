@@ -2,18 +2,17 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Acr.UserDialogs;
-using Covid19Radar.Common;
-using Covid19Radar.Model;
-using Covid19Radar.Services.Logs;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
+using Covid19Radar.Common;
+using Covid19Radar.Model;
+using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 using Xamarin.ExposureNotifications;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
@@ -76,7 +75,7 @@ namespace Covid19Radar.Services
 
             if (userData.LastProcessTekTimestamp != null && userData.LastProcessTekTimestamp.Count > 0)
             {
-                var stringValue = Utils.SerializeToJson(userData.LastProcessTekTimestamp);
+                var stringValue = JsonConvert.SerializeObject(userData.LastProcessTekTimestamp);
                 preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, stringValue);
                 userData.LastProcessTekTimestamp.Clear();
                 loggerService.Info("Migrated LastProcessTekTimestamp");

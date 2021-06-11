@@ -2,12 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Model;
-using Covid19Radar.Services;
-using Prism.Navigation;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
+using Covid19Radar.Services;
+using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {

@@ -2,18 +2,17 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Common;
-using Covid19Radar.Model;
-using Covid19Radar.Services.Logs;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.IO;
 using System.Threading;
-using System.Net;
+using System.Threading.Tasks;
+using Covid19Radar.Model;
+using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
@@ -21,18 +20,14 @@ namespace Covid19Radar.Services
     public class HttpDataService : IHttpDataService
     {
         private readonly ILoggerService loggerService;
-        private readonly ISecureStorageService secureStorageService;
-        private readonly IApplicationPropertyService applicationPropertyService;
 
         private readonly HttpClient apiClient; // API key based client.
         private readonly HttpClient httpClient;
         private readonly HttpClient downloadClient;
 
-        public HttpDataService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IApplicationPropertyService applicationPropertyService)
+        public HttpDataService(ILoggerService loggerService, IHttpClientService httpClientService)
         {
             this.loggerService = loggerService;
-            this.secureStorageService = secureStorageService;
-            this.applicationPropertyService = applicationPropertyService;
 
             // Create API key based client.
             apiClient = httpClientService.Create();
@@ -79,7 +74,7 @@ namespace Covid19Radar.Services
         {
             loggerService.StartMethod();
             var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/v2/diagnosis";
-            var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
+            var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
             HttpStatusCode status = await PutAsync(url, content);
             loggerService.EndMethod();
             return status;
@@ -96,7 +91,7 @@ namespace Covid19Radar.Services
             {
                 loggerService.Info("Success to download");
                 loggerService.EndMethod();
-                return Utils.DeserializeFromJson<List<TemporaryExposureKeyExportFileModel>>(result);
+                return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
             }
             else
             {
@@ -142,43 +137,6 @@ namespace Covid19Radar.Services
             return new ApiResponse<LogStorageSas>(statusCode, logStorageSas);
         }
 
-        private async Task<string> GetAsync(string url)
-        {
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-
-        private async Task<string> GetAsync(string url, CancellationToken cancellationToken)
-        {
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url, cancellationToken);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-        private async Task<string> GetCdnAsync(string url)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
         private async Task<string> GetCdnAsync(string url, CancellationToken cancellationToken)
         {
             Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
@@ -188,19 +146,6 @@ namespace Covid19Radar.Services
             if (result.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-
-        private async Task<Stream> GetCdnStreamAsync(string url)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStreamAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStreamAsync();
             }
             return null;
         }
@@ -227,7 +172,6 @@ namespace Covid19Radar.Services
             }
         }
 
-
         private async Task<string> PostAsync(string url, HttpContent body)
         {
             HttpResponseMessage result = await httpClient.PostAsync(url, body);
@@ -244,6 +188,5 @@ namespace Covid19Radar.Services
             await result.Content.ReadAsStringAsync();
             return result.StatusCode;
         }
-
     }
 }

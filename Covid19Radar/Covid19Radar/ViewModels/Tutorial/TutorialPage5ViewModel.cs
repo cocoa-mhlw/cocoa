@@ -16,7 +16,6 @@ namespace Covid19Radar.ViewModels
         public TutorialPage5ViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
         {
             this.loggerService = loggerService;
-
         }
 
         public Command OnClickEnable => new Command(async () =>

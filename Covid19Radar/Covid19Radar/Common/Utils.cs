@@ -3,17 +3,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using Newtonsoft.Json;
 
 namespace Covid19Radar.Common
 {
     public static class Utils
     {
         #region Other Public Methods
-
-        public static string SerializeToJson(object obj) => JsonConvert.SerializeObject(obj);
-
-        public static T DeserializeFromJson<T>(string jsonObj) => JsonConvert.DeserializeObject<T>(jsonObj);
 
         public static DateTime JstNow()
         {

@@ -27,6 +27,5 @@ namespace Covid19Radar.ViewModels
 
             loggerService.EndMethod();
         });
-
     }
 }
