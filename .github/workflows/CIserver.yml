@@ -65,6 +65,7 @@ jobs:
   test:
     name: Test-ServerApi
     runs-on: ubuntu-latest
+    needs: [build_serverapi, build_serverapi_common, build_serverapi_external, build_serverapi_background]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
