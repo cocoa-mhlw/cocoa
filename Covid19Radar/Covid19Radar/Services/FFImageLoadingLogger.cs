@@ -2,17 +2,16 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
-using System.Collections.Generic;
-using Covid19Radar.Services.Logs;
 using FFImageLoading.Helpers;
 using Prism.Logging;
+using System;
+using System.Collections.Generic;
 
 namespace Covid19Radar.Services
 {
     public class FFImageLoadingLogger : IMiniLogger
     {
-        private readonly ILogger _logger;
+        private ILogger _logger { get; }
 
         public FFImageLoadingLogger(ILogger logger)
         {
