@@ -5,6 +5,7 @@
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -102,7 +103,7 @@ namespace Covid19Radar.Services
             {
                 loggerService.EndMethod();
                 var userData = applicationPropertyService.GetProperties("UserData");
-                return Utils.DeserializeFromJson<UserDataModel>(userData.ToString());
+                return JsonConvert.DeserializeObject<UserDataModel>(userData.ToString());
             }
 
             loggerService.EndMethod();

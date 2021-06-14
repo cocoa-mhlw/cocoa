@@ -76,7 +76,7 @@ namespace Covid19Radar.Services
 
             if (userData.LastProcessTekTimestamp != null && userData.LastProcessTekTimestamp.Count > 0)
             {
-                var stringValue = Utils.SerializeToJson(userData.LastProcessTekTimestamp);
+                var stringValue = JsonConvert.SerializeObject(userData.LastProcessTekTimestamp);
                 preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, stringValue);
                 userData.LastProcessTekTimestamp.Clear();
                 loggerService.Info("Migrated LastProcessTekTimestamp");

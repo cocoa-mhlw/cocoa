@@ -79,7 +79,7 @@ namespace Covid19Radar.Services
         {
             loggerService.StartMethod();
             var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/v2/diagnosis";
-            var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
+            var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
             HttpStatusCode status = await PutAsync(url, content);
             loggerService.EndMethod();
             return status;
@@ -96,7 +96,7 @@ namespace Covid19Radar.Services
             {
                 loggerService.Info("Success to download");
                 loggerService.EndMethod();
-                return Utils.DeserializeFromJson<List<TemporaryExposureKeyExportFileModel>>(result);
+                return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
             }
             else
             {
