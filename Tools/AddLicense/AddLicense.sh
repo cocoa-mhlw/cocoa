@@ -50,10 +50,6 @@ function addLicense() {
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する
 
-  elif [ "$fileType" == 'xlf' ]; then
-    comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
-    lineNumber=2 # XML 宣言の後に挿入する
-
   elif [ "$fileType" == 'xml' ]; then
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する

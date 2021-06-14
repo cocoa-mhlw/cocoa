@@ -25,7 +25,6 @@ FILES=(
   '*.strings'
   '*.tf'
   '*.xaml'
-  '*.xlf'
   '*.xml'
   '*.yml'
 )
