@@ -1,8 +1,8 @@
-Feature: Tutorial
-
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+Feature: Tutorial
 
 Scenario: Complete Tutorial
 	Given I am on "HOME" page
@@ -23,7 +23,7 @@ Scenario: Complete Tutorial
 	And I can see "ButtonStart"
 
 	When I tap on "ButtonStart" button
-	#Then I am on "Terms of Service" page		
+	#Then I am on "Terms of Service" page
 	Then I can see "ButtonAgree"
 	And I can see "ButtonNotAgree"
 
@@ -38,5 +38,3 @@ Scenario: Complete Tutorial
 	#Then I am on "Terms of Service" page
 	#And I can see "NextButton"
 	#When I tap on "NextButton" button
-	
-	
