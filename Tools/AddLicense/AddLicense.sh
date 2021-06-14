@@ -11,58 +11,59 @@ function addLicense() {
     'file, You can obtain one at https://mozilla.org/MPL/2.0/.'
   )
   local comment=''
+  local fileType=${1##*.}
   local lineNumber=1
 
   # 各種ファイルに適したコメントを生成する処理
-  if [ "$1" == '*.axml' ]; then
+  if [ "$fileType" == 'axml' ]; then
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する
 
-  elif [ "$1" == '*.bat' ]; then
+  elif [ "$fileType" == 'bat' ]; then
     comment=$(printf '@REM %s\\n' "${MPL[@]}")
 
-  elif [ "$1" == '*.cs' ]; then
+  elif [ "$fileType" == 'cs' ]; then
     comment=$(printf '// %s\\n' "${MPL[@]}")
 
-  elif [ "$1" == '*.feature' ]; then
+  elif [ "$fileType" == 'feature' ]; then
     comment=$(printf '# %s\\n' "${MPL[@]}")
 
-  elif [ "$1" == '*.resx' ]; then
+  elif [ "$fileType" == 'resx' ]; then
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する
 
-  elif [ "$1" == '*.sh' ]; then
+  elif [ "$fileType" == 'sh' ]; then
     comment='\\n'$(printf '# %s\\n' "${MPL[@]}")
     lineNumber=2 # Shebang の後に挿入する
 
-  elif [ "$1" == '*.storyboard' ]; then
+  elif [ "$fileType" == 'storyboard' ]; then
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する
 
-  elif [ "$1" == '*.strings' ]; then
+  elif [ "$fileType" == 'strings' ]; then
     comment='\\n/*\n'$(printf '  %s\\n' "${MPL[@]}")'*/\n'
 
-  elif [ "$1" == '*.tf' ]; then
+  elif [ "$fileType" == 'tf' ]; then
     comment=$(printf '# %s\\n' "${MPL[@]}")
 
-  elif [ "$1" == '*.xaml' ]; then
+  elif [ "$fileType" == 'xaml' ]; then
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する
 
-  elif [ "$1" == '*.xlf' ]; then
+  elif [ "$fileType" == 'xlf' ]; then
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する
 
-  elif [ "$1" == '*.xml' ]; then
+  elif [ "$fileType" == 'xml' ]; then
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する
 
-  elif [ "$1" == '*.yml' ]; then
+  elif [ "$fileType" == 'yml' ]; then
     comment=$(printf '# %s\\n' "${MPL[@]}")
   fi
 
   # ライセンスの文言が無いファイルを探し，もしあれば生成したコメントを挿入する
-  git grep -z -L "${MPL[1]}" -- "$1" | xargs -0 sed -i -e "${lineNumber}i$comment"
+  git grep -z -L "${MPL[0]}" -- "$1" | xargs -0 sed -i -e "${lineNumber}i$comment"
 }
 
 # 対象ファイル
@@ -82,6 +83,6 @@ FILES=(
   '*.yml'
 )
 
-for item in "${FILES[@]}"; do
-  addLicense "$item"
+for file in "${FILES[@]}"; do
+  addLicense "$file"
 done
