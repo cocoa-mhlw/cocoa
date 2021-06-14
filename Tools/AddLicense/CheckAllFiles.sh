@@ -5,13 +5,13 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 # リポジトリ内のファイルについて MPL の記載漏れをチェックします。
-# 詳しい処理につきましては Tools/GitHooks/PreCommit.sh をご参照ください。
+# 詳しい処理につきましては Tools/AddLicense/AddLicense.sh をご参照ください。
 
 # リポジトリのルートへ移動
 cd "$(git rev-parse --show-toplevel)" || exit
 
 # `addLicense` の読み込み
-source Tools/GitHooks/PreCommit.sh
+source Tools/AddLicense/AddLicense.sh
 
 # 対象ファイル（リポジトリのルートを基準とした相対パスで記述）
 FILES=(

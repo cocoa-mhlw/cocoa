@@ -6,13 +6,13 @@
 
 # Commit 時に MPL の記載漏れをチェックします。
 # 有効化するには，GitHooks.sh を実行する必要があります。
-# 詳しい処理につきましては Tools/GitHooks/PreCommit.sh をご参照ください。
+# 詳しい処理につきましては Tools/AddLicense/AddLicense.sh をご参照ください。
 
 # リポジトリのルートへ移動
 cd "$(git rev-parse --show-toplevel)" || exit
 
 # `addLicense` の読み込み
-source Tools/GitHooks/PreCommit.sh
+source Tools/AddLicense/AddLicense.sh
 
 # ステージングエリアのファイル一覧を取得（削除を除く）
 stagedFiles=$(git diff --name-only --cached --diff-filter=d)
