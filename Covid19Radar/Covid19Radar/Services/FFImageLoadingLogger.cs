@@ -1,4 +1,4 @@
-﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -12,33 +12,28 @@ namespace Covid19Radar.Services
 {
     public class FFImageLoadingLogger : IMiniLogger
     {
-        private readonly ILogger        _prism_logger;
-        private readonly ILoggerService _cocoa_logger;
+        private readonly ILogger _logger;
 
-        public FFImageLoadingLogger(ILogger prismLogger, ILoggerService cocoaLogger)
+        public FFImageLoadingLogger(ILogger logger)
         {
-            _prism_logger = prismLogger;
-            _cocoa_logger = cocoaLogger;
+            _logger = logger;
         }
 
         public void Debug(string message)
         {
-            _prism_logger.Debug(message);
-            _cocoa_logger.Debug(message);
+            _logger.Debug(message);
         }
 
         public void Error(string errorMessage)
         {
-            _prism_logger.Warn(errorMessage);
-            _cocoa_logger.Error(errorMessage);
+            _logger.Warn(errorMessage);
         }
 
         public void Error(string errorMessage, Exception ex)
         {
-            _prism_logger.Report(ex, new Dictionary<string, string>{
+            _logger.Report(ex, new Dictionary<string, string>{
                 { "message", errorMessage }
             });
-            _cocoa_logger.Exception(errorMessage, ex);
         }
     }
 }
