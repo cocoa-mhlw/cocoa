@@ -8,6 +8,9 @@
 # 有効化するには，GitHooks.sh を実行する必要があります。
 # 詳しい処理につきましては Tools/GitHooks/PreCommit.sh をご参照ください。
 
+# リポジトリのルートへ移動
+cd "$(git rev-parse --show-toplevel)" || exit
+
 # `addLicense` の読み込み
 source Tools/GitHooks/PreCommit.sh
 

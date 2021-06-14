@@ -7,10 +7,13 @@
 # リポジトリ内のファイルについて MPL の記載漏れをチェックします。
 # 詳しい処理につきましては Tools/GitHooks/PreCommit.sh をご参照ください。
 
+# リポジトリのルートへ移動
+cd "$(git rev-parse --show-toplevel)" || exit
+
 # `addLicense` の読み込み
 source Tools/GitHooks/PreCommit.sh
 
-# 対象ファイル
+# 対象ファイル（リポジトリのルートを基準とした相対パスで記述）
 FILES=(
   '*.axml'
   '*.bat'

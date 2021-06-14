@@ -4,6 +4,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+# リポジトリのルートへ移動
+cd "$(git rev-parse --show-toplevel)" || exit
+
 # pre-commit 用のスクリプトを追加
 cp Tools/GitHooks/PreCommit.sh .git/hooks/pre-commit
 chmod a+x .git/hooks/pre-commit
