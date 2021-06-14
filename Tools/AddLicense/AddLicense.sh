@@ -14,7 +14,7 @@ function addLicense() {
   local fileType=${1##*.}
   local lineNumber=1
 
-  # 各種ファイルに適したコメントを生成する処理
+  # 各種ファイルに適したコメントを生成する
   if [ "$fileType" == 'axml' ]; then
     comment='\\n<!--\n'$(printf '  %s\\n' "${MPL[@]}")'-->\n'
     lineNumber=2 # XML 宣言の後に挿入する
@@ -62,27 +62,6 @@ function addLicense() {
     comment=$(printf '# %s\\n' "${MPL[@]}")
   fi
 
-  # ライセンスの文言が無いファイルを探し，もしあれば生成したコメントを挿入する
+  # ライセンスの文言が無いファイルを探し，該当するものに生成したコメントを挿入する
   git grep -z -L "${MPL[0]}" -- "$1" | xargs -0 sed -i -e "${lineNumber}i$comment"
 }
-
-# 対象ファイル
-FILES=(
-  '*.axml'
-  '*.bat'
-  '*.cs'
-  '*.feature'
-  '*.resx'
-  '*.sh'
-  '*.storyboard'
-  '*.strings'
-  '*.tf'
-  '*.xaml'
-  '*.xlf'
-  '*.xml'
-  '*.yml'
-)
-
-for file in "${FILES[@]}"; do
-  addLicense "$file"
-done
