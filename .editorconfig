@@ -13,3 +13,6 @@ indent_size = 4
 
 [*.cs]
 charset = utf-8-bom
+
+[*.csx]
+indent_style = tab
