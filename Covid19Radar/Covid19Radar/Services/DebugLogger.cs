@@ -6,6 +6,7 @@ using System;
 using Covid19Radar.Services.Logs;
 using FFImageLoading.Helpers;
 using Prism.Logging;
+using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
@@ -13,9 +14,9 @@ namespace Covid19Radar.Services
     {
         private readonly ILoggerService _logger;
 
-        public DebugLogger(ILoggerService logger)
+        public DebugLogger()
         {
-            _logger = logger;
+            _logger = DependencyService.Resolve<ILoggerService>();
         }
 
         public void Debug(string message)
