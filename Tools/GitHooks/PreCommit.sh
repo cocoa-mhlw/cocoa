@@ -5,7 +5,7 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 # Commit 時に MPL の記載漏れをチェックします。
-# 有効化するには，GitHooks.sh を実行する必要があります。
+# あらかじめ Tools/GitHooks/PrepareHooks.sh を実行する必要があります。
 # 詳しい処理につきましては Tools/AddLicense/AddLicense.sh をご参照ください。
 
 # リポジトリのルートへ移動
