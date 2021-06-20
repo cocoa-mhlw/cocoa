@@ -12,9 +12,63 @@ using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Services
 {
+    public class MockCommonUtils
+    {
+        public string CdnUrlBase { get => AppSettings.Instance.CdnUrlBase; }
+        public string ApiUrlBase { get => AppSettings.Instance.ApiUrlBase; }
+
+        public bool IsDownloadRequired()
+                => Regex.IsMatch(CdnUrlBase, @"^https://.*\..*\..*/$");
+
+        public bool IsDirectInput()
+        => Regex.IsMatch(CdnUrlBase, @"^(\d+,)+\d+,*$");
+
+
+        private ushort NumberEndofSentence(string url)
+        {
+            Match match = Regex.Match(url, @"(?<d>\d+)$");
+            ushort number = 0;
+            if (match.Success)
+            {
+                number = Convert.ToUInt16(match.Groups["d"].Value);
+            }
+            return (number);
+        }
+        public List<string> GetCreatedTimes()
+            => CdnUrlBase.Split(",").ToList();
+        public ushort GetTekListDataType()
+        => NumberEndofSentence(CdnUrlBase);
+        public string[] GetApiUrlSegment()
+        {
+            // "url/api" -> { "url/api", "", "" }
+            // "url/base/api/register1/diagnosis2" -> { "url/base/api", "/register1", "/diagnosis2" } 
+            // "url/api1/r1/d2" -> { "url/api1", "/r1", "/d2" } 
+            // "url/api1/d2/r1" -> { "url/api1", "/r1", "/d2" } 
+            var url = ApiUrlBase;
+            var r = new Regex("/r(egister)?[0-9]+");
+            var d = new Regex("/d(iagnosis)?[0-9]+");
+            var urlRegister = r.Match(url).Value;
+            url = r.Replace(url, "");
+            var urlDiagnosis = d.Match(url).Value;
+            url = d.Replace(url, "");
+            var urlApi = url;
+            return (new string[] { urlApi, urlRegister, urlDiagnosis });
+        }
+        public ushort GetDiagnosisDataType()
+        => NumberEndofSentence(GetApiUrlSegment()[2]);
+        public ushort GetRegisterDataType()
+        => NumberEndofSentence(GetApiUrlSegment()[1]);
+        public ushort GetApiDataType()
+        => NumberEndofSentence(GetApiUrlSegment()[0]);
+        public bool IsDirectInputApi()
+        => Regex.IsMatch(GetApiUrlSegment()[0], @"^(\d+,)+\d+,?$");
+        public List<string> GetApiStrings()
+            => GetApiUrlSegment()[0].Split(",").ToList();
+    }
     public class TestNativeImplementation : INativeImplementation
     {
         static readonly Random random = new Random();
+        private readonly MockCommonUtils mockCommonUtils;
 
         Task WaitRandom()
             => Task.Delay(random.Next(100, 2500));
@@ -54,22 +108,22 @@ namespace Covid19Radar.Services
 
         enum PresetDataType
         {
-            Default = 0, // two low-risk matches (default for v1.2.3)
+            TwoLowRiskMatches = 0, // two low-risk matches (default for v1.2.3)
             OneHighRiskMatchAnd2LowRiskMatches = 1, // one high-risk match and 2 low-risk matches 
-            NoMatch = 2, 
+            NoMatch = 2,
             // please add "YourDataType = <int>"
         }
 
-        private ushort[] DataPreset(int intDataType)
+        private ushort[] DataPreset(int dataType)
         {
-            /* DataPreset returns ushort[].
+            /* DataPreset returns ushort[];
                index[0] ~ index[4] : data for ExposureDetectionSummary 
                index[5] ~ index[10] : 1st data for ExposureInfo
                index[11] ~ index[15] : 2nd data for ExposureInfo
                index[16] ~ index[20] : 3rd data for ExposureInfo
+               ....
              */
-            PresetDataType dataType = (PresetDataType) intDataType;
-            switch (dataType)
+            switch ((PresetDataType)dataType)
             {
                 case PresetDataType.OneHighRiskMatchAnd2LowRiskMatches:
                     return (
@@ -82,7 +136,7 @@ namespace Covid19Radar.Services
                     return (
                         new ushort[] {0, 0, 0, 0, 0, // ExposureDetectionSummary
                         });
-                case PresetDataType.Default:
+                case PresetDataType.TwoLowRiskMatches:
                 default:
                     return (
                         new ushort[] {10, 2, 5, 0, 0, // ExposureDetectionSummary
@@ -92,42 +146,13 @@ namespace Covid19Radar.Services
             }
         }
 
-        public string[] GetUrlPathSegment()
-        {
-            // "url/api" -> { "url/api", "", "" }
-            // "url/base/api/register1/diagnosis2" -> { "url/base/api", "/register1", "/diagnosis2" } 
-            // "url/api1/r1/d2" -> { "url/api1", "/r1", "/d2" } 
-            // "url/api1/d2/r1" -> { "url/api1", "/r1", "/d2" } 
-            var url = AppSettings.Instance.ApiUrlBase;
-            var r = new Regex("/r(egister)?[0-9]+");
-            var d = new Regex("/d(iagnosis)?[0-9]+");
-            var urlRegister = r.Match(url).Value;
-            url = r.Replace(url, "");
-            var urlDiagnosis = d.Match(url).Value;
-            url = d.Replace(url, "");
-            var urlApi = url;
-            return (new string[] { urlApi, urlRegister, urlDiagnosis });
-        }
-
-        public ushort GetNumberEndofSentence(string url)
-        {
-            var match = Regex.Match(url, @"(?<d>\d+)$");
-            ushort dataVer = 0;
-            if (match.Success)
-            {
-                dataVer = Convert.ToUInt16(match.Groups["d"].Value);
-            }
-            return (dataVer);
-        }
-
         private ushort[] CreatePresetData()
         {
-            string url = GetUrlPathSegment()[0];
-            if (Regex.IsMatch(url, @"^(\d+,)+\d+,?$"))
+            if (mockCommonUtils.IsDirectInputApi())
             {
-                return url.Split(",").ToList().Select(x => Convert.ToUInt16(x)).ToArray();
+                return mockCommonUtils.GetApiStrings().Select(x => Convert.ToUInt16(x)).ToArray();
             }
-            return DataPreset(GetNumberEndofSentence(url));
+            return DataPreset(mockCommonUtils.GetApiDataType());
 
         }
 

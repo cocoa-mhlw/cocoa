@@ -10,7 +10,6 @@ using System.IO;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Text.RegularExpressions;
 using System.Linq;
 using System.Net.Http;
 using Covid19Radar.Common;
@@ -20,9 +19,11 @@ namespace Covid19Radar.Services
     class HttpDataServiceMock : IHttpDataService
     {
         private readonly HttpClient downloadClient;
+        private readonly MockCommonUtils mockCommonUtils;
+
         public HttpDataServiceMock(IHttpClientService httpClientService)
         {
-                downloadClient = httpClientService.Create();
+            downloadClient = httpClientService.Create();
         }
 
         // copy from ./HttpDataService.cs
@@ -81,29 +82,26 @@ namespace Covid19Radar.Services
             // set 0 hour,1 min,2 sec,3 millisecond for debug
         }
 
-        private List<TemporaryExposureKeyExportFileModel> DataPreset(int dataVersion)
+        enum PresetTekListType // PresetTekListData for Tek List 
         {
-            /* DataPreset for TEK FileModel
-               0(default): nothing (default for v1.2.3)
-               1: real time
-               2: last night
-               please add
-             */
-            switch (dataVersion)
+            Nothing = 0, //nothing (default for v1.2.3)
+            RealTime = 1, // real time
+            MidnightTime = 2, // last night
+            // please add "YourDataType = <int>"
+        }
+
+        private List<TemporaryExposureKeyExportFileModel> PresetTekListData(int dataVersion)
+        {
+            switch ((PresetTekListType)dataVersion)
             {
-                case 2:
+                case PresetTekListType.MidnightTime:
                     return new List<TemporaryExposureKeyExportFileModel> { CreateTestData(CalcMidnightTimeAddDays(-1)), CreateTestData(CalcMidnightTimeAddDays(0)) };
-                case 1:
+                case PresetTekListType.RealTime:
                     return new List<TemporaryExposureKeyExportFileModel> { CreateTestData(CalcTimeAddDays(-1)), CreateTestData(CalcTimeAddDays(0)) };
-                case 0:
+                case PresetTekListType.Nothing:
                 default:
                     return new List<TemporaryExposureKeyExportFileModel>();
             }
-        }
-        private static bool IsDownloadRequired()
-        {
-            string url = AppSettings.Instance.CdnUrlBase;
-            return (Regex.IsMatch(url, @"^https://.*\..*\..*/$"));
         }
 
         async Task<List<TemporaryExposureKeyExportFileModel>> IHttpDataService.GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
@@ -114,8 +112,8 @@ namespace Covid19Radar.Services
                "https://CDN_URL_BASE/2" -> dataVersion = 2
                "https://CDN_URL_BASE/" -> dataVersion = 0 (default)
             */
-            string url = AppSettings.Instance.CdnUrlBase;
-            if (IsDownloadRequired())
+            //string url = AppSettings.Instance.CdnUrlBase;
+            if (mockCommonUtils.IsDownloadRequired())
             {
                 // copy from GetTemporaryExposureKeyList @ ./HttpDataService.cs and delete logger part
                 var container = AppSettings.Instance.BlobStorageContainerName;
@@ -132,63 +130,23 @@ namespace Covid19Radar.Services
                     return new List<TemporaryExposureKeyExportFileModel>();
                 }
             }
-            else if (IsDirectInput(url))
+            else if (mockCommonUtils.IsDirectInput())
             {
                 Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList direct data called");
-                return (url.Split(",").ToList().Select(x => CreateTestData(Convert.ToInt64(x))).ToList());
+                return (mockCommonUtils.GetCreatedTimes().Select(x => CreateTestData(Convert.ToInt64(x))).ToList());
             }
             else
             {
                 Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList preset data called");
-                return (DataPreset(NumberEndofSentence(url)));
+                return (PresetTekListData(mockCommonUtils.GetTekListDataType()));
             }
         }
 
-        bool IsDirectInput(string url)
-        {
-            return Regex.IsMatch(url, @"^(\d+,)+\d+,*$");
-        }
-
-        // copy from ./TestNativeImplementation.cs
-        private string[] UrlApi()
-        {
-            string url = AppSettings.Instance.ApiUrlBase;
-            Regex r = new Regex("/r(egister)?[0-9]+");
-            Regex d = new Regex("/d(iagnosis)?[0-9]+");
-            string urlRegister = r.Match(url).Value;
-            url = r.Replace(url, "");
-            string urlDiagnosis = d.Match(url).Value;
-            url = d.Replace(url, "");
-            string urlApi = url;
-            return (new string[] { urlApi, urlRegister, urlDiagnosis });
-        }
-
-        private string UrlApiRegister()
-        {
-            string url = AppSettings.Instance.ApiUrlBase;
-            Regex r = new Regex("/r(egister)?[0-9]+");
-            Regex d = new Regex("/d(iagnosis)?[0-9]+");
-            string urlRegister = r.Match(url).Value;
-            url = r.Replace(url, "");
-            return ( urlRegister);
-        }
-
-        // copy from ./TestNativeImplementation.cs
-        private ushort NumberEndofSentence(string url)
-        {
-            Match match = Regex.Match(url, @"(?<d>\d+)$");
-            ushort dataVersion = 0;
-            if (match.Success)
-            {
-                dataVersion = Convert.ToUInt16(match.Groups["d"].Value);
-            }
-            return (dataVersion);
-        }
 
         async Task<bool> IHttpDataService.PostRegisterUserAsync()
         {
             Debug.WriteLine("HttpDataServiceMock::PostRegisterUserAsync called");
-            var result = NumberEndofSentence(UrlApi()[1]) switch
+            var result = mockCommonUtils.GetRegisterDataType() switch
             {
                 1 => false,
                 _ => true
@@ -199,14 +157,14 @@ namespace Covid19Radar.Services
         Task<HttpStatusCode> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             var code = HttpStatusCode.OK; // default. for PutSelfExposureKeys NG
-            var dataVersion = NumberEndofSentence(UrlApi()[2]);
-            if (dataVersion >= 100) // HttpStatusCode >=100 by RFC2616#section-10
+            var dataType = mockCommonUtils.GetDiagnosisDataType();
+            if (dataType >= 100) // HttpStatusCode >=100 by RFC2616#section-10
             {
-                code = (HttpStatusCode)dataVersion;
+                code = (HttpStatusCode)dataType;
             }
             else
             {
-                switch (dataVersion)
+                switch (dataType)
                 {
                     case 1:
                         code = HttpStatusCode.NoContent; //  for Successful PutSelfExposureKeys 
