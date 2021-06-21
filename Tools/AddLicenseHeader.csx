@@ -25,7 +25,7 @@ for (int i = 0; i < files.Length; ++i) {
 	} else {
 		using (var fs = new FileStream(file, FileMode.Open, FileAccess.ReadWrite, FileShare.None))
 		using (var sr = new StreamReader(fs, true)) {
-			var openWriter = new OpenWriter<StreamWriter, (FileStream fs, Encoding enc)>(state => {
+			var openWriter = new OpenWriter<StreamWriter, (FileStream fs, Encoding enc)>(static state => {
 				state.fs.SetLength(0);
 				return new(state.fs, state.enc) {
 					NewLine = "\n"
