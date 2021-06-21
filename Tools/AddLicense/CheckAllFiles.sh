@@ -32,5 +32,4 @@ FILES=(
 # 対象ファイルの内，MPL が抜けているもの対して文言を挿入する
 for file in "${FILES[@]}"; do
   addLicense "$file"
-  git add "$file"
 done
