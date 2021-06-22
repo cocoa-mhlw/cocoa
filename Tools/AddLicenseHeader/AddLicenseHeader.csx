@@ -33,9 +33,10 @@ for (int i = 0; i < files.Length; ++i) {
 			});
 
 			string data = sr.ReadToEnd().Replace("\r\n", "\n");
+			string name = Path.GetFileNameWithoutExtension(file);
 			string ext  = Path.GetExtension(file);
 
-			var result = AddHeader(data, ext switch {
+			var result = AddHeader(name, data, ext switch {
 				// 拡張子毎にライセンス通知の書式を設定する。
 				".cs"         => CreateCStyleHeader,
 				".csx"        => CreateCStyleHeader,
@@ -53,7 +54,7 @@ for (int i = 0; i < files.Length; ++i) {
 				".feature"    => CreateShellScriptStyleHeader,
 
 				// それ以外のファイルは書き換えない。
-				_ => (line1, line2, line3) => null
+				_ => (filename, line1, line2, line3) => null
 			}, openWriter, (fs, enc));
 
 			switch (result) {
@@ -81,15 +82,16 @@ WriteLine("{0}個中{1}個のファイルにライセンス通知を追加しま
 
 /*================================================================================================*/
 
-public const string XML_HEADER_1 = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
-public const string XML_HEADER_2 = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
-public const string SH_HEADER    = "#!/bin/bash";
+public const string XML_HEADER_1   = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>";
+public const string XML_HEADER_2   = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+public const string SH_HEADER      = "#!/bin/bash";
+public const string FEATURE_HEADER = "Feature: ";
 
 const string HEADER_LINE_1 = "This Source Code Form is subject to the terms of the Mozilla Public";
 const string HEADER_LINE_2 = "License, v. 2.0. If a copy of the MPL was not distributed with this";
 const string HEADER_LINE_3 = "file, You can obtain one at https://mozilla.org/MPL/2.0/.";
 
-public delegate string? CreateHeader(string line1, string line2, string line3);
+public delegate string? CreateHeader(string filename, string line1, string line2, string line3);
 
 public delegate TWriter OpenWriter<out TWriter, in TState>(TState state)
 	where TWriter: TextWriter;
@@ -102,13 +104,14 @@ public enum FileState
 }
 
 public static FileState AddHeader<TWriter, TState>(
+	string                      filename,
 	string                      data,
 	CreateHeader                createHeader,
 	OpenWriter<TWriter, TState> openWriter,
 	TState                      argForWriter)
 	where TWriter: TextWriter
 {
-	string? header = createHeader(HEADER_LINE_1, HEADER_LINE_2, HEADER_LINE_3);
+	string? header = createHeader(filename, HEADER_LINE_1, HEADER_LINE_2, HEADER_LINE_3);
 
 	if (header is null) {
 		return FileState.NotDefined;
@@ -124,41 +127,47 @@ public static FileState AddHeader<TWriter, TState>(
 }
 
 /// <summary>C言語のブロックコメントと同じ書式で記述できる言語用のライセンス通知を作成する</summary>
-public static string CreateCStyleHeader(string line1, string line2, string line3)
+public static string CreateCStyleHeader(string filename, string line1, string line2, string line3)
 {
 	return "/* " + line1 + "\n * " + line2 + "\n * " + line3 + " */\n";
 }
 
 /// <summary>XMLのコメントと同じ書式で記述できる言語用のライセンス通知を作成する</summary>
-public static string CreateXMLStyleHeader(string line1, string line2, string line3)
+public static string CreateXMLStyleHeader(string filename, string line1, string line2, string line3)
 {
 	return XML_HEADER_1 + "\n<!-- " + line1 + "\n   - " + line2 + "\n   - " + line3 + " -->\n";
 }
 
 /// <summary>XMLのコメントと同じ書式で記述できる言語用のライセンス通知を作成する</summary>
 /// <remarks>XML宣言とライセンス通知の間に空行を挿入する</remarks>
-public static string CreateXMLStyleHeaderWithAlign(string line1, string line2, string line3)
+public static string CreateXMLStyleHeaderWithAlign(string filename, string line1, string line2, string line3)
 {
 	return XML_HEADER_2 + "\n\n\n<!-- " + line1 + "\n   - " + line2 + "\n   - " + line3 + " -->\n";
 }
 
 /// <summary>バッチファイル用のライセンス通知を作成する</summary>
-public static string CreateBatchFileStyleHeader(string line1, string line2, string line3)
+public static string CreateBatchFileStyleHeader(string filename, string line1, string line2, string line3)
 {
-	return "@REM " + line1 + "\n@REM " + line2 + "\n@REM " + line3 + "\n";
+	return "@REM " + line1 + "\n@REM " + line2 + "\n@REM " + line3 + '\n';
+}
+
+/// <summary>シェルスクリプトのコメントと同じ書式で記述できる言語用のライセンス通知を作成する</summary>
+public static string CreateShellScriptStyleHeader(string filename, string line1, string line2, string line3)
+{
+	return "# " + line1 + "\n# " + line2 + "\n# " + line3 + '\n';
 }
 
 /// <summary>シェルスクリプト用のライセンス通知を作成する</summary>
 /// <remarks><c>Shebang</c> を挿入する</remarks>
-public static string CreateShellScriptStyleHeaderWithShebang(string line1, string line2, string line3)
+public static string CreateShellScriptStyleHeaderWithShebang(string filename, string line1, string line2, string line3)
 {
-	return SH_HEADER + "\n" + CreateShellScriptStyleHeader(line1, line2, line3);
+	return SH_HEADER + '\n' + CreateShellScriptStyleHeader(filename, line1, line2, line3);
 }
 
-/// <summary>シェルスクリプトのコメントと同じ書式で記述できる言語用のライセンス通知を作成する</summary>
-public static string CreateShellScriptStyleHeader(string line1, string line2, string line3)
+/// <summary><c>.feature</c>ファイル用のライセンス通知を作成する</summary>
+public static string CreateFeatureFileHeader(string filename, string line1, string line2, string line3)
 {
-	return "# " + line1 + "\n# " + line2 + "\n# " + line3 + "\n";
+	return FEATURE_HEADER + filename + "\n\n" + CreateShellScriptStyleHeader(filename, line1, line2, line3);
 }
 
 /// <summary>除外設定</summary>
