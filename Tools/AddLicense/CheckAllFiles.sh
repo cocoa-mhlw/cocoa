@@ -8,7 +8,7 @@
 # 詳しい処理につきましては Tools/AddLicense/AddLicense.sh をご参照ください。
 
 # リポジトリのルートへ移動
-cd "$(git rev-parse --show-toplevel)" || exit
+cd "$(git rev-parse --show-toplevel)" || exit 1
 
 # `addLicense` の読み込み
 source Tools/AddLicense/AddLicense.sh
@@ -30,6 +30,8 @@ FILES=(
 )
 
 # 対象ファイルの内，MPL が抜けているもの対して文言を挿入する
-for file in "${FILES[@]}"; do
-  addLicense "$file"
+for path in "${FILES[@]}"; do
+  for file in $(git ls-files -- "$path"); do
+    addLicense "$file"
+  done
 done
