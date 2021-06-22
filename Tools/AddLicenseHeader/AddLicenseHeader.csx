@@ -51,7 +51,7 @@ for (int i = 0; i < files.Length; ++i) {
 				".sh"         => CreateShellScriptStyleHeaderWithShebang,
 				".tf"         => CreateShellScriptStyleHeader,
 				".yml"        => CreateShellScriptStyleHeader,
-				".feature"    => CreateShellScriptStyleHeader,
+				".feature"    => CreateFeatureFileHeader,
 
 				// それ以外のファイルは書き換えない。
 				_ => (filename, line1, line2, line3) => null
