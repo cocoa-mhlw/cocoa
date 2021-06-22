@@ -3,5 +3,5 @@
 @REM file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 @echo off
-call csi %~dp0\AddLicenseHeader.csx %~dp0\..\
+call csi %~dp0\AddLicenseHeader\AddLicenseHeader.csx %~dp0\..\
 pause
