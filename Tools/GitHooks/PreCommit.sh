@@ -9,7 +9,7 @@
 # 詳しい処理につきましては Tools/AddLicense/AddLicense.sh をご参照ください。
 
 # リポジトリのルートへ移動
-cd "$(git rev-parse --show-toplevel)" || exit
+cd "$(git rev-parse --show-toplevel)" || exit 1
 
 # `addLicense` の読み込み
 source Tools/AddLicense/AddLicense.sh
@@ -19,6 +19,5 @@ stagedFiles=$(git diff --name-only --cached --diff-filter=d)
 
 # 対象ファイルの内，MPL が抜けているもの対して文言を挿入する
 for file in $stagedFiles; do
-  addLicense "$file"
-  git add "$file"
+  addLicense "$file" && git add "$file"
 done

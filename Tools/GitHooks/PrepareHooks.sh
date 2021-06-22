@@ -5,11 +5,10 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 # リポジトリのルートへ移動
-cd "$(git rev-parse --show-toplevel)" || exit
+cd "$(git rev-parse --show-toplevel)" || exit 1
 
 # pre-commit 用のスクリプトを追加
-cp Tools/GitHooks/PreCommit.sh .git/hooks/pre-commit
-chmod a+x .git/hooks/pre-commit
+install -m a+x -D Tools/GitHooks/PreCommit.sh .git/hooks/pre-commit
 
 # 追加した Git Hooks を有効にする
 git init
