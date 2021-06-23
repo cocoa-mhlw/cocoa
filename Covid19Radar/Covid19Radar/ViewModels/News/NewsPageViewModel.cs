@@ -124,13 +124,13 @@ namespace Covid19Radar.ViewModels
             base.Initialize(parameters);
 
             var data = await _lis.DownloadAsync();
-            if (!(data is null)) {
-                this.LatestInformation = new ObservableCollection<LatestInformationModel>(data);
-            } else {
+            if (data is null) {
                 this.LatestInformation = new ObservableCollection<LatestInformationModel>();
                 this.LatestInformation.Add(new LatestInformationModel() {
                     Title = AppResources.NewsPage_FailedToDownload
                 });
+            } else {
+                this.LatestInformation = new ObservableCollection<LatestInformationModel>(data);
             }
             _logger.EndMethod();
         }
