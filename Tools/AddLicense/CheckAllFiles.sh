@@ -11,7 +11,7 @@
 cd "$(git rev-parse --show-toplevel)" || exit 1
 
 # `addLicense` の読み込み
-source Tools/AddLicense/AddLicense.sh
+source Tools/AddLicense/AddLicense.sh && export -f addLicense
 
 # 対象ファイル（リポジトリのルートを基準とした相対パスで記述）
 FILES=(
@@ -30,8 +30,6 @@ FILES=(
 )
 
 # 対象ファイルの内，MPL が抜けているもの対して文言を挿入する
-for path in "${FILES[@]}"; do
-  for file in $(git ls-files -- "$path"); do
-    addLicense "$file"
-  done
+for file in "${FILES[@]}"; do
+  git ls-files -- "$file" | xargs -r -P 4 -I '%' bash -c 'addLicense %'
 done
