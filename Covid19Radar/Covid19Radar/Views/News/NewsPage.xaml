@@ -92,6 +92,8 @@
                             <!--
                                 参考：https://corona.go.jp/dashboard/
                                 オープンデータ：https://opendata.corona.go.jp/api/Covid19JapanAll
+
+                                アプリのダウンロード数など：https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html
                             -->
                         </StackLayout>
                     </Frame>
