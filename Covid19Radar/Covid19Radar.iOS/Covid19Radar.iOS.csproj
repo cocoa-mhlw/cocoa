@@ -28,7 +28,6 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <LangVersion>latest</LangVersion>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
     <MtouchFastDev>true</MtouchFastDev>
@@ -41,7 +40,7 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
@@ -1176,8 +1175,6 @@
     <EmbeddedResource Include="fa-brands-400.otf" />
     <EmbeddedResource Include="fa-regular-400.otf" />
     <EmbeddedResource Include="fa-solid-900.otf" />
-    <EmbeddedResource Include="NotoSansCJKjp-Medium.otf" />
-    <EmbeddedResource Include="NotoSansCJKjp-Regular.otf" />
     <EmbeddedResource Include="Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
