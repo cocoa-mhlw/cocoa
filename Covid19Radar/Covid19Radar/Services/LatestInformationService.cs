@@ -21,7 +21,7 @@ namespace Covid19Radar.Services
         /// <summary>
         ///  <see cref="Covid19Radar.Model.LatestInformationModel"/>を非同期的にダウンロードします。
         /// </summary>
-        /// <returns>ダウンロードした最新情報を含むこの処理の非同期操作です。</returns>
+        /// <returns>ダウンロードした最新情報を含むこの処理の非同期操作を返します。</returns>
         public ValueTask<LatestInformationModel[]?> DownloadAsync();
     }
 

@@ -34,6 +34,9 @@ namespace Covid19Radar.ViewModels
         private                 string?                                       _g_search;
         private                 BrowserLaunchOptions                          _blo;
 
+        /// <summary>
+        ///  最新情報を格納した観測可能なコレクションを取得します。
+        /// </summary>
         public ObservableCollection<LatestInformationModel>? LatestInformation
         {
             get => _lim;
@@ -135,8 +138,8 @@ namespace Covid19Radar.ViewModels
         /// <summary>
         ///  指定されたWebサイトを表示します。
         /// </summary>
-        /// <param name="url">Webサイトへの完全なアドレスです。<see langword="null"/>または空文字を指定する事はできません。</param>
-        /// <returns>この処理の非同期操作です。</returns>
+        /// <param name="url">Webサイトへの完全なアドレスを指定します。<see langword="null"/>または空文字を指定する事はできません。</param>
+        /// <returns>この処理の非同期操作を返します。</returns>
         protected async ValueTask ShowPage(Uri url)
         {
             _logger.StartMethod();
