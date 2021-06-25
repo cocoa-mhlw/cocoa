@@ -32,7 +32,7 @@ namespace Covid19Radar.Services
             {
                 number = Convert.ToUInt16(match.Groups["d"].Value);
             }
-            return (number);
+            return number;
         }
         public List<string> GetCreatedTimes()
             => CdnUrlBase.Split(",").ToList();
@@ -52,23 +52,23 @@ namespace Covid19Radar.Services
             var urlDiagnosis = d.Match(url).Value;
             url = d.Replace(url, "");
             var urlApi = url;
-            return (new string[] { urlApi, urlRegister, urlDiagnosis });
+            return new string[] { urlApi, urlRegister, urlDiagnosis };
         }
         public ushort GetDiagnosisDataType()
-        => NumberEndofSentence(GetApiUrlSegment()[2]);
+            => NumberEndofSentence(GetApiUrlSegment()[2]);
         public ushort GetRegisterDataType()
-        => NumberEndofSentence(GetApiUrlSegment()[1]);
+            => NumberEndofSentence(GetApiUrlSegment()[1]);
         public ushort GetApiDataType()
-        => NumberEndofSentence(GetApiUrlSegment()[0]);
+            => NumberEndofSentence(GetApiUrlSegment()[0]);
         public bool IsDirectInputApi()
-        => Regex.IsMatch(GetApiUrlSegment()[0], @"^(\d+,)+\d+,?$");
+            => Regex.IsMatch(GetApiUrlSegment()[0], @"^(\d+,)+\d+,?$");
         public List<string> GetApiStrings()
             => GetApiUrlSegment()[0].Split(",").ToList();
     }
     public class TestNativeImplementation : INativeImplementation
     {
         static readonly Random random = new Random();
-        private readonly MockCommonUtils mockCommonUtils;
+        private static readonly MockCommonUtils mockCommonUtils = new MockCommonUtils();
 
         Task WaitRandom()
             => Task.Delay(random.Next(100, 2500));
@@ -94,10 +94,11 @@ namespace Covid19Radar.Services
         public async Task<IEnumerable<TemporaryExposureKey>> GetSelfTemporaryExposureKeysAsync()
         {
             var keys = new List<TemporaryExposureKey>();
-
-            for (var i = 1; i < 14; i++)
+            const int DAY_OF_TEK_STORED = 14;
+            for (var i = 1; i <= DAY_OF_TEK_STORED; i++)
+            {
                 keys.Add(GenerateRandomKey(i));
-
+            }
             await WaitRandom();
 
             return keys;
@@ -188,11 +189,12 @@ namespace Covid19Radar.Services
 
         static TemporaryExposureKey GenerateRandomKey(int daysAgo)
         {
-            var buffer = new byte[16];
-            random.NextBytes(buffer);
+            const int KEY_DATA_LENGTH = 16;
+            var keyData = new byte[KEY_DATA_LENGTH];
+            random.NextBytes(keyData);
 
             return new TemporaryExposureKey(
-                buffer,
+                keyData,
                 DateTimeOffset.UtcNow.AddDays(-1 * daysAgo),
                 TimeSpan.FromMinutes(random.Next(5, 120)),
                 (RiskLevel)random.Next(1, 8));

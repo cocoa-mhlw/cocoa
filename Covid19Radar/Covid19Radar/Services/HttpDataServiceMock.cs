@@ -19,7 +19,7 @@ namespace Covid19Radar.Services
     class HttpDataServiceMock : IHttpDataService
     {
         private readonly HttpClient downloadClient;
-        private readonly MockCommonUtils mockCommonUtils;
+        private static readonly MockCommonUtils mockCommonUtils = new MockCommonUtils();
 
         public HttpDataServiceMock(IHttpClientService httpClientService)
         {
@@ -78,8 +78,8 @@ namespace Covid19Radar.Services
         private long CalcMidnightTimeAddDays(int day)
         {
             DateTime d = DateTime.UtcNow.AddDays(day);
-            return (new DateTimeOffset(new DateTime(d.Year, d.Month, d.Day, 0, 1, 2, 3)).ToUnixTimeMilliseconds());
             // set 0 hour,1 min,2 sec,3 millisecond for debug
+            return new DateTimeOffset(new DateTime(d.Year, d.Month, d.Day, 0, 1, 2, 3)).ToUnixTimeMilliseconds();
         }
 
         enum PresetTekListType // PresetTekListData for Tek List 
@@ -138,7 +138,7 @@ namespace Covid19Radar.Services
             else
             {
                 Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList preset data called");
-                return (PresetTekListData(mockCommonUtils.GetTekListDataType()));
+                return PresetTekListData(mockCommonUtils.GetTekListDataType());
             }
         }
 
