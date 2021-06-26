@@ -16,7 +16,7 @@ function addLicense() {
 
   # 各種ファイルに適したコメントを生成する
   if [ "$fileType" == 'axml' ]; then
-    comment=$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
+    comment='\\n'$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
     lineNumber=2 # XML 宣言の後に挿入する
 
   elif [ "$fileType" == 'bat' ]; then
@@ -29,15 +29,15 @@ function addLicense() {
     comment=$(printf '# %s\\n' "${MPL[@]}")
 
   elif [ "$fileType" == 'resx' ]; then
-    comment=$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
+    comment='\\n'$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
     lineNumber=2 # XML 宣言の後に挿入する
 
   elif [ "$fileType" == 'sh' ]; then
-    comment=$(printf '# %s\\n' "${MPL[@]}")
+    comment='\\n'$(printf '# %s\\n' "${MPL[@]}")
     lineNumber=2 # Shebang の後に挿入する
 
   elif [ "$fileType" == 'storyboard' ]; then
-    comment=$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
+    comment='\\n'$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
     lineNumber=2 # XML 宣言の後に挿入する
 
   elif [ "$fileType" == 'strings' ]; then
@@ -47,11 +47,11 @@ function addLicense() {
     comment=$(printf '# %s\\n' "${MPL[@]}")
 
   elif [ "$fileType" == 'xaml' ]; then
-    comment=$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
+    comment='\\n'$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
     lineNumber=2 # XML 宣言の後に挿入する
 
   elif [ "$fileType" == 'xml' ]; then
-    comment=$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
+    comment='\\n'$(printf '<!-- %s\\n - %s\\n - %s -->\\n' "${MPL[@]}")
     lineNumber=2 # XML 宣言の後に挿入する
 
   elif [ "$fileType" == 'yml' ]; then
