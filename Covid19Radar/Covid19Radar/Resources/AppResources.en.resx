@@ -938,4 +938,24 @@ Storage :</value>
     <value>https://www.mhlw.go.jp/cocoa/kiyaku_english.html</value>
     <comment>利用規約URL</comment>
   </data>
+  <data name="SettingsPage_JoinToDevelop0" xml:space="preserve">
+    <value>Join us to develop</value>
+    <comment>開発に参加する</comment>
+  </data>
+  <data name="SettingsPage_JoinToDevelop1" xml:space="preserve">
+    <value>This app is developing with volunteers.</value>
+    <comment>本アプリは有志により開発されています。</comment>
+  </data>
+  <data name="SettingsPage_JoinToDevelop2" xml:space="preserve">
+    <value>Let's do you develop COCOA together?</value>
+    <comment>貴方も一緒に COCOA を開発しませんか？</comment>
+  </data>
+  <data name="SettingsPage_JoinToDevelop3" xml:space="preserve">
+    <value>You can join us to develop in the GitHub repository below:</value>
+    <comment>下記の GitHub リポジトリから開発に参加する事ができます。</comment>
+  </data>
+  <data name="SettingsPage_JoinToDevelop4" xml:space="preserve">
+    <value>The repository:</value>
+    <comment>リポジトリ：</comment>
+  </data>
 </root>

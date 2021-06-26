@@ -106,6 +106,38 @@
                         VerticalOptions="Start" />
                 </Grid>
             </Frame>
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Frame Padding="15" HasShadow="False">
+                <StackLayout>
+                    <Label
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop0}" />
+                    <Label Style="{StaticResource DefaultLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop1}" />
+                                <Span Text=" " />
+                                <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop2}" />
+                                <Span Text=" " />
+                                <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop3}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Style="{StaticResource DefaultLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.SettingsPage_JoinToDevelop4}" />
+                                <Span Text=" " />
+                                <Span Text="{Binding RepoLink}" TextColor="{StaticResource Primary}" TextDecorations="Underline">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding OnTapRepoLink}" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ScrollView>
 </ContentPage>

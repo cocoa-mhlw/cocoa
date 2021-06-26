@@ -26,6 +26,8 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _AppVersion, value); }
         }
 
+        public string RepoLink { get; }
+
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly IUserDataService userDataService;
         private readonly IHttpDataService httpDataService;
@@ -36,6 +38,7 @@ namespace Covid19Radar.ViewModels
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppInfo.VersionString;
+            this.RepoLink = "https://github.com/cocoa-mhlw/cocoa";
             this.loggerService = loggerService;
             this.userDataService = userDataService;
             this.httpDataService = httpDataService;
@@ -82,6 +85,12 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
+            loggerService.EndMethod();
+        });
+
+        public ICommand OnTapRepoLink => new Command(async () => {
+            loggerService.StartMethod();
+            await Browser.OpenAsync(this.RepoLink, BrowserLaunchMode.External);
             loggerService.EndMethod();
         });
     }

@@ -938,4 +938,24 @@
     <value>https://www.mhlw.go.jp/cocoa/kiyaku_japanese.html</value>
     <comment>利用規約URL</comment>
   </data>
+  <data name="SettingsPage_JoinToDevelop0" xml:space="preserve">
+    <value>開発に参加する</value>
+    <comment>開発に参加する</comment>
+  </data>
+  <data name="SettingsPage_JoinToDevelop1" xml:space="preserve">
+    <value>本アプリは有志により開発されています。</value>
+    <comment>本アプリは有志により開発されています。</comment>
+  </data>
+  <data name="SettingsPage_JoinToDevelop2" xml:space="preserve">
+    <value>貴方も一緒に COCOA を開発しませんか？</value>
+    <comment>貴方も一緒に COCOA を開発しませんか？</comment>
+  </data>
+  <data name="SettingsPage_JoinToDevelop3" xml:space="preserve">
+    <value>下記の GitHub リポジトリから開発に参加する事ができます。</value>
+    <comment>下記の GitHub リポジトリから開発に参加する事ができます。</comment>
+  </data>
+  <data name="SettingsPage_JoinToDevelop4" xml:space="preserve">
+    <value>リポジトリ：</value>
+    <comment>リポジトリ：</comment>
+  </data>
 </root>
