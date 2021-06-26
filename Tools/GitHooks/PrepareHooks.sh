@@ -8,7 +8,7 @@
 cd "$(git rev-parse --show-toplevel)" || exit 1
 
 # pre-commit 用のスクリプトを追加
-install -m a+x -D Tools/GitHooks/PreCommit.sh .git/hooks/pre-commit
+install -m 755 -D Tools/GitHooks/PreCommit.sh .git/hooks/pre-commit
 
 # 追加した Git Hooks を有効にする
 git init
