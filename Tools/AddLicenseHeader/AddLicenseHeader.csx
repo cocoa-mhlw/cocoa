@@ -115,7 +115,8 @@ public static FileState AddHeader<TWriter, TState>(
 
 	if (header is null) {
 		return FileState.NotDefined;
-	} else if (data.StartsWith(header)) {
+	} else if (data.Contains(HEADER_LINE_1)) {
+		// 厳密に一致しているかどうかを判定する場合は条件を `data.StartsWith(header)` に変更してください。
 		return FileState.AlreadyAdded;
 	} else {
 		using (var tw = openWriter(argForWriter)) {
