@@ -8,6 +8,7 @@ using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using Covid19Radar.Resources;
+using System;
 
 namespace Covid19Radar.ViewModels
 {
@@ -19,6 +20,10 @@ namespace Covid19Radar.ViewModels
         {
             get { return _exposureCount; }
             set { SetProperty(ref _exposureCount, value); }
+        }
+        public string NowDate
+        {
+            get { return DateTime.Now.ToLocalTime().ToString("D"); }
         }
 
         public ContactedNotifyPageViewModel(INavigationService navigationService, ILoggerService loggerService, IExposureNotificationService exposureNotificationService) : base(navigationService)
