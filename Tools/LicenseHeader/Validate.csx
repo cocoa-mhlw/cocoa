@@ -52,7 +52,7 @@ if (count == 0) {
 	}
 	ForegroundColor = ConsoleColor.Red;
 	WriteLine(sb.ToString());
-	throw new LicenseHeaderException(sb.ToString());
+	Environment.Exit(-1);
 }
 
 
@@ -86,16 +86,4 @@ public static bool Ignore(string file)
 		|| file.Contains("obj")
 		|| file.Contains("Obj")
 		|| file.Contains(".github");
-}
-
-[Serializable()]
-public sealed class LicenseHeaderException : System.Exception
-{
-	public LicenseHeaderException(string message)
-		: base(message) { }
-
-	protected LicenseHeaderException(
-		System.Runtime.Serialization.SerializationInfo info,
-		System.Runtime.Serialization.StreamingContext  context)
-		: base(info, context) { }
 }
