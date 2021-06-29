@@ -36,19 +36,6 @@ jobs:
       uses: microsoft/setup-msbuild@v1
     - name: Build
       run: msbuild ${{ github.workspace }}/src/Covid19Radar.Api.Common/Covid19Radar.Api.Common.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
-  build_serverapi_external:
-    name: Build-ServerApi-External
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        Configuration: [Debug, Release]
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1
-    - name: Build
-      run: msbuild ${{ github.workspace }}/src/Covid19Radar.Api.External/Covid19Radar.Api.External.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
   build_serverapi_background:
     name: Build-ServerApi-Background
     runs-on: windows-latest
@@ -65,7 +52,7 @@ jobs:
   test:
     name: Test-ServerApi
     runs-on: ubuntu-latest
-    needs: [build_serverapi, build_serverapi_common, build_serverapi_external, build_serverapi_background]
+    needs: [build_serverapi, build_serverapi_common, build_serverapi_background]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
