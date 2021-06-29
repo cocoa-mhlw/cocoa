@@ -19,7 +19,6 @@ Covid19Radar/Covid19Radar.iOS/Assets.xcassets/Contents.json
 Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
 Covid19Radar/Covid19Radar.iOS/Entitlements.plist
 Covid19Radar/Covid19Radar.iOS/Info.plist
-Covid19Radar/Covid19Radar/Common/DateTimeUtility.cs
 Covid19Radar/Covid19Radar/Covid19Radar.csproj
 Covid19Radar/Covid19Radar/Memo.md
 Covid19Radar/Covid19Radar/Resources/AppResources.Designer.cs
