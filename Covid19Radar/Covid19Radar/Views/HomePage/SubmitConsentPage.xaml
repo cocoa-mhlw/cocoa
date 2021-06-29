@@ -63,6 +63,8 @@
             <Grid Grid.Row="1">
                 <Button
                     AutomationId="NextButton"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{x:Static resources:AppResources.SubmitConsentPageButton}"
                     Command="{prism:NavigateTo 'NotifyOtherPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageButton}" />
