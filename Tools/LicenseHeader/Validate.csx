@@ -50,6 +50,8 @@ if (count == 0) {
 	for (int i = 0; i < count; ++i) {
 		sb.Append(" - ").AppendLine(invalid_files[i]);
 	}
+	ForegroundColor = ConsoleColor.Red;
+	WriteLine(sb.ToString());
 	throw new LicenseHeaderException(sb.ToString());
 }
 
