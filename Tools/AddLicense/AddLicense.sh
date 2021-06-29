@@ -59,7 +59,7 @@ function addLicense() {
   fi
 
   # MPL の適用対象であるかを確認する。その中でライセンスの文言がないものに限り，生成したコメントを挿入する
-  if [ "$(grep -c "$1" Tools/AddLicense/Exclusions.txt)" -eq 0 ]; then
+  if [ "$comment" != '' ] && [ "$(grep -c "$1" Tools/AddLicense/Exclusions.txt)" -eq 0 ]; then
     git grep -z -I -L "${MPL[0]}" -- "$1" | xargs -0 -r sed -i -e "${lineNumber}i$comment"
   else
     echo "Excluded: $1"
