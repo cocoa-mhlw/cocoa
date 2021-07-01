@@ -260,12 +260,12 @@ namespace Covid19Radar.UnitTests.Services.Logs
         [Theory]
         [InlineData("Hello", "\"Hello\"")]
         [InlineData("Hello, world!!", "\"Hello, world!!\"")]
-        [InlineData("Hello\r", "\"Hello\"")]
-        [InlineData("Hello\n", "\"Hello\"")]
-        [InlineData("Hello\r\n", "\"Hello\"")]
+        [InlineData("Hello\r", "\"Hello\\r\"")]
+        [InlineData("Hello\n", "\"Hello\\n\"")]
+        [InlineData("Hello\r\n", "\"Hello\\r\\n\"")]
         [InlineData("\"Hello\"", "\"\"\"Hello\"\"\"")]
         [InlineData("\"\"Hello\"\"", "\"\"\"\"\"Hello\"\"\"\"\"")]
-        [InlineData("\"Hello\": foo, \"world\": bar\n!!", "\"\"\"Hello\"\": foo, \"\"world\"\": bar!!\"")]
+        [InlineData("\"Hello\": foo, \"world\": bar\n!!", "\"\"\"Hello\"\": foo, \"\"world\"\": bar\\n!!\"")]
         [InlineData(null, "\"\"")]
         [InlineData("", "\"\"")]
         public void Info_Success(string message, string expectedMessage)
@@ -690,7 +690,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
         private LoggerService CreateDefaultLoggerService(ILogPathService logPathService, IEssentialsService essentialsService)
         {
-            return new LoggerService(logPathService, essentialsService);
+            return new LoggerService(new LogWriter(logPathService, essentialsService));
         }
 
         private ILogPathService CreateDefaultMockILogPathService()
