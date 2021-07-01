@@ -40,6 +40,7 @@
     <item name="windowActionModeOverlay">true</item>
    
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+    <item name="android:forceDarkAllowed">false</item>
   </style>
     <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
       <item name="colorAccent">@color/colorAccent</item>
