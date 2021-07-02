@@ -75,8 +75,6 @@ namespace Covid19Radar.ViewModels
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.ToString());
-
                 loggerService.Exception("Failed to exposure notification status.", ex);
                 loggerService.EndMethod();
             }

@@ -4,7 +4,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -230,7 +229,7 @@ namespace Covid19Radar.Services
                 loggerService.EndMethod();
                 return (-1, downloadedFiles);
             }
-            Debug.WriteLine("C19R Fetch Exposure Key");
+            loggerService.Debug("C19R Fetch Exposure Key");
 
             var newCreated = startTimestamp;
             foreach (var tekItem in tekList)
@@ -239,8 +238,8 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > startTimestamp)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
-                    Debug.WriteLine(tmpFile);
+                    loggerService.Debug(Utils.SerializeToJson(tekItem));
+                    loggerService.Debug(tmpFile);
 
                     loggerService.Info($"Download TEK file. url: {tekItem.Url}");
                     using (Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken))
@@ -258,7 +257,7 @@ namespace Covid19Radar.Services
                     }
                     newCreated = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
-                    Debug.WriteLine($"C19R FETCH DIAGKEY {tmpFile}");
+                    loggerService.Debug($"C19R FETCH DIAGKEY {tmpFile}");
                 }
             }
             loggerService.Info($"Downloaded files: {downloadedFiles.Count()}");
@@ -287,7 +286,7 @@ namespace Covid19Radar.Services
                 var positiveDiagnosis = exposureNotificationService.PositiveDiagnosis;
                 if (string.IsNullOrEmpty(positiveDiagnosis))
                 {
-                    loggerService.Error($"Diagnostic number is null or empty.");
+                    loggerService.Error("Diagnostic number is null or empty.");
                     loggerService.EndMethod();
                     throw new InvalidOperationException();
                 }
@@ -361,8 +360,8 @@ namespace Covid19Radar.Services
 
             var beforeKey = Utils.SerializeToJson(temporaryExposureKeys.ToList());
             var afterKey = Utils.SerializeToJson(keys.ToList());
-            Debug.WriteLine($"C19R {beforeKey}");
-            Debug.WriteLine($"C19R {afterKey}");
+            loggerService.Debug($"C19R before key: {beforeKey}");
+            loggerService.Debug($"C19R after key: {afterKey}");
 
             if (keys.Count() == 0)
             {

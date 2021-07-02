@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using BackgroundTasks;
 using Covid19Radar.iOS.Services.Logs;
 using Covid19Radar.Services.Logs;
@@ -59,9 +60,9 @@ namespace Covid19Radar.iOS.Services.Logs
 
         private void HandleAppRefresh(BGAppRefreshTask task)
         {
+            loggerService.StartMethod();
             try
             {
-                loggerService.StartMethod();
 
                 ScheduleAppRefresh();
 
@@ -82,12 +83,14 @@ namespace Covid19Radar.iOS.Services.Logs
                 };
 
                 queue.AddOperation(operation);
-
-                loggerService.EndMethod();
             }
-            catch
+            catch (Exception e)
             {
-                // do nothing
+                loggerService.Exception("Failed to handle app refresh.", e);
+            }
+            finally
+            {
+                loggerService.EndMethod();
             }
         }
 
@@ -137,20 +140,20 @@ namespace Covid19Radar.iOS.Services.Logs
 
         public override void Main()
         {
+            loggerService.StartMethod();
             base.Main();
-
             try
             {
-                loggerService.StartMethod();
-
                 logFileService.Rotate();
-
                 loggerService.Info("Periodic deletion of old logs.");
-                loggerService.EndMethod();
             }
-            catch
+            catch (Exception e)
             {
-                // do nothing
+                loggerService.Exception("Failed to rotate logs.", e);
+            }
+            finally
+            {
+                loggerService.EndMethod();
             }
         }
 
