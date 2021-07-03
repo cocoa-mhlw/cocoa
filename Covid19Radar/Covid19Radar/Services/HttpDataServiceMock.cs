@@ -19,7 +19,7 @@ namespace Covid19Radar.Services
     class HttpDataServiceMock : IHttpDataService
     {
         private readonly HttpClient downloadClient;
-        private static readonly MockCommonUtils mockCommonUtils = new MockCommonUtils();
+        private readonly MockCommonUtils mockCommonUtils = new MockCommonUtils();
 
         public HttpDataServiceMock(IHttpClientService httpClientService)
         {

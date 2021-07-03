@@ -68,7 +68,9 @@ namespace Covid19Radar.Services
     public class TestNativeImplementation : INativeImplementation
     {
         static readonly Random random = new Random();
-        private static readonly MockCommonUtils mockCommonUtils = new MockCommonUtils();
+        private readonly MockCommonUtils mockCommonUtils = new MockCommonUtils();
+        const int DAY_OF_TEK_STORED = 14; // used only in GetSelfTemporaryExposureKeysAsync
+        const int KEY_DATA_LENGTH = 16; // used only in GenerateRandomKey
 
         Task WaitRandom()
             => Task.Delay(random.Next(100, 2500));
@@ -94,7 +96,6 @@ namespace Covid19Radar.Services
         public async Task<IEnumerable<TemporaryExposureKey>> GetSelfTemporaryExposureKeysAsync()
         {
             var keys = new List<TemporaryExposureKey>();
-            const int DAY_OF_TEK_STORED = 14;
             for (var i = 1; i <= DAY_OF_TEK_STORED; i++)
             {
                 keys.Add(GenerateRandomKey(i));
@@ -189,7 +190,6 @@ namespace Covid19Radar.Services
 
         static TemporaryExposureKey GenerateRandomKey(int daysAgo)
         {
-            const int KEY_DATA_LENGTH = 16;
             var keyData = new byte[KEY_DATA_LENGTH];
             random.NextBytes(keyData);
 
