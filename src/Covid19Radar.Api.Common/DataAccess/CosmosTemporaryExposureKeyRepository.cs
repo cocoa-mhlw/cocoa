@@ -17,11 +17,11 @@ namespace Covid19Radar.Api.DataAccess
     public class CosmosTemporaryExposureKeyRepository : ITemporaryExposureKeyRepository
     {
         private readonly ICosmos _db;
-        private readonly ILogger<CosmosTemporaryExposureKeyExportRepository> _logger;
+        private readonly ILogger<CosmosTemporaryExposureKeyRepository> _logger;
 
         public CosmosTemporaryExposureKeyRepository(
             ICosmos db,
-            ILogger<CosmosTemporaryExposureKeyExportRepository> logger)
+            ILogger<CosmosTemporaryExposureKeyRepository> logger)
         {
             _db = db;
             _logger = logger;

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    x:Class="Covid19Radar.Views.HowToReceiveProcessingNumberPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    Title="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageTitle}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout
+            Spacing="16"
+            Margin="20,20,20,10">
+            <Grid
+                ColumnSpacing="10"
+                RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.7*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*" />
+                    <RowDefinition Height="0.5*" />
+                </Grid.RowDefinitions>
+                <ffimageloading:CachedImage
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="notify_img01.png" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    VerticalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription1}" />
+                <ffimageloading:CachedImage
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="notify_img02.png" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    VerticalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription2}" />
+            </Grid>
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                AutomationProperties.Name="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}"
+                Style="{StaticResource DefaultLabel}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{x:Static resources:AppResources.NoteSymbol}" />
+                        <Span Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                AutomationProperties.Name="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}"
+                Style="{StaticResource DefaultLabel}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{x:Static resources:AppResources.NoteSymbol}" />
+                        <Span Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -156,6 +156,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ReAgreePrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
             containerRegistry.RegisterForNavigation<SplashPage>();
+            containerRegistry.RegisterForNavigation<HowToReceiveProcessingNumberPage>();
 
             // News Page
             containerRegistry.RegisterForNavigation<NewsPage>();

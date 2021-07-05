@@ -6,9 +6,9 @@ using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {
-    public class TutorialPage6ViewModel : ViewModelBase
+    public class HowToReceiveProcessingNumberPageViewModel : ViewModelBase
     {
-        public TutorialPage6ViewModel(INavigationService navigationService) : base(navigationService)
+        public HowToReceiveProcessingNumberPageViewModel(INavigationService navigationService) : base(navigationService)
         {
         }
     }
