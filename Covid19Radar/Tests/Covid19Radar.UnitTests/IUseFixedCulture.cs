@@ -11,11 +11,12 @@ namespace Covid19Radar.UnitTests
 {
     public interface IUseFixedCulture : IClassFixture<CultureFixer> { }
 
-    public sealed class CultureFixer
+    public class CultureFixer
     {
-        public CultureFixer()
+        public CultureFixer() : this(CultureInfo.InvariantCulture) { }
+
+        protected CultureFixer(CultureInfo c)
         {
-            var c = CultureInfo.InvariantCulture;
             CultureInfo.DefaultThreadCurrentCulture   = c;
             CultureInfo.DefaultThreadCurrentUICulture = c;
             CultureInfo.CurrentCulture                = c;
