@@ -17,7 +17,7 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
-    public class ReAgreePrivacyPolicyPageViewModelTests
+    public class ReAgreePrivacyPolicyPageViewModelTests : IUseFixedCulture
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
