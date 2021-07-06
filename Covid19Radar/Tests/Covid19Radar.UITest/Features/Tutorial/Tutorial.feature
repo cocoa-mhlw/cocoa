@@ -23,7 +23,7 @@ Scenario: Complete Tutorial
 	And I can see "ButtonStart"
 
 	When I tap on "ButtonStart" button
-	#Then I am on "Terms of Service" page		
+	#Then I am on "Terms of Service" page
 	Then I can see "ButtonAgree"
 	And I can see "ButtonNotAgree"
 
@@ -38,5 +38,3 @@ Scenario: Complete Tutorial
 	#Then I am on "Terms of Service" page
 	#And I can see "NextButton"
 	#When I tap on "NextButton" button
-	
-	

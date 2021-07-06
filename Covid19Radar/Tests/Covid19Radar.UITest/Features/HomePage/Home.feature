@@ -14,7 +14,7 @@ Scenario: Navigate away from and to Home
 	Then I can see a label marked as "HOME"
 	When I tap on "HOME" element
 	Then I am on "HOME" page
-	
+
 	Scenario: Exposures
 	Given I am on "HOME" page
 	And I can see "ButtonExposures"
