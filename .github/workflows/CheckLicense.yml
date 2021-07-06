@@ -1,0 +1,21 @@
+name: "Validate License Header"
+
+on:
+  push:
+    branches: [ main, develop, 'feature/**' ]
+  pull_request:
+    branches: [ main, develop, 'feature/**' ]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1.8.1
+        with:
+          dotnet-version: 5.0.301
+      - name: Setup C# Interactive
+        run: dotnet tool install -g dotnet-script
+      - name: Validate
+        run: dotnet script Tools/LicenseHeader/Validate.csx .
