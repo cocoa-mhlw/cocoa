@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Globalization;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
@@ -58,6 +59,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         [Fact]
         public void OpenWebViewCommandTests()
         {
+            // The test is locale dependent
+            CultureInfo.CurrentUICulture = CultureInfo.InvariantCulture;
+
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
             var param = new NavigationParameters
             {
