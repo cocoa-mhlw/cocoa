@@ -288,94 +288,12 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\en.lproj\HelpPage20%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage20%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage20%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage21%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage21%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage21%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage22%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage22%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage22%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage30%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage30%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage30%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage31%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage31%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage31%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage32%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage32%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage32%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage40%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage40%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage40%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage41%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage41%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage41%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage42%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage42%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage42%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage44%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage44%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage44%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage45%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage45%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage45%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage50%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage50%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HelpPage50%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HOMEPage10%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HOMEPage10%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HOMEPage10%403x.png" />
-    <BundleResource Include="Resources\en.lproj\HOMEPage11%401x.png" />
-    <BundleResource Include="Resources\en.lproj\HOMEPage11%402x.png" />
-    <BundleResource Include="Resources\en.lproj\HOMEPage11%403x.png" />
-    <BundleResource Include="Resources\en.lproj\InfoMark%401x.png" />
-    <BundleResource Include="Resources\en.lproj\InfoMark%402x.png" />
-    <BundleResource Include="Resources\en.lproj\InfoMark%403x.png" />
-    <BundleResource Include="Resources\en.lproj\Logo%401x.png" />
-    <BundleResource Include="Resources\en.lproj\Logo%402x.png" />
-    <BundleResource Include="Resources\en.lproj\Logo%403x.png" />
-    <BundleResource Include="Resources\en.lproj\Nocontact10%401x.png" />
-    <BundleResource Include="Resources\en.lproj\Nocontact10%402x.png" />
-    <BundleResource Include="Resources\en.lproj\Nocontact10%403x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage10%401x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage10%402x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage10%403x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage11%401x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage11%402x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage11%403x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage12%401x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage12%402x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage12%403x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage20%401x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage20%402x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage20%403x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage40%401x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage40%402x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage40%403x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage50%401x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage50%402x.png" />
-    <BundleResource Include="Resources\en.lproj\TutorialPage50%403x.png" />
-    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%403x.png" />
     <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%402x.png" />
     <BundleResource Include="Resources\Base.lproj\privacypolicy_img01.png" />
-    <BundleResource Include="Resources\en.lproj\privacypolicy_img01%403x.png" />
-    <BundleResource Include="Resources\en.lproj\privacypolicy_img01%402x.png" />
-    <BundleResource Include="Resources\en.lproj\privacypolicy_img01.png" />
-    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01%403x.png" />
-    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01%402x.png" />
-    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01.png" />
     <BundleResource Include="Resources\Base.lproj\arrow_icon%403x.png" />
     <BundleResource Include="Resources\Base.lproj\arrow_icon%402x.png" />
     <BundleResource Include="Resources\Base.lproj\arrow_icon.png" />
-    <BundleResource Include="Resources\en.lproj\arrow_icon%403x.png" />
-    <BundleResource Include="Resources\en.lproj\arrow_icon%402x.png" />
-    <BundleResource Include="Resources\en.lproj\arrow_icon.png" />
-    <BundleResource Include="Resources\ja.lproj\arrow_icon%403x.png" />
-    <BundleResource Include="Resources\ja.lproj\arrow_icon%402x.png" />
-    <BundleResource Include="Resources\ja.lproj\arrow_icon.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage50%401x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage50%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage50%403x.png" />
@@ -391,13 +309,22 @@
     <BundleResource Include="Resources\Base.lproj\HelpPage22%401x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage22%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage22%403x.png" />
-    <BundleResource Include="Resources\zh.lproj\arrow_icon%403x.png" />
-    <BundleResource Include="Resources\zh.lproj\arrow_icon%402x.png" />
-    <BundleResource Include="Resources\zh.lproj\arrow_icon.png" />
-    <BundleResource Include="Resources\notify_img02%403x.png" />
-    <BundleResource Include="Resources\notify_img02%402x.png" />
-    <BundleResource Include="Resources\notify_img01%403x.png" />
-    <BundleResource Include="Resources\notify_img01%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage31%401x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage31%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage31%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage32%401x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage32%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\HelpPage32%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\IconHamburger%401x.png" />
+    <BundleResource Include="Resources\Base.lproj\IconHamburger%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\IconHamburger%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\Base.lproj\Logo.png" />
+    <BundleResource Include="Resources\Base.lproj\notify_img01%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\notify_img01%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\notify_img02%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\notify_img02%403x.png" />
+    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -466,15 +393,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\Logo%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\Logo%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\Logo%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\Logo%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage30%401x.png" />
@@ -612,15 +530,6 @@
     <BundleResource Include="Resources\ja.lproj\HelpPage21%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage30%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage30%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage30%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage31%401x.png" />
   </ItemGroup>
   <ItemGroup>
@@ -639,51 +548,6 @@
     <BundleResource Include="Resources\ja.lproj\HelpPage32%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage40%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage40%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage40%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage41%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage41%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage41%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage42%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage42%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage42%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage44%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage44%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage44%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage45%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage45%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage45%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage50%401x.png" />
   </ItemGroup>
   <ItemGroup>
@@ -691,87 +555,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage50%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage10%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage10%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage10%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage11%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage11%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage11%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage12%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage12%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage12%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage20%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage20%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage20%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage40%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage40%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage40%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage50%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage50%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\TutorialPage50%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HOMEPage10%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HOMEPage10%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HOMEPage10%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HOMEPage11%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HOMEPage11%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HOMEPage11%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\InfoMark%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\InfoMark%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\InfoMark%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\Nocontact10%401x.png" />
