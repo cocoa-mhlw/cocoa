@@ -628,7 +628,6 @@
   <ItemGroup>
     <Folder Include="Services\Logs\" />
     <Folder Include="Renderers\" />
-    <Folder Include="Resources\zh.lproj\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
