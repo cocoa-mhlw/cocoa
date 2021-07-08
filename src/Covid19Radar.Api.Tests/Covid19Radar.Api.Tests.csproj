@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar.Api.Common\Covid19Radar.Api.Common.csproj" />
-    <ProjectReference Include="..\Covid19Radar.Api.External\Covid19Radar.Api.External.csproj" />
     <ProjectReference Include="..\Covid19Radar.Api\Covid19Radar.Api.csproj" />
     <ProjectReference Include="..\Covid19Radar.Background\Covid19Radar.Background.csproj" />
   </ItemGroup>
