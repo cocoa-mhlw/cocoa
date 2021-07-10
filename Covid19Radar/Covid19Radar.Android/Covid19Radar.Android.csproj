@@ -161,7 +161,7 @@
       <Version>4.6.0.967</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification">
-      <Version>19.7.2-eap-alpha02</Version>
+      <Version>19.7.2-eap-alpha03</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
       <Version>117.0.0-preview03</Version>

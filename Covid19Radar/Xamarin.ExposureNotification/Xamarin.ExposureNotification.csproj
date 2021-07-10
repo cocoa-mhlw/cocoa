@@ -40,7 +40,7 @@
 		<Compile Include="**\*.android.cs" />
 		<Compile Include="**\*.android.*.cs" />
 
-		<PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification" Version="19.7.2-eap-alpha02" />
+		<PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification" Version="19.7.2-eap-alpha03" />
 		<PackageReference Include="Xamarin.AndroidX.Core" Version="1.2.0" />
 		<PackageReference Include="Xamarin.AndroidX.Work.Runtime" Version="2.5.0.1" />
 	</ItemGroup>
