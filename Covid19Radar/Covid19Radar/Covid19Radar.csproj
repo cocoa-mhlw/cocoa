@@ -179,6 +179,7 @@
   <ItemGroup>
     <Folder Include="Services\Logs\" />
     <Folder Include="Controls\" />
+    <Folder Include="Services\Migration\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />

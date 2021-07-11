@@ -7,6 +7,7 @@ namespace Covid19Radar.Common
     public static class PreferenceKey
     {
         // for preferences
+        public static string AppVersion = "AppVersion";
         public static string StartDateTime = "StartDateTime";
         public static string LastProcessTekTimestamp = "LastProcessTekTimestamp";
         public static string ExposureNotificationConfiguration = "ExposureNotificationConfiguration";

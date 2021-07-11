@@ -17,6 +17,7 @@ using Covid19Radar.Services.Logs;
 using System;
 using CommonServiceLocator;
 using Covid19Radar.Common;
+using Covid19Radar.Services.Migration;
 
 /*
  * Our mission...is
@@ -180,6 +181,7 @@ namespace Covid19Radar
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
+            container.Register<IVersionMigrationService, VersionMigrationService>(Reuse.Singleton);
         }
 
         protected override void OnStart()

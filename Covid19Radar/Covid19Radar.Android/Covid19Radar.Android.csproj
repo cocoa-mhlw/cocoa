@@ -202,6 +202,8 @@
     <Compile Include="Services\PreferencesService.cs" />
     <Compile Include="Services\SecureStorageServiceAndroid.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
+    <Compile Include="Services\Migration\PlatformVersionMigrationService.cs" />
+    <Compile Include="Services\Migration\Migrator123.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
@@ -433,6 +435,7 @@
     <Folder Include="Renderers\" />
     <Folder Include="Resources\xml\" />
     <Folder Include="Services\Logs\" />
+    <Folder Include="Services\Migration\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-ja-xhdpi\HelpPage22.png" />
