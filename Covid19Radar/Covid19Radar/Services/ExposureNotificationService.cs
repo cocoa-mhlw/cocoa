@@ -31,9 +31,11 @@ namespace Covid19Radar.Services
         Task FetchExposureKeyAsync();
 
         List<UserExposureInfo> GetExposureInformationList();
-        int GetExposureCount();
         void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList);
         void RemoveExposureInformation();
+
+        List<UserExposureInfo> GetExposureInformationListToDisplay();
+        int GetExposureCountToDisplay();
 
         Task<string> UpdateStatusMessageAsync();
         Task<bool> StartExposureNotification();
@@ -111,24 +113,32 @@ namespace Covid19Radar.Services
         private async Task GetExposureNotificationConfig()
         {
             loggerService.StartMethod();
-
-            string container = AppSettings.Instance.BlobStorageContainerName;
-            string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
-            HttpClient httpClient = httpClientService.Create();
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
+            try
             {
-                loggerService.Info("Success to download configuration");
-                var content = await result.Content.ReadAsStringAsync();
-                preferencesService.SetValue(PreferenceKey.ExposureNotificationConfiguration, content);
+                string container = AppSettings.Instance.BlobStorageContainerName;
+                string url = AppSettings.Instance.CdnUrlBase + $"{container}/Configration.json";
+                HttpClient httpClient = httpClientService.Create();
+                Task<HttpResponseMessage> response = httpClient.GetAsync(url);
+                HttpResponseMessage result = await response;
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    loggerService.Info("Success to download configuration");
+                    var content = await result.Content.ReadAsStringAsync();
+                    preferencesService.SetValue(PreferenceKey.ExposureNotificationConfiguration, content);
+                }
+                else
+                {
+                    loggerService.Error("Fail to download configuration");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                loggerService.Error("Fail to download configuration");
+                loggerService.Exception("Failed download of exposure notification configuration.", ex);
             }
-
-            loggerService.EndMethod();
+            finally
+            {
+                loggerService.EndMethod();
+            }
         }
 
         public Configuration GetConfiguration()
@@ -214,19 +224,6 @@ namespace Covid19Radar.Services
             return result;
         }
 
-        public int GetExposureCount()
-        {
-            loggerService.StartMethod();
-            int result = 0;
-            var exposureInformationList = GetExposureInformationList();
-            if (exposureInformationList != null)
-            {
-                result = exposureInformationList.Count;
-            }
-            loggerService.EndMethod();
-            return result;
-        }
-
         public void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList)
         {
             loggerService.StartMethod();
@@ -243,6 +240,29 @@ namespace Covid19Radar.Services
             secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
             secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
             loggerService.EndMethod();
+        }
+
+        public List<UserExposureInfo> GetExposureInformationListToDisplay()
+        {
+            loggerService.StartMethod();
+            var list = GetExposureInformationList()?
+                .Where(x => x.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(AppConstants.DaysOfExposureInformationToDisplay)) >= 0)
+                .ToList();
+            loggerService.EndMethod();
+            return list;
+        }
+
+        public int GetExposureCountToDisplay()
+        {
+            loggerService.StartMethod();
+            int result = 0;
+            var exposureInformationList = GetExposureInformationListToDisplay();
+            if (exposureInformationList != null)
+            {
+                result = exposureInformationList.Count;
+            }
+            loggerService.EndMethod();
+            return result;
         }
 
         public async Task<string> UpdateStatusMessageAsync()

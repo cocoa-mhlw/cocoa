@@ -25,7 +25,7 @@ namespace Covid19Radar.ViewModels
         {
             Title = AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
-            ExposureCount = exposureNotificationService.GetExposureCount().ToString();
+            ExposureCount = exposureNotificationService.GetExposureCountToDisplay().ToString();
         }
 
         public Command OnClickByForm => new Command(async () =>

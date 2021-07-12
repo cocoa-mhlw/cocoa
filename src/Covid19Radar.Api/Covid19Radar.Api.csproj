@@ -32,7 +32,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\ServiceDependencies\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties host_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

@@ -25,7 +25,7 @@ namespace Covid19Radar.Api.Services
             IAuthorizedAppRepository authApp,
             ILogger<DeviceValidationService> logger)
         {
-            Android = new DeviceValidationAndroidService(config, http);
+            Android = new DeviceValidationAndroidService();
             Apple = new DeviceValidationAppleService(config, http, logger);
             AuthApp = authApp;
         }
@@ -40,7 +40,7 @@ namespace Covid19Radar.Api.Services
             if (!app.DeviceValidationEnabled) return true;
             return param.Platform switch
             {
-                "android" => await Android.Validation(param, param.GetAndroidNonce(), requestTime, app),
+                "android" => Android.Validation(param, param.GetAndroidNonce(), requestTime, app),
                 "ios" => await Apple.Validation(param, requestTime, app),
                 _ => false,
             };

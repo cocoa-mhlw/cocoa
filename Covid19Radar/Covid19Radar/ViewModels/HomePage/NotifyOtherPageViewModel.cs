@@ -80,7 +80,7 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var result = await UserDialogs.Instance.ConfirmAsync(AppResources.NotifyOtherPageDiag1Message, AppResources.NotifyOtherPageDiag1Title, AppResources.ButtonAgree, AppResources.ButtonCancel);
+            var result = await UserDialogs.Instance.ConfirmAsync(AppResources.NotifyOtherPageDiag1Message, AppResources.NotifyOtherPageDiag1Title, AppResources.NotifyOtherPageButton, AppResources.ButtonCancel);
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(

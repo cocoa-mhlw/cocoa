@@ -28,7 +28,7 @@
 * 第三者の特許権、意匠権、著作権、商標権、肖像権などを侵害するもの
 * 営利を目的としたもの
 * 記載された内容が虚偽又は著しく事実と異なるもの
-* [Github利用規約](https://docs.github.com/ja/github/site-policy/github-terms-of-service)に反するもの
+* [GitHub利用規約](https://docs.github.com/ja/github/site-policy/github-terms-of-service)に反するもの
 * その他、運用上、不適当であると判断されるもの
 
 ## ４ 知的財産権

@@ -39,7 +39,6 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span
-                                    FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Small"
                                     Text="{x:Static resources:AppResources.VersionText}"
                                     TextColor="{StaticResource PrimaryText}" />
@@ -85,13 +84,11 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span
-                                    FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Small"
                                     Text="{x:Static resources:AppResources.SettingsPageLabel3}"
                                     TextColor="{StaticResource PrimaryText}" />
                                 <Span Text="{x:Static System:Environment.NewLine}" />
                                 <Span
-                                    FontFamily="NotoSansRegularFontFamily"
                                     FontSize="Caption"
                                     Text="{x:Static resources:AppResources.SettingsPageDescription3}"
                                     TextColor="{StaticResource SecondaryText}" />

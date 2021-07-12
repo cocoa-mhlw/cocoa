@@ -128,7 +128,6 @@
             </Style>
 
             <Style x:Key="DefaultEntry" TargetType="Entry">
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
                 <Setter Property="BackgroundColor" Value="Transparent" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryText}" />
@@ -144,7 +143,6 @@
             </Style>
 
             <Style x:Key="DefaultDatePicker" TargetType="DatePicker">
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
                 <Setter Property="BackgroundColor" Value="Transparent" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="Opacity" Value="0.6" />
@@ -156,7 +154,6 @@
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontSize" Value="Title" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
             </Style>
 
             <Style x:Key="DefaultTitleLabel" TargetType="Label">
@@ -165,7 +162,6 @@
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontSize" Value="Title" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
             </Style>
 
             <Style x:Key="DefaultSubTitleLabelColor" TargetType="Label">
@@ -173,7 +169,6 @@
                 <Setter Property="TextColor" Value="{StaticResource Primary}" />
                 <Setter Property="FontSize" Value="Subtitle" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
             </Style>
 
             <Style x:Key="DefaultSubTitleLabel" TargetType="Label">
@@ -181,7 +176,6 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="{x:OnPlatform Android=18, iOS=20}" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
             </Style>
 
             <Style x:Key="DefaultLabelLarge" TargetType="Label">
@@ -189,7 +183,6 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
             <Style x:Key="DefaultLabelLargeColor" TargetType="Label">
@@ -197,7 +190,6 @@
                 <Setter Property="TextColor" Value="{StaticResource Primary}" />
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
             <Style x:Key="DefaultLabelColor" TargetType="Label">
@@ -205,7 +197,6 @@
                 <Setter Property="TextColor" Value="{StaticResource Primary}" />
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
             <Style x:Key="DefaultLabel" TargetType="Label">
@@ -213,7 +204,6 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
 
@@ -222,7 +212,6 @@
                 <Setter Property="TextColor" Value="{StaticResource Primary}" />
                 <Setter Property="FontSize" Value="Small" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
 
@@ -231,7 +220,6 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="Small" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
             <Style x:Key="DefaultLabelMicro" TargetType="Label">
@@ -239,7 +227,6 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="Micro" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
             <Style x:Key="DefaultActivityIndicator" TargetType="ActivityIndicator">
@@ -252,7 +239,6 @@
                 <Setter Property="TextColor" Value="{StaticResource Primary}" />
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
             <Style x:Key="DefaultNumberLabel" TargetType="Label">
@@ -284,7 +270,6 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
                 <Setter Property="Margin" Value="0,0,0,0" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
             <Style x:Key="DefaultWebView" TargetType="WebView">
@@ -305,7 +290,6 @@
 
             <Style x:Key="DefaultButton" TargetType="Button">
                 <Setter Property="Visual" Value="Default" />
-                <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="BorderColor" Value="{StaticResource ButtonBorder}" />
                 <Setter Property="BorderWidth" Value="4" />
@@ -329,7 +313,6 @@
 
             <Style x:Key="DefaultButtonGrayedOut" TargetType="Button">
                 <Setter Property="Visual" Value="Default" />
-                <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="BorderColor" Value="{StaticResource ButtonGrayedOut}" />
                 <Setter Property="BorderWidth" Value="2" />
@@ -349,7 +332,6 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
             </Style>
 
@@ -359,7 +341,6 @@
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
                 <Setter Property="TextColor" Value="{StaticResource Primary}" />
                 <Setter Property="FontSize" Value="Small" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
 
@@ -367,7 +348,6 @@
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="Small" />
-                <Setter Property="FontFamily" Value="NotoSansRegularFontFamily" />
             </Style>
 
             <Style x:Key="ImageLableStackLayout" TargetType="StackLayout">
