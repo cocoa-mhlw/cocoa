@@ -43,7 +43,7 @@ jobs:
       run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
   test:
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: macos-latest # Tests must be executed on macos
     needs: [build_ios, build_android]
     steps:
     - name: Checkout
