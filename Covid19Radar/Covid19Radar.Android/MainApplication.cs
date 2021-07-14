@@ -39,7 +39,7 @@ namespace Covid19Radar.Droid
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
-
+            container.Register<ILocalContentService, LocalContentPathService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

@@ -27,7 +27,7 @@ namespace Covid19Radar
             var j = JObject.Parse(json);
 
             AppVersion = j.Value<string>("appVersion");
-            LicenseUrl = j.Value<string>("licenseUrl");
+            LicenseFilename = j.Value<string>("licenseFilename");
             AppStoreUrl = j.Value<string>("appStoreUrl");
             GooglePlayUrl = j.Value<string>("googlePlayUrl");
             ApiUrlBase = j.Value<string>("apiUrlBase");
@@ -45,7 +45,7 @@ namespace Covid19Radar
 
         public string SupportEmail { get; }
         public string AppVersion { get; }
-        public string LicenseUrl { get; }
+        public string LicenseFilename { get; }
         public string ApiUrlBase { get; }
         public string ApiSecret { get; }
         public string ApiKey { get; }
