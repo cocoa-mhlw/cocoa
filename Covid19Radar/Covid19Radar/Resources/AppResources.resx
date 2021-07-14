@@ -1046,7 +1046,7 @@ Storage :</value>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
     <value>If you are contacted by a health center, please say that you would like to register positive test result using the Contact Confirmation Application.</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝え下さい。</comment>
+    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
     <value>After that, you will receive an 8-digit processing number via SMS or email.</value>
