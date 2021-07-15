@@ -44,7 +44,8 @@
                 </StackLayout>
                 <StackLayout Margin="0, 15, 0, 0"
                              IsVisible="{Binding IsVisibleWithSymptomsLayout}">
-                    <Label Style="{StaticResource DefaultLabel}"
+                    <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
+                           Style="{StaticResource DefaultLabel}"
                            Text="{x:Static resources:AppResources.NotifyOtherPageWithSymptomsDescription1}" />
                     <StackLayout Spacing="0"
                                  Margin="0, 5, 0, 10">
@@ -58,7 +59,8 @@
                                    BackgroundColor="White"
                                    CornerRadius="5"
                                    HasShadow="False">
-                                <controls:CustomDatePicker MaximumDate="{x:Static x:DateTime.Now}"
+                                <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
+                                                           MaximumDate="{x:Static x:DateTime.Now}"
                                                            BackgroundColor="White"
                                                            Format="d"
                                                            Date="{Binding DiagnosisDate}"/>
@@ -68,7 +70,8 @@
                 </StackLayout>
                 <StackLayout Margin="0, 15, 0, 0"
                              IsVisible="{Binding IsVisibleNoSymptomsLayout}">
-                    <Label Style="{StaticResource DefaultLabel}"
+                    <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
+                           Style="{StaticResource DefaultLabel}"
                            Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
                     <StackLayout Spacing="0"
                                  Margin="0, 5, 0, 10">
@@ -82,7 +85,8 @@
                                    BackgroundColor="White"
                                    CornerRadius="5"
                                    HasShadow="False">
-                                <controls:CustomDatePicker MaximumDate="{x:Static x:DateTime.Now}"
+                                <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
+                                                           MaximumDate="{x:Static x:DateTime.Now}"
                                                            BackgroundColor="White"
                                                            Format="d"
                                                            Date="{Binding DiagnosisDate}"/>
@@ -98,7 +102,7 @@
                        Style="{StaticResource DefaultLabelColor}"
                        Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{prism:NavigateTo 'HelpPage3'}" />
+                        <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
                     </Label.GestureRecognizers>
                 </Label>
                 <StackLayout Spacing="0">
