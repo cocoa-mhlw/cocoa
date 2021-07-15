@@ -10,6 +10,9 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
+using AndroidX.Work;
+using Xamarin.ExposureNotifications;
+using Java.IO;
 
 namespace Covid19Radar.Droid
 {
@@ -28,8 +31,23 @@ namespace Covid19Radar.Droid
         {
             base.OnCreate();
 
+            // for Debug only
+            string timestamp = DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_");
+            var file = new File(DataDir, $"{timestamp}.txt");
+            file.CreateNewFile();
+
+            // Override WorkRequest configuration
+            // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
+            var repeatInterval = TimeSpan.FromHours(6);
+            static void requestBuilder(PeriodicWorkRequest.Builder b) =>
+               b.SetConstraints(new Constraints.Builder()
+                   .SetRequiresBatteryNotLow(true)
+                   .SetRequiredNetworkType(NetworkType.Connected)
+                   .Build());
+            ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
+
+            App.InitExposureNotification();
             App.InitializeServiceLocator(RegisterPlatformTypes);
-            App.UseMockExposureNotificationImplementationIfNeeded();
         }
 
         private void RegisterPlatformTypes(IContainer container)
