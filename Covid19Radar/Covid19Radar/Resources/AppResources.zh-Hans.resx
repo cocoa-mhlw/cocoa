@@ -943,7 +943,7 @@
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
     <value>如果保健中心与您联系，请说明您想使用接触确认应用登记阳性检测结果。</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝え下さい。</comment>
+    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
     <value>您将通过短信或电子邮件收到一个8位数的处理号码。</value>
