@@ -20,42 +20,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Behaviors\UnUsed\**" />
     <Compile Remove="Controls\**" />
-    <Compile Remove="Converters\UnUsed\**" />
-    <Compile Remove="Model\UnUsed\**" />
-    <Compile Remove="Services\UnUsed\**" />
-    <Compile Remove="Templates\UnUsed\**" />
-    <Compile Remove="ViewModels\HomePage\UnUsed\**" />
-    <Compile Remove="ViewModels\Tutorial\UnUsed\**" />
-    <Compile Remove="ViewModels\UnUsed\**" />
-    <Compile Remove="Views\HomePage\UnUsed\**" />
-    <Compile Remove="Views\Tutorial\UnUsed\**" />
-    <Compile Remove="Views\UnUsed\**" />
-    <EmbeddedResource Remove="Behaviors\UnUsed\**" />
     <EmbeddedResource Remove="Controls\**" />
-    <EmbeddedResource Remove="Converters\UnUsed\**" />
-    <EmbeddedResource Remove="Model\UnUsed\**" />
-    <EmbeddedResource Remove="Services\UnUsed\**" />
-    <EmbeddedResource Remove="Templates\UnUsed\**" />
-    <EmbeddedResource Remove="ViewModels\HomePage\UnUsed\**" />
-    <EmbeddedResource Remove="ViewModels\Tutorial\UnUsed\**" />
-    <EmbeddedResource Remove="ViewModels\UnUsed\**" />
-    <EmbeddedResource Remove="Views\HomePage\UnUsed\**" />
-    <EmbeddedResource Remove="Views\Tutorial\UnUsed\**" />
-    <EmbeddedResource Remove="Views\UnUsed\**" />
-    <None Remove="Behaviors\UnUsed\**" />
     <None Remove="Controls\**" />
-    <None Remove="Converters\UnUsed\**" />
-    <None Remove="Model\UnUsed\**" />
-    <None Remove="Services\UnUsed\**" />
-    <None Remove="Templates\UnUsed\**" />
-    <None Remove="ViewModels\HomePage\UnUsed\**" />
-    <None Remove="ViewModels\Tutorial\UnUsed\**" />
-    <None Remove="ViewModels\UnUsed\**" />
-    <None Remove="Views\HomePage\UnUsed\**" />
-    <None Remove="Views\Tutorial\UnUsed\**" />
-    <None Remove="Views\UnUsed\**" />
   </ItemGroup>
 
   <ItemGroup>

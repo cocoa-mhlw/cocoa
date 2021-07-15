@@ -21,7 +21,12 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Margin="0,0,0,20" Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.TutorialPage4Title2}" />
+        <Label
+            AutomationProperties.IsInAccessibleTree="True"
+            Grid.Row="0"
+            Margin="0,0,0,20"
+            Style="{StaticResource DefaultTitleLabel}"
+            Text="{x:Static resources:AppResources.TutorialPage4Title2}" />
         <ScrollView Grid.Row="1">
             <Grid>
                 <Grid.RowDefinitions>
@@ -34,7 +39,10 @@
                     Aspect="AspectFit"
                     Scale="0.9"
                     Source="TutorialPage40.png" />
-                    <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.TutorialPage4Description}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.TutorialPage4Description}" />
                     <!--
                 <Label Style="{StaticResource DefaultLabelColor}" Text="{x:Static resources:AppResources.TutorialPage4Label}">
                     <Label.GestureRecognizers>
@@ -45,17 +53,19 @@
                 <Grid Grid.Row="1">
                     <StackLayout>
                         <Button
-                        AutomationId="EnableButton"
-                        Command="{Binding Path=OnClickEnable}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.TutorialPage4Button1}" />
+                            AutomationId="EnableButton"
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Command="{Binding Path=OnClickEnable}"
+                            Style="{StaticResource DefaultButton}"
+                            Text="{x:Static resources:AppResources.TutorialPage4Button1}" />
 
                         <Button
-                        Margin="0,10,0,0"
-                        AutomationId="DisableButton"
-                        Command="{Binding Path=OnClickDisable}"
-                        Style="{StaticResource DefaultButtonGrayedOut}"
-                        Text="{x:Static resources:AppResources.TutorialPage4Button2}" />
+                            Margin="0,10,0,0"
+                            AutomationId="DisableButton"
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Command="{Binding Path=OnClickDisable}"
+                            Style="{StaticResource DefaultButtonGrayedOut}"
+                            Text="{x:Static resources:AppResources.TutorialPage4Button2}" />
                     </StackLayout>
                 </Grid>
             </Grid>
