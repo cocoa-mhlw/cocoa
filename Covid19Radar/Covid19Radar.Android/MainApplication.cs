@@ -36,6 +36,8 @@ namespace Covid19Radar.Droid
             var file = new File(DataDir, $"{timestamp}.txt");
             file.CreateNewFile();
 
+            App.InitializeServiceLocator(RegisterPlatformTypes);
+
             // Override WorkRequest configuration
             // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
             var repeatInterval = TimeSpan.FromHours(6);
@@ -47,7 +49,6 @@ namespace Covid19Radar.Droid
             ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
 
             App.InitExposureNotification();
-            App.InitializeServiceLocator(RegisterPlatformTypes);
         }
 
         private void RegisterPlatformTypes(IContainer container)
