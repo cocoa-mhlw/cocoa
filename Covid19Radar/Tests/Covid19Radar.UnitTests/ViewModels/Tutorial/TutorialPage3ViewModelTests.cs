@@ -77,6 +77,7 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
+            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Never());
 
             mockNavigationService.Verify(x => x.NavigateAsync("PrivacyPolicyPage"), Times.Once);
         }
