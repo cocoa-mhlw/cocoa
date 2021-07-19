@@ -62,7 +62,7 @@
 - Daniel Kastl (German Translation)
 - Iyotetsuya (Traditional Chinese Translation)
 - Anharu (Xamarin)
-- Soichi Ikebe (Documentation)
+- Soichi Ikebe (Xamarin / Documentation)
 - Elisa Sakamoto (Italian Translation)
 - Leo Ando (Client Android)
 - Prastyo ([Indonesian Translation](https://github.com/Covid-19Radar/Covid19Radar/commits?author=jiprastyo))
