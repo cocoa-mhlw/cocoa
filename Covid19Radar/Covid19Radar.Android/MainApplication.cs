@@ -13,6 +13,7 @@ using Covid19Radar.Droid.Services;
 using AndroidX.Core.App;
 using Covid19Radar.Resources;
 using Android.OS;
+using CommonServiceLocator;
 
 namespace Covid19Radar.Droid
 {
@@ -37,6 +38,11 @@ namespace Covid19Radar.Droid
             App.UseMockExposureNotificationImplementationIfNeeded();
 
             CreateNotificationChannel();
+
+#if DEBUG
+            ILocalNotificationService localNotificationService = ServiceLocator.Current.GetInstance<ILocalNotificationService>();
+            localNotificationService.ShowExposureNotification();
+#endif
         }
 
         private void CreateNotificationChannel()
@@ -46,11 +52,12 @@ namespace Covid19Radar.Droid
                 return;
             }
 
-            NotificationChannel notificationChannel = new NotificationChannel(
-                NOTIFICATION_CHANNEL_ID,
-                AppResources.AndroidNotificationChannelName,
-                NotificationImportance.Default
-            );
+            NotificationChannelCompat notificationChannel = new NotificationChannelCompat
+                .Builder(NOTIFICATION_CHANNEL_ID, NotificationManagerCompat.ImportanceDefault)
+                .SetName(AppResources.AndroidNotificationChannelName)
+                .SetShowBadge(false)
+                .Build();
+
             var nm = NotificationManagerCompat.From(this);
             nm.CreateNotificationChannel(notificationChannel);
         }

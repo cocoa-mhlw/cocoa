@@ -8,8 +8,9 @@ namespace Covid19Radar.iOS.Services
 {
     public class LocalNotificationService : ILocalNotificationService
     {
-        public LocalNotificationService()
+        public void ShowExposureNotification()
         {
+            throw new System.NotImplementedException();
         }
     }
 }

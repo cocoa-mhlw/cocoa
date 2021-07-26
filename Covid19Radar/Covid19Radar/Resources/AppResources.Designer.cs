@@ -1487,6 +1487,18 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string AndroidNotificationTitle {
+            get {
+                return ResourceManager.GetString("AndroidNotificationTitle", resourceCulture);
+            }
+        }
+        
+        public static string AndroidNotificationText {
+            get {
+                return ResourceManager.GetString("AndroidNotificationText", resourceCulture);
+            }
+        }
+        
         public static string NoteSymbol {
             get {
                 return ResourceManager.GetString("NoteSymbol", resourceCulture);

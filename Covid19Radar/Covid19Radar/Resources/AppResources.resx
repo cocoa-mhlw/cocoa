@@ -1064,6 +1064,14 @@ Storage :</value>
     <value>Exposure notification</value>
     <comment>接触を通知</comment>
   </data>
+  <data name="AndroidNotificationTitle" xml:space="preserve">
+    <value>Exposure notification</value>
+    <comment>接触を通知</comment>
+  </data>
+  <data name="AndroidNotificationText" xml:space="preserve">
+    <value>You were in close contact with COVID-19 positive users.</value>
+    <comment>陽性者との接触が確認されました。</comment>
+  </data>
 	<data name="NoteSymbol" xml:space="preserve">
     <value>* </value>
     <comment>※</comment>
