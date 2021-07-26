@@ -199,6 +199,7 @@
     <Compile Include="Services\PreferencesService.cs" />
     <Compile Include="Services\SecureStorageServiceAndroid.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
+    <Compile Include="Services\LocalNotificationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
