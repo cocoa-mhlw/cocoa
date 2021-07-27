@@ -9,6 +9,7 @@ using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using DryIoc;
 using Foundation;
+using UserNotifications;
 using UIKit;
 using Xamarin.Forms;
 
@@ -47,9 +48,11 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
-            //Plugin.LocalNotification.NotificationCenter.AskPermission();
+            AskPermissionForUserNotification();
 
             LoadApplication(new App());
+
+
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
@@ -61,10 +64,13 @@ namespace Covid19Radar.iOS
             MessagingCenter.Send((object)this, AppConstants.IosOnActivatedMessage);
         }
 
-        //public override void WillEnterForeground(UIApplication uiApplication)
-        //{
-        //    Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
-        //}
+        private void AskPermissionForUserNotification()
+        {
+            UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Sound, (granted, error) =>
+            {
+                // TODO: 許諾の状態に応じてなにか対応を行うか/アラートのタイプ
+            });
+        }
 
         private void RegisterPlatformTypes(IContainer container)
         {
