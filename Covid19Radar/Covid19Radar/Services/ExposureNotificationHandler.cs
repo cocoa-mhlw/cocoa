@@ -30,6 +30,7 @@ namespace Covid19Radar.Services
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
         private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
         private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
+        private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
 
         public ExposureNotificationHandler()
         {
@@ -123,6 +124,11 @@ namespace Covid19Radar.Services
             loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
             loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
             exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
+
+            if (exposureInformationList.Count > 0)
+            {
+                LocalNotificationService.ShowExposureNotification();
+            }
 
             loggerService.EndMethod();
         }
