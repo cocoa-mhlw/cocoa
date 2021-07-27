@@ -10,6 +10,10 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
+using AndroidX.Core.App;
+using Covid19Radar.Resources;
+using Android.OS;
+using CommonServiceLocator;
 
 namespace Covid19Radar.Droid
 {
@@ -20,6 +24,8 @@ namespace Covid19Radar.Droid
 #endif
     public class MainApplication : Application
     {
+        public const string NOTIFICATION_CHANNEL_ID = "notification_channel_cocoa_202107";
+
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
@@ -30,6 +36,30 @@ namespace Covid19Radar.Droid
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
             App.UseMockExposureNotificationImplementationIfNeeded();
+
+            CreateNotificationChannel();
+
+#if DEBUG
+            ILocalNotificationService localNotificationService = ServiceLocator.Current.GetInstance<ILocalNotificationService>();
+            localNotificationService.ShowExposureNotification();
+#endif
+        }
+
+        private void CreateNotificationChannel()
+        {
+            if (Build.VERSION.SdkInt < BuildVersionCodes.O)
+            {
+                return;
+            }
+
+            NotificationChannelCompat notificationChannel = new NotificationChannelCompat
+                .Builder(NOTIFICATION_CHANNEL_ID, NotificationManagerCompat.ImportanceDefault)
+                .SetName(AppResources.AndroidNotificationChannelName)
+                .SetShowBadge(false)
+                .Build();
+
+            var nm = NotificationManagerCompat.From(this);
+            nm.CreateNotificationChannel(notificationChannel);
         }
 
         private void RegisterPlatformTypes(IContainer container)
@@ -39,6 +69,7 @@ namespace Covid19Radar.Droid
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
+            container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
