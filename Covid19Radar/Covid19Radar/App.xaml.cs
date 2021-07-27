@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -157,6 +157,9 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
             containerRegistry.RegisterForNavigation<SplashPage>();
             containerRegistry.RegisterForNavigation<HowToReceiveProcessingNumberPage>();
+
+            // News Page
+            containerRegistry.RegisterForNavigation<NewsPage>();
         }
 
         private static void RegisterCommonTypes(IContainer container)
@@ -175,9 +178,11 @@ namespace Covid19Radar
 #if USE_MOCK
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
+            container.Register<ILatestInformationService, LatestInformationServiceMock>(Reuse.Singleton);
 #else
             container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
+            container.Register<ILatestInformationService, LatestInformationService>(Reuse.Singleton);
 #endif
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
         }
