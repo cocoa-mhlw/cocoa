@@ -12,4 +12,5 @@ namespace Covid19Radar.Droid.Services
         private const string ASSET_PATH = "file:///android_asset";
 
         public string LicenseUrl => Path.Combine(ASSET_PATH, ILocalContentService.LICENSE_FILENAME);
+    }
 }
