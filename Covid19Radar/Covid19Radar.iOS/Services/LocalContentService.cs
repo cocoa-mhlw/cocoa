@@ -10,9 +10,6 @@ namespace Covid19Radar.iOS.Services
 {
     public class LocalContentService : ILocalContentService
     {
-        public string LicenseUrl {
-            get => Path.Combine(NSBundle.MainBundle.BundleUrl.AbsoluteString,
-                ILocalContentService.LICENSE_FILENAME);
-        }
+        public string LicenseUrl => Path.Combine(NSBundle.MainBundle.BundleUrl.AbsoluteString, ILocalContentService.LICENSE_FILENAME);
     }
 }
