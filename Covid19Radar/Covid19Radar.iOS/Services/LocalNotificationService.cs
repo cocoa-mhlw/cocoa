@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 using Foundation;
 using UserNotifications;
 
@@ -13,14 +14,51 @@ namespace Covid19Radar.iOS.Services
 {
     public class LocalNotificationService : ILocalNotificationService
     {
-        public void ShowExposureNotification()
+        private readonly ILoggerService _loggerService;
+
+        public LocalNotificationService(ILoggerService loggerService)
         {
-            // TODO: iOS側は非同期なのでとりあえずasync/awaitでTaskで囲んでおく
-            _ = Task.Run(() => ScheduleLocalNotification());
+            _loggerService = loggerService;
         }
 
-        private async Task ScheduleLocalNotification()
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public async Task PrepareAsync()
         {
+            _loggerService.StartMethod();
+
+            AskPermissionForUserNotification();
+
+            _loggerService.EndMethod();
+        }
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+
+        public async Task ShowExposureNotificationAsync()
+        {
+            _loggerService.StartMethod();
+
+            await ScheduleLocalNotificationAsync();
+
+            _loggerService.EndMethod();
+        }
+
+        private void AskPermissionForUserNotification()
+        {
+            _loggerService.StartMethod();
+
+            UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Sound, (granted, error) =>
+            {
+                _loggerService.Info($"Ask permission for user notification: {granted}");
+
+                // TODO: 許諾の状態に応じてなにか対応を行うか/アラートのタイプ
+            });
+
+            _loggerService.EndMethod();
+        }
+
+        private async Task ScheduleLocalNotificationAsync()
+        {
+            _loggerService.StartMethod();
+
             try
             {
                 var settings = await UNUserNotificationCenter.Current.GetNotificationSettingsAsync();
@@ -32,7 +70,6 @@ namespace Covid19Radar.iOS.Services
 
                 var content = new UNMutableNotificationContent();
 
-                // TODO: 文言
                 content.Title = AppResources.LocalExposureNotificationTitle;
                 content.Body = AppResources.LocalExposureNotificationContent;
 
@@ -41,9 +78,12 @@ namespace Covid19Radar.iOS.Services
                 var notificationCenter = UNUserNotificationCenter.Current;
                 await notificationCenter.AddNotificationRequestAsync(request);
             }
-            catch
+            catch (Exception e)
             {
+                _loggerService.Exception("Exception occurred", e);
             }
+
+            _loggerService.EndMethod();
         }
     }
 }
