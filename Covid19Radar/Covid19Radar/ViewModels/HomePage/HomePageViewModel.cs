@@ -88,6 +88,8 @@ namespace Covid19Radar.ViewModels
                 loggerService.Exception("Failed to exposure notification status.", ex);
                 loggerService.EndMethod();
             }
+
+            await localNotificationService.PrepareAsync();
         }
 
         public Command OnClickExposures => new Command(async () =>
@@ -127,11 +129,9 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         }
 
-        public override async void OnAppearing()
+        public override void OnAppearing()
         {
             base.OnAppearing();
-
-            await localNotificationService.PrepareAsync();
 
             SettingDaysOfUse();
         }
