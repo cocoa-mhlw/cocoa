@@ -10,6 +10,7 @@ using Covid19Radar.Services.Logs;
 using DryIoc;
 using Foundation;
 using UIKit;
+using UserNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.iOS
@@ -47,6 +48,8 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
+            UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate();
+
             LoadApplication(new App());
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
@@ -74,5 +77,13 @@ namespace Covid19Radar.iOS
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
 #endif
         }
+    }
+}
+
+public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
+{
+    public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
+    {
+        completionHandler(UNNotificationPresentationOptions.Banner);
     }
 }
