@@ -4,6 +4,7 @@
 
 using System;
 using System.Threading.Tasks;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Foundation;
 using UserNotifications;
@@ -32,8 +33,8 @@ namespace Covid19Radar.iOS.Services
                 var content = new UNMutableNotificationContent();
 
                 // TODO: 文言
-                content.Title = "重要なお知らせ";
-                content.Body = "新型コロナウイルス感染症の陽性登録者と接触した可能性があります。接触確認アプリにアクセスして陽性者との接触を確認してください。";
+                content.Title = AppResources.LocalExposureNotificationTitle;
+                content.Body = AppResources.LocalExposureNotificationContent;
 
                 // TODO: 発動タイミングは即時で大丈夫か
                 var request = UNNotificationRequest.FromIdentifier(new NSUuid().AsString(), content, null);

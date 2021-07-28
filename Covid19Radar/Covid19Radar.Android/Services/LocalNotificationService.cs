@@ -28,8 +28,8 @@ namespace Covid19Radar.Droid.Services
             var notification = new NotificationCompat
                 .Builder(Platform.AppContext, MainApplication.NOTIFICATION_CHANNEL_ID)
                 .SetSmallIcon(Resource.Drawable.ic_notification)
-                .SetContentTitle(AppResources.AndroidNotificationTitle)
-                .SetContentText(AppResources.AndroidNotificationText)
+                .SetContentTitle(AppResources.LocalExposureNotificationTitle)
+                .SetContentText(AppResources.LocalExposureNotificationContent)
                 .SetVisibility(NotificationCompat.VisibilitySecret)
                 .SetContentIntent(pendingIntent)
                 .SetLocalOnly(true)
