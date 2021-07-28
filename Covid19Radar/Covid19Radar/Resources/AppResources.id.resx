@@ -67,18 +67,6 @@
     <value>Anda akan diberitahu jika anda telah terpapar dengan seseorang yang telah melaporkan hasil tes positif COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Coba lagi nanti.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Gagal</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Diagnosis terkirim</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Selesai</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Mengirimkan diagnosis ...</value>
   </data>
@@ -583,11 +571,6 @@
 </value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Dibatalkan
-</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Mohon tunggu sebentar sampai pendaftaran dimulai</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -615,10 +598,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>Jumlah pendaftaran telah mencapai batas maksimal yang diperbolehkan. Keluar dari aplikasi.</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Error saat pendaftaran</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>Catatan kontak yang sesuai dengan pengajuan tidak dapat dikonfirmasi. Tidak perlu menyerahkan.</value>

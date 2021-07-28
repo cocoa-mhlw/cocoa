@@ -43,15 +43,6 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Хәзер түгел</value>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Омтылышны соңрак кабатлагыз.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Хата</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Тәмам</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Баш тарту</value>
   </data>
@@ -139,9 +130,5 @@
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>Теркәлү</value>
     <comment>登録</comment>
-  </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Баш тартылган</value>
-    <comment>キャンセルしました</comment>
   </data>
 </root>
