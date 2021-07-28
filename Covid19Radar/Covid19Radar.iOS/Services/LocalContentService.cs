@@ -8,10 +8,11 @@ using Foundation;
 
 namespace Covid19Radar.iOS.Services
 {
-    public class LocalContentPathService : ILocalContentService
+    public class LocalContentService : ILocalContentService
     {
-        private const string CONTENT_DIR = "Content";
-
-        public string GetLocalContentUrl() => Path.Combine(NSBundle.MainBundle.BundleUrl.AbsoluteString, CONTENT_DIR);
+        public string LicenseUrl {
+            get => Path.Combine(NSBundle.MainBundle.BundleUrl.AbsoluteString,
+                ILocalContentService.LICENSE_FILENAME);
+        }
     }
 }

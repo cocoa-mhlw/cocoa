@@ -6,6 +6,8 @@ namespace Covid19Radar.Services
 {
     public interface ILocalContentService
     {
-        public string GetLocalContentUrl();
+        public const string LICENSE_FILENAME = "license.html";
+
+        public string LicenseUrl { get; }
     }
 }

@@ -280,7 +280,7 @@
     <Compile Include="Services\PreferencesService.cs" />
     <Compile Include="Services\SecureStorageServiceIos.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
-    <Compile Include="Services\LocalContentPathService.cs" />
+    <Compile Include="Services\LocalContentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -326,6 +326,7 @@
     <BundleResource Include="Resources\Base.lproj\notify_img02%402x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%403x.png" />
     <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\license.html" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -629,7 +630,6 @@
   <ItemGroup>
     <Folder Include="Services\Logs\" />
     <Folder Include="Renderers\" />
-    <Folder Include="Resources\Content\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
