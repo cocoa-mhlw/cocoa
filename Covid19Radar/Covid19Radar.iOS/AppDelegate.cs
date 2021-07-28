@@ -49,6 +49,7 @@ namespace Covid19Radar.iOS
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
             AskPermissionForUserNotification();
+            UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate();
 
             LoadApplication(new App());
 
@@ -87,5 +88,13 @@ namespace Covid19Radar.iOS
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
 #endif
         }
+    }
+}
+
+public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
+{
+    public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
+    {
+        completionHandler(UNNotificationPresentationOptions.Banner);
     }
 }
