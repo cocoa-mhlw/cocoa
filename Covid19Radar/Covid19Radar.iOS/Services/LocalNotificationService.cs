@@ -45,11 +45,9 @@ namespace Covid19Radar.iOS.Services
         {
             _loggerService.StartMethod();
 
-            UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Sound, (granted, error) =>
+            UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert, (granted, error) =>
             {
                 _loggerService.Info($"Ask permission for user notification: {granted}");
-
-                // TODO: 許諾の状態に応じてなにか対応を行うか/アラートのタイプ
             });
 
             _loggerService.EndMethod();
@@ -64,8 +62,7 @@ namespace Covid19Radar.iOS.Services
                 var settings = await UNUserNotificationCenter.Current.GetNotificationSettingsAsync();
                 if (settings.AuthorizationStatus != UNAuthorizationStatus.Authorized)
                 {
-                    // TODO: 通知許諾がされていない場合のエラーハンドリングは握りつぶす？
-                    throw new NotImplementedException();
+                    throw new Exception($"UserNotification is not authorized: {settings.AuthorizationStatus}");
                 }
 
                 var content = new UNMutableNotificationContent();
