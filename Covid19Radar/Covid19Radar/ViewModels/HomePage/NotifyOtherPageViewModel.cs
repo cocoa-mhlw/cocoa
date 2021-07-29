@@ -80,12 +80,12 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var result = await UserDialogs.Instance.ConfirmAsync(AppResources.NotifyOtherPageDiag1Message, AppResources.NotifyOtherPageDiag1Title, AppResources.NotifyOtherPageButton, AppResources.ButtonCancel);
+            var result = await UserDialogs.Instance.ConfirmAsync(AppResources.NotifyOtherPageDiag1Message, AppResources.NotifyOtherPageDiag1Title, AppResources.ButtonRegister, AppResources.ButtonCancel);
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    AppResources.NotifyOtherPageDiag2Message,
                     "",
+                    AppResources.NotifyOtherPageDiag2Title,
                     AppResources.ButtonOk
                     );
 
@@ -101,7 +101,7 @@ namespace Covid19Radar.ViewModels
             {
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiagAppClose,
-                    AppResources.NotifyOtherPageDiagErrorTitle,
+                    AppResources.NotifyOtherPageDiagAppCloseTitle,
                     AppResources.ButtonOk
                 );
                 UserDialogs.Instance.HideLoading();
@@ -116,10 +116,8 @@ namespace Covid19Radar.ViewModels
 
             if (errorCount > 0)
             {
-                var current = errorCount + 1;
-                var max = AppConstants.MaxErrorCount;
                 await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
-                    AppResources.NotifyOtherPageDiag3Title + $"{current}/{max}",
+                    AppResources.NotifyOtherPageDiag3Title,
                     AppResources.ButtonOk
                     );
                 await Task.Delay(errorCount * 5000);
@@ -131,7 +129,7 @@ namespace Covid19Radar.ViewModels
             {
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag4Message,
-                    AppResources.NotifyOtherPageDiagErrorTitle,
+                    AppResources.ProcessingNumberErrorDiagTitle,
                     AppResources.ButtonOk
                 );
                 errorCount++;
@@ -147,7 +145,7 @@ namespace Covid19Radar.ViewModels
             {
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag5Message,
-                    AppResources.NotifyOtherPageDiagErrorTitle,
+                    AppResources.ProcessingNumberErrorDiagTitle,
                     AppResources.ButtonOk
                 );
                 errorCount++;
@@ -187,8 +185,8 @@ namespace Covid19Radar.ViewModels
                 await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(
-                    AppResources.NotifyOtherPageDialogSubmittedText,
-                    AppResources.ButtonComplete,
+                    "",
+                    AppResources.NotifyOtherPageDialogSubmittedTitle,
                     AppResources.ButtonOk
                 );
                 await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
@@ -212,7 +210,7 @@ namespace Covid19Radar.ViewModels
                 errorCount++;
                 UserDialogs.Instance.Alert(
                     AppResources.NotifyOtherPageDialogExceptionText,
-                    AppResources.ButtonFailed,
+                    AppResources.NotifyOtherPageDialogExceptionTitle,
                     AppResources.ButtonOk
                 );
                 loggerService.Exception("Failed to submit UID.", ex);

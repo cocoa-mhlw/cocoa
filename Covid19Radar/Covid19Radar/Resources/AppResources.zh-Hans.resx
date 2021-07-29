@@ -39,7 +39,7 @@
     <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
 	<data name="ButtonOk" xml:space="preserve">
-    <value>确定</value>
+    <value>OK</value>
   </data>
 	<data name="ButtonNotNow" xml:space="preserve">
     <value>暂不</value>
@@ -65,16 +65,16 @@
     <comment>exposures comment</comment>
   </data>
 	<data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>请稍后重试。</value>
+    <value>请再输入受理编号。</value>
+    <comment>処理番号を再度入力してください。</comment>
   </data>
-	<data name="ButtonFailed" xml:space="preserve">
-    <value>失败</value>
+	<data name="NotifyOtherPageDialogExceptionTitle" xml:space="preserve">
+    <value>无法登记阳性信息</value>
+    <comment>陽性情報を登録できませんでした</comment>
   </data>
-	<data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>诊断已提交</value>
-  </data>
-	<data name="ButtonComplete" xml:space="preserve">
-    <value>完成</value>
+	<data name="NotifyOtherPageDialogSubmittedTitle" xml:space="preserve">
+    <value>登记完成</value>
+    <comment>登録が完了しました</comment>
   </data>
 	<data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>正在提交诊断结果...</value>
@@ -85,6 +85,11 @@
   </data>
 	<data name="ButtonCancel" xml:space="preserve">
     <value>取消</value>
+    <comment>キャンセル</comment>
+  </data>
+  <data name="ButtonRegister" xml:space="preserve">
+    <value>登记</value>
+    <comment>登録</comment>
   </data>
 	<data name="LoadingTextDeleting" xml:space="preserve">
     <value>正在删除</value>
@@ -111,13 +116,20 @@
     <value>正在等待注册</value>
   </data>
 	<data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>是否确实要重置所有数据？</value>
+    <value>所有数据将被删除，终止使用本应用吗？</value>
+    <comment>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</comment>
   </data>
 	<data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>删除所有数据</value>
+    <value>终止使用本应用</value>
+    <comment>アプリの使用を中止します</comment>
+  </data>
+  <data name="SettingsPageDialogResetCompletedTitle" xml:space="preserve">
+    <value>数据已删除</value>
+    <comment>データを削除しました</comment>
   </data>
 	<data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
-    <value>所有设置和数据都已删除。请重新启动应用程序。</value>
+    <value>关闭应用。</value>
+    <comment>アプリを終了します。</comment>
   </data>
 	<data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>返回注册</value>
@@ -213,11 +225,11 @@
     <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
 	<data name="HelpPage3Description2" xml:space="preserve">
-    <value>保健所等官方机构会给您开具“数字码”。</value>
+    <value>保健所等官方机构会给您开具“受理编号”。</value>
     <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
   </data>
 	<data name="HelpPage3Description3" xml:space="preserve">
-    <value>使用该应用登记您的数字码。</value>
+    <value>使用该应用登记您的受理编号。</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
 	<data name="SettingsPageButton1" xml:space="preserve">
@@ -417,7 +429,7 @@
     <comment>登録する</comment>
   </data>
 	<data name="NotifyOtherPageLabel" xml:space="preserve">
-    <value>如何获得数字码</value>
+    <value>如何获得受理编号</value>
     <comment>処理番号の取得方法</comment>
   </data>
 	<data name="NotifyOtherPageTitle" xml:space="preserve">
@@ -477,7 +489,7 @@
     <comment>から</comment>
   </data>
 	<data name="NotifyOtherPageLabel2" xml:space="preserve">
-    <value>请输入八位数字码</value>
+    <value>请输入八位受理编号</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
 	<data name="SubmitConsentPageTitle1" xml:space="preserve">
@@ -566,40 +578,40 @@
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 	<data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>输入的数字码不正确</value>
-    <comment>アプリで入力された処理番号が違います</comment>
+    <value>请输入正确的受理编号。</value>
+    <comment>正しい処理番号を入力してください。</comment>
   </data>
 	<data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
     <value>无法连接到登记服务中心</value>
     <comment>センターに接続できません</comment>
   </data>
 	<data name="NotifyOtherPageDiag1Message" xml:space="preserve">
-    <value>是否登记阳性信息？</value>
-    <comment>陽性情報を登録しますか?</comment>
+    <value>是否登记？</value>
+    <comment>よろしいですか？</comment>
   </data>
 	<data name="NotifyOtherPageDiag1Title" xml:space="preserve">
-    <value>登记</value>
-    <comment>登録</comment>
+    <value>阳性信息登记</value>
+    <comment>陽性情報の登録をします</comment>
   </data>
-	<data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>已取消</value>
-    <comment>キャンセルしました</comment>
+	<data name="NotifyOtherPageDiag2Title" xml:space="preserve">
+    <value>登记已取消</value>
+    <comment>登録をキャンセルしました</comment>
   </data>
 	<data name="NotifyOtherPageDiag3Message" xml:space="preserve">
-    <value>在开始登记前请稍等片刻</value>
-    <comment>登録開始までしばらくそのままでお待ちください</comment>
+    <value>请稍等。</value>
+    <comment>しばらくそのままでお待ちください。</comment>
   </data>
 	<data name="NotifyOtherPageDiag3Title" xml:space="preserve">
-    <value>等待登记</value>
-    <comment>登録待ち</comment>
+    <value>登记开始</value>
+    <comment>登録を開始します</comment>
   </data>
 	<data name="NotifyOtherPageDiag4Message" xml:space="preserve">
-    <value>未输入数字码</value>
+    <value>未输入受理编号</value>
     <comment>処理番号が入力されていません</comment>
   </data>
 	<data name="NotifyOtherPageDiag5Message" xml:space="preserve">
-    <value>数字码格式不匹配</value>
-    <comment>処理番号のフォーマットが一致していません</comment>
+    <value>请输入半角数字的受理编号。</value>
+    <comment>処理番号は半角数字で入力してください。</comment>
   </data>
 	<data name="NotifyOtherPageDiag6Message" xml:space="preserve">
     <value>必须启用 COVID-19 接触日志才可进行阳性登记，请在应用或系统设置中启用设定。</value>
@@ -609,21 +621,25 @@
     <value>请启用 COVID-19 接触日志</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
-	<data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>登记次数已达上限。退出应用程序</value>
-    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  <data name="NotifyOtherPageDiagAppCloseTitle" xml:space="preserve">
+    <value>登记次数达到上限</value>
+    <comment>登録回数の上限に達しました</comment>
   </data>
-	<data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>登记出现错误</value>
-    <comment>登録エラー</comment>
+	<data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>关闭应用。</value>
+    <comment>アプリを終了します。</comment>
+  </data>
+	<data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
+    <value>受理编号错误</value>
+    <comment>処理番号が違います</comment>
   </data>
 	<data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>无法确认与提交对应的联系人记录。无需提交。</value>
-    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+    <value>不需要登记。</value>
+    <comment>登録する必要はありません。</comment>
   </data>
 	<data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>无适用联系人</value>
-    <comment>該当接触なし</comment>
+    <value>没有接触记录</value>
+    <comment>接触記録がありません</comment>
   </data>
 	<data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
@@ -832,7 +848,7 @@
     <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
   </data>
 	<data name="NotifyOtherPageDescription3" xml:space="preserve">
-    <value>请输入通过短信或电子邮件收到的处理号码</value>
+    <value>请输入通过短信或电子邮件收到的受理编号</value>
     <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
   </data>
 	<data name="NotifyOtherPageDescription5" xml:space="preserve">
@@ -848,7 +864,7 @@
     <comment>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</comment>
   </data>
 	<data name="NotifyOtherPageDescription4" xml:space="preserve">
-    <value>登录后</value>
+    <value>登记后</value>
     <comment>登録すると</comment>
   </data>
 	<data name="NotifyOtherPageDescription6" xml:space="preserve">
@@ -890,7 +906,7 @@
     <comment>陽性登録の前にお読みください</comment>
   </data>
 	<data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>如果处理号码是正确的，在您症状开始或接受检查后的两天以内与您接触过的人（ 通常指1米以内彼此靠近15分钟以上的COCOA使用者 ）将得到通知。接受通知者不会知道可以识别您的信息。</value>
+    <value>如果受理编号是正确的，在您症状开始或接受检查后的两天以内与您接触过的人（ 通常指1米以内彼此靠近15分钟以上的COCOA使用者 ）将得到通知。接受通知者不会知道可以识别您的信息。</value>
     <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
 	<data name="SubmitConsentPageDescription2" xml:space="preserve">
@@ -918,11 +934,11 @@
     <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
 	<data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>当您在保健所提出在COCOA上进行阳性注册后，管理系统将会通过手机号码或者邮箱地址通知您「处理号码」</value>
+    <value>当您在保健所提出在COCOA上进行阳性注册后，管理系统将会通过手机号码或者邮箱地址通知您「受理编号」</value>
     <comment>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</comment>
   </data>
 	<data name="SubmitConsentPageDescription9" xml:space="preserve">
-    <value>当您咋COCOA中输入处理号码后，您的手机将会通过管理系统来验证处理号码是否正确</value>
+    <value>当您咋COCOA中输入受理编号后，您的手机将会通过管理系统来验证受理编号是否正确</value>
     <comment>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
   </data>
 	<data name="HelpPage3Description6" xml:space="preserve">
@@ -938,7 +954,7 @@
     <comment>利用規約URL</comment>
   </data>
 	<data name="HowToReceiveProcessingNumberPageTitle" xml:space="preserve">
-    <value>如何获得数字码</value>
+    <value>如何获得受理编号</value>
     <comment>処理番号の取得方法</comment>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
@@ -946,11 +962,11 @@
     <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>您将通过短信或电子邮件收到一个8位数的处理号码。</value>
+    <value>您将通过短信或电子邮件收到一个8位数的受理编号。</value>
     <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>处理号码在发出后一小时内有效。 如果它已过期，您将收到一个新的处理号码。</value>
+    <value>受理编号在发出后一小时内有效。 如果它已过期，您将收到一个新的受理编号。</value>
     <comment>処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">

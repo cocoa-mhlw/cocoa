@@ -67,18 +67,6 @@
     <value>COVID-19 양성 판정을 받은 사람과 접촉한 경우 알림이 옵니다.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>나중에 다시 시도하세요.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>실패</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>진단 결과 제출</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>완료</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>진단 제출 중...</value>
   </data>
@@ -580,10 +568,6 @@
     <value>등록</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>취소됨</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>등록이 시작될 때까지 잠시 기다려주십시오.</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +595,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>등록 건수가 상한선에 도달했습니다. 종료 응용 프로그램</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>등록 오류</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>제출에 해당하는 연락처 레코드를 확인할 수 없습니다. 제출할 필요가 없습니다.</value>
