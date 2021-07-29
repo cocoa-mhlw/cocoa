@@ -37,7 +37,8 @@ namespace Covid19Radar.iOS
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
-            App.UseMockExposureNotificationImplementationIfNeeded();
+
+            App.InitExposureNotification();
 
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
 
