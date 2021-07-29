@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using Foundation;
 using UserNotifications;
 
 namespace Covid19Radar.iOS.Services
 {
     public class LocalNotificationService : ILocalNotificationService
     {
+        private const string NOTIFICATION_ID = "jp.go.mhlw.covid19radar.LocalNotificationService.NotificationId";
+
         private readonly ILoggerService _loggerService;
 
         public LocalNotificationService(ILoggerService loggerService)
@@ -70,8 +71,7 @@ namespace Covid19Radar.iOS.Services
                 content.Title = AppResources.LocalExposureNotificationTitle;
                 content.Body = AppResources.LocalExposureNotificationContent;
 
-                // TODO: 発動タイミングは即時で大丈夫か
-                var request = UNNotificationRequest.FromIdentifier(new NSUuid().AsString(), content, null);
+                var request = UNNotificationRequest.FromIdentifier(NOTIFICATION_ID, content, null);
                 var notificationCenter = UNUserNotificationCenter.Current;
                 await notificationCenter.AddNotificationRequestAsync(request);
             }
