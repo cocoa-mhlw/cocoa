@@ -84,6 +84,14 @@ public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
 {
     public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
     {
-        completionHandler(UNNotificationPresentationOptions.Banner);
+        if (UIDevice.CurrentDevice.CheckSystemVersion(14, 0))
+        {
+            completionHandler(UNNotificationPresentationOptions.Banner | UNNotificationPresentationOptions.List);
+        }
+        else
+        {
+            completionHandler(UNNotificationPresentationOptions.Alert);
+        }
+        
     }
 }
