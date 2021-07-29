@@ -12,7 +12,6 @@ using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
 using AndroidX.Work;
 using Xamarin.ExposureNotifications;
-using Java.IO;
 
 namespace Covid19Radar.Droid
 {
@@ -30,11 +29,6 @@ namespace Covid19Radar.Droid
         public override void OnCreate()
         {
             base.OnCreate();
-
-            // for Debug only
-            string timestamp = DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_");
-            var file = new File(DataDir, $"{timestamp}.txt");
-            file.CreateNewFile();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
