@@ -19,6 +19,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService loggerService;
         private readonly IUserDataService userDataService;
         private readonly IExposureNotificationService exposureNotificationService;
+        private readonly ILocalNotificationService localNotificationService;
 
         private string _startDate;
         private string _pastDate;
@@ -34,12 +35,19 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _pastDate, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+        public HomePageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataService userDataService,
+            IExposureNotificationService exposureNotificationService,
+            ILocalNotificationService localNotificationService
+            ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
+            this.localNotificationService = localNotificationService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -80,6 +88,8 @@ namespace Covid19Radar.ViewModels
                 loggerService.Exception("Failed to exposure notification status.", ex);
                 loggerService.EndMethod();
             }
+
+            await localNotificationService.PrepareAsync();
         }
 
         public Command OnClickExposures => new Command(async () =>
@@ -122,6 +132,7 @@ namespace Covid19Radar.ViewModels
         public override void OnAppearing()
         {
             base.OnAppearing();
+
             SettingDaysOfUse();
         }
 

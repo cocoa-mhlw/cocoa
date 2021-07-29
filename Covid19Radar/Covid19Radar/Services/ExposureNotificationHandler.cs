@@ -127,7 +127,7 @@ namespace Covid19Radar.Services
 
             if (exposureInformationList.Count > 0)
             {
-                LocalNotificationService.ShowExposureNotification();
+                await LocalNotificationService.ShowExposureNotificationAsync();
             }
 
             loggerService.EndMethod();
