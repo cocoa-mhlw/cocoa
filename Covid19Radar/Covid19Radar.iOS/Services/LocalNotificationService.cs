@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using Foundation;
 using UserNotifications;
 
 namespace Covid19Radar.iOS.Services
 {
     public class LocalNotificationService : ILocalNotificationService
     {
+        private const string NOTIFICATION_ID = "jp.go.mhlw.covid19radar.LocalNotificationService.NotificationId";
+
         private readonly ILoggerService _loggerService;
 
         public LocalNotificationService(ILoggerService loggerService)
@@ -45,11 +46,9 @@ namespace Covid19Radar.iOS.Services
         {
             _loggerService.StartMethod();
 
-            UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Sound, (granted, error) =>
+            UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert, (granted, error) =>
             {
                 _loggerService.Info($"Ask permission for user notification: {granted}");
-
-                // TODO: 許諾の状態に応じてなにか対応を行うか/アラートのタイプ
             });
 
             _loggerService.EndMethod();
@@ -64,8 +63,7 @@ namespace Covid19Radar.iOS.Services
                 var settings = await UNUserNotificationCenter.Current.GetNotificationSettingsAsync();
                 if (settings.AuthorizationStatus != UNAuthorizationStatus.Authorized)
                 {
-                    // TODO: 通知許諾がされていない場合のエラーハンドリングは握りつぶす？
-                    throw new NotImplementedException();
+                    throw new Exception($"UserNotification is not authorized: {settings.AuthorizationStatus}");
                 }
 
                 var content = new UNMutableNotificationContent();
@@ -73,8 +71,7 @@ namespace Covid19Radar.iOS.Services
                 content.Title = AppResources.LocalExposureNotificationTitle;
                 content.Body = AppResources.LocalExposureNotificationContent;
 
-                // TODO: 発動タイミングは即時で大丈夫か
-                var request = UNNotificationRequest.FromIdentifier(new NSUuid().AsString(), content, null);
+                var request = UNNotificationRequest.FromIdentifier(NOTIFICATION_ID, content, null);
                 var notificationCenter = UNUserNotificationCenter.Current;
                 await notificationCenter.AddNotificationRequestAsync(request);
             }
