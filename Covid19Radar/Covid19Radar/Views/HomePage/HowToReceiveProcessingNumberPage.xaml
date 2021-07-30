@@ -60,8 +60,12 @@
             </Grid>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                AutomationProperties.Name="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}"
                 Style="{StaticResource DefaultLabel}">
+                <AutomationProperties.Name>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
+                    </OnPlatform>
+                </AutomationProperties.Name>
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{x:Static resources:AppResources.NoteSymbol}" />
@@ -71,8 +75,12 @@
             </Label>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                AutomationProperties.Name="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}"
                 Style="{StaticResource DefaultLabel}">
+                <AutomationProperties.Name>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
+                    </OnPlatform>
+                </AutomationProperties.Name>
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{x:Static resources:AppResources.NoteSymbol}" />

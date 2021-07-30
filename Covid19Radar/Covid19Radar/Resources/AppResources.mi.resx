@@ -67,18 +67,6 @@
     <value>Ka whakamōhiotia koe mēnā kua mārakerake koe ki tētahi hua o te COVID i te otinga.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Me ngana anō ā muri ake.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>I Rahua</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Tataritanga i Tukuna</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Kua oti</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>I tuku Tataritanga...</value>
   </data>
@@ -580,10 +568,6 @@
     <value>Rēhita</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Kua whakakorea</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Taihoa koa kia tīmata rā anō te rēhitatanga</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +595,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>Kua tae atu te tau o registrations ki te tepe o runga. Waiho te taupānga</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Hapa rēhitatanga</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>Kāore i taea te whakaū i te pūkete hoapā e ōrite ana ki te tukunga. Kāore e hiahiatia te tuku.</value>

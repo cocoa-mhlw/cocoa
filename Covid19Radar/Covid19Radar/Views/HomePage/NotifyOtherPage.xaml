@@ -59,7 +59,8 @@
                                    BackgroundColor="White"
                                    CornerRadius="5"
                                    HasShadow="False">
-                                <controls:CustomDatePicker MaximumDate="{x:Static x:DateTime.Now}"
+                                <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
+                                                           MaximumDate="{x:Static x:DateTime.Now}"
                                                            BackgroundColor="White"
                                                            Format="d"
                                                            Date="{Binding DiagnosisDate}"/>
@@ -84,7 +85,8 @@
                                    BackgroundColor="White"
                                    CornerRadius="5"
                                    HasShadow="False">
-                                <controls:CustomDatePicker MaximumDate="{x:Static x:DateTime.Now}"
+                                <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
+                                                           MaximumDate="{x:Static x:DateTime.Now}"
                                                            BackgroundColor="White"
                                                            Format="d"
                                                            Date="{Binding DiagnosisDate}"/>

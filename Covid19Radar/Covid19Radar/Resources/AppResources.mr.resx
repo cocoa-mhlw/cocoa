@@ -67,18 +67,6 @@
     <value>जर तुम्हाला एखाद्या सकारात्मक सीओव्हीआयडी-19 परिणामाची माहिती दिली असेल तर तुम्हाला सूचित केले जाईल.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>कृपया नंतर पुन्हा प्रयत्न करा.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>अयशस्वी</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>सादर केलेले निदान</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>पूर्ण</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>निदान सबमिट करत आहे...</value>
   </data>
@@ -580,10 +568,6 @@
     <value>नोंदणी करा</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>रद्द केली</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>नोंदणी सुरू होईपर्यंत कृपया थोडा वेळ थांबा</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +595,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>नोंदणीची संख्या वरच्या मर्यादेपर्यंत पोहोचली आहे. अनुप्रयोग बाहेर पडा</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>नोंदणी त्रुटी</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>सबमिशनशी संबंधित संपर्क रेकॉर्ड पुष्टी होऊ शकली नाही. सबमिट करण्याची गरज नाही.</value>

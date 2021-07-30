@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -39,7 +39,6 @@ namespace Covid19Radar.Api
             ValidationServerService = validationServerService;
         }
 
-        [FunctionName(nameof(TemporaryExposureKeysApi))]
         public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys")] HttpRequest req)
         {
@@ -64,7 +63,6 @@ namespace Covid19Radar.Api
             return new OkObjectResult(result);
         }
 
-        [FunctionName(nameof(TemporaryExposureKeysApi) + "WithRegion")]
         public async Task<IActionResult> RunWithRegionAsync(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys/{region}")] HttpRequest req,
             string region)

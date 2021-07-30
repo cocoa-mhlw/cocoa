@@ -43,15 +43,6 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Häzir däl</value>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Soňra synanyşyň.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Şowsuz</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Doly</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Bes et</value>
   </data>
@@ -139,9 +130,5 @@
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>Bellige al</value>
     <comment>登録</comment>
-  </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Bes edildi</value>
-    <comment>キャンセルしました</comment>
   </data>
 </root>
