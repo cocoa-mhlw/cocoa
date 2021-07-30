@@ -280,6 +280,7 @@
     <Compile Include="Services\PreferencesService.cs" />
     <Compile Include="Services\SecureStorageServiceIos.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
+    <Compile Include="Services\LocalContentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -324,6 +325,7 @@
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage32%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%403x.png" />
+    <BundleResource Include="Resources\license.html" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
