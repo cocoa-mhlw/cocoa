@@ -18,6 +18,7 @@ using System;
 using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Migration;
+using Xamarin.ExposureNotifications;
 
 /*
  * Our mission...is
@@ -51,8 +52,6 @@ namespace Covid19Radar
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.AddSkipBackupAttribute();
 
-            Xamarin.ExposureNotifications.ExposureNotification.Init();
-
             // Local Notification tap event listener
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
@@ -76,12 +75,19 @@ namespace Covid19Radar
             LoggerService.EndMethod();
         }
 
-        public static void UseMockExposureNotificationImplementationIfNeeded()
+        public static void InitExposureNotification()
+        {
+            UseMockExposureNotificationImplementationIfNeeded();
+
+            ExposureNotification.Init();
+        }
+
+        private static void UseMockExposureNotificationImplementationIfNeeded()
         {
 #if USE_MOCK
             // For debug mode, set the mock api provider to interact
             // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
         }
 

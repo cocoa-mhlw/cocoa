@@ -39,7 +39,8 @@ namespace Covid19Radar.iOS
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
-            App.UseMockExposureNotificationImplementationIfNeeded();
+
+            App.InitExposureNotification();
 
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
 
@@ -47,10 +48,7 @@ namespace Covid19Radar.iOS
             global::Xamarin.Forms.FormsMaterial.Init();
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
-            global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
-            {
-                Logger = new Covid19Radar.Services.DebugLogger()
-            });
+            global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
             //Plugin.LocalNotification.NotificationCenter.AskPermission();
 
@@ -78,6 +76,7 @@ namespace Covid19Radar.iOS
             container.Register<ISecureStorageDependencyService, SecureStorageServiceIos>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
+            container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<IVersionMigration, PlatformVersionMigrationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);

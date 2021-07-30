@@ -43,15 +43,6 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>දැන් නොවේ</value>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>පසුව නැවත උත්සාහ කරන්න.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>අසාර්ථකයි</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>සම්පූර්ණ</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>අවලංගු කරන්න</value>
   </data>
@@ -139,9 +130,5 @@
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>ලියාපදිංචි වන්න</value>
     <comment>登録</comment>
-  </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>අවලංගු කෙරිණ</value>
-    <comment>キャンセルしました</comment>
   </data>
 </root>

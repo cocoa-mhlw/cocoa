@@ -4,6 +4,7 @@
 
 using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 

@@ -12,6 +12,8 @@ using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
 using Covid19Radar.Services.Migration;
 using Covid19Radar.Droid.Services.Migration;
+using AndroidX.Work;
+using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Droid
 {
@@ -31,7 +33,18 @@ namespace Covid19Radar.Droid
             base.OnCreate();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
-            App.UseMockExposureNotificationImplementationIfNeeded();
+
+            // Override WorkRequest configuration
+            // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
+            var repeatInterval = TimeSpan.FromHours(6);
+            static void requestBuilder(PeriodicWorkRequest.Builder b) =>
+               b.SetConstraints(new Constraints.Builder()
+                   .SetRequiresBatteryNotLow(true)
+                   .SetRequiredNetworkType(NetworkType.Connected)
+                   .Build());
+            ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
+
+            App.InitExposureNotification();
         }
 
         private void RegisterPlatformTypes(IContainer container)
@@ -41,6 +54,7 @@ namespace Covid19Radar.Droid
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
+            container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<IVersionMigration, PlatformVersionMigrationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);

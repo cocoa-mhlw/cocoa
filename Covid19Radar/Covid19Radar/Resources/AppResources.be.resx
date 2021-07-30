@@ -47,15 +47,6 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Не зараз</value>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Паўтарыце спробу пазней.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Памылка</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Завершана</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Скасаваць</value>
   </data>
@@ -163,9 +154,5 @@
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>Рэгістрацыя</value>
     <comment>登録</comment>
-  </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Скасавана</value>
-    <comment>キャンセルしました</comment>
   </data>
 </root>
