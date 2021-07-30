@@ -143,21 +143,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string ButtonFailed {
+        public static string NotifyOtherPageDialogExceptionTitle {
             get {
-                return ResourceManager.GetString("ButtonFailed", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTitle", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDialogSubmittedText {
+        public static string NotifyOtherPageDialogSubmittedTitle {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDialogSubmittedText", resourceCulture);
-            }
-        }
-        
-        public static string ButtonComplete {
-            get {
-                return ResourceManager.GetString("ButtonComplete", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialogSubmittedTitle", resourceCulture);
             }
         }
         
@@ -176,6 +170,12 @@ namespace Covid19Radar.Resources {
         public static string ButtonReset {
             get {
                 return ResourceManager.GetString("ButtonReset", resourceCulture);
+            }
+        }
+        
+        public static string ButtonRegister {
+            get {
+                return ResourceManager.GetString("ButtonRegister", resourceCulture);
             }
         }
         
@@ -236,6 +236,12 @@ namespace Covid19Radar.Resources {
         public static string SettingsPageDialogResetTitle {
             get {
                 return ResourceManager.GetString("SettingsPageDialogResetTitle", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageDialogResetCompletedTitle {
+            get {
+                return ResourceManager.GetString("SettingsPageDialogResetCompletedTitle", resourceCulture);
             }
         }
         
@@ -947,9 +953,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotifyOtherPageDiag2Message {
+        public static string NotifyOtherPageDiag2Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag2Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDiag2Title", resourceCulture);
             }
         }
         
@@ -989,15 +995,21 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string NotifyOtherPageDiagAppCloseTitle {
+            get {
+                return ResourceManager.GetString("NotifyOtherPageDiagAppCloseTitle", resourceCulture);
+            }
+        }
+        
         public static string NotifyOtherPageDiagAppClose {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiagAppClose", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiagErrorTitle {
+        public static string ProcessingNumberErrorDiagTitle {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiagErrorTitle", resourceCulture);
+                return ResourceManager.GetString("ProcessingNumberErrorDiagTitle", resourceCulture);
             }
         }
         

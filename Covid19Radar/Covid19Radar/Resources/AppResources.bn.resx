@@ -67,18 +67,6 @@
     <value>আপনি যদি কেউ ইতিবাচক COVID-19 ফলাফল রিপোর্ট প্রকাশ করা হয়েছে আপনি অবহিত করা হবে.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>অনুগ্রহ করে পরে আবার চেষ্টা করুন।</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>ব্যর্থ হয়েছে</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>নিদান জমা</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>সম্পন্ন হয়েছে</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>নির্ণয়ের জমা দেওয়া হচ্ছে...</value>
   </data>
@@ -580,10 +568,6 @@
     <value>নিবন্ধন করুন</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>বাতিল করা হয়েছে</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>নিবন্ধন শুরু না হওয়া পর্যন্ত অনুগ্রহ করে কিছু সময়ের জন্য অপেক্ষা করুন</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +595,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>রেজিস্ট্রেশনের সংখ্যা সর্বোচ্চ সীমায় পৌঁছেছে। প্রয়োগণ প্রস্থান করুন</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>নিবন্ধন ত্রুটি</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>জমা দেওয়ার সাথে সামঞ্জস্যপূর্ণ যোগাযোগ রেকর্ড নিশ্চিত করা যায়নি। জমা দেওয়ার দরকার নেই।</value>
