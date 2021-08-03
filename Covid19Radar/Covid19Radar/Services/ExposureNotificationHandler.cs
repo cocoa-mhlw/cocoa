@@ -98,6 +98,8 @@ namespace Covid19Radar.Services
 
             var config = await GetConfigurationAsync();
 
+            var isExposureDetected = false;
+
             if (userExposureSummary.HighestRiskScore >= config.MinimumRiskScore)
             {
                 var exposureInfo = await getExposureInfo();
@@ -115,6 +117,7 @@ namespace Covid19Radar.Services
                     {
                         UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                         exposureInformationList.Add(userExposureInfo);
+                        isExposureDetected = true;
                     }
                 }
             }
@@ -125,7 +128,7 @@ namespace Covid19Radar.Services
             loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
             exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
 
-            if (exposureInformationList.Count > 0)
+            if (isExposureDetected)
             {
                 await LocalNotificationService.ShowExposureNotificationAsync();
             }
