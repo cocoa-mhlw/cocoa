@@ -13,7 +13,7 @@ namespace Covid19Radar.iOS.Services
 {
     public class LocalNotificationService : ILocalNotificationService
     {
-        private const string NOTIFICATION_ID = "jp.go.mhlw.covid19radar.LocalNotificationService.NotificationId";
+        private const string NOTIFICATION_ID = "notification_id_cocoa";
 
         private readonly ILoggerService _loggerService;
 
