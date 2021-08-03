@@ -82,5 +82,10 @@ namespace Covid19Radar.iOS.Services
 
             _loggerService.EndMethod();
         }
+
+        public Task DismissExposureNotificationAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
