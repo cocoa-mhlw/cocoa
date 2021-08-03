@@ -18,6 +18,8 @@ namespace Covid19Radar.Droid.Services
     {
         private const string NOTIFICATION_CHANNEL_ID = "notification_channel_cocoa_202107";
 
+        private const int REQUEST_CODE = 0x01;
+
         private const int NOTIFICATION_ID_EXPOSURE = 0x1234;
 
         private readonly ILoggerService _loggerService;
@@ -61,7 +63,7 @@ namespace Covid19Radar.Droid.Services
             Intent intent = MainActivity.NewIntent(Platform.AppContext);
             PendingIntent pendingIntent = PendingIntent.GetActivity(
                 Platform.AppContext,
-                0x0,
+                REQUEST_CODE,
                 intent,
                 PendingIntentFlags.UpdateCurrent
                 );
