@@ -98,7 +98,7 @@ namespace Covid19Radar.Services
 
             var config = await GetConfigurationAsync();
 
-            var isExposureDetected = false;
+            var isNewExposureDetected = false;
 
             if (userExposureSummary.HighestRiskScore >= config.MinimumRiskScore)
             {
@@ -117,20 +117,24 @@ namespace Covid19Radar.Services
                     {
                         UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                         exposureInformationList.Add(userExposureInfo);
-                        isExposureDetected = true;
+                        isNewExposureDetected = true;
                     }
                 }
             }
 
-            exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
-
-            loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
-            loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
-            exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
-
-            if (isExposureDetected)
+            if (isNewExposureDetected)
             {
+                loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
+                loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
+
+                exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
+                exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
+
                 await LocalNotificationService.ShowExposureNotificationAsync();
+            }
+            else
+            {
+                loggerService.Info($"MatchedKeyCount: {userExposureSummary.MatchedKeyCount}, but no new exposure detected");
             }
 
             loggerService.EndMethod();
