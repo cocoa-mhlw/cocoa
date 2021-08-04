@@ -281,6 +281,7 @@
     <Compile Include="Services\SecureStorageServiceIos.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
+    <Compile Include="Services\LocalNotificationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

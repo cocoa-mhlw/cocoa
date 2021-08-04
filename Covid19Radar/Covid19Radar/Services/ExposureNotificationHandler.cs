@@ -30,6 +30,7 @@ namespace Covid19Radar.Services
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
         private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
         private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
+        private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
 
         public ExposureNotificationHandler()
         {
@@ -97,6 +98,8 @@ namespace Covid19Radar.Services
 
             var config = await GetConfigurationAsync();
 
+            var isNewExposureDetected = false;
+
             if (userExposureSummary.HighestRiskScore >= config.MinimumRiskScore)
             {
                 var exposureInfo = await getExposureInfo();
@@ -114,15 +117,25 @@ namespace Covid19Radar.Services
                     {
                         UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                         exposureInformationList.Add(userExposureInfo);
+                        isNewExposureDetected = true;
                     }
                 }
             }
 
-            exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
+            if (isNewExposureDetected)
+            {
+                loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
+                loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
 
-            loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
-            loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
-            exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
+                exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
+                exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
+
+                await LocalNotificationService.ShowExposureNotificationAsync();
+            }
+            else
+            {
+                loggerService.Info($"MatchedKeyCount: {userExposureSummary.MatchedKeyCount}, but no new exposure detected");
+            }
 
             loggerService.EndMethod();
         }

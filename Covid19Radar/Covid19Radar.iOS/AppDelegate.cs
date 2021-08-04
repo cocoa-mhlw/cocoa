@@ -10,6 +10,7 @@ using Covid19Radar.Services.Logs;
 using DryIoc;
 using Foundation;
 using UIKit;
+using UserNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.iOS
@@ -48,7 +49,7 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
-            //Plugin.LocalNotification.NotificationCenter.AskPermission();
+            UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate();
 
             LoadApplication(new App());
 
@@ -62,11 +63,6 @@ namespace Covid19Radar.iOS
             MessagingCenter.Send((object)this, AppConstants.IosOnActivatedMessage);
         }
 
-        //public override void WillEnterForeground(UIApplication uiApplication)
-        //{
-        //    Plugin.LocalNotification.NotificationCenter.ResetApplicationIconBadgeNumber(uiApplication);
-        //}
-
         private void RegisterPlatformTypes(IContainer container)
         {
             // Services
@@ -75,11 +71,28 @@ namespace Covid19Radar.iOS
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
+            container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
 #endif
         }
+    }
+}
+
+public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
+{
+    public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
+    {
+        if (UIDevice.CurrentDevice.CheckSystemVersion(14, 0))
+        {
+            completionHandler(UNNotificationPresentationOptions.Banner | UNNotificationPresentationOptions.List);
+        }
+        else
+        {
+            completionHandler(UNNotificationPresentationOptions.Alert);
+        }
+        
     }
 }

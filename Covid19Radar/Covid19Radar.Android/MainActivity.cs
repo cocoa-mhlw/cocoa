@@ -14,6 +14,12 @@ namespace Covid19Radar.Droid
     [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        internal static Intent NewIntent(Context context)
+        {
+            Intent intent = new Intent(context, typeof(MainActivity));
+            return intent;
+        }
+
         public static object dataLock = new object();
 
         protected override void OnCreate(Bundle savedInstanceState)
