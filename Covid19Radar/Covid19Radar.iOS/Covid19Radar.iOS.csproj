@@ -202,7 +202,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Services\CloseApplication.cs" />
+    <Compile Include="Services\CloseApplicationService.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
     <None Include="appcenter-pre-build.sh" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\1024.png">

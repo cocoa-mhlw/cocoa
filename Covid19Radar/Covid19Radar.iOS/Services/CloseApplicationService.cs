@@ -7,9 +7,9 @@ using Covid19Radar.Services;
 
 namespace Covid19Radar.iOS.Services
 {
-    public class CloseApplication : ICloseApplication
+    public class CloseApplicationService : ICloseApplicationService
     {
-        public void closeApplication()
+        public void CloseApplication()
         {
             Thread.CurrentThread.Abort();
         }

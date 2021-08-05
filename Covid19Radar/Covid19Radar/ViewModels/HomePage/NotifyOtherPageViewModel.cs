@@ -21,7 +21,7 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService loggerService;
         private readonly IExposureNotificationService exposureNotificationService;
-        private readonly ICloseApplication closeApplication;
+        private readonly ICloseApplicationService closeApplicationService;
 
         private string _diagnosisUid;
         public string DiagnosisUid
@@ -71,13 +71,13 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IExposureNotificationService exposureNotificationService,
-            ICloseApplication closeApplication
+            ICloseApplicationService closeApplicationService
             ) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
             this.exposureNotificationService = exposureNotificationService;
-            this.closeApplication = closeApplication;
+            this.closeApplicationService = closeApplicationService;
             errorCount = 0;
             DiagnosisUid = "";
             DiagnosisDate = DateTime.Today;
@@ -112,7 +112,7 @@ namespace Covid19Radar.ViewModels
                     AppResources.ButtonOk
                 );
                 UserDialogs.Instance.HideLoading();
-                closeApplication.closeApplication();
+                closeApplicationService.CloseApplication();
 
                 loggerService.Error($"Exceeded the number of trials.");
                 loggerService.EndMethod();

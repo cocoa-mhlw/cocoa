@@ -6,9 +6,9 @@ using Covid19Radar.Services;
 
 namespace Covid19Radar.Droid.Services
 {
-    public class CloseApplication : ICloseApplication
+    public class CloseApplicationService : ICloseApplicationService
     {
-        public void closeApplication()
+        public void CloseApplication()
         {
             var activity = Xamarin.Essentials.Platform.CurrentActivity;
             activity.FinishAffinity();
