@@ -184,10 +184,10 @@
     <Compile Include="Services\CloseApplication.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
     <Compile Include="Services\Logs\LogPathPlatformService.cs" />
-    <Compile Include="Services\Logs\LogPeriodicDeleteServiceAndroid.cs" />
+    <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
-    <Compile Include="Services\SecureStorageServiceAndroid.cs" />
+    <Compile Include="Services\SecureStorageService.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />

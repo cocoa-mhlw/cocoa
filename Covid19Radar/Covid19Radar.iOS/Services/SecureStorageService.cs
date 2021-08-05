@@ -10,7 +10,7 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.iOS.Services
 {
-    public class SecureStorageServiceIos : ISecureStorageDependencyService
+    public class SecureStorageService : ISecureStorageDependencyService
     {
         static readonly string Service = $"{AppInfo.PackageName}.securestorage";
 

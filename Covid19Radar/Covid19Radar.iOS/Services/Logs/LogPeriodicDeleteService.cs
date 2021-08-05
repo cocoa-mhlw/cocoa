@@ -6,11 +6,10 @@ using BackgroundTasks;
 using Covid19Radar.Services.Logs;
 using Foundation;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace Covid19Radar.iOS.Services.Logs
 {
-    public class LogPeriodicDeleteServiceIos : ILogPeriodicDeleteService
+    public class LogPeriodicDeleteService : ILogPeriodicDeleteService
     {
         #region Static Fields
 
@@ -27,7 +26,7 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Constructors
 
-        public LogPeriodicDeleteServiceIos(
+        public LogPeriodicDeleteService(
             ILoggerService loggerService,
             ILogFileService logFileService
             )

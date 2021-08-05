@@ -11,14 +11,14 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.Droid.Services.Logs
 {
-    public class LogPeriodicDeleteServiceAndroid : ILogPeriodicDeleteService
+    public class LogPeriodicDeleteService : ILogPeriodicDeleteService
     {
         private static readonly int requestCode = 1000;
         private static readonly long executionIntervalMillis = 60 * 60 * 24 * 1000; // 24hours
 
         private readonly ILoggerService loggerService;
 
-        public LogPeriodicDeleteServiceAndroid(
+        public LogPeriodicDeleteService(
             ILoggerService loggerService
             )
         {
@@ -68,7 +68,7 @@ namespace Covid19Radar.Droid.Services.Logs
                 loggerService.Info($"Action: {intent.Action}");
                 logFileService.Rotate();
                 loggerService.Info("Periodic deletion of old logs.");
-                var nextScheduledTime = LogPeriodicDeleteServiceAndroid.SetNextSchedule();
+                var nextScheduledTime = LogPeriodicDeleteService.SetNextSchedule();
                 loggerService.Info($"Next scheduled time: {DateTimeOffset.FromUnixTimeMilliseconds(nextScheduledTime).ToOffset(new TimeSpan(9, 0, 0))}");
             }
             catch
