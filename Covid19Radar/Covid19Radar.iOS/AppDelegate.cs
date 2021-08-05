@@ -69,7 +69,7 @@ namespace Covid19Radar.iOS
         {
             // Services
             container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
-            container.Register<ILogPathDependencyService, LogPathServiceIos>(Reuse.Singleton);
+            container.Register<ILogPathPlatformService, LogPathPlatformService>(Reuse.Singleton);
             container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteServiceIos>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, SecureStorageServiceIos>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
