@@ -50,7 +50,7 @@ namespace Covid19Radar
             LoggerService = Container.Resolve<ILoggerService>();
             LoggerService.StartMethod();
             LogFileService = Container.Resolve<ILogFileService>();
-            LogFileService.AddSkipBackupAttribute();
+            LogFileService.SetSkipBackupAttributeToLogDir();
 
             // Local Notification tap event listener
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;

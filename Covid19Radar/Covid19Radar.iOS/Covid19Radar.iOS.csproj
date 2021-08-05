@@ -273,7 +273,6 @@
     <Compile Include="Extensions\AlignmentExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\FormattedStringExtensions.cs" />
-    <Compile Include="Services\Logs\LogFileServiceIos.cs" />
     <Compile Include="Services\Logs\LogPathServiceIos.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteServiceIos.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
@@ -283,6 +282,7 @@
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\Migration\MigrationProcessService.cs" />
+    <Compile Include="Services\BackupAttributeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

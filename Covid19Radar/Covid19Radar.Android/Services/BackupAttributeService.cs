@@ -3,13 +3,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Services.Logs;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Droid.Services.Logs
 {
-    public class LogFileServiceAndroid : ILogFileDependencyService
+    public class BackupAttributeService : IBackupAttributeService
     {
-        public void AddSkipBackupAttribute()
+        public void SetSkipBackupAttributeToLogDir()
         {
             // Skip backup in `AndroidManifest.xml`
         }

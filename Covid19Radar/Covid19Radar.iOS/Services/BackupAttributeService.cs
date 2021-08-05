@@ -7,17 +7,18 @@ using Foundation;
 
 namespace Covid19Radar.iOS.Services.Logs
 {
-    public class LogFileServiceIos : ILogFileDependencyService
+    public class BackupAttributeService : IBackupAttributeService
     {
         private readonly ILogPathService logPathService;
 
-        public LogFileServiceIos(
+        public BackupAttributeService(
             ILogPathService logPathService
             )
         {
             this.logPathService = logPathService;
         }
-        public void AddSkipBackupAttribute()
+
+        public void SetSkipBackupAttributeToLogDir()
         {
             var logsDirPath = logPathService.LogsDirPath;
             var url = NSUrl.FromFilename(logsDirPath);

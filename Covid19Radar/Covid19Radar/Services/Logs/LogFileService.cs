@@ -22,7 +22,7 @@ namespace Covid19Radar.Services.Logs
 
         private readonly ILoggerService loggerService;
         private readonly ILogPathService logPathService;
-        private readonly ILogFileDependencyService logFileDependencyService;
+        private readonly IBackupAttributeService logFileDependencyService;
 
         #endregion
 
@@ -31,7 +31,7 @@ namespace Covid19Radar.Services.Logs
         public LogFileService(
             ILoggerService loggerService,
             ILogPathService logPathService,
-            ILogFileDependencyService logFileDependencyService
+            IBackupAttributeService logFileDependencyService
             )
         {
             this.loggerService = loggerService;
@@ -130,7 +130,7 @@ namespace Covid19Radar.Services.Logs
 
         }
 
-        public void AddSkipBackupAttribute() => logFileDependencyService.AddSkipBackupAttribute();
+        public void SetSkipBackupAttributeToLogDir() => logFileDependencyService.SetSkipBackupAttributeToLogDir();
 
         public void Rotate()
         {

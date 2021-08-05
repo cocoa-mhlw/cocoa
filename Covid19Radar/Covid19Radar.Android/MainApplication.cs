@@ -59,7 +59,7 @@ namespace Covid19Radar.Droid
         private void RegisterPlatformTypes(IContainer container)
         {
             // Services
-            container.Register<ILogFileDependencyService, LogFileServiceAndroid>(Reuse.Singleton);
+            container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
             container.Register<ILogPathDependencyService, LogPathServiceAndroid>(Reuse.Singleton);
             container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteServiceAndroid>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
