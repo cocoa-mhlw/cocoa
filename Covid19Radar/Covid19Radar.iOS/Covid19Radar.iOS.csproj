@@ -376,6 +376,9 @@
     <PackageReference Include="CommonServiceLocator">
       <Version>2.0.6</Version>
     </PackageReference>
+    <PackageReference Include="Chino.iOS">
+      <Version>1.0.0-beta07</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
