@@ -6,7 +6,6 @@ using System;
 using System.IO;
 using System.IO.Compression;
 using Covid19Radar.Common;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services.Logs
 {
@@ -23,15 +22,21 @@ namespace Covid19Radar.Services.Logs
 
         private readonly ILoggerService loggerService;
         private readonly ILogPathService logPathService;
+        private readonly ILogFileDependencyService logFileDependencyService;
 
         #endregion
 
         #region Constructors
 
-        public LogFileService(ILoggerService loggerService, ILogPathService logPathService)
+        public LogFileService(
+            ILoggerService loggerService,
+            ILogPathService logPathService,
+            ILogFileDependencyService logFileDependencyService
+            )
         {
             this.loggerService = loggerService;
             this.logPathService = logPathService;
+            this.logFileDependencyService = logFileDependencyService;
         }
 
         #endregion
@@ -125,7 +130,7 @@ namespace Covid19Radar.Services.Logs
 
         }
 
-        public void AddSkipBackupAttribute() => DependencyService.Get<ILogFileDependencyService>().AddSkipBackupAttribute();
+        public void AddSkipBackupAttribute() => logFileDependencyService.AddSkipBackupAttribute();
 
         public void Rotate()
         {

@@ -59,13 +59,16 @@ namespace Covid19Radar.Droid
         private void RegisterPlatformTypes(IContainer container)
         {
             // Services
+            container.Register<ILogFileDependencyService, LogFileServiceAndroid>(Reuse.Singleton);
             container.Register<ILogPathDependencyService, LogPathServiceAndroid>(Reuse.Singleton);
+            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteServiceAndroid>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
             container.Register<IMigrationProcessService, MigrationProccessService>(Reuse.Singleton);
+            container.Register<ICloseApplication, CloseApplication>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

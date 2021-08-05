@@ -5,13 +5,10 @@
 using System;
 using Android.App;
 using Android.Content;
-using Covid19Radar.Droid.Services.Logs;
-using Covid19Radar.Services;
+using CommonServiceLocator;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(LogPeriodicDeleteServiceAndroid))]
 namespace Covid19Radar.Droid.Services.Logs
 {
     public class LogPeriodicDeleteServiceAndroid : ILogPeriodicDeleteService
@@ -21,9 +18,11 @@ namespace Covid19Radar.Droid.Services.Logs
 
         private readonly ILoggerService loggerService;
 
-        public LogPeriodicDeleteServiceAndroid()
+        public LogPeriodicDeleteServiceAndroid(
+            ILoggerService loggerService
+            )
         {
-            loggerService = DependencyService.Resolve<ILoggerService>();
+            this.loggerService = loggerService;
         }
 
         public void Init()
@@ -54,15 +53,12 @@ namespace Covid19Radar.Droid.Services.Logs
     [IntentFilter(new[] { Intent.ActionBootCompleted })]
     public class LogPeriodicDeleteReceiver : BroadcastReceiver
     {
-        private readonly ILoggerService loggerService;
-        private readonly ILogFileService logFileService;
+        private ILoggerService loggerService => ServiceLocator.Current.GetInstance<ILoggerService>();
+        private ILogFileService logFileService => ServiceLocator.Current.GetInstance<ILogFileService>();
 
         public LogPeriodicDeleteReceiver()
         {
-            var essensialService = new EssentialsService();
-            var logPathService = new LogPathService(new LogPathServiceAndroid());
-            loggerService = new LoggerService(logPathService, essensialService);
-            logFileService = new Covid19Radar.Services.Logs.LogFileService(loggerService, logPathService);
+            // do nothing
         }
 
         public override void OnReceive(Context context, Intent intent)

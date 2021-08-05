@@ -4,7 +4,6 @@
 
 using System.Windows.Input;
 using Acr.UserDialogs;
-using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -31,8 +30,18 @@ namespace Covid19Radar.ViewModels
         private readonly IHttpDataService httpDataService;
         private readonly ILogFileService logFileService;
         private readonly ITermsUpdateService termsUpdateService;
+        private readonly ICloseApplication closeApplication;
 
-        public SettingsPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IHttpDataService httpDataService, IExposureNotificationService exposureNotificationService, ILogFileService logFileService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public SettingsPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataService userDataService,
+            IHttpDataService httpDataService,
+            IExposureNotificationService exposureNotificationService,
+            ILogFileService logFileService,
+            ITermsUpdateService termsUpdateService,
+            ICloseApplication closeApplication
+            ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppInfo.VersionString;
@@ -42,6 +51,7 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationService = exposureNotificationService;
             this.logFileService = logFileService;
             this.termsUpdateService = termsUpdateService;
+            this.closeApplication = closeApplication;
         }
 
         public ICommand OnChangeResetData => new Command(async () =>
@@ -80,7 +90,7 @@ namespace Covid19Radar.ViewModels
                     );
                 Application.Current.Quit();
                 // Application close
-                DependencyService.Get<ICloseApplication>().closeApplication();
+                closeApplication.closeApplication();
 
                 loggerService.EndMethod();
                 return;
