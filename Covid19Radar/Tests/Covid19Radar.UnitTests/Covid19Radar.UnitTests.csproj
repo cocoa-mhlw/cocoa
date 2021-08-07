@@ -33,7 +33,4 @@
     <Folder Include="Mocks\" />
     <Folder Include="ViewModels\Tutorial\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="ViewModels\Tutorial\" />
-  </ItemGroup>
 </Project>

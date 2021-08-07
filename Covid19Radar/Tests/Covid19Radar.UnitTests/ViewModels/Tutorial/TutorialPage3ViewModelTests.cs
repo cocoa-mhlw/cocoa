@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Services;
@@ -10,7 +9,6 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Moq;
 using Prism.Navigation;
-using Xamarin.Essentials;
 using Xunit;
 
 namespace Covid19Radar.UnitTests.ViewModels
@@ -41,10 +39,10 @@ namespace Covid19Radar.UnitTests.ViewModels
         [Fact]
         public void Dispose()
         {
-            mockUserDataService.Reset();
             mockUserDialogs.Reset();
             mockNavigationService.Reset();
             mockLoggerService.Reset();
+            mockUserDataService.Reset();
             mockTermsUpdateService.Reset();
 
         }
@@ -68,10 +66,7 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             mockUserDataService
                 .Setup(product => product.RegisterUserAsync())
-                .Returns(Task.Run(() =>
-                {
-                    return true;
-                }));
+                .Returns(Task.Run(() => { return true; }));
 
             unitUnderTest.OnClickAgree.Execute(null);
 
@@ -90,10 +85,7 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             mockUserDataService
                 .Setup(product => product.RegisterUserAsync())
-                .Returns(Task.Run(() =>
-                {
-                    return false;
-                }));
+                .Returns(Task.Run(() =>　{　return false; }));
 
             unitUnderTest.OnClickAgree.Execute(null);
 
