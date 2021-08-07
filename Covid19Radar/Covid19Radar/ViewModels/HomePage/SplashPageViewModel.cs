@@ -16,12 +16,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService _loggerService;
         private readonly IUserDataService _userDataService;
 
-        public SplashPageViewModel(
-            INavigationService navigationService,
-            ILoggerService loggerService,
-            ITermsUpdateService termsUpdateService,
-            IUserDataService userDataService
-        ) : base(navigationService)
+        public SplashPageViewModel(INavigationService navigationService, ILoggerService loggerService, ITermsUpdateService termsUpdateService, IUserDataService userDataService) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
