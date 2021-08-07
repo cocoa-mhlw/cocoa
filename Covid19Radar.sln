@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.Android", "Covid19Radar\Covid19Radar.Android\Covid19Radar.Android.csproj", "{92B1EC8F-ECF4-403A-B6F4-5EC80F43A69A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A03DD13-C0FC-4998-AFEB-74D5390C59A1}"
+	ProjectSection(SolutionItems) = preProject
+		Nuget.config = Nuget.config
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Radar.iOS", "Covid19Radar\Covid19Radar.iOS\Covid19Radar.iOS.csproj", "{3104A081-8DF8-4EDB-A40A-38DE78AA63AC}"
 EndProject

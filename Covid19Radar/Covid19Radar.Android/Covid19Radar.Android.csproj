@@ -12,7 +12,7 @@
     <RootNamespace>Covid19Radar.Droid</RootNamespace>
     <AssemblyName>Covid19Radar.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
@@ -132,9 +132,6 @@
     <PackageReference Include="Acr.UserDialogs">
       <Version>7.1.0.442</Version>
     </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
-    </PackageReference>
     <PackageReference Include="Prism.Core">
       <Version>7.2.0.1422</Version>
     </PackageReference>
@@ -161,7 +158,7 @@
       <Version>4.6.0.967</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification">
-      <Version>19.7.1-eap.1</Version>
+      <Version>19.7.2-eap-alpha03</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
       <Version>117.0.0-preview03</Version>
@@ -174,6 +171,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.RecyclerView">
       <Version>1.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Chino.Android">
+      <Version>1.0.0-beta07</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
