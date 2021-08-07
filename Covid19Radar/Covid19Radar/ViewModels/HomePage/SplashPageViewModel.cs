@@ -15,20 +15,17 @@ namespace Covid19Radar.ViewModels
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataService _userDataService;
-        private readonly ILocalNotificationService _localNotificationService;
 
         public SplashPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
             ITermsUpdateService termsUpdateService,
-            IUserDataService userDataService,
-            ILocalNotificationService localNotificationService
+            IUserDataService userDataService
         ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
             _userDataService = userDataService;
-            _localNotificationService = localNotificationService;
         }
 
         public override async void OnNavigatedTo(INavigationParameters parameters)
@@ -36,8 +33,6 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             base.OnNavigatedTo(parameters);
-
-            await _localNotificationService.DismissExposureNotificationAsync();
 
             await _userDataService.Migrate();
 

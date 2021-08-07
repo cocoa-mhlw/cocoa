@@ -88,13 +88,14 @@ namespace Covid19Radar.ViewModels
                 loggerService.Exception("Failed to exposure notification status.", ex);
                 loggerService.EndMethod();
             }
-
             await localNotificationService.PrepareAsync();
         }
 
         public Command OnClickExposures => new Command(async () =>
         {
             loggerService.StartMethod();
+
+            await localNotificationService.DismissExposureNotificationAsync();
 
             var count = exposureNotificationService.GetExposureCountToDisplay();
             loggerService.Info($"Exposure count: {count}");
