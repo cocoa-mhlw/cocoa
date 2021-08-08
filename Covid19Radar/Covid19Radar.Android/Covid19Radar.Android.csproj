@@ -191,12 +191,9 @@
     <Compile Include="Services\SecureStorageServiceAndroid.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
-<<<<<<< HEAD
+    <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\Migration\PlatformVersionMigrationService.cs" />
     <Compile Include="Services\Migration\Migrator123.cs" />
-=======
-    <Compile Include="Services\LocalNotificationService.cs" />
->>>>>>> 2018ddedef00785a58249fb76ff4ef9a9b8802d7
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
