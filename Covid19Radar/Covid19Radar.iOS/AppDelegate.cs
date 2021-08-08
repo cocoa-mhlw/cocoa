@@ -74,7 +74,7 @@ namespace Covid19Radar.iOS
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
-            container.Register<IVersionMigration, PlatformVersionMigrationService>(Reuse.Singleton);
+            container.Register<ISequentialIndivisualVersionMigrationServiceSeSeqSequSequeSequenSequentSequentiSequentiaSequentialS, PlatformVersionMigrationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

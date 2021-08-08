@@ -35,7 +35,7 @@ namespace Covid19Radar.Droid.Services.Migration
         }
     }
 
-    public class PlatformVersionMigrationService : IVersionMigration
+    public class PlatformVersionMigrationService : ISequentialVersionMigrationService
     {
         private readonly ILoggerService _loggerService;
 
@@ -44,7 +44,7 @@ namespace Covid19Radar.Droid.Services.Migration
             _loggerService = loggerService;
         }
 
-        public async Task MigrateTo123Async()
+        public async Task MigrateTo_1_2_3_Async()
         {
             _loggerService.StartMethod();
 

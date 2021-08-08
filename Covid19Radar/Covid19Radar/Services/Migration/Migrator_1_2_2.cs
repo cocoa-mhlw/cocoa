@@ -13,14 +13,14 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Services.Migration
 {
-    public class Migrator122 : IVersionMigrationService
+    public class Migrator_1_2_2 : IVersionMigrationService
     {
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly IPreferencesService _preferencesService;
         private readonly ISecureStorageService _secureStorageService;
         private readonly ILoggerService _loggerService;
 
-        public Migrator122(
+        public Migrator_1_2_2(
             IApplicationPropertyService applicationPropertyService,
             IPreferencesService preferencesService,
             ISecureStorageService secureStorageService,
