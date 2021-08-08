@@ -16,7 +16,7 @@ namespace Covid19Radar.Resources {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResources {
+    public class AppResources {
         
         private static System.Resources.ResourceManager resourceMan;
         
@@ -27,7 +27,7 @@ namespace Covid19Radar.Resources {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Resources.ResourceManager ResourceManager {
+        public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
                     System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Covid19Radar.Resources.AppResources", typeof(AppResources).Assembly);
@@ -38,7 +38,7 @@ namespace Covid19Radar.Resources {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Globalization.CultureInfo Culture {
+        public static System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -47,1453 +47,1471 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        internal static string ButtonAgree {
+        public static string ButtonAgree {
             get {
                 return ResourceManager.GetString("ButtonAgree", resourceCulture);
             }
         }
         
-        internal static string HomePageTitle {
+        public static string HomePageTitle {
             get {
                 return ResourceManager.GetString("HomePageTitle", resourceCulture);
             }
         }
         
-        internal static string AppName {
+        public static string AppName {
             get {
                 return ResourceManager.GetString("AppName", resourceCulture);
             }
         }
         
-        internal static string SettingsPageTitle {
+        public static string SettingsPageTitle {
             get {
                 return ResourceManager.GetString("SettingsPageTitle", resourceCulture);
             }
         }
         
-        internal static string SettingsPageButton1 {
+        public static string SettingsPageButton1 {
             get {
                 return ResourceManager.GetString("SettingsPageButton1", resourceCulture);
             }
         }
         
-        internal static string TitleLicenseAgreement {
+        public static string TitleLicenseAgreement {
             get {
                 return ResourceManager.GetString("TitleLicenseAgreement", resourceCulture);
             }
         }
         
-        internal static string TitileUserStatusSettings {
+        public static string TitileUserStatusSettings {
             get {
                 return ResourceManager.GetString("TitileUserStatusSettings", resourceCulture);
             }
         }
         
-        internal static string ButtonOk {
+        public static string ButtonOk {
             get {
                 return ResourceManager.GetString("ButtonOk", resourceCulture);
             }
         }
         
-        internal static string DialogNetworkConnectionError {
+        public static string DialogNetworkConnectionError {
             get {
                 return ResourceManager.GetString("DialogNetworkConnectionError", resourceCulture);
             }
         }
         
-        internal static string ButtonNotNow {
+        public static string ButtonNotNow {
             get {
                 return ResourceManager.GetString("ButtonNotNow", resourceCulture);
             }
         }
         
-        internal static string MainExposures {
+        public static string MainExposures {
             get {
                 return ResourceManager.GetString("MainExposures", resourceCulture);
             }
         }
         
-        internal static string NotifyOthersLearnMoreUrl {
+        public static string NotifyOthersLearnMoreUrl {
             get {
                 return ResourceManager.GetString("NotifyOthersLearnMoreUrl", resourceCulture);
             }
         }
         
-        internal static string MainTutorial {
+        public static string MainTutorial {
             get {
                 return ResourceManager.GetString("MainTutorial", resourceCulture);
             }
         }
         
-        internal static string ExposuresPageNoExposures {
+        public static string ExposuresPageNoExposures {
             get {
                 return ResourceManager.GetString("ExposuresPageNoExposures", resourceCulture);
             }
         }
         
-        internal static string ExposuresPageNoExposuresInfo {
+        public static string ExposuresPageNoExposuresInfo {
             get {
                 return ResourceManager.GetString("ExposuresPageNoExposuresInfo", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDialogExceptionText {
+        public static string NotifyOtherPageDialogExceptionText {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogExceptionText", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDialogExceptionTitle {
+        public static string NotifyOtherPageDialogExceptionTitle {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogExceptionTitle", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDialogSubmittedTitle {
+        public static string NotifyOtherPageDialogSubmittedTitle {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogSubmittedTitle", resourceCulture);
             }
         }
         
-        internal static string LoadingTextSubmittingDiagnosis {
+        public static string LoadingTextSubmittingDiagnosis {
             get {
                 return ResourceManager.GetString("LoadingTextSubmittingDiagnosis", resourceCulture);
             }
         }
         
-        internal static string ButtonCancel {
+        public static string ButtonCancel {
             get {
                 return ResourceManager.GetString("ButtonCancel", resourceCulture);
             }
         }
         
-        internal static string ButtonReset {
+        public static string ButtonReset {
             get {
                 return ResourceManager.GetString("ButtonReset", resourceCulture);
             }
         }
         
-        internal static string ButtonRegister {
+        public static string ButtonRegister {
             get {
                 return ResourceManager.GetString("ButtonRegister", resourceCulture);
             }
         }
         
-        internal static string LoadingTextDeleting {
+        public static string LoadingTextDeleting {
             get {
                 return ResourceManager.GetString("LoadingTextDeleting", resourceCulture);
             }
         }
         
-        internal static string HomePageHeader2Description {
+        public static string HomePageHeader2Description {
             get {
                 return ResourceManager.GetString("HomePageHeader2Description", resourceCulture);
             }
         }
         
-        internal static string HomePageHeader3Title {
+        public static string HomePageHeader3Title {
             get {
                 return ResourceManager.GetString("HomePageHeader3Title", resourceCulture);
             }
         }
         
-        internal static string HomePageHeader3Description {
+        public static string HomePageHeader3Description {
             get {
                 return ResourceManager.GetString("HomePageHeader3Description", resourceCulture);
             }
         }
         
-        internal static string ButtonShare {
+        public static string ButtonShare {
             get {
                 return ResourceManager.GetString("ButtonShare", resourceCulture);
             }
         }
         
-        internal static string ButtonNotifyOtherPage {
+        public static string ButtonNotifyOtherPage {
             get {
                 return ResourceManager.GetString("ButtonNotifyOtherPage", resourceCulture);
             }
         }
         
-        internal static string PrivacyPolicyPageTitle {
+        public static string PrivacyPolicyPageTitle {
             get {
                 return ResourceManager.GetString("PrivacyPolicyPageTitle", resourceCulture);
             }
         }
         
-        internal static string LoadingTextRegistering {
+        public static string LoadingTextRegistering {
             get {
                 return ResourceManager.GetString("LoadingTextRegistering", resourceCulture);
             }
         }
         
-        internal static string SettingsPageDialogResetText {
+        public static string SettingsPageDialogResetText {
             get {
                 return ResourceManager.GetString("SettingsPageDialogResetText", resourceCulture);
             }
         }
         
-        internal static string SettingsPageDialogResetTitle {
+        public static string SettingsPageDialogResetTitle {
             get {
                 return ResourceManager.GetString("SettingsPageDialogResetTitle", resourceCulture);
             }
         }
         
-        internal static string SettingsPageDialogResetCompletedTitle {
+        public static string SettingsPageDialogResetCompletedTitle {
             get {
                 return ResourceManager.GetString("SettingsPageDialogResetCompletedTitle", resourceCulture);
             }
         }
         
-        internal static string SettingsPageDialogResetCompletedText {
+        public static string SettingsPageDialogResetCompletedText {
             get {
                 return ResourceManager.GetString("SettingsPageDialogResetCompletedText", resourceCulture);
             }
         }
         
-        internal static string VersionText {
+        public static string VersionText {
             get {
                 return ResourceManager.GetString("VersionText", resourceCulture);
             }
         }
         
-        internal static string SettingsPageLabel1 {
+        public static string SettingsPageLabel1 {
             get {
                 return ResourceManager.GetString("SettingsPageLabel1", resourceCulture);
             }
         }
         
-        internal static string SettingsPageDescription1 {
+        public static string SettingsPageDescription1 {
             get {
                 return ResourceManager.GetString("SettingsPageDescription1", resourceCulture);
             }
         }
         
-        internal static string SettingsPageLabel2 {
+        public static string SettingsPageLabel2 {
             get {
                 return ResourceManager.GetString("SettingsPageLabel2", resourceCulture);
             }
         }
         
-        internal static string SettingsPageDescription2 {
+        public static string SettingsPageDescription2 {
             get {
                 return ResourceManager.GetString("SettingsPageDescription2", resourceCulture);
             }
         }
         
-        internal static string SettingsPageLabel3 {
+        public static string SettingsPageLabel3 {
             get {
                 return ResourceManager.GetString("SettingsPageLabel3", resourceCulture);
             }
         }
         
-        internal static string SettingsPageDescription3 {
+        public static string SettingsPageDescription3 {
             get {
                 return ResourceManager.GetString("SettingsPageDescription3", resourceCulture);
             }
         }
         
-        internal static string ButtonReturnToRegistration {
+        public static string ButtonReturnToRegistration {
             get {
                 return ResourceManager.GetString("ButtonReturnToRegistration", resourceCulture);
             }
         }
         
-        internal static string PositiveRegistrationText {
+        public static string PositiveRegistrationText {
             get {
                 return ResourceManager.GetString("PositiveRegistrationText", resourceCulture);
             }
         }
         
-        internal static string PositiveRegistrationConfirmText {
+        public static string PositiveRegistrationConfirmText {
             get {
                 return ResourceManager.GetString("PositiveRegistrationConfirmText", resourceCulture);
             }
         }
         
-        internal static string HelpMenuPageTitle {
+        public static string HelpMenuPageTitle {
             get {
                 return ResourceManager.GetString("HelpMenuPageTitle", resourceCulture);
             }
         }
         
-        internal static string HelpMenuPageLabel1 {
+        public static string HelpMenuPageLabel1 {
             get {
                 return ResourceManager.GetString("HelpMenuPageLabel1", resourceCulture);
             }
         }
         
-        internal static string HelpMenuPageLabel2 {
+        public static string HelpMenuPageLabel2 {
             get {
                 return ResourceManager.GetString("HelpMenuPageLabel2", resourceCulture);
             }
         }
         
-        internal static string HelpMenuPageLabel3 {
+        public static string HelpMenuPageLabel3 {
             get {
                 return ResourceManager.GetString("HelpMenuPageLabel3", resourceCulture);
             }
         }
         
-        internal static string HelpMenuPageLabel4 {
+        public static string HelpMenuPageLabel4 {
             get {
                 return ResourceManager.GetString("HelpMenuPageLabel4", resourceCulture);
             }
         }
         
-        internal static string HelpPage1Title {
+        public static string HelpPage1Title {
             get {
                 return ResourceManager.GetString("HelpPage1Title", resourceCulture);
             }
         }
         
-        internal static string HelpPage2Title {
+        public static string HelpPage2Title {
             get {
                 return ResourceManager.GetString("HelpPage2Title", resourceCulture);
             }
         }
         
-        internal static string HelpPage3Title {
+        public static string HelpPage3Title {
             get {
                 return ResourceManager.GetString("HelpPage3Title", resourceCulture);
             }
         }
         
-        internal static string HelpPage4Title {
+        public static string HelpPage4Title {
             get {
                 return ResourceManager.GetString("HelpPage4Title", resourceCulture);
             }
         }
         
-        internal static string HelpPage1Description1Text {
+        public static string HelpPage1Description1Text {
             get {
                 return ResourceManager.GetString("HelpPage1Description1Text", resourceCulture);
             }
         }
         
-        internal static string HelpPage1Description2Title {
+        public static string HelpPage1Description2Title {
             get {
                 return ResourceManager.GetString("HelpPage1Description2Title", resourceCulture);
             }
         }
         
-        internal static string HelpPage1Description2Text {
+        public static string HelpPage1Description2Text {
             get {
                 return ResourceManager.GetString("HelpPage1Description2Text", resourceCulture);
             }
         }
         
-        internal static string HelpPage1Description3Title {
+        public static string HelpPage1Description3Title {
             get {
                 return ResourceManager.GetString("HelpPage1Description3Title", resourceCulture);
             }
         }
         
-        internal static string HelpPage1Description3Text {
+        public static string HelpPage1Description3Text {
             get {
                 return ResourceManager.GetString("HelpPage1Description3Text", resourceCulture);
             }
         }
         
-        internal static string HelpPage2Description1 {
+        public static string HelpPage2Description1 {
             get {
                 return ResourceManager.GetString("HelpPage2Description1", resourceCulture);
             }
         }
         
-        internal static string HelpPage2Description2 {
+        public static string HelpPage2Description2 {
             get {
                 return ResourceManager.GetString("HelpPage2Description2", resourceCulture);
             }
         }
         
-        internal static string HelpPage2Description3 {
+        public static string HelpPage2Description3 {
             get {
                 return ResourceManager.GetString("HelpPage2Description3", resourceCulture);
             }
         }
         
-        internal static string HelpPage2Label1 {
+        public static string HelpPage2Label1 {
             get {
                 return ResourceManager.GetString("HelpPage2Label1", resourceCulture);
             }
         }
         
-        internal static string HelpPage2Label2 {
+        public static string HelpPage2Label2 {
             get {
                 return ResourceManager.GetString("HelpPage2Label2", resourceCulture);
             }
         }
         
-        internal static string HelpPage2Label3 {
+        public static string HelpPage2Label3 {
             get {
                 return ResourceManager.GetString("HelpPage2Label3", resourceCulture);
             }
         }
         
-        internal static string HelpPage4ButtonText {
+        public static string HelpPage4ButtonText {
             get {
                 return ResourceManager.GetString("HelpPage4ButtonText", resourceCulture);
             }
         }
         
-        internal static string HelpPage4Description {
+        public static string HelpPage4Description {
             get {
                 return ResourceManager.GetString("HelpPage4Description", resourceCulture);
             }
         }
         
-        internal static string HelpPage3Description1 {
+        public static string HelpPage3Description1 {
             get {
                 return ResourceManager.GetString("HelpPage3Description1", resourceCulture);
             }
         }
         
-        internal static string HelpPage3Description2 {
+        public static string HelpPage3Description2 {
             get {
                 return ResourceManager.GetString("HelpPage3Description2", resourceCulture);
             }
         }
         
-        internal static string HelpPage3Description3 {
+        public static string HelpPage3Description3 {
             get {
                 return ResourceManager.GetString("HelpPage3Description3", resourceCulture);
             }
         }
         
-        internal static string NotContactPageTitle {
+        public static string NotContactPageTitle {
             get {
                 return ResourceManager.GetString("NotContactPageTitle", resourceCulture);
             }
         }
         
-        internal static string NotContactPageLabel1 {
+        public static string NotContactPageLabel1 {
             get {
                 return ResourceManager.GetString("NotContactPageLabel1", resourceCulture);
             }
         }
         
-        internal static string NotContactPageDescription1 {
+        public static string NotContactPageDescription1 {
             get {
                 return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
             }
         }
         
-        internal static string NotContactPageButtonText {
+        public static string NotContactPageButtonText {
             get {
                 return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
             }
         }
         
-        internal static string ThankYouNotifyOtherPageLabel1 {
+        public static string ThankYouNotifyOtherPageLabel1 {
             get {
                 return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
             }
         }
         
-        internal static string ThankYouNotifyOtherPageDescription1 {
+        public static string ThankYouNotifyOtherPageDescription1 {
             get {
                 return ResourceManager.GetString("ThankYouNotifyOtherPageDescription1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage3Title {
+        public static string TutorialPage3Title {
             get {
                 return ResourceManager.GetString("TutorialPage3Title", resourceCulture);
             }
         }
         
-        internal static string TutorialPage3ButtonText {
+        public static string TutorialPage3ButtonText {
             get {
                 return ResourceManager.GetString("TutorialPage3ButtonText", resourceCulture);
             }
         }
         
-        internal static string TutorialPage6Label1 {
+        public static string TutorialPage6Label1 {
             get {
                 return ResourceManager.GetString("TutorialPage6Label1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage6ButtonText1 {
+        public static string TutorialPage6ButtonText1 {
             get {
                 return ResourceManager.GetString("TutorialPage6ButtonText1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage6ButtonText2 {
+        public static string TutorialPage6ButtonText2 {
             get {
                 return ResourceManager.GetString("TutorialPage6ButtonText2", resourceCulture);
             }
         }
         
-        internal static string HelpPage1MainTitle {
+        public static string HelpPage1MainTitle {
             get {
                 return ResourceManager.GetString("HelpPage1MainTitle", resourceCulture);
             }
         }
         
-        internal static string ContactedNotifyPageButton1 {
+        public static string ContactedNotifyPageButton1 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageButton1", resourceCulture);
             }
         }
         
-        internal static string ContactedNotifyPageCountText {
+        public static string ContactedNotifyPageCountText {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageCountText", resourceCulture);
             }
         }
         
-        internal static string ContactedNotifyPageMainText {
+        public static string ContactedNotifyPageMainText {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageMainText", resourceCulture);
             }
         }
         
-        internal static string ContactedNotifyPageTitle {
+        public static string ContactedNotifyPageTitle {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageTitle", resourceCulture);
             }
         }
         
-        internal static string InqueryPageTitle {
+        public static string InqueryPageTitle {
             get {
                 return ResourceManager.GetString("InqueryPageTitle", resourceCulture);
             }
         }
         
-        internal static string InqueryPageTitle_Menu {
+        public static string InqueryPageTitle_Menu {
             get {
                 return ResourceManager.GetString("InqueryPageTitle_Menu", resourceCulture);
             }
         }
         
-        internal static string HomePageDescription1 {
+        public static string HomePageDescription1 {
             get {
                 return ResourceManager.GetString("HomePageDescription1", resourceCulture);
             }
         }
         
-        internal static string HomePageDescription2 {
+        public static string HomePageDescription2 {
             get {
                 return ResourceManager.GetString("HomePageDescription2", resourceCulture);
             }
         }
         
-        internal static string HomePageDescription3 {
+        public static string HomePageDescription3 {
             get {
                 return ResourceManager.GetString("HomePageDescription3", resourceCulture);
             }
         }
         
-        internal static string HomePageDescription4 {
+        public static string HomePageDescription4 {
             get {
                 return ResourceManager.GetString("HomePageDescription4", resourceCulture);
             }
         }
         
-        internal static string HomePageDescription5 {
+        public static string HomePageDescription5 {
             get {
                 return ResourceManager.GetString("HomePageDescription5", resourceCulture);
             }
         }
         
-        internal static string HomePageTitle1 {
+        public static string HomePageTitle1 {
             get {
                 return ResourceManager.GetString("HomePageTitle1", resourceCulture);
             }
         }
         
-        internal static string TermsofservicePageTitle {
+        public static string TermsofservicePageTitle {
             get {
                 return ResourceManager.GetString("TermsofservicePageTitle", resourceCulture);
             }
         }
         
-        internal static string TutorialPage2Description1 {
+        public static string TutorialPage2Description1 {
             get {
                 return ResourceManager.GetString("TutorialPage2Description1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage2Description2 {
+        public static string TutorialPage2Description2 {
             get {
                 return ResourceManager.GetString("TutorialPage2Description2", resourceCulture);
             }
         }
         
-        internal static string TutorialPage2Description3 {
+        public static string TutorialPage2Description3 {
             get {
                 return ResourceManager.GetString("TutorialPage2Description3", resourceCulture);
             }
         }
         
-        internal static string TutorialPage2Description4 {
+        public static string TutorialPage2Description4 {
             get {
                 return ResourceManager.GetString("TutorialPage2Description4", resourceCulture);
             }
         }
         
-        internal static string TutorialPage2Description5 {
+        public static string TutorialPage2Description5 {
             get {
                 return ResourceManager.GetString("TutorialPage2Description5", resourceCulture);
             }
         }
         
-        internal static string TutorialPage2Title {
+        public static string TutorialPage2Title {
             get {
                 return ResourceManager.GetString("TutorialPage2Title", resourceCulture);
             }
         }
         
-        internal static string TutorialPage5Description1 {
+        public static string TutorialPage5Description1 {
             get {
                 return ResourceManager.GetString("TutorialPage5Description1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage5Description2 {
+        public static string TutorialPage5Description2 {
             get {
                 return ResourceManager.GetString("TutorialPage5Description2", resourceCulture);
             }
         }
         
-        internal static string TutorialPage5Description3 {
+        public static string TutorialPage5Description3 {
             get {
                 return ResourceManager.GetString("TutorialPage5Description3", resourceCulture);
             }
         }
         
-        internal static string TutorialPage5Description4 {
+        public static string TutorialPage5Description4 {
             get {
                 return ResourceManager.GetString("TutorialPage5Description4", resourceCulture);
             }
         }
         
-        internal static string TutorialPage5Title {
+        public static string TutorialPage5Title {
             get {
                 return ResourceManager.GetString("TutorialPage5Title", resourceCulture);
             }
         }
         
-        internal static string MenuPageTitle {
+        public static string MenuPageTitle {
             get {
                 return ResourceManager.GetString("MenuPageTitle", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageButton {
+        public static string NotifyOtherPageButton {
             get {
                 return ResourceManager.GetString("NotifyOtherPageButton", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDescription3 {
+        public static string NotifyOtherPageDescription3 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDescription3", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDescription5 {
+        public static string NotifyOtherPageDescription5 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDescription5", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageLabel {
+        public static string NotifyOtherPageLabel {
             get {
                 return ResourceManager.GetString("NotifyOtherPageLabel", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageTitle {
+        public static string NotifyOtherPageTitle {
             get {
                 return ResourceManager.GetString("NotifyOtherPageTitle", resourceCulture);
             }
         }
         
-        internal static string TutorialPage1Button {
+        public static string TutorialPage1Button {
             get {
                 return ResourceManager.GetString("TutorialPage1Button", resourceCulture);
             }
         }
         
-        internal static string TutorialPage1Description1 {
+        public static string TutorialPage1Description1 {
             get {
                 return ResourceManager.GetString("TutorialPage1Description1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage1Description2 {
+        public static string TutorialPage1Description2 {
             get {
                 return ResourceManager.GetString("TutorialPage1Description2", resourceCulture);
             }
         }
         
-        internal static string TutorialPage1Description3 {
+        public static string TutorialPage1Description3 {
             get {
                 return ResourceManager.GetString("TutorialPage1Description3", resourceCulture);
             }
         }
         
-        internal static string TutorialPage1Title1 {
+        public static string TutorialPage1Title1 {
             get {
                 return ResourceManager.GetString("TutorialPage1Title1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage1Title2 {
+        public static string TutorialPage1Title2 {
             get {
                 return ResourceManager.GetString("TutorialPage1Title2", resourceCulture);
             }
         }
         
-        internal static string TutorialPage4Button1 {
+        public static string TutorialPage4Button1 {
             get {
                 return ResourceManager.GetString("TutorialPage4Button1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage4Button2 {
+        public static string TutorialPage4Button2 {
             get {
                 return ResourceManager.GetString("TutorialPage4Button2", resourceCulture);
             }
         }
         
-        internal static string TutorialPage4Description {
+        public static string TutorialPage4Description {
             get {
                 return ResourceManager.GetString("TutorialPage4Description", resourceCulture);
             }
         }
         
-        internal static string TutorialPage4Label {
+        public static string TutorialPage4Label {
             get {
                 return ResourceManager.GetString("TutorialPage4Label", resourceCulture);
             }
         }
         
-        internal static string TutorialPage4Title1 {
+        public static string TutorialPage4Title1 {
             get {
                 return ResourceManager.GetString("TutorialPage4Title1", resourceCulture);
             }
         }
         
-        internal static string TutorialPage4Title2 {
+        public static string TutorialPage4Title2 {
             get {
                 return ResourceManager.GetString("TutorialPage4Title2", resourceCulture);
             }
         }
         
-        internal static string HomePageDescription0 {
+        public static string HomePageDescription0 {
             get {
                 return ResourceManager.GetString("HomePageDescription0", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageLabel2 {
+        public static string NotifyOtherPageLabel2 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageLabel2", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageButton {
+        public static string SubmitConsentPageButton {
             get {
                 return ResourceManager.GetString("SubmitConsentPageButton", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageTitle1 {
+        public static string SubmitConsentPageTitle1 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageTitle1", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageTitle2 {
+        public static string SubmitConsentPageTitle2 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageTitle2", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationServiceMessage4 {
+        public static string ExposureNotificationServiceMessage4 {
             get {
                 return ResourceManager.GetString("ExposureNotificationServiceMessage4", resourceCulture);
             }
         }
         
-        internal static string ExposuresPageTitle {
+        public static string ExposuresPageTitle {
             get {
                 return ResourceManager.GetString("ExposuresPageTitle", resourceCulture);
             }
         }
         
-        internal static string ExposuresPageLabel1 {
+        public static string ExposuresPageLabel1 {
             get {
                 return ResourceManager.GetString("ExposuresPageLabel1", resourceCulture);
             }
         }
         
-        internal static string UrlContactedPhone {
+        public static string UrlContactedPhone {
             get {
                 return ResourceManager.GetString("UrlContactedPhone", resourceCulture);
             }
         }
         
-        internal static string LocalNotificationDescription {
+        public static string LocalNotificationDescription {
             get {
                 return ResourceManager.GetString("LocalNotificationDescription", resourceCulture);
             }
         }
         
-        internal static string LocalNotificationTitle {
+        public static string LocalNotificationTitle {
             get {
                 return ResourceManager.GetString("LocalNotificationTitle", resourceCulture);
             }
         }
         
-        internal static string LocalNotificationPermittedDescription {
+        public static string LocalNotificationPermittedDescription {
             get {
                 return ResourceManager.GetString("LocalNotificationPermittedDescription", resourceCulture);
             }
         }
         
-        internal static string LocalNotificationPermittedTitle {
+        public static string LocalNotificationPermittedTitle {
             get {
                 return ResourceManager.GetString("LocalNotificationPermittedTitle", resourceCulture);
             }
         }
         
-        internal static string InqueryPageDescription3 {
+        public static string InqueryPageDescription3 {
             get {
                 return ResourceManager.GetString("InqueryPageDescription3", resourceCulture);
             }
         }
         
-        internal static string HomePagePastDays {
+        public static string HomePagePastDays {
             get {
                 return ResourceManager.GetString("HomePagePastDays", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationStatusMessageActive {
+        public static string ExposureNotificationStatusMessageActive {
             get {
                 return ResourceManager.GetString("ExposureNotificationStatusMessageActive", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationStatusMessageBluetoothOff {
+        public static string ExposureNotificationStatusMessageBluetoothOff {
             get {
                 return ResourceManager.GetString("ExposureNotificationStatusMessageBluetoothOff", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationStatusMessageDisabled {
+        public static string ExposureNotificationStatusMessageDisabled {
             get {
                 return ResourceManager.GetString("ExposureNotificationStatusMessageDisabled", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationStatusMessageIsOptined {
+        public static string ExposureNotificationStatusMessageIsOptined {
             get {
                 return ResourceManager.GetString("ExposureNotificationStatusMessageIsOptined", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationStatusMessageRestricted {
+        public static string ExposureNotificationStatusMessageRestricted {
             get {
                 return ResourceManager.GetString("ExposureNotificationStatusMessageRestricted", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationStatusMessageUnknown {
+        public static string ExposureNotificationStatusMessageUnknown {
             get {
                 return ResourceManager.GetString("ExposureNotificationStatusMessageUnknown", resourceCulture);
             }
         }
         
-        internal static string DialogNetworkConnectionErrorTitle {
+        public static string DialogNetworkConnectionErrorTitle {
             get {
                 return ResourceManager.GetString("DialogNetworkConnectionErrorTitle", resourceCulture);
             }
         }
         
-        internal static string DialogExposureNotificationStartupErrorTitle {
+        public static string DialogExposureNotificationStartupErrorTitle {
             get {
                 return ResourceManager.GetString("DialogExposureNotificationStartupErrorTitle", resourceCulture);
             }
         }
         
-        internal static string DialogExposureNotificationStartupError {
+        public static string DialogExposureNotificationStartupError {
             get {
                 return ResourceManager.GetString("DialogExposureNotificationStartupError", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationHandler1ErrorMessage {
+        public static string ExposureNotificationHandler1ErrorMessage {
             get {
                 return ResourceManager.GetString("ExposureNotificationHandler1ErrorMessage", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationHandler2ErrorMessage {
+        public static string ExposureNotificationHandler2ErrorMessage {
             get {
                 return ResourceManager.GetString("ExposureNotificationHandler2ErrorMessage", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag1Message {
+        public static string NotifyOtherPageDiag1Message {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag1Message", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag1Title {
+        public static string NotifyOtherPageDiag1Title {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag1Title", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag2Title {
+        public static string NotifyOtherPageDiag2Title {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag2Title", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag3Message {
+        public static string NotifyOtherPageDiag3Message {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag3Message", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag3Title {
+        public static string NotifyOtherPageDiag3Title {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag3Title", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag4Message {
+        public static string NotifyOtherPageDiag4Message {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag4Message", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag5Message {
+        public static string NotifyOtherPageDiag5Message {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag5Message", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag6Message {
+        public static string NotifyOtherPageDiag6Message {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag6Message", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiag6Title {
+        public static string NotifyOtherPageDiag6Title {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag6Title", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiagAppCloseTitle {
+        public static string NotifyOtherPageDiagAppCloseTitle {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiagAppCloseTitle", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDiagAppClose {
+        public static string NotifyOtherPageDiagAppClose {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiagAppClose", resourceCulture);
             }
         }
         
-        internal static string ProcessingNumberErrorDiagTitle {
+        public static string ProcessingNumberErrorDiagTitle {
             get {
                 return ResourceManager.GetString("ProcessingNumberErrorDiagTitle", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFound {
+        public static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFound {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFound", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle {
+        public static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle", resourceCulture);
             }
         }
         
-        internal static string AppUtilsGetNewVersionDescription {
+        public static string AppUtilsGetNewVersionDescription {
             get {
                 return ResourceManager.GetString("AppUtilsGetNewVersionDescription", resourceCulture);
             }
         }
         
-        internal static string AppUtilsGetNewVersionTitle {
+        public static string AppUtilsGetNewVersionTitle {
             get {
                 return ResourceManager.GetString("AppUtilsGetNewVersionTitle", resourceCulture);
             }
         }
         
-        internal static string UrlVersion {
+        public static string UrlVersion {
             get {
                 return ResourceManager.GetString("UrlVersion", resourceCulture);
             }
         }
         
-        internal static string ExposureNotificationHandler3ErrorMessage {
+        public static string ExposureNotificationHandler3ErrorMessage {
             get {
                 return ResourceManager.GetString("ExposureNotificationHandler3ErrorMessage", resourceCulture);
             }
         }
         
-        internal static string ContactedNotifyPageButton2 {
+        public static string ContactedNotifyPageButton2 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageButton2", resourceCulture);
             }
         }
         
-        internal static string ContactedNotifyPageDescription1 {
+        public static string ContactedNotifyPageDescription1 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageDescription1", resourceCulture);
             }
         }
         
-        internal static string ReAgreeCheckButton {
+        public static string ReAgreeCheckButton {
             get {
                 return ResourceManager.GetString("ReAgreeCheckButton", resourceCulture);
             }
         }
         
-        internal static string ReAgreePrivacyPolicyPageTitle {
+        public static string ReAgreePrivacyPolicyPageTitle {
             get {
                 return ResourceManager.GetString("ReAgreePrivacyPolicyPageTitle", resourceCulture);
             }
         }
         
-        internal static string ReAgreePrivacyPolicyTextLink {
+        public static string ReAgreePrivacyPolicyTextLink {
             get {
                 return ResourceManager.GetString("ReAgreePrivacyPolicyTextLink", resourceCulture);
             }
         }
         
-        internal static string ReAgreeTermsOfServiceTextLink {
+        public static string ReAgreeTermsOfServiceTextLink {
             get {
                 return ResourceManager.GetString("ReAgreeTermsOfServiceTextLink", resourceCulture);
             }
         }
         
-        internal static string ReAgreeTermsOfServiceTitle {
+        public static string ReAgreeTermsOfServiceTitle {
             get {
                 return ResourceManager.GetString("ReAgreeTermsOfServiceTitle", resourceCulture);
             }
         }
         
-        internal static string UrlTermsUpdate {
+        public static string UrlTermsUpdate {
             get {
                 return ResourceManager.GetString("UrlTermsUpdate", resourceCulture);
             }
         }
         
-        internal static string InqueryPageDescription2 {
+        public static string InqueryPageDescription2 {
             get {
                 return ResourceManager.GetString("InqueryPageDescription2", resourceCulture);
             }
         }
         
-        internal static string InqueryPageButton1 {
+        public static string InqueryPageButton1 {
             get {
                 return ResourceManager.GetString("InqueryPageButton1", resourceCulture);
             }
         }
         
-        internal static string InqueryPageButton2 {
+        public static string InqueryPageButton2 {
             get {
                 return ResourceManager.GetString("InqueryPageButton2", resourceCulture);
             }
         }
         
-        internal static string InqueryPageButton3 {
+        public static string InqueryPageButton3 {
             get {
                 return ResourceManager.GetString("InqueryPageButton3", resourceCulture);
             }
         }
         
-        internal static string InqueryPageDescription1 {
+        public static string InqueryPageDescription1 {
             get {
                 return ResourceManager.GetString("InqueryPageDescription1", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageButton1 {
+        public static string SendLogConfirmationPageButton1 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageButton1", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageDescription1 {
+        public static string SendLogConfirmationPageDescription1 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageDescription1", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageDescription2 {
+        public static string SendLogConfirmationPageDescription2 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageDescription2", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageDescription3 {
+        public static string SendLogConfirmationPageDescription3 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageDescription3", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageDescription4 {
+        public static string SendLogConfirmationPageDescription4 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageDescription4", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageDescription5 {
+        public static string SendLogConfirmationPageDescription5 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageDescription5", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageDescription6 {
+        public static string SendLogConfirmationPageDescription6 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageDescription6", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageDescription7 {
+        public static string SendLogConfirmationPageDescription7 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageDescription7", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageDescription8 {
+        public static string SendLogConfirmationPageDescription8 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageDescription8", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageTextLink1 {
+        public static string SendLogConfirmationPageTextLink1 {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageTextLink1", resourceCulture);
             }
         }
         
-        internal static string SendLogConfirmationPageTitle {
+        public static string SendLogConfirmationPageTitle {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageTitle", resourceCulture);
             }
         }
         
-        internal static string SendLogCompletePageButton1 {
+        public static string SendLogCompletePageButton1 {
             get {
                 return ResourceManager.GetString("SendLogCompletePageButton1", resourceCulture);
             }
         }
         
-        internal static string SendLogCompletePageButton2 {
+        public static string SendLogCompletePageButton2 {
             get {
                 return ResourceManager.GetString("SendLogCompletePageButton2", resourceCulture);
             }
         }
         
-        internal static string SendLogCompletePageDescription1 {
+        public static string SendLogCompletePageDescription1 {
             get {
                 return ResourceManager.GetString("SendLogCompletePageDescription1", resourceCulture);
             }
         }
         
-        internal static string SendLogCompletePageDescription2 {
+        public static string SendLogCompletePageDescription2 {
             get {
                 return ResourceManager.GetString("SendLogCompletePageDescription2", resourceCulture);
             }
         }
         
-        internal static string Error {
+        public static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
             }
         }
         
-        internal static string FailedMessageToGetOperatingInformation {
+        public static string FailedMessageToGetOperatingInformation {
             get {
                 return ResourceManager.GetString("FailedMessageToGetOperatingInformation", resourceCulture);
             }
         }
         
-        internal static string FailedMessageToSaveOperatingInformation {
+        public static string FailedMessageToSaveOperatingInformation {
             get {
                 return ResourceManager.GetString("FailedMessageToSaveOperatingInformation", resourceCulture);
             }
         }
         
-        internal static string FailedMessageToSendOperatingInformation {
+        public static string FailedMessageToSendOperatingInformation {
             get {
                 return ResourceManager.GetString("FailedMessageToSendOperatingInformation", resourceCulture);
             }
         }
         
-        internal static string InquiryMailBody {
+        public static string InquiryMailBody {
             get {
                 return ResourceManager.GetString("InquiryMailBody", resourceCulture);
             }
         }
         
-        internal static string InquiryMailSubject {
+        public static string InquiryMailSubject {
             get {
                 return ResourceManager.GetString("InquiryMailSubject", resourceCulture);
             }
         }
         
-        internal static string Processing {
+        public static string Processing {
             get {
                 return ResourceManager.GetString("Processing", resourceCulture);
             }
         }
         
-        internal static string SaveCompleted {
+        public static string SaveCompleted {
             get {
                 return ResourceManager.GetString("SaveCompleted", resourceCulture);
             }
         }
         
-        internal static string Saving {
+        public static string Saving {
             get {
                 return ResourceManager.GetString("Saving", resourceCulture);
             }
         }
         
-        internal static string SendIdMailBody1 {
+        public static string SendIdMailBody1 {
             get {
                 return ResourceManager.GetString("SendIdMailBody1", resourceCulture);
             }
         }
         
-        internal static string SendIdMailBody2 {
+        public static string SendIdMailBody2 {
             get {
                 return ResourceManager.GetString("SendIdMailBody2", resourceCulture);
             }
         }
         
-        internal static string SendIdMailSubject {
+        public static string SendIdMailSubject {
             get {
                 return ResourceManager.GetString("SendIdMailSubject", resourceCulture);
             }
         }
         
-        internal static string Sending {
+        public static string Sending {
             get {
                 return ResourceManager.GetString("Sending", resourceCulture);
             }
         }
         
-        internal static string SendingError {
+        public static string SendingError {
             get {
                 return ResourceManager.GetString("SendingError", resourceCulture);
             }
         }
         
-        internal static string SuccessMessageToSaveOperatingInformationForAndroid {
+        public static string SuccessMessageToSaveOperatingInformationForAndroid {
             get {
                 return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid", resourceCulture);
             }
         }
         
-        internal static string SuccessMessageToSaveOperatingInformationForIOS {
+        public static string SuccessMessageToSaveOperatingInformationForIOS {
             get {
                 return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForIOS", resourceCulture);
             }
         }
         
-        internal static string UrlContactedForm {
+        public static string UrlContactedForm {
             get {
                 return ResourceManager.GetString("UrlContactedForm", resourceCulture);
             }
         }
         
-        internal static string SuccessMessageToSaveOperatingInformationForAndroid2 {
+        public static string SuccessMessageToSaveOperatingInformationForAndroid2 {
             get {
                 return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid2", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDescription1 {
+        public static string NotifyOtherPageDescription1 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDescription1", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDescription2 {
+        public static string NotifyOtherPageDescription2 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDescription2", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDescription4 {
+        public static string NotifyOtherPageDescription4 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDescription4", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageDescription6 {
+        public static string NotifyOtherPageDescription6 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDescription6", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageNoSymptomsDescription1 {
+        public static string NotifyOtherPageNoSymptomsDescription1 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageNoSymptomsDescription1", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageRadioButtonNo {
+        public static string NotifyOtherPageRadioButtonNo {
             get {
                 return ResourceManager.GetString("NotifyOtherPageRadioButtonNo", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageRadioButtonYes {
+        public static string NotifyOtherPageRadioButtonYes {
             get {
                 return ResourceManager.GetString("NotifyOtherPageRadioButtonYes", resourceCulture);
             }
         }
         
-        internal static string NotifyOtherPageWithSymptomsDescription1 {
+        public static string NotifyOtherPageWithSymptomsDescription1 {
             get {
                 return ResourceManager.GetString("NotifyOtherPageWithSymptomsDescription1", resourceCulture);
             }
         }
         
-        internal static string HelpPage3Description4 {
+        public static string HelpPage3Description4 {
             get {
                 return ResourceManager.GetString("HelpPage3Description4", resourceCulture);
             }
         }
         
-        internal static string HelpPage3Description5 {
+        public static string HelpPage3Description5 {
             get {
                 return ResourceManager.GetString("HelpPage3Description5", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription1 {
+        public static string SubmitConsentPageDescription1 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription1", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription10 {
+        public static string SubmitConsentPageDescription10 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription10", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription2 {
+        public static string SubmitConsentPageDescription2 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription2", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription3 {
+        public static string SubmitConsentPageDescription3 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription3", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription4 {
+        public static string SubmitConsentPageDescription4 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription4", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription5 {
+        public static string SubmitConsentPageDescription5 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription5", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription6 {
+        public static string SubmitConsentPageDescription6 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription6", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription7 {
+        public static string SubmitConsentPageDescription7 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription7", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription8 {
+        public static string SubmitConsentPageDescription8 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription8", resourceCulture);
             }
         }
         
-        internal static string SubmitConsentPageDescription9 {
+        public static string SubmitConsentPageDescription9 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription9", resourceCulture);
             }
         }
         
-        internal static string HelpPage3Description6 {
+        public static string HelpPage3Description6 {
             get {
                 return ResourceManager.GetString("HelpPage3Description6", resourceCulture);
             }
         }
         
-        internal static string UrlPrivacyPolicy {
+        public static string UrlPrivacyPolicy {
             get {
                 return ResourceManager.GetString("UrlPrivacyPolicy", resourceCulture);
             }
         }
         
-        internal static string UrlTermOfUse {
+        public static string UrlTermOfUse {
             get {
                 return ResourceManager.GetString("UrlTermOfUse", resourceCulture);
             }
         }
         
-        internal static string HowToReceiveProcessingNumberPageTitle {
+        public static string HowToReceiveProcessingNumberPageTitle {
             get {
                 return ResourceManager.GetString("HowToReceiveProcessingNumberPageTitle", resourceCulture);
             }
         }
         
-        internal static string HowToReceiveProcessingNumberPageDescription1 {
+        public static string HowToReceiveProcessingNumberPageDescription1 {
             get {
                 return ResourceManager.GetString("HowToReceiveProcessingNumberPageDescription1", resourceCulture);
             }
         }
         
-        internal static string HowToReceiveProcessingNumberPageDescription2 {
+        public static string HowToReceiveProcessingNumberPageDescription2 {
             get {
                 return ResourceManager.GetString("HowToReceiveProcessingNumberPageDescription2", resourceCulture);
             }
         }
         
-        internal static string HowToReceiveProcessingNumberPageDescription3 {
+        public static string HowToReceiveProcessingNumberPageDescription3 {
             get {
                 return ResourceManager.GetString("HowToReceiveProcessingNumberPageDescription3", resourceCulture);
             }
         }
         
-        internal static string HowToReceiveProcessingNumberPageDescription4 {
+        public static string HowToReceiveProcessingNumberPageDescription4 {
             get {
                 return ResourceManager.GetString("HowToReceiveProcessingNumberPageDescription4", resourceCulture);
             }
         }
         
-        internal static string NoteSymbol {
+        public static string AndroidNotificationChannelName {
+            get {
+                return ResourceManager.GetString("AndroidNotificationChannelName", resourceCulture);
+            }
+        }
+        
+        public static string LocalExposureNotificationTitle {
+            get {
+                return ResourceManager.GetString("LocalExposureNotificationTitle", resourceCulture);
+            }
+        }
+        
+        public static string LocalExposureNotificationContent {
+            get {
+                return ResourceManager.GetString("LocalExposureNotificationContent", resourceCulture);
+            }
+        }
+        
+        public static string NoteSymbol {
             get {
                 return ResourceManager.GetString("NoteSymbol", resourceCulture);
             }
