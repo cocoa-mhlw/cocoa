@@ -17,7 +17,7 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.Services.Migration
 {
-    public class MigrationCoreServiceTests
+    public class MigrationServiceTests
     {
         const string APPLICATION_PROPERTY_USER_DATA_KEY = "UserData";
         const string APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY = "TermsOfServiceLastUpdateDateTime";
@@ -33,7 +33,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
         private readonly IPreferencesService _dummyPreferencesService;
         private readonly IApplicationPropertyService _dummyApplicationPropertyService;
 
-        public MigrationCoreServiceTests()
+        public MigrationServiceTests()
         {
             _migrationProcessService = _mockRepository.Create<IMigrationProcessService>();
             _mockLoggerService = _mockRepository.Create<ILoggerService>();
@@ -45,9 +45,9 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         }
 
-        private MigrationCoreService CreateService()
+        private MigrationService CreateService()
         {
-            return new MigrationCoreService(
+            return new MigrationService(
                 _migrationProcessService.Object,
                 _dummyApplicationPropertyService,
                 _dummyPreferencesService,

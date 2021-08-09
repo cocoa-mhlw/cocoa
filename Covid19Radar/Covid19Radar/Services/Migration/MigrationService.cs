@@ -23,7 +23,7 @@ namespace Covid19Radar.Services.Migration
         public abstract Task MigrateAsync();
     }
 
-    public class MigrationCoreService : AbsMigrationService, IMigrationProcessService
+    public class MigrationService : AbsMigrationService
     {
         protected const string DEFAULT_VERSION = "1.0.0";
 
@@ -39,7 +39,7 @@ namespace Covid19Radar.Services.Migration
         private readonly IEssentialsService _essentialsService;
         private readonly ILoggerService _loggerService;
 
-        public MigrationCoreService(
+        public MigrationService(
             IMigrationProcessService platformMigrationProcessService,
             IApplicationPropertyService applicationPropertyService,
             IPreferencesService preferencesService,
@@ -172,8 +172,11 @@ namespace Covid19Radar.Services.Migration
                 fromVersion = GuessVersion();
                 if (fromVersion.CompareTo(VERSION_1_0_0) == 0)
                 {
-                    await Initialize_1_0_0_Async();
-                    UpdateAppVersionPreference(fromVersion);
+                    await new Initializer_1_0_0(
+                        _applicationPropertyService,
+                        _loggerService
+                        ).ExecuteAsync();
+                    UpdateAppVersionPreference(VERSION_1_0_0);
                 }
             }
 
@@ -186,67 +189,30 @@ namespace Covid19Radar.Services.Migration
                 return;
             }
 
-            await SetupAsync();
+            await _platformMigrationProcessService.SetupAsync();
 
             if (fromVersion.CompareTo(VERSION_1_2_2) < 0)
             {
-                await MigrateTo_1_2_2_Async();
+                await new Migrator_1_2_2(
+                    _applicationPropertyService,
+                    _preferencesService,
+                    _secureStorageService,
+                    _loggerService
+                    ).ExecuteAsync();
+
+                await _platformMigrationProcessService.MigrateTo_1_2_2_Async();
+
+                UpdateAppVersionPreference(VERSION_1_2_2);
             }
 
             if (fromVersion.CompareTo(VERSION_1_2_3) < 0)
             {
-                await MigrateTo_1_2_3_Async();
+                await _platformMigrationProcessService.MigrateTo_1_2_3_Async();
+
+                UpdateAppVersionPreference(VERSION_1_2_3);
             }
 
             UpdateAppVersionPreference(currentAppVersion);
-
-            _loggerService.EndMethod();
-        }
-
-        public Task SetupAsync()
-        {
-            // do nothing
-
-            return Task.CompletedTask;
-        }
-
-        public async Task Initialize_1_0_0_Async()
-        {
-            _loggerService.StartMethod();
-
-            await new Initializer_1_0_0(
-                _applicationPropertyService,
-                _loggerService
-                ).ExecuteAsync();
-
-            _loggerService.EndMethod();
-        }
-
-        public async Task MigrateTo_1_2_2_Async()
-        {
-            _loggerService.StartMethod();
-
-            await new Migrator_1_2_2(
-                _applicationPropertyService,
-                _preferencesService,
-                _secureStorageService,
-                _loggerService
-                ).ExecuteAsync();
-
-            await _platformMigrationProcessService.MigrateTo_1_2_2_Async();
-
-            UpdateAppVersionPreference(VERSION_1_2_2);
-
-            _loggerService.EndMethod();
-        }
-
-        public async Task MigrateTo_1_2_3_Async()
-        {
-            _loggerService.StartMethod();
-
-            await _platformMigrationProcessService.MigrateTo_1_2_2_Async();
-
-            UpdateAppVersionPreference(VERSION_1_2_3);
 
             _loggerService.EndMethod();
         }
