@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Services.Migration
 {
-    public class Migrator_1_2_2 : AbsMigrationService
+    internal class Migrator_1_2_2
     {
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly IPreferencesService _preferencesService;
@@ -99,7 +99,7 @@ namespace Covid19Radar.Services.Migration
             await _applicationPropertyService.Remove(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY);
         }
 
-        public override async Task MigrateAsync()
+        public async Task ExecuteAsync()
         {
             _loggerService.StartMethod();
 

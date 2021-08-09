@@ -217,7 +217,7 @@ namespace Covid19Radar.Services.Migration
             await new Initializer_1_0_0(
                 _applicationPropertyService,
                 _loggerService
-                ).MigrateAsync();
+                ).ExecuteAsync();
 
             _loggerService.EndMethod();
         }
@@ -231,7 +231,7 @@ namespace Covid19Radar.Services.Migration
                 _preferencesService,
                 _secureStorageService,
                 _loggerService
-                ).MigrateAsync();
+                ).ExecuteAsync();
 
             await _platformMigrationProcessService.MigrateTo_1_2_2_Async();
 

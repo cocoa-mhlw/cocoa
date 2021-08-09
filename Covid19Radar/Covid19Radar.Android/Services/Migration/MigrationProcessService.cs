@@ -79,7 +79,7 @@ namespace Covid19Radar.Droid.Services.Migration
 
             await new WorkManagerMigrator(
                 _loggerService
-                ).MigrateAsync();
+                ).ExecuteAsync();
 
             _loggerService.EndMethod();
         }

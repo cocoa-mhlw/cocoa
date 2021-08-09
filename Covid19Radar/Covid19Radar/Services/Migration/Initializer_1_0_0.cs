@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Services.Migration
 {
-    public class Initializer_1_0_0 : AbsMigrationService
+    internal class Initializer_1_0_0
     {
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly ILoggerService _loggerService;
@@ -25,7 +25,7 @@ namespace Covid19Radar.Services.Migration
 
         const string APPLICATION_PROPERTY_USER_DATA_KEY = "UserData";
 
-        public override async Task MigrateAsync()
+        public async Task ExecuteAsync()
         {
             _loggerService.StartMethod();
 

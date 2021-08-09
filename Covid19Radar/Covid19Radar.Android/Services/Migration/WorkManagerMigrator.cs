@@ -5,11 +5,10 @@
 using System.Threading.Tasks;
 using AndroidX.Work;
 using Covid19Radar.Services.Logs;
-using Covid19Radar.Services.Migration;
 
 namespace Covid19Radar.Droid.Services.Migration
 {
-    public class WorkManagerMigrator: AbsMigrationService
+    internal class WorkManagerMigrator
     {
         private readonly ILoggerService _loggerService;
 
@@ -20,7 +19,7 @@ namespace Covid19Radar.Droid.Services.Migration
             _loggerService = loggerService;
         }
 
-        public override Task MigrateAsync()
+        internal Task ExecuteAsync()
         {
             _loggerService.StartMethod();
 
