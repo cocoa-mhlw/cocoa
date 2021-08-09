@@ -12,7 +12,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CommonServiceLocator;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
@@ -30,7 +29,7 @@ namespace Covid19Radar.Services
         private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
         private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
-        private IMigrationService VersionMigrationService => ServiceLocator.Current.GetInstance<IMigrationService>();
+        private AbsMigrationService MigrationService => ServiceLocator.Current.GetInstance<AbsMigrationService>();
         private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
         private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
 
@@ -160,7 +159,7 @@ namespace Covid19Radar.Services
 
             try
             {
-                await VersionMigrationService.MigrateAsync();
+                await MigrationService.MigrateAsync();
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {

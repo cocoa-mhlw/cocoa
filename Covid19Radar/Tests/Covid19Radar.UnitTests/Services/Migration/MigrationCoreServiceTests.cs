@@ -17,7 +17,7 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.Services.Migration
 {
-    public class VersionMigrationServiceTests
+    public class MigrationCoreServiceTests
     {
         const string APPLICATION_PROPERTY_USER_DATA_KEY = "UserData";
         const string APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY = "TermsOfServiceLastUpdateDateTime";
@@ -25,7 +25,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         private readonly MockRepository _mockRepository = new MockRepository(MockBehavior.Default);
 
-        private readonly Mock<ISequentialMigrationService> _mockSequentialVersionMigrationService;
+        private readonly Mock<IMigrationProcessService> _migrationProcessService;
         private readonly Mock<ILoggerService> _mockLoggerService;
         private readonly Mock<IEssentialsService> _mockEssentialService;
 
@@ -33,9 +33,9 @@ namespace Covid19Radar.UnitTests.Services.Migration
         private readonly IPreferencesService _dummyPreferencesService;
         private readonly IApplicationPropertyService _dummyApplicationPropertyService;
 
-        public VersionMigrationServiceTests()
+        public MigrationCoreServiceTests()
         {
-            _mockSequentialVersionMigrationService = _mockRepository.Create<ISequentialMigrationService>();
+            _migrationProcessService = _mockRepository.Create<IMigrationProcessService>();
             _mockLoggerService = _mockRepository.Create<ILoggerService>();
             _mockEssentialService = _mockRepository.Create<IEssentialsService>();
 
@@ -45,10 +45,10 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         }
 
-        private MigrationService CreateService()
+        private MigrationCoreService CreateService()
         {
-            return new MigrationService(
-                _mockSequentialVersionMigrationService.Object,
+            return new MigrationCoreService(
+                _migrationProcessService.Object,
                 _dummyApplicationPropertyService,
                 _dummyPreferencesService,
                 _dummySecureStorageService,

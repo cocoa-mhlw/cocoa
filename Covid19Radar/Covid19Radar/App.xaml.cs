@@ -187,7 +187,7 @@ namespace Covid19Radar
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
-            container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
+            container.Register<AbsMigrationService, MigrationCoreService>(Reuse.Singleton);
         }
 
         protected override void OnStart()

@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Services.Migration
 {
-    public class Initializer_1_0_0 : IMigrationService
+    public class Initializer_1_0_0 : AbsMigrationService
     {
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly ILoggerService _loggerService;

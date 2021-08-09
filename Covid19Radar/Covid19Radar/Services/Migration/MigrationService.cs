@@ -10,7 +10,7 @@ using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Services.Migration
 {
-    public interface ISequentialMigrationService
+    public interface IMigrationProcessService
     {
         public Task SetupAsync() => Task.CompletedTask;
         public Task Initialize_1_0_0_Async() => Task.CompletedTask;
@@ -18,12 +18,12 @@ namespace Covid19Radar.Services.Migration
         public Task MigrateTo_1_2_3_Async() => Task.CompletedTask;
     }
 
-    public abstract class IMigrationService
+    public abstract class AbsMigrationService
     {
         public abstract Task MigrateAsync();
     }
 
-    public class MigrationService : IMigrationService, ISequentialMigrationService
+    public class MigrationCoreService : AbsMigrationService, IMigrationProcessService
     {
         protected const string DEFAULT_VERSION = "1.0.0";
 
@@ -31,7 +31,7 @@ namespace Covid19Radar.Services.Migration
         private static readonly Version VERSION_1_2_2 = new Version("1.2.2");
         private static readonly Version VERSION_1_2_3 = new Version("1.2.3");
 
-        private readonly ISequentialMigrationService _sequentialMigrationService;
+        private readonly IMigrationProcessService _platformMigrationProcessService;
 
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly IPreferencesService _preferencesService;
@@ -39,15 +39,15 @@ namespace Covid19Radar.Services.Migration
         private readonly IEssentialsService _essentialsService;
         private readonly ILoggerService _loggerService;
 
-        public MigrationService(
-            ISequentialMigrationService platformVersionMigrationService,
+        public MigrationCoreService(
+            IMigrationProcessService platformMigrationProcessService,
             IApplicationPropertyService applicationPropertyService,
             IPreferencesService preferencesService,
             ISecureStorageService secureStorageService,
             IEssentialsService essentialsService,
             ILoggerService loggerService)
         {
-            _sequentialMigrationService = platformVersionMigrationService;
+            _platformMigrationProcessService = platformMigrationProcessService;
             _applicationPropertyService = applicationPropertyService;
             _preferencesService = preferencesService;
             _secureStorageService = secureStorageService;
@@ -233,7 +233,7 @@ namespace Covid19Radar.Services.Migration
                 _loggerService
                 ).MigrateAsync();
 
-            await _sequentialMigrationService.MigrateTo_1_2_2_Async();
+            await _platformMigrationProcessService.MigrateTo_1_2_2_Async();
 
             UpdateAppVersionPreference(VERSION_1_2_2);
 
@@ -244,7 +244,7 @@ namespace Covid19Radar.Services.Migration
         {
             _loggerService.StartMethod();
 
-            await _sequentialMigrationService.MigrateTo_1_2_2_Async();
+            await _platformMigrationProcessService.MigrateTo_1_2_2_Async();
 
             UpdateAppVersionPreference(VERSION_1_2_3);
 

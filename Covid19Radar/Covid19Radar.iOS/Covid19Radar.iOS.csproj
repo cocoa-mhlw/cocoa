@@ -282,7 +282,7 @@
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
-    <Compile Include="Services\Migration\SequentialMigrationService.cs" />
+    <Compile Include="Services\Migration\MigrationSequenceService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

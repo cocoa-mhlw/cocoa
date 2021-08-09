@@ -6,7 +6,7 @@ using Covid19Radar.Services.Migration;
 
 namespace Covid19Radar.iOS.Services.Migration
 {
-    public class SequentialMigrationService : ISequentialMigrationService
+    public class MigrationSequenceService : IMigrationProcessService
     {
     }
 }

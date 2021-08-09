@@ -192,7 +192,7 @@
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
-    <Compile Include="Services\Migration\SequentialMigrationService.cs" />
+    <Compile Include="Services\Migration\MigrationProcessService.cs" />
     <Compile Include="Services\Migration\WorkManagerMigrator.cs" />
   </ItemGroup>
   <ItemGroup>

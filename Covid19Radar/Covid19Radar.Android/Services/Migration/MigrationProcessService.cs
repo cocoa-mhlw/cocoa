@@ -42,7 +42,7 @@ namespace Covid19Radar.Droid.Services.Migration
     public class UpgradeWorker : Worker
     {
         private readonly ILoggerService _loggerService = ServiceLocator.Current.GetInstance<ILoggerService>();
-        private readonly IMigrationService _versionMigrationService = ServiceLocator.Current.GetInstance<IMigrationService>();
+        private readonly AbsMigrationService _migrationService = ServiceLocator.Current.GetInstance<AbsMigrationService>();
 
         public UpgradeWorker(
             Context context,
@@ -56,7 +56,7 @@ namespace Covid19Radar.Droid.Services.Migration
         {
             _loggerService.StartMethod();
 
-            Task.Run(() => _versionMigrationService.MigrateAsync()).GetAwaiter().GetResult();
+            Task.Run(() => _migrationService.MigrateAsync()).GetAwaiter().GetResult();
 
             _loggerService.EndMethod();
 
@@ -64,11 +64,11 @@ namespace Covid19Radar.Droid.Services.Migration
         }
     }
 
-    public class SequentialMigrationService : ISequentialMigrationService
+    public class MigrationProccessService : IMigrationProcessService
     {
         private readonly ILoggerService _loggerService;
 
-        public SequentialMigrationService(ILoggerService loggerService)
+        public MigrationProccessService(ILoggerService loggerService)
         {
             _loggerService = loggerService;
         }
