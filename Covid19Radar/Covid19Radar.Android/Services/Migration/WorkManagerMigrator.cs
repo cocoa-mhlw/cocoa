@@ -9,11 +9,11 @@ using Covid19Radar.Services.Migration;
 
 namespace Covid19Radar.Droid.Services.Migration
 {
-    public class Migrator123: IVersionMigrationService
+    public class WorkManagerMigrator: IVersionMigrationService
     {
         private readonly ILoggerService _loggerService;
 
-        public Migrator123(
+        public WorkManagerMigrator(
             ILoggerService loggerService
             )
         {
@@ -46,7 +46,7 @@ namespace Covid19Radar.Droid.Services.Migration
             foreach (var oldWorkName in oldWorkNames)
             {
                 workManager.CancelUniqueWork(oldWorkName);
-                loggerService.Debug($"Worker {oldWorkName} is canceled.");
+                loggerService.Info($"Worker {oldWorkName} is canceled.");
             }
 
             loggerService.EndMethod();

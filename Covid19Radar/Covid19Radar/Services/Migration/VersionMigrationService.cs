@@ -12,6 +12,7 @@ namespace Covid19Radar.Services.Migration
 {
     public interface ISequentialVersionMigrationService
     {
+        public Task SetupAsync() => Task.CompletedTask;
         public Task Initialize_1_0_0_Async() => Task.CompletedTask;
         public Task MigrateTo_1_2_2_Async() => Task.CompletedTask;
         public Task MigrateTo_1_2_3_Async() => Task.CompletedTask;
@@ -181,6 +182,8 @@ namespace Covid19Radar.Services.Migration
                 return;
             }
 
+            await SetupAsync();
+
             if (fromVersion.CompareTo(VERSION_1_2_2) < 0)
             {
                 await MigrateTo_1_2_2_Async();
@@ -194,6 +197,13 @@ namespace Covid19Radar.Services.Migration
             UpdateAppVersionPreference(currentAppVersion);
 
             _loggerService.EndMethod();
+        }
+
+        public Task SetupAsync()
+        {
+            // do nothing
+
+            return Task.CompletedTask;
         }
 
         public async Task Initialize_1_0_0_Async()

@@ -44,16 +44,15 @@ namespace Covid19Radar.Droid.Services.Migration
             _loggerService = loggerService;
         }
 
-        public async Task MigrateTo_1_2_3_Async()
+        public async Task SetupAsync()
         {
             _loggerService.StartMethod();
 
-            await new Migrator123(
+            await new WorkManagerMigrator(
                 _loggerService
                 ).MigrateAsync();
 
             _loggerService.EndMethod();
         }
-
     }
 }
