@@ -5,6 +5,7 @@
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using AndroidX.Work;
 using CommonServiceLocator;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Services.Migration;
@@ -18,7 +19,6 @@ namespace Covid19Radar.Droid.Services.Migration
     public class AppVersionUpgradeReceiver : BroadcastReceiver
     {
         private readonly ILoggerService _loggerService = ServiceLocator.Current.GetInstance<ILoggerService>();
-        private readonly IVersionMigrationService _versionMigrationService = ServiceLocator.Current.GetInstance<IVersionMigrationService>();
 
         public override void OnReceive(Context context, Intent intent)
         {
@@ -29,9 +29,38 @@ namespace Covid19Radar.Droid.Services.Migration
                 return;
             }
 
-            _versionMigrationService.MigrateAsync();
+            WorkManager workManager = WorkManager.GetInstance(context);
+            var worker = new OneTimeWorkRequest.Builder(
+                            Java.Lang.Class.FromType(typeof(VersionUpgradeWorker))
+                            ).Build();
+            _ = workManager.Enqueue(worker);
 
             _loggerService.EndMethod();
+        }
+    }
+
+    public class VersionUpgradeWorker : Worker
+    {
+        private readonly ILoggerService _loggerService = ServiceLocator.Current.GetInstance<ILoggerService>();
+        private readonly IVersionMigrationService _versionMigrationService = ServiceLocator.Current.GetInstance<IVersionMigrationService>();
+
+        public VersionUpgradeWorker(
+            Context context,
+            WorkerParameters workerParams
+            ) : base(context, workerParams)
+        {
+            // do nothing
+        }
+
+        public override Result DoWork()
+        {
+            _loggerService.StartMethod();
+
+            Task.Run(() => _versionMigrationService.MigrateAsync()).GetAwaiter().GetResult();
+
+            _loggerService.EndMethod();
+
+            return Result.InvokeSuccess();
         }
     }
 
