@@ -16,14 +16,14 @@ namespace Covid19Radar.ViewModels
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataService _userDataService;
-        private readonly IVersionMigrationService _versionMigrationService;
+        private readonly IMigrationService _versionMigrationService;
 
         public SplashPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
             ITermsUpdateService termsUpdateService,
             IUserDataService userDataService,
-            IVersionMigrationService versionMigrationService
+            IMigrationService versionMigrationService
             ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;

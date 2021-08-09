@@ -9,7 +9,7 @@ using Covid19Radar.Services.Migration;
 
 namespace Covid19Radar.Droid.Services.Migration
 {
-    public class WorkManagerMigrator: IVersionMigrationService
+    public class WorkManagerMigrator: IMigrationService
     {
         private readonly ILoggerService _loggerService;
 

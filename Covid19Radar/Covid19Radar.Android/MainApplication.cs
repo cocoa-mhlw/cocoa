@@ -56,7 +56,7 @@ namespace Covid19Radar.Droid
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
-            container.Register<ISequentialVersionMigrationService, PlatformVersionMigrationService>(Reuse.Singleton);
+            container.Register<ISequentialMigrationService, SequentialMigrationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

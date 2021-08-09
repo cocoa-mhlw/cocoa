@@ -30,7 +30,7 @@ namespace Covid19Radar.Services
         private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
         private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
-        private IVersionMigrationService VersionMigrationService => ServiceLocator.Current.GetInstance<IVersionMigrationService>();
+        private IMigrationService VersionMigrationService => ServiceLocator.Current.GetInstance<IMigrationService>();
         private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
         private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
 

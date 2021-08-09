@@ -31,7 +31,7 @@ namespace Covid19Radar.Droid.Services.Migration
 
             WorkManager workManager = WorkManager.GetInstance(context);
             var worker = new OneTimeWorkRequest.Builder(
-                            Java.Lang.Class.FromType(typeof(VersionUpgradeWorker))
+                            Java.Lang.Class.FromType(typeof(UpgradeWorker))
                             ).Build();
             _ = workManager.Enqueue(worker);
 
@@ -39,12 +39,12 @@ namespace Covid19Radar.Droid.Services.Migration
         }
     }
 
-    public class VersionUpgradeWorker : Worker
+    public class UpgradeWorker : Worker
     {
         private readonly ILoggerService _loggerService = ServiceLocator.Current.GetInstance<ILoggerService>();
-        private readonly IVersionMigrationService _versionMigrationService = ServiceLocator.Current.GetInstance<IVersionMigrationService>();
+        private readonly IMigrationService _versionMigrationService = ServiceLocator.Current.GetInstance<IMigrationService>();
 
-        public VersionUpgradeWorker(
+        public UpgradeWorker(
             Context context,
             WorkerParameters workerParams
             ) : base(context, workerParams)
@@ -64,11 +64,11 @@ namespace Covid19Radar.Droid.Services.Migration
         }
     }
 
-    public class PlatformVersionMigrationService : ISequentialVersionMigrationService
+    public class SequentialMigrationService : ISequentialMigrationService
     {
         private readonly ILoggerService _loggerService;
 
-        public PlatformVersionMigrationService(ILoggerService loggerService)
+        public SequentialMigrationService(ILoggerService loggerService)
         {
             _loggerService = loggerService;
         }

@@ -192,8 +192,8 @@
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
-    <Compile Include="Services\Migration\PlatformVersionMigrationService.cs" />
-    <Compile Include="Services\Migration\Migrator_1_2_3.cs" />
+    <Compile Include="Services\Migration\SequentialMigrationService.cs" />
+    <Compile Include="Services\Migration\WorkManagerMigrator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
