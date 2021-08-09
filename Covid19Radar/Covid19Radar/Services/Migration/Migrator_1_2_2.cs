@@ -15,6 +15,10 @@ namespace Covid19Radar.Services.Migration
 {
     internal class Migrator_1_2_2
     {
+        private const string APPLICATION_PROPERTY_USER_DATA_KEY = "UserData";
+        private const string APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY = "TermsOfServiceLastUpdateDateTime";
+        private const string APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY = "PrivacyPolicyLastUpdateDateTime";
+
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly IPreferencesService _preferencesService;
         private readonly ISecureStorageService _secureStorageService;
@@ -31,72 +35,6 @@ namespace Covid19Radar.Services.Migration
             _preferencesService = preferencesService;
             _secureStorageService = secureStorageService;
             _loggerService = loggerService;
-        }
-
-        private Task<bool> DetectCorruptData()
-        {
-            var result = false;
-
-            try
-            {
-                _ = GetUserDataFromApplicationProperties();
-            }
-            catch (FormatException e)
-            {
-                result = true;
-                _loggerService.Exception("GetUserDataFromApplicationProperties FormatException", e);
-            }
-            catch (JsonReaderException e)
-            {
-                result = true;
-                _loggerService.Exception("GetUserDataFromApplicationProperties JsonReaderException", e);
-            }
-
-            if (_applicationPropertyService.ContainsKey(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY))
-            {
-                try
-                {
-                    _ = DateTime.Parse(_applicationPropertyService.GetProperties(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY).ToString());
-                }
-                catch (FormatException e)
-                {
-                    result = true;
-                    _loggerService.Exception("TermsOfServiceLastUpdateDateTime FormatException", e);
-                }
-            }
-
-            if (_applicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY))
-            {
-                try
-                {
-                    _ = DateTime.Parse(_applicationPropertyService.GetProperties(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY).ToString());
-                }
-                catch (FormatException e)
-                {
-                    result = true;
-                    _loggerService.Exception("PrivacyPolicyLastUpdateDateTime FormatException", e);
-                }
-            }
-
-            return Task.FromResult(result);
-        }
-
-        private async Task TryRecoveryDataAsync()
-        {
-            // Try recovery UserData
-            var userData = _applicationPropertyService.GetProperties(APPLICATION_PROPERTY_USER_DATA_KEY).ToString();
-            var userDataModelForFailback = JsonConvert.DeserializeObject<UserDataModelForFailback>(userData);
-
-            // Clear DateTime
-            userDataModelForFailback.StartDateTime = DateTime.Now.ToString();
-
-            // Save UserData recovered
-            string userDataModelForFailbackString = JsonConvert.SerializeObject(userDataModelForFailback);
-            await _applicationPropertyService.SavePropertiesAsync(APPLICATION_PROPERTY_USER_DATA_KEY, userDataModelForFailbackString);
-
-            // Remove all ApplicationProperties
-            await _applicationPropertyService.Remove(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY);
-            await _applicationPropertyService.Remove(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY);
         }
 
         public async Task ExecuteAsync()
@@ -119,9 +57,71 @@ namespace Covid19Radar.Services.Migration
             _loggerService.EndMethod();
         }
 
-        const string APPLICATION_PROPERTY_USER_DATA_KEY = "UserData";
-        const string APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY = "TermsOfServiceLastUpdateDateTime";
-        const string APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY = "PrivacyPolicyLastUpdateDateTime";
+        private Task<bool> DetectCorruptData()
+        {
+            var existsCorruptData = false;
+
+            try
+            {
+                _ = GetUserDataFromApplicationProperties();
+            }
+            catch (FormatException e)
+            {
+                existsCorruptData = true;
+                _loggerService.Exception("GetUserDataFromApplicationProperties FormatException", e);
+            }
+            catch (JsonReaderException e)
+            {
+                existsCorruptData = true;
+                _loggerService.Exception("GetUserDataFromApplicationProperties JsonReaderException", e);
+            }
+
+            if (_applicationPropertyService.ContainsKey(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY))
+            {
+                try
+                {
+                    _ = DateTime.Parse(_applicationPropertyService.GetProperties(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY).ToString());
+                }
+                catch (FormatException e)
+                {
+                    existsCorruptData = true;
+                    _loggerService.Exception("TermsOfServiceLastUpdateDateTime FormatException", e);
+                }
+            }
+
+            if (_applicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY))
+            {
+                try
+                {
+                    _ = DateTime.Parse(_applicationPropertyService.GetProperties(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY).ToString());
+                }
+                catch (FormatException e)
+                {
+                    existsCorruptData = true;
+                    _loggerService.Exception("PrivacyPolicyLastUpdateDateTime FormatException", e);
+                }
+            }
+
+            return Task.FromResult(existsCorruptData);
+        }
+
+        private async Task TryRecoveryDataAsync()
+        {
+            // Try recovery UserData
+            var userData = _applicationPropertyService.GetProperties(APPLICATION_PROPERTY_USER_DATA_KEY).ToString();
+            var userDataModelForFailback = JsonConvert.DeserializeObject<UserDataModelForFailback>(userData);
+
+            // Clear DateTime
+            userDataModelForFailback.StartDateTime = DateTime.Now.ToString();
+
+            // Save UserData recovered
+            string userDataModelForFailbackString = JsonConvert.SerializeObject(userDataModelForFailback);
+            await _applicationPropertyService.SavePropertiesAsync(APPLICATION_PROPERTY_USER_DATA_KEY, userDataModelForFailbackString);
+
+            // Remove all ApplicationProperties
+            await _applicationPropertyService.Remove(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY);
+            await _applicationPropertyService.Remove(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY);
+        }
 
         private UserDataModel GetUserDataFromApplicationProperties()
         {

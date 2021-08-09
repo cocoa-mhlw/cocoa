@@ -11,6 +11,8 @@ namespace Covid19Radar.Services.Migration
 {
     internal class Initializer_1_0_0
     {
+        private const string APPLICATION_PROPERTY_USER_DATA_KEY = "UserData";
+
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly ILoggerService _loggerService;
 
@@ -22,8 +24,6 @@ namespace Covid19Radar.Services.Migration
             _applicationPropertyService = applicationPropertyService;
             _loggerService = loggerService;
         }
-
-        const string APPLICATION_PROPERTY_USER_DATA_KEY = "UserData";
 
         public async Task ExecuteAsync()
         {
@@ -41,6 +41,5 @@ namespace Covid19Radar.Services.Migration
 
             _loggerService.EndMethod();
         }
-
     }
 }

@@ -25,35 +25,11 @@ namespace Covid19Radar.Services.Migration
 
     public class MigrationService : AbsMigrationService
     {
-        protected const string DEFAULT_VERSION = "1.0.0";
+        private const string DEFAULT_VERSION = "1.0.0";
 
         private static readonly Version VERSION_1_0_0 = new Version("1.0.0");
         private static readonly Version VERSION_1_2_2 = new Version("1.2.2");
         private static readonly Version VERSION_1_2_3 = new Version("1.2.3");
-
-        private readonly IMigrationProcessService _platformMigrationProcessService;
-
-        private readonly IApplicationPropertyService _applicationPropertyService;
-        private readonly IPreferencesService _preferencesService;
-        private readonly ISecureStorageService _secureStorageService;
-        private readonly IEssentialsService _essentialsService;
-        private readonly ILoggerService _loggerService;
-
-        public MigrationService(
-            IMigrationProcessService platformMigrationProcessService,
-            IApplicationPropertyService applicationPropertyService,
-            IPreferencesService preferencesService,
-            ISecureStorageService secureStorageService,
-            IEssentialsService essentialsService,
-            ILoggerService loggerService)
-        {
-            _platformMigrationProcessService = platformMigrationProcessService;
-            _applicationPropertyService = applicationPropertyService;
-            _preferencesService = preferencesService;
-            _secureStorageService = secureStorageService;
-            _essentialsService = essentialsService;
-            _loggerService = loggerService;
-        }
 
         private Version CurrentAppVersion
         {
@@ -89,18 +65,28 @@ namespace Covid19Radar.Services.Migration
             }
         }
 
-        private Task<bool> DetectDowngradeAsync()
+        private readonly IMigrationProcessService _platformMigrationProcessService;
+        private readonly IApplicationPropertyService _applicationPropertyService;
+        private readonly IPreferencesService _preferencesService;
+        private readonly ISecureStorageService _secureStorageService;
+        private readonly IEssentialsService _essentialsService;
+        private readonly ILoggerService _loggerService;
+
+        public MigrationService(
+            IMigrationProcessService platformMigrationProcessService,
+            IApplicationPropertyService applicationPropertyService,
+            IPreferencesService preferencesService,
+            ISecureStorageService secureStorageService,
+            IEssentialsService essentialsService,
+            ILoggerService loggerService)
         {
-            var fromVersion = PreferenceVersion;
-            fromVersion = fromVersion is null ? GuessVersion() : fromVersion;
-
-            return Task.FromResult((fromVersion.CompareTo(CurrentAppVersion) > 0));
+            _platformMigrationProcessService = platformMigrationProcessService;
+            _applicationPropertyService = applicationPropertyService;
+            _preferencesService = preferencesService;
+            _secureStorageService = secureStorageService;
+            _essentialsService = essentialsService;
+            _loggerService = loggerService;
         }
-
-        private void UpdateAppVersionPreference(Version version)
-            => _preferencesService.SetValue(PreferenceKey.AppVersion, version.ToString());
-
-        private readonly SemaphoreSlim _semaphoreForMigrate = new SemaphoreSlim(1, 1);
 
         public async override Task MigrateAsync()
         {
@@ -115,6 +101,19 @@ namespace Covid19Radar.Services.Migration
                 _semaphoreForMigrate.Release();
             }
         }
+
+        private Task<bool> DetectDowngradeAsync()
+        {
+            var fromVersion = PreferenceVersion;
+            fromVersion = fromVersion is null ? GuessVersion() : fromVersion;
+
+            return Task.FromResult((fromVersion.CompareTo(CurrentAppVersion) > 0));
+        }
+
+        private void UpdateAppVersionPreference(Version version)
+            => _preferencesService.SetValue(PreferenceKey.AppVersion, version.ToString());
+
+        private readonly SemaphoreSlim _semaphoreForMigrate = new SemaphoreSlim(1, 1);
 
         private async Task ClearAllDataAsync()
         {
@@ -180,11 +179,11 @@ namespace Covid19Radar.Services.Migration
                 }
             }
 
-            var currentAppVersion = CurrentAppVersion;
+            var currentVersion = CurrentAppVersion;
 
-            if (fromVersion.CompareTo(currentAppVersion) == 0)
+            if (fromVersion.CompareTo(currentVersion) == 0)
             {
-                _loggerService.Debug($"fromVersion: {fromVersion} == currentAppVersion: {currentAppVersion}");
+                _loggerService.Debug($"fromVersion: {fromVersion} == currentVersion: {currentVersion}");
                 _loggerService.EndMethod();
                 return;
             }
@@ -212,7 +211,7 @@ namespace Covid19Radar.Services.Migration
                 UpdateAppVersionPreference(VERSION_1_2_3);
             }
 
-            UpdateAppVersionPreference(currentAppVersion);
+            UpdateAppVersionPreference(currentVersion);
 
             _loggerService.EndMethod();
         }
