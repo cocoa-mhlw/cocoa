@@ -25,7 +25,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         private readonly MockRepository _mockRepository = new MockRepository(MockBehavior.Default);
 
-        private readonly Mock<ISequentialVersionMigrationService> _mockVersionMigration;
+        private readonly Mock<ISequentialVersionMigrationService> _mockSequentialVersionMigrationService;
         private readonly Mock<ILoggerService> _mockLoggerService;
         private readonly Mock<IEssentialsService> _mockEssentialService;
 
@@ -35,7 +35,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         public VersionMigrationServiceTests()
         {
-            _mockVersionMigration = _mockRepository.Create<ISequentialVersionMigrationService>();
+            _mockSequentialVersionMigrationService = _mockRepository.Create<ISequentialVersionMigrationService>();
             _mockLoggerService = _mockRepository.Create<ILoggerService>();
             _mockEssentialService = _mockRepository.Create<IEssentialsService>();
 
@@ -48,7 +48,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
         private VersionMigrationService CreateService()
         {
             return new VersionMigrationService(
-                _mockVersionMigration.Object,
+                _mockSequentialVersionMigrationService.Object,
                 _dummyApplicationPropertyService,
                 _dummyPreferencesService,
                 _dummySecureStorageService,
