@@ -125,6 +125,30 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ExposuresPageExposureUnitPluralZero {
+            get {
+                return ResourceManager.GetString("ExposuresPageExposureUnitPluralZero", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageExposureUnitPluralOnce {
+            get {
+                return ResourceManager.GetString("ExposuresPageExposureUnitPluralOnce", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageExposureUnitPluralTwice {
+            get {
+                return ResourceManager.GetString("ExposuresPageExposureUnitPluralTwice", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageExposureUnitPlural {
+            get {
+                return ResourceManager.GetString("ExposuresPageExposureUnitPlural", resourceCulture);
+            }
+        }
+        
         public static string ExposuresPageNoExposures {
             get {
                 return ResourceManager.GetString("ExposuresPageNoExposures", resourceCulture);

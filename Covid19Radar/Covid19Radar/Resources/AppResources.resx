@@ -169,6 +169,22 @@
     <value>How to use</value>
     <comment>Tab How to use</comment>
   </data>
+	<data name="ExposuresPageExposureUnitPluralZero" xml:space="preserve">
+    <value>0 exposure</value>
+    <comment>回の接触</comment>
+  </data>
+	<data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
+    <value>Once exposure</value>
+    <comment>回の接触</comment>
+  </data>
+	<data name="ExposuresPageExposureUnitPluralTwice" xml:space="preserve">
+    <value>Twice exposures</value>
+    <comment>回の接触</comment>
+  </data>
+	<data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
+    <value>{0} exposures</value>
+    <comment>回の接触</comment>
+  </data>
 	<data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>No known exposures</value>
     <comment>If not found exposures data</comment>

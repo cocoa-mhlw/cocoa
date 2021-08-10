@@ -2,9 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Model;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Prism.Navigation;
+using System;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace Covid19Radar.ViewModels
 
         public ExposuresPageViewModel(INavigationService navigationService, IExposureNotificationService exposureNotificationService) : base(navigationService)
         {
-            Title = Resources.AppResources.MainExposures;
+            Title = AppResources.MainExposures;
             _exposures = new ObservableCollection<ExposureSummary>();
 
             var exposureInformationList = exposureNotificationService.GetExposureInformationListToDisplay();
@@ -32,16 +33,52 @@ namespace Covid19Radar.ViewModels
                 {
                     var ens = new ExposureSummary();
                     ens.ExposureDate = en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
-                    ens.ExposureCount = en.Count().ToString();
+                    ens.ExposureCountInt = en.Count();
                     _exposures.Add(ens);
                 }
             }
+
+            _exposures.Add(new ExposureSummary()
+            {
+                ExposureDate = DateTime.UtcNow.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                ExposureCountInt = 0
+            });
+            _exposures.Add(new ExposureSummary()
+            {
+                ExposureDate = DateTime.UtcNow.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                ExposureCountInt = 1
+            });
+            _exposures.Add(new ExposureSummary()
+            {
+                ExposureDate = DateTime.UtcNow.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                ExposureCountInt = 2
+            });
+            _exposures.Add(new ExposureSummary()
+            {
+                ExposureDate = DateTime.UtcNow.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                ExposureCountInt = 3
+            });
         }
     }
 
     public class ExposureSummary
     {
         public string ExposureDate { get; set; }
-        public string ExposureCount { get; set; }
+
+        private string _exposureCount;
+
+        public string ExposureCount { get => _exposureCount; }
+        public int ExposureCountInt { set => _exposureCount = PluralizeCount(value); }
+
+        private string PluralizeCount(int count)
+        {
+            return count switch
+            {
+                0 => AppResources.ExposuresPageExposureUnitPluralZero,
+                1 => AppResources.ExposuresPageExposureUnitPluralOnce,
+                2 => AppResources.ExposuresPageExposureUnitPluralTwice,
+                _ => string.Format(AppResources.ExposuresPageExposureUnitPlural, count),
+            };
+        }
     }
 }
