@@ -2,37 +2,62 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Chino;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
+using static Covid19Radar.IExposureNotificationEventSubject;
 
 namespace Covid19Radar.ViewModels
 {
-    public class TutorialPage4ViewModel : ViewModelBase
+    public class TutorialPage4ViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
         private readonly ILoggerService loggerService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
+        private readonly IExposureNotificationEventSubject exposureNotificationEventSubject;
 
         public TutorialPage4ViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            AbsExposureNotificationApiService exposureNotificationApiService
+            AbsExposureNotificationApiService exposureNotificationApiService,
+            IExposureNotificationEventSubject exposureNotificationEventSubject
             ) : base(navigationService)
         {
             this.loggerService = loggerService;
             this.exposureNotificationApiService = exposureNotificationApiService;
+            this.exposureNotificationEventSubject = exposureNotificationEventSubject;
+        }
+
+        public override async void Initialize(INavigationParameters parameters)
+        {
+            base.Initialize(parameters);
+
+            loggerService.StartMethod();
+
+            exposureNotificationEventSubject.AddObserver(this);
+
+            loggerService.EndMethod();
         }
 
         public Command OnClickEnable => new Command(async () =>
         {
             loggerService.StartMethod();
 
-            await exposureNotificationApiService.StartExposureNotificationAsync();
-            await NavigationService.NavigateAsync(nameof(TutorialPage6));
-
-            loggerService.EndMethod();
+            try
+            {
+                await exposureNotificationApiService.StartExposureNotificationAsync();
+                await NavigationService.NavigateAsync(nameof(TutorialPage6));
+            }
+            catch (ENException exception)
+            {
+                loggerService.Exception("ENException", exception);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
         });
         public Command OnClickDisable => new Command(async () =>
         {
@@ -40,5 +65,20 @@ namespace Covid19Radar.ViewModels
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
             loggerService.EndMethod();
         });
+
+        public override void Destroy()
+        {
+            exposureNotificationEventSubject.RemoveObserver(this);
+        }
+
+        public async void OnEnabled()
+        {
+            loggerService.StartMethod();
+
+            await exposureNotificationApiService.StartExposureNotificationAsync();
+            await NavigationService.NavigateAsync(nameof(TutorialPage6));
+
+            loggerService.EndMethod();
+        }
     }
 }
