@@ -21,6 +21,14 @@ namespace Covid19Radar
             }
         }
 
+        public void FireOnDeclinedEvent()
+        {
+            foreach (var callback in CallbackList)
+            {
+                callback.OnDeclined();
+            }
+        }
+
         public void FireOnGetTekHistoryAllowed()
         {
             foreach (var callback in CallbackList)
@@ -42,6 +50,7 @@ namespace Covid19Radar
         public interface IExposureNotificationEventCallback
         {
             public void OnEnabled() { }
+            public void OnDeclined() { }
             public void OnGetTekHistoryAllowed() { }
             public void OnPreauthorizeAllowed() { }
         }

@@ -35,6 +35,8 @@ namespace Covid19Radar.Droid.Services
                 if (apiException.StatusCode == CommonStatusCodes.ResolutionRequired)
                 {
                     apiException.Status.StartResolutionForResult(Platform.CurrentActivity, REQUEST_EN_START);
+                    throw new ENException(ENException.Code_Android.FAILED_UNAUTHORIZED,
+                        "StartAsync StartResolutionForResult");
                 }
                 else
                 {
@@ -61,6 +63,8 @@ namespace Covid19Radar.Droid.Services
                 if (apiException.StatusCode == CommonStatusCodes.ResolutionRequired)
                 {
                     apiException.Status.StartResolutionForResult(Platform.CurrentActivity, REQUEST_GET_TEK_HISTORY);
+                    throw new ENException(ENException.Code_Android.FAILED_UNAUTHORIZED,
+                        "GetTemporaryExposureKeyHistoryAsync StartResolutionForResult");
                 }
                 else
                 {
@@ -107,6 +111,8 @@ namespace Covid19Radar.Droid.Services
                 if (apiException.StatusCode == CommonStatusCodes.ResolutionRequired)
                 {
                     apiException.Status.StartResolutionForResult(Platform.CurrentActivity, REQUEST_PREAUTHORIZE_KEYS);
+                    throw new ENException(ENException.Code_Android.FAILED_UNAUTHORIZED,
+                        "RequestPreAuthorizedTemporaryExposureKeyHistoryAsync StartResolutionForResult");
                 }
                 else
                 {
@@ -126,6 +132,8 @@ namespace Covid19Radar.Droid.Services
                 if (apiException.StatusCode == CommonStatusCodes.ResolutionRequired)
                 {
                     apiException.Status.StartResolutionForResult(Platform.CurrentActivity, REQUEST_PREAUTHORIZE_KEYS);
+                    throw new ENException(ENException.Code_Android.FAILED_UNAUTHORIZED,
+                        "RequestPreAuthorizedTemporaryExposureKeyReleaseAsync StartResolutionForResult");
                 }
                 else
                 {

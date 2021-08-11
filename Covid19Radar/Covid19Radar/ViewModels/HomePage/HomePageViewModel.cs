@@ -84,24 +84,25 @@ namespace Covid19Radar.ViewModels
             // Check Version
             AppUtils.CheckVersion(loggerService);
 
-            await localNotificationService.PrepareAsync();
-
             await StartExposureNotificationAsync();
 
-            // TODO await exposureNotificationService.FetchExposureKeyAsync();
+            await localNotificationService.PrepareAsync();
 
-            await ShowStatusesAsync();
+            // TODO await exposureNotificationService.FetchExposureKeyAsync();
         }
 
         private async Task StartExposureNotificationAsync()
         {
+            loggerService.StartMethod();
+
             try
             {
                 _ = await exposureNotificationApiService.StartExposureNotificationAsync();
+                await UpdateStatusesAsync();
             }
             catch (ENException exception)
             {
-                loggerService.Exception("Failed to exposure notification status.", exception);
+                loggerService.Exception("Failed to exposure notification start.", exception);
             }
             finally
             {
@@ -109,13 +110,12 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        private async Task ShowStatusesAsync()
+        private async Task UpdateStatusesAsync()
         {
+            loggerService.StartMethod();
+
             try
             {
-                await exposureNotificationApiService.StartExposureNotificationAsync();
-                // TODO await exposureNotificationService.FetchExposureKeyAsync();
-
                 IList<ExposureNotificationStatus> statuses = await exposureNotificationApiService.GetStatusesAsync();
                 var (alertMessageList, messageList) = GetStatusMessage(statuses);
 
@@ -218,13 +218,13 @@ namespace Covid19Radar.ViewModels
         });
 
         public Command OnClickShareApp => new Command(() =>
-       {
-           loggerService.StartMethod();
+        {
+            loggerService.StartMethod();
 
-           AppUtils.PopUpShare();
+            AppUtils.PopUpShare();
 
-           loggerService.EndMethod();
-       });
+            loggerService.EndMethod();
+        });
 
         private void SettingDaysOfUse()
         {
@@ -245,16 +245,32 @@ namespace Covid19Radar.ViewModels
         {
             base.OnResume();
 
-            SettingDaysOfUse();
+            await StartExposureNotificationAsync();
 
-            await ShowStatusesAsync();
+            SettingDaysOfUse();
+        }
+
+        public override void Destroy()
+        {
+            exposureNotificationEventSubject.RemoveObserver(this);
         }
 
         public async void OnEnabled()
         {
+            loggerService.StartMethod();
+
             await StartExposureNotificationAsync();
 
-            await ShowStatusesAsync();
+            loggerService.EndMethod();
+        }
+
+        public async void OnDeclined()
+        {
+            loggerService.StartMethod();
+
+            await UpdateStatusesAsync();
+
+            loggerService.EndMethod();
         }
     }
 }

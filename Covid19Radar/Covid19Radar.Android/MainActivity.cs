@@ -79,21 +79,30 @@ namespace Covid19Radar.Droid
 
             Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
 
-            if (resultCode != Result.Ok)
-            {
-                return;
-            }
+            var isOk = (resultCode == Result.Ok);
 
             switch (requestCode)
             {
                 case ExposureNotificationApiService.REQUEST_EN_START:
-                    _exposureNotificationEventSubject.FireOnEnableEvent();
+                    if(isOk)
+                    {
+                        _exposureNotificationEventSubject.FireOnEnableEvent();
+                    } else
+                    {
+                        _exposureNotificationEventSubject.FireOnDeclinedEvent();
+                    }
                     break;
                 case ExposureNotificationApiService.REQUEST_GET_TEK_HISTORY:
-                    _exposureNotificationEventSubject.FireOnGetTekHistoryAllowed();
+                    if (isOk)
+                    {
+                        _exposureNotificationEventSubject.FireOnGetTekHistoryAllowed();
+                    }
                     break;
                 case ExposureNotificationApiService.REQUEST_PREAUTHORIZE_KEYS:
-                    _exposureNotificationEventSubject.FireOnPreauthorizeAllowed();
+                    if (isOk)
+                    {
+                        _exposureNotificationEventSubject.FireOnPreauthorizeAllowed();
+                    }
                     break;
             }
         }
