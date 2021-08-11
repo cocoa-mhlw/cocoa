@@ -9,9 +9,6 @@ using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
 using Covid19Radar.Droid.Services;
-using Prism;
-using Prism.Common;
-using Prism.Navigation;
 using CommonServiceLocator;
 
 namespace Covid19Radar.Droid
