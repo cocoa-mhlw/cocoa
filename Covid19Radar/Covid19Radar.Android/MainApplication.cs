@@ -90,6 +90,8 @@ namespace Covid19Radar.Droid
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
 
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
+            container.Register<IExposureNotificationEventSubject, ExposureNotificationEventSubject>(Reuse.Singleton);
+
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

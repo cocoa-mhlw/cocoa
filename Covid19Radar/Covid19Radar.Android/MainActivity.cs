@@ -8,6 +8,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
+using Covid19Radar.Droid.Services;
+using Prism;
+using Prism.Common;
+using Prism.Navigation;
+using CommonServiceLocator;
 
 namespace Covid19Radar.Droid
 {
@@ -19,6 +24,9 @@ namespace Covid19Radar.Droid
             Intent intent = new Intent(context, typeof(MainActivity));
             return intent;
         }
+
+        private readonly IExposureNotificationEventSubject _exposureNotificationEventSubject
+            = ServiceLocator.Current.GetInstance<IExposureNotificationEventSubject>();
 
         public static object dataLock = new object();
 
@@ -70,6 +78,24 @@ namespace Covid19Radar.Droid
             base.OnActivityResult(requestCode, resultCode, data);
 
             Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
+
+            if (resultCode != Result.Ok)
+            {
+                return;
+            }
+
+            switch (requestCode)
+            {
+                case ExposureNotificationApiService.REQUEST_EN_START:
+                    _exposureNotificationEventSubject.FireOnEnableEvent();
+                    break;
+                case ExposureNotificationApiService.REQUEST_GET_TEK_HISTORY:
+                    _exposureNotificationEventSubject.FireOnGetTekHistoryAllowed();
+                    break;
+                case ExposureNotificationApiService.REQUEST_PREAUTHORIZE_KEYS:
+                    _exposureNotificationEventSubject.FireOnPreauthorizeAllowed();
+                    break;
+            }
         }
 
         //protected override void OnNewIntent(Intent intent)
