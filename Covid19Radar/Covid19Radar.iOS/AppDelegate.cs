@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Chino.Prism.iOS;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
@@ -72,6 +73,8 @@ namespace Covid19Radar.iOS
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
+
+            container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

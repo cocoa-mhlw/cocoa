@@ -12,6 +12,7 @@ using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
 using AndroidX.Work;
 using Xamarin.ExposureNotifications;
+using Chino.Prism.Droid;
 
 namespace Covid19Radar.Droid
 {
@@ -54,6 +55,8 @@ namespace Covid19Radar.Droid
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
+
+            container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else
