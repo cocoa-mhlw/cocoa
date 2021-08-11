@@ -14,7 +14,7 @@ namespace Covid19Radar.Services
             _loggerService = loggerService;
         }
 
-        public async Task StartExposureNotificationAsync()
+        public async Task<bool> StartExposureNotificationAsync()
         {
             _loggerService.StartMethod();
 
@@ -23,14 +23,36 @@ namespace Covid19Radar.Services
                 var enabled = await IsEnabledAsync();
                 if (enabled)
                 {
-                    return;
+                    return false;
                 }
                 await StartAsync();
+                return true;
             }
             finally
             {
                 _loggerService.EndMethod();
 
+            }
+        }
+
+        public async Task<bool> StopExposureNotificationAsync()
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                var enabled = await IsEnabledAsync();
+                if (!enabled)
+                {
+                    return false;
+                }
+                await StopAsync();
+                return true;
+
+            }
+            finally
+            {
+                _loggerService.EndMethod();
             }
         }
 

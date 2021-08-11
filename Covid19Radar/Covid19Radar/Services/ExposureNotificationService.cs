@@ -36,8 +36,6 @@ namespace Covid19Radar.Services
         List<UserExposureInfo> GetExposureInformationListToDisplay();
         int GetExposureCountToDisplay();
 
-        Task<bool> StopExposureNotification();
-
         string PositiveDiagnosis { get; set; }
         DateTime? DiagnosisDate { get; set; }
         IEnumerable<TemporaryExposureKey> FliterTemporaryExposureKeys(IEnumerable<TemporaryExposureKey> temporaryExposureKeys);
@@ -260,28 +258,6 @@ namespace Covid19Radar.Services
             }
             loggerService.EndMethod();
             return result;
-        }
-
-        public async Task<bool> StopExposureNotification()
-        {
-            loggerService.StartMethod();
-            try
-            {
-                var enabled = await ExposureNotification.IsEnabledAsync();
-                if (enabled)
-                {
-                    await ExposureNotification.StopAsync();
-                }
-
-                loggerService.EndMethod();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Error disabling notifications.", ex);
-                loggerService.EndMethod();
-                return false;
-            }
         }
 
         /* Processing number issued when positive */

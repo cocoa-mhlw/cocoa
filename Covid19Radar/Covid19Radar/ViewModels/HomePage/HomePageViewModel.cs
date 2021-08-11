@@ -2,9 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
@@ -82,9 +80,18 @@ namespace Covid19Radar.ViewModels
 
             await localNotificationService.PrepareAsync();
 
+            await StartExposureNotificationAsync();
+
+            // TODO await exposureNotificationService.FetchExposureKeyAsync();
+
+            await ShowStatusesAsync();
+        }
+
+        private async Task StartExposureNotificationAsync()
+        {
             try
             {
-                await exposureNotificationApiService.StartExposureNotificationAsync();
+                _ = await exposureNotificationApiService.StartExposureNotificationAsync();
             }
             catch (ENException exception)
             {
@@ -94,10 +101,6 @@ namespace Covid19Radar.ViewModels
             {
                 loggerService.EndMethod();
             }
-
-            // TODO await exposureNotificationService.FetchExposureKeyAsync();
-
-            await ShowStatusesAsync();
         }
 
         private async Task ShowStatusesAsync()
