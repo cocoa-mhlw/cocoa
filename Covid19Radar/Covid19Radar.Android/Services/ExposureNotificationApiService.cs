@@ -2,11 +2,13 @@
 using System.Threading.Tasks;
 using Android.Content;
 using Android.Gms.Common.Apis;
+using Chino;
 using Chino.Android.Google;
 using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
 
-namespace Chino.Prism.Droid
+namespace Covid19Radar.Droid.Services
 {
     public class ExposureNotificationApiService : AbsExposureNotificationApiService
     {
@@ -16,9 +18,10 @@ namespace Chino.Prism.Droid
 
         public readonly ExposureNotificationClient Client = new ExposureNotificationClient();
 
-        public void Init(Context applicationContext)
+        public ExposureNotificationApiService(
+            ILoggerService loggerService
+            ) : base(loggerService)
         {
-            Client.Init(applicationContext);
         }
 
         public override async Task StartAsync()

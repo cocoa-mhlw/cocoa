@@ -11,8 +11,10 @@ using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
 using AndroidX.Work;
-using Xamarin.ExposureNotifications;
-using Chino.Prism.Droid;
+using Chino;
+using Chino.Android.Google;
+using System.Collections.Generic;
+using CommonServiceLocator;
 
 namespace Covid19Radar.Droid
 {
@@ -21,17 +23,48 @@ namespace Covid19Radar.Droid
 #else
     [Application(Debuggable = false)]
 #endif
-    public class MainApplication : Application
+    public class MainApplication : Application, IExposureNotificationHandler
     {
+        private const long INITIAL_BACKOFF_MILLIS = 60 * 60 * 1000;
+
+        private ExposureNotificationClient EnClient = null;
+
+        private readonly JobSetting _exposureDetectedV1JobSetting
+            = new JobSetting(INITIAL_BACKOFF_MILLIS, Android.App.Job.BackoffPolicy.Linear, true);
+        private readonly JobSetting _exposureDetectedV2JobSetting
+            = new JobSetting(INITIAL_BACKOFF_MILLIS, Android.App.Job.BackoffPolicy.Linear, true);
+        private readonly JobSetting _exposureNotDetectedJobSetting = null;
+
+        private Lazy<ExposureNotificationApiService> _exposureNotificationApiService
+            = new Lazy<ExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>() as ExposureNotificationApiService);
+
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
 
+        public AbsExposureNotificationClient GetEnClient()
+        {
+            if (EnClient == null)
+            {
+                EnClient = new ExposureNotificationClient()
+                {
+                    ExposureDetectedV1JobSetting = _exposureDetectedV1JobSetting,
+                    ExposureDetectedV2JobSetting = _exposureDetectedV2JobSetting,
+                    ExposureNotDetectedJobSetting = _exposureNotDetectedJobSetting
+                };
+                EnClient.Init(this);
+            }
+
+            return EnClient;
+        }
         public override void OnCreate()
         {
             base.OnCreate();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
+
+            AbsExposureNotificationClient.Handler = this;
+            _exposureNotificationApiService.Value.Client.Init(this);
 
             // Override WorkRequest configuration
             // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
@@ -41,7 +74,7 @@ namespace Covid19Radar.Droid
                    .SetRequiresBatteryNotLow(true)
                    .SetRequiredNetworkType(NetworkType.Connected)
                    .Build());
-            ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
+            //ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
 
             App.InitExposureNotification();
         }
@@ -62,6 +95,23 @@ namespace Covid19Radar.Droid
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
 #endif
+        }
+
+        public void PreExposureDetected()
+        {
+        }
+
+        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        {
+        }
+
+        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        {
+        }
+
+        public void ExposureNotDetected()
+        {
+            throw new NotImplementedException();
         }
     }
 }

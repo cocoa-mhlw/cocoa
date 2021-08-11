@@ -2,10 +2,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Chino.Prism.iOS;
+using System.Collections.Generic;
+using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using DryIoc;
@@ -20,7 +22,7 @@ namespace Covid19Radar.iOS
     // User Interface of the application, as well as listening (and optionally responding) to
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IExposureNotificationHandler
     {
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
@@ -37,6 +39,8 @@ namespace Covid19Radar.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
+
+            InitializeExposureNotificationClient();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
@@ -56,6 +60,20 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
+        }
+
+        public AbsExposureNotificationClient GetEnClient() => ExposureNotificationClientManager.Shared;
+
+        private void InitializeExposureNotificationClient()
+        {
+            AbsExposureNotificationClient.Handler = this;
+            ExposureNotificationClientManager.Shared.UserExplanation = AppResources.LocalNotificationDescription;
+
+#if DEBUG
+            ExposureNotificationClientManager.Shared.IsTest = true;
+#else
+            ExposureNotificationClientManager.Shared.IsTest = false;
+#endif
         }
 
         public override void OnActivated(UIApplication uiApplication)
@@ -80,6 +98,22 @@ namespace Covid19Radar.iOS
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
 #endif
+        }
+
+        public void PreExposureDetected()
+        {
+        }
+
+        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        {
+        }
+
+        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        {
+        }
+
+        public void ExposureNotDetected()
+        {
         }
     }
 }

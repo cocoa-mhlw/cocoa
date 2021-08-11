@@ -13,19 +13,23 @@ namespace Covid19Radar.ViewModels
     public class TutorialPage4ViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly IExposureNotificationService exposureNotificationService;
+        private readonly AbsExposureNotificationApiService exposureNotificationApiService;
 
-        public TutorialPage4ViewModel(INavigationService navigationService, ILoggerService loggerService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+        public TutorialPage4ViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            AbsExposureNotificationApiService exposureNotificationApiService
+            ) : base(navigationService)
         {
             this.loggerService = loggerService;
-            this.exposureNotificationService = exposureNotificationService;
+            this.exposureNotificationApiService = exposureNotificationApiService;
         }
 
         public Command OnClickEnable => new Command(async () =>
         {
             loggerService.StartMethod();
 
-            await exposureNotificationService.StartExposureNotification();
+            await exposureNotificationApiService.StartExposureNotificationAsync();
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
 
             loggerService.EndMethod();

@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Chino;
 using Chino.iOS;
 using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 
-namespace Chino.Prism.iOS
+namespace Covid19Radar.iOS.Services
 {
     public class ExposureNotificationApiService : AbsExposureNotificationApiService
     {
@@ -23,6 +25,12 @@ namespace Chino.Prism.iOS
             {
                 _exposureNotificationClient.IsTest = value;
             }
+        }
+
+        public ExposureNotificationApiService(
+            ILoggerService loggerService
+            ) : base(loggerService)
+        {
         }
 
         public override Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
