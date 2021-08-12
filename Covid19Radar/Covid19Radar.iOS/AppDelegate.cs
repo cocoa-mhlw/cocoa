@@ -4,6 +4,7 @@
 
 using System.Collections.Generic;
 using Chino;
+using Chino.iOS;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
@@ -62,17 +63,19 @@ namespace Covid19Radar.iOS
             return base.FinishedLaunching(app, options);
         }
 
-        public AbsExposureNotificationClient GetEnClient() => ExposureNotificationClientManager.Shared;
+        private ExposureNotificationClient _enClient = new ExposureNotificationClient();
+
+        public AbsExposureNotificationClient GetEnClient() => _enClient;
 
         private void InitializeExposureNotificationClient()
         {
             AbsExposureNotificationClient.Handler = this;
-            ExposureNotificationClientManager.Shared.UserExplanation = AppResources.LocalNotificationDescription;
+            _enClient.UserExplanation = AppResources.LocalNotificationDescription;
 
 #if DEBUG
-            ExposureNotificationClientManager.Shared.IsTest = true;
+            _enClient.IsTest = true;
 #else
-            ExposureNotificationClientManager.Shared.IsTest = false;
+            _enClient.IsTest = false;
 #endif
         }
 
