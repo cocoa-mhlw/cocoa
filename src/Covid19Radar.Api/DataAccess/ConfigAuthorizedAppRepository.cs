@@ -14,7 +14,6 @@ namespace Covid19Radar.Api.DataAccess
         public readonly AuthorizedAppInformation iOS;
         public ConfigAuthorizedAppRepository(IConfiguration config)
         {
-            
             Android = new AuthorizedAppInformation();
             Android.Platform = "android";
             Android.AllowedRegions = config.SupportRegions();
