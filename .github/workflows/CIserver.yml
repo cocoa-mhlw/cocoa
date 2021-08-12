@@ -6,8 +6,12 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ main, develop, 'feature/**' ]
+    paths:
+      - 'src/**'
   pull_request:
     branches: [ main, develop, 'feature/**' ]
+    paths:
+      - 'src/**'
 
 jobs:
   build_serverapi:
