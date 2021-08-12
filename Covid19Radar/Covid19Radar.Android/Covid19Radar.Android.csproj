@@ -193,7 +193,6 @@
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\ExposureNotificationApiService.cs" />
-    <Compile Include="ExposureNotificationEventSubject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />

@@ -55,4 +55,11 @@ namespace Covid19Radar
             public void OnPreauthorizeAllowed() { }
         }
     }
+
+    public class ExposureNotificationEventSubject : IExposureNotificationEventSubject
+    {
+        public ExposureNotificationEventSubject()
+        {
+        }
+    }
 }
