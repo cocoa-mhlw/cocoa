@@ -78,13 +78,19 @@ namespace Covid19Radar.Droid
 
             var isOk = (resultCode == Result.Ok);
 
+            FireExposureNotificationEvent(requestCode, isOk);
+        }
+
+        private void FireExposureNotificationEvent(int requestCode, bool isOk)
+        {
             switch (requestCode)
             {
                 case ExposureNotificationApiService.REQUEST_EN_START:
-                    if(isOk)
+                    if (isOk)
                     {
                         _exposureNotificationEventSubject.FireOnEnableEvent();
-                    } else
+                    }
+                    else
                     {
                         _exposureNotificationEventSubject.FireOnDeclinedEvent();
                     }
