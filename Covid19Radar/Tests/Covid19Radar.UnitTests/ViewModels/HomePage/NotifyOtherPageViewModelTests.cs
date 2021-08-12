@@ -17,6 +17,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IExposureNotificationService> mockExposureNotificationService;
+        private readonly Mock<ICloseApplication> mockCloseApplication;
+        private readonly Mock<AbsExposureNotificationApiService> mockExposureNotificationApiService;
+        private readonly Mock<DiagnosisKeyRegisterServer> mockDiagnosisKeyRegisterServer;
+        private readonly Mock<IExposureNotificationEventSubject> mockExposureNotificationEventSubject;
 
         public NotifyOtherPageViewModelTests()
         {
@@ -24,6 +28,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockExposureNotificationService = mockRepository.Create<IExposureNotificationService>();
+            mockCloseApplication = mockRepository.Create<ICloseApplication>();
+            mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>();
+            mockDiagnosisKeyRegisterServer = mockRepository.Create<DiagnosisKeyRegisterServer>();
+            mockExposureNotificationEventSubject = mockRepository.Create<IExposureNotificationEventSubject>();
         }
 
         private NotifyOtherPageViewModel CreateViewModel()
@@ -31,7 +39,12 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new NotifyOtherPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockExposureNotificationService.Object);
+                mockExposureNotificationService.Object,
+                mockCloseApplication.Object,
+                mockExposureNotificationApiService.Object,
+                mockDiagnosisKeyRegisterServer.Object,
+                mockExposureNotificationEventSubject.Object
+                );
         }
 
         [Theory]
