@@ -53,10 +53,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         [InlineData("11111111", false, true, true)]
         [InlineData("1111111", true, false, false)]
         [InlineData("111111111", true, false, false)]
-        public void CheckRegisterButtonEnableTest(string diagnosisUid, bool isVisibleWithSymptomsLayout, bool isVisibleNoSymptomsLayout, bool expectResult)
+        public void CheckRegisterButtonEnableTest(string processNumber, bool isVisibleWithSymptomsLayout, bool isVisibleNoSymptomsLayout, bool expectResult)
         {
             var vm = CreateViewModel();
-            vm.DiagnosisUid = diagnosisUid;
+            vm.ProcessNumber = processNumber;
             vm.IsVisibleWithSymptomsLayout = isVisibleWithSymptomsLayout;
             vm.IsVisibleNoSymptomsLayout = isVisibleNoSymptomsLayout;
 

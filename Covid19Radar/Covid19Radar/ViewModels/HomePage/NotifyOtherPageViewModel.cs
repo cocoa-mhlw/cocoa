@@ -28,13 +28,13 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
 
-        private string _diagnosisUid;
-        public string DiagnosisUid
+        private string _processNumber;
+        public string ProcessNumber
         {
-            get { return _diagnosisUid; }
+            get { return _processNumber; }
             set
             {
-                SetProperty(ref _diagnosisUid, value);
+                SetProperty(ref _processNumber, value);
                 IsEnabled = CheckRegisterButtonEnable();
             }
         }
@@ -88,7 +88,7 @@ namespace Covid19Radar.ViewModels
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
 
             errorCount = 0;
-            DiagnosisUid = "";
+            ProcessNumber = "";
             DiagnosisDate = DateTime.Today;
         }
 
@@ -142,7 +142,7 @@ namespace Covid19Radar.ViewModels
 
 
                 // Init Dialog
-                if (string.IsNullOrEmpty(_diagnosisUid))
+                if (string.IsNullOrEmpty(_processNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag4Message,
@@ -154,8 +154,8 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                Regex regex = new Regex(AppConstants.positiveRegex);
-                if (!regex.IsMatch(_diagnosisUid))
+                Regex regex = new Regex(AppConstants.processNumberRegex);
+                if (!regex.IsMatch(_processNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag5Message,
@@ -163,7 +163,7 @@ namespace Covid19Radar.ViewModels
                         AppResources.ButtonOk
                     );
                     errorCount++;
-                    loggerService.Error($"Incorrect diagnostic number format.");
+                    loggerService.Error($"Incorrect process number format.");
                     return;
                 }
 
@@ -200,7 +200,7 @@ namespace Covid19Radar.ViewModels
                     AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle,
                     AppResources.ButtonOk
                 );
-                loggerService.Exception("Failed to submit UID invalid data.", ex);
+                loggerService.Exception("Failed to submit DiagnosisKeys invalid data.", ex);
             }
             catch (Exception ex)
             {
@@ -212,7 +212,7 @@ namespace Covid19Radar.ViewModels
                     AppResources.NotifyOtherPageDialogExceptionTitle,
                     AppResources.ButtonOk
                 );
-                loggerService.Exception("Failed to submit UID.", ex);
+                loggerService.Exception("Failed to submit DiagnosisKeys.", ex);
             }
             finally
             {
@@ -222,7 +222,7 @@ namespace Covid19Radar.ViewModels
 
         private async Task SubmitDiagnosisKeys()
         {
-            loggerService.Info($"Submit the processing number.");
+            loggerService.Info($"Submit DiagnosisKeys.");
 
             try
             {
@@ -243,7 +243,7 @@ namespace Covid19Radar.ViewModels
 
                 HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                     filteredTemporaryExposureKeyList,
-                    _diagnosisUid
+                    _processNumber
                     );
                 loggerService.Info($"HTTP status is {httpStatusCode}({(int)httpStatusCode}).");
 
@@ -269,7 +269,7 @@ namespace Covid19Radar.ViewModels
             {
                 case HttpStatusCode.NoContent:
                     // Success
-                    loggerService.Info($"Successfully submit the diagnostic number.");
+                    loggerService.Info($"Successfully submit DiagnosisKeys.");
 
                     await UserDialogs.Instance.AlertAsync(
                         "",
@@ -293,7 +293,7 @@ namespace Covid19Radar.ViewModels
                         "",
                         AppResources.ExposureNotificationHandler2ErrorMessage,
                         AppResources.ButtonOk);
-                    loggerService.Error($"Cannot connect to the service.");
+                    loggerService.Error($"Cannot connect to the server.");
                     break;
 
                 case HttpStatusCode.BadRequest:
@@ -336,7 +336,7 @@ namespace Covid19Radar.ViewModels
 
         public bool CheckRegisterButtonEnable()
         {
-            return DiagnosisUid.Length == AppConstants.MaxDiagnosisUidCount && (IsVisibleWithSymptomsLayout || IsVisibleNoSymptomsLayout);
+            return ProcessNumber.Length == AppConstants.MaxProcessNumberLength && (IsVisibleWithSymptomsLayout || IsVisibleNoSymptomsLayout);
         }
 
         public async void OnGetTekHistoryAllowed()
