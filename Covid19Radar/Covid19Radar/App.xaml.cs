@@ -20,6 +20,7 @@ using Covid19Radar.Common;
 using Xamarin.ExposureNotifications;
 
 /*
+
  * Our mission...is
  * Empower every person and every organization on the planet achieve more.
  * Put an end to Covid 19
