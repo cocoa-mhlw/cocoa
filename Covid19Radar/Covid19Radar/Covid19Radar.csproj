@@ -133,6 +133,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Compile Update="Views\HomePage\WebAccessibilityPolicyPage.xaml.cs">
+      <DependentUpon>WebAccessibilityPolicyPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Templates\HelpMenuTemplate.xaml">

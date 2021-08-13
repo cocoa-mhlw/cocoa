@@ -555,9 +555,13 @@
     <value>利用規約に同意する必要があります。</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-	<data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
+  <data name="ExposureNotificationRestrictedTitle" xml:space="preserve">
+    <value>接触通知機能が停止しています</value>
+    <comment>接触通知機能が停止しています</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>アプリを再インストールするか、 OSの設定から接触通知を有効にしてください。</value>
+    <comment>アプリを再インストールするか、 OSの設定から接触通知を有効にしてください。</comment>
   </data>
 	<data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</value>
@@ -984,5 +988,13 @@
 	<data name="NoteSymbol" xml:space="preserve">
     <value>※</value>
     <comment>※</comment>
+  </data>
+  <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
+    <value>ウェブアクセシビリティ方針</value>
+    <comment>ウェブアクセシビリティ方針</comment>
+  </data>
+  <data name="UrlWebAccessibilityPolicy" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/cocoa/webaccessibility_japanese.html</value>
+    <comment>ウェブアクセシビリティ方針URL</comment>
   </data>
 </root>

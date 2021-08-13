@@ -15,6 +15,7 @@ using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
 using CommonServiceLocator;
+using Java.Util.Concurrent;
 
 namespace Covid19Radar.Droid
 {
@@ -26,6 +27,9 @@ namespace Covid19Radar.Droid
     public class MainApplication : Application, IExposureNotificationHandler
     {
         private const long INITIAL_BACKOFF_MILLIS = 60 * 60 * 1000;
+
+        private const int WORKER_REPEATED_INTERVAL_HOURS = 6;
+        private const int WORKER_BACKOFF_DELAY_HOURS = 1;
 
         private ExposureNotificationClient EnClient = null;
 
@@ -68,12 +72,17 @@ namespace Covid19Radar.Droid
 
             // Override WorkRequest configuration
             // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
-            var repeatInterval = TimeSpan.FromHours(6);
+            var repeatInterval = TimeSpan.FromHours(WORKER_REPEATED_INTERVAL_HOURS);
             static void requestBuilder(PeriodicWorkRequest.Builder b) =>
                b.SetConstraints(new Constraints.Builder()
                    .SetRequiresBatteryNotLow(true)
                    .SetRequiredNetworkType(NetworkType.Connected)
-                   .Build());
+                   .Build())
+               .SetBackoffCriteria(
+                   BackoffPolicy.Linear,
+                   WORKER_BACKOFF_DELAY_HOURS,
+                   TimeUnit.Hours
+                   );
             //ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
 
             App.InitExposureNotification();

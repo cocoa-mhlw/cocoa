@@ -899,6 +899,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ExposureNotificationRestrictedTitle {
+            get {
+                return ResourceManager.GetString("ExposureNotificationRestrictedTitle", resourceCulture);
+            }
+        }
+        
         public static string ExposureNotificationStatusMessageRestricted {
             get {
                 return ResourceManager.GetString("ExposureNotificationStatusMessageRestricted", resourceCulture);
@@ -1514,6 +1520,18 @@ namespace Covid19Radar.Resources {
         public static string NoteSymbol {
             get {
                 return ResourceManager.GetString("NoteSymbol", resourceCulture);
+            }
+        }
+        
+        public static string WebAccessibilityPolicyPageTitle {
+            get {
+                return ResourceManager.GetString("WebAccessibilityPolicyPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string UrlWebAccessibilityPolicy {
+            get {
+                return ResourceManager.GetString("UrlWebAccessibilityPolicy", resourceCulture);
             }
         }
     }

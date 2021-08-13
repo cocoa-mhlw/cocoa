@@ -673,9 +673,13 @@
     <value>You must agree to the terms of use.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-	<data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>COVID-19 Contact notification feature not approved. Please approve from each OS or re-approve after reinstalling the application.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
+  <data name="ExposureNotificationRestrictedTitle" xml:space="preserve">
+    <value>The close contact notification function is disabled</value>
+    <comment>接触通知機能が停止しています</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Please reinstall the app or enable the notification from the OS settings.</value>
+    <comment>アプリを再インストールするか、 OSの設定から接触通知を有効にしてください。</comment>
   </data>
 	<data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</value>
@@ -1090,5 +1094,13 @@ Storage :</value>
 	<data name="NoteSymbol" xml:space="preserve">
     <value>* </value>
     <comment>※</comment>
+  </data>
+  <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
+    <value>Web accessibility policy</value>
+    <comment>ウェブアクセシビリティ方針</comment>
+  </data>
+  <data name="UrlWebAccessibilityPolicy" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/cocoa/webaccessibility_english.html</value>
+    <comment>ウェブアクセシビリティ方針URL</comment>
   </data>
 </root>
