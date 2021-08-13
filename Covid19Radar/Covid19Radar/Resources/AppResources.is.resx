@@ -532,10 +532,6 @@
     <value>Morate pristati na uvjete korištenja.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>COVID-19 Značajka obavijesti o kontaktu nije odobrena. Odobrite iz svakog OS-a ili ga ponovo odobrite nakon ponovne instalacije aplikacije.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Obavijest o izloženosti nije podržana. Ažurirajte OS na najnoviju verziju. Ako i dalje imate problema, obratite nam se na appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
