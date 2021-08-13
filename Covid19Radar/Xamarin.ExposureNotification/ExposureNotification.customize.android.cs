@@ -5,8 +5,13 @@ namespace Xamarin.ExposureNotifications
 {
     public static partial class ExposureNotification
     {
-        private static readonly string[] OldWorkNames = { "exposurenotification" }; // Array of old work-name.
-        private static readonly string CurrentWorkName = "cocoaexposurenotification"; // Current work-name. (changed policy from `replace` to `keep`)
+        private static readonly string[] OldWorkNames = {
+            "exposurenotification",
+            "cocoaexposurenotification",
+        }; // Array of old work-name.
+
+        // Current work-name.
+        private static readonly string CurrentWorkName = "cocoaexposurenotification-202107";
 
         // Schedule background work (Customization by COCOA)
         static Task PlatformScheduleFetch()
