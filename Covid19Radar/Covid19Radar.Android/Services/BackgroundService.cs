@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Android.Content;
 using Android.Runtime;
 using AndroidX.Work;
@@ -95,6 +96,9 @@ namespace Covid19Radar.Droid.Services
         private readonly ILoggerService _loggerService
             = ServiceLocator.Current.GetInstance<ILoggerService>();
 
+        private readonly IUserDataRepository _userDataRepository
+            = ServiceLocator.Current.GetInstance<IUserDataRepository>();
+
         private readonly ExposureConfiguration _exposureConfiguration = new ExposureConfiguration();
 
         private readonly IList<ServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
@@ -104,66 +108,36 @@ namespace Covid19Radar.Droid.Services
                         Region = region
                     }).ToList();
 
-        private string _diagnosisKeysDir;
-
         public BackgroundWorker(Context context, WorkerParameters workerParameters)
             : base(context, workerParameters)
         {
         }
 
-        private void PrepareDirs()
+        private string PrepareDir(string region)
         {
-            var appDir = FileSystem.AppDataDirectory;
+            var cacheDir = FileSystem.CacheDirectory;
 
-            _diagnosisKeysDir = Path.Combine(appDir, DIAGNOSIS_KEYS_DIR);
-            if (!Directory.Exists(_diagnosisKeysDir))
+            var baseDir = Path.Combine(cacheDir, DIAGNOSIS_KEYS_DIR);
+            if (!Directory.Exists(baseDir))
             {
-                Directory.CreateDirectory(_diagnosisKeysDir);
+                Directory.CreateDirectory(baseDir);
             }
+
+            var dir = Path.Combine(baseDir, region);
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+            return dir;
         }
 
         public override Result DoWork()
         {
             _loggerService.StartMethod();
 
-            PrepareDirs();
-
-            if (!_exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
-            {
-                _loggerService.Debug($"EN API is not enabled." +
-                    $" worker will retry after {BackgroundService.BACKOFF_DELAY_IN_MINUTES} minutes later.");
-                return Result.InvokeRetry();
-            }
-
             try
             {
-                foreach(var serverConfiguration in _serverConfigurations)
-                {
-                    var diagnosisKeyEntryList = _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration)
-                        .GetAwaiter().GetResult();
-
-                    List<string> downloadedFileNameList = new List<string>();
-
-                    foreach (var diagnosisKeyEntry in diagnosisKeyEntryList)
-                    {
-                        string filePath = _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, _diagnosisKeysDir)
-                            .GetAwaiter().GetResult();
-
-                        _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
-
-                        downloadedFileNameList.Add(filePath);
-                    }
-
-                    var downloadedFileNames = string.Join("\n", downloadedFileNameList);
-                    _loggerService.Debug(downloadedFileNames);
-
-                    _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
-                        downloadedFileNameList,
-                        _exposureConfiguration
-                        ).GetAwaiter().GetResult();
-                }
-
-                return Result.InvokeSuccess();
+                return DoWorkAsync().GetAwaiter().GetResult();
             }
             catch (IOException exception)
             {
@@ -183,6 +157,79 @@ namespace Covid19Radar.Droid.Services
             finally
             {
                 _loggerService.EndMethod();
+            }
+        }
+
+        private async Task<Result> DoWorkAsync()
+        {
+            if (! await _exposureNotificationApiService.IsEnabledAsync())
+            {
+                _loggerService.Debug($"EN API is not enabled." +
+                    $" worker will retry after {BackgroundService.BACKOFF_DELAY_IN_MINUTES} minutes later.");
+                return Result.InvokeRetry();
+            }
+
+            foreach (var serverConfiguration in _serverConfigurations)
+            {
+                List<string> downloadedFileNameList = new List<string>();
+
+                try
+                {
+                    var tmpDir = PrepareDir(serverConfiguration.Region);
+
+                    var diagnosisKeyEntryList = _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration)
+                        .GetAwaiter().GetResult();
+
+                    var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region);
+                    var targetDiagnosisKeyEntryList = diagnosisKeyEntryList
+                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp);
+
+                    foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
+                    {
+                        string filePath = _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir)
+                            .GetAwaiter().GetResult();
+
+                        _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
+
+                        downloadedFileNameList.Add(filePath);
+                    }
+
+                    var downloadedFileNames = string.Join("\n", downloadedFileNameList);
+                    _loggerService.Debug(downloadedFileNames);
+
+                    _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
+                        downloadedFileNameList,
+                        _exposureConfiguration
+                        ).GetAwaiter().GetResult();
+
+                    // Save LastProcessDiagnosisKeyTimestamp after ProvideDiagnosisKeysAsync was succeeded.
+                    var latestProcessTimestamp = targetDiagnosisKeyEntryList
+                        .Select(diagnosisKeyEntry => diagnosisKeyEntry.Created)
+                        .Max();
+                    await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region, latestProcessTimestamp);
+
+                }
+                finally
+                {
+                    RemoveFiles(downloadedFileNameList);
+                }
+            }
+
+            return Result.InvokeSuccess();
+        }
+
+        private void RemoveFiles(List<string> fileList)
+        {
+            foreach(var file in fileList)
+            {
+                try
+                {
+                    File.Delete(file);
+                }
+                catch(Exception exception)
+                {
+                    _loggerService.Exception("Exception occurred", exception);
+                }
             }
         }
 
