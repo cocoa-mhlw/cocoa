@@ -8,7 +8,6 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Covid19Radar.Model;
 using Covid19Radar.Views;
-using System.Diagnostics;
 using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.ViewModels
@@ -68,6 +67,14 @@ namespace Covid19Radar.ViewModels
                 Icon = "\uf70e",
                 PageName = nameof(PrivacyPolicyPage2),
                 Title = Resources.AppResources.PrivacyPolicyPageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf70e",
+                PageName = nameof(WebAccessibilityPolicyPage),
+                Title = Resources.AppResources.WebAccessibilityPolicyPageTitle,
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });

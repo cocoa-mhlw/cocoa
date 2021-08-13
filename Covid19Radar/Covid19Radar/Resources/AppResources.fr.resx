@@ -532,10 +532,6 @@
     <value>Vous devez accepter les conditions d’utilisation.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>La fonction Notification d’exposition au COVID-19 n’est pas approuvée. Veuillez l’approuver via les paramètres du système d’exploitation, ou en réinstallant cette application.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>La Notification d’exposition n’est pas prise en charge. Veuillez mettre à jour le système d’exploitation vers la dernière version. Si vous avez encore des problèmes, veuillez nous contacter à appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
