@@ -8,11 +8,14 @@ on:
     branches: [ main, develop, 'feature/**' ]
     paths:
       - 'src/**'
+      - 'Covid19Radar.Functions.sln'
+      - 'Covid19Radar.Functions.runsettings'
   pull_request:
     branches: [ main, develop, 'feature/**' ]
     paths:
       - 'src/**'
-
+      - 'Covid19Radar.Functions.sln'
+      - 'Covid19Radar.Functions.runsettings'
 jobs:
   build_serverapi:
     name: Build-ServerApi
