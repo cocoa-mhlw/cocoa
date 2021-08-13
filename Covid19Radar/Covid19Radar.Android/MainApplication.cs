@@ -39,8 +39,8 @@ namespace Covid19Radar.Droid
         private Lazy<ExposureNotificationApiService> _exposureNotificationApiService
             = new Lazy<ExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>() as ExposureNotificationApiService);
 
-        private Lazy<IBackgroundService> _backgroundService
-            = new Lazy<IBackgroundService>(() => ServiceLocator.Current.GetInstance<IBackgroundService>());
+        private Lazy<AbsBackgroundService> _backgroundService
+            = new Lazy<AbsBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsBackgroundService>());
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
@@ -81,7 +81,7 @@ namespace Covid19Radar.Droid
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
 
             container.Register<ICloseApplication, CloseApplication>(Reuse.Singleton);
-            container.Register<IBackgroundService, BackgroundService>(Reuse.Singleton);
+            container.Register<AbsBackgroundService, BackgroundService>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);

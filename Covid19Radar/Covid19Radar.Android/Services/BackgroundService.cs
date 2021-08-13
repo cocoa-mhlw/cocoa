@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Runtime;
 using AndroidX.Work;
 using Chino;
 using CommonServiceLocator;
-using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -17,7 +13,7 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.Droid.Services
 {
-    public class BackgroundService : IBackgroundService
+    public class BackgroundService : AbsBackgroundService
     {
 #if DEBUG
         internal const int INTERVAL_IN_MINUTES = 16;
@@ -36,13 +32,21 @@ namespace Covid19Radar.Droid.Services
         private readonly ILoggerService _loggerService;
 
         public BackgroundService(
-            ILoggerService loggerService
-            )
+            IDiagnosisKeyRepository diagnosisKeyRepository,
+            AbsExposureNotificationApiService exposureNotificationApiService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository
+            ) : base(
+                diagnosisKeyRepository,
+                exposureNotificationApiService,
+                loggerService,
+                userDataRepository
+                )
         {
             _loggerService = loggerService;
         }
 
-        public void ScheduleExposureDetection()
+        public override void ScheduleExposureDetection()
         {
             _loggerService.StartMethod();
 
@@ -85,158 +89,65 @@ namespace Covid19Radar.Droid.Services
     [Preserve]
     public class BackgroundWorker : Worker
     {
-        private const string DIAGNOSIS_KEYS_DIR = "diagnosis_keys";
+        private readonly Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
+            = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
 
-        private readonly IDiagnosisKeyRepository _diagnosisKeyRepository
-            = ServiceLocator.Current.GetInstance<IDiagnosisKeyRepository>();
+        private readonly Lazy<ILoggerService> _loggerService
+            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
-        private readonly AbsExposureNotificationApiService _exposureNotificationApiService
-            = ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>();
-
-        private readonly ILoggerService _loggerService
-            = ServiceLocator.Current.GetInstance<ILoggerService>();
-
-        private readonly IUserDataRepository _userDataRepository
-            = ServiceLocator.Current.GetInstance<IUserDataRepository>();
-
-        private readonly ExposureConfiguration _exposureConfiguration = new ExposureConfiguration();
-
-        private readonly IList<ServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
-                    region => new ServerConfiguration()
-                    {
-                        ApiEndpoint = $"{AppSettings.Instance.CdnUrlBase}/{AppSettings.Instance.BlobStorageContainerName}",
-                        Region = region
-                    }).ToList();
+        private readonly Lazy<AbsBackgroundService> _backgroundService
+            = new Lazy<AbsBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsBackgroundService>());
 
         public BackgroundWorker(Context context, WorkerParameters workerParameters)
             : base(context, workerParameters)
         {
         }
 
-        private string PrepareDir(string region)
-        {
-            var cacheDir = FileSystem.CacheDirectory;
-
-            var baseDir = Path.Combine(cacheDir, DIAGNOSIS_KEYS_DIR);
-            if (!Directory.Exists(baseDir))
-            {
-                Directory.CreateDirectory(baseDir);
-            }
-
-            var dir = Path.Combine(baseDir, region);
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
-            return dir;
-        }
-
         public override Result DoWork()
         {
-            _loggerService.StartMethod();
+            var exposureNotificationApiService = _exposureNotificationApiService.Value;
+            var loggerService = _loggerService.Value;
+            var backgroundService = _backgroundService.Value;
 
-            try
-            {
-                return DoWorkAsync().GetAwaiter().GetResult();
-            }
-            catch (IOException exception)
-            {
-                _loggerService.Exception("IOException", exception);
-                return Result.InvokeRetry();
-            }
-            catch (ENException exception)
-            {
-                _loggerService.Exception("ENException", exception);
-                return Result.InvokeFailure();
-            }
-            catch (Exception exception)
-            {
-                _loggerService.Exception("Exception", exception);
-                return Result.InvokeFailure();
-            }
-            finally
-            {
-                _loggerService.EndMethod();
-            }
-        }
+            loggerService.StartMethod();
 
-        private async Task<Result> DoWorkAsync()
-        {
-            if (! await _exposureNotificationApiService.IsEnabledAsync())
+            if (!exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
             {
-                _loggerService.Debug($"EN API is not enabled." +
+                loggerService.Debug($"EN API is not enabled." +
                     $" worker will retry after {BackgroundService.BACKOFF_DELAY_IN_MINUTES} minutes later.");
                 return Result.InvokeRetry();
             }
 
-            foreach (var serverConfiguration in _serverConfigurations)
+            try
             {
-                List<string> downloadedFileNameList = new List<string>();
-
-                try
-                {
-                    var tmpDir = PrepareDir(serverConfiguration.Region);
-
-                    var diagnosisKeyEntryList = _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration)
-                        .GetAwaiter().GetResult();
-
-                    var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region);
-                    var targetDiagnosisKeyEntryList = diagnosisKeyEntryList
-                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp);
-
-                    foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
-                    {
-                        string filePath = _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir)
-                            .GetAwaiter().GetResult();
-
-                        _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
-
-                        downloadedFileNameList.Add(filePath);
-                    }
-
-                    var downloadedFileNames = string.Join("\n", downloadedFileNameList);
-                    _loggerService.Debug(downloadedFileNames);
-
-                    _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
-                        downloadedFileNameList,
-                        _exposureConfiguration
-                        ).GetAwaiter().GetResult();
-
-                    // Save LastProcessDiagnosisKeyTimestamp after ProvideDiagnosisKeysAsync was succeeded.
-                    var latestProcessTimestamp = targetDiagnosisKeyEntryList
-                        .Select(diagnosisKeyEntry => diagnosisKeyEntry.Created)
-                        .Max();
-                    await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region, latestProcessTimestamp);
-
-                }
-                finally
-                {
-                    RemoveFiles(downloadedFileNameList);
-                }
+                backgroundService.ExposureDetectionAsync().GetAwaiter().GetResult();
+                return Result.InvokeSuccess();
             }
-
-            return Result.InvokeSuccess();
-        }
-
-        private void RemoveFiles(List<string> fileList)
-        {
-            foreach(var file in fileList)
+            catch (IOException exception)
             {
-                try
-                {
-                    File.Delete(file);
-                }
-                catch(Exception exception)
-                {
-                    _loggerService.Exception("Exception occurred", exception);
-                }
+                loggerService.Exception("IOException", exception);
+                return Result.InvokeRetry();
+            }
+            catch (ENException exception)
+            {
+                loggerService.Exception("ENException", exception);
+                return Result.InvokeFailure();
+            }
+            catch (Exception exception)
+            {
+                loggerService.Exception("Exception", exception);
+                return Result.InvokeFailure();
+            }
+            finally
+            {
+                loggerService.EndMethod();
             }
         }
 
         public override void OnStopped() {
             base.OnStopped();
 
-            _loggerService.Warning("OnStopped");
+            _loggerService.Value.Warning("OnStopped");
         }
 
     }

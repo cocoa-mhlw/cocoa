@@ -1,15 +1,30 @@
 ﻿using System;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.iOS.Services
 {
-    public class BackgroundService : IBackgroundService
+    public class BackgroundService : AbsBackgroundService
     {
-        public BackgroundService()
+        private readonly ILoggerService _loggerService;
+
+        public BackgroundService(
+            IDiagnosisKeyRepository diagnosisKeyRepository,
+            AbsExposureNotificationApiService exposureNotificationApiService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository
+            ) : base(
+                diagnosisKeyRepository,
+                exposureNotificationApiService,
+                loggerService,
+                userDataRepository
+                )
         {
+            _loggerService = loggerService;
         }
 
-        public void ScheduleExposureDetection()
+        public override void ScheduleExposureDetection()
         {
             throw new NotImplementedException();
         }
