@@ -15,7 +15,7 @@ namespace Covid19Radar.iOS.Services
 {
     public class BackgroundService : AbsBackgroundService
     {
-        private static string BGTASK_IDENTIFIER => AppInfo.PackageName + ".exposure-notification";
+        private static string BGTASK_IDENTIFIER => AppInfo.PackageName + ".exposure-detection";
 
         private const int TIMEOUT_IN_MILLIS = 60 * 60 * 1000;
 
@@ -42,7 +42,9 @@ namespace Covid19Radar.iOS.Services
         {
             _loggerService.StartMethod();
 
-            _ = BGTaskScheduler.Shared.Register(BGTASK_IDENTIFIER, null, task =>
+            _loggerService.Debug($"BGTASK_IDENTIFIER: {BGTASK_IDENTIFIER}");
+
+            var result = BGTaskScheduler.Shared.Register(BGTASK_IDENTIFIER, null, task =>
             {
                 _loggerService.Info("Background task has been started.");
 
@@ -84,6 +86,15 @@ namespace Covid19Radar.iOS.Services
                 });
             });
 
+            if (result)
+            {
+                _loggerService.Debug("BGTaskScheduler.Shared.Register succeeded.");
+            }
+            else
+            {
+                _loggerService.Info("BGTaskScheduler.Shared.Register failed.");
+            }
+
             ScheduleBgTask();
 
             _loggerService.EndMethod();
@@ -95,13 +106,17 @@ namespace Covid19Radar.iOS.Services
 
             try
             {
-                BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER);
-                bgTaskRequest.RequiresNetworkConnectivity = true;
+                BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
+                {
+                    RequiresNetworkConnectivity = true
+                };
 
                 BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
                 if (error != null)
                 {
-                    throw new NSErrorException(error);
+                    NSErrorException exception = new NSErrorException(error);
+                    _loggerService.Exception("BGTaskScheduler submit failed.", exception);
+                    throw exception;
                 }
             }
             finally
