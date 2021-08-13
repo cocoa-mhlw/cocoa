@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Android.Content;
 using Android.Runtime;
 using AndroidX.Work;
 using Chino;
 using CommonServiceLocator;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Java.Util.Concurrent;
@@ -84,8 +86,8 @@ namespace Covid19Radar.Droid.Services
     {
         private const string DIAGNOSIS_KEYS_DIR = "diagnosis_keys";
 
-        private readonly ICdnAccessService _cdnAccessService
-            = ServiceLocator.Current.GetInstance<ICdnAccessService>();
+        private readonly IDiagnosisKeyRepository _diagnosisKeyRepository
+            = ServiceLocator.Current.GetInstance<IDiagnosisKeyRepository>();
 
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService
             = ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>();
@@ -94,7 +96,13 @@ namespace Covid19Radar.Droid.Services
             = ServiceLocator.Current.GetInstance<ILoggerService>();
 
         private readonly ExposureConfiguration _exposureConfiguration = new ExposureConfiguration();
-        private readonly ServerConfiguration _serverConfiguration = new ServerConfiguration();
+
+        private readonly IList<ServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
+                    region => new ServerConfiguration()
+                    {
+                        ApiEndpoint = $"{AppSettings.Instance.CdnUrlBase}/{AppSettings.Instance.BlobStorageContainerName}",
+                        Region = region
+                    }).ToList();
 
         private string _diagnosisKeysDir;
 
@@ -129,28 +137,31 @@ namespace Covid19Radar.Droid.Services
 
             try
             {
-                var diagnosisKeyEntryList = _cdnAccessService.GetDiagnosisKeysListAsync(_serverConfiguration)
-                    .GetAwaiter().GetResult();
-
-                List<string> downloadedFileNameList = new List<string>();
-
-                foreach (var diagnosisKeyEntry in diagnosisKeyEntryList)
+                foreach(var serverConfiguration in _serverConfigurations)
                 {
-                    string filePath = _cdnAccessService.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, _diagnosisKeysDir)
+                    var diagnosisKeyEntryList = _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration)
                         .GetAwaiter().GetResult();
 
-                    _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
+                    List<string> downloadedFileNameList = new List<string>();
 
-                    downloadedFileNameList.Add(filePath);
+                    foreach (var diagnosisKeyEntry in diagnosisKeyEntryList)
+                    {
+                        string filePath = _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, _diagnosisKeysDir)
+                            .GetAwaiter().GetResult();
+
+                        _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
+
+                        downloadedFileNameList.Add(filePath);
+                    }
+
+                    var downloadedFileNames = string.Join("\n", downloadedFileNameList);
+                    _loggerService.Debug(downloadedFileNames);
+
+                    _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
+                        downloadedFileNameList,
+                        _exposureConfiguration
+                        ).GetAwaiter().GetResult();
                 }
-
-                var downloadedFileNames = string.Join("\n", downloadedFileNameList);
-                _loggerService.Debug(downloadedFileNames);
-
-                _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
-                    downloadedFileNameList,
-                    _exposureConfiguration
-                    ).GetAwaiter().GetResult();
 
                 return Result.InvokeSuccess();
             }

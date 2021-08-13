@@ -4,16 +4,17 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
 
-namespace Covid19Radar.Services
+namespace Covid19Radar.Repository
 {
-    public interface ICdnAccessService
+    public interface IDiagnosisKeyRepository
     {
         public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(ServerConfiguration serverConfiguration);
 
-        public Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string path);
+        public Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir);
     }
 
     [JsonObject]
@@ -29,23 +30,26 @@ namespace Covid19Radar.Services
         public long Created;
     }
 
-    public class CdnAccessService : ICdnAccessService
+    public class DiagnosisKeyRepository : IDiagnosisKeyRepository
     {
+        private const string CATALOG_FILE_NAME = "list.json";
         private const long BUFFER_LENGTH = 4 * 1024 * 1024;
 
-        private readonly HttpClient _client = new HttpClient();
+        private readonly HttpClient _client;
         private readonly ILoggerService _loggerService;
 
-        public CdnAccessService(
+        public DiagnosisKeyRepository(
+            IHttpClientService httpClientService,
             ILoggerService loggerService
             )
         {
+            _client = httpClientService.Create();
             _loggerService = loggerService;
         }
 
         public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(ServerConfiguration serverConfiguration)
         {
-            Uri uri = new Uri($"{serverConfiguration.ApiEndpoint}/{serverConfiguration.ClusterId}/list.json");
+            Uri uri = new Uri($"{serverConfiguration.ApiEndpoint}/{serverConfiguration.Region}/{CATALOG_FILE_NAME}");
             HttpResponseMessage response = await _client.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {
@@ -61,14 +65,14 @@ namespace Covid19Radar.Services
             return new List<DiagnosisKeyEntry>();
         }
 
-        public async Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string path)
+        public async Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir)
         {
             Uri uri = new Uri(diagnosisKeyEntry.Url);
             HttpResponseMessage response = await _client.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {
                 string fileName = uri.Segments[uri.Segments.Length - 1];
-                string outputPath = Path.Combine(path, fileName);
+                string outputPath = Path.Combine(outputDir, fileName);
 
                 byte[] buffer = new byte[BUFFER_LENGTH];
 
@@ -91,4 +95,5 @@ namespace Covid19Radar.Services
         }
 
     }
+
 }
