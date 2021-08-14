@@ -173,7 +173,7 @@
       <Version>1.2.1</Version>
     </PackageReference>
     <PackageReference Include="Chino.Android">
-      <Version>1.0.0-beta10</Version>
+      <Version>1.0.0-beta11</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

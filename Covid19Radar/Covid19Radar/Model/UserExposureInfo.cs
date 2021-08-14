@@ -21,7 +21,7 @@ namespace Covid19Radar.Model
         public UserExposureInfo(ExposureInformation exposureInformation)
         {
             Timestamp = DateTimeOffset.UnixEpoch.AddMilliseconds(exposureInformation.DateMillisSinceEpoch).UtcDateTime;
-            Duration = TimeSpan.FromSeconds(exposureInformation.Duration);
+            Duration = TimeSpan.FromMilliseconds(exposureInformation.DurationInMillis);
             AttenuationValue = exposureInformation.AttenuationValue;
             TotalRiskScore = exposureInformation.TotalRiskScore;
             TransmissionRiskLevel = exposureInformation.TransmissionRiskLevel;
