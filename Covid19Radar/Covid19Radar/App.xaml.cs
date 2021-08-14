@@ -28,10 +28,17 @@ using Xamarin.ExposureNotifications;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
 {
+    public enum DeepLinkDestination: int
+    {
+        ContactPage
+    }
+
     public partial class App : PrismApplication
     {
         private ILoggerService LoggerService;
         private ILogFileService LogFileService;
+
+        private DeepLinkDestination? destination;
 
         /*
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -40,9 +47,10 @@ namespace Covid19Radar
          */
         public App() : this(null) { }
 
-        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
+        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) {
+        }
 
-        protected override async void OnInitialized()
+        protected override void OnInitialized()
         {
             InitializeComponent();
 
@@ -55,7 +63,20 @@ namespace Covid19Radar
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
-            INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage));
+            LoggerService.EndMethod();
+
+            
+        }
+
+        public async void NavigateToSplash()
+        {
+            var param = new NavigationParameters();
+            if (destination != null)
+            {
+                param.Add("destination", destination);
+            }
+
+            INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage), param);
 
             if (!result.Success)
             {
@@ -70,8 +91,12 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
+        }
 
-            LoggerService.EndMethod();
+        public void setDestination(DeepLinkDestination destination)
+        {
+
+            this.destination = destination;
         }
 
         public static void InitExposureNotification()
@@ -198,10 +223,20 @@ namespace Covid19Radar
             LogFileService.Rotate();
         }
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
             base.OnResume();
             LogFileService.Rotate();
+
+            switch (destination)
+            {
+                case DeepLinkDestination.ContactPage:
+                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage) + "/" + nameof(ContactedNotifyPage));
+                    break;
+                default:
+                    break;
+            }
+            this.destination = null;
         }
 
         /*

@@ -57,8 +57,15 @@ namespace Covid19Radar.ViewModels
                 }
                 else
                 {
+                    var param = new NavigationParameters();
+                    var destination = parameters.GetValue<DeepLinkDestination?>("destination");
+                    if (destination != null)
+                    {
+                        param.Add("destination", parameters.GetValue<DeepLinkDestination>("destination"));
+                    }
+
                     _loggerService.Info($"Transition to HomePage");
-                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage), param);
                 }
             }
             else

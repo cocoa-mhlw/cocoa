@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Threading.Tasks;
+using Covid19Radar;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
@@ -26,6 +28,9 @@ namespace Covid19Radar.iOS
         {
         }
 
+        bool isLaunch = false;
+        DeepLinkDestination _destination;
+
         //
         // This method is invoked when the application has loaded and is ready to run. In this
         // method you should instantiate the window, load the UI into it and then make the window
@@ -35,6 +40,7 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            isLaunch = true;
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
@@ -51,6 +57,7 @@ namespace Covid19Radar.iOS
 
             UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate();
 
+            
             LoadApplication(new App());
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
@@ -61,6 +68,12 @@ namespace Covid19Radar.iOS
         {
             base.OnActivated(uiApplication);
             MessagingCenter.Send((object)this, AppConstants.IosOnActivatedMessage);
+
+            if (isLaunch)
+            {
+                ((App)App.Current).NavigateToSplash();
+            }
+            isLaunch = false;
         }
 
         private void RegisterPlatformTypes(IContainer container)
@@ -94,5 +107,11 @@ public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
             completionHandler(UNNotificationPresentationOptions.Alert);
         }
         
+    }
+
+    public override void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNotificationResponse response, System.Action completionHandler)
+    {
+        ((App)App.Current).setDestination(DeepLinkDestination.ContactPage);
+        completionHandler();
     }
 }
