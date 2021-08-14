@@ -223,11 +223,16 @@ namespace Covid19Radar
             LogFileService.Rotate();
         }
 
-        protected override async void OnResume()
+        protected override void OnResume()
         {
             base.OnResume();
             LogFileService.Rotate();
 
+            NavigateToDestination();
+        }
+
+        public async void NavigateToDestination()
+        {
             switch (destination)
             {
                 case DeepLinkDestination.ContactPage:
