@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Chino;
+using Covid19Radar.Model;
 
 namespace Covid19Radar.Repository
 {
@@ -7,5 +10,9 @@ namespace Covid19Radar.Repository
         Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region);
         Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp);
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
+
+        Task<(UserExposureSummary, IList<UserExposureInfo>)> GetUserExposureDataAsync();
+        Task SetExposureDataAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformationList);
+        Task RemoveExposureInformationAsync();
     }
 }

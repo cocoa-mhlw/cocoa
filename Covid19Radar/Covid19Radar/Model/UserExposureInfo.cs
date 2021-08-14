@@ -3,18 +3,28 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using Chino;
 
 namespace Covid19Radar.Model
 {
     public class UserExposureInfo
     {
-        public UserExposureInfo(DateTime timestamp, TimeSpan duration, int attenuationValue, int totalRiskScore, UserRiskLevel riskLevel)
+        public UserExposureInfo(DateTime timestamp, TimeSpan duration, int attenuationValue, int totalRiskScore, RiskLevel riskLevel)
         {
             Timestamp = timestamp;
             Duration = duration;
             AttenuationValue = attenuationValue;
             TotalRiskScore = totalRiskScore;
             TransmissionRiskLevel = riskLevel;
+        }
+
+        public UserExposureInfo(ExposureInformation exposureInformation)
+        {
+            Timestamp = DateTimeOffset.UnixEpoch.AddMilliseconds(exposureInformation.DateMillisSinceEpoch).UtcDateTime;
+            Duration = TimeSpan.FromSeconds(exposureInformation.Duration);
+            AttenuationValue = exposureInformation.AttenuationValue;
+            TotalRiskScore = exposureInformation.TotalRiskScore;
+            TransmissionRiskLevel = exposureInformation.TransmissionRiskLevel;
         }
 
         // When the contact occurred
@@ -27,19 +37,6 @@ namespace Covid19Radar.Model
 
         public int TotalRiskScore { get; set; }
 
-        public UserRiskLevel TransmissionRiskLevel { get; set; }
-    }
-
-    public enum UserRiskLevel
-    {
-        Invalid = 0,
-        Lowest = 1,
-        Low = 2,
-        MediumLow = 3,
-        Medium = 4,
-        MediumHigh = 5,
-        High = 6,
-        VeryHigh = 7,
-        Highest = 8
+        public RiskLevel TransmissionRiskLevel { get; set; }
     }
 }
