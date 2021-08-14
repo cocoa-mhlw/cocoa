@@ -78,6 +78,8 @@ namespace Covid19Radar.Droid
                 SetupENClient(exposureNotificationApiService.Client);
             }
 
+            _ = _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
+
             _exposureDetectionBackgroundService.Value.Schedule();
         }
 

@@ -4,7 +4,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Chino;
 using CommonServiceLocator;
 using Covid19Radar.Common;
@@ -82,7 +81,7 @@ namespace Covid19Radar.iOS
 
             _exposureDetectionBackgroundService.Value.Schedule();
 
-            _ = Task.Run(async () => await _exposureConfigurationRepository.Value.GetExposureConfigurationAsync());
+            _ = _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
 
             return base.FinishedLaunching(app, options);
         }

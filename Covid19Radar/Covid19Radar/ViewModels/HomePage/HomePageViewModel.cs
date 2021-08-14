@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Chino;
 using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -21,7 +22,7 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService loggerService;
         private readonly IUserDataService userDataService;
-        private readonly IExposureNotificationService exposureNotificationService;
+        private readonly IUserDataRepository _userDataRepository;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
 
@@ -43,7 +44,7 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IUserDataService userDataService,
-            IExposureNotificationService exposureNotificationService,
+            IUserDataRepository userDataRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILocalNotificationService localNotificationService
             ) : base(navigationService)
@@ -51,7 +52,7 @@ namespace Covid19Radar.ViewModels
             Title = AppResources.HomePageTitle;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
-            this.exposureNotificationService = exposureNotificationService;
+            this._userDataRepository = userDataRepository;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
         }
@@ -196,7 +197,9 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var count = exposureNotificationService.GetExposureCountToDisplay();
+            var (_, userExposureInformationList) = await _userDataRepository.GetUserExposureDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var count = userExposureInformationList.Count();
+
             loggerService.Info($"Exposure count: {count}");
             if (count > 0)
             {

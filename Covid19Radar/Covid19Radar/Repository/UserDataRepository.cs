@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -184,6 +185,13 @@ namespace Covid19Radar.Repository
 
                 _loggerService.EndMethod();
             }
+        }
+
+        public async Task<(UserExposureSummary, IList<UserExposureInfo>)> GetUserExposureDataAsync(int fromDay)
+        {
+            var (summary, list) = await GetUserExposureDataAsync();
+            return (summary, list.Where(x => x.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(fromDay)) >= 0).ToList());
+
         }
     }
 }

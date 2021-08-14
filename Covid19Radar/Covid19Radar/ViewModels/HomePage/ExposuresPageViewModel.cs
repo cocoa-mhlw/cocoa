@@ -2,8 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Model;
-using Covid19Radar.Services;
+using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Prism.Navigation;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -13,31 +13,50 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase
     {
+        private readonly IUserDataRepository _userDataRepository;
+
         public ObservableCollection<ExposureSummary> _exposures;
+
         public ObservableCollection<ExposureSummary> Exposures
         {
             get { return _exposures; }
             set { SetProperty(ref _exposures, value); }
         }
 
-        public ExposuresPageViewModel(INavigationService navigationService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+        public ExposuresPageViewModel(
+            INavigationService navigationService,
+            IUserDataRepository userDataRepository
+            ) : base(navigationService)
         {
+            _userDataRepository = userDataRepository;
+
             Title = Resources.AppResources.MainExposures;
             _exposures = new ObservableCollection<ExposureSummary>();
 
-            var exposureInformationList = exposureNotificationService.GetExposureInformationListToDisplay();
-            if (exposureInformationList != null)
+        }
+
+        public override async void Initialize(INavigationParameters parameters)
+        {
+            base.Initialize(parameters);
+
+            var (userExposureSummary, userExposureInformationList)
+                = await _userDataRepository.GetUserExposureDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
+
+            if (userExposureInformationList.Count() > 0)
             {
-                foreach (var en in exposureInformationList.GroupBy(eni => eni.Timestamp))
+                foreach (var en in userExposureInformationList.GroupBy(userExposureInformation => userExposureInformation.Timestamp))
                 {
-                    var ens = new ExposureSummary();
-                    ens.ExposureDate = en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
-                    ens.ExposureCount = en.Count().ToString();
+                    var ens = new ExposureSummary()
+                    {
+                        ExposureDate = en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureCount = en.Count().ToString()
+                    };
                     _exposures.Add(ens);
                 }
             }
         }
     }
+
 
     public class ExposureSummary
     {

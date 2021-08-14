@@ -12,6 +12,8 @@ namespace Covid19Radar.Repository
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
 
         Task<(UserExposureSummary, IList<UserExposureInfo>)> GetUserExposureDataAsync();
+        Task<(UserExposureSummary, IList<UserExposureInfo>)> GetUserExposureDataAsync(int fromDay);
+
         Task SetExposureDataAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformationList);
         Task RemoveExposureInformationAsync();
     }
