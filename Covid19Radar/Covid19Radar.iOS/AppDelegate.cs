@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System.Threading.Tasks;
 using Covid19Radar;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
@@ -28,8 +27,7 @@ namespace Covid19Radar.iOS
         {
         }
 
-        bool isLaunch = false;
-        DeepLinkDestination _destination;
+        bool isLaunch = false; // TODO 状態追加するのは微妙...
 
         //
         // This method is invoked when the application has loaded and is ready to run. In this
