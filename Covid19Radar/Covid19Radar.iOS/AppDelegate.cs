@@ -22,6 +22,8 @@ namespace Covid19Radar.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
+
+        private App xamarinApp;
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
         {
@@ -53,10 +55,22 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
-            UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate();
+            var xamarinApp = new App();
 
-            
-            LoadApplication(new App());
+            var notificationCenterDelegate = new UserNotificationCenterDelegate();
+            notificationCenterDelegate.OnRecieved += (UserNotificationCenterDelegate sender, UNNotificationResponse response) => {
+                this.xamarinApp?.setDestination(DeepLinkDestination.ContactPage);
+                if (app.ApplicationState == UIApplicationState.Active) // TODO:- C#だと循環参照しない？
+                {
+                    this.xamarinApp?.NavigateToDestination();
+                }
+
+            };
+            UNUserNotificationCenter.Current.Delegate = notificationCenterDelegate;
+
+
+            LoadApplication(xamarinApp);
+            this.xamarinApp = xamarinApp;
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
@@ -69,7 +83,7 @@ namespace Covid19Radar.iOS
 
             if (isLaunch)
             {
-                ((App)App.Current).NavigateToSplash();
+                xamarinApp?.NavigateToSplash();
             }
             isLaunch = false;
         }
@@ -92,10 +106,16 @@ namespace Covid19Radar.iOS
     }
 }
 
+
 public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
 {
+    public delegate void NotificationCenterReceivedEventHandler(UserNotificationCenterDelegate sender, UNNotificationResponse response);
+    public event NotificationCenterReceivedEventHandler OnRecieved;
+
     public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
     {
+
+
         if (UIDevice.CurrentDevice.CheckSystemVersion(14, 0))
         {
             completionHandler(UNNotificationPresentationOptions.Banner | UNNotificationPresentationOptions.List);
@@ -109,7 +129,7 @@ public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
 
     public override void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNotificationResponse response, System.Action completionHandler)
     {
-        ((App)App.Current).setDestination(DeepLinkDestination.ContactPage);
+        OnRecieved?.Invoke(this, response);
         completionHandler();
     }
 }
