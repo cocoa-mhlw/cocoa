@@ -8,7 +8,6 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
-using static Covid19Radar.IExposureNotificationEventSubject;
 
 namespace Covid19Radar.ViewModels
 {
@@ -16,29 +15,15 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService loggerService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
-        private readonly IExposureNotificationEventSubject exposureNotificationEventSubject;
 
         public TutorialPage4ViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            AbsExposureNotificationApiService exposureNotificationApiService,
-            IExposureNotificationEventSubject exposureNotificationEventSubject
+            AbsExposureNotificationApiService exposureNotificationApiService
             ) : base(navigationService)
         {
             this.loggerService = loggerService;
             this.exposureNotificationApiService = exposureNotificationApiService;
-            this.exposureNotificationEventSubject = exposureNotificationEventSubject;
-        }
-
-        public override async void Initialize(INavigationParameters parameters)
-        {
-            base.Initialize(parameters);
-
-            loggerService.StartMethod();
-
-            exposureNotificationEventSubject.AddObserver(this);
-
-            loggerService.EndMethod();
         }
 
         public Command OnClickEnable => new Command(async () =>
@@ -65,11 +50,6 @@ namespace Covid19Radar.ViewModels
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
             loggerService.EndMethod();
         });
-
-        public override void Destroy()
-        {
-            exposureNotificationEventSubject.RemoveObserver(this);
-        }
 
         public async void OnEnabled()
         {

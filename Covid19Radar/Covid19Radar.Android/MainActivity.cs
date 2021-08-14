@@ -9,7 +9,8 @@ using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
 using Covid19Radar.Droid.Services;
-using CommonServiceLocator;
+using System;
+using Prism.Common;
 
 namespace Covid19Radar.Droid
 {
@@ -22,10 +23,9 @@ namespace Covid19Radar.Droid
             return intent;
         }
 
-        private readonly IExposureNotificationEventSubject _exposureNotificationEventSubject
-            = ServiceLocator.Current.GetInstance<IExposureNotificationEventSubject>();
-
         public static object dataLock = new object();
+
+        private App _app;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,7 +45,8 @@ namespace Covid19Radar.Droid
             UserDialogs.Init(this);
 
             //NotificationCenter.CreateNotificationChannel();
-            LoadApplication(new App());
+            _app = new App();
+            LoadApplication(_app);
             //NotificationCenter.NotifyNotificationTapped(base.Intent);
         }
 
@@ -83,31 +84,27 @@ namespace Covid19Radar.Droid
 
         private void FireExposureNotificationEvent(int requestCode, bool isOk)
         {
-            switch (requestCode)
+            Action<IExposureNotificationEventCallback> action = requestCode switch
             {
-                case ExposureNotificationApiService.REQUEST_EN_START:
-                    if (isOk)
+                ExposureNotificationApiService.REQUEST_EN_START
+                    => new Action<IExposureNotificationEventCallback>(callback =>
                     {
-                        _exposureNotificationEventSubject.FireOnEnableEvent();
-                    }
-                    else
-                    {
-                        _exposureNotificationEventSubject.FireOnDeclinedEvent();
-                    }
-                    break;
-                case ExposureNotificationApiService.REQUEST_GET_TEK_HISTORY:
-                    if (isOk)
-                    {
-                        _exposureNotificationEventSubject.FireOnGetTekHistoryAllowed();
-                    }
-                    break;
-                case ExposureNotificationApiService.REQUEST_PREAUTHORIZE_KEYS:
-                    if (isOk)
-                    {
-                        _exposureNotificationEventSubject.FireOnPreauthorizeAllowed();
-                    }
-                    break;
-            }
+                        if(isOk)
+                        {
+                            callback.OnEnabled();
+                        }
+                        else
+                        {
+                            callback.OnDeclined();
+                        }
+                    }),
+                ExposureNotificationApiService.REQUEST_GET_TEK_HISTORY
+                    => new Action<IExposureNotificationEventCallback>(callback => { callback.OnGetTekHistoryAllowed(); }),
+                ExposureNotificationApiService.REQUEST_PREAUTHORIZE_KEYS
+                    => new Action<IExposureNotificationEventCallback>(callback => { callback.OnPreauthorizeAllowed(); }),
+                _ => new Action<IExposureNotificationEventCallback>(callback => { /* do nothing */ }),
+            };
+            PageUtilities.InvokeViewAndViewModelAction(PageUtilities.GetCurrentPage(_app.MainPage), action);
         }
 
         //protected override void OnNewIntent(Intent intent)

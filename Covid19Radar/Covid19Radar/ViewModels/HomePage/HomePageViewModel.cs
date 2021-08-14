@@ -14,7 +14,6 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
-using static Covid19Radar.IExposureNotificationEventSubject;
 
 namespace Covid19Radar.ViewModels
 {
@@ -25,7 +24,6 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
-        private readonly IExposureNotificationEventSubject exposureNotificationEventSubject;
 
         private string _startDate;
         private string _pastDate;
@@ -47,8 +45,7 @@ namespace Covid19Radar.ViewModels
             IUserDataService userDataService,
             IExposureNotificationService exposureNotificationService,
             AbsExposureNotificationApiService exposureNotificationApiService,
-            ILocalNotificationService localNotificationService,
-            IExposureNotificationEventSubject exposureNotificationEventSubject
+            ILocalNotificationService localNotificationService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
@@ -57,7 +54,6 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationService = exposureNotificationService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
-            this.exposureNotificationEventSubject = exposureNotificationEventSubject;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -65,8 +61,6 @@ namespace Covid19Radar.ViewModels
             base.Initialize(parameters);
 
             loggerService.StartMethod();
-
-            exposureNotificationEventSubject.AddObserver(this);
 
             // It seems the life cycle methods are not called after background fetch in iOS.
             // The days of use will be updated at this time.
@@ -249,11 +243,6 @@ namespace Covid19Radar.ViewModels
             await StartExposureNotificationAsync();
 
             SettingDaysOfUse();
-        }
-
-        public override void Destroy()
-        {
-            exposureNotificationEventSubject.RemoveObserver(this);
         }
 
         public async void OnEnabled()
