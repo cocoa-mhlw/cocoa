@@ -1,4 +1,6 @@
 ﻿using System;
+using Chino;
+
 namespace Covid19Radar
 {
     public static class Extensions
@@ -14,5 +16,8 @@ namespace Covid19Radar
             TimeSpan elapsedTime = dateTime.ToUniversalTime() - UNIX_EPOCH;
             return (long)elapsedTime.TotalSeconds;
         }
+
+        public static long GetRollingStartIntervalNumberAsUnixTimeInSec(this TemporaryExposureKey temporaryExposureKey)
+            => temporaryExposureKey.RollingStartIntervalNumber * (60 * 10);
     }
 }

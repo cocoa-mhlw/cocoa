@@ -5,21 +5,12 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Chino;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
 
 namespace Covid19Radar.Services
 {
-    public interface IDiagnosisKeyRegisterServer
-    {
-        public Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
-            IList<TemporaryExposureKey> temporaryExposureKeys,
-            string processNumber
-            );
-    }
-
     public class DiagnosisKeyRegisterServer : IDiagnosisKeyRegisterServer
     {
         private readonly ILoggerService _loggerService;
@@ -44,21 +35,23 @@ namespace Covid19Radar.Services
         {
             try
             {
-                _loggerService.Info($"TemporaryExposureKey count: {temporaryExposureKeys.Count()}");
-                foreach (var tek in temporaryExposureKeys)
-                {
-                    _loggerService.Info(
-                        $"TemporaryExposureKey: " +
-                        $"RollingStartIntervalNumber: {tek.RollingStartIntervalNumber}({ConvertToUnitTimeSeconds(tek.RollingStartIntervalNumber)}), " +
-                        $"RollingPeriod: {tek.RollingPeriod}, " +
-                        $"RiskLevel: {tek.RiskLevel}"
-                        );
-                }
+                _loggerService.StartMethod();
 
                 if (string.IsNullOrEmpty(processNumber))
                 {
                     _loggerService.Error($"Process number is null or empty.");
                     throw new InvalidOperationException();
+                }
+
+                _loggerService.Info($"TemporaryExposureKey count: {temporaryExposureKeys.Count()}");
+                foreach (var tek in temporaryExposureKeys)
+                {
+                    _loggerService.Info(
+                        $"TemporaryExposureKey: " +
+                        $"RollingStartIntervalNumber: {tek.RollingStartIntervalNumber}({tek.GetRollingStartIntervalNumberAsUnixTimeInSec()}), " +
+                        $"RollingPeriod: {tek.RollingPeriod}, " +
+                        $"RiskLevel: {tek.RiskLevel}"
+                        );
                 }
 
                 var diagnosisInfo = await CreateSubmissionAsync(temporaryExposureKeys, processNumber);
@@ -71,9 +64,6 @@ namespace Covid19Radar.Services
                 _loggerService.EndMethod();
             }
         }
-
-        private object ConvertToUnitTimeSeconds(int rollingStartIntervalNumber)
-             => rollingStartIntervalNumber * (60 * 10);
 
         private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(
             IList<TemporaryExposureKey> temporaryExposureKeys,
