@@ -14,7 +14,6 @@ using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
 using CommonServiceLocator;
-using Java.Util.Concurrent;
 
 namespace Covid19Radar.Droid
 {
@@ -39,8 +38,8 @@ namespace Covid19Radar.Droid
         private Lazy<ExposureNotificationApiService> _exposureNotificationApiService
             = new Lazy<ExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>() as ExposureNotificationApiService);
 
-        private Lazy<AbsBackgroundService> _backgroundService
-            = new Lazy<AbsBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsBackgroundService>());
+        private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
@@ -59,7 +58,7 @@ namespace Covid19Radar.Droid
             AbsExposureNotificationClient.Handler = this;
             SetupENClient(_exposureNotificationApiService.Value.Client);
 
-            _backgroundService.Value.ScheduleExposureDetection();
+            _exposureDetectionBackgroundService.Value.Schedule();
         }
 
         private void SetupENClient(ExposureNotificationClient client)
@@ -81,7 +80,7 @@ namespace Covid19Radar.Droid
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
 
             container.Register<ICloseApplication, CloseApplication>(Reuse.Singleton);
-            container.Register<AbsBackgroundService, BackgroundService>(Reuse.Singleton);
+            container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);

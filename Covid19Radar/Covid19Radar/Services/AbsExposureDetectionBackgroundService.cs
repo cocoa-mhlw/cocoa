@@ -11,7 +11,7 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.Services
 {
-    public abstract class AbsBackgroundService
+    public abstract class AbsExposureDetectionBackgroundService : IBackgroundService
     {
         private const string DIAGNOSIS_KEYS_DIR = "diagnosis_keys";
 
@@ -28,7 +28,7 @@ namespace Covid19Radar.Services
                         Region = region
                     }).ToList();
 
-        public AbsBackgroundService(
+        public AbsExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILoggerService loggerService,
@@ -41,7 +41,7 @@ namespace Covid19Radar.Services
             _userDataRepository = userDataRepository;
         }
 
-        public abstract void ScheduleExposureDetection();
+        public abstract void Schedule();
 
         public async Task ExposureDetectionAsync()
         {

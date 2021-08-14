@@ -13,7 +13,7 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.Droid.Services
 {
-    public class BackgroundService : AbsBackgroundService
+    public class ExposureDetectionBackgroundService : AbsExposureDetectionBackgroundService
     {
 #if DEBUG
         internal const int INTERVAL_IN_MINUTES = 16;
@@ -31,7 +31,7 @@ namespace Covid19Radar.Droid.Services
 
         private readonly ILoggerService _loggerService;
 
-        public BackgroundService(
+        public ExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILoggerService loggerService,
@@ -46,7 +46,7 @@ namespace Covid19Radar.Droid.Services
             _loggerService = loggerService;
         }
 
-        public override void ScheduleExposureDetection()
+        public override void Schedule()
         {
             _loggerService.StartMethod();
 
@@ -95,8 +95,8 @@ namespace Covid19Radar.Droid.Services
         private readonly Lazy<ILoggerService> _loggerService
             = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
-        private readonly Lazy<AbsBackgroundService> _backgroundService
-            = new Lazy<AbsBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsBackgroundService>());
+        private readonly Lazy<AbsExposureDetectionBackgroundService> _backgroundService
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
 
         public BackgroundWorker(Context context, WorkerParameters workerParameters)
             : base(context, workerParameters)
@@ -114,7 +114,7 @@ namespace Covid19Radar.Droid.Services
             if (!exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
             {
                 loggerService.Debug($"EN API is not enabled." +
-                    $" worker will retry after {BackgroundService.BACKOFF_DELAY_IN_MINUTES} minutes later.");
+                    $" worker will retry after {ExposureDetectionBackgroundService.BACKOFF_DELAY_IN_MINUTES} minutes later.");
                 return Result.InvokeRetry();
             }
 

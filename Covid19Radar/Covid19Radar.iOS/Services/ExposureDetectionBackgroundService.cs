@@ -13,7 +13,7 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.iOS.Services
 {
-    public class BackgroundService : AbsBackgroundService
+    public class ExposureDetectionBackgroundService : AbsExposureDetectionBackgroundService
     {
         private static string BGTASK_IDENTIFIER => AppInfo.PackageName + ".exposure-detection";
 
@@ -22,7 +22,7 @@ namespace Covid19Radar.iOS.Services
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly ILoggerService _loggerService;
 
-        public BackgroundService(
+        public ExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILoggerService loggerService,
@@ -38,7 +38,7 @@ namespace Covid19Radar.iOS.Services
             _loggerService = loggerService;
         }
 
-        public override void ScheduleExposureDetection()
+        public override void Schedule()
         {
             _loggerService.StartMethod();
 

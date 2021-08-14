@@ -283,7 +283,7 @@
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\ExposureNotificationApiService.cs" />
-    <Compile Include="Services\BackgroundService.cs" />
+    <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

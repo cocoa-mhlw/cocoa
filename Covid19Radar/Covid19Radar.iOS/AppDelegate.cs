@@ -32,8 +32,8 @@ namespace Covid19Radar.iOS
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationClient
             = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
 
-        private Lazy<AbsBackgroundService> _backgroundService
-            = new Lazy<AbsBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsBackgroundService>());
+        private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
 
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
@@ -69,7 +69,7 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
-            _backgroundService.Value.ScheduleExposureDetection();
+            _exposureDetectionBackgroundService.Value.Schedule();
 
             return base.FinishedLaunching(app, options);
         }
@@ -109,7 +109,7 @@ namespace Covid19Radar.iOS
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
 
             container.Register<ICloseApplication, CloseApplication>(Reuse.Singleton);
-            container.Register<AbsBackgroundService, BackgroundService>(Reuse.Singleton);
+            container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
