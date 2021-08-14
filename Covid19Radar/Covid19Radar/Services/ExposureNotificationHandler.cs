@@ -114,9 +114,9 @@ namespace Covid19Radar.Services
 
                     if (exposure.TotalRiskScore >= config.MinimumRiskScore)
                     {
-                        UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
-                        exposureInformationList.Add(userExposureInfo);
-                        isNewExposureDetected = true;
+                        //UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (RiskLevel)exposure.TransmissionRiskLevel);
+                        //exposureInformationList.Add(userExposureInfo);
+                        //isNewExposureDetected = true;
                     }
                 }
             }

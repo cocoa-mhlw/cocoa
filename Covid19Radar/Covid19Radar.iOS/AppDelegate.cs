@@ -4,11 +4,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Chino;
 using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -34,6 +36,15 @@ namespace Covid19Radar.iOS
 
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
+
+        private Lazy<IUserDataRepository> _userDataRepository
+            = new Lazy<IUserDataRepository>(() => ServiceLocator.Current.GetInstance<IUserDataRepository>());
+
+        private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
+            = new Lazy<IExposureConfigurationRepository>(() => ServiceLocator.Current.GetInstance<IExposureConfigurationRepository>());
+
+        private Lazy<ILocalNotificationService> _localNotificationService
+            = new Lazy<ILocalNotificationService>(() => ServiceLocator.Current.GetInstance<ILocalNotificationService>());
 
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
@@ -70,6 +81,8 @@ namespace Covid19Radar.iOS
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
             _exposureDetectionBackgroundService.Value.Schedule();
+
+            _ = Task.Run(async () => await _exposureConfigurationRepository.Value.GetExposureConfigurationAsync());
 
             return base.FinishedLaunching(app, options);
         }
@@ -130,9 +143,52 @@ namespace Covid19Radar.iOS
             _loggerService.Value.Info("ExposureDetected v2");
         }
 
-        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        public async void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
-            _loggerService.Value.Info("ExposureDetected v1");
+            var loggerService = _loggerService.Value;
+            loggerService.Info("ExposureDetected v1");
+
+            ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
+            ExposureConfiguration.AppleExposureConfigurationV1 configurationV1 = exposureConfiguration.AppleExposureConfigV1;
+
+            var isNewExposureDetected = false;
+            List<ExposureInformation> exposureInformationList = new List<ExposureInformation>();
+
+            if (exposureSummary.MaximumRiskScore >= configurationV1.MinimumRiskScore)
+            {
+                foreach (var exposureInfo in exposureInformations)
+                {
+                    loggerService.Info($"Exposure.Timestamp: {exposureInfo.DateMillisSinceEpoch}");
+                    loggerService.Info($"Exposure.Duration: {exposureInfo.DurationInMillis}");
+                    loggerService.Info($"Exposure.AttenuationValue: {exposureInfo.AttenuationValue}");
+                    loggerService.Info($"Exposure.TotalRiskScore: {exposureInfo.TotalRiskScore}");
+                    loggerService.Info($"Exposure.TransmissionRiskLevel: {exposureInfo.TransmissionRiskLevel}");
+
+                    if (exposureInfo.TotalRiskScore >= configurationV1.MinimumRiskScore)
+                    {
+                        exposureInformationList.Add(exposureInfo);
+                        isNewExposureDetected = true;
+                    }
+                }
+            }
+
+            if (isNewExposureDetected)
+            {
+                loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {exposureSummary.MatchedKeyCount}");
+                loggerService.Info($"Save ExposureInformation. Count: {exposureInformations.Count}");
+
+                exposureInformationList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+
+                await _userDataRepository.Value.SetExposureDataAsync(exposureSummary, exposureInformationList);
+
+                await _localNotificationService.Value.ShowExposureNotificationAsync();
+            }
+            else
+            {
+                loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
+            }
+
+            loggerService.EndMethod();
         }
 
         public void ExposureNotDetected()

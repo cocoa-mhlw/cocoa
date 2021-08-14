@@ -195,6 +195,7 @@ namespace Covid19Radar
 
             container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
+            container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository> (Reuse.Singleton);
         }
 
         protected override void OnStart()

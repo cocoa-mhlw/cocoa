@@ -14,6 +14,7 @@ using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
 using CommonServiceLocator;
+using Covid19Radar.Repository;
 
 namespace Covid19Radar.Droid
 {
@@ -40,6 +41,12 @@ namespace Covid19Radar.Droid
 
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
+
+        private Lazy<IUserDataRepository> _userDataRepository
+            = new Lazy<IUserDataRepository>(() => ServiceLocator.Current.GetInstance<IUserDataRepository>());
+
+        private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
+            = new Lazy<IExposureConfigurationRepository>(() => ServiceLocator.Current.GetInstance<IExposureConfigurationRepository>());
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
@@ -114,9 +121,11 @@ namespace Covid19Radar.Droid
             _loggerService.Value.Debug("ExposureDetected: ExposureWindows");
         }
 
-        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        public async void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
             _loggerService.Value.Debug("ExposureDetected: Legacy-V1");
+
+            await _userDataRepository.Value.SetExposureDataAsync(exposureSummary, exposureInformations);
         }
 
         public void ExposureNotDetected()
