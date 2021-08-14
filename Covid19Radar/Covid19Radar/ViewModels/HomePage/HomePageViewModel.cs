@@ -125,9 +125,7 @@ namespace Covid19Radar.ViewModels
        {
            loggerService.StartMethod();
 
-           //AppUtils.PopUpShare();
-
-           localNotificationService.ShowExposureNotificationAsync();
+           AppUtils.PopUpShare();
 
            loggerService.EndMethod();
        });
