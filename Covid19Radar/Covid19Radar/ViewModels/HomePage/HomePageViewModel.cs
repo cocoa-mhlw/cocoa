@@ -4,7 +4,6 @@
 
 using System;
 using System.Diagnostics;
-using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
