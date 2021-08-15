@@ -14,6 +14,7 @@ using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
 using CommonServiceLocator;
+using System.Diagnostics;
 
 namespace Covid19Radar.Droid
 {
@@ -96,12 +97,14 @@ namespace Covid19Radar.Droid
             container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
 
 #if USE_MOCK
+            Debug.Print("Configuration: MOCK");
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
+
         }
 
         public void PreExposureDetected()
