@@ -42,7 +42,7 @@ namespace Covid19Radar.UnitTests.Models
             var deserializedExposureSummary = JsonConvert.DeserializeObject<UserExposureSummary>(testJson);
 
             Assert.Equal(1, deserializedExposureSummary.DaysSinceLastExposure);
-            Assert.Equal(2UL, deserializedExposureSummary.MatchedKeyCount);
+            Assert.Equal(2L, deserializedExposureSummary.MatchedKeyCount);
             Assert.Equal(30, deserializedExposureSummary.HighestRiskScore);
             Assert.Equal(new TimeSpan[] { new TimeSpan(1, 2, 3, 4, 5), new TimeSpan(2, 3, 4, 5, 6) }, deserializedExposureSummary.AttenuationDurations);
             Assert.Equal(10, deserializedExposureSummary.SummationRiskScore);

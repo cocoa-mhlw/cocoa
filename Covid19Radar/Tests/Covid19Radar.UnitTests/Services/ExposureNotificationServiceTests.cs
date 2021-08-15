@@ -136,12 +136,12 @@ namespace Covid19Radar.UnitTests.Services
             Assert.Equal(new TimeSpan(0, 5, 0), result[0].Duration);
             Assert.Equal(2, result[0].AttenuationValue);
             Assert.Equal(19, result[0].TotalRiskScore);
-            Assert.Equal(UserRiskLevel.Medium, result[0].TransmissionRiskLevel);
+            Assert.Equal(Chino.RiskLevel.Medium, result[0].TransmissionRiskLevel);
             Assert.Equal(new DateTime(2020, 12, 21, 11, 00, 00), result[1].Timestamp);
             Assert.Equal(new TimeSpan(0, 15, 0), result[1].Duration);
             Assert.Equal(3, result[1].AttenuationValue);
             Assert.Equal(20, result[1].TotalRiskScore);
-            Assert.Equal(UserRiskLevel.MediumHigh, result[1].TransmissionRiskLevel);
+            Assert.Equal(Chino.RiskLevel.MediumHigh, result[1].TransmissionRiskLevel);
         }
 
         [Fact]
@@ -187,8 +187,8 @@ namespace Covid19Radar.UnitTests.Services
 
             var testExposureSummary = new UserExposureSummary(1, 2, 30, new[] { new TimeSpan(0, 5, 0), new TimeSpan(0, 10, 0) }, 40);
             var testExposureInformation = new List<UserExposureInfo> {
-                new UserExposureInfo(new DateTime(2020,12,21), new TimeSpan(0, 10, 0), 20, 30, UserRiskLevel.Lowest),
-                new UserExposureInfo(new DateTime(2020,12,22), new TimeSpan(0, 20, 0), 30, 40, UserRiskLevel.Low)
+                new UserExposureInfo(new DateTime(2020,12,21), new TimeSpan(0, 10, 0), 20, 30, Chino.RiskLevel.Lowest),
+                new UserExposureInfo(new DateTime(2020,12,22), new TimeSpan(0, 20, 0), 30, 40, Chino.RiskLevel.Low)
             };
 
             unitUnderTest.SetExposureInformation(testExposureSummary, testExposureInformation);
