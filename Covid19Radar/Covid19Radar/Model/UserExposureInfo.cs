@@ -9,6 +9,10 @@ namespace Covid19Radar.Model
 {
     public class UserExposureInfo
     {
+        public UserExposureInfo()
+        {
+        }
+
         public UserExposureInfo(DateTime timestamp, TimeSpan duration, int attenuationValue, int totalRiskScore, RiskLevel riskLevel)
         {
             Timestamp = timestamp;

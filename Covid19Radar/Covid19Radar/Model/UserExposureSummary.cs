@@ -10,6 +10,10 @@ namespace Covid19Radar.Model
 {
     public class UserExposureSummary
     {
+        public UserExposureSummary()
+        {
+        }
+
         public UserExposureSummary(int daysSinceLastExposure, ulong matchedKeyCount, int highestRiskScore, TimeSpan[] attenuationDurations, int summationRiskScore)
         {
             DaysSinceLastExposure = daysSinceLastExposure;
