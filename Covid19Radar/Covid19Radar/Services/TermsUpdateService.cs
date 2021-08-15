@@ -84,6 +84,7 @@ namespace Covid19Radar.Services
             {
                 try
                 {
+                    client.Timeout = TimeSpan.FromSeconds(5);
                     var json = await client.GetStringAsync(uri);
                     loggerService.Info($"uri: {uri}");
                     loggerService.Info($"TermsUpdateInfo: {json}");
