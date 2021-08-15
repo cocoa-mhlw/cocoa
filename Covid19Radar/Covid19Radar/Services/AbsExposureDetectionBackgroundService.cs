@@ -60,6 +60,12 @@ namespace Covid19Radar.Services
                     var targetDiagnosisKeyEntryList = diagnosisKeyEntryList
                         .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp);
 
+                    if (targetDiagnosisKeyEntryList.Count() == 0)
+                    {
+                        _loggerService.Info($"No new diagnosis-key found on {serverConfiguration.ApiEndpoint}/{serverConfiguration.Region}.");
+                        continue;
+                    }
+
                     foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
                     {
                         string filePath = _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir)
