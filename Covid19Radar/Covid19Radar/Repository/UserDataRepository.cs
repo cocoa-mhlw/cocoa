@@ -21,6 +21,8 @@ namespace Covid19Radar.Repository
         private const string KEY_DAILY_SUMMARIES = "daily_summaries";
         private const string KEY_EXPOSURE_WINDOWS = "exposure_windows";
 
+        private const string EMPTY_LIST_JSON = "[]";
+
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
         private readonly IPreferencesService _preferencesService;
@@ -319,8 +321,8 @@ namespace Covid19Radar.Repository
 
         private (List<ExposureSummary>, List<ExposureInformation>) GetExposureInformationData()
         {
-            string exposureSummariesJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, null);
-            string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, null);
+            string exposureSummariesJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, EMPTY_LIST_JSON);
+            string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, EMPTY_LIST_JSON);
 
             List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummariesJson);
             List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
@@ -330,8 +332,8 @@ namespace Covid19Radar.Repository
 
         private (List<DailySummary>, List<ExposureWindow>) GetExposureWindowData()
         {
-            string dailySummariesJson = _preferencesService.GetValue<string>(KEY_DAILY_SUMMARIES, null);
-            string exposureWindowListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_WINDOWS, null);
+            string dailySummariesJson = _preferencesService.GetValue<string>(KEY_DAILY_SUMMARIES, EMPTY_LIST_JSON);
+            string exposureWindowListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_WINDOWS, EMPTY_LIST_JSON);
 
             List<DailySummary> dailySummaryList = JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson);
             List<ExposureWindow> exposureWindowList = JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson);
