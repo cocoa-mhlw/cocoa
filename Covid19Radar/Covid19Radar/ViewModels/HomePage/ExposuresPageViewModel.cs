@@ -39,7 +39,7 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
-            var (userExposureSummary, userExposureInformationList)
+            var (_, userExposureInformationList)
                 = await _userDataRepository.GetUserExposureDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
             if (userExposureInformationList.Count() > 0)

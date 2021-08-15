@@ -48,6 +48,9 @@ namespace Covid19Radar.Droid
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ServiceLocator.Current.GetInstance<IExposureConfigurationRepository>());
 
+        private Lazy<ILocalNotificationService> _localNotificationService
+            = new Lazy<ILocalNotificationService>(() => ServiceLocator.Current.GetInstance<ILocalNotificationService>());
+
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
@@ -125,9 +128,28 @@ namespace Covid19Radar.Droid
 
         public async void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
-            _loggerService.Value.Debug("ExposureDetected: Legacy-V1");
+            var loggerService = _loggerService.Value;
+            loggerService.Info("ExposureDetected: Legacy-V1");
 
-            await _userDataRepository.Value.SetExposureDataAsync(exposureSummary, exposureInformations);
+            ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
+            ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
+
+            bool isNewExposureDetected = await _userDataRepository.Value.AppendExposureDataAsync(
+                exposureSummary,
+                exposureInformations,
+                configurationV1.MinimumRiskScore
+                );
+
+            if (isNewExposureDetected)
+            {
+                await _localNotificationService.Value.ShowExposureNotificationAsync();
+            }
+            else
+            {
+                loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
+            }
+
+            loggerService.EndMethod();
         }
 
         public void ExposureNotDetected()

@@ -150,36 +150,14 @@ namespace Covid19Radar.iOS
             ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
             ExposureConfiguration.AppleExposureConfigurationV1 configurationV1 = exposureConfiguration.AppleExposureConfigV1;
 
-            var isNewExposureDetected = false;
-            List<ExposureInformation> exposureInformationList = new List<ExposureInformation>();
-
-            if (exposureSummary.MaximumRiskScore >= configurationV1.MinimumRiskScore)
-            {
-                foreach (var exposureInfo in exposureInformations)
-                {
-                    loggerService.Info($"Exposure.Timestamp: {exposureInfo.DateMillisSinceEpoch}");
-                    loggerService.Info($"Exposure.Duration: {exposureInfo.DurationInMillis}");
-                    loggerService.Info($"Exposure.AttenuationValue: {exposureInfo.AttenuationValue}");
-                    loggerService.Info($"Exposure.TotalRiskScore: {exposureInfo.TotalRiskScore}");
-                    loggerService.Info($"Exposure.TransmissionRiskLevel: {exposureInfo.TransmissionRiskLevel}");
-
-                    if (exposureInfo.TotalRiskScore >= configurationV1.MinimumRiskScore)
-                    {
-                        exposureInformationList.Add(exposureInfo);
-                        isNewExposureDetected = true;
-                    }
-                }
-            }
+            bool isNewExposureDetected = await _userDataRepository.Value.AppendExposureDataAsync(
+                exposureSummary,
+                exposureInformations,
+                configurationV1.MinimumRiskScore
+                );
 
             if (isNewExposureDetected)
             {
-                loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {exposureSummary.MatchedKeyCount}");
-                loggerService.Info($"Save ExposureInformation. Count: {exposureInformations.Count}");
-
-                exposureInformationList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
-
-                await _userDataRepository.Value.SetExposureDataAsync(exposureSummary, exposureInformationList);
-
                 await _localNotificationService.Value.ShowExposureNotificationAsync();
             }
             else

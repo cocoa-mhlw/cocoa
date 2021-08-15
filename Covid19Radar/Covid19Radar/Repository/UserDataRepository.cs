@@ -15,7 +15,7 @@ namespace Covid19Radar.Repository
     {
         private const string KEY_LAST_PROCESS_DIAGNOSIS_KEY_TIMESTAMP = "last_process_diagnosis_key_timestamp";
 
-        private const string KEY_EXPOSURE_SUMMARY = "exposure_sumary";
+        private const string KEY_EXPOSURE_SUMMARIES = "exposure_summaries";
         private const string KEY_EXPOSURE_INFORMATIONS = "exposure_informations";
 
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
@@ -112,18 +112,18 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public async Task SetExposureDataAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformationList)
+        public async Task SetExposureDataAsync(IList<ExposureSummary> exposureSummaryList, IList<ExposureInformation> exposureInformationList)
         {
             _loggerService.StartMethod();
 
-            string exposureSummaryJson = JsonConvert.SerializeObject(exposureSummary);
+            string exposureSummaryListJson = JsonConvert.SerializeObject(exposureSummaryList);
             string exposureInformationListJson = JsonConvert.SerializeObject(exposureInformationList);
 
             await _semaphore.WaitAsync();
 
             try
             {
-                _preferencesService.SetValue(KEY_EXPOSURE_SUMMARY, exposureSummaryJson);
+                _preferencesService.SetValue(KEY_EXPOSURE_SUMMARIES, exposureSummaryListJson);
                 _preferencesService.SetValue(KEY_EXPOSURE_INFORMATIONS, exposureInformationListJson);
             }
             finally
@@ -142,7 +142,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.RemoveValue(KEY_EXPOSURE_SUMMARY);
+                _preferencesService.RemoveValue(KEY_EXPOSURE_SUMMARIES);
                 _preferencesService.RemoveValue(KEY_EXPOSURE_INFORMATIONS);
             }
             finally
@@ -153,7 +153,7 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public async Task<(UserExposureSummary, IList<UserExposureInfo>)> GetUserExposureDataAsync()
+        public async Task<(IList<UserExposureSummary>, IList<UserExposureInfo>)> GetUserExposureDataAsync()
         {
             _loggerService.StartMethod();
 
@@ -161,18 +161,20 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string exposureSummaryJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARY, null);
+                string exposureSummaryListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, null);
                 string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, null);
 
-                if (exposureSummaryJson is null || exposureInformationListJson is null)
+                if (exposureSummaryListJson is null || exposureInformationListJson is null)
                 {
-                    return (null, new List<UserExposureInfo>());
+                    return (new List<UserExposureSummary>(), new List<UserExposureInfo>());
                 }
 
-                ExposureSummary exposureSummary = JsonConvert.DeserializeObject<ExposureSummary>(exposureSummaryJson);
+                List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummaryListJson);
                 List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
 
-                UserExposureSummary userExposureSumary = new UserExposureSummary(exposureSummary);
+                List<UserExposureSummary> userExposureSumary = exposureSummaryList
+                    .Select(exposureSummary => new UserExposureSummary(exposureSummary))
+                    .ToList();
                 List<UserExposureInfo> userExposureInfoList = exposureInformationList
                     .Select(exposureInfo => new UserExposureInfo(exposureInfo))
                     .ToList();
@@ -187,11 +189,60 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public async Task<(UserExposureSummary, IList<UserExposureInfo>)> GetUserExposureDataAsync(int fromDay)
+        public async Task<(IList<UserExposureSummary>, IList<UserExposureInfo>)> GetUserExposureDataAsync(int offsetDays)
         {
-            var (summary, list) = await GetUserExposureDataAsync();
-            return (summary, list.Where(x => x.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(fromDay)) >= 0).ToList());
+            var (summaries, list) = await GetUserExposureDataAsync();
+            return (summaries,
+                list.Where(info => info.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0).ToList());
+        }
 
+        public async Task<bool> AppendExposureDataAsync(
+            ExposureSummary exposureSummary,
+            IList<ExposureInformation> exposureInformationList,
+            int minimumRiskScore
+            )
+        {
+            var (existExposureSummaryList, existExposureInformationList) = GetExposureData();
+            bool isNewExposureDetected = false;
+
+            if (exposureSummary.MaximumRiskScore >= minimumRiskScore)
+            {
+                existExposureSummaryList.Add(exposureSummary);
+
+                foreach (var exposureInfo in exposureInformationList)
+                {
+                    _loggerService.Info($"Exposure.Timestamp: {exposureInfo.DateMillisSinceEpoch}");
+                    _loggerService.Info($"Exposure.Duration: {exposureInfo.DurationInMillis}");
+                    _loggerService.Info($"Exposure.AttenuationValue: {exposureInfo.AttenuationValue}");
+                    _loggerService.Info($"Exposure.TotalRiskScore: {exposureInfo.TotalRiskScore}");
+                    _loggerService.Info($"Exposure.TransmissionRiskLevel: {exposureInfo.TransmissionRiskLevel}");
+
+                    if (exposureInfo.TotalRiskScore >= minimumRiskScore)
+                    {
+                        existExposureInformationList.Add(exposureInfo);
+                        isNewExposureDetected = true;
+                    }
+                }
+
+                _loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {exposureSummary.MatchedKeyCount}");
+                _loggerService.Info($"Save ExposureInformation. Count: {existExposureInformationList.Count}");
+                existExposureInformationList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+
+                await SetExposureDataAsync(existExposureSummaryList, existExposureInformationList);
+            }
+
+            return isNewExposureDetected;
+        }
+
+        private (List<ExposureSummary>, List<ExposureInformation>) GetExposureData()
+        {
+            string exposureSummaryJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, null);
+            string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, null);
+
+            List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummaryJson);
+            List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
+
+            return (exposureSummaryList, exposureInformationList);
         }
     }
 }
