@@ -91,6 +91,10 @@ namespace Covid19Radar.Services
                     await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region, latestProcessTimestamp);
 
                 }
+                catch(Exception exception)
+                {
+                    _loggerService.Exception("Exception occurred.", exception);
+                }
                 finally
                 {
                     RemoveFiles(downloadedFileNameList);

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Services.Logs;
@@ -93,14 +94,17 @@ namespace Covid19Radar.Services
 
         public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles)
         {
+            throw new NotImplementedException("This service is mock.");
         }
 
         public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration)
         {
+            throw new NotImplementedException("This service is mock.");
         }
 
         public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, string token)
         {
+            throw new NotImplementedException("This service is mock.");
         }
 
         public override async Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
