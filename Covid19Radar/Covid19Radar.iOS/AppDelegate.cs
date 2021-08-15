@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Chino;
 using CommonServiceLocator;
 using Covid19Radar.Common;
@@ -118,9 +119,11 @@ namespace Covid19Radar.iOS
             container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
 
 #if USE_MOCK
+            Debug.Print("Configuration: MOCK");
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
 #else
+            Debug.Print("Configuration: not MOCK");
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif

@@ -59,7 +59,6 @@ namespace Covid19Radar.Droid
             }
         }
 
-
         public override void OnCreate()
         {
             base.OnCreate();
@@ -101,6 +100,7 @@ namespace Covid19Radar.Droid
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
 #else
+            Debug.Print("Configuration: not MOCK");
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
