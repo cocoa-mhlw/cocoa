@@ -22,14 +22,17 @@ namespace Covid19Radar.iOS.Services
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly ILoggerService _loggerService;
 
+
         public ExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
+            IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
+                exposureConfigurationRepository,
                 loggerService,
                 userDataRepository
                 )

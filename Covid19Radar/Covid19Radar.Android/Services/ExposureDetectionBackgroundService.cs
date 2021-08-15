@@ -34,11 +34,13 @@ namespace Covid19Radar.Droid.Services
         public ExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
+            IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
+                exposureConfigurationRepository,
                 loggerService,
                 userDataRepository
                 )

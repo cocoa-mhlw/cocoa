@@ -27,23 +27,17 @@ namespace Covid19Radar.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IExposureNotificationHandler
     {
-        private Lazy<ILoggerService> _loggerService
-            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
-
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationClient
             = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
 
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
 
-        private Lazy<IUserDataRepository> _userDataRepository
-            = new Lazy<IUserDataRepository>(() => ServiceLocator.Current.GetInstance<IUserDataRepository>());
-
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ServiceLocator.Current.GetInstance<IExposureConfigurationRepository>());
 
-        private Lazy<ILocalNotificationService> _localNotificationService
-            = new Lazy<ILocalNotificationService>(() => ServiceLocator.Current.GetInstance<ILocalNotificationService>());
+        private Lazy<IExposureDetectionService> _exposureDetectionService
+            = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
 
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
@@ -133,45 +127,17 @@ namespace Covid19Radar.iOS
         }
 
         public void PreExposureDetected()
-        {
-            _loggerService.Value.Info("PreExposureDetected");
-        }
+            => _exposureDetectionService.Value.PreExposureDetected();
 
         public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
-        {
-            _loggerService.Value.Info("ExposureDetected v2");
-        }
+            => _exposureDetectionService.Value.ExposureDetected(dailySummaries, exposureWindows);
 
-        public async void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
-        {
-            var loggerService = _loggerService.Value;
-            loggerService.Info("ExposureDetected v1");
-
-            ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
-            ExposureConfiguration.AppleExposureConfigurationV1 configurationV1 = exposureConfiguration.AppleExposureConfigV1;
-
-            bool isNewExposureDetected = await _userDataRepository.Value.AppendExposureDataAsync(
-                exposureSummary,
-                exposureInformations,
-                configurationV1.MinimumRiskScore
-                );
-
-            if (isNewExposureDetected)
-            {
-                await _localNotificationService.Value.ShowExposureNotificationAsync();
-            }
-            else
-            {
-                loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
-            }
-
-            loggerService.EndMethod();
-        }
+        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+            => _exposureDetectionService.Value.ExposureDetected(exposureSummary, exposureInformations);
 
         public void ExposureNotDetected()
-        {
-            _loggerService.Value.Info("ExposureNotDetected");
-        }
+            => _exposureDetectionService.Value.ExposureNotDetected();
+
     }
 }
 

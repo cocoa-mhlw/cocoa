@@ -19,6 +19,12 @@ namespace Covid19Radar.Repository
             IList<ExposureInformation> exposureInformationList,
             int minimumRiskScore
             );
+
+        Task AppendExposureDataAsync(
+            IList<DailySummary> dailySummaryList,
+            IList<ExposureWindow> exposueWindowList
+            );
+
         Task RemoveExposureInformationAsync();
     }
 }

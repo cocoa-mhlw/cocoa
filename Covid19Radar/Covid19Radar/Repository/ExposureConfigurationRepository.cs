@@ -50,6 +50,7 @@ namespace Covid19Radar.Repository
             return configDir;
         }
 
+        // TODO: We should make consideration later.
         public string ResourceUrl
             => "https://raw.githubusercontent.com/keiji/chino/master/Chino.Common.Tests/files/exposure_configuration.json";
 
@@ -75,9 +76,10 @@ namespace Covid19Radar.Repository
             }
 
             ExposureConfiguration exposureConfiguration;
+            string url = ResourceUrl;
 
-            var response = await _client.GetAsync(ResourceUrl);
-            if(response.IsSuccessStatusCode)
+            var response = await _client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
             {
                 string exposureConfigurationAsJson = await response.Content.ReadAsStringAsync();
                 _loggerService.Debug(exposureConfigurationAsJson);
@@ -96,7 +98,7 @@ namespace Covid19Radar.Repository
             }
             else
             {
-                _loggerService.Warning($"Download ExposureConfiguration failed from {ResourceUrl}. Default configuration will be loaded.");
+                _loggerService.Warning($"Download ExposureConfiguration failed from {url}. Default configuration will be loaded.");
                 exposureConfiguration = new ExposureConfiguration();
             }
 
