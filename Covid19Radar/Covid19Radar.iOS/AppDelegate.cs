@@ -76,8 +76,6 @@ namespace Covid19Radar.iOS
 
             _exposureDetectionBackgroundService.Value.Schedule();
 
-            _ = _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
-
             return base.FinishedLaunching(app, options);
         }
 
