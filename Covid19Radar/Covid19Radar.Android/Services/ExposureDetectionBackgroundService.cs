@@ -116,8 +116,8 @@ namespace Covid19Radar.Droid.Services
             if (!exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
             {
                 loggerService.Debug($"EN API is not enabled." +
-                    $" worker will retry after {ExposureDetectionBackgroundService.BACKOFF_DELAY_IN_MINUTES} minutes later.");
-                return Result.InvokeRetry();
+                    $" worker will start after {ExposureDetectionBackgroundService.INTERVAL_IN_MINUTES} minutes later.");
+                return Result.InvokeSuccess();
             }
 
             try
