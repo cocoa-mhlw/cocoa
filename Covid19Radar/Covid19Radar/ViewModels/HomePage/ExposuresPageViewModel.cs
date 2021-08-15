@@ -5,6 +5,7 @@
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Prism.Navigation;
+using System;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
@@ -39,27 +40,51 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
+            var (dailySummaryList, exposureWindowList)
+                 = await _userDataRepository.GetExposureWindowDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
+
             var (_, userExposureInformationList)
                 = await _userDataRepository.GetUserExposureDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
-            if (userExposureInformationList.Count() > 0)
+            if (exposureWindowList.Count() > 0)
             {
-                foreach (var en in userExposureInformationList.GroupBy(userExposureInformation => userExposureInformation.Timestamp))
+                foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
                     var ens = new ExposureSummary()
                     {
-                        ExposureDate = en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-                        ExposureCount = en.Count().ToString()
+                        Timestamp = ew.Key,
+                        ExposureDate = ew.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureCount = ew.Count().ToString()
                     };
                     _exposures.Add(ens);
                 }
             }
+
+            if (userExposureInformationList.Count() > 0)
+            {
+                foreach (var ei in userExposureInformationList.GroupBy(userExposureInformation => userExposureInformation.Timestamp))
+                {
+                    var ens = new ExposureSummary()
+                    {
+                        Timestamp = ei.Key,
+                        ExposureDate = ei.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureCount = ei.Count().ToString()
+                    };
+                    _exposures.Add(ens);
+                }
+            }
+
+            Exposures = new ObservableCollection<ExposureSummary>(
+                _exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp)
+                );
         }
     }
 
 
     public class ExposureSummary
     {
+        public DateTime Timestamp { get; set; }
+
         public string ExposureDate { get; set; }
         public string ExposureCount { get; set; }
     }
