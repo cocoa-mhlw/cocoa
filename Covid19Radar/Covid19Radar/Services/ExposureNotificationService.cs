@@ -59,7 +59,7 @@ namespace Covid19Radar.Services
             this.preferencesService = preferencesService;
             this.applicationPropertyService = applicationPropertyService;
 
-            _ = GetExposureNotificationConfig();
+            //_ = GetExposureNotificationConfig();
         }
 
         public async Task MigrateFromUserData(UserDataModel userData)
