@@ -35,8 +35,8 @@ namespace Covid19Radar.Droid
         private Lazy<ILoggerService> _loggerService
             = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
-        private Lazy<ExposureNotificationApiService> _exposureNotificationApiService
-            = new Lazy<ExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>() as ExposureNotificationApiService);
+        private Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
+            = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
 
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
@@ -45,7 +45,17 @@ namespace Covid19Radar.Droid
         {
         }
 
-        public AbsExposureNotificationClient GetEnClient() => _exposureNotificationApiService.Value.Client;
+        public AbsExposureNotificationClient GetEnClient()
+        {
+            if (_exposureNotificationApiService.Value is ExposureNotificationApiService exposureNotificationApiService)
+            {
+                return exposureNotificationApiService.Client;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         public ExposureConfiguration GetExposureConfiguration() => new ExposureConfiguration();
 
@@ -56,7 +66,10 @@ namespace Covid19Radar.Droid
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
             AbsExposureNotificationClient.Handler = this;
-            SetupENClient(_exposureNotificationApiService.Value.Client);
+            if (_exposureNotificationApiService.Value is ExposureNotificationApiService exposureNotificationApiService)
+            {
+                SetupENClient(exposureNotificationApiService.Client);
+            }
 
             _exposureDetectionBackgroundService.Value.Schedule();
         }
