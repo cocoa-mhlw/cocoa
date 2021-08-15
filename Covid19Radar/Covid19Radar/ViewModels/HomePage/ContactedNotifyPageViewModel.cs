@@ -45,8 +45,8 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
-            var (dailySummaryList, _) = await _userDataRepository.GetExposureWindowDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var (_, userExposureInformationList) = await _userDataRepository.GetUserExposureDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var userExposureInformationList = await _userDataRepository.GetUserExposureInfosAsync(AppConstants.DaysOfExposureInformationToDisplay);
             ExposureCount = (dailySummaryList.Count() + userExposureInformationList.Count()).ToString();
         }
 

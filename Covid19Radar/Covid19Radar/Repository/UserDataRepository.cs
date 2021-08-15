@@ -117,184 +117,26 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public async Task RemoveExposureInformationAsync()
-        {
-            _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
-
-            try
-            {
-                _preferencesService.RemoveValue(KEY_EXPOSURE_SUMMARIES);
-                _preferencesService.RemoveValue(KEY_EXPOSURE_INFORMATIONS);
-            }
-            finally
-            {
-                _semaphore.Release();
-
-                _loggerService.EndMethod();
-            }
-        }
-
-        public async Task<(IList<DailySummary>, IList<ExposureWindow>)> GetExposureWindowDataAsync()
-        {
-            _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
-
-            try
-            {
-                string dailySummaryListJson = _preferencesService.GetValue<string>(KEY_DAILY_SUMMARIES, null);
-                string exposureWindowListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_WINDOWS, null);
-
-                if (dailySummaryListJson is null || exposureWindowListJson is null)
-                {
-                    return (new List<DailySummary>(), new List<ExposureWindow>());
-                }
-
-                List<DailySummary> dailySummaryList = JsonConvert.DeserializeObject<List<DailySummary>>(dailySummaryListJson);
-                List<ExposureWindow> exposureWindowList = JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson);
-
-                dailySummaryList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
-                exposureWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
-
-                return (dailySummaryList, exposureWindowList);
-            }
-            finally
-            {
-                _semaphore.Release();
-
-                _loggerService.EndMethod();
-            }
-        }
-
-        public async Task<(IList<DailySummary>, IList<ExposureWindow>)> GetExposureWindowDataAsync(int offsetDays)
-        {
-            var (summaries, exposureWindows) = await GetExposureWindowDataAsync();
-            return (
-                summaries
-                    .Where(dailySummary => dailySummary.GetDateTime().CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
-                .ToList(),
-                exposureWindows
-                    .Where(exposureWindow => exposureWindow.GetDateTime().CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
-                .ToList());
-        }
-
-        public async Task<(IList<UserExposureSummary>, IList<UserExposureInfo>)> GetUserExposureDataAsync()
-        {
-            _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
-
-            try
-            {
-                string exposureSummaryListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, null);
-                string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, null);
-
-                if (exposureSummaryListJson is null || exposureInformationListJson is null)
-                {
-                    return (new List<UserExposureSummary>(), new List<UserExposureInfo>());
-                }
-
-                List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummaryListJson);
-                List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
-
-                List<UserExposureSummary> userExposureSumary = exposureSummaryList
-                    .Select(exposureSummary => new UserExposureSummary(exposureSummary))
-                    .ToList();
-                List<UserExposureInfo> userExposureInfoList = exposureInformationList
-                    .Select(exposureInfo => new UserExposureInfo(exposureInfo))
-                    .ToList();
-
-                return (userExposureSumary, userExposureInfoList);
-            }
-            finally
-            {
-                _semaphore.Release();
-
-                _loggerService.EndMethod();
-            }
-        }
-
-        public async Task<(IList<UserExposureSummary>, IList<UserExposureInfo>)> GetUserExposureDataAsync(int offsetDays)
-        {
-            var (summaries, infomations) = await GetUserExposureDataAsync();
-            return (summaries,
-                infomations
-                .Where(info => info.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
-                .ToList());
-        }
-
-        public async Task<bool> AppendExposureDataAsync(
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformationList,
-            int minimumRiskScore
-            )
-        {
-            var (existExposureSummaryList, existExposureInformationList) = GetExposureInformationData();
-            bool isNewExposureDetected = false;
-
-            if (exposureSummary.MaximumRiskScore >= minimumRiskScore)
-            {
-                existExposureSummaryList.Add(exposureSummary);
-
-                foreach (var exposureInfo in exposureInformationList)
-                {
-                    _loggerService.Info($"Exposure.Timestamp: {exposureInfo.DateMillisSinceEpoch}");
-                    _loggerService.Info($"Exposure.Duration: {exposureInfo.DurationInMillis}");
-                    _loggerService.Info($"Exposure.AttenuationValue: {exposureInfo.AttenuationValue}");
-                    _loggerService.Info($"Exposure.TotalRiskScore: {exposureInfo.TotalRiskScore}");
-                    _loggerService.Info($"Exposure.TransmissionRiskLevel: {exposureInfo.TransmissionRiskLevel}");
-
-                    if (exposureInfo.TotalRiskScore >= minimumRiskScore)
-                    {
-                        existExposureInformationList.Add(exposureInfo);
-                        isNewExposureDetected = true;
-                    }
-                }
-
-                _loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {exposureSummary.MatchedKeyCount}");
-                _loggerService.Info($"Save ExposureInformation. Count: {existExposureInformationList.Count}");
-                existExposureInformationList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
-
-                await SetExposureDataAsync(existExposureSummaryList, existExposureInformationList);
-            }
-
-            return isNewExposureDetected;
-        }
-
+        #region ExposureWindow mode
         public async Task AppendExposureDataAsync(
             IList<DailySummary> dailySummaryList,
             IList<ExposureWindow> exposueWindowList
             )
         {
-            var (existDailySummaryList, existExposureWindowList) = GetExposureWindowData();
+            _loggerService.StartMethod();
+
+            List<DailySummary> existDailySummaryList = await GetDailySummariesAsync();
+            List<ExposureWindow> existExposureWindowList = await GetExposureWindowsAsync();
+
             existDailySummaryList.AddRange(dailySummaryList);
             existExposureWindowList.AddRange(exposueWindowList);
 
+            existDailySummaryList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+            existExposureWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+
             await SetExposureDataAsync(existDailySummaryList, existExposureWindowList);
-        }
 
-        private async Task SetExposureDataAsync(IList<ExposureSummary> exposureSummaryList, IList<ExposureInformation> exposureInformationList)
-        {
-            _loggerService.StartMethod();
-
-            string exposureSummaryListJson = JsonConvert.SerializeObject(exposureSummaryList);
-            string exposureInformationListJson = JsonConvert.SerializeObject(exposureInformationList);
-
-            await _semaphore.WaitAsync();
-
-            try
-            {
-                _preferencesService.SetValue(KEY_EXPOSURE_SUMMARIES, exposureSummaryListJson);
-                _preferencesService.SetValue(KEY_EXPOSURE_INFORMATIONS, exposureInformationListJson);
-            }
-            finally
-            {
-                _semaphore.Release();
-
-                _loggerService.EndMethod();
-            }
+            _loggerService.EndMethod();
         }
 
         private async Task SetExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
@@ -319,26 +161,251 @@ namespace Covid19Radar.Repository
             }
         }
 
-        private (List<ExposureSummary>, List<ExposureInformation>) GetExposureInformationData()
+        public async Task<List<DailySummary>> GetDailySummariesAsync()
         {
-            string exposureSummariesJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, EMPTY_LIST_JSON);
-            string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, EMPTY_LIST_JSON);
+            _loggerService.StartMethod();
 
-            List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummariesJson);
-            List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
+            await _semaphore.WaitAsync();
 
-            return (exposureSummaryList, exposureInformationList);
+            try
+            {
+                string dailySummariesJson = _preferencesService.GetValue<string>(KEY_DAILY_SUMMARIES, EMPTY_LIST_JSON);
+                return JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
         }
 
-        private (List<DailySummary>, List<ExposureWindow>) GetExposureWindowData()
+        public async Task<List<DailySummary>> GetDailySummariesAsync(int offsetDays)
         {
-            string dailySummariesJson = _preferencesService.GetValue<string>(KEY_DAILY_SUMMARIES, EMPTY_LIST_JSON);
-            string exposureWindowListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_WINDOWS, EMPTY_LIST_JSON);
-
-            List<DailySummary> dailySummaryList = JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson);
-            List<ExposureWindow> exposureWindowList = JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson);
-
-            return (dailySummaryList, exposureWindowList);
+            return (await GetDailySummariesAsync())
+                .Where(dailySummary => dailySummary.GetDateTime().CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
+                .ToList();
         }
+
+        public async Task<List<ExposureWindow>> GetExposureWindowsAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                string exposureWindowListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_WINDOWS, EMPTY_LIST_JSON);
+                return JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task<List<ExposureWindow>> GetExposureWindowsAsync(int offsetDays)
+        {
+            return (await GetExposureWindowsAsync())
+                .Where(dailySummary => dailySummary.GetDateTime().CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
+                .ToList();
+        }
+
+        public async Task<List<UserExposureSummary>> GetUserExposureSummariesAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                string exposureSummaryListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, EMPTY_LIST_JSON);
+                List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummaryListJson);
+
+                return exposureSummaryList
+                    .Select(exposureSummary => new UserExposureSummary(exposureSummary))
+                    .ToList();
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task RemoveDailySummariesAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                _preferencesService.RemoveValue(KEY_DAILY_SUMMARIES);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task RemoveExposureWindowsAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                _preferencesService.RemoveValue(KEY_EXPOSURE_WINDOWS);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+        #endregion
+
+        #region Legacy v1
+        public async Task<bool> AppendExposureDataAsync(
+            ExposureSummary exposureSummary,
+            IList<ExposureInformation> exposureInformationList,
+            int minimumRiskScore
+            )
+        {
+            var (existExposureSummaryList, existExposureInformationList) = await GetExposureInformationDataAsync();
+            bool isNewExposureDetected = false;
+
+            if (exposureSummary.MaximumRiskScore >= minimumRiskScore)
+            {
+                existExposureSummaryList.Add(exposureSummary);
+
+                foreach (var exposureInfo in exposureInformationList)
+                {
+                    _loggerService.Info($"Exposure.Timestamp: {exposureInfo.DateMillisSinceEpoch}");
+                    _loggerService.Info($"Exposure.Duration: {exposureInfo.DurationInMillis}");
+                    _loggerService.Info($"Exposure.AttenuationValue: {exposureInfo.AttenuationValue}");
+                    _loggerService.Info($"Exposure.TotalRiskScore: {exposureInfo.TotalRiskScore}");
+                    _loggerService.Info($"Exposure.TransmissionRiskLevel: {exposureInfo.TransmissionRiskLevel}");
+
+                    if (exposureInfo.TotalRiskScore >= minimumRiskScore)
+                    {
+                        existExposureInformationList.Add(exposureInfo);
+                        isNewExposureDetected = true;
+                    }
+                }
+
+                _loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {exposureSummary.MatchedKeyCount}");
+                _loggerService.Info($"Save ExposureInformation. Count: {existExposureInformationList.Count}");
+
+                existExposureInformationList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+
+                await SetExposureDataAsync(existExposureSummaryList, existExposureInformationList);
+            }
+
+            return isNewExposureDetected;
+        }
+
+        private async Task SetExposureDataAsync(IList<ExposureSummary> exposureSummaryList, IList<ExposureInformation> exposureInformationList)
+        {
+            _loggerService.StartMethod();
+
+            string exposureSummaryListJson = JsonConvert.SerializeObject(exposureSummaryList);
+            string exposureInformationListJson = JsonConvert.SerializeObject(exposureInformationList);
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                _preferencesService.SetValue(KEY_EXPOSURE_SUMMARIES, exposureSummaryListJson);
+                _preferencesService.SetValue(KEY_EXPOSURE_INFORMATIONS, exposureInformationListJson);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task<List<UserExposureInfo>> GetUserExposureInfosAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, EMPTY_LIST_JSON);
+                List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
+
+                return exposureInformationList
+                    .Select(exposureInfo => new UserExposureInfo(exposureInfo))
+                    .ToList();
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task<List<UserExposureInfo>> GetUserExposureInfosAsync(int offsetDays)
+        {
+            return (await GetUserExposureInfosAsync())
+                .Where(exposureInfo => exposureInfo.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
+                .ToList();
+        }
+
+        public async Task RemoveUserExposureInformationAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                _preferencesService.RemoveValue(KEY_EXPOSURE_SUMMARIES);
+                _preferencesService.RemoveValue(KEY_EXPOSURE_INFORMATIONS);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task<(List<ExposureSummary>, List<ExposureInformation>)> GetExposureInformationDataAsync()
+        {
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                string exposureSummariesJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, EMPTY_LIST_JSON);
+                string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, EMPTY_LIST_JSON);
+
+                List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummariesJson);
+                List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
+
+                return (exposureSummaryList, exposureInformationList);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        #endregion
     }
 }

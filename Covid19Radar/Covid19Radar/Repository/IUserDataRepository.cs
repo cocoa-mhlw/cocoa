@@ -11,11 +11,25 @@ namespace Covid19Radar.Repository
         Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp);
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
 
-        Task<(IList<DailySummary>, IList<ExposureWindow>)> GetExposureWindowDataAsync();
-        Task<(IList<DailySummary>, IList<ExposureWindow>)> GetExposureWindowDataAsync(int offsetDays);
+        // ExposureWindow mode
+        Task AppendExposureDataAsync(
+            IList<DailySummary> dailySummaryList,
+            IList<ExposureWindow> exposueWindowList
+            );
 
-        Task<(IList<UserExposureSummary>, IList<UserExposureInfo>)> GetUserExposureDataAsync();
-        Task<(IList<UserExposureSummary>, IList<UserExposureInfo>)> GetUserExposureDataAsync(int offsetDays);
+        Task<List<DailySummary>> GetDailySummariesAsync();
+        Task<List<DailySummary>> GetDailySummariesAsync(int offsetDays);
+        Task RemoveDailySummariesAsync();
+
+        Task<List<ExposureWindow>> GetExposureWindowsAsync();
+        Task<List<ExposureWindow>> GetExposureWindowsAsync(int offsetDays);
+        Task RemoveExposureWindowsAsync();
+
+        // Legacy v1 mode
+        Task<List<UserExposureSummary>> GetUserExposureSummariesAsync();
+
+        Task<List<UserExposureInfo>> GetUserExposureInfosAsync();
+        Task<List<UserExposureInfo>> GetUserExposureInfosAsync(int offsetDays);
 
         Task<bool> AppendExposureDataAsync(
             ExposureSummary exposureSummary,
@@ -23,11 +37,6 @@ namespace Covid19Radar.Repository
             int minimumRiskScore
             );
 
-        Task AppendExposureDataAsync(
-            IList<DailySummary> dailySummaryList,
-            IList<ExposureWindow> exposueWindowList
-            );
-
-        Task RemoveExposureInformationAsync();
+        Task RemoveUserExposureInformationAsync();
     }
 }
