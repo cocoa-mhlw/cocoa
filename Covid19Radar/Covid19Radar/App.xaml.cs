@@ -194,6 +194,7 @@ namespace Covid19Radar
             //container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
 
             container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);
+            container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
             container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository> (Reuse.Singleton);

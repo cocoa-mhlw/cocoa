@@ -197,8 +197,10 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
+            var (dailySummaryList, userExposureWindowList) = await _userDataRepository.GetExposureWindowDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
             var (_, userExposureInformationList) = await _userDataRepository.GetUserExposureDataAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var count = userExposureInformationList.Count();
+
+            var count = dailySummaryList.Count() + userExposureInformationList.Count();
 
             loggerService.Info($"Exposure count: {count}");
             if (count > 0)

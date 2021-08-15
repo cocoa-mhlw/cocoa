@@ -134,6 +134,50 @@ namespace Covid19Radar.Repository
             }
         }
 
+        public async Task<(IList<DailySummary>, IList<ExposureWindow>)> GetExposureWindowDataAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                string dailySummaryListJson = _preferencesService.GetValue<string>(KEY_DAILY_SUMMARIES, null);
+                string exposureWindowListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_WINDOWS, null);
+
+                if (dailySummaryListJson is null || exposureWindowListJson is null)
+                {
+                    return (new List<DailySummary>(), new List<ExposureWindow>());
+                }
+
+                List<DailySummary> dailySummaryList = JsonConvert.DeserializeObject<List<DailySummary>>(dailySummaryListJson);
+                List<ExposureWindow> exposureWindowList = JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson);
+
+                dailySummaryList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+                exposureWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+
+                return (dailySummaryList, exposureWindowList);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task<(IList<DailySummary>, IList<ExposureWindow>)> GetExposureWindowDataAsync(int offsetDays)
+        {
+            var (summaries, exposureWindows) = await GetExposureWindowDataAsync();
+            return (
+                summaries
+                    .Where(dailySummary => dailySummary.GetDateTime().CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
+                .ToList(),
+                exposureWindows
+                    .Where(exposureWindow => exposureWindow.GetDateTime().CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
+                .ToList());
+        }
+
         public async Task<(IList<UserExposureSummary>, IList<UserExposureInfo>)> GetUserExposureDataAsync()
         {
             _loggerService.StartMethod();
@@ -172,9 +216,9 @@ namespace Covid19Radar.Repository
 
         public async Task<(IList<UserExposureSummary>, IList<UserExposureInfo>)> GetUserExposureDataAsync(int offsetDays)
         {
-            var (summaries, list) = await GetUserExposureDataAsync();
+            var (summaries, infomations) = await GetUserExposureDataAsync();
             return (summaries,
-                list
+                infomations
                 .Where(info => info.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
                 .ToList());
         }

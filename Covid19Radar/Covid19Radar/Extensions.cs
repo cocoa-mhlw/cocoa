@@ -19,5 +19,11 @@ namespace Covid19Radar
 
         public static long GetRollingStartIntervalNumberAsUnixTimeInSec(this TemporaryExposureKey temporaryExposureKey)
             => temporaryExposureKey.RollingStartIntervalNumber * (60 * 10);
+
+        public static DateTime GetDateTime(this DailySummary dailySummary)
+            => DateTimeOffset.UnixEpoch.AddMilliseconds(dailySummary.DateMillisSinceEpoch).UtcDateTime;
+
+        public static DateTime GetDateTime(this ExposureWindow exposureWindow)
+            => DateTimeOffset.UnixEpoch.AddMilliseconds(exposureWindow.DateMillisSinceEpoch).UtcDateTime;
     }
 }
