@@ -90,14 +90,6 @@ namespace Covid19Radar.ViewModels
             }
 
             await localNotificationService.PrepareAsync();
-
-            switch(parameters.GetValue<DeepLinkDestination?>("destination")) {
-                case DeepLinkDestination.ContactPage:
-                    _ = await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
-                    break;
-                default:
-                    break;
-            }
         }
 
         public Command OnClickExposures => new Command(async () =>
