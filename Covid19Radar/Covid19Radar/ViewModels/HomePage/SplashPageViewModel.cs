@@ -12,6 +12,7 @@ namespace Covid19Radar.ViewModels
 {
     public class SplashPageViewModel : ViewModelBase
     {
+        // TODO 使い回されるのでPathをまとめたクラスを作ったほうがよさそう
         private string HomePagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage);
 
         private readonly ITermsUpdateService _termsUpdateService;

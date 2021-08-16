@@ -93,10 +93,17 @@ namespace Covid19Radar
             }
         }
 
-        public void setDestination(DeepLinkDestination destination)
+        public async void NavigateTo(DeepLinkDestination destination)
         {
-
-            this.destination = destination;
+            switch (destination)
+            {
+                case DeepLinkDestination.ContactPage:
+                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage) + "/" + nameof(ContactedNotifyPage));
+                    break;
+                default:
+                    break;
+            }
+            
         }
 
         public static void InitExposureNotification()
@@ -227,21 +234,6 @@ namespace Covid19Radar
         {
             base.OnResume();
             LogFileService.Rotate();
-
-            NavigateToDestination();
-        }
-
-        public async void NavigateToDestination()
-        {
-            switch (destination)
-            {
-                case DeepLinkDestination.ContactPage:
-                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage) + "/" + nameof(ContactedNotifyPage));
-                    break;
-                default:
-                    break;
-            }
-            this.destination = null;
         }
 
         /*
