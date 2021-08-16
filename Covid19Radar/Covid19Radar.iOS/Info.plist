@@ -170,7 +170,7 @@
 	<key>ENDeveloperRegion</key>
 	<string>JP</string>
 	<key>ENAPIVersion</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
 	<key>UIFileSharingEnabled</key>
