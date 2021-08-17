@@ -164,6 +164,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
             containerRegistry.RegisterForNavigation<SplashPage>();
             containerRegistry.RegisterForNavigation<HowToReceiveProcessingNumberPage>();
+            containerRegistry.RegisterForNavigation<WebAccessibilityPolicyPage>();
         }
 
         private static void RegisterCommonTypes(IContainer container)

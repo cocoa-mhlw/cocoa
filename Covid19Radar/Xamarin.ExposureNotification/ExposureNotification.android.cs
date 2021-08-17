@@ -202,11 +202,16 @@ namespace Xamarin.ExposureNotifications
 		{
 		}
 
-		public override Result DoWork()
+		public override Result DoWork() => DoAsyncWork().GetAwaiter().GetResult();
+
+		async Task<Result> DoAsyncWork()
 		{
 			try
 			{
-				Task.Run(() => DoAsyncWork()).GetAwaiter().GetResult();
+				if (await ExposureNotification.IsEnabledAsync())
+				{
+					await ExposureNotification.UpdateKeysFromServer();
+				}
 				return Result.InvokeSuccess();
 			}
 			catch (Exception ex)
@@ -214,12 +219,6 @@ namespace Xamarin.ExposureNotifications
 				System.Diagnostics.Debug.WriteLine(ex);
 				return Result.InvokeRetry();
 			}
-		}
-
-		async Task DoAsyncWork()
-		{
-			if (await ExposureNotification.IsEnabledAsync())
-				await ExposureNotification.UpdateKeysFromServer();
 		}
 	}
 

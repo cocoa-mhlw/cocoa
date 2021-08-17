@@ -14,6 +14,7 @@ using Covid19Radar.Services.Migration;
 using Covid19Radar.Droid.Services.Migration;
 using AndroidX.Work;
 using Xamarin.ExposureNotifications;
+using Java.Util.Concurrent;
 
 namespace Covid19Radar.Droid
 {
@@ -24,6 +25,9 @@ namespace Covid19Radar.Droid
 #endif
     public class MainApplication : Application
     {
+        private const int WORKER_REPEATED_INTERVAL_HOURS = 6;
+        private const int WORKER_BACKOFF_DELAY_HOURS = 1;
+
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
@@ -36,12 +40,17 @@ namespace Covid19Radar.Droid
 
             // Override WorkRequest configuration
             // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
-            var repeatInterval = TimeSpan.FromHours(6);
+            var repeatInterval = TimeSpan.FromHours(WORKER_REPEATED_INTERVAL_HOURS);
             static void requestBuilder(PeriodicWorkRequest.Builder b) =>
                b.SetConstraints(new Constraints.Builder()
                    .SetRequiresBatteryNotLow(true)
                    .SetRequiredNetworkType(NetworkType.Connected)
-                   .Build());
+                   .Build())
+               .SetBackoffCriteria(
+                   BackoffPolicy.Linear,
+                   WORKER_BACKOFF_DELAY_HOURS,
+                   TimeUnit.Hours
+                   );
             ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
 
             App.InitExposureNotification();

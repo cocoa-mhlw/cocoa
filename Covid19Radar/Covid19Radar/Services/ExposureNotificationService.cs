@@ -298,7 +298,7 @@ namespace Covid19Radar.Services
                     break;
                 case Status.Restricted:
                     // call out settings in each os
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, "", Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, Resources.AppResources.ExposureNotificationRestrictedTitle, Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
                     break;
                 default:

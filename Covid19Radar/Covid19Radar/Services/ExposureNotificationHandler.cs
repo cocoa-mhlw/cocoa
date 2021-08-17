@@ -202,8 +202,10 @@ namespace Covid19Radar.Services
             }
             catch (Exception ex)
             {
-                // any expections, bail out and wait for the next time
+                // any exceptions, throw and wait for retry
                 loggerService.Exception("Fail to download files", ex);
+
+                throw ex;
             }
             finally
             {
