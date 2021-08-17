@@ -5,11 +5,6 @@ namespace Xamarin.ExposureNotifications
 {
     public static partial class ExposureNotification
     {
-        private static readonly string[] OldWorkNames = {
-            "exposurenotification",
-            "cocoaexposurenotification",
-        }; // Array of old work-name.
-
         // Current work-name.
         private static readonly string CurrentWorkName = "cocoaexposurenotification-202107";
 
