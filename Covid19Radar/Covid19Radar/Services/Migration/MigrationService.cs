@@ -10,11 +10,24 @@ using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Services.Migration
 {
+
+    /// <summary>
+    /// Define the version that need migration.
+    /// </summary>
     public interface IMigrationProcessService
     {
+        /// <summary>
+        /// Setup migration.
+        ///
+        /// This method will be executed every migration process once.
+        /// </summary>
+        /// <returns></returns>
         public Task SetupAsync() => Task.CompletedTask;
+
         public Task Initialize_1_0_0_Async() => Task.CompletedTask;
+
         public Task MigrateTo_1_2_2_Async() => Task.CompletedTask;
+
         public Task MigrateTo_1_2_3_Async() => Task.CompletedTask;
     }
 
@@ -25,9 +38,9 @@ namespace Covid19Radar.Services.Migration
 
     public class MigrationService : AbsMigrationService
     {
-        private const string DEFAULT_VERSION = "1.0.0";
+        private const string FIRST_VERSION = "1.0.0";
 
-        private static readonly Version VERSION_1_0_0 = new Version("1.0.0");
+        private static readonly Version VERSION_1_0_0 = new Version(FIRST_VERSION);
         private static readonly Version VERSION_1_2_2 = new Version("1.2.2");
         private static readonly Version VERSION_1_2_3 = new Version("1.2.3");
 
@@ -56,7 +69,7 @@ namespace Covid19Radar.Services.Migration
                     _loggerService.Debug($"appVersion entry is not found in Preferences.");
                     return null;
                 }
-                var appVersion = _preferencesService.GetValue<string>(PreferenceKey.AppVersion, DEFAULT_VERSION);
+                var appVersion = _preferencesService.GetValue<string>(PreferenceKey.AppVersion, FIRST_VERSION);
                 _loggerService.Info($"Current Preference Version: {appVersion}");
 
                 _loggerService.EndMethod();
@@ -65,6 +78,9 @@ namespace Covid19Radar.Services.Migration
             }
         }
 
+        private void UpdateAppVersionPreference(Version version)
+            => _preferencesService.SetValue(PreferenceKey.AppVersion, version.ToString());
+
         private readonly IMigrationProcessService _platformMigrationProcessService;
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly IPreferencesService _preferencesService;
@@ -72,13 +88,16 @@ namespace Covid19Radar.Services.Migration
         private readonly IEssentialsService _essentialsService;
         private readonly ILoggerService _loggerService;
 
+        private readonly SemaphoreSlim _semaphoreForMigrate = new SemaphoreSlim(1, 1);
+
         public MigrationService(
             IMigrationProcessService platformMigrationProcessService,
             IApplicationPropertyService applicationPropertyService,
             IPreferencesService preferencesService,
             ISecureStorageService secureStorageService,
             IEssentialsService essentialsService,
-            ILoggerService loggerService)
+            ILoggerService loggerService
+            )
         {
             _platformMigrationProcessService = platformMigrationProcessService;
             _applicationPropertyService = applicationPropertyService;
@@ -90,9 +109,10 @@ namespace Covid19Radar.Services.Migration
 
         public async override Task MigrateAsync()
         {
+            await _semaphoreForMigrate.WaitAsync();
+
             try
             {
-                await _semaphoreForMigrate.WaitAsync();
                 var fromVersion = PreferenceVersion;
                 await MigrateAsync(fromVersion);
             }
@@ -109,11 +129,6 @@ namespace Covid19Radar.Services.Migration
 
             return Task.FromResult((fromVersion.CompareTo(CurrentAppVersion) > 0));
         }
-
-        private void UpdateAppVersionPreference(Version version)
-            => _preferencesService.SetValue(PreferenceKey.AppVersion, version.ToString());
-
-        private readonly SemaphoreSlim _semaphoreForMigrate = new SemaphoreSlim(1, 1);
 
         private async Task ClearAllDataAsync()
         {
