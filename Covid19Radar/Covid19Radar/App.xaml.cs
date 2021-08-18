@@ -46,8 +46,7 @@ namespace Covid19Radar
          */
         public App() : this(null) { }
 
-        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) {
-        }
+        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
 
         protected override void OnInitialized()
         {
@@ -68,11 +67,7 @@ namespace Covid19Radar
 
         public async void NavigateToSplash(DeepLinkDestination destination)
         {
-            var param = new NavigationParameters()
-            {
-                { "destination", destination }
-            };
-
+            var param = SplashPage.CreateNavigationParams(destination);
             INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage), param);
 
             if (!result.Success)
