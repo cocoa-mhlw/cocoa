@@ -12,6 +12,8 @@ namespace Covid19Radar.ViewModels
 {
     public class SplashPageViewModel : ViewModelBase
     {
+        private string HomePagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage); //TODO パスをクラスとしてまとめる
+
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataService _userDataService;
@@ -55,17 +57,15 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to ReAgreePrivacyPolicyPage");
                     _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param);
                 }
+                else if (parameters.GetValue<DeepLinkDestination?>("destination") == DeepLinkDestination.ContactPage)
+                {
+                    _loggerService.Info($"Transition to ContactPage");
+                    _ = await NavigationService.NavigateAsync(HomePagePath + "/" + nameof(ContactedNotifyPage));
+                }
                 else
                 {
-                    var param = new NavigationParameters();
-                    var destination = parameters.GetValue<DeepLinkDestination?>("destination");
-                    if (destination != null)
-                    {
-                        param.Add("destination", parameters.GetValue<DeepLinkDestination>("destination"));
-                    }
-
                     _loggerService.Info($"Transition to HomePage");
-                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage), param);
+                    _ = await NavigationService.NavigateAsync(HomePagePath);
                 }
             }
             else
