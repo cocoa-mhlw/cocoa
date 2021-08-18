@@ -58,7 +58,7 @@ namespace Covid19Radar.iOS
             _notificationCenterDelegate.OnRecieved += (UserNotificationCenterDelegate sender, UNNotificationResponse response) => {
                 // TODO:- C#だと循環参照しない？
                 // TODO:- 起動時遷移のときに連続して呼ばれるのは大丈夫か要確認(アニメーションがないので大丈夫そう？)
-                _prismApp?.NavigateToSplash(DeepLinkDestination.ContactPage); 
+                _prismApp?.NavigateToSplash(DeepLinkDestination.ContactNotifyPage); 
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 
@@ -94,7 +94,6 @@ namespace Covid19Radar.iOS
     }
 }
 
-
 public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
 {
     public delegate void NotificationCenterReceivedEventHandler(UserNotificationCenterDelegate sender, UNNotificationResponse response);
@@ -102,8 +101,6 @@ public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
 
     public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
     {
-
-
         if (UIDevice.CurrentDevice.CheckSystemVersion(14, 0))
         {
             completionHandler(UNNotificationPresentationOptions.Banner | UNNotificationPresentationOptions.List);

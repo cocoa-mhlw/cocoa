@@ -31,7 +31,7 @@ namespace Covid19Radar
     public enum DeepLinkDestination: int
     {
         HomePage,
-        ContactPage
+        ContactNotifyPage
     }
 
     public partial class App : PrismApplication
@@ -87,18 +87,6 @@ namespace Covid19Radar
                     }
                 };
                 System.Diagnostics.Debugger.Break();
-            }
-        }
-
-        public async void NavigateTo(DeepLinkDestination destination)
-        {
-            switch (destination)
-            {
-                case DeepLinkDestination.ContactPage:
-                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage) + "/" + nameof(ContactedNotifyPage));
-                    break;
-                default:
-                    break;
             }
         }
 

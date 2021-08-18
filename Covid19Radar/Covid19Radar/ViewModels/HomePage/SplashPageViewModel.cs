@@ -57,7 +57,7 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to ReAgreePrivacyPolicyPage");
                     _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param);
                 }
-                else if (parameters.GetValue<DeepLinkDestination>("destination") == DeepLinkDestination.ContactPage)
+                else if (parameters.GetValue<DeepLinkDestination>("destination") == DeepLinkDestination.ContactNotifyPage)
                 {
                     _loggerService.Info($"Transition to ContactPage");
                     _ = await NavigationService.NavigateAsync(HomePagePath + "/" + nameof(ContactedNotifyPage));
