@@ -30,6 +30,7 @@ namespace Covid19Radar
 {
     public enum DeepLinkDestination: int
     {
+        HomePage,
         ContactPage
     }
 
@@ -37,8 +38,6 @@ namespace Covid19Radar
     {
         private ILoggerService LoggerService;
         private ILogFileService LogFileService;
-
-        private DeepLinkDestination? destination;
 
         /*
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -68,13 +67,12 @@ namespace Covid19Radar
             
         }
 
-        public async void NavigateToSplash()
+        public async void NavigateToSplash(DeepLinkDestination destination)
         {
-            var param = new NavigationParameters();
-            if (destination != null)
+            var param = new NavigationParameters()
             {
-                param.Add("destination", destination);
-            }
+                { "destination", destination }
+            };
 
             INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage), param);
 
@@ -93,10 +91,16 @@ namespace Covid19Radar
             }
         }
 
-        public void setDestination(DeepLinkDestination destination)
+        public async void NavigateTo(DeepLinkDestination destination)
         {
-
-            this.destination = destination;
+            switch (destination)
+            {
+                case DeepLinkDestination.ContactPage:
+                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage) + "/" + nameof(ContactedNotifyPage));
+                    break;
+                default:
+                    break;
+            }
         }
 
         public static void InitExposureNotification()
@@ -227,21 +231,6 @@ namespace Covid19Radar
         {
             base.OnResume();
             LogFileService.Rotate();
-
-            NavigateToDestination();
-        }
-
-        public async void NavigateToDestination()
-        {
-            switch (destination)
-            {
-                case DeepLinkDestination.ContactPage:
-                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage) + "/" + nameof(ContactedNotifyPage));
-                    break;
-                default:
-                    break;
-            }
-            this.destination = null;
         }
 
         /*
