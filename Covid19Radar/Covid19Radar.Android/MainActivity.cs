@@ -8,6 +8,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
+using Covid19Radar.Droid.Services;
+using System;
+using Prism.Common;
 
 namespace Covid19Radar.Droid
 {
@@ -21,6 +24,8 @@ namespace Covid19Radar.Droid
         }
 
         public static object dataLock = new object();
+
+        private App _app;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,7 +45,8 @@ namespace Covid19Radar.Droid
             UserDialogs.Init(this);
 
             //NotificationCenter.CreateNotificationChannel();
-            LoadApplication(new App());
+            _app = new App();
+            LoadApplication(_app);
             //NotificationCenter.NotifyNotificationTapped(base.Intent);
         }
 
@@ -70,6 +76,35 @@ namespace Covid19Radar.Droid
             base.OnActivityResult(requestCode, resultCode, data);
 
             Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
+
+            var isOk = (resultCode == Result.Ok);
+
+            FireExposureNotificationEvent(requestCode, isOk);
+        }
+
+        private void FireExposureNotificationEvent(int requestCode, bool isOk)
+        {
+            Action<IExposureNotificationEventCallback> action = requestCode switch
+            {
+                ExposureNotificationApiService.REQUEST_EN_START
+                    => new Action<IExposureNotificationEventCallback>(callback =>
+                    {
+                        if(isOk)
+                        {
+                            callback.OnEnabled();
+                        }
+                        else
+                        {
+                            callback.OnDeclined();
+                        }
+                    }),
+                ExposureNotificationApiService.REQUEST_GET_TEK_HISTORY
+                    => new Action<IExposureNotificationEventCallback>(callback => { callback.OnGetTekHistoryAllowed(); }),
+                ExposureNotificationApiService.REQUEST_PREAUTHORIZE_KEYS
+                    => new Action<IExposureNotificationEventCallback>(callback => { callback.OnPreauthorizeAllowed(); }),
+                _ => new Action<IExposureNotificationEventCallback>(callback => { /* do nothing */ }),
+            };
+            PageUtilities.InvokeViewAndViewModelAction(PageUtilities.GetCurrentPage(_app.MainPage), action);
         }
 
         //protected override void OnNewIntent(Intent intent)

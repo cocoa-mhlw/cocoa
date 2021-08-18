@@ -11,7 +11,10 @@ using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
 using AndroidX.Work;
-using Xamarin.ExposureNotifications;
+using Chino;
+using Chino.Android.Google;
+using System.Collections.Generic;
+using CommonServiceLocator;
 using Java.Util.Concurrent;
 
 namespace Covid19Radar.Droid
@@ -21,20 +24,51 @@ namespace Covid19Radar.Droid
 #else
     [Application(Debuggable = false)]
 #endif
-    public class MainApplication : Application
+    public class MainApplication : Application, IExposureNotificationHandler
     {
+        private const long INITIAL_BACKOFF_MILLIS = 60 * 60 * 1000;
+
         private const int WORKER_REPEATED_INTERVAL_HOURS = 6;
         private const int WORKER_BACKOFF_DELAY_HOURS = 1;
+
+        private ExposureNotificationClient EnClient = null;
+
+        private readonly JobSetting _exposureDetectedV1JobSetting
+            = new JobSetting(INITIAL_BACKOFF_MILLIS, Android.App.Job.BackoffPolicy.Linear, true);
+        private readonly JobSetting _exposureDetectedV2JobSetting
+            = new JobSetting(INITIAL_BACKOFF_MILLIS, Android.App.Job.BackoffPolicy.Linear, true);
+        private readonly JobSetting _exposureNotDetectedJobSetting = null;
+
+        private Lazy<ExposureNotificationApiService> _exposureNotificationApiService
+            = new Lazy<ExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>() as ExposureNotificationApiService);
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
 
+        public AbsExposureNotificationClient GetEnClient()
+        {
+            if (EnClient == null)
+            {
+                EnClient = new ExposureNotificationClient()
+                {
+                    ExposureDetectedV1JobSetting = _exposureDetectedV1JobSetting,
+                    ExposureDetectedV2JobSetting = _exposureDetectedV2JobSetting,
+                    ExposureNotDetectedJobSetting = _exposureNotDetectedJobSetting
+                };
+                EnClient.Init(this);
+            }
+
+            return EnClient;
+        }
         public override void OnCreate()
         {
             base.OnCreate();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
+
+            AbsExposureNotificationClient.Handler = this;
+            _exposureNotificationApiService.Value.Client.Init(this);
 
             // Override WorkRequest configuration
             // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
@@ -49,7 +83,7 @@ namespace Covid19Radar.Droid
                    WORKER_BACKOFF_DELAY_HOURS,
                    TimeUnit.Hours
                    );
-            ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
+            //ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
 
             App.InitExposureNotification();
         }
@@ -63,11 +97,31 @@ namespace Covid19Radar.Droid
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
+
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
+            container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
+            container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
+        }
+
+        public void PreExposureDetected()
+        {
+        }
+
+        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        {
+        }
+
+        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        {
+        }
+
+        public void ExposureNotDetected()
+        {
+            throw new NotImplementedException();
         }
     }
 }

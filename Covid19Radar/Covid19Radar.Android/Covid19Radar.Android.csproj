@@ -173,7 +173,7 @@
       <Version>1.2.1</Version>
     </PackageReference>
     <PackageReference Include="Chino.Android">
-      <Version>1.0.0-beta09</Version>
+      <Version>1.0.0-beta10</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +192,7 @@
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
+    <Compile Include="Services\ExposureNotificationApiService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />

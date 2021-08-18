@@ -2,9 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
+using System.Collections.Generic;
+using Chino;
+using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using DryIoc;
@@ -19,8 +24,11 @@ namespace Covid19Radar.iOS
     // User Interface of the application, as well as listening (and optionally responding) to
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IExposureNotificationHandler
     {
+        private Lazy<AbsExposureNotificationApiService> _exposureNotificationClient
+            = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
+
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
         {
@@ -39,7 +47,7 @@ namespace Covid19Radar.iOS
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
-            App.InitExposureNotification();
+            InitializeExposureNotificationClient();
 
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
 
@@ -57,6 +65,24 @@ namespace Covid19Radar.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        public AbsExposureNotificationClient GetEnClient() => _exposureNotificationClient.Value;
+
+        private void InitializeExposureNotificationClient()
+        {
+            AbsExposureNotificationClient.Handler = this;
+
+            if (GetEnClient() is ExposureNotificationApiService exposureNotificationApiService)
+            {
+                exposureNotificationApiService.UserExplanation = AppResources.LocalNotificationDescription;
+
+#if DEBUG
+                exposureNotificationApiService.IsTest = true;
+#else
+                exposureNotificationApiService.IsTest = false;
+#endif
+            }
+        }
+
         public override void OnActivated(UIApplication uiApplication)
         {
             base.OnActivated(uiApplication);
@@ -72,11 +98,30 @@ namespace Covid19Radar.iOS
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
+
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
+            container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
+            container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
+        }
+
+        public void PreExposureDetected()
+        {
+        }
+
+        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        {
+        }
+
+        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        {
+        }
+
+        public void ExposureNotDetected()
+        {
         }
     }
 }

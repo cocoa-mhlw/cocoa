@@ -282,6 +282,7 @@
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
+    <Compile Include="Services\ExposureNotificationApiService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -377,7 +378,7 @@
       <Version>2.0.6</Version>
     </PackageReference>
     <PackageReference Include="Chino.iOS">
-      <Version>1.0.0-beta09</Version>
+      <Version>1.0.0-beta10</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

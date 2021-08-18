@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
@@ -13,7 +12,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.ExposureNotifications;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
@@ -36,10 +34,6 @@ namespace Covid19Radar.Services
 
         List<UserExposureInfo> GetExposureInformationListToDisplay();
         int GetExposureCountToDisplay();
-
-        Task<string> UpdateStatusMessageAsync();
-        Task<bool> StartExposureNotification();
-        Task<bool> StopExposureNotification();
 
         string PositiveDiagnosis { get; set; }
         DateTime? DiagnosisDate { get; set; }
@@ -263,97 +257,6 @@ namespace Covid19Radar.Services
             }
             loggerService.EndMethod();
             return result;
-        }
-
-        public async Task<string> UpdateStatusMessageAsync()
-        {
-            loggerService.StartMethod();
-            ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
-            loggerService.EndMethod();
-            return await GetStatusMessageAsync();
-        }
-
-        public async Task<bool> StartExposureNotification()
-        {
-            loggerService.StartMethod();
-            try
-            {
-                var enabled = await ExposureNotification.IsEnabledAsync();
-                if (!enabled)
-                {
-                    await ExposureNotification.StartAsync();
-                }
-
-                loggerService.EndMethod();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Error enabling notifications.", ex);
-                loggerService.EndMethod();
-                return false;
-            }
-            finally
-            {
-
-            }
-        }
-
-        public async Task<bool> StopExposureNotification()
-        {
-            loggerService.StartMethod();
-            try
-            {
-                var enabled = await ExposureNotification.IsEnabledAsync();
-                if (enabled)
-                {
-                    await ExposureNotification.StopAsync();
-                }
-
-                loggerService.EndMethod();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Error disabling notifications.", ex);
-                loggerService.EndMethod();
-                return false;
-            }
-        }
-
-        private async Task<string> GetStatusMessageAsync()
-        {
-            var message = "";
-
-            switch (ExposureNotificationStatus)
-            {
-                case Status.Unknown:
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageUnknown, "", Resources.AppResources.ButtonOk);
-                    message = Resources.AppResources.ExposureNotificationStatusMessageUnknown;
-                    break;
-                case Status.Disabled:
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageDisabled, "", Resources.AppResources.ButtonOk);
-                    message = Resources.AppResources.ExposureNotificationStatusMessageDisabled;
-                    break;
-                case Status.Active:
-                    message = Resources.AppResources.ExposureNotificationStatusMessageActive;
-                    break;
-                case Status.BluetoothOff:
-                    // call out settings in each os
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff, "", Resources.AppResources.ButtonOk);
-                    message = Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff;
-                    break;
-                case Status.Restricted:
-                    // call out settings in each os
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, Resources.AppResources.ExposureNotificationRestrictedTitle, Resources.AppResources.ButtonOk);
-                    message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
-                    break;
-                default:
-                    break;
-            }
-
-            CurrentStatusMessage = message;
-            return message;
         }
 
         /* Processing number issued when positive */
