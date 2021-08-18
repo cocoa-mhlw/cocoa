@@ -23,13 +23,13 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
 
-        private App xamarinApp = new App();
-        private UserNotificationCenterDelegate notificationCenterDelegate = new UserNotificationCenterDelegate();
-
+        private App xamarinApp;
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
         {
         }
+
+        bool isLaunch = false; // TODO 状態追加するのは微妙...
 
         //
         // This method is invoked when the application has loaded and is ready to run. In this
@@ -40,6 +40,7 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            isLaunch = true;
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
@@ -54,14 +55,22 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
+            var xamarinApp = new App();
 
+            var notificationCenterDelegate = new UserNotificationCenterDelegate();
             notificationCenterDelegate.OnRecieved += (UserNotificationCenterDelegate sender, UNNotificationResponse response) => {
-                this.xamarinApp.NavigateToSplash(); // TODO:- C#だと循環参照しない？
+                this.xamarinApp?.setDestination(DeepLinkDestination.ContactPage);
+                if (app.ApplicationState == UIApplicationState.Active) // TODO:- C#だと循環参照しない？
+                {
+                    this.xamarinApp?.NavigateToDestination();
+                }
+
             };
             UNUserNotificationCenter.Current.Delegate = notificationCenterDelegate;
 
 
-            LoadApplication(this.xamarinApp);
+            LoadApplication(xamarinApp);
+            this.xamarinApp = xamarinApp;
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
@@ -72,9 +81,11 @@ namespace Covid19Radar.iOS
             base.OnActivated(uiApplication);
             MessagingCenter.Send((object)this, AppConstants.IosOnActivatedMessage);
 
-            notificationCenterDelegate.OnRecieved += (UserNotificationCenterDelegate sender, UNNotificationResponse response) => {
-                this.xamarinApp.NavigateTo(DeepLinkDestination.ContactPage); // TODO:- C#だと循環参照しない？
-            };
+            if (isLaunch)
+            {
+                xamarinApp?.NavigateToSplash();
+            }
+            isLaunch = false;
         }
 
         private void RegisterPlatformTypes(IContainer container)
