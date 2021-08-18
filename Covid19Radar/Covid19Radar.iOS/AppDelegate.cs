@@ -31,8 +31,6 @@ namespace Covid19Radar.iOS
         {
         }
 
-        bool isLaunch = false; // TODO 状態追加するのは微妙...
-
         //
         // This method is invoked when the application has loaded and is ready to run. In this
         // method you should instantiate the window, load the UI into it and then make the window
@@ -42,7 +40,6 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            isLaunch = true;
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
