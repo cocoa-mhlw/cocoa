@@ -31,7 +31,7 @@ namespace Covid19Radar
     public enum DeepLinkDestination: int
     {
         HomePage,
-        ContactNotifyPage
+        ContactedNotifyPage
     }
 
     public partial class App : PrismApplication
