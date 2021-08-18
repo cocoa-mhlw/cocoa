@@ -61,10 +61,9 @@ namespace Covid19Radar
             // Local Notification tap event listener
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
+            NavigateToSplash(DeepLinkDestination.HomePage);
 
             LoggerService.EndMethod();
-
-            
         }
 
         public async void NavigateToSplash(DeepLinkDestination destination)

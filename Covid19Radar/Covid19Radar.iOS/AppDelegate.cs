@@ -68,7 +68,6 @@ namespace Covid19Radar.iOS
 
             LoadApplication(prismApp);
             _prismApp = prismApp;
-            _prismApp?.NavigateToSplash(DeepLinkDestination.HomePage);
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
