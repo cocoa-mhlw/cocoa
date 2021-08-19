@@ -1,7 +1,6 @@
 ---
 title: "ライセンスの取り扱い"
-date: 2021-07-30T00:00:00+09:00
-path: "/development/maintainance_oss_licenses"
+weight: 1
 draft: false
 ---
 

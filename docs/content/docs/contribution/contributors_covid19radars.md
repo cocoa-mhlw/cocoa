@@ -1,7 +1,6 @@
 ---
 title: "COVID-19Radar Contoributors"
-date: 2021-07-14T00:00:00+09:00
-path: "/contributions/contributors-covid-19radar"
+weight: 300
 draft: false
 ---
 

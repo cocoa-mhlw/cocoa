@@ -2,7 +2,22 @@ baseURL = "http://example.org/"
 languageCode = "ja-JP"
 title = "COCOA - 新型コロナウィルス接触確認アプリ"
 theme = "book"
+enableGitInfo = true
+
+[markup]
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 2
+
+[menu]
+# [[menu.before]]
+[[menu.after]]
+  name = "GitHubリポジトリ"
+  url = "https://github.com/cocoa-mhlw/cocoa"
+  weight = 1
+# [[menu.after]]
 
 [params]
   BookTheme = 'light'
-  BookMenuBundle = "/menu"

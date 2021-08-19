@@ -1,7 +1,6 @@
 ---
 title: "多言語対応"
-date: 2021-06-21T00:00:00+09:00
-path: "/development/multi_language"
+weight: 1
 draft: false
 ---
 

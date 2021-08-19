@@ -1,7 +1,6 @@
 ---
 title: "貢献についてのガイドライン"
-date: 2021-04-10T00:00:00+09:00
-path: "/contributions/guidelines"
+weight: 100
 draft: false
 ---
 

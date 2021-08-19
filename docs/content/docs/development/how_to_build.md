@@ -1,7 +1,6 @@
 ---
 title: "ビルド方法"
-date: 2021-05-16T00:00:00+09:00
-path: "/development/how_to_build"
+weight: 1
 draft: false
 ---
 
