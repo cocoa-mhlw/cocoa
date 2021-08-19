@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "ja-JP"
+title = "COCOA - 新型コロナウィルス接触確認アプリ"
+theme = "book"
+
+[params]
+  BookTheme = 'light'
+  BookMenuBundle = "/menu"
