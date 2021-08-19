@@ -38,6 +38,8 @@ namespace Covid19Radar.Services
         private static readonly string TermsOfServiceLastUpdateDateKey = "TermsOfServiceLastUpdateDateTime";
         private static readonly string PrivacyPolicyLastUpdateDateKey = "PrivacyPolicyLastUpdateDateTime";
 
+        private const double TIMEOUT_IN_MILLIS = 5 * 1000;
+
         public TermsUpdateService(ILoggerService loggerService, IApplicationPropertyService applicationPropertyService, IPreferencesService preferencesService)
         {
             this.loggerService = loggerService;
@@ -84,7 +86,7 @@ namespace Covid19Radar.Services
             {
                 try
                 {
-                    client.Timeout = TimeSpan.FromSeconds(5);
+                    client.Timeout = TimeSpan.FromMilliseconds(TIMEOUT_IN_MILLIS);
                     var json = await client.GetStringAsync(uri);
                     loggerService.Info($"uri: {uri}");
                     loggerService.Info($"TermsUpdateInfo: {json}");
