@@ -20,14 +20,14 @@ namespace Covid19Radar.Services.Logs
     public interface ILogWriter
     {
         /// <summary>
-        ///  ログを出力します。
+        ///  ログ出力を行います。
         /// </summary>
-        /// <param name="message">出力するメッセージです。</param>
-        /// <param name="method">実行中の関数の名前です。</param>
-        /// <param name="filePath">実行中の関数を格納しているソースファイルの名前です。</param>
-        /// <param name="lineNumber">実行中の関数のソースファイル内での行番号です。</param>
-        /// <param name="logLevel">ログレベルです。</param>
-        public void Write(string? message, string method, string filePath, int lineNumber, LogLevel logLevel);
+        /// <param name="message">出力するメッセージを指定します。</param>
+        /// <param name="method">実行中の関数の名前を指定します。</param>
+        /// <param name="filePath">実行中の関数を格納しているソースファイルの名前を指定します。</param>
+        /// <param name="lineNumber">実行中の関数のソースファイル内での行番号を指定します。</param>
+        /// <param name="logLevel">ログレベルを指定します。</param>
+        public void Write(string? message, string? method, string? filePath, int lineNumber, LogLevel logLevel);
     }
 
     /// <summary>
@@ -36,7 +36,7 @@ namespace Covid19Radar.Services.Logs
     public sealed class LogWriter : ILogWriter
     {
         [ThreadStatic()]
-        private static StringBuilder? _sb;
+        private static StringBuilder? _sb_cache;
         private const string DATETIME_FORMAT = "yyyy/MM/dd HH:mm:ss.fffffff";
         private static readonly string HEADER = CreateLogHeaderRow();
         private readonly ILogPathService _log_path;
@@ -57,7 +57,7 @@ namespace Covid19Radar.Services.Logs
         }
 
         /// <inheritdoc/>
-        public void Write(string? message, string method, string filePath, int lineNumber, LogLevel logLevel)
+        public void Write(string? message, string? method, string? sourceFile, int lineNumber, LogLevel logLevel)
         {
 #if !DEBUG
             if (logLevel == LogLevel.Verbose || logLevel == LogLevel.Debug) {
@@ -65,33 +65,53 @@ namespace Covid19Radar.Services.Logs
             }
 #endif
             try {
-                var    jstNow = Utils.JstNow();
-                string row    = CreateLogContentRow(message ?? string.Empty, method, filePath, lineNumber, logLevel, jstNow, _essentials);
-                Debug.WriteLine(row);
-                this.WriteLine(jstNow, row);
+                // null は空文字として扱う。
+                message    ??= string.Empty;
+                method     ??= string.Empty;
+                sourceFile ??= string.Empty;
+
+                // ローカル変数初期化。
+                var    time = Utils.JstNow();
+                var    file = _log_file;
+                string path = _log_path.LogFilePath(time);
+
+                // ファイルを更新する必要がある場合。
+                if (file is null || file.Path != path) {
+                    // 新しいファイルを生成する。
+                    var newFile = new LogFile(path, _encoding);
+
+                    do {
+                        if (Interlocked.CompareExchange(ref _log_file, newFile, file) == file) {
+                            // _log_file を新しいファイルに置き換える事ができた場合、
+                            // 元のファイルを破棄しループから抜ける。
+                            file?.Dispose();
+                            file = newFile;
+                            break;
+                        }
+
+                        // 別スレッドに制御を渡す。
+                        Thread.Yield();
+
+                        // ローカル変数を更新する。
+                        time = Utils.JstNow();
+                        file = _log_file;
+                        path = _log_path.LogFilePath(time);
+
+                        if (newFile.Path != path) {
+                            // 日付が更新された場合は新しいファイルを作り直す。
+                            newFile.Dispose();
+                            newFile = new LogFile(path, _encoding);
+                        }
+                    } while (file is null || file.Path != path);
+                }
+
+                // ログをファイルに書き込む。
+                string line = CreateLogContentRow(message, method, sourceFile, lineNumber, logLevel, time, _essentials);
+                file .WriteLine(line);
+                Debug.WriteLine(line);
             } catch (Exception e) {
                 Debug.WriteLine(e.ToString());
             }
-        }
-
-        private void WriteLine(DateTime jstNow, string line)
-        {
-            var    file = _log_file;
-            string path = _log_path.LogFilePath(jstNow);
-            if (file is null || file.Path != path) {
-                var newFile = new LogFile(path, _encoding);
-                do {
-                    if (Interlocked.CompareExchange(ref _log_file, newFile, file) == file) {
-                        newFile.WriteLine(HEADER);
-                        file?.Dispose();
-                        file = newFile;
-                        break;
-                    }
-                    Thread.Yield();
-                    file = _log_file;
-                } while (file is null || file.Path != path);
-            }
-            file.WriteLine(line);
         }
 
         private static string CreateLogHeaderRow()
@@ -139,11 +159,10 @@ namespace Covid19Radar.Services.Logs
 
         private static string CreateLogRow(params string[] cols)
         {
-            _ = _sb is null ? _sb = new StringBuilder()
-                            : _sb.Clear();
-
+            var sb = _sb_cache is null ? _sb_cache = new StringBuilder()
+                                       : _sb_cache.Clear();
             foreach (string col in cols) {
-                _sb.Append(",\"");
+                sb.Append(",\"");
                 foreach (char ch in col) {
                     string? escaped = ch switch {
                         '\t' => "\\t",  '\v' => "\\v",
@@ -151,19 +170,33 @@ namespace Covid19Radar.Services.Logs
                         '\\' => "\\\\", '\"' => "\"\"",
                         _ => null
                     };
-                    _ = escaped is null ? _sb.Append(ch)
-                                        : _sb.Append(escaped);
+                    _ = escaped is null ? sb.Append(ch)
+                                        : sb.Append(escaped);
                 }
-                _sb.Append('\"');
+                sb.Append('\"');
             }
-            _sb.Remove(0, 1);
-            return _sb.ToString();
+            sb.Remove(0, 1);
+            return sb.ToString();
+        }
+
+        private static FileStream OpenLogFile(string path, bool useWriterMode)
+        {
+            return new FileStream(
+                path,
+                useWriterMode ? FileMode.Append  : FileMode.Open,
+                useWriterMode ? FileAccess.Write : FileAccess.Read,
+                FileShare.ReadWrite | FileShare.Delete);
+        }
+
+        public static StreamReader OpenReader(string path)
+        {
+            return new StreamReader(OpenLogFile(path, false));
         }
 
         private sealed class LogFile : IDisposable
         {
-            private readonly Encoding           _encoding;
-            private readonly Lazy<StreamWriter> _writer;
+            private readonly Encoding _encoding;
+            private readonly Lazy<TextWriter> _writer;
 
             internal string Path { get; }
 
@@ -176,14 +209,19 @@ namespace Covid19Radar.Services.Logs
 
                 this.Path = path;
                 _encoding = enc;
-                _writer   = new Lazy<StreamWriter>(this.OpenFile, LazyThreadSafetyMode.PublicationOnly);
+                _writer   = new Lazy<TextWriter>(this.OpenFile, LazyThreadSafetyMode.ExecutionAndPublication);
             }
 
-            private StreamWriter OpenFile()
+            private TextWriter OpenFile()
             {
-                return new StreamWriter(new FileStream(this.Path, FileMode.Append, FileAccess.Write, FileShare.ReadWrite), _encoding) {
+                var fs = OpenLogFile(this.Path, true);
+                var sw = TextWriter.Synchronized(new StreamWriter(fs, _encoding) {
                     AutoFlush = true
-                };
+                });
+                if (fs.Length <= _encoding.Preamble.Length) {
+                    sw.WriteLine(HEADER);
+                }
+                return sw;
             }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]

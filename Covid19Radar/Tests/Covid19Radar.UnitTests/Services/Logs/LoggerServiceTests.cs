@@ -3,8 +3,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Text.RegularExpressions;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -41,7 +43,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             loggerService.StartMethod(method, filePath, lineNumber);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -85,8 +87,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
             Assert.True(Directory.Exists("~/.cocoa/logs"));
             Assert.True(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
 
-            Mock.Get(mockILogPathService).Verify(s => s.LogsDirPath, Times.Exactly(2));
-            Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.Once());
+            Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.AtLeastOnce());
         }
 
         [Fact]
@@ -104,8 +105,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             Assert.True(Directory.Exists("~/.cocoa/logs"));
             Assert.True(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
-            Mock.Get(mockILogPathService).Verify(s => s.LogsDirPath, Times.Once());
-            Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.Once());
+
+            Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.AtLeastOnce());
         }
 
         [Fact]
@@ -123,8 +124,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             Assert.True(Directory.Exists("~/.cocoa/logs"));
             Assert.True(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
-            Mock.Get(mockILogPathService).Verify(s => s.LogsDirPath, Times.Once());
-            Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.Once());
+
+            Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.AtLeastOnce());
         }
 
         #endregion
@@ -141,7 +142,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             loggerService.EndMethod("Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -183,7 +184,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             loggerService.Verbose("Message", "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -225,7 +226,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             loggerService.Debug("Message", "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -260,12 +261,12 @@ namespace Covid19Radar.UnitTests.Services.Logs
         [Theory]
         [InlineData("Hello", "\"Hello\"")]
         [InlineData("Hello, world!!", "\"Hello, world!!\"")]
-        [InlineData("Hello\r", "\"Hello\\r\"")]
-        [InlineData("Hello\n", "\"Hello\\n\"")]
-        [InlineData("Hello\r\n", "\"Hello\\r\\n\"")]
-        [InlineData("\"Hello\"", "\"\"\"Hello\"\"\"")]
-        [InlineData("\"\"Hello\"\"", "\"\"\"\"\"Hello\"\"\"\"\"")]
-        [InlineData("\"Hello\": foo, \"world\": bar\n!!", "\"\"\"Hello\"\": foo, \"\"world\"\": bar\\n!!\"")]
+        [InlineData("Hello\r", "\"Hello\r\"")]
+        [InlineData("Hello\n", "\"Hello\n\"")]
+        [InlineData("Hello\r\n", "\"Hello\r\n\"")]
+        [InlineData("\"Hello\"", "\"\"Hello\"\"")]
+        [InlineData("\"\"Hello\"\"", "\"\"\"Hello\"\"\"")]
+        [InlineData("\"Hello\": foo, \"world\": bar\n!!", "\"\"Hello\": foo, \"world\": bar\n!!\"")]
         [InlineData(null, "\"\"")]
         [InlineData("", "\"\"")]
         public void Info_Success(string message, string expectedMessage)
@@ -277,7 +278,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             loggerService.Info(message, "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -326,7 +327,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             var lineNumber = 0;
             string logRow;
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 while ((logRow = sr.ReadLine()) != null)
                 {
@@ -450,7 +451,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             var lineNumber = 0;
             string logRow;
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 while ((logRow = sr.ReadLine()) != null)
                 {
@@ -570,7 +571,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             loggerService.Warning("Message", "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -612,7 +613,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             loggerService.Error("Message", "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -654,7 +655,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             loggerService.Exception("Message", new NullReferenceException(), "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = LogWriter.OpenReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -748,9 +749,81 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
         private string[] ParseLogRow(string logRow)
         {
-            var pattern = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
-            return pattern.Split(logRow);
+            return ParseCsv(logRow, true)
+                .Select(s => $"\"{s}\"")
+                .ToArray();
         }
+
+        #endregion
+
+        #region CocoaLogViewer Code
+
+        // このコードは CocoaLogViewer からコピーしました。MITライセンスに基づいて配布されています。
+        // This source code is copied from CocoaLogViewer and distributed under the MIT License.
+        // https://github.com/YigtyORG/CocoaLogViewer/blob/284bac856306eca780b62c7079046c870aff7a6e/src/Covid19Radar.LogViewer/Models/LogFileModel.cs#L64-L123
+        // Copyright (C) 2020-2021 Yigty.ORG; all rights reserved.
+        // Copyright (C) 2020-2021 Takym.
+
+		private static List<string> ParseCsv(string line, bool allowEscape)
+		{
+			var  result = new List<string>();
+			var  sb     = new StringBuilder(); // This line was modified.
+			int  i      = 0;
+			bool dq     = false;
+			while (i < line.Length) {
+				char ch = line[i];
+				switch (ch) {
+				case '\"':
+					++i;
+					if (dq && i < line.Length && line[i] == '\"') {
+						++i;
+						sb.Append('\"');
+					} else {
+						dq = !dq;
+					}
+					break;
+				case '\\' when allowEscape:
+					++i;
+					if (i < line.Length) {
+						ch = line[i];
+						++i;
+						sb.Append(ch switch {
+							't' => '\t',
+							'v' => '\v',
+							'r' => '\r',
+							'n' => '\n',
+							_ => ch
+						});
+					} else {
+						sb.Append('\\');
+					}
+					break;
+				case ',':
+					++i;
+					if (dq) {
+						sb.Append(',');
+					} else {
+						result.Add(sb.ToString());
+						sb.Clear();
+					}
+					break;
+				case ' ': case '\0': case '\t': case '\v': case '\r': case '\n':
+					++i;
+					if (dq) {
+						sb.Append(ch);
+					}
+					break;
+				default:
+					++i;
+					sb.Append(ch);
+					break;
+				}
+			}
+			if (sb.Length > 0) {
+				result.Add(sb.ToString());
+			}
+			return result;
+		}
 
         #endregion
     }
