@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main, develop, 'feature/**'  ]
     paths:
-      - 'docs/**'
+      - 'documents/**'
   pull_request:
     branches: [ main, develop, 'feature/**' ]
     paths:
-      - 'docs/**'
+      - 'documents/**'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,13 +25,13 @@ jobs:
           extended: true
       - name: Build Site
         run: |
-          cd ${{ github.workspace }}/docs
+          cd ${{ github.workspace }}/documents
           hugo --minify
-          ls ${{ github.workspace }}/docs
+          ls ${{ github.workspace }}/documents
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: ${{ github.workspace }}/docs/public
+          FOLDER: ${{ github.workspace }}/documents/public
           CLEAN: true  
