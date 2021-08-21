@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
@@ -54,7 +53,6 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
-            var prismApp = new App();
             _notificationCenterDelegate.OnRecieved += (UserNotificationCenterDelegate sender, UNNotificationResponse response) => {
                 // TODO:- C#だと循環参照しない？
                 // TODO:- 起動時遷移のときに連続して呼ばれるのは大丈夫か要確認(アニメーションがないので大丈夫そう？)
@@ -62,9 +60,8 @@ namespace Covid19Radar.iOS
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 
-
-            LoadApplication(prismApp);
-            _prismApp = prismApp;
+            _prismApp = new App();
+            LoadApplication(_prismApp);
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);
