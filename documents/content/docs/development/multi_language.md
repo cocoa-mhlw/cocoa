@@ -1,7 +1,7 @@
 ---
 title: "多言語対応"
-weight: 1
-draft: false
+weight: 40
+type: docs
 ---
 
 # 多言語対応

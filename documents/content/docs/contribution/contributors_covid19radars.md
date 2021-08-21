@@ -1,7 +1,7 @@
 ---
 title: "COVID-19Radar Contoributors"
-weight: 300
-draft: false
+weight: 700
+type: docs
 ---
 
 # COVID-19Radar Contirbutors

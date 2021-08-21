@@ -5,15 +5,23 @@ type: docs
 
 # COCOA Open Source Project
 こちらは新型コロナウィルス接触確認アプリ（以降COCOA）のオープンソースプロジェクトのドキュメントです。
+
+COCOAのリポジトリは次のURLです。
+
+ * [https://github.com/cocoa-mhlw/cocoa](https://github.com/cocoa-mhlw/cocoa)
+
+リポジトリの運営については[「内閣官房情報通信技術（IT）総合戦略室」GitHub運用方針]({{<relref "operation_policy">}})を注意事項もご確認ください。
+
+
+## 開発について
+ * [ブランチ構成]({{<relref "branches">}})
+ * [ビルド方法]({{<relref "how_to_build">}})
+ * [ライセンスの取り扱い]({{<relref "maintainance_oss_licenses">}})
+ * [多言語対応]({{<relref "multi_language">}})
+
+## 貢献について
+ * [貢献についてのガイドライン]({{<relref "guidelines">}})
+ * [Pull Requestが取り込まれるまで]({{<relref "handling_pullreqeust">}})
+ * [Contributors]({{<relref "contributors">}})
+
 COCOAは[Project Covid19Radar[Archived]](https://github.com/Covid-19Radar)を元に開発されています。
-
-COCOAのインストール方法、説明、更新情報等については、厚生労働省の[COCOAに関するページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html)をご確認下さい。
-
-## COCOA利用者向けQ&A
-COCOAの利用方法で不明な点につきましては、厚生労働省の[Q&Aページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html)をご確認ください。
-
-## COCOAへのご要望等につきまして
-本リポジトリへの PullRequest や Issues を歓迎いたします。事前に[新型コロナウイルス接触確認アプリ（COCOA) への貢献についてのガイドライン](CONTRIBUTING.md)をご確認の上、投稿いただければと思います。
-また、当方のリソース面や意思決定プロセスに起因して、お返事が遅くなる場合があります。ご了承いただけましたら幸いです。
-
-技術的な点以外のご要望については、大変お手数ですが、 [Q&Aページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html)に記載がありますお問い合わせメールアドレスにご連絡いただきますようお願い致します。  

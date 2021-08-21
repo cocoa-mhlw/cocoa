@@ -1,7 +1,7 @@
 ---
 title: "Contoributors"
-weight: 200
-draft: false
+weight: 600
+type: docs
 ---
 
 # Contirbutors

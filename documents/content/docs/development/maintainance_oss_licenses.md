@@ -1,7 +1,7 @@
 ---
 title: "ライセンスの取り扱い"
-weight: 1
-draft: false
+weight: 30
+type: docs
 ---
 
 # ライセンスの取り扱い

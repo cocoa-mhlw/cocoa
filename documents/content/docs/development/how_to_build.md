@@ -1,6 +1,6 @@
 ---
 title: "ビルド方法"
-weight: 1
+weight: 20
 draft: false
 ---
 
