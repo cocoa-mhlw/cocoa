@@ -12,14 +12,9 @@ namespace Covid19Radar.Common
             IList<TemporaryExposureKey> temporaryExposureKeys,
             DateTime diagnosisDate,
             int daysToSendTek,
-            ILoggerService? loggerService = null
+            ILoggerService loggerService
             )
         {
-            if (loggerService is null)
-            {
-                loggerService = new DevNullLogger();
-            }
-
             loggerService.StartMethod();
 
             List<TemporaryExposureKey> filteredTemporaryExposureKeys = new List<TemporaryExposureKey>();

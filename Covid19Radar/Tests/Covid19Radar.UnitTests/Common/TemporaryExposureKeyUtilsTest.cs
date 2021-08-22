@@ -3,12 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using Chino;
 using Covid19Radar.Common;
+using Covid19Radar.Services.Logs;
+using Moq;
 using Xunit;
 
 namespace Covid19Radar.UnitTests.Common
 {
     public class TemporaryExposureKeyUtilsTest
     {
+        private readonly MockRepository mockRepository;
+        private readonly Mock<ILoggerService> mockLoggerService;
+
+        public TemporaryExposureKeyUtilsTest()
+        {
+            mockRepository = new MockRepository(MockBehavior.Default);
+            mockLoggerService = mockRepository.Create<ILoggerService>();
+        }
+
         [Theory]
         [InlineData("2020-11-22T00:00:00+09:00", 0, "", "")]
         [InlineData("2020-11-21T00:00:00+09:00", 1, "2020-11-18T00:00:00Z", "2020-11-18T00:00:00Z")]
@@ -38,7 +49,8 @@ namespace Covid19Radar.UnitTests.Common
             IList<TemporaryExposureKey> filteredTemporaryExposureKeys = TemporaryExposureKeyUtils.FiilterTemporaryExposureKeys(
                 temporaryExposureKeys,
                 diagnosisDate,
-                AppConstants.DaysToSendTek
+                AppConstants.DaysToSendTek,
+                mockLoggerService.Object
                 );
 
             var actualCount = filteredTemporaryExposureKeys.Count();
