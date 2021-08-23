@@ -28,6 +28,12 @@ using Xamarin.ExposureNotifications;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
 {
+    public enum DeepLinkDestination: int
+    {
+        HomePage,
+        ContactedNotifyPage
+    }
+
     public partial class App : PrismApplication
     {
         private ILoggerService LoggerService;
@@ -42,7 +48,7 @@ namespace Covid19Radar
 
         public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
 
-        protected override async void OnInitialized()
+        protected override void OnInitialized()
         {
             InitializeComponent();
 
@@ -54,8 +60,15 @@ namespace Covid19Radar
             // Local Notification tap event listener
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
+            NavigateToSplash(DeepLinkDestination.HomePage);
 
-            INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage));
+            LoggerService.EndMethod();
+        }
+
+        public async void NavigateToSplash(DeepLinkDestination destination)
+        {
+            var param = SplashPage.CreateNavigationParams(destination);
+            INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage), param);
 
             if (!result.Success)
             {
@@ -70,8 +83,6 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
-
-            LoggerService.EndMethod();
         }
 
         public static void InitExposureNotification()
