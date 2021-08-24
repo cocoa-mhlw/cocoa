@@ -57,7 +57,7 @@ namespace Covid19Radar.Services
             return Task.Factory.StartNew<HttpStatusCode>(() =>
             {
                 Debug.WriteLine("HttpDataServiceMock::PutSelfExposureKeysAsync called");
-                return HttpStatusCode.OK;
+                return HttpStatusCode.NoContent;
             });
         }
 

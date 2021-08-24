@@ -17,11 +17,11 @@ namespace Covid19Radar.Common
         public const int MaxErrorCount = 3;
 
         /// <summary>
-        /// Max diagnosis UID Count
+        /// Max Process Number length
         /// </summary>
-        public const int MaxDiagnosisUidCount = 8;
+        public const int MaxProcessNumberLength = 8;
 
-        public const string positiveRegex = @"\b[0-9]{8}\b";
+        public const string processNumberRegex = @"\b[0-9]{8}\b";
 
         /// <summary>
         /// Number of days of exposure information to display
