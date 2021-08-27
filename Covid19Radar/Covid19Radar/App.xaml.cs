@@ -28,12 +28,6 @@ using Xamarin.ExposureNotifications;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
 {
-    public enum DeepLinkDestination: int
-    {
-        HomePage,
-        ContactedNotifyPage
-    }
-
     public partial class App : PrismApplication
     {
         private ILoggerService LoggerService;
@@ -57,18 +51,16 @@ namespace Covid19Radar
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.AddSkipBackupAttribute();
 
-            // Local Notification tap event listener
-            //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
-            NavigateToSplash(DeepLinkDestination.HomePage);
+            NavigateToSplash(Destination.HomePage);
 
             LoggerService.EndMethod();
         }
 
-        public async void NavigateToSplash(DeepLinkDestination destination)
+        public async void NavigateToSplash(Destination destination)
         {
             var param = SplashPage.CreateNavigationParams(destination);
-            INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage), param);
+            INavigationResult result = await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), param);
 
             if (!result.Success)
             {
@@ -83,6 +75,15 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
+        }
+
+        public async Task NavigateTo(Destination destination)
+        {
+            LoggerService.StartMethod();
+
+            await NavigationService.NavigateAsync(destination.ToPath());
+
+            LoggerService.EndMethod();
         }
 
         public static void InitExposureNotification()
@@ -126,11 +127,6 @@ namespace Covid19Radar
             var container = (ServiceLocator.Current as ContainerServiceLocator).CopyContainerWithRegistrations();
             return new DryIocContainerExtension(container);
         }
-
-        //protected void OnNotificationTapped(NotificationTappedEventArgs e)
-        //{
-        //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-        //}
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {

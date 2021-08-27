@@ -8,18 +8,29 @@ using Android.OS;
 using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
+using System;
 
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        private const string EXTRA_KEY_DESTINATION = "key_destination";
+
         internal static Intent NewIntent(Context context)
         {
             Intent intent = new Intent(context, typeof(MainActivity));
             return intent;
         }
 
+        internal static Intent NewIntent(Context context, Destination destination)
+        {
+            Intent intent = new Intent(context, typeof(MainActivity));
+            intent.PutExtra(EXTRA_KEY_DESTINATION, (int)destination);
+            return intent;
+        }
+
+        private App _prismApp;
         public static object dataLock = new object();
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -39,9 +50,17 @@ namespace Covid19Radar.Droid
 
             UserDialogs.Init(this);
 
-            //NotificationCenter.CreateNotificationChannel();
-            LoadApplication(new App());
-            //NotificationCenter.NotifyNotificationTapped(base.Intent);
+            _prismApp = new App();
+            LoadApplication(_prismApp);
+
+            Destination destination = GetDestinationFromIntent(Intent);
+            _prismApp.NavigateToSplash(destination);
+        }
+
+        private static Destination GetDestinationFromIntent(Intent intent)
+        {
+            int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
+            return (Destination)Enum.ToObject(typeof(Destination), ordinal);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -72,12 +91,13 @@ namespace Covid19Radar.Droid
             Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
         }
 
-        //protected override void OnNewIntent(Intent intent)
-        //{
-        //    NotificationCenter.NotifyNotificationTapped(intent);
+        protected async override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
 
-        //    base.OnNewIntent(intent);
-        //}
+            var destination = GetDestinationFromIntent(Intent);
+            await _prismApp.NavigateTo(destination);
+        }
 
     }
 }

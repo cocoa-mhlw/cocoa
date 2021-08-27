@@ -60,7 +60,7 @@ namespace Covid19Radar.Droid.Services
         {
             _loggerService.StartMethod();
 
-            Intent intent = MainActivity.NewIntent(Platform.AppContext);
+            Intent intent = MainActivity.NewIntent(Platform.AppContext, Destination.ContactedNotifyPage);
             PendingIntent pendingIntent = PendingIntent.GetActivity(
                 Platform.AppContext,
                 REQUEST_CODE,
