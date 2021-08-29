@@ -117,10 +117,10 @@ namespace Covid19Radar.Services.Migration
             }
         }
 
-        private Task<bool> DetectDowngradeAsync()
+        private bool DetectDowngrade()
         {
             var fromVersion = GetPreferenceVersion() ?? GuessVersion();
-            return Task.FromResult((fromVersion.CompareTo(CurrentAppVersion) > 0));
+            return fromVersion.CompareTo(CurrentAppVersion) > 0;
         }
 
         private Version GuessVersion()
@@ -136,7 +136,7 @@ namespace Covid19Radar.Services.Migration
         {
             _loggerService.StartMethod();
 
-            if (await DetectDowngradeAsync())
+            if (DetectDowngrade())
             {
                 _loggerService.Error("App version Downgrade detected.");
             }
