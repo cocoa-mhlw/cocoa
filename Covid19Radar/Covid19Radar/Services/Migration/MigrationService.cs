@@ -124,35 +124,6 @@ namespace Covid19Radar.Services.Migration
             return Task.FromResult((fromVersion.CompareTo(CurrentAppVersion) > 0));
         }
 
-        private async Task ClearAllDataAsync()
-        {
-            _loggerService.StartMethod();
-
-            const string applicationPropertyUserDataKey = "UserData";
-            const string applicationPropertyTermsOfServiceLastUpdateDateKey = "TermsOfServiceLastUpdateDateTime";
-            const string applicationPropertyPrivacyPolicyLastUpdateDateKey = "PrivacyPolicyLastUpdateDateTime";
-
-            // Remove all ApplicationProperties
-            await _applicationPropertyService.Remove(applicationPropertyUserDataKey);
-            await _applicationPropertyService.Remove(applicationPropertyTermsOfServiceLastUpdateDateKey);
-            await _applicationPropertyService.Remove(applicationPropertyPrivacyPolicyLastUpdateDateKey);
-            await _applicationPropertyService.Remove(PreferenceKey.ExposureNotificationConfiguration);
-
-            // Remove all Preferences
-            _preferencesService.RemoveValue(PreferenceKey.AppVersion);
-            _preferencesService.RemoveValue(PreferenceKey.StartDateTime);
-            _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTime);
-            _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
-            _preferencesService.RemoveValue(PreferenceKey.ExposureNotificationConfiguration);
-            _preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
-
-            // Do not remove Exposure informations from SecureStorage
-            //_secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
-            //_secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
-
-            _loggerService.EndMethod();
-        }
-
         private Version GuessVersion()
         {
             if (_preferencesService.ContainsKey(PreferenceKey.StartDateTime))
@@ -168,11 +139,7 @@ namespace Covid19Radar.Services.Migration
 
             if (await DetectDowngradeAsync())
             {
-                _loggerService.Warning("Downgrade is detected. All data will be cleared.");
-
-                await ClearAllDataAsync();
-
-                _loggerService.Info("All data cleared.");
+                _loggerService.Error("App version Downgrade detected.");
             }
 
             if (fromVersion is null)
