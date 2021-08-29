@@ -90,7 +90,7 @@ namespace Covid19Radar.Repository
             else
             {
                 _loggerService.Debug($"DownloadDiagnosisKeysAsync {response.StatusCode}");
-                return null;
+                throw new HttpRequestException($"Request is unsuccessful with status code {response.StatusCode}");
             }
         }
 
