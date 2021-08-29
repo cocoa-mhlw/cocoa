@@ -30,7 +30,7 @@ namespace Covid19Radar.Services
             }
             catch(Exception ex)
             {
-                _loggerService.Exception("Failed to check version.", ex);
+                _loggerService.Exception("Failed to start exposure notification", ex);
             }
             finally
             {
