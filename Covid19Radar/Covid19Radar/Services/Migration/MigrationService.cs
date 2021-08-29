@@ -118,7 +118,11 @@ namespace Covid19Radar.Services.Migration
 
         public async override Task MigrateAsync()
         {
+            _loggerService.StartMethod();
+
             await _semaphoreForMigrate.WaitAsync();
+
+            _loggerService.Info("Migration process have been started.");
 
             try
             {
