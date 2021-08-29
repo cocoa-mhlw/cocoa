@@ -43,7 +43,7 @@ namespace Covid19Radar.Droid.Services.Migration
     public class UpgradeWorker : Worker
     {
         private readonly ILoggerService _loggerService = ServiceLocator.Current.GetInstance<ILoggerService>();
-        private readonly AbsMigrationService _migrationService = ServiceLocator.Current.GetInstance<AbsMigrationService>();
+        private readonly IMigrationService _migrationService = ServiceLocator.Current.GetInstance<IMigrationService>();
 
         public UpgradeWorker(
             Context context,

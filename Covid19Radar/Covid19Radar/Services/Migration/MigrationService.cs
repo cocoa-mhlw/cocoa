@@ -32,12 +32,12 @@ namespace Covid19Radar.Services.Migration
         public Task MigrateTo_1_2_3_Async() => Task.CompletedTask;
     }
 
-    public abstract class AbsMigrationService
+    public interface IMigrationService
     {
-        public abstract Task MigrateAsync();
+        public Task MigrateAsync();
     }
 
-    public class MigrationService : AbsMigrationService
+    public class MigrationService : IMigrationService
     {
         private const string FIRST_VERSION = "1.0.0";
 
@@ -116,7 +116,7 @@ namespace Covid19Radar.Services.Migration
             return _currentAppVersion;
         }
 
-        public async override Task MigrateAsync()
+        public async Task MigrateAsync()
         {
             _loggerService.StartMethod();
 
