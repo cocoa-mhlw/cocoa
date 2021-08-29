@@ -45,8 +45,7 @@ namespace Covid19Radar.Services.Migration
         private static readonly Version VERSION_1_2_2 = new Version("1.2.2");
         private static readonly Version VERSION_1_2_3 = new Version("1.2.3");
 
-        private Version _currentAppVersion;
-        private Version CurrentAppVersion => _currentAppVersion;
+        private static readonly Version VERSION_LATEST = VERSION_1_2_3;
 
         private void SetPreferenceVersion(Version version)
             => _preferencesService.SetValue(PreferenceKey.AppVersion, version.ToString());
@@ -92,14 +91,29 @@ namespace Covid19Radar.Services.Migration
             _secureStorageService = secureStorageService;
             _essentialsService = essentialsService;
             _loggerService = loggerService;
-
-            _currentAppVersion = GetAppVersion();
         }
 
-        private Version GetAppVersion()
+        private Version? _currentAppVersion;
+        private Version GetCurrentAppVersion()
         {
+            if (_currentAppVersion != null)
+            {
+                return _currentAppVersion;
+            }
+
             string appVersion = _essentialsService.AppVersion;
-            return new Version(appVersion);
+
+            try
+            {
+                _currentAppVersion = new Version(appVersion);
+            }
+            catch (ArgumentException e)
+            {
+                _loggerService.Exception($"AppVersion {appVersion} is not valid.", e);
+                _currentAppVersion = VERSION_LATEST;
+            }
+
+            return _currentAppVersion;
         }
 
         public async override Task MigrateAsync()
@@ -113,14 +127,18 @@ namespace Covid19Radar.Services.Migration
             }
             finally
             {
+                _loggerService.Info("Migration process completed.");
+
                 _semaphoreForMigrate.Release();
+
+                _loggerService.EndMethod();
             }
         }
 
         private bool DetectDowngrade()
         {
             var fromVersion = GetPreferenceVersion() ?? GuessVersion();
-            return fromVersion.CompareTo(CurrentAppVersion) > 0;
+            return fromVersion.CompareTo(GetCurrentAppVersion()) > 0;
         }
 
         private Version GuessVersion()
@@ -154,9 +172,9 @@ namespace Covid19Radar.Services.Migration
                 }
             }
 
-            if (fromVersion.CompareTo(CurrentAppVersion) == 0)
+            if (fromVersion.CompareTo(GetCurrentAppVersion()) == 0)
             {
-                _loggerService.Debug($"fromVersion: {fromVersion} == currentVersion: {CurrentAppVersion}");
+                _loggerService.Debug($"fromVersion: {fromVersion} == currentVersion: {GetCurrentAppVersion()}");
                 _loggerService.EndMethod();
                 return;
             }
@@ -184,7 +202,7 @@ namespace Covid19Radar.Services.Migration
                 SetPreferenceVersion(VERSION_1_2_3);
             }
 
-            SetPreferenceVersion(CurrentAppVersion);
+            SetPreferenceVersion(GetCurrentAppVersion());
 
             _loggerService.EndMethod();
         }
