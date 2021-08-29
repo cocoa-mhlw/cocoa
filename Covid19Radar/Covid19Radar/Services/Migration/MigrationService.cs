@@ -93,14 +93,13 @@ namespace Covid19Radar.Services.Migration
             _essentialsService = essentialsService;
             _loggerService = loggerService;
 
-            LoadAppVersion();
-
+            _currentAppVersion = GetAppVersion();
         }
 
-        private void LoadAppVersion()
+        private Version GetAppVersion()
         {
             string appVersion = _essentialsService.AppVersion;
-            _currentAppVersion = new Version(appVersion);
+            return new Version(appVersion);
         }
 
         public async override Task MigrateAsync()
