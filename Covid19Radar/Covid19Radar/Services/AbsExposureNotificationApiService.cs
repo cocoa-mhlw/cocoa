@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Services.Logs;
@@ -27,8 +28,9 @@ namespace Covid19Radar.Services
                 }
                 await StartAsync();
             }
-            catch
+            catch(Exception ex)
             {
+                _loggerService.Exception("Failed to check version.", ex);
             }
             finally
             {
