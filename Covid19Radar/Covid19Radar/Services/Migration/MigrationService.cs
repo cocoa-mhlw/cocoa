@@ -57,6 +57,7 @@ namespace Covid19Radar.Services.Migration
             if (!_preferencesService.ContainsKey(PreferenceKey.AppVersion))
             {
                 _loggerService.Debug($"appVersion entry is not found in Preferences.");
+                _loggerService.EndMethod();
                 return null;
             }
             var appVersion = _preferencesService.GetValue(PreferenceKey.AppVersion, FIRST_VERSION);
