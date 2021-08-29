@@ -26,6 +26,7 @@ namespace Covid19Radar.Droid.Services.Migration
 
             if (intent.Action != Intent.ActionMyPackageReplaced)
             {
+                _loggerService.EndMethod();
                 return;
             }
 
