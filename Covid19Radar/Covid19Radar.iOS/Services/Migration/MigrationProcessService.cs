@@ -8,5 +8,6 @@ namespace Covid19Radar.iOS.Services.Migration
 {
     public class MigrationProcessService : IMigrationProcessService
     {
+        // Currently, It is not needed that iOS platform specific migration process.
     }
 }
