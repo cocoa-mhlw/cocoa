@@ -112,7 +112,7 @@ namespace Covid19Radar.Services.Migration
             var userDataModelForFailback = JsonConvert.DeserializeObject<UserDataModelForFailback>(userData);
 
             // Clear DateTime
-            userDataModelForFailback.StartDateTime = DateTime.Now.ToString();
+            userDataModelForFailback.StartDateTime = DateTime.UtcNow.ToString();
 
             // Save UserData recovered
             string userDataModelForFailbackString = JsonConvert.SerializeObject(userDataModelForFailback);
