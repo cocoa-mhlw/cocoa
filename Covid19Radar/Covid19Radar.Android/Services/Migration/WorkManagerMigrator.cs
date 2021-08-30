@@ -10,6 +10,12 @@ namespace Covid19Radar.Droid.Services.Migration
 {
     internal class WorkManagerMigrator
     {
+        // Array of old work-name.
+        private static readonly string[] OldWorkNames = {
+            "exposurenotification",
+            "cocoaexposurenotification",
+        };
+
         private readonly ILoggerService _loggerService;
 
         public WorkManagerMigrator(
@@ -23,13 +29,8 @@ namespace Covid19Radar.Droid.Services.Migration
         {
             _loggerService.StartMethod();
 
-            // Array of old work-name.
-            string[] oldWorkName = {
-                "exposurenotification",
-            };
-
             var workManager = WorkManager.GetInstance(Xamarin.Essentials.Platform.AppContext);
-            CancelOldWorks(workManager, oldWorkName, _loggerService);
+            CancelOldWorks(workManager, OldWorkNames, _loggerService);
 
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
