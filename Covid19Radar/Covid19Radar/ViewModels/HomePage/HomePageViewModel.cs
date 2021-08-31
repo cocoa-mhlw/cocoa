@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -17,7 +18,7 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
+        private readonly IUserDataRepository userDataRepository;
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly ILocalNotificationService localNotificationService;
 
@@ -38,14 +39,14 @@ namespace Covid19Radar.ViewModels
         public HomePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataService userDataService,
+            IUserDataRepository userDataRepository,
             IExposureNotificationService exposureNotificationService,
             ILocalNotificationService localNotificationService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
+            this.userDataRepository = userDataRepository;
             this.exposureNotificationService = exposureNotificationService;
             this.localNotificationService = localNotificationService;
         }
@@ -62,7 +63,7 @@ namespace Covid19Radar.ViewModels
                 SettingDaysOfUse();
             });
 
-            var startDate = userDataService.GetStartDate();
+            var startDate = userDataRepository.GetStartDate();
             StartDate = startDate.ToLocalTime().ToString("D");
 
             SettingDaysOfUse();
@@ -124,7 +125,7 @@ namespace Covid19Radar.ViewModels
         private void SettingDaysOfUse()
         {
             loggerService.StartMethod();
-            var daysOfUse = userDataService.GetDaysOfUse();
+            var daysOfUse = userDataRepository.GetDaysOfUse();
             PastDate = daysOfUse.ToString();
             loggerService.EndMethod();
         }

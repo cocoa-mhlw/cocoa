@@ -4,7 +4,7 @@
 
 using System.Windows.Input;
 using Acr.UserDialogs;
-using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -27,18 +27,23 @@ namespace Covid19Radar.ViewModels
         }
 
         private readonly IExposureNotificationService exposureNotificationService;
-        private readonly IUserDataService userDataService;
-        private readonly IHttpDataService httpDataService;
+        private readonly IUserDataRepository userDataRepository;
         private readonly ILogFileService logFileService;
         private readonly ITermsUpdateService termsUpdateService;
 
-        public SettingsPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IHttpDataService httpDataService, IExposureNotificationService exposureNotificationService, ILogFileService logFileService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public SettingsPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository,
+            IExposureNotificationService exposureNotificationService,
+            ILogFileService logFileService,
+            ITermsUpdateService termsUpdateService
+            ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            this.httpDataService = httpDataService;
+            this.userDataRepository = userDataRepository;
             this.exposureNotificationService = exposureNotificationService;
             this.logFileService = logFileService;
             this.termsUpdateService = termsUpdateService;
@@ -64,7 +69,7 @@ namespace Covid19Radar.ViewModels
                 }
 
                 // Reset All Data and Optout
-                userDataService.RemoveStartDate();
+                userDataRepository.RemoveStartDate();
                 exposureNotificationService.RemoveExposureInformation();
                 exposureNotificationService.RemoveConfiguration();
                 exposureNotificationService.RemoveLastProcessTekTimestamp();

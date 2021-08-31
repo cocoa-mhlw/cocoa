@@ -19,6 +19,7 @@ using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Migration;
 using Xamarin.ExposureNotifications;
+using Covid19Radar.Repository;
 
 /*
  * Our mission...is
@@ -170,6 +171,7 @@ namespace Covid19Radar
         private static void RegisterCommonTypes(IContainer container)
         {
             // Services
+            container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
