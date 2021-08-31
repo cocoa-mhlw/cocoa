@@ -20,7 +20,10 @@ namespace Covid19Radar.Repository
         void RemoveStartDate();
 
         bool IsReAgree(TermsType termsType, TermsUpdateInfoModel privacyUpdateInfo);
+
+        DateTime GetLastUpdateDate(TermsType termsType);
         void SaveLastUpdateDate(TermsType termsType, DateTime updateDate);
+
         bool IsAllAgreed();
 
         void RemoveAllUpdateDate();
@@ -69,20 +72,12 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
 
-            TermsUpdateInfoModel.Detail info = null;
-            string key = null;
-
-            switch (termsType)
+            TermsUpdateInfoModel.Detail info = termsType switch
             {
-                case TermsType.TermsOfService:
-                    info = termsUpdateInfo.TermsOfService;
-                    key = PreferenceKey.TermsOfServiceLastUpdateDateTime;
-                    break;
-                case TermsType.PrivacyPolicy:
-                    info = termsUpdateInfo.PrivacyPolicy;
-                    key = PreferenceKey.PrivacyPolicyLastUpdateDateTime;
-                    break;
-            }
+                TermsType.TermsOfService => termsUpdateInfo.TermsOfService,
+                TermsType.PrivacyPolicy => termsUpdateInfo.PrivacyPolicy,
+                _ => throw new NotSupportedException()
+            };
 
             if (info == null)
             {
@@ -90,16 +85,29 @@ namespace Covid19Radar.Repository
                 return false;
             }
 
-            var lastUpdateDate = new DateTime();
+            DateTime lastUpdateDate = GetLastUpdateDate(termsType);
+            _loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
+            _loggerService.EndMethod();
+
+            return lastUpdateDate < info.UpdateDateTime;
+        }
+
+        public DateTime GetLastUpdateDate(TermsType termsType)
+        {
+            string key = termsType switch
+            {
+                TermsType.TermsOfService => PreferenceKey.TermsOfServiceLastUpdateDateTime,
+                TermsType.PrivacyPolicy => PreferenceKey.PrivacyPolicyLastUpdateDateTime,
+                _ => throw new NotSupportedException()
+            };
+
+            var lastUpdateDate = new DateTime(); // 0001/01/01
             if (_preferencesService.ContainsKey(key))
             {
                 lastUpdateDate = _preferencesService.GetValue(key, lastUpdateDate);
             }
 
-            _loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
-            _loggerService.EndMethod();
-
-            return lastUpdateDate < info.UpdateDateTime;
+            return lastUpdateDate;
         }
 
         public void SaveLastUpdateDate(TermsType termsType, DateTime updateDate)
