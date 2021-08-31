@@ -34,59 +34,38 @@ namespace Covid19Radar.Services.Migration
         {
             if (_preferencesService.ContainsKey(START_DATETIME))
             {
-                string dateTimeStr = _preferencesService.GetValue(START_DATETIME, DateTime.UtcNow.ToString());
-
-                DateTime dateTime;
-                try
-                {
-                    dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
-                }
-                catch (FormatException exception)
-                {
-                    _loggerService.Exception($"Parse dateTime FormatException occurred. {dateTimeStr}", exception);
-                    dateTime = ParceDateTimeAsGBLocaleForFailback(dateTimeStr);
-                }
-                _preferencesService.SetValue(PreferenceKey.StartDateTimeEpoch, dateTime.ToUnixEpoch());
-                _preferencesService.RemoveValue(START_DATETIME);
+                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch);
             }
 
             if (_preferencesService.ContainsKey(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME))
             {
-                string dateTimeStr = _preferencesService.GetValue(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME, DateTime.UtcNow.ToString());
-
-                DateTime dateTime;
-                try
-                {
-                    dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
-                }
-                catch (FormatException exception)
-                {
-                    _loggerService.Exception($"Parse dateTime FormatException occurred. {dateTimeStr}", exception);
-                    dateTime = ParceDateTimeAsGBLocaleForFailback(dateTimeStr);
-                }
-                _preferencesService.SetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, dateTime.ToUnixEpoch());
-                _preferencesService.RemoveValue(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME);
+                MigrateDateTimeToEpoch(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME, PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch);
             }
 
             if (_preferencesService.ContainsKey(PRIVACY_POLICY_LAST_UPDATE_DATETIME))
             {
-                string dateTimeStr = _preferencesService.GetValue(PRIVACY_POLICY_LAST_UPDATE_DATETIME, DateTime.UtcNow.ToString());
-
-                DateTime dateTime;
-                try
-                {
-                    dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
-                }
-                catch (FormatException exception)
-                {
-                    _loggerService.Exception($"Parse dateTime FormatException occurred. {dateTimeStr}", exception);
-                    dateTime = ParceDateTimeAsGBLocaleForFailback(dateTimeStr);
-                }
-                _preferencesService.SetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, dateTime.ToUnixEpoch());
-                _preferencesService.RemoveValue(PRIVACY_POLICY_LAST_UPDATE_DATETIME);
+                MigrateDateTimeToEpoch(PRIVACY_POLICY_LAST_UPDATE_DATETIME, PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch);
             }
 
             return Task.CompletedTask;
+        }
+
+        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey)
+        {
+            string dateTimeStr = _preferencesService.GetValue(dateTimeKey, DateTime.UtcNow.ToString());
+
+            DateTime dateTime;
+            try
+            {
+                dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
+            }
+            catch (FormatException exception)
+            {
+                _loggerService.Exception($"Parse dateTime FormatException occurred. {dateTimeStr}", exception);
+                dateTime = ParceDateTimeAsGBLocaleForFailback(dateTimeStr);
+            }
+            _preferencesService.SetValue(epochKey, dateTime.ToUnixEpoch());
+            _preferencesService.RemoveValue(dateTimeKey);
         }
 
         private DateTime ParceDateTimeAsGBLocaleForFailback(string dateTimeStr)
