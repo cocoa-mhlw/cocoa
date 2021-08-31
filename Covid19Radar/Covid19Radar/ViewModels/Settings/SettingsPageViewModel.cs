@@ -69,7 +69,7 @@ namespace Covid19Radar.ViewModels
                 userDataRepository.RemoveStartDate();
                 exposureNotificationService.RemoveExposureInformation();
                 exposureNotificationService.RemoveConfiguration();
-                exposureNotificationService.RemoveLastProcessTekTimestamp();
+                userDataRepository.RemoveLastProcessTekTimestamp();
                 userDataRepository.RemoveAllUpdateDate();
 
                 _ = logFileService.DeleteLogsDir();

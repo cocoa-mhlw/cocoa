@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CommonServiceLocator;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Services.Migration;
@@ -28,10 +29,10 @@ namespace Covid19Radar.Services
         private ILoggerService LoggerService => ServiceLocator.Current.GetInstance<ILoggerService>();
         private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
-        private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
         private IMigrationService MigrationService => ServiceLocator.Current.GetInstance<IMigrationService>();
         private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
         private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
+        private IUserDataRepository UserDataRepository => ServiceLocator.Current.GetInstance<IUserDataRepository>();
 
         public ExposureNotificationHandler()
         {
@@ -163,7 +164,7 @@ namespace Covid19Radar.Services
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
-                    var lastCreated = exposureNotificationService.GetLastProcessTekTimestamp(serverRegion);
+                    var lastCreated = UserDataRepository.GetLastProcessTekTimestamp(serverRegion);
                     loggerService.Info($"region: {serverRegion}, lastCreated: {lastCreated}");
 
                     cancellationToken.ThrowIfCancellationRequested();
@@ -182,7 +183,7 @@ namespace Covid19Radar.Services
                     loggerService.Info("C19R Submit Batches");
                     await submitBatches(downloadedFiles);
 
-                    exposureNotificationService.SetLastProcessTekTimestamp(serverRegion, newCreated);
+                    UserDataRepository.SetLastProcessTekTimestamp(serverRegion, newCreated);
                     loggerService.Info($"region: {serverRegion}, lastCreated: {newCreated}");
 
                     // delete all temporary files

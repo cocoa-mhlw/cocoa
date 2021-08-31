@@ -3,10 +3,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Repository
 {
@@ -25,6 +27,10 @@ namespace Covid19Radar.Repository
         bool IsAllAgreed();
 
         void RemoveAllUpdateDate();
+
+        long GetLastProcessTekTimestamp(string region);
+        void SetLastProcessTekTimestamp(string region, long created);
+        void RemoveLastProcessTekTimestamp();
     }
 
     public class UserDataRepository : IUserDataRepository
@@ -102,6 +108,48 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
             _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTime);
             _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
+            _loggerService.EndMethod();
+        }
+
+        public long GetLastProcessTekTimestamp(string region)
+        {
+            _loggerService.StartMethod();
+            var result = 0L;
+            var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+            if (!string.IsNullOrEmpty(jsonString))
+            {
+                var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
+                if (dict.ContainsKey(region))
+                {
+                    result = dict[region];
+                }
+            }
+            _loggerService.EndMethod();
+            return result;
+        }
+
+        public void SetLastProcessTekTimestamp(string region, long created)
+        {
+            _loggerService.StartMethod();
+            var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+            Dictionary<string, long> newDict;
+            if (!string.IsNullOrEmpty(jsonString))
+            {
+                newDict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
+            }
+            else
+            {
+                newDict = new Dictionary<string, long>();
+            }
+            newDict[region] = created;
+            _preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
+            _loggerService.EndMethod();
+        }
+
+        public void RemoveLastProcessTekTimestamp()
+        {
+            _loggerService.StartMethod();
+            _preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
             _loggerService.EndMethod();
         }
     }
