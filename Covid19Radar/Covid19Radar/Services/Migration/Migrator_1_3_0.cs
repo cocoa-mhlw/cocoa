@@ -34,12 +34,12 @@ namespace Covid19Radar.Services.Migration
         {
             if (_preferencesService.ContainsKey(StartDateTime))
             {
-                string dateTimeStr = _preferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, DateTime.UtcNow.ToString());
+                string dateTimeStr = _preferencesService.GetValue(StartDateTime, DateTime.UtcNow.ToString());
 
                 DateTime dateTime;
                 try
                 {
-                    dateTime = DateTime.Parse(dateTimeStr);
+                    dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
                 }
                 catch (FormatException exception)
                 {
@@ -57,7 +57,7 @@ namespace Covid19Radar.Services.Migration
                 DateTime dateTime;
                 try
                 {
-                    dateTime = DateTime.Parse(dateTimeStr);
+                    dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
                 }
                 catch (FormatException exception)
                 {
@@ -75,7 +75,7 @@ namespace Covid19Radar.Services.Migration
                 DateTime dateTime;
                 try
                 {
-                    dateTime = DateTime.Parse(dateTimeStr);
+                    dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
                 }
                 catch (FormatException exception)
                 {
@@ -93,7 +93,7 @@ namespace Covid19Radar.Services.Migration
         {
             try
             {
-                return DateTime.Parse(dateTimeStr, GB_CULTURE_INFO);
+                return DateTime.SpecifyKind(DateTime.Parse(dateTimeStr, GB_CULTURE_INFO), DateTimeKind.Utc);
             }
             catch (FormatException exception)
             {

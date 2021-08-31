@@ -53,6 +53,9 @@ namespace Covid19Radar.Droid.Services
                         case int i:
                             value = preference.GetInt(key, i);
                             break;
+                        case long l:
+                            value = preference.GetLong(key, l);
+                            break;
                         case bool b:
                             value = preference.GetBoolean(key, b);
                             break;
@@ -104,6 +107,9 @@ namespace Covid19Radar.Droid.Services
                     {
                         case int i:
                             editor.PutInt(key, i);
+                            break;
+                        case long l:
+                            editor.PutLong(key, l);
                             break;
                         case bool b:
                             editor.PutBoolean(key, b);

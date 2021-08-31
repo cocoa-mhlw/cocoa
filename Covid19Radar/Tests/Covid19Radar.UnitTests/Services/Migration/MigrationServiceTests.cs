@@ -156,6 +156,49 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
         }
 
+        [Fact]
+        public async Task Migrate_InitTo130Async()
+        {
+            _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.3.0");
+
+            await CreateService()
+                .MigrateAsync();
+
+            // Application-properties must not be exist
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_USER_DATA_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
+
+            // Preference-properties must not be exist
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME));
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
+
+            // AppVersion
+            var preferenceAppVersion = _dummyPreferencesService.GetValue<string>(PreferenceKey.AppVersion, null);
+            Assert.Equal("1.3.0", preferenceAppVersion);
+
+            // TermsOfServiceLastUpdateDateTime
+            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch));
+
+            // PrivacyPolicyLastUpdateDateTime
+            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch));
+
+            // LastProcessTekTimestamp
+            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            var lastProcessTekTimestampString = _dummyPreferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+
+            // ExposureNotificationConfiguration
+            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+
+            Assert.False(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
+        }
+
         private async Task<(DateTime, DateTime, DateTime, Dictionary<string, long>, UserExposureInfo, UserExposureInfo, UserExposureSummary)> SetUpVersion100(
             bool isOptIned = true,
             bool isPrivaryPolicyAgreed = true,
@@ -244,17 +287,17 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // StartDateTime
             Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME));
-            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, new DateTime());
+            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, DateTime.UtcNow);
             Assert.Equal(startDateTime, startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
             Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
-            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE, new DateTime());
+            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE, DateTime.UtcNow);
             Assert.Equal(termsOfServiceLastUpdateDate, termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
-            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE, new DateTime());
+            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE, DateTime.UtcNow);
             Assert.Equal(privacyPolicyLastUpdateDate, privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
@@ -310,17 +353,17 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // StartDateTime
             Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME));
-            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, new DateTime());
+            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, DateTime.UtcNow);
             Assert.Equal(startDateTime, startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
             Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
-            //var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTime, new DateTime());
-            //Assert.Equal(termsOfServiceLastUpdateDate, termsOfServiceLastUpdateDateTimePref);
+            //var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTime, 0);
+            //Assert.Equal(termsOfServiceLastUpdateDate.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
-            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE, new DateTime());
+            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE, DateTime.UtcNow);
             Assert.Equal(privacyPolicyLastUpdateDate, privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
@@ -381,12 +424,12 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // TermsOfServiceLastUpdateDateTime
             Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
-            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE, new DateTime());
+            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE, DateTime.UtcNow);
             Assert.Equal(termsOfServiceLastUpdateDate, termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
-            //var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime, new DateTime());
+            //var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime, DateTime.UtcNow);
             //Assert.Equal(privacyPolicyLastUpdateDate, privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
@@ -441,15 +484,15 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // StartDateTime
-            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, new DateTime());
+            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, DateTime.UtcNow);
             Assert.Equal(startDateTime, startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
-            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE, new DateTime());
+            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE, DateTime.UtcNow);
             Assert.Equal(termsOfServiceLastUpdateDate, termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
-            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE, new DateTime());
+            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE, DateTime.UtcNow);
             Assert.Equal(privacyPolicyLastUpdateDate, privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
@@ -521,7 +564,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // StartDateTime
-            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, new DateTime());
+            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, DateTime.UtcNow);
             Assert.NotEqual(startDateTime, startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
@@ -606,16 +649,238 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.Equal("1.2.3", preferenceAppVersion);
 
             // StartDateTime
-            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, new DateTime());
+            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, DateTime.UtcNow);
             Assert.Equal(startDateTime, startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
-            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE, new DateTime());
+            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE, DateTime.UtcNow);
             Assert.Equal(termsOfServiceLastUpdateDate, termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
-            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE, new DateTime());
+            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE, DateTime.UtcNow);
             Assert.Equal(privacyPolicyLastUpdateDate, privacyPolicyLastUpdateDateTimePref);
+
+            // LastProcessTekTimestamp
+            Assert.True(_dummyPreferencesService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            var lastProcessTekTimestampPrefString = _dummyPreferencesService.GetValue(PreferenceKey.LastProcessTekTimestamp, "{}");
+            var lastProcessTekTimestampPref = JsonConvert.DeserializeObject<IDictionary<string, long>>(lastProcessTekTimestampPrefString);
+            Assert.Equal(lastProcesTekTimestamp, lastProcessTekTimestampPref);
+
+            // ExposureNotificationConfiguration
+            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+
+            // ExposureInformation
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
+            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
+            Assert.Equal(2, userExposureInfosPref.Count);
+            AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
+            AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
+
+            // ExposureSummary
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
+            AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
+        }
+
+        [Fact]
+        public async Task Migrate_100to130Async()
+        {
+            var (
+                startDateTime,
+                termsOfServiceLastUpdateDate, privacyPolicyLastUpdateDate,
+                lastProcesTekTimestamp,
+                userExposureInfo1, userExposureInfo2, userExposureSummary
+            ) = await SetUpVersion100(hasAppVersionAtPreference: false);
+
+            _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.3.0");
+
+            await CreateService()
+                .MigrateAsync();
+
+            var preferenceAppVersion = _dummyPreferencesService.GetValue<string>(PreferenceKey.AppVersion, null);
+            Assert.Equal("1.3.0", preferenceAppVersion);
+
+            // Application-properties must not be exist
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_USER_DATA_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
+
+            // Preference-properties must not be exist
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME));
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
+
+            // StartDateTime
+            var startDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, 0L);
+            Assert.Equal(startDateTime.ToUnixEpoch(), startDateTimePref);
+
+            // TermsOfServiceLastUpdateDateTime
+            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
+            Assert.Equal(termsOfServiceLastUpdateDate.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
+
+            // PrivacyPolicyLastUpdateDateTime
+            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
+            Assert.Equal(privacyPolicyLastUpdateDate.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
+
+            // LastProcessTekTimestamp
+            Assert.True(_dummyPreferencesService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            var lastProcessTekTimestampPrefString = _dummyPreferencesService.GetValue(PreferenceKey.LastProcessTekTimestamp, "{}");
+            var lastProcessTekTimestampPref = JsonConvert.DeserializeObject<IDictionary<string, long>>(lastProcessTekTimestampPrefString);
+            Assert.Equal(lastProcesTekTimestamp, lastProcessTekTimestampPref);
+
+            // ExposureNotificationConfiguration
+            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+
+            // ExposureInformation
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
+            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
+            Assert.Equal(2, userExposureInfosPref.Count);
+            AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
+            AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
+
+            // ExposureSummary
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
+            AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
+        }
+
+        [Fact]
+        public async Task Migrate_122to130Async()
+        {
+            var (
+                startDateTime,
+                termsOfServiceLastUpdateDate, privacyPolicyLastUpdateDate,
+                lastProcesTekTimestamp,
+                userExposureInfo1, userExposureInfo2, userExposureSummary
+            ) = await SetUpVersion122(hasAppVersionAtPreference: false);
+
+            _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.3.0");
+
+            await CreateService()
+                .MigrateAsync();
+
+            // AppVersion
+            var preferenceAppVersion = _dummyPreferencesService.GetValue<string>(PreferenceKey.AppVersion, null);
+            Assert.Equal("1.3.0", preferenceAppVersion);
+
+            // Preference-properties must not be exist
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME));
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
+
+            // StartDateTime
+            var startDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, 0L);
+            Assert.Equal(startDateTime.ToUnixEpoch(), startDateTimePref);
+
+            // TermsOfServiceLastUpdateDateTime
+            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
+            Assert.Equal(termsOfServiceLastUpdateDate.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
+
+            // PrivacyPolicyLastUpdateDateTime
+            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
+            Assert.Equal(privacyPolicyLastUpdateDate.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
+
+            // LastProcessTekTimestamp
+            Assert.True(_dummyPreferencesService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            var lastProcessTekTimestampPrefString = _dummyPreferencesService.GetValue(PreferenceKey.LastProcessTekTimestamp, "{}");
+            var lastProcessTekTimestampPref = JsonConvert.DeserializeObject<IDictionary<string, long>>(lastProcessTekTimestampPrefString);
+            Assert.Equal(lastProcesTekTimestamp, lastProcessTekTimestampPref);
+
+            // ExposureNotificationConfiguration
+            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+
+            // ExposureInformation
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
+            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
+            Assert.Equal(2, userExposureInfosPref.Count);
+            AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
+            AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
+
+            // ExposureSummary
+            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
+            AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
+        }
+
+        private async Task<(DateTime, DateTime, DateTime, Dictionary<string, long>, UserExposureInfo, UserExposureInfo, UserExposureSummary)> SetUpVersion123(
+            bool isOptIned = true,
+            bool isPrivaryPolicyAgreed = true)
+        {
+            var values = await SetUpVersion122(isOptIned, isPrivaryPolicyAgreed);
+
+            _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.2.3");
+
+            await CreateService()
+                .MigrateAsync();
+
+            // Application-properties must not be exist
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_USER_DATA_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
+
+            // Preference-properties must be exist
+            Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME));
+            if (isOptIned)
+            {
+                Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
+            }
+            if (isPrivaryPolicyAgreed)
+            {
+                Assert.True(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
+            }
+            return values;
+        }
+
+        [Fact]
+        public async Task Migrate_123to130Async()
+        {
+            var (
+                startDateTime,
+                termsOfServiceLastUpdateDate, privacyPolicyLastUpdateDate,
+                lastProcesTekTimestamp,
+                userExposureInfo1, userExposureInfo2, userExposureSummary
+            ) = await SetUpVersion123();
+
+            _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.3.0");
+
+            await CreateService()
+                .MigrateAsync();
+
+            // AppVersion
+            var preferenceAppVersion = _dummyPreferencesService.GetValue<string>(PreferenceKey.AppVersion, null);
+            Assert.Equal("1.3.0", preferenceAppVersion);
+
+            // Preference-properties must not be exist
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME));
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
+            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
+
+            // StartDateTime
+            var startDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, 0L);
+            long expected = startDateTime.ToUnixEpoch();
+            Assert.Equal(expected, startDateTimePref);
+
+            // TermsOfServiceLastUpdateDateTime
+            var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
+            Assert.Equal(termsOfServiceLastUpdateDate.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
+
+            // PrivacyPolicyLastUpdateDateTime
+            var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
+            Assert.Equal(privacyPolicyLastUpdateDate.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
             Assert.True(_dummyPreferencesService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
@@ -684,8 +949,30 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         public bool ContainsKey(string key) => _dict.ContainsKey(key);
 
-        public T GetValue<T>(string key, T defaultValue = default) => (T)_dict.GetValueOrDefault(key, defaultValue);
+        public T GetValue<T>(string key, T defaultValue)
+        {
+            if (!_dict.ContainsKey(key))
+            {
+                return defaultValue;
+            }
 
+            object value = _dict[key];
+
+            if (defaultValue == null)
+            {
+                value = value.ToString();
+                return (T)value;
+            }
+
+            switch (defaultValue)
+            {
+                case string:
+                    value = value.ToString();
+                    break;
+            }
+
+            return (T)value;
+        }
         public void RemoveValue(string key) => _dict.Remove(key);
 
         public void SetValue<T>(string key, T value) => _dict[key] = value;

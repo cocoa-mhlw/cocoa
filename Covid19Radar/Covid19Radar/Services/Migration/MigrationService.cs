@@ -153,13 +153,13 @@ namespace Covid19Radar.Services.Migration
 
         private Version GuessVersion()
         {
-            if (_preferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME))
-            {
-                return VERSION_1_2_2;
-            }
             if (_preferencesService.ContainsKey(PreferenceKey.StartDateTimeEpoch))
             {
                 return VERSION_1_3_0;
+            }
+            if (_preferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME))
+            {
+                return VERSION_1_2_2;
             }
             return VERSION_1_0_0;
         }
@@ -195,7 +195,7 @@ namespace Covid19Radar.Services.Migration
 
             await _platformMigrationProcessService.SetupAsync();
 
-            if (fromVersion.CompareTo(VERSION_1_2_2) < 0)
+            if (IsNeedMigrate(fromVersion, VERSION_1_2_2, GetCurrentAppVersion()))
             {
                 await new Migrator_1_2_2(
                     _applicationPropertyService,
@@ -209,14 +209,14 @@ namespace Covid19Radar.Services.Migration
                 SetPreferenceVersion(VERSION_1_2_2);
             }
 
-            if (fromVersion.CompareTo(VERSION_1_2_3) < 0)
+            if (IsNeedMigrate(fromVersion, VERSION_1_2_3, GetCurrentAppVersion()))
             {
                 await _platformMigrationProcessService.MigrateTo_1_2_3_Async();
 
                 SetPreferenceVersion(VERSION_1_2_3);
             }
 
-            if (fromVersion.CompareTo(VERSION_1_3_0) < 0)
+            if (IsNeedMigrate(fromVersion, VERSION_1_3_0, GetCurrentAppVersion()))
             {
                 await new Migrator_1_3_0(
                     _preferencesService,
@@ -232,6 +232,9 @@ namespace Covid19Radar.Services.Migration
 
             _loggerService.EndMethod();
         }
+
+        private static bool IsNeedMigrate(Version fromVersion, Version toVersion, Version currentAppVersion)
+            => fromVersion.CompareTo(toVersion) < 0 && currentAppVersion.CompareTo(toVersion) >= 0;
     }
 }
 #nullable disable

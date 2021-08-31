@@ -46,8 +46,8 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Theory]
-        [InlineData(TermsType.TermsOfService, "TermsOfServiceLastUpdateDateTime")]
-        [InlineData(TermsType.PrivacyPolicy, "PrivacyPolicyLastUpdateDateTime")]
+        [InlineData(TermsType.TermsOfService, "TermsOfServiceLastUpdateDateTimeEpoch")]
+        [InlineData(TermsType.PrivacyPolicy, "PrivacyPolicyLastUpdateDateTimeEpoch")]
         public void IsUpdatedTest_NotSaveLastUpdateDateTime(TermsType termsType, string key)
         {
             var info = new TermsUpdateInfoModel
@@ -63,8 +63,8 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Theory]
-        [InlineData(TermsType.TermsOfService, "TermsOfServiceLastUpdateDateTime")]
-        [InlineData(TermsType.PrivacyPolicy, "PrivacyPolicyLastUpdateDateTime")]
+        [InlineData(TermsType.TermsOfService, "TermsOfServiceLastUpdateDateTimeEpoch")]
+        [InlineData(TermsType.PrivacyPolicy, "PrivacyPolicyLastUpdateDateTimeEpoch")]
         public void IsUpdatedTest_RequiredReAgree(TermsType termsType, string key)
         {
             var info = new TermsUpdateInfoModel
@@ -75,14 +75,14 @@ namespace Covid19Radar.UnitTests.Services
 
             var termsUpdateService = CreateService();
             mockPreferencesService.Setup(x => x.ContainsKey(key)).Returns(true);
-            mockPreferencesService.Setup(x => x.GetValue(key, new DateTime())).Returns(new DateTime(2020, 11, 1));
+            mockUserDataRepository.Setup(x => x.GetLastUpdateDate(termsType)).Returns(new DateTime(2020, 11, 1));
             var result = termsUpdateService.IsUpdated(termsType, info);
             Assert.True(result);
         }
 
         [Theory]
-        [InlineData(TermsType.TermsOfService, "TermsOfServiceLastUpdateDateTime")]
-        [InlineData(TermsType.PrivacyPolicy, "PrivacyPolicyLastUpdateDateTime")]
+        [InlineData(TermsType.TermsOfService, "TermsOfServiceLastUpdateDateTimeEpoch")]
+        [InlineData(TermsType.PrivacyPolicy, "PrivacyPolicyLastUpdateDateTimeEpoch")]
         public void IsUpdatedTest_NoNeedReAgree(TermsType termsType, string key)
         {
             var info = new TermsUpdateInfoModel
@@ -93,7 +93,7 @@ namespace Covid19Radar.UnitTests.Services
 
             var termsUpdateService = CreateService();
             mockPreferencesService.Setup(x => x.ContainsKey(key)).Returns(true);
-            mockPreferencesService.Setup(x => x.GetValue(key, new DateTime())).Returns(new DateTime(2020, 11, 3));
+            mockUserDataRepository.Setup(x => x.GetLastUpdateDate(termsType)).Returns(new DateTime(2020, 11, 3));
             var result = termsUpdateService.IsUpdated(termsType, info);
             Assert.False(result);
         }

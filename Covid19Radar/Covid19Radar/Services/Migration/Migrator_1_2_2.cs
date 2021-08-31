@@ -19,6 +19,10 @@ namespace Covid19Radar.Services.Migration
         private const string APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY = "TermsOfServiceLastUpdateDateTime";
         private const string APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY = "PrivacyPolicyLastUpdateDateTime";
 
+        public static string PREFERENCE_KEY_START_DATETIME = "StartDateTime";
+        public static string PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
+        public static string PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
+
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly IPreferencesService _preferencesService;
         private readonly ISecureStorageService _secureStorageService;
@@ -145,7 +149,7 @@ namespace Covid19Radar.Services.Migration
             _loggerService.StartMethod();
 
             var applicationPropertyKey = termsType == TermsType.TermsOfService ? APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY : APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY;
-            var preferenceKey = termsType == TermsType.TermsOfService ? PreferenceKey.TermsOfServiceLastUpdateDateTime : PreferenceKey.PrivacyPolicyLastUpdateDateTime;
+            var preferenceKey = termsType == TermsType.TermsOfService ? PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATETIME : PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATETIME;
 
             if (_preferencesService.ContainsKey(applicationPropertyKey))
             {
@@ -181,7 +185,7 @@ namespace Covid19Radar.Services.Migration
 
             if (userData.StartDateTime != null && !userData.StartDateTime.Equals(new DateTime()))
             {
-                _preferencesService.SetValue(PreferenceKey.StartDateTime, userData.StartDateTime);
+                _preferencesService.SetValue(PREFERENCE_KEY_START_DATETIME, userData.StartDateTime);
                 userData.StartDateTime = new DateTime();
                 _loggerService.Info("Migrated StartDateTime");
             }

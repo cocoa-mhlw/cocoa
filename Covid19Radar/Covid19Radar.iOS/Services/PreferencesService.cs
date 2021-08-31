@@ -50,7 +50,10 @@ namespace Covid19Radar.iOS.Services
                     switch (defaultValue)
                     {
                         case int i:
-                            value = (int)(nint)userDefaults.IntForKey(key);
+                            value = (int)userDefaults.IntForKey(key);
+                            break;
+                        case long l:
+                            value = (long)userDefaults.IntForKey(key);
                             break;
                         case bool b:
                             value = userDefaults.BoolForKey(key);
@@ -60,10 +63,6 @@ namespace Covid19Radar.iOS.Services
                             break;
                         case string s:
                             value = userDefaults.StringForKey(key);
-                            break;
-                        case DateTime d:
-                            var valueString = userDefaults.StringForKey(key);
-                            value = DateTime.Parse(valueString);
                             break;
                         default:
                             loggerService.Info("Type is not supported.");
@@ -104,6 +103,9 @@ namespace Covid19Radar.iOS.Services
                         case int i:
                             userDefaults.SetInt(i, key);
                             break;
+                        case long l:
+                            userDefaults.SetInt((nint)l, key);
+                            break;
                         case bool b:
                             userDefaults.SetBool(b, key);
                             break;
@@ -112,10 +114,6 @@ namespace Covid19Radar.iOS.Services
                             break;
                         case string s:
                             userDefaults.SetString(s, key);
-                            break;
-                        case DateTime d:
-                            var valueString = d.ToString();
-                            userDefaults.SetString(valueString, key);
                             break;
                     }
 

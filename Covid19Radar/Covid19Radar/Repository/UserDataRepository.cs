@@ -35,7 +35,7 @@ namespace Covid19Radar.Repository
 
     public class UserDataRepository : IUserDataRepository
     {
-        private static readonly DateTime UNIX_EPOCH = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+        private static readonly DateTime UNIX_EPOCH = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
 
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
