@@ -59,7 +59,7 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTime);
-            if (_userDataRepository.IsReAgree(TermsType.PrivacyPolicy, UpdateInfo))
+            if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
             {
                 var param = new NavigationParameters
                 {

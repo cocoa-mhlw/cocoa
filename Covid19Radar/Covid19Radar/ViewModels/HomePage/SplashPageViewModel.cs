@@ -51,7 +51,7 @@ namespace Covid19Radar.ViewModels
 
                 var termsUpdateInfo = await _termsUpdateService.GetTermsUpdateInfo();
 
-                if (_userDataRepository.IsReAgree(TermsType.TermsOfService, termsUpdateInfo))
+                if (_termsUpdateService.IsUpdated(TermsType.TermsOfService, termsUpdateInfo))
                 {
                     var param = new NavigationParameters
                 {
@@ -60,7 +60,7 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to ReAgreeTermsOfServicePage");
                     _ = await NavigationService.NavigateAsync(nameof(ReAgreeTermsOfServicePage), param);
                 }
-                else if (_userDataRepository.IsReAgree(TermsType.PrivacyPolicy, termsUpdateInfo))
+                else if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, termsUpdateInfo))
                 {
                     var param = new NavigationParameters
                 {

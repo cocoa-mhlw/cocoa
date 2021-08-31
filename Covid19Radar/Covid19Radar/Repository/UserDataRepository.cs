@@ -19,8 +19,6 @@ namespace Covid19Radar.Repository
 
         void RemoveStartDate();
 
-        bool IsReAgree(TermsType termsType, TermsUpdateInfoModel privacyUpdateInfo);
-
         DateTime GetLastUpdateDate(TermsType termsType);
         void SaveLastUpdateDate(TermsType termsType, DateTime updateDate);
 
@@ -66,30 +64,6 @@ namespace Covid19Radar.Repository
             _preferencesService.RemoveValue(PreferenceKey.StartDateTime);
 
             _loggerService.EndMethod();
-        }
-
-        public bool IsReAgree(TermsType termsType, TermsUpdateInfoModel termsUpdateInfo)
-        {
-            _loggerService.StartMethod();
-
-            TermsUpdateInfoModel.Detail info = termsType switch
-            {
-                TermsType.TermsOfService => termsUpdateInfo.TermsOfService,
-                TermsType.PrivacyPolicy => termsUpdateInfo.PrivacyPolicy,
-                _ => throw new NotSupportedException()
-            };
-
-            if (info == null)
-            {
-                _loggerService.EndMethod();
-                return false;
-            }
-
-            DateTime lastUpdateDate = GetLastUpdateDate(termsType);
-            _loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
-            _loggerService.EndMethod();
-
-            return lastUpdateDate < info.UpdateDateTime;
         }
 
         public DateTime GetLastUpdateDate(TermsType termsType)

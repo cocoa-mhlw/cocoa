@@ -113,7 +113,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTime));
-            mockUserDataRepository.Setup(x => x.IsReAgree(TermsType.PrivacyPolicy, updateInfo)).Returns(true);
+            mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(true);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
             var resultParam = new NavigationParameters
@@ -139,7 +139,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTime));
-            mockUserDataRepository.Setup(x => x.IsReAgree(TermsType.PrivacyPolicy, updateInfo)).Returns(false);
+            mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(false);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
             mockNavigationService.Verify(x => x.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage)), Times.Once());

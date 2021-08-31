@@ -6,6 +6,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
@@ -15,15 +16,21 @@ namespace Covid19Radar.Services
     public interface ITermsUpdateService
     {
         Task<TermsUpdateInfoModel> GetTermsUpdateInfo();
+        bool IsUpdated(TermsType termsType, TermsUpdateInfoModel termsUpdateInfo);
     }
 
     public class TermsUpdateService : ITermsUpdateService
     {
         private readonly ILoggerService loggerService;
+        private readonly IUserDataRepository userDataRepository;
 
-        public TermsUpdateService(ILoggerService loggerService)
+        public TermsUpdateService(
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository
+            )
         {
             this.loggerService = loggerService;
+            this.userDataRepository = userDataRepository;
         }
 
         public async Task<TermsUpdateInfoModel> GetTermsUpdateInfo()
@@ -53,6 +60,30 @@ namespace Covid19Radar.Services
                     return new TermsUpdateInfoModel();
                 }
             }
+        }
+
+        public bool IsUpdated(TermsType termsType, TermsUpdateInfoModel termsUpdateInfo)
+        {
+            loggerService.StartMethod();
+
+            TermsUpdateInfoModel.Detail info = termsType switch
+            {
+                TermsType.TermsOfService => termsUpdateInfo.TermsOfService,
+                TermsType.PrivacyPolicy => termsUpdateInfo.PrivacyPolicy,
+                _ => throw new NotSupportedException()
+            };
+
+            if (info == null)
+            {
+                loggerService.EndMethod();
+                return false;
+            }
+
+            DateTime lastUpdateDate = userDataRepository.GetLastUpdateDate(termsType);
+            loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
+            loggerService.EndMethod();
+
+            return lastUpdateDate < info.UpdateDateTime;
         }
     }
 }
