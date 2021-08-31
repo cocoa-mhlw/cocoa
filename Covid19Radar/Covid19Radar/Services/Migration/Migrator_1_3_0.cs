@@ -12,9 +12,9 @@ namespace Covid19Radar.Services.Migration
 {
     internal class Migrator_1_3_0
     {
-        public static string StartDateTime = "StartDateTime";
-        public static string TermsOfServiceLastUpdateDateTime = "TermsOfServiceLastUpdateDateTime";
-        public static string PrivacyPolicyLastUpdateDateTime = "PrivacyPolicyLastUpdateDateTime";
+        private const string START_DATETIME = "StartDateTime";
+        private const string TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
+        private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
 
         private static readonly CultureInfo GB_CULTURE_INFO = new CultureInfo("en-GB");
 
@@ -32,9 +32,9 @@ namespace Covid19Radar.Services.Migration
 
         public Task ExecuteAsync()
         {
-            if (_preferencesService.ContainsKey(StartDateTime))
+            if (_preferencesService.ContainsKey(START_DATETIME))
             {
-                string dateTimeStr = _preferencesService.GetValue(StartDateTime, DateTime.UtcNow.ToString());
+                string dateTimeStr = _preferencesService.GetValue(START_DATETIME, DateTime.UtcNow.ToString());
 
                 DateTime dateTime;
                 try
@@ -47,12 +47,12 @@ namespace Covid19Radar.Services.Migration
                     dateTime = ParceDateTimeAsGBLocaleForFailback(dateTimeStr);
                 }
                 _preferencesService.SetValue(PreferenceKey.StartDateTimeEpoch, dateTime.ToUnixEpoch());
-                _preferencesService.RemoveValue(StartDateTime);
+                _preferencesService.RemoveValue(START_DATETIME);
             }
 
-            if (_preferencesService.ContainsKey(TermsOfServiceLastUpdateDateTime))
+            if (_preferencesService.ContainsKey(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME))
             {
-                string dateTimeStr = _preferencesService.GetValue(TermsOfServiceLastUpdateDateTime, DateTime.UtcNow.ToString());
+                string dateTimeStr = _preferencesService.GetValue(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME, DateTime.UtcNow.ToString());
 
                 DateTime dateTime;
                 try
@@ -65,12 +65,12 @@ namespace Covid19Radar.Services.Migration
                     dateTime = ParceDateTimeAsGBLocaleForFailback(dateTimeStr);
                 }
                 _preferencesService.SetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, dateTime.ToUnixEpoch());
-                _preferencesService.RemoveValue(TermsOfServiceLastUpdateDateTime);
+                _preferencesService.RemoveValue(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME);
             }
 
-            if (_preferencesService.ContainsKey(PrivacyPolicyLastUpdateDateTime))
+            if (_preferencesService.ContainsKey(PRIVACY_POLICY_LAST_UPDATE_DATETIME))
             {
-                string dateTimeStr = _preferencesService.GetValue(PrivacyPolicyLastUpdateDateTime, DateTime.UtcNow.ToString());
+                string dateTimeStr = _preferencesService.GetValue(PRIVACY_POLICY_LAST_UPDATE_DATETIME, DateTime.UtcNow.ToString());
 
                 DateTime dateTime;
                 try
@@ -83,7 +83,7 @@ namespace Covid19Radar.Services.Migration
                     dateTime = ParceDateTimeAsGBLocaleForFailback(dateTimeStr);
                 }
                 _preferencesService.SetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, dateTime.ToUnixEpoch());
-                _preferencesService.RemoveValue(PrivacyPolicyLastUpdateDateTime);
+                _preferencesService.RemoveValue(PRIVACY_POLICY_LAST_UPDATE_DATETIME);
             }
 
             return Task.CompletedTask;
