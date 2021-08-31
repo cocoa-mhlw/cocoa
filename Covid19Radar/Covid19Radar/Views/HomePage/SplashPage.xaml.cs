@@ -11,13 +11,13 @@ namespace Covid19Radar.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SplashPage : ContentPage
     {
-        public const string DeepLinkDestinationKey = "destination";
+        public const string DestinationKey = "destination";
 
-        public static NavigationParameters CreateNavigationParams(DeepLinkDestination destination)
+        public static NavigationParameters CreateNavigationParams(Destination destination)
         {
             return new NavigationParameters()
             {
-                { DeepLinkDestinationKey, destination }
+                { DestinationKey, destination }
             };
         }
 

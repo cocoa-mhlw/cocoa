@@ -6,14 +6,11 @@ using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
-using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
     public class SplashPageViewModel : ViewModelBase
     {
-        private string HomePagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage); //TODO パスをクラスに切り出す
-
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataService _userDataService;
@@ -57,15 +54,15 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to ReAgreePrivacyPolicyPage");
                     _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param);
                 }
-                else if (parameters.GetValue<DeepLinkDestination>(SplashPage.DeepLinkDestinationKey) == DeepLinkDestination.ContactedNotifyPage)
+                else if (parameters.GetValue<Destination>(SplashPage.DestinationKey) == Destination.ContactedNotifyPage)
                 {
-                    _loggerService.Info($"Transition to ContactPage");
-                    _ = await NavigationService.NavigateAsync(HomePagePath + "/" + nameof(ContactedNotifyPage));
+                    _loggerService.Info($"Transition to DeepLinkDestination.ContactedNotifyPage");
+                    _ = await NavigationService.NavigateAsync(Destination.ContactedNotifyPage.ToPath());
                 }
                 else
                 {
                     _loggerService.Info($"Transition to HomePage");
-                    _ = await NavigationService.NavigateAsync(HomePagePath);
+                    _ = await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
                 }
             }
             else
