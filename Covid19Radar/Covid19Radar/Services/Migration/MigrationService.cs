@@ -30,6 +30,8 @@ namespace Covid19Radar.Services.Migration
         public Task MigrateTo_1_2_2_Async() => Task.CompletedTask;
 
         public Task MigrateTo_1_2_3_Async() => Task.CompletedTask;
+
+        public Task MigrateTo_1_3_0_Async() => Task.CompletedTask;
     }
 
     public interface IMigrationService
@@ -44,8 +46,11 @@ namespace Covid19Radar.Services.Migration
         private static readonly Version VERSION_1_0_0 = new Version(FIRST_VERSION);
         private static readonly Version VERSION_1_2_2 = new Version("1.2.2");
         private static readonly Version VERSION_1_2_3 = new Version("1.2.3");
+        private static readonly Version VERSION_1_3_0 = new Version("1.3.0");
 
-        private static readonly Version VERSION_LATEST = VERSION_1_2_3;
+        private static readonly Version VERSION_LATEST = VERSION_1_3_0;
+
+        public static readonly string PREFERENCE_KEY_START_DATETIME = "StartDateTime";
 
         private void SetPreferenceVersion(Version version)
             => _preferencesService.SetValue(PreferenceKey.AppVersion, version.ToString());
@@ -148,9 +153,13 @@ namespace Covid19Radar.Services.Migration
 
         private Version GuessVersion()
         {
-            if (_preferencesService.ContainsKey(PreferenceKey.StartDateTime))
+            if (_preferencesService.ContainsKey(PREFERENCE_KEY_START_DATETIME))
             {
                 return VERSION_1_2_2;
+            }
+            if (_preferencesService.ContainsKey(PreferenceKey.StartDateTimeEpoch))
+            {
+                return VERSION_1_3_0;
             }
             return VERSION_1_0_0;
         }
@@ -205,6 +214,18 @@ namespace Covid19Radar.Services.Migration
                 await _platformMigrationProcessService.MigrateTo_1_2_3_Async();
 
                 SetPreferenceVersion(VERSION_1_2_3);
+            }
+
+            if (fromVersion.CompareTo(VERSION_1_3_0) < 0)
+            {
+                await new Migrator_1_3_0(
+                    _preferencesService,
+                    _loggerService
+                    ).ExecuteAsync();
+
+                await _platformMigrationProcessService.MigrateTo_1_3_0_Async();
+
+                SetPreferenceVersion(VERSION_1_3_0);
             }
 
             SetPreferenceVersion(GetCurrentAppVersion());

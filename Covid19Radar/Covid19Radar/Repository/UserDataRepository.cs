@@ -70,7 +70,6 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
 
-            _preferencesService.RemoveValue(PreferenceKey.StartDateTime);
             _preferencesService.RemoveValue(PreferenceKey.StartDateTimeEpoch);
 
             _loggerService.EndMethod();
@@ -102,17 +101,14 @@ namespace Covid19Radar.Repository
 
         public bool IsAllAgreed()
         {
-            return (_preferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTime) && _preferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTime))
-                || (_preferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch) && _preferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch))
+            return (_preferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch) && _preferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch))
                 ;
         }
 
         public void RemoveAllUpdateDate()
         {
             _loggerService.StartMethod();
-            _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTime);
             _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch);
-            _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
             _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch);
             _loggerService.EndMethod();
         }

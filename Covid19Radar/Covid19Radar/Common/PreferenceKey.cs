@@ -8,11 +8,8 @@ namespace Covid19Radar.Common
     {
         // for preferences
         public static string AppVersion = "AppVersion";
-        public static string StartDateTime = "StartDateTime";
         public static string LastProcessTekTimestamp = "LastProcessTekTimestamp";
         public static string ExposureNotificationConfiguration = "ExposureNotificationConfiguration";
-        public static string TermsOfServiceLastUpdateDateTime = "TermsOfServiceLastUpdateDateTime";
-        public static string PrivacyPolicyLastUpdateDateTime = "PrivacyPolicyLastUpdateDateTime";
         public static string StartDateTimeEpoch = "StartDateTimeEpoch";
         public static string TermsOfServiceLastUpdateDateTimeEpoch = "TermsOfServiceLastUpdateDateTimeEpoch";
         public static string PrivacyPolicyLastUpdateDateTimeEpoch = "PrivacyPolicyLastUpdateDateTimeEpoch";
