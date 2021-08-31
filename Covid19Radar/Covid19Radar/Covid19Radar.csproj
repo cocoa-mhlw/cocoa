@@ -148,6 +148,7 @@
   <ItemGroup>
     <Folder Include="Services\Logs\" />
     <Folder Include="Controls\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj" />

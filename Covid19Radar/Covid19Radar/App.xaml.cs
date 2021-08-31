@@ -18,6 +18,7 @@ using System;
 using CommonServiceLocator;
 using Covid19Radar.Common;
 using Xamarin.ExposureNotifications;
+using Covid19Radar.Repository;
 
 /*
  * Our mission...is
@@ -179,6 +180,7 @@ namespace Covid19Radar
             container.Register<IExposureNotificationService, ExposureNotificationService>(Reuse.Singleton);
             container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
             container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
+
 #if USE_MOCK
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
@@ -190,6 +192,9 @@ namespace Covid19Radar
 
             container.Register<IDiagnosisKeyRegisterServer, DebugDiagnosisKeyRegisterServer>(Reuse.Singleton);
             //container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
+
+            container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
+            container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
         }
 
         protected override void OnStart()

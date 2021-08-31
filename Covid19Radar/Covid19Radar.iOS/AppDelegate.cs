@@ -26,8 +26,14 @@ namespace Covid19Radar.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IExposureNotificationHandler
     {
+        private Lazy<ILoggerService> _loggerService
+            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationClient
             = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
+
+        private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
 
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
@@ -62,6 +68,9 @@ namespace Covid19Radar.iOS
             LoadApplication(new App());
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
+
+            _exposureDetectionBackgroundService.Value.Schedule();
+
             return base.FinishedLaunching(app, options);
         }
 
@@ -100,6 +109,7 @@ namespace Covid19Radar.iOS
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
 
             container.Register<ICloseApplication, CloseApplication>(Reuse.Singleton);
+            container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
@@ -112,18 +122,22 @@ namespace Covid19Radar.iOS
 
         public void PreExposureDetected()
         {
+            _loggerService.Value.Info("PreExposureDetected");
         }
 
         public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
         {
+            _loggerService.Value.Info("ExposureDetected v2");
         }
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
+            _loggerService.Value.Info("ExposureDetected v1");
         }
 
         public void ExposureNotDetected()
         {
+            _loggerService.Value.Info("ExposureNotDetected");
         }
     }
 }
