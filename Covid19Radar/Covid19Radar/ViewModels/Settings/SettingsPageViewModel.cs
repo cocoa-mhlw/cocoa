@@ -29,15 +29,13 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly IUserDataRepository userDataRepository;
         private readonly ILogFileService logFileService;
-        private readonly ITermsUpdateService termsUpdateService;
 
         public SettingsPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IExposureNotificationService exposureNotificationService,
-            ILogFileService logFileService,
-            ITermsUpdateService termsUpdateService
+            ILogFileService logFileService
             ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
@@ -46,7 +44,6 @@ namespace Covid19Radar.ViewModels
             this.userDataRepository = userDataRepository;
             this.exposureNotificationService = exposureNotificationService;
             this.logFileService = logFileService;
-            this.termsUpdateService = termsUpdateService;
         }
 
         public ICommand OnChangeResetData => new Command(async () =>
@@ -73,7 +70,7 @@ namespace Covid19Radar.ViewModels
                 exposureNotificationService.RemoveExposureInformation();
                 exposureNotificationService.RemoveConfiguration();
                 exposureNotificationService.RemoveLastProcessTekTimestamp();
-                termsUpdateService.RemoveAllUpdateDate();
+                userDataRepository.RemoveAllUpdateDate();
 
                 _ = logFileService.DeleteLogsDir();
 
