@@ -62,10 +62,6 @@ namespace Covid19Radar.Droid.Services
                         case string s:
                             value = preference.GetString(key, s);
                             break;
-                        case DateTime d:
-                            var valueString = preference.GetString(key, d.ToString());
-                            value = DateTime.Parse(valueString);
-                            break;
                         default:
                             loggerService.Info("Type is not supported.");
                             value = defaultValue;
@@ -117,10 +113,6 @@ namespace Covid19Radar.Droid.Services
                             break;
                         case string s:
                             editor.PutString(key, s);
-                            break;
-                        case DateTime d:
-                            var valueString = d.ToString();
-                            editor.PutString(key, valueString);
                             break;
                     }
                     result = editor.Commit();

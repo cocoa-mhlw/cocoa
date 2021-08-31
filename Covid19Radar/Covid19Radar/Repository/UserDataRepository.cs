@@ -35,6 +35,8 @@ namespace Covid19Radar.Repository
 
     public class UserDataRepository : IUserDataRepository
     {
+        private static readonly DateTime UNIX_EPOCH = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
 
@@ -49,12 +51,13 @@ namespace Covid19Radar.Repository
 
         public void SetStartDate(DateTime dateTime)
         {
-            _preferencesService.SetValue(PreferenceKey.StartDateTime, dateTime);
+            _preferencesService.SetValue(PreferenceKey.StartDateTimeEpoch, dateTime.ToUnixEpoch());
         }
 
         public DateTime GetStartDate()
         {
-            return _preferencesService.GetValue(PreferenceKey.StartDateTime, DateTime.UtcNow);
+            long epoch = _preferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, DateTime.UtcNow.ToUnixEpoch());
+            return UNIX_EPOCH.AddSeconds(epoch);
         }
 
         public int GetDaysOfUse()
@@ -68,6 +71,7 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
 
             _preferencesService.RemoveValue(PreferenceKey.StartDateTime);
+            _preferencesService.RemoveValue(PreferenceKey.StartDateTimeEpoch);
 
             _loggerService.EndMethod();
         }
@@ -76,38 +80,40 @@ namespace Covid19Radar.Repository
         {
             string key = termsType switch
             {
-                TermsType.TermsOfService => PreferenceKey.TermsOfServiceLastUpdateDateTime,
-                TermsType.PrivacyPolicy => PreferenceKey.PrivacyPolicyLastUpdateDateTime,
+                TermsType.TermsOfService => PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch,
+                TermsType.PrivacyPolicy => PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch,
                 _ => throw new NotSupportedException()
             };
 
-            var lastUpdateDate = new DateTime(); // 0001/01/01
-            if (_preferencesService.ContainsKey(key))
-            {
-                lastUpdateDate = _preferencesService.GetValue(key, lastUpdateDate);
-            }
+            long epoch = _preferencesService.GetValue(key, 0);
 
-            return lastUpdateDate;
+            return UNIX_EPOCH.AddSeconds(epoch);
         }
 
         public void SaveLastUpdateDate(TermsType termsType, DateTime updateDate)
         {
             _loggerService.StartMethod();
 
-            var key = termsType == TermsType.TermsOfService ? PreferenceKey.TermsOfServiceLastUpdateDateTime : PreferenceKey.PrivacyPolicyLastUpdateDateTime;
-            _preferencesService.SetValue(key, updateDate);
+            var key = termsType == TermsType.TermsOfService ? PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch : PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch;
+            _preferencesService.SetValue(key, updateDate.ToUnixEpoch());
 
             _loggerService.EndMethod();
         }
 
         public bool IsAllAgreed()
-            => _preferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTime) && _preferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
+        {
+            return (_preferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTime) && _preferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTime))
+                || (_preferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch) && _preferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch))
+                ;
+        }
 
         public void RemoveAllUpdateDate()
         {
             _loggerService.StartMethod();
             _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTime);
+            _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch);
             _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
+            _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch);
             _loggerService.EndMethod();
         }
 
