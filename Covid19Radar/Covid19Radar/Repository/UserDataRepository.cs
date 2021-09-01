@@ -84,7 +84,7 @@ namespace Covid19Radar.Repository
                 _ => throw new NotSupportedException()
             };
 
-            long epoch = _preferencesService.GetValue(key, 0);
+            long epoch = _preferencesService.GetValue(key, 0L);
 
             return UNIX_EPOCH.AddSeconds(epoch);
         }
