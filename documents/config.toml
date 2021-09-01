@@ -1,4 +1,4 @@
-baseURL = "https://keiji.github.io/cocoa/"
+baseURL = "https://cocoa-mhlw.github.io/cocoa"
 languageCode = "ja-JP"
 title = "COCOA Open Source Project"
 theme = "book"
