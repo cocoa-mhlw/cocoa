@@ -39,7 +39,7 @@ type: docs
 
 ## ４ 知的財産権
 
-当リポジトリのソースコードについては、[ライセンス条項](LICENSE.md)によって提供されています。
+当リポジトリのソースコードについては、[ライセンス条項](https://github.com/cocoa-mhlw/cocoa/blob/develop/LICENSE.md)によって提供されています。
 
 ## ５ その他
 
