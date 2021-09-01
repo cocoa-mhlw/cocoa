@@ -12,9 +12,14 @@ namespace Covid19Radar.Repository
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
 
         // ExposureWindow mode
+        Task SetExposureDataAsync(
+            List<DailySummary> dailySummaryList,
+            List<ExposureWindow> exposueWindowList
+            );
+
         Task AppendExposureDataAsync(
-            IList<DailySummary> dailySummaryList,
-            IList<ExposureWindow> exposueWindowList
+            List<DailySummary> dailySummaryList,
+            List<ExposureWindow> exposueWindowList
             );
 
         Task<List<DailySummary>> GetDailySummariesAsync();
@@ -33,7 +38,7 @@ namespace Covid19Radar.Repository
 
         Task<bool> AppendExposureDataAsync(
             ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformationList,
+            List<ExposureInformation> exposureInformationList,
             int minimumRiskScore
             );
 

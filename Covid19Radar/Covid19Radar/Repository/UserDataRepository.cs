@@ -118,9 +118,27 @@ namespace Covid19Radar.Repository
         }
 
         #region ExposureWindow mode
+        public async Task SetExposureDataAsync(
+            List<DailySummary> dailySummaryList,
+            List<ExposureWindow> exposueWindowList
+            )
+        {
+            _loggerService.StartMethod();
+
+            dailySummaryList.AddRange(dailySummaryList);
+            exposueWindowList.AddRange(exposueWindowList);
+
+            dailySummaryList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+            exposueWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+
+            await SetExposureDataAsync(dailySummaryList, exposueWindowList);
+
+            _loggerService.EndMethod();
+        }
+
         public async Task AppendExposureDataAsync(
-            IList<DailySummary> dailySummaryList,
-            IList<ExposureWindow> exposueWindowList
+            List<DailySummary> dailySummaryList,
+            List<ExposureWindow> exposueWindowList
             )
         {
             _loggerService.StartMethod();
@@ -276,7 +294,7 @@ namespace Covid19Radar.Repository
         #region Legacy v1
         public async Task<bool> AppendExposureDataAsync(
             ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformationList,
+            List<ExposureInformation> exposureInformationList,
             int minimumRiskScore
             )
         {

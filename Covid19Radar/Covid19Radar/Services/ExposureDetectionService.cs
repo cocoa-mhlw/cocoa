@@ -50,9 +50,9 @@ namespace Covid19Radar.Services
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
 
-            _userDataRepository.AppendExposureDataAsync(
-                dailySummaries,
-                exposureWindows
+            _userDataRepository.SetExposureDataAsync(
+                dailySummaries.ToList(),
+                exposureWindows.ToList()
                 );
 
             bool isHighRiskExposureDetected = dailySummaries
@@ -81,7 +81,7 @@ namespace Covid19Radar.Services
 
             bool isNewExposureDetected = _userDataRepository.AppendExposureDataAsync(
                 exposureSummary,
-                exposureInformations,
+                exposureInformations.ToList(),
                 configurationV1.MinimumRiskScore
                 )
                 .GetAwaiter().GetResult();
