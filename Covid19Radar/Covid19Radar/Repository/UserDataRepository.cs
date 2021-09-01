@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Common;
@@ -23,8 +22,6 @@ namespace Covid19Radar.Repository
 
         private const string EMPTY_LIST_JSON = "[]";
 
-        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
-
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
 
@@ -37,11 +34,9 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
-        public async Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region)
+        public Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region)
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
@@ -57,21 +52,17 @@ namespace Covid19Radar.Repository
                     }
                 }
 
-                return result;
+                return Task.FromResult(result);
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
 
-        public async Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp)
+        public Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp)
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
@@ -89,30 +80,25 @@ namespace Covid19Radar.Repository
                 newDict[region] = timestamp;
                 _preferencesService.SetValue(KEY_LAST_PROCESS_DIAGNOSIS_KEY_TIMESTAMP, JsonConvert.SerializeObject(newDict));
 
-                _loggerService.EndMethod();
+                return Task.CompletedTask;
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
 
-        public async Task RemoveLastProcessDiagnosisKeyTimestampAsync()
+        public Task RemoveLastProcessDiagnosisKeyTimestampAsync()
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
                 _preferencesService.RemoveValue(KEY_LAST_PROCESS_DIAGNOSIS_KEY_TIMESTAMP);
+                return Task.CompletedTask;
             }
-            catch
+            finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
@@ -157,43 +143,38 @@ namespace Covid19Radar.Repository
             _loggerService.EndMethod();
         }
 
-        private async Task SetExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
+        private Task SetExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
         {
             _loggerService.StartMethod();
 
             string dailySummaryListJson = JsonConvert.SerializeObject(dailySummaryList);
             string exposureWindowListJson = JsonConvert.SerializeObject(exposureWindowList);
 
-            await _semaphore.WaitAsync();
-
             try
             {
                 _preferencesService.SetValue(KEY_DAILY_SUMMARIES, dailySummaryListJson);
                 _preferencesService.SetValue(KEY_EXPOSURE_WINDOWS, exposureWindowListJson);
+                return Task.CompletedTask;
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
 
-        public async Task<List<DailySummary>> GetDailySummariesAsync()
+        public Task<List<DailySummary>> GetDailySummariesAsync()
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
                 string dailySummariesJson = _preferencesService.GetValue<string>(KEY_DAILY_SUMMARIES, EMPTY_LIST_JSON);
-                return JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson);
+                return Task.FromResult(
+                    JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson)
+                );
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
@@ -205,21 +186,19 @@ namespace Covid19Radar.Repository
                 .ToList();
         }
 
-        public async Task<List<ExposureWindow>> GetExposureWindowsAsync()
+        public Task<List<ExposureWindow>> GetExposureWindowsAsync()
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
                 string exposureWindowListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_WINDOWS, EMPTY_LIST_JSON);
-                return JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson);
+                return Task.FromResult(
+                    JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson)
+                );
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
@@ -231,61 +210,53 @@ namespace Covid19Radar.Repository
                 .ToList();
         }
 
-        public async Task<List<UserExposureSummary>> GetUserExposureSummariesAsync()
+        public Task<List<UserExposureSummary>> GetUserExposureSummariesAsync()
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
                 string exposureSummaryListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, EMPTY_LIST_JSON);
                 List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummaryListJson);
 
-                return exposureSummaryList
-                    .Select(exposureSummary => new UserExposureSummary(exposureSummary))
-                    .ToList();
+                return Task.FromResult(
+                    exposureSummaryList
+                        .Select(exposureSummary => new UserExposureSummary(exposureSummary))
+                        .ToList()
+                    );
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
 
-        public async Task RemoveDailySummariesAsync()
+        public Task RemoveDailySummariesAsync()
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
                 _preferencesService.RemoveValue(KEY_DAILY_SUMMARIES);
+                return Task.CompletedTask;
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
 
-        public async Task RemoveExposureWindowsAsync()
+        public Task RemoveExposureWindowsAsync()
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
                 _preferencesService.RemoveValue(KEY_EXPOSURE_WINDOWS);
+                return Task.CompletedTask;
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
@@ -331,47 +302,42 @@ namespace Covid19Radar.Repository
             return isNewExposureDetected;
         }
 
-        private async Task SetExposureDataAsync(IList<ExposureSummary> exposureSummaryList, IList<ExposureInformation> exposureInformationList)
+        private Task SetExposureDataAsync(IList<ExposureSummary> exposureSummaryList, IList<ExposureInformation> exposureInformationList)
         {
             _loggerService.StartMethod();
 
             string exposureSummaryListJson = JsonConvert.SerializeObject(exposureSummaryList);
             string exposureInformationListJson = JsonConvert.SerializeObject(exposureInformationList);
 
-            await _semaphore.WaitAsync();
-
             try
             {
                 _preferencesService.SetValue(KEY_EXPOSURE_SUMMARIES, exposureSummaryListJson);
                 _preferencesService.SetValue(KEY_EXPOSURE_INFORMATIONS, exposureInformationListJson);
+                return Task.CompletedTask;
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
 
-        public async Task<List<UserExposureInfo>> GetUserExposureInfosAsync()
+        public Task<List<UserExposureInfo>> GetUserExposureInfosAsync()
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
                 string exposureInformationListJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_INFORMATIONS, EMPTY_LIST_JSON);
                 List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
 
-                return exposureInformationList
-                    .Select(exposureInfo => new UserExposureInfo(exposureInfo))
-                    .ToList();
+                return Task.FromResult(
+                    exposureInformationList
+                        .Select(exposureInfo => new UserExposureInfo(exposureInfo))
+                        .ToList()
+                    );
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
@@ -383,29 +349,24 @@ namespace Covid19Radar.Repository
                 .ToList();
         }
 
-        public async Task RemoveUserExposureInformationAsync()
+        public Task RemoveUserExposureInformationAsync()
         {
             _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
 
             try
             {
                 _preferencesService.RemoveValue(KEY_EXPOSURE_SUMMARIES);
                 _preferencesService.RemoveValue(KEY_EXPOSURE_INFORMATIONS);
+                return Task.CompletedTask;
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
 
-        private async Task<(List<ExposureSummary>, List<ExposureInformation>)> GetExposureInformationDataAsync()
+        private Task<(List<ExposureSummary>, List<ExposureInformation>)> GetExposureInformationDataAsync()
         {
-            await _semaphore.WaitAsync();
-
             try
             {
                 string exposureSummariesJson = _preferencesService.GetValue<string>(KEY_EXPOSURE_SUMMARIES, EMPTY_LIST_JSON);
@@ -414,12 +375,10 @@ namespace Covid19Radar.Repository
                 List<ExposureSummary> exposureSummaryList = JsonConvert.DeserializeObject<List<ExposureSummary>>(exposureSummariesJson);
                 List<ExposureInformation> exposureInformationList = JsonConvert.DeserializeObject<List<ExposureInformation>>(exposureInformationListJson);
 
-                return (exposureSummaryList, exposureInformationList);
+                return Task.FromResult((exposureSummaryList, exposureInformationList));
             }
             finally
             {
-                _semaphore.Release();
-
                 _loggerService.EndMethod();
             }
         }
