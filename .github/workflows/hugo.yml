@@ -2,11 +2,7 @@ name: Hugo-Site
 
 on:
   push:
-    branches: [ main, develop, 'feature/**'  ]
-    paths:
-      - 'documents/**'
-  pull_request:
-    branches: [ main, develop, 'feature/**' ]
+    branches: [ main, develop ]
     paths:
       - 'documents/**'
 jobs:
