@@ -75,18 +75,6 @@
     <value>Егер сіз coVID-19 нәтижесі туралы оң хабарлаған біреуге хабарландырыңыз.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Әрекетті кейінірек қайталаңыз.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Сәтсіз аяқталды</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Диагноз ды ұсынған</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Аяқталды</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Диагноз ды ұсыну...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>Пайдалану шарттарына келіспеу керек.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>COVID-19 Байланыс хабарламасы мүмкіндігі бекітілмеген. Өтінім қайта жасалғаннан кейін әрбір ОЖ-дан бекітуді немесе қайта бекітуді сұраймын.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Экспозиция туралы хабарландыруға қолдау көрсетілмейді. ОЖ соңғы нұсқасына жаңартыңыз. Егер әлі де проблемалар туындаса, appsupport@cov19.mhlw.go.jp байланысыңызды сұраймыз.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>Тіркеу</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Бас тартылды</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Тіркеу басталғанша біраз уақыт күте тұрыңыз</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>Тіркеу саны жоғарғы шекке жетті. Шығу өтінімі</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Тіркеу қатесі</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>Ұсынысқа сәйкес келетін байланыс жазбасы расталмады. Ұсынудың қажеті жоқ.</value>

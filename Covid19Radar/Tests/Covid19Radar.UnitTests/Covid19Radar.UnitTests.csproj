@@ -31,5 +31,6 @@
     <Folder Include="ViewModels\HomePage\" />
     <Folder Include="Models\" />
     <Folder Include="Mocks\" />
+    <Folder Include="Services\Migration\" />
   </ItemGroup>
 </Project>

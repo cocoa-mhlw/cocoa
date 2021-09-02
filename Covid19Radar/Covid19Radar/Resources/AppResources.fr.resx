@@ -67,18 +67,6 @@
     <value>Vous serez notifié si vous avez été exposé à une personne ayant été déclarée positive au COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Veuillez réessayer ultérieurement.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Échec</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Diagnostic soumis</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Terminé</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Soumission du diagnostic...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>Vous devez accepter les conditions d’utilisation.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>La fonction Notification d’exposition au COVID-19 n’est pas approuvée. Veuillez l’approuver via les paramètres du système d’exploitation, ou en réinstallant cette application.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>La Notification d’exposition n’est pas prise en charge. Veuillez mettre à jour le système d’exploitation vers la dernière version. Si vous avez encore des problèmes, veuillez nous contacter à appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>S’enregistrer</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Annulé</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Veuillez attendre un certain temps jusqu’à ce que l’inscription commence</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>Le nombre d’enregistrements a atteint la limite maximale. Sortie de l’application.</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Erreur d’inscription</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>Le dossier de contact correspondant à la soumission n’a pas pu être confirmé. Pas besoin de soumettre.</value>

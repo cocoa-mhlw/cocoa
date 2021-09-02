@@ -67,18 +67,6 @@
     <value>Jums bus pranešta, jei jums buvo veikiami asmens, kuris pranešė apie teigiamą COVID-19 rezultatą.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Pamėginkite vėliau.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Nepavyko</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Diagnozė Pateikta</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Atlikta</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Pateikti diagnozę...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>Turite sutikti su naudojimo sąlygomis.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Pranešimas apie ekspoziciją yra ribojamas. Prašome aktyvūs.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Pranešimas apie ekspoziciją nepalaikomas. Atnaujinkite OS į naujausią versiją. Jei vis dar turite problemų, prašome susisiekti su mumis appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>Registruoti</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Atšaukta</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Palaukite, kol prasidės registracija</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>Registracijų skaičius pasiekė viršutinę ribą. Išeiti iš programos</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Registracijos klaida</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>Nepavyko patvirtinti pateiktą kontakto įrašą. Nereikia pateikti.</value>

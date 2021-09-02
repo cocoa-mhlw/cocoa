@@ -73,7 +73,11 @@ namespace Covid19Radar.ViewModels
                 _ = logFileService.DeleteLogsDir();
 
                 UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync(AppResources.SettingsPageDialogResetCompletedText);
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.SettingsPageDialogResetCompletedText,
+                    AppResources.SettingsPageDialogResetCompletedTitle,
+                    AppResources.ButtonOk
+                    );
                 Application.Current.Quit();
                 // Application close
                 DependencyService.Get<ICloseApplication>().closeApplication();

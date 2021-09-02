@@ -65,16 +65,16 @@
     <comment>exposures comment</comment>
   </data>
 	<data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Please try again later.</value>
+    <value>Please enter the processing number again.</value>
+    <comment>処理番号を再度入力してください。</comment>
   </data>
-	<data name="ButtonFailed" xml:space="preserve">
-    <value>Failed</value>
+	<data name="NotifyOtherPageDialogExceptionTitle" xml:space="preserve">
+    <value>Could not register positive test result's information</value>
+    <comment>陽性情報を登録できませんでした</comment>
   </data>
-	<data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Diagnosis Submitted</value>
-  </data>
-	<data name="ButtonComplete" xml:space="preserve">
-    <value>Complete</value>
+	<data name="NotifyOtherPageDialogSubmittedTitle" xml:space="preserve">
+    <value>Registration is complete</value>
+    <comment>登録が完了しました</comment>
   </data>
 	<data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Submitting Diagnosis...</value>
@@ -85,6 +85,10 @@
   </data>
 	<data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
+  </data>
+  <data name="ButtonRegister" xml:space="preserve">
+    <value>Register</value>
+    <comment>登録</comment>
   </data>
 	<data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
@@ -111,13 +115,20 @@
     <value>Waiting for register</value>
   </data>
 	<data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>Do you really want to reset all the data?</value>
+    <value>Do you really want to delete all the data and stop the usage of the app?</value>
+    <comment>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</comment>
   </data>
 	<data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>Delete all data</value>
+    <value>Stop app usage</value>
+    <comment>アプリの使用を中止します</comment>
+  </data>
+  <data name="SettingsPageDialogResetCompletedTitle" xml:space="preserve">
+    <value>Data have been deleted</value>
+    <comment>データを削除しました</comment>
   </data>
 	<data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
-    <value>All settings and data have been deleted. Please restart the application.</value>
+    <value>Close the app</value>
+    <comment>アプリを終了します。</comment>
   </data>
 	<data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Return to registration</value>
@@ -417,7 +428,7 @@
     <comment>登録する</comment>
   </data>
 	<data name="NotifyOtherPageLabel" xml:space="preserve">
-    <value>How to receive a process code</value>
+    <value>How to receive a processing number</value>
     <comment>処理番号の取得方法</comment>
   </data>
 	<data name="NotifyOtherPageTitle" xml:space="preserve">
@@ -545,9 +556,13 @@
     <value>You must agree to the terms of use.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-	<data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Exposure Notification is restricted. Please active.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
+  <data name="ExposureNotificationRestrictedTitle" xml:space="preserve">
+    <value>The close contact notification function is disabled</value>
+    <comment>接触通知機能が停止しています</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Please reinstall the app or enable the notification from the OS settings.</value>
+    <comment>アプリを再インストールするか、 OSの設定から接触通知を有効にしてください。</comment>
   </data>
 	<data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</value>
@@ -566,40 +581,40 @@
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 	<data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>Process number incorrect</value>
-    <comment>アプリで入力された処理番号が違います</comment>
+    <value>Please input a valid processing number.</value>
+    <comment>正しい処理番号を入力してください。</comment>
   </data>
 	<data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
     <value>Cannot connect to registration center</value>
     <comment>センターに接続できません</comment>
   </data>
 	<data name="NotifyOtherPageDiag1Message" xml:space="preserve">
-    <value>Do you want to register positive information?</value>
-    <comment>陽性情報を登録しますか?</comment>
+    <value>Do you want to register it?</value>
+    <comment>よろしいですか？</comment>
   </data>
 	<data name="NotifyOtherPageDiag1Title" xml:space="preserve">
-    <value>Register</value>
-    <comment>登録</comment>
+    <value>Register positive test result</value>
+    <comment>陽性情報の登録をします</comment>
   </data>
-	<data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Canceled</value>
-    <comment>キャンセルしました</comment>
+	<data name="NotifyOtherPageDiag2Title" xml:space="preserve">
+    <value>Registration was canceled</value>
+    <comment>登録をキャンセルしました</comment>
   </data>
 	<data name="NotifyOtherPageDiag3Message" xml:space="preserve">
-    <value>Please wait for a while until registration starts</value>
-    <comment>登録開始までしばらくそのままでお待ちください</comment>
+    <value>Please wait.</value>
+    <comment>しばらくそのままでお待ちください。</comment>
   </data>
 	<data name="NotifyOtherPageDiag3Title" xml:space="preserve">
-    <value>Awaiting registration</value>
-    <comment>登録待ち</comment>
+    <value>Processing the registration</value>
+    <comment>登録を開始します</comment>
   </data>
 	<data name="NotifyOtherPageDiag4Message" xml:space="preserve">
     <value>No processing number entered</value>
     <comment>処理番号が入力されていません</comment>
   </data>
 	<data name="NotifyOtherPageDiag5Message" xml:space="preserve">
-    <value>Processing number format does not match</value>
-    <comment>処理番号のフォーマットが一致していません</comment>
+    <value>Please enter a processing number in half-width numbers.</value>
+    <comment>処理番号は半角数字で入力してください。</comment>
   </data>
 	<data name="NotifyOtherPageDiag6Message" xml:space="preserve">
     <value>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</value>
@@ -609,21 +624,25 @@
     <value>Enable COVID-19 contact logging</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
-	<data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>The number of registrations has reached the upper limit. Exit application</value>
-    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  <data name="NotifyOtherPageDiagAppCloseTitle" xml:space="preserve">
+    <value>Reached the maximum number of registrations</value>
+    <comment>登録回数の上限に達しました</comment>
   </data>
-	<data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Registration error</value>
-    <comment>登録エラー</comment>
+	<data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
+    <value>Close the app</value>
+    <comment>アプリを終了します。</comment>
+  </data>
+	<data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
+    <value>Incorrect processing number</value>
+    <comment>処理番号が違います</comment>
   </data>
 	<data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>The contact record corresponding to the submission could not be confirmed. No need to submit.</value>
-    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+    <value>Registration is not necessary.</value>
+    <comment>登録する必要はありません。</comment>
   </data>
 	<data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>No applicable contact</value>
-    <comment>該当接触なし</comment>
+    <value>No close contact record present</value>
+    <comment>接触記録がありません</comment>
   </data>
 	<data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
@@ -830,7 +849,7 @@ Storage :</value>
     <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
   </data>
 	<data name="NotifyOtherPageDescription3" xml:space="preserve">
-    <value>Please enter below the process code that you have received by SMS or email</value>
+    <value>Please enter below the processing number that you have received by SMS or email</value>
     <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
   </data>
 	<data name="NotifyOtherPageDescription5" xml:space="preserve">
@@ -846,7 +865,7 @@ Storage :</value>
     <comment>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</comment>
   </data>
 	<data name="NotifyOtherPageDescription4" xml:space="preserve">
-    <value>After you register the process code</value>
+    <value>After you register the processing number</value>
     <comment>登録すると</comment>
   </data>
 	<data name="NotifyOtherPageDescription6" xml:space="preserve">
@@ -941,7 +960,7 @@ Storage :</value>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
     <value>If you are contacted by a health center, please say that you would like to register positive test result using the Contact Confirmation Application.</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝え下さい。</comment>
+    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
   </data>
 	<data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
     <value>After that, you will receive an 8-digit processing number via SMS or email.</value>
@@ -958,5 +977,13 @@ Storage :</value>
 	<data name="NoteSymbol" xml:space="preserve">
     <value>* </value>
     <comment>※</comment>
+  </data>
+  <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
+    <value>Web accessibility policy</value>
+    <comment>ウェブアクセシビリティ方針</comment>
+  </data>
+  <data name="UrlWebAccessibilityPolicy" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/cocoa/webaccessibility_english.html</value>
+    <comment>ウェブアクセシビリティ方針URL</comment>
   </data>
 </root>

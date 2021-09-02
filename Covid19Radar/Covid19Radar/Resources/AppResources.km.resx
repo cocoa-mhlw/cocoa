@@ -47,15 +47,6 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>មិនមែនឥឡូវ</value>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>បានបរាជ័យ</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>បញ្ចប់</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>បោះបង់</value>
   </data>
@@ -163,9 +154,5 @@
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>ចុះឈ្មោះ</value>
     <comment>登録</comment>
-  </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>បានបោះបង់</value>
-    <comment>キャンセルしました</comment>
   </data>
 </root>

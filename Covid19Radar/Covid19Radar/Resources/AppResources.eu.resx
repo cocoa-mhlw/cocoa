@@ -47,15 +47,6 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Orain ez</value>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Saiatu berriro geroago.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Huts egin du</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Osatuta</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Utzi</value>
   </data>
@@ -171,9 +162,5 @@
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>Erregistratu</value>
     <comment>登録</comment>
-  </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Bertan behera utzita</value>
-    <comment>キャンセルしました</comment>
   </data>
 </root>

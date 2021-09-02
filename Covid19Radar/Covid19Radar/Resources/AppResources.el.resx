@@ -67,18 +67,6 @@
     <value>Θα ειδοποιηθείτε εάν έχετε εκτεθεί σε κάποιον που ανέφερε θετικό αποτέλεσμα COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Δοκιμάστε ξανά αργότερα.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Απέτυχε</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Διάγνωση που υποβλήθηκε</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Ολοκληρώθηκε</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Υποβολή διάγνωσης...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>Πρέπει να συμφωνήσετε με τους όρους χρήσης.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Η ειδοποίηση έκθεσης είναι περιορισμένη. Παρακαλώ ενεργή.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Η ειδοποίηση έκθεσης δεν υποστηρίζεται. Ενημερώστε το λειτουργικό σύστημα στην πιο πρόσφατη έκδοση. Αν εξακολουθείτε να αντιμετωπίζετε προβλήματα, παρακαλούμε επικοινωνήστε μαζί μας στο appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>Καταχώρηση</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Ακυρωμένο</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Περιμένετε λίγο μέχρι να ξεκινήσει η εγγραφή</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>Ο αριθμός των εγγραφών έχει φτάσει στο ανώτατο όριο. Έξοδος από την εφαρμογή</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Σφάλμα εγγραφής</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>Δεν ήταν δυνατή η επιβεβαίωση της καρτέλας επαφής που αντιστοιχεί στην υποβολή. Δεν χρειάζεται να υποταχθείς.</value>

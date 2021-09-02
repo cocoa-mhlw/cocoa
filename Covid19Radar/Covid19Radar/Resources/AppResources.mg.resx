@@ -67,18 +67,6 @@
     <value>Ho hampahafantarina ianao raha toa ka niharan' ny olona iray izay nanao tatitra tsara COVID-19.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Mamerena manandrana aoriana kely azafady.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Tsy nahomby</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Aretina ny Fangatahana</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Fenoy</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Fanekena ny Aretina ...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>Tsy maintsy manaiky ireo teny ampiasaina ianao.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Fampilazana ny hatsiaka. Aoka ianao ho mazoto.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Tsy notohanana ny Fampilazana hatsiaka. Mba hanavao azafady ny OS amin' ny endriny farany. Raha mbola manana olana ianao dia mba mifandraisa aminay ao amin' ny appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>Misoratra anarana</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Canceled</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Miandrasa kely azafady raha tsy manomboka ny fisoratana anarana</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>Ny isan' ny registrations dia efa nahatratra ny fetra ambony. Fampiharana ny fivoahana</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Fahadisoana fisoratana anarana</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>Tsy azo raisina ho mpikambana ny firaketana ny rakitsoratra mifandraika amin' ilay fanoavana. Tsy mila manaiky izany.</value>

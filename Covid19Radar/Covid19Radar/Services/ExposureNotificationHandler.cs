@@ -12,10 +12,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CommonServiceLocator;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Services.Migration;
+using Newtonsoft.Json;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 
@@ -28,7 +29,9 @@ namespace Covid19Radar.Services
         private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
         private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
+        private IMigrationService MigrationService => ServiceLocator.Current.GetInstance<IMigrationService>();
         private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
+        private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
 
         public ExposureNotificationHandler()
         {
@@ -71,7 +74,7 @@ namespace Covid19Radar.Services
             loggerService.Info("Get default configuration");
 
             var defaultConfiguration = Task.FromResult(configuration);
-            loggerService.Info($"configuration: {Utils.SerializeToJson(configuration)}");
+            loggerService.Info($"configuration: {JsonConvert.SerializeObject(configuration)}");
 
             loggerService.EndMethod();
             return defaultConfiguration;
@@ -96,6 +99,8 @@ namespace Covid19Radar.Services
 
             var config = await GetConfigurationAsync();
 
+            var isNewExposureDetected = false;
+
             if (userExposureSummary.HighestRiskScore >= config.MinimumRiskScore)
             {
                 var exposureInfo = await getExposureInfo();
@@ -113,15 +118,25 @@ namespace Covid19Radar.Services
                     {
                         UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                         exposureInformationList.Add(userExposureInfo);
+                        isNewExposureDetected = true;
                     }
                 }
             }
 
-            exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
+            if (isNewExposureDetected)
+            {
+                loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
+                loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
 
-            loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
-            loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
-            exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
+                exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
+                exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
+
+                await LocalNotificationService.ShowExposureNotificationAsync();
+            }
+            else
+            {
+                loggerService.Info($"MatchedKeyCount: {userExposureSummary.MatchedKeyCount}, but no new exposure detected");
+            }
 
             loggerService.EndMethod();
         }
@@ -144,9 +159,7 @@ namespace Covid19Radar.Services
 
             try
             {
-                // Migrate from UserData.
-                // Since it may be executed during the migration when the application starts, execute it here as well.
-                await UserDataService.Migrate();
+                await MigrationService.MigrateAsync();
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
@@ -189,8 +202,10 @@ namespace Covid19Radar.Services
             }
             catch (Exception ex)
             {
-                // any expections, bail out and wait for the next time
+                // any exceptions, throw and wait for retry
                 loggerService.Exception("Fail to download files", ex);
+
+                throw ex;
             }
             finally
             {
@@ -239,7 +254,7 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > startTimestamp)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
+                    Debug.WriteLine(JsonConvert.SerializeObject(tekItem));
                     Debug.WriteLine(tmpFile);
 
                     loggerService.Info($"Download TEK file. url: {tekItem.Url}");
@@ -305,8 +320,8 @@ namespace Covid19Radar.Services
 
                     case HttpStatusCode.NotAcceptable:
                         await UserDialogs.Instance.AlertAsync(
-                            "",
                             AppResources.ExposureNotificationHandler1ErrorMessage,
+                            AppResources.ProcessingNumberErrorDiagTitle,
                             AppResources.ButtonOk);
 
                         loggerService.Error($"The diagnostic number is incorrect.");
@@ -359,8 +374,8 @@ namespace Covid19Radar.Services
                 RollingPeriod = (uint)(k.RollingDuration.TotalMinutes / 10),
             });
 
-            var beforeKey = Utils.SerializeToJson(temporaryExposureKeys.ToList());
-            var afterKey = Utils.SerializeToJson(keys.ToList());
+            var beforeKey = JsonConvert.SerializeObject(temporaryExposureKeys.ToList());
+            var afterKey = JsonConvert.SerializeObject(keys.ToList());
             Debug.WriteLine($"C19R {beforeKey}");
             Debug.WriteLine($"C19R {afterKey}");
 

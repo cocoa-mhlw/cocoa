@@ -67,18 +67,6 @@
     <value>Ви будете повідомлені, якщо ви були схильні до тих, хто повідомив позитивний COVID-19 результат.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Спробуйте ще раз пізніше.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Помилка</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Діагноз подано</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Завершено</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Подача діагнозу...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>Ви повинні погодитися з умовами використання.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Сповіщення про експозицію обмежено. Будь ласка, активний.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Сповіщення про експозицію не підтримується. Оновіть ОС до останньої версії. Якщо у вас ще є проблеми, будь ласка, зв'яжіться з нами за адресою appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>Реєстрація</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Скасовано</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Зачекайте деякий час до початку реєстрації</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>Кількість реєстрацій досягла верхньої межі. Вийти з програми</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Помилка реєстрації</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>Не вдалося підтвердити запис контактної особи, що відповідає поданням. Не потрібно подавати.</value>

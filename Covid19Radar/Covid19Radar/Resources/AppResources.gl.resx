@@ -47,15 +47,6 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Agora non</value>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Téntao de novo máis tarde.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Erro</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Completo</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
@@ -171,9 +162,5 @@
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>Rexistrar</value>
     <comment>登録</comment>
-  </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Cancelado</value>
-    <comment>キャンセルしました</comment>
   </data>
 </root>
