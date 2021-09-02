@@ -10,7 +10,7 @@ COCOAのリポジトリは次のURLです。
 
  * [https://github.com/cocoa-mhlw/cocoa](https://github.com/cocoa-mhlw/cocoa)
 
-リポジトリの運営については[デジタル庁 GitHub運用方針]({{<relref "operation_policy">}})を注意事項もご確認ください。
+リポジトリの運営については[デジタル庁 GitHub運用方針]({{<relref "operation_policy">}})の注意事項もご確認ください。
 
 
 ## 開発について

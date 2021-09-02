@@ -5,9 +5,6 @@ draft: false
 ---
 
 # ビルド方法
-
-_文体は後で調整する。何を書くかざっくり記述していく。_
-
 ## ビルド構成（Build Configuration）
 COCOAのビルド構成は次の通り。
 
