@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Acr.UserDialogs;
 using Covid19Radar.Services;
@@ -14,22 +13,9 @@ namespace Covid19Radar.ViewModels
 {
     public class DebugPageViewModel : ViewModelBase
     {
-        private class LastProcessTekTimestamp
-        {
-            internal string Region;
-
-            internal long Ticks;
-
-            internal DateTimeOffset DateTime
-                => DateTimeOffset.FromUnixTimeMilliseconds(Ticks).ToLocalTime();
-
-            public override string ToString()
-                => $"{Region} - {DateTime:F}({Ticks})";
-        }
-
-        private readonly IUserDataService userDataService;
-        private readonly ITermsUpdateService termsUpdateService;
-        private readonly IExposureNotificationService exposureNotificationService;
+        private readonly IUserDataService _userDataService;
+        private readonly ITermsUpdateService _termsUpdateService＿;
+        private readonly IExposureNotificationService _exposureNotificationService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -37,6 +23,7 @@ namespace Covid19Radar.ViewModels
             get { return _debugInfo; }
             set { SetProperty(ref _debugInfo, value); }
         }
+
         public async void Info(string ex = "")
         {
             string os = Device.RuntimePlatform;
@@ -48,20 +35,21 @@ namespace Covid19Radar.ViewModels
 #endif
 
             // debug info for ./SplashPageViewModel.cs
-            var termsUpdateInfo = await termsUpdateService.GetTermsUpdateInfo();
+            var termsUpdateInfo = await _termsUpdateService＿.GetTermsUpdateInfo();
 
-            IList<string> lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(region =>
+            var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(region =>
                              new LastProcessTekTimestamp()
                              {
                                  Region = region,
-                                 Ticks = exposureNotificationService.GetLastProcessTekTimestamp(region)
+                                 Ticks = _exposureNotificationService.GetLastProcessTekTimestamp(region)
                              }.ToString()
-            ).ToList();
+                );
+
+            string regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
             string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList);
 
             var exposureNotificationStatus = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
-            var exposureNotificationMessage = await exposureNotificationService.UpdateStatusMessageAsync();
-            var regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
+            var exposureNotificationMessage = await _exposureNotificationService.UpdateStatusMessageAsync();
 
             // ../../settings.json
             var str = new[] {
@@ -72,9 +60,9 @@ namespace Covid19Radar.ViewModels
                 $"ApiUrl: {AppSettings.Instance.ApiUrlBase}",
                 $"TermsOfServiceUpdatedDateTime: {termsUpdateInfo.TermsOfService.UpdateDateTime}",
                 $"PrivacyPolicyUpdatedDateTime: {termsUpdateInfo.PrivacyPolicy.UpdateDateTime}",
-                $"StartDate: {userDataService.GetStartDate().ToLocalTime().ToString("F")}",
-                $"DaysOfUse: {userDataService.GetDaysOfUse()}",
-                $"ExposureCount: {exposureNotificationService.GetExposureCountToDisplay()}",
+                $"StartDate: {_userDataService.GetStartDate().ToLocalTime().ToString("F")}",
+                $"DaysOfUse: {_userDataService.GetDaysOfUse()}",
+                $"ExposureCount: {_exposureNotificationService.GetExposureCountToDisplay()}",
                 $"LastProcessTekTimestamp: {lastProcessTekTimestampsStr}",
                 $"ENstatus: {exposureNotificationStatus}",
                 $"ENmessage: {exposureNotificationMessage}",
@@ -92,9 +80,9 @@ namespace Covid19Radar.ViewModels
             ) : base(navigationService)
         {
             Title = "Title:Debug";
-            this.userDataService = userDataService;
-            this.termsUpdateService = termsUpdateService;
-            this.exposureNotificationService = exposureNotificationService;
+            _userDataService = userDataService;
+            _termsUpdateService＿ = termsUpdateService;
+            _exposureNotificationService = exposureNotificationService;
         }
 
         public override void Initialize(INavigationParameters parameters)
@@ -102,25 +90,24 @@ namespace Covid19Radar.ViewModels
             base.Initialize(parameters);
             Info("Initialize");
         }
-        public Command OnClickReload => new Command(async () =>
-        {
-            Info("Reload");
-        });
+
+        public Command OnClickReload => new Command(() => Info("Reload"));
 
         public Command OnClickStartExposureNotification => new Command(async () =>
         {
             UserDialogs.Instance.ShowLoading("Starting ExposureNotification...");
-            var result = await exposureNotificationService.StartExposureNotification();
+            var result = await _exposureNotificationService.StartExposureNotification();
             var message = $"Result: {result}";
             UserDialogs.Instance.HideLoading();
             await UserDialogs.Instance.AlertAsync(message, "StartExposureNotification", Resources.AppResources.ButtonOk);
             Info("StartExposureNotification");
         });
+
         public Command OnClickFetchExposureKeyAsync => new Command(async () =>
         {
             var exception = "FetchExposureKeyAsync";
             try {
-                await exposureNotificationService.FetchExposureKeyAsync();
+                await _exposureNotificationService.FetchExposureKeyAsync();
             }
             catch (Exception ex)
             {
@@ -133,42 +120,60 @@ namespace Covid19Radar.ViewModels
         public Command OnClickStopExposureNotification => new Command(async () =>
         {
             UserDialogs.Instance.ShowLoading("Stopping ExposureNotification...");
-            var result = await exposureNotificationService.StopExposureNotification();
+            var result = await _exposureNotificationService.StopExposureNotification();
             string message = $"Result: {result}";
             UserDialogs.Instance.HideLoading();
             await UserDialogs.Instance.AlertAsync(message, "StopExposureNotification", Resources.AppResources.ButtonOk);
             Info("StopExposureNotification");
         });
 
-        public Command OnClickRemoveStartDate => new Command(async () =>
+        public Command OnClickRemoveStartDate => new Command(() =>
         {
-            userDataService.RemoveStartDate();
+            _userDataService.RemoveStartDate();
             Info("RemoveStartDate");
         });
-        public Command OnClickRemoveExposureInformation => new Command(async () =>
+
+        public Command OnClickRemoveExposureInformation => new Command(() =>
         {
-            exposureNotificationService.RemoveExposureInformation();
+            _exposureNotificationService.RemoveExposureInformation();
             Info("RemoveExposureInformation");
         });
-        public Command OnClickRemoveConfiguration => new Command(async () =>
+
+        public Command OnClickRemoveConfiguration => new Command(() =>
         {
-            exposureNotificationService.RemoveConfiguration();
+            _exposureNotificationService.RemoveConfiguration();
             Info("RemoveConfiguration");
         });
-        public Command OnClickRemoveLastProcessTekTimestamp => new Command(async () =>
+
+        public Command OnClickRemoveLastProcessTekTimestamp => new Command(() =>
         {
-            exposureNotificationService.RemoveLastProcessTekTimestamp();
+            _exposureNotificationService.RemoveLastProcessTekTimestamp();
             Info("RemoveLastProcessTekTimestamp");
         });
-        public Command OnClickRemoveAllUpdateDate => new Command(async () =>
+
+        public Command OnClickRemoveAllUpdateDate => new Command(() =>
         {
-            termsUpdateService.RemoveAllUpdateDate();
+            _termsUpdateService＿.RemoveAllUpdateDate();
             Info("RemoveAllUpdateDate");
         });
-        public Command OnClickQuit => new Command(async () =>
+
+        public Command OnClickQuit => new Command(() =>
         {
             Application.Current.Quit();
             DependencyService.Get<ICloseApplication>().closeApplication();
         });
+
+        private class LastProcessTekTimestamp
+        {
+            internal string Region;
+
+            internal long Ticks;
+
+            internal DateTimeOffset DateTime
+                => DateTimeOffset.FromUnixTimeMilliseconds(Ticks).ToLocalTime();
+
+            public override string ToString()
+                => $"{Region} - {DateTime:F}({Ticks})";
+        }
     }
 }
