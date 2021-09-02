@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Net.Http;
 using Covid19Radar.Common;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
@@ -122,7 +123,7 @@ namespace Covid19Radar.Services
                 if (result != null)
                 {
                     Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList downloaded");
-                    return Utils.DeserializeFromJson<List<TemporaryExposureKeyExportFileModel>>(result);
+                    return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
                 }
                 else
                 {
