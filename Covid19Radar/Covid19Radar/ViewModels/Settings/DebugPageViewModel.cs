@@ -3,6 +3,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Acr.UserDialogs;
 using Covid19Radar.Services;
 using Prism.Navigation;
@@ -12,6 +14,19 @@ namespace Covid19Radar.ViewModels
 {
     public class DebugPageViewModel : ViewModelBase
     {
+        private class LastProcessTekTimestamp
+        {
+            internal string Region;
+
+            internal long Ticks;
+
+            internal DateTimeOffset DateTime
+                => DateTimeOffset.FromUnixTimeMilliseconds(Ticks).ToLocalTime();
+
+            public override string ToString()
+                => $"{Region} - {DateTime:F}({Ticks})";
+        }
+
         private readonly IUserDataService userDataService;
         private readonly ITermsUpdateService termsUpdateService;
         private readonly IExposureNotificationService exposureNotificationService;
@@ -24,19 +39,7 @@ namespace Covid19Radar.ViewModels
         }
         public async void Info(string ex = "")
         {
-            string os;
-            switch (Device.RuntimePlatform)
-            {
-                case Device.Android:
-                    os = "Android";
-                    break;
-                case Device.iOS:
-                    os = "iOS";
-                    break;
-                default:
-                    os = "unknown";
-                    break;
-            }
+            string os = Device.RuntimePlatform;
 #if DEBUG
             os += ",DEBUG";
 #endif
@@ -45,49 +48,55 @@ namespace Covid19Radar.ViewModels
 #endif
 
             // debug info for ./SplashPageViewModel.cs
-            string agree;
-            if (termsUpdateService.IsAllAgreed())
-            {
-                agree = "exists";// (mainly) navigate from SplashPage to HomePage
-                var termsUpdateInfo = await termsUpdateService.GetTermsUpdateInfo();
-                if (termsUpdateService.IsReAgree(TermsType.TermsOfService, termsUpdateInfo))
-                {
-                    agree += "-TermsOfService";
-                }
-                else if (termsUpdateService.IsReAgree(TermsType.PrivacyPolicy, termsUpdateInfo))
-                {
-                    agree += "-PrivacyPolicy";
-                }
-            }
-            else
-            {
-                agree = "not exists"; // navigate from SplashPage to TutorialPage1
-            }
+            var termsUpdateInfo = await termsUpdateService.GetTermsUpdateInfo();
 
-            var ticks = exposureNotificationService.GetLastProcessTekTimestamp(AppSettings.Instance.SupportedRegions[0]);
-            var dt = DateTimeOffset.FromUnixTimeMilliseconds(ticks).ToOffset(new TimeSpan(9, 0, 0));
-            //please check : offset is correct or not
-            //cf: ../../../Covid19Radar.Android/Services/Logs/LogPeriodicDeleteServiceAndroid.cs
-            var lastProcessTekTimestamp = dt.ToLocalTime().ToString("F");
+            IList<string> lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(region =>
+                             new LastProcessTekTimestamp()
+                             {
+                                 Region = region,
+                                 Ticks = exposureNotificationService.GetLastProcessTekTimestamp(region)
+                             }.ToString()
+            ).ToList();
+            string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList);
 
             var exposureNotificationStatus = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
             var exposureNotificationMessage = await exposureNotificationService.UpdateStatusMessageAsync();
+            var regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
+
             // ../../settings.json
-            var str = new[] { "Build: " + os, "Ver: " + AppSettings.Instance.AppVersion,
-                "Region: " + string.Join(",", AppSettings.Instance.SupportedRegions), "CdnUrl: " + AppSettings.Instance.CdnUrlBase,
-                "ApiUrl: " + AppSettings.Instance.ApiUrlBase, "Agree: " + agree, "StartDate: " + userDataService.GetStartDate().ToLocalTime().ToString("F"),
-                "DaysOfUse: " + userDataService.GetDaysOfUse(), "ExposureCount: " + exposureNotificationService.GetExposureCountToDisplay(),
-                "LastProcessTek: " + lastProcessTekTimestamp, " (long): " + ticks, "ENstatus: " + exposureNotificationStatus,
-                "ENmessage: " + exposureNotificationMessage, "Now: " + DateTime.Now.ToLocalTime().ToString("F"), ex};
+            var str = new[] {
+                $"Build: {os}",
+                $"Version: {AppSettings.Instance.AppVersion}",
+                $"Region: {regionString}",
+                $"CdnUrl: {AppSettings.Instance.CdnUrlBase}",
+                $"ApiUrl: {AppSettings.Instance.ApiUrlBase}",
+                $"TermsOfServiceUpdatedDateTime: {termsUpdateInfo.TermsOfService.UpdateDateTime}",
+                $"PrivacyPolicyUpdatedDateTime: {termsUpdateInfo.PrivacyPolicy.UpdateDateTime}",
+                $"StartDate: {userDataService.GetStartDate().ToLocalTime().ToString("F")}",
+                $"DaysOfUse: {userDataService.GetDaysOfUse()}",
+                $"ExposureCount: {exposureNotificationService.GetExposureCountToDisplay()}",
+                $"LastProcessTekTimestamp: {lastProcessTekTimestampsStr}",
+                $"ENstatus: {exposureNotificationStatus}",
+                $"ENmessage: {exposureNotificationMessage}",
+                $"Now: {DateTime.Now.ToLocalTime().ToString("F")}",
+                ex
+            };
             DebugInfo = string.Join(Environment.NewLine, str);
         }
-        public DebugPageViewModel(INavigationService navigationService, IUserDataService userDataService, ITermsUpdateService termsUpdateService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+
+        public DebugPageViewModel(
+            INavigationService navigationService,
+            IUserDataService userDataService,
+            ITermsUpdateService termsUpdateService,
+            IExposureNotificationService exposureNotificationService
+            ) : base(navigationService)
         {
-            Title = "Title:DebugPage";
+            Title = "Title:Debug";
             this.userDataService = userDataService;
             this.termsUpdateService = termsUpdateService;
             this.exposureNotificationService = exposureNotificationService;
         }
+
         public override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
@@ -102,17 +111,22 @@ namespace Covid19Radar.ViewModels
         {
             UserDialogs.Instance.ShowLoading("Starting ExposureNotification...");
             var result = await exposureNotificationService.StartExposureNotification();
-            var str = $"StartExposureNotification: {result}";
+            var message = $"Result: {result}";
             UserDialogs.Instance.HideLoading();
-            await UserDialogs.Instance.AlertAsync(str, str, Resources.AppResources.ButtonOk);
+            await UserDialogs.Instance.AlertAsync(message, "StartExposureNotification", Resources.AppResources.ButtonOk);
             Info("StartExposureNotification");
         });
         public Command OnClickFetchExposureKeyAsync => new Command(async () =>
         {
-            var exLog = "FetchExposureKeyAsync";
-            try { await exposureNotificationService.FetchExposureKeyAsync(); }
-            catch (Exception ex) { exLog += $":Exception: {ex}"; }
-            Info(exLog);
+            var exception = "FetchExposureKeyAsync";
+            try {
+                await exposureNotificationService.FetchExposureKeyAsync();
+            }
+            catch (Exception ex)
+            {
+                exception += $":Exception: {ex}";
+            }
+            Info(exception);
         });
 
         // see ../Settings/SettingsPageViewModel.cs
@@ -120,9 +134,9 @@ namespace Covid19Radar.ViewModels
         {
             UserDialogs.Instance.ShowLoading("Stopping ExposureNotification...");
             var result = await exposureNotificationService.StopExposureNotification();
-            string str = "StopExposureNotification: " + result.ToString();
+            string message = $"Result: {result}";
             UserDialogs.Instance.HideLoading();
-            await UserDialogs.Instance.AlertAsync(str, str, Resources.AppResources.ButtonOk);
+            await UserDialogs.Instance.AlertAsync(message, "StopExposureNotification", Resources.AppResources.ButtonOk);
             Info("StopExposureNotification");
         });
 
