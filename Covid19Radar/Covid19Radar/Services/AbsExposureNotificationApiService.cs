@@ -26,15 +26,13 @@ namespace Covid19Radar.Services
                     return false;
                 }
                 await StartAsync();
-            }
-            catch
-            {
+                return true;
             }
             finally
             {
                 _loggerService.EndMethod();
+
             }
-            return true;
         }
 
         public async Task<bool> StopExposureNotificationAsync()
