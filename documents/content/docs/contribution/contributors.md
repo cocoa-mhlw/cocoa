@@ -8,6 +8,8 @@ type: docs
 
 ## COCOA Contirbutors
 
- * 
+ *
+ * [Takym](https://github.com/cocoa-mhlw/cocoa/commits?author=Takym)
+ *
 
 （アルファベット順）
