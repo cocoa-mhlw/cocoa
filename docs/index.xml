@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on COCOA Open Source Project</title><link>https://cocoa-mhlw.github.io/cocoa/docs/</link><description>Recent content in Docs on COCOA Open Source Project</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><atom:link href="https://cocoa-mhlw.github.io/cocoa/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>デジタル庁 GitHub運用方針</title><link>https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/</guid><description>デジタル庁 GitHub運用方針 # デジタル庁が運用するGitHubリポジトリ（以下「当リポジトリ」という。）を通じた情報発信にあたり、運用方針を以下のとおり定めます。
+１ 投稿内容 # 日本国政府のITシステムに関する仕様や技術ドキュメントに関わる情報
+デジタル庁の施策等について関わる情報
+日本国政府のITシステムに関する問い合わせへの回答
+２ GitHubリポジトリの運用者 # デジタル庁
+３ 注意事項 # 当リポジトリにあるIssueやDiscussion、Pull Requestについては、必要に応じて回答いたします。
+リポジトリで公開しているシステムに関係のないコメントや、以下の事項に該当すると判断したIssueやDiscussion、Pull Request、及びコメントは、その投稿者に断りなく、全部又は⼀部を削除する場合があります。
+法令等に違反するもの 公序良俗に反するもの 犯罪行為を助長するもの 特定の個人、企業、団体等を誹謗中傷し、又は名誉若しくは信用を傷つけるもの 本人の承諾なく個人情報を開示・漏えいする等のプライバシーを侵害するもの 第三者の特許権、意匠権、著作権、商標権、肖像権などを侵害するもの 営利を目的としたもの 記載された内容が虚偽又は著しく事実と異なるもの GitHub利用規約に反するもの その他、運用上、不適当であると判断されるもの ４ 知的財産権 # 当リポジトリのソースコードについては、ライセンス条項によって提供されています。
+５ その他 # 本運用方針は、予告なく変更する場合があります。</description></item></channel></rss>

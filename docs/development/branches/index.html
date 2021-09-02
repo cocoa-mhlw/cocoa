@@ -1,0 +1,160 @@
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="ブランチ構成 #  develop #  デフォルトブランチです。Pull Requestは原則、このブランチに向けて送ってください。
+main #  リリースされているCOCOAのソースコードの最新版が格納されます。各バージョンのコードはReleaseにあります。
+featureブランチ #  大きめの機能を作る際、複数人数で作業を分担するためにcocoa-mhlw/cocoa上に作ります。featureブランチがある場合、関連するPull Requestは該当するfeatureブランチに向けます。作業の完了後、develop向けにPull Reqeustを出す流れです。 featureを作るか、developをIssueやPull Requestの大きさを見ながらコラボレーターが判断します。詳細は相談してください。">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="ブランチ構成">
+<meta property="og:description" content="ブランチ構成 #  develop #  デフォルトブランチです。Pull Requestは原則、このブランチに向けて送ってください。
+main #  リリースされているCOCOAのソースコードの最新版が格納されます。各バージョンのコードはReleaseにあります。
+featureブランチ #  大きめの機能を作る際、複数人数で作業を分担するためにcocoa-mhlw/cocoa上に作ります。featureブランチがある場合、関連するPull Requestは該当するfeatureブランチに向けます。作業の完了後、develop向けにPull Reqeustを出す流れです。 featureを作るか、developをIssueやPull Requestの大きさを見ながらコラボレーターが判断します。詳細は相談してください。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/docs/development/branches/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2021-09-02T12:34:24+09:00">
+<title>ブランチ構成 | COCOA Open Source Project</title>
+<link rel=manifest href=/cocoa/manifest.json>
+<link rel=icon href=/cocoa/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
+<script defer src=/cocoa/flexsearch.min.js></script>
+<script defer src=/cocoa/en.search.min.431181638903a4f0ea55a21e602603cb052be2e0eef0674d7c0145787347fb2c.js integrity="sha256-QxGBY4kDpPDqVaIeYCYDywUr4uDu8GdNfAFFeHNH+yw=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/cocoa/><span>COCOA Open Source Project</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<span>Developments</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/branches/ class=active>ブランチ構成</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/>ビルド方法</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/maintainance_oss_licenses/>ライセンスの取り扱い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/multi_language/>多言語対応</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Contributions</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/guidelines/>貢献についてのガイドライン</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/handling_pullreqeust/>Pull Requestが取り込まれるまで</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors/>Contoributors</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors_covid19radars/>COVID-19Radar Contoributors</a>
+</li>
+</ul>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/>デジタル庁 GitHub運用方針</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href=https://github.com/cocoa-mhlw/cocoa target=_blank rel=noopener>
+GitHubリポジトリ
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/cocoa/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>ブランチ構成</strong>
+<label for=toc-control>
+<img src=/cocoa/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#ブランチ構成>ブランチ構成</a>
+<ul>
+<li><a href=#develop>develop</a></li>
+<li><a href=#main>main</a></li>
+<li><a href=#featureブランチ>featureブランチ</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h2 id=ブランチ構成>
+ブランチ構成
+<a class=anchor href=#%e3%83%96%e3%83%a9%e3%83%b3%e3%83%81%e6%a7%8b%e6%88%90>#</a>
+</h2>
+<h3 id=develop>
+develop
+<a class=anchor href=#develop>#</a>
+</h3>
+<p>デフォルトブランチです。Pull Requestは原則、このブランチに向けて送ってください。</p>
+<h3 id=main>
+main
+<a class=anchor href=#main>#</a>
+</h3>
+<p>リリースされているCOCOAのソースコードの最新版が格納されます。各バージョンのコードは<a href=https://github.com/cocoa-mhlw/cocoa/releases>Release</a>にあります。</p>
+<h3 id=featureブランチ>
+featureブランチ
+<a class=anchor href=#feature%e3%83%96%e3%83%a9%e3%83%b3%e3%83%81>#</a>
+</h3>
+<p>大きめの機能を作る際、複数人数で作業を分担するために<code>cocoa-mhlw/cocoa</code>上に作ります。featureブランチがある場合、関連するPull Requestは該当するfeatureブランチに向けます。作業の完了後、<code>develop</code>向けにPull Reqeustを出す流れです。
+featureを作るか、developをIssueやPull Requestの大きさを見ながらコラボレーターが判断します。詳細は相談してください。</p>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#ブランチ構成>ブランチ構成</a>
+<ul>
+<li><a href=#develop>develop</a></li>
+<li><a href=#main>main</a></li>
+<li><a href=#featureブランチ>featureブランチ</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Pull Requestが取り込まれるまで #  Pull Requestは貢献の一つです。Pull Requestでは一般的に次の手順で取り込まれます。
+Issueの投稿 #  Issueを投稿します。これはコラボレーターだけでなく、すべてのコントリビューターの皆様に行っていただけます。
+トリアージ #  GitHubコミュニティとして #  コラボレーターにより現象の再現性などを確認後、必要に応じてラベルを付けます。また、開発チームによる確認が必要と思われたものについてはwaiting-confirmationラベルを付与します。
+開発チームとして #  開発チームによる確認が行われます。確認が完了すると開発チームが運用している課題管理システムに登録されます。この際、Internal Tracking IDをIssueのDescriptionに付記します。確認が完了するとconfirmedのラベルに変更します（IssueとInternal Tracking IDは1:1の関係ではありません。1つのIssueに複数のIDが対応する場合があります）。
+担当の割り当て #  Issueの担当を決めます。コントリビューターの皆様で担当しても良いという方はその旨申し出てください。help wanted / welcome-contribution のラベルがついているものを優先して対応いただけると助かります。申し出をいただければコラボレーターがIssueにassignします。assignについては、同じIssueに対して複数のコラボレーターが作業をすることで後から調整が必要になったり、誰かの労力が無駄になることを避ける目的があります。何卒ご協力ください。
+Pull Requestの作成 #  Pull Requestを作成します。基本的にはdevelopブランチ向けに出します（大きめの変更の場合、featureブランチを用意することもあります）。Pull Reqeustを出す際は、必ずDescriptionに対応するIssue番号を記載してください。
+コードレビュー #  GitHubコミュニティによるコードレビュー #  コラボレーターがPull Requestをレビューします。Approve権限はコラボレーターにしかありませんが、コントリビューターの皆様どなたでもコードレビューに参加できます。
+開発チームによるコードレビュー #  コラボレーターがApproveした後、開発チームがコードレビューをします。
+Pull Requestの取り込み #  Pull Reqeustが取り込まれます。Pull Reqeustの作成時期と、取り込み時期によってはコンフリクトが起こる可能性もあります。 その場合、コンフリクトの解消をお願いする場合があります。">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Pull Requestが取り込まれるまで">
+<meta property="og:description" content="Pull Requestが取り込まれるまで #  Pull Requestは貢献の一つです。Pull Requestでは一般的に次の手順で取り込まれます。
+Issueの投稿 #  Issueを投稿します。これはコラボレーターだけでなく、すべてのコントリビューターの皆様に行っていただけます。
+トリアージ #  GitHubコミュニティとして #  コラボレーターにより現象の再現性などを確認後、必要に応じてラベルを付けます。また、開発チームによる確認が必要と思われたものについてはwaiting-confirmationラベルを付与します。
+開発チームとして #  開発チームによる確認が行われます。確認が完了すると開発チームが運用している課題管理システムに登録されます。この際、Internal Tracking IDをIssueのDescriptionに付記します。確認が完了するとconfirmedのラベルに変更します（IssueとInternal Tracking IDは1:1の関係ではありません。1つのIssueに複数のIDが対応する場合があります）。
+担当の割り当て #  Issueの担当を決めます。コントリビューターの皆様で担当しても良いという方はその旨申し出てください。help wanted / welcome-contribution のラベルがついているものを優先して対応いただけると助かります。申し出をいただければコラボレーターがIssueにassignします。assignについては、同じIssueに対して複数のコラボレーターが作業をすることで後から調整が必要になったり、誰かの労力が無駄になることを避ける目的があります。何卒ご協力ください。
+Pull Requestの作成 #  Pull Requestを作成します。基本的にはdevelopブランチ向けに出します（大きめの変更の場合、featureブランチを用意することもあります）。Pull Reqeustを出す際は、必ずDescriptionに対応するIssue番号を記載してください。
+コードレビュー #  GitHubコミュニティによるコードレビュー #  コラボレーターがPull Requestをレビューします。Approve権限はコラボレーターにしかありませんが、コントリビューターの皆様どなたでもコードレビューに参加できます。
+開発チームによるコードレビュー #  コラボレーターがApproveした後、開発チームがコードレビューをします。
+Pull Requestの取り込み #  Pull Reqeustが取り込まれます。Pull Reqeustの作成時期と、取り込み時期によってはコンフリクトが起こる可能性もあります。 その場合、コンフリクトの解消をお願いする場合があります。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/docs/contribution/handling_pullreqeust/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2021-09-02T12:34:24+09:00">
+<title>Pull Requestが取り込まれるまで | COCOA Open Source Project</title>
+<link rel=manifest href=/cocoa/manifest.json>
+<link rel=icon href=/cocoa/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
+<script defer src=/cocoa/flexsearch.min.js></script>
+<script defer src=/cocoa/en.search.min.431181638903a4f0ea55a21e602603cb052be2e0eef0674d7c0145787347fb2c.js integrity="sha256-QxGBY4kDpPDqVaIeYCYDywUr4uDu8GdNfAFFeHNH+yw=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/cocoa/><span>COCOA Open Source Project</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<span>Developments</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/branches/>ブランチ構成</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/>ビルド方法</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/maintainance_oss_licenses/>ライセンスの取り扱い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/multi_language/>多言語対応</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Contributions</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/guidelines/>貢献についてのガイドライン</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/handling_pullreqeust/ class=active>Pull Requestが取り込まれるまで</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors/>Contoributors</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors_covid19radars/>COVID-19Radar Contoributors</a>
+</li>
+</ul>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/>デジタル庁 GitHub運用方針</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href=https://github.com/cocoa-mhlw/cocoa target=_blank rel=noopener>
+GitHubリポジトリ
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/cocoa/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>Pull Requestが取り込まれるまで</strong>
+<label for=toc-control>
+<img src=/cocoa/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#issueの投稿>Issueの投稿</a></li>
+<li><a href=#トリアージ>トリアージ</a>
+<ul>
+<li><a href=#githubコミュニティとして>GitHubコミュニティとして</a></li>
+<li><a href=#開発チームとして>開発チームとして</a></li>
+</ul>
+</li>
+<li><a href=#担当の割り当て>担当の割り当て</a></li>
+<li><a href=#pull-requestの作成>Pull Requestの作成</a></li>
+<li><a href=#コードレビュー>コードレビュー</a>
+<ul>
+<li><a href=#githubコミュニティによるコードレビュー>GitHubコミュニティによるコードレビュー</a></li>
+<li><a href=#開発チームによるコードレビュー>開発チームによるコードレビュー</a></li>
+</ul>
+</li>
+<li><a href=#pull-requestの取り込み>Pull Requestの取り込み</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h1 id=pull-requestが取り込まれるまで>
+Pull Requestが取り込まれるまで
+<a class=anchor href=#pull-request%e3%81%8c%e5%8f%96%e3%82%8a%e8%be%bc%e3%81%be%e3%82%8c%e3%82%8b%e3%81%be%e3%81%a7>#</a>
+</h1>
+<p>Pull Requestは貢献の一つです。Pull Requestでは一般的に次の手順で取り込まれます。</p>
+<h2 id=issueの投稿>
+Issueの投稿
+<a class=anchor href=#issue%e3%81%ae%e6%8a%95%e7%a8%bf>#</a>
+</h2>
+<p>Issueを投稿します。これはコラボレーターだけでなく、すべてのコントリビューターの皆様に行っていただけます。</p>
+<h2 id=トリアージ>
+トリアージ
+<a class=anchor href=#%e3%83%88%e3%83%aa%e3%82%a2%e3%83%bc%e3%82%b8>#</a>
+</h2>
+<h3 id=githubコミュニティとして>
+GitHubコミュニティとして
+<a class=anchor href=#github%e3%82%b3%e3%83%9f%e3%83%a5%e3%83%8b%e3%83%86%e3%82%a3%e3%81%a8%e3%81%97%e3%81%a6>#</a>
+</h3>
+<p>コラボレーターにより現象の再現性などを確認後、必要に応じてラベルを付けます。また、開発チームによる確認が必要と思われたものについては<code>waiting-confirmation</code>ラベルを付与します。</p>
+<h3 id=開発チームとして>
+開発チームとして
+<a class=anchor href=#%e9%96%8b%e7%99%ba%e3%83%81%e3%83%bc%e3%83%a0%e3%81%a8%e3%81%97%e3%81%a6>#</a>
+</h3>
+<p>開発チームによる確認が行われます。確認が完了すると開発チームが運用している課題管理システムに登録されます。この際、Internal Tracking IDをIssueのDescriptionに付記します。確認が完了すると<code>confirmed</code>のラベルに変更します（IssueとInternal Tracking IDは1:1の関係ではありません。1つのIssueに複数のIDが対応する場合があります）。</p>
+<h2 id=担当の割り当て>
+担当の割り当て
+<a class=anchor href=#%e6%8b%85%e5%bd%93%e3%81%ae%e5%89%b2%e3%82%8a%e5%bd%93%e3%81%a6>#</a>
+</h2>
+<p>Issueの担当を決めます。コントリビューターの皆様で担当しても良いという方はその旨申し出てください。<code>help wanted</code> / <code>welcome-contribution</code> のラベルがついているものを優先して対応いただけると助かります。申し出をいただければコラボレーターがIssueにassignします。assignについては、同じIssueに対して複数のコラボレーターが作業をすることで後から調整が必要になったり、誰かの労力が無駄になることを避ける目的があります。何卒ご協力ください。</p>
+<h2 id=pull-requestの作成>
+Pull Requestの作成
+<a class=anchor href=#pull-request%e3%81%ae%e4%bd%9c%e6%88%90>#</a>
+</h2>
+<p>Pull Requestを作成します。基本的には<code>develop</code>ブランチ向けに出します（大きめの変更の場合、<code>feature</code>ブランチを用意することもあります）。Pull Reqeustを出す際は、必ずDescriptionに対応するIssue番号を記載してください。</p>
+<h2 id=コードレビュー>
+コードレビュー
+<a class=anchor href=#%e3%82%b3%e3%83%bc%e3%83%89%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc>#</a>
+</h2>
+<h3 id=githubコミュニティによるコードレビュー>
+GitHubコミュニティによるコードレビュー
+<a class=anchor href=#github%e3%82%b3%e3%83%9f%e3%83%a5%e3%83%8b%e3%83%86%e3%82%a3%e3%81%ab%e3%82%88%e3%82%8b%e3%82%b3%e3%83%bc%e3%83%89%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc>#</a>
+</h3>
+<p>コラボレーターがPull Requestをレビューします。Approve権限はコラボレーターにしかありませんが、コントリビューターの皆様どなたでもコードレビューに参加できます。</p>
+<h3 id=開発チームによるコードレビュー>
+開発チームによるコードレビュー
+<a class=anchor href=#%e9%96%8b%e7%99%ba%e3%83%81%e3%83%bc%e3%83%a0%e3%81%ab%e3%82%88%e3%82%8b%e3%82%b3%e3%83%bc%e3%83%89%e3%83%ac%e3%83%93%e3%83%a5%e3%83%bc>#</a>
+</h3>
+<p>コラボレーターがApproveした後、開発チームがコードレビューをします。</p>
+<h2 id=pull-requestの取り込み>
+Pull Requestの取り込み
+<a class=anchor href=#pull-request%e3%81%ae%e5%8f%96%e3%82%8a%e8%be%bc%e3%81%bf>#</a>
+</h2>
+<p>Pull Reqeustが取り込まれます。Pull Reqeustの作成時期と、取り込み時期によってはコンフリクトが起こる可能性もあります。
+その場合、コンフリクトの解消をお願いする場合があります。</p>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#issueの投稿>Issueの投稿</a></li>
+<li><a href=#トリアージ>トリアージ</a>
+<ul>
+<li><a href=#githubコミュニティとして>GitHubコミュニティとして</a></li>
+<li><a href=#開発チームとして>開発チームとして</a></li>
+</ul>
+</li>
+<li><a href=#担当の割り当て>担当の割り当て</a></li>
+<li><a href=#pull-requestの作成>Pull Requestの作成</a></li>
+<li><a href=#コードレビュー>コードレビュー</a>
+<ul>
+<li><a href=#githubコミュニティによるコードレビュー>GitHubコミュニティによるコードレビュー</a></li>
+<li><a href=#開発チームによるコードレビュー>開発チームによるコードレビュー</a></li>
+</ul>
+</li>
+<li><a href=#pull-requestの取り込み>Pull Requestの取り込み</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>

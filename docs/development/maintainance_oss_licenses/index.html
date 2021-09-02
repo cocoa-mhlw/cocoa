@@ -1,0 +1,172 @@
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="ライセンスの取り扱い #  COCOAのライセンス #  COCOAは、オープンソースライセンスに「Mozilla Public License 2.0（MPL 2.0）」を採用しています。
+https://www.mozilla.org/en-US/MPL/2.0/
+MPL 2.0では、各ソースコードに次のライセンス通知を表示することを規定しています。
+/* This Source Code Form is subject to the terms of the Mozilla Public * License, v. 2.0. If a copy of the MPL was not distributed with this * file, You can obtain one at https://mozilla.org/MPL/2.0/. */ ライセンス通知はプログラム・コードに加えて、XMLファイルなどにも追加する必要があります。
+使用しているOSSライブラリに変更があったとき #  COCOAが使用しているOSSのライセンス情報はリポジトリのルートにあるCOPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.mdに集約します。
+ライセンスに更新があった場合、ファイルCOPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.mdをHTMLに変換したものをlicense.htmlとして、プラットフォームそれぞれ次の場所に配置します。
+ Android  /Covid19Radar/Covid19Radar.Android/Assets ディレクトリ   iOS  Covid19Radar/Covid19Radar.iOS/Resources ディレクトリ    現状、ライセンスファイルの変換はGitHub Flavorであればよく、手動で行っています。これはライセンスの変更が週一程度の頻度では起こらないと考えているためです。ライセンスの編集が頻繁に発生するようであれば（それは開発工程を考え直した上で）、CIでの変換を検討します。">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="ライセンスの取り扱い">
+<meta property="og:description" content="ライセンスの取り扱い #  COCOAのライセンス #  COCOAは、オープンソースライセンスに「Mozilla Public License 2.0（MPL 2.0）」を採用しています。
+https://www.mozilla.org/en-US/MPL/2.0/
+MPL 2.0では、各ソースコードに次のライセンス通知を表示することを規定しています。
+/* This Source Code Form is subject to the terms of the Mozilla Public * License, v. 2.0. If a copy of the MPL was not distributed with this * file, You can obtain one at https://mozilla.org/MPL/2.0/. */ ライセンス通知はプログラム・コードに加えて、XMLファイルなどにも追加する必要があります。
+使用しているOSSライブラリに変更があったとき #  COCOAが使用しているOSSのライセンス情報はリポジトリのルートにあるCOPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.mdに集約します。
+ライセンスに更新があった場合、ファイルCOPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.mdをHTMLに変換したものをlicense.htmlとして、プラットフォームそれぞれ次の場所に配置します。
+ Android  /Covid19Radar/Covid19Radar.Android/Assets ディレクトリ   iOS  Covid19Radar/Covid19Radar.iOS/Resources ディレクトリ    現状、ライセンスファイルの変換はGitHub Flavorであればよく、手動で行っています。これはライセンスの変更が週一程度の頻度では起こらないと考えているためです。ライセンスの編集が頻繁に発生するようであれば（それは開発工程を考え直した上で）、CIでの変換を検討します。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/docs/development/maintainance_oss_licenses/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2021-09-02T12:34:24+09:00">
+<title>ライセンスの取り扱い | COCOA Open Source Project</title>
+<link rel=manifest href=/cocoa/manifest.json>
+<link rel=icon href=/cocoa/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
+<script defer src=/cocoa/flexsearch.min.js></script>
+<script defer src=/cocoa/en.search.min.431181638903a4f0ea55a21e602603cb052be2e0eef0674d7c0145787347fb2c.js integrity="sha256-QxGBY4kDpPDqVaIeYCYDywUr4uDu8GdNfAFFeHNH+yw=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/cocoa/><span>COCOA Open Source Project</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<span>Developments</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/branches/>ブランチ構成</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/>ビルド方法</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/maintainance_oss_licenses/ class=active>ライセンスの取り扱い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/multi_language/>多言語対応</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Contributions</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/guidelines/>貢献についてのガイドライン</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/handling_pullreqeust/>Pull Requestが取り込まれるまで</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors/>Contoributors</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors_covid19radars/>COVID-19Radar Contoributors</a>
+</li>
+</ul>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/>デジタル庁 GitHub運用方針</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href=https://github.com/cocoa-mhlw/cocoa target=_blank rel=noopener>
+GitHubリポジトリ
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/cocoa/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>ライセンスの取り扱い</strong>
+<label for=toc-control>
+<img src=/cocoa/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#cocoaのライセンス>COCOAのライセンス</a></li>
+<li><a href=#使用しているossライブラリに変更があったとき>使用しているOSSライブラリに変更があったとき</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h1 id=ライセンスの取り扱い>
+ライセンスの取り扱い
+<a class=anchor href=#%e3%83%a9%e3%82%a4%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%ae%e5%8f%96%e3%82%8a%e6%89%b1%e3%81%84>#</a>
+</h1>
+<h2 id=cocoaのライセンス>
+COCOAのライセンス
+<a class=anchor href=#cocoa%e3%81%ae%e3%83%a9%e3%82%a4%e3%82%bb%e3%83%b3%e3%82%b9>#</a>
+</h2>
+<p>COCOAは、オープンソースライセンスに「Mozilla Public License 2.0（MPL 2.0）」を採用しています。</p>
+<p><a href=https://www.mozilla.org/en-US/MPL/2.0/>https://www.mozilla.org/en-US/MPL/2.0/</a></p>
+<p>MPL 2.0では、各ソースコードに次のライセンス通知を表示することを規定しています。</p>
+<pre><code>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+</code></pre><p>ライセンス通知はプログラム・コードに加えて、XMLファイルなどにも追加する必要があります。</p>
+<h2 id=使用しているossライブラリに変更があったとき>
+使用しているOSSライブラリに変更があったとき
+<a class=anchor href=#%e4%bd%bf%e7%94%a8%e3%81%97%e3%81%a6%e3%81%84%e3%82%8boss%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%81%ab%e5%a4%89%e6%9b%b4%e3%81%8c%e3%81%82%e3%81%a3%e3%81%9f%e3%81%a8%e3%81%8d>#</a>
+</h2>
+<p>COCOAが使用しているOSSのライセンス情報はリポジトリのルートにある<code>COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md</code>に集約します。</p>
+<p>ライセンスに更新があった場合、ファイル<code>COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md</code>をHTMLに変換したものを<code>license.html</code>として、プラットフォームそれぞれ次の場所に配置します。</p>
+<ul>
+<li>Android
+<ul>
+<li><code>/Covid19Radar/Covid19Radar.Android/Assets</code> ディレクトリ</li>
+</ul>
+</li>
+<li>iOS
+<ul>
+<li><code>Covid19Radar/Covid19Radar.iOS/Resources</code> ディレクトリ</li>
+</ul>
+</li>
+</ul>
+<p>現状、ライセンスファイルの変換はGitHub Flavorであればよく、手動で行っています。これはライセンスの変更が週一程度の頻度では起こらないと考えているためです。ライセンスの編集が頻繁に発生するようであれば（それは開発工程を考え直した上で）、CIでの変換を検討します。</p>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#cocoaのライセンス>COCOAのライセンス</a></li>
+<li><a href=#使用しているossライブラリに変更があったとき>使用しているOSSライブラリに変更があったとき</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>
