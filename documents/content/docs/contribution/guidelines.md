@@ -13,7 +13,7 @@ type: docs
 ## Issue へのコメントや Discussions について
 
 * Issue の投稿、コメントはご自由にどうぞ！　質問や提案などは Discussion で受け付けています。
-* [デジタル庁 GitHub運用方針](https://github.com/cocoa-mhlw/cocoa/blob/develop/OPERATION_POLICY.md)の注意事項もご確認ください。
+* [デジタル庁 GitHub運用方針](https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/)の注意事項もご確認ください。
 * Issue や Discussion を追加する場合、必ず既に同様の Issue が無いか検索をしてから作成してください。
 * お送りいただいた Issue や Discussionに対する回答は保証できません。また、Pull Request についても必ず反映できるとは限りませんのでご了承ください。
 * 文言変更や見た目の大幅な変更、機能の追加といった、コンテンツの意味を変えるものについては、関係者との調整が必要です。採用される可能性は決して高くないことをご了承いただけましたら幸いです。
