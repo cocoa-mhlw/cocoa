@@ -1,13 +1,15 @@
-# COVID-19 Contact-Confirming Application COCOA (English)/([Japanese](README.ja.md))
+# COCOA - COVID-19 Contact-Confirming Application (English)/([Japanese](README.ja.md))
 
 [![App develop](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CI.yml/badge.svg?branch=develop)](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CI.yml)
 
 [![Server develop](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CIserver.yml/badge.svg?branch=develop)](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CIserver.yml)
 
-This is the official repository for the COVID-19 Contact-Confirming Application(COCOA).  
+This is the official repository for the COCOA - COVID-19 Contact-Confirming Application.
 COCOA has been developed from [Project Covid19Radar](https://github.com/Covid-19Radar).
 
-For information on how to install COCOA, instructions, and updates, please visit the MHLW [COCOA website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html).
+For information please see the [website](https://cocoa-mhlw.github.io/cocoa).
+
+For more information on how to install COCOA, instructions, and updates, please visit the MHLW [COCOA website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html).
 
 ## Q&A for COCOA Users
 
@@ -20,7 +22,7 @@ Please note that due to our resources and decision making process, it may take s
 
 If you have any non-technical requests, please contact us from email address in [Q&A Website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html).
 
-## License.
+## License
 
 COCOA is licensed under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE.md) for the full license text.
 
