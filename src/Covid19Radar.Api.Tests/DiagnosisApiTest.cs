@@ -30,7 +30,6 @@ namespace Covid19Radar.Api.Tests
             config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
-            var validation = new Mock<IValidationUserService>();
             var validationServer = new Mock<IValidationServerService>();
             var deviceCheck = new Mock<IV1DeviceValidationService>();
             var verification = new Mock<IVerificationService>();
@@ -38,7 +37,6 @@ namespace Covid19Radar.Api.Tests
             var diagnosisApi = new DiagnosisApi(config.Object,
                                                 diagnosisRepo.Object,
                                                 tekRepo.Object,
-                                                validation.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
@@ -68,15 +66,10 @@ namespace Covid19Radar.Api.Tests
                                                             It.IsAny<TemporaryExposureKeyModel[]>()))
                 .ReturnsAsync(new DiagnosisModel());
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
-            var validation = new Mock<IValidationUserService>();
             var validationServer = new Mock<IValidationServerService>();
             validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
 
-            var validationResult = new IValidationUserService.ValidateResult()
-            {
-                IsValid = isValid
-            };
-            validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
+
             var deviceCheck = new Mock<IV1DeviceValidationService>();
             deviceCheck.Setup(_ => _.Validation(It.IsAny<V1DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var verification = new Mock<IVerificationService>();
@@ -84,7 +77,6 @@ namespace Covid19Radar.Api.Tests
             var diagnosisApi = new DiagnosisApi(config.Object,
                                                 diagnosisRepo.Object,
                                                 tekRepo.Object,
-                                                validation.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
