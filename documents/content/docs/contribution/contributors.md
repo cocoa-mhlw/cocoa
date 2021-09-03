@@ -10,6 +10,6 @@ type: docs
 
  *
  * [Takym](https://github.com/cocoa-mhlw/cocoa/commits?author=Takym)
- *
+ * [Kuu](https://github.com/cocoa-mhlw/cocoa/commits?author=fumiya-kume)
 
 （アルファベット順）
