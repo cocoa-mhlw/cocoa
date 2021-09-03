@@ -26,7 +26,7 @@ namespace Covid19Radar.Model
         public UserExposureSummary(ExposureSummary exposureSummary)
         {
             DaysSinceLastExposure = exposureSummary.DaysSinceLastExposure;
-            MatchedKeyCount = (ulong)exposureSummary.MatchedKeyCount; // TODO Remove cast after updating Cappuccino.
+            MatchedKeyCount = exposureSummary.MatchedKeyCount;
             HighestRiskScore = exposureSummary.MaximumRiskScore;
             AttenuationDurations = exposureSummary.AttenuationDurationsInMinutes
                 .Select(attenuationDuration => TimeSpan.FromSeconds(attenuationDuration))
