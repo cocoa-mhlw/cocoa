@@ -10,11 +10,11 @@ using AndroidX.Core.App;
 
 namespace Xamarin.ExposureNotifications
 {
-    [BroadcastReceiver(
-        Permission = "com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK",
-        Exported = true)]
-    [IntentFilter(new[] { ExposureNotificationClient.ActionExposureStateUpdated, "com.google.android.gms.exposurenotification.ACTION_EXPOSURE_NOT_FOUND" })]
-    [Preserve]
+    //[BroadcastReceiver(
+    //    Permission = "com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK",
+    //    Exported = true)]
+    //[IntentFilter(new[] { ExposureNotificationClient.ActionExposureStateUpdated, "com.google.android.gms.exposurenotification.ACTION_EXPOSURE_NOT_FOUND" })]
+    //[Preserve]
     class ExposureNotificationCallbackBroadcastReceiver : BroadcastReceiver
     {
         public override void OnReceive(Context context, Intent intent)
@@ -32,8 +32,8 @@ namespace Xamarin.ExposureNotifications
         }
     }
 
-    [Service(
-        Permission = "android.permission.BIND_JOB_SERVICE")]
+    //[Service(
+    //    Permission = "android.permission.BIND_JOB_SERVICE")]
     [Preserve]
     class ExposureNotificationCallbackService : JobIntentService
     {

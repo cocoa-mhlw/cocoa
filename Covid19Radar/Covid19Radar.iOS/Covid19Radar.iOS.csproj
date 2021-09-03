@@ -59,7 +59,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>EntitlementsDebug.plist</CodesignEntitlements>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
@@ -284,6 +284,8 @@
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\Migration\MigrationProcessService.cs" />
     <Compile Include="Services\ExposureNotificationApiService.cs" />
+    <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
+    <None Include="EntitlementsDebug.plist" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

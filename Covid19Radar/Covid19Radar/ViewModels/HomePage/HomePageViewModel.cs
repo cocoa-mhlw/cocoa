@@ -98,6 +98,7 @@ namespace Covid19Radar.ViewModels
             catch (ENException exception)
             {
                 loggerService.Exception("Failed to exposure notification start.", exception);
+                await UpdateStatusesAsync();
             }
             finally
             {

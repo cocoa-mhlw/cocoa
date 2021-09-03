@@ -54,6 +54,7 @@
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
 		<string>APP_PACKAGE_NAME.exposure-notification</string>
+		<string>APP_PACKAGE_NAME.exposure-detection</string>
 		<string>APP_PACKAGE_NAME.delete-old-logs</string>
 	</array>
 	<key>UIAppFonts</key>
