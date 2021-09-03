@@ -11,5 +11,7 @@ type: docs
  *
  * [Takym](https://github.com/cocoa-mhlw/cocoa/commits?author=Takym)
  * [Kuu](https://github.com/cocoa-mhlw/cocoa/commits?author=fumiya-kume)
+ * [山本ユースケ](https://github.com/cocoa-mhlw/cocoa/commits?author=yusuke)
+
 
 （アルファベット順）
