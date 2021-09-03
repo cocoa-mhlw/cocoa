@@ -192,6 +192,8 @@
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
+    <Compile Include="Services\Migration\MigrationProcessService.cs" />
+    <Compile Include="Services\Migration\WorkManagerMigrator.cs" />
     <Compile Include="Services\ExposureNotificationApiService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -455,6 +457,7 @@
     <Folder Include="Services\Logs\" />
     <Folder Include="Resources\drawable-zh-xxhdpi\" />
     <Folder Include="Resources\drawable-zh-xhdpi\" />
+    <Folder Include="Services\Migration\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-ja-xhdpi\HelpPage22.png" />

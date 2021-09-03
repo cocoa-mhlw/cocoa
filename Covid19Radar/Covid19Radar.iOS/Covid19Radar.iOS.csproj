@@ -282,6 +282,7 @@
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
+    <Compile Include="Services\Migration\MigrationProcessService.cs" />
     <Compile Include="Services\ExposureNotificationApiService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -545,6 +546,7 @@
     <Folder Include="Services\Logs\" />
     <Folder Include="Renderers\" />
     <Folder Include="Resources\zh-Hans.lproj\" />
+    <Folder Include="Services\Migration\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>

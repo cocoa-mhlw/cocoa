@@ -12,10 +12,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CommonServiceLocator;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Services.Migration;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
@@ -29,6 +29,7 @@ namespace Covid19Radar.Services
         private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
         private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
+        private IMigrationService MigrationService => ServiceLocator.Current.GetInstance<IMigrationService>();
         private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
 
         public ExposureNotificationHandler()
@@ -157,9 +158,7 @@ namespace Covid19Radar.Services
 
             try
             {
-                // Migrate from UserData.
-                // Since it may be executed during the migration when the application starts, execute it here as well.
-                await UserDataService.Migrate();
+                await MigrationService.MigrateAsync();
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
