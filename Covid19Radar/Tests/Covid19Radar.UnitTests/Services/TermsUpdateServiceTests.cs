@@ -15,20 +15,18 @@ namespace Covid19Radar.UnitTests.Services
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IApplicationPropertyService> mockApplicationPropertyService;
         private readonly Mock<IPreferencesService> mockPreferencesService;
 
         public TermsUpdateServiceTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockApplicationPropertyService = mockRepository.Create<IApplicationPropertyService>();
             mockPreferencesService = mockRepository.Create<IPreferencesService>();
         }
 
         private TermsUpdateService CreateService()
         {
-            return new TermsUpdateService(mockLoggerService.Object, mockApplicationPropertyService.Object, mockPreferencesService.Object);
+            return new TermsUpdateService(mockLoggerService.Object, mockPreferencesService.Object);
         }
 
         [Theory]

@@ -1,7 +1,10 @@
-# 新型コロナウィルス接触確認アプリ COCOA (Japanese)/([English](README.md))
+# COCOA - 新型コロナウィルス接触確認アプリ (Japanese)/([English](README.md))
 
-こちらは新型コロナウィルス接触確認アプリ（以降COCOA）の公式リポジトリです。  
+こちらは新型コロナウィルス接触確認アプリ「COCOA」の公式リポジトリです。
+
 COCOAは[Project Covid19Radar](https://github.com/Covid-19Radar)を元に開発されています。
+
+COCOAの開発に関する情報は次の[サイト](https://cocoa-mhlw.github.io/cocoa)をご確認ください。
 
 COCOAのインストール方法、説明、更新情報等については、厚生労働省の[COCOAに関するページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html)
 をご確認下さい。

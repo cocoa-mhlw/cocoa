@@ -17,6 +17,7 @@ using Covid19Radar.Services.Logs;
 using System;
 using CommonServiceLocator;
 using Covid19Radar.Common;
+using Covid19Radar.Services.Migration;
 using Xamarin.ExposureNotifications;
 using Covid19Radar.Repository;
 
@@ -180,6 +181,7 @@ namespace Covid19Radar
             container.Register<IExposureNotificationService, ExposureNotificationService>(Reuse.Singleton);
             container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
             container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
+            container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
