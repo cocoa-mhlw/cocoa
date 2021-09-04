@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
@@ -39,19 +40,29 @@ namespace Covid19Radar.Repository
         DateTime? GetLastConfirmedDate();
 
         void RemoveAllExposureNotificationStatus();
+
+        List<UserExposureInfo> GetExposureInformationList();
+        void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList);
+        void RemoveExposureInformation();
+
+        List<UserExposureInfo> GetExposureInformationListToDisplay();
+        int GetExposureCountToDisplay();
     }
 
     public class UserDataRepository : IUserDataRepository
     {
         private readonly IPreferencesService _preferencesService;
+        private readonly ISecureStorageService _secureStorageService;
         private readonly ILoggerService _loggerService;
 
         public UserDataRepository(
             IPreferencesService preferencesService,
+            ISecureStorageService secureStorageService,
             ILoggerService loggerService
             )
         {
             _loggerService = loggerService;
+            _secureStorageService = secureStorageService;
             _preferencesService = preferencesService;
         }
 
@@ -210,6 +221,60 @@ namespace Covid19Radar.Repository
             _preferencesService.RemoveValue(PreferenceKey.CanConfirmExposure);
             _preferencesService.RemoveValue(PreferenceKey.LastConfirmedDateTimeEpoch);
             _loggerService.EndMethod();
+        }
+
+        public List<UserExposureInfo> GetExposureInformationList()
+        {
+            _loggerService.StartMethod();
+            List<UserExposureInfo> result = null;
+            var exposureInformationJson = _secureStorageService.GetValue<string>(PreferenceKey.ExposureInformation);
+            if (!string.IsNullOrEmpty(exposureInformationJson))
+            {
+                result = JsonConvert.DeserializeObject<List<UserExposureInfo>>(exposureInformationJson);
+            }
+            _loggerService.EndMethod();
+            return result;
+        }
+
+        public void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList)
+        {
+            _loggerService.StartMethod();
+            var summaryJson = JsonConvert.SerializeObject(summary);
+            var informationListJson = JsonConvert.SerializeObject(informationList);
+            _secureStorageService.SetValue(PreferenceKey.ExposureSummary, summaryJson);
+            _secureStorageService.SetValue(PreferenceKey.ExposureInformation, informationListJson);
+            _loggerService.EndMethod();
+        }
+
+        public void RemoveExposureInformation()
+        {
+            _loggerService.StartMethod();
+            _secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
+            _secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
+            _loggerService.EndMethod();
+        }
+
+        public List<UserExposureInfo> GetExposureInformationListToDisplay()
+        {
+            _loggerService.StartMethod();
+            var list = GetExposureInformationList()?
+                .Where(x => x.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(AppConstants.DaysOfExposureInformationToDisplay)) >= 0)
+                .ToList();
+            _loggerService.EndMethod();
+            return list;
+        }
+
+        public int GetExposureCountToDisplay()
+        {
+            _loggerService.StartMethod();
+            int result = 0;
+            var exposureInformationList = GetExposureInformationListToDisplay();
+            if (exposureInformationList != null)
+            {
+                result = exposureInformationList.Count;
+            }
+            _loggerService.EndMethod();
+            return result;
         }
     }
 }
