@@ -88,7 +88,7 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
 
             var exposureNotificationService = ExposureNotificationService;
-            var exposureInformationList = exposureNotificationService.GetExposureInformationList() ?? new List<UserExposureInfo>();
+            var exposureInformationList = UserDataRepository.GetExposureInformationList() ?? new List<UserExposureInfo>();
 
             UserExposureSummary userExposureSummary = new UserExposureSummary(summary.DaysSinceLastExposure, summary.MatchedKeyCount, summary.HighestRiskScore, summary.AttenuationDurations, summary.SummationRiskScore);
 
@@ -130,7 +130,7 @@ namespace Covid19Radar.Services
                 loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
 
                 exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
-                exposureNotificationService.SetExposureInformation(userExposureSummary, exposureInformationList);
+                UserDataRepository.SetExposureInformation(userExposureSummary, exposureInformationList);
 
                 await LocalNotificationService.ShowExposureNotificationAsync();
             }
@@ -148,7 +148,6 @@ namespace Covid19Radar.Services
         public async Task FetchExposureKeyBatchFilesFromServerAsync(Func<IEnumerable<string>, Task> submitBatches, CancellationToken cancellationToken)
         {
             var loggerService = LoggerService;
-            var exposureNotificationService = ExposureNotificationService;
 
             if (Interlocked.Exchange(ref fetchExposureKeysIsRunning, 1) == 1)
             {

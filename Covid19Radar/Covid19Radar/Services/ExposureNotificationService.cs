@@ -2,15 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Common;
+using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Covid19Radar.Common;
-using Covid19Radar.Model;
-using Covid19Radar.Services.Logs;
-using Newtonsoft.Json;
 using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Services
@@ -21,13 +20,6 @@ namespace Covid19Radar.Services
         void RemoveConfiguration();
 
         Task FetchExposureKeyAsync();
-
-        List<UserExposureInfo> GetExposureInformationList();
-        void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList);
-        void RemoveExposureInformation();
-
-        List<UserExposureInfo> GetExposureInformationListToDisplay();
-        int GetExposureCountToDisplay();
 
         Task<bool> StartExposureNotification();
         Task<bool> StopExposureNotification();
@@ -41,14 +33,19 @@ namespace Covid19Radar.Services
     {
         private readonly ILoggerService loggerService;
         private readonly IHttpClientService httpClientService;
-        private readonly ISecureStorageService secureStorageService;
         private readonly IPreferencesService preferencesService;
 
-        public ExposureNotificationService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IPreferencesService preferencesService, IApplicationPropertyService applicationPropertyService)
+        public string CurrentStatusMessage { get; set; } = "初期状態";
+        public Status ExposureNotificationStatus { get; set; }
+
+        public ExposureNotificationService(
+            ILoggerService loggerService,
+            IHttpClientService httpClientService,
+            IPreferencesService preferencesService
+            )
         {
             this.loggerService = loggerService;
             this.httpClientService = httpClientService;
-            this.secureStorageService = secureStorageService;
             this.preferencesService = preferencesService;
 
             _ = GetExposureNotificationConfig();
@@ -111,60 +108,6 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
             await ExposureNotification.UpdateKeysFromServer();
             loggerService.EndMethod();
-        }
-
-        public List<UserExposureInfo> GetExposureInformationList()
-        {
-            loggerService.StartMethod();
-            List<UserExposureInfo> result = null;
-            var exposureInformationJson = secureStorageService.GetValue<string>(PreferenceKey.ExposureInformation);
-            if (!string.IsNullOrEmpty(exposureInformationJson))
-            {
-                result = JsonConvert.DeserializeObject<List<UserExposureInfo>>(exposureInformationJson);
-            }
-            loggerService.EndMethod();
-            return result;
-        }
-
-        public void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList)
-        {
-            loggerService.StartMethod();
-            var summaryJson = JsonConvert.SerializeObject(summary);
-            var informationListJson = JsonConvert.SerializeObject(informationList);
-            secureStorageService.SetValue(PreferenceKey.ExposureSummary, summaryJson);
-            secureStorageService.SetValue(PreferenceKey.ExposureInformation, informationListJson);
-            loggerService.EndMethod();
-        }
-
-        public void RemoveExposureInformation()
-        {
-            loggerService.StartMethod();
-            secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
-            secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
-            loggerService.EndMethod();
-        }
-
-        public List<UserExposureInfo> GetExposureInformationListToDisplay()
-        {
-            loggerService.StartMethod();
-            var list = GetExposureInformationList()?
-                .Where(x => x.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(AppConstants.DaysOfExposureInformationToDisplay)) >= 0)
-                .ToList();
-            loggerService.EndMethod();
-            return list;
-        }
-
-        public int GetExposureCountToDisplay()
-        {
-            loggerService.StartMethod();
-            int result = 0;
-            var exposureInformationList = GetExposureInformationListToDisplay();
-            if (exposureInformationList != null)
-            {
-                result = exposureInformationList.Count;
-            }
-            loggerService.EndMethod();
-            return result;
         }
 
         public async Task<bool> StartExposureNotification()
