@@ -12,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CommonServiceLocator;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
@@ -88,7 +89,7 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
 
             var exposureNotificationService = ExposureNotificationService;
-            var exposureInformationList = UserDataRepository.GetExposureInformationList() ?? new List<UserExposureInfo>();
+            var exposureInformationList = UserDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay) ?? new List<UserExposureInfo>();
 
             UserExposureSummary userExposureSummary = new UserExposureSummary(summary.DaysSinceLastExposure, summary.MatchedKeyCount, summary.HighestRiskScore, summary.AttenuationDurations, summary.SummationRiskScore);
 
@@ -162,7 +163,7 @@ namespace Covid19Radar.Services
                 await MigrationService.MigrateAsync();
 
                 // Remove out of date exposure informations.
-                var informationList = UserDataRepository.GetExposureInformationListToDisplay() ?? new List<UserExposureInfo>();
+                var informationList = UserDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay) ?? new List<UserExposureInfo>();
                 var summary = UserDataRepository.GetExposureSummary();
                 UserDataRepository.SetExposureInformation(summary, informationList);
 

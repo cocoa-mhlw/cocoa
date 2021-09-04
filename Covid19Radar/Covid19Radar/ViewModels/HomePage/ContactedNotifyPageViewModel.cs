@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Essentials;
 using Covid19Radar.Resources;
 using Covid19Radar.Repository;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.ViewModels
 {
@@ -37,7 +38,7 @@ namespace Covid19Radar.ViewModels
         public override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
-            ExposureCount = _userDataRepository.GetExposureCountToDisplay().ToString();
+            ExposureCount = _userDataRepository.GetExposureCount(AppConstants.DaysOfExposureInformationToDisplay).ToString();
         }
 
         public Command OnClickByForm => new Command(async () =>
