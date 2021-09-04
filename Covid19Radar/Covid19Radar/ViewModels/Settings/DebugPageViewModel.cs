@@ -35,7 +35,19 @@ namespace Covid19Radar.ViewModels
 #endif
 
             // debug info for ./SplashPageViewModel.cs
-            var termsUpdateInfo = await _termsUpdateService＿.GetTermsUpdateInfo();
+            var termsUpdateInfo = await _termsUpdateService＿.GetTermsUpdateInfo() ?? new Model.TermsUpdateInfoModel();
+
+            var termsOfServiceUpdateDateTime = "Not Available";
+            if (termsUpdateInfo.TermsOfService != null)
+            {
+                termsOfServiceUpdateDateTime = termsUpdateInfo.TermsOfService.UpdateDateTime.ToString();
+            }
+
+            var privacyPolicyUpdateDateTime = "Not Available";
+            if (termsUpdateInfo.PrivacyPolicy != null)
+            {
+                privacyPolicyUpdateDateTime = termsUpdateInfo.PrivacyPolicy.UpdateDateTime.ToString();
+            }
 
             var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(region =>
                              new LastProcessTekTimestamp()
@@ -58,8 +70,8 @@ namespace Covid19Radar.ViewModels
                 $"Region: {regionString}",
                 $"CdnUrl: {AppSettings.Instance.CdnUrlBase}",
                 $"ApiUrl: {AppSettings.Instance.ApiUrlBase}",
-                $"TermsOfServiceUpdatedDateTime: {termsUpdateInfo.TermsOfService.UpdateDateTime}",
-                $"PrivacyPolicyUpdatedDateTime: {termsUpdateInfo.PrivacyPolicy.UpdateDateTime}",
+                $"TermsOfServiceUpdatedDateTime: {termsOfServiceUpdateDateTime}",
+                $"PrivacyPolicyUpdatedDateTime: {privacyPolicyUpdateDateTime}",
                 $"StartDate: {_userDataService.GetStartDate().ToLocalTime().ToString("F")}",
                 $"DaysOfUse: {_userDataService.GetDaysOfUse()}",
                 $"ExposureCount: {_exposureNotificationService.GetExposureCountToDisplay()}",
