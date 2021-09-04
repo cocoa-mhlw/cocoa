@@ -24,7 +24,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _debugInfo, value); }
         }
 
-        public async void Info(string ex = "")
+        public async void UpdateInfo(string exception = "")
         {
             string os = Device.RuntimePlatform;
 #if DEBUG
@@ -79,7 +79,7 @@ namespace Covid19Radar.ViewModels
                 $"ENstatus: {exposureNotificationStatus}",
                 $"ENmessage: {exposureNotificationMessage}",
                 $"Now: {DateTime.Now.ToLocalTime().ToString("F")}",
-                ex
+                exception
             };
             DebugInfo = string.Join(Environment.NewLine, str);
         }
@@ -100,10 +100,10 @@ namespace Covid19Radar.ViewModels
         public override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
-            Info("Initialize");
+            UpdateInfo("Initialize");
         }
 
-        public Command OnClickReload => new Command(() => Info("Reload"));
+        public Command OnClickReload => new Command(() => UpdateInfo("Reload"));
 
         public Command OnClickStartExposureNotification => new Command(async () =>
         {
@@ -112,20 +112,21 @@ namespace Covid19Radar.ViewModels
             var message = $"Result: {result}";
             UserDialogs.Instance.HideLoading();
             await UserDialogs.Instance.AlertAsync(message, "StartExposureNotification", Resources.AppResources.ButtonOk);
-            Info("StartExposureNotification");
+            UpdateInfo("StartExposureNotification");
         });
 
         public Command OnClickFetchExposureKeyAsync => new Command(async () =>
         {
             var exception = "FetchExposureKeyAsync";
-            try {
+            try
+            {
                 await _exposureNotificationService.FetchExposureKeyAsync();
             }
             catch (Exception ex)
             {
                 exception += $":Exception: {ex}";
             }
-            Info(exception);
+            UpdateInfo(exception);
         });
 
         // see ../Settings/SettingsPageViewModel.cs
@@ -136,37 +137,37 @@ namespace Covid19Radar.ViewModels
             string message = $"Result: {result}";
             UserDialogs.Instance.HideLoading();
             await UserDialogs.Instance.AlertAsync(message, "StopExposureNotification", Resources.AppResources.ButtonOk);
-            Info("StopExposureNotification");
+            UpdateInfo("StopExposureNotification");
         });
 
         public Command OnClickRemoveStartDate => new Command(() =>
         {
             _userDataService.RemoveStartDate();
-            Info("RemoveStartDate");
+            UpdateInfo("RemoveStartDate");
         });
 
         public Command OnClickRemoveExposureInformation => new Command(() =>
         {
             _exposureNotificationService.RemoveExposureInformation();
-            Info("RemoveExposureInformation");
+            UpdateInfo("RemoveExposureInformation");
         });
 
         public Command OnClickRemoveConfiguration => new Command(() =>
         {
             _exposureNotificationService.RemoveConfiguration();
-            Info("RemoveConfiguration");
+            UpdateInfo("RemoveConfiguration");
         });
 
         public Command OnClickRemoveLastProcessTekTimestamp => new Command(() =>
         {
             _exposureNotificationService.RemoveLastProcessTekTimestamp();
-            Info("RemoveLastProcessTekTimestamp");
+            UpdateInfo("RemoveLastProcessTekTimestamp");
         });
 
         public Command OnClickRemoveAllUpdateDate => new Command(() =>
         {
             _termsUpdateService＿.RemoveAllUpdateDate();
-            Info("RemoveAllUpdateDate");
+            UpdateInfo("RemoveAllUpdateDate");
         });
 
         public Command OnClickQuit => new Command(() =>
