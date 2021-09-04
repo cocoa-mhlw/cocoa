@@ -161,6 +161,11 @@ namespace Covid19Radar.Services
             {
                 await MigrationService.MigrateAsync();
 
+                // Remove out of date exposure informations.
+                var informationList = UserDataRepository.GetExposureInformationListToDisplay() ?? new List<UserExposureInfo>();
+                var summary = UserDataRepository.GetExposureSummary();
+                UserDataRepository.SetExposureInformation(summary, informationList);
+
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
                     var lastCreated = UserDataRepository.GetLastProcessTekTimestamp(serverRegion);

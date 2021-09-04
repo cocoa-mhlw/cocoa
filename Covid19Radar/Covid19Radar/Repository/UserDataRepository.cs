@@ -41,6 +41,8 @@ namespace Covid19Radar.Repository
 
         void RemoveAllExposureNotificationStatus();
 
+        UserExposureSummary GetExposureSummary();
+
         List<UserExposureInfo> GetExposureInformationList();
         void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList);
         void RemoveExposureInformation();
@@ -252,6 +254,19 @@ namespace Covid19Radar.Repository
             _secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
             _secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
             _loggerService.EndMethod();
+        }
+
+        public UserExposureSummary GetExposureSummary()
+        {
+            _loggerService.StartMethod();
+            UserExposureSummary result = null;
+            var exposureSummaryJson = _secureStorageService.GetValue<string>(PreferenceKey.ExposureSummary);
+            if (!string.IsNullOrEmpty(exposureSummaryJson))
+            {
+                result = JsonConvert.DeserializeObject<UserExposureSummary>(exposureSummaryJson);
+            }
+            _loggerService.EndMethod();
+            return result;
         }
 
         public List<UserExposureInfo> GetExposureInformationListToDisplay()

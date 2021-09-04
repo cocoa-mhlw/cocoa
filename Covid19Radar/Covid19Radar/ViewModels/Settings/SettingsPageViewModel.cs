@@ -70,10 +70,11 @@ namespace Covid19Radar.ViewModels
 
                 // Reset All Data and Optout
                 userDataRepository.RemoveStartDate();
-                exposureNotificationService.RemoveConfiguration();
+                userDataRepository.RemoveExposureInformation();
                 userDataRepository.RemoveLastProcessTekTimestamp();
                 userDataRepository.RemoveAllUpdateDate();
                 userDataRepository.RemoveAllExposureNotificationStatus();
+                exposureNotificationService.RemoveConfiguration();
 
                 _ = logFileService.DeleteLogsDir();
 
