@@ -127,7 +127,7 @@ namespace Covid19Radar.ViewModels
 
             await localNotificationService.DismissExposureNotificationAsync();
 
-            var count = userDataRepository.GetExposureCountToDisplay();
+            var count = userDataRepository.GetExposureCount(AppConstants.DaysOfExposureInformationToDisplay);
 
             loggerService.Info($"Exposure count: {count}");
             if (count > 0)

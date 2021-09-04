@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Resources;
+using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Prism.Navigation;
 using System.Collections.ObjectModel;
@@ -37,7 +38,7 @@ namespace Covid19Radar.ViewModels
 
             _exposures = new ObservableCollection<ExposureSummary>();
 
-            var exposureInformationList = _userDataRepository.GetExposureInformationListToDisplay();
+            var exposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
             if (exposureInformationList != null)
             {
                 foreach (var en in exposureInformationList.GroupBy(eni => eni.Timestamp))

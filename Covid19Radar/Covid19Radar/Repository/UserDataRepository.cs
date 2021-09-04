@@ -44,11 +44,11 @@ namespace Covid19Radar.Repository
         UserExposureSummary GetExposureSummary();
 
         List<UserExposureInfo> GetExposureInformationList();
+        List<UserExposureInfo> GetExposureInformationList(int offsetDays);
         void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList);
         void RemoveExposureInformation();
 
-        List<UserExposureInfo> GetExposureInformationListToDisplay();
-        int GetExposureCountToDisplay();
+        int GetExposureCount(int offsetDays);
     }
 
     public class UserDataRepository : IUserDataRepository
@@ -269,21 +269,22 @@ namespace Covid19Radar.Repository
             return result;
         }
 
-        public List<UserExposureInfo> GetExposureInformationListToDisplay()
+        public List<UserExposureInfo> GetExposureInformationList(int offsetDays)
         {
             _loggerService.StartMethod();
+            var date = DateTimeUtility.Instance.UtcNow.AddDays(offsetDays);
             var list = GetExposureInformationList()?
-                .Where(x => x.Timestamp.CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(AppConstants.DaysOfExposureInformationToDisplay)) >= 0)
+                .Where(x => x.Timestamp.CompareTo(date) >= 0)
                 .ToList();
             _loggerService.EndMethod();
             return list;
         }
 
-        public int GetExposureCountToDisplay()
+        public int GetExposureCount(int offsetDays)
         {
             _loggerService.StartMethod();
             int result = 0;
-            var exposureInformationList = GetExposureInformationListToDisplay();
+            var exposureInformationList = GetExposureInformationList(offsetDays);
             if (exposureInformationList != null)
             {
                 result = exposureInformationList.Count;
