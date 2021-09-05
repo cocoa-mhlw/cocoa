@@ -42,11 +42,11 @@ namespace Covid19Radar.Repository
         void RemoveAllExposureNotificationStatus();
 
         UserExposureSummary GetExposureSummary();
-
         List<UserExposureInfo> GetExposureInformationList();
         List<UserExposureInfo> GetExposureInformationList(int offsetDays);
         void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList);
         void RemoveExposureInformation();
+        void RemoveOutOfDateExposureInformation(int offsetDays);
 
         int GetExposureCount(int offsetDays);
     }
@@ -253,6 +253,16 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
             _secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
             _secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
+            _loggerService.EndMethod();
+        }
+
+        public void RemoveOutOfDateExposureInformation(int offsetDays)
+        {
+            _loggerService.StartMethod();
+
+            var informationList = GetExposureInformationList(offsetDays) ?? new List<UserExposureInfo>();
+            SetExposureInformation(GetExposureSummary(), informationList);
+
             _loggerService.EndMethod();
         }
 
