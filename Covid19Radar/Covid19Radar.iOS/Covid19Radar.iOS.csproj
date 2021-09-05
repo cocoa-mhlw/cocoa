@@ -533,12 +533,6 @@
     <BundleResource Include="Resources\Base.lproj\SplashImg%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="fa-brands-400.otf" />
-    <EmbeddedResource Include="fa-regular-400.otf" />
-    <EmbeddedResource Include="fa-solid-900.otf" />
-    <EmbeddedResource Include="Roboto-Regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Services\Logs\" />
     <Folder Include="Renderers\" />
     <Folder Include="Resources\zh-Hans.lproj\" />
