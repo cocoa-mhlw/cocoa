@@ -5,14 +5,11 @@
 using System;
 using Covid19Radar.Common;
 using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
 using System.Text.RegularExpressions;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using Covid19Radar.UnitTests.Mocks;
 using Moq;
 using Xunit;
 
@@ -24,7 +21,6 @@ namespace Covid19Radar.UnitTests.Repository
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IPreferencesService> mockPreferencesService;
         private readonly Mock<ISecureStorageService> mockSecureStorageService;
-        private readonly Mock<IHttpClientService> mockHttpClientService;
         private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
 
         public UserDataRepositoryTests()
@@ -33,7 +29,6 @@ namespace Covid19Radar.UnitTests.Repository
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockPreferencesService = mockRepository.Create<IPreferencesService>();
             mockSecureStorageService = mockRepository.Create<ISecureStorageService>();
-            mockHttpClientService = mockRepository.Create<IHttpClientService>();
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
             DateTimeUtility.Instance = mockDateTimeUtility.Object;
         }
@@ -95,12 +90,6 @@ namespace Covid19Radar.UnitTests.Repository
         [Fact]
         public void GetExposureInformationListTests_Success()
         {
-            mockHttpClientService.Setup(x => x.Create()).Returns(new HttpClient(new MockHttpHandler((request, cancellationToken) =>
-            {
-                // Make an error not to process code that cannot be Mocked
-                return new HttpResponseMessage(HttpStatusCode.NotFound);
-            })));
-
             var unitUnderTest = CreateRepository();
 
             mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2020-12-21T10:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":2,\"TotalRiskScore\":19,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2020-12-21T11:00:00\",\"Duration\":\"00:15:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":20,\"TransmissionRiskLevel\":5}]");
@@ -123,12 +112,6 @@ namespace Covid19Radar.UnitTests.Repository
         [Fact]
         public void GetExposureInformationListTests_NoData()
         {
-            mockHttpClientService.Setup(x => x.Create()).Returns(new HttpClient(new MockHttpHandler((request, cancellationToken) =>
-            {
-                // Make an error not to process code that cannot be Mocked
-                return new HttpResponseMessage(HttpStatusCode.NotFound);
-            })));
-
             var unitUnderTest = CreateRepository();
 
             mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns((string)(object)null);
@@ -141,12 +124,6 @@ namespace Covid19Radar.UnitTests.Repository
         [Fact]
         public void SetExposureInformationTests_Success()
         {
-            mockHttpClientService.Setup(x => x.Create()).Returns(new HttpClient(new MockHttpHandler((request, cancellationToken) =>
-            {
-                // Make an error not to process code that cannot be Mocked
-                return new HttpResponseMessage(HttpStatusCode.NotFound);
-            })));
-
             var unitUnderTest = CreateRepository();
 
             var actualExposureSummaryJson = "";
@@ -204,12 +181,6 @@ namespace Covid19Radar.UnitTests.Repository
         [Fact]
         public void RemoveExposureInformationTests()
         {
-            mockHttpClientService.Setup(x => x.Create()).Returns(new HttpClient(new MockHttpHandler((request, cancellationToken) =>
-            {
-                // Make an error not to process code that cannot be Mocked
-                return new HttpResponseMessage(HttpStatusCode.NotFound);
-            })));
-
             var unitUnderTest = CreateRepository();
 
             mockSecureStorageService.Reset();
@@ -250,12 +221,6 @@ namespace Covid19Radar.UnitTests.Repository
         [Fact]
         public void GetExposureInformationListToDisplayTests_NoData()
         {
-            mockHttpClientService.Setup(x => x.Create()).Returns(new HttpClient(new MockHttpHandler((request, cancellationToken) =>
-            {
-                // Make an error not to process code that cannot be Mocked
-                return new HttpResponseMessage(HttpStatusCode.NotFound);
-            })));
-
             var unitUnderTest = CreateRepository();
 
             mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns((string)(object)null);
@@ -271,12 +236,6 @@ namespace Covid19Radar.UnitTests.Repository
         [InlineData(17, 9, 1, 2, 3)]
         public void GetExposureInformationListToDisplayTests_Jst(int day, int hour, int minute, int expectedCount, int expectedStartDay)
         {
-            mockHttpClientService.Setup(x => x.Create()).Returns(new HttpClient(new MockHttpHandler((request, cancellationToken) =>
-            {
-                // Make an error not to process code that cannot be Mocked
-                return new HttpResponseMessage(HttpStatusCode.NotFound);
-            })));
-
             var unitUnderTest = CreateRepository();
 
             mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
@@ -300,12 +259,6 @@ namespace Covid19Radar.UnitTests.Repository
         [InlineData(20, 0)]
         public void GetExposureCountToDisplayTests_Success(int day, int expectedCount)
         {
-            mockHttpClientService.Setup(x => x.Create()).Returns(new HttpClient(new MockHttpHandler((request, cancellationToken) =>
-            {
-                // Make an error not to process code that cannot be Mocked
-                return new HttpResponseMessage(HttpStatusCode.NotFound);
-            })));
-
             var unitUnderTest = CreateRepository();
 
             mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
@@ -319,12 +272,6 @@ namespace Covid19Radar.UnitTests.Repository
         [Fact]
         public void GetExposureCountToDisplayTests_NoData()
         {
-            mockHttpClientService.Setup(x => x.Create()).Returns(new HttpClient(new MockHttpHandler((request, cancellationToken) =>
-            {
-                // Make an error not to process code that cannot be Mocked
-                return new HttpResponseMessage(HttpStatusCode.NotFound);
-            })));
-
             var unitUnderTest = CreateRepository();
 
             mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns((string)(object)null);
