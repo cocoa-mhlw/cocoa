@@ -53,9 +53,8 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
+
             _notificationCenterDelegate.OnRecieved += (UserNotificationCenterDelegate sender, UNNotificationResponse response) => {
-                // TODO:- C#だと循環参照しない？
-                // TODO:- 起動時遷移のときに連続して呼ばれるのは大丈夫か要確認(アニメーションがないので大丈夫そう？)
                 _prismApp?.NavigateToSplash(Destination.ContactedNotifyPage);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
