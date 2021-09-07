@@ -532,10 +532,6 @@
     <value>Пайдалану шарттарына келіспеу керек.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>COVID-19 Байланыс хабарламасы мүмкіндігі бекітілмеген. Өтінім қайта жасалғаннан кейін әрбір ОЖ-дан бекітуді немесе қайта бекітуді сұраймын.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Экспозиция туралы хабарландыруға қолдау көрсетілмейді. ОЖ соңғы нұсқасына жаңартыңыз. Егер әлі де проблемалар туындаса, appsupport@cov19.mhlw.go.jp байланысыңызды сұраймыз.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>

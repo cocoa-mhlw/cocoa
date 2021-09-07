@@ -557,9 +557,13 @@
     <value>您必须同意使用条款。</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-	<data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>COVID-19 暴露通知受到限制。请于系统设置中允许通知，或重新安装应用后再次选择允许通知。</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
+  <data name="ExposureNotificationRestrictedTitle" xml:space="preserve">
+    <value>接触通知功能已停止</value>
+    <comment>接触通知機能が停止しています</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>请重新安装应用或从系统设置中启用接触通知。</value>
+    <comment>アプリを再インストールするか、 OSの設定から接触通知を有効にしてください。</comment>
   </data>
 	<data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>不支持暴露通知。请将系统更新到最新版本。如果仍有问题，请通过appsupport@cov19.mhlw.go.jp与我们联系。</value>
@@ -973,8 +977,28 @@
     <value>如果您从保健中心收到了My HER-SYS的使用指南，请从那里申请使用接触确认应用。</value>
     <comment>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
   </data>
+  <data name="AndroidNotificationChannelName" xml:space="preserve">
+    <value>接触通知</value>
+    <comment>接触を通知</comment>
+  </data>
+  <data name="LocalExposureNotificationTitle" xml:space="preserve">
+    <value>重要通知</value>
+    <comment>重要なお知らせ</comment>
+  </data>
+  <data name="LocalExposureNotificationContent" xml:space="preserve">
+    <value>您可能接触过感染新型冠状病毒的阳性登记者。点击查看详细信息。</value>
+    <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
+  </data>
 	<data name="NoteSymbol" xml:space="preserve">
     <value>*</value>
     <comment>※</comment>
+  </data>
+  <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
+    <value>网页无障碍访问政策</value>
+    <comment>ウェブアクセシビリティ方針</comment>
+  </data>
+  <data name="UrlWebAccessibilityPolicy" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/cocoa/webaccessibility_chinese.html</value>
+    <comment>ウェブアクセシビリティ方針URL</comment>
   </data>
 </root>

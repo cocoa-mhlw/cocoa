@@ -532,10 +532,6 @@
     <value>Tsy maintsy manaiky ireo teny ampiasaina ianao.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Fampilazana ny hatsiaka. Aoka ianao ho mazoto.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>Tsy notohanana ny Fampilazana hatsiaka. Mba hanavao azafady ny OS amin' ny endriny farany. Raha mbola manana olana ianao dia mba mifandraisa aminay ao amin' ny appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>

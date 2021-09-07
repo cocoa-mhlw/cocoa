@@ -52,6 +52,8 @@ namespace Covid19Radar.ViewModels
 
         public override async void Initialize(INavigationParameters parameters)
         {
+            base.Initialize(parameters);
+
             loggerService.StartMethod();
 
             // It seems the life cycle methods are not called after background fetch in iOS.
@@ -69,27 +71,30 @@ namespace Covid19Radar.ViewModels
 
             // Check Version
             AppUtils.CheckVersion(loggerService);
+
             try
             {
                 await exposureNotificationService.StartExposureNotification();
                 await exposureNotificationService.FetchExposureKeyAsync();
-
-                var statusMessage = await exposureNotificationService.UpdateStatusMessageAsync();
-                loggerService.Info($"Exposure notification status: {statusMessage}");
-
-                base.Initialize(parameters);
-
-                loggerService.EndMethod();
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.ToString());
+                loggerService.Exception("Failed to fetch exposure key.", ex);
+            }
 
+            try
+            {
+                var statusMessage = await exposureNotificationService.UpdateStatusMessageAsync();
+                loggerService.Info($"Exposure notification status: {statusMessage}");
+            }
+            catch (Exception ex)
+            {
                 loggerService.Exception("Failed to exposure notification status.", ex);
-                loggerService.EndMethod();
             }
 
             await localNotificationService.PrepareAsync();
+
+            loggerService.EndMethod();
         }
 
         public Command OnClickExposures => new Command(async () =>
