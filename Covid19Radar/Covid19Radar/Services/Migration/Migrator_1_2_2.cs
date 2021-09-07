@@ -19,6 +19,8 @@ namespace Covid19Radar.Services.Migration
         private const string APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY = "TermsOfServiceLastUpdateDateTime";
         private const string APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY = "PrivacyPolicyLastUpdateDateTime";
 
+        private const string PREFERENCE_KEY_EXPOSURE_SUMMARY = "ExposureSummary";
+
         private readonly IApplicationPropertyService _applicationPropertyService;
         private readonly IPreferencesService _preferencesService;
         private readonly ISecureStorageService _secureStorageService;
@@ -216,7 +218,7 @@ namespace Covid19Radar.Services.Migration
 
             if (userData.ExposureSummary != null)
             {
-                _secureStorageService.SetValue(PreferenceKey.ExposureSummary, JsonConvert.SerializeObject(userData.ExposureSummary));
+                _secureStorageService.SetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, JsonConvert.SerializeObject(userData.ExposureSummary));
                 userData.ExposureSummary = null;
                 _loggerService.Info("Migrated ExposureSummary");
             }

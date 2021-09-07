@@ -33,5 +33,6 @@
     <Folder Include="Mocks\" />
     <Folder Include="Services\Migration\" />
     <Folder Include="Common\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
 </Project>

@@ -77,7 +77,7 @@ namespace Covid19Radar.ViewModels
 
                 await userDataRepository.RemoveDailySummariesAsync();
                 await userDataRepository.RemoveExposureWindowsAsync();
-                await userDataRepository.RemoveUserExposureInformationAsync();
+                userDataRepository.RemoveExposureInformation();
                 await userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
                 exposureConfigurationRepository.RemoveExposureConfiguration();
 

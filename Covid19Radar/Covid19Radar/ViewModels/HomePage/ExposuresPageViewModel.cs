@@ -44,7 +44,7 @@ namespace Covid19Radar.ViewModels
                 = await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
             var userExposureInformationList
-                = await _userDataRepository.GetUserExposureInfosAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
             if (exposureWindowList.Count() > 0)
             {

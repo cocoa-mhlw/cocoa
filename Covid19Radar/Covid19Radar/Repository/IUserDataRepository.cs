@@ -17,9 +17,10 @@ namespace Covid19Radar.Repository
             List<ExposureWindow> exposueWindowList
             );
 
-        Task AppendExposureDataAsync(
+        Task<bool> AppendExposureDataAsync(
             List<DailySummary> dailySummaryList,
-            List<ExposureWindow> exposueWindowList
+            List<ExposureWindow> exposueWindowList,
+            bool ignoreDuplicate = true
             );
 
         Task<List<DailySummary>> GetDailySummariesAsync();
@@ -31,17 +32,18 @@ namespace Covid19Radar.Repository
         Task RemoveExposureWindowsAsync();
 
         // Legacy v1 mode
-        Task<List<UserExposureSummary>> GetUserExposureSummariesAsync();
+        List<UserExposureInfo> GetExposureInformationList();
+        List<UserExposureInfo> GetExposureInformationList(int offsetDays);
 
-        Task<List<UserExposureInfo>> GetUserExposureInfosAsync();
-        Task<List<UserExposureInfo>> GetUserExposureInfosAsync(int offsetDays);
-
-        Task<bool> AppendExposureDataAsync(
+        void SetExposureInformation(List<UserExposureInfo> informationList);
+        bool AppendExposureData(
             ExposureSummary exposureSummary,
             List<ExposureInformation> exposureInformationList,
             int minimumRiskScore
             );
 
-        Task RemoveUserExposureInformationAsync();
+        void RemoveExposureInformation();
+        void RemoveOutOfDateExposureInformation(int offsetDays);
+        int GetV1ExposureCount(int offsetDays);
     }
 }
