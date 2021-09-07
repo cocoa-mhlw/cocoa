@@ -55,7 +55,7 @@ namespace Covid19Radar.Services
             this.secureStorageService = secureStorageService;
             this.preferencesService = preferencesService;
 
-            _ = GetExposureNotificationConfig();
+            //_ = GetExposureNotificationConfig();
         }
 
         private async Task GetExposureNotificationConfig()

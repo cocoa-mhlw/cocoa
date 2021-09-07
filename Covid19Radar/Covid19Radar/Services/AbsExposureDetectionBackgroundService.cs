@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Chino;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
@@ -17,10 +16,10 @@ namespace Covid19Radar.Services
 
         private readonly IDiagnosisKeyRepository _diagnosisKeyRepository;
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
+        private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
 
-        private readonly ExposureConfiguration _exposureConfiguration = new ExposureConfiguration();
         private readonly IList<ServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
                     region => new ServerConfiguration()
                     {
@@ -31,12 +30,14 @@ namespace Covid19Radar.Services
         public AbsExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
+            IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository
             )
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
             _exposureNotificationApiService = exposureNotificationApiService;
+            _exposureConfigurationRepository = exposureConfigurationRepository;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
         }
@@ -53,6 +54,7 @@ namespace Covid19Radar.Services
                 {
                     var tmpDir = PrepareDir(serverConfiguration.Region);
 
+                    var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
                     var diagnosisKeyEntryList = _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration)
                         .GetAwaiter().GetResult();
 
@@ -81,7 +83,7 @@ namespace Covid19Radar.Services
 
                     _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
-                        _exposureConfiguration
+                        exposureConfiguration
                         ).GetAwaiter().GetResult();
 
                     // Save LastProcessDiagnosisKeyTimestamp after ProvideDiagnosisKeysAsync was succeeded.
@@ -90,10 +92,6 @@ namespace Covid19Radar.Services
                         .Max();
                     await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region, latestProcessTimestamp);
 
-                }
-                catch(Exception exception)
-                {
-                    _loggerService.Exception("Exception occurred.", exception);
                 }
                 finally
                 {

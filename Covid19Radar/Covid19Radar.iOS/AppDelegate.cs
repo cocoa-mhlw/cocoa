@@ -9,6 +9,7 @@ using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.iOS.Services.Migration;
 using Covid19Radar.Services;
@@ -28,14 +29,17 @@ namespace Covid19Radar.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IExposureNotificationHandler
     {
-        private Lazy<ILoggerService> _loggerService
-            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
-
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationClient
             = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
 
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
+
+        private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
+            = new Lazy<IExposureConfigurationRepository>(() => ServiceLocator.Current.GetInstance<IExposureConfigurationRepository>());
+
+        private Lazy<IExposureDetectionService> _exposureDetectionService
+            = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
 
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
@@ -122,24 +126,17 @@ namespace Covid19Radar.iOS
         }
 
         public void PreExposureDetected()
-        {
-            _loggerService.Value.Info("PreExposureDetected");
-        }
+            => _exposureDetectionService.Value.PreExposureDetected();
 
         public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
-        {
-            _loggerService.Value.Info("ExposureDetected v2");
-        }
+            => _exposureDetectionService.Value.ExposureDetected(dailySummaries, exposureWindows);
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
-        {
-            _loggerService.Value.Info("ExposureDetected v1");
-        }
+            => _exposureDetectionService.Value.ExposureDetected(exposureSummary, exposureInformations);
 
         public void ExposureNotDetected()
-        {
-            _loggerService.Value.Info("ExposureNotDetected");
-        }
+            => _exposureDetectionService.Value.ExposureNotDetected();
+
     }
 }
 

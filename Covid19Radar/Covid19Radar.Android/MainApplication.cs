@@ -35,14 +35,15 @@ namespace Covid19Radar.Droid
             = new JobSetting(INITIAL_BACKOFF_MILLIS, Android.App.Job.BackoffPolicy.Linear, true);
         private readonly JobSetting _exposureNotDetectedJobSetting = null;
 
-        private Lazy<ILoggerService> _loggerService
-            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
             = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
 
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
+
+        private Lazy<IExposureDetectionService> _exposureDetectionService
+            = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
@@ -59,8 +60,6 @@ namespace Covid19Radar.Droid
                 return null;
             }
         }
-
-        public ExposureConfiguration GetExposureConfiguration() => new ExposureConfiguration();
 
         public override void OnCreate()
         {
@@ -104,26 +103,19 @@ namespace Covid19Radar.Droid
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
+
         }
 
         public void PreExposureDetected()
-        {
-            _loggerService.Value.Debug("PreExposureDetected");
-        }
+            => _exposureDetectionService.Value.PreExposureDetected();
 
         public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
-        {
-            _loggerService.Value.Debug("ExposureDetected: ExposureWindows");
-        }
+            => _exposureDetectionService.Value.ExposureDetected(dailySummaries, exposureWindows);
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
-        {
-            _loggerService.Value.Debug("ExposureDetected: Legacy-V1");
-        }
+            => _exposureDetectionService.Value.ExposureDetected(exposureSummary, exposureInformations);
 
         public void ExposureNotDetected()
-        {
-            _loggerService.Value.Debug("ExposureNotDetected");
-        }
+            => _exposureDetectionService.Value.ExposureNotDetected();
     }
 }

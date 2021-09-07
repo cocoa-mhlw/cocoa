@@ -8,12 +8,17 @@ using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using Covid19Radar.Resources;
+using Covid19Radar.Repository;
+using Covid19Radar.Common;
+using System.Linq;
 
 namespace Covid19Radar.ViewModels
 {
     public class ContactedNotifyPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
+        private readonly IUserDataRepository _userDataRepository;
+
         private string _exposureCount;
         public string ExposureCount
         {
@@ -21,11 +26,28 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposureCount, value); }
         }
 
-        public ContactedNotifyPageViewModel(INavigationService navigationService, ILoggerService loggerService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+        public ContactedNotifyPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository,
+            IExposureNotificationService exposureNotificationService
+            ) : base(navigationService)
         {
-            Title = AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
+            _userDataRepository = userDataRepository;
+
+            Title = AppResources.TitileUserStatusSettings;
+
             ExposureCount = exposureNotificationService.GetExposureCountToDisplay().ToString();
+        }
+
+        public override async void Initialize(INavigationParameters parameters)
+        {
+            base.Initialize(parameters);
+
+            var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var userExposureInformationList = await _userDataRepository.GetUserExposureInfosAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            ExposureCount = (dailySummaryList.Count() + userExposureInformationList.Count()).ToString();
         }
 
         public Command OnClickByForm => new Command(async () =>

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
@@ -170,8 +171,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
                     {"404", 53454353 }
                 };
 
-            var userExposureInfo1 = new UserExposureInfo(userExposureInfo1DateTime, new TimeSpan(50), 3, 11, UserRiskLevel.High);
-            var userExposureInfo2 = new UserExposureInfo(userExposureInfo2DateTime, new TimeSpan(100), 8, 10, UserRiskLevel.Medium);
+            var userExposureInfo1 = new UserExposureInfo(userExposureInfo1DateTime, new TimeSpan(50), 3, 11, RiskLevel.High);
+            var userExposureInfo2 = new UserExposureInfo(userExposureInfo2DateTime, new TimeSpan(100), 8, 10, RiskLevel.Medium);
             var userExposureSummary = new UserExposureSummary(4, 6, 11, new TimeSpan[0], 5);
 
             var userData = new UserDataModel()
