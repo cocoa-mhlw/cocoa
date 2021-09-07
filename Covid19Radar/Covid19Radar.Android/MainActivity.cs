@@ -75,8 +75,6 @@ namespace Covid19Radar.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
-            Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
-
             var isOk = (resultCode == Result.Ok);
 
             FireExposureNotificationEvent(requestCode, isOk);

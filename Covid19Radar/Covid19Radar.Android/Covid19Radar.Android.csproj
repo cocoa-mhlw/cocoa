@@ -311,10 +311,6 @@
       <Project>{554EE1AB-B447-480C-90E5-C4F040891DE6}</Project>
       <Name>Covid19Radar</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj">
-      <Project>{83af4c2e-22f8-4dab-b993-be6abb3e56a1}</Project>
-      <Name>Xamarin.ExposureNotification</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml" />

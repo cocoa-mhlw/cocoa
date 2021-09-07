@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -29,16 +28,13 @@ namespace Covid19Radar.ViewModels
         public ContactedNotifyPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository,
-            IExposureNotificationService exposureNotificationService
+            IUserDataRepository userDataRepository
             ) : base(navigationService)
         {
             this.loggerService = loggerService;
             _userDataRepository = userDataRepository;
 
             Title = AppResources.TitileUserStatusSettings;
-
-            ExposureCount = exposureNotificationService.GetExposureCountToDisplay().ToString();
         }
 
         public override async void Initialize(INavigationParameters parameters)

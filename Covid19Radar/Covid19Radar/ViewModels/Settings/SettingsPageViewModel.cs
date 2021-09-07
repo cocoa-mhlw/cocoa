@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Acr.UserDialogs;
 using Chino;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -26,9 +27,9 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _AppVersion, value); }
         }
 
-        private readonly IExposureNotificationService exposureNotificationService;
         private readonly IUserDataService userDataService;
-        private readonly IHttpDataService httpDataService;
+        private readonly IUserDataRepository userDataRepository;
+        private readonly IExposureConfigurationRepository exposureConfigurationRepository;
         private readonly ILogFileService logFileService;
         private readonly ITermsUpdateService termsUpdateService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
@@ -37,8 +38,8 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IUserDataService userDataService,
-            IHttpDataService httpDataService,
-            IExposureNotificationService exposureNotificationService,
+            IUserDataRepository userDataRepository,
+            IExposureConfigurationRepository exposureConfigurationRepository,
             ILogFileService logFileService,
             ITermsUpdateService termsUpdateService,
             AbsExposureNotificationApiService exposureNotificationApiService
@@ -48,8 +49,8 @@ namespace Covid19Radar.ViewModels
             AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
-            this.httpDataService = httpDataService;
-            this.exposureNotificationService = exposureNotificationService;
+            this.userDataRepository = userDataRepository;
+            this.exposureConfigurationRepository = exposureConfigurationRepository;
             this.logFileService = logFileService;
             this.termsUpdateService = termsUpdateService;
             this.exposureNotificationApiService = exposureNotificationApiService;
@@ -73,9 +74,13 @@ namespace Covid19Radar.ViewModels
 
                 // Reset All Data and Optout
                 userDataService.RemoveStartDate();
-                exposureNotificationService.RemoveExposureInformation();
-                exposureNotificationService.RemoveConfiguration();
-                exposureNotificationService.RemoveLastProcessTekTimestamp();
+
+                await userDataRepository.RemoveDailySummariesAsync();
+                await userDataRepository.RemoveExposureWindowsAsync();
+                await userDataRepository.RemoveUserExposureInformationAsync();
+                await userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
+                exposureConfigurationRepository.RemoveExposureConfiguration();
+
                 termsUpdateService.RemoveAllUpdateDate();
 
                 _ = logFileService.DeleteLogsDir();
