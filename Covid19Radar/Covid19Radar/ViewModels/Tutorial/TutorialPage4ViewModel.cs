@@ -38,6 +38,7 @@ namespace Covid19Radar.ViewModels
             catch (ENException exception)
             {
                 loggerService.Exception("ENException", exception);
+                await NavigationService.NavigateAsync(nameof(TutorialPage6));
             }
             finally
             {

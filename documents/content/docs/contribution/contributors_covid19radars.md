@@ -1,4 +1,12 @@
-# COVID-19Radar Japan Core contributors
+---
+title: "COVID-19Radar Contoributors"
+weight: 700
+type: docs
+---
+
+# COVID-19Radar Contirbutors
+
+## COVID-19Radar Japan Core contributors
 - Kazumi Hirose
 - Kristina Yasuda
 - Noriko Matsumoto
@@ -6,7 +14,7 @@
 - Takashi Takebayashi
 - Akihiko Kodama
 
-# COVID-19Radar Contributors
+## COVID-19Radar Contributors
 - Kazumi Hirose (Organizer)
 - Noriko Matsumoto (Designer/Device iOS Lending)
 - Yasuaki Matsuda (Server side / Azure Functions)
@@ -76,7 +84,7 @@
 - Kotaro Sakamoto
 - Koichi Yokota (Documentation)
 
-# Original Covid19Radar Beta Testers
+## Original Covid19Radar Beta Testers
 - Nagahata Kenji
 - Takahiro Soda
 - もくだいさん
