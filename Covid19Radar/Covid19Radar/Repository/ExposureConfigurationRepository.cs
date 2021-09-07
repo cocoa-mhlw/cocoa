@@ -40,9 +40,9 @@ namespace Covid19Radar.Repository
 
         private string PrepareConfigDir()
         {
-            var cacheDir = FileSystem.CacheDirectory;
+            var dir = FileSystem.AppDataDirectory;
 
-            var configDir = Path.Combine(cacheDir, CONFIG_DIR);
+            var configDir = Path.Combine(dir, CONFIG_DIR);
             if (!Directory.Exists(configDir))
             {
                 Directory.CreateDirectory(configDir);
