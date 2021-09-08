@@ -9,6 +9,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
@@ -87,7 +88,7 @@ namespace Covid19Radar.Services
                     loggerService.Info($"uri: {uri}");
                     loggerService.Info($"TermsUpdateInfo: {json}");
 
-                    var deserializedJson = Utils.DeserializeFromJson<TermsUpdateInfoModel>(json);
+                    var deserializedJson = JsonConvert.DeserializeObject<TermsUpdateInfoModel>(json);
 
                     loggerService.EndMethod();
 

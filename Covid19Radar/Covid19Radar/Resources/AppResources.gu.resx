@@ -67,18 +67,6 @@
     <value>જો તમને કોઈ એવા વ્યક્તિ સાથે સંપર્ક થયો હોય કે જેણે હકારાત્મક COVID-19 પરિણામ ની જાણ કરી હોય તો તમને સૂચિત કરવામાં આવશે.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>પછીથી ફરી પ્રયાસ કરો.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>નિષ્ફળ</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>નિદાન રજૂ થયેલ છે</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>પૂર્ણ</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>નિદાન રજૂ કરી રહ્યા છીએ...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>તમારે ઉપયોગની શરતો સાથે સંમત થવું જોઈએ.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>એક્સપોઝર નોટિફિકેશન મર્યાદિત છે. કૃપા કરીને સક્રિય રહો.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>એક્સપોઝર સૂચના આધારભૂત નથી. કૃપા કરીને ઓએસને નવીનતમ આવૃત્તિમાં અપડેટ કરો. જો તમને હજુ પણ સમસ્યા હોય તો કૃપા કરીને appsupport@cov19.mhlw.go.jp પર અમારો સંપર્ક કરો.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>રજિસ્ટર કરો</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>રદ કર્યું</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>મહેરબાની કરીને રજીસ્ટ્રેશન શરૂ થાય ત્યાં સુધી થોડી રાહ જુઓ</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>નોંધણીની સંખ્યા ઉપરની મર્યાદા સુધી પહોંચી ગઈ છે. કાર્યક્રમમાંથી બહાર નીકળો</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>નોંધણી ભૂલ</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>રજૂઆતને અનુરૂપ સંપર્ક રેકોર્ડની પુષ્ટિ થઈ શકી નથી. સબમિટ કરવાની જરૂર નથી.</value>

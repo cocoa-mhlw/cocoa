@@ -67,18 +67,6 @@
     <value>ಸಕಾರಾತ್ಮಕ ಕೋವಿದ್-19 ಫಲಿತಾಂಶವನ್ನು ವರದಿ ಮಾಡಿದ ಯಾರಿಗಾದರೂ ನೀವು ಆಮಿಷ ಒಡ್ಡಿದ್ದರೆ ನಿಮಗೆ ಅಧಿಸೂಚನೆ ಹೊರಡಿಸಲಾಗುವುದು.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>ವಿಫಲವಾಗಿದೆ</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>ನಾಪತ್ತೆ ಅರ್ಜಿ</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>ಪೂರ್ಣಗೊಳಿಸು</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</value>
   </data>
@@ -544,10 +532,6 @@
     <value>ನೀವು ಬಳಕೆಯ ನಿಬಂಧನೆಗಳನ್ನು ಒಪ್ಪಬೇಕು.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆಯನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಸಕ್ರಿಯರಾಗಿರಿ.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>ಎಕ್ಸ್ ಪೋಶರ್ ಅಧಿಸೂಚನೆಯನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ದಯವಿಟ್ಟು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ OS ಅನ್ನು ಅಪ್ ಡೇಟ್ ಮಾಡಿ. ನಿಮಗೆ ಇನ್ನೂ ಸಮಸ್ಯೆಗಳಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಮ್ಮನ್ನು appsupport@cov19.mhlw.go.jp ಸಂಪರ್ಕಿಸಿ.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>ನೋಂದಾಯಿಸಿ</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>ನೋಂದಣಿ ಪ್ರಾರಂಭವಾಗುವವರೆಗೆ ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯ ಕಾಯಿರಿ</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>ನೋಂದಣಿಗಳ ಸಂಖ್ಯೆ ಗರಿಷ್ಠ ಮಿತಿಯನ್ನು ತಲುಪಿದೆ. ಅಪ್ಲಿಕೇಶನ್ ನಿಂದ ನಿರ್ಗಮಿಸು</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>ನೋಂದಣಿ ದೋಷ</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>ಸಲ್ಲಿಕೆಯ ಸಂಬಂಧವಾದ ಸಂಪರ್ಕ ದಾಖಲೆಯನ್ನು ದೃಢೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಸಲ್ಲಿಸಬೇಕಾದ ಅಗತ್ಯವಿಲ್ಲ.</value>

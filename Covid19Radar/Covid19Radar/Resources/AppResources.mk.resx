@@ -47,15 +47,6 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Не сега</value>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Обидете се повторно подоцна.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Неуспешно</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>Комплетирано</value>
-  </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>Откажи</value>
   </data>
@@ -163,9 +154,5 @@
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>Регистрирај</value>
     <comment>登録</comment>
-  </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Откажано</value>
-    <comment>キャンセルしました</comment>
   </data>
 </root>

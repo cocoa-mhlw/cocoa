@@ -10,6 +10,9 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
+using AndroidX.Work;
+using Xamarin.ExposureNotifications;
+using Java.Util.Concurrent;
 
 namespace Covid19Radar.Droid
 {
@@ -20,6 +23,9 @@ namespace Covid19Radar.Droid
 #endif
     public class MainApplication : Application
     {
+        private const int WORKER_REPEATED_INTERVAL_HOURS = 6;
+        private const int WORKER_BACKOFF_DELAY_HOURS = 1;
+
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
@@ -29,7 +35,23 @@ namespace Covid19Radar.Droid
             base.OnCreate();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
-            App.UseMockExposureNotificationImplementationIfNeeded();
+
+            // Override WorkRequest configuration
+            // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
+            var repeatInterval = TimeSpan.FromHours(WORKER_REPEATED_INTERVAL_HOURS);
+            static void requestBuilder(PeriodicWorkRequest.Builder b) =>
+               b.SetConstraints(new Constraints.Builder()
+                   .SetRequiresBatteryNotLow(true)
+                   .SetRequiredNetworkType(NetworkType.Connected)
+                   .Build())
+               .SetBackoffCriteria(
+                   BackoffPolicy.Linear,
+                   WORKER_BACKOFF_DELAY_HOURS,
+                   TimeUnit.Hours
+                   );
+            ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
+
+            App.InitExposureNotification();
         }
 
         private void RegisterPlatformTypes(IContainer container)
@@ -39,7 +61,8 @@ namespace Covid19Radar.Droid
             container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
-
+            container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
+            container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

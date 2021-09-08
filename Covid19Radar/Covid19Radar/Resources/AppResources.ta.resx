@@ -67,18 +67,6 @@
     <value>நேர்மறை குறியீடாகவும்-19 முடிவாகவும் அறிவிக்கப்பட்ட ஒருவரிடம் நீங்கள் வெளிப்படுத்தப்பட்டால் உங்களுக்கு அறிவிக்கப்படுவீர்கள்.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>பின்னர் மீண்டும் முயற்சிக்கவும்.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>தோல்வியடைந்தது</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>ஆய்வு அறிக்கை சமர்ப்பிக்கப்பட்டது</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>முழுமை</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>நோய் கண்டறிதல்...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>நீங்கள் பயன்பாட்டு விதிமுறைகளை ஏற்க வேண்டும்.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>வெளிப்பாடு அறிவிப்பு கட்டுப்படுத்தப்பட்டுள்ளது. தயவு செய்து செயலில்.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>வெளிப்பாடு அறிவிப்பு ஆதரிக்கப்படவில்லை. சமீபத்திய பதிப்பிற்கு OS ஐ புதுப்பிக்கவும். நீங்கள் இன்னும் பிரச்சினைகள் இருந்தால், appsupport@cov19.mhlw.go.jp எங்களை தொடர்பு கொள்ளவும்.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>பதிவு செய்</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>ரத்துசெய்யப்பட்டது</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>பதிவு தொடங்கும் வரை சிறிது நேரம் காத்திருக்கவும்</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>பதிவுகளின் எண்ணிக்கை உச்ச வரம்பை எட்டியுள்ளது. பயன்பாட்டை விட்டு வெளியேறு</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>பதிவு பிழை</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>சமர்ப்பிப்புடன் தொடர்புடைய தொடர்பு பதிவை உறுதிப்படுத்த முடியவில்லை. சமர்ப்பிக்க வேண்டிய அவசியம் இல்லை.</value>

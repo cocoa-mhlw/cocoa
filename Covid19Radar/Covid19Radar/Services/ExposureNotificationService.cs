@@ -76,7 +76,7 @@ namespace Covid19Radar.Services
 
             if (userData.LastProcessTekTimestamp != null && userData.LastProcessTekTimestamp.Count > 0)
             {
-                var stringValue = Utils.SerializeToJson(userData.LastProcessTekTimestamp);
+                var stringValue = JsonConvert.SerializeObject(userData.LastProcessTekTimestamp);
                 preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, stringValue);
                 userData.LastProcessTekTimestamp.Clear();
                 loggerService.Info("Migrated LastProcessTekTimestamp");
@@ -345,7 +345,7 @@ namespace Covid19Radar.Services
                     break;
                 case Status.Restricted:
                     // call out settings in each os
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, "", Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, Resources.AppResources.ExposureNotificationRestrictedTitle, Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
                     break;
                 default:

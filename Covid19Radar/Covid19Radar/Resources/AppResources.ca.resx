@@ -67,18 +67,6 @@
     <value>Se l'avisarà si ha estat exposat a algú que comunicava un resultat de COVID-19 positiu.</value>
     <comment>exposures comment</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>Torneu-ho a provar més tard.</value>
-  </data>
-  <data name="ButtonFailed" xml:space="preserve">
-    <value>Ha fallat</value>
-  </data>
-  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>Diagnòstic presentat</value>
-  </data>
-  <data name="ButtonComplete" xml:space="preserve">
-    <value>complet</value>
-  </data>
   <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>La presentació del diagnòstic...</value>
   </data>
@@ -544,10 +532,6 @@
     <value>Vostè ha d'acceptar les condicions d'ús.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>La notificació d'exposició està restringida. Si us plau actiu.</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
     <value>No es permet la notificació d'exposició. Si us plau actualitzi l'OS a la versió més recent. Si encara teniu problemes, poseu-vos en contacte amb nosaltres a appsupport@cov19.mhlw.go.jp.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
@@ -580,10 +564,6 @@
     <value>Registra</value>
     <comment>登録</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Cancel·lat</value>
-    <comment>キャンセルしました</comment>
-  </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>Espereu-vos una estona fins que comenci el registre</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
@@ -611,10 +591,6 @@
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
     <value>El nombre de registres ha assolit el límit superior. Sol·licitud de sortida</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
-  </data>
-  <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>Error de registre</value>
-    <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>No s'ha pogut confirmar el registre de contacte corresponent a la tramesa. No hi ha necessitat de presentar.</value>

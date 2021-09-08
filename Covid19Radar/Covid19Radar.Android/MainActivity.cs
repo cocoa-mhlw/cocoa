@@ -8,15 +8,18 @@ using Android.OS;
 using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
-using Xamarin.ExposureNotifications;
-using System;
-using AndroidX.Work;
 
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        internal static Intent NewIntent(Context context)
+        {
+            Intent intent = new Intent(context, typeof(MainActivity));
+            return intent;
+        }
+
         public static object dataLock = new object();
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -25,16 +28,6 @@ namespace Covid19Radar.Droid
             ToolbarResource = Resource.Layout.Toolbar;
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
-
-            // Override WorkRequest configuration
-            // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
-            var repeatInterval = TimeSpan.FromHours(6);
-            Action<PeriodicWorkRequest.Builder> requestBuilder = b =>
-               b.SetConstraints(new Constraints.Builder()
-                   .SetRequiresBatteryNotLow(true)
-                   .SetRequiredNetworkType(NetworkType.Connected)
-                   .Build());
-            ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
 
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
