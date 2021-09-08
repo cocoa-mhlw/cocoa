@@ -168,6 +168,7 @@ namespace Covid19Radar
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
             container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
             container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
+            container.Register<ILogWriter, LogWriter>(Reuse.Singleton);
             container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
             container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
             container.Register<IExposureNotificationService, ExposureNotificationService>(Reuse.Singleton);
