@@ -17,6 +17,7 @@ using Covid19Radar.Services.Logs;
 using System;
 using CommonServiceLocator;
 using Covid19Radar.Common;
+using Covid19Radar.Services.Migration;
 using Xamarin.ExposureNotifications;
 
 /*
@@ -187,6 +188,7 @@ namespace Covid19Radar
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
+            container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
         }
 
         protected override void OnStart()
