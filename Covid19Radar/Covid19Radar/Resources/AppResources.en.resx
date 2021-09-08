@@ -974,6 +974,18 @@ Storage :</value>
     <value>If you have received a usage guide for My HER-SYS from the health center, please apply to use the Contact Confirmation Application from there.</value>
     <comment>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
   </data>
+  <data name="AndroidNotificationChannelName" xml:space="preserve">
+    <value>Exposure notification</value>
+    <comment>接触を通知</comment>
+  </data>
+  <data name="LocalExposureNotificationTitle" xml:space="preserve">
+    <value>Important Notice</value>
+    <comment>重要なお知らせ</comment>
+  </data>
+  <data name="LocalExposureNotificationContent" xml:space="preserve">
+    <value>It is possible you have been in close proximity to a user who tested positive for COVID-19. Tap for more details.</value>
+    <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
+  </data>
 	<data name="NoteSymbol" xml:space="preserve">
     <value>* </value>
     <comment>※</comment>
