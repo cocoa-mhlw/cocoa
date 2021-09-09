@@ -124,7 +124,7 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
-            mockUserDialogs.Verify(x => x.RequestAsync(new ShareFileRequest{File = new ShareFile(path)}), Times.Once());
+            mockUserDialogs.Verify(x => x.RequestAsync(), Times.Once());
         }
 
         [Fact]
