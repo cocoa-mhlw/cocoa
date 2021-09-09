@@ -146,7 +146,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\Logs\" />
     <Folder Include="Controls\" />
     <Folder Include="Services\Migration\" />
   </ItemGroup>

@@ -20,6 +20,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly MockRepository mockRepository;
         private readonly Mock<IUserDialogs> mockUserDialogs;
         private readonly Mock<INavigationService> mockNavigationService;
+        private readonly Mock<ILogShareService> mockLogShareService;
         private readonly Mock<ILogFileService> mockLogFileService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ILogUploadService> mockLogUploadService;
@@ -33,6 +34,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             UserDialogs.Instance = mockUserDialogs.Object;
 
             mockNavigationService = mockRepository.Create<INavigationService>();
+            mockLogShareService = mockRepository.Create<ILogShareService>();
             mockLogFileService = mockRepository.Create<ILogFileService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockLogUploadService = mockRepository.Create<ILogUploadService>();
@@ -43,6 +45,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         {
             var vm = new SendLogConfirmationPageViewModel(
                 mockNavigationService.Object,
+                mockLogShareService.Object,
                 mockLogFileService.Object,
                 mockLoggerService.Object,
                 mockLogUploadService.Object,
@@ -113,6 +116,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
 
+            var path = Path.Combine("~/.cocoa/logs", testZipFileName);
+
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
 
@@ -124,6 +129,10 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
+<<<<<<< Updated upstream
+=======
+            mockLogShareService.Verify(x => x.RequestAsync(), Times.Once());
+>>>>>>> Stashed changes
         }
 
         [Fact]
