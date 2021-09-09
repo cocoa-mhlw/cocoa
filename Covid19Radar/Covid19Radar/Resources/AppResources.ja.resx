@@ -997,4 +997,8 @@
     <value>https://www.mhlw.go.jp/cocoa/webaccessibility_japanese.html</value>
     <comment>ウェブアクセシビリティ方針URL</comment>
   </data>
+  <data name="YourID" xml:space="preserve">
+    <value>動作情報ID：</value>
+    <comment>動作情報ID：</comment>
+  </data>
 </root>
