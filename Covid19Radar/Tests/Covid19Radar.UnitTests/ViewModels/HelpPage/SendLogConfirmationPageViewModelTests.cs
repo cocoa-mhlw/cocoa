@@ -20,7 +20,6 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly MockRepository mockRepository;
         private readonly Mock<IUserDialogs> mockUserDialogs;
         private readonly Mock<INavigationService> mockNavigationService;
-        private readonly Mock<IShareService> mockShareService;
         private readonly Mock<ILogFileService> mockLogFileService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ILogUploadService> mockLogUploadService;
@@ -34,7 +33,6 @@ namespace Covid19Radar.UnitTests.ViewModels
             UserDialogs.Instance = mockUserDialogs.Object;
 
             mockNavigationService = mockRepository.Create<INavigationService>();
-            mockShareService = mockRepository.Create<IShareService>();
             mockLogFileService = mockRepository.Create<ILogFileService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockLogUploadService = mockRepository.Create<ILogUploadService>();
@@ -45,7 +43,6 @@ namespace Covid19Radar.UnitTests.ViewModels
         {
             var vm = new SendLogConfirmationPageViewModel(
                 mockNavigationService.Object,
-                mockShareService.Object,
                 mockLogFileService.Object,
                 mockLoggerService.Object,
                 mockLogUploadService.Object,
@@ -127,7 +124,6 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
-            mockShare.Verify(x => x.RequestAsync(), Times.Once());
         }
 
         [Fact]
