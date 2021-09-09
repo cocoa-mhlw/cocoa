@@ -39,4 +39,4 @@ COCOA v1.2.6にアップデート後、最初に接触確認を行うタイミ�
 
  * https://www.mhlw.go.jp/content/10906000/000829254.pdf
  * https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html
- * https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html#Q4-10
+ * https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html#Q4-16
