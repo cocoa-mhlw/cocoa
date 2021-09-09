@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Appendix on COCOA Open Source Project</title><link>https://cocoa-mhlw.github.io/cocoa/docs/appendix/</link><description>Recent content in Appendix on COCOA Open Source Project</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><atom:link href="https://cocoa-mhlw.github.io/cocoa/docs/appendix/index.xml" rel="self" type="application/rss+xml"/><item><title>iOS版の通知許可に関するお願い</title><link>https://cocoa-mhlw.github.io/cocoa/docs/appendix/ios_local_notification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cocoa-mhlw.github.io/cocoa/docs/appendix/ios_local_notification/</guid><description>iOS版の通知許可に関するお願い # v1.2.6から、接触確認APIからの通知に加えて「ローカル通知」を利用するように変更しました。 iOS版をお使いの方は、ローカル通知を許可していただく操作が必要です（Android版をお使いの方は本ページの操作は不要です）。
+ローカル通知を導入した理由 # 今後、COCOAが利用している「接触確認API」のバージョンアップを予定しています。 バージョンアップ後は接触確認APIからの通知は廃止されます。ローカル通知が許可されていない場合、COCOAから通知を使って接触の可能性をお知らせできません（接触確認処理に影響はありません。また、接触の有無についてはCOCOAの画面上で確認することはできます）。
+ローカル通知の許可方法 # ローカル通知の許可方法は、次の通りです。
+アプリ起動時の許可 # COCOA v1.2.6をインストールしてはじめてホーム画面を表示するタイミングで、ローカル通知の許可を求めるダイアログが表示されます。 「許可」を選択すると、以後、ローカル通知が有効になります。
+バックグラウンド処理時の許可 # COCOA v1.2.6にアップデート後、最初に接触確認を行うタイミング（アップデート完了後、おおむね4時間以内）で、ローカル通知の許可を求めるダイアログを表示します。 「許可」を選択すると、以後、ローカル通知が有効になります。
+手動による許可（マニュアル操作） # 「設定」アプリを起動して「通知」を選択します。 「通知スタイル」の中から「接触確認アプリ」を選択して「通知を許可」のスイッチをONにすると、以後、ローカル通知が有効になります。
+ローカル通知の許可については、厚生労働省のサイトもご確認ください。
+https://www.mhlw.go.jp/content/10906000/000829254.pdf https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html#Q4-16</description></item></channel></rss>
