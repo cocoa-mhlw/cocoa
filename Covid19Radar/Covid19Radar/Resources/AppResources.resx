@@ -1102,5 +1102,8 @@ Storage :</value>
   <data name="UrlWebAccessibilityPolicy" xml:space="preserve">
     <value>https://www.mhlw.go.jp/cocoa/webaccessibility_english.html</value>
     <comment>ウェブアクセシビリティ方針URL</comment>
+  <data name="YourID" xml:space="preserve">
+    <value>動作情報ID：</value>
+    <comment>動作情報ID：</comment>
   </data>
 </root>
