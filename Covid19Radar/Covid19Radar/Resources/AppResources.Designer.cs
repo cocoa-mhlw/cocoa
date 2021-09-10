@@ -1210,12 +1210,6 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("SendLogCompletePageButton2", resourceCulture);
             }
         }
-
-        public static string SendLogCompletePageButton3 {
-            get {
-                return ResourceManager.GetString("SendLogCompletePageButton3", resourceCulture);
-            }
-        }
         
         public static string SendLogCompletePageDescription1 {
             get {
@@ -1313,12 +1307,6 @@ namespace Covid19Radar.Resources {
             }
         }
 
-        public static string SuccessMessageToCopyLogId {
-            get {
-                return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
-            }
-        }
-        
         public static string SuccessMessageToSaveOperatingInformationForAndroid {
             get {
                 return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid", resourceCulture);
@@ -1544,6 +1532,18 @@ namespace Covid19Radar.Resources {
         public static string UrlWebAccessibilityPolicy {
             get {
                 return ResourceManager.GetString("UrlWebAccessibilityPolicy", resourceCulture);
+            }
+        }
+
+        public static string SendLogCompletePageButton3 {
+            get {
+                return ResourceManager.GetString("SendLogCompletePageButton3", resourceCulture);
+            }
+        }
+
+        public static string SuccessMessageToCopyLogId {
+            get {
+                return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
             }
         }
     }
