@@ -17,7 +17,6 @@ namespace Covid19Radar.ViewModels
     public class SendLogConfirmationPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly ILogShareService LogShareService;
         private readonly ILogFileService logFileService;
         private readonly ILogUploadService logUploadService;
         private readonly ILogPathService logPathService;
@@ -30,14 +29,12 @@ namespace Covid19Radar.ViewModels
 
         public SendLogConfirmationPageViewModel(
             INavigationService navigationService,
-            ILogShareService logShareService,
             ILogFileService logFileService,
             ILoggerService loggerService,
             ILogUploadService logUploadService,
             ILogPathService logPathService) : base(navigationService)
         {
             this.loggerService = loggerService;
-            this.LogShareService = logShareService;
             this.logFileService = logFileService;
             this.logUploadService = logUploadService;
             this.logPathService = logPathService;
