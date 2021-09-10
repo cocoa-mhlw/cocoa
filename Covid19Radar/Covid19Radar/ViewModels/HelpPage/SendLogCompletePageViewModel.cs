@@ -16,9 +16,15 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService loggerService;
 
+        private string _LogId;
+
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
 
-        private string LogId { get; set; }
+        public string LogId
+        {
+            get { return _LogId; }
+            set { SetProperty(ref _LogId, value); }
+        }
 
         public SendLogCompletePageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
         {
