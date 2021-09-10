@@ -1312,6 +1312,12 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("SendingError", resourceCulture);
             }
         }
+
+        public static string SuccessMessageToCopyLogId {
+            get {
+                return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
+            }
+        }
         
         public static string SuccessMessageToSaveOperatingInformationForAndroid {
             get {
