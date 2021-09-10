@@ -42,6 +42,7 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Label
                         Grid.Row="0"
@@ -62,6 +63,11 @@
                         Text="{x:Static resources:AppResources.SendLogCompletePageButton1}" />
                     <Button
                         Grid.Row="3"
+                        Command="{Binding Path=OnCopyCommand}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.SendLogCompletePageButton3}" />
+                    <Button
+                        Grid.Row="4"
                         Command="{Binding Path=OnClickHomeCommand}"
                         Style="{StaticResource DefaultButtonGrayedOut}"
                         Text="{x:Static resources:AppResources.SendLogCompletePageButton2}" />

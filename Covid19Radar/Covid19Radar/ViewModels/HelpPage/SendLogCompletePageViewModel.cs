@@ -4,6 +4,7 @@
 
 using System;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -19,6 +20,7 @@ namespace Covid19Radar.ViewModels
         private string _LogId;
 
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
+        public Func<string, Task> CopyIdAsync { get; set; } = Clipboard.SetTextAsync;
 
         public string LogId
         {
@@ -49,6 +51,14 @@ namespace Covid19Radar.ViewModels
                 loggerService.Exception("Exception", ex);
                 loggerService.EndMethod();
             }
+        });
+
+        public Command OnCopyCommand => new Command(async () =>
+        {
+            await CopyIdAsync(LogId);
+            await UserDialogs.Instance.AlertAsync(
+                Resources.AppResources.SuccessMessageToCopyLogId,
+                Resources.AppResources.ButtonOk);
         });
 
         public Command OnClickHomeCommand => new Command(async () =>
