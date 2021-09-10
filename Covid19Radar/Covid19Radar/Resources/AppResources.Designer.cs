@@ -1210,6 +1210,12 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("SendLogCompletePageButton2", resourceCulture);
             }
         }
+
+        public static string SendLogCompletePageButton3 {
+            get {
+                return ResourceManager.GetString("SendLogCompletePageButton3", resourceCulture);
+            }
+        }
         
         public static string SendLogCompletePageDescription1 {
             get {
