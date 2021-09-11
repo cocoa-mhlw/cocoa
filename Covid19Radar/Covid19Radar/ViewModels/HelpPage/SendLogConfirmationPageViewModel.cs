@@ -165,11 +165,17 @@ namespace Covid19Radar.ViewModels
                         var logUploadingFileName = logFileService.LogUploadingFileName(LogId);
                         var path = Path.Combine(publicPath, logUploadingFileName);
 
-
-                        await Share.RequestAsync(new ShareFileRequest
+                        try
                         {
-                            File = new ShareFile(path)
-                        });
+                            await Share.RequestAsync(new ShareFileRequest
+                            {
+                                File = new ShareFile(path)
+                            });
+                        }
+                        catch (NotImplementedInReferenceAssemblyException exception)
+                        {
+                            loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+                        }
                     }
                 });
             });
