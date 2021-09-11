@@ -88,7 +88,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
-        public void OnCopyCommandTests()
+        public void OnCopyCommandTests_Success()
         {
             var testLogId = "test-log-id";
 
@@ -101,13 +101,12 @@ namespace Covid19Radar.UnitTests.ViewModels
             {
                 copyId = LogId;
                 return Task.CompletedTask;
-            }
-            ;
+            };
 
             unitUnderTest.OnCopyCommand.Execute(null);
 
             mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Never());
-            Assert.Equal(copyId, testLogId);
+            Assert.Equal(testLogId, copyId);
         }
 
         [Fact]

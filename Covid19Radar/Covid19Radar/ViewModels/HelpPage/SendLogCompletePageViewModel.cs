@@ -20,6 +20,7 @@ namespace Covid19Radar.ViewModels
         private string _LogId;
 
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
+
         public Func<string, Task> CopyIdAsync { get; set; } = Clipboard.SetTextAsync;
 
         public string LogId
@@ -55,10 +56,17 @@ namespace Covid19Radar.ViewModels
 
         public Command OnCopyCommand => new Command(async () =>
         {
-            await CopyIdAsync(LogId);
-            await UserDialogs.Instance.AlertAsync(
-                Resources.AppResources.SuccessMessageToCopyLogId,
-                Resources.AppResources.ButtonOk);
+            try
+            {
+                await CopyIdAsync(LogId);
+                await UserDialogs.Instance.AlertAsync(
+                    Resources.AppResources.SuccessMessageToCopyLogId,
+                    Resources.AppResources.ButtonOk);
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed to copy operationing information ID.", ex);
+            }
         });
 
         public Command OnClickHomeCommand => new Command(async () =>
