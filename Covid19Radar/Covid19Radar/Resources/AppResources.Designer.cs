@@ -1546,12 +1546,5 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
             }
         }
-
-        public static string FailedMessageToCopyOperatingInformationId {
-            get {
-                return ResourceManager.GetString("FailedMessageToCopyOperatingInformationId", resourceCulture);
-            }
-        }
-
     }
 }
