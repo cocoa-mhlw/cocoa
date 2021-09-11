@@ -1003,11 +1003,7 @@ Storage :</value>
     <comment>動作情報IDをコピーする</comment>
   </data>
   <data name="SuccessMessageToCopyLogId" xml:space="preserve">
-    <value>The Operating information ID was copied successfully</value>
-    <comment>コピーしました</comment>
-  </data>
-  <data name="FailedMessageToCopyOperatingInformationId" xml:space="preserve">
-    <value>Failed to Copy operationing information ID</value>
-    <comment>動作情報IDのコピーに失敗しました</comment>
+    <value>The Operating information ID was copied successfully.</value>
+    <comment>The Operating information ID was copied successfully.</comment>
   </data>
 </root>
