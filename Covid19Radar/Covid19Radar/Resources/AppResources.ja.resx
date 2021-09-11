@@ -1005,8 +1005,4 @@
     <value>コピーしました</value>
     <comment>コピーしました</comment>
   </data>
-  <data name="FailedMessageToCopyOperatingInformationId" xml:space="preserve">
-    <value>動作情報IDのコピーに失敗しました</value>
-    <comment>動作情報IDのコピーに失敗しました</comment>
-  </data>
 </root>
