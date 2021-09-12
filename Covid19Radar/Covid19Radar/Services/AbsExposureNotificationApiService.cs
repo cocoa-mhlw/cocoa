@@ -93,10 +93,10 @@ namespace Covid19Radar.Services
             {
                 KeyData = keyData,
                 RollingStartIntervalNumber = DateTimeOffset.UtcNow.AddDays(offsetDays).UtcDateTime.ToEnInterval(),
-                RollingPeriod = random.Next(5, 144),
-                RiskLevel = (RiskLevel)random.Next(1, 8),
-                ReportType = (ReportType)random.Next(1, 8),
-                DaysSinceOnsetOfSymptoms = random.Next(-14, 14)
+                RollingPeriod = random.Next(5, 144 + 1),
+                RiskLevel = (RiskLevel)random.Next(1, 8 + 1),
+                ReportType = (ReportType)random.Next(1, 8 + 1),
+                DaysSinceOnsetOfSymptoms = random.Next(-14, 14 + 1)
             };
         }
 
