@@ -64,7 +64,7 @@
                     <Button
                         Grid.Row="3"
                         Command="{Binding Path=OnCopyCommand}"
-                        Style="{StaticResource DefaultButton}"
+                        Style="{StaticResource DefaultButtonMiddle}"
                         Text="{x:Static resources:AppResources.SendLogCompletePageButton3}" />
                     <Button
                         Grid.Row="4"
