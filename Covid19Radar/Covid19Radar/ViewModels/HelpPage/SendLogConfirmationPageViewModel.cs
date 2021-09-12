@@ -150,6 +150,7 @@ namespace Covid19Radar.ViewModels
 
                 BeginInvokeOnMainThread(async () =>
                 {
+                    await Task.Delay(1000);
                     UserDialogs.Instance.HideLoading();
 
                     if (!result)
