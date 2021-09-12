@@ -64,6 +64,13 @@ iOSシミュレータを利用する場合、***[Debug_Mock|iPhoneSimulator]*** 
 - iOSシミュレータでSecure Storageを利用するには、Keychain を有効にする必要があります。詳細は[Xamarin.Essentials: Secure Storage](https://docs.microsoft.com/ja-jp/xamarin/essentials/secure-storage?tabs=ios#get-started)を参照してください。
 - 正しい構成を選択しないと動作しません。例えば、***[Covid19Radar.Android]>[Debug_Mock|iPhoneSimulator]>[pixel3a...]*** のような構成を選択できますが当然ながら起動しません。
 
+### ビルド失敗事例
+これまでに、以下のビルド失敗に関する事例が報告されています。  
+
+- https://github.com/cocoa-mhlw/cocoa/issues/40
+- https://github.com/cocoa-mhlw/cocoa/issues/53
+- https://github.com/cocoa-mhlw/cocoa/issues/173
+
 ### アプリケーション情報の設定
 
 #### Android
