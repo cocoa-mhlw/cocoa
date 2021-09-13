@@ -42,7 +42,6 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Label
                         Grid.Row="0"
@@ -52,7 +51,15 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{x:Static resources:AppResources.SendIdMailBody1}" />
-                                <Span Text="{Binding LogId}" />
+                                <Span Text="{x:Static x:Environment.NewLine}" />
+                                <Span Text="{Binding LogId}"
+                                      TextColor="#2196F3"
+                                      TextDecorations="Underline">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=OnCopyCommand}"
+                                                              CommandParameter="{Binding LogId}" />
+                                    </Span.GestureRecognizers>
+                                </Span>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -63,11 +70,6 @@
                         Text="{x:Static resources:AppResources.SendLogCompletePageButton1}" />
                     <Button
                         Grid.Row="3"
-                        Command="{Binding Path=OnCopyCommand}"
-                        Style="{StaticResource DefaultButtonMiddle}"
-                        Text="{x:Static resources:AppResources.SendLogCompletePageButton3}" />
-                    <Button
-                        Grid.Row="4"
                         Command="{Binding Path=OnClickHomeCommand}"
                         Style="{StaticResource DefaultButtonGrayedOut}"
                         Text="{x:Static resources:AppResources.SendLogCompletePageButton2}" />

@@ -88,7 +88,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
-        public void OnCopyCommandTests_Success()
+        public void OnCopyCommandTests()
         {
             var testLogId = "test-log-id";
 
