@@ -2,36 +2,34 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="ビルド方法 #  ビルド構成（Build Configuration） #  COCOAのビルド構成は次の通り。
- Debug Debug_Mock Release  Debug #  デバッグ用の構成。サーバー通信と接触確認APIを利用する。 デバッグレベルのログを出力したり、AndroidのAndroidManifestの一部がデバッグ用に切り替わる。
-Debug_Mock #  Debugに加えて、サーバーとの通信と接触確認APIについてはモック（Mock）が応答する構成。 各種サーバーのURLを指定することなく、また後述する接触確認APIをデバッグ目的で利用する権限がなくても動作する。
-Release #  リリース用の構成。
-アプリケーションの情報の設定 #  Android #  Androidのアプリケーション情報は、AndroidManifest.xmlで設定する。
- ApplicationId: manifestタグの属性package Version: manifestタグの属性android:versionName  iOS #  iOSのアプリケーション情報は、info.plistで設定する。
- Bundle ID: CFBundleIdentifier Version: CFBundleShortVersionString  接触確認APIを利用したデバッグについて #  DebugやReleaseのConfigurationでビルドしても、接触確認APIにはアクセスできない。
-Androidの場合は、ホワイトリストに登録されているGoogleアカウントが必要。ホワイトリストへの登録にはGoogleへ申請する。
-iOSの場合は、Appleから承認を得たプロビジョニングプロファイルが必要。
-申請はGoogle, Appleともに公衆衛生機関のみ許可される。 ホワイトリストに登録されたアカウントやプロビジョニングプロファイルは、開発チームが運用している（これはどの国も同じ状況という認識）。">
+<meta name=description content="ビルド方法 #  事前準備 #  COCOAはXamarinベースのアプリなので、Xamarin開発環境(Visual Studio)を自身のPCへインストールします。 詳細な手順等については、Xamarinのインストールを参照してください。
+Xamarinについては、Xamarinドキュメント を参照してください。
+COCOAの構成 #  COCOA内には2つのソリューションファイルがあります。
+ COCOAアプリ・・・Covid19Radar.sln COCOAサーバ・・・Covid19Radar.Functions.sln  COCOAアプリのビルド #  ビルド構成 #  COCOAアプリのビルド構成は以下の通りです(Android/iOS共通)。
+接触確認APIの利用については、接触確認APIの利用についても参照してください。
+   ビルド構成 サーバ通信 接触確認API 利用可能なメンバー     Debug ON ON COCOA開発チーム   Debug_Mock OFF(*) OFF(*) COCOA開発チーム, コミュニティメンバー   Release ON ON COCOA開発チーム    (*) モックAPIを利用
+Debug #  デバッグ用の構成です。サーバー通信と接触確認APIを利用します。 デバッグレベルのログを出力したり、AndroidのAndroidManifestの一部をデバッグ用に切り替えます。 切替内容に関する詳細は、DEBUGマクロを参照してください。
+COCOA開発チームがデバッグする際に利用します。コミュニティメンバーが利用することはできません。
+Debug_Mock #  サーバーとの通信と接触確認APIについてはモック（Mock）が応答する構成です。">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content="ビルド方法">
-<meta property="og:description" content="ビルド方法 #  ビルド構成（Build Configuration） #  COCOAのビルド構成は次の通り。
- Debug Debug_Mock Release  Debug #  デバッグ用の構成。サーバー通信と接触確認APIを利用する。 デバッグレベルのログを出力したり、AndroidのAndroidManifestの一部がデバッグ用に切り替わる。
-Debug_Mock #  Debugに加えて、サーバーとの通信と接触確認APIについてはモック（Mock）が応答する構成。 各種サーバーのURLを指定することなく、また後述する接触確認APIをデバッグ目的で利用する権限がなくても動作する。
-Release #  リリース用の構成。
-アプリケーションの情報の設定 #  Android #  Androidのアプリケーション情報は、AndroidManifest.xmlで設定する。
- ApplicationId: manifestタグの属性package Version: manifestタグの属性android:versionName  iOS #  iOSのアプリケーション情報は、info.plistで設定する。
- Bundle ID: CFBundleIdentifier Version: CFBundleShortVersionString  接触確認APIを利用したデバッグについて #  DebugやReleaseのConfigurationでビルドしても、接触確認APIにはアクセスできない。
-Androidの場合は、ホワイトリストに登録されているGoogleアカウントが必要。ホワイトリストへの登録にはGoogleへ申請する。
-iOSの場合は、Appleから承認を得たプロビジョニングプロファイルが必要。
-申請はGoogle, Appleともに公衆衛生機関のみ許可される。 ホワイトリストに登録されたアカウントやプロビジョニングプロファイルは、開発チームが運用している（これはどの国も同じ状況という認識）。">
+<meta property="og:description" content="ビルド方法 #  事前準備 #  COCOAはXamarinベースのアプリなので、Xamarin開発環境(Visual Studio)を自身のPCへインストールします。 詳細な手順等については、Xamarinのインストールを参照してください。
+Xamarinについては、Xamarinドキュメント を参照してください。
+COCOAの構成 #  COCOA内には2つのソリューションファイルがあります。
+ COCOAアプリ・・・Covid19Radar.sln COCOAサーバ・・・Covid19Radar.Functions.sln  COCOAアプリのビルド #  ビルド構成 #  COCOAアプリのビルド構成は以下の通りです(Android/iOS共通)。
+接触確認APIの利用については、接触確認APIの利用についても参照してください。
+   ビルド構成 サーバ通信 接触確認API 利用可能なメンバー     Debug ON ON COCOA開発チーム   Debug_Mock OFF(*) OFF(*) COCOA開発チーム, コミュニティメンバー   Release ON ON COCOA開発チーム    (*) モックAPIを利用
+Debug #  デバッグ用の構成です。サーバー通信と接触確認APIを利用します。 デバッグレベルのログを出力したり、AndroidのAndroidManifestの一部をデバッグ用に切り替えます。 切替内容に関する詳細は、DEBUGマクロを参照してください。
+COCOA開発チームがデバッグする際に利用します。コミュニティメンバーが利用することはできません。
+Debug_Mock #  サーバーとの通信と接触確認APIについてはモック（Mock）が応答する構成です。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-10T17:11:06+09:00">
+<meta property="article:modified_time" content="2021-09-13T12:05:07+09:00">
 <title>ビルド方法 | COCOA Open Source Project</title>
 <link rel=manifest href=/cocoa/manifest.json>
 <link rel=icon href=/cocoa/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
 <script defer src=/cocoa/flexsearch.min.js></script>
-<script defer src=/cocoa/en.search.min.ed5f6d5f8d04b296839f47f05d194803d174f9133a2253027ed3ae3f55f4d521.js integrity="sha256-7V9tX40EspaDn0fwXRlIA9F0+RM6IlMCftOuP1X01SE=" crossorigin=anonymous></script>
+<script defer src=/cocoa/en.search.min.8463575ce08d906b6fb15ed9dd2d67c9ef180aa0854dbf15126cd19514d92ea8.js integrity="sha256-hGNXXOCNkGtvsV7Z3S1nye8YCqCFTb8VEmzRlRTZLqg=" crossorigin=anonymous></script>
 </head>
 <body dir=ltr>
 <input type=checkbox class="hidden toggle" id=menu-control>
@@ -165,20 +163,23 @@ GitHubリポジトリ
 <aside class="hidden clearfix">
 <nav id=TableOfContents>
 <ul>
-<li><a href=#ビルド構成build-configuration>ビルド構成（Build Configuration）</a>
+<li><a href=#事前準備>事前準備</a></li>
+<li><a href=#cocoaの構成>COCOAの構成</a></li>
+<li><a href=#cocoaアプリのビルド>COCOAアプリのビルド</a>
 <ul>
-<li><a href=#debug>Debug</a></li>
-<li><a href=#debug_mock>Debug_Mock</a></li>
-<li><a href=#release>Release</a></li>
+<li><a href=#ビルド構成>ビルド構成</a></li>
+<li><a href=#ビルド実行手順>ビルド＆実行手順</a></li>
+<li><a href=#注意事項>注意事項</a></li>
+<li><a href=#ビルド失敗事例>ビルド失敗事例</a></li>
+<li><a href=#アプリケーション情報の設定>アプリケーション情報の設定</a></li>
 </ul>
 </li>
-<li><a href=#アプリケーションの情報の設定>アプリケーションの情報の設定</a>
+<li><a href=#cocoaサーバのビルド>COCOAサーバのビルド</a></li>
+<li><a href=#接触確認apiの利用について>接触確認APIの利用について</a>
 <ul>
-<li><a href=#android>Android</a></li>
-<li><a href=#ios>iOS</a></li>
+<li><a href=#利用手順>利用手順</a></li>
 </ul>
 </li>
-<li><a href=#接触確認apiを利用したデバッグについて>接触確認APIを利用したデバッグについて</a></li>
 </ul>
 </nav>
 </aside>
@@ -187,64 +188,176 @@ GitHubリポジトリ
 ビルド方法
 <a class=anchor href=#%e3%83%93%e3%83%ab%e3%83%89%e6%96%b9%e6%b3%95>#</a>
 </h1>
-<h2 id=ビルド構成build-configuration>
-ビルド構成（Build Configuration）
-<a class=anchor href=#%e3%83%93%e3%83%ab%e3%83%89%e6%a7%8b%e6%88%90build-configuration>#</a>
+<h2 id=事前準備>
+事前準備
+<a class=anchor href=#%e4%ba%8b%e5%89%8d%e6%ba%96%e5%82%99>#</a>
 </h2>
-<p>COCOAのビルド構成は次の通り。</p>
+<p>COCOAはXamarinベースのアプリなので、Xamarin開発環境(Visual Studio)を自身のPCへインストールします。
+詳細な手順等については、<a href=https://docs.microsoft.com/ja-jp/xamarin/get-started/installation/>Xamarinのインストール</a>を参照してください。</p>
+<p>Xamarinについては、<a href=https://docs.microsoft.com/ja-jp/xamarin/>Xamarinドキュメント</a> を参照してください。</p>
+<h2 id=cocoaの構成>
+COCOAの構成
+<a class=anchor href=#cocoa%e3%81%ae%e6%a7%8b%e6%88%90>#</a>
+</h2>
+<p>COCOA内には2つのソリューションファイルがあります。</p>
 <ul>
-<li>Debug</li>
-<li>Debug_Mock</li>
-<li>Release</li>
+<li>COCOAアプリ・・・Covid19Radar.sln</li>
+<li>COCOAサーバ・・・Covid19Radar.Functions.sln</li>
 </ul>
-<h3 id=debug>
+<h2 id=cocoaアプリのビルド>
+COCOAアプリのビルド
+<a class=anchor href=#cocoa%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%93%e3%83%ab%e3%83%89>#</a>
+</h2>
+<h3 id=ビルド構成>
+ビルド構成
+<a class=anchor href=#%e3%83%93%e3%83%ab%e3%83%89%e6%a7%8b%e6%88%90>#</a>
+</h3>
+<p>COCOAアプリのビルド構成は以下の通りです(Android/iOS共通)。<br>
+接触確認APIの利用については、<a href=#%e6%8e%a5%e8%a7%a6%e7%a2%ba%e8%aa%8dapi%e3%81%ae%e5%88%a9%e7%94%a8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>接触確認APIの利用について</a>も参照してください。</p>
+<table>
+<thead>
+<tr>
+<th>ビルド構成</th>
+<th>サーバ通信</th>
+<th>接触確認API</th>
+<th>利用可能なメンバー</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debug</td>
+<td>ON</td>
+<td>ON</td>
+<td>COCOA開発チーム</td>
+</tr>
+<tr>
+<td>Debug_Mock</td>
+<td>OFF(*)</td>
+<td>OFF(*)</td>
+<td>COCOA開発チーム, コミュニティメンバー</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>ON</td>
+<td>ON</td>
+<td>COCOA開発チーム</td>
+</tr>
+</tbody>
+</table>
+<p>(*) モックAPIを利用</p>
+<h4 id=debug>
 Debug
 <a class=anchor href=#debug>#</a>
-</h3>
-<p>デバッグ用の構成。サーバー通信と接触確認APIを利用する。
-<a href="https://github.com/cocoa-mhlw/cocoa/search?q=%22if+DEBUG%22">デバッグレベルのログを出力したり、AndroidのAndroidManifestの一部がデバッグ用に切り替わる。</a></p>
-<h3 id=debug_mock>
+</h4>
+<p>デバッグ用の構成です。サーバー通信と接触確認APIを利用します。
+デバッグレベルのログを出力したり、AndroidのAndroidManifestの一部をデバッグ用に切り替えます。
+切替内容に関する詳細は、<a href="https://github.com/cocoa-mhlw/cocoa/search?q=%22if+DEBUG%22">DEBUGマクロ</a>を参照してください。</p>
+<p>COCOA開発チームがデバッグする際に利用します。コミュニティメンバーが利用することはできません。</p>
+<h4 id=debug_mock>
 Debug_Mock
 <a class=anchor href=#debug_mock>#</a>
-</h3>
-<p>Debugに加えて、サーバーとの通信と接触確認APIについてはモック（Mock）が応答する構成。
-各種サーバーのURLを指定することなく、また後述する接触確認APIをデバッグ目的で利用する権限がなくても動作する。</p>
-<h3 id=release>
+</h4>
+<p>サーバーとの通信と接触確認APIについてはモック（Mock）が応答する構成です。<br>
+上記以外はDebugと同じです。各種サーバーのURLを指定したり、接触確認APIを利用する権限(デバッグ用途)を保持している必要はありません。</p>
+<p>コミュニティメンバーが主に利用する構成です。</p>
+<h4 id=release>
 Release
 <a class=anchor href=#release>#</a>
+</h4>
+<p>アプリリリース用の構成です。</p>
+<p>COCOA開発チームがアプリリリースする際に利用します。コミュニティメンバーが利用することはできません。</p>
+<h3 id=ビルド実行手順>
+ビルド＆実行手順
+<a class=anchor href=#%e3%83%93%e3%83%ab%e3%83%89%e5%ae%9f%e8%a1%8c%e6%89%8b%e9%a0%86>#</a>
 </h3>
-<p>リリース用の構成。</p>
-<h2 id=アプリケーションの情報の設定>
-アプリケーションの情報の設定
-<a class=anchor href=#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e6%83%85%e5%a0%b1%e3%81%ae%e8%a8%ad%e5%ae%9a>#</a>
-</h2>
-<h3 id=android>
+<p>Debug_Mockを例にしてビルド手順を説明します。手順は色々あると思いますが、エディタの左上にある構成選択から適切な構成を選択して再生ボタン(▶︎)をクリックする方法を紹介します。</p>
+<p>以下はVisual Studio 2019 for Macで選択する画面の例です。Windowsの場合は画面が異なりますが、基本的には同じです。</p>
+<h4 id=androidアプリの場合>
+Androidアプリの場合
+<a class=anchor href=#android%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e5%a0%b4%e5%90%88>#</a>
+</h4>
+<p><em><strong>[Covid19Radar.Android]>[Debug_Mock]>[Your_Device]</strong></em> を選択してビルドします。
+<img src=/cocoa/development/how_to_build//visualstudio-android.webp alt=構成選択例(Android)></p>
+<h4 id=iosアプリの場合>
+iOSアプリの場合
+<a class=anchor href=#ios%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e5%a0%b4%e5%90%88>#</a>
+</h4>
+<p><em><strong>[Covid19Radar.iOS]>[Debug_Mock]>[Your_Device]</strong></em> を選択してビルドします。<br>
+iOSシミュレータを利用する場合、<em><strong>[Debug_Mock|iPhoneSimulator]</strong></em> を選択します。
+<img src=/cocoa/development/how_to_build//visualstudio-ios.webp alt=構成選択例(iOS)></p>
+<h3 id=注意事項>
+注意事項
+<a class=anchor href=#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85>#</a>
+</h3>
+<ul>
+<li>iOS実機を利用する場合は、Apple Developersの登録が必要です。</li>
+<li>iOSシミュレータでSecure Storageを利用するには、Keychain を有効にする必要があります。詳細は<a href="https://docs.microsoft.com/ja-jp/xamarin/essentials/secure-storage?tabs=ios#get-started">Xamarin.Essentials: Secure Storage</a>を参照してください。</li>
+<li>正しい構成を選択しないと動作しません。例えば、<em><strong>[Covid19Radar.Android]>[Debug_Mock|iPhoneSimulator]>[pixel3a&mldr;]</strong></em> のような構成を選択できますが当然ながら起動しません。</li>
+</ul>
+<h3 id=ビルド失敗事例>
+ビルド失敗事例
+<a class=anchor href=#%e3%83%93%e3%83%ab%e3%83%89%e5%a4%b1%e6%95%97%e4%ba%8b%e4%be%8b>#</a>
+</h3>
+<p>これまでに、以下のビルド失敗に関する事例が報告されています。</p>
+<ul>
+<li><a href=https://github.com/cocoa-mhlw/cocoa/issues/40>https://github.com/cocoa-mhlw/cocoa/issues/40</a></li>
+<li><a href=https://github.com/cocoa-mhlw/cocoa/issues/53>https://github.com/cocoa-mhlw/cocoa/issues/53</a></li>
+<li><a href=https://github.com/cocoa-mhlw/cocoa/issues/173>https://github.com/cocoa-mhlw/cocoa/issues/173</a></li>
+</ul>
+<h3 id=アプリケーション情報の設定>
+アプリケーション情報の設定
+<a class=anchor href=#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e6%83%85%e5%a0%b1%e3%81%ae%e8%a8%ad%e5%ae%9a>#</a>
+</h3>
+<h4 id=android>
 Android
 <a class=anchor href=#android>#</a>
-</h3>
-<p>Androidのアプリケーション情報は、<a href=https://github.com/cocoa-mhlw/cocoa/blob/master/Covid19Radar/Covid19Radar.Android/Properties/AndroidManifest.xml>AndroidManifest.xml</a>で設定する。</p>
+</h4>
+<p>Androidのアプリケーション情報は、<a href=https://github.com/cocoa-mhlw/cocoa/blob/master/Covid19Radar/Covid19Radar.Android/Properties/AndroidManifest.xml>AndroidManifest.xml</a>で設定します。</p>
 <ul>
 <li>ApplicationId: <code>manifest</code>タグの属性<code>package</code></li>
 <li>Version: <code>manifest</code>タグの属性<code>android:versionName</code></li>
 </ul>
-<h3 id=ios>
+<h4 id=ios>
 iOS
 <a class=anchor href=#ios>#</a>
-</h3>
-<p>iOSのアプリケーション情報は、<a href=https://github.com/cocoa-mhlw/cocoa/blob/master/Covid19Radar/Covid19Radar.iOS/Info.plist>info.plist</a>で設定する。</p>
+</h4>
+<p>iOSのアプリケーション情報は、<a href=https://github.com/cocoa-mhlw/cocoa/blob/master/Covid19Radar/Covid19Radar.iOS/Info.plist>info.plist</a>で設定します。</p>
 <ul>
 <li>Bundle ID: <code>CFBundleIdentifier</code></li>
 <li>Version: <code>CFBundleShortVersionString</code></li>
 </ul>
-<h2 id=接触確認apiを利用したデバッグについて>
-接触確認APIを利用したデバッグについて
-<a class=anchor href=#%e6%8e%a5%e8%a7%a6%e7%a2%ba%e8%aa%8dapi%e3%82%92%e5%88%a9%e7%94%a8%e3%81%97%e3%81%9f%e3%83%87%e3%83%90%e3%83%83%e3%82%b0%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a>
+<h2 id=cocoaサーバのビルド>
+COCOAサーバのビルド
+<a class=anchor href=#cocoa%e3%82%b5%e3%83%bc%e3%83%90%e3%81%ae%e3%83%93%e3%83%ab%e3%83%89>#</a>
 </h2>
-<p>DebugやReleaseのConfigurationでビルドしても、接触確認APIにはアクセスできない。</p>
-<p>Androidの場合は、ホワイトリストに登録されているGoogleアカウントが必要。ホワイトリストへの登録にはGoogleへ申請する。</p>
-<p>iOSの場合は、Appleから承認を得たプロビジョニングプロファイルが必要。</p>
-<p>申請はGoogle, Appleともに公衆衛生機関のみ許可される。
-ホワイトリストに登録されたアカウントやプロビジョニングプロファイルは、開発チームが運用している（これはどの国も同じ状況という認識）。</p>
+<p>COCOAサーバのビルド構成はDebug/Releaseの2通りです。</p>
+<h2 id=接触確認apiの利用について>
+接触確認APIの利用について
+<a class=anchor href=#%e6%8e%a5%e8%a7%a6%e7%a2%ba%e8%aa%8dapi%e3%81%ae%e5%88%a9%e7%94%a8%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a>
+</h2>
+<p>アプリ開発で接触確認APIを利用するには、Goodle,Appleへ申請して許可を得る必要があります。<br>
+申請については、Google,Appleともに公衆衛生機関のみ許可されています。詳細は以下を参照してください。</p>
+<ul>
+<li><a href=https://blog.google/documents/72/Exposure_Notifications_Service_Additional_Terms.pdf/>Google COVID-19 Exposure Notifications Service Additional Terms</a></li>
+<li><a href=https://developer.apple.com/contact/request/download/Exposure_Notification_Addendum.pdf>Apple Exposure Notification APIs Addendum</a></li>
+</ul>
+<p>COCOA開発チームはAPIを利用するための申請を実施してアカウントやプロファイルを運用しています。
+コミュニティメンバーはAPI利用許可を得ることができないため、DebugやRelease構成でビルドしても接触確認APIを利用できません。</p>
+<h3 id=利用手順>
+利用手順
+<a class=anchor href=#%e5%88%a9%e7%94%a8%e6%89%8b%e9%a0%86>#</a>
+</h3>
+<h4 id=androidの場合>
+Androidの場合
+<a class=anchor href=#android%e3%81%ae%e5%a0%b4%e5%90%88>#</a>
+</h4>
+<p>ホワイトリストに登録されているGoogleアカウントを利用します。<br>
+ホワイトリスト登録についてはGoogleへ申請します。</p>
+<h4 id=iosの場合>
+iOSの場合
+<a class=anchor href=#ios%e3%81%ae%e5%a0%b4%e5%90%88>#</a>
+</h4>
+<p>Appleから承認を得たプロビジョニングプロファイルを利用します。</p>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
@@ -259,20 +372,23 @@ iOS
 <div class=book-toc-content>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#ビルド構成build-configuration>ビルド構成（Build Configuration）</a>
+<li><a href=#事前準備>事前準備</a></li>
+<li><a href=#cocoaの構成>COCOAの構成</a></li>
+<li><a href=#cocoaアプリのビルド>COCOAアプリのビルド</a>
 <ul>
-<li><a href=#debug>Debug</a></li>
-<li><a href=#debug_mock>Debug_Mock</a></li>
-<li><a href=#release>Release</a></li>
+<li><a href=#ビルド構成>ビルド構成</a></li>
+<li><a href=#ビルド実行手順>ビルド＆実行手順</a></li>
+<li><a href=#注意事項>注意事項</a></li>
+<li><a href=#ビルド失敗事例>ビルド失敗事例</a></li>
+<li><a href=#アプリケーション情報の設定>アプリケーション情報の設定</a></li>
 </ul>
 </li>
-<li><a href=#アプリケーションの情報の設定>アプリケーションの情報の設定</a>
+<li><a href=#cocoaサーバのビルド>COCOAサーバのビルド</a></li>
+<li><a href=#接触確認apiの利用について>接触確認APIの利用について</a>
 <ul>
-<li><a href=#android>Android</a></li>
-<li><a href=#ios>iOS</a></li>
+<li><a href=#利用手順>利用手順</a></li>
 </ul>
 </li>
-<li><a href=#接触確認apiを利用したデバッグについて>接触確認APIを利用したデバッグについて</a></li>
 </ul>
 </nav>
 </div>
