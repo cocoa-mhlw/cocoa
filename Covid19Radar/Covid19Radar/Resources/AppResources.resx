@@ -1103,7 +1103,7 @@ Storage :</value>
     <value>https://www.mhlw.go.jp/cocoa/webaccessibility_english.html</value>
     <comment>ウェブアクセシビリティ方針URL</comment>
   </data>
-  <data name="SendLogCompletePageCopyid" xml:space="preserve">
+  <data name="SendLogCompletePageCopyId" xml:space="preserve">
     <value>Operating information ID (Tap to copy)</value>
     <comment>動作情報ID（タップしてコピー）</comment>
   </data>
