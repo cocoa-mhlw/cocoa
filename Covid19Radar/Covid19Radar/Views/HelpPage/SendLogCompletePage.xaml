@@ -50,7 +50,7 @@
                     <Label Grid.Row="1" Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.SendIdMailBody1}" />
+                                <Span Text="{x:Static resources:AppResources.SendLogCompletePageCopyId}" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
                                 <Span Text="{Binding LogId}"
                                       TextColor="#2196F3"
