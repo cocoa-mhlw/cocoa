@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -65,8 +65,10 @@ namespace Covid19Radar.Api
             newItem.ProtectSecret = Cryption.Protect(secret);
             await UserRepository.Create(newItem);
             var result = new RegisterResultModel();
-            result.UserUuid = userUuid;
-            result.Secret = secret;
+            // set dummy Uuid
+            var dummyUuid = "000000000000000000000000000000000";
+            result.UserUuid = dummyUuid;
+            result.Secret = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
             result.JumpConsistentSeed = newItem.JumpConsistentSeed;
             return new OkObjectResult(result);
         }

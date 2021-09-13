@@ -46,6 +46,7 @@
     <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
     <CodesignProvision>VS: net.kzmx.Covid19Radar Development</CodesignProvision>
     <LangVersion>latest</LangVersion>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -106,6 +107,7 @@
     <BuildIpa>false</BuildIpa>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <OptimizePNGs>true</OptimizePNGs>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -163,6 +165,7 @@
     <MtouchFloat32>true</MtouchFloat32>
     <MtouchI18n>cjk</MtouchI18n>
     <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
@@ -198,6 +201,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <MtouchArch>ARM64</MtouchArch>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
