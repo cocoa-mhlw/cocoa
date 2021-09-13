@@ -13,6 +13,7 @@ namespace Covid19Radar.Repository
     {
         public string ResourceUrl { get; }
         public Task<ExposureConfiguration> GetExposureConfigurationAsync();
+        public void RemoveExposureConfiguration();
     }
 
     public class ExposureConfigurationRepository : IExposureConfigurationRepository
@@ -115,5 +116,16 @@ namespace Covid19Radar.Repository
 
         private async Task SaveAsync(string exposureConfigurationAsJson)
             => await File.WriteAllTextAsync(_exposureConfigurationPath, exposureConfigurationAsJson);
+
+        public void RemoveExposureConfiguration()
+        {
+            if (!File.Exists(_exposureConfigurationPath))
+            {
+                _loggerService.Debug("No ExposureConfiguration file found.");
+                return;
+            }
+
+            File.Delete(_exposureConfigurationPath);
+        }
     }
 }

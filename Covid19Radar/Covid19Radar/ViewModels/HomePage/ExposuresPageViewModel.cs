@@ -3,9 +3,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Prism.Navigation;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
@@ -44,7 +46,7 @@ namespace Covid19Radar.ViewModels
                 = await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
             var userExposureInformationList
-                = await _userDataRepository.GetUserExposureInfosAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay) ?? new List<UserExposureInfo>();
 
             if (exposureWindowList.Count() > 0)
             {

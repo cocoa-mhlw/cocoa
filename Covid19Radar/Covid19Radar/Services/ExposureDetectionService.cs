@@ -79,12 +79,11 @@ namespace Covid19Radar.Services
                 .GetAwaiter().GetResult();
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
-            bool isNewExposureDetected = _userDataRepository.AppendExposureDataAsync(
+            bool isNewExposureDetected = _userDataRepository.AppendExposureData(
                 exposureSummary,
                 exposureInformations.ToList(),
                 configurationV1.MinimumRiskScore
-                )
-                .GetAwaiter().GetResult();
+                );
 
             if (isNewExposureDetected)
             {
