@@ -105,7 +105,7 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             unitUnderTest.OnCopyCommand.Execute(null);
 
-            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Never());
+            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Once());
             Assert.Equal(testLogId, copyId);
         }
 
