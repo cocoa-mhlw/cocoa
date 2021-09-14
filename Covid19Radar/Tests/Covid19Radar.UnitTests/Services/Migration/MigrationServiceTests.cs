@@ -975,7 +975,20 @@ namespace Covid19Radar.UnitTests.Services.Migration
         }
         public void RemoveValue(string key) => _dict.Remove(key);
 
-        public void SetValue<T>(string key, T value) => _dict[key] = value;
+        public void SetValue<T>(string key, T value)
+        {
+            object obj = value;
+
+            switch (value)
+            {
+                case DateTime:
+                    obj = value.ToString();
+                    break;
+                default:
+                    break;
+            }
+            _dict[key] = obj;
+        }
     }
 
     class InMemorySecureStorageService : ISecureStorageService
