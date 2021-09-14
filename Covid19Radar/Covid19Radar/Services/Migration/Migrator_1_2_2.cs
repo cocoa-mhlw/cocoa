@@ -161,12 +161,12 @@ namespace Covid19Radar.Services.Migration
             {
                 if (_applicationPropertyService.ContainsKey(applicationPropertyKey))
                 {
-                    var lastUpdateDate = (DateTime)_applicationPropertyService.GetProperties(applicationPropertyKey);
+                    var lastUpdateDate = _applicationPropertyService.GetProperties(applicationPropertyKey).ToString();
                     _preferencesService.SetValue(preferenceKey, lastUpdateDate);
                 }
                 else
                 {
-                    _preferencesService.SetValue(preferenceKey, new DateTime());
+                    _preferencesService.SetValue(preferenceKey, new DateTime().ToString());
                     _loggerService.Info($"Migrated {applicationPropertyKey}");
                 }
             }
@@ -185,7 +185,7 @@ namespace Covid19Radar.Services.Migration
 
             if (userData.StartDateTime != null && !userData.StartDateTime.Equals(new DateTime()))
             {
-                _preferencesService.SetValue(PREFERENCE_KEY_START_DATETIME, userData.StartDateTime);
+                _preferencesService.SetValue(PREFERENCE_KEY_START_DATETIME, userData.StartDateTime.ToString());
                 userData.StartDateTime = new DateTime();
                 _loggerService.Info("Migrated StartDateTime");
             }
