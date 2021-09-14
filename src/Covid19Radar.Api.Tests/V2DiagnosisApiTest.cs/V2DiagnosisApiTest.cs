@@ -116,7 +116,7 @@ namespace Covid19Radar.Api.Tests
 
             context.Setup(_ => _.Request.Body).Returns(stream);
 
-            if(isChaffRequest)
+            if (isChaffRequest)
             {
                 IHeaderDictionary headers = new HeaderDictionary() {
                     { "X-Chaff", "Foo" /* Server will check X-Chaff header existence, content no matter. */ }
@@ -132,7 +132,7 @@ namespace Covid19Radar.Api.Tests
             {
                 Assert.AreEqual(((int)expectedStatusCode), statusCodeResult.StatusCode);
             }
-            else if(result is BadRequestErrorMessageResult)
+            else if (result is BadRequestErrorMessageResult)
             {
                 Assert.AreEqual(expectedStatusCode, HttpStatusCode.BadRequest);
             }
