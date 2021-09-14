@@ -250,6 +250,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
                 _dummyPreferencesService.RemoveValue(PreferenceKey.AppVersion);
             }
 
+            await Task.Delay(1000);
+
             return (
                 startDateTime,
                 termsOfServiceLastUpdateDate, privacyPolicyLastUpdateDate,
