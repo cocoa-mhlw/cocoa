@@ -54,15 +54,6 @@ namespace Covid19Radar.Api
         public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "put", Route = "v2/diagnosis")] HttpRequest req)
         {
-#if DEBUG
-            // Check Chaff request for debug
-            // https://google.github.io/exposure-notifications-server/server_functional_requirements.html
-            if (req.Headers?.ContainsKey(CHAFF_HEADER) ?? false)
-            {
-                return new NoContentResult();
-            }
-#endif
-
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             Logger.LogInformation($"{nameof(RunAsync)}");
 
