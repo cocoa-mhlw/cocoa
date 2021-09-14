@@ -202,7 +202,7 @@ namespace Covid19Radar.Services.Migration
 
             if (_applicationPropertyService.ContainsKey(ConfigurationPropertyKey))
             {
-                var configuration = _applicationPropertyService.GetProperties(ConfigurationPropertyKey) as string;
+                var configuration = _applicationPropertyService.GetProperties(ConfigurationPropertyKey).ToString();
                 if (!string.IsNullOrEmpty(configuration))
                 {
                     _preferencesService.SetValue(PreferenceKey.ExposureNotificationConfiguration, configuration);
