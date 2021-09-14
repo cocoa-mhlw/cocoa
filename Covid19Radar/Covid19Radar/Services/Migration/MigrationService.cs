@@ -220,6 +220,7 @@ namespace Covid19Radar.Services.Migration
             {
                 await new Migrator_1_3_0(
                     _preferencesService,
+                    _secureStorageService,
                     _loggerService
                     ).ExecuteAsync();
 

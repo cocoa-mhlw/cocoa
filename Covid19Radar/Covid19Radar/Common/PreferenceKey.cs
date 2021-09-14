@@ -20,6 +20,5 @@ namespace Covid19Radar.Common
 
         // for secure storage
         public static string ExposureInformation = "ExposureInformation";
-        public static string ExposureSummary = "ExposureSummary";
     }
 }

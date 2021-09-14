@@ -14,19 +14,23 @@ namespace Covid19Radar.Services.Migration
         private const string START_DATETIME = "StartDateTime";
         private const string TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
+        private const string EXPOSURE_SUMMARY = "ExposureSummary";
 
         private readonly DateTime FALLBACK_DATETIME = new DateTime(2020, 6, 19);
         private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
 
         private readonly IPreferencesService _preferencesService;
+        private readonly ISecureStorageService _secureStorageService;
         private readonly ILoggerService _loggerService;
 
         public Migrator_1_3_0(
             IPreferencesService preferencesService,
+            ISecureStorageService secureStorageService,
             ILoggerService loggerService
             )
         {
             _preferencesService = preferencesService;
+            _secureStorageService = secureStorageService;
             _loggerService = loggerService;
         }
 
@@ -55,6 +59,11 @@ namespace Covid19Radar.Services.Migration
                     -TIME_DIFFERENCIAL_JST_UTC,
                     FALLBACK_DATETIME
                     );
+            }
+
+            if (_secureStorageService.ContainsKey(EXPOSURE_SUMMARY))
+            {
+                _secureStorageService.RemoveValue(EXPOSURE_SUMMARY);
             }
 
             return Task.CompletedTask;

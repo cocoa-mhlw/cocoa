@@ -218,13 +218,6 @@ namespace Covid19Radar.Services.Migration
                 _loggerService.Info("Migrated ExposureInformation");
             }
 
-            if (userData.ExposureSummary != null)
-            {
-                _secureStorageService.SetValue(PreferenceKey.ExposureSummary, JsonConvert.SerializeObject(userData.ExposureSummary));
-                userData.ExposureSummary = null;
-                _loggerService.Info("Migrated ExposureSummary");
-            }
-
             _loggerService.EndMethod();
         }
 
@@ -235,7 +228,6 @@ namespace Covid19Radar.Services.Migration
             public bool IsPolicyAccepted { get; set; } = false;
             public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
             public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
-            public UserExposureSummary ExposureSummary { get; set; }
         }
     }
 }

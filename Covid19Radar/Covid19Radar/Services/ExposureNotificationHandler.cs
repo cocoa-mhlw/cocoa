@@ -91,19 +91,17 @@ namespace Covid19Radar.Services
             var exposureNotificationService = ExposureNotificationService;
             var exposureInformationList = UserDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay) ?? new List<UserExposureInfo>();
 
-            UserExposureSummary userExposureSummary = new UserExposureSummary(summary.DaysSinceLastExposure, summary.MatchedKeyCount, summary.HighestRiskScore, summary.AttenuationDurations, summary.SummationRiskScore);
-
-            loggerService.Info($"ExposureSummary.MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
-            loggerService.Info($"ExposureSummary.DaysSinceLastExposure: {userExposureSummary.DaysSinceLastExposure}");
-            loggerService.Info($"ExposureSummary.HighestRiskScore: {userExposureSummary.HighestRiskScore}");
-            loggerService.Info($"ExposureSummary.AttenuationDurations: {string.Join(",", userExposureSummary.AttenuationDurations)}");
-            loggerService.Info($"ExposureSummary.SummationRiskScore: {userExposureSummary.SummationRiskScore}");
+            loggerService.Info($"ExposureSummary.MatchedKeyCount: {summary.MatchedKeyCount}");
+            loggerService.Info($"ExposureSummary.DaysSinceLastExposure: {summary.DaysSinceLastExposure}");
+            loggerService.Info($"ExposureSummary.HighestRiskScore: {summary.HighestRiskScore}");
+            loggerService.Info($"ExposureSummary.AttenuationDurations: {string.Join(",", summary.AttenuationDurations)}");
+            loggerService.Info($"ExposureSummary.SummationRiskScore: {summary.SummationRiskScore}");
 
             var config = await GetConfigurationAsync();
 
             var isNewExposureDetected = false;
 
-            if (userExposureSummary.HighestRiskScore >= config.MinimumRiskScore)
+            if (summary.HighestRiskScore >= config.MinimumRiskScore)
             {
                 var exposureInfo = await getExposureInfo();
                 loggerService.Info($"ExposureInfo: {exposureInfo.Count()}");
@@ -127,17 +125,17 @@ namespace Covid19Radar.Services
 
             if (isNewExposureDetected)
             {
-                loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {userExposureSummary.MatchedKeyCount}");
+                loggerService.Info($"Save ExposureSummary. MatchedKeyCount: {summary.MatchedKeyCount}");
                 loggerService.Info($"Save ExposureInformation. Count: {exposureInformationList.Count}");
 
                 exposureInformationList.Sort((a, b) => a.Timestamp.CompareTo(b.Timestamp));
-                UserDataRepository.SetExposureInformation(userExposureSummary, exposureInformationList);
+                UserDataRepository.SetExposureInformation(exposureInformationList);
 
                 await LocalNotificationService.ShowExposureNotificationAsync();
             }
             else
             {
-                loggerService.Info($"MatchedKeyCount: {userExposureSummary.MatchedKeyCount}, but no new exposure detected");
+                loggerService.Info($"MatchedKeyCount: {summary.MatchedKeyCount}, but no new exposure detected");
             }
 
             loggerService.EndMethod();

@@ -126,35 +126,20 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            var actualExposureSummaryJson = "";
-            mockSecureStorageService.Setup(x => x.SetValue("ExposureSummary", It.IsAny<string>())).Callback<string, string>((k, v) =>
-            {
-                actualExposureSummaryJson = v;
-            });
-
             var actualExposureInformaionJson = "";
             mockSecureStorageService.Setup(x => x.SetValue("ExposureInformation", It.IsAny<string>())).Callback<string, string>((k, v) =>
             {
                 actualExposureInformaionJson = v;
             });
 
-            var testExposureSummary = new UserExposureSummary(1, 2, 30, new[] { new TimeSpan(0, 5, 0), new TimeSpan(0, 10, 0) }, 40);
             var testExposureInformation = new List<UserExposureInfo> {
                 new UserExposureInfo(new DateTime(2020,12,21), new TimeSpan(0, 10, 0), 20, 30, UserRiskLevel.Lowest),
                 new UserExposureInfo(new DateTime(2020,12,22), new TimeSpan(0, 20, 0), 30, 40, UserRiskLevel.Low)
             };
 
-            unitUnderTest.SetExposureInformation(testExposureSummary, testExposureInformation);
+            unitUnderTest.SetExposureInformation(testExposureInformation);
 
-            mockSecureStorageService.Verify(x => x.SetValue("ExposureSummary", It.IsAny<string>()), Times.Once());
             mockSecureStorageService.Verify(x => x.SetValue("ExposureInformation", It.IsAny<string>()), Times.Once());
-
-            Assert.NotEmpty(actualExposureSummaryJson);
-            Assert.Contains("\"DaysSinceLastExposure\":1", actualExposureSummaryJson);
-            Assert.Contains("\"MatchedKeyCount\":2", actualExposureSummaryJson);
-            Assert.Contains("\"HighestRiskScore\":30", actualExposureSummaryJson);
-            Assert.Contains("\"SummationRiskScore\":40", actualExposureSummaryJson);
-            Assert.Contains("\"AttenuationDurations\":[\"00:05:00\",\"00:10:00\"]", actualExposureSummaryJson);
 
             Assert.NotEmpty(actualExposureInformaionJson);
 
@@ -188,7 +173,6 @@ namespace Covid19Radar.UnitTests.Repository
 
             unitUnderTest.RemoveExposureInformation();
 
-            mockSecureStorageService.Verify(x => x.RemoveValue("ExposureSummary"), Times.Once());
             mockSecureStorageService.Verify(x => x.RemoveValue("ExposureInformation"), Times.Once());
 
             mockLoggerService.Verify(x => x.StartMethod("RemoveExposureInformation", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
@@ -304,7 +288,6 @@ namespace Covid19Radar.UnitTests.Repository
 
             unitUnderTest.RemoveOutOfDateExposureInformation(offsetDays);
 
-            mockSecureStorageService.Verify(x => x.SetValue("ExposureSummary", It.IsAny<string>()), Times.Once());
             mockSecureStorageService.Verify(x => x.SetValue("ExposureInformation", It.IsAny<string>()), Times.Once());
 
             var result = unitUnderTest.GetExposureInformationList();

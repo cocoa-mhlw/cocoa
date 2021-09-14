@@ -41,10 +41,9 @@ namespace Covid19Radar.Repository
 
         void RemoveAllExposureNotificationStatus();
 
-        UserExposureSummary GetExposureSummary();
         List<UserExposureInfo> GetExposureInformationList();
         List<UserExposureInfo> GetExposureInformationList(int offsetDays);
-        void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList);
+        void SetExposureInformation(List<UserExposureInfo> informationList);
         void RemoveExposureInformation();
         void RemoveOutOfDateExposureInformation(int offsetDays);
 
@@ -238,12 +237,10 @@ namespace Covid19Radar.Repository
             return result;
         }
 
-        public void SetExposureInformation(UserExposureSummary summary, List<UserExposureInfo> informationList)
+        public void SetExposureInformation(List<UserExposureInfo> informationList)
         {
             _loggerService.StartMethod();
-            var summaryJson = JsonConvert.SerializeObject(summary);
             var informationListJson = JsonConvert.SerializeObject(informationList);
-            _secureStorageService.SetValue(PreferenceKey.ExposureSummary, summaryJson);
             _secureStorageService.SetValue(PreferenceKey.ExposureInformation, informationListJson);
             _loggerService.EndMethod();
         }
@@ -251,7 +248,6 @@ namespace Covid19Radar.Repository
         public void RemoveExposureInformation()
         {
             _loggerService.StartMethod();
-            _secureStorageService.RemoveValue(PreferenceKey.ExposureSummary);
             _secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
             _loggerService.EndMethod();
         }
@@ -261,22 +257,9 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
 
             var informationList = GetExposureInformationList(offsetDays) ?? new List<UserExposureInfo>();
-            SetExposureInformation(GetExposureSummary(), informationList);
+            SetExposureInformation(informationList);
 
             _loggerService.EndMethod();
-        }
-
-        public UserExposureSummary GetExposureSummary()
-        {
-            _loggerService.StartMethod();
-            UserExposureSummary result = null;
-            var exposureSummaryJson = _secureStorageService.GetValue<string>(PreferenceKey.ExposureSummary);
-            if (!string.IsNullOrEmpty(exposureSummaryJson))
-            {
-                result = JsonConvert.DeserializeObject<UserExposureSummary>(exposureSummaryJson);
-            }
-            _loggerService.EndMethod();
-            return result;
         }
 
         public List<UserExposureInfo> GetExposureInformationList(int offsetDays)

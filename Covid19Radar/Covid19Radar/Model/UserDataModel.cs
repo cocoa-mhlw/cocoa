@@ -16,6 +16,5 @@ namespace Covid19Radar.Model
         public bool IsPolicyAccepted { get; set; } = false;
         public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
         public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
-        public UserExposureSummary ExposureSummary { get; set; }
     }
 }
