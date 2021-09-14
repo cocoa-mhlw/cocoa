@@ -564,7 +564,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // StartDateTime
-            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, DateTime.UtcNow.ToString());
+            var startDateTimePref = _dummyPreferencesService.GetValue(PREFERENCE_KEY_START_DATETIME, new DateTime().ToString());
             Assert.NotEqual(startDateTime.ToString(), startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
