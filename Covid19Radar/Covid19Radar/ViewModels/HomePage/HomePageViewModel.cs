@@ -86,6 +86,8 @@ namespace Covid19Radar.ViewModels
 
             // TODO We should replace below line with new FetchExposureKeyAsync method(with Cappuccino).
             // await exposureNotificationService.FetchExposureKeyAsync();
+
+            loggerService.EndMethod();
         }
 
         private async Task StartExposureNotificationAsync()

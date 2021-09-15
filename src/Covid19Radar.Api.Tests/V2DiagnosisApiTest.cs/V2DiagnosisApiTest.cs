@@ -30,7 +30,6 @@ namespace Covid19Radar.Api.Tests
             config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
-            var validation = new Mock<IValidationUserService>();
             var validationServer = new Mock<IValidationServerService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
             var verification = new Mock<IVerificationService>();
