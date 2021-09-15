@@ -75,7 +75,14 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
-            _exposureDetectionBackgroundService.Value.Schedule();
+            try
+            {
+                _exposureDetectionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                // Logger
+            }
 
             return base.FinishedLaunching(app, options);
         }
