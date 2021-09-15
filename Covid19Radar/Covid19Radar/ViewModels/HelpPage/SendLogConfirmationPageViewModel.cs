@@ -147,6 +147,7 @@ namespace Covid19Radar.ViewModels
             _ = TaskRun(() =>
             {
                 var result = logFileService.CopyLogUploadingFileToPublicPath(ZipFileName);
+                Task.Delay(1000);
 
                 BeginInvokeOnMainThread(async () =>
                 {
