@@ -85,9 +85,11 @@ namespace Covid19Radar.Services
                     var downloadedFileNames = string.Join("\n", downloadedFileNameList);
                     _loggerService.Debug(downloadedFileNames);
 
+                    // Use Legacy-V1
                     _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
-                        exposureConfiguration
+                        exposureConfiguration,
+                        new Guid().ToString()
                         ).GetAwaiter().GetResult();
 
                     // Save LastProcessDiagnosisKeyTimestamp after ProvideDiagnosisKeysAsync was succeeded.
