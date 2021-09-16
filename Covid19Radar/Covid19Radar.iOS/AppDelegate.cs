@@ -41,6 +41,9 @@ namespace Covid19Radar.iOS
         private Lazy<IExposureDetectionService> _exposureDetectionService
             = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
 
+        private Lazy<ILoggerService> _loggerService
+            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
         {
@@ -81,7 +84,7 @@ namespace Covid19Radar.iOS
             }
             catch (Exception exception)
             {
-                // Logger
+                _loggerService.Value.Exception("failed to Scheduling", exception);
             }
 
             return base.FinishedLaunching(app, options);
