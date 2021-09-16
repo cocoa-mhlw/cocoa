@@ -147,10 +147,10 @@ namespace Covid19Radar.ViewModels
             _ = TaskRun(() =>
             {
                 var result = logFileService.CopyLogUploadingFileToPublicPath(ZipFileName);
-                Task.Delay(1000);
 
                 BeginInvokeOnMainThread(async () =>
                 {
+                    await Task.Delay(2500);
                     UserDialogs.Instance.HideLoading();
 
                     if (!result)

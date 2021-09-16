@@ -125,7 +125,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             unitUnderTest.OnClickConfirmLogCommand.Execute(null);
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
-            mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
+            mockUserDialogs.Verify(x => x.HideLoading(), Times.Never());
         }
 
         [Fact]
@@ -148,8 +148,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             unitUnderTest.OnClickConfirmLogCommand.Execute(null);
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
-            mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
-            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Once());
+            mockUserDialogs.Verify(x => x.HideLoading(), Times.Never());
+            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Never());
         }
 
         [Fact]
