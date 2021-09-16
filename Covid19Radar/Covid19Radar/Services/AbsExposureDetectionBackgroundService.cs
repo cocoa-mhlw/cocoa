@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
@@ -19,6 +20,8 @@ namespace Covid19Radar.Services
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
+
+        public CancellationTokenSource cancellationTokenSource { get; }
 
         private readonly IList<ServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
                     region => new ServerConfiguration()
@@ -40,6 +43,7 @@ namespace Covid19Radar.Services
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
+            cancellationTokenSource = new CancellationTokenSource();
         }
 
         public abstract void Schedule();
@@ -90,6 +94,11 @@ namespace Covid19Radar.Services
                     var latestProcessTimestamp = targetDiagnosisKeyEntryList
                         .Select(diagnosisKeyEntry => diagnosisKeyEntry.Created)
                         .Max();
+
+                    if (cancellationTokenSource.Token.IsCancellationRequested) {
+                        cancellationTokenSource.Token.ThrowIfCancellationRequested();
+                    }
+
                     await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region, latestProcessTimestamp);
 
                 }

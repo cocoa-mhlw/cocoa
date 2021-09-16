@@ -53,8 +53,8 @@ namespace Covid19Radar.iOS.Services
 
                 ScheduleBgTask();
 
-                var cancellationTokenSource = new CancellationTokenSource(TIMEOUT_IN_MILLIS);
-                task.ExpirationHandler = cancellationTokenSource.Cancel;
+                task.ExpirationHandler = () => cancellationTokenSource.Cancel();
+
 
                 _ = Task.Run(async () =>
                 {
