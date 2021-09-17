@@ -37,6 +37,9 @@ namespace Covid19Radar.iOS
         private Lazy<IExposureDetectionService> _exposureDetectionService
             = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
 
+        private Lazy<ILoggerService> _loggerService
+            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
         {
@@ -71,7 +74,14 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
-            _exposureDetectionBackgroundService.Value.Schedule();
+            try
+            {
+                _exposureDetectionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("failed to Scheduling", exception);
+            }
 
             return base.FinishedLaunching(app, options);
         }
