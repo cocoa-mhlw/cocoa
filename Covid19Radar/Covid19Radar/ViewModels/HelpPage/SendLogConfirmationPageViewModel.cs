@@ -142,7 +142,6 @@ namespace Covid19Radar.ViewModels
 
         private void CopyZipFileToPublicPath()
         {
-            UserDialogs.Instance.ShowLoading(Resources.AppResources.Saving);
 
             _ = TaskRun(() =>
             {
@@ -150,7 +149,6 @@ namespace Covid19Radar.ViewModels
 
                 BeginInvokeOnMainThread(async () =>
                 {
-                    UserDialogs.Instance.HideLoading();
 
                     if (!result)
                     {
