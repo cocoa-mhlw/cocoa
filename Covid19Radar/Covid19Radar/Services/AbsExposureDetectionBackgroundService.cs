@@ -82,6 +82,11 @@ namespace Covid19Radar.Services
                         downloadedFileNameList.Add(filePath);
                     }
 
+                    if (cancellationTokenSource.Token.IsCancellationRequested)
+                    {
+                        cancellationTokenSource.Token.ThrowIfCancellationRequested();
+                    }
+
                     var downloadedFileNames = string.Join("\n", downloadedFileNameList);
                     _loggerService.Debug(downloadedFileNames);
 
@@ -94,10 +99,6 @@ namespace Covid19Radar.Services
                     var latestProcessTimestamp = targetDiagnosisKeyEntryList
                         .Select(diagnosisKeyEntry => diagnosisKeyEntry.Created)
                         .Max();
-
-                    if (cancellationTokenSource.Token.IsCancellationRequested) {
-                        cancellationTokenSource.Token.ThrowIfCancellationRequested();
-                    }
 
                     await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region, latestProcessTimestamp);
 
