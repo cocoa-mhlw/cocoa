@@ -10,23 +10,36 @@ using System.Linq;
 namespace Covid19Radar.Api.Models
 {
 
-	public class DiagnosisSubmissionParameter : IPayload, IDeviceVerification
-    {
+	public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
+	{
+		public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
+
 		private const int TRANSMISSION_RISK_LEVEL = 4;
+
+		// RFC3339
+		// e.g. 2021-09-20T23:52:57.436+00:00
+		[JsonProperty("symptomOnsetDate")]
+		public string SymptomOnsetDate { get; set; }
 
 		[JsonProperty("keys")]
 		public Key[] Keys { get; set; }
+
 		[JsonProperty("regions")]
 		public string[] Regions { get; set; }
+
 		[JsonProperty("platform")]
 		public string Platform { get; set; }
+
 		[JsonProperty("deviceVerificationPayload")]
 		public string DeviceVerificationPayload { get; set; }
+
 		[JsonProperty("appPackageName")]
 		public string AppPackageName { get; set; }
+
 		// Some signature / code confirming authorization by the verification authority.
 		[JsonProperty("verificationPayload")]
 		public string VerificationPayload { get; set; }
+
 		// Random data to obscure the size of the request network packet sniffers.
 		[JsonProperty("padding")]
 		public string Padding { get; set; }
@@ -36,8 +49,7 @@ namespace Covid19Radar.Api.Models
 			=> string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
 
 		[JsonIgnore]
-		public string KeysText
-		{
+		public string KeysText {
 			get
 			{
 				return Keys.OrderBy(_ => _.KeyData)
@@ -46,29 +58,33 @@ namespace Covid19Radar.Api.Models
 			}
 		}
 
-		public class Key
+        public class Key
 		{
 			[JsonProperty("keyData")]
 			public string KeyData { get; set; }
+
 			[JsonProperty("rollingStartNumber")]
 			public uint RollingStartNumber { get; set; }
+
 			[JsonProperty("rollingPeriod")]
 			public uint RollingPeriod { get; set; }
-			public TemporaryExposureKeyModel ToModel(DiagnosisSubmissionParameter _, ulong timestamp)
+
+			[JsonProperty("reportType")]
+			public uint ReportType { get; set; }
+
+			[JsonIgnore]
+			public int DaysSinceOnsetOfSymptoms { get; set; }
+
+			public TemporaryExposureKeyModel ToModel(V3DiagnosisSubmissionParameter _, ulong timestamp)
 			{
 				return new TemporaryExposureKeyModel()
 				{
-					KeyData = Convert.FromBase64String(this.KeyData),
-					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
-					RollingStartIntervalNumber = (int)this.RollingStartNumber,
+					KeyData = Convert.FromBase64String(KeyData),
+					RollingPeriod = ((int)RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)RollingPeriod),
+					RollingStartIntervalNumber = (int)RollingStartNumber,
 					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
-
-					// TODO: We should consider which report-type choose when accept submission from Legacy-COCOA.
-					//ReportType = (int)ReportType,
-
-					// TODO: We should consider what days-since-onset-of-symptoms assign when accept submission from Legacy-COCOA.
-					//DaysSinceOnsetOfSymptoms = DaysSinceOnsetOfSymptoms,
-
+					ReportType = (int)ReportType,
+					DaysSinceOnsetOfSymptoms = DaysSinceOnsetOfSymptoms,
 					Timestamp = timestamp,
 					Exported = false
 				};
@@ -87,8 +103,8 @@ namespace Covid19Radar.Api.Models
 				return true;
 			}
 
-			public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod);
-		}
+            public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType, DaysSinceOnsetOfSymptoms);
+        }
 
 		/// <summary>
 		/// Validation

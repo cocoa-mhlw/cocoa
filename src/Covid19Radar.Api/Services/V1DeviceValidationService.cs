@@ -32,16 +32,16 @@ namespace Covid19Radar.Api.Services
             AuthApp = authApp;
         }
 
-        public async Task<bool> Validation(V1DiagnosisSubmissionParameter param, DateTimeOffset requestTime)
+        public async Task<bool> Validation(IDeviceVerification deviceVerification, DateTimeOffset requestTime)
         {
-            var app = await AuthApp.GetAsync(param.Platform);
+            var app = await AuthApp.GetAsync(deviceVerification.Platform);
             // unsupported
             if (app == null) return false;
             if (!app.DeviceValidationEnabled) return true;
-            return param.Platform switch
+            return deviceVerification.Platform switch
             {
-                "android" =>  Android.Validation(param, param.GetAndroidNonce(), requestTime, app),
-                "ios" => await Apple.Validation(param, requestTime, app),
+                "android" =>  Android.Validation(deviceVerification, deviceVerification.GetAndroidNonce(), requestTime, app),
+                "ios" => await Apple.Validation(deviceVerification, requestTime, app),
                 _ => false,
             };
         }

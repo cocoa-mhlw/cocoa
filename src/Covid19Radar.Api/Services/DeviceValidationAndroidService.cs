@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.Models;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -13,11 +12,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Net.Http;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Services
 {
@@ -41,11 +37,11 @@ namespace Covid19Radar.Api.Services
         /// <summary>
         /// Validation Android
         /// </summary>
-        /// <param name="param">subumission parameter</param>
+        /// <param name="deviceVerificationPayload">Payload of Device verification. parameter</param>
         /// <returns>True when successful.</returns>
-        public  bool Validation(DiagnosisSubmissionParameter param, byte[] expectedNonce, DateTimeOffset requestTime, AuthorizedAppInformation app)
+        public bool Validation(IAndroidDeviceVerification androidDeviceVerification, byte[] expectedNonce, DateTimeOffset requestTime, AuthorizedAppInformation app)
         {
-            var claims = ParsePayload(param.DeviceVerificationPayload);
+            var claims = ParsePayload(androidDeviceVerification.DeviceVerificationPayload);
 
             // Validate the nonce
             if (Convert.ToBase64String(claims.Nonce) != Convert.ToBase64String(expectedNonce))
