@@ -39,7 +39,7 @@ namespace Covid19Radar.Api.Services
             if (!app.DeviceValidationEnabled) return true;
             return deviceVerification.Platform switch
             {
-                "android" => Android.Validation(deviceVerification, deviceVerification.GetAndroidNonce(), requestTime, app),
+                "android" => Android.Validation(deviceVerification, requestTime, app),
                 "ios" => await Apple.Validation(deviceVerification, requestTime, app),
                 _ => false,
             };
