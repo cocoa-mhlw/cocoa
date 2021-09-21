@@ -53,13 +53,14 @@ namespace Covid19Radar.Services
             foreach (var serverConfiguration in _serverConfigurations)
             {
                 List<string> downloadedFileNameList = new List<string>();
+                var cancellationToken = cancellationTokenSource.Token;
 
                 try
                 {
                     var tmpDir = PrepareDir(serverConfiguration.Region);
 
                     var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
-                    var diagnosisKeyEntryList = _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration)
+                    var diagnosisKeyEntryList = _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration, cancellationToken)
                         .GetAwaiter().GetResult();
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region);
@@ -74,17 +75,12 @@ namespace Covid19Radar.Services
 
                     foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
                     {
-                        string filePath = _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir)
+                        string filePath = _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir, cancellationToken)
                             .GetAwaiter().GetResult();
 
                         _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
 
                         downloadedFileNameList.Add(filePath);
-                    }
-
-                    if (cancellationTokenSource.Token.IsCancellationRequested)
-                    {
-                        cancellationTokenSource.Token.ThrowIfCancellationRequested();
                     }
 
                     var downloadedFileNames = string.Join("\n", downloadedFileNameList);
@@ -141,6 +137,11 @@ namespace Covid19Radar.Services
                     _loggerService.Exception("Exception occurred", exception);
                 }
             }
+        }
+
+        ~AbsExposureDetectionBackgroundService()
+        {
+            cancellationTokenSource.Dispose();
         }
     }
 }
