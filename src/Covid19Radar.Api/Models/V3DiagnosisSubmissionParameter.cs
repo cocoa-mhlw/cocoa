@@ -12,14 +12,17 @@ namespace Covid19Radar.Api.Models
 
 	public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
 	{
-		public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
-
+		private const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
 		private const int TRANSMISSION_RISK_LEVEL = 4;
 
 		// RFC3339
 		// e.g. 2021-09-20T23:52:57.436+00:00
 		[JsonProperty("symptomOnsetDate")]
 		public string SymptomOnsetDate { get; set; }
+
+		[JsonIgnore]
+		public DateTime SymptomOnsetDateAsDateTime
+			=> DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null);
 
 		[JsonProperty("keys")]
 		public Key[] Keys { get; set; }
@@ -58,7 +61,7 @@ namespace Covid19Radar.Api.Models
 			}
 		}
 
-        public class Key
+		public class Key
 		{
 			[JsonProperty("keyData")]
 			public string KeyData { get; set; }
@@ -74,6 +77,9 @@ namespace Covid19Radar.Api.Models
 
 			[JsonIgnore]
 			public int DaysSinceOnsetOfSymptoms { get; set; }
+
+			public DateTime GetDate()
+				=> DateTimeOffset.FromUnixTimeSeconds(RollingStartNumber * TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC).DateTime;
 
 			public TemporaryExposureKeyModel ToModel(V3DiagnosisSubmissionParameter _, ulong timestamp)
 			{

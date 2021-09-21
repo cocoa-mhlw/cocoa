@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.DataAccess;
-using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -40,7 +39,7 @@ namespace Covid19Radar.Api.Services
             if (!app.DeviceValidationEnabled) return true;
             return deviceVerification.Platform switch
             {
-                "android" =>  Android.Validation(deviceVerification, deviceVerification.GetAndroidNonce(), requestTime, app),
+                "android" =>  Android.Validation(deviceVerification, requestTime, app),
                 "ios" => await Apple.Validation(deviceVerification, requestTime, app),
                 _ => false,
             };

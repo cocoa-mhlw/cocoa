@@ -107,9 +107,16 @@ namespace Covid19Radar.Api
                 return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
             }
 
-            var timestamp = DateTimeOffset.UtcNow;
-            var keys = diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray();
+            // Set DaysSinceOnsetOfSymptoms
+            var symptomOnsetDate = diagnosis.SymptomOnsetDateAsDateTime;
+            foreach (var key in diagnosis.Keys)
+            {
+                var dateOffset = key.GetDate() - symptomOnsetDate;
+                key.DaysSinceOnsetOfSymptoms = dateOffset.Days;
+            }
 
+            var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            var keys = diagnosis.Keys.Select(key => key.ToModel(diagnosis, timestamp));
 
             foreach (var k in keys)
             {
