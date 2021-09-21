@@ -70,6 +70,8 @@ namespace Covid19Radar.Api
             }
 
             var diagnosis = JsonConvert.DeserializeObject<V3DiagnosisSubmissionParameter>(requestBody);
+            diagnosis.SetDaysSinceOnsetOfSymptoms();
+
             var reqTime = DateTimeOffset.UtcNow;
 
             // payload valid
@@ -105,14 +107,6 @@ namespace Covid19Radar.Api
             if (verificationResult != ((int)HttpStatusCode.OK))
             {
                 return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
-            }
-
-            // Set DaysSinceOnsetOfSymptoms
-            var symptomOnsetDate = diagnosis.SymptomOnsetDateAsDateTime;
-            foreach (var key in diagnosis.Keys)
-            {
-                var dateOffset = key.GetDate() - symptomOnsetDate;
-                key.DaysSinceOnsetOfSymptoms = dateOffset.Days;
             }
 
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();

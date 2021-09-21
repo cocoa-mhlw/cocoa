@@ -20,10 +20,6 @@ namespace Covid19Radar.Api.Models
 		[JsonProperty("symptomOnsetDate")]
 		public string SymptomOnsetDate { get; set; }
 
-		[JsonIgnore]
-		public DateTime SymptomOnsetDateAsDateTime
-			=> DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null);
-
 		[JsonProperty("keys")]
 		public Key[] Keys { get; set; }
 
@@ -125,6 +121,17 @@ namespace Covid19Radar.Api.Models
 			if (string.IsNullOrWhiteSpace(AppPackageName)) return false;
 			if (Keys.Any(_ => !_.IsValid())) return false;
 			return true;
+		}
+
+        public void SetDaysSinceOnsetOfSymptoms()
+        {
+			// Set DaysSinceOnsetOfSymptoms
+			var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null);
+			foreach (var key in Keys)
+			{
+				var dateOffset = key.GetDate() - symptomOnsetDate;
+				key.DaysSinceOnsetOfSymptoms = dateOffset.Days;
+			}
 		}
 	}
 }
