@@ -24,10 +24,10 @@ namespace Covid19Radar.Background.Services
             Logger.LogInformation($"{nameof(TemporaryExposureKeySignatureInfoService)} constructor");
             AppBundleId = config.iOSBundleId();
             AndroidPackage = config.AndroidPackageName();
-            Info = new SignatureInfo();
-            Info.AppBundleId = AppBundleId;
-            Info.AndroidPackage = AndroidPackage;
-            Info.SignatureAlgorithm = Algorithm;
+            Info = new SignatureInfo()
+            {
+                SignatureAlgorithm = Algorithm
+            };
         }
 
         public SignatureInfo Create()
