@@ -33,7 +33,7 @@ namespace Covid19Radar.Api
         private readonly IVerificationService _verificationService;
         private readonly IValidationServerService _validationServerService;
 
-        private readonly ILogger<V2DiagnosisApi> _logger;
+        private readonly ILogger<V3DiagnosisApi> _logger;
 
         public V3DiagnosisApi(
             IConfiguration config,
@@ -42,7 +42,7 @@ namespace Covid19Radar.Api
             IDeviceValidationService deviceValidationService,
             IVerificationService verificationService,
             IValidationServerService validationServerService,
-            ILogger<V2DiagnosisApi> logger
+            ILogger<V3DiagnosisApi> logger
             )
         {
             _supportRegions = config.SupportRegions();
@@ -55,7 +55,7 @@ namespace Covid19Radar.Api
             _logger = logger;
         }
 
-        [FunctionName(nameof(V2DiagnosisApi))]
+        [FunctionName(nameof(V3DiagnosisApi))]
         public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "put", Route = "v3/diagnosis")] HttpRequest req)
         {
