@@ -27,7 +27,6 @@ namespace Covid19Radar.Api
 
         private readonly string[] _supportRegions;
 
-        private readonly IDiagnosisRepository _diagnosisRepository;
         private readonly ITemporaryExposureKeyRepository _tekRepository;
         private readonly IDeviceValidationService _deviceValidationService;
         private readonly IVerificationService _verificationService;
@@ -37,7 +36,6 @@ namespace Covid19Radar.Api
 
         public V3DiagnosisApi(
             IConfiguration config,
-            IDiagnosisRepository diagnosisRepository,
             ITemporaryExposureKeyRepository tekRepository,
             IDeviceValidationService deviceValidationService,
             IVerificationService verificationService,
@@ -47,7 +45,6 @@ namespace Covid19Radar.Api
         {
             _supportRegions = config.SupportRegions();
 
-            _diagnosisRepository = diagnosisRepository;
             _tekRepository = tekRepository;
             _deviceValidationService = deviceValidationService;
             _verificationService = verificationService;

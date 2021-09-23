@@ -34,14 +34,12 @@ namespace Covid19Radar.Api.Tests
             // preparation
             var config = new Mock<IConfiguration>();
             config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
-            var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validationServer = new Mock<IValidationServerService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
             var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
-                                                diagnosisRepo.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
@@ -88,7 +86,6 @@ namespace Covid19Radar.Api.Tests
             var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
-                                                diagnosisRepo.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
@@ -192,7 +189,6 @@ namespace Covid19Radar.Api.Tests
             var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
-                                                diagnosisRepo.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
