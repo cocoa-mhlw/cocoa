@@ -72,11 +72,11 @@ namespace Covid19Radar.Api.Models
 			[JsonProperty("reportType")]
 			public uint ReportType { get; set; }
 
-			[JsonIgnore]
+			[JsonProperty("daysSinceOnsetOfSymptoms")]
 			public int DaysSinceOnsetOfSymptoms { get; set; }
 
 			public DateTime GetDate()
-				=> DateTimeOffset.FromUnixTimeSeconds(RollingStartNumber * TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC).DateTime;
+				=> DateTimeOffset.FromUnixTimeSeconds(RollingStartNumber * TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC).Date;
 
 			public TemporaryExposureKeyModel ToModel(V3DiagnosisSubmissionParameter _, ulong timestamp)
 			{
@@ -101,14 +101,14 @@ namespace Covid19Radar.Api.Models
 				if (string.IsNullOrWhiteSpace(KeyData)) return false;
 				if (RollingPeriod > Constants.ActiveRollingPeriod) return false;
 
-				// 00:00:00.000
 				var dateTime = DateTime.UtcNow;
+				var todayRollingStartNumber = dateTime.ToRollingStartNumber();
+
+				// 00:00:00.000
 				dateTime = dateTime.AddHours(-dateTime.Hour)
 					.AddMinutes(-dateTime.Minute)
 					.AddSeconds(-dateTime.Second)
 					.AddMilliseconds(-dateTime.Millisecond);
-
-				var todayRollingStartNumber = dateTime.ToRollingStartNumber();
 				var oldestRollingStartNumber = dateTime.AddDays(Constants.OutOfDateDays).ToRollingStartNumber();
 				if (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > todayRollingStartNumber) return false;
 				return true;
@@ -133,15 +133,7 @@ namespace Covid19Radar.Api.Models
 
         public void SetDaysSinceOnsetOfSymptoms()
         {
-			// Set DaysSinceOnsetOfSymptoms
-			var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null).ToUniversalTime();
-
-			// 00:00:00.000
-			symptomOnsetDate = symptomOnsetDate.AddHours(-symptomOnsetDate.Hour)
-				.AddMinutes(-symptomOnsetDate.Minute)
-				.AddSeconds(-symptomOnsetDate.Second)
-				.AddMilliseconds(-symptomOnsetDate.Millisecond);
-
+			var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null).ToUniversalTime().Date;
 			foreach (var key in Keys)
 			{
 				var dateOffset = key.GetDate() - symptomOnsetDate;
