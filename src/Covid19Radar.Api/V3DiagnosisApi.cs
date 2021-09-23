@@ -69,27 +69,30 @@ namespace Covid19Radar.Api
                 return validateResult.ErrorActionResult;
             }
 
-            var diagnosis = JsonConvert.DeserializeObject<V3DiagnosisSubmissionParameter>(requestBody);
-            diagnosis.SetDaysSinceOnsetOfSymptoms();
+            var submissionParameter = JsonConvert.DeserializeObject<V3DiagnosisSubmissionParameter>(requestBody);
+            submissionParameter.SetDaysSinceOnsetOfSymptoms();
+
+            // Filter valid keys
+            submissionParameter.Keys = submissionParameter.Keys.Where(key => key.IsValid()).ToArray();
 
             var reqTime = DateTimeOffset.UtcNow;
 
             // payload valid
-            if (!diagnosis.IsValid())
+            if (!submissionParameter.IsValid())
             {
                 _logger.LogInformation($"Invalid parameter");
                 return new BadRequestErrorMessageResult("Invalid parameter");
             }
 
             // validation support region
-            if (!diagnosis.Regions.Any(_ => _supportRegions.Contains(_)))
+            if (!submissionParameter.Regions.Any(_ => _supportRegions.Contains(_)))
             {
                 _logger.LogInformation($"Regions not supported.");
                 return new BadRequestErrorMessageResult("Regions not supported.");
             }
 
             // validation device
-            if (!await _deviceValidationService.Validation(diagnosis, reqTime))
+            if (!await _deviceValidationService.Validation(submissionParameter, reqTime))
             {
                 _logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
@@ -99,25 +102,25 @@ namespace Covid19Radar.Api
             // https://google.github.io/exposure-notifications-server/server_functional_requirements.html
             if (req.Headers?.ContainsKey(CHAFF_HEADER) ?? false)
             {
-                return new NoContentResult();
+                return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
             }
 
             // validatetion VerificationPayload
-            var verificationResult = await _verificationService.VerificationAsync(diagnosis.VerificationPayload);
+            var verificationResult = await _verificationService.VerificationAsync(submissionParameter.VerificationPayload);
             if (verificationResult != ((int)HttpStatusCode.OK))
             {
                 return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
             }
 
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            var keys = diagnosis.Keys.Select(key => key.ToModel(diagnosis, timestamp));
+            var keys = submissionParameter.Keys.Select(key => key.ToModel(submissionParameter, timestamp));
 
             foreach (var k in keys)
             {
                 await _tekRepository.UpsertAsync(k);
             }
 
-            return new NoContentResult();
+            return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
         }
     }
 }

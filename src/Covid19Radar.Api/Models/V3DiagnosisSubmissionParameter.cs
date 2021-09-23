@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.Common;
+using Covid19Radar.Api.Extensions;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Covid19Radar.Api.Models
 
 	public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
 	{
-		private const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
+		public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
 		private const int TRANSMISSION_RISK_LEVEL = 4;
 
 		// RFC3339
@@ -98,10 +99,18 @@ namespace Covid19Radar.Api.Models
 			public bool IsValid()
 			{
 				if (string.IsNullOrWhiteSpace(KeyData)) return false;
-				if (RollingPeriod != 0 && RollingPeriod > Constants.ActiveRollingPeriod) return false;
-				var nowRollingStartNumber = DateTimeOffset.UtcNow.ToUnixTimeSeconds() / TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC;
-				var oldestRollingStartNumber = new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC;
-				if (RollingStartNumber != 0 && (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > nowRollingStartNumber)) return false;
+				if (RollingPeriod > Constants.ActiveRollingPeriod) return false;
+
+				// 00:00:00.000
+				var dateTime = DateTime.UtcNow;
+				dateTime = dateTime.AddHours(-dateTime.Hour)
+					.AddMinutes(-dateTime.Minute)
+					.AddSeconds(-dateTime.Second)
+					.AddMilliseconds(-dateTime.Millisecond);
+
+				var todayRollingStartNumber = dateTime.ToRollingStartNumber();
+				var oldestRollingStartNumber = dateTime.AddDays(Constants.OutOfDateDays).ToRollingStartNumber();
+				if (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > todayRollingStartNumber) return false;
 				return true;
 			}
 
@@ -119,14 +128,20 @@ namespace Covid19Radar.Api.Models
 			if (string.IsNullOrWhiteSpace(Platform)) return false;
 			if (string.IsNullOrWhiteSpace(DeviceVerificationPayload)) return false;
 			if (string.IsNullOrWhiteSpace(AppPackageName)) return false;
-			if (Keys.Any(_ => !_.IsValid())) return false;
 			return true;
 		}
 
         public void SetDaysSinceOnsetOfSymptoms()
         {
 			// Set DaysSinceOnsetOfSymptoms
-			var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null);
+			var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null).ToUniversalTime();
+
+			// 00:00:00.000
+			symptomOnsetDate = symptomOnsetDate.AddHours(-symptomOnsetDate.Hour)
+				.AddMinutes(-symptomOnsetDate.Minute)
+				.AddSeconds(-symptomOnsetDate.Second)
+				.AddMilliseconds(-symptomOnsetDate.Millisecond);
+
 			foreach (var key in Keys)
 			{
 				var dateOffset = key.GetDate() - symptomOnsetDate;
