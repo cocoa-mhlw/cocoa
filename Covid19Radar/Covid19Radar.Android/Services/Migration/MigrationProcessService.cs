@@ -7,6 +7,7 @@ using Android.App;
 using Android.Content;
 using AndroidX.Work;
 using CommonServiceLocator;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Services.Migration;
 using Xamarin.Forms.Internals;
@@ -67,10 +68,15 @@ namespace Covid19Radar.Droid.Services.Migration
 
     public class MigrationProccessService : IMigrationProcessService
     {
+        private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
         private readonly ILoggerService _loggerService;
 
-        public MigrationProccessService(ILoggerService loggerService)
+        public MigrationProccessService(
+            AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
+            ILoggerService loggerService
+            )
         {
+            _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             _loggerService = loggerService;
         }
 
@@ -79,6 +85,7 @@ namespace Covid19Radar.Droid.Services.Migration
             _loggerService.StartMethod();
 
             await new WorkManagerMigrator(
+                _exposureDetectionBackgroundService,
                 _loggerService
                 ).ExecuteAsync();
 

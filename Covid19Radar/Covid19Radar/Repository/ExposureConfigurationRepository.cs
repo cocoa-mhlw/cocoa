@@ -1,4 +1,8 @@
-﻿using System.IO;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Chino;
@@ -13,6 +17,7 @@ namespace Covid19Radar.Repository
     {
         public string ResourceUrl { get; }
         public Task<ExposureConfiguration> GetExposureConfigurationAsync();
+        public void RemoveExposureConfiguration();
     }
 
     public class ExposureConfigurationRepository : IExposureConfigurationRepository
@@ -115,5 +120,16 @@ namespace Covid19Radar.Repository
 
         private async Task SaveAsync(string exposureConfigurationAsJson)
             => await File.WriteAllTextAsync(_exposureConfigurationPath, exposureConfigurationAsJson);
+
+        public void RemoveExposureConfiguration()
+        {
+            if (!File.Exists(_exposureConfigurationPath))
+            {
+                _loggerService.Debug("No ExposureConfiguration file found.");
+                return;
+            }
+
+            File.Delete(_exposureConfigurationPath);
+        }
     }
 }

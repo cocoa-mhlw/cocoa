@@ -1,6 +1,6 @@
 ---
 title: "デジタル庁 GitHub運用方針"
-weight: 1000
+weight: 1
 type: docs
 ---
 

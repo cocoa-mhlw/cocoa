@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Model;
@@ -17,9 +21,10 @@ namespace Covid19Radar.Repository
             List<ExposureWindow> exposueWindowList
             );
 
-        Task AppendExposureDataAsync(
+        Task<bool> AppendExposureDataAsync(
             List<DailySummary> dailySummaryList,
-            List<ExposureWindow> exposueWindowList
+            List<ExposureWindow> exposueWindowList,
+            bool ignoreDuplicate = true
             );
 
         Task<List<DailySummary>> GetDailySummariesAsync();
@@ -31,17 +36,18 @@ namespace Covid19Radar.Repository
         Task RemoveExposureWindowsAsync();
 
         // Legacy v1 mode
-        Task<List<UserExposureSummary>> GetUserExposureSummariesAsync();
+        List<UserExposureInfo> GetExposureInformationList();
+        List<UserExposureInfo> GetExposureInformationList(int offsetDays);
 
-        Task<List<UserExposureInfo>> GetUserExposureInfosAsync();
-        Task<List<UserExposureInfo>> GetUserExposureInfosAsync(int offsetDays);
-
-        Task<bool> AppendExposureDataAsync(
+        void SetExposureInformation(List<UserExposureInfo> informationList);
+        bool AppendExposureData(
             ExposureSummary exposureSummary,
             List<ExposureInformation> exposureInformationList,
             int minimumRiskScore
             );
 
-        Task RemoveUserExposureInformationAsync();
+        void RemoveExposureInformation();
+        void RemoveOutOfDateExposureInformation(int offsetDays);
+        int GetV1ExposureCount(int offsetDays);
     }
 }

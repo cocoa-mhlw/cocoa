@@ -9,7 +9,6 @@ using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
-using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.iOS.Services.Migration;
 using Covid19Radar.Services;
@@ -35,11 +34,11 @@ namespace Covid19Radar.iOS
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
 
-        private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
-            = new Lazy<IExposureConfigurationRepository>(() => ServiceLocator.Current.GetInstance<IExposureConfigurationRepository>());
-
         private Lazy<IExposureDetectionService> _exposureDetectionService
             = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
+
+        private Lazy<ILoggerService> _loggerService
+            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
@@ -75,7 +74,14 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
-            _exposureDetectionBackgroundService.Value.Schedule();
+            try
+            {
+                _exposureDetectionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("failed to Scheduling", exception);
+            }
 
             return base.FinishedLaunching(app, options);
         }

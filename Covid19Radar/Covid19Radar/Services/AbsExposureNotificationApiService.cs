@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Chino;
@@ -65,9 +69,17 @@ namespace Covid19Radar.Services
 
         private bool _isEnabled = false;
 
-        public MockExposureNotificationApiService(ILoggerService loggerService)
+        private IExposureDetectionService _exposureDetectionService;
+
+        private readonly Random _random = new Random();
+
+        public MockExposureNotificationApiService(
+            IExposureDetectionService exposureDetectionService,
+            ILoggerService loggerService
+            )
             : base(loggerService)
         {
+            _exposureDetectionService = exposureDetectionService;
         }
 
         public override async Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
@@ -76,10 +88,32 @@ namespace Covid19Radar.Services
             return emptyList;
         }
 
+
+        static TemporaryExposureKey GenerateRandomKey(int offsetDays, Random random)
+        {
+            var keyData = new byte[16];
+
+            return new TemporaryExposureKey()
+            {
+                KeyData = keyData,
+                RollingStartIntervalNumber = DateTimeOffset.UtcNow.AddDays(offsetDays).UtcDateTime.ToEnInterval(),
+                RollingPeriod = random.Next(5, 144 + 1),
+                RiskLevel = (RiskLevel)random.Next(1, 8 + 1),
+                ReportType = (ReportType)random.Next(1, 8 + 1),
+                DaysSinceOnsetOfSymptoms = random.Next(-14, 14 + 1)
+            };
+        }
+
         public override async Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
         {
-            List<TemporaryExposureKey> emptyList = new List<TemporaryExposureKey>();
-            return emptyList;
+            List<TemporaryExposureKey> temporaryExposureKeys = new List<TemporaryExposureKey>();
+
+            for (var i = 1; i < 14; i++)
+            {
+                temporaryExposureKeys.Add(GenerateRandomKey(-i, _random));
+            }
+
+            return temporaryExposureKeys;
         }
 
         public override async Task<long> GetVersionAsync()
@@ -100,6 +134,41 @@ namespace Covid19Radar.Services
         public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration)
         {
             throw new NotImplementedException("This service is mock.");
+        }
+
+        private (ExposureSummary, IEnumerable<ExposureInformation>) CreateDummyV1ExposureData()
+        {
+            var exposureSummary = new ExposureSummary()
+            {
+            };
+
+            IEnumerable<ExposureInformation> CreateInformations()
+            {
+                var exposureInformations = new List<ExposureInformation>
+                {
+                    new ExposureInformation()
+                    {
+                        DateMillisSinceEpoch = DateTime.UtcNow.AddDays(-10).ToUnixEpochTime(),
+                        DurationInMillis = TimeSpan.FromMinutes(5).Ticks,
+                        AttenuationDurationsInMillis = new int[] { 1440000, 0, 0 },
+                        AttenuationValue = 65,
+                        TotalRiskScore = 5,
+                        TransmissionRiskLevel = RiskLevel.Medium,
+                    },
+                    new ExposureInformation()
+                    {
+                        DateMillisSinceEpoch = DateTime.UtcNow.AddDays(-11).ToUnixEpochTime(),
+                        DurationInMillis = TimeSpan.FromMinutes(5).Ticks,
+                        AttenuationDurationsInMillis = new int[] { 1440000, 0, 0 },
+                        AttenuationValue = 40,
+                        TotalRiskScore = 3,
+                        TransmissionRiskLevel = RiskLevel.Low,
+                    },
+                };
+                return exposureInformations;
+            }
+
+            return (exposureSummary, CreateInformations());
         }
 
         public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, string token)
