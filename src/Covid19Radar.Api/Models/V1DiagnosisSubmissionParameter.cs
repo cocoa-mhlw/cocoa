@@ -23,17 +23,6 @@ namespace Covid19Radar.Api.Models
 		public new string KeyString
 			=> string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
 
-		[JsonIgnore]
-		public new string KeysText
-		{
-			get
-			{
-				return Keys.OrderBy(_ => _.KeyData)
-					.Select(_ => _.KeyData)
-					.Aggregate((a, b) => a + b);
-			}
-		}
-
 		public new class Key
 		{
 			[JsonProperty("keyData")]

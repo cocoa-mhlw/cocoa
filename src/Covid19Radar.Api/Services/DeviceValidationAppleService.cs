@@ -63,11 +63,11 @@ namespace Covid19Radar.Api.Services
                 Timestamp = requestTime.ToUnixTimeMilliseconds()
             };
 
-            var keysText = appleDeviceVerification.KeysText;
+            var keyString = appleDeviceVerification.KeyString;
 
             using (var sha = SHA256.Create())
             {
-                var value = System.Text.Encoding.UTF8.GetBytes(appleDeviceVerification.AppPackageName + keysText + string.Join(',', appleDeviceVerification.Regions));
+                var value = Encoding.UTF8.GetBytes(appleDeviceVerification.AppPackageName + keyString + string.Join(',', appleDeviceVerification.Regions));
                 payload.TransactionId = Convert.ToBase64String(sha.ComputeHash(value));
             }
 
