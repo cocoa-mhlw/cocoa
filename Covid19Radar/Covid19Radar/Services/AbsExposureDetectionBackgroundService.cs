@@ -134,10 +134,5 @@ namespace Covid19Radar.Services
                 }
             }
         }
-
-        ~AbsExposureDetectionBackgroundService()
-        {
-            cancellationTokenSource.Dispose();
-        }
     }
 }
