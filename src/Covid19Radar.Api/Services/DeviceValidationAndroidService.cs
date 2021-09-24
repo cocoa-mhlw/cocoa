@@ -217,7 +217,7 @@ namespace Covid19Radar.Api.Services
             public bool BasicIntegrity { get; }
         }
 
-        public static byte[] GetAndroidNonce(IAndroidDeviceVerification submission)
+        private static byte[] GetAndroidNonce(IAndroidDeviceVerification submission)
         {
             var cleartext = GetAndroidNonceClearText(submission);
             var nonce = GetSha256(cleartext);
