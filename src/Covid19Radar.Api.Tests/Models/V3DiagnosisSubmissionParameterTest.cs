@@ -44,13 +44,7 @@ namespace Covid19Radar.Api.Tests.Models
         [DataRow("KEYDATA", 144, 1, false)]
         public void KeyValidationTest(string keyData, int rollingPeriod, int rollingStartNummberDayOffset, bool isValid)
         {
-            var dateTime = DateTime.UtcNow;
-
-            // 00:00:00.000
-            dateTime = dateTime.AddHours(-dateTime.Hour)
-                .AddMinutes(-dateTime.Minute)
-                .AddSeconds(-dateTime.Second)
-                .AddMilliseconds(-dateTime.Millisecond);
+            var dateTime = DateTime.UtcNow.Date;
 
             var key = new V3DiagnosisSubmissionParameter.Key() { KeyData = keyData, RollingPeriod = (uint)rollingPeriod, RollingStartNumber = dateTime.AddDays(rollingStartNummberDayOffset).ToRollingStartNumber() };
             Assert.AreEqual(isValid, key.IsValid());
