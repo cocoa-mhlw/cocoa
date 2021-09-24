@@ -21,8 +21,6 @@ namespace Covid19Radar.Services
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
 
-        public CancellationTokenSource cancellationTokenSource { get; }
-
         private readonly IList<ServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
                     region => new ServerConfiguration()
                     {
@@ -43,17 +41,15 @@ namespace Covid19Radar.Services
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
-            cancellationTokenSource = new CancellationTokenSource();
         }
 
         public abstract void Schedule();
 
-        public async Task ExposureDetectionAsync()
+        public async Task ExposureDetectionAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             foreach (var serverConfiguration in _serverConfigurations)
             {
                 List<string> downloadedFileNameList = new List<string>();
-                var cancellationToken = cancellationTokenSource.Token;
 
                 try
                 {

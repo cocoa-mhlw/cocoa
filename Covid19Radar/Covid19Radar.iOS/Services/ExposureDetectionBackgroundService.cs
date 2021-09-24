@@ -53,8 +53,9 @@ namespace Covid19Radar.iOS.Services
 
                 ScheduleBgTask();
 
-                task.ExpirationHandler = () => cancellationTokenSource.Cancel();
-
+                CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+                task.ExpirationHandler = cancellationTokenSource.Cancel;
+                var cancellationToken = cancellationTokenSource.Token;
 
                 _ = Task.Run(async () =>
                 {
@@ -73,7 +74,7 @@ namespace Covid19Radar.iOS.Services
                             return;
                         }
 
-                        await ExposureDetectionAsync();
+                        await ExposureDetectionAsync(cancellationToken);
                         task.SetTaskCompleted(true);
                     }
                     catch (OperationCanceledException exception)
