@@ -45,7 +45,7 @@ namespace Covid19Radar.Api.Models
 		public string Padding { get; set; }
 
 		[JsonIgnore]
-		public string KeyString
+		public string KeysTextForDeviceVerification
 			=> string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
 
 		public class Key

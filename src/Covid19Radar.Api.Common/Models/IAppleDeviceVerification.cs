@@ -12,7 +12,7 @@ namespace Covid19Radar.Api.Models
 
 		public string[] Regions { get; }
 
-		public string KeyString { get; }
+		public string KeysTextForDeviceVerification { get; }
 
 		public string DeviceVerificationPayload { get; }
 

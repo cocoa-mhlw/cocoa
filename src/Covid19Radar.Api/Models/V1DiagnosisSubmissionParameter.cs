@@ -19,10 +19,6 @@ namespace Covid19Radar.Api.Models
 		[JsonProperty("keys")]
 		public new Key[] Keys { get; set; }
 
-		[JsonIgnore]
-		public new string KeyString
-			=> string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
-
 		public new class Key
 		{
 			[JsonProperty("keyData")]
