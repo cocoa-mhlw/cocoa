@@ -10,8 +10,6 @@ namespace Covid19Radar.Api.Services
 {
     public interface IDeviceValidationService
     {
-        Task<bool> Validation(DiagnosisSubmissionParameter param, DateTimeOffset requestTime);
+        Task<bool> Validation(IDeviceVerification deviceVerification, DateTimeOffset requestTime);
     }
-
-
 }
