@@ -44,7 +44,7 @@ namespace Covid19Radar.Api.Models
 			public uint RollingPeriod { get; set; }
 			[JsonProperty("transmissionRisk")]
 			public int TransmissionRisk { get; set; }
-			public TemporaryExposureKeyModel ToModel(V1DiagnosisSubmissionParameter p, ulong timestamp)
+			public TemporaryExposureKeyModel ToModel(V1DiagnosisSubmissionParameter _, ulong timestamp)
 			{
 				return new TemporaryExposureKeyModel()
 				{
