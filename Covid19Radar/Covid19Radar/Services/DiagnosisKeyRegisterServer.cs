@@ -17,6 +17,8 @@ namespace Covid19Radar.Services
 {
     public class DiagnosisKeyRegisterServer : IDiagnosisKeyRegisterServer
     {
+        private const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
+
         private readonly ILoggerService _loggerService;
         private readonly IHttpDataService _httpDataService;
         private readonly IDeviceVerifier _deviceVerifier;
@@ -33,8 +35,10 @@ namespace Covid19Radar.Services
         }
 
         public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+            DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
-            string processNumber
+            string processNumber,
+            string idempotencyKey
             )
         {
             try
@@ -58,7 +62,7 @@ namespace Covid19Radar.Services
                         );
                 }
 
-                var diagnosisInfo = await CreateSubmissionAsync(temporaryExposureKeys, processNumber);
+                var diagnosisInfo = await CreateSubmissionAsync(symptomOnsetDate, temporaryExposureKeys, processNumber, idempotencyKey);
                 HttpStatusCode httpStatusCode = await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
 
                 return httpStatusCode;
@@ -70,8 +74,10 @@ namespace Covid19Radar.Services
         }
 
         private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(
+            DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
-            string processNumber
+            string processNumber,
+            string idempotencyKey
             )
         {
             _loggerService.StartMethod();
@@ -97,12 +103,14 @@ namespace Covid19Radar.Services
             // Create the submission
             var submission = new DiagnosisSubmissionParameter()
             {
+                SymptomOnsetDate = symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
                 Keys = keys.ToArray(),
                 Regions = AppSettings.Instance.SupportedRegions,
                 Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
                 DeviceVerificationPayload = null,
                 AppPackageName = AppInfo.PackageName,
                 VerificationPayload = processNumber,
+                IdempotencyKey = idempotencyKey,
                 Padding = padding
             };
 
