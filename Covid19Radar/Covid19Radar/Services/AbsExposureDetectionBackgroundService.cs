@@ -24,8 +24,8 @@ namespace Covid19Radar.Services
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
 
-        private readonly IList<ServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
-                    region => new ServerConfiguration()
+        private readonly IList<DiagnosisKeyServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
+                    region => new DiagnosisKeyServerConfiguration()
                     {
                         ApiEndpoint = $"{AppSettings.Instance.CdnUrlBase}/{AppSettings.Instance.BlobStorageContainerName}",
                         Region = region
