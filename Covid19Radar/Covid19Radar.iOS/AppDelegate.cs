@@ -133,30 +133,34 @@ namespace Covid19Radar.iOS
 
         public void PreExposureDetected()
         {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.PreExposureDetected(enVersion);
+            _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
         }
 
         public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
         {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.ExposureDetected(enVersion, dailySummaries, exposureWindows);
+            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
         }
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.ExposureDetected(enVersion, exposureSummary, exposureInformations);
+            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
         }
 
         public void ExposureNotDetected()
         {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.ExposureNotDetected(enVersion);
+            _exposureDetectionService.Value.ExposureNotDetected(exposureConfiguration, enVersion);
         }
     }
 }

@@ -14,13 +14,13 @@ namespace Covid19Radar.Services
 {
     public interface IExposureDetectionService
     {
-        public void PreExposureDetected(string enVersion);
+        public void PreExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion);
 
-        public void ExposureDetected(string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows);
+        public void ExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows);
 
-        public void ExposureDetected(string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations);
+        public void ExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations);
 
-        public void ExposureNotDetected(string enVersion);
+        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion);
     }
 
     public class ExposureDetectionService : IExposureDetectionService
@@ -29,7 +29,6 @@ namespace Covid19Radar.Services
         private readonly IUserDataRepository _userDataRepository;
         private readonly ILocalNotificationService _localNotificationService;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
-        private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
 
         private readonly IExposureDataCollectServer _exposureDataCollectServer;
 
@@ -39,7 +38,6 @@ namespace Covid19Radar.Services
             IUserDataRepository userDataRepository,
             ILocalNotificationService localNotificationService,
             IExposureRiskCalculationService exposureRiskCalculationService,
-            IExposureConfigurationRepository exposureConfigurationRepository,
             IExposureDataCollectServer exposureDataCollectServer
             )
         {
@@ -47,16 +45,15 @@ namespace Covid19Radar.Services
             _userDataRepository = userDataRepository;
             _localNotificationService = localNotificationService;
             _exposureRiskCalculationService = exposureRiskCalculationService;
-            _exposureConfigurationRepository = exposureConfigurationRepository;
             _exposureDataCollectServer = exposureDataCollectServer;
         }
 
-        public void PreExposureDetected(string enVersion)
+        public void PreExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion)
         {
             _loggerService.Debug("PreExposureDetected");
         }
 
-        public void ExposureDetected(string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        public void ExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
 
@@ -82,8 +79,6 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async () =>
             {
-                ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
-
                 _ = await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     DeviceInfo.Model,
@@ -93,12 +88,10 @@ namespace Covid19Radar.Services
             });
         }
 
-        public void ExposureDetected(string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        public void ExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
             _loggerService.Info("ExposureDetected: Legacy-V1");
 
-            ExposureConfiguration exposureConfiguration = _exposureConfigurationRepository.GetExposureConfigurationAsync()
-                .GetAwaiter().GetResult();
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
             bool isNewExposureDetected = _userDataRepository.AppendExposureData(
@@ -119,8 +112,6 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async () =>
             {
-                ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
-
                 _ = await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     DeviceInfo.Model,
@@ -132,14 +123,12 @@ namespace Covid19Radar.Services
             _loggerService.EndMethod();
         }
 
-        public void ExposureNotDetected(string enVersion)
+        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion)
         {
             _loggerService.Info("ExposureNotDetected");
 
             _ = Task.Run(async () =>
             {
-                ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
-
                 _ = await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     DeviceInfo.Model,
