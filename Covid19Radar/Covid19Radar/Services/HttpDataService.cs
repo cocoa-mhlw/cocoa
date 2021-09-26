@@ -78,7 +78,7 @@ namespace Covid19Radar.Services
         public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             loggerService.StartMethod();
-            var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/v2/diagnosis";
+            var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/v3/diagnosis";
             var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
             HttpStatusCode status = await PutAsync(url, content);
             loggerService.EndMethod();
