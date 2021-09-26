@@ -4,9 +4,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.Services
 {
@@ -29,13 +31,18 @@ namespace Covid19Radar.Services
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
 
+        private readonly AbsExposureNotificationClient _exposureNotificationClient;
+        private readonly IExposureDataCollectServer _exposureDataCollectServer;
+
         public ExposureDetectionService
         (
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             ILocalNotificationService localNotificationService,
             IExposureRiskCalculationService exposureRiskCalculationService,
-            IExposureConfigurationRepository exposureConfigurationRepository
+            IExposureConfigurationRepository exposureConfigurationRepository,
+            AbsExposureNotificationClient exposureNotificationClient,
+            IExposureDataCollectServer exposureDataCollectServer
             )
         {
             _loggerService = loggerService;
@@ -43,6 +50,8 @@ namespace Covid19Radar.Services
             _localNotificationService = localNotificationService;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _exposureConfigurationRepository = exposureConfigurationRepository;
+            _exposureNotificationClient = exposureNotificationClient;
+            _exposureDataCollectServer = exposureDataCollectServer;
         }
 
         public void PreExposureDetected()
@@ -73,6 +82,19 @@ namespace Covid19Radar.Services
             {
                 _loggerService.Info($"DailySummary: {dailySummaries.Count}, but no high-risk exposure detected");
             }
+
+            _ = Task.Run(async () =>
+            {
+                var enVersion = (await _exposureNotificationClient.GetVersionAsync()).ToString();
+                ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
+
+                _ = await _exposureDataCollectServer.UploadExposureDataAsync(
+                    exposureConfiguration,
+                    DeviceInfo.Model,
+                    enVersion,
+                    dailySummaries, exposureWindows
+                    );
+            });
         }
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
@@ -99,13 +121,37 @@ namespace Covid19Radar.Services
                 _loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
             }
 
+            _ = Task.Run(async () =>
+            {
+                var enVersion = (await _exposureNotificationClient.GetVersionAsync()).ToString();
+                ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
+
+                _ = await _exposureDataCollectServer.UploadExposureDataAsync(
+                    exposureConfiguration,
+                    DeviceInfo.Model,
+                    enVersion,
+                    exposureSummary, exposureInformations
+                    );
+            });
+
             _loggerService.EndMethod();
         }
 
         public void ExposureNotDetected()
         {
             _loggerService.Info("ExposureNotDetected");
+
+            _ = Task.Run(async () =>
+            {
+                var enVersion = (await _exposureNotificationClient.GetVersionAsync()).ToString();
+                ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
+
+                _ = await _exposureDataCollectServer.UploadExposureDataAsync(
+                    exposureConfiguration,
+                    DeviceInfo.Model,
+                    enVersion
+                    );
+            });
         }
     }
-
 }
