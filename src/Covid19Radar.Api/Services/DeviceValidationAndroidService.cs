@@ -225,7 +225,7 @@ namespace Covid19Radar.Api.Services
         }
 
         private static string GetAndroidNonceClearText(IAndroidDeviceVerification submission)
-                => string.Join("|", submission.AppPackageName, submission.KeyString, GetRegionString(submission.Regions), submission.VerificationPayload);
+                => string.Join("|", submission.AppPackageName, submission.KeysTextForDeviceVerification, GetRegionString(submission.Regions), submission.VerificationPayload);
 
         private static string GetRegionString(string[] regions)
             => string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));

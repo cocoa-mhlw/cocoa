@@ -6,13 +6,11 @@ namespace Covid19Radar.Api.Models
 {
     public interface IAndroidDeviceVerification
     {
-        public string KeyString { get; }
-
         public string AppPackageName { get; set; }
 
         public string[] Regions { get; }
 
-        public string KeysText { get; }
+        public string KeysTextForDeviceVerification { get; }
 
         public string DeviceVerificationPayload { get; }
 
