@@ -132,17 +132,32 @@ namespace Covid19Radar.iOS
         }
 
         public void PreExposureDetected()
-            => _exposureDetectionService.Value.PreExposureDetected();
+        {
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.PreExposureDetected(enVersion);
+        }
 
         public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
-            => _exposureDetectionService.Value.ExposureDetected(dailySummaries, exposureWindows);
+        {
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureDetected(enVersion, dailySummaries, exposureWindows);
+        }
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
-            => _exposureDetectionService.Value.ExposureDetected(exposureSummary, exposureInformations);
+        {
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureDetected(enVersion, exposureSummary, exposureInformations);
+        }
 
         public void ExposureNotDetected()
-            => _exposureDetectionService.Value.ExposureNotDetected();
-
+        {
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureNotDetected(enVersion);
+        }
     }
 }
 

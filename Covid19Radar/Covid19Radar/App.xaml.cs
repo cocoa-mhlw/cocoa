@@ -101,11 +101,6 @@ namespace Covid19Radar
             return new DryIocContainerExtension(container);
         }
 
-        //protected void OnNotificationTapped(NotificationTappedEventArgs e)
-        //{
-        //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-        //}
-
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Base and Navigation
@@ -204,13 +199,6 @@ namespace Covid19Radar
             LogFileService.Rotate();
         }
 
-        /*
-         public async Task InitializeBackgroundTasks()
-        {
-            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
-        }
-        */
         protected override void OnSleep()
         {
             base.OnSleep();

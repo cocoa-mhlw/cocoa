@@ -28,11 +28,6 @@ namespace Covid19Radar.Droid.Services
 #endif
         internal const string CURRENT_WORK_NAME = "cappuccino_worker";
 
-        internal static string[] OLD_WORK_NAMES = {
-            "exposurenotification",
-            "cocoaexposurenotification",
-        };
-
         private readonly ILoggerService _loggerService;
 
         public ExposureDetectionBackgroundService(
@@ -58,8 +53,6 @@ namespace Covid19Radar.Droid.Services
 
             WorkManager workManager = WorkManager.GetInstance(Platform.AppContext);
 
-            CancelOldWorks(workManager);
-
             PeriodicWorkRequest periodicWorkRequest = CreatePeriodicWorkRequest();
             workManager.EnqueueUniquePeriodicWork(
                 CURRENT_WORK_NAME,
@@ -68,14 +61,6 @@ namespace Covid19Radar.Droid.Services
                 );
 
             _loggerService.EndMethod();
-        }
-
-        private static void CancelOldWorks(WorkManager workManager)
-        {
-            foreach (var oldWorkName in OLD_WORK_NAMES)
-            {
-                workManager.CancelUniqueWork(oldWorkName);
-            }
         }
 
         private static PeriodicWorkRequest CreatePeriodicWorkRequest()

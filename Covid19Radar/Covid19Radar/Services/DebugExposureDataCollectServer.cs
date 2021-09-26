@@ -39,20 +39,36 @@ namespace Covid19Radar.Services
 
     public class ReleaseExposureDataCollectServer : IExposureDataCollectServer
     {
-        public Task<ExposureDataResponse?> UploadExposureDataAsync(ExposureConfiguration exposureConfiguration, string deviceModel, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformation)
+        public Task<ExposureDataResponse?> UploadExposureDataAsync(
+            ExposureConfiguration exposureConfiguration,
+            string deviceModel,
+            string enVersion,
+            ExposureSummary exposureSummary,
+            IList<ExposureInformation> exposureInformation
+            )
             => Task.FromResult<ExposureDataResponse>(null);
 
-        public Task<ExposureDataResponse?> UploadExposureDataAsync(ExposureConfiguration exposureConfiguration, string deviceModel, string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        public Task<ExposureDataResponse?> UploadExposureDataAsync(
+            ExposureConfiguration exposureConfiguration,
+            string deviceModel,
+            string enVersion,
+            IList<DailySummary> dailySummaries,
+            IList<ExposureWindow> exposureWindows
+            )
             => Task.FromResult<ExposureDataResponse>(null);
 
-        public Task<ExposureDataResponse?> UploadExposureDataAsync(ExposureConfiguration exposureConfiguration, string deviceModel, string enVersion)
+        public Task<ExposureDataResponse?> UploadExposureDataAsync(
+            ExposureConfiguration exposureConfiguration,
+            string deviceModel,
+            string enVersion
+            )
             => Task.FromResult<ExposureDataResponse>(null);
     }
 
-    public class DebugExposureDataCollectServer: IExposureDataCollectServer
+    public class DebugExposureDataCollectServer : IExposureDataCollectServer
     {
         // https://github.com/keiji/en-calibration-server
-        private const string API_ENDPOINT = "https://en.keiji.dev/diagnosis_keys";
+        private const string API_ENDPOINT = "https://en.keiji.dev/exposure_data";
         private const string CLUSTER_ID = "212458"; // 6 digits
 
         private readonly ILoggerService _loggerService;
@@ -74,7 +90,7 @@ namespace Covid19Radar.Services
             string enVersion,
             ExposureSummary exposureSummary,
             IList<ExposureInformation> exposureInformation
-         )
+            )
         {
             var exposureResult = new ExposureRequest(exposureConfiguration,
                 exposureSummary, exposureInformation

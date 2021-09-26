@@ -12,7 +12,6 @@ using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
 using Covid19Radar.Services.Migration;
 using Covid19Radar.Droid.Services.Migration;
-using AndroidX.Work;
 using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
@@ -38,9 +37,6 @@ namespace Covid19Radar.Droid
 
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
             = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
-
-        private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
-            = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
 
         private Lazy<IExposureDetectionService> _exposureDetectionService
             = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
@@ -72,8 +68,6 @@ namespace Covid19Radar.Droid
             {
                 SetupENClient(exposureNotificationApiService.Client);
             }
-
-            _exposureDetectionBackgroundService.Value.Schedule();
         }
 
         private void SetupENClient(ExposureNotificationClient client)
@@ -107,15 +101,31 @@ namespace Covid19Radar.Droid
         }
 
         public void PreExposureDetected()
-            => _exposureDetectionService.Value.PreExposureDetected();
+        {
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.PreExposureDetected(enVersion);
+        }
 
         public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
-            => _exposureDetectionService.Value.ExposureDetected(dailySummaries, exposureWindows);
+        {
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureDetected(enVersion, dailySummaries, exposureWindows);
+        }
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
-            => _exposureDetectionService.Value.ExposureDetected(exposureSummary, exposureInformations);
+        {
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureDetected(enVersion, exposureSummary, exposureInformations);
+        }
 
         public void ExposureNotDetected()
-            => _exposureDetectionService.Value.ExposureNotDetected();
+        {
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureNotDetected(enVersion);
+        }
     }
 }
