@@ -57,29 +57,28 @@ namespace Covid19Radar.Services
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
 
-            _userDataRepository.SetExposureDataAsync(
-                dailySummaries.ToList(),
-                exposureWindows.ToList()
-                );
-
-            bool isHighRiskExposureDetected = dailySummaries
-                .Select(dailySummary => _exposureRiskCalculationService.CalcRiskLevel(dailySummary))
-                .Where(riskLevel => riskLevel >= RiskLevel.High)
-                .Count() > 0;
-
-            if (isHighRiskExposureDetected)
-            {
-                _localNotificationService.ShowExposureNotificationAsync()
-                    .GetAwaiter().GetResult();
-            }
-            else
-            {
-                _loggerService.Info($"DailySummary: {dailySummaries.Count}, but no high-risk exposure detected");
-            }
-
             _ = Task.Run(async () =>
             {
-                _ = await _exposureDataCollectServer.UploadExposureDataAsync(
+                await _userDataRepository.SetExposureDataAsync(
+                    dailySummaries.ToList(),
+                    exposureWindows.ToList()
+                    );
+
+                bool isHighRiskExposureDetected = dailySummaries
+                    .Select(dailySummary => _exposureRiskCalculationService.CalcRiskLevel(dailySummary))
+                    .Where(riskLevel => riskLevel >= RiskLevel.High)
+                    .Count() > 0;
+
+                if (isHighRiskExposureDetected)
+                {
+                    _ = _localNotificationService.ShowExposureNotificationAsync();
+                }
+                else
+                {
+                    _loggerService.Info($"DailySummary: {dailySummaries.Count}, but no high-risk exposure detected");
+                }
+
+                await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     DeviceInfo.Model,
                     enVersion,
@@ -94,33 +93,30 @@ namespace Covid19Radar.Services
 
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
-            bool isNewExposureDetected = _userDataRepository.AppendExposureData(
-                exposureSummary,
-                exposureInformations.ToList(),
-                configurationV1.MinimumRiskScore
-                );
+            _ = Task.Run(async() =>
+            {
+                bool isNewExposureDetected = _userDataRepository.AppendExposureData(
+                    exposureSummary,
+                    exposureInformations.ToList(),
+                    configurationV1.MinimumRiskScore
+                    );
 
-            if (isNewExposureDetected)
-            {
-                _localNotificationService.ShowExposureNotificationAsync()
-                    .GetAwaiter().GetResult();
-            }
-            else
-            {
-                _loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
-            }
+                if (isNewExposureDetected)
+                {
+                    _ = _localNotificationService.ShowExposureNotificationAsync();
+                }
+                else
+                {
+                    _loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
+                }
 
-            _ = Task.Run(async () =>
-            {
-                _ = await _exposureDataCollectServer.UploadExposureDataAsync(
+                await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     DeviceInfo.Model,
                     enVersion,
                     exposureSummary, exposureInformations
                     );
             });
-
-            _loggerService.EndMethod();
         }
 
         public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion)
@@ -129,7 +125,7 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async () =>
             {
-                _ = await _exposureDataCollectServer.UploadExposureDataAsync(
+                await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     DeviceInfo.Model,
                     enVersion
