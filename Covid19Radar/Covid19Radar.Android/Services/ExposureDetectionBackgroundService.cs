@@ -19,13 +19,9 @@ namespace Covid19Radar.Droid.Services
 {
     public class ExposureDetectionBackgroundService : AbsExposureDetectionBackgroundService
     {
-#if DEBUG
-        internal const int INTERVAL_IN_MINUTES = 16;
-        internal const int BACKOFF_DELAY_IN_MINUTES = 3;
-#else
         internal const int INTERVAL_IN_MINUTES = 4 * 60;
         internal const int BACKOFF_DELAY_IN_MINUTES = 1 * 60;
-#endif
+
         internal const string CURRENT_WORK_NAME = "cappuccino_worker";
 
         private readonly ILoggerService _loggerService;
@@ -135,7 +131,8 @@ namespace Covid19Radar.Droid.Services
             }
         }
 
-        public override void OnStopped() {
+        public override void OnStopped()
+        {
             base.OnStopped();
 
             _loggerService.Value.Warning("OnStopped");
