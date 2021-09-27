@@ -10,6 +10,8 @@ using Android.Content;
 using Acr.UserDialogs;
 using System;
 
+using FormsApplication = Xamarin.Forms.Application;
+
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -30,7 +32,17 @@ namespace Covid19Radar.Droid
             return intent;
         }
 
-        private App _prismApp;
+        private App? AppInstance
+        {
+            get
+            {
+                if (FormsApplication.Current is App app)
+                {
+                    return app;
+                }
+                return null;
+            }
+        }
         public static object dataLock = new object();
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -50,11 +62,10 @@ namespace Covid19Radar.Droid
 
             UserDialogs.Init(this);
 
-            _prismApp = new App();
-            LoadApplication(_prismApp);
+            LoadApplication(new App());
 
             Destination destination = GetDestinationFromIntent(Intent);
-            _prismApp.NavigateToSplash(destination);
+            AppInstance.NavigateToSplash(destination);
         }
 
         private static Destination GetDestinationFromIntent(Intent intent)
@@ -96,7 +107,7 @@ namespace Covid19Radar.Droid
             base.OnNewIntent(intent);
 
             var destination = GetDestinationFromIntent(Intent);
-            await _prismApp.NavigateTo(destination);
+            await AppInstance.NavigateTo(destination);
         }
 
     }
