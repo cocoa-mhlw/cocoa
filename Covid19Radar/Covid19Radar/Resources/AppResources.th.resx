@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>กำลังลบ</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>ชวนเพื่อน และครอบครัวของคุณมาร่วมมือกัน</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>แชร์</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>ช่วยปกป้องครอบครัว และเพื่อนของคุณโดยการลงทะเบียนผลตรวจแบบไม่ระบุตัวตน</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>หนึ่งคนที่ใช้แอพนี้เพิ่มขึ้น เท่ากับอีกหนึ่งก้าวที่ช่วยหยุด COVID-19</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>วิธีการใช้งาน</value>
@@ -323,14 +315,6 @@
     <value>ติดต่อเกี่ยวกับแอปพลิเคชัน</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>อยู่ในระหว่างใช้งาน</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>การพบปะใกล้ชิดกับผู้ติดเชื้อที่ได้รับการยืนยันแล้วใน 14 วันที่ผ่านมา</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>เมื่อคุณมีผลการตรวจว่าติดเชื้อ COVID-19</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,10 +443,6 @@
     <value>การบันทึกข้อมูลการสัมผัสเชื้อ</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>กรุณาใส่รหัส 8 หลัก</value>
     <comment>8桁の処理番号を入力してください</comment>
@@ -512,29 +492,9 @@
     <value>ข้อมูลเกี่ยวกับแอปพลิเคชันนี้</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>วัน</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>การแจ้งเตือนการสัมผัสเชื้อทำงานอยู่</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>บลูทูธถูกปิดอยู่ กรุณาเปิดบลูทูธ</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>การแจ้งเตือนการสัมผัสเชื้อถูกปิดการทำงาน กรุณาเปิดการทำงานจากการตั้งค่าของอุปกรณ์ของคุณ</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>คุณจะเป็นต้องยอมรับข้อตกลงสิทธิ์การใช้งาน</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>ไม่รองรับการแจ้งเตือนการสัมผัสเชื้อ กรุณาอัปเดทระบบปฏิบัติการให้เป็นรุ่นล่าสุด หากยังพบปัญหาอยู่กรุณาติดต่อ appsupport@cov19.mhlw.go.jp</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>การเชื่อต่อเครือข่ายผิดพลาด</value>

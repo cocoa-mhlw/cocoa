@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Es wird gelöscht</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Ihre Familie und Freunde zur Teilnahme einladen</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Freigeben</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Helfen Sie mit, Ihre Familie und Freunde zu schützen, indem Sie Testergebnisse anonym registrieren.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Jeder weitere Benutzer dieser App ist ein weiterer Schritt zur Eindämmung der Verbreitung von COVID-19.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Wie man diese App benutzt</value>
@@ -323,14 +315,6 @@
     <value>Support</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>im Gebrauch</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>Enge Kontakte überprüfen.</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Bei einem positiven Test auf COVID-19</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,10 +443,6 @@
     <value>Bluetooth aktivieren</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>Geben Sie einen 8-stelligen Zahlencode ein</value>
     <comment>8桁の処理番号を入力してください</comment>
@@ -512,29 +492,9 @@
     <value>Informationen zu dieser App</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>TAGE</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Die Belichtungsbenachrichtigung ist aktiv.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth ist ausgeschaltet. Aktivieren Sie Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Die Belichtungsbenachrichtigung ist deaktiviert. Öffnen Sie die Terminaleinstellungen, und aktivieren Sie die Belichtungsbenachrichtigung.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>Sie müssen den Nutzungsbedingungen zustimmen.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Die Belichtungsbenachrichtigung wird nicht unterstützt. Bitte aktualisieren Sie das Betriebssystem auf die neueste Version. Wenn Sie immer noch Probleme haben, kontaktieren Sie uns bitte unter appsupport@cov19.mhlw.go.jp.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Netzwerkverbindungsfehler</value>

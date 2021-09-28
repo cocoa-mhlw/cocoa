@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
@@ -84,7 +85,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             reAgreePrivacyPolicyPageViewModel.OpenWebView.Execute(null);
 
             Assert.Equal(1, actualCalls);
-            Assert.Equal("https://www.mhlw.go.jp/cocoa/privacypolicy_english.html", actualUri);
+            Assert.Equal(AppResources.UrlPrivacyPolicy, actualUri);
             Assert.Equal(BrowserLaunchMode.SystemPreferred, actualLaunchMode);
         }
 

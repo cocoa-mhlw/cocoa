@@ -24,6 +24,38 @@ namespace Covid19Radar.Droid.Services
             return preference.Contains(key);
         }
 
+        public DateTime? GetDateTime(string key)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}, type={typeof(DateTime)}");
+
+                if (!ContainsKey(key))
+                {
+                    loggerService.Info($"{key} is not contained.");
+                    loggerService.EndMethod();
+                    return null;
+                }
+
+                var context = Android.App.Application.Context;
+                var preference = context.GetSharedPreferences(context.PackageName, Android.Content.FileCreationMode.Private);
+                try
+                {
+                    var valueString = preference.GetString(key, null);
+                    var value = DateTime.Parse(valueString);
+                    loggerService.EndMethod();
+                    return value;
+                }
+                catch (Exception)
+                {
+                    loggerService.Error($"Failed to get value of {key}");
+                    loggerService.EndMethod();
+                    return null;
+                }
+            }
+        }
+
         public T GetValue<T>(string key, T defaultValue)
         {
             lock (this)
@@ -33,6 +65,7 @@ namespace Covid19Radar.Droid.Services
 
                 if (!ContainsKey(key))
                 {
+                    loggerService.Info($"{key} is not contained.");
                     loggerService.EndMethod();
                     return defaultValue;
                 }

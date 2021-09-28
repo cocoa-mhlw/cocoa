@@ -200,11 +200,14 @@ namespace Covid19Radar.Services
                         }
                     }
                 }
+                UserDataRepository.SetCanConfirmExposure(true);
+                UserDataRepository.SetLastConfirmedDate(DateTime.UtcNow);
             }
             catch (Exception ex)
             {
                 // any exceptions, throw and wait for retry
                 loggerService.Exception("Fail to download files", ex);
+                UserDataRepository.SetCanConfirmExposure(false);
 
                 throw ex;
             }
@@ -234,17 +237,27 @@ namespace Covid19Radar.Services
             {
                 loggerService.Exception("Failed to create directory", ex);
                 loggerService.EndMethod();
-                // catch error return newCreated -1 / downloadedFiles 0
-                return (-1, downloadedFiles);
+                throw new Exception("Failed to create directory.");
             }
 
             var httpDataService = HttpDataService;
 
-            List<TemporaryExposureKeyExportFileModel> tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
+            List<TemporaryExposureKeyExportFileModel> tekList;
+            try
+            {
+                tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed to get TEK list", ex);
+                loggerService.EndMethod();
+                throw new Exception("Failed to get TEK list.");
+            }
+
             if (tekList.Count == 0)
             {
                 loggerService.EndMethod();
-                return (-1, downloadedFiles);
+                throw new Exception("TEK list is empty.");
             }
             Debug.WriteLine("C19R Fetch Exposure Key");
 
@@ -270,6 +283,8 @@ namespace Covid19Radar.Services
                         catch (Exception ex)
                         {
                             loggerService.Exception("Fail to copy", ex);
+                            loggerService.EndMethod();
+                            throw new Exception("Failed to copy.");
                         }
                     }
                     newCreated = tekItem.Created;

@@ -951,30 +951,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         public bool ContainsKey(string key) => _dict.ContainsKey(key);
 
-        public T GetValue<T>(string key, T defaultValue)
-        {
-            if (!_dict.ContainsKey(key))
-            {
-                return defaultValue;
-            }
+        public T GetValue<T>(string key, T defaultValue = default) => (T)_dict.GetValueOrDefault(key, defaultValue);
 
-            object value = _dict[key];
-
-            if (defaultValue == null)
-            {
-                value = value.ToString();
-                return (T)value;
-            }
-
-            switch (defaultValue)
-            {
-                case string:
-                    value = value.ToString();
-                    break;
-            }
-
-            return (T)value;
-        }
         public void RemoveValue(string key) => _dict.Remove(key);
 
         public void SetValue<T>(string key, T value) => _dict[key] = value;

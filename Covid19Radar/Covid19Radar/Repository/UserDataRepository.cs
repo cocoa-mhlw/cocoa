@@ -31,6 +31,14 @@ namespace Covid19Radar.Repository
         long GetLastProcessTekTimestamp(string region);
         void SetLastProcessTekTimestamp(string region, long created);
         void RemoveLastProcessTekTimestamp();
+
+        void SetCanConfirmExposure(bool canConfirmExposure);
+        bool IsCanConfirmExposure();
+
+        void SetLastConfirmedDate(DateTime utcNow);
+        DateTime? GetLastConfirmedDate();
+
+        void RemoveAllExposureNotificationStatus();
     }
 
     public class UserDataRepository : IUserDataRepository
@@ -152,6 +160,57 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
             _preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
+            _loggerService.EndMethod();
+        }
+
+        public void SetCanConfirmExposure(bool canConfirmExposure)
+        {
+            _loggerService.StartMethod();
+            _preferencesService.SetValue(PreferenceKey.CanConfirmExposure, canConfirmExposure);
+            _loggerService.EndMethod();
+        }
+
+        public bool IsCanConfirmExposure()
+        {
+            _loggerService.StartMethod();
+            var canConfirmExposure = _preferencesService.GetValue(PreferenceKey.CanConfirmExposure, true);
+            _loggerService.EndMethod();
+
+            return canConfirmExposure;
+        }
+
+        public void SetLastConfirmedDate(DateTime dateTime)
+        {
+            _loggerService.StartMethod();
+            _preferencesService.SetValue(PreferenceKey.LastConfirmedDateTimeEpoch, dateTime.ToUnixEpoch());
+            _loggerService.EndMethod();
+        }
+
+
+        public DateTime? GetLastConfirmedDate()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                if (!_preferencesService.ContainsKey(PreferenceKey.LastConfirmedDateTimeEpoch))
+                {
+                    return null;
+                }
+
+                long epoch = _preferencesService.GetValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L);
+                return UNIX_EPOCH.AddSeconds(epoch);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        public void RemoveAllExposureNotificationStatus()
+        {
+            _loggerService.StartMethod();
+            _preferencesService.RemoveValue(PreferenceKey.CanConfirmExposure);
+            _preferencesService.RemoveValue(PreferenceKey.LastConfirmedDateTimeEpoch);
             _loggerService.EndMethod();
         }
     }
