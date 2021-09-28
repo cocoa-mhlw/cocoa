@@ -12,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CommonServiceLocator;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
@@ -32,6 +33,7 @@ namespace Covid19Radar.Services
         private IMigrationService MigrationService => ServiceLocator.Current.GetInstance<IMigrationService>();
         private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
         private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
+        private IPreferencesService PreferencesService => ServiceLocator.Current.GetInstance<IPreferencesService>();
 
         public ExposureNotificationHandler()
         {
@@ -199,11 +201,14 @@ namespace Covid19Radar.Services
                         }
                     }
                 }
+                PreferencesService.SetValue(PreferenceKey.CanConfirmExposure, true);
+                PreferencesService.SetValue(PreferenceKey.LastConfirmedUtcDateTime, DateTime.UtcNow);
             }
             catch (Exception ex)
             {
                 // any exceptions, throw and wait for retry
                 loggerService.Exception("Fail to download files", ex);
+                PreferencesService.SetValue(PreferenceKey.CanConfirmExposure, false);
 
                 throw ex;
             }
@@ -233,17 +238,27 @@ namespace Covid19Radar.Services
             {
                 loggerService.Exception("Failed to create directory", ex);
                 loggerService.EndMethod();
-                // catch error return newCreated -1 / downloadedFiles 0
-                return (-1, downloadedFiles);
+                throw new Exception("Failed to create directory.");
             }
 
             var httpDataService = HttpDataService;
 
-            List<TemporaryExposureKeyExportFileModel> tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
+            List<TemporaryExposureKeyExportFileModel> tekList;
+            try
+            {
+                tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed to get TEK list", ex);
+                loggerService.EndMethod();
+                throw new Exception("Failed to get TEK list.");
+            }
+
             if (tekList.Count == 0)
             {
                 loggerService.EndMethod();
-                return (-1, downloadedFiles);
+                throw new Exception("TEK list is empty.");
             }
             Debug.WriteLine("C19R Fetch Exposure Key");
 
@@ -269,6 +284,8 @@ namespace Covid19Radar.Services
                         catch (Exception ex)
                         {
                             loggerService.Exception("Fail to copy", ex);
+                            loggerService.EndMethod();
+                            throw new Exception("Failed to copy.");
                         }
                     }
                     newCreated = tekItem.Created;

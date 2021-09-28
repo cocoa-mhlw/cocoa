@@ -74,6 +74,9 @@ namespace Covid19Radar.Droid
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
 #endif
+            container.Register<IExposureNotificationStatusPlatformService, ExposureNotificationStatusPlatformService>(Reuse.Singleton);
+            container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
+            container.Register<IPlatformService, PlatformService>(Reuse.Singleton);
         }
     }
 }

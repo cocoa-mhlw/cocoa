@@ -680,6 +680,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         public bool ContainsKey(string key) => _dict.ContainsKey(key);
 
+        public DateTime? GetDateTime(string key) => (DateTime?)_dict.GetValueOrDefault(key, null);
+
         public T GetValue<T>(string key, T defaultValue = default) => (T)_dict.GetValueOrDefault(key, defaultValue);
 
         public void RemoveValue(string key) => _dict.Remove(key);

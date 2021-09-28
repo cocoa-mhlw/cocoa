@@ -83,6 +83,8 @@ namespace Covid19Radar.iOS
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
 #endif
+            container.Register<IExposureNotificationStatusPlatformService, ExposureNotificationStatusPlatformService>(Reuse.Singleton);
+            container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
         }
     }
 }
@@ -99,6 +101,6 @@ public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
         {
             completionHandler(UNNotificationPresentationOptions.Alert);
         }
-        
+
     }
 }

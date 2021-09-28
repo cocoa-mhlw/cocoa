@@ -92,10 +92,6 @@
 	<data name="LoadingTextDeleting" xml:space="preserve">
     <value>削除しています</value>
   </data>
-	<data name="HomePageHeader3Title" xml:space="preserve">
-    <value>本アプリを広めましょう</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
 	<data name="ButtonShare" xml:space="preserve">
     <value>共有する</value>
   </data>
@@ -141,10 +137,6 @@
 	<data name="HomePageHeader2Description" xml:space="preserve">
     <value>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-	<data name="HomePageHeader3Description" xml:space="preserve">
-    <value>本アプリは多くの方にお使いいただくほど効果を発揮します。</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
 	<data name="HelpMenuPageTitle" xml:space="preserve">
     <value>使い方</value>
@@ -318,17 +310,13 @@
     <value>お問い合わせ</value>
     <comment>お問い合わせ（メニュー）</comment>
   </data>
-	<data name="HomePageDescription1" xml:space="preserve">
-    <value>使用中</value>
-    <comment>使用中</comment>
-  </data>
 	<data name="HomePageDescription2" xml:space="preserve">
-    <value>陽性者との接触を確認する</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
+    <value>陽性者との接触結果を確認</value>
+    <comment>陽性者との接触結果を確認</comment>
   </data>
 	<data name="HomePageDescription3" xml:space="preserve">
-    <value>新型コロナウイルス陽性と診断されたら</value>
-    <comment>新型コロナウイルス陽性と診断されたら</comment>
+    <value>陽性と診断されたら</value>
+    <comment>陽性と診断されたら</comment>
   </data>
 	<data name="HomePageDescription4" xml:space="preserve">
     <value>陽性情報の登録</value>
@@ -483,8 +471,8 @@
     <comment>使用を中止して過去14日間の接触履歴を消去</comment>
   </data>
 	<data name="HomePageDescription0" xml:space="preserve">
-    <value>から</value>
-    <comment>から</comment>
+    <value>利用開始から</value>
+    <comment>利用開始から</comment>
   </data>
 	<data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>8桁の処理番号を入力してください</value>
@@ -536,20 +524,8 @@
     <comment>接触確認アプリに関する情報</comment>
   </data>
 	<data name="HomePagePastDays" xml:space="preserve">
-    <value>日間</value>
-    <comment>X日間</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Notification機能は許諾の状態です。</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+    <value>日</value>
+    <comment>日</comment>
   </data>
 	<data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>利用規約に同意する必要があります。</value>
@@ -558,14 +534,6 @@
   <data name="ExposureNotificationRestrictedTitle" xml:space="preserve">
     <value>接触通知機能が停止しています</value>
     <comment>接触通知機能が停止しています</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>アプリを再インストールするか、 OSの設定から接触通知を有効にしてください。</value>
-    <comment>アプリを再インストールするか、 OSの設定から接触通知を有効にしてください。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
 	<data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>通信に失敗しました。</value>
@@ -996,5 +964,111 @@
   <data name="UrlWebAccessibilityPolicy" xml:space="preserve">
     <value>https://www.mhlw.go.jp/cocoa/webaccessibility_japanese.html</value>
     <comment>ウェブアクセシビリティ方針URL</comment>
+  </data>
+  <data name="HomePageENStatusActiveTitle" xml:space="preserve">
+    <value>動作中</value>
+    <comment>動作中</comment>
+  </data>
+  <data name="HomePageENStatusActiveDescription" xml:space="preserve">
+    <value>接触有無の最新確認日時</value>
+    <comment>接触有無の最新確認日時</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedTitle" xml:space="preserve">
+    <value>接触有無を確認できません</value>
+    <comment>接触有無を確認できません</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedDescription1" xml:space="preserve">
+    <value>接触有無が確認できませんでした。</value>
+    <comment>接触有無が確認できませんでした。</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedDescription2" xml:space="preserve">
+    <value>解決のため、対処方法を確認してください。</value>
+    <comment>解決のため、対処方法を確認してください。</comment>
+  </data>
+  <data name="HomePageTroubleshootingButtonText" xml:space="preserve">
+    <value>対処方法を確認</value>
+    <comment>対処方法を確認</comment>
+  </data>
+  <data name="HomePageENStatusStoppedTitle" xml:space="preserve">
+    <value>停止中</value>
+    <comment>停止中</comment>
+  </data>
+  <data name="HomePageENStatusStoppedDescription1" xml:space="preserve">
+    <value>現在、接触を記録できていません。</value>
+    <comment>現在、接触を記録できていません。</comment>
+  </data>
+  <data name="HomePageENStatusStoppedDescription2" xml:space="preserve">
+    <value>接触通知を有効にするため、必要な対処方法を確認してください。</value>
+    <comment>接触通知を有効にするため、必要な対処方法を確認してください。</comment>
+  </data>
+  <data name="LatestConfirmationDateExplanationDialogText" xml:space="preserve">
+    <value>陽性者との接触の有無を1日に1回程度確認しており、最新の確認日時を表示しています。</value>
+    <comment>陽性者との接触の有無を1日に1回程度確認しており、最新の確認日時を表示しています。</comment>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>閉じる</value>
+    <comment>閉じる</comment>
+  </data>
+  <data name="HomePageQuestionIconAccessibilityTextiOS" xml:space="preserve">
+    <value>詳しい説明</value>
+    <comment>詳しい説明</comment>
+  </data>
+  <data name="HomePageQuestionIconAccessibilityTextAndroid" xml:space="preserve">
+    <value>詳しい説明ボタン</value>
+    <comment>詳しい説明ボタン</comment>
+  </data>
+  <data name="InProgressText" xml:space="preserve">
+    <value>取得中</value>
+    <comment>取得中</comment>
+  </data>
+  <data name="DateTimeFormatToDisplayOnHomePage" xml:space="preserve">
+    <value>yyyy年MM月dd日 HH時mm分</value>
+    <comment>ホーム画面の最新確認日時のフォーマット</comment>
+  </data>
+  <data name="ToSettingsButton" xml:space="preserve">
+    <value>設定へ</value>
+    <comment>設定へ</comment>
+  </data>
+  <data name="CheckSettingsDialogTitle" xml:space="preserve">
+    <value>設定をご確認ください</value>
+    <comment>設定をご確認ください</comment>
+  </data>
+  <data name="ExposureNotificationOffWarningDialogMessage" xml:space="preserve">
+    <value>アプリを利用するため、スマートフォンの接触通知設定をオンにしてください。</value>
+    <comment>アプリを利用するため、スマートフォンの接触通知設定をオンにしてください。</comment>
+  </data>
+  <data name="BluetoothOffWarningDialogMessage" xml:space="preserve">
+    <value>接触記録のため、Bluetooth設定をオンにしてください。</value>
+    <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>
+  </data>
+  <data name="LocationOffWarningDialogMessage" xml:space="preserve">
+    <value>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
+なお、本アプリで利用者の位置情報を収集することはありません。</value>
+    <comment>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
+なお、本アプリで利用者の位置情報を収集することはありません。</comment>
+  </data>
+  <data name="TroubleshootingPageTitle" xml:space="preserve">
+    <value>対処方法</value>
+    <comment>対処方法</comment>
+  </data>
+  <data name="TroubleshootingPageDescription1" xml:space="preserve">
+    <value>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</value>
+    <comment>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription2" xml:space="preserve">
+    <value>・アプリの再起動を行ってください。</value>
+    <comment>・アプリの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription3" xml:space="preserve">
+    <value>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</value>
+    <comment>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription4" xml:space="preserve">
+    <value>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</value>
+    <comment>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription5" xml:space="preserve">
+    <value>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</value>
+    <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
   </data>
 </root>

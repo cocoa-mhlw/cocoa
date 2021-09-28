@@ -30,22 +30,146 @@
             Padding="15"
             BackgroundColor="#EEEEEE"
             Spacing="15">
+            <StackLayout IsVisible="{Binding IsVisibleENStatusActiveLayout}">
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    Spacing="16">
+                    <StackLayout.Margin>
+                        <OnPlatform x:TypeArguments="Thickness"
+                                    Android="0, 10"
+                                    iOS="0, 10, 0, 0" />
+                    </StackLayout.Margin>
+                    <Grid>
+                        <ffimageloading:CachedImage
+                            Aspect="AspectFit"
+                            Source="home_active_icon.png"
+                            AutomationProperties.IsInAccessibleTree="False" />
+                        <ffimageloading:CachedImage
+                            x:Name="home_active_icon"
+                            Aspect="AspectFit"
+                            Source="home_active_icon.png"
+                            AutomationProperties.IsInAccessibleTree="False" />
+                    </Grid>
+                    <Label
+                        Style="{StaticResource HomePageLargeBoldLabel}"
+                        Text="{x:Static resources:AppResources.HomePageENStatusActiveTitle}"
+                        AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}" />
+                </StackLayout>
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    Spacing="5">
+                    <Label Style="{StaticResource HomePageMicroLabel}"
+                           VerticalOptions="Center"
+                           Text="{x:Static resources:AppResources.HomePageENStatusActiveDescription}"
+                           AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}" />
+                    <ffimageloading:CachedImage
+                        Aspect="AspectFit"
+                        Source="question_icon.png"
+                        AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
+                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextAndroid}">
+                        <ffimageloading:CachedImage.IsVisible>
+                            <OnPlatform x:TypeArguments="x:Boolean"
+                                        Android="True"
+                                        iOS="False" />
+                        </ffimageloading:CachedImage.IsVisible>
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=OnClickQuestionIcon}" />
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>
+                    <ImageButton
+                        Aspect="AspectFit"
+                        Source="question_icon.png"
+                        AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
+                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextiOS}"
+                        Command="{Binding Path=OnClickQuestionIcon}">
+                        <ImageButton.IsVisible>
+                            <OnPlatform x:TypeArguments="x:Boolean"
+                                        Android="False"
+                                        iOS="True" />
+                        </ImageButton.IsVisible>
+                    </ImageButton>
+                </StackLayout>
+                <Label
+                    Style="{StaticResource HomePageMicroLabel}"
+                    Text="{Binding LatestConfirmationDate}"
+                    FontSize="13"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding IsVisibleENStatusUnconfirmedLayout}">
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    Spacing="5"
+                    Margin="0, 10">
+                    <ffimageloading:CachedImage
+                        Aspect="AspectFit"
+                        Source="home_alert_icon.png"
+                        AutomationProperties.IsInAccessibleTree="False" />
+                    <Label
+                        Style="{StaticResource HomePageLargeBoldLabel}"
+                        Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedTitle}"
+                        AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}" />
+                </StackLayout>
+                <Label
+                    Style="{StaticResource HomePageMicroLabel}"
+                    Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedDescription1}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}" />
+                <Label
+                    Style="{StaticResource HomePageMicroLabel}"
+                    Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedDescription2}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}" />
+                <Button
+                    Style="{StaticResource HomePageBlueButton}"
+                    Text="{x:Static resources:AppResources.HomePageTroubleshootingButtonText}"
+                    Command="{prism:NavigateTo 'TroubleshootingPage'}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding IsVisibleENStatusStoppedLayout}">
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    Spacing="5"
+                    Margin="0, 10">
+                    <ffimageloading:CachedImage
+                        Aspect="AspectFit"
+                        Source="home_stop_icon.png"
+                        AutomationProperties.IsInAccessibleTree="False" />
+                    <Label
+                        Style="{StaticResource HomePageLargeBoldLabel}"
+                        Text="{x:Static resources:AppResources.HomePageENStatusStoppedTitle}"
+                        AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}" />
+                </StackLayout>
+                <Label
+                    Style="{StaticResource HomePageMicroLabel}"
+                    Text="{x:Static resources:AppResources.HomePageENStatusStoppedDescription1}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}" />
+                <Label
+                    Style="{StaticResource HomePageMicroLabel}"
+                    Text="{x:Static resources:AppResources.HomePageENStatusStoppedDescription2}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}" />
+                <Button
+                    Style="{StaticResource HomePageBlueButton}"
+                    Text="{x:Static resources:AppResources.HomePageTroubleshootingButtonText}"
+                    Command="{Binding OnClickCheckStopReason}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}" />
+            </StackLayout>
             <Frame
                 Padding="10"
                 CornerRadius="10"
                 HasShadow="False">
                 <StackLayout Spacing="0">
-                    <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
+                    <Label Style="{StaticResource HomePageSmallLabel}">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="{Binding StartDate}" />
                                 <Span Text="{x:Static resources:AppResources.HomePageDescription0}" />
                                 <Span Text=" " />
-                                <Span Text="{Binding PastDate}" />
+                                <Span Text="{Binding PastDate}"
+                                      FontAttributes="Bold"
+                                      FontSize="17" />
                                 <Span Text=" " />
                                 <Span Text="{x:Static resources:AppResources.HomePagePastDays}" />
-                                <Span Text=" " />
-                                <Span Text="{x:Static resources:AppResources.HomePageDescription1}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -53,77 +177,47 @@
                         AutomationId="ButtonExposures"
                         AutomationProperties.HelpText="{x:Static resources:AppResources.HomePageDescription2}"
                         Command="{Binding Path=OnClickExposures}"
-                        Style="{StaticResource DefaultButton}"
+                        Style="{StaticResource HomePageButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription2}" />
-
                 </StackLayout>
             </Frame>
             <Frame
                 Padding="10"
                 CornerRadius="10"
                 HasShadow="False">
-                <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageDescription3}" />
-                    <Grid ColumnSpacing="15" RowSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.2*" />
-                            <ColumnDefinition Width="0.8*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <ffimageloading:CachedImage
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Aspect="AspectFit"
-                            Source="HOMEPage10.png" />
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Style="{StaticResource DefaultLabelSmall}"
-                            Text="{x:Static resources:AppResources.HomePageHeader2Description}"
-                            VerticalTextAlignment="Center" />
-                    </Grid>
-
+                <StackLayout Spacing="5">
+                    <Label
+                        Margin="0, 5, 0, 5"
+                        Style="{StaticResource HomePageMediumBoldLabel}"
+                        Text="{x:Static resources:AppResources.HomePageDescription3}" />
+                    <Label
+                        Margin="20, 0, 20, 0"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.HomePageHeader2Description}"
+                        HorizontalTextAlignment="Center" />
                     <Button
                         Command="{prism:NavigateTo 'SubmitConsentPage'}"
-                        Style="{StaticResource DefaultButton}"
+                        Style="{StaticResource HomePageButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription4}" />
                 </StackLayout>
             </Frame>
-            <Frame
-                Padding="10"
-                CornerRadius="10"
-                HasShadow="False">
-                <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
-                    <Grid ColumnSpacing="15" RowSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.2*" />
-                            <ColumnDefinition Width="0.8*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <ffimageloading:CachedImage
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Aspect="AspectFit"
-                            Source="HOMEPage11.png" />
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Style="{StaticResource DefaultLabelSmall}"
-                            Text="{x:Static resources:AppResources.HomePageHeader3Description}"
-                            VerticalTextAlignment="Center" />
-                    </Grid>
-                    <Button
-                        Command="{Binding Path=OnClickShareApp}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.HomePageDescription5}" />
-                </StackLayout>
-            </Frame>
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="EndAndExpand"
+                Margin="10"
+                Spacing="5">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=OnClickShareApp}" />
+                </StackLayout.GestureRecognizers>
+                <ffimageloading:CachedImage
+                    Aspect="AspectFit"
+                    Source="app_share_icon.png"
+                    AutomationProperties.IsInAccessibleTree="False" />
+                <Label
+                    Style="{StaticResource HomePageLabelColor}"
+                    Text="{x:Static resources:AppResources.HomePageDescription5}" />
+            </StackLayout>
         </StackLayout>
-
     </ScrollView>
 </ContentPage>
