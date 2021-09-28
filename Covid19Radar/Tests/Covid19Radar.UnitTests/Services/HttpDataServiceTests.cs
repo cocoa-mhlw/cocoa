@@ -139,7 +139,7 @@ namespace Covid19Radar.UnitTests.Services
             var mockHttpClient = new HttpClient(new MockHttpHandler((r, c) =>
             {
                 var absoluteUri = r.RequestUri.AbsoluteUri;
-                if (absoluteUri.EndsWith("/api/v2/diagnosis"))
+                if (absoluteUri.EndsWith("/api/v3/diagnosis"))
                 {
                     requestContent = r.Content;
                     var response = new HttpResponseMessage(HttpStatusCode.NoContent);
