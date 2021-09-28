@@ -165,6 +165,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<SplashPage>();
             containerRegistry.RegisterForNavigation<HowToReceiveProcessingNumberPage>();
             containerRegistry.RegisterForNavigation<WebAccessibilityPolicyPage>();
+            containerRegistry.RegisterForNavigation<TroubleshootingPage>();
         }
 
         private static void RegisterCommonTypes(IContainer container)
@@ -183,12 +184,15 @@ namespace Covid19Radar
 #if USE_MOCK
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
+            container.Register<IExposureNotificationStatusService, ExposureNotificationStatusServiceMock>(Reuse.Singleton);
 #else
             container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
+            container.Register<IExposureNotificationStatusService, ExposureNotificationStatusService>(Reuse.Singleton);
 #endif
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
+            container.Register<IDialogService, DialogService>(Reuse.Singleton);
         }
 
         protected override void OnStart()

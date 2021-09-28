@@ -29,14 +29,26 @@
         <ScrollView Grid.Row="1">
             <StackLayout Margin="0,0,0,20" Spacing="5">
                 <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
                     Margin="0,0,0,20"
                     Aspect="AspectFit"
                     Scale="0.8"
                     Source="TutorialPage20.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.TutorialPage2Description2}" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.TutorialPage2Description3}" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.TutorialPage2Description4}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.TutorialPage2Description2}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.TutorialPage2Description3}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.TutorialPage2Description4}" />
                 <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage2Description5}"
                     Grid.Row="1"
                     AutomationId="NextButton"
                     Command="{prism:NavigateTo 'TutorialPage3'}"

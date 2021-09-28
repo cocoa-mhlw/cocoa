@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using System;
@@ -28,7 +27,12 @@ namespace Covid19Radar.Services
         private readonly HttpClient httpClient;
         private readonly HttpClient downloadClient;
 
-        public HttpDataService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IApplicationPropertyService applicationPropertyService)
+        public HttpDataService(
+            ILoggerService loggerService,
+            IHttpClientService httpClientService,
+            ISecureStorageService secureStorageService,
+            IApplicationPropertyService applicationPropertyService
+            )
         {
             this.loggerService = loggerService;
             this.secureStorageService = secureStorageService;
@@ -92,18 +96,15 @@ namespace Covid19Radar.Services
             string container = AppSettings.Instance.BlobStorageContainerName;
             string url = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
             var result = await GetCdnAsync(url, cancellationToken);
-            if (result != null)
-            {
-                loggerService.Info("Success to download");
-                loggerService.EndMethod();
-                return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
-            }
-            else
+            if (result == null)
             {
                 loggerService.Error("Fail to download");
                 loggerService.EndMethod();
-                return new List<TemporaryExposureKeyExportFileModel>();
+                throw new Exception("Failed to download TEK list.");
             }
+            loggerService.Info("Success to download");
+            loggerService.EndMethod();
+            return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
         }
 
         public async Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)

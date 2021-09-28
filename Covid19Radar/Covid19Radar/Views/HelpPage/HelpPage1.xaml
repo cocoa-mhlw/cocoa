@@ -25,19 +25,45 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Spacing="15" Grid.Row="0">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1MainTitle}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage20.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1MainTitle}" />
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="HelpPage20.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
             </StackLayout>
             <StackLayout Spacing="15" Grid.Row="1">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Title}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage22.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Text}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description2Title}" />
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="HelpPage22.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description2Text}" />
             </StackLayout>
             <StackLayout Spacing="15" Grid.Row="2">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description3Title}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage21.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description3Text}" />
+                <Label
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description3Title}" />
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="HelpPage21.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description3Text}" />
             </StackLayout>
         </Grid>
     </ScrollView>

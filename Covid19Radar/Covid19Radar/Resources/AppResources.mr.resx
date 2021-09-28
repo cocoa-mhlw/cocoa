@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>हटवणे</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>अॅप शेअर करा</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>सामायिक करा</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>जर तुम्ही नवीन कोरोनाशी सकारात्मक असाल तर, तुमच्या आजूबाजूच्या लोकांचे संरक्षण करण्यासाठी कृपया सकारात्मक नोंदणीसह सहकार्य करा.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>हे अनुप्रयोग इतके प्रभावी आहे की अनेक लोक ते इन्स्टॉल करतात, त्यामुळे कृपया आपल्या आजूबाजूच्या लोकांना ते अनुप्रयोग सामायिक करा.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>कसे वापरावे</value>
@@ -323,14 +315,6 @@
     <value>समर्थन</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>वापरात</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>जवळचे संपर्क तपासा</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19 साठी चाचणी पॉझिटीव्ह</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,10 +443,6 @@
     <value>ब्लूटूथ चालू करा</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>8 अंकी कोड प्रविष्ट करा</value>
     <comment>8桁の処理番号を入力してください</comment>
@@ -512,29 +492,9 @@
     <value>या अॅपबद्दल माहिती</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>दिवस</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>एक्स्पोजर सूचना सक्रिय आहे.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>ब्लूटूथ बंद आहे. कृपया ब्लूटूथ चालू करा.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>एक्सपोजर सूचना अकार्यान्वीत आहे. टर्मिनल संयोजना उघडा आणि एक्स्पोजर सूचना चालू करा.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>वापराच्या अटी मान्य करायला चला.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>एक्स्पोजर सूचना समर्थीत नाही. कृपया ओएस अद्ययावत करा. जर तुम्हाला अजूनही समस्या असतील तर कृपया appsupport@cov19.mhlw.go.jp आमच्याशी संपर्क साधा.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>संजाळ कनेक्शन त्रुटी</value>

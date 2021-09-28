@@ -194,6 +194,10 @@
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\Migration\MigrationProcessService.cs" />
     <Compile Include="Services\Migration\WorkManagerMigrator.cs" />
+    <Compile Include="Services\ExposureNotificationStatusPlatformService.cs" />
+    <Compile Include="Services\ExternalNavigationService.cs" />
+    <Compile Include="Services\PlatformService.cs" />
+    <Compile Include="Services\IPlatformService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
@@ -290,6 +294,70 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\ic_notification.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\app_share_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\home_alert_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\home_stop_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\question_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\app_share_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\home_alert_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\home_stop_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\question_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\home_active_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\home_active_icon.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\alert_workaround_img.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\alert_workaround_img.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-zh-xxhdpi\alert_workaround_img.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-zh-xhdpi\alert_workaround_img.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-ja-xhdpi\alert_workaround_img.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-ja-xxhdpi\alert_workaround_img.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -477,12 +545,6 @@
     <AndroidResource Include="Resources\drawable-xhdpi\HelpPage22.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\HOMEPage10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\HOMEPage11.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\InfoMark.png" />
   </ItemGroup>
   <ItemGroup>
@@ -493,12 +555,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\HelpPage22.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\HOMEPage10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\HOMEPage11.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\InfoMark.png" />
