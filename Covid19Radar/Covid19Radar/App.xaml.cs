@@ -42,7 +42,7 @@ namespace Covid19Radar
 
         public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
 
-        protected override void OnInitialized()
+        protected override async void OnInitialized()
         {
             InitializeComponent();
 
@@ -52,16 +52,8 @@ namespace Covid19Radar
             LogFileService.AddSkipBackupAttribute();
 
             LogUnobservedTaskExceptions();
-            NavigateToSplash(Destination.HomePage);
 
-            LoggerService.EndMethod();
-        }
-
-        public async void NavigateToSplash(Destination destination)
-        {
-            var param = SplashPage.CreateNavigationParams(destination);
-            INavigationResult result = await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), param);
-
+            var result = await NavigateToSplashAsync(Destination.HomePage);
             if (!result.Success)
             {
                 LoggerService.Info($"Failed transition.");
@@ -75,15 +67,28 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
+
+            LoggerService.EndMethod();
         }
 
-        public async Task NavigateTo(Destination destination)
+        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination)
+        {
+            var param = SplashPage.CreateNavigationParams(destination);
+            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), param);
+        }
+
+        public async Task<INavigationResult> NavigateToAsync(Destination destination)
         {
             LoggerService.StartMethod();
 
-            await NavigationService.NavigateAsync(destination.ToPath());
-
-            LoggerService.EndMethod();
+            try
+            {
+                return await NavigationService.NavigateAsync(destination.ToPath());
+            }
+            finally
+            {
+                LoggerService.EndMethod();
+            }
         }
 
         public static void InitExposureNotification()

@@ -67,9 +67,9 @@ namespace Covid19Radar.iOS
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
 
-            _notificationCenterDelegate.OnRecieved += (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
+            _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
             {
-                AppInstance?.NavigateToSplash(Destination.ContactedNotifyPage);
+                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 
