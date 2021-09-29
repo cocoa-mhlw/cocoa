@@ -253,14 +253,11 @@ namespace Covid19Radar.UnitTests.Services
         private Mock<IUserDataRepository> CreateDefaultMockIUserDataRepository()
         {
             var mock = new Mock<IUserDataRepository>();
-            //mock.Setup(s => s.GetDateTime(PreferenceKey.LastConfirmedUtcDateTime)).Returns(DateTime.UtcNow);
-            //mock.Setup(s => s.GetValue(PreferenceKey.CanConfirmExposure, It.IsAny<bool>())).Returns(true);
-            //mock.Setup(s => s.SetValue(PreferenceKey.LastConfirmedUtcDateTime, It.IsAny<DateTime>()));
-            //mock.Setup(s => s.SetValue(PreferenceKey.CanConfirmExposure, It.IsAny<bool>()));
-            //mock.Setup(s => s.RemoveValue(PreferenceKey.LastConfirmedUtcDateTime));
-            //mock.Setup(s => s.RemoveValue(PreferenceKey.CanConfirmExposure));
-            //mock.Setup(s => s.ContainsKey(PreferenceKey.LastConfirmedUtcDateTime)).Returns(false);
-            //mock.Setup(s => s.ContainsKey(PreferenceKey.CanConfirmExposure)).Returns(false);
+            mock.Setup(s => s.GetLastConfirmedDate()).Returns(DateTime.UtcNow);
+            mock.Setup(s => s.IsCanConfirmExposure()).Returns(true);
+            mock.Setup(s => s.SetLastConfirmedDate(It.IsAny<DateTime>()));
+            mock.Setup(s => s.SetCanConfirmExposure(It.IsAny<bool>()));
+            mock.Setup(s => s.RemoveAllExposureNotificationStatus());
 
             return mock;
         }
