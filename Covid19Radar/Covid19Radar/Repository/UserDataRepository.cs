@@ -43,8 +43,6 @@ namespace Covid19Radar.Repository
 
     public class UserDataRepository : IUserDataRepository
     {
-        private static readonly DateTime UNIX_EPOCH = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
 
@@ -65,7 +63,7 @@ namespace Covid19Radar.Repository
         public DateTime GetStartDate()
         {
             long epoch = _preferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, DateTime.UtcNow.ToUnixEpoch());
-            return UNIX_EPOCH.AddSeconds(epoch);
+            return DateTime.UnixEpoch.AddSeconds(epoch);
         }
 
         public int GetDaysOfUse()
@@ -198,7 +196,7 @@ namespace Covid19Radar.Repository
                 }
 
                 long epoch = _preferencesService.GetValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L);
-                return UNIX_EPOCH.AddSeconds(epoch);
+                return DateTime.UnixEpoch.AddSeconds(epoch);
             }
             finally
             {
