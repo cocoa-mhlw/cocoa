@@ -92,7 +92,7 @@ namespace Covid19Radar.Repository
 
             long epoch = _preferencesService.GetValue(key, 0L);
 
-            return UNIX_EPOCH.AddSeconds(epoch);
+            return DateTime.UnixEpoch.AddSeconds(epoch);
         }
 
         public void SaveLastUpdateDate(TermsType termsType, DateTime updateDate)
