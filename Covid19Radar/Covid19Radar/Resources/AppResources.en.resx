@@ -973,6 +973,7 @@ Storage :</value>
   <data name="SuccessMessageToCopyLogId" xml:space="preserve">
     <value>The Operating information ID was copied successfully.</value>
     <comment>コピーしました</comment>
+  </data>
   <data name="HomePageENStatusActiveTitle" xml:space="preserve">
     <value>Active</value>
     <comment>動作中</comment>

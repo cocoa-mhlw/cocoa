@@ -972,6 +972,7 @@
   <data name="SuccessMessageToCopyLogId" xml:space="preserve">
     <value>コピーしました</value>
     <comment>コピーしました</comment>
+  </data>
   <data name="HomePageENStatusActiveTitle" xml:space="preserve">
     <value>動作中</value>
     <comment>動作中</comment>
