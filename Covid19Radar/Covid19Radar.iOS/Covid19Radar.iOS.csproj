@@ -287,6 +287,8 @@
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\Migration\MigrationProcessService.cs" />
+    <Compile Include="Services\ExposureNotificationStatusPlatformService.cs" />
+    <Compile Include="Services\ExternalNavigationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -332,6 +334,22 @@
     <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%403x.png" />
     <BundleResource Include="Resources\license.html" />
+    <BundleResource Include="Resources\Base.lproj\app_share_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\app_share_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_alert_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_alert_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_stop_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_stop_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\question_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\question_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_active_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_active_icon%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\alert_workaround_img%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\alert_workaround_img%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\alert_workaround_img%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -505,18 +523,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage22%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage10%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage10%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage11%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage11%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\InfoMark%402x.png" />

@@ -92,14 +92,6 @@
     <value>Тестілеу нәтижелерін анонимді тіркеу арқылы отбасы мен достарыңызды қорғауға көмектесу.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Отбасыңызбен және достарыңызбен қатысуды сұрау</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Осы қосымшаны пайдаланатын тағы бір адам COVID-19 таралуын қамтитын тағы бір қадам болып табылады.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Ортақ пайдалану</value>
   </data>
@@ -327,14 +319,6 @@
     <value>Қолдау</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>пайдалану кезінде</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>Контактілерді жабу</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19 бойынша оң нәтиже берген кезде</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -463,10 +447,6 @@
     <value>Экспозиция туралы хабарландыруларды пайдалану үшін</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>8 таңбалы кодты енгізу</value>
     <comment>8桁の処理番号を入力してください</comment>
@@ -512,29 +492,9 @@
     <value>Осы бағдарлама туралы ақпарат</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>Күн</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Экспозиция туралы хабарландыру белсенді болып табылады.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth өшірілген. Bluetooth қосыңыз.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Экспозиция туралы хабарландыру ажыратылады. Терминал параметрлерін ашып, Экспозиция туралы хабарландыруды қосыңыз.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>Пайдалану шарттарына келіспеу керек.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Экспозиция туралы хабарландыруға қолдау көрсетілмейді. ОЖ соңғы нұсқасына жаңартыңыз. Егер әлі де проблемалар туындаса, appsupport@cov19.mhlw.go.jp байланысыңызды сұраймыз.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Желі қосылымының қатесі</value>

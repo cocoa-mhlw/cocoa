@@ -31,8 +31,18 @@ namespace Covid19Radar.ViewModels
         private readonly IHttpDataService httpDataService;
         private readonly ILogFileService logFileService;
         private readonly ITermsUpdateService termsUpdateService;
+        private readonly IExposureNotificationStatusService exposureNotificationStatusService;
 
-        public SettingsPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IHttpDataService httpDataService, IExposureNotificationService exposureNotificationService, ILogFileService logFileService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public SettingsPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataService userDataService,
+            IHttpDataService httpDataService,
+            IExposureNotificationService exposureNotificationService,
+            ILogFileService logFileService,
+            ITermsUpdateService termsUpdateService,
+            IExposureNotificationStatusService exposureNotificationStatusService
+            ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppInfo.VersionString;
@@ -42,6 +52,7 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationService = exposureNotificationService;
             this.logFileService = logFileService;
             this.termsUpdateService = termsUpdateService;
+            this.exposureNotificationStatusService = exposureNotificationStatusService;
         }
 
         public ICommand OnChangeResetData => new Command(async () =>
@@ -68,6 +79,7 @@ namespace Covid19Radar.ViewModels
                 exposureNotificationService.RemoveExposureInformation();
                 exposureNotificationService.RemoveConfiguration();
                 exposureNotificationService.RemoveLastProcessTekTimestamp();
+                exposureNotificationStatusService.RemoveAllExposureNotificationStatus();
                 termsUpdateService.RemoveAllUpdateDate();
 
                 _ = logFileService.DeleteLogsDir();

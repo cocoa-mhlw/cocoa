@@ -123,10 +123,6 @@
     <value>كۆپرەك تېپىش</value>
     <comment>技術的な詳細について</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>كۈن</value>
-    <comment>X日間</comment>
-  </data>
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>تىزىملىتىش</value>
     <comment>登録</comment>
