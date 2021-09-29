@@ -24,7 +24,7 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
 
-        private App AppInstance
+        private App? AppInstance
         {
             get
             {
