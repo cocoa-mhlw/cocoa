@@ -30,7 +30,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _updateText, value); }
         }
 
-                public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
 
         public ReAgreeTermsOfServicePageViewModel(
             INavigationService navigationService,
