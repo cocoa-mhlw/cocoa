@@ -1496,7 +1496,9 @@ namespace Covid19Radar.Resources {
         public static string SuccessMessageToCopyLogId {
             get {
                 return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
-        
+            }
+        }
+
         public static string HomePageENStatusActiveTitle {
             get {
                 return ResourceManager.GetString("HomePageENStatusActiveTitle", resourceCulture);
