@@ -8,7 +8,7 @@ using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.iOS.Services.Logs
 {
-    public class LogPathServiceIos : ILogPathDependencyService
+    public class LogPathPlatformService : ILogPathPlatformService
     {
         #region Instance Properties
 
@@ -40,7 +40,7 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Constructors
 
-        public LogPathServiceIos()
+        public LogPathPlatformService()
         {
         }
 

@@ -68,13 +68,16 @@ namespace Covid19Radar.iOS
         private void RegisterPlatformTypes(IContainer container)
         {
             // Services
-            container.Register<ILogPathDependencyService, LogPathServiceIos>(Reuse.Singleton);
-            container.Register<ISecureStorageDependencyService, SecureStorageServiceIos>(Reuse.Singleton);
+            container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
+            container.Register<ILogPathPlatformService, LogPathPlatformService>(Reuse.Singleton);
+            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
+            container.Register<ISecureStorageDependencyService, Services.SecureStorageService>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
             container.Register<IMigrationProcessService, MigrationProcessService>(Reuse.Singleton);
+            container.Register<ICloseApplicationService, CloseApplicationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else

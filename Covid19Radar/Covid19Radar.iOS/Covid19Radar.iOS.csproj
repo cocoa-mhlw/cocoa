@@ -206,7 +206,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Services\CloseApplication.cs" />
+    <Compile Include="Services\CloseApplicationService.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
     <None Include="appcenter-pre-build.sh" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\1024.png">
@@ -277,16 +277,16 @@
     <Compile Include="Extensions\AlignmentExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\FormattedStringExtensions.cs" />
-    <Compile Include="Services\Logs\LogFileServiceIos.cs" />
-    <Compile Include="Services\Logs\LogPathServiceIos.cs" />
-    <Compile Include="Services\Logs\LogPeriodicDeleteServiceIos.cs" />
+    <Compile Include="Services\Logs\LogPathPlatformService.cs" />
+    <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
-    <Compile Include="Services\SecureStorageServiceIos.cs" />
+    <Compile Include="Services\SecureStorageService.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\Migration\MigrationProcessService.cs" />
+    <Compile Include="Services\BackupAttributeService.cs" />
     <Compile Include="Services\ExposureNotificationStatusPlatformService.cs" />
     <Compile Include="Services\ExternalNavigationService.cs" />
   </ItemGroup>

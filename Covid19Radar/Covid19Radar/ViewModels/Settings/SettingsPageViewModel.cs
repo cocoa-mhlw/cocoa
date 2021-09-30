@@ -4,7 +4,6 @@
 
 using System.Windows.Input;
 using Acr.UserDialogs;
-using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -31,6 +30,7 @@ namespace Covid19Radar.ViewModels
         private readonly IHttpDataService httpDataService;
         private readonly ILogFileService logFileService;
         private readonly ITermsUpdateService termsUpdateService;
+        private readonly ICloseApplicationService closeApplicationService;
         private readonly IExposureNotificationStatusService exposureNotificationStatusService;
 
         public SettingsPageViewModel(
@@ -41,6 +41,7 @@ namespace Covid19Radar.ViewModels
             IExposureNotificationService exposureNotificationService,
             ILogFileService logFileService,
             ITermsUpdateService termsUpdateService,
+            ICloseApplicationService closeApplicationService,
             IExposureNotificationStatusService exposureNotificationStatusService
             ) : base(navigationService)
         {
@@ -52,6 +53,7 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationService = exposureNotificationService;
             this.logFileService = logFileService;
             this.termsUpdateService = termsUpdateService;
+            this.closeApplicationService = closeApplicationService;
             this.exposureNotificationStatusService = exposureNotificationStatusService;
         }
 
@@ -92,7 +94,7 @@ namespace Covid19Radar.ViewModels
                     );
                 Application.Current.Quit();
                 // Application close
-                DependencyService.Get<ICloseApplication>().closeApplication();
+                closeApplicationService.CloseApplication();
 
                 loggerService.EndMethod();
                 return;
