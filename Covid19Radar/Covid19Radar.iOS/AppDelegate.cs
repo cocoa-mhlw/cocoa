@@ -13,6 +13,8 @@ using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
 
+using FormsApplication = Xamarin.Forms.Application;
+
 namespace Covid19Radar.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -22,7 +24,18 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
 
-        private App _prismApp;
+        private App? AppInstance
+        {
+            get
+            {
+                if (FormsApplication.Current is App app)
+                {
+                    return app;
+                }
+                return null;
+            }
+        }
+
         private readonly UserNotificationCenterDelegate _notificationCenterDelegate = new UserNotificationCenterDelegate();
 
         public static AppDelegate Instance { get; private set; }
@@ -54,13 +67,13 @@ namespace Covid19Radar.iOS
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
 
-            _notificationCenterDelegate.OnRecieved += (UserNotificationCenterDelegate sender, UNNotificationResponse response) => {
-                _prismApp?.NavigateToSplash(Destination.ContactedNotifyPage);
+            _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
+            {
+                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 
-            _prismApp = new App();
-            LoadApplication(_prismApp);
+            LoadApplication(new App());
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             return base.FinishedLaunching(app, options);

@@ -9,6 +9,9 @@ using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
 using System;
+using System.Threading.Tasks;
+
+using FormsApplication = Xamarin.Forms.Application;
 
 namespace Covid19Radar.Droid
 {
@@ -30,10 +33,20 @@ namespace Covid19Radar.Droid
             return intent;
         }
 
-        private App _prismApp;
+        private App? AppInstance
+        {
+            get
+            {
+                if (FormsApplication.Current is App app)
+                {
+                    return app;
+                }
+                return null;
+            }
+        }
         public static object dataLock = new object();
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
@@ -50,17 +63,25 @@ namespace Covid19Radar.Droid
 
             UserDialogs.Init(this);
 
-            _prismApp = new App();
-            LoadApplication(_prismApp);
+            LoadApplication(new App());
 
-            Destination destination = GetDestinationFromIntent(Intent);
-            _prismApp.NavigateToSplash(destination);
+            await NavigateToDestinationFromIntent(Intent);
         }
 
         private static Destination GetDestinationFromIntent(Intent intent)
         {
             int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
             return (Destination)Enum.ToObject(typeof(Destination), ordinal);
+        }
+
+        private async Task NavigateToDestinationFromIntent(Intent intent)
+        {
+            if (!intent.HasExtra(EXTRA_KEY_DESTINATION))
+            {
+                return;
+            }
+            var destination = GetDestinationFromIntent(intent);
+            await AppInstance?.NavigateToSplashAsync(destination);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -95,8 +116,7 @@ namespace Covid19Radar.Droid
         {
             base.OnNewIntent(intent);
 
-            var destination = GetDestinationFromIntent(Intent);
-            await _prismApp.NavigateTo(destination);
+            await NavigateToDestinationFromIntent(intent);
         }
 
     }

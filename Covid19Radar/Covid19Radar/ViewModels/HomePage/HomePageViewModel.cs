@@ -71,6 +71,8 @@ namespace Covid19Radar.ViewModels
             AppUtils.CheckVersion(loggerService);
             try
             {
+                await localNotificationService.PrepareAsync();
+
                 await exposureNotificationService.StartExposureNotification();
                 await exposureNotificationService.FetchExposureKeyAsync();
 
@@ -88,8 +90,6 @@ namespace Covid19Radar.ViewModels
                 loggerService.Exception("Failed to exposure notification status.", ex);
                 loggerService.EndMethod();
             }
-
-            await localNotificationService.PrepareAsync();
         }
 
         public Command OnClickExposures => new Command(async () =>
