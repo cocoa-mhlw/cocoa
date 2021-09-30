@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Covid19Radar.Views.TroubleshootingPage"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    Title="{x:Static resources:AppResources.TroubleshootingPageTitle}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ScrollView>
+        <StackLayout
+            Padding="20"
+            Spacing="20">
+            <ffimageloading:CachedImage
+                Aspect="AspectFit"
+                Source="alert_workaround_img.png"
+                AutomationProperties.IsInAccessibleTree="False" />
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.TroubleshootingPageDescription1}"
+                AutomationProperties.IsInAccessibleTree="True" />
+            <Frame
+                Padding="15"
+                BackgroundColor="#FFF3DD"
+                CornerRadius="10">
+                <StackLayout Spacing="10">
+                    <Label
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription2}"
+                        AutomationProperties.IsInAccessibleTree="True" />
+                    <Label
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription3}"
+                        AutomationProperties.IsInAccessibleTree="True" />
+                    <Label
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription4}"
+                        AutomationProperties.IsInAccessibleTree="True" />
+                </StackLayout>
+            </Frame>
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.TroubleshootingPageDescription5}"
+                AutomationProperties.IsInAccessibleTree="True" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

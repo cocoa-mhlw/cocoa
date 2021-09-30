@@ -19,11 +19,17 @@ namespace Covid19Radar.UnitTests.Services
 {
     public class HttpDataServiceTests
     {
+        #region Instance Properties
+
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IHttpClientService> mockHttpClientService;
         private readonly Mock<ISecureStorageService> mockSecureStorageService;
         private readonly Mock<IApplicationPropertyService> mockApplicationPropertyService;
+
+        #endregion
+
+        #region Constructors
 
         public HttpDataServiceTests()
         {
@@ -34,14 +40,25 @@ namespace Covid19Radar.UnitTests.Services
             mockApplicationPropertyService = mockRepository.Create<IApplicationPropertyService>();
         }
 
+        #endregion
+
+        #region Other Private Methods
+
         private IHttpDataService CreateService()
         {
             return new HttpDataService(
                 mockLoggerService.Object,
                 mockHttpClientService.Object,
                 mockSecureStorageService.Object,
-                mockApplicationPropertyService.Object);
+                mockApplicationPropertyService.Object
+                );
         }
+
+        #endregion
+
+        #region Test Methods
+
+        #region PostRegisterUserAsync()
 
         [Fact]
         public async Task PostRegisterUserAsyncTestsAsync_Success()
@@ -132,6 +149,10 @@ namespace Covid19Radar.UnitTests.Services
             Assert.False(result);
         }
 
+        #endregion
+
+        #region PutSelfExposureKeysAsync()
+
         [Fact]
         public async Task PutSelfExposureKeysAsync_Success()
         {
@@ -205,5 +226,9 @@ namespace Covid19Radar.UnitTests.Services
             Assert.Null(jsonContent["userUuid"]);
             Assert.Null(mockHttpClient.DefaultRequestHeaders.Authorization);
         }
+
+        #endregion
+
+        #endregion
     }
 }

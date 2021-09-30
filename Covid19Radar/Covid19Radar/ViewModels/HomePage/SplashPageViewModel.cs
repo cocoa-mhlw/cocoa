@@ -4,6 +4,7 @@
 
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Services.Migration;
 using Covid19Radar.Views;
 using Prism.Navigation;
 
@@ -14,12 +15,20 @@ namespace Covid19Radar.ViewModels
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataService _userDataService;
+        private readonly IMigrationService _migrationService;
 
-        public SplashPageViewModel(INavigationService navigationService, ILoggerService loggerService, ITermsUpdateService termsUpdateService, IUserDataService userDataService) : base(navigationService)
+        public SplashPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            ITermsUpdateService termsUpdateService,
+            IUserDataService userDataService,
+            IMigrationService migrationService
+            ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
             _userDataService = userDataService;
+            _migrationService = migrationService;
         }
 
         public override async void OnNavigatedTo(INavigationParameters parameters)
@@ -28,7 +37,7 @@ namespace Covid19Radar.ViewModels
 
             base.OnNavigatedTo(parameters);
 
-            await _userDataService.Migrate();
+            await _migrationService.MigrateAsync();
 
             if (_termsUpdateService.IsAllAgreed())
             {

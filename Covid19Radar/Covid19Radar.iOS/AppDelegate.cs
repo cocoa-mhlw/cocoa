@@ -5,8 +5,10 @@
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.iOS.Services.Migration;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Services.Migration;
 using DryIoc;
 using Foundation;
 using UIKit;
@@ -94,11 +96,14 @@ namespace Covid19Radar.iOS
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
+            container.Register<IMigrationProcessService, MigrationProcessService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
 #endif
+            container.Register<IExposureNotificationStatusPlatformService, ExposureNotificationStatusPlatformService>(Reuse.Singleton);
+            container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
         }
     }
 }
@@ -118,7 +123,7 @@ public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
         {
             completionHandler(UNNotificationPresentationOptions.Alert);
         }
-        
+
     }
 
     public override void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNotificationResponse response, System.Action completionHandler)

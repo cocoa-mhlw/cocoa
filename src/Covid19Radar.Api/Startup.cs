@@ -23,7 +23,6 @@ namespace Covid19Radar.Api
             builder.Services.AddCosmosClient();
             builder.Services.AddSingleton<ICryptionService, CryptionService>();
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
-            builder.Services.AddSingleton<IValidationUserService, ValidationUserService>();
             builder.Services.AddSingleton<IValidationServerService, ValidationServerService>();
             builder.Services.AddSingleton<IValidationInquiryLogService, ValidationInquiryLogService>();
             builder.Services.AddSingleton<IAuthorizedAppRepository, ConfigAuthorizedAppRepository>();

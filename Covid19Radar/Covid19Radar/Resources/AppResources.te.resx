@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>తొలగిస్తోంది</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>అనువర్తనాన్ని పంచుకోండి</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>భాగస్వామ్యం చేయి</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>మీరు కొత్త కరోనా తో సానుకూలంగా ఉంటే, దయచేసి మీ చుట్టూ ఉన్న వ్యక్తులను రక్షించడానికి అనుకూల నమోదులో సహకరించండి.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>ఈ అనువర్తనం చాలా ప్రభావవంతంగా ఉంది, చాలా మంది దీనిని ఇన్స్టాల్, కాబట్టి మీ చుట్టూ ఉన్న వ్యక్తులతో అప్లికేషన్ భాగస్వామ్యం చెయ్యండి.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>ఎలా ఉపయోగించాలి</value>
@@ -323,14 +315,6 @@
     <value>మద్దతు</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>వాడుకలో</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>సన్నిహిత పరిచయాలను తనిఖీ చేయండి</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19 కొరకు పాజిటివ్ టెస్ట్ చేసినప్పుడు</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,10 +443,6 @@
     <value>బ్లూటూత్ ఆన్ చేయండి</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>8 అంకెల కోడ్ ఎంటర్ చేయండి</value>
     <comment>8桁の処理番号を入力してください</comment>
@@ -512,29 +492,9 @@
     <value>ఈ యాప్ గురించి సమాచారం</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>రోజులు</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>ప్రత్యక్షీకరణ నోటిఫికేషన్ యాక్టివ్ గా ఉంది.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>బ్లూటూత్ ఆఫ్ చేయబడింది. దయచేసి బ్లూటూత్ ఆన్ చేయండి.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>ప్రత్యక్షీకరణ నోటిఫికేషన్ నిలిపివేయబడింది. టెర్మినల్ సెట్టింగ్ లను ఓపెన్ చేయండి మరియు ప్రత్యక్షీకరణ నోటిఫికేషన్ ఆన్ చేయండి.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>మీరు విధిగా ఉపయోగ నిబంధనలను అంగీకరించాలి.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>ప్రత్యక్షీకరణ నోటిఫికేషన్ మద్దతు ఇవ్వదు. దయచేసి OSని తాజా వెర్షన్ కు అప్ డేట్ చేయండి. ఒకవేళ మీకు ఇంకా సమస్యలు ఉన్నట్లయితే, appsupport@cov19.mhlw.go.jp వద్ద దయచేసి మమ్మల్ని సంప్రదించండి.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>జాలిక అనుసంధాన దోషం</value>

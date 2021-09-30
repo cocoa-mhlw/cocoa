@@ -2,25 +2,21 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Acr.UserDialogs;
-using Covid19Radar.Common;
-using Covid19Radar.Model;
-using Covid19Radar.Services.Logs;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Covid19Radar.Common;
+using Covid19Radar.Model;
+using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 using Xamarin.ExposureNotifications;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
     public interface IExposureNotificationService
     {
-        Task MigrateFromUserData(UserDataModel userData);
-
         Configuration GetConfiguration();
         void RemoveConfiguration();
 
@@ -37,7 +33,6 @@ namespace Covid19Radar.Services
         List<UserExposureInfo> GetExposureInformationListToDisplay();
         int GetExposureCountToDisplay();
 
-        Task<string> UpdateStatusMessageAsync();
         Task<bool> StartExposureNotification();
         Task<bool> StopExposureNotification();
 
@@ -52,10 +47,6 @@ namespace Covid19Radar.Services
         private readonly IHttpClientService httpClientService;
         private readonly ISecureStorageService secureStorageService;
         private readonly IPreferencesService preferencesService;
-        private readonly IApplicationPropertyService applicationPropertyService;
-
-        public string CurrentStatusMessage { get; set; } = "初期状態";
-        public Status ExposureNotificationStatus { get; set; }
 
         public ExposureNotificationService(ILoggerService loggerService, IHttpClientService httpClientService, ISecureStorageService secureStorageService, IPreferencesService preferencesService, IApplicationPropertyService applicationPropertyService)
         {
@@ -63,51 +54,8 @@ namespace Covid19Radar.Services
             this.httpClientService = httpClientService;
             this.secureStorageService = secureStorageService;
             this.preferencesService = preferencesService;
-            this.applicationPropertyService = applicationPropertyService;
 
             _ = GetExposureNotificationConfig();
-        }
-
-        public async Task MigrateFromUserData(UserDataModel userData)
-        {
-            loggerService.StartMethod();
-
-            const string ConfigurationPropertyKey = "ExposureNotificationConfigration";
-
-            if (userData.LastProcessTekTimestamp != null && userData.LastProcessTekTimestamp.Count > 0)
-            {
-                var stringValue = JsonConvert.SerializeObject(userData.LastProcessTekTimestamp);
-                preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, stringValue);
-                userData.LastProcessTekTimestamp.Clear();
-                loggerService.Info("Migrated LastProcessTekTimestamp");
-            }
-
-            if (applicationPropertyService.ContainsKey(ConfigurationPropertyKey))
-            {
-                var configuration = applicationPropertyService.GetProperties(ConfigurationPropertyKey) as string;
-                if (!string.IsNullOrEmpty(configuration))
-                {
-                    preferencesService.SetValue(PreferenceKey.ExposureNotificationConfiguration, configuration);
-                }
-                await applicationPropertyService.Remove(ConfigurationPropertyKey);
-                loggerService.Info("Migrated ExposureNotificationConfiguration");
-            }
-
-            if (userData.ExposureInformation != null)
-            {
-                secureStorageService.SetValue(PreferenceKey.ExposureInformation, JsonConvert.SerializeObject(userData.ExposureInformation));
-                userData.ExposureInformation = null;
-                loggerService.Info("Migrated ExposureInformation");
-            }
-
-            if (userData.ExposureSummary != null)
-            {
-                secureStorageService.SetValue(PreferenceKey.ExposureSummary, JsonConvert.SerializeObject(userData.ExposureSummary));
-                userData.ExposureSummary = null;
-                loggerService.Info("Migrated ExposureSummary");
-            }
-
-            loggerService.EndMethod();
         }
 
         private async Task GetExposureNotificationConfig()
@@ -265,14 +213,6 @@ namespace Covid19Radar.Services
             return result;
         }
 
-        public async Task<string> UpdateStatusMessageAsync()
-        {
-            loggerService.StartMethod();
-            ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
-            loggerService.EndMethod();
-            return await GetStatusMessageAsync();
-        }
-
         public async Task<bool> StartExposureNotification()
         {
             loggerService.StartMethod();
@@ -319,41 +259,6 @@ namespace Covid19Radar.Services
                 loggerService.EndMethod();
                 return false;
             }
-        }
-
-        private async Task<string> GetStatusMessageAsync()
-        {
-            var message = "";
-
-            switch (ExposureNotificationStatus)
-            {
-                case Status.Unknown:
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageUnknown, "", Resources.AppResources.ButtonOk);
-                    message = Resources.AppResources.ExposureNotificationStatusMessageUnknown;
-                    break;
-                case Status.Disabled:
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageDisabled, "", Resources.AppResources.ButtonOk);
-                    message = Resources.AppResources.ExposureNotificationStatusMessageDisabled;
-                    break;
-                case Status.Active:
-                    message = Resources.AppResources.ExposureNotificationStatusMessageActive;
-                    break;
-                case Status.BluetoothOff:
-                    // call out settings in each os
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff, "", Resources.AppResources.ButtonOk);
-                    message = Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff;
-                    break;
-                case Status.Restricted:
-                    // call out settings in each os
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, Resources.AppResources.ExposureNotificationRestrictedTitle, Resources.AppResources.ButtonOk);
-                    message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
-                    break;
-                default:
-                    break;
-            }
-
-            CurrentStatusMessage = message;
-            return message;
         }
 
         /* Processing number issued when positive */

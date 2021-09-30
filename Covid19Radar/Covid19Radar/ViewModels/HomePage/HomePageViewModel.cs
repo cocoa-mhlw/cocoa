@@ -3,7 +3,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.Diagnostics;
+using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -20,19 +21,43 @@ namespace Covid19Radar.ViewModels
         private readonly IUserDataService userDataService;
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly ILocalNotificationService localNotificationService;
+        private readonly IExposureNotificationStatusService exposureNotificationStatusService;
+        private readonly IDialogService dialogService;
+        private readonly IExternalNavigationService externalNavigationService;
 
-        private string _startDate;
         private string _pastDate;
-
-        public string StartDate
-        {
-            get { return _startDate; }
-            set { SetProperty(ref _startDate, value); }
-        }
         public string PastDate
         {
             get { return _pastDate; }
             set { SetProperty(ref _pastDate, value); }
+        }
+
+        private string _latestConfirmationDate;
+        public string LatestConfirmationDate
+        {
+            get { return _latestConfirmationDate; }
+            set { SetProperty(ref _latestConfirmationDate, value); }
+        }
+
+        private bool _isVisibleENStatusActiveLayout;
+        public bool IsVisibleENStatusActiveLayout
+        {
+            get { return _isVisibleENStatusActiveLayout; }
+            set { SetProperty(ref _isVisibleENStatusActiveLayout, value); }
+        }
+
+        private bool _isVisibleENStatusUnconfirmedLayout;
+        public bool IsVisibleENStatusUnconfirmedLayout
+        {
+            get { return _isVisibleENStatusUnconfirmedLayout; }
+            set { SetProperty(ref _isVisibleENStatusUnconfirmedLayout, value); }
+        }
+
+        private bool _isVisibleENStatusStoppedLayout;
+        public bool IsVisibleENStatusStoppedLayout
+        {
+            get { return _isVisibleENStatusStoppedLayout; }
+            set { SetProperty(ref _isVisibleENStatusStoppedLayout, value); }
         }
 
         public HomePageViewModel(
@@ -40,7 +65,10 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             IUserDataService userDataService,
             IExposureNotificationService exposureNotificationService,
-            ILocalNotificationService localNotificationService
+            ILocalNotificationService localNotificationService,
+            IExposureNotificationStatusService exposureNotificationStatusService,
+            IDialogService dialogService,
+            IExternalNavigationService externalNavigationService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
@@ -48,48 +76,43 @@ namespace Covid19Radar.ViewModels
             this.userDataService = userDataService;
             this.exposureNotificationService = exposureNotificationService;
             this.localNotificationService = localNotificationService;
+            this.exposureNotificationStatusService = exposureNotificationStatusService;
+            this.dialogService = dialogService;
+            this.externalNavigationService = externalNavigationService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
         {
+            base.Initialize(parameters);
+
             loggerService.StartMethod();
 
             // It seems the life cycle methods are not called after background fetch in iOS.
             // The days of use will be updated at this time.
             MessagingCenter.Unsubscribe<object>(this, AppConstants.IosOnActivatedMessage);
-            MessagingCenter.Subscribe<object>(this, AppConstants.IosOnActivatedMessage, (sender) =>
+            MessagingCenter.Subscribe<object>(this, AppConstants.IosOnActivatedMessage, async (sender) =>
             {
-                SettingDaysOfUse();
+                await UpdateView();
             });
-
-            var startDate = userDataService.GetStartDate();
-            StartDate = startDate.ToLocalTime().ToString("D");
-
-            SettingDaysOfUse();
 
             // Check Version
             AppUtils.CheckVersion(loggerService);
+
             try
             {
                 await localNotificationService.PrepareAsync();
 
                 await exposureNotificationService.StartExposureNotification();
                 await exposureNotificationService.FetchExposureKeyAsync();
-
-                var statusMessage = await exposureNotificationService.UpdateStatusMessageAsync();
-                loggerService.Info($"Exposure notification status: {statusMessage}");
-
-                base.Initialize(parameters);
-
-                loggerService.EndMethod();
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.ToString());
-
-                loggerService.Exception("Failed to exposure notification status.", ex);
-                loggerService.EndMethod();
+                loggerService.Exception("Failed to fetch exposure key.", ex);
             }
+
+            await UpdateView();
+
+            loggerService.EndMethod();
         }
 
         public Command OnClickExposures => new Command(async () =>
@@ -121,25 +144,120 @@ namespace Covid19Radar.ViewModels
            loggerService.EndMethod();
        });
 
-        private void SettingDaysOfUse()
+        public Command OnClickQuestionIcon => new Command(() =>
         {
             loggerService.StartMethod();
+
+            UserDialogs.Instance.Alert(
+                AppResources.LatestConfirmationDateExplanationDialogText,
+                null,
+                AppResources.ButtonClose);
+
+            loggerService.EndMethod();
+        });
+
+        public Command OnClickCheckStopReason => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var enStopReason = exposureNotificationStatusService.ExposureNotificationStoppedReason;
+
+            try
+            {
+                if (enStopReason == ExposureNotificationStoppedReason.ExposureNotificationOff)
+                {
+                    bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
+                    if (isOK)
+                    {
+                        externalNavigationService.NavigateAppSettings();
+                    }
+                }
+                else if (enStopReason == ExposureNotificationStoppedReason.BluetoothOff)
+                {
+                    bool isOK = await dialogService.ShowBluetoothOffWarningAsync();
+                    if (isOK)
+                    {
+                        externalNavigationService.NavigateBluetoothSettings();
+                    }
+                }
+                else if (enStopReason == ExposureNotificationStoppedReason.GpsOff)
+                {
+                    bool isOK = await dialogService.ShowLocationOffWarningAsync();
+                    if (isOK)
+                    {
+                        externalNavigationService.NavigateLocationSettings();
+                    }
+                }
+            }
+            catch (PlatformNotSupportedException ex)
+            {
+                loggerService.Exception("Exception", ex);
+            }
+
+            loggerService.EndMethod();
+        });
+
+        private async Task UpdateView()
+        {
+            loggerService.StartMethod();
+
             var daysOfUse = userDataService.GetDaysOfUse();
             PastDate = daysOfUse.ToString();
+
+            await exposureNotificationStatusService.UpdateStatuses();
+
+            switch (exposureNotificationStatusService.ExposureNotificationStatus)
+            {
+                case ExposureNotificationStatus.Unconfirmed:
+                    IsVisibleENStatusActiveLayout = false;
+                    IsVisibleENStatusUnconfirmedLayout = true;
+                    IsVisibleENStatusStoppedLayout = false;
+                    break;
+                case ExposureNotificationStatus.Stopped:
+                    IsVisibleENStatusActiveLayout = false;
+                    IsVisibleENStatusUnconfirmedLayout = false;
+                    IsVisibleENStatusStoppedLayout = true;
+                    break;
+                default:
+                    IsVisibleENStatusActiveLayout = true;
+                    IsVisibleENStatusUnconfirmedLayout = false;
+                    IsVisibleENStatusStoppedLayout = false;
+
+                    var latestUtcDate = exposureNotificationStatusService.LastConfirmedUtcDateTime;
+                    if (latestUtcDate == null)
+                    {
+                        LatestConfirmationDate = AppResources.InProgressText;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            var latestLocalDate = latestUtcDate.Value.ToLocalTime();
+                            LatestConfirmationDate = latestLocalDate.ToString(AppResources.DateTimeFormatToDisplayOnHomePage);
+                        }
+                        catch (FormatException ex)
+                        {
+                            loggerService.Exception("Failed to conversion utc date time", ex);
+                        }
+                    }
+                    
+                    break;
+            }
+
             loggerService.EndMethod();
         }
 
-        public override void OnAppearing()
+        public override async void OnAppearing()
         {
             base.OnAppearing();
 
-            SettingDaysOfUse();
+            await UpdateView();
         }
 
-        public override void OnResume()
+        public override async void OnResume()
         {
             base.OnResume();
-            SettingDaysOfUse();
+            await UpdateView();
         }
     }
 }

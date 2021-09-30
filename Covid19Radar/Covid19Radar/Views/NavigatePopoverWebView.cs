@@ -4,6 +4,7 @@
 
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using System;
 
 namespace Covid19Radar.Views
 {
@@ -14,7 +15,12 @@ namespace Covid19Radar.Views
         {
             Navigating += async (_, e) =>
             {
-                if (firstNavigateUrl != null && firstNavigateUrl != e.Url)
+                if (e.Url.StartsWith("mailto"))
+                {
+                    e.Cancel = true;
+                    await Launcher.OpenAsync(e.Url);
+                }
+                else if (firstNavigateUrl != null && firstNavigateUrl != e.Url)
                 {
                     e.Cancel = true;
                     await Browser.OpenAsync(e.Url);
