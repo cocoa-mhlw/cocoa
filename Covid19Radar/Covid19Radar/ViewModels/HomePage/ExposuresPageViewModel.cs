@@ -76,7 +76,6 @@ namespace Covid19Radar.ViewModels
             {
                 0 => AppResources.ExposuresPageExposureUnitPluralZero,
                 1 => AppResources.ExposuresPageExposureUnitPluralOnce,
-                2 => AppResources.ExposuresPageExposureUnitPluralTwice,
                 _ => string.Format(AppResources.ExposuresPageExposureUnitPlural, count),
             };
         }

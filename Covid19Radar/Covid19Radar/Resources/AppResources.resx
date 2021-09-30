@@ -174,11 +174,7 @@
     <comment>回の接触</comment>
   </data>
 	<data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
-    <value>Once exposure</value>
-    <comment>回の接触</comment>
-  </data>
-	<data name="ExposuresPageExposureUnitPluralTwice" xml:space="preserve">
-    <value>Twice exposures</value>
+    <value>1 exposure</value>
     <comment>回の接触</comment>
   </data>
 	<data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
