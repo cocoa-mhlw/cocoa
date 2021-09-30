@@ -172,34 +172,6 @@ namespace Covid19Radar.Services
             }
         }
     }
-#else
-    public class DebugExposureDataCollectServer : IExposureDataCollectServer
-    {
-        public Task<ExposureDataResponse?> UploadExposureDataAsync(
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation
-            )
-            => Task.FromResult<ExposureDataResponse>(null);
-
-        public Task<ExposureDataResponse?> UploadExposureDataAsync(
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows
-            )
-            => Task.FromResult<ExposureDataResponse>(null);
-
-        public Task<ExposureDataResponse?> UploadExposureDataAsync(
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion
-            )
-            => Task.FromResult<ExposureDataResponse>(null);
-    }
 #endif
 
     public class ExposureRequest
