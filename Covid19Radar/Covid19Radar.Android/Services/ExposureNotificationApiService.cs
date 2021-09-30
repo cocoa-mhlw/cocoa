@@ -75,8 +75,6 @@ namespace Covid19Radar.Droid.Services
                     throw apiException;
                 }
             }
-
-            return new List<TemporaryExposureKey>();
         }
 
         public override async Task<long> GetVersionAsync()

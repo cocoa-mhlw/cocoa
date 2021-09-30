@@ -24,8 +24,8 @@ namespace Covid19Radar.Services
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
 
-        private readonly IList<ServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
-                    region => new ServerConfiguration()
+        private readonly IList<DiagnosisKeyServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
+                    region => new DiagnosisKeyServerConfiguration()
                     {
                         ApiEndpoint = $"{AppSettings.Instance.CdnUrlBase}/{AppSettings.Instance.BlobStorageContainerName}",
                         Region = region
@@ -59,12 +59,17 @@ namespace Covid19Radar.Services
                     var tmpDir = PrepareDir(serverConfiguration.Region);
 
                     var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
-                    var diagnosisKeyEntryList = _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration)
-                        .GetAwaiter().GetResult();
+                    var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region);
-                    var targetDiagnosisKeyEntryList = diagnosisKeyEntryList
-                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp);
+                    var targetDiagnosisKeyEntryList = diagnosisKeyEntryList;
+
+#if DEBUG
+                    // Do nothing
+#else
+                    targetDiagnosisKeyEntryList = targetDiagnosisKeyEntryList
+                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
+#endif
 
                     if (targetDiagnosisKeyEntryList.Count() == 0)
                     {
@@ -74,8 +79,7 @@ namespace Covid19Radar.Services
 
                     foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
                     {
-                        string filePath = _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir)
-                            .GetAwaiter().GetResult();
+                        string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir);
 
                         _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
 
@@ -85,10 +89,10 @@ namespace Covid19Radar.Services
                     var downloadedFileNames = string.Join("\n", downloadedFileNameList);
                     _loggerService.Debug(downloadedFileNames);
 
-                    _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
+                    await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
                         exposureConfiguration
-                        ).GetAwaiter().GetResult();
+                        );
 
                     // Save LastProcessDiagnosisKeyTimestamp after ProvideDiagnosisKeysAsync was succeeded.
                     var latestProcessTimestamp = targetDiagnosisKeyEntryList
