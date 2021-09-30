@@ -118,7 +118,7 @@ namespace Covid19Radar.Repository
             dailySummaryList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
             exposueWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
 
-            await SetExposureDataAsync(dailySummaryList, exposueWindowList);
+            await SaveExposureDataAsync(dailySummaryList, exposueWindowList);
 
             _loggerService.EndMethod();
         }
@@ -157,14 +157,14 @@ namespace Covid19Radar.Repository
             existDailySummaryList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
             existExposureWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
 
-            await SetExposureDataAsync(existDailySummaryList, existExposureWindowList);
+            await SaveExposureDataAsync(existDailySummaryList, existExposureWindowList);
 
             _loggerService.EndMethod();
 
             return isNewExposureDetected;
         }
 
-        private Task SetExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
+        private Task SaveExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
         {
             _loggerService.StartMethod();
 

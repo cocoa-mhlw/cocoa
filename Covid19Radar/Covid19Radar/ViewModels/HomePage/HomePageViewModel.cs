@@ -26,6 +26,7 @@ namespace Covid19Radar.ViewModels
         private readonly IUserDataRepository _userDataRepository;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
+        private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
 
         private string _startDate;
         private string _pastDate;
@@ -47,7 +48,8 @@ namespace Covid19Radar.ViewModels
             IUserDataService userDataService,
             IUserDataRepository userDataRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
-            ILocalNotificationService localNotificationService
+            ILocalNotificationService localNotificationService,
+            AbsExposureDetectionBackgroundService exposureDetectionBackgroundService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
@@ -56,6 +58,7 @@ namespace Covid19Radar.ViewModels
             this._userDataRepository = userDataRepository;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
+            this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -84,8 +87,7 @@ namespace Covid19Radar.ViewModels
 
             await localNotificationService.PrepareAsync();
 
-            // TODO We should replace below line with new FetchExposureKeyAsync method(with Cappuccino).
-            // await exposureNotificationService.FetchExposureKeyAsync();
+            _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
 
             loggerService.EndMethod();
         }

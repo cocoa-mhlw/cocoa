@@ -19,19 +19,10 @@ namespace Covid19Radar.Droid.Services
 {
     public class ExposureDetectionBackgroundService : AbsExposureDetectionBackgroundService
     {
-#if DEBUG
-        internal const int INTERVAL_IN_MINUTES = 16;
-        internal const int BACKOFF_DELAY_IN_MINUTES = 3;
-#else
         internal const int INTERVAL_IN_MINUTES = 4 * 60;
         internal const int BACKOFF_DELAY_IN_MINUTES = 1 * 60;
-#endif
-        internal const string CURRENT_WORK_NAME = "cappuccino_worker";
 
-        internal static string[] OLD_WORK_NAMES = {
-            "exposurenotification",
-            "cocoaexposurenotification",
-        };
+        internal const string CURRENT_WORK_NAME = "cappuccino_worker";
 
         private readonly ILoggerService _loggerService;
 
@@ -58,8 +49,6 @@ namespace Covid19Radar.Droid.Services
 
             WorkManager workManager = WorkManager.GetInstance(Platform.AppContext);
 
-            CancelOldWorks(workManager);
-
             PeriodicWorkRequest periodicWorkRequest = CreatePeriodicWorkRequest();
             workManager.EnqueueUniquePeriodicWork(
                 CURRENT_WORK_NAME,
@@ -68,14 +57,6 @@ namespace Covid19Radar.Droid.Services
                 );
 
             _loggerService.EndMethod();
-        }
-
-        private static void CancelOldWorks(WorkManager workManager)
-        {
-            foreach (var oldWorkName in OLD_WORK_NAMES)
-            {
-                workManager.CancelUniqueWork(oldWorkName);
-            }
         }
 
         private static PeriodicWorkRequest CreatePeriodicWorkRequest()
@@ -150,7 +131,8 @@ namespace Covid19Radar.Droid.Services
             }
         }
 
-        public override void OnStopped() {
+        public override void OnStopped()
+        {
             base.OnStopped();
 
             _loggerService.Value.Warning("OnStopped");

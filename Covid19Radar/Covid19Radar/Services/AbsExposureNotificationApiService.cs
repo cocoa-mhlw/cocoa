@@ -69,17 +69,13 @@ namespace Covid19Radar.Services
 
         private bool _isEnabled = false;
 
-        private IExposureDetectionService _exposureDetectionService;
-
         private readonly Random _random = new Random();
 
         public MockExposureNotificationApiService(
-            IExposureDetectionService exposureDetectionService,
             ILoggerService loggerService
             )
             : base(loggerService)
         {
-            _exposureDetectionService = exposureDetectionService;
         }
 
         public override async Task<IList<ExposureNotificationStatus>> GetStatusesAsync()

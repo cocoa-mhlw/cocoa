@@ -132,17 +132,36 @@ namespace Covid19Radar.iOS
         }
 
         public void PreExposureDetected()
-            => _exposureDetectionService.Value.PreExposureDetected();
+        {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
+        }
 
         public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
-            => _exposureDetectionService.Value.ExposureDetected(dailySummaries, exposureWindows);
+        {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+        }
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
-            => _exposureDetectionService.Value.ExposureDetected(exposureSummary, exposureInformations);
+        {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
+        }
 
         public void ExposureNotDetected()
-            => _exposureDetectionService.Value.ExposureNotDetected();
-
+        {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureNotDetected(exposureConfiguration, enVersion);
+        }
     }
 }
 

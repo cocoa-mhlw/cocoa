@@ -16,7 +16,7 @@ namespace Covid19Radar.Repository
 {
     public interface IDiagnosisKeyRepository
     {
-        public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(ServerConfiguration serverConfiguration);
+        public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(DiagnosisKeyServerConfiguration diagnosisKeyServerConfiguration);
 
         public Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir);
     }
@@ -51,9 +51,9 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
-        public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(ServerConfiguration serverConfiguration)
+        public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(DiagnosisKeyServerConfiguration diagnosisKeyServerConfiguration)
         {
-            Uri uri = new Uri($"{serverConfiguration.ApiEndpoint}/{serverConfiguration.Region}/{CATALOG_FILE_NAME}");
+            Uri uri = new Uri($"{diagnosisKeyServerConfiguration.ApiEndpoint}/{diagnosisKeyServerConfiguration.Region}/{CATALOG_FILE_NAME}");
             HttpResponseMessage response = await _client.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {
