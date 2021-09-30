@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Chino.iOS;
@@ -46,17 +47,29 @@ namespace Covid19Radar.iOS.Services
         public override Task<long> GetVersionAsync()
             => _exposureNotificationClient.GetVersionAsync();
 
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, cancellationTokenSource);
+
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, configuration, cancellationTokenSource);
+
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            string token,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, configuration, token, cancellationTokenSource);
+
         public override Task<bool> IsEnabledAsync()
             => _exposureNotificationClient.IsEnabledAsync();
-
-        public override Task ProvideDiagnosisKeysAsync(List<string> keyFiles)
-            => _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles);
-
-        public override Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration)
-            => _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, configuration);
-
-        public override Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, string token)
-            => _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, configuration, token);
 
         public override Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
             => _exposureNotificationClient.RequestPreAuthorizedTemporaryExposureKeyHistoryAsync();
