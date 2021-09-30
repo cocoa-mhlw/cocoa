@@ -9,7 +9,7 @@ using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Droid.Services.Logs
 {
-    public class LogPathServiceAndroid : ILogPathDependencyService
+    public class LogPathPlatformService : ILogPathPlatformService
     {
         #region Instance Properties
 
@@ -33,7 +33,7 @@ namespace Covid19Radar.Droid.Services.Logs
 
         #region Constructors
 
-        public LogPathServiceAndroid()
+        public LogPathPlatformService()
         {
         }
 

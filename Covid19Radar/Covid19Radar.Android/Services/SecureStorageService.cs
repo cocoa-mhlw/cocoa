@@ -13,7 +13,7 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.Droid.Services
 {
-    public class SecureStorageServiceAndroid : ISecureStorageDependencyService
+    public class SecureStorageService : ISecureStorageDependencyService
     {
         private readonly string Alias = $"{AppInfo.PackageName}.securestorage";
         private readonly int IvLength = 12;
@@ -23,7 +23,7 @@ namespace Covid19Radar.Droid.Services
 
         private readonly ISharedPreferences sharedPreferences;
 
-        public SecureStorageServiceAndroid()
+        public SecureStorageService()
         {
             sharedPreferences = Android.App.Application.Context.GetSharedPreferences(Alias, FileCreationMode.Private);
         }

@@ -29,13 +29,15 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly IUserDataRepository userDataRepository;
         private readonly ILogFileService logFileService;
+        private readonly ICloseApplicationService closeApplicationService;
 
         public SettingsPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IExposureNotificationService exposureNotificationService,
-            ILogFileService logFileService
+            ILogFileService logFileService,
+            ICloseApplicationService closeApplicationService
             ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
@@ -44,6 +46,7 @@ namespace Covid19Radar.ViewModels
             this.userDataRepository = userDataRepository;
             this.exposureNotificationService = exposureNotificationService;
             this.logFileService = logFileService;
+            this.closeApplicationService = closeApplicationService;
         }
 
         public ICommand OnChangeResetData => new Command(async () =>
@@ -83,7 +86,7 @@ namespace Covid19Radar.ViewModels
                     );
                 Application.Current.Quit();
                 // Application close
-                DependencyService.Get<ICloseApplication>().closeApplication();
+                closeApplicationService.CloseApplication();
 
                 loggerService.EndMethod();
                 return;

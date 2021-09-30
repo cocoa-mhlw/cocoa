@@ -4,8 +4,8 @@
 
 namespace Covid19Radar.Services
 {
-    public interface ICloseApplication
+    public interface ICloseApplicationService
     {
-        void closeApplication();
+        void CloseApplication();
     }
 }
