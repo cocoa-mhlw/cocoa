@@ -5,7 +5,6 @@
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Prism.Navigation;
-using System;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
@@ -37,27 +36,6 @@ namespace Covid19Radar.ViewModels
                     _exposures.Add(ens);
                 }
             }
-
-            _exposures.Add(new ExposureSummary()
-            {
-                ExposureDate = DateTime.UtcNow.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-                ExposureCountInt = 0
-            });
-            _exposures.Add(new ExposureSummary()
-            {
-                ExposureDate = DateTime.UtcNow.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-                ExposureCountInt = 1
-            });
-            _exposures.Add(new ExposureSummary()
-            {
-                ExposureDate = DateTime.UtcNow.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-                ExposureCountInt = 2
-            });
-            _exposures.Add(new ExposureSummary()
-            {
-                ExposureDate = DateTime.UtcNow.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-                ExposureCountInt = 3
-            });
         }
     }
 
