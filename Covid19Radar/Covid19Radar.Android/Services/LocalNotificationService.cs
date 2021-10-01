@@ -87,5 +87,17 @@ namespace Covid19Radar.Droid.Services
             _loggerService.EndMethod();
         }
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public async Task DismissExposureNotificationAsync()
+        {
+            _loggerService.StartMethod();
+
+            var nm = NotificationManagerCompat.From(Platform.AppContext);
+            nm.Cancel(NOTIFICATION_ID_EXPOSURE);
+
+            _loggerService.EndMethod();
+        }
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
     }
 }

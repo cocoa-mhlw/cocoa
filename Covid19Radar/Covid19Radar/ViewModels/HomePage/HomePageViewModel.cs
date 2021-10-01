@@ -119,6 +119,8 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
+            await localNotificationService.DismissExposureNotificationAsync();
+
             var count = exposureNotificationService.GetExposureCountToDisplay();
             loggerService.Info($"Exposure count: {count}");
             if (count > 0)
