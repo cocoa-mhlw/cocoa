@@ -86,6 +86,8 @@ namespace Covid19Radar.iOS.Services
 
         public async Task DismissExposureNotificationAsync()
         {
+            _loggerService.StartMethod();
+
             var notifications = await UNUserNotificationCenter.Current.GetDeliveredNotificationsAsync();
             var targetNotifications = notifications
                 .Select(notification => notification.Request.Identifier)
@@ -96,7 +98,8 @@ namespace Covid19Radar.iOS.Services
             {
                 UNUserNotificationCenter.Current.RemoveDeliveredNotifications(targetNotifications);
             }
-            
+
+            _loggerService.EndMethod();
         }
     }
 }
