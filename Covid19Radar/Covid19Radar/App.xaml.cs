@@ -52,12 +52,9 @@ namespace Covid19Radar
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.SetSkipBackupAttributeToLogDir();
 
-            // Local Notification tap event listener
-            //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
-            INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage));
-
+            var result = await NavigateToSplashAsync(Destination.HomePage);
             if (!result.Success)
             {
                 LoggerService.Info($"Failed transition.");
@@ -73,6 +70,26 @@ namespace Covid19Radar
             }
 
             LoggerService.EndMethod();
+        }
+
+        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination)
+        {
+            var param = SplashPage.CreateNavigationParams(destination);
+            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), param);
+        }
+
+        public async Task<INavigationResult> NavigateToAsync(Destination destination)
+        {
+            LoggerService.StartMethod();
+
+            try
+            {
+                return await NavigationService.NavigateAsync(destination.ToPath());
+            }
+            finally
+            {
+                LoggerService.EndMethod();
+            }
         }
 
         public static void InitExposureNotification()
@@ -116,11 +133,6 @@ namespace Covid19Radar
             var container = (ServiceLocator.Current as ContainerServiceLocator).CopyContainerWithRegistrations();
             return new DryIocContainerExtension(container);
         }
-
-        //protected void OnNotificationTapped(NotificationTappedEventArgs e)
-        //{
-        //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-        //}
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {

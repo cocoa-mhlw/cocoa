@@ -8,21 +8,45 @@ using Android.OS;
 using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
+using System;
+using System.Threading.Tasks;
+
+using FormsApplication = Xamarin.Forms.Application;
 
 namespace Covid19Radar.Droid
 {
     [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        private const string EXTRA_KEY_DESTINATION = "key_destination";
+
         internal static Intent NewIntent(Context context)
         {
             Intent intent = new Intent(context, typeof(MainActivity));
             return intent;
         }
 
+        internal static Intent NewIntent(Context context, Destination destination)
+        {
+            Intent intent = new Intent(context, typeof(MainActivity));
+            intent.PutExtra(EXTRA_KEY_DESTINATION, (int)destination);
+            return intent;
+        }
+
+        private App? AppInstance
+        {
+            get
+            {
+                if (FormsApplication.Current is App app)
+                {
+                    return app;
+                }
+                return null;
+            }
+        }
         public static object dataLock = new object();
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
@@ -39,9 +63,25 @@ namespace Covid19Radar.Droid
 
             UserDialogs.Init(this);
 
-            //NotificationCenter.CreateNotificationChannel();
             LoadApplication(new App());
-            //NotificationCenter.NotifyNotificationTapped(base.Intent);
+
+            await NavigateToDestinationFromIntent(Intent);
+        }
+
+        private static Destination GetDestinationFromIntent(Intent intent)
+        {
+            int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
+            return (Destination)Enum.ToObject(typeof(Destination), ordinal);
+        }
+
+        private async Task NavigateToDestinationFromIntent(Intent intent)
+        {
+            if (!intent.HasExtra(EXTRA_KEY_DESTINATION))
+            {
+                return;
+            }
+            var destination = GetDestinationFromIntent(intent);
+            await AppInstance?.NavigateToSplashAsync(destination);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -72,12 +112,12 @@ namespace Covid19Radar.Droid
             Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
         }
 
-        //protected override void OnNewIntent(Intent intent)
-        //{
-        //    NotificationCenter.NotifyNotificationTapped(intent);
+        protected async override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
 
-        //    base.OnNewIntent(intent);
-        //}
+            await NavigateToDestinationFromIntent(intent);
+        }
 
     }
 }

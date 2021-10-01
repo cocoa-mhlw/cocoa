@@ -100,6 +100,8 @@ namespace Covid19Radar.ViewModels
 
             try
             {
+                await localNotificationService.PrepareAsync();
+
                 await exposureNotificationService.StartExposureNotification();
                 await exposureNotificationService.FetchExposureKeyAsync();
             }
@@ -107,8 +109,6 @@ namespace Covid19Radar.ViewModels
             {
                 loggerService.Exception("Failed to fetch exposure key.", ex);
             }
-
-            await localNotificationService.PrepareAsync();
 
             await UpdateView();
 

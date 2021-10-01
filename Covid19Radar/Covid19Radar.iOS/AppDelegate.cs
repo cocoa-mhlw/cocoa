@@ -15,6 +15,8 @@ using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
 
+using FormsApplication = Xamarin.Forms.Application;
+
 namespace Covid19Radar.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -23,6 +25,21 @@ namespace Covid19Radar.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
+
+        private App? AppInstance
+        {
+            get
+            {
+                if (FormsApplication.Current is App app)
+                {
+                    return app;
+                }
+                return null;
+            }
+        }
+
+        private readonly UserNotificationCenterDelegate _notificationCenterDelegate = new UserNotificationCenterDelegate();
+
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
         {
@@ -51,7 +68,12 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
-            UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate();
+
+            _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
+            {
+                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage);
+            };
+            UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 
             LoadApplication(new App());
 
@@ -91,6 +113,9 @@ namespace Covid19Radar.iOS
 
 public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
 {
+    public delegate void NotificationCenterReceivedEventHandler(UserNotificationCenterDelegate sender, UNNotificationResponse response);
+    public event NotificationCenterReceivedEventHandler OnRecieved;
+
     public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
     {
         if (UIDevice.CurrentDevice.CheckSystemVersion(14, 0))
@@ -102,5 +127,11 @@ public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
             completionHandler(UNNotificationPresentationOptions.Alert);
         }
 
+    }
+
+    public override void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNotificationResponse response, System.Action completionHandler)
+    {
+        OnRecieved?.Invoke(this, response);
+        completionHandler();
     }
 }

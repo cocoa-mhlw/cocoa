@@ -7,7 +7,6 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Services.Migration;
 using Covid19Radar.Views;
 using Prism.Navigation;
-using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
@@ -64,10 +63,15 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to ReAgreePrivacyPolicyPage");
                     _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param);
                 }
+                else if (parameters.GetValue<Destination>(SplashPage.DestinationKey) == Destination.ContactedNotifyPage)
+                {
+                    _loggerService.Info($"Transition to DeepLinkDestination.ContactedNotifyPage");
+                    _ = await NavigationService.NavigateAsync(Destination.ContactedNotifyPage.ToPath());
+                }
                 else
                 {
                     _loggerService.Info($"Transition to HomePage");
-                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                    _ = await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
                 }
             }
             else
