@@ -32,7 +32,7 @@ namespace Covid19Radar.ViewModels
                 {
                     var ens = new ExposureSummary();
                     ens.ExposureDate = en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
-                    ens.ExposureCountInt = en.Count();
+                    ens.SetExposureCount(en.Count());
                     _exposures.Add(ens);
                 }
             }
@@ -43,12 +43,15 @@ namespace Covid19Radar.ViewModels
     {
         public string ExposureDate { get; set; }
 
-        private string _exposureCount;
+        private string _exposurePluralizeCount;
 
-        public string ExposureCount { get => _exposureCount; }
-        public int ExposureCountInt { set => _exposureCount = PluralizeCount(value); }
+        public string ExposurePluralizeCount => _exposurePluralizeCount;
 
-        private string PluralizeCount(int count)
+        public void SetExposureCount(int value) {
+            _exposurePluralizeCount = PluralizeCount(value);
+        }
+
+        private static string PluralizeCount(int count)
         {
             return count switch
             {

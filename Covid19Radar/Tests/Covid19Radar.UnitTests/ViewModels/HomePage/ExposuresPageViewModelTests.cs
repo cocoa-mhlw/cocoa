@@ -86,7 +86,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             Assert.Single(vm.Exposures);
 
-            Assert.Equal(AppResources.ExposuresPageExposureUnitPluralOnce, vm.Exposures[0].ExposureCount);
+            Assert.Equal(AppResources.ExposuresPageExposureUnitPluralOnce, vm.Exposures[0].ExposurePluralizeCount);
         }
 
         [Fact]
@@ -106,7 +106,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             Assert.Single(vm.Exposures);
 
-            Assert.Equal(string.Format(AppResources.ExposuresPageExposureUnitPlural, 2), vm.Exposures[0].ExposureCount);
+            Assert.Equal(string.Format(AppResources.ExposuresPageExposureUnitPlural, 2), vm.Exposures[0].ExposurePluralizeCount);
         }
     }
 }
