@@ -4,6 +4,7 @@
 
 
 using System;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -19,7 +20,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IUserDataService> mockUserDataService;
+        private readonly Mock<IUserDataRepository> mockUserDataRepository;
         private readonly Mock<IExposureNotificationService> mockExposureNotificationService;
         private readonly Mock<ILocalNotificationService> mockLocalNotificationService;
         private readonly Mock<IExposureNotificationStatusService> mockExposureNotificationStatusService;
@@ -31,7 +32,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockUserDataService = mockRepository.Create<IUserDataService>();
+            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
             mockExposureNotificationService = mockRepository.Create<IExposureNotificationService>();
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
             mockExposureNotificationStatusService = mockRepository.Create<IExposureNotificationStatusService>();
@@ -44,7 +45,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new HomePageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockUserDataService.Object,
+                mockUserDataRepository.Object,
                 mockExposureNotificationService.Object,
                 mockLocalNotificationService.Object,
                 mockExposureNotificationStatusService.Object,
@@ -90,7 +91,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             var mockLastConfirmedUtcDateTime = DateTime.UtcNow;
             mockExposureNotificationStatusService.Setup(x => x.ExposureNotificationStatus).Returns(ExposureNotificationStatus.Active);
-            mockExposureNotificationStatusService.Setup(x => x.LastConfirmedUtcDateTime).Returns(mockLastConfirmedUtcDateTime);
+            mockUserDataRepository.Setup(x => x.GetLastConfirmedDate()).Returns(mockLastConfirmedUtcDateTime);
 
             homePageViewModel.OnAppearing();
 

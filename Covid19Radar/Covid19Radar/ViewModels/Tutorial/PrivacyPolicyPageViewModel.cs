@@ -3,8 +3,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -14,8 +15,8 @@ namespace Covid19Radar.ViewModels
 {
     public class PrivacyPolicyPageViewModel : ViewModelBase
     {
-        private readonly ILoggerService loggerService;
-        private readonly ITermsUpdateService termsUpdateService;
+        private readonly ILoggerService _loggerService;
+        private readonly IUserDataRepository _userDataRepository;
 
         private string _url;
         public string Url
@@ -24,23 +25,27 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public PrivacyPolicyPageViewModel(INavigationService navigationService, ILoggerService loggerService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public PrivacyPolicyPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository
+            ) : base(navigationService)
         {
             Title = AppResources.PrivacyPolicyPageTitle;
-            Url = Resources.AppResources.UrlPrivacyPolicy;
+            Url = AppResources.UrlPrivacyPolicy;
 
-            this.loggerService = loggerService;
-            this.termsUpdateService = termsUpdateService;
+            _loggerService = loggerService;
+            _userDataRepository = userDataRepository;
         }
 
         public Command OnClickAgree => new Command(async () =>
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
-            termsUpdateService.SaveLastUpdateDate(TermsType.PrivacyPolicy, DateTime.Now);
+            _userDataRepository.SaveLastUpdateDate(TermsType.PrivacyPolicy, DateTime.Now);
             await NavigationService.NavigateAsync(nameof(TutorialPage4));
 
-            loggerService.EndMethod();
+            _loggerService.EndMethod();
         });
     }
 }

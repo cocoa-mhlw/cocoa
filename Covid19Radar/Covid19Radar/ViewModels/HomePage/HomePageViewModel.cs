@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -18,7 +19,7 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
+        private readonly IUserDataRepository userDataRepository;
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly ILocalNotificationService localNotificationService;
         private readonly IExposureNotificationStatusService exposureNotificationStatusService;
@@ -63,7 +64,7 @@ namespace Covid19Radar.ViewModels
         public HomePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataService userDataService,
+            IUserDataRepository userDataRepository,
             IExposureNotificationService exposureNotificationService,
             ILocalNotificationService localNotificationService,
             IExposureNotificationStatusService exposureNotificationStatusService,
@@ -73,7 +74,7 @@ namespace Covid19Radar.ViewModels
         {
             Title = AppResources.HomePageTitle;
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
+            this.userDataRepository = userDataRepository;
             this.exposureNotificationService = exposureNotificationService;
             this.localNotificationService = localNotificationService;
             this.exposureNotificationStatusService = exposureNotificationStatusService;
@@ -203,7 +204,8 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var daysOfUse = userDataService.GetDaysOfUse();
+            var daysOfUse = userDataRepository.GetDaysOfUse();
+
             PastDate = daysOfUse.ToString();
 
             await exposureNotificationStatusService.UpdateStatuses();
@@ -225,7 +227,7 @@ namespace Covid19Radar.ViewModels
                     IsVisibleENStatusUnconfirmedLayout = false;
                     IsVisibleENStatusStoppedLayout = false;
 
-                    var latestUtcDate = exposureNotificationStatusService.LastConfirmedUtcDateTime;
+                    var latestUtcDate = userDataRepository.GetLastConfirmedDate();
                     if (latestUtcDate == null)
                     {
                         LatestConfirmationDate = AppResources.InProgressText;

@@ -4,7 +4,7 @@
 
 using System;
 using System.Threading.Tasks;
-using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Moq;
@@ -22,16 +22,18 @@ namespace Covid19Radar.UnitTests.Services
         public void ExposureNotificationStoppedReasonTest_InitialValue()
         {
             var mockILoggerService = CreateDefaultMockILoggerService();
-            var mockIPreferencesService = CreateDefaultMockIPreferencesService();
+            var mockIUserDataRepository = CreateDefaultMockIUserDataRepository();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var mockIExposureNotificationStatusPlatformService = CreateDefaultMockIExposureNotificationStatusPlatformService();
-            mockIPreferencesService.Setup(s => s.GetDateTime(PreferenceKey.LastConfirmedUtcDateTime)).Returns<DateTime?>(null);
+
+            mockIUserDataRepository.Setup(s => s.GetLastConfirmedDate()).Returns<DateTime?>(null);
+
             var exposureNotificationStatusService =
                 CreateDefaultExposureNotificationStatusService(
                     mockILoggerService.Object,
-                    mockIPreferencesService.Object,
                     mockIEssentialsService.Object,
-                    mockIExposureNotificationStatusPlatformService.Object
+                    mockIExposureNotificationStatusPlatformService.Object,
+                    mockIUserDataRepository.Object
                     );
 
             var actualReason = exposureNotificationStatusService.ExposureNotificationStoppedReason;
@@ -55,15 +57,15 @@ namespace Covid19Radar.UnitTests.Services
             bool gpsEnabled, bool bluetoothEnabled, bool exposureNotificationEnabled, ExposureNotificationStoppedReason expectedReason)
         {
             var mockILoggerService = CreateDefaultMockILoggerService();
-            var mockIPreferencesService = CreateDefaultMockIPreferencesService();
+            var mockIUserDataRepository = CreateDefaultMockIUserDataRepository();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var mockIExposureNotificationStatusPlatformService = CreateDefaultMockIExposureNotificationStatusPlatformService();
             var exposureNotificationStatusService =
                 CreateDefaultExposureNotificationStatusService(
                     mockILoggerService.Object,
-                    mockIPreferencesService.Object,
                     mockIEssentialsService.Object,
-                    mockIExposureNotificationStatusPlatformService.Object
+                    mockIExposureNotificationStatusPlatformService.Object,
+                    mockIUserDataRepository.Object
                     );
 
             mockIEssentialsService.Reset();
@@ -91,15 +93,15 @@ namespace Covid19Radar.UnitTests.Services
             bool bluetoothEnabled, bool exposureNotificationEnabled, ExposureNotificationStoppedReason expectedReason)
         {
             var mockILoggerService = CreateDefaultMockILoggerService();
-            var mockIPreferencesService = CreateDefaultMockIPreferencesService();
+            var mockIUserDataRepository = CreateDefaultMockIUserDataRepository();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var mockIExposureNotificationStatusPlatformService = CreateDefaultMockIExposureNotificationStatusPlatformService();
             var exposureNotificationStatusService =
                 CreateDefaultExposureNotificationStatusService(
                     mockILoggerService.Object,
-                    mockIPreferencesService.Object,
                     mockIEssentialsService.Object,
-                    mockIExposureNotificationStatusPlatformService.Object
+                    mockIExposureNotificationStatusPlatformService.Object,
+                    mockIUserDataRepository.Object
                     );
 
             mockIEssentialsService.Reset();
@@ -121,80 +123,6 @@ namespace Covid19Radar.UnitTests.Services
 
         #endregion
 
-        #region LastConfirmedUtcDateTime
-
-        [Fact]
-        public void LastConfirmedUtcDateTimeTest_NotExists()
-        {
-            var mockILoggerService = CreateDefaultMockILoggerService();
-            var mockIPreferencesService = CreateDefaultMockIPreferencesService();
-            var mockIEssentialsService = CreateDefaultMockIEssentialsService();
-            var mockIExposureNotificationStatusPlatformService = CreateDefaultMockIExposureNotificationStatusPlatformService();
-            mockIPreferencesService.Setup(s => s.GetDateTime(PreferenceKey.LastConfirmedUtcDateTime)).Returns<DateTime?>(null);
-            var exposureNotificationStatusService =
-                CreateDefaultExposureNotificationStatusService(
-                    mockILoggerService.Object,
-                    mockIPreferencesService.Object,
-                    mockIEssentialsService.Object,
-                    mockIExposureNotificationStatusPlatformService.Object
-                    );
-
-            var lastConfirmedUtcDateTime = exposureNotificationStatusService.LastConfirmedUtcDateTime;
-
-            Assert.Null(lastConfirmedUtcDateTime);
-            mockIPreferencesService.Verify(s => s.GetDateTime(PreferenceKey.LastConfirmedUtcDateTime), Times.Once());
-        }
-
-        [Fact]
-        public void LastConfirmedUtcDateTimeTest_Exists()
-        {
-            var mockILoggerService = CreateDefaultMockILoggerService();
-            var mockIPreferencesService = CreateDefaultMockIPreferencesService();
-            var mockIEssentialsService = CreateDefaultMockIEssentialsService();
-            var mockIExposureNotificationStatusPlatformService = CreateDefaultMockIExposureNotificationStatusPlatformService();
-            var exposureNotificationStatusService =
-                CreateDefaultExposureNotificationStatusService(
-                    mockILoggerService.Object,
-                    mockIPreferencesService.Object,
-                    mockIEssentialsService.Object,
-                    mockIExposureNotificationStatusPlatformService.Object
-                    );
-
-            var lastConfirmedUtcDateTime = exposureNotificationStatusService.LastConfirmedUtcDateTime;
-
-            Assert.NotNull(lastConfirmedUtcDateTime);
-            mockIPreferencesService.Verify(s => s.GetDateTime(PreferenceKey.LastConfirmedUtcDateTime), Times.Once());
-        }
-
-        #endregion
-
-        #region RemoveAllExposureNotificationStatus()
-
-        [Fact]
-        public void RemoveAllExposureNotificationStatusTest()
-        {
-            var mockILoggerService = CreateDefaultMockILoggerService();
-            var mockIPreferencesService = CreateDefaultMockIPreferencesService();
-            var mockIEssentialsService = CreateDefaultMockIEssentialsService();
-            var mockIExposureNotificationStatusPlatformService = CreateDefaultMockIExposureNotificationStatusPlatformService();
-            var exposureNotificationStatusService =
-                CreateDefaultExposureNotificationStatusService(
-                    mockILoggerService.Object,
-                    mockIPreferencesService.Object,
-                    mockIEssentialsService.Object,
-                    mockIExposureNotificationStatusPlatformService.Object
-                    );
-
-            exposureNotificationStatusService.RemoveAllExposureNotificationStatus();
-
-            mockILoggerService.Verify(s => s.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            mockIPreferencesService.Verify(s => s.RemoveValue(PreferenceKey.LastConfirmedUtcDateTime), Times.Once());
-            mockIPreferencesService.Verify(s => s.RemoveValue(PreferenceKey.CanConfirmExposure), Times.Once());
-            mockILoggerService.Verify(s => s.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-        }
-
-        #endregion
-
         #region UpdateStatuses()
 
         [Theory]
@@ -211,15 +139,15 @@ namespace Covid19Radar.UnitTests.Services
             int gpsEnabledCalls, int bluetoothEnabledCalls, int exposureNotificationEnabledCalls)
         {
             var mockILoggerService = CreateDefaultMockILoggerService();
-            var mockIPreferencesService = CreateDefaultMockIPreferencesService();
+            var mockIUserDataRepository = CreateDefaultMockIUserDataRepository();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var mockIExposureNotificationStatusPlatformService = CreateDefaultMockIExposureNotificationStatusPlatformService();
             var exposureNotificationStatusService =
                 CreateDefaultExposureNotificationStatusService(
                     mockILoggerService.Object,
-                    mockIPreferencesService.Object,
                     mockIEssentialsService.Object,
-                    mockIExposureNotificationStatusPlatformService.Object
+                    mockIExposureNotificationStatusPlatformService.Object,
+                    mockIUserDataRepository.Object
                     );
 
             mockIEssentialsService.Reset();
@@ -253,15 +181,15 @@ namespace Covid19Radar.UnitTests.Services
             int bluetoothEnabledCalls, int exposureNotificationEnabledCalls)
         {
             var mockILoggerService = CreateDefaultMockILoggerService();
-            var mockIPreferencesService = CreateDefaultMockIPreferencesService();
+            var mockIUserDataRepository = CreateDefaultMockIUserDataRepository();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var mockIExposureNotificationStatusPlatformService = CreateDefaultMockIExposureNotificationStatusPlatformService();
             var exposureNotificationStatusService =
                 CreateDefaultExposureNotificationStatusService(
                     mockILoggerService.Object,
-                    mockIPreferencesService.Object,
                     mockIEssentialsService.Object,
-                    mockIExposureNotificationStatusPlatformService.Object
+                    mockIExposureNotificationStatusPlatformService.Object,
+                    mockIUserDataRepository.Object
                     );
 
             mockIEssentialsService.Reset();
@@ -294,16 +222,16 @@ namespace Covid19Radar.UnitTests.Services
 
         private ExposureNotificationStatusService CreateDefaultExposureNotificationStatusService(
             ILoggerService loggerService,
-            IPreferencesService preferencesService,
             IEssentialsService essentialsService,
-            IExposureNotificationStatusPlatformService exposureNotificationStatusPlatformService
+            IExposureNotificationStatusPlatformService exposureNotificationStatusPlatformService,
+            IUserDataRepository userDataRepository
             )
         {
             return new ExposureNotificationStatusService(
                 loggerService,
-                preferencesService,
                 essentialsService,
-                exposureNotificationStatusPlatformService
+                exposureNotificationStatusPlatformService,
+                userDataRepository
                 );
         }
 
@@ -322,17 +250,14 @@ namespace Covid19Radar.UnitTests.Services
             return mock;
         }
 
-        private Mock<IPreferencesService> CreateDefaultMockIPreferencesService()
+        private Mock<IUserDataRepository> CreateDefaultMockIUserDataRepository()
         {
-            var mock = new Mock<IPreferencesService>();
-            mock.Setup(s => s.GetDateTime(PreferenceKey.LastConfirmedUtcDateTime)).Returns(DateTime.UtcNow);
-            mock.Setup(s => s.GetValue(PreferenceKey.CanConfirmExposure, It.IsAny<bool>())).Returns(true);
-            mock.Setup(s => s.SetValue(PreferenceKey.LastConfirmedUtcDateTime, It.IsAny<DateTime>()));
-            mock.Setup(s => s.SetValue(PreferenceKey.CanConfirmExposure, It.IsAny<bool>()));
-            mock.Setup(s => s.RemoveValue(PreferenceKey.LastConfirmedUtcDateTime));
-            mock.Setup(s => s.RemoveValue(PreferenceKey.CanConfirmExposure));
-            mock.Setup(s => s.ContainsKey(PreferenceKey.LastConfirmedUtcDateTime)).Returns(false);
-            mock.Setup(s => s.ContainsKey(PreferenceKey.CanConfirmExposure)).Returns(false);
+            var mock = new Mock<IUserDataRepository>();
+            mock.Setup(s => s.GetLastConfirmedDate()).Returns(DateTime.UtcNow);
+            mock.Setup(s => s.IsCanConfirmExposure()).Returns(true);
+            mock.Setup(s => s.SetLastConfirmedDate(It.IsAny<DateTime>()));
+            mock.Setup(s => s.SetCanConfirmExposure(It.IsAny<bool>()));
+            mock.Setup(s => s.RemoveAllExposureNotificationStatus());
 
             return mock;
         }

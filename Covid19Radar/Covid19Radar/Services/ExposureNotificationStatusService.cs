@@ -4,7 +4,7 @@
 
 using System;
 using System.Threading.Tasks;
-using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Services
@@ -51,16 +51,14 @@ namespace Covid19Radar.Services
             }
         }
 
-        public DateTime? LastConfirmedUtcDateTime => _preferencesService.GetDateTime(PreferenceKey.LastConfirmedUtcDateTime);
-
         #endregion
 
         #region Instance Fields
 
         private readonly ILoggerService _loggerService;
-        private readonly IPreferencesService _preferencesService;
         private readonly IEssentialsService _essentialsService;
         private readonly IExposureNotificationStatusPlatformService _exposureNotificationStatusPlatformService;
+        private readonly IUserDataRepository _userDataRepository;
 
         private bool _exposureNotificationEnabled = true;
         private bool _bluetoothEnabled = true;
@@ -71,7 +69,7 @@ namespace Covid19Radar.Services
         #region Instance Properties
 
         private bool IsStopped => ExposureNotificationStoppedReason != ExposureNotificationStoppedReason.NotStopping;
-        private bool CanConfirmExposure => _preferencesService.GetValue(PreferenceKey.CanConfirmExposure, true);
+        private bool CanConfirmExposure => _userDataRepository.IsCanConfirmExposure();
 
         #endregion
 
@@ -79,15 +77,15 @@ namespace Covid19Radar.Services
 
         public ExposureNotificationStatusService(
             ILoggerService loggerService,
-            IPreferencesService preferencesService,
             IEssentialsService essentialsService,
-            IExposureNotificationStatusPlatformService exposureNotificationPlatformService
+            IExposureNotificationStatusPlatformService exposureNotificationPlatformService,
+            IUserDataRepository userDataRepository
             )
         {
             _loggerService = loggerService;
-            _preferencesService = preferencesService;
             _essentialsService = essentialsService;
             _exposureNotificationStatusPlatformService = exposureNotificationPlatformService;
+            _userDataRepository = userDataRepository;
         }
 
         #endregion
@@ -133,14 +131,6 @@ namespace Covid19Radar.Services
             {
                 _loggerService.EndMethod();
             }
-        }
-
-        public void RemoveAllExposureNotificationStatus()
-        {
-            _loggerService.StartMethod();
-            _preferencesService.RemoveValue(PreferenceKey.LastConfirmedUtcDateTime);
-            _preferencesService.RemoveValue(PreferenceKey.CanConfirmExposure);
-            _loggerService.EndMethod();
         }
 
         #endregion

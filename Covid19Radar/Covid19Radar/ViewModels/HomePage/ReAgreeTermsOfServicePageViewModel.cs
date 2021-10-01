@@ -5,6 +5,7 @@
 using System;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
@@ -16,8 +17,9 @@ namespace Covid19Radar.ViewModels
 {
     public class ReAgreeTermsOfServicePageViewModel : ViewModelBase
     {
-        private readonly ILoggerService loggerService;
-        private ITermsUpdateService _termsUpdateService;
+        private readonly ILoggerService _loggerService;
+        private readonly ITermsUpdateService _termsUpdateService;
+        private readonly IUserDataRepository _userDataRepository;
 
         private TermsUpdateInfoModel UpdateInfo;
         private DateTime UpdateDateTime { get; set; }
@@ -28,30 +30,36 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _updateText, value); }
         }
 
-                public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
 
-        public ReAgreeTermsOfServicePageViewModel(INavigationService navigationService, ILoggerService loggerService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public ReAgreeTermsOfServicePageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            ITermsUpdateService termsUpdateService,
+            IUserDataRepository userDataRepository
+            ) : base(navigationService)
         {
+            _loggerService = loggerService;
             _termsUpdateService = termsUpdateService;
-            this.loggerService = loggerService;
+            _userDataRepository = userDataRepository;
         }
 
         public Command OpenWebView => new Command(async () =>
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
             var url = Resources.AppResources.UrlTermOfUse;
             await BrowserOpenAsync(url, BrowserLaunchMode.SystemPreferred);
 
-            loggerService.EndMethod();
+            _loggerService.EndMethod();
         });
 
         public Command OnClickReAgreeCommand => new Command(async () =>
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
-            _termsUpdateService.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTime);
-            if (_termsUpdateService.IsReAgree(TermsType.PrivacyPolicy, UpdateInfo))
+            _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTime);
+            if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
             {
                 var param = new NavigationParameters
                 {
@@ -64,19 +72,19 @@ namespace Covid19Radar.ViewModels
                 _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
 
-            loggerService.EndMethod();
+            _loggerService.EndMethod();
         });
 
         public override void Initialize(INavigationParameters parameters)
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
             base.Initialize(parameters);
             UpdateInfo = (TermsUpdateInfoModel) parameters["updateInfo"];
             UpdateDateTime = UpdateInfo.TermsOfService.UpdateDateTime;
             UpdateText = UpdateInfo.TermsOfService.Text;
 
-            loggerService.EndMethod();
+            _loggerService.EndMethod();
         }
     }
 }
