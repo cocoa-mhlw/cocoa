@@ -494,6 +494,14 @@
     <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
+	<data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
+    <value>1回の接触</value>
+    <comment>1回の接触</comment>
+  </data>
+	<data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
+    <value>{0}回の接触</value>
+    <comment>{0}回の接触</comment>
+  </data>
 	<data name="ExposuresPageTitle" xml:space="preserve">
     <value>過去14日間の接触一覧</value>
     <comment>過去14日間の接触一覧</comment>

@@ -169,6 +169,14 @@
     <value>How to use</value>
     <comment>Tab How to use</comment>
   </data>
+	<data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
+    <value>1 exposure</value>
+    <comment>1回の接触</comment>
+  </data>
+	<data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
+    <value>{0} exposures</value>
+    <comment>{0}回の接触</comment>
+  </data>
 	<data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>No known exposures</value>
     <comment>If not found exposures data</comment>
