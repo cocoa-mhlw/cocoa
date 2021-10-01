@@ -72,7 +72,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Fact]
-        public void ExposureUnitTestOnce()
+        public void ExposureUnitOnceTest()
         {
             var date = DateTime.UtcNow.Date;
             List<UserExposureInfo> testList = new List<UserExposureInfo>()
@@ -90,7 +90,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Fact]
-        public void ExposureUnitTestPlural()
+        public void ExposureUnitPluralTest()
         {
             var date = DateTime.UtcNow.Date;
 
