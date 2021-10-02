@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Services;
@@ -83,20 +84,26 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public override async Task<bool> IsEnabledAsync()
             => true;
 
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles)
-        {
-            // do nothing
-        }
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => ProvideDiagnosisKeysResult.Completed;
 
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration)
-        {
-            // do nothing
-        }
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => ProvideDiagnosisKeysResult.Completed;
 
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, string token)
-        {
-            // do nothing
-        }
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            string token,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => ProvideDiagnosisKeysResult.Completed;
 
         public override async Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
         {
