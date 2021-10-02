@@ -46,15 +46,16 @@ namespace Covid19Radar.Services
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
         }
-
+          
         public abstract void Schedule();
 
-        public async Task ExposureDetectionAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task ExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
+            var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
+
             foreach (var serverConfiguration in _serverConfigurations)
             {
                 List<string> downloadedFileNameList = new List<string>();
-
                 try
                 {
                     var tmpDir = PrepareDir(serverConfiguration.Region);
@@ -92,7 +93,8 @@ namespace Covid19Radar.Services
 
                     await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
-                        exposureConfiguration
+                        exposureConfiguration,
+                        cancellationTokenSource
                         );
 
                     // Save LastProcessDiagnosisKeyTimestamp after ProvideDiagnosisKeysAsync was succeeded.
