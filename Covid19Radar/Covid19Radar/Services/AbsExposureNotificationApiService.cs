@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Services.Logs;
@@ -69,17 +70,13 @@ namespace Covid19Radar.Services
 
         private bool _isEnabled = false;
 
-        private IExposureDetectionService _exposureDetectionService;
-
         private readonly Random _random = new Random();
 
         public MockExposureNotificationApiService(
-            IExposureDetectionService exposureDetectionService,
             ILoggerService loggerService
             )
             : base(loggerService)
         {
-            _exposureDetectionService = exposureDetectionService;
         }
 
         public override async Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
@@ -126,16 +123,6 @@ namespace Covid19Radar.Services
             return _isEnabled;
         }
 
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles)
-        {
-            throw new NotImplementedException("This service is mock.");
-        }
-
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration)
-        {
-            throw new NotImplementedException("This service is mock.");
-        }
-
         private (ExposureSummary, IEnumerable<ExposureInformation>) CreateDummyV1ExposureData()
         {
             var exposureSummary = new ExposureSummary()
@@ -171,19 +158,6 @@ namespace Covid19Radar.Services
             return (exposureSummary, CreateInformations());
         }
 
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, string token)
-        {
-            throw new NotImplementedException("This service is mock.");
-        }
-
-        public override async Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
-        {
-        }
-
-        public override async Task RequestPreAuthorizedTemporaryExposureKeyReleaseAsync()
-        {
-        }
-
         public override async Task StartAsync()
         {
             _isEnabled = true;
@@ -193,6 +167,34 @@ namespace Covid19Radar.Services
         {
             _isEnabled = false;
         }
+
+        public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => Task.FromResult(ProvideDiagnosisKeysResult.Completed);
+
+        public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => Task.FromResult(ProvideDiagnosisKeysResult.Completed);
+
+        public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            string token,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => Task.FromResult(ProvideDiagnosisKeysResult.Completed);
+
+        public override Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
+            => Task.CompletedTask;
+
+        public override Task RequestPreAuthorizedTemporaryExposureKeyReleaseAsync()
+            => Task.CompletedTask;
+
     }
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
 }

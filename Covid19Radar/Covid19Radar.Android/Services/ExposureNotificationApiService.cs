@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Android.Content;
 using Android.Gms.Common.Apis;
@@ -75,8 +76,6 @@ namespace Covid19Radar.Droid.Services
                     throw apiException;
                 }
             }
-
-            return new List<TemporaryExposureKey>();
         }
 
         public override async Task<long> GetVersionAsync()
@@ -89,20 +88,25 @@ namespace Covid19Radar.Droid.Services
             return await Client.IsEnabledAsync();
         }
 
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles)
-        {
-            await Client.ProvideDiagnosisKeysAsync(keyFiles);
-        }
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => await Client.ProvideDiagnosisKeysAsync(keyFiles, cancellationTokenSource);
 
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration)
-        {
-            await Client.ProvideDiagnosisKeysAsync(keyFiles, configuration);
-        }
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => await Client.ProvideDiagnosisKeysAsync(keyFiles, configuration, cancellationTokenSource);
 
-        public override async Task ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, string token)
-        {
-            await Client.ProvideDiagnosisKeysAsync(keyFiles, configuration, token);
-        }
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration, string token,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => await Client.ProvideDiagnosisKeysAsync(keyFiles, configuration, token, cancellationTokenSource);
 
         public override async Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
         {

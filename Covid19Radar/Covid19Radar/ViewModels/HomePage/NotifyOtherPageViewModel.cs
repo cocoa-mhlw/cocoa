@@ -241,9 +241,14 @@ namespace Covid19Radar.ViewModels
 
                 loggerService.Info($"FilteredTemporaryExposureKeys-count: {filteredTemporaryExposureKeyList.Count()}");
 
+                // TODO: Save and use revoke operation.
+                string idempotencyKey = Guid.NewGuid().ToString();
+
                 HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+                    _diagnosisDate,
                     filteredTemporaryExposureKeyList,
-                    _processNumber
+                    _processNumber,
+                    idempotencyKey
                     );
                 loggerService.Info($"HTTP status is {httpStatusCode}({(int)httpStatusCode}).");
 
@@ -267,7 +272,7 @@ namespace Covid19Radar.ViewModels
         {
             switch (httpStatusCode)
             {
-                case HttpStatusCode.NoContent:
+                case HttpStatusCode.OK:
                     // Success
                     loggerService.Info($"Successfully submit DiagnosisKeys.");
 

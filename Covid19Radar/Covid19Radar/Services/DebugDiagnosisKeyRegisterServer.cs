@@ -16,6 +16,8 @@ namespace Covid19Radar.Services
 {
     public class DebugDiagnosisKeyRegisterServer : IDiagnosisKeyRegisterServer
     {
+        private const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
+
         // https://github.com/keiji/en-calibration-server
         private const string API_ENDPOINT = "https://en.keiji.dev/diagnosis_keys";
         private const string CLUSTER_ID = "212458"; // 6 digits
@@ -33,7 +35,12 @@ namespace Covid19Radar.Services
             _httpClient = httpClientService.Create();
         }
 
-        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(IList<TemporaryExposureKey> temporaryExposureKeys, string _)
+        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+            DateTime symptomOnsetDate,
+            IList<TemporaryExposureKey> temporaryExposureKeys,
+            string _,
+            string idempotencyKey
+            )
         {
 #if DEBUG
             _loggerService.StartMethod();
@@ -44,9 +51,11 @@ namespace Covid19Radar.Services
 #endif
             try
             {
-                RequestDiagnosisKey request = new RequestDiagnosisKey(temporaryExposureKeys,
-                    ReportType.ConfirmedClinicalDiagnosis,
-                    RiskLevel.High
+                RequestDiagnosisKey request = new RequestDiagnosisKey(
+                    symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
+                    temporaryExposureKeys,
+                    idempotencyKey,
+                    ReportType.ConfirmedClinicalDiagnosis
                     );
                 string requestJson = JsonConvert.SerializeObject(request);
 
@@ -70,21 +79,30 @@ namespace Covid19Radar.Services
     [JsonObject]
     public class RequestDiagnosisKey
     {
+        [JsonProperty("symptomOnsetDate")]
+        public string SymptomOnsetDate { get; set; }
+
         public IList<Tek> temporaryExposureKeys;
 
+        [JsonProperty("idempotency_key")]
+        public string IdempotencyKey { get; set; }
+
         public RequestDiagnosisKey(
+            string symptomOnsetDate,
             IList<TemporaryExposureKey> teks,
-            ReportType defaultRportType = ReportType.ConfirmedClinicalDiagnosis,
-            RiskLevel defaultTrasmissionRisk = RiskLevel.Medium)
+            string idempotencyKey,
+            ReportType defaultRportType = ReportType.ConfirmedTest
+            )
         {
+            SymptomOnsetDate = symptomOnsetDate;
             temporaryExposureKeys = teks.Select(tek =>
             {
                 return new Tek(tek)
                 {
                     reportType = (int)defaultRportType,
-                    transmissionRisk = (int)defaultTrasmissionRisk,
                 };
             }).ToList();
+            IdempotencyKey = idempotencyKey;
         }
     }
 
@@ -95,7 +113,6 @@ namespace Covid19Radar.Services
         public readonly long rollingStartNumber;
         public readonly long rollingPeriod;
         public int reportType;
-        public int transmissionRisk;
 
         public Tek(TemporaryExposureKey tek)
         {
@@ -103,7 +120,6 @@ namespace Covid19Radar.Services
             rollingStartNumber = tek.RollingStartIntervalNumber;
             rollingPeriod = tek.RollingPeriod;
             reportType = (int)ReportType.ConfirmedClinicalDiagnosis;
-            transmissionRisk = (int)RiskLevel.VeryHigh;
         }
     }
 }

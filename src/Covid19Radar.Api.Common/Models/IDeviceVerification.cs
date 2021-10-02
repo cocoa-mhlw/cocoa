@@ -2,11 +2,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-namespace Covid19Radar.Model
+namespace Covid19Radar.Api.Models
 {
-    public class ServerConfiguration
+    public interface IDeviceVerification : IAndroidDeviceVerification, IAppleDeviceVerification
     {
-        public string ApiEndpoint = "https://en.keiji.dev/diagnosis_keys";
-        public string Region = "212458";
     }
 }

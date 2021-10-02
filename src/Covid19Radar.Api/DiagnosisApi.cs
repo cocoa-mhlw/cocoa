@@ -24,7 +24,7 @@ namespace Covid19Radar.Api
     {
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
-        private readonly IV1DeviceValidationService DeviceCheck;
+        private readonly IDeviceValidationService DeviceCheck;
         private readonly IVerificationService VerificationService;
         private readonly ILogger<DiagnosisApi> Logger;
         private readonly string[] SupportRegions;
@@ -34,7 +34,7 @@ namespace Covid19Radar.Api
             IConfiguration config,
             IDiagnosisRepository diagnosisRepository,
             ITemporaryExposureKeyRepository tekRepository,
-            IV1DeviceValidationService deviceCheck,
+            IDeviceValidationService deviceCheck,
             IVerificationService verificationService,
             IValidationServerService validationServerService,
             ILogger<DiagnosisApi> logger)
