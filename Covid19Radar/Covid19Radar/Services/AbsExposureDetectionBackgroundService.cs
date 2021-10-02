@@ -46,7 +46,7 @@ namespace Covid19Radar.Services
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
         }
-          
+
         public abstract void Schedule();
 
         public async Task ExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
@@ -101,7 +101,6 @@ namespace Covid19Radar.Services
                     var latestProcessTimestamp = targetDiagnosisKeyEntryList
                         .Select(diagnosisKeyEntry => diagnosisKeyEntry.Created)
                         .Max();
-
                     await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region, latestProcessTimestamp);
 
                 }
