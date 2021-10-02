@@ -90,6 +90,10 @@ namespace Covid19Radar.iOS.Services
                         _loggerService.Exception($"Exception", exception);
                         task.SetTaskCompleted(false);
                     }
+                    finally
+                    {
+                        cancellationTokenSource.Dispose();
+                    }
                 }, cancellationTokenSource.Token);
             });
 
