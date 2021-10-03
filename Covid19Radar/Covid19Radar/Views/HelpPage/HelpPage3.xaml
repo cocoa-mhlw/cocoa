@@ -34,11 +34,13 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
                         Grid.Row="0"
                         Grid.Column="0"
                         Aspect="AspectFit"
                         Source="HelpPage40.png" />
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
@@ -54,12 +56,14 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
                         Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HelpPage3Description2}"
                         VerticalTextAlignment="Center" />
                     <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
                         Grid.Row="1"
                         Grid.Column="1"
                         Aspect="AspectFit"
@@ -75,11 +79,13 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
                         Grid.Row="0"
                         Grid.Column="0"
                         Aspect="AspectFit"
                         Source="HelpPage42.png" />
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
@@ -95,12 +101,14 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
                         Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HelpPage3Description4}"
                         VerticalTextAlignment="Center" />
                     <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
                         Grid.Row="1"
                         Grid.Column="1"
                         Aspect="AspectFit"
@@ -115,11 +123,13 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
                         Grid.Row="0"
                         Grid.Column="0"
                         Aspect="AspectFit"
                         Source="HelpPage45.png" />
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
@@ -130,6 +140,8 @@
             <Grid Grid.Row="1">
                 <Button
                     AutomationId="NextButton"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{x:Static resources:AppResources.HelpPage3Description6}"
                     Command="{Binding Path=OnClickNotifyOtherPage}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.HelpPage3Description6}" />

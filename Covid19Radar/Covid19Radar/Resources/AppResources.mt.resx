@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Tħassir</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Ixxerja l-App</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Ixxerja</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Jekk inti pożittiv bil-corona l-ġdida, jekk jogħġbok tikkoopera mar-Re ġistrazzjoni pożittiva biex tipproteġi n-nies ta ' madwarek.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Din l-applikazzjoni hija tant effettiva li ħafna nies tinstallahom, għalhekk jekk jogħġbok jaqsmu l-applikazzjoni ma ' nies ta ' madwarek.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Kif tuża</value>
@@ -323,14 +315,6 @@
     <value>Appoġġ</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>waqt l-użu</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>Iċċekkja kuntatti mill-qrib</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Meta ttestjat pożittiv għal COVID-19</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,10 +443,6 @@
     <value>Ixgħel bluetooth</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>Daħħal kodiċi bi 8 ċifri</value>
     <comment>8桁の処理番号を入力してください</comment>
@@ -512,29 +492,9 @@
     <value>Informazzjoni dwar din l-applikazzjoni</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>Jiem</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>In-Notifika ta' Espożizzjoni hija attiva.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth huwa mitfi. Jekk jogħġbok ixgħel Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>In-Notifika ta' Espożizzjoni hija diżattivata. Iftaħ l-issettjar tat-terminals u ixgħel in-Notifika ta' Espożizzjoni.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>Għandek taqbel mat-termini tal-użu.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>In-Notifika ta' Espożizzjoni mhijiex appoġġjata. Jekk jogħġbok aġġorna l-OS għall-aħħar verżjoni. Jekk għad għandek problemi, jekk jogħġbok ikkuntattjana fil-appsupport@cov19.mhlw.go.jp.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Żball fil-konnessjoni tan-netwerk</value>

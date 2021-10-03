@@ -5,6 +5,8 @@
 using System;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
@@ -23,6 +25,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ITermsUpdateService> mockTermsUpdateService;
+        private readonly Mock<IUserDataRepository> mockUserDataRepository;
 
         public ReAgreePrivacyPolicyPageViewModelTests()
         {
@@ -30,6 +33,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockTermsUpdateService = mockRepository.Create<ITermsUpdateService>();
+            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
         }
 
         private ReAgreePrivacyPolicyPageViewModel CreateViewModel()
@@ -37,7 +41,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var vm = new ReAgreePrivacyPolicyPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockTermsUpdateService.Object);
+                mockTermsUpdateService.Object,
+                mockUserDataRepository.Object
+                );
             return vm;
         }
 
@@ -79,7 +85,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             reAgreePrivacyPolicyPageViewModel.OpenWebView.Execute(null);
 
             Assert.Equal(1, actualCalls);
-            Assert.Equal("https://www.mhlw.go.jp/cocoa/privacypolicy_english.html", actualUri);
+            Assert.Equal(AppResources.UrlPrivacyPolicy, actualUri);
             Assert.Equal(BrowserLaunchMode.SystemPreferred, actualLaunchMode);
         }
 
@@ -94,7 +100,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             };
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
-            mockTermsUpdateService.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTime));
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTime));
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
             mockNavigationService.Verify(x => x.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage)), Times.Once());

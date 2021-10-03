@@ -43,14 +43,14 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
         #region Other Private Methods
 
-        private LogPathService CreateDefaultLogPathService(ILogPathDependencyService logPathDependencyService)
+        private LogPathService CreateDefaultLogPathService(ILogPathPlatformService logPathDependencyService)
         {
             return new LogPathService(logPathDependencyService);
         }
 
-        private ILogPathDependencyService CreateDefaultMockILogPathDependencyService()
+        private ILogPathPlatformService CreateDefaultMockILogPathDependencyService()
         {
-            var mock = Mock.Of<ILogPathDependencyService>(s =>
+            var mock = Mock.Of<ILogPathPlatformService>(s =>
             s.LogsDirPath == "~/.cocoa/logs" &&
             s.LogUploadingTmpPath == "~/.cocoa/tmp" &&
             s.LogUploadingPublicPath == "~/.cocoa/public"

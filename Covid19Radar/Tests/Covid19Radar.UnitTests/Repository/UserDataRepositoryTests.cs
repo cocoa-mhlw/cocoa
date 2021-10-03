@@ -249,5 +249,52 @@ namespace Covid19Radar.UnitTests.Repository
                 Assert.Equal(new DateTime(2021, 1, expectedStartDay + idx, 0, 0, 0), result[idx].Timestamp);
             }
         }
+
+        #region LastConfirmedUtcDateTime
+
+        [Fact]
+        public void LastConfirmedUtcDateTimeTest_NotExists()
+        {
+            mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.LastConfirmedDateTimeEpoch)).Returns(false);
+
+            var userDataRepository = CreateRepository();
+
+            var lastConfirmedUtcDateTime = userDataRepository.GetLastConfirmedDate();
+
+            Assert.Null(lastConfirmedUtcDateTime);
+        }
+
+        [Fact]
+        public void LastConfirmedUtcDateTimeTest_Exists()
+        {
+            mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.LastConfirmedDateTimeEpoch)).Returns(true);
+            mockPreferencesService.Setup(s => s.GetValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L)).Returns(800);
+
+            var userDataRepository = CreateRepository();
+
+            var lastConfirmedUtcDateTime = userDataRepository.GetLastConfirmedDate();
+
+            var expoectedDateTime = DateTimeOffset.FromUnixTimeSeconds(800).DateTime;
+
+            Assert.NotNull(lastConfirmedUtcDateTime);
+            Assert.Equal(expoectedDateTime, lastConfirmedUtcDateTime);
+        }
+
+        #endregion
+
+        #region RemoveAllExposureNotificationStatus()
+
+        [Fact]
+        public void RemoveAllExposureNotificationStatusTest()
+        {
+            var userDataRepository = CreateRepository();
+
+            userDataRepository.RemoveAllExposureNotificationStatus();
+
+            mockPreferencesService.Verify(s => s.RemoveValue(PreferenceKey.LastConfirmedDateTimeEpoch), Times.Once());
+            mockPreferencesService.Verify(s => s.RemoveValue(PreferenceKey.CanConfirmExposure), Times.Once());
+        }
+
+        #endregion
     }
 }

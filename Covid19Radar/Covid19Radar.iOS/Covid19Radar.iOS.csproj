@@ -206,7 +206,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Services\CloseApplication.cs" />
+    <Compile Include="Services\CloseApplicationService.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
     <None Include="appcenter-pre-build.sh" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\1024.png">
@@ -277,18 +277,20 @@
     <Compile Include="Extensions\AlignmentExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\FormattedStringExtensions.cs" />
-    <Compile Include="Services\Logs\LogFileServiceIos.cs" />
-    <Compile Include="Services\Logs\LogPathServiceIos.cs" />
-    <Compile Include="Services\Logs\LogPeriodicDeleteServiceIos.cs" />
+    <Compile Include="Services\Logs\LogPathPlatformService.cs" />
+    <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
-    <Compile Include="Services\SecureStorageServiceIos.cs" />
+    <Compile Include="Services\SecureStorageService.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\Migration\MigrationProcessService.cs" />
     <Compile Include="Services\ExposureNotificationApiService.cs" />
     <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
+    <Compile Include="Services\BackupAttributeService.cs" />
+    <Compile Include="Services\ExposureNotificationStatusPlatformService.cs" />
+    <Compile Include="Services\ExternalNavigationService.cs" />
     <None Include="EntitlementsDebug.plist" />
   </ItemGroup>
   <ItemGroup>
@@ -335,6 +337,22 @@
     <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%403x.png" />
     <BundleResource Include="Resources\license.html" />
+    <BundleResource Include="Resources\Base.lproj\app_share_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\app_share_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_alert_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_alert_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_stop_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_stop_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\question_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\question_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_active_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_active_icon%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\alert_workaround_img%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\alert_workaround_img%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\alert_workaround_img%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -385,7 +403,7 @@
       <Version>2.0.6</Version>
     </PackageReference>
     <PackageReference Include="Chino.iOS">
-      <Version>1.0.0-beta12</Version>
+      <Version>1.0.0-rc02</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -507,18 +525,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage22%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage10%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage10%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage11%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage11%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\InfoMark%402x.png" />

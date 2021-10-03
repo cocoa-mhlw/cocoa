@@ -2,12 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Services.Migration;
 using Covid19Radar.Views;
 using Prism.Navigation;
-using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
@@ -17,17 +18,20 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService _loggerService;
         private readonly IUserDataService _userDataService;
         private readonly IMigrationService _migrationService;
+        private readonly IUserDataRepository _userDataRepository;
 
         public SplashPageViewModel(
             INavigationService navigationService,
-            ILoggerService loggerService,
             ITermsUpdateService termsUpdateService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository,
             IUserDataService userDataService,
             IMigrationService migrationService
             ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
+            _userDataRepository = userDataRepository;
             _userDataService = userDataService;
             _migrationService = migrationService;
         }
@@ -40,13 +44,13 @@ namespace Covid19Radar.ViewModels
 
             await _migrationService.MigrateAsync();
 
-            if (_termsUpdateService.IsAllAgreed())
+            if (_userDataRepository.IsAllAgreed())
             {
                 _loggerService.Info("User data exists");
 
                 var termsUpdateInfo = await _termsUpdateService.GetTermsUpdateInfo();
 
-                if (_termsUpdateService.IsReAgree(TermsType.TermsOfService, termsUpdateInfo))
+                if (_termsUpdateService.IsUpdated(TermsType.TermsOfService, termsUpdateInfo))
                 {
                     var param = new NavigationParameters
                 {
@@ -55,7 +59,7 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to ReAgreeTermsOfServicePage");
                     _ = await NavigationService.NavigateAsync(nameof(ReAgreeTermsOfServicePage), param);
                 }
-                else if (_termsUpdateService.IsReAgree(TermsType.PrivacyPolicy, termsUpdateInfo))
+                else if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, termsUpdateInfo))
                 {
                     var param = new NavigationParameters
                 {
@@ -64,10 +68,15 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to ReAgreePrivacyPolicyPage");
                     _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param);
                 }
+                else if (parameters.GetValue<Destination>(SplashPage.DestinationKey) == Destination.ContactedNotifyPage)
+                {
+                    _loggerService.Info($"Transition to DeepLinkDestination.ContactedNotifyPage");
+                    _ = await NavigationService.NavigateAsync(Destination.ContactedNotifyPage.ToPath());
+                }
                 else
                 {
                     _loggerService.Info($"Transition to HomePage");
-                    _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                    _ = await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
                 }
             }
             else

@@ -19,16 +19,16 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<ICloseApplication> mockCloseApplication;
         private readonly Mock<IDiagnosisKeyRegisterServer> mockDiagnosisKeyRegisterServer;
+        private readonly Mock<ICloseApplicationService> mockCloseApplicationService;
 
         public NotifyOtherPageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockCloseApplication = mockRepository.Create<ICloseApplication>();
             mockDiagnosisKeyRegisterServer = mockRepository.Create<IDiagnosisKeyRegisterServer>();
+            mockCloseApplicationService = mockRepository.Create<ICloseApplicationService>();
         }
 
         private NotifyOtherPageViewModel CreateViewModel()
@@ -36,9 +36,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new NotifyOtherPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockCloseApplication.Object,
                 new MockExposureNotificationApiService(mockLoggerService.Object),
-                mockDiagnosisKeyRegisterServer.Object
+                mockDiagnosisKeyRegisterServer.Object,
+                mockCloseApplicationService.Object
                 );
         }
 
@@ -71,8 +71,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             ) : base(loggerService) {
         }
 
-        public override async Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
-            => new List<ExposureNotificationStatus>();
+        public override async Task<IList<Chino.ExposureNotificationStatus>> GetStatusesAsync()
+            => new List<Chino.ExposureNotificationStatus>();
 
         public override async Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
             => new List<TemporaryExposureKey>();

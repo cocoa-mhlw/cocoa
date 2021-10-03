@@ -144,7 +144,7 @@ namespace Covid19Radar.Services
                 {
                     new ExposureInformation()
                     {
-                        DateMillisSinceEpoch = DateTime.UtcNow.AddDays(-10).ToUnixEpochTime(),
+                        DateMillisSinceEpoch = DateTime.UtcNow.AddDays(-10).ToUnixEpoch(),
                         DurationInMillis = TimeSpan.FromMinutes(5).Ticks,
                         AttenuationDurationsInMillis = new int[] { 1440000, 0, 0 },
                         AttenuationValue = 65,
@@ -153,7 +153,7 @@ namespace Covid19Radar.Services
                     },
                     new ExposureInformation()
                     {
-                        DateMillisSinceEpoch = DateTime.UtcNow.AddDays(-11).ToUnixEpochTime(),
+                        DateMillisSinceEpoch = DateTime.UtcNow.AddDays(-11).ToUnixEpoch(),
                         DurationInMillis = TimeSpan.FromMinutes(5).Ticks,
                         AttenuationDurationsInMillis = new int[] { 1440000, 0, 0 },
                         AttenuationValue = 40,

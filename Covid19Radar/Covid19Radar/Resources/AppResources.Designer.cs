@@ -125,6 +125,18 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ExposuresPageExposureUnitPluralOnce {
+            get {
+                return ResourceManager.GetString("ExposuresPageExposureUnitPluralOnce", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageExposureUnitPlural {
+            get {
+                return ResourceManager.GetString("ExposuresPageExposureUnitPlural", resourceCulture);
+            }
+        }
+        
         public static string ExposuresPageNoExposures {
             get {
                 return ResourceManager.GetString("ExposuresPageNoExposures", resourceCulture);
@@ -188,18 +200,6 @@ namespace Covid19Radar.Resources {
         public static string HomePageHeader2Description {
             get {
                 return ResourceManager.GetString("HomePageHeader2Description", resourceCulture);
-            }
-        }
-        
-        public static string HomePageHeader3Title {
-            get {
-                return ResourceManager.GetString("HomePageHeader3Title", resourceCulture);
-            }
-        }
-        
-        public static string HomePageHeader3Description {
-            get {
-                return ResourceManager.GetString("HomePageHeader3Description", resourceCulture);
             }
         }
         
@@ -569,12 +569,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string HomePageDescription1 {
-            get {
-                return ResourceManager.GetString("HomePageDescription1", resourceCulture);
-            }
-        }
-        
         public static string HomePageDescription2 {
             get {
                 return ResourceManager.GetString("HomePageDescription2", resourceCulture);
@@ -875,24 +869,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string ExposureNotificationStatusMessageActive {
-            get {
-                return ResourceManager.GetString("ExposureNotificationStatusMessageActive", resourceCulture);
-            }
-        }
-        
-        public static string ExposureNotificationStatusMessageBluetoothOff {
-            get {
-                return ResourceManager.GetString("ExposureNotificationStatusMessageBluetoothOff", resourceCulture);
-            }
-        }
-        
-        public static string ExposureNotificationStatusMessageDisabled {
-            get {
-                return ResourceManager.GetString("ExposureNotificationStatusMessageDisabled", resourceCulture);
-            }
-        }
-        
         public static string ExposureNotificationStatusMessageIsOptined {
             get {
                 return ResourceManager.GetString("ExposureNotificationStatusMessageIsOptined", resourceCulture);
@@ -902,18 +878,6 @@ namespace Covid19Radar.Resources {
         public static string ExposureNotificationRestrictedTitle {
             get {
                 return ResourceManager.GetString("ExposureNotificationRestrictedTitle", resourceCulture);
-            }
-        }
-        
-        public static string ExposureNotificationStatusMessageRestricted {
-            get {
-                return ResourceManager.GetString("ExposureNotificationStatusMessageRestricted", resourceCulture);
-            }
-        }
-        
-        public static string ExposureNotificationStatusMessageUnknown {
-            get {
-                return ResourceManager.GetString("ExposureNotificationStatusMessageUnknown", resourceCulture);
             }
         }
         
@@ -1532,6 +1496,162 @@ namespace Covid19Radar.Resources {
         public static string UrlWebAccessibilityPolicy {
             get {
                 return ResourceManager.GetString("UrlWebAccessibilityPolicy", resourceCulture);
+            }
+        }
+        
+        public static string HomePageENStatusActiveTitle {
+            get {
+                return ResourceManager.GetString("HomePageENStatusActiveTitle", resourceCulture);
+            }
+        }
+        
+        public static string HomePageENStatusActiveDescription {
+            get {
+                return ResourceManager.GetString("HomePageENStatusActiveDescription", resourceCulture);
+            }
+        }
+        
+        public static string HomePageENStatusUnconfirmedTitle {
+            get {
+                return ResourceManager.GetString("HomePageENStatusUnconfirmedTitle", resourceCulture);
+            }
+        }
+        
+        public static string HomePageENStatusUnconfirmedDescription1 {
+            get {
+                return ResourceManager.GetString("HomePageENStatusUnconfirmedDescription1", resourceCulture);
+            }
+        }
+        
+        public static string HomePageENStatusUnconfirmedDescription2 {
+            get {
+                return ResourceManager.GetString("HomePageENStatusUnconfirmedDescription2", resourceCulture);
+            }
+        }
+        
+        public static string HomePageTroubleshootingButtonText {
+            get {
+                return ResourceManager.GetString("HomePageTroubleshootingButtonText", resourceCulture);
+            }
+        }
+        
+        public static string HomePageENStatusStoppedTitle {
+            get {
+                return ResourceManager.GetString("HomePageENStatusStoppedTitle", resourceCulture);
+            }
+        }
+        
+        public static string HomePageENStatusStoppedDescription1 {
+            get {
+                return ResourceManager.GetString("HomePageENStatusStoppedDescription1", resourceCulture);
+            }
+        }
+        
+        public static string HomePageENStatusStoppedDescription2 {
+            get {
+                return ResourceManager.GetString("HomePageENStatusStoppedDescription2", resourceCulture);
+            }
+        }
+        
+        public static string LatestConfirmationDateExplanationDialogText {
+            get {
+                return ResourceManager.GetString("LatestConfirmationDateExplanationDialogText", resourceCulture);
+            }
+        }
+        
+        public static string ButtonClose {
+            get {
+                return ResourceManager.GetString("ButtonClose", resourceCulture);
+            }
+        }
+        
+        public static string HomePageQuestionIconAccessibilityTextiOS {
+            get {
+                return ResourceManager.GetString("HomePageQuestionIconAccessibilityTextiOS", resourceCulture);
+            }
+        }
+        
+        public static string HomePageQuestionIconAccessibilityTextAndroid {
+            get {
+                return ResourceManager.GetString("HomePageQuestionIconAccessibilityTextAndroid", resourceCulture);
+            }
+        }
+        
+        public static string InProgressText {
+            get {
+                return ResourceManager.GetString("InProgressText", resourceCulture);
+            }
+        }
+        
+        public static string DateTimeFormatToDisplayOnHomePage {
+            get {
+                return ResourceManager.GetString("DateTimeFormatToDisplayOnHomePage", resourceCulture);
+            }
+        }
+        
+        public static string ToSettingsButton {
+            get {
+                return ResourceManager.GetString("ToSettingsButton", resourceCulture);
+            }
+        }
+        
+        public static string CheckSettingsDialogTitle {
+            get {
+                return ResourceManager.GetString("CheckSettingsDialogTitle", resourceCulture);
+            }
+        }
+        
+        public static string ExposureNotificationOffWarningDialogMessage {
+            get {
+                return ResourceManager.GetString("ExposureNotificationOffWarningDialogMessage", resourceCulture);
+            }
+        }
+        
+        public static string BluetoothOffWarningDialogMessage {
+            get {
+                return ResourceManager.GetString("BluetoothOffWarningDialogMessage", resourceCulture);
+            }
+        }
+        
+        public static string LocationOffWarningDialogMessage {
+            get {
+                return ResourceManager.GetString("LocationOffWarningDialogMessage", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageTitle {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageDescription1 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageDescription1", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageDescription2 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageDescription2", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageDescription3 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageDescription3", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageDescription4 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageDescription4", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageDescription5 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageDescription5", resourceCulture);
             }
         }
     }
