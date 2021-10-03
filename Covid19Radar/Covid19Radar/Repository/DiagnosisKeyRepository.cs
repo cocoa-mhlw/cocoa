@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
@@ -16,9 +17,9 @@ namespace Covid19Radar.Repository
 {
     public interface IDiagnosisKeyRepository
     {
-        public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(DiagnosisKeyServerConfiguration diagnosisKeyServerConfiguration);
+        public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(DiagnosisKeyServerConfiguration diagnosisKeyServerConfiguration, CancellationToken cancellationToken);
 
-        public Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir);
+        public Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir, CancellationToken cancellationToken);
     }
 
     [JsonObject]
@@ -51,10 +52,10 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
-        public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(DiagnosisKeyServerConfiguration diagnosisKeyServerConfiguration)
+        public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(DiagnosisKeyServerConfiguration diagnosisKeyServerConfiguration, CancellationToken cancellationToken)
         {
             Uri uri = new Uri($"{diagnosisKeyServerConfiguration.ApiEndpoint}/{diagnosisKeyServerConfiguration.Region}/{CATALOG_FILE_NAME}");
-            HttpResponseMessage response = await _client.GetAsync(uri);
+            HttpResponseMessage response = await _client.GetAsync(uri, cancellationToken);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
@@ -69,10 +70,10 @@ namespace Covid19Radar.Repository
             return new List<DiagnosisKeyEntry>();
         }
 
-        public async Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir)
+        public async Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir, CancellationToken cancellationToken)
         {
             Uri uri = new Uri(diagnosisKeyEntry.Url);
-            HttpResponseMessage response = await _client.GetAsync(uri);
+            HttpResponseMessage response = await _client.GetAsync(uri, cancellationToken);
             if (response.IsSuccessStatusCode)
             {
                 string fileName = uri.Segments[uri.Segments.Length - 1];

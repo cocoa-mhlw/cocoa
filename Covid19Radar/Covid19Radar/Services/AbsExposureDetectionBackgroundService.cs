@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
@@ -48,18 +49,19 @@ namespace Covid19Radar.Services
 
         public abstract void Schedule();
 
-        public async Task ExposureDetectionAsync()
+        public async Task ExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
+            var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
+
             foreach (var serverConfiguration in _serverConfigurations)
             {
                 List<string> downloadedFileNameList = new List<string>();
-
                 try
                 {
                     var tmpDir = PrepareDir(serverConfiguration.Region);
 
                     var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
-                    var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration);
+                    var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region);
                     var targetDiagnosisKeyEntryList = diagnosisKeyEntryList;
@@ -79,7 +81,7 @@ namespace Covid19Radar.Services
 
                     foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
                     {
-                        string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir);
+                        string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir, cancellationToken);
 
                         _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
 
@@ -91,7 +93,8 @@ namespace Covid19Radar.Services
 
                     await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
-                        exposureConfiguration
+                        exposureConfiguration,
+                        cancellationTokenSource
                         );
 
                     // Save LastProcessDiagnosisKeyTimestamp after ProvideDiagnosisKeysAsync was succeeded.
