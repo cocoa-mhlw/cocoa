@@ -4,9 +4,10 @@
 
 using System;
 using System.Collections.Generic;
+using Chino;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
-using Covid19Radar.Services;
 using Covid19Radar.ViewModels;
 using Moq;
 using Prism.Navigation;
@@ -18,20 +19,21 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
-        private readonly Mock<IExposureNotificationService> mockExposureNotificationService;
+        private readonly Mock<IUserDataRepository> mockUserDataRepository;
 
         public ExposurePageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
-            mockExposureNotificationService = mockRepository.Create<IExposureNotificationService>();
+            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
         }
 
         private ExposuresPageViewModel CreateViewModel()
         {
             return new ExposuresPageViewModel(
                 mockNavigationService.Object,
-                mockExposureNotificationService.Object);
+                mockUserDataRepository.Object
+                );
         }
 
         [Fact]
@@ -41,10 +43,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             List<UserExposureInfo> dummyList = new List<UserExposureInfo>()
             {
-                new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, UserRiskLevel.High),
-                new UserExposureInfo(date, TimeSpan.FromMinutes(20), 98, 98, UserRiskLevel.Medium),
+                new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, RiskLevel.High),
+                new UserExposureInfo(date, TimeSpan.FromMinutes(20), 98, 98, RiskLevel.Medium),
             };
-            mockExposureNotificationService.Setup(x => x.GetExposureInformationListToDisplay()).Returns(dummyList);
+            mockUserDataRepository.Setup(x => x.GetExposureInformationList()).Returns(dummyList);
 
             var vm = CreateViewModel();
             vm.Initialize(new NavigationParameters());
@@ -60,10 +62,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             List<UserExposureInfo> testList = new List<UserExposureInfo>()
             {
-                new UserExposureInfo(date1, TimeSpan.FromMinutes(15), 99, 99, UserRiskLevel.High),
-                new UserExposureInfo(date2, TimeSpan.FromMinutes(20), 98, 98, UserRiskLevel.Medium),
+                new UserExposureInfo(date1, TimeSpan.FromMinutes(15), 99, 99, RiskLevel.High),
+                new UserExposureInfo(date2, TimeSpan.FromMinutes(20), 98, 98, RiskLevel.Medium),
             };
-            mockExposureNotificationService.Setup(x => x.GetExposureInformationListToDisplay()).Returns(testList);
+            mockUserDataRepository.Setup(x => x.GetExposureInformationList()).Returns(testList);
 
             var vm = CreateViewModel();
             vm.Initialize(new NavigationParameters());
@@ -77,9 +79,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var date = DateTime.UtcNow.Date;
             List<UserExposureInfo> testList = new List<UserExposureInfo>()
             {
-                new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, UserRiskLevel.High),
+                new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, RiskLevel.High),
             };
-            mockExposureNotificationService.Setup(x => x.GetExposureInformationListToDisplay()).Returns(testList);
+            mockUserDataRepository.Setup(x => x.GetExposureInformationList()).Returns(testList);
 
             var vm = CreateViewModel();
             vm.Initialize(new NavigationParameters());
@@ -96,10 +98,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             List<UserExposureInfo> testList = new List<UserExposureInfo>()
             {
-                new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, UserRiskLevel.High),
-                new UserExposureInfo(date, TimeSpan.FromMinutes(20), 98, 98, UserRiskLevel.Medium)
+                new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, RiskLevel.High),
+                new UserExposureInfo(date, TimeSpan.FromMinutes(20), 98, 98, RiskLevel.Medium)
             };
-            mockExposureNotificationService.Setup(x => x.GetExposureInformationListToDisplay()).Returns(testList);
+            mockUserDataRepository.Setup(x => x.GetExposureInformationList()).Returns(testList);
 
             var vm = CreateViewModel();
             vm.Initialize(new NavigationParameters());

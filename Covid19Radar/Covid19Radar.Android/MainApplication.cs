@@ -100,7 +100,6 @@ namespace Covid19Radar.Droid
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
 
-            container.Register<IExposureNotificationStatusPlatformService, ExposureNotificationStatusPlatformService>(Reuse.Singleton);
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
             container.Register<IPlatformService, PlatformService>(Reuse.Singleton);
         }

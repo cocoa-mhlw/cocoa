@@ -138,7 +138,7 @@ namespace Covid19Radar.Droid
                     => new Action<IExposureNotificationEventCallback>(callback => { callback.OnPreauthorizeAllowed(); }),
                 _ => new Action<IExposureNotificationEventCallback>(callback => { /* do nothing */ }),
             };
-            PageUtilities.InvokeViewAndViewModelAction(PageUtilities.GetCurrentPage(_app.MainPage), action);
+            PageUtilities.InvokeViewAndViewModelAction(PageUtilities.GetCurrentPage(AppInstance.MainPage), action);
         }
 
         protected async override void OnNewIntent(Intent intent)

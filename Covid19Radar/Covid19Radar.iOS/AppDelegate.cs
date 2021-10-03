@@ -152,7 +152,6 @@ namespace Covid19Radar.iOS
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
-            container.Register<IExposureNotificationStatusPlatformService, ExposureNotificationStatusPlatformService>(Reuse.Singleton);
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
         }
 

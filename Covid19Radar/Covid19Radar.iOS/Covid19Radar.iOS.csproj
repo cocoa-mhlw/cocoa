@@ -289,7 +289,6 @@
     <Compile Include="Services\ExposureNotificationApiService.cs" />
     <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
     <Compile Include="Services\BackupAttributeService.cs" />
-    <Compile Include="Services\ExposureNotificationStatusPlatformService.cs" />
     <Compile Include="Services\ExternalNavigationService.cs" />
     <None Include="EntitlementsDebug.plist" />
   </ItemGroup>

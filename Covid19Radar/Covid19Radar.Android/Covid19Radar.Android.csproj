@@ -197,7 +197,6 @@
     <Compile Include="Services\ExposureNotificationApiService.cs" />
     <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
     <Compile Include="Services\BackupAttributeService.cs" />
-    <Compile Include="Services\ExposureNotificationStatusPlatformService.cs" />
     <Compile Include="Services\ExternalNavigationService.cs" />
     <Compile Include="Services\PlatformService.cs" />
     <Compile Include="Services\IPlatformService.cs" />
