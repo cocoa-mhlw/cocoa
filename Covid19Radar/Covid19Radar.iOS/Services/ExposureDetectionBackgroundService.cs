@@ -57,7 +57,7 @@ namespace Covid19Radar.iOS.Services
 
                 ScheduleBgTask();
 
-                var cancellationTokenSource = new CancellationTokenSource(TIMEOUT_IN_MILLIS);
+                var cancellationTokenSource = new CancellationTokenSource();
                 task.ExpirationHandler = cancellationTokenSource.Cancel;
 
                 _ = Task.Run(async () =>
@@ -77,7 +77,7 @@ namespace Covid19Radar.iOS.Services
                             return;
                         }
 
-                        await ExposureDetectionAsync();
+                        await ExposureDetectionAsync(cancellationTokenSource);
                         task.SetTaskCompleted(true);
                     }
                     catch (OperationCanceledException exception)
@@ -90,7 +90,11 @@ namespace Covid19Radar.iOS.Services
                         _loggerService.Exception($"Exception", exception);
                         task.SetTaskCompleted(false);
                     }
-                });
+                    finally
+                    {
+                        cancellationTokenSource.Dispose();
+                    }
+                }, cancellationTokenSource.Token);
             });
 
             if (result)
