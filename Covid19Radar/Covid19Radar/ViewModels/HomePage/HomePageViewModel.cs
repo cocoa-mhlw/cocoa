@@ -188,19 +188,6 @@ namespace Covid19Radar.ViewModels
             var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
 
             if (
-            statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
-            )
-            {
-                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
-                if (isOK)
-                {
-                    externalNavigationService.NavigateAppSettings();
-                }
-            }
-            else if (
             statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
             || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
             )
@@ -219,6 +206,19 @@ namespace Covid19Radar.ViewModels
                 if (isOK)
                 {
                     externalNavigationService.NavigateLocationSettings();
+                }
+            }
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
+            )
+            {
+                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
+                if (isOK)
+                {
+                    externalNavigationService.NavigateAppSettings();
                 }
             }
 
