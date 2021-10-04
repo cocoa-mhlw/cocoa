@@ -8,7 +8,7 @@ namespace Covid19Radar.UnitTests
 {
     public class AppSettingsTests
     {
-        [Fact]
+        [Fact(Skip = "Under consideration")]
         public void SettingsTests()
         {
             var settings = new AppSettings();
