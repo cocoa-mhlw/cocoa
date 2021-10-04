@@ -9,11 +9,15 @@ on:
     paths:
       - 'Covid19Radar/**'
       - 'Covid19Radar.sln'
+      - 'Nuget.config'
+      - '.github/**'
   pull_request:
     branches: [ main, develop, 'feature/**' ]
     paths:
       - 'Covid19Radar/**'
       - 'Covid19Radar.sln'
+      - 'Nuget.config'
+      - '.github/**'
 jobs:
   build_ios:
     name: Build-iOS
@@ -49,7 +53,7 @@ jobs:
       run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
   test:
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: macos-latest # Tests must be executed on macos
     needs: [build_ios, build_android]
     steps:
     - name: Checkout

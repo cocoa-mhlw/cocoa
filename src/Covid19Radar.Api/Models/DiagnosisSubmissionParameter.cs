@@ -10,8 +10,10 @@ using System.Linq;
 namespace Covid19Radar.Api.Models
 {
 
-	public class DiagnosisSubmissionParameter : IPayload
+	public class DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
+		private const int TRANSMISSION_RISK_LEVEL = 4;
+
 		[JsonProperty("keys")]
 		public Key[] Keys { get; set; }
 		[JsonProperty("regions")]
@@ -29,7 +31,11 @@ namespace Covid19Radar.Api.Models
 		[JsonProperty("padding")]
 		public string Padding { get; set; }
 
-		public  class Key
+		[JsonIgnore]
+		public string KeysTextForDeviceVerification
+			=> string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+
+		public class Key
 		{
 			[JsonProperty("keyData")]
 			public string KeyData { get; set; }
@@ -37,14 +43,21 @@ namespace Covid19Radar.Api.Models
 			public uint RollingStartNumber { get; set; }
 			[JsonProperty("rollingPeriod")]
 			public uint RollingPeriod { get; set; }
-			public TemporaryExposureKeyModel ToModel(DiagnosisSubmissionParameter p, ulong timestamp)
+			public TemporaryExposureKeyModel ToModel(DiagnosisSubmissionParameter _, ulong timestamp)
 			{
 				return new TemporaryExposureKeyModel()
 				{
 					KeyData = Convert.FromBase64String(this.KeyData),
 					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
-					TransmissionRiskLevel = 4,
+					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
+
+					// TODO: We should consider which report-type choose when accept submission from Legacy-COCOA.
+					//ReportType = (int)ReportType,
+
+					// TODO: We should consider what days-since-onset-of-symptoms assign when accept submission from Legacy-COCOA.
+					//DaysSinceOnsetOfSymptoms = DaysSinceOnsetOfSymptoms,
+
 					Timestamp = timestamp,
 					Exported = false
 				};
@@ -57,11 +70,13 @@ namespace Covid19Radar.Api.Models
 			{
 				if (string.IsNullOrWhiteSpace(KeyData)) return false;
 				if (RollingPeriod != 0 && RollingPeriod > Constants.ActiveRollingPeriod) return false;
-				var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds() / 600;
-				var oldest = new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
-				if (RollingStartNumber != 0 && (RollingStartNumber < oldest || RollingStartNumber > now)) return false;
+				var nowRollingStartNumber = DateTimeOffset.UtcNow.ToUnixTimeSeconds() / TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC;
+				var oldestRollingStartNumber = new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC;
+				if (RollingStartNumber != 0 && (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > nowRollingStartNumber)) return false;
 				return true;
 			}
+
+			public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod);
 		}
 
 		/// <summary>
@@ -79,5 +94,4 @@ namespace Covid19Radar.Api.Models
 			return true;
 		}
 	}
-
 }

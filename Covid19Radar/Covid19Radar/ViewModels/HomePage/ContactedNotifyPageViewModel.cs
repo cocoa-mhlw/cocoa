@@ -2,18 +2,22 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using Covid19Radar.Resources;
+using Covid19Radar.Repository;
+using Covid19Radar.Common;
+using System.Linq;
 
 namespace Covid19Radar.ViewModels
 {
     public class ContactedNotifyPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
+        private readonly IUserDataRepository _userDataRepository;
+
         private string _exposureCount;
         public string ExposureCount
         {
@@ -21,11 +25,25 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposureCount, value); }
         }
 
-        public ContactedNotifyPageViewModel(INavigationService navigationService, ILoggerService loggerService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+        public ContactedNotifyPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository
+            ) : base(navigationService)
         {
-            Title = AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
-            ExposureCount = exposureNotificationService.GetExposureCountToDisplay().ToString();
+            _userDataRepository = userDataRepository;
+
+            Title = AppResources.TitileUserStatusSettings;
+        }
+
+        public override async void Initialize(INavigationParameters parameters)
+        {
+            base.Initialize(parameters);
+
+            var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var userExposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+            ExposureCount = (dailySummaryList.Count() + userExposureInformationList.Count()).ToString();
         }
 
         public Command OnClickByForm => new Command(async () =>

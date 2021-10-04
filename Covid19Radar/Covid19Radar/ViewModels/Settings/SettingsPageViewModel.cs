@@ -2,15 +2,16 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Acr.UserDialogs;
-using Covid19Radar.Model;
+using Chino;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using Xamarin.Essentials;
-using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -26,22 +27,33 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _AppVersion, value); }
         }
 
-        private readonly IExposureNotificationService exposureNotificationService;
         private readonly IUserDataService userDataService;
-        private readonly IHttpDataService httpDataService;
+        private readonly IUserDataRepository userDataRepository;
+        private readonly IExposureConfigurationRepository exposureConfigurationRepository;
         private readonly ILogFileService logFileService;
         private readonly ITermsUpdateService termsUpdateService;
+        private readonly AbsExposureNotificationApiService exposureNotificationApiService;
 
-        public SettingsPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IHttpDataService httpDataService, IExposureNotificationService exposureNotificationService, ILogFileService logFileService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public SettingsPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataService userDataService,
+            IUserDataRepository userDataRepository,
+            IExposureConfigurationRepository exposureConfigurationRepository,
+            ILogFileService logFileService,
+            ITermsUpdateService termsUpdateService,
+            AbsExposureNotificationApiService exposureNotificationApiService
+            ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
             this.userDataService = userDataService;
-            this.httpDataService = httpDataService;
-            this.exposureNotificationService = exposureNotificationService;
+            this.userDataRepository = userDataRepository;
+            this.exposureConfigurationRepository = exposureConfigurationRepository;
             this.logFileService = logFileService;
             this.termsUpdateService = termsUpdateService;
+            this.exposureNotificationApiService = exposureNotificationApiService;
         }
 
         public ICommand OnChangeResetData => new Command(async () =>
@@ -58,16 +70,17 @@ namespace Covid19Radar.ViewModels
             {
                 UserDialogs.Instance.ShowLoading(AppResources.LoadingTextDeleting);
 
-                if (await ExposureNotification.IsEnabledAsync())
-                {
-                    await ExposureNotification.StopAsync();
-                }
+                await StopExposureNotificationAsync();
 
                 // Reset All Data and Optout
                 userDataService.RemoveStartDate();
-                exposureNotificationService.RemoveExposureInformation();
-                exposureNotificationService.RemoveConfiguration();
-                exposureNotificationService.RemoveLastProcessTekTimestamp();
+
+                await userDataRepository.RemoveDailySummariesAsync();
+                await userDataRepository.RemoveExposureWindowsAsync();
+                userDataRepository.RemoveExposureInformation();
+                await userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
+                exposureConfigurationRepository.RemoveExposureConfiguration();
+
                 termsUpdateService.RemoveAllUpdateDate();
 
                 _ = logFileService.DeleteLogsDir();
@@ -88,5 +101,23 @@ namespace Covid19Radar.ViewModels
 
             loggerService.EndMethod();
         });
+
+        private async Task StopExposureNotificationAsync()
+        {
+            loggerService.StartMethod();
+
+            try
+            {
+                _ = await exposureNotificationApiService.StopExposureNotificationAsync();
+            }
+            catch (ENException exception)
+            {
+                loggerService.Exception("ENException", exception);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+        }
     }
 }

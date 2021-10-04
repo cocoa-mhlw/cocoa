@@ -2,6 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Chino;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
@@ -16,14 +20,16 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IExposureNotificationService> mockExposureNotificationService;
+        private readonly Mock<ICloseApplication> mockCloseApplication;
+        private readonly Mock<IDiagnosisKeyRegisterServer> mockDiagnosisKeyRegisterServer;
 
         public NotifyOtherPageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockExposureNotificationService = mockRepository.Create<IExposureNotificationService>();
+            mockCloseApplication = mockRepository.Create<ICloseApplication>();
+            mockDiagnosisKeyRegisterServer = mockRepository.Create<IDiagnosisKeyRegisterServer>();
         }
 
         private NotifyOtherPageViewModel CreateViewModel()
@@ -31,7 +37,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new NotifyOtherPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockExposureNotificationService.Object);
+                mockCloseApplication.Object,
+                new MockExposureNotificationApiService(mockLoggerService.Object),
+                mockDiagnosisKeyRegisterServer.Object
+                );
         }
 
         [Theory]
@@ -40,10 +49,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         [InlineData("11111111", false, true, true)]
         [InlineData("1111111", true, false, false)]
         [InlineData("111111111", true, false, false)]
-        public void CheckRegisterButtonEnableTest(string diagnosisUid, bool isVisibleWithSymptomsLayout, bool isVisibleNoSymptomsLayout, bool expectResult)
+        public void CheckRegisterButtonEnableTest(string processNumber, bool isVisibleWithSymptomsLayout, bool isVisibleNoSymptomsLayout, bool expectResult)
         {
             var vm = CreateViewModel();
-            vm.DiagnosisUid = diagnosisUid;
+            vm.ProcessNumber = processNumber;
             vm.IsVisibleWithSymptomsLayout = isVisibleWithSymptomsLayout;
             vm.IsVisibleNoSymptomsLayout = isVisibleNoSymptomsLayout;
 
@@ -52,4 +61,69 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             Assert.Equal(expectResult, result);
         }
     }
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+    internal class MockExposureNotificationApiService : AbsExposureNotificationApiService
+    {
+        private const long DUMMY_EN_API_VERSION = 2;
+
+        internal MockExposureNotificationApiService(
+            ILoggerService loggerService
+            ) : base(loggerService) {
+        }
+
+        public override async Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
+            => new List<ExposureNotificationStatus>();
+
+        public override async Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
+            => new List<TemporaryExposureKey>();
+
+        public override async Task<long> GetVersionAsync()
+            => DUMMY_EN_API_VERSION;
+
+        public override async Task<bool> IsEnabledAsync()
+            => true;
+
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => ProvideDiagnosisKeysResult.Completed;
+
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => ProvideDiagnosisKeysResult.Completed;
+
+        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
+            List<string> keyFiles,
+            ExposureConfiguration configuration,
+            string token,
+            CancellationTokenSource cancellationTokenSource = null
+            )
+            => ProvideDiagnosisKeysResult.Completed;
+
+        public override async Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
+        {
+            // do nothing
+        }
+
+        public override async Task RequestPreAuthorizedTemporaryExposureKeyReleaseAsync()
+        {
+            // do nothing
+        }
+
+        public override async Task StartAsync()
+        {
+            // do nothing
+        }
+
+        public override async Task StopAsync()
+        {
+            // do nothing
+        }
+    }
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
 }

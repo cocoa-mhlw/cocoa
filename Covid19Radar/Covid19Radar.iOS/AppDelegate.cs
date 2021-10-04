@@ -2,9 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
+using System.Collections.Generic;
+using Chino;
+using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
+using Covid19Radar.Resources;
 using Covid19Radar.iOS.Services.Migration;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -21,8 +26,20 @@ namespace Covid19Radar.iOS
     // User Interface of the application, as well as listening (and optionally responding) to
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IExposureNotificationHandler
     {
+        private Lazy<AbsExposureNotificationApiService> _exposureNotificationClient
+            = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
+
+        private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
+
+        private Lazy<IExposureDetectionService> _exposureDetectionService
+            = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
+
+        private Lazy<ILoggerService> _loggerService
+            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
         {
@@ -41,7 +58,7 @@ namespace Covid19Radar.iOS
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
-            App.InitExposureNotification();
+            InitializeExposureNotificationClient();
 
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
 
@@ -56,7 +73,35 @@ namespace Covid19Radar.iOS
             LoadApplication(new App());
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
+
+            try
+            {
+                _exposureDetectionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("failed to Scheduling", exception);
+            }
+
             return base.FinishedLaunching(app, options);
+        }
+
+        public AbsExposureNotificationClient GetEnClient() => _exposureNotificationClient.Value;
+
+        private void InitializeExposureNotificationClient()
+        {
+            AbsExposureNotificationClient.Handler = this;
+
+            if (GetEnClient() is ExposureNotificationApiService exposureNotificationApiService)
+            {
+                exposureNotificationApiService.UserExplanation = AppResources.LocalNotificationDescription;
+
+#if DEBUG
+                exposureNotificationApiService.IsTest = true;
+#else
+                exposureNotificationApiService.IsTest = false;
+#endif
+            }
         }
 
         public override void OnActivated(UIApplication uiApplication)
@@ -74,12 +119,48 @@ namespace Covid19Radar.iOS
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
+            container.Register<ICloseApplication, CloseApplication>(Reuse.Singleton);
             container.Register<IMigrationProcessService, MigrationProcessService>(Reuse.Singleton);
+            container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
+            container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
+            container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
+        }
+
+        public void PreExposureDetected()
+        {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
+        }
+
+        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+        }
+
+        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
+        }
+
+        public void ExposureNotDetected()
+        {
+            var exposureConfiguration = GetEnClient().ExposureConfiguration;
+            var enVersion = GetEnClient().GetVersionAsync()
+                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.ExposureNotDetected(exposureConfiguration, enVersion);
         }
     }
 }

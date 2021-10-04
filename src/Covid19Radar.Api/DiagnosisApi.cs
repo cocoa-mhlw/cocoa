@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -24,8 +24,7 @@ namespace Covid19Radar.Api
     {
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
-        private readonly IValidationUserService Validation;
-        private readonly IV1DeviceValidationService DeviceCheck;
+        private readonly IDeviceValidationService DeviceCheck;
         private readonly IVerificationService VerificationService;
         private readonly ILogger<DiagnosisApi> Logger;
         private readonly string[] SupportRegions;
@@ -35,15 +34,13 @@ namespace Covid19Radar.Api
             IConfiguration config,
             IDiagnosisRepository diagnosisRepository,
             ITemporaryExposureKeyRepository tekRepository,
-            IValidationUserService validation,
-            IV1DeviceValidationService deviceCheck,
+            IDeviceValidationService deviceCheck,
             IVerificationService verificationService,
             IValidationServerService validationServerService,
             ILogger<DiagnosisApi> logger)
         {
             DiagnosisRepository = diagnosisRepository;
             TekRepository = tekRepository;
-            Validation = validation;
             DeviceCheck = deviceCheck;
             Logger = logger;
             SupportRegions = config.SupportRegions();
@@ -82,13 +79,6 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Regions not supported.");
             }
 
-            // validation
-            var validationResult = await Validation.ValidateAsync(req, diagnosis);
-            if (!validationResult.IsValid)
-            {
-                Logger.LogInformation($"validation error.");
-                return validationResult.ErrorActionResult;
-            }
 
             // TODO: Security Consider, additional validation for user uuid.
 

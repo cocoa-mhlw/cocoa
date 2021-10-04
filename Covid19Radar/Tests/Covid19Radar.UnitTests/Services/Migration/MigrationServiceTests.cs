@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
@@ -22,6 +23,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
         const string APPLICATION_PROPERTY_USER_DATA_KEY = "UserData";
         const string APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY = "TermsOfServiceLastUpdateDateTime";
         const string APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY = "PrivacyPolicyLastUpdateDateTime";
+
+        private const string PREFERENCE_KEY_EXPOSURE_SUMMARY = "ExposureSummary";
 
         private readonly MockRepository _mockRepository = new MockRepository(MockBehavior.Default);
 
@@ -90,7 +93,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // AppVersion
@@ -110,7 +113,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             // ExposureNotificationConfiguration
             Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
 
-            Assert.False(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
         }
 
@@ -128,7 +131,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // AppVersion
@@ -148,7 +151,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             // ExposureNotificationConfiguration
             Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
 
-            Assert.False(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
         }
 
@@ -170,8 +173,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
                     {"404", 53454353 }
                 };
 
-            var userExposureInfo1 = new UserExposureInfo(userExposureInfo1DateTime, new TimeSpan(50), 3, 11, UserRiskLevel.High);
-            var userExposureInfo2 = new UserExposureInfo(userExposureInfo2DateTime, new TimeSpan(100), 8, 10, UserRiskLevel.Medium);
+            var userExposureInfo1 = new UserExposureInfo(userExposureInfo1DateTime, new TimeSpan(50), 3, 11, RiskLevel.High);
+            var userExposureInfo2 = new UserExposureInfo(userExposureInfo2DateTime, new TimeSpan(100), 8, 10, RiskLevel.Medium);
             var userExposureSummary = new UserExposureSummary(4, 6, 11, new TimeSpan[0], 5);
 
             var userData = new UserDataModel()
@@ -235,7 +238,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // StartDateTime
@@ -271,8 +274,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
 
             // ExposureSummary
-            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -301,7 +304,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // StartDateTime
@@ -337,8 +340,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
 
             // ExposureSummary
-            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -367,7 +370,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // StartDateTime
@@ -403,8 +406,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
 
             // ExposureSummary
-            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -433,7 +436,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // StartDateTime
@@ -466,8 +469,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
 
             // ExposureSummary
-            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -513,7 +516,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             // StartDateTime
@@ -546,8 +549,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
 
             // ExposureSummary
-            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -570,7 +573,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureSummary));
+            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
             Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
 
             if (!hasAppVersionAtPreference)
@@ -631,8 +634,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             AssertUserExposureInfo(userExposureInfo2, userExposureInfosPref[1]);
 
             // ExposureSummary
-            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureSummary));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureSummary, "{}");
+            Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }

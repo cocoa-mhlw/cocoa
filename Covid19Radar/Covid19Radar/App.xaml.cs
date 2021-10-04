@@ -18,7 +18,7 @@ using System;
 using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Migration;
-using Xamarin.ExposureNotifications;
+using Covid19Radar.Repository;
 
 /*
  * Our mission...is
@@ -75,22 +75,6 @@ namespace Covid19Radar
             LoggerService.EndMethod();
         }
 
-        public static void InitExposureNotification()
-        {
-            UseMockExposureNotificationImplementationIfNeeded();
-
-            ExposureNotification.Init();
-        }
-
-        private static void UseMockExposureNotificationImplementationIfNeeded()
-        {
-#if USE_MOCK
-            // For debug mode, set the mock api provider to interact
-            // with some fake data
-            ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
-#endif
-        }
-
         // Initialize IOC container
         public static void InitializeServiceLocator(Action<IContainer> registerPlatformTypes)
         {
@@ -116,11 +100,6 @@ namespace Covid19Radar
             var container = (ServiceLocator.Current as ContainerServiceLocator).CopyContainerWithRegistrations();
             return new DryIocContainerExtension(container);
         }
-
-        //protected void OnNotificationTapped(NotificationTappedEventArgs e)
-        //{
-        //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-        //}
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
@@ -180,9 +159,10 @@ namespace Covid19Radar
             container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
             container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
             container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
-            container.Register<IExposureNotificationService, ExposureNotificationService>(Reuse.Singleton);
             container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
             container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
+            container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
+
 #if USE_MOCK
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
@@ -190,8 +170,21 @@ namespace Covid19Radar
             container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
+
+#if DEBUG
+            container.Register<IDiagnosisKeyRegisterServer, DebugDiagnosisKeyRegisterServer>(Reuse.Singleton);
+            container.Register<IExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
+#else
+            container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
+            container.Register<IExposureDataCollectServer, ReleaseExposureDataCollectServer>(Reuse.Singleton);
+#endif
+
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
-            container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
+            container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);
+            container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
+            container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
+            container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
+            container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
         }
 
         protected override void OnStart()
@@ -209,13 +202,6 @@ namespace Covid19Radar
             LogFileService.Rotate();
         }
 
-        /*
-         public async Task InitializeBackgroundTasks()
-        {
-            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
-        }
-        */
         protected override void OnSleep()
         {
             base.OnSleep();

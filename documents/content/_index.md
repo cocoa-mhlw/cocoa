@@ -10,7 +10,7 @@ COCOAのリポジトリは次のURLです。
 
  * [https://github.com/cocoa-mhlw/cocoa](https://github.com/cocoa-mhlw/cocoa)
 
-リポジトリの運営については[デジタル庁 GitHub運用方針]({{<relref "operation_policy">}})を注意事項もご確認ください。
+リポジトリの運営については[デジタル庁 GitHub運用方針]({{<relref "operation_policy">}})の注意事項もご確認ください。
 
 
 ## 開発について
@@ -23,5 +23,18 @@ COCOAのリポジトリは次のURLです。
  * [貢献についてのガイドライン]({{<relref "guidelines">}})
  * [Pull Requestが取り込まれるまで]({{<relref "handling_pullreqeust">}})
  * [Contributors]({{<relref "contributors">}})
+
+## 素材（掲載されている情報等）
+ * 同意事項
+    * [プライバシーポリシー]({{<relref "privacy_policy">}})
+    * [利用規約]({{<relref "terms_of_use">}})
+ * Google Play Store
+    * [日本語]({{<relref "docs/materials/goole_play/ja/">}})
+    * [English]({{<relref "docs/materials/goole_play/en/">}})
+    * [簡体中国語]({{<relref "docs/materials/goole_play/zh_cn/">}})
+ * App Store
+    * [日本語]({{<relref "docs/materials/app_store/ja/">}})
+    * [English]({{<relref "docs/materials/app_store/en/">}})
+    * [簡体中国語]({{<relref "docs/materials/app_store/zh_cn/">}})
 
 COCOAは[Project Covid19Radar[Archived]](https://github.com/Covid-19Radar)を元に開発されています。

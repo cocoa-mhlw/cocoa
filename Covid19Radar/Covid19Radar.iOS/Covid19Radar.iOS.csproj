@@ -46,6 +46,7 @@
     <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
     <CodesignProvision>VS: net.kzmx.Covid19Radar Development</CodesignProvision>
     <LangVersion>latest</LangVersion>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,7 +60,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>EntitlementsDebug.plist</CodesignEntitlements>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
@@ -106,6 +107,7 @@
     <BuildIpa>false</BuildIpa>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <OptimizePNGs>true</OptimizePNGs>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -163,6 +165,7 @@
     <MtouchFloat32>true</MtouchFloat32>
     <MtouchI18n>cjk</MtouchI18n>
     <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
@@ -198,6 +201,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <MtouchArch>ARM64</MtouchArch>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -283,6 +287,9 @@
     <Compile Include="Services\LocalContentService.cs" />
     <Compile Include="Services\LocalNotificationService.cs" />
     <Compile Include="Services\Migration\MigrationProcessService.cs" />
+    <Compile Include="Services\ExposureNotificationApiService.cs" />
+    <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
+    <None Include="EntitlementsDebug.plist" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -369,7 +376,7 @@
       <Version>4.6.0.967</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
-      <Version>1.1.0-beta1</Version>
+      <Version>1.2.3-alpha01</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.MaterialComponents">
       <Version>92.0.0</Version>
@@ -377,15 +384,14 @@
     <PackageReference Include="CommonServiceLocator">
       <Version>2.0.6</Version>
     </PackageReference>
+    <PackageReference Include="Chino.iOS">
+      <Version>1.0.0-rc01</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{554EE1AB-B447-480C-90E5-C4F040891DE6}</Project>
       <Name>Covid19Radar</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj">
-      <Project>{83af4c2e-22f8-4dab-b993-be6abb3e56a1}</Project>
-      <Name>Xamarin.ExposureNotification</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
