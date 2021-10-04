@@ -5,12 +5,14 @@
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
+using Covid19Radar.Resources;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.ViewModels
 {
@@ -33,7 +35,7 @@ namespace Covid19Radar.ViewModels
         {
             _userDataRepository = userDataRepository;
 
-            Title = Resources.AppResources.MainExposures;
+            Title = AppResources.MainExposures;
             _exposures = new ObservableCollection<ExposureSummary>();
 
         }
@@ -42,6 +44,11 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
+            await InitExposures();
+        }
+
+        public async Task InitExposures()
+        {
             var exposureWindowList
                 = await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
@@ -56,8 +63,8 @@ namespace Covid19Radar.ViewModels
                     {
                         Timestamp = ew.Key,
                         ExposureDate = ew.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-                        ExposureCount = ew.Count().ToString()
                     };
+                    ens.SetExposureCount(ew.Count());
                     _exposures.Add(ens);
                 }
             }
@@ -70,8 +77,8 @@ namespace Covid19Radar.ViewModels
                     {
                         Timestamp = ei.Key,
                         ExposureDate = ei.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-                        ExposureCount = ei.Count().ToString()
                     };
+                    ens.SetExposureCount(ei.Count());
                     _exposures.Add(ens);
                 }
             }
@@ -79,6 +86,7 @@ namespace Covid19Radar.ViewModels
             Exposures = new ObservableCollection<ExposureSummary>(
                 _exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp)
                 );
+
         }
     }
 
@@ -88,6 +96,22 @@ namespace Covid19Radar.ViewModels
         public DateTime Timestamp { get; set; }
 
         public string ExposureDate { get; set; }
-        public string ExposureCount { get; set; }
+
+        private string _exposurePluralizeCount;
+
+        public string ExposurePluralizeCount => _exposurePluralizeCount;
+
+        public void SetExposureCount(int value) {
+            _exposurePluralizeCount = PluralizeCount(value);
+        }
+
+        private static string PluralizeCount(int count)
+        {
+            return count switch
+            {
+                1 => AppResources.ExposuresPageExposureUnitPluralOnce,
+                _ => string.Format(AppResources.ExposuresPageExposureUnitPlural, count),
+            };
+        }
     }
 }

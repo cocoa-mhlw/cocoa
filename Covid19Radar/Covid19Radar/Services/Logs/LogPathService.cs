@@ -31,13 +31,13 @@ namespace Covid19Radar.Services.Logs
 
         #region Instance Fields
 
-        private readonly ILogPathDependencyService logPathDependencyService;
+        private readonly ILogPathPlatformService logPathDependencyService;
 
         #endregion
 
         #region Constructors
 
-        public LogPathService(ILogPathDependencyService logPathDependencyService)
+        public LogPathService(ILogPathPlatformService logPathDependencyService)
         {
             this.logPathDependencyService = logPathDependencyService;
         }

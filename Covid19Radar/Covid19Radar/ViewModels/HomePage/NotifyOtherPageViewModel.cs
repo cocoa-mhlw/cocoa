@@ -24,9 +24,10 @@ namespace Covid19Radar.ViewModels
     public class NotifyOtherPageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
         private readonly ILoggerService loggerService;
-        private readonly ICloseApplication closeApplication;
+
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
+        private readonly ICloseApplicationService closeApplicationService;
 
         private string _processNumber;
         public string ProcessNumber
@@ -75,18 +76,17 @@ namespace Covid19Radar.ViewModels
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            ICloseApplication closeApplication,
             AbsExposureNotificationApiService exposureNotificationApiService,
-            IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer
+            IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer,
+            ICloseApplicationService closeApplicationService
             ) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
 
             this.loggerService = loggerService;
-            this.closeApplication = closeApplication;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
-
+            this.closeApplicationService = closeApplicationService;
             errorCount = 0;
             ProcessNumber = "";
             DiagnosisDate = DateTime.Today;
@@ -96,11 +96,13 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
+
             var result = await UserDialogs.Instance.ConfirmAsync(
                 AppResources.NotifyOtherPageDiag1Message,
                 AppResources.NotifyOtherPageDiag1Title,
                 AppResources.ButtonRegister,
                 AppResources.ButtonCancel);
+
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
@@ -124,8 +126,11 @@ namespace Covid19Radar.ViewModels
                         AppResources.NotifyOtherPageDiagAppCloseTitle,
                         AppResources.ButtonOk
                     );
-                    closeApplication.closeApplication();
+                    UserDialogs.Instance.HideLoading();
+                    closeApplicationService.CloseApplication();
+
                     loggerService.Error($"Exceeded the number of trials.");
+                    loggerService.EndMethod();
                     return;
                 }
 
@@ -140,9 +145,13 @@ namespace Covid19Radar.ViewModels
                     await Task.Delay(errorCount * 5000);
                 }
 
+                loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
 
-                // Init Dialog
-                if (string.IsNullOrEmpty(_processNumber))
+                if (errorCount > 0)
+
+
+                    // Init Dialog
+                    if (string.IsNullOrEmpty(_processNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag4Message,

@@ -20,6 +20,8 @@ using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
 
+using FormsApplication = Xamarin.Forms.Application;
+
 namespace Covid19Radar.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -39,6 +41,20 @@ namespace Covid19Radar.iOS
 
         private Lazy<ILoggerService> _loggerService
             = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+
+        private App? AppInstance
+        {
+            get
+            {
+                if (FormsApplication.Current is App app)
+                {
+                    return app;
+                }
+                return null;
+            }
+        }
+
+        private readonly UserNotificationCenterDelegate _notificationCenterDelegate = new UserNotificationCenterDelegate();
 
         public static AppDelegate Instance { get; private set; }
         public AppDelegate()
@@ -68,7 +84,12 @@ namespace Covid19Radar.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
 
-            UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate();
+
+            _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
+            {
+                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage);
+            };
+            UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 
             LoadApplication(new App());
 
@@ -113,15 +134,17 @@ namespace Covid19Radar.iOS
         private void RegisterPlatformTypes(IContainer container)
         {
             // Services
-            container.Register<ILogPathDependencyService, LogPathServiceIos>(Reuse.Singleton);
-            container.Register<ISecureStorageDependencyService, SecureStorageServiceIos>(Reuse.Singleton);
+            container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
+            container.Register<ILogPathPlatformService, LogPathPlatformService>(Reuse.Singleton);
+            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
+            container.Register<ISecureStorageDependencyService, Services.SecureStorageService>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
-            container.Register<ICloseApplication, CloseApplication>(Reuse.Singleton);
             container.Register<IMigrationProcessService, MigrationProcessService>(Reuse.Singleton);
             container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
+            container.Register<ICloseApplicationService, CloseApplicationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
@@ -129,6 +152,7 @@ namespace Covid19Radar.iOS
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
+            container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
         }
 
         public void PreExposureDetected()
@@ -167,6 +191,9 @@ namespace Covid19Radar.iOS
 
 public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
 {
+    public delegate void NotificationCenterReceivedEventHandler(UserNotificationCenterDelegate sender, UNNotificationResponse response);
+    public event NotificationCenterReceivedEventHandler OnRecieved;
+
     public override void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
     {
         if (UIDevice.CurrentDevice.CheckSystemVersion(14, 0))
@@ -177,6 +204,12 @@ public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
         {
             completionHandler(UNNotificationPresentationOptions.Alert);
         }
-        
+
+    }
+
+    public override void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNotificationResponse response, System.Action completionHandler)
+    {
+        OnRecieved?.Invoke(this, response);
+        completionHandler();
     }
 }

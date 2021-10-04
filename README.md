@@ -17,7 +17,7 @@ If you have any questions about how to use COCOA, please check the MHLW [Q&A web
 
 ## Regarding requests for COCOA
 
-We welcome PullRequest and Issues to this repository. Please check [CONTRIBUTING.md](CONTRIBUTING.md) in advance before submitting.
+We welcome PullRequest and Issues to this repository. Please check [COCOA Open Source Project](https://cocoa-mhlw.github.io/cocoa/) in advance before submitting.
 Please note that due to our resources and decision making process, it may take some time to respond. We would appreciate your understanding.
 
 If you have any non-technical requests, please contact us from email address in [Q&A Website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html).

@@ -31,8 +31,7 @@
                                 <Label Style="{StaticResource CardLabelSmall}">
                                     <Label.FormattedText>
                                         <FormattedString>
-                                            <Span Text="{Binding ExposureCount}" />
-                                            <Span Text="個" />
+                                            <Span Text="{Binding ExposurePluralizeCount}" />
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>

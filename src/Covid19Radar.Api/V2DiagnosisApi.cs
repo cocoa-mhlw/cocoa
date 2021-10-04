@@ -22,6 +22,8 @@ namespace Covid19Radar.Api
 {
     public class V2DiagnosisApi
     {
+        private const string CHAFF_HEADER = "X-Chaff";
+
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
         private readonly IDeviceValidationService DeviceCheck;
@@ -84,6 +86,13 @@ namespace Covid19Radar.Api
             {
                 Logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
+            }
+
+            // Check Chaff request for production
+            // https://google.github.io/exposure-notifications-server/server_functional_requirements.html
+            if (req.Headers?.ContainsKey(CHAFF_HEADER) ?? false)
+            {
+                return new NoContentResult();
             }
 
             // validatetion VerificationPayload

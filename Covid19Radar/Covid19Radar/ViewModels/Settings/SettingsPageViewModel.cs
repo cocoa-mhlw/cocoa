@@ -27,33 +27,30 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _AppVersion, value); }
         }
 
-        private readonly IUserDataService userDataService;
         private readonly IUserDataRepository userDataRepository;
         private readonly IExposureConfigurationRepository exposureConfigurationRepository;
         private readonly ILogFileService logFileService;
-        private readonly ITermsUpdateService termsUpdateService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
+        private readonly ICloseApplicationService closeApplicationService;
 
         public SettingsPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataService userDataService,
             IUserDataRepository userDataRepository,
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILogFileService logFileService,
-            ITermsUpdateService termsUpdateService,
-            AbsExposureNotificationApiService exposureNotificationApiService
+            AbsExposureNotificationApiService exposureNotificationApiService,
+            ICloseApplicationService closeApplicationService
             ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
             this.userDataRepository = userDataRepository;
             this.exposureConfigurationRepository = exposureConfigurationRepository;
             this.logFileService = logFileService;
-            this.termsUpdateService = termsUpdateService;
             this.exposureNotificationApiService = exposureNotificationApiService;
+            this.closeApplicationService = closeApplicationService;
         }
 
         public ICommand OnChangeResetData => new Command(async () =>
@@ -73,15 +70,16 @@ namespace Covid19Radar.ViewModels
                 await StopExposureNotificationAsync();
 
                 // Reset All Data and Optout
-                userDataService.RemoveStartDate();
-
                 await userDataRepository.RemoveDailySummariesAsync();
                 await userDataRepository.RemoveExposureWindowsAsync();
                 userDataRepository.RemoveExposureInformation();
                 await userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
                 exposureConfigurationRepository.RemoveExposureConfiguration();
 
-                termsUpdateService.RemoveAllUpdateDate();
+                userDataRepository.RemoveStartDate();
+                userDataRepository.RemoveLastProcessTekTimestamp();
+                userDataRepository.RemoveAllUpdateDate();
+                userDataRepository.RemoveAllExposureNotificationStatus();
 
                 _ = logFileService.DeleteLogsDir();
 
@@ -93,7 +91,7 @@ namespace Covid19Radar.ViewModels
                     );
                 Application.Current.Quit();
                 // Application close
-                DependencyService.Get<ICloseApplication>().closeApplication();
+                closeApplicationService.CloseApplication();
 
                 loggerService.EndMethod();
                 return;

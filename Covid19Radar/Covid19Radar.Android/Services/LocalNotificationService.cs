@@ -60,7 +60,7 @@ namespace Covid19Radar.Droid.Services
         {
             _loggerService.StartMethod();
 
-            Intent intent = MainActivity.NewIntent(Platform.AppContext);
+            Intent intent = MainActivity.NewIntent(Platform.AppContext, Destination.ContactedNotifyPage);
             PendingIntent pendingIntent = PendingIntent.GetActivity(
                 Platform.AppContext,
                 REQUEST_CODE,
@@ -84,6 +84,18 @@ namespace Covid19Radar.Droid.Services
             nm.Notify(NOTIFICATION_ID_EXPOSURE, notification);
 
             _loggerService.Info("Local exposure notification shown.");
+            _loggerService.EndMethod();
+        }
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public async Task DismissExposureNotificationAsync()
+        {
+            _loggerService.StartMethod();
+
+            var nm = NotificationManagerCompat.From(Platform.AppContext);
+            nm.Cancel(NOTIFICATION_ID_EXPOSURE);
+
             _loggerService.EndMethod();
         }
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously

@@ -19,11 +19,13 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
+        private readonly Mock<IBackupAttributeService> mockBackupAttributeService;
 
         public LogFileServiceTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockLoggerService = mockRepository.Create<ILoggerService>();
+            mockBackupAttributeService = mockRepository.Create<IBackupAttributeService>();
         }
 
         [Fact]
@@ -295,7 +297,11 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
         private LogFileService CreateDefaultLogFileService(ILogPathService logPathService)
         {
-            return new LogFileService(mockLoggerService.Object, logPathService);
+            return new LogFileService(
+                mockLoggerService.Object,
+                logPathService,
+                mockBackupAttributeService.Object
+                );
         }
 
         private ILogPathService CreateDefaultMockILogPathService()
