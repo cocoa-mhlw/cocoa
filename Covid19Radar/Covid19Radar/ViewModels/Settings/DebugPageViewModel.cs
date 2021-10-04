@@ -15,12 +15,12 @@ namespace Covid19Radar.ViewModels
 {
     public class DebugPageViewModel : ViewModelBase
     {
-        private readonly IUserDataService _userDataService;
-        private readonly ITermsUpdateService _termsUpdateService＿;
+        private readonly ITermsUpdateService _termsUpdateService;
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
         private readonly IUserDataRepository _userDataRepository;
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
+        private readonly ICloseApplicationService _closeApplicationService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -40,7 +40,7 @@ namespace Covid19Radar.ViewModels
 #endif
 
             // debug info for ./SplashPageViewModel.cs
-            var termsUpdateInfo = await _termsUpdateService＿.GetTermsUpdateInfo() ?? new Model.TermsUpdateInfoModel();
+            var termsUpdateInfo = await _termsUpdateService.GetTermsUpdateInfo() ?? new Model.TermsUpdateInfoModel();
 
             var termsOfServiceUpdateDateTime = "Not Available";
             if (termsUpdateInfo.TermsOfService != null)
@@ -81,8 +81,8 @@ namespace Covid19Radar.ViewModels
                 $"ApiUrl: {AppSettings.Instance.ApiUrlBase}",
                 $"TermsOfServiceUpdatedDateTime: {termsOfServiceUpdateDateTime}",
                 $"PrivacyPolicyUpdatedDateTime: {privacyPolicyUpdateDateTime}",
-                $"StartDate: {_userDataService.GetStartDate().ToLocalTime().ToString("F")}",
-                $"DaysOfUse: {_userDataService.GetDaysOfUse()}",
+                $"StartDate: {_userDataRepository.GetStartDate().ToLocalTime().ToString("F")}",
+                $"DaysOfUse: {_userDataRepository.GetDaysOfUse()}",
                 $"Legacy-V1 ExposureCount: {_userDataRepository.GetV1ExposureCount(AppConstants.DaysOfExposureInformationToDisplay)}",
                 $"DailySummaryCount: {dailySummaryCount}",
                 $"ExposureWindowCount: {exposureWindowCount}",
@@ -96,21 +96,21 @@ namespace Covid19Radar.ViewModels
 
         public DebugPageViewModel(
             INavigationService navigationService,
-            IUserDataService userDataService,
             ITermsUpdateService termsUpdateService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IUserDataRepository userDataRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
-            AbsExposureDetectionBackgroundService exposureDetectionBackgroundService
+            AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
+            ICloseApplicationService closeApplicationService
             ) : base(navigationService)
         {
             Title = "Title:Debug";
-            _userDataService = userDataService;
-            _termsUpdateService＿ = termsUpdateService;
+            _termsUpdateService = termsUpdateService;
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _userDataRepository = userDataRepository;
             _exposureNotificationApiService = exposureNotificationApiService;
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
+            _closeApplicationService = closeApplicationService;
         }
 
         public override void Initialize(INavigationParameters parameters)
@@ -154,7 +154,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickRemoveStartDate => new Command(() =>
         {
-            _userDataService.RemoveStartDate();
+            _userDataRepository.RemoveStartDate();
             UpdateInfo("RemoveStartDate");
         });
 
@@ -179,14 +179,14 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickRemoveAllUpdateDate => new Command(() =>
         {
-            _termsUpdateService＿.RemoveAllUpdateDate();
+            _userDataRepository.RemoveAllUpdateDate();
             UpdateInfo("RemoveAllUpdateDate");
         });
 
         public Command OnClickQuit => new Command(() =>
         {
             Application.Current.Quit();
-            DependencyService.Get<ICloseApplication>().closeApplication();
+            _closeApplicationService.CloseApplication();
         });
 
         private class LastProcessTekTimestamp
