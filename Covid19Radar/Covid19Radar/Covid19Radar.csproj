@@ -6,7 +6,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <Copyright />
     <PackageProjectUrl></PackageProjectUrl>
-    <Configurations>Debug;Release;Debug_Mock</Configurations>
+    <Configurations>Release;Debug;Debug_Mock</Configurations>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>none</DebugType>
@@ -67,7 +67,7 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.967" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
     <PackageReference Include="CommonServiceLocator" Version="2.0.6" />
-    <PackageReference Include="Chino.Common" Version="1.0.0-rc01" />
+    <PackageReference Include="Chino.Common" Version="1.0.0-rc03" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CustomDatePicker.cs" />

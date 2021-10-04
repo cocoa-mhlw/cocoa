@@ -9,17 +9,9 @@ namespace Covid19Radar
 {
     public static class Extensions
     {
-        private static DateTime UNIX_EPOCH = new DateTime(1970, 1, 1, 0, 0, 0, 0);
-
         // https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-CryptographySpecificationv1.2.pdf
         public static int ToEnInterval(this DateTime dateTime)
-            => (int)(dateTime.ToUnixEpochTime() / (60 * 10));
-
-        public static long ToUnixEpochTime(this DateTime dateTime)
-        {
-            TimeSpan elapsedTime = dateTime.ToUniversalTime() - UNIX_EPOCH;
-            return (long)elapsedTime.TotalSeconds;
-        }
+            => (int)(dateTime.ToUnixEpoch() / (60 * 10));
 
         public static long GetRollingStartIntervalNumberAsUnixTimeInSec(this TemporaryExposureKey temporaryExposureKey)
             => temporaryExposureKey.RollingStartIntervalNumber * (60 * 10);
@@ -29,5 +21,11 @@ namespace Covid19Radar
 
         public static DateTime GetDateTime(this ExposureWindow exposureWindow)
             => DateTimeOffset.UnixEpoch.AddMilliseconds(exposureWindow.DateMillisSinceEpoch).UtcDateTime;
+
+        public static long ToUnixEpoch(this DateTime dateTime)
+        {
+            TimeSpan elapsedTime = dateTime.ToUniversalTime() - DateTime.UnixEpoch;
+            return (long)elapsedTime.TotalSeconds;
+        }
     }
 }

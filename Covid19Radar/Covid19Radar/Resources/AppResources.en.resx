@@ -56,6 +56,14 @@
     <value>How to use</value>
     <comment>Tab How to use</comment>
   </data>
+  <data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
+    <value>1 exposure</value>
+    <comment>1回の接触</comment>
+  </data>
+  <data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
+    <value>{0} exposures</value>
+    <comment>{0}回の接触</comment>
+  </data>
 	<data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>No known exposures</value>
     <comment>If not found exposures data</comment>
@@ -92,10 +100,6 @@
   </data>
 	<data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
-  </data>
-	<data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Ask your family and friends to participate</value>
-    <comment>本アプリを広めましょう</comment>
   </data>
 	<data name="ButtonShare" xml:space="preserve">
     <value>Share</value>
@@ -142,10 +146,6 @@
 	<data name="HomePageHeader2Description" xml:space="preserve">
     <value>Help protect your family and friends by anonymously registering test results.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-	<data name="HomePageHeader3Description" xml:space="preserve">
-    <value>One more person using this app is one more step towards containing the spread of COVID-19.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
 	<data name="HelpMenuPageTitle" xml:space="preserve">
     <value>How to use this app</value>
@@ -347,17 +347,13 @@
     <value>Support</value>
     <comment>お問い合わせ（メニュー）</comment>
   </data>
-	<data name="HomePageDescription1" xml:space="preserve">
-    <value>in use</value>
-    <comment>使用中</comment>
-  </data>
 	<data name="HomePageDescription2" xml:space="preserve">
-    <value>Check close contacts</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
+    <value>Check contact with positive testers</value>
+    <comment>陽性者との接触結果を確認</comment>
   </data>
 	<data name="HomePageDescription3" xml:space="preserve">
     <value>When tested positive for COVID-19</value>
-    <comment>新型コロナウイルス陽性と診断されたら</comment>
+    <comment>陽性と診断されたら</comment>
   </data>
 	<data name="HomePageDescription4" xml:space="preserve">
     <value>Register positive test result</value>
@@ -484,8 +480,8 @@
     <comment>接触検知をご利用いただくために</comment>
   </data>
 	<data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
+    <value>Using COCOA for</value>
+    <comment>利用開始から</comment>
   </data>
 	<data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>Enter an 8-digit code</value>
@@ -537,20 +533,8 @@
     <comment>接触確認アプリに関する情報</comment>
   </data>
 	<data name="HomePagePastDays" xml:space="preserve">
-    <value>Days</value>
-    <comment>X日間</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Exposure Notification is active.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth is turned off. Please turn on Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+    <value>days</value>
+    <comment>X日</comment>
   </data>
 	<data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>You must agree to the terms of use.</value>
@@ -559,14 +543,6 @@
   <data name="ExposureNotificationRestrictedTitle" xml:space="preserve">
     <value>The close contact notification function is disabled</value>
     <comment>接触通知機能が停止しています</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Please reinstall the app or enable the notification from the OS settings.</value>
-    <comment>アプリを再インストールするか、 OSの設定から接触通知を有効にしてください。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
 	<data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Network connection error</value>
@@ -997,5 +973,111 @@ Storage :</value>
   <data name="UrlWebAccessibilityPolicy" xml:space="preserve">
     <value>https://www.mhlw.go.jp/cocoa/webaccessibility_english.html</value>
     <comment>ウェブアクセシビリティ方針URL</comment>
+  </data>
+  <data name="HomePageENStatusActiveTitle" xml:space="preserve">
+    <value>Active</value>
+    <comment>動作中</comment>
+  </data>
+  <data name="HomePageENStatusActiveDescription" xml:space="preserve">
+    <value>Last check for contact</value>
+    <comment>接触有無の最新確認日時</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedTitle" xml:space="preserve">
+    <value>Cannot confirm contact</value>
+    <comment>接触有無を確認できません</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedDescription1" xml:space="preserve">
+    <value>No incidents of contact could be confirmed.</value>
+    <comment>接触有無が確認できませんでした。</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedDescription2" xml:space="preserve">
+    <value>Check “troubleshooting” for solutions.</value>
+    <comment>解決のため、対処方法を確認してください。</comment>
+  </data>
+  <data name="HomePageTroubleshootingButtonText" xml:space="preserve">
+    <value>Troubleshooting</value>
+    <comment>対処方法を確認</comment>
+  </data>
+  <data name="HomePageENStatusStoppedTitle" xml:space="preserve">
+    <value>Paused</value>
+    <comment>停止中</comment>
+  </data>
+  <data name="HomePageENStatusStoppedDescription1" xml:space="preserve">
+    <value>No contact records are being collected.</value>
+    <comment>現在、接触を記録できていません。</comment>
+  </data>
+  <data name="HomePageENStatusStoppedDescription2" xml:space="preserve">
+    <value>Check Troubleshooting for how to activate contact notifications.</value>
+    <comment>接触通知を有効にするため、必要な対処方法を確認してください。</comment>
+  </data>
+  <data name="LatestConfirmationDateExplanationDialogText" xml:space="preserve">
+    <value>This app checks for contact with positive testers once per day. The date/time of the last check is shown here.</value>
+    <comment>陽性者との接触の有無を1日に1回程度確認しており、最新の確認日時を表示しています。</comment>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>Close</value>
+    <comment>閉じる</comment>
+  </data>
+  <data name="HomePageQuestionIconAccessibilityTextiOS" xml:space="preserve">
+    <value>Detailed explanation</value>
+    <comment>詳しい説明</comment>
+  </data>
+  <data name="HomePageQuestionIconAccessibilityTextAndroid" xml:space="preserve">
+    <value>Detailed explanation button</value>
+    <comment>詳しい説明ボタン</comment>
+  </data>
+  <data name="InProgressText" xml:space="preserve">
+    <value>In progress</value>
+    <comment>取得中</comment>
+  </data>
+  <data name="DateTimeFormatToDisplayOnHomePage" xml:space="preserve">
+    <value>dd MMMM yyyy HH:mm</value>
+    <comment>ホーム画面の最新確認日時のフォーマット</comment>
+  </data>
+  <data name="ToSettingsButton" xml:space="preserve">
+    <value>Settings</value>
+    <comment>設定へ</comment>
+  </data>
+  <data name="CheckSettingsDialogTitle" xml:space="preserve">
+    <value>Check Settings</value>
+    <comment>設定をご確認ください</comment>
+  </data>
+  <data name="ExposureNotificationOffWarningDialogMessage" xml:space="preserve">
+    <value>Turn on contact notification settings in your smartphone to use the app.</value>
+    <comment>アプリを利用するため、スマートフォンの接触通知設定をオンにしてください。</comment>
+  </data>
+  <data name="BluetoothOffWarningDialogMessage" xml:space="preserve">
+    <value>Turn on Bluetooth to record contact incidents.</value>
+    <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>
+  </data>
+  <data name="LocationOffWarningDialogMessage" xml:space="preserve">
+    <value>Your OS needs location services to be on for contact notifications to function. Turn location services on or update your device to Android 11 or later.
+Note: this app does not collect users’ location information.</value>
+    <comment>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
+なお、本アプリで利用者の位置情報を収集することはありません。</comment>
+  </data>
+  <data name="TroubleshootingPageTitle" xml:space="preserve">
+    <value>Troubleshooting</value>
+    <comment>対処方法</comment>
+  </data>
+  <data name="TroubleshootingPageDescription1" xml:space="preserve">
+    <value>Try the following if you see a “cannot confirm contact” warning on the home screen.</value>
+    <comment>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription2" xml:space="preserve">
+    <value>・ Restart the app.</value>
+    <comment>・アプリの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription3" xml:space="preserve">
+    <value>・ Android users: in Settings, remove COCOA from any power saving functions*, or set your phone to enter power-saving mode only when battery power is low.</value>
+    <comment>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription4" xml:space="preserve">
+    <value>*Names of power saving functions differ depending on the device, i.e., “Power-Saving Mode,” “Stamina Mode,” “Battery Optimization,” etc.</value>
+    <comment>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription5" xml:space="preserve">
+    <value>If you have tried all of the above and the warning still appears, please contact Customer Support.</value>
+    <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
   </data>
 </root>

@@ -41,7 +41,7 @@ namespace Covid19Radar
          */
         public App() : this(null) { }
 
-        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
+        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: false) { }
 
         protected override async void OnInitialized()
         {
@@ -50,14 +50,11 @@ namespace Covid19Radar
             LoggerService = Container.Resolve<ILoggerService>();
             LoggerService.StartMethod();
             LogFileService = Container.Resolve<ILogFileService>();
-            LogFileService.AddSkipBackupAttribute();
+            LogFileService.SetSkipBackupAttributeToLogDir();
 
-            // Local Notification tap event listener
-            //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
-            INavigationResult result = await NavigationService.NavigateAsync("/" + nameof(SplashPage));
-
+            var result = await NavigateToSplashAsync(Destination.HomePage);
             if (!result.Success)
             {
                 LoggerService.Info($"Failed transition.");
@@ -73,6 +70,26 @@ namespace Covid19Radar
             }
 
             LoggerService.EndMethod();
+        }
+
+        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination)
+        {
+            var param = SplashPage.CreateNavigationParams(destination);
+            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), param);
+        }
+
+        public async Task<INavigationResult> NavigateToAsync(Destination destination)
+        {
+            LoggerService.StartMethod();
+
+            try
+            {
+                return await NavigationService.NavigateAsync(destination.ToPath());
+            }
+            finally
+            {
+                LoggerService.EndMethod();
+            }
         }
 
         // Initialize IOC container
@@ -147,15 +164,16 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<SplashPage>();
             containerRegistry.RegisterForNavigation<HowToReceiveProcessingNumberPage>();
             containerRegistry.RegisterForNavigation<WebAccessibilityPolicyPage>();
+            containerRegistry.RegisterForNavigation<TroubleshootingPage>();
         }
 
         private static void RegisterCommonTypes(IContainer container)
         {
             // Services
+            container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
-            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
             container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
             container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
             container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
@@ -179,10 +197,10 @@ namespace Covid19Radar
             container.Register<IExposureDataCollectServer, ReleaseExposureDataCollectServer>(Reuse.Singleton);
 #endif
 
+            container.Register<IDialogService, DialogService>(Reuse.Singleton);
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
             container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
-            container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
         }

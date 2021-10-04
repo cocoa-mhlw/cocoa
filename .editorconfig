@@ -13,3 +13,6 @@ indent_size = 4
 
 [*.cs]
 charset = utf-8-bom
+
+[*.resx]
+trim_trailing_whitespace = false

@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>ഇല്ലാതാക്കുന്നു</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>ആപ്പ് പങ്കിടുക</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>പങ്കിടുക</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>പുതിയ കൊറോണ നിങ്ങൾക്ക് പോസിറ്റീവാണെങ്കിൽ, ചുറ്റുമുള്ള ആളുകളെ പരിരക്ഷിക്കുന്നതിന് പോസിറ്റീവ് രജിസ്ട്രേഷനുമായി സഹകരിക്കുക.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>അനവധി ആളുകൾ ഇൻസ്റ്റാൾ ചെയ്യുന്നതിന് ഈ ആപ്ലിക്കേഷൻ വളരെ ഫലപ്രദമാണ്, അതിനാൽ നിങ്ങളുടെ ചുറ്റുമുള്ള ആളുകളോടൊപ്പം ആപ്ലിക്കേഷൻ പങ്കിടുക.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>ഉപയോഗിക്കേണ്ട വിധം</value>
@@ -323,14 +315,6 @@
     <value>പിന്തുണ</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>ൽ േക.</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>അടുത്ത സമ്പർക്കങ്ങൾ പരിശോധിക്കുക</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>COVID-19-നായി പോസിറ്റീവ് ടെസ്റ്റ് ചെയ്യുമ്പോൾ</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,10 +443,6 @@
     <value>Bluetooth ഓണാക്കുക</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>ഒരു 8 അക്ക കോഡ് നൽകുക</value>
     <comment>8桁の処理番号を入力してください</comment>
@@ -512,29 +492,9 @@
     <value>ഈ ആപ്ലിക്കേഷനെ കുറിച്ചുള്ള വിവരങ്ങൾ</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>ദിവസം</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>എക്സ്പോഷർ അറിയിപ്പ് സജീവമാണ്.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth ഓഫാക്കി. Bluetooth ഓണാക്കുക.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>എക്സ്പോഷർ അറിയിപ്പ് പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു. ടെർമിനൽ സജ്ജീകരണങ്ങൾ തുറക്കുക, എക്സ്പോഷഅറിയിപ്പ് ഓണാക്കുക.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>ഉപയോഗ വ്യവസ്ഥകൾ നിങ്ങൾ അംഗീകരിക്കണം.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>എക്സ്പോഷർ അറിയിപ്പ് പിന്തുണയ്ക്കുന്നില്ല. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് OS അപ് ഡേറ്റ് ചെയ്യുക. നിങ്ങൾക്ക് ഇപ്പോഴും പ്രശ്നങ്ങൾ ഉണ്ടെങ്കിൽ, appsupport@cov19.mhlw.go.jp ഞങ്ങളെ ബന്ധപ്പെടുക.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>നെറ്റ് വർക്ക് കണക്ഷൻ പിശക്</value>

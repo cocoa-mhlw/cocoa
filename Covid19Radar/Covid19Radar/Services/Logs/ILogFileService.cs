@@ -14,7 +14,7 @@ namespace Covid19Radar.Services.Logs
         bool DeleteAllLogUploadingFiles();
 
         // Log rotate
-        void AddSkipBackupAttribute();
+        void SetSkipBackupAttributeToLogDir();
         void Rotate();
         bool DeleteLogsDir();
     }
