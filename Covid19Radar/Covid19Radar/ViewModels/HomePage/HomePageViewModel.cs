@@ -27,7 +27,6 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
-        private readonly IUserDataRepository userDataRepository;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
 
@@ -212,7 +211,9 @@ namespace Covid19Radar.ViewModels
                     externalNavigationService.NavigateBluetoothSettings();
                 }
             }
-            else if (statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED))
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED)
+            )
             {
                 bool isOK = await dialogService.ShowLocationOffWarningAsync();
                 if (isOK)
@@ -228,37 +229,33 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var daysOfUse = userDataRepository.GetDaysOfUse();
+            var daysOfUse = _userDataRepository.GetDaysOfUse();
 
             PastDate = daysOfUse.ToString();
 
             var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
 
-            if (
-            statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
-            )
+            var isStopped =
+                statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED);
+            var canConfirmExposure = _userDataRepository.IsCanConfirmExposure();
+
+            if (isStopped)
+            {
+                IsVisibleENStatusActiveLayout = false;
+                IsVisibleENStatusUnconfirmedLayout = false;
+                IsVisibleENStatusStoppedLayout = true;
+            }
+            else if (!canConfirmExposure)
             {
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
-            }
-            else if (
-            statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
-            )
-            {
-                IsVisibleENStatusActiveLayout = false;
-                IsVisibleENStatusUnconfirmedLayout = false;
-                IsVisibleENStatusStoppedLayout = true;
-            }
-            else if (statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED))
-            {
-                IsVisibleENStatusActiveLayout = false;
-                IsVisibleENStatusUnconfirmedLayout = false;
-                IsVisibleENStatusStoppedLayout = true;
             }
             else
             {
@@ -266,7 +263,7 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusUnconfirmedLayout = false;
                 IsVisibleENStatusStoppedLayout = false;
 
-                var latestUtcDate = userDataRepository.GetLastConfirmedDate();
+                var latestUtcDate = _userDataRepository.GetLastConfirmedDate();
                 if (latestUtcDate == null)
                 {
                     LatestConfirmationDate = AppResources.InProgressText;

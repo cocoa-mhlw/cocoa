@@ -7,7 +7,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Chino;
 using System;
-using System.Collections.Generic;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;

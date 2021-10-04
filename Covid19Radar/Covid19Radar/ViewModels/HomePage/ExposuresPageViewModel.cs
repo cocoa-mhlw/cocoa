@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.ViewModels
 {
@@ -43,11 +44,16 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
+            await InitExposures();
+        }
+
+        public async Task InitExposures()
+        {
             var exposureWindowList
                 = await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
             var userExposureInformationList
-                = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay) ?? new List<UserExposureInfo>();
+                = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
             if (exposureWindowList.Count() > 0)
             {
@@ -80,6 +86,7 @@ namespace Covid19Radar.ViewModels
             Exposures = new ObservableCollection<ExposureSummary>(
                 _exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp)
                 );
+
         }
     }
 

@@ -402,7 +402,7 @@
       <Version>2.0.6</Version>
     </PackageReference>
     <PackageReference Include="Chino.iOS">
-      <Version>1.0.0-rc02</Version>
+      <Version>1.0.0-rc03</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

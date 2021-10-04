@@ -36,9 +36,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
-            mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>();
+            mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>(mockLoggerService.Object);
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
-            mockExposureDetectionBackgroundService = mockRepository.Create<AbsExposureDetectionBackgroundService>();
+            mockExposureDetectionBackgroundService = mockRepository.Create<AbsExposureDetectionBackgroundService>(
+                mockRepository.Create<IDiagnosisKeyRepository>().Object,
+                mockExposureNotificationApiService.Object,
+                mockRepository.Create<IExposureConfigurationRepository>().Object,
+                mockLoggerService.Object,
+                mockUserDataRepository.Object
+                );
             mockDialogService = mockRepository.Create<IDialogService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();
         }
@@ -58,14 +64,21 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Theory]
-        [InlineData(false, true, false)]
-        [InlineData(false, false, true)]
-        public void UpdateView_ENStatus_Unconfirmed_Stopped(bool isVisibleActiveLayoutResult, bool isVisibleUnconfirmedLayoutResult, bool isVisibleStoppedLayoutResult)
+        [InlineData(ExposureNotificationStatus.Code_Android.ACTIVATED, false, false, true, false)]
+        [InlineData(ExposureNotificationStatus.Code_Android.INACTIVATED, true, false, false, true)]
+        public void UpdateView_ENStatus_Unconfirmed_Stopped(
+            int status,
+            bool isCanConfirmExposure,
+            bool isVisibleActiveLayoutResult,
+            bool isVisibleUnconfirmedLayoutResult,
+            bool isVisibleStoppedLayoutResult
+            )
         {
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationApiService
-                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.INACTIVATED } as IList<int>));
+                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { status } as IList<int>));
+            mockUserDataRepository.Setup(x => x.IsCanConfirmExposure()).Returns(isCanConfirmExposure);
 
             homePageViewModel.OnAppearing();
 
@@ -81,6 +94,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
+            mockUserDataRepository.Setup(x => x.IsCanConfirmExposure()).Returns(true);
 
             homePageViewModel.OnAppearing();
 
@@ -99,6 +113,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
             mockUserDataRepository.Setup(x => x.GetLastConfirmedDate()).Returns(mockLastConfirmedUtcDateTime);
+            mockUserDataRepository.Setup(x => x.IsCanConfirmExposure()).Returns(true);
 
             homePageViewModel.OnAppearing();
 
@@ -116,7 +131,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationApiService
-                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED } as IList<int>));
+                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.INACTIVATED } as IList<int>));
             mockDialogService.Setup(x => x.ShowExposureNotificationOffWarningAsync()).ReturnsAsync(true);
 
             homePageViewModel.OnClickCheckStopReason.Execute(null);
