@@ -12,8 +12,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Net.Http;
-using Covid19Radar.Common;
 using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 namespace Covid19Radar.Services
 {
@@ -187,5 +187,59 @@ namespace Covid19Radar.Services
                 return new ApiResponse<LogStorageSas>((int)HttpStatusCode.OK, new LogStorageSas { SasToken = "sv=2012-02-12&se=2015-07-08T00%3A12%3A08Z&sr=c&sp=wl&sig=t%2BbzU9%2B7ry4okULN9S0wst%2F8MCUhTjrHyV9rDNLSe8g%3Dsss" });
             });
         }
+    }
+
+    public class MockCommonUtils
+    {
+        public string CdnUrlBase { get => AppSettings.Instance.CdnUrlBase; }
+        public string ApiUrlBase { get => AppSettings.Instance.ApiUrlBase; }
+
+        public bool IsDownloadRequired()
+                => Regex.IsMatch(CdnUrlBase, @"^https://.*\..*\..*/$");
+
+        public bool IsDirectInput()
+        => Regex.IsMatch(CdnUrlBase, @"^(\d+,)+\d+,*$");
+
+
+        private ushort NumberEndofSentence(string url)
+        {
+            Match match = Regex.Match(url, @"(?<d>\d+)$");
+            ushort number = 0;
+            if (match.Success)
+            {
+                number = Convert.ToUInt16(match.Groups["d"].Value);
+            }
+            return number;
+        }
+        public List<string> GetCreatedTimes()
+            => CdnUrlBase.Split(",").ToList();
+        public ushort GetTekListDataType()
+        => NumberEndofSentence(CdnUrlBase);
+        public string[] GetApiUrlSegment()
+        {
+            // "url/api" -> { "url/api", "", "" }
+            // "url/base/api/register1/diagnosis2" -> { "url/base/api", "/register1", "/diagnosis2" } 
+            // "url/api1/r1/d2" -> { "url/api1", "/r1", "/d2" } 
+            // "url/api1/d2/r1" -> { "url/api1", "/r1", "/d2" } 
+            var url = ApiUrlBase;
+            var r = new Regex("/r(egister)?[0-9]+");
+            var d = new Regex("/d(iagnosis)?[0-9]+");
+            var urlRegister = r.Match(url).Value;
+            url = r.Replace(url, "");
+            var urlDiagnosis = d.Match(url).Value;
+            url = d.Replace(url, "");
+            var urlApi = url;
+            return new string[] { urlApi, urlRegister, urlDiagnosis };
+        }
+        public ushort GetDiagnosisDataType()
+            => NumberEndofSentence(GetApiUrlSegment()[2]);
+        public ushort GetRegisterDataType()
+            => NumberEndofSentence(GetApiUrlSegment()[1]);
+        public ushort GetApiDataType()
+            => NumberEndofSentence(GetApiUrlSegment()[0]);
+        public bool IsDirectInputApi()
+            => Regex.IsMatch(GetApiUrlSegment()[0], @"^(\d+,)+\d+,?$");
+        public List<string> GetApiStrings()
+            => GetApiUrlSegment()[0].Split(",").ToList();
     }
 }

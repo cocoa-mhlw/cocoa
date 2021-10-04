@@ -5,6 +5,8 @@
 using System;
 using System.Linq;
 using Acr.UserDialogs;
+using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -15,7 +17,10 @@ namespace Covid19Radar.ViewModels
     {
         private readonly IUserDataService _userDataService;
         private readonly ITermsUpdateService _termsUpdateService＿;
-        private readonly IExposureNotificationService _exposureNotificationService;
+        private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
+        private readonly IUserDataRepository _userDataRepository;
+        private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
+        private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -49,19 +54,23 @@ namespace Covid19Radar.ViewModels
                 privacyPolicyUpdateDateTime = termsUpdateInfo.PrivacyPolicy.UpdateDateTime.ToString();
             }
 
-            var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(region =>
-                             new LastProcessTekTimestamp()
-                             {
-                                 Region = region,
-                                 Ticks = _exposureNotificationService.GetLastProcessTekTimestamp(region)
-                             }.ToString()
-                );
+            var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(async region =>
+            {
+                var ticks = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
+                new LastProcessTekTimestamp()
+                {
+                    Region = region,
+                    Ticks = ticks
+                }.ToString();
+            });
 
             string regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
             string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList);
 
-            var exposureNotificationStatus = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
-            var exposureNotificationMessage = await _exposureNotificationService.UpdateStatusMessageAsync();
+            var exposureNotificationStatus = await _exposureNotificationApiService.IsEnabledAsync();
+
+            var dailySummaryCount = (await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
+            var exposureWindowCount = (await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
 
             // ../../settings.json
             var str = new[] {
@@ -74,10 +83,11 @@ namespace Covid19Radar.ViewModels
                 $"PrivacyPolicyUpdatedDateTime: {privacyPolicyUpdateDateTime}",
                 $"StartDate: {_userDataService.GetStartDate().ToLocalTime().ToString("F")}",
                 $"DaysOfUse: {_userDataService.GetDaysOfUse()}",
-                $"ExposureCount: {_exposureNotificationService.GetExposureCountToDisplay()}",
+                $"Legacy-V1 ExposureCount: {_userDataRepository.GetV1ExposureCount(AppConstants.DaysOfExposureInformationToDisplay)}",
+                $"DailySummaryCount: {dailySummaryCount}",
+                $"ExposureWindowCount: {exposureWindowCount}",
                 $"LastProcessTekTimestamp: {lastProcessTekTimestampsStr}",
                 $"ENstatus: {exposureNotificationStatus}",
-                $"ENmessage: {exposureNotificationMessage}",
                 $"Now: {DateTime.Now.ToLocalTime().ToString("F")}",
                 exception
             };
@@ -88,13 +98,19 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             IUserDataService userDataService,
             ITermsUpdateService termsUpdateService,
-            IExposureNotificationService exposureNotificationService
+            IExposureConfigurationRepository exposureConfigurationRepository,
+            IUserDataRepository userDataRepository,
+            AbsExposureNotificationApiService exposureNotificationApiService,
+            AbsExposureDetectionBackgroundService exposureDetectionBackgroundService
             ) : base(navigationService)
         {
             Title = "Title:Debug";
             _userDataService = userDataService;
             _termsUpdateService＿ = termsUpdateService;
-            _exposureNotificationService = exposureNotificationService;
+            _exposureConfigurationRepository = exposureConfigurationRepository;
+            _userDataRepository = userDataRepository;
+            _exposureNotificationApiService = exposureNotificationApiService;
+            _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
         }
 
         public override void Initialize(INavigationParameters parameters)
@@ -108,10 +124,8 @@ namespace Covid19Radar.ViewModels
         public Command OnClickStartExposureNotification => new Command(async () =>
         {
             UserDialogs.Instance.ShowLoading("Starting ExposureNotification...");
-            var result = await _exposureNotificationService.StartExposureNotification();
-            var message = $"Result: {result}";
+            await _exposureNotificationApiService.StartAsync();
             UserDialogs.Instance.HideLoading();
-            await UserDialogs.Instance.AlertAsync(message, "StartExposureNotification", Resources.AppResources.ButtonOk);
             UpdateInfo("StartExposureNotification");
         });
 
@@ -120,7 +134,7 @@ namespace Covid19Radar.ViewModels
             var exception = "FetchExposureKeyAsync";
             try
             {
-                await _exposureNotificationService.FetchExposureKeyAsync();
+                await _exposureDetectionBackgroundService.ExposureDetectionAsync();
             }
             catch (Exception ex)
             {
@@ -133,10 +147,8 @@ namespace Covid19Radar.ViewModels
         public Command OnClickStopExposureNotification => new Command(async () =>
         {
             UserDialogs.Instance.ShowLoading("Stopping ExposureNotification...");
-            var result = await _exposureNotificationService.StopExposureNotification();
-            string message = $"Result: {result}";
+            await _exposureNotificationApiService.StopAsync();
             UserDialogs.Instance.HideLoading();
-            await UserDialogs.Instance.AlertAsync(message, "StopExposureNotification", Resources.AppResources.ButtonOk);
             UpdateInfo("StopExposureNotification");
         });
 
@@ -148,19 +160,20 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickRemoveExposureInformation => new Command(() =>
         {
-            _exposureNotificationService.RemoveExposureInformation();
+            _userDataRepository.RemoveExposureInformation();
             UpdateInfo("RemoveExposureInformation");
         });
 
         public Command OnClickRemoveConfiguration => new Command(() =>
         {
-            _exposureNotificationService.RemoveConfiguration();
+
+            _exposureConfigurationRepository.RemoveExposureConfiguration();
             UpdateInfo("RemoveConfiguration");
         });
 
-        public Command OnClickRemoveLastProcessTekTimestamp => new Command(() =>
+        public Command OnClickRemoveLastProcessTekTimestamp => new Command(async () =>
         {
-            _exposureNotificationService.RemoveLastProcessTekTimestamp();
+            await _userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
             UpdateInfo("RemoveLastProcessTekTimestamp");
         });
 
