@@ -4,6 +4,7 @@
 
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
@@ -21,6 +22,7 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
         private readonly ICloseApplicationService _closeApplicationService;
+        private readonly IServerConfigurationRepository _serverConfigurationRepository;
 
         private string _debugInfo;
         public string DebugInfo
@@ -29,7 +31,21 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _debugInfo, value); }
         }
 
-        public async void UpdateInfo(string exception = "")
+        private string _serverConfigurationInfo;
+        public string ServerConfigurationInfo
+        {
+            get { return _serverConfigurationInfo; }
+            set { SetProperty(ref _serverConfigurationInfo, value); }
+        }
+
+        public async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await UpdateInfo();
+        }
+
+        public async Task UpdateInfo(string exception = "")
         {
             string os = Device.RuntimePlatform;
 #if DEBUG
@@ -73,7 +89,7 @@ namespace Covid19Radar.ViewModels
             var exposureWindowCount = (await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
 
             // ../../settings.json
-            var str = new[] {
+            var settings = new[] {
                 $"Build: {os}",
                 $"Version: {AppSettings.Instance.AppVersion}",
                 $"Region: {regionString}",
@@ -91,7 +107,25 @@ namespace Covid19Radar.ViewModels
                 $"Now: {DateTime.Now.ToLocalTime().ToString("F")}",
                 exception
             };
-            DebugInfo = string.Join(Environment.NewLine, str);
+            DebugInfo = string.Join(Environment.NewLine, settings);
+
+            // ServerConfiguration
+            var serverRegions = string.Join(",", _serverConfigurationRepository.Regions);
+            var diagnosisKeyListProvideServerUrls = _serverConfigurationRepository.Regions
+                .Select(region => _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region))
+                .Select(url => $"    * {url}");
+
+            var serverConfiguration = new[]
+            {
+                $"Regions: {serverRegions}",
+                $"DiagnosisKeyRegisterApiUrl: {_serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint}",
+                $"DiagnosisKeyListProvideServerUrls:\n" +
+                $"{string.Join(Environment.NewLine, diagnosisKeyListProvideServerUrls)}",
+                $"InquiryLogApiUrl: {_serverConfigurationRepository.InquiryLogApiEndpoint}",
+                $"ExposureDataCollectServerUrl: {_serverConfigurationRepository.ExposureDataCollectServerEndpoint}",
+                $"UserRegisterApiEndpoint: {_serverConfigurationRepository.UserRegisterApiEndpoint}",
+            };
+            ServerConfigurationInfo = string.Join(Environment.NewLine, serverConfiguration);
         }
 
         public DebugPageViewModel(
@@ -101,7 +135,8 @@ namespace Covid19Radar.ViewModels
             IUserDataRepository userDataRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
-            ICloseApplicationService closeApplicationService
+            ICloseApplicationService closeApplicationService,
+            IServerConfigurationRepository serverConfigurationRepository
             ) : base(navigationService)
         {
             Title = "Title:Debug";
@@ -111,22 +146,26 @@ namespace Covid19Radar.ViewModels
             _exposureNotificationApiService = exposureNotificationApiService;
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             _closeApplicationService = closeApplicationService;
+            _serverConfigurationRepository = serverConfigurationRepository;
         }
 
-        public override void Initialize(INavigationParameters parameters)
+        public override async void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
-            UpdateInfo("Initialize");
+
+            await _serverConfigurationRepository.LoadAsync();
+
+            _ = UpdateInfo("Initialize");
         }
 
-        public Command OnClickReload => new Command(() => UpdateInfo("Reload"));
+        public Command OnClickReload => new Command(async () => await UpdateInfo("Reload"));
 
         public Command OnClickStartExposureNotification => new Command(async () =>
         {
             UserDialogs.Instance.ShowLoading("Starting ExposureNotification...");
             await _exposureNotificationApiService.StartAsync();
             UserDialogs.Instance.HideLoading();
-            UpdateInfo("StartExposureNotification");
+            await UpdateInfo("StartExposureNotification");
         });
 
         public Command OnClickFetchExposureKeyAsync => new Command(async () =>
@@ -140,7 +179,7 @@ namespace Covid19Radar.ViewModels
             {
                 exception += $":Exception: {ex}";
             }
-            UpdateInfo(exception);
+            await UpdateInfo(exception);
         });
 
         // see ../Settings/SettingsPageViewModel.cs
@@ -149,38 +188,38 @@ namespace Covid19Radar.ViewModels
             UserDialogs.Instance.ShowLoading("Stopping ExposureNotification...");
             await _exposureNotificationApiService.StopAsync();
             UserDialogs.Instance.HideLoading();
-            UpdateInfo("StopExposureNotification");
+            await UpdateInfo("StopExposureNotification");
         });
 
-        public Command OnClickRemoveStartDate => new Command(() =>
+        public Command OnClickRemoveStartDate => new Command(async () =>
         {
             _userDataRepository.RemoveStartDate();
-            UpdateInfo("RemoveStartDate");
+            await UpdateInfo("RemoveStartDate");
         });
 
-        public Command OnClickRemoveExposureInformation => new Command(() =>
+        public Command OnClickRemoveExposureInformation => new Command(async () =>
         {
             _userDataRepository.RemoveExposureInformation();
-            UpdateInfo("RemoveExposureInformation");
+            await UpdateInfo("RemoveExposureInformation");
         });
 
-        public Command OnClickRemoveConfiguration => new Command(() =>
+        public Command OnClickRemoveConfiguration => new Command(async () =>
         {
 
             _exposureConfigurationRepository.RemoveExposureConfiguration();
-            UpdateInfo("RemoveConfiguration");
+             await UpdateInfo("RemoveConfiguration");
         });
 
         public Command OnClickRemoveLastProcessTekTimestamp => new Command(async () =>
         {
             await _userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
-            UpdateInfo("RemoveLastProcessTekTimestamp");
+            await UpdateInfo("RemoveLastProcessTekTimestamp");
         });
 
-        public Command OnClickRemoveAllUpdateDate => new Command(() =>
+        public Command OnClickRemoveAllUpdateDate => new Command(async () =>
         {
             _userDataRepository.RemoveAllUpdateDate();
-            UpdateInfo("RemoveAllUpdateDate");
+            await UpdateInfo("RemoveAllUpdateDate");
         });
 
         public Command OnClickQuit => new Command(() =>

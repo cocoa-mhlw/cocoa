@@ -131,6 +131,7 @@ namespace Covid19Radar
             // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
+            containerRegistry.RegisterForNavigation<EditServerConfigurationPage>();
 
             // tutorial
             containerRegistry.RegisterForNavigation<TutorialPage1>();
@@ -190,9 +191,11 @@ namespace Covid19Radar
 #endif
 
 #if DEBUG
+            container.Register<IServerConfigurationRepository, DebugServerConfigurationRepository>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRegisterServer, DebugDiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
 #else
+            container.Register<IServerConfigurationRepository, ReleaseServerConfigurationRepository>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IExposureDataCollectServer, ReleaseExposureDataCollectServer>(Reuse.Singleton);
 #endif
