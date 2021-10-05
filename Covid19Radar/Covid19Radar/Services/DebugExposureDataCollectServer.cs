@@ -146,8 +146,8 @@ namespace Covid19Radar.Services
         {
             await _serverConfigurationRepository.LoadAsync();
 
-            var tasks = _serverConfigurationRepository.Regions.Select(async region => {
-                return await UploadExposureDataAsync(exposureRequest, region);
+            var tasks = _serverConfigurationRepository.ExposureDataCollectServerUrls.Select(async url => {
+                return await UploadExposureDataAsync(exposureRequest, url);
             });
 
             ExposureDataResponse[] responses = await Task.WhenAll(tasks);
@@ -157,16 +157,14 @@ namespace Covid19Radar.Services
 
         private async Task<ExposureDataResponse?> UploadExposureDataAsync(
             ExposureRequest exposureRequest,
-            string region
+            string exposureDataCollectServerEndpoint
             )
         {
             _loggerService.StartMethod();
+            _loggerService.Debug($"exposureDataCollectServerEndpoint: {exposureDataCollectServerEndpoint}");
 
             try
             {
-                var exposureDataCollectServerEndpoint = _serverConfigurationRepository.GetExposureDataCollectServerUrl(region);
-                _loggerService.Debug($"exposureDataCollectServerEndpoint: {exposureDataCollectServerEndpoint}");
-
                 var requestJson = exposureRequest.ToJsonString();
                 var httpContent = new StringContent(requestJson);
 

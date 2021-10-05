@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Model;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace Covid19Radar.Services
     {
         Task<bool> PostRegisterUserAsync();
 
-        Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request);
+        Task<IList<HttpStatusCode>> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request);
 
         Task<ApiResponse<LogStorageSas>> GetLogStorageSas();
     }

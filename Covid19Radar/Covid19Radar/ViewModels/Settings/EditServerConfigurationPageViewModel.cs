@@ -104,31 +104,29 @@ namespace Covid19Radar.ViewModels
 
         private void UpdateUrls()
         {
-            var regions = Regions.Replace(" ", "").Split(",");
-            _serverConfigurationRepository.Regions = Regions.Replace(" ", "").Split(",");
-
+            _serverConfigurationRepository.Regions = Regions.Replace(" ", "").Split(",").Distinct().ToArray();
             _serverConfigurationRepository.DiagnosisKeyRegisterApiBaseEndpoint = DiagnosisKeyRegisterApiBaseEndpoint;
             _serverConfigurationRepository.DiagnosisKeyListProvideServerBaseEndpoint = DiagnosisKeyListProvideServerBaseEndpoint;
             _serverConfigurationRepository.ExposureDataCollectServerBaseEndpoint = ExposureDataCollectServerBaseEndpoint;
 
-            var diagnosisKeyRegisterApiUrls = regions
-                .Select(region => _serverConfigurationRepository.GetDiagnosisKeyRegisterApiUrl(region));
+            var diagnosisKeyRegisterApiUrls = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls;
             DiagnosisKeyRegisterApiUrls = string.Join(Environment.NewLine, diagnosisKeyRegisterApiUrls);
 
-            var diagnosisKeyListProvideServerUrls = regions
-                .Select(region => _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region));
+            var diagnosisKeyListProvideServerUrls = _serverConfigurationRepository.DiagnosisKeyListProvideServerUrls;
             DiagnosisKeyListProvideServerUrls = string.Join(Environment.NewLine, diagnosisKeyListProvideServerUrls);
 
-            var exposureDataCollectServerUrls = regions
-                .Select(region => _serverConfigurationRepository.GetExposureDataCollectServerUrl(region));
+            var exposureDataCollectServerUrls = _serverConfigurationRepository.ExposureDataCollectServerUrls;
             ExposureDataCollectServerUrls = string.Join(Environment.NewLine, exposureDataCollectServerUrls);
         }
 
         public ICommand OnSave => new Command(async () =>
         {
             _serverConfigurationRepository.UserRegisterApiEndpoint = UserRegisterApiEndpoint;
-            _serverConfigurationRepository.Regions = Regions.Replace(" ", "").Split(",");
-
+            _serverConfigurationRepository.Regions = Regions
+                .Replace(" ", "")
+                .Split(",")
+                .Distinct()
+                .ToArray();
             _serverConfigurationRepository.DiagnosisKeyRegisterApiBaseEndpoint = DiagnosisKeyRegisterApiBaseEndpoint;
             _serverConfigurationRepository.DiagnosisKeyListProvideServerBaseEndpoint = DiagnosisKeyListProvideServerBaseEndpoint;
             _serverConfigurationRepository.InquiryLogApiEndpoint = InquiryLogApiEndpoint;

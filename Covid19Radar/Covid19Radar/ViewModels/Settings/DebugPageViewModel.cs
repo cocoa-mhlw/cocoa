@@ -111,8 +111,7 @@ namespace Covid19Radar.ViewModels
 
             // ServerConfiguration
             var serverRegions = string.Join(",", _serverConfigurationRepository.Regions);
-            var diagnosisKeyListProvideServerUrls = _serverConfigurationRepository.Regions
-                .Select(region => _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region))
+            var diagnosisKeyListProvideServerUrls = _serverConfigurationRepository.DiagnosisKeyListProvideServerUrls
                 .Select(url => $"    * {url}");
 
             var serverConfiguration = new[]

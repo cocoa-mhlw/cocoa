@@ -32,6 +32,10 @@ namespace Covid19Radar.Common
 
         public static string CombineAsUrl(params string[] paths)
         {
+            if (paths is null)
+            {
+                return "";
+            }
             var filteredPaths = paths.Where(path => !string.IsNullOrEmpty(path));
             var lastPath = filteredPaths.Last();
             var hasLastSlash = lastPath.Last() == '/';

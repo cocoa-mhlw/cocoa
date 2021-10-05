@@ -35,7 +35,7 @@ namespace Covid19Radar.Services
             _httpClient = httpClientService.Create();
         }
 
-        public async Task<List<HttpStatusCode>> SubmitDiagnosisKeysAsync(
+        public async Task<IList<HttpStatusCode>> SubmitDiagnosisKeysAsync(
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string _,
@@ -60,7 +60,7 @@ namespace Covid19Radar.Services
                     ReportType.ConfirmedClinicalDiagnosis
                     );
 
-                var tasks = _serverConfigurationRepository.Regions.Select(region => SubmitDiagnosisKeysAsync(request, region));
+                var tasks = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls.Select(url => SubmitDiagnosisKeysAsync(request, url));
                 HttpStatusCode[] statuses = await Task.WhenAll(tasks);
 
                 return statuses.ToList();
@@ -73,7 +73,7 @@ namespace Covid19Radar.Services
 
         private async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
             RequestDiagnosisKey request,
-            string region
+            string diagnosisKeyRegisterApiEndpoint
         )
         {
             _loggerService.StartMethod();
@@ -83,7 +83,6 @@ namespace Covid19Radar.Services
                 string requestJson = JsonConvert.SerializeObject(request);
                 StringContent httpContent = new StringContent(requestJson);
 
-                var diagnosisKeyRegisterApiEndpoint = _serverConfigurationRepository.GetDiagnosisKeyRegisterApiUrl(region);
                 _loggerService.Debug($"diagnosisKeyRegisterApiEndpoint: {diagnosisKeyRegisterApiEndpoint}");
                 Uri uri = new Uri(diagnosisKeyRegisterApiEndpoint);
 
