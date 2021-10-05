@@ -26,6 +26,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
         private readonly Mock<AbsExposureNotificationApiService> mockExposureNotificationApiService;
         private readonly Mock<ILocalNotificationService> mockLocalNotificationService;
+        private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
         private readonly Mock<AbsExposureDetectionBackgroundService> mockExposureDetectionBackgroundService;
         private readonly Mock<IDialogService> mockDialogService;
         private readonly Mock<IExternalNavigationService> mockExternalNavigationService;
@@ -38,12 +39,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
             mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>(mockLoggerService.Object);
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
+            mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
             mockExposureDetectionBackgroundService = mockRepository.Create<AbsExposureDetectionBackgroundService>(
                 mockRepository.Create<IDiagnosisKeyRepository>().Object,
                 mockExposureNotificationApiService.Object,
                 mockRepository.Create<IExposureConfigurationRepository>().Object,
                 mockLoggerService.Object,
-                mockUserDataRepository.Object
+                mockUserDataRepository.Object,
+                mockServerConfigurationRepository.Object
                 );
             mockDialogService = mockRepository.Create<IDialogService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();

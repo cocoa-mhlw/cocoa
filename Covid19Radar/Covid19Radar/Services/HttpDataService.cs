@@ -37,14 +37,12 @@ namespace Covid19Radar.Services
 
             // Create API key based client.
             apiClient = httpClientService.Create();
-            apiClient.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
             apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             apiClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
             apiClient.DefaultRequestHeaders.Add("x-api-key", AppSettings.Instance.ApiKey);
 
             // Create client.
             httpClient = httpClientService.Create();
-            httpClient.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
 
@@ -209,7 +207,6 @@ namespace Covid19Radar.Services
                 return null;
             }
         }
-
 
         private async Task<string> PostAsync(string url, HttpContent body)
         {

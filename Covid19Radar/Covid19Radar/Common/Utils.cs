@@ -30,11 +30,7 @@ namespace Covid19Radar.Common
             return dateTimes;
         }
 
-        #endregion
-
-        #region Other Internal Methods
-
-        internal static string CombineAsUrl(params string[] paths)
+        public static string CombineAsUrl(params string[] paths)
         {
             var filteredPaths = paths.Where(path => !string.IsNullOrEmpty(path));
             var lastPath = filteredPaths.Last();
