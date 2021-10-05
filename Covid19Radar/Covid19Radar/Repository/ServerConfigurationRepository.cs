@@ -19,31 +19,31 @@ namespace Covid19Radar.Repository
 
         public string UserRegisterApiEndpoint { get; set; }
 
-        public string DiagnosisKeyRegisterApiBaseEndpoint { get; set; }
+        public string DiagnosisKeyRegisterApiEndpoint { get; set; }
 
         public virtual IList<string> DiagnosisKeyRegisterApiUrls
         {
             get
             {
                 return Regions
-                    .Select(region => DiagnosisKeyRegisterApiBaseEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
+                    .Select(region => DiagnosisKeyRegisterApiEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
                     .Where(url => url != null)
                     .Distinct()
                     .ToList();
             }
         }
 
-        public string DiagnosisKeyListProvideServerBaseEndpoint { get; set; }
+        public string DiagnosisKeyListProvideServerEndpoint { get; set; }
 
         public virtual string GetDiagnosisKeyListProvideServerUrl(string region)
-            => DiagnosisKeyListProvideServerBaseEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region);
+            => DiagnosisKeyListProvideServerEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region);
 
         public virtual IList<string> DiagnosisKeyListProvideServerUrls
         {
             get
             {
                 return Regions
-                    .Select(region => DiagnosisKeyListProvideServerBaseEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
+                    .Select(region => DiagnosisKeyListProvideServerEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
                     .Where(url => url != null)
                     .Distinct()
                     .ToList();
@@ -52,14 +52,14 @@ namespace Covid19Radar.Repository
 
         public string InquiryLogApiEndpoint { get; set; }
 
-        public string? ExposureDataCollectServerBaseEndpoint { get; set; }
+        public string? ExposureDataCollectServerEndpoint { get; set; }
 
         public virtual IList<string> ExposureDataCollectServerUrls
         {
             get
             {
                 return Regions
-                    .Select(region => ExposureDataCollectServerBaseEndpoint?.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
+                    .Select(region => ExposureDataCollectServerEndpoint?.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
                     .Where(url => url != null)
                     .Distinct()
                     .ToList();
@@ -110,23 +110,23 @@ namespace Covid19Radar.Repository
             set => _serverConfiguration.Regions = string.Join(",", value);
         }
 
-        public string DiagnosisKeyRegisterApiBaseEndpoint
+        public string DiagnosisKeyRegisterApiEndpoint
         {
-            get => _serverConfiguration.DiagnosisKeyRegisterApiBaseEndpoint;
-            set => _serverConfiguration.DiagnosisKeyRegisterApiBaseEndpoint = value;
+            get => _serverConfiguration.DiagnosisKeyRegisterApiEndpoint;
+            set => _serverConfiguration.DiagnosisKeyRegisterApiEndpoint = value;
         }
 
-        public string ExposureDataCollectServerBaseEndpoint
+        public string ExposureDataCollectServerEndpoint
         {
-            get => _serverConfiguration.ExposureDataCollectServerBaseEndpoint;
-            set => _serverConfiguration.ExposureDataCollectServerBaseEndpoint = value;
+            get => _serverConfiguration.ExposureDataCollectServerEndpoint;
+            set => _serverConfiguration.ExposureDataCollectServerEndpoint = value;
         }
 
 
-        public string DiagnosisKeyListProvideServerBaseEndpoint
+        public string DiagnosisKeyListProvideServerEndpoint
         {
-            get => _serverConfiguration.DiagnosisKeyListProvideServerBaseEndpoint;
-            set => _serverConfiguration.DiagnosisKeyListProvideServerBaseEndpoint = value;
+            get => _serverConfiguration.DiagnosisKeyListProvideServerEndpoint;
+            set => _serverConfiguration.DiagnosisKeyListProvideServerEndpoint = value;
         }
 
         public async Task LoadAsync()
@@ -179,7 +179,7 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string DiagnosisKeyRegisterApiBaseEndpoint
+        public string DiagnosisKeyRegisterApiEndpoint
         {
             get => Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
             set
@@ -188,7 +188,7 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string DiagnosisKeyListProvideServerBaseEndpoint
+        public string DiagnosisKeyListProvideServerEndpoint
         {
             get => null;
             set
@@ -197,7 +197,7 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string? ExposureDataCollectServerBaseEndpoint
+        public string? ExposureDataCollectServerEndpoint
         {
             get => null;
             set
@@ -235,12 +235,12 @@ namespace Covid19Radar.Repository
         [JsonProperty("regions")]
         public string Regions = string.Join(",", AppSettings.Instance.SupportedRegions);
 
-        [JsonProperty("diagnosis_key_register_api_base_endpoint")]
-        public string DiagnosisKeyRegisterApiBaseEndpoint
+        [JsonProperty("diagnosis_key_register_api_endpoint")]
+        public string DiagnosisKeyRegisterApiEndpoint
             = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
 
-        [JsonProperty("diagnosis_key_list_provide_server_base_endpoint")]
-        public string DiagnosisKeyListProvideServerBaseEndpoint
+        [JsonProperty("diagnosis_key_list_provide_server_endpoint")]
+        public string DiagnosisKeyListProvideServerEndpoint
             = Utils.CombineAsUrl(
                 AppSettings.Instance.CdnUrlBase,
                 AppSettings.Instance.BlobStorageContainerName,
@@ -248,8 +248,8 @@ namespace Covid19Radar.Repository
                 "list.json"
                 );
 
-        [JsonProperty("exposure_data_collect_server_base_endpoint")]
-        public string? ExposureDataCollectServerBaseEndpoint = null;
+        [JsonProperty("exposure_data_collect_server_endpoint")]
+        public string? ExposureDataCollectServerEndpoint = null;
     }
 
 }

@@ -36,14 +36,14 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="DiagnosisKeyRegisterApiBaseEndpoint"
+                Text="DiagnosisKeyRegisterApiEndpoint"
                 Margin="8, 0, 0, 8"
                 />
             <Entry
                 Keyboard="Url"
-                Text="{Binding DiagnosisKeyRegisterApiBaseEndpoint}"
+                Text="{Binding DiagnosisKeyRegisterApiEndpoint}"
                 Margin="8, 0, 8, 16"
-                Placeholder="DiagnosisKey registeration API base-endpoint"/>
+                Placeholder="DiagnosisKey registeration API endpoint"/>
 
             <Label
                 Style="{StaticResource DefaultLabel}"
@@ -59,14 +59,14 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="DiagnosisKeyListBaseEndpoint"
+                Text="DiagnosisKeyListEndpoint"
                 Margin="8, 0, 0, 8"
                 />
             <Entry
                 Keyboard="Url"
-                Text="{Binding DiagnosisKeyListProvideServerBaseEndpoint}"
+                Text="{Binding DiagnosisKeyListProvideServerEndpoint}"
                 Margin="8, 0, 8, 16"
-                Placeholder="DiagnosisKey-list(list.json) base-endpoint">
+                Placeholder="DiagnosisKey-list(list.json) endpoint">
             </Entry>
 
             <Label
@@ -83,14 +83,14 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="ExposureDataCollectServerBaseEndpoint"
+                Text="ExposureDataCollectServerEndpoint"
                 Margin="8, 0, 0, 8"
                 />
             <Entry
                 Keyboard="Url"
-                Text="{Binding ExposureDataCollectServerBaseEndpoint}"
+                Text="{Binding ExposureDataCollectServerEndpoint}"
                 Margin="8, 0, 8, 16"
-                Placeholder="ExposureData collect API base-endpoint"/>
+                Placeholder="ExposureData collect API endpoint"/>
 
             <Label
                 Style="{StaticResource DefaultLabel}"

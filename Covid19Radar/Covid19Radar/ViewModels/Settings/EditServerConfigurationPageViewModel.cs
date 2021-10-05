@@ -35,11 +35,11 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _regions, value); }
         }
 
-        private string _diagnosisKeyRegisterApiBaseEndpoint;
-        public string DiagnosisKeyRegisterApiBaseEndpoint
+        private string _diagnosisKeyRegisterApiEndpoint;
+        public string DiagnosisKeyRegisterApiEndpoint
         {
-            get { return _diagnosisKeyRegisterApiBaseEndpoint; }
-            set { SetProperty(ref _diagnosisKeyRegisterApiBaseEndpoint, value); }
+            get { return _diagnosisKeyRegisterApiEndpoint; }
+            set { SetProperty(ref _diagnosisKeyRegisterApiEndpoint, value); }
         }
 
         private string _diagnosisKeyRegisterApiUrls;
@@ -49,11 +49,11 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _diagnosisKeyRegisterApiUrls, value); }
         }
 
-        private string _diagnosisKeyListProvideServerBaseEndpoint;
-        public string DiagnosisKeyListProvideServerBaseEndpoint
+        private string _diagnosisKeyListProvideServerEndpoint;
+        public string DiagnosisKeyListProvideServerEndpoint
         {
-            get { return _diagnosisKeyListProvideServerBaseEndpoint; }
-            set { SetProperty(ref _diagnosisKeyListProvideServerBaseEndpoint, value); }
+            get { return _diagnosisKeyListProvideServerEndpoint; }
+            set { SetProperty(ref _diagnosisKeyListProvideServerEndpoint, value); }
         }
 
         private string _diagnosisKeyListProvideServerUrls;
@@ -63,11 +63,11 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _diagnosisKeyListProvideServerUrls, value); }
         }
 
-        private string _exposureDataCollectServerBaseEndpoint;
-        public string ExposureDataCollectServerBaseEndpoint
+        private string _exposureDataCollectServerEndpoint;
+        public string ExposureDataCollectServerEndpoint
         {
-            get { return _exposureDataCollectServerBaseEndpoint; }
-            set { SetProperty(ref _exposureDataCollectServerBaseEndpoint, value); }
+            get { return _exposureDataCollectServerEndpoint; }
+            set { SetProperty(ref _exposureDataCollectServerEndpoint, value); }
         }
 
         private string _exposureDataCollectServerUrls;
@@ -93,10 +93,10 @@ namespace Covid19Radar.ViewModels
 
                 UserRegisterApiEndpoint = _serverConfigurationRepository.UserRegisterApiEndpoint;
                 Regions = string.Join(",", _serverConfigurationRepository.Regions);
-                DiagnosisKeyRegisterApiBaseEndpoint = _serverConfigurationRepository.DiagnosisKeyRegisterApiBaseEndpoint;
-                DiagnosisKeyListProvideServerBaseEndpoint = _serverConfigurationRepository.DiagnosisKeyListProvideServerBaseEndpoint;
+                DiagnosisKeyRegisterApiEndpoint = _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint;
+                DiagnosisKeyListProvideServerEndpoint = _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint;
                 InquiryLogApiEndpoint = _serverConfigurationRepository.InquiryLogApiEndpoint;
-                ExposureDataCollectServerBaseEndpoint = _serverConfigurationRepository.ExposureDataCollectServerBaseEndpoint;
+                ExposureDataCollectServerEndpoint = _serverConfigurationRepository.ExposureDataCollectServerEndpoint;
 
                 UpdateUrls();
             });
@@ -105,9 +105,9 @@ namespace Covid19Radar.ViewModels
         private void UpdateUrls()
         {
             _serverConfigurationRepository.Regions = Regions.Replace(" ", "").Split(",").Distinct().ToArray();
-            _serverConfigurationRepository.DiagnosisKeyRegisterApiBaseEndpoint = DiagnosisKeyRegisterApiBaseEndpoint;
-            _serverConfigurationRepository.DiagnosisKeyListProvideServerBaseEndpoint = DiagnosisKeyListProvideServerBaseEndpoint;
-            _serverConfigurationRepository.ExposureDataCollectServerBaseEndpoint = ExposureDataCollectServerBaseEndpoint;
+            _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint = DiagnosisKeyRegisterApiEndpoint;
+            _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint = DiagnosisKeyListProvideServerEndpoint;
+            _serverConfigurationRepository.ExposureDataCollectServerEndpoint = ExposureDataCollectServerEndpoint;
 
             var diagnosisKeyRegisterApiUrls = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls;
             DiagnosisKeyRegisterApiUrls = string.Join(Environment.NewLine, diagnosisKeyRegisterApiUrls);
@@ -127,10 +127,10 @@ namespace Covid19Radar.ViewModels
                 .Split(",")
                 .Distinct()
                 .ToArray();
-            _serverConfigurationRepository.DiagnosisKeyRegisterApiBaseEndpoint = DiagnosisKeyRegisterApiBaseEndpoint;
-            _serverConfigurationRepository.DiagnosisKeyListProvideServerBaseEndpoint = DiagnosisKeyListProvideServerBaseEndpoint;
+            _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint = DiagnosisKeyRegisterApiEndpoint;
+            _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint = DiagnosisKeyListProvideServerEndpoint;
             _serverConfigurationRepository.InquiryLogApiEndpoint = InquiryLogApiEndpoint;
-            _serverConfigurationRepository.ExposureDataCollectServerBaseEndpoint = ExposureDataCollectServerBaseEndpoint;
+            _serverConfigurationRepository.ExposureDataCollectServerEndpoint = ExposureDataCollectServerEndpoint;
 
             await _serverConfigurationRepository.SaveAsync();
 
