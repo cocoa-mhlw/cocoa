@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
 
@@ -68,20 +69,18 @@ namespace Covid19Radar.Services
 #if DEBUG
     public class DebugExposureDataCollectServer : IExposureDataCollectServer
     {
-        // https://github.com/keiji/en-calibration-server
-        private const string API_ENDPOINT = "https://en.keiji.dev/exposure_data";
-        private const string CLUSTER_ID = "212458"; // 6 digits
-
         private readonly ILoggerService _loggerService;
-
+        private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly HttpClient _httpClient;
 
         public DebugExposureDataCollectServer(
             ILoggerService loggerService,
+            IServerConfigurationRepository serverConfigurationRepository,
             IHttpClientService httpClientService
             )
         {
             _loggerService = loggerService;
+            _serverConfigurationRepository = serverConfigurationRepository;
             _httpClient = httpClientService.Create();
         }
 
@@ -144,10 +143,14 @@ namespace Covid19Radar.Services
             ExposureRequest exposureRequest
             )
         {
+            await _serverConfigurationRepository.LoadAsync();
+
+            var exposureDataCollectServerEndpoint = _serverConfigurationRepository.ExposureDataCollectServerEndpoint;
+
             var requestJson = exposureRequest.ToJsonString();
             var httpContent = new StringContent(requestJson);
 
-            Uri uri = new Uri($"{API_ENDPOINT}/{CLUSTER_ID}/");
+            Uri uri = new Uri(exposureDataCollectServerEndpoint);
 
             try
             {

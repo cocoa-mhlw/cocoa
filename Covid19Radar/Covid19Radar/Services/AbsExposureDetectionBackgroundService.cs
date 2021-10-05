@@ -24,20 +24,15 @@ namespace Covid19Radar.Services
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
-
-        private readonly IList<DiagnosisKeyServerConfiguration> _serverConfigurations = AppSettings.Instance.SupportedRegions.Select(
-                    region => new DiagnosisKeyServerConfiguration()
-                    {
-                        ApiEndpoint = $"{AppSettings.Instance.CdnUrlBase}/{AppSettings.Instance.BlobStorageContainerName}",
-                        Region = region
-                    }).ToList();
+        private readonly IServerConfigurationRepository _serverConfigurationRepository;
 
         public AbsExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            IServerConfigurationRepository serverConfigurationRepository
             )
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
@@ -45,6 +40,7 @@ namespace Covid19Radar.Services
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
+            _serverConfigurationRepository = serverConfigurationRepository;
         }
 
         public abstract void Schedule();
@@ -53,8 +49,17 @@ namespace Covid19Radar.Services
         {
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
-            foreach (var serverConfiguration in _serverConfigurations)
+            await _serverConfigurationRepository.LoadAsync();
+
+            foreach (var region in _serverConfigurationRepository.Regions)
             {
+                var diagnosisKeyListProvideServerUrl = _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region);
+                var serverConfiguration = new DiagnosisKeyServerConfiguration()
+                {
+                    ApiEndpoint = diagnosisKeyListProvideServerUrl,
+                    Region = region
+                };
+
                 List<string> downloadedFileNameList = new List<string>();
                 try
                 {

@@ -9,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
 
@@ -18,20 +19,19 @@ namespace Covid19Radar.Services
     {
         private const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
 
-        // https://github.com/keiji/en-calibration-server
-        private const string API_ENDPOINT = "https://en.keiji.dev/diagnosis_keys";
-        private const string CLUSTER_ID = "212458"; // 6 digits
-
         private readonly ILoggerService _loggerService;
+        private readonly IServerConfigurationRepository _serverConfigurationRepository;
 
         private readonly HttpClient _httpClient;
 
         public DebugDiagnosisKeyRegisterServer(
             ILoggerService loggerService,
+            IServerConfigurationRepository serverConfigurationRepository,
             IHttpClientService httpClientService
             )
         {
             _loggerService = loggerService;
+            _serverConfigurationRepository = serverConfigurationRepository;
             _httpClient = httpClientService.Create();
         }
 
@@ -51,6 +51,8 @@ namespace Covid19Radar.Services
 #endif
             try
             {
+                await _serverConfigurationRepository.LoadAsync();
+
                 RequestDiagnosisKey request = new RequestDiagnosisKey(
                     symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
                     temporaryExposureKeys,
@@ -61,7 +63,9 @@ namespace Covid19Radar.Services
 
                 StringContent httpContent = new StringContent(requestJson);
 
-                Uri uri = new Uri($"{API_ENDPOINT}/{CLUSTER_ID}/{Guid.NewGuid()}.json");
+                var diagnosisKeyRegisterApiEndpoint = _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint;
+                Uri uri = new Uri($"{diagnosisKeyRegisterApiEndpoint}/{Guid.NewGuid()}.json");
+
                 HttpResponseMessage response = await _httpClient.PutAsync(uri, httpContent);
                 if (response.IsSuccessStatusCode)
                 {
