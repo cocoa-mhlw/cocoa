@@ -31,7 +31,7 @@
                 Keyboard="Url"
                 Text="{Binding Regions}"
                 Margin="8, 0, 8, 16"
-                Placeholder="Regions as comma sepalated (or Cluster ID)">
+                Placeholder="Regions or Cluster IDs, Comma sepalated">
             </Entry>
 
             <Label
