@@ -19,10 +19,6 @@ namespace Covid19Radar.Services
 
         Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request);
 
-        Task<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken);
-
-        Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken);
-
         Task<ApiResponse<LogStorageSas>> GetLogStorageSas();
     }
 }

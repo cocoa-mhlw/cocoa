@@ -9,7 +9,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Net;
@@ -85,9 +84,10 @@ namespace Covid19Radar.Services
 
             await serverConfigurationRepository.LoadAsync();
 
-            var url = serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint;
+            var url = serverConfigurationRepository.GetDiagnosisKeyRegisterApiUrl();
             var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
             HttpStatusCode status = await PutAsync(url, content);
+
             loggerService.EndMethod();
             return status;
         }
@@ -227,6 +227,5 @@ namespace Covid19Radar.Services
             await result.Content.ReadAsStringAsync();
             return result.StatusCode;
         }
-
     }
 }

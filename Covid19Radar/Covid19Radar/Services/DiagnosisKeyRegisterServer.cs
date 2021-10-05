@@ -34,7 +34,7 @@ namespace Covid19Radar.Services
             _deviceVerifier = deviceVerifier;
         }
 
-        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+        public async Task<List<HttpStatusCode>> SubmitDiagnosisKeysAsync(
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,
@@ -65,7 +65,10 @@ namespace Covid19Radar.Services
                 var diagnosisInfo = await CreateSubmissionAsync(symptomOnsetDate, temporaryExposureKeys, processNumber, idempotencyKey);
                 HttpStatusCode httpStatusCode = await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
 
-                return httpStatusCode;
+                return new List<HttpStatusCode>()
+                {
+                    httpStatusCode
+                };
             }
             finally
             {

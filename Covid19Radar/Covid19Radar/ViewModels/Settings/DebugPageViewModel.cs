@@ -118,12 +118,11 @@ namespace Covid19Radar.ViewModels
             var serverConfiguration = new[]
             {
                 $"Regions: {serverRegions}",
-                $"DiagnosisKeyRegisterApiUrl: {_serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint}",
-                $"DiagnosisKeyListProvideServerUrls:\n" +
-                $"{string.Join(Environment.NewLine, diagnosisKeyListProvideServerUrls)}",
-                $"InquiryLogApiUrl: {_serverConfigurationRepository.InquiryLogApiEndpoint}",
-                $"ExposureDataCollectServerUrl: {_serverConfigurationRepository.ExposureDataCollectServerEndpoint}",
+                $"DiagnosisKeyRegisterApiBaseEndpoint: {_serverConfigurationRepository.DiagnosisKeyRegisterApiBaseEndpoint}",
+                $"DiagnosisKeyListProvideServerBaseEndpoint: {_serverConfigurationRepository.DiagnosisKeyListProvideServerBaseEndpoint}",
+                $"ExposureDataCollectServerBaseEndpoint: {_serverConfigurationRepository.ExposureDataCollectServerBaseEndpoint}",
                 $"UserRegisterApiEndpoint: {_serverConfigurationRepository.UserRegisterApiEndpoint}",
+                $"InquiryLogApiUrl: {_serverConfigurationRepository.InquiryLogApiEndpoint}",
             };
             ServerConfigurationInfo = string.Join(Environment.NewLine, serverConfiguration);
         }

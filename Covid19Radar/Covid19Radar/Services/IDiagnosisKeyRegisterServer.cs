@@ -12,7 +12,7 @@ namespace Covid19Radar.Services
 {
     public interface IDiagnosisKeyRegisterServer
     {
-        public Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+        public Task<List<HttpStatusCode>> SubmitDiagnosisKeysAsync(
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,

@@ -54,21 +54,16 @@ namespace Covid19Radar.Services
             foreach (var region in _serverConfigurationRepository.Regions)
             {
                 var diagnosisKeyListProvideServerUrl = _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region);
-                var serverConfiguration = new DiagnosisKeyServerConfiguration()
-                {
-                    ApiEndpoint = diagnosisKeyListProvideServerUrl,
-                    Region = region
-                };
 
                 List<string> downloadedFileNameList = new List<string>();
                 try
                 {
-                    var tmpDir = PrepareDir(serverConfiguration.Region);
+                    var tmpDir = PrepareDir(region);
 
                     var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
-                    var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(serverConfiguration, cancellationToken);
+                    var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
-                    var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region);
+                    var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
                     var targetDiagnosisKeyEntryList = diagnosisKeyEntryList;
 
 #if DEBUG
@@ -80,7 +75,7 @@ namespace Covid19Radar.Services
 
                     if (targetDiagnosisKeyEntryList.Count() == 0)
                     {
-                        _loggerService.Info($"No new diagnosis-key found on {serverConfiguration.ApiEndpoint}/{serverConfiguration.Region}.");
+                        _loggerService.Info($"No new diagnosis-key found on {diagnosisKeyListProvideServerUrl}");
                         continue;
                     }
 
@@ -106,7 +101,7 @@ namespace Covid19Radar.Services
                     var latestProcessTimestamp = targetDiagnosisKeyEntryList
                         .Select(diagnosisKeyEntry => diagnosisKeyEntry.Created)
                         .Max();
-                    await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(serverConfiguration.Region, latestProcessTimestamp);
+                    await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(region, latestProcessTimestamp);
 
                 }
                 finally

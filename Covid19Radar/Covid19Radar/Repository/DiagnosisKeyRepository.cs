@@ -17,7 +17,7 @@ namespace Covid19Radar.Repository
 {
     public interface IDiagnosisKeyRepository
     {
-        public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(DiagnosisKeyServerConfiguration diagnosisKeyServerConfiguration, CancellationToken cancellationToken);
+        public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken);
 
         public Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir, CancellationToken cancellationToken);
     }
@@ -37,7 +37,6 @@ namespace Covid19Radar.Repository
 
     public class DiagnosisKeyRepository : IDiagnosisKeyRepository
     {
-        private const string CATALOG_FILE_NAME = "list.json";
         private const long BUFFER_LENGTH = 4 * 1024 * 1024;
 
         private readonly HttpClient _client;
@@ -52,10 +51,9 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
-        public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(DiagnosisKeyServerConfiguration diagnosisKeyServerConfiguration, CancellationToken cancellationToken)
+        public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken)
         {
-            Uri uri = new Uri($"{diagnosisKeyServerConfiguration.ApiEndpoint}/{diagnosisKeyServerConfiguration.Region}/{CATALOG_FILE_NAME}");
-            HttpResponseMessage response = await _client.GetAsync(uri, cancellationToken);
+            HttpResponseMessage response = await _client.GetAsync(url, cancellationToken);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();

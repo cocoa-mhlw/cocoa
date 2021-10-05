@@ -36,9 +36,11 @@ namespace Covid19Radar.Common
 
         internal static string CombineAsUrl(params string[] paths)
         {
-            var lastPath = paths.Last();
+            var filteredPaths = paths.Where(path => !string.IsNullOrEmpty(path));
+            var lastPath = filteredPaths.Last();
             var hasLastSlash = lastPath.Last() == '/';
-            var combinedUrl = string.Join('/', paths.Select(path => path.TrimStart('/').TrimEnd('/')));
+
+            var combinedUrl = string.Join('/', filteredPaths.Select(path => path.TrimStart('/').TrimEnd('/')));
 
             if (hasLastSlash)
             {

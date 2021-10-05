@@ -36,14 +36,26 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="DiagnosisKeyRegisterApiEndpoint"
+                Text="DiagnosisKeyRegisterApiBaseEndpoint"
                 Margin="8, 0, 0, 8"
                 />
             <Entry
                 Keyboard="Url"
-                Text="{Binding DiagnosisKeyRegisterApiEndpoint}"
+                Text="{Binding DiagnosisKeyRegisterApiBaseEndpoint}"
                 Margin="8, 0, 8, 16"
-                Placeholder="DiagnosisKey registeration API endpoint"/>
+                Placeholder="DiagnosisKey registeration API base-endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="DiagnosisKeyRegisterApiUrls"
+                Margin="8, 0, 0, 8"
+                />
+            <Label
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="DarkCyan"
+                Text="{Binding DiagnosisKeyRegisterApiUrls}"
+                Margin="8, 0, 8, 16"
+                />
 
             <Label
                 Style="{StaticResource DefaultLabel}"
@@ -59,36 +71,38 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="DiagnosisKeyListProvideServerEndpoints"
+                Text="DiagnosisKeyListProvideServerUrls"
                 Margin="8, 0, 0, 8"
                 />
             <Label
                 Style="{StaticResource DefaultLabelSmall}"
-                Text="{Binding DiagnosisKeyListProvideServerEndpoints}"
+                TextColor="DarkCyan"
+                Text="{Binding DiagnosisKeyListProvideServerUrls}"
                 Margin="8, 0, 8, 16"
                 />
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="InquiryLogApiEndpoint"
+                Text="ExposureDataCollectServerBaseEndpoint"
                 Margin="8, 0, 0, 8"
                 />
             <Entry
                 Keyboard="Url"
-                Text="{Binding InquiryLogApiEndpoint}"
+                Text="{Binding ExposureDataCollectServerBaseEndpoint}"
                 Margin="8, 0, 8, 16"
-                Placeholder="Inquiry-log submission API endpoint"/>
+                Placeholder="ExposureData collect API base-endpoint"/>
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="ExposureDataCollectServerEndpoint"
+                Text="ExposureDataCollectServerUrls"
                 Margin="8, 0, 0, 8"
                 />
-            <Entry
-                Keyboard="Url"
-                Text="{Binding ExposureDataCollectServerEndpoint}"
+            <Label
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="DarkCyan"
+                Text="{Binding ExposureDataCollectServerUrls}"
                 Margin="8, 0, 8, 16"
-                Placeholder="ExposureData collect API endpoint"/>
+                />
 
             <Label
                 Style="{StaticResource DefaultLabel}"
@@ -100,6 +114,17 @@
                 Text="{Binding UserRegisterApiEndpoint}"
                 Margin="8, 0, 8, 16"
                 Placeholder="User registration API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="InquiryLogApiEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding InquiryLogApiEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="Inquiry-log submission API endpoint"/>
 
             <Button
                 Command="{Binding OnSave}"

@@ -4,6 +4,8 @@
 
 using System;
 using System.IO;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Newtonsoft.Json;
@@ -17,15 +19,19 @@ namespace Covid19Radar.Repository
 
         public string UserRegisterApiEndpoint { get; set; }
 
-        public string DiagnosisKeyRegisterApiEndpoint { get; set; }
+        public string DiagnosisKeyRegisterApiBaseEndpoint { get; set; }
 
-        public string GetDiagnosisKeyListProvideServerUrl(string region, string listFileName = "list.json");
+        public string GetDiagnosisKeyRegisterApiUrl(string region = null);
 
         public string DiagnosisKeyListProvideServerBaseEndpoint { get; set; }
 
+        public string GetDiagnosisKeyListProvideServerUrl(string region);
+
         public string InquiryLogApiEndpoint { get; set; }
 
-        public string? ExposureDataCollectServerEndpoint { get; set; }
+        public string? ExposureDataCollectServerBaseEndpoint { get; set; }
+
+        public string? GetExposureDataCollectServerUrl(string region);
 
         public Task SaveAsync();
 
@@ -59,26 +65,35 @@ namespace Covid19Radar.Repository
             set => _serverConfiguration.UserRegisterApiEndpoint = value;
         }
 
+        public string InquiryLogApiEndpoint
+        {
+            get => _serverConfiguration.InquiryLogApiEndpoint;
+            set => _serverConfiguration.InquiryLogApiEndpoint = value;
+        }
+
         public string[] Regions
         {
-            get => _serverConfiguration.Regions.Split(",");
+            get => _serverConfiguration.Regions.Split(",").Where(region => !string.IsNullOrEmpty(region)).ToArray();
             set => _serverConfiguration.Regions = string.Join(",", value);
         }
 
-        public string DiagnosisKeyRegisterApiEndpoint
+        public string DiagnosisKeyRegisterApiBaseEndpoint
         {
-            get => _serverConfiguration.DiagnosisKeyRegisterApiEndpoint;
-            set => _serverConfiguration.DiagnosisKeyRegisterApiEndpoint = value;
+            get => _serverConfiguration.DiagnosisKeyRegisterApiBaseEndpoint;
+            set => _serverConfiguration.DiagnosisKeyRegisterApiBaseEndpoint = value;
         }
 
-        public string ExposureDataCollectServerEndpoint
+        public string GetDiagnosisKeyRegisterApiUrl(string region = null)
+            => Utils.CombineAsUrl(_serverConfiguration.DiagnosisKeyRegisterApiBaseEndpoint, "diagnosis_keys", region, "diagnosis_keys.json");
+
+        public string ExposureDataCollectServerBaseEndpoint
         {
-            get => _serverConfiguration.ExposureDataCollectServerEndpoint;
-            set => _serverConfiguration.ExposureDataCollectServerEndpoint = value;
+            get => _serverConfiguration.ExposureDataCollectServerBaseEndpoint;
+            set => _serverConfiguration.ExposureDataCollectServerBaseEndpoint = value;
         }
 
-        public string GetDiagnosisKeyListProvideServerUrl(string region, string listFileName = "list.json")
-            => Utils.CombineAsUrl(_serverConfiguration.DiagnosisKeyListProvideServerBaseEndpoint, region, listFileName);
+        public string? GetExposureDataCollectServerUrl(string region)
+            => Utils.CombineAsUrl(_serverConfiguration.ExposureDataCollectServerBaseEndpoint, region);
 
         public string DiagnosisKeyListProvideServerBaseEndpoint
         {
@@ -86,11 +101,8 @@ namespace Covid19Radar.Repository
             set => _serverConfiguration.DiagnosisKeyListProvideServerBaseEndpoint = value;
         }
 
-        public string InquiryLogApiEndpoint
-        {
-            get => _serverConfiguration.InquiryLogApiEndpoint;
-            set => _serverConfiguration.InquiryLogApiEndpoint = value;
-        }
+        public string GetDiagnosisKeyListProvideServerUrl(string region)
+            => Utils.CombineAsUrl(_serverConfiguration.DiagnosisKeyListProvideServerBaseEndpoint, region, "list.json");
 
         public async Task LoadAsync()
         {
@@ -124,6 +136,15 @@ namespace Covid19Radar.Repository
             }
         }
 
+        public string InquiryLogApiEndpoint
+        {
+            get => Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+            set
+            {
+                // Do nothing
+            }
+        }
+
         public string[] Regions
         {
             get => AppSettings.Instance.SupportedRegions;
@@ -133,7 +154,7 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string DiagnosisKeyRegisterApiEndpoint
+        public string DiagnosisKeyRegisterApiBaseEndpoint
         {
             get => Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
             set
@@ -142,8 +163,8 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string GetDiagnosisKeyListProvideServerUrl(string region, string listFileName = "list.json")
-            => Utils.CombineAsUrl(AppSettings.Instance.CdnUrlBase, AppSettings.Instance.BlobStorageContainerName, region, listFileName);
+        public string GetDiagnosisKeyRegisterApiUrl(string _ = null)
+            => Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
 
         public string DiagnosisKeyListProvideServerBaseEndpoint
         {
@@ -154,16 +175,10 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string InquiryLogApiEndpoint
-        {
-            get => Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
-            set
-            {
-                // Do nothing
-            }
-        }
+        public string GetDiagnosisKeyListProvideServerUrl(string region)
+            => Utils.CombineAsUrl(AppSettings.Instance.CdnUrlBase, AppSettings.Instance.BlobStorageContainerName, region, "list.json");
 
-        public string ExposureDataCollectServerEndpoint
+        public string? ExposureDataCollectServerBaseEndpoint
         {
             get => null;
             set
@@ -171,6 +186,9 @@ namespace Covid19Radar.Repository
                 // Do nothing
             }
         }
+
+        public string? GetExposureDataCollectServerUrl(string region)
+            => null;
 
         public Task SaveAsync()
         {
@@ -190,20 +208,20 @@ namespace Covid19Radar.Repository
         [JsonProperty("user_register_api_endpoint")]
         public string UserRegisterApiEndpoint = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
 
+        [JsonProperty("inquiry_log_api_endpoint")]
+        public string? InquiryLogApiEndpoint = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+
         [JsonProperty("regions")]
         public string Regions = string.Join(",", AppSettings.Instance.SupportedRegions);
 
-        [JsonProperty("diagnosis_key_register_api_endpoint")]
-        public string DiagnosisKeyRegisterApiEndpoint = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
+        [JsonProperty("diagnosis_key_register_api_base_endpoint")]
+        public string DiagnosisKeyRegisterApiBaseEndpoint = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
 
         [JsonProperty("diagnosis_key_list_provide_server_base_endpoint")]
         public string DiagnosisKeyListProvideServerBaseEndpoint = Utils.CombineAsUrl(AppSettings.Instance.CdnUrlBase, AppSettings.Instance.BlobStorageContainerName);
 
-        [JsonProperty("inquiry_log_api_endpoint")]
-        public string? InquiryLogApiEndpoint = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
-
-        [JsonProperty("exposure_data_collect_server_endpoint")]
-        public string? ExposureDataCollectServerEndpoint = null;
+        [JsonProperty("exposure_data_collect_server_base_endpoint")]
+        public string? ExposureDataCollectServerBaseEndpoint = null;
     }
 
 }

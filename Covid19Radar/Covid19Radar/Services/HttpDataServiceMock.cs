@@ -6,13 +6,11 @@ using Covid19Radar.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Net.Http;
-using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 
 namespace Covid19Radar.Services
@@ -52,15 +50,6 @@ namespace Covid19Radar.Services
 
         public void RemoveCredentials()
         {
-        }
-
-        Task<Stream> IHttpDataService.GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
-        {
-            return Task.Factory.StartNew<Stream>(() =>
-            {
-                Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKey called");
-                return new MemoryStream();
-            });
         }
 
         private TemporaryExposureKeyExportFileModel CreateTestData(long created)
@@ -104,45 +93,6 @@ namespace Covid19Radar.Services
                     return new List<TemporaryExposureKeyExportFileModel>();
             }
         }
-
-        async Task<List<TemporaryExposureKeyExportFileModel>> IHttpDataService.GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
-        {
-            /* CdnUrlBase trick for Debug_Mock
-               "https://www.example.com/"(url with 2+ periods) -> download "url"+"c19r/440/list.json".  IsDownloadRequired
-               "1598022036649,1598022036751,1598022036826" -> direct input timestamps.  IsDirectInput
-               "https://CDN_URL_BASE/2" -> dataVersion = 2
-               "https://CDN_URL_BASE/" -> dataVersion = 0 (default)
-            */
-            //string url = AppSettings.Instance.CdnUrlBase;
-            if (mockCommonUtils.IsDownloadRequired())
-            {
-                // copy from GetTemporaryExposureKeyList @ ./HttpDataService.cs and delete logger part
-                var container = AppSettings.Instance.BlobStorageContainerName;
-                var urlJson = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
-                var result = await GetCdnAsync(urlJson, cancellationToken);
-                if (result != null)
-                {
-                    Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList downloaded");
-                    return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
-                }
-                else
-                {
-                    Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList download failed");
-                    return new List<TemporaryExposureKeyExportFileModel>();
-                }
-            }
-            else if (mockCommonUtils.IsDirectInput())
-            {
-                Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList direct data called");
-                return (mockCommonUtils.GetCreatedTimes().Select(x => CreateTestData(Convert.ToInt64(x))).ToList());
-            }
-            else
-            {
-                Debug.WriteLine("HttpDataServiceMock::GetTemporaryExposureKeyList preset data called");
-                return PresetTekListData(mockCommonUtils.GetTekListDataType());
-            }
-        }
-
 
         async Task<bool> IHttpDataService.PostRegisterUserAsync()
         {
