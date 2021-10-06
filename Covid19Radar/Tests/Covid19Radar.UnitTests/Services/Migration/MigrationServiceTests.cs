@@ -221,8 +221,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             Debug.Print($"now: {now}, offset: {offset}");
 
             var startDateTime = DateTime.UtcNow;
-            var termsOfServiceLastUpdateDateJst = CreateTermsUpdateDateTime(JstNow).AddMinutes(1);
-            var privacyPolicyLastUpdateDateJst = CreateTermsUpdateDateTime(JstNow).AddMinutes(2);
+            var termsOfServiceLastUpdateDateJst = DateTime.SpecifyKind(CreateTermsUpdateDateTime(JstNow.AddMinutes(1)), DateTimeKind.Unspecified);
+            var privacyPolicyLastUpdateDateJst = DateTime.SpecifyKind(CreateTermsUpdateDateTime(JstNow.AddMinutes(2)), DateTimeKind.Unspecified);
 
             var userExposureInfo1DateTime = DateTime.UtcNow;
             var userExposureInfo2DateTime = DateTime.UtcNow.AddDays(1);
