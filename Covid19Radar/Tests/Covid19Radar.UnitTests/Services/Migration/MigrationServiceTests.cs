@@ -30,6 +30,11 @@ namespace Covid19Radar.UnitTests.Services.Migration
         private static readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
         private static DateTime JstNow => DateTime.UtcNow + TIME_DIFFERENCIAL_JST_UTC;
 
+        private const string FORMAT_TERMS_UPDATE_DATETIME = "yyyy/MM/dd HH:mm:ss";
+
+        private static DateTime CreateTermsUpdateDateTime(DateTime dateTime)
+            => DateTime.ParseExact(dateTime.ToString(FORMAT_TERMS_UPDATE_DATETIME), FORMAT_TERMS_UPDATE_DATETIME, null);
+
         private readonly MockRepository _mockRepository = new MockRepository(MockBehavior.Default);
 
         private readonly Mock<IMigrationProcessService> _migrationProcessService;
@@ -210,8 +215,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.0.0");
 
             var startDateTime = DateTime.UtcNow;
-            var termsOfServiceLastUpdateDateJst = DateTime.SpecifyKind(JstNow.AddMinutes(1) + TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Unspecified);
-            var privacyPolicyLastUpdateDateJst = DateTime.SpecifyKind(JstNow.AddMinutes(2) + TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Unspecified);
+            var termsOfServiceLastUpdateDateJst = DateTime.SpecifyKind(CreateTermsUpdateDateTime(JstNow.AddMinutes(1) + TIME_DIFFERENCIAL_JST_UTC), DateTimeKind.Unspecified);
+            var privacyPolicyLastUpdateDateJst = DateTime.SpecifyKind(CreateTermsUpdateDateTime(JstNow.AddMinutes(2) + TIME_DIFFERENCIAL_JST_UTC), DateTimeKind.Unspecified);
 
             var userExposureInfo1DateTime = DateTime.UtcNow;
             var userExposureInfo2DateTime = DateTime.UtcNow.AddDays(1);
