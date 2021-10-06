@@ -3,7 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using Newtonsoft.Json;
+using System.Linq;
 
 namespace Covid19Radar.Common
 {
@@ -28,6 +28,25 @@ namespace Covid19Radar.Common
                 dateTimes[index] = TimeZoneInfo.ConvertTime(DateTime.Now.AddDays(-index), JstTimeZoneInfo());
             }
             return dateTimes;
+        }
+
+        public static string CombineAsUrl(params string[] paths)
+        {
+            if (paths is null)
+            {
+                return "";
+            }
+            var filteredPaths = paths.Where(path => !string.IsNullOrEmpty(path));
+            var lastPath = filteredPaths.Last();
+            var hasLastSlash = lastPath.Last() == '/';
+
+            var combinedUrl = string.Join('/', filteredPaths.Select(path => path.TrimStart('/').TrimEnd('/')));
+
+            if (hasLastSlash)
+            {
+                return combinedUrl + '/';
+            }
+            return combinedUrl;
         }
 
         #endregion

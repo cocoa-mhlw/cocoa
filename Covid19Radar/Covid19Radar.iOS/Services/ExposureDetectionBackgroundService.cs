@@ -32,13 +32,15 @@ namespace Covid19Radar.iOS.Services
             AbsExposureNotificationApiService exposureNotificationApiService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            IServerConfigurationRepository serverConfigurationRepository
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
                 exposureConfigurationRepository,
                 loggerService,
-                userDataRepository
+                userDataRepository,
+                serverConfigurationRepository
                 )
         {
             _exposureNotificationApiService = exposureNotificationApiService;

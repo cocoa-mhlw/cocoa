@@ -155,5 +155,9 @@
     <Compile Remove="ViewModels/Settings/DebugPageViewModel.cs" />
     <Compile Remove="Views/Settings/DebugPage.xaml.cs" />
     <EmbeddedResource Remove="Views/Settings/DebugPage.xaml" />
+
+    <Compile Remove="ViewModels/Settings/EditServerConfigurationPageViewModel.cs" />
+    <Compile Remove="Views/Settings/EditServerConfigurationPage.xaml.cs" />
+    <EmbeddedResource Remove="Views/Settings/EditServerConfigurationPage.xaml" />
   </ItemGroup>
 </Project>

@@ -9,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
 
@@ -18,24 +19,23 @@ namespace Covid19Radar.Services
     {
         private const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
 
-        // https://github.com/keiji/en-calibration-server
-        private const string API_ENDPOINT = "https://en.keiji.dev/diagnosis_keys";
-        private const string CLUSTER_ID = "212458"; // 6 digits
-
         private readonly ILoggerService _loggerService;
+        private readonly IServerConfigurationRepository _serverConfigurationRepository;
 
         private readonly HttpClient _httpClient;
 
         public DebugDiagnosisKeyRegisterServer(
             ILoggerService loggerService,
+            IServerConfigurationRepository serverConfigurationRepository,
             IHttpClientService httpClientService
             )
         {
             _loggerService = loggerService;
+            _serverConfigurationRepository = serverConfigurationRepository;
             _httpClient = httpClientService.Create();
         }
 
-        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+        public async Task<IList<HttpStatusCode>> SubmitDiagnosisKeysAsync(
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string _,
@@ -51,17 +51,41 @@ namespace Covid19Radar.Services
 #endif
             try
             {
+                await _serverConfigurationRepository.LoadAsync();
+
                 RequestDiagnosisKey request = new RequestDiagnosisKey(
                     symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
                     temporaryExposureKeys,
                     idempotencyKey,
                     ReportType.ConfirmedClinicalDiagnosis
                     );
-                string requestJson = JsonConvert.SerializeObject(request);
 
+                var tasks = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls.Select(url => SubmitDiagnosisKeysAsync(request, url));
+                HttpStatusCode[] statuses = await Task.WhenAll(tasks);
+
+                return statuses.ToList();
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+            RequestDiagnosisKey request,
+            string diagnosisKeyRegisterApiEndpoint
+        )
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                string requestJson = JsonConvert.SerializeObject(request);
                 StringContent httpContent = new StringContent(requestJson);
 
-                Uri uri = new Uri($"{API_ENDPOINT}/{CLUSTER_ID}/{Guid.NewGuid()}.json");
+                _loggerService.Debug($"diagnosisKeyRegisterApiEndpoint: {diagnosisKeyRegisterApiEndpoint}");
+                Uri uri = new Uri(diagnosisKeyRegisterApiEndpoint);
+
                 HttpResponseMessage response = await _httpClient.PutAsync(uri, httpContent);
                 if (response.IsSuccessStatusCode)
                 {

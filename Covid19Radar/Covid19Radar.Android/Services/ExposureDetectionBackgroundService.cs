@@ -31,13 +31,15 @@ namespace Covid19Radar.Droid.Services
             AbsExposureNotificationApiService exposureNotificationApiService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            IServerConfigurationRepository serverConfigurationRepository
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
                 exposureConfigurationRepository,
                 loggerService,
-                userDataRepository
+                userDataRepository,
+                serverConfigurationRepository
                 )
         {
             _loggerService = loggerService;

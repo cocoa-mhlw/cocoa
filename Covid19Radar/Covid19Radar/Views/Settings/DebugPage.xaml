@@ -25,6 +25,23 @@
                 CornerRadius="10"
                 HasShadow="False">
                 <StackLayout Spacing="0">
+
+                    <Label HorizontalTextAlignment="Start"
+                           Style="{StaticResource DefaultWebView}">
+                    <Label.FormattedText>
+                    <FormattedString>
+                      <Span Text="ServerConfiguration&#xa;"/>
+                      <Span Text="{Binding ServerConfigurationInfo}" />
+                    </FormattedString>
+                    </Label.FormattedText>
+                    </Label>
+
+                    <Button
+                        Command="{prism:NavigateTo 'EditServerConfigurationPage'}"
+                        Style="{StaticResource DefaultButton}"
+                        Margin="0, 8, 0, 16"
+                        Text="Edit ServerConfiguration" />
+
                     <Label HorizontalTextAlignment="Start" Style="{StaticResource DefaultWebView}">
                     <Label.FormattedText>
                     <FormattedString>
@@ -33,6 +50,7 @@
                     </FormattedString>
                     </Label.FormattedText>
                     </Label>
+
                     <Button
                         Command="{Binding Path=OnClickReload}"
                         Style="{StaticResource DefaultButton}"

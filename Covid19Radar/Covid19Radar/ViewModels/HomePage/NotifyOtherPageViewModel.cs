@@ -253,15 +253,21 @@ namespace Covid19Radar.ViewModels
                 // TODO: Save and use revoke operation.
                 string idempotencyKey = Guid.NewGuid().ToString();
 
-                HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+                IList<HttpStatusCode> httpStatusCodes = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                     _diagnosisDate,
                     filteredTemporaryExposureKeyList,
                     _processNumber,
                     idempotencyKey
                     );
-                loggerService.Info($"HTTP status is {httpStatusCode}({(int)httpStatusCode}).");
 
-                ShowResult(httpStatusCode);
+                foreach(var statusCode in httpStatusCodes)
+                {
+                    loggerService.Info($"HTTP status is {httpStatusCodes}({(int)statusCode}).");
+
+                    // Mainly, we expect that SubmitDiagnosisKeysAsync returns one result.
+                    // Multiple-results is for debug use only.
+                    ShowResult(statusCode);
+                }
             }
             catch (ENException exception)
             {

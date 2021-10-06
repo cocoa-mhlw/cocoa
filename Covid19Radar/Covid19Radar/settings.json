@@ -3,6 +3,7 @@
   "apiSecret": "API_SECRET",
   "apiKey": "API_KEY",
   "apiUrlBase": "https://API_URL_BASE/api",
+  "diagnosisApiVersion": "v3",
   "supportedRegions": "212458",
   "blobStorageContainerName": "diagnosis_keys",
   "androidSafetyNetApiKey": "ANDROID_SAFETYNETKEY",
