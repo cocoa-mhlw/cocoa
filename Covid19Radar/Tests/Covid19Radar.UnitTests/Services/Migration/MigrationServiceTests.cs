@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
@@ -213,6 +214,11 @@ namespace Covid19Radar.UnitTests.Services.Migration
             bool hasAppVersionAtPreference = true)
         {
             _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.0.0");
+
+            var now = DateTime.Now;
+            var offset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow);
+
+            Debug.Print($"now: {now}, offset: {offset}");
 
             var startDateTime = DateTime.UtcNow;
             var termsOfServiceLastUpdateDateJst = CreateTermsUpdateDateTime(JstNow).AddMinutes(1);
