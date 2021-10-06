@@ -740,7 +740,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
-            var privacyPolicyLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
+            var privacyPolicyLastUpdateDateUtc = JstToUtc(privacyPolicyLastUpdateDateJst);
             Assert.Equal(privacyPolicyLastUpdateDateUtc.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
@@ -802,7 +802,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
-            var privacyPolicyLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
+            var privacyPolicyLastUpdateDateUtc = JstToUtc(privacyPolicyLastUpdateDateJst);
             Assert.Equal(privacyPolicyLastUpdateDateUtc.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
@@ -898,7 +898,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
-            var privacyPolicyLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
+            var privacyPolicyLastUpdateDateUtc = JstToUtc(privacyPolicyLastUpdateDateJst);
             Assert.Equal(privacyPolicyLastUpdateDateUtc.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
