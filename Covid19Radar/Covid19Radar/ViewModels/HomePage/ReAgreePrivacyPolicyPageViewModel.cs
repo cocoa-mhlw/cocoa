@@ -21,7 +21,7 @@ namespace Covid19Radar.ViewModels
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly IUserDataRepository _userDataRepository;
 
-        private DateTime UpdateDateTime { get; set; }
+        private DateTime UpdateDateTimeUtc { get; set; }
         private string _updateText;
         public string UpdateText
         {
@@ -57,7 +57,7 @@ namespace Covid19Radar.ViewModels
         {
             _loggerService.StartMethod();
 
-            _userDataRepository.SaveLastUpdateDate(TermsType.PrivacyPolicy, UpdateDateTime);
+            _userDataRepository.SaveLastUpdateDate(TermsType.PrivacyPolicy, UpdateDateTimeUtc);
             _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 
             _loggerService.EndMethod();
@@ -69,7 +69,7 @@ namespace Covid19Radar.ViewModels
 
             base.Initialize(parameters);
             TermsUpdateInfoModel.Detail updateInfo = (TermsUpdateInfoModel.Detail) parameters["updatePrivacyPolicyInfo"];
-            UpdateDateTime = updateInfo.UpdateDateTime;
+            UpdateDateTimeUtc = updateInfo.UpdateDateTimeUtc;
             UpdateText = updateInfo.Text;
 
             _loggerService.EndMethod();
