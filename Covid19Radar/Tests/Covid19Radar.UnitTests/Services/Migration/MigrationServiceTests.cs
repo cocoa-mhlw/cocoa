@@ -215,8 +215,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.0.0");
 
             var startDateTime = DateTime.UtcNow;
-            var termsOfServiceLastUpdateDateJst = DateTime.SpecifyKind(CreateTermsUpdateDateTime(JstNow.AddMinutes(1) + TIME_DIFFERENCIAL_JST_UTC), DateTimeKind.Unspecified);
-            var privacyPolicyLastUpdateDateJst = DateTime.SpecifyKind(CreateTermsUpdateDateTime(JstNow.AddMinutes(2) + TIME_DIFFERENCIAL_JST_UTC), DateTimeKind.Unspecified);
+            var termsOfServiceLastUpdateDateJst = DateTime.SpecifyKind(CreateTermsUpdateDateTime(JstNow.AddMinutes(1)), DateTimeKind.Unspecified);
+            var privacyPolicyLastUpdateDateJst = DateTime.SpecifyKind(CreateTermsUpdateDateTime(JstNow.AddMinutes(2)), DateTimeKind.Unspecified);
 
             var userExposureInfo1DateTime = DateTime.UtcNow;
             var userExposureInfo2DateTime = DateTime.UtcNow.AddDays(1);
