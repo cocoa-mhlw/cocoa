@@ -30,6 +30,9 @@ namespace Covid19Radar.UnitTests.Services.Migration
         private static readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
         private static DateTime JstNow => DateTime.UtcNow + TIME_DIFFERENCIAL_JST_UTC;
 
+        private static DateTime JstToUtc(DateTime dateTimeJst)
+            => DateTime.SpecifyKind(dateTimeJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+
         private const string FORMAT_TERMS_UPDATE_DATETIME = "yyyy/MM/dd HH:mm:ss";
 
         private static DateTime CreateTermsUpdateDateTime(DateTime dateTime)
@@ -732,12 +735,12 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
-            //var termsOfServiceLastUpdateDateUtc = DateTime.SpecifyKind(termsOfServiceLastUpdateDateJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
-            Assert.Equal(termsOfServiceLastUpdateDateJst.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
+            var termsOfServiceLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
+            Assert.Equal(termsOfServiceLastUpdateDateUtc.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
-            var privacyPolicyLastUpdateDateUtc = DateTime.SpecifyKind(privacyPolicyLastUpdateDateJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+            var privacyPolicyLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
             Assert.Equal(privacyPolicyLastUpdateDateUtc.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
@@ -794,12 +797,12 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
-            var termsOfServiceLastUpdateDateUtc = DateTime.SpecifyKind(termsOfServiceLastUpdateDateJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+            var termsOfServiceLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
             Assert.Equal(termsOfServiceLastUpdateDateUtc.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
-            var privacyPolicyLastUpdateDateUtc = DateTime.SpecifyKind(privacyPolicyLastUpdateDateJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+            var privacyPolicyLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
             Assert.Equal(privacyPolicyLastUpdateDateUtc.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
@@ -890,12 +893,12 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
-            var termsOfServiceLastUpdateDateUtc = DateTime.SpecifyKind(termsOfServiceLastUpdateDateJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+            var termsOfServiceLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
             Assert.Equal(termsOfServiceLastUpdateDateUtc.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
-            var privacyPolicyLastUpdateDateUtc = DateTime.SpecifyKind(privacyPolicyLastUpdateDateJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+            var privacyPolicyLastUpdateDateUtc = JstToUtc(termsOfServiceLastUpdateDateJst);
             Assert.Equal(privacyPolicyLastUpdateDateUtc.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
