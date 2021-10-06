@@ -63,7 +63,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
                 );
         }
 
-        private const string FORMAT_TERMS_UPDATE_DATETIME = "yyyy/MM/dd HH:mm";
+        private const string FORMAT_TERMS_UPDATE_DATETIME = "yyyy/MM/dd HH:mm:ss";
 
         private static DateTime CreateTermsUpdateDateTime(DateTime dateTime)
             => DateTime.ParseExact(dateTime.ToString(FORMAT_TERMS_UPDATE_DATETIME), FORMAT_TERMS_UPDATE_DATETIME, null);
@@ -214,8 +214,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
             _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.0.0");
 
             var startDateTime = DateTime.UtcNow;
-            var termsOfServiceLastUpdateDateJst = CreateTermsUpdateDateTime(DateTime.Now.AddMinutes(1));
-            var privacyPolicyLastUpdateDateJst = CreateTermsUpdateDateTime(DateTime.Now.AddMinutes(2));
+            var termsOfServiceLastUpdateDateJst = CreateTermsUpdateDateTime(DateTime.Now.AddMinutes(1) + TIME_DIFFERENCIAL_JST_UTC);
+            var privacyPolicyLastUpdateDateJst = CreateTermsUpdateDateTime(DateTime.Now.AddMinutes(2) + TIME_DIFFERENCIAL_JST_UTC);
 
             var userExposureInfo1DateTime = DateTime.UtcNow;
             var userExposureInfo2DateTime = DateTime.UtcNow.AddDays(1);
