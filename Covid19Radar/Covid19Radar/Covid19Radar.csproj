@@ -151,4 +151,9 @@
     <Folder Include="Services\Migration\" />
     <Folder Include="Repository\" />
   </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Release'">
+    <Compile Remove="ViewModels/Settings/DebugPageViewModel.cs" />
+    <Compile Remove="Views/Settings/DebugPage.xaml.cs" />
+    <EmbeddedResource Remove="Views/Settings/DebugPage.xaml" />
+  </ItemGroup>
 </Project>
