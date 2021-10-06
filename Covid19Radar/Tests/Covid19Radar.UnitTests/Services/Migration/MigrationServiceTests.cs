@@ -732,8 +732,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
-            var termsOfServiceLastUpdateDateUtc = DateTime.SpecifyKind(termsOfServiceLastUpdateDateJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
-            Assert.Equal(termsOfServiceLastUpdateDateUtc.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
+            //var termsOfServiceLastUpdateDateUtc = DateTime.SpecifyKind(termsOfServiceLastUpdateDateJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+            Assert.Equal(termsOfServiceLastUpdateDateJst.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
