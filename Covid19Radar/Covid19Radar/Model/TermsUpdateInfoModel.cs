@@ -17,11 +17,19 @@ namespace Covid19Radar.Model
 
         public class Detail
         {
+            private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
+
             [JsonProperty("text")]
             public string Text { get; set; }
 
+            /// <summary>
+            /// Updated terms of service(or privacy policy) dateTime, that based on Japan Standard Time (UTC+9)
+            /// </summary>
             [JsonProperty("update_date")]
-            public DateTime UpdateDateTime { get; set; }
+            public DateTime UpdateDateTimeJst { get; set; }
+
+            public DateTime UpdateDateTimeUtc
+                => DateTime.SpecifyKind(UpdateDateTimeJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
         }
     }
 }

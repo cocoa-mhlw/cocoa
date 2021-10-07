@@ -79,11 +79,13 @@ namespace Covid19Radar.Services
                 return false;
             }
 
+            var updateDatetime = info.UpdateDateTimeUtc;
+
             DateTime lastUpdateDate = userDataRepository.GetLastUpdateDate(termsType);
-            loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
+            loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, updateDatetimeUtc: {updateDatetime}");
             loggerService.EndMethod();
 
-            return lastUpdateDate < info.UpdateDateTime;
+            return lastUpdateDate < updateDatetime;
         }
     }
 }
