@@ -53,8 +53,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var reAgreeTermsOfServicePageViewModel = CreateViewModel();
             var updateInfo = new TermsUpdateInfoModel
             {
-                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTime = new DateTime(2020, 11, 01) },
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTime = new DateTime(2020, 11, 02) }
+                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
             var param = new NavigationParameters
             {
@@ -71,8 +71,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var reAgreeTermsOfServicePageViewModel = CreateViewModel();
             var updateInfo = new TermsUpdateInfoModel
             {
-                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTime = new DateTime(2020, 11, 01) },
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTime = new DateTime(2020, 11, 02) }
+                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
             var param = new NavigationParameters
             {
@@ -104,8 +104,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var reAgreeTermsOfServicePageViewModel = CreateViewModel();
             var updateInfo = new TermsUpdateInfoModel
             {
-                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTime = new DateTime(2020, 11, 01) },
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTime = new DateTime(2020, 11, 02) }
+                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
             var param = new NavigationParameters
             {
@@ -113,7 +113,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             };
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
-            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTime));
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTimeUtc));
             mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(true);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
@@ -130,8 +130,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var reAgreeTermsOfServicePageViewModel = CreateViewModel();
             var updateInfo = new TermsUpdateInfoModel
             {
-                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTime = new DateTime(2020, 11, 01) },
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTime = new DateTime(2020, 11, 02) }
+                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
             var param = new NavigationParameters
             {
@@ -139,7 +139,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             };
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
-            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTime));
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTimeUtc));
             mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(false);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 

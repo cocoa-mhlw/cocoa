@@ -22,7 +22,7 @@ namespace Covid19Radar.ViewModels
         private readonly IUserDataRepository _userDataRepository;
 
         private TermsUpdateInfoModel UpdateInfo;
-        private DateTime UpdateDateTime { get; set; }
+        private DateTime UpdateDateTimeUtc { get; set; }
         private string _updateText;
         public string UpdateText
         {
@@ -58,7 +58,7 @@ namespace Covid19Radar.ViewModels
         {
             _loggerService.StartMethod();
 
-            _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTime);
+            _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTimeUtc);
             if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
             {
                 var param = new NavigationParameters
@@ -81,7 +81,7 @@ namespace Covid19Radar.ViewModels
 
             base.Initialize(parameters);
             UpdateInfo = (TermsUpdateInfoModel) parameters["updateInfo"];
-            UpdateDateTime = UpdateInfo.TermsOfService.UpdateDateTime;
+            UpdateDateTimeUtc = UpdateInfo.TermsOfService.UpdateDateTimeUtc;
             UpdateText = UpdateInfo.TermsOfService.Text;
 
             _loggerService.EndMethod();
