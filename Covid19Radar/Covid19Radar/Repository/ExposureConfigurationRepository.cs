@@ -61,6 +61,7 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
 
+            await _serverConfigurationRepository.LoadAsync();
             string url = _serverConfigurationRepository.ExposureConfigurationUrl;
 
             string fileName = url.Split('/').Last();
