@@ -8,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Threading;
-using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
@@ -60,7 +59,7 @@ namespace Covid19Radar.Services
                 {
                     var tmpDir = PrepareDir(region);
 
-                    var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync(region);
+                    var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
                     var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);

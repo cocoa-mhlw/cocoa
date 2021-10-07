@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Chino;
@@ -15,7 +16,7 @@ namespace Covid19Radar.Repository
 {
     public interface IExposureConfigurationRepository
     {
-        public Task<ExposureConfiguration> GetExposureConfigurationAsync(string region);
+        public Task<ExposureConfiguration> GetExposureConfigurationAsync();
         public void RemoveExposureConfiguration();
     }
 
@@ -28,7 +29,8 @@ namespace Covid19Radar.Repository
         private readonly ILoggerService _loggerService;
 
         private readonly string _configDir;
-        private readonly string _exposureConfigurationPath;
+
+        private string _exposureConfigurationPath;
 
         public ExposureConfigurationRepository(
             IHttpClientService httpClientService,
@@ -55,9 +57,14 @@ namespace Covid19Radar.Repository
             return configDir;
         }
 
-        public async Task<ExposureConfiguration> GetExposureConfigurationAsync(string region)
+        public async Task<ExposureConfiguration> GetExposureConfigurationAsync()
         {
             _loggerService.StartMethod();
+
+            string url = _serverConfigurationRepository.ExposureConfigurationUrl;
+
+            string fileName = url.Split('/').Last();
+            _exposureConfigurationPath = Path.Combine(_configDir, fileName);
 
             if (File.Exists(_exposureConfigurationPath))
             {
@@ -77,7 +84,6 @@ namespace Covid19Radar.Repository
             }
 
             ExposureConfiguration exposureConfiguration;
-            string url = _serverConfigurationRepository.GetExposureConfigurationUrl(region);
 
             var response = await _client.GetAsync(url);
             if (response.IsSuccessStatusCode)

@@ -83,6 +83,17 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
+                Text="ExposureConfigurationUrl"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding ExposureConfigurationUrl}"
+                Margin="8, 0, 8, 16"
+                Placeholder="ExposureConfiguration url"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
                 Text="ExposureDataCollectServerEndpoint"
                 Margin="8, 0, 0, 8"
                 />

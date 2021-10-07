@@ -52,22 +52,7 @@ namespace Covid19Radar.Repository
 
         public string InquiryLogApiEndpoint { get; set; }
 
-        public string? ExposureConfigurationEndpoint { get; set; }
-
-        string GetExposureConfigurationUrl(string region)
-            => ExposureConfigurationEndpoint?.Replace(ServerConfiguration.PLACEHOLDER_REGION, region);
-
-        public virtual IList<string> ExposureConfigurationUrls
-        {
-            get
-            {
-                return Regions
-                    .Select(region => GetExposureConfigurationUrl(region))
-                    .Where(url => url != null)
-                    .Distinct()
-                    .ToList();
-            }
-        }
+        public string ExposureConfigurationUrl { get; set; }
 
         public string? ExposureDataCollectServerEndpoint { get; set; }
 
@@ -139,10 +124,10 @@ namespace Covid19Radar.Repository
             set => _serverConfiguration.ExposureDataCollectServerEndpoint = value;
         }
 
-        public string ExposureConfigurationEndpoint
+        public string ExposureConfigurationUrl
         {
-            get => _serverConfiguration.ExposureConfigurationEndpoint;
-            set => _serverConfiguration.ExposureConfigurationEndpoint = value;
+            get => _serverConfiguration.ExposureConfigurationUrl;
+            set => _serverConfiguration.ExposureConfigurationUrl = value;
         }
 
         public string DiagnosisKeyListProvideServerEndpoint
@@ -219,10 +204,10 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string ExposureConfigurationEndpoint
+        public string ExposureConfigurationUrl
         {
             // TODO: Replace url for RELEASE.
-            get => Utils.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino/", "configuration.json");
+            get => Utils.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino", "configuration.json");
             set
             {
                 // Do nothing
@@ -280,9 +265,9 @@ namespace Covid19Radar.Repository
                 "list.json"
                 );
 
-        [JsonProperty("exposure_configuration_endpoint")]
-        public string? ExposureConfigurationEndpoint
-            = Utils.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino/test", "configuration_{region}.json");
+        [JsonProperty("exposure_configuration_url")]
+        public string? ExposureConfigurationUrl
+            = Utils.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino", "configuration.json");
 
         [JsonProperty("exposure_data_collect_server_endpoint")]
         public string? ExposureDataCollectServerEndpoint = null;
