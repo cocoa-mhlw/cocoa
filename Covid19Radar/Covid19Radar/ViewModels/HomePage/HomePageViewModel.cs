@@ -139,7 +139,7 @@ namespace Covid19Radar.ViewModels
             loggerService.StartMethod();
 
             var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var userExposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay) ?? new List<UserExposureInfo>();
+            var userExposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
             var count = dailySummaryList.Count() + userExposureInformationList.Count();
 

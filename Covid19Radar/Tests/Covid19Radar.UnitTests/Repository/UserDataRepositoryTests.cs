@@ -69,7 +69,8 @@ namespace Covid19Radar.UnitTests.Repository
 
             var result = unitUnderTest.GetExposureInformationList();
 
-            Assert.Null(result);
+            Assert.NotNull(result);
+            Assert.Empty(result);
         }
 
         [Fact]
@@ -163,7 +164,8 @@ namespace Covid19Radar.UnitTests.Repository
 
             var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
-            Assert.Null(result);
+            Assert.NotNull(result);
+            Assert.Empty(result);
         }
 
         [Theory]

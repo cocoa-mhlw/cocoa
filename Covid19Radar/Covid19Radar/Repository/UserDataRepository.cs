@@ -366,7 +366,7 @@ namespace Covid19Radar.Repository
                 result = JsonConvert.DeserializeObject<List<UserExposureInfo>>(exposureInformationJson);
             }
             _loggerService.EndMethod();
-            return result;
+            return result ?? new List<UserExposureInfo>();
         }
 
         public List<UserExposureInfo> GetExposureInformationList(int offsetDays)
@@ -567,7 +567,7 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
 
-            var informationList = GetExposureInformationList(offsetDays) ?? new List<UserExposureInfo>();
+            var informationList = GetExposureInformationList(offsetDays);
             SetExposureInformation(informationList);
 
             _loggerService.EndMethod();
@@ -576,7 +576,7 @@ namespace Covid19Radar.Repository
         public int GetV1ExposureCount(int offsetDays)
         {
             _loggerService.StartMethod();
-            var exposureInformationList = GetExposureInformationList(offsetDays) ?? new List<UserExposureInfo>();
+            var exposureInformationList = GetExposureInformationList(offsetDays);
             _loggerService.EndMethod();
             return exposureInformationList.Count;
         }
