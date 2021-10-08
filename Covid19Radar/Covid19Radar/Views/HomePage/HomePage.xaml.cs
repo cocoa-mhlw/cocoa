@@ -25,7 +25,6 @@ namespace Covid19Radar.Views
 
         #region Instance Fields
 
-        //private CancellationTokenSource _cancellationTokenSource;
         private CachedImage _homeActiveIconImage;
 
         #endregion
