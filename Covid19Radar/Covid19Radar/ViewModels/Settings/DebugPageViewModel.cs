@@ -58,16 +58,16 @@ namespace Covid19Radar.ViewModels
             // debug info for ./SplashPageViewModel.cs
             var termsUpdateInfo = await _termsUpdateService.GetTermsUpdateInfo() ?? new Model.TermsUpdateInfoModel();
 
-            var termsOfServiceUpdateDateTime = "Not Available";
+            var termsOfServiceUpdateDateTimeUtc = "Not Available";
             if (termsUpdateInfo.TermsOfService != null)
             {
-                termsOfServiceUpdateDateTime = termsUpdateInfo.TermsOfService.UpdateDateTime.ToString();
+                termsOfServiceUpdateDateTimeUtc = termsUpdateInfo.TermsOfService.UpdateDateTimeUtc.ToString();
             }
 
-            var privacyPolicyUpdateDateTime = "Not Available";
+            var privacyPolicyUpdateDateTimeUtc = "Not Available";
             if (termsUpdateInfo.PrivacyPolicy != null)
             {
-                privacyPolicyUpdateDateTime = termsUpdateInfo.PrivacyPolicy.UpdateDateTime.ToString();
+                privacyPolicyUpdateDateTimeUtc = termsUpdateInfo.PrivacyPolicy.UpdateDateTimeUtc.ToString();
             }
 
             var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(async region =>
@@ -95,8 +95,8 @@ namespace Covid19Radar.ViewModels
                 $"Region: {regionString}",
                 $"CdnUrl: {AppSettings.Instance.CdnUrlBase}",
                 $"ApiUrl: {AppSettings.Instance.ApiUrlBase}",
-                $"TermsOfServiceUpdatedDateTime: {termsOfServiceUpdateDateTime}",
-                $"PrivacyPolicyUpdatedDateTime: {privacyPolicyUpdateDateTime}",
+                $"TermsOfServiceUpdatedDateTimeUtc: {termsOfServiceUpdateDateTimeUtc}",
+                $"PrivacyPolicyUpdatedDateTimeUtc: {privacyPolicyUpdateDateTimeUtc}",
                 $"StartDate: {_userDataRepository.GetStartDate().ToLocalTime().ToString("F")}",
                 $"DaysOfUse: {_userDataRepository.GetDaysOfUse()}",
                 $"Legacy-V1 ExposureCount: {_userDataRepository.GetV1ExposureCount(AppConstants.DaysOfExposureInformationToDisplay)}",
