@@ -51,7 +51,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void InitializeTests()
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
-            var updateInfo = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTime = new DateTime(2020, 11, 02) };
+            var updateInfo = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = new DateTime(2020, 11, 02) };
             var param = new NavigationParameters
             {
                 { "updatePrivacyPolicyInfo", updateInfo }
@@ -67,7 +67,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
             var param = new NavigationParameters
             {
-                { "updatePrivacyPolicyInfo", new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTime = DateTime.Now } }
+                { "updatePrivacyPolicyInfo", new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now } }
             };
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
@@ -93,14 +93,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void OnClickReAgreeCommandTests()
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
-            var updateInfo = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTime = DateTime.Now };
+            var updateInfo = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now };
             var param = new NavigationParameters
             {
                 { "updatePrivacyPolicyInfo", updateInfo }
             };
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
-            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTime));
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTimeUtc));
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
             mockNavigationService.Verify(x => x.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage)), Times.Once());

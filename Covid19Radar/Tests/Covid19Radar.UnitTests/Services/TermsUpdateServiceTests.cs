@@ -52,8 +52,8 @@ namespace Covid19Radar.UnitTests.Services
         {
             var info = new TermsUpdateInfoModel
             {
-                TermsOfService = new TermsUpdateInfoModel.Detail { UpdateDateTime = DateTime.UtcNow },
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { UpdateDateTime = DateTime.UtcNow }
+                TermsOfService = new TermsUpdateInfoModel.Detail { UpdateDateTimeJst = DateTime.UtcNow },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { UpdateDateTimeJst = DateTime.UtcNow }
             };
 
             var termsUpdateService = CreateService();
@@ -69,8 +69,8 @@ namespace Covid19Radar.UnitTests.Services
         {
             var info = new TermsUpdateInfoModel
             {
-                TermsOfService = new TermsUpdateInfoModel.Detail { UpdateDateTime = new DateTime(2020, 11, 2) },
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { UpdateDateTime = new DateTime(2020, 11, 2) }
+                TermsOfService = new TermsUpdateInfoModel.Detail { UpdateDateTimeJst = new DateTime(2020, 11, 2) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { UpdateDateTimeJst = new DateTime(2020, 11, 2) }
             };
 
             var termsUpdateService = CreateService();
@@ -87,8 +87,8 @@ namespace Covid19Radar.UnitTests.Services
         {
             var info = new TermsUpdateInfoModel
             {
-                TermsOfService = new TermsUpdateInfoModel.Detail { UpdateDateTime = new DateTime(2020, 11, 2) },
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { UpdateDateTime = new DateTime(2020, 11, 2) }
+                TermsOfService = new TermsUpdateInfoModel.Detail { UpdateDateTimeJst = new DateTime(2020, 11, 2) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { UpdateDateTimeJst = new DateTime(2020, 11, 2) }
             };
 
             var termsUpdateService = CreateService();

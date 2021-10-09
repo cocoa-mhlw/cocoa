@@ -15,6 +15,8 @@ namespace Covid19Radar.Services.Migration
         private const string TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
 
+        private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
+
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
 
@@ -31,30 +33,38 @@ namespace Covid19Radar.Services.Migration
         {
             if (_preferencesService.ContainsKey(START_DATETIME))
             {
-                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch);
+                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch, TimeSpan.Zero);
             }
 
             if (_preferencesService.ContainsKey(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME))
             {
-                MigrateDateTimeToEpoch(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME, PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch);
+                MigrateDateTimeToEpoch(
+                    TERMS_OF_SERVICE_LAST_UPDATE_DATETIME,
+                    PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch,
+                    -TIME_DIFFERENCIAL_JST_UTC
+                    );
             }
 
             if (_preferencesService.ContainsKey(PRIVACY_POLICY_LAST_UPDATE_DATETIME))
             {
-                MigrateDateTimeToEpoch(PRIVACY_POLICY_LAST_UPDATE_DATETIME, PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch);
+                MigrateDateTimeToEpoch(
+                    PRIVACY_POLICY_LAST_UPDATE_DATETIME,
+                    PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch,
+                    -TIME_DIFFERENCIAL_JST_UTC
+                    );
             }
 
             return Task.CompletedTask;
         }
 
-        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey)
+        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeSpan differential)
         {
             string dateTimeStr = _preferencesService.GetValue(dateTimeKey, DateTime.UtcNow.ToString());
 
             DateTime dateTime;
             try
             {
-                dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
+                dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr) + differential, DateTimeKind.Utc);
             }
             catch (FormatException exception)
             {
