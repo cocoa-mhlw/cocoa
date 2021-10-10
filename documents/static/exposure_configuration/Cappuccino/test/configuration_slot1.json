@@ -102,7 +102,7 @@
       "High": 1.0,
       "Standard": 1.0
     },
-    "minimum_risk_score": 0.0,
+    "minimum_window_score": 0.0,
     "report_type_weights": {
       "ConfirmedClinicalDiagnosis": 1.0,
       "ConfirmedTest": 1.0,
