@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Chino;
@@ -15,32 +16,33 @@ namespace Covid19Radar.Repository
 {
     public interface IExposureConfigurationRepository
     {
-        public string ResourceUrl { get; }
         public Task<ExposureConfiguration> GetExposureConfigurationAsync();
         public void RemoveExposureConfiguration();
     }
 
     public class ExposureConfigurationRepository : IExposureConfigurationRepository
     {
-        private const string CONFIG_DIR = "config";
-        private const string EXPOSURE_CONFIGURATION_FILENAME = "exposure_configuration.json";
+        private const string CONFIG_DIR = "exposure_configuration";
 
         private readonly HttpClient _client;
+        private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILoggerService _loggerService;
 
         private readonly string _configDir;
-        private readonly string _exposureConfigurationPath;
+
+        private string _exposureConfigurationPath;
 
         public ExposureConfigurationRepository(
             IHttpClientService httpClientService,
+            IServerConfigurationRepository serverConfigurationRepository,
             ILoggerService loggerService
             )
         {
             _client = httpClientService.Create();
+            _serverConfigurationRepository = serverConfigurationRepository;
             _loggerService = loggerService;
 
             _configDir = PrepareConfigDir();
-            _exposureConfigurationPath = Path.Combine(_configDir, EXPOSURE_CONFIGURATION_FILENAME);
         }
 
         private string PrepareConfigDir()
@@ -55,13 +57,15 @@ namespace Covid19Radar.Repository
             return configDir;
         }
 
-        // TODO: We should make consideration later.
-        public string ResourceUrl
-            => "https://raw.githubusercontent.com/keiji/chino/master/Chino.Common.Tests/files/exposure_configuration.json";
-
         public async Task<ExposureConfiguration> GetExposureConfigurationAsync()
         {
             _loggerService.StartMethod();
+
+            await _serverConfigurationRepository.LoadAsync();
+            string url = _serverConfigurationRepository.ExposureConfigurationUrl;
+
+            string fileName = url.Split('/').Last();
+            _exposureConfigurationPath = Path.Combine(_configDir, fileName);
 
             if (File.Exists(_exposureConfigurationPath))
             {
@@ -81,7 +85,6 @@ namespace Covid19Radar.Repository
             }
 
             ExposureConfiguration exposureConfiguration;
-            string url = ResourceUrl;
 
             var response = await _client.GetAsync(url);
             if (response.IsSuccessStatusCode)

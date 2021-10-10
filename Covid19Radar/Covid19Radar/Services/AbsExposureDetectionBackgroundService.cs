@@ -8,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Threading;
-using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
