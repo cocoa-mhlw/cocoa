@@ -6,6 +6,7 @@
   "diagnosisApiVersion": "v3",
   "supportedRegions": "212458",
   "blobStorageContainerName": "diagnosis_keys",
+  "exposureConfigurationUrlBase": "https://cocoa-mhlw.github.io/cocoa/",
   "androidSafetyNetApiKey": "ANDROID_SAFETYNETKEY",
   "cdnUrlBase": "https://CDN_URL_BASE/",
   "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",

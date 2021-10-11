@@ -63,6 +63,13 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _diagnosisKeyListProvideServerUrls, value); }
         }
 
+        private string _exposureConfigurationUrl;
+        public string ExposureConfigurationUrl
+        {
+            get { return _exposureConfigurationUrl; }
+            set { SetProperty(ref _exposureConfigurationUrl, value); }
+        }
+
         private string _exposureDataCollectServerEndpoint;
         public string ExposureDataCollectServerEndpoint
         {
@@ -96,6 +103,7 @@ namespace Covid19Radar.ViewModels
                 DiagnosisKeyRegisterApiEndpoint = _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint;
                 DiagnosisKeyListProvideServerEndpoint = _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint;
                 InquiryLogApiEndpoint = _serverConfigurationRepository.InquiryLogApiEndpoint;
+                ExposureConfigurationUrl = _serverConfigurationRepository.ExposureConfigurationUrl;
                 ExposureDataCollectServerEndpoint = _serverConfigurationRepository.ExposureDataCollectServerEndpoint;
 
                 UpdateUrls();
@@ -130,6 +138,7 @@ namespace Covid19Radar.ViewModels
             _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint = DiagnosisKeyRegisterApiEndpoint;
             _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint = DiagnosisKeyListProvideServerEndpoint;
             _serverConfigurationRepository.InquiryLogApiEndpoint = InquiryLogApiEndpoint;
+            _serverConfigurationRepository.ExposureConfigurationUrl = ExposureConfigurationUrl;
             _serverConfigurationRepository.ExposureDataCollectServerEndpoint = ExposureDataCollectServerEndpoint;
 
             await _serverConfigurationRepository.SaveAsync();

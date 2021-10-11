@@ -119,6 +119,7 @@ namespace Covid19Radar.ViewModels
                 $"Regions: {serverRegions}",
                 $"DiagnosisKeyRegisterApiEndpoint: {_serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint}",
                 $"DiagnosisKeyListProvideServerEndpoint: {_serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint}",
+                $"ExposureConfigurationUrl: {_serverConfigurationRepository.ExposureConfigurationUrl}",
                 $"ExposureDataCollectServerEndpoint: {_serverConfigurationRepository.ExposureDataCollectServerEndpoint}",
                 $"UserRegisterApiEndpoint: {_serverConfigurationRepository.UserRegisterApiEndpoint}",
                 $"InquiryLogApiUrl: {_serverConfigurationRepository.InquiryLogApiEndpoint}",
