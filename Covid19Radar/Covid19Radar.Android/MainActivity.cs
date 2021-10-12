@@ -14,6 +14,8 @@ using Prism.Common;
 using System.Threading.Tasks;
 
 using FormsApplication = Xamarin.Forms.Application;
+using Covid19Radar.Views;
+using Prism.Navigation;
 
 namespace Covid19Radar.Droid
 {
@@ -42,6 +44,7 @@ namespace Covid19Radar.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         private const string EXTRA_KEY_DESTINATION = "key_destination";
+        private const string QUERY_KEY_PROCESSING_NAME = "pn";
 
         internal static Intent NewIntent(Context context)
         {
@@ -91,20 +94,27 @@ namespace Covid19Radar.Droid
             await NavigateToDestinationFromIntent(Intent);
         }
 
-        private static Destination GetDestinationFromIntent(Intent intent)
-        {
-            int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
-            return (Destination)Enum.ToObject(typeof(Destination), ordinal);
-        }
 
         private async Task NavigateToDestinationFromIntent(Intent intent)
         {
-            if (!intent.HasExtra(EXTRA_KEY_DESTINATION))
+            if (intent.Data != null)
             {
-                return;
+                var processingNumber = intent.Data.GetQueryParameter(QUERY_KEY_PROCESSING_NAME);
+
+                var param = new NavigationParameters();
+                param = NotifyOtherPage.CreateNavigationParams(processingNumber, param);
+                param = SplashPage.CreateNavigationParams(Destination.NotifyOtherPage, param);
+                await AppInstance?.NavigateToSplashAsync(param);
+
             }
-            var destination = GetDestinationFromIntent(intent);
-            await AppInstance?.NavigateToSplashAsync(destination);
+            else if (intent.HasExtra(EXTRA_KEY_DESTINATION))
+            {
+                int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
+                var destination = (Destination)Enum.ToObject(typeof(Destination), ordinal);
+
+                var param = SplashPage.CreateNavigationParams(destination, new NavigationParameters());
+                await AppInstance?.NavigateToSplashAsync(param);
+            }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -112,20 +122,6 @@ namespace Covid19Radar.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-        private void RequestPermission()
-        {
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
-            {
-                string[] permissions = new string[] {
-                    Android.Manifest.Permission.Bluetooth,
-                    Android.Manifest.Permission.BluetoothPrivileged,
-                    Android.Manifest.Permission.BluetoothAdmin,
-                };
-
-                RequestPermissions(permissions, 0);
-            }
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -144,7 +140,7 @@ namespace Covid19Radar.Droid
                 ExposureNotificationApiService.REQUEST_EN_START
                     => new Action<IExposureNotificationEventCallback>(callback =>
                     {
-                        if(isOk)
+                        if (isOk)
                         {
                             callback.OnEnabled();
                         }

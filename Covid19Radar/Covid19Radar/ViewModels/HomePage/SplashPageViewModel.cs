@@ -73,6 +73,11 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to DeepLinkDestination.ContactedNotifyPage");
                     _ = await NavigationService.NavigateAsync(Destination.ContactedNotifyPage.ToPath());
                 }
+                else if (parameters.GetValue<Destination>(SplashPage.DestinationKey) == Destination.NotifyOtherPage)
+                {
+                    _loggerService.Info($"Transition to DeepLinkDestination.NotifyOtherPage");
+                    _ = await NavigationService.NavigateAsync(Destination.NotifyOtherPage.ToPath(), parameters);
+                }
                 else
                 {
                     _loggerService.Info($"Transition to HomePage");
