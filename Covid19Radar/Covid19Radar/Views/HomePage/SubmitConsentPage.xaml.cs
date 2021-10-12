@@ -18,7 +18,7 @@ namespace Covid19Radar.Views
             InitializeComponent();
         }
 
-        public static NavigationParameters CreateNavigationParams(
+        public static NavigationParameters BuildNavigationParams(
             bool isFromAppLinks,
             NavigationParameters param
             )
