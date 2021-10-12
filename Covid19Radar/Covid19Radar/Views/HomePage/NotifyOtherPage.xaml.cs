@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.ViewModels;
+using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,9 +12,20 @@ namespace Covid19Radar.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotifyOtherPage : ContentPage
     {
+        public const string ProcessNumberKey = "processNumber";
+
         public NotifyOtherPage()
         {
             InitializeComponent();
+        }
+
+        public static NavigationParameters CreateNavigationParams(
+            string processNumber,
+            NavigationParameters param
+            )
+        {
+            param.Add(ProcessNumberKey, processNumber);
+            return param;
         }
 
         void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)

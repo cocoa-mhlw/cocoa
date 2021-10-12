@@ -18,107 +18,111 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ScrollView>
-        <Grid Style="{StaticResource DefaultGridLayout}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <StackLayout Grid.Row="0">
-                <Label
+        <StackLayout
+            Padding="15,15,15,20">
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="0, 0, 0, 10"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.NotifyOtherPageDescription1}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="0, 0, 0, 10"
+                Style="{StaticResource DefaultLabelSmall}"
+                Text="{x:Static resources:AppResources.NotifyOtherPageDescription2}" />
+            <StackLayout Orientation="Horizontal" Spacing="30">
+                <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
-                    Margin="0, 0, 0, 10"
-                    Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageDescription1}" />
-                <Label
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CheckedChanged="OnRadioButtonCheckedChanged"
+                    Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
+                    GroupName="CheckSymptoms" />
+                <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
-                    Margin="0, 0, 0, 10"
-                    Style="{StaticResource DefaultLabelSmall}"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageDescription2}" />
-                <StackLayout Orientation="Horizontal" Spacing="30">
-                    <RadioButton
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TextColor="Black"
-                        FontSize="Medium"
-                        CheckedChanged="OnRadioButtonCheckedChanged"
-                        Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
-                        GroupName="CheckSymptoms" />
-                    <RadioButton
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TextColor="Black"
-                        FontSize="Medium"
-                        CheckedChanged="OnRadioButtonCheckedChanged"
-                        Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
-                        GroupName="CheckSymptoms" />
-                </StackLayout>
-                <StackLayout Margin="0, 15, 0, 0"
-                             IsVisible="{Binding IsVisibleWithSymptomsLayout}">
-                    <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
-                           Style="{StaticResource DefaultLabel}"
-                           Text="{x:Static resources:AppResources.NotifyOtherPageWithSymptomsDescription1}" />
-                    <StackLayout Spacing="0"
-                                 Margin="0, 5, 0, 10">
-                        <Frame Padding="0"
-                               BackgroundColor="#CECECE"
-                               CornerRadius="7"
-                               HasShadow="False"
-                               HorizontalOptions="FillAndExpand">
-                            <Frame Margin="3"
-                                   Padding="0"
-                                   BackgroundColor="White"
-                                   CornerRadius="5"
-                                   HasShadow="False">
-                                <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
-                                                           MaximumDate="{x:Static x:DateTime.Now}"
-                                                           BackgroundColor="White"
-                                                           Format="d"
-                                                           Date="{Binding DiagnosisDate}"/>
-                            </Frame>
+                    TextColor="Black"
+                    FontSize="Medium"
+                    CheckedChanged="OnRadioButtonCheckedChanged"
+                    Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
+                    GroupName="CheckSymptoms" />
+            </StackLayout>
+            <StackLayout Margin="0, 15, 0, 0"
+                            IsVisible="{Binding IsVisibleWithSymptomsLayout}">
+                <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.NotifyOtherPageWithSymptomsDescription1}" />
+                <StackLayout Spacing="0"
+                                Margin="0, 5, 0, 10">
+                    <Frame Padding="0"
+                            BackgroundColor="#CECECE"
+                            CornerRadius="7"
+                            HasShadow="False"
+                            HorizontalOptions="FillAndExpand">
+                        <Frame Margin="3"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="5"
+                                HasShadow="False">
+                            <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
+                                                        MaximumDate="{x:Static x:DateTime.Now}"
+                                                        BackgroundColor="White"
+                                                        Format="d"
+                                                        Date="{Binding DiagnosisDate}"/>
                         </Frame>
-                    </StackLayout>
+                    </Frame>
                 </StackLayout>
-                <StackLayout Margin="0, 15, 0, 0"
-                             IsVisible="{Binding IsVisibleNoSymptomsLayout}">
-                    <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
-                           Style="{StaticResource DefaultLabel}"
-                           Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
-                    <StackLayout Spacing="0"
-                                 Margin="0, 5, 0, 10">
-                        <Frame Padding="0"
-                               BackgroundColor="#CECECE"
-                               CornerRadius="7"
-                               HasShadow="False"
-                               HorizontalOptions="FillAndExpand">
-                            <Frame Margin="3"
-                                   Padding="0"
-                                   BackgroundColor="White"
-                                   CornerRadius="5"
-                                   HasShadow="False">
-                                <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
-                                                           MaximumDate="{x:Static x:DateTime.Now}"
-                                                           BackgroundColor="White"
-                                                           Format="d"
-                                                           Date="{Binding DiagnosisDate}"/>
-                            </Frame>
+            </StackLayout>
+            <StackLayout Margin="0, 15, 0, 0"
+                            IsVisible="{Binding IsVisibleNoSymptomsLayout}">
+                <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
+                <StackLayout Spacing="0"
+                                Margin="0, 5, 0, 10">
+                    <Frame Padding="0"
+                            BackgroundColor="#CECECE"
+                            CornerRadius="7"
+                            HasShadow="False"
+                            HorizontalOptions="FillAndExpand">
+                        <Frame Margin="3"
+                                Padding="0"
+                                BackgroundColor="White"
+                                CornerRadius="5"
+                                HasShadow="False">
+                            <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
+                                                        MaximumDate="{x:Static x:DateTime.Now}"
+                                                        BackgroundColor="White"
+                                                        Format="d"
+                                                        Date="{Binding DiagnosisDate}"/>
                         </Frame>
-                    </StackLayout>
+                    </Frame>
                 </StackLayout>
-                <Label
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Margin="0, 15, 0, 0"
-                    Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
-                <Label
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Margin="0, 0, 0, 5"
-                    HorizontalOptions="Start"
-                    Style="{StaticResource DefaultLabelColor}"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <StackLayout Spacing="0">
+            </StackLayout>
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="0, 15, 0, 0"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="0, 0, 0, 5"
+                HorizontalOptions="Start"
+                Style="{StaticResource DefaultLabelColor}"
+                Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
+                </Label.GestureRecognizers>
+            </Label>
+            <StackLayout Spacing="0">
+                <Frame
+                    Padding="0"
+                    BackgroundColor="#CECECE"
+                    CornerRadius="7"
+                    HasShadow="False"
+                    HeightRequest="90"
+                    HorizontalOptions="FillAndExpand">
                     <Frame
+                        Margin="3"
                         Padding="0"
                         BackgroundColor="#CECECE"
                         CornerRadius="7"
@@ -163,18 +167,55 @@
                                 Text="{x:Static resources:AppResources.NotifyOtherPageDescription6}" />
                         </StackLayout>
                     </Frame>
+                </Frame>
+                <Frame
+                    Margin="0,20,0,15"
+                    Padding="10"
+                    BackgroundColor="#FFF3DD"
+                    CornerRadius="10">
+                    <StackLayout Spacing="10">
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            Text="{x:Static resources:AppResources.NotifyOtherPageDescription4}"/>
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.NotifyOtherPageDescription5}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            Text="{x:Static resources:AppResources.NotifyOtherPageDescription6}" />
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout Spacing="10"
+                            IsVisible="{Binding IsConsentLinkVisible}"
+                             >
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Margin="0, 0, 0, 5"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource DefaultLabelColor}"
+                        Text="【重要】同意内容を確認">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=OnShowConsentPageClicked}" />
+                        </Label.GestureRecognizers>
+                    </Label>
                 </StackLayout>
+
             </StackLayout>
-            <Grid Grid.Row="1">
-                <Button
-                    AutomationId="NextButton"
-                    AutomationProperties.IsInAccessibleTree="True"
-                    AutomationProperties.Name="{x:Static resources:AppResources.NotifyOtherPageButton}"
-                    Command="{Binding Path=OnClickRegister}"
-                    IsEnabled="{Binding IsEnabled}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageButton}" />
-            </Grid>
-        </Grid>
+
+            <Button
+                AutomationId="NextButton"
+                AutomationProperties.IsInAccessibleTree="True"
+                AutomationProperties.Name="{x:Static resources:AppResources.NotifyOtherPageButton}"
+                Command="{Binding Path=OnClickRegister}"
+                IsEnabled="{Binding IsEnabled}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.NotifyOtherPageButton}" />
+        </StackLayout>
     </ScrollView>
 </ContentPage>
