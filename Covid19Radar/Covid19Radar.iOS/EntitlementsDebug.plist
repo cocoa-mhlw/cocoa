@@ -8,5 +8,9 @@
 	<true/>
 	<key>com.apple.developer.exposure-notification-test-skip-file-verification</key>
 	<true/>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:www.mhlw.go.jp</string>
+	</array>
 </dict>
 </plist>
