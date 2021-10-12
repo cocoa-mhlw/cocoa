@@ -13,7 +13,7 @@ namespace Covid19Radar.Views
     {
         public const string DestinationKey = "destination";
 
-        public static NavigationParameters CreateNavigationParams(
+        public static NavigationParameters BuildNavigationParams(
             Destination destination,
             NavigationParameters param
             )

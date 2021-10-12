@@ -19,7 +19,7 @@ namespace Covid19Radar.Views
             InitializeComponent();
         }
 
-        public static NavigationParameters CreateNavigationParams(
+        public static NavigationParameters BuildNavigationParams(
             string processNumber,
             NavigationParameters param
             )

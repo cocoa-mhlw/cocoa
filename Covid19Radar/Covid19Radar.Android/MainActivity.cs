@@ -101,10 +101,9 @@ namespace Covid19Radar.Droid
             {
                 var processingNumber = intent.Data.GetQueryParameter(QUERY_KEY_PROCESSING_NAME);
 
-                var param = new NavigationParameters();
-                param = NotifyOtherPage.CreateNavigationParams(processingNumber, param);
-                param = SplashPage.CreateNavigationParams(Destination.NotifyOtherPage, param);
-                await AppInstance?.NavigateToSplashAsync(param);
+                var navigationParameters = new NavigationParameters();
+                navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
 
             }
             else if (intent.HasExtra(EXTRA_KEY_DESTINATION))
@@ -112,16 +111,9 @@ namespace Covid19Radar.Droid
                 int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
                 var destination = (Destination)Enum.ToObject(typeof(Destination), ordinal);
 
-                var param = SplashPage.CreateNavigationParams(destination, new NavigationParameters());
-                await AppInstance?.NavigateToSplashAsync(param);
+                var navigationParameters = new NavigationParameters();
+                await AppInstance?.NavigateToSplashAsync(destination, navigationParameters);
             }
-        }
-
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
