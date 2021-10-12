@@ -15,7 +15,28 @@ using FormsApplication = Xamarin.Forms.Application;
 
 namespace Covid19Radar.Droid
 {
-    [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(
+        Label = "@string/app_name",
+        Icon = "@mipmap/ic_launcher",
+        Theme = "@style/MainTheme.Splash",
+        MainLauncher = true,
+        LaunchMode = LaunchMode.SingleTop,
+        ScreenOrientation = ScreenOrientation.Portrait,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
+        )]
+    [IntentFilter(
+        new[] { Intent.ActionView },
+        AutoVerify = true,
+        Categories = new[]
+        {
+            Intent.CategoryDefault,
+            Intent.CategoryBrowsable
+        },
+        DataScheme = "https",
+        DataHost = "www.mhlw.go.jp",
+        DataPathPattern = "/cocoa/a/.*"
+        )
+    ]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         private const string EXTRA_KEY_DESTINATION = "key_destination";
