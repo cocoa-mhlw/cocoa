@@ -60,7 +60,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>Apple Distribution: Ministry of Health, Labour and Welfare - Japan (55EKK667LP)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>EntitlementsDebug.plist</CodesignEntitlements>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
