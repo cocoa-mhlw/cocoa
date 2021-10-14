@@ -21,6 +21,8 @@ using UserNotifications;
 using Xamarin.Forms;
 
 using FormsApplication = Xamarin.Forms.Application;
+using Prism.Navigation;
+using Covid19Radar.Views;
 
 namespace Covid19Radar.iOS
 {
@@ -87,7 +89,8 @@ namespace Covid19Radar.iOS
 
             _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
             {
-                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage);
+                NavigationParameters navigationParameters = new NavigationParameters();
+                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage, navigationParameters);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 

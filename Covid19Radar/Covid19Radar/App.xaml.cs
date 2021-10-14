@@ -54,7 +54,8 @@ namespace Covid19Radar
 
             LogUnobservedTaskExceptions();
 
-            var result = await NavigateToSplashAsync(Destination.HomePage);
+            var navigationParameters = new NavigationParameters();
+            var result = await NavigateToSplashAsync(Destination.HomePage, navigationParameters);
             if (!result.Success)
             {
                 LoggerService.Info($"Failed transition.");
@@ -72,19 +73,19 @@ namespace Covid19Radar
             LoggerService.EndMethod();
         }
 
-        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination)
+        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, NavigationParameters navigationParameters)
         {
-            var param = SplashPage.CreateNavigationParams(destination);
-            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), param);
+            navigationParameters = SplashPage.BuildNavigationParams(destination, navigationParameters);
+            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParameters);
         }
 
-        public async Task<INavigationResult> NavigateToAsync(Destination destination)
+        public async Task<INavigationResult> NavigateToAsync(Destination destination, NavigationParameters navigationParameters)
         {
             LoggerService.StartMethod();
 
             try
             {
-                return await NavigationService.NavigateAsync(destination.ToPath());
+                return await NavigationService.NavigateAsync(destination.ToPath(), navigationParameters);
             }
             finally
             {
