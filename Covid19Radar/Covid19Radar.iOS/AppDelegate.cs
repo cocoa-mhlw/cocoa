@@ -118,7 +118,7 @@ namespace Covid19Radar.iOS
                 exposureNotificationApiService.UserExplanation = AppResources.LocalNotificationDescription;
 
 #if DEBUG
-                exposureNotificationApiService.IsTest = true;
+                exposureNotificationApiService.IsTest = false;
 #else
                 exposureNotificationApiService.IsTest = false;
 #endif
