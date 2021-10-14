@@ -60,7 +60,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>Apple Distribution: Ministry of Health, Labour and Welfare - Japan (55EKK667LP)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>EntitlementsDebug.plist</CodesignEntitlements>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
@@ -79,7 +79,7 @@
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchInterpreter>
     </MtouchInterpreter>
-    <CodesignProvision>Covid19radar(distribution)</CodesignProvision>
+    <CodesignProvision>Covid19radar(adhoc)</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
