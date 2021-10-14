@@ -121,7 +121,7 @@
     <BuildIpa>True</BuildIpa>
     <CodesignProvision>Covid19radar(adhoc)</CodesignProvision>
     <CodesignKey>Apple Distribution: Ministry of Health, Labour and Welfare - Japan (55EKK667LP)</CodesignKey>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>EntitlementsDebug.plist</CodesignEntitlements>
     <MtouchI18n>cjk</MtouchI18n>
     <LangVersion>latest</LangVersion>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
