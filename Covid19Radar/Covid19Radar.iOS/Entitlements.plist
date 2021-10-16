@@ -4,5 +4,9 @@
 <dict>
 	<key>com.apple.developer.exposure-notification</key>
 	<true/>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:APPLINKS_DOMAIN</string>
+	</array>
 </dict>
 </plist>

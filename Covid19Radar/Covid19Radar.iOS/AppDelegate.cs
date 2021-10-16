@@ -19,8 +19,11 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
+using System.Linq;
 
 using FormsApplication = Xamarin.Forms.Application;
+using Prism.Navigation;
+using Covid19Radar.Views;
 
 namespace Covid19Radar.iOS
 {
@@ -30,6 +33,8 @@ namespace Covid19Radar.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IExposureNotificationHandler
     {
+        private const string QUERY_KEY_PROCESSING_NAME = "pn";
+
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationClient
             = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
 
@@ -87,7 +92,8 @@ namespace Covid19Radar.iOS
 
             _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
             {
-                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage);
+                NavigationParameters navigationParameters = new NavigationParameters();
+                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage, navigationParameters);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 
@@ -107,7 +113,35 @@ namespace Covid19Radar.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+        {
+            if (!(userActivity.ActivityType == NSUserActivityType.BrowsingWeb && userActivity.WebPageUrl != null))
+            {
+                return false;
+            }
+
+            var urlComponents = new NSUrlComponents(userActivity.WebPageUrl, true);
+            NavigateUniversalLinks(urlComponents);
+            return true;
+        }
+
+        private void NavigateUniversalLinks(NSUrlComponents urlComponents)
+        {
+            if (urlComponents.Path.StartsWith("/cocoa/a"))
+            {
+                var processingNumber = urlComponents?.QueryItems?.Where(item => item.Name == QUERY_KEY_PROCESSING_NAME).First().Value;
+                var navigationParameters = new NavigationParameters();
+                if (processingNumber != null)
+                {
+                    navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                }
+
+                InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
+            }
+        }
+
         public AbsExposureNotificationClient GetEnClient() => _exposureNotificationClient.Value;
+
 
         private void InitializeExposureNotificationClient()
         {
