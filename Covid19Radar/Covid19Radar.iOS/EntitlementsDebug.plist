@@ -10,7 +10,7 @@
 	<true/>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:www.mhlw.go.jp?mode=developer</string>
+		<string>applinks:APPLINKS_DOMAIN</string>
 	</array>
 </dict>
 </plist>
