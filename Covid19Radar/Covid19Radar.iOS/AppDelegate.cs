@@ -105,7 +105,7 @@ namespace Covid19Radar.iOS
             try
             {
                 var urlComponents = new NSUrlComponents(url, true);
-                if (urlComponents.Path.StartsWith("/cocoa/a/"))
+                if (urlComponents.Path?.StartsWith("/cocoa/a/") == true)
                 {
                     var processingNumber = urlComponents.QueryItems?.FirstOrDefault(item => item.Name == QUERY_KEY_PROCESSING_NAME)?.Value;
                     var navigationParameters = new NavigationParameters();
