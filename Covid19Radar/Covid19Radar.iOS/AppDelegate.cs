@@ -113,6 +113,25 @@ namespace Covid19Radar.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        public AbsExposureNotificationClient GetEnClient() => _exposureNotificationClient.Value;
+
+
+        private void InitializeExposureNotificationClient()
+        {
+            AbsExposureNotificationClient.Handler = this;
+
+            if (GetEnClient() is ExposureNotificationApiService exposureNotificationApiService)
+            {
+                exposureNotificationApiService.UserExplanation = AppResources.LocalNotificationDescription;
+
+#if DEBUG
+                exposureNotificationApiService.IsTest = true;
+#else
+                exposureNotificationApiService.IsTest = false;
+#endif
+            }
+        }
+
         public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
         {
             if (userActivity.ActivityType == NSUserActivityType.BrowsingWeb && userActivity.WebPageUrl != null)
@@ -140,25 +159,6 @@ namespace Covid19Radar.iOS
                 }
 
                 InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
-            }
-        }
-
-        public AbsExposureNotificationClient GetEnClient() => _exposureNotificationClient.Value;
-
-
-        private void InitializeExposureNotificationClient()
-        {
-            AbsExposureNotificationClient.Handler = this;
-
-            if (GetEnClient() is ExposureNotificationApiService exposureNotificationApiService)
-            {
-                exposureNotificationApiService.UserExplanation = AppResources.LocalNotificationDescription;
-
-#if DEBUG
-                exposureNotificationApiService.IsTest = true;
-#else
-                exposureNotificationApiService.IsTest = false;
-#endif
             }
         }
 
