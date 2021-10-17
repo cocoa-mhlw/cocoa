@@ -115,7 +115,6 @@ namespace Covid19Radar.iOS
 
         public AbsExposureNotificationClient GetEnClient() => _exposureNotificationClient.Value;
 
-
         private void InitializeExposureNotificationClient()
         {
             AbsExposureNotificationClient.Handler = this;
@@ -141,26 +140,38 @@ namespace Covid19Radar.iOS
             }
             else
             {
-                _loggerService.Value.Info($"Failed to ContinueUserActivity.");
-                return false;
+                _loggerService.Value.Info($"Failed to handle ContinueUserActivity.");
+                return base.ContinueUserActivity(application, userActivity, completionHandler);
             }
         }
 
         private void NavigateUniversalLinks(NSUrl url)
         {
-            var components = url.PathComponents;
-            if (3 <= components.Length && components[0] == "/" && components[1] == "cocoa" && components[2] == "a")
+            try
             {
-                var urlComponents = new NSUrlComponents(url, true);
-                var processingNumber = urlComponents.QueryItems?.FirstOrDefault(item => item.Name == QUERY_KEY_PROCESSING_NAME)?.Value;
-                var navigationParameters = new NavigationParameters();
-                if (!String.IsNullOrEmpty(processingNumber))
+                if (IsValidPathForNotifyOtherPage(url.PathComponents))
                 {
-                    navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
-                }
+                    var urlComponents = new NSUrlComponents(url, true);
+                    var processingNumber = urlComponents.QueryItems?.FirstOrDefault(item => item.Name == QUERY_KEY_PROCESSING_NAME)?.Value;
+                    var navigationParameters = new NavigationParameters();
 
-                InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
+                    if (!String.IsNullOrEmpty(processingNumber))
+                    {
+                        navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                    }
+
+                    InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
+                }
             }
+            catch(Exception e)
+            {
+                _loggerService.Value.Exception("Failed to NavigateUniversalLinks", e);
+            }
+        }
+
+        private bool IsValidPathForNotifyOtherPage(string[] pathComponents)
+        {
+            return (3 <= pathComponents.Length && pathComponents[0] == "/" && pathComponents[1] == "cocoa" && pathComponents[2] == "a");
         }
 
         public override void OnActivated(UIApplication uiApplication)
