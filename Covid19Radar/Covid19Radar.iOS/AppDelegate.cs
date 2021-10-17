@@ -90,13 +90,7 @@ namespace Covid19Radar.iOS
         {
             if (userActivity.ActivityType == NSUserActivityType.BrowsingWeb && userActivity.WebPageUrl != null)
             {
-                var urlComponents = new NSUrlComponents(userActivity.WebPageUrl, true);
-                if (urlComponents == null)
-                {
-                    return false;
-                }
-
-                NavigateUniversalLinks(urlComponents);
+                NavigateUniversalLinks(userActivity.WebPageUrl);
                 return true;
             }
             else
@@ -105,10 +99,12 @@ namespace Covid19Radar.iOS
             }
         }
 
-        private void NavigateUniversalLinks(NSUrlComponents urlComponents)
+        private void NavigateUniversalLinks(NSUrl url)
         {
-            if (urlComponents.Path.StartsWith("/cocoa/a"))
+            var components = url.PathComponents;
+            if (3 <= components.Length && components[0] == "/" && components[1] == "cocoa" && components[2] == "a")
             {
+                var urlComponents = new NSUrlComponents(url, true);
                 var processingNumber = urlComponents?.QueryItems?.Where(item => item.Name == QUERY_KEY_PROCESSING_NAME).First().Value;
                 var navigationParameters = new NavigationParameters();
                 if (!String.IsNullOrEmpty(processingNumber))
