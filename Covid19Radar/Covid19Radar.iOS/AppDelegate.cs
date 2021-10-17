@@ -141,6 +141,7 @@ namespace Covid19Radar.iOS
             }
             else
             {
+                _loggerService.Value.Info($"Failed to ContinueUserActivity.");
                 return false;
             }
         }
