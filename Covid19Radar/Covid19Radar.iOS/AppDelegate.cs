@@ -105,7 +105,7 @@ namespace Covid19Radar.iOS
             if (3 <= components.Length && components[0] == "/" && components[1] == "cocoa" && components[2] == "a")
             {
                 var urlComponents = new NSUrlComponents(url, true);
-                var processingNumber = urlComponents?.QueryItems?.Where(item => item.Name == QUERY_KEY_PROCESSING_NAME).First().Value;
+                var processingNumber = urlComponents.QueryItems?.FirstOrDefault(item => item.Name == QUERY_KEY_PROCESSING_NAME)?.Value;
                 var navigationParameters = new NavigationParameters();
                 if (!String.IsNullOrEmpty(processingNumber))
                 {
