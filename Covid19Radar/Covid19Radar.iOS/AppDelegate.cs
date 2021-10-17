@@ -88,14 +88,21 @@ namespace Covid19Radar.iOS
 
         public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
         {
-            if (!(userActivity.ActivityType == NSUserActivityType.BrowsingWeb && userActivity.WebPageUrl != null))
+            if (userActivity.ActivityType == NSUserActivityType.BrowsingWeb && userActivity.WebPageUrl != null)
+            {
+                var urlComponents = new NSUrlComponents(userActivity.WebPageUrl, true);
+                if (urlComponents == null)
+                {
+                    return false;
+                }
+
+                NavigateUniversalLinks(urlComponents);
+                return true;
+            }
+            else
             {
                 return false;
             }
-
-            var urlComponents = new NSUrlComponents(userActivity.WebPageUrl, true);
-            NavigateUniversalLinks(urlComponents);
-            return true;
         }
 
         private void NavigateUniversalLinks(NSUrlComponents urlComponents)
@@ -104,7 +111,7 @@ namespace Covid19Radar.iOS
             {
                 var processingNumber = urlComponents?.QueryItems?.Where(item => item.Name == QUERY_KEY_PROCESSING_NAME).First().Value;
                 var navigationParameters = new NavigationParameters();
-                if (processingNumber != null)
+                if (!String.IsNullOrEmpty(processingNumber))
                 {
                     navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
                 }
