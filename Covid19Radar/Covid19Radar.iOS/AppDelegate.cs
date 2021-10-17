@@ -149,9 +149,9 @@ namespace Covid19Radar.iOS
         {
             try
             {
-                if (IsValidPathForNotifyOtherPage(url.PathComponents))
+                var urlComponents = new NSUrlComponents(url, true);
+                if (urlComponents.Path.StartsWith("/cocoa/a/"))
                 {
-                    var urlComponents = new NSUrlComponents(url, true);
                     var processingNumber = urlComponents.QueryItems?.FirstOrDefault(item => item.Name == QUERY_KEY_PROCESSING_NAME)?.Value;
                     var navigationParameters = new NavigationParameters();
 
@@ -167,11 +167,6 @@ namespace Covid19Radar.iOS
             {
                 _loggerService.Value.Exception("Failed to NavigateUniversalLinks", e);
             }
-        }
-
-        private bool IsValidPathForNotifyOtherPage(string[] pathComponents)
-        {
-            return (3 <= pathComponents.Length && pathComponents[0] == "/" && pathComponents[1] == "cocoa" && pathComponents[2] == "a");
         }
 
         public override void OnActivated(UIApplication uiApplication)
