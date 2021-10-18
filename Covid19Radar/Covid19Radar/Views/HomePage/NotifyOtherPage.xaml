@@ -145,28 +145,6 @@
                                 Text="{Binding DiagnosisUid}" />
                         </Frame>
                     </Frame>
-                    <Frame
-                        Margin="0,20,0,15"
-                        Padding="10"
-                        BackgroundColor="#FFF3DD"
-                        CornerRadius="10">
-                        <StackLayout Spacing="10">
-                            <Label
-                                AutomationProperties.IsInAccessibleTree="True"
-                                FontSize="Medium"
-                                FontAttributes="Bold"
-                                TextColor="Black"
-                                Text="{x:Static resources:AppResources.NotifyOtherPageDescription4}"/>
-                            <Label
-                                AutomationProperties.IsInAccessibleTree="True"
-                                Style="{StaticResource DefaultLabel}"
-                                Text="{x:Static resources:AppResources.NotifyOtherPageDescription5}" />
-                            <Label
-                                AutomationProperties.IsInAccessibleTree="True"
-                                Style="{StaticResource DefaultLabelSmall}"
-                                Text="{x:Static resources:AppResources.NotifyOtherPageDescription6}" />
-                        </StackLayout>
-                    </Frame>
                 </Frame>
                 <Frame
                     Margin="0,20,0,15"
