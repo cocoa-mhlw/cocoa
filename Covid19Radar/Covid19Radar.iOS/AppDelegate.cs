@@ -19,6 +19,8 @@ using System.Linq;
 using FormsApplication = Xamarin.Forms.Application;
 using Prism.Navigation;
 using Covid19Radar.Views;
+using System;
+using CommonServiceLocator;
 
 namespace Covid19Radar.iOS
 {
@@ -29,6 +31,9 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         private const string QUERY_KEY_PROCESSING_NAME = "pn";
+
+        private Lazy<ILoggerService> _loggerService
+                    = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
         private App? AppInstance
         {
