@@ -12,4 +12,18 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<queries>
+		<intent>
+			<action android:name="android.intent.action.SENDTO" />
+			<data android:scheme="mailto" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="mailto" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.SEND" />
+			<data android:scheme="mailto" />
+		</intent>
+	</queries>
 </manifest>
