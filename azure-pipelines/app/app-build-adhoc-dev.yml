@@ -10,7 +10,7 @@ trigger:
     include:
     - Covid19Radar
     - Covid19Radar.sln
-    - azure-pipelines
+    - azure-pipelines/app
 
 variables:
 - group: app-settings-dev
