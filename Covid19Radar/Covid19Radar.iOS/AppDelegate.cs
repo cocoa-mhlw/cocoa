@@ -30,8 +30,6 @@ namespace Covid19Radar.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-        private const string QUERY_KEY_PROCESSING_NAME = "pn";
-
         private Lazy<ILoggerService> _loggerService
                     = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
@@ -112,10 +110,13 @@ namespace Covid19Radar.iOS
                 var urlComponents = new NSUrlComponents(url, true);
                 if (urlComponents.Path?.StartsWith("/cocoa/a/") == true)
                 {
-                    var processingNumber = urlComponents.QueryItems?.FirstOrDefault(item => item.Name == QUERY_KEY_PROCESSING_NAME)?.Value;
+                    var processingNumber = urlComponents
+                        .QueryItems?
+                        .FirstOrDefault(item => item.Name == AppConstants.LinkQueryKeyProcessingNumber)?
+                        .Value;
                     var navigationParameters = new NavigationParameters();
 
-                    if (!String.IsNullOrEmpty(processingNumber))
+                    if (!string.IsNullOrEmpty(processingNumber))
                     {
                         navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
                     }

@@ -5,7 +5,6 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
 using System;
@@ -14,6 +13,7 @@ using System.Threading.Tasks;
 using FormsApplication = Xamarin.Forms.Application;
 using Covid19Radar.Views;
 using Prism.Navigation;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.Droid
 {
@@ -42,7 +42,6 @@ namespace Covid19Radar.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         private const string EXTRA_KEY_DESTINATION = "key_destination";
-        private const string QUERY_KEY_PROCESSING_NAME = "pn";
 
         internal static Intent NewIntent(Context context)
         {
@@ -97,7 +96,7 @@ namespace Covid19Radar.Droid
         {
             if (intent.Data != null)
             {
-                var processingNumber = intent.Data.GetQueryParameter(QUERY_KEY_PROCESSING_NAME);
+                var processingNumber = intent.Data.GetQueryParameter(AppConstants.LinkQueryKeyProcessingNumber);
 
                 var navigationParameters = new NavigationParameters();
                 navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
