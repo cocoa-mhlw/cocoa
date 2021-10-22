@@ -16,6 +16,6 @@ namespace Covid19Radar.Background.Services
 
         Task DeleteAsync(TemporaryExposureKeyExportModel model);
 
-        Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models);
+        Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models, string[] supportRegions);
     }
 }

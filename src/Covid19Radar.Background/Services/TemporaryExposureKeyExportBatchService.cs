@@ -98,7 +98,7 @@ namespace Covid19Radar.Background.Services
 
                 // Write Export Files json
                 var models = await TekExportRepository.GetKeysAsync(0);
-                await BlobService.WriteFilesJsonAsync(models);
+                await BlobService.WriteFilesJsonAsync(models, Regions);
             }
             catch (Exception ex)
             {
