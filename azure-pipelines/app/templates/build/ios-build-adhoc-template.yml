@@ -28,11 +28,17 @@ steps:
     signingIdentity: 'Apple Distribution'
     signingProvisioningProfileID: '2344b82c-8860-4a27-9986-648b58dccbd4'
 
+- script: |
+    mkdir -p symbols
+    find . -type d -name *.dSYM -exec cp -v -R {} $(System.DefaultWorkingDirectory)/symbols
+  displayName: Copy symbol files to staging
+
 - task: CopyFiles@2
   displayName: 'Copy Files to: Build.ArtifactStagingDirectory'
   inputs:
-    SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/AppStore
-    Contents: '*.ipa'
+    Contents: |
+      '**/Covid19Radar.iOS/bin/iPhone/AppStore/**/*.ipa'
+      '**/symbols/**/*'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - script: |
@@ -43,6 +49,6 @@ steps:
   displayName: 'Change archive name'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: archives_v$(APP_VERSION)_adhoc_$(Environment)'
+  displayName: 'Publish IPA and symbols'
   inputs:
     ArtifactName: 'archives_v$(APP_VERSION)_adhoc_$(Environment)'
