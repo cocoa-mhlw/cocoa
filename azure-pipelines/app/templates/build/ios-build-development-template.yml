@@ -33,7 +33,7 @@ steps:
   inputs:
     SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/Debug
     Contents: '*.ipa'
-  TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - script: |
     mkdir -p symbols
