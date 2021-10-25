@@ -37,8 +37,8 @@ steps:
   displayName: 'Copy Files to: Build.ArtifactStagingDirectory'
   inputs:
     Contents: |
-      '**/Covid19Radar.iOS/bin/iPhone/Debug/**/*.ipa'
-      '**/symbols/**/*'
+      **/*.ipa/**/*
+      **/symbols/**/*
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - script: |
