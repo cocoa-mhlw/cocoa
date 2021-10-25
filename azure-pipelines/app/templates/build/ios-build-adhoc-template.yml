@@ -30,7 +30,7 @@ steps:
 
 - script: |
     mkdir -p symbols
-    find . -type d -name *.dSYM -exec cp -v -R {} $(System.DefaultWorkingDirectory)/symbols
+    find . -type d -name '*.dSYM' | xargs -J % cp -v -R % $(System.DefaultWorkingDirectory)/symbols
   displayName: Copy symbol files to staging
 
 - task: CopyFiles@2
