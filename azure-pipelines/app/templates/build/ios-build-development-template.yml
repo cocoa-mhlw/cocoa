@@ -8,7 +8,7 @@ steps:
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_development_20221007.mobileprovision'
+    provProfileSecureFile: 'cocoa_development_20221025.mobileprovision'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -26,7 +26,7 @@ steps:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
     configuration: Debug
     signingIdentity: 'Apple Development'
-    signingProvisioningProfileID: 'c869a415-fe6c-42ff-8d5a-3933d0d46080'
+    signingProvisioningProfileID: '985fdb07-e257-414c-acd9-fc282139dd4b'
 
 - script: |
     mkdir -p symbols
