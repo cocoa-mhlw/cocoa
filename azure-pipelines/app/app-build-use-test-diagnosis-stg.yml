@@ -17,9 +17,6 @@ jobs:
 - job: build_ios
   pool:
     vmImage: '$(VmImage)'
-    demands:
-    - xcode
-    - Xamarin.iOS
   variables:
   - group: ios-signing-development
   - group: ios-build-environment

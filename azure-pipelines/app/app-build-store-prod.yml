@@ -17,9 +17,6 @@ jobs:
 - job: build_ios
   pool:
     vmImage: '$(VmImage)'
-    demands:
-    - xcode
-    - Xamarin.iOS
   variables:
   - group: ios-signing-distribution
   - group: ios-build-environment
@@ -31,10 +28,6 @@ jobs:
 - job: build_android
   pool:
     vmImage: '$(VmImage)'
-    demands:
-    - MSBuild
-    - Xamarin.Android
-    - JDK
   variables:
   - group: android-signing-prod
   - group: android-build-environment
