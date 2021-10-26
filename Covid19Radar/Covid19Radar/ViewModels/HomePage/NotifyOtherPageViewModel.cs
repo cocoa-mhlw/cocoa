@@ -40,11 +40,45 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isConsentLinkVisible, value); }
         }
 
+        private string _processNumberDescription = AppResources.NotifyOtherPageDescription3;
+        public string ProcessNumberDescription
+        {
+            get { return _processNumberDescription; }
+            set { SetProperty(ref _processNumberDescription, value); }
+        }
+
+        private bool _isHowToObtainProcessNumberVisible = true;
+        public bool IsHowToObtainProcessNumberVisible
+        {
+            get { return _isHowToObtainProcessNumberVisible; }
+            set { SetProperty(ref _isHowToObtainProcessNumberVisible, value); }
+        }
+
         private bool _isProcessNumberEnabled;
         public bool IsProcessNumberEnabled
         {
             get { return _isProcessNumberEnabled; }
             set { SetProperty(ref _isProcessNumberEnabled, value); }
+        }
+
+        private string _placeholderProcessNumber = AppResources.NotifyOtherPageLabel2;
+        public string PlaceholderProcessNumber
+        {
+            get { return _placeholderProcessNumber; }
+            set { SetProperty(ref _placeholderProcessNumber, value); }
+        }
+
+        private string _inqueryTelephoneNumber = "0120-123-456";
+        public string InqueryTelephoneNumber
+        {
+            get { return _inqueryTelephoneNumber; }
+        }
+
+        private bool _isInqueryTelephoneNumberVisible;
+        public bool IsInqueryTelephoneNumberVisible
+        {
+            get { return _isInqueryTelephoneNumberVisible; }
+            set { SetProperty(ref _isInqueryTelephoneNumberVisible, value); }
         }
 
         private bool _isEnabled;
