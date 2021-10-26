@@ -31,7 +31,7 @@ namespace Covid19Radar.ViewModels
             set
             {
                 SetProperty(ref _diagnosisUid, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
         private bool _isConsentLinkVisible;
@@ -82,11 +82,18 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isInqueryTelephoneNumberVisible, value); }
         }
 
-        private bool _isEnabled;
-        public bool IsEnabled
+        private string _nextButtonLabel = AppResources.NotifyOtherPageButton;
+        public string NextButtonLabel
         {
-            get { return _isEnabled; }
-            set { SetProperty(ref _isEnabled, value); }
+            get { return _nextButtonLabel; }
+            set { SetProperty(ref _nextButtonLabel, value); }
+        }
+
+        private bool _isNextButtonEnabled;
+        public bool IsNextButtonEnabled
+        {
+            get { return _isNextButtonEnabled; }
+            set { SetProperty(ref _isNextButtonEnabled, value); }
         }
         private bool _isVisibleWithSymptomsLayout;
         public bool IsVisibleWithSymptomsLayout
@@ -95,7 +102,7 @@ namespace Covid19Radar.ViewModels
             set
             {
                 SetProperty(ref _isVisibleWithSymptomsLayout, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
         private bool _isVisibleNoSymptomsLayout;
@@ -105,7 +112,7 @@ namespace Covid19Radar.ViewModels
             set
             {
                 SetProperty(ref _isVisibleNoSymptomsLayout, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
         private DateTime _diagnosisDate;
@@ -145,6 +152,7 @@ namespace Covid19Radar.ViewModels
                 PlaceholderProcessNumber = "8桁の処理番号";
                 IsConsentLinkVisible = true;
                 IsInqueryTelephoneNumberVisible = true;
+                NextButtonLabel = "同意して登録する";
             }
         }
 
