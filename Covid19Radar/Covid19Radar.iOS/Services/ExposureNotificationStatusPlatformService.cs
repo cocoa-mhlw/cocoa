@@ -6,7 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using ExposureNotifications;
+using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.iOS.Services
 {
@@ -21,62 +21,22 @@ namespace Covid19Radar.iOS.Services
 
         public async Task<bool> GetExposureNotificationEnabledAsync()
         {
-            var manager = await GetManager();
-            var status = manager.ExposureNotificationStatus;
+            var status = await ExposureNotification.GetStatusAsync();
             _loggerService.Info($"status: {status}");
-            return status == ENStatus.Active;
+            return status == Status.Active;
         }
 
         public async Task<bool> GetBluetoothEnabledAsync()
         {
-            var manager = await GetManager();
-            var status = manager.ExposureNotificationStatus;
+            var status = await ExposureNotification.GetStatusAsync();
             _loggerService.Info($"status: {status}");
-            return status != ENStatus.BluetoothOff;
+            return status != Status.BluetoothOff;
         }
 
         public Task<bool> GetGpsEnabledAsync()
         {
             // Not used on iOS.
             throw new PlatformNotSupportedException();
-        }
-
-        private ENManager _manager = null;
-        private bool _managerActivated = false;
-
-        private Task<ENManager> GetManager()
-        {
-            var taskCompletionSource = new TaskCompletionSource<ENManager>();
-            lock (this)
-            {
-                if (_manager == null)
-                {
-                    _manager = new ENManager();
-                }
-                if (!_managerActivated)
-                {
-                    _manager.Activate((error) => {
-                        if (error == null || error.Code == (long)ENErrorCode.Ok)
-                        {
-                            _loggerService.Info("activated");
-                            _managerActivated = true;
-                            taskCompletionSource.SetResult(_manager);
-                        }
-                        else
-                        {
-                            _loggerService.Error($"error: {error}");
-                            _manager = null;
-                            _managerActivated = false;
-                            taskCompletionSource.SetException(new Exception("Failed activate of ENManager."));
-                        }
-                    });
-                }
-                else
-                {
-                    taskCompletionSource.SetResult(_manager);
-                }
-            }
-            return taskCompletionSource.Task;
         }
     }
 }

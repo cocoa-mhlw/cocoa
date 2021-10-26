@@ -129,6 +129,8 @@ namespace Covid19Radar.Services
             }
             finally
             {
+                _loggerService.Info($"ExposureNotificationStatus: {ExposureNotificationStatus}");
+                _loggerService.Info($"ExposureNotificationStoppedReason: {ExposureNotificationStoppedReason}");
                 _loggerService.EndMethod();
             }
         }
