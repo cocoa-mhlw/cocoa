@@ -183,11 +183,11 @@
             <Button
                 AutomationId="NextButton"
                 AutomationProperties.IsInAccessibleTree="True"
-                AutomationProperties.Name="{x:Static resources:AppResources.NotifyOtherPageButton}"
+                AutomationProperties.Name="{Binding NextButtonLabel}"
                 Command="{Binding Path=OnClickRegister}"
-                IsEnabled="{Binding IsEnabled}"
+                IsEnabled="{Binding IsNextButtonEnabled}"
                 Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.NotifyOtherPageButton}" />
+                Text="{Binding NextButtonLabel}" />
 
             <Frame
                 Margin="0,25,0,15"
