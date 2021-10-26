@@ -55,7 +55,7 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isHowToObtainProcessNumberVisible, value); }
         }
 
-        private bool _isProcessNumberEnabled;
+        private bool _isProcessNumberEnabled = true;
         public bool IsProcessNumberEnabled
         {
             get { return _isProcessNumberEnabled; }

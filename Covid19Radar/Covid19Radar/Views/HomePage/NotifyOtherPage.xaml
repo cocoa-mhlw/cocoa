@@ -170,7 +170,6 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Margin="0, 0, 0, 5"
-                        HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultLabelColor}"
                         Text="【重要】同意内容を確認">
                         <Label.GestureRecognizers>
@@ -206,7 +205,6 @@
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabelColor}"
                         FontSize="Large"
-                        HorizontalTextAlignment="Center"
                         TextDecorations="Underline"
                         Text="{Binding InqueryTelephoneNumber}">
                         <Label.GestureRecognizers>
@@ -216,7 +214,6 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabelSmall}"
-                        HorizontalTextAlignment="Center"
                         Text="（受付：毎日 9:00 - 17:00）" />
                 </StackLayout>
             </Frame>
