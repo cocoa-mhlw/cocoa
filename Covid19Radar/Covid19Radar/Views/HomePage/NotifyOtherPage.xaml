@@ -102,19 +102,22 @@
                 AutomationProperties.IsInAccessibleTree="True"
                 Margin="0, 15, 0, 0"
                 Style="{StaticResource DefaultLabel}"
-                Text="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
+                Text="{Binding ProcessNumberDescription}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                Margin="0, 0, 0, 5"
+                Margin="0, 0, 0, 0"
                 HorizontalOptions="Start"
                 Style="{StaticResource DefaultLabelColor}"
-                Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
+                Text="{x:Static resources:AppResources.NotifyOtherPageLabel}"
+                IsVisible="{Binding IsHowToObtainProcessNumberVisible}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
                 </Label.GestureRecognizers>
             </Label>
-            <StackLayout Spacing="0">
+            <StackLayout Spacing="0"
+                Margin="0, 5, 0, 0">
                 <Frame
+                    Margin="3"
                     Padding="0"
                     BackgroundColor="#CECECE"
                     CornerRadius="7"
@@ -124,28 +127,20 @@
                     <Frame
                         Margin="3"
                         Padding="0"
-                        BackgroundColor="#CECECE"
-                        CornerRadius="7"
-                        HasShadow="False"
-                        HeightRequest="90"
-                        HorizontalOptions="FillAndExpand">
-                        <Frame
-                            Margin="3"
-                            Padding="0"
-                            BackgroundColor="White"
-                            CornerRadius="5"
-                            HasShadow="False">
-                            <Entry
-                                AutomationProperties.IsInAccessibleTree="True"
-                                CharacterSpacing="5"
-                                Keyboard="Numeric"
-                                MaxLength="{x:Static common:AppConstants.MaxDiagnosisUidCount}"
-                                Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"
-                                Style="{StaticResource DefaultEntry}"
-                                Text="{Binding DiagnosisUid}" />
+                        BackgroundColor="White"
+                        CornerRadius="5"
+                        HasShadow="False">
+                        <Entry
+                            AutomationProperties.IsInAccessibleTree="True"
+                            CharacterSpacing="5"
+                            Keyboard="Numeric"
+                            IsEnabled="{Binding IsProcessNumberEnabled}"
+                            MaxLength="{x:Static common:AppConstants.MaxDiagnosisUidCount}"
+                            Placeholder="{Binding PlaceholderProcessNumber}"
+                            Style="{StaticResource DefaultEntry}"
+                            Text="{Binding DiagnosisUid}" />
                         </Frame>
                     </Frame>
-                </Frame>
                 <Frame
                     Margin="0,20,0,15"
                     Padding="10"
@@ -194,6 +189,35 @@
                 IsEnabled="{Binding IsEnabled}"
                 Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageButton}" />
+
+            <Frame
+                Margin="0,25,0,15"
+                Padding="10"
+                CornerRadius="10"
+                IsVisible="{Binding IsInqueryTelephoneNumberVisible}">
+                <StackLayout Spacing="10">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        Text="登録に関するお問い合わせ"/>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelColor}"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding InqueryTelephoneNumber}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=OnInqueryTelephoneNumberClicked}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="（受付：毎日 9:00 - 17:00）" />
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ScrollView>
 </ContentPage>
