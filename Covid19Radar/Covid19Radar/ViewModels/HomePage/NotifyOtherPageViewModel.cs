@@ -14,6 +14,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
 using System.IO;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -138,10 +139,34 @@ namespace Covid19Radar.ViewModels
             if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessNumberKey))
             {
                 DiagnosisUid = parameters.GetValue<string>(NotifyOtherPage.ProcessNumberKey);
+                ProcessNumberDescription = "陽性登録に必要な処理番号";
+                IsHowToObtainProcessNumberVisible = false;
                 IsProcessNumberEnabled = false;
+                PlaceholderProcessNumber = "8桁の処理番号";
                 IsConsentLinkVisible = true;
+                IsInqueryTelephoneNumberVisible = true;
             }
         }
+
+        public Command OnInqueryTelephoneNumberClicked => new Command(() =>
+        {
+            loggerService.StartMethod();
+
+            try
+            {
+                PhoneDialer.Open(InqueryTelephoneNumber);
+            }
+            catch (FeatureNotSupportedException exception)
+            {
+                loggerService.Exception("Exception occurred: PhoneDialer", exception);
+            }
+            catch (Exception exception)
+            {
+                loggerService.Exception("Exception occurred: PhoneDialer", exception);
+            }
+
+            loggerService.EndMethod();
+        });
 
         public Command OnShowConsentPageClicked => new Command(async () =>
         {
