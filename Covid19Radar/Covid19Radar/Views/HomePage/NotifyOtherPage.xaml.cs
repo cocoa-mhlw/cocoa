@@ -2,10 +2,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Common;
 using Covid19Radar.ViewModels;
 using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Text.RegularExpressions;
 
 namespace Covid19Radar.Views
 {
@@ -24,7 +26,9 @@ namespace Covid19Radar.Views
             NavigationParameters param
             )
         {
-            param.Add(ProcessNumberKey, processNumber);
+            if (Regex.IsMatch(processNumber, AppConstants.LinkQueryValueRegexProcessingNumber)) {
+                param.Add(ProcessNumberKey, processNumber);
+            }
             return param;
         }
 
