@@ -63,6 +63,8 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("4801434 ")]
         [InlineData("4801434 1")]
         [InlineData("48014341 1")]
+        [InlineData("48014341\n1")]
+        [InlineData("1\n48014341")]
         [InlineData("%204801434")]
         [InlineData("()_+_($#")]
         public void BuildNavigationParams_InvalidCharacter(string processNumber)
