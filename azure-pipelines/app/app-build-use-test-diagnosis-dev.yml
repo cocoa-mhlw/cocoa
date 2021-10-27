@@ -14,14 +14,19 @@ trigger:
 
 variables:
 - group: app-settings-dev
+- name: APP_VERSION
+  value: '1.4.0'
 
 jobs:
 - job: build_ios
   pool:
-    vmImage: '$(VmImage)'
+    vmImage: 'macOS-11'
   variables:
   - group: ios-signing-development
-  - group: ios-build-environment
+  - name: XamarinSymlinkVersion
+    value: '6_12_8'
+  - name: XcodeVersion
+    value: '13.0'
   - name: DEVELOPER_DIR
     value: '/Applications/Xcode_$(XcodeVersion).app'
   steps:
