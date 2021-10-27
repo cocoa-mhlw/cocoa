@@ -26,13 +26,12 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("18113949")]
         [InlineData("91595442")]
         [InlineData("10266747")]
-        public void BuildNavigationParams_Success(string processNumber)
+        public void IsValidProcessNumber_Success(string processNumber)
         {
             var navigationParameters = new NavigationParameters();
-            navigationParameters = NotifyOtherPage.BuildNavigationParams(processNumber, navigationParameters);
+            var isValid = NotifyOtherPage.IsValidProcessNumber(processNumber);
 
-            Assert.True(navigationParameters.ContainsKey("processNumber"));
-            Assert.Equal(processNumber, navigationParameters["processNumber"]);
+            Assert.True(isValid);
         }
 
 
@@ -43,12 +42,12 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("4801434")]
         [InlineData("042835603")]
         [InlineData("3361857071")]
-        public void BuildNavigationParams_InvalidLength(string processNumber)
+        public void IsValidProcessNumber_InvalidLength(string processNumber)
         {
             var navigationParameters = new NavigationParameters();
-            navigationParameters = NotifyOtherPage.BuildNavigationParams(processNumber, navigationParameters);
+            var isValid = NotifyOtherPage.IsValidProcessNumber(processNumber);
 
-            Assert.False(navigationParameters.ContainsKey("processNumber"));
+            Assert.False(isValid);
         }
 
         [Theory]
@@ -67,12 +66,12 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("1\n48014341")]
         [InlineData("%204801434")]
         [InlineData("()_+_($#")]
-        public void BuildNavigationParams_InvalidCharacter(string processNumber)
+        public void IsValidProcessNumber_InvalidCharacter(string processNumber)
         {
             var navigationParameters = new NavigationParameters();
-            navigationParameters = NotifyOtherPage.BuildNavigationParams(processNumber, navigationParameters);
+            var isValid = NotifyOtherPage.IsValidProcessNumber(processNumber);
 
-            Assert.False(navigationParameters.ContainsKey("processNumber"));
+            Assert.False(isValid);
         }
     }
 }
