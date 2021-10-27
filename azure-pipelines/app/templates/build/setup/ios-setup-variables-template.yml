@@ -6,7 +6,7 @@ steps:
 - script: |
     INFO_PLIST_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS/Info.plist"
     sed -i '' "s/APP_PACKAGE_NAME/$(APP_PACKAGE_NAME)/g" $INFO_PLIST_PATH
-    sed -i '' "s/APP_VERSION/$(APP_VERSION)/g" $INFO_PLIST_PATH
+    sed -i '' "s/APP_VERSION/$(AppVersion)/g" $INFO_PLIST_PATH
   displayName: 'Inject app settings into Info.plist'
 
 - script: |

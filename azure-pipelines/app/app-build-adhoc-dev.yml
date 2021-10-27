@@ -14,7 +14,7 @@ trigger:
 
 variables:
 - group: app-settings-dev
-- name: APP_VERSION
+- name: AppVersion
   value: '1.4.0'
 
 jobs:

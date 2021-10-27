@@ -2,7 +2,7 @@ steps:
 - script: |
     MANIFEST_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.Android/Properties/AndroidManifest.xml"
     sed -i '' "s/APP_PACKAGE_NAME/$(APP_PACKAGE_NAME)/g" $MANIFEST_PATH
-    sed -i '' "s/APP_VERSION/$(APP_VERSION)/g" $MANIFEST_PATH
+    sed -i '' "s/APP_VERSION/$(AppVersion)/g" $MANIFEST_PATH
     sed -i '' "s/android:debuggable=\"true\"//g" $MANIFEST_PATH
   displayName: 'Inject app settings into AndroidManifest.xml'
 
