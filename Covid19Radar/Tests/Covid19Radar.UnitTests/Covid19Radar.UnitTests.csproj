@@ -42,8 +42,4 @@
     <Folder Include="Views\" />
     <Folder Include="Views\NotifyOtherPage\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="Views\" />
-    <None Remove="Views\NotifyOtherPage\" />
-  </ItemGroup>
 </Project>
