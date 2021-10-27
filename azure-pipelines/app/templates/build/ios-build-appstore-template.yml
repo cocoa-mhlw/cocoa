@@ -50,11 +50,11 @@ steps:
 - script: |
     cd $(Build.ArtifactStagingDirectory)/
     ARCHIVE_FILE=`find *.ipa | head -1`
-    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_v$(AppVersion)_appstore_$(Environment).ipa
+    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_appstore_$(Environment)_v$(AppVersion)_$(buildVersion).ipa
     ls -la
   displayName: 'Change archive name'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish IPA and symbols'
   inputs:
-    ArtifactName: 'archives_v$(AppVersion)_appstore_$(Environment)'
+    ArtifactName: 'archives_appstore_$(Environment)_v$(AppVersion)_$(buildVersion)'

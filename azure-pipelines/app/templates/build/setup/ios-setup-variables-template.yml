@@ -13,6 +13,7 @@ steps:
     BUILD_VERSION="`date +%s`"
     INFO_PLIST_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS/Info.plist"
     /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_VERSION" $INFO_PLIST_PATH
+    echo "##vso[task.setvariable variable=buildVersion]$(BUILD_VERSION)"
   displayName: 'Set build version'
 
 - script: |
