@@ -10,7 +10,7 @@ steps:
     BUILD_VERSION="`date +%s`"
     MANIFEST_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.Android/Properties/AndroidManifest.xml"
     sed -i '' -e 's/android:versionCode="[0-9]*"/android:versionCode="'$BUILD_VERSION'"/g' $MANIFEST_PATH
-    echo "##vso[task.setvariable variable=buildVersion]$(BUILD_VERSION)"
+    echo "##vso[task.setvariable variable=buildVersion]$BUILD_VERSION"
   displayName: 'Set build version'
 
 - script: |
