@@ -98,10 +98,12 @@ namespace Covid19Radar.Droid
             {
                 var processingNumber = intent.Data.GetQueryParameter(AppConstants.LinkQueryKeyProcessingNumber);
 
-                var navigationParameters = new NavigationParameters();
-                navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
-                await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
-
+                if (processingNumber != null && NotifyOtherPage.IsValidProcessNumber(processingNumber))
+                {
+                    var navigationParameters = new NavigationParameters();
+                    navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                    await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
+                }
             }
             else if (intent.HasExtra(EXTRA_KEY_DESTINATION))
             {
