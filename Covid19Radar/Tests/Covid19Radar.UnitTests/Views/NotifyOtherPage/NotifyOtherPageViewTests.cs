@@ -65,7 +65,7 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("48014341 1")]
         [InlineData("%204801434")]
         [InlineData("()_+_($#")]
-        public void BuildNuvigationParams_InvalidCharactor(string processNumber)
+        public void BuildNuvigationParams_InvalidCharacter(string processNumber)
         {
             var navigationParameters = new NavigationParameters();
             navigationParameters = NotifyOtherPage.BuildNavigationParams(processNumber, navigationParameters);
