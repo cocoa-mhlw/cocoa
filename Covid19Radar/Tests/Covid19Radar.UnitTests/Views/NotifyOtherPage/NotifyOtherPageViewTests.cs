@@ -26,7 +26,7 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("18113949")]
         [InlineData("91595442")]
         [InlineData("10266747")]
-        public void BuildNuvigationParams_Success(string processNumber)
+        public void BuildNavigationParams_Success(string processNumber)
         {
             var navigationParameters = new NavigationParameters();
             navigationParameters = NotifyOtherPage.BuildNavigationParams(processNumber, navigationParameters);
@@ -43,7 +43,7 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("4801434")]
         [InlineData("042835603")]
         [InlineData("3361857071")]
-        public void BuildNuvigationParams_InvalidLength(string processNumber)
+        public void BuildNavigationParams_InvalidLength(string processNumber)
         {
             var navigationParameters = new NavigationParameters();
             navigationParameters = NotifyOtherPage.BuildNavigationParams(processNumber, navigationParameters);
@@ -65,7 +65,7 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("48014341 1")]
         [InlineData("%204801434")]
         [InlineData("()_+_($#")]
-        public void BuildNuvigationParams_InvalidCharacter(string processNumber)
+        public void BuildNavigationParams_InvalidCharacter(string processNumber)
         {
             var navigationParameters = new NavigationParameters();
             navigationParameters = NotifyOtherPage.BuildNavigationParams(processNumber, navigationParameters);
