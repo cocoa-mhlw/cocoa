@@ -121,6 +121,10 @@ namespace Covid19Radar.iOS
                         navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
                         InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
                     }
+                    else
+                    {
+                        _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
+                    }
                 }
             }
             catch(Exception e)
