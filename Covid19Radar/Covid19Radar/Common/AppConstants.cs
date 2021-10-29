@@ -37,11 +37,5 @@ namespace Covid19Radar.Common
         /// Key of processing-number in AppLinks(Universal Links) query parameters.
         /// </summary>
         public const string LinkQueryKeyProcessingNumber = "pn";
-
-        /// <summary>
-        /// Value pattern of processing-number in AppLinks(Universal Links) query parameters.
-        /// </summary>
-        public const string LinkQueryValueRegexProcessingNumber = @"\A[0-9]{8}\z";
-
     }
 }

@@ -39,7 +39,6 @@
     <Folder Include="Mocks\" />
     <Folder Include="Services\Migration\" />
     <Folder Include="Repository\" />
-    <Folder Include="Views\" />
-    <Folder Include="Views\NotifyOtherPage\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 </Project>

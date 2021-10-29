@@ -1654,5 +1654,47 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("TroubleshootingPageDescription5", resourceCulture);
             }
         }
+        
+        public static string ProcessNumberDescriptionDeepLink {
+            get {
+                return ResourceManager.GetString("ProcessNumberDescriptionDeepLink", resourceCulture);
+            }
+        }
+        
+        public static string ProcessNumberPlaceholderDeepLink {
+            get {
+                return ResourceManager.GetString("ProcessNumberPlaceholderDeepLink", resourceCulture);
+            }
+        }
+        
+        public static string AgreeAndRegisterButton {
+            get {
+                return ResourceManager.GetString("AgreeAndRegisterButton", resourceCulture);
+            }
+        }
+        
+        public static string ConfirmAgreement {
+            get {
+                return ResourceManager.GetString("ConfirmAgreement", resourceCulture);
+            }
+        }
+        
+        public static string InquiryAboutRegistrationTitle {
+            get {
+                return ResourceManager.GetString("InquiryAboutRegistrationTitle", resourceCulture);
+            }
+        }
+        
+        public static string InquiryAboutRegistrationPhoneNumber {
+            get {
+                return ResourceManager.GetString("InquiryAboutRegistrationPhoneNumber", resourceCulture);
+            }
+        }
+        
+        public static string InquiryAboutRegistrationReceptionTime {
+            get {
+                return ResourceManager.GetString("InquiryAboutRegistrationReceptionTime", resourceCulture);
+            }
+        }
     }
 }

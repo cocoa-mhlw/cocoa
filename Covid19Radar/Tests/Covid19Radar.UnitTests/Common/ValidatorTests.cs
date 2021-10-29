@@ -2,15 +2,14 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-using Covid19Radar.Views;
-using Prism.Navigation;
+using Covid19Radar.Common;
 using Xunit;
 
-namespace Covid19Radar.UnitTests.Views
+namespace Covid19Radar.UnitTests.Common
 {
-    public class NotifyOtherPageViewTests
+    public class ValidatorTests
     {
-        public NotifyOtherPageViewTests()
+        public ValidatorTests()
         {
         }
 
@@ -28,12 +27,9 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("10266747")]
         public void IsValidProcessNumber_Success(string processNumber)
         {
-            var navigationParameters = new NavigationParameters();
-            var isValid = NotifyOtherPage.IsValidProcessNumber(processNumber);
-
+            var isValid = Validator.IsValidProcessNumber(processNumber);
             Assert.True(isValid);
         }
-
 
         [Theory]
         [InlineData("")]
@@ -44,9 +40,7 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("3361857071")]
         public void IsValidProcessNumber_InvalidLength(string processNumber)
         {
-            var navigationParameters = new NavigationParameters();
-            var isValid = NotifyOtherPage.IsValidProcessNumber(processNumber);
-
+            var isValid = Validator.IsValidProcessNumber(processNumber);
             Assert.False(isValid);
         }
 
@@ -68,9 +62,7 @@ namespace Covid19Radar.UnitTests.Views
         [InlineData("()_+_($#")]
         public void IsValidProcessNumber_InvalidCharacter(string processNumber)
         {
-            var navigationParameters = new NavigationParameters();
-            var isValid = NotifyOtherPage.IsValidProcessNumber(processNumber);
-
+            var isValid = Validator.IsValidProcessNumber(processNumber);
             Assert.False(isValid);
         }
     }

@@ -21,11 +21,6 @@ namespace Covid19Radar.Views
             InitializeComponent();
         }
 
-        public static bool IsValidProcessNumber(string processNumber)
-        {
-            return Regex.IsMatch(processNumber, AppConstants.LinkQueryValueRegexProcessingNumber);
-        }
-
         public static NavigationParameters BuildNavigationParams(
             string processNumber,
             NavigationParameters param

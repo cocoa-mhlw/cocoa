@@ -14,7 +14,6 @@ using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
 using System.IO;
-using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -23,117 +22,108 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService loggerService;
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly ICloseApplicationService closeApplicationService;
+        private readonly IEssentialsService _essentialsService;
 
         private string _diagnosisUid;
         public string DiagnosisUid
         {
-            get { return _diagnosisUid; }
+            get => _diagnosisUid;
             set
             {
                 SetProperty(ref _diagnosisUid, value);
                 IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
+        private bool isDeepLink = false;
+        public bool IsDeepLink
+        {
+            get => isDeepLink;
+            set => SetProperty(ref isDeepLink, value);
+        }
+
         private bool _isConsentLinkVisible;
         public bool IsConsentLinkVisible
         {
-            get { return _isConsentLinkVisible; }
-            set { SetProperty(ref _isConsentLinkVisible, value); }
+            get => _isConsentLinkVisible;
+            set => SetProperty(ref _isConsentLinkVisible, value);
         }
 
-        private string _processNumberDescription = AppResources.NotifyOtherPageDescription3;
-        public string ProcessNumberDescription
+        private bool _isProcessNumberReadOnly = false;
+        public bool IsProcessNumberReadOnly
         {
-            get { return _processNumberDescription; }
-            set { SetProperty(ref _processNumberDescription, value); }
+            get => _isProcessNumberReadOnly;
+            set => SetProperty(ref _isProcessNumberReadOnly, value);
         }
 
         private bool _isHowToObtainProcessNumberVisible = true;
         public bool IsHowToObtainProcessNumberVisible
         {
-            get { return _isHowToObtainProcessNumberVisible; }
-            set { SetProperty(ref _isHowToObtainProcessNumberVisible, value); }
+            get => _isHowToObtainProcessNumberVisible;
+            set => SetProperty(ref _isHowToObtainProcessNumberVisible, value);
         }
 
-        private bool _isProcessNumberEnabled = true;
-        public bool IsProcessNumberEnabled
-        {
-            get { return _isProcessNumberEnabled; }
-            set { SetProperty(ref _isProcessNumberEnabled, value); }
-        }
-
-        private string _placeholderProcessNumber = AppResources.NotifyOtherPageLabel2;
-        public string PlaceholderProcessNumber
-        {
-            get { return _placeholderProcessNumber; }
-            set { SetProperty(ref _placeholderProcessNumber, value); }
-        }
-
-        private string _inqueryTelephoneNumber = "0120-123-456";
-        public string InqueryTelephoneNumber
-        {
-            get { return _inqueryTelephoneNumber; }
-        }
+        public string InqueryTelephoneNumber { get; } = AppResources.InquiryAboutRegistrationPhoneNumber;
 
         private bool _isInqueryTelephoneNumberVisible;
         public bool IsInqueryTelephoneNumberVisible
         {
-            get { return _isInqueryTelephoneNumberVisible; }
-            set { SetProperty(ref _isInqueryTelephoneNumberVisible, value); }
-        }
-
-        private string _nextButtonLabel = AppResources.NotifyOtherPageButton;
-        public string NextButtonLabel
-        {
-            get { return _nextButtonLabel; }
-            set { SetProperty(ref _nextButtonLabel, value); }
+            get => _isInqueryTelephoneNumberVisible;
+            set => SetProperty(ref _isInqueryTelephoneNumberVisible, value);
         }
 
         private bool _isNextButtonEnabled;
         public bool IsNextButtonEnabled
         {
-            get { return _isNextButtonEnabled; }
-            set { SetProperty(ref _isNextButtonEnabled, value); }
+            get => _isNextButtonEnabled;
+            set => SetProperty(ref _isNextButtonEnabled, value);
         }
+
         private bool _isVisibleWithSymptomsLayout;
         public bool IsVisibleWithSymptomsLayout
         {
-            get { return _isVisibleWithSymptomsLayout; }
+            get => _isVisibleWithSymptomsLayout;
             set
             {
                 SetProperty(ref _isVisibleWithSymptomsLayout, value);
                 IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
         private bool _isVisibleNoSymptomsLayout;
         public bool IsVisibleNoSymptomsLayout
         {
-            get { return _isVisibleNoSymptomsLayout; }
+            get => _isVisibleNoSymptomsLayout;
             set
             {
                 SetProperty(ref _isVisibleNoSymptomsLayout, value);
                 IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
         private DateTime _diagnosisDate;
+
         public DateTime DiagnosisDate
         {
-            get { return _diagnosisDate; }
-            set { SetProperty(ref _diagnosisDate, value); }
+            get => _diagnosisDate;
+            set => SetProperty(ref _diagnosisDate, value);
         }
+
         private int errorCount { get; set; }
 
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
             IExposureNotificationService exposureNotificationService,
-            ICloseApplicationService closeApplicationService
+            ICloseApplicationService closeApplicationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
             this.exposureNotificationService = exposureNotificationService;
             this.closeApplicationService = closeApplicationService;
+            _essentialsService = essentialsService;
             errorCount = 0;
             DiagnosisUid = "";
             DiagnosisDate = DateTime.Today;
@@ -146,13 +136,11 @@ namespace Covid19Radar.ViewModels
             if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessNumberKey))
             {
                 DiagnosisUid = parameters.GetValue<string>(NotifyOtherPage.ProcessNumberKey);
-                ProcessNumberDescription = "陽性登録に必要な処理番号";
+                IsDeepLink = true;
                 IsHowToObtainProcessNumberVisible = false;
-                IsProcessNumberEnabled = false;
-                PlaceholderProcessNumber = "8桁の処理番号";
+                IsProcessNumberReadOnly = true;
                 IsConsentLinkVisible = true;
                 IsInqueryTelephoneNumberVisible = true;
-                NextButtonLabel = "同意して登録する";
             }
         }
 
@@ -162,11 +150,8 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                PhoneDialer.Open(InqueryTelephoneNumber);
-            }
-            catch (FeatureNotSupportedException exception)
-            {
-                loggerService.Exception("Exception occurred: PhoneDialer", exception);
+                var phoneNumber = Regex.Replace(InqueryTelephoneNumber, "[^0-9]", "");
+                _essentialsService.PhoneDialerOpen(phoneNumber);
             }
             catch (Exception exception)
             {

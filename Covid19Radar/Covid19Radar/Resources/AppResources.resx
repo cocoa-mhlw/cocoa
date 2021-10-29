@@ -1185,4 +1185,32 @@ Note: this app does not collect users’ location information.</value>
     <value>If you have tried all of the above and the warning still appears, please contact Customer Support.</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
   </data>
+  <data name="ProcessNumberDescriptionDeepLink" xml:space="preserve">
+    <value>陽性登録に必要な処理番号</value>
+    <comment>陽性登録に必要な処理番号</comment>
+  </data>
+  <data name="ProcessNumberPlaceholderDeepLink" xml:space="preserve">
+    <value>8桁の処理番号</value>
+    <comment>8桁の処理番号</comment>
+  </data>
+  <data name="AgreeAndRegisterButton" xml:space="preserve">
+    <value>同意して登録する</value>
+    <comment>同意して登録する</comment>
+  </data>
+  <data name="ConfirmAgreement" xml:space="preserve">
+    <value>【重要】同意内容を確認</value>
+    <comment>【重要】同意内容を確認</comment>
+  </data>
+  <data name="InquiryAboutRegistrationTitle" xml:space="preserve">
+    <value>登録に関するお問い合わせ</value>
+    <comment>登録に関するお問い合わせ</comment>
+  </data>
+  <data name="InquiryAboutRegistrationPhoneNumber" xml:space="preserve">
+    <value>0120-251-871</value>
+    <comment>0120-251-871</comment>
+  </data>
+  <data name="InquiryAboutRegistrationReceptionTime" xml:space="preserve">
+    <value>（受付：毎日 午前9時から午後5時まで）</value>
+    <comment>（受付：毎日 午前9時から午後5時まで）</comment>
+  </data>
 </root>
