@@ -107,17 +107,17 @@
                         <Setter Property="Text" Value="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
                     </DataTrigger>
                     <DataTrigger TargetType="Label" Binding="{Binding IsDeepLink}" Value="True">
-                        <Setter Property="Text" Value="{x:Static resources:AppResources.ProcessNumberDescriptionDeepLink}" />
+                        <Setter Property="Text" Value="{x:Static resources:AppResources.ProcessingNumberDescriptionDeepLink}" />
                     </DataTrigger>
                 </Label.Triggers>
             </Label>
             <Label
-                AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessNumberVisible}"
+                AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessingNumberVisible}"
                 Margin="0, 0, 0, 0"
                 HorizontalOptions="Start"
                 Style="{StaticResource DefaultLabelColor}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageLabel}"
-                IsVisible="{Binding IsHowToObtainProcessNumberVisible}">
+                IsVisible="{Binding IsHowToObtainProcessingNumberVisible}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
                 </Label.GestureRecognizers>
@@ -142,7 +142,7 @@
                             AutomationProperties.IsInAccessibleTree="True"
                             CharacterSpacing="5"
                             Keyboard="Numeric"
-                            IsReadOnly="{Binding IsProcessNumberReadOnly}"
+                            IsReadOnly="{Binding IsProcessingNumberReadOnly}"
                             MaxLength="{x:Static common:AppConstants.MaxDiagnosisUidCount}"
                             Style="{StaticResource DefaultEntry}"
                             Text="{Binding DiagnosisUid}">
@@ -151,7 +151,7 @@
                                     <Setter Property="Placeholder" Value="{x:Static resources:AppResources.NotifyOtherPageLabel2}" />
                                 </DataTrigger>
                                 <DataTrigger TargetType="Entry" Binding="{Binding IsDeepLink}" Value="True">
-                                    <Setter Property="Placeholder" Value="{x:Static resources:AppResources.ProcessNumberPlaceholderDeepLink}" />
+                                    <Setter Property="Placeholder" Value="{x:Static resources:AppResources.ProcessingNumberPlaceholderDeepLink}" />
                                 </DataTrigger>
                             </Entry.Triggers>
                          </Entry>

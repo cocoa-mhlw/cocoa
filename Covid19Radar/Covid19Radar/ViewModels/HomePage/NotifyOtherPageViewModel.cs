@@ -49,18 +49,18 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref _isConsentLinkVisible, value);
         }
 
-        private bool _isProcessNumberReadOnly = false;
-        public bool IsProcessNumberReadOnly
+        private bool _isProcessingNumberReadOnly = false;
+        public bool IsProcessingNumberReadOnly
         {
-            get => _isProcessNumberReadOnly;
-            set => SetProperty(ref _isProcessNumberReadOnly, value);
+            get => _isProcessingNumberReadOnly;
+            set => SetProperty(ref _isProcessingNumberReadOnly, value);
         }
 
-        private bool _isHowToObtainProcessNumberVisible = true;
-        public bool IsHowToObtainProcessNumberVisible
+        private bool _isHowToObtainProcessingNumberVisible = true;
+        public bool IsHowToObtainProcessingNumberVisible
         {
-            get => _isHowToObtainProcessNumberVisible;
-            set => SetProperty(ref _isHowToObtainProcessNumberVisible, value);
+            get => _isHowToObtainProcessingNumberVisible;
+            set => SetProperty(ref _isHowToObtainProcessingNumberVisible, value);
         }
 
         public string InqueryTelephoneNumber { get; } = AppResources.InquiryAboutRegistrationPhoneNumber;
@@ -133,12 +133,12 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
-            if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessNumberKey))
+            if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessingNumberKey))
             {
-                DiagnosisUid = parameters.GetValue<string>(NotifyOtherPage.ProcessNumberKey);
+                DiagnosisUid = parameters.GetValue<string>(NotifyOtherPage.ProcessingNumberKey);
                 IsDeepLink = true;
-                IsHowToObtainProcessNumberVisible = false;
-                IsProcessNumberReadOnly = true;
+                IsHowToObtainProcessingNumberVisible = false;
+                IsProcessingNumberReadOnly = true;
                 IsConsentLinkVisible = true;
                 IsInqueryTelephoneNumberVisible = true;
             }

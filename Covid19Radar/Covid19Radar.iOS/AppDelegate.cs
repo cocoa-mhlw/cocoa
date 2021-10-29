@@ -118,7 +118,7 @@ namespace Covid19Radar.iOS
                         .FirstOrDefault(item => item.Name == AppConstants.LinkQueryKeyProcessingNumber)?
                         .Value;
 
-                    if (processingNumber != null && Validator.IsValidProcessNumber(processingNumber))
+                    if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                     {
                         var navigationParameters = new NavigationParameters();
                         navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);

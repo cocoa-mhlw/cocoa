@@ -14,7 +14,7 @@ namespace Covid19Radar.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotifyOtherPage : ContentPage
     {
-        public const string ProcessNumberKey = "processNumber";
+        public const string ProcessingNumberKey = "processingNumber";
 
         public NotifyOtherPage()
         {
@@ -22,11 +22,11 @@ namespace Covid19Radar.Views
         }
 
         public static NavigationParameters BuildNavigationParams(
-            string processNumber,
+            string processingNumber,
             NavigationParameters param
             )
         {
-            param.Add(ProcessNumberKey, processNumber);
+            param.Add(ProcessingNumberKey, processingNumber);
             return param;
         }
 

@@ -1185,11 +1185,11 @@ Note: this app does not collect users’ location information.</value>
     <value>If you have tried all of the above and the warning still appears, please contact Customer Support.</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
   </data>
-  <data name="ProcessNumberDescriptionDeepLink" xml:space="preserve">
+  <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
     <value>陽性登録に必要な処理番号</value>
     <comment>陽性登録に必要な処理番号</comment>
   </data>
-  <data name="ProcessNumberPlaceholderDeepLink" xml:space="preserve">
+  <data name="ProcessingNumberPlaceholderDeepLink" xml:space="preserve">
     <value>8桁の処理番号</value>
     <comment>8桁の処理番号</comment>
   </data>

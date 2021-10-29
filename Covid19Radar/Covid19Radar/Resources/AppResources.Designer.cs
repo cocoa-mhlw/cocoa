@@ -1655,15 +1655,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string ProcessNumberDescriptionDeepLink {
+        public static string ProcessingNumberDescriptionDeepLink {
             get {
-                return ResourceManager.GetString("ProcessNumberDescriptionDeepLink", resourceCulture);
+                return ResourceManager.GetString("ProcessingNumberDescriptionDeepLink", resourceCulture);
             }
         }
         
-        public static string ProcessNumberPlaceholderDeepLink {
+        public static string ProcessingNumberPlaceholderDeepLink {
             get {
-                return ResourceManager.GetString("ProcessNumberPlaceholderDeepLink", resourceCulture);
+                return ResourceManager.GetString("ProcessingNumberPlaceholderDeepLink", resourceCulture);
             }
         }
         

@@ -103,7 +103,7 @@ namespace Covid19Radar.Droid
             {
                 var processingNumber = intent.Data.GetQueryParameter(AppConstants.LinkQueryKeyProcessingNumber);
 
-                if (processingNumber != null && Validator.IsValidProcessNumber(processingNumber))
+                if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                 {
                     var navigationParameters = new NavigationParameters();
                     navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);

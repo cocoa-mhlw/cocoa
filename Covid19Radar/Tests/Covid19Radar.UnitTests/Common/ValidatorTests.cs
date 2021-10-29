@@ -25,9 +25,9 @@ namespace Covid19Radar.UnitTests.Common
         [InlineData("18113949")]
         [InlineData("91595442")]
         [InlineData("10266747")]
-        public void IsValidProcessNumber_Success(string processNumber)
+        public void IsValidProcessingNumber_Success(string processingNumber)
         {
-            var isValid = Validator.IsValidProcessNumber(processNumber);
+            var isValid = Validator.IsValidProcessingNumber(processingNumber);
             Assert.True(isValid);
         }
 
@@ -38,9 +38,9 @@ namespace Covid19Radar.UnitTests.Common
         [InlineData("4801434")]
         [InlineData("042835603")]
         [InlineData("3361857071")]
-        public void IsValidProcessNumber_InvalidLength(string processNumber)
+        public void IsValidProcessingNumber_InvalidLength(string processingNumber)
         {
-            var isValid = Validator.IsValidProcessNumber(processNumber);
+            var isValid = Validator.IsValidProcessingNumber(processingNumber);
             Assert.False(isValid);
         }
 
@@ -60,9 +60,9 @@ namespace Covid19Radar.UnitTests.Common
         [InlineData("1\n48014341")]
         [InlineData("%204801434")]
         [InlineData("()_+_($#")]
-        public void IsValidProcessNumber_InvalidCharacter(string processNumber)
+        public void IsValidProcessingNumber_InvalidCharacter(string processingNumber)
         {
-            var isValid = Validator.IsValidProcessNumber(processNumber);
+            var isValid = Validator.IsValidProcessingNumber(processingNumber);
             Assert.False(isValid);
         }
     }

@@ -13,9 +13,9 @@ namespace Covid19Radar.Common
         /// </summary>
         private const string ProcessingNumberRegex = @"\A[0-9]{8}\z";
 
-        public static bool IsValidProcessNumber(string processNumber)
+        public static bool IsValidProcessingNumber(string processingNumber)
         {
-            return Regex.IsMatch(processNumber, ProcessingNumberRegex);
+            return Regex.IsMatch(processingNumber, ProcessingNumberRegex);
         }
     }
 }
