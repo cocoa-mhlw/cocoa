@@ -35,11 +35,11 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        private bool isDeepLink = false;
+        private bool _isDeepLink = false;
         public bool IsDeepLink
         {
-            get => isDeepLink;
-            set => SetProperty(ref isDeepLink, value);
+            get => _isDeepLink;
+            set => SetProperty(ref _isDeepLink, value);
         }
 
         private bool _isConsentLinkVisible;
@@ -63,7 +63,7 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref _isHowToObtainProcessingNumberVisible, value);
         }
 
-        public string InqueryTelephoneNumber { get; } = AppResources.InquiryAboutRegistrationPhoneNumber;
+        public string InqueryTelephoneNumber => AppResources.InquiryAboutRegistrationPhoneNumber;
 
         private bool _isInqueryTelephoneNumberVisible;
         public bool IsInqueryTelephoneNumberVisible
