@@ -987,10 +987,6 @@ Storage :</value>
     <value>Please read before continue the positive registration</value>
     <comment>陽性登録の前にお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>If the processing number is correct, people who have come in close contact (within 1 meter for 15 minutes or more) with you 2 or more days before the day the symptoms started or the day you were tested, will be notified. None of your personal information will be known to the person who has received the notification</value>
-    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
-  </data>
 	<data name="SubmitConsentPageDescription2" xml:space="preserve">
     <value>・When you complete the registration, people who have come in close contact with you will receive a notification.</value>
     <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
@@ -1022,6 +1018,10 @@ Storage :</value>
 	<data name="SubmitConsentPageDescription9" xml:space="preserve">
     <value>After you have entered the processing number into COCOA, your mobile phone will query the management system to confirm the validity of that number</value>
     <comment>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+  </data>
+	<data name="SubmitConsentPageDescription10" xml:space="preserve">
+    <value>If the processing number is correct, people who have come in close contact (within 1 meter for 15 minutes or more) with you 2 or more days before the day the symptoms started or the day you were tested, will be notified. None of your personal information will be known to the person who has received the notification</value>
+    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
 	<data name="HelpPage3Description6" xml:space="preserve">
     <value>Register positive result</value>

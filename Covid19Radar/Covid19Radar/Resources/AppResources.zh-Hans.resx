@@ -885,10 +885,6 @@
     <value>请在注册阳性之前阅览</value>
     <comment>陽性登録の前にお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>如果受理编号是正确的，在您症状开始或接受检查后的两天以内与您接触过的人（ 通常指1米以内彼此靠近15分钟以上的COCOA使用者 ）将得到通知。接受通知者不会知道可以识别您的信息。</value>
-    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
-  </data>
 	<data name="SubmitConsentPageDescription2" xml:space="preserve">
     <value>・注册阳性后，与您接触过的人将得到通知</value>
     <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
@@ -920,6 +916,10 @@
 	<data name="SubmitConsentPageDescription9" xml:space="preserve">
     <value>当您咋COCOA中输入受理编号后，您的手机将会通过管理系统来验证受理编号是否正确</value>
     <comment>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+  </data>
+	<data name="SubmitConsentPageDescription10" xml:space="preserve">
+    <value>如果受理编号是正确的，在您症状开始或接受检查后的两天以内与您接触过的人（ 通常指1米以内彼此靠近15分钟以上的COCOA使用者 ）将得到通知。接受通知者不会知道可以识别您的信息。</value>
+    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
 	<data name="HelpPage3Description6" xml:space="preserve">
     <value>注册阳性信息</value>

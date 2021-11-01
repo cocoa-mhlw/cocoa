@@ -1361,12 +1361,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SubmitConsentPageDescription10 {
-            get {
-                return ResourceManager.GetString("SubmitConsentPageDescription10", resourceCulture);
-            }
-        }
-        
         public static string SubmitConsentPageDescription2 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription2", resourceCulture);
@@ -1412,6 +1406,12 @@ namespace Covid19Radar.Resources {
         public static string SubmitConsentPageDescription9 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageDescription9", resourceCulture);
+            }
+        }
+        
+        public static string SubmitConsentPageDescription10 {
+            get {
+                return ResourceManager.GetString("SubmitConsentPageDescription10", resourceCulture);
             }
         }
         
