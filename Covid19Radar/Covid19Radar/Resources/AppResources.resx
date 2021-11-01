@@ -983,23 +983,27 @@ Storage :</value>
     <value>The only information included in the notification will be a randomly generated code. No personal information will be disclosed.</value>
     <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
-	<data name="SubmitConsentPageDescription1" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_1" xml:space="preserve">
     <value>Please read before continue the positive registration</value>
     <comment>陽性登録の前にお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>・When you complete the registration, people who have come in close contact with you will receive a notification.</value>
-    <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
+	<data name="SubmitConsentPageDescription1_2" xml:space="preserve">
+    <value>・If you register your positivity on the application, a code will be daily generated on your smartphone and uploaded to the notification server</value>
+    <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
   </data>
-	<data name="SubmitConsentPageDescription3" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_3" xml:space="preserve">
+    <value>・Depending on the result of the judgment from the code information of the notification server,  a notification will be sent to the people who have come in contact with you</value>
+    <comment>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</comment>
+  </data>
+	<data name="SubmitConsentPageDescription1_4" xml:space="preserve">
     <value>・ None of your personal information will be known to the person who has received the notification</value>
     <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
-	<data name="SubmitConsentPageDescription4" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_5" xml:space="preserve">
     <value>・ To avoid the spread of the infection, please cooperate with the registration process</value>
     <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
   </data>
-	<data name="SubmitConsentPageDescription5" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_6" xml:space="preserve">
     <value>For more details please read below</value>
     <comment>詳しくは以下をお読みください</comment>
   </data>
@@ -1012,12 +1016,12 @@ Storage :</value>
     <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
 	<data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>When you apply at the health center for positive registration with COCOA, the management system will notify the mobile phone number or email address with a processing number.</value>
-    <comment>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</comment>
+    <value>When your positivity information has been reported to the management system, on the registered phone number or email address you will receive the processing number required for COCOA positive registration</value>
+    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</comment>
   </data>
 	<data name="SubmitConsentPageDescription9" xml:space="preserve">
-    <value>After you have entered the processing number into COCOA, your mobile phone will query the management system to confirm the validity of that number</value>
-    <comment>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+    <value>After the processing number has been registered into COCOA, the mobile phone will query the management system to confirm the validity of that number</value>
+    <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
   </data>
 	<data name="SubmitConsentPageDescription10" xml:space="preserve">
     <value>If the processing number is correct, people who have come in close contact (within 1 meter for 15 minutes or more) with you 2 or more days before the day the symptoms started or the day you were tested, will be notified. None of your personal information will be known to the person who has received the notification</value>
@@ -1186,23 +1190,23 @@ Note: this app does not collect users’ location information.</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
   </data>
   <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
-    <value>陽性登録に必要な処理番号</value>
+    <value>Processing number for positive registration</value>
     <comment>陽性登録に必要な処理番号</comment>
   </data>
   <data name="ProcessingNumberPlaceholderDeepLink" xml:space="preserve">
-    <value>8桁の処理番号</value>
+    <value>8-digit processing number</value>
     <comment>8桁の処理番号</comment>
   </data>
-  <data name="AgreeAndRegisterButton" xml:space="preserve">
-    <value>同意して登録する</value>
-    <comment>同意して登録する</comment>
-  </data>
   <data name="ConfirmAgreement" xml:space="preserve">
-    <value>【重要】同意内容を確認</value>
+    <value>[Important] Confirmation of consent</value>
     <comment>【重要】同意内容を確認</comment>
   </data>
+  <data name="AgreeAndRegisterButton" xml:space="preserve">
+    <value>Agree and register</value>
+    <comment>同意して登録する</comment>
+  </data>
   <data name="InquiryAboutRegistrationTitle" xml:space="preserve">
-    <value>登録に関するお問い合わせ</value>
+    <value>Inquery about the registration​</value>
     <comment>登録に関するお問い合わせ</comment>
   </data>
   <data name="InquiryAboutRegistrationPhoneNumber" xml:space="preserve">
@@ -1210,7 +1214,7 @@ Note: this app does not collect users’ location information.</value>
     <comment>0120-251-871</comment>
   </data>
   <data name="InquiryAboutRegistrationReceptionTime" xml:space="preserve">
-    <value>（受付：毎日 午前9時から午後5時まで）</value>
+    <value>(Every day from 9:00 to 17:00)​</value>
     <comment>（受付：毎日 午前9時から午後5時まで）</comment>
   </data>
 </root>

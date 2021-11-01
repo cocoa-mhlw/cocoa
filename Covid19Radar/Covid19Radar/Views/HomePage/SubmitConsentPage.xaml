@@ -28,37 +28,71 @@
                        BackgroundColor="#FFF3DD"
                        CornerRadius="10">
                     <StackLayout Spacing="10">
-                        <Label FontSize="Large"
-                               FontAttributes="Bold"
-                               TextColor="Black"
-                               Text="{x:Static resources:AppResources.SubmitConsentPageDescription1}"/>
-                        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription2}" />
-                        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription3}" />
-                        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription4}" />
-                        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.SubmitConsentPageDescription5}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            FontSize="Large"
+                            FontAttributes="Bold"
+                            TextColor="Black"
+                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_1}"/>
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_2}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_3}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_4}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_5}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_6}" />
                     </StackLayout>
                 </Frame>
-                <Label Margin="0, 10, 0, 5"
-                       Style="{StaticResource DefaultLabel}"
-                       Text="{x:Static resources:AppResources.SubmitConsentPageDescription6}" />
-                <Label Style="{StaticResource DefaultLabelSmall}"
-                       Text="{x:Static resources:AppResources.SubmitConsentPageDescription7}" />
-                <Image Margin="0, 15"
-                       Source="arrow_icon.png"
-                       HorizontalOptions="Center"/>
-                <Label Style="{StaticResource DefaultLabel}"
-                       Text="{x:Static resources:AppResources.SubmitConsentPageDescription8}" />
-                <Image Margin="0, 15"
-                       Source="arrow_icon.png"
-                       HorizontalOptions="Center"/>
-                <Label Style="{StaticResource DefaultLabel}"
-                       Text="{x:Static resources:AppResources.SubmitConsentPageDescription9}" />
-                <Image Margin="0, 15"
-                       Source="arrow_icon.png"
-                       HorizontalOptions="Center"/>
-                <Label Margin="0, 0, 0, 15"
-                       Style="{StaticResource DefaultLabel}"
-                       Text="{x:Static resources:AppResources.SubmitConsentPageDescription10}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Margin="0, 10, 0, 5"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.SubmitConsentPageDescription6}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    Text="{x:Static resources:AppResources.SubmitConsentPageDescription7}" />
+                <Image
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Margin="0, 15"
+                    Source="arrow_icon.png"
+                    HorizontalOptions="Center"/>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.SubmitConsentPageDescription8}" />
+                <Image
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Margin="0, 15"
+                    Source="arrow_icon.png"
+                    HorizontalOptions="Center"/>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.SubmitConsentPageDescription9}" />
+                <Image
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Margin="0, 15"
+                    Source="arrow_icon.png"
+                    HorizontalOptions="Center"/>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Margin="0, 0, 0, 15"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.SubmitConsentPageDescription10}" />
             </StackLayout>
             <Grid Grid.Row="1">
                 <Button
