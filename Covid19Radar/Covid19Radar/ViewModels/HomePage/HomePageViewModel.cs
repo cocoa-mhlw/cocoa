@@ -25,6 +25,7 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureNotificationStatusService exposureNotificationStatusService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
+        private readonly IEssentialsService essentialsService;
 
         private string _pastDate;
         public string PastDate
@@ -69,7 +70,8 @@ namespace Covid19Radar.ViewModels
             ILocalNotificationService localNotificationService,
             IExposureNotificationStatusService exposureNotificationStatusService,
             IDialogService dialogService,
-            IExternalNavigationService externalNavigationService
+            IExternalNavigationService externalNavigationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
@@ -80,6 +82,7 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationStatusService = exposureNotificationStatusService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
+            this.essentialsService = essentialsService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -172,7 +175,26 @@ namespace Covid19Radar.ViewModels
                     bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
                     if (isOK)
                     {
-                        externalNavigationService.NavigateAppSettings();
+                        if (essentialsService.IsAndroid)
+                        {
+                            try
+                            {
+                                await exposureNotificationService.StartExposureNotification();
+                                await exposureNotificationService.FetchExposureKeyAsync();
+                            }
+                            catch (Exception ex)
+                            {
+                                loggerService.Exception("Failed to fetch exposure key.", ex);
+                            }
+                            finally
+                            {
+                                await UpdateView();
+                            }
+                        }
+                        else if (essentialsService.IsIos)
+                        {
+                            externalNavigationService.NavigateAppSettings();
+                        }
                     }
                 }
                 else if (enStopReason == ExposureNotificationStoppedReason.BluetoothOff)
@@ -244,7 +266,7 @@ namespace Covid19Radar.ViewModels
                             loggerService.Exception("Failed to conversion utc date time", ex);
                         }
                     }
-                    
+
                     break;
             }
 
@@ -254,7 +276,6 @@ namespace Covid19Radar.ViewModels
         public override async void OnAppearing()
         {
             base.OnAppearing();
-
             await UpdateView();
         }
 

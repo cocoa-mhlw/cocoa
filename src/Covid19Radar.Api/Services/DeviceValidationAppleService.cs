@@ -101,7 +101,7 @@ namespace Covid19Radar.Api.Services
                 if (!response.IsSuccessStatusCode)
                 {
                     var responseBody = await response.Content.ReadAsStringAsync();
-                    Logger.LogWarning($"POST {UrlApple} {response.StatusCode} {response.ReasonPhrase} {responseBody}");
+                    Logger.LogWarning($"iOS device check failed.\r\n{nameof(HttpRequestMessage)} : {request}\r\n{nameof(HttpResponseMessage)} : {response}");
                 }
 
                 //switch (response.StatusCode)
@@ -117,7 +117,8 @@ namespace Covid19Radar.Api.Services
                 //        break;
                 //}
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                    return false;
+                    // FIXME: When call iOS Device check, return error sometimes, Until the cause is known, ignored device check
+                    return true;
 
                 return true;
             }

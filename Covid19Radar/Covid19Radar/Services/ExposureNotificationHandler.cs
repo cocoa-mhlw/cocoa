@@ -246,6 +246,7 @@ namespace Covid19Radar.Services
             try
             {
                 tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
+                loggerService.Info($"TEK list count: {tekList.Count}");
             }
             catch (Exception ex)
             {
@@ -254,11 +255,6 @@ namespace Covid19Radar.Services
                 throw new Exception("Failed to get TEK list.");
             }
 
-            if (tekList.Count == 0)
-            {
-                loggerService.EndMethod();
-                throw new Exception("TEK list is empty.");
-            }
             Debug.WriteLine("C19R Fetch Exposure Key");
 
             var newCreated = startTimestamp;
