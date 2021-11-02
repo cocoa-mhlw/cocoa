@@ -1,0 +1,48 @@
+steps:
+- task: InstallAppleCertificate@2
+  displayName: 'Install an Apple certificate'
+  inputs:
+    certSecureFile: 'cocoa_distribution_20220610.p12'
+    certPwd: '$(iOS_CertificatePassword)'
+
+- task: InstallAppleProvisioningProfile@1
+  displayName: 'Install an Apple provisioning profile'
+  inputs:
+    provProfileSecureFile: 'cocoa_appstore_20220610.mobileprovision'
+
+- template: setup/ios-setup-variables-template.yml
+  parameters:
+    configuration: release
+
+- template: setup/app-setup-variables-template.yml
+
+- template: setup/ios-setup-xamarin-template.yml
+
+- template: setup/app-setup-xamarin-template.yml
+
+- task: XamariniOS@2
+  displayName: 'Build Covid19Radar.iOS.csproj'
+  inputs:
+    solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
+    configuration: AppStore
+    signingIdentity: 'Apple Distribution'
+    signingProvisioningProfileID: 'daf169e9-9f6e-4450-937c-02298c7ecb61'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: Build.ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/AppStore
+    Contents: '*.ipa'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    cd $(Build.ArtifactStagingDirectory)/
+    ARCHIVE_FILE=`find *.ipa | head -1`
+    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_v$(APP_VERSION)_appstore_$(Environment).ipa
+    ls -la
+  displayName: 'Change archive name'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: archives_v$(APP_VERSION)_appstore_$(Environment)'
+  inputs:
+    ArtifactName: 'archives_v$(APP_VERSION)_appstore_$(Environment)'

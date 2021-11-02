@@ -9,7 +9,7 @@ using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Droid.Services
 {
-    public class ExternalNavigationService: IExternalNavigationService
+    public class ExternalNavigationService : IExternalNavigationService
     {
         private readonly ILoggerService _loggerService;
         private readonly IEssentialsService _essentialsService;

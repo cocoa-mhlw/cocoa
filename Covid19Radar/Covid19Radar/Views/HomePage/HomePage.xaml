@@ -52,7 +52,8 @@
                             AutomationProperties.IsInAccessibleTree="False" />
                     </Grid>
                     <Label
-                        Style="{StaticResource HomePageLargeBoldLabel}"
+                        Style="{StaticResource DefaultLabelLarge}"
+                        FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageENStatusActiveTitle}"
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}" />
                 </StackLayout>
@@ -60,7 +61,7 @@
                     Orientation="Horizontal"
                     HorizontalOptions="Center"
                     Spacing="5">
-                    <Label Style="{StaticResource HomePageMicroLabel}"
+                    <Label Style="{StaticResource DefaultLabelCaption}"
                            VerticalOptions="Center"
                            Text="{x:Static resources:AppResources.HomePageENStatusActiveDescription}"
                            AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}" />
@@ -92,9 +93,8 @@
                     </ImageButton>
                 </StackLayout>
                 <Label
-                    Style="{StaticResource HomePageMicroLabel}"
+                    Style="{StaticResource DefaultLabelCaption}"
                     Text="{Binding LatestConfirmationDate}"
-                    FontSize="13"
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}" />
             </StackLayout>
             <StackLayout IsVisible="{Binding IsVisibleENStatusUnconfirmedLayout}">
@@ -108,16 +108,17 @@
                         Source="home_alert_icon.png"
                         AutomationProperties.IsInAccessibleTree="False" />
                     <Label
-                        Style="{StaticResource HomePageLargeBoldLabel}"
+                        Style="{StaticResource DefaultLabelLarge}"
+                        FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedTitle}"
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}" />
                 </StackLayout>
                 <Label
-                    Style="{StaticResource HomePageMicroLabel}"
+                    Style="{StaticResource DefaultLabelCaption}"
                     Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedDescription1}"
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}" />
                 <Label
-                    Style="{StaticResource HomePageMicroLabel}"
+                    Style="{StaticResource DefaultLabelCaption}"
                     Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedDescription2}"
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}" />
                 <Button
@@ -137,16 +138,17 @@
                         Source="home_stop_icon.png"
                         AutomationProperties.IsInAccessibleTree="False" />
                     <Label
-                        Style="{StaticResource HomePageLargeBoldLabel}"
+                        Style="{StaticResource DefaultLabelLarge}"
+                        FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageENStatusStoppedTitle}"
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}" />
                 </StackLayout>
                 <Label
-                    Style="{StaticResource HomePageMicroLabel}"
+                    Style="{StaticResource DefaultLabelCaption}"
                     Text="{x:Static resources:AppResources.HomePageENStatusStoppedDescription1}"
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}" />
                 <Label
-                    Style="{StaticResource HomePageMicroLabel}"
+                    Style="{StaticResource DefaultLabelCaption}"
                     Text="{x:Static resources:AppResources.HomePageENStatusStoppedDescription2}"
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}" />
                 <Button
@@ -160,14 +162,15 @@
                 CornerRadius="10"
                 HasShadow="False">
                 <StackLayout Spacing="0">
-                    <Label Style="{StaticResource HomePageSmallLabel}">
+                    <Label Style="{StaticResource DefaultLabelSmall}"
+                           HorizontalTextAlignment="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{x:Static resources:AppResources.HomePageDescription0}" />
                                 <Span Text=" " />
                                 <Span Text="{Binding PastDate}"
-                                      FontAttributes="Bold"
-                                      FontSize="17" />
+                                      FontSize="Medium"
+                                      FontAttributes="Bold" />
                                 <Span Text=" " />
                                 <Span Text="{x:Static resources:AppResources.HomePagePastDays}" />
                             </FormattedString>
@@ -177,7 +180,7 @@
                         AutomationId="ButtonExposures"
                         AutomationProperties.HelpText="{x:Static resources:AppResources.HomePageDescription2}"
                         Command="{Binding Path=OnClickExposures}"
-                        Style="{StaticResource HomePageButton}"
+                        Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription2}" />
                 </StackLayout>
             </Frame>
@@ -188,7 +191,8 @@
                 <StackLayout Spacing="5">
                     <Label
                         Margin="0, 5, 0, 5"
-                        Style="{StaticResource HomePageMediumBoldLabel}"
+                        Style="{StaticResource DefaultLabelBody}"
+                        FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageDescription3}" />
                     <Label
                         Margin="20, 0, 20, 0"
@@ -197,7 +201,7 @@
                         HorizontalTextAlignment="Center" />
                     <Button
                         Command="{prism:NavigateTo 'SubmitConsentPage'}"
-                        Style="{StaticResource HomePageButton}"
+                        Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription4}" />
                 </StackLayout>
             </Frame>
