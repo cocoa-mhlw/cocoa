@@ -112,7 +112,7 @@ namespace Covid19Radar.ViewModels
 
             if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessNumberKey))
             {
-                DiagnosisUid = parameters.GetValue<string>(NotifyOtherPage.ProcessNumberKey);
+                ProcessNumber = parameters.GetValue<string>(NotifyOtherPage.ProcessNumberKey);
                 IsProcessNumberEnabled = false;
                 IsConsentLinkVisible = true;
             }

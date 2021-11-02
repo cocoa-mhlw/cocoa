@@ -128,6 +128,8 @@ namespace Covid19Radar.iOS
 #else
                 exposureNotificationApiService.IsTest = false;
 #endif
+            }
+        }
 
         public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
         {
