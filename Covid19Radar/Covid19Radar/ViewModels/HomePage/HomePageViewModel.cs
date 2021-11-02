@@ -198,26 +198,7 @@ namespace Covid19Radar.ViewModels
                 bool isOK = await dialogService.ShowBluetoothOffWarningAsync();
                 if (isOK)
                 {
-                    if (essentialsService.IsAndroid)
-                    {
-                        try
-                        {
-                            await exposureNotificationApiService.StartExposureNotificationAsync();
-                            _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
-                        }
-                        catch (Exception ex)
-                        {
-                            loggerService.Exception("Failed to fetch exposure key.", ex);
-                        }
-                        finally
-                        {
-                            await UpdateView();
-                        }
-                    }
-                    else if (essentialsService.IsIos)
-                    {
-                        externalNavigationService.NavigateAppSettings();
-                    }
+                    externalNavigationService.NavigateBluetoothSettings();
                 }
             }
             else if (
@@ -240,7 +221,26 @@ namespace Covid19Radar.ViewModels
                 bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
                 if (isOK)
                 {
-                    externalNavigationService.NavigateAppSettings();
+                    if (essentialsService.IsAndroid)
+                    {
+                        try
+                        {
+                            await exposureNotificationApiService.StartExposureNotificationAsync();
+                            _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
+                        }
+                        catch (Exception ex)
+                        {
+                            loggerService.Exception("Failed to fetch exposure key.", ex);
+                        }
+                        finally
+                        {
+                            await UpdateView();
+                        }
+                    }
+                    else if (essentialsService.IsIos)
+                    {
+                        externalNavigationService.NavigateAppSettings();
+                    }
                 }
             }
 

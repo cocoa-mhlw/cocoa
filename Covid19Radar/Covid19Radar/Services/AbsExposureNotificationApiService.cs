@@ -20,7 +20,7 @@ namespace Covid19Radar.Services
             _loggerService = loggerService;
         }
 
-        public async Task<bool> StartExposureNotificationAsync()
+        public virtual async Task<bool> StartExposureNotificationAsync()
         {
             _loggerService.StartMethod();
 

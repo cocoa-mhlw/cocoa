@@ -136,11 +136,13 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             var homePageViewModel = CreateViewModel();
 
+            mockExposureNotificationApiService.Setup(x => x.StartExposureNotificationAsync()).Returns(Task.FromResult(true));
             mockExposureNotificationApiService
-                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.INACTIVATED } as IList<int>));
+                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_iOS.Disabled } as IList<int>));
             mockDialogService.Setup(x => x.ShowExposureNotificationOffWarningAsync()).ReturnsAsync(true);
             mockEssentialsService.Setup(x => x.IsAndroid).Returns(false);
             mockEssentialsService.Setup(x => x.IsIos).Returns(true);
+            mockExposureDetectionBackgroundService.Setup(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>())).Returns(Task.CompletedTask);
 
             homePageViewModel.OnClickCheckStopReason.Execute(null);
 
@@ -155,9 +157,13 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             var homePageViewModel = CreateViewModel();
 
+            mockExposureNotificationApiService.Setup(x => x.StartExposureNotificationAsync()).Returns(Task.FromResult(true));
+            mockExposureNotificationApiService
+                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.INACTIVATED } as IList<int>));
             mockDialogService.Setup(x => x.ShowExposureNotificationOffWarningAsync()).ReturnsAsync(true);
             mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
             mockEssentialsService.Setup(x => x.IsIos).Returns(false);
+            mockExposureDetectionBackgroundService.Setup(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>())).Returns(Task.CompletedTask);
 
             homePageViewModel.OnClickCheckStopReason.Execute(null);
 
