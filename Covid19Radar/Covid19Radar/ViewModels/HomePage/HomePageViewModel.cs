@@ -29,6 +29,7 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
+        private readonly IEssentialsService essentialsService;
 
         private string _pastDate;
         public string PastDate
@@ -73,7 +74,8 @@ namespace Covid19Radar.ViewModels
             ILocalNotificationService localNotificationService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             IDialogService dialogService,
-            IExternalNavigationService externalNavigationService
+            IExternalNavigationService externalNavigationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
@@ -85,6 +87,7 @@ namespace Covid19Radar.ViewModels
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
+            this.essentialsService = essentialsService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -218,7 +221,26 @@ namespace Covid19Radar.ViewModels
                 bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
                 if (isOK)
                 {
-                    externalNavigationService.NavigateAppSettings();
+                    if (essentialsService.IsAndroid)
+                    {
+                        try
+                        {
+                            await exposureNotificationApiService.StartExposureNotificationAsync();
+                            _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
+                        }
+                        catch (Exception ex)
+                        {
+                            loggerService.Exception("Failed to fetch exposure key.", ex);
+                        }
+                        finally
+                        {
+                            await UpdateView();
+                        }
+                    }
+                    else if (essentialsService.IsIos)
+                    {
+                        externalNavigationService.NavigateAppSettings();
+                    }
                 }
             }
 
@@ -288,7 +310,6 @@ namespace Covid19Radar.ViewModels
         public override async void OnAppearing()
         {
             base.OnAppearing();
-
             await UpdateView();
         }
 

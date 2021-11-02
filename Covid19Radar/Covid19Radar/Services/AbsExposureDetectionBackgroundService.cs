@@ -44,7 +44,7 @@ namespace Covid19Radar.Services
 
         public abstract void Schedule();
 
-        public async Task ExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
+        public virtual async Task ExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 

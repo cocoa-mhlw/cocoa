@@ -32,5 +32,10 @@ namespace Covid19Radar.Common
         /// Message when `AppDelagate.OnActivated()` occurs on iOS.
         /// </summary>
         public const string IosOnActivatedMessage = "IosOnActivatedMessage";
+
+        /// <summary>
+        /// Key of processing-number in AppLinks(Universal Links) query parameters.
+        /// </summary>
+        public const string LinkQueryKeyProcessingNumber = "pn";
     }
 }

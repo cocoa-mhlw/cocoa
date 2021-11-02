@@ -82,7 +82,12 @@ namespace Covid19Radar.Api
 
             // TODO: Security Consider, additional validation for user uuid.
 
-            // validation device 
+            // validation device
+            Logger.LogInformation("regions: " + (diagnosis?.Regions != null && diagnosis.Regions.Count() != 0 ? string.Join(", ", diagnosis.Regions) : "Empty") + ", " +
+                      $"platform: {diagnosis?.Platform}, " +
+                      $"deviceVerificationPayload: {diagnosis?.DeviceVerificationPayload}, " +
+                      $"appPackageName: {diagnosis?.AppPackageName}, " +
+                      $"padding: {diagnosis?.Padding}");
             if (false == await DeviceCheck.Validation(diagnosis, reqTime)) 
             {
                 Logger.LogInformation($"Invalid Device");

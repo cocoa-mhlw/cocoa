@@ -26,6 +26,7 @@ namespace Covid19Radar.Views
 
         private CancellationTokenSource _cancellationTokenSource;
         private CachedImage _homeActiveIconImage;
+        private readonly SemaphoreSlim _semaphoreForAnimation = new SemaphoreSlim(1, 1);
 
         #endregion
 
@@ -64,11 +65,13 @@ namespace Covid19Radar.Views
         {
             StopAnimation();
 
-            _cancellationTokenSource = new CancellationTokenSource();
+            var cancellationTokenSource = new CancellationTokenSource();
+            _cancellationTokenSource = cancellationTokenSource;
 
             _ = Task.Run(async () =>
             {
-                while (!_cancellationTokenSource.IsCancellationRequested)
+                _semaphoreForAnimation.Wait();
+                while (!cancellationTokenSource.IsCancellationRequested)
                 {
                     _ = _homeActiveIconImage.FadeTo(0.25, length: 0);
                     await _homeActiveIconImage.RelScaleTo(ANIMATION_SCALE_VALUE,
@@ -80,11 +83,12 @@ namespace Covid19Radar.Views
                         length: ANIMATION_SCALEOUT_DURATION_IN_MILLIS,
                         easing: Easing.Linear
                         );
-
                     await Task.Delay(ANIMATION_INTERVAL_IN_MILLIS);
                 }
+                cancellationTokenSource.Dispose();
+                _semaphoreForAnimation.Release();
             },
-            _cancellationTokenSource.Token);
+            cancellationTokenSource.Token);
         }
 
         private void StopAnimation()

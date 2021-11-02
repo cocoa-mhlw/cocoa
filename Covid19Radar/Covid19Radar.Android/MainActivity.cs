@@ -5,7 +5,6 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Runtime;
 using Android.Content;
 using Acr.UserDialogs;
 using Covid19Radar.Droid.Services;
@@ -14,10 +13,34 @@ using Prism.Common;
 using System.Threading.Tasks;
 
 using FormsApplication = Xamarin.Forms.Application;
+using Covid19Radar.Views;
+using Prism.Navigation;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.Droid
 {
-    [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(
+        Label = "@string/app_name",
+        Icon = "@mipmap/ic_launcher",
+        Theme = "@style/MainTheme.Splash",
+        MainLauncher = true,
+        LaunchMode = LaunchMode.SingleTop,
+        ScreenOrientation = ScreenOrientation.Portrait,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
+        )]
+    [IntentFilter(
+        new[] { Intent.ActionView },
+        AutoVerify = true,
+        Categories = new[]
+        {
+            Intent.CategoryDefault,
+            Intent.CategoryBrowsable
+        },
+        DataScheme = "https",
+        DataHost = "www.mhlw.go.jp",
+        DataPathPattern = "/cocoa/a/.*"
+        )
+    ]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         private const string EXTRA_KEY_DESTINATION = "key_destination";
@@ -70,40 +93,25 @@ namespace Covid19Radar.Droid
             await NavigateToDestinationFromIntent(Intent);
         }
 
-        private static Destination GetDestinationFromIntent(Intent intent)
-        {
-            int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
-            return (Destination)Enum.ToObject(typeof(Destination), ordinal);
-        }
 
         private async Task NavigateToDestinationFromIntent(Intent intent)
         {
-            if (!intent.HasExtra(EXTRA_KEY_DESTINATION))
+            if (intent.Data != null)
             {
-                return;
+                var processingNumber = intent.Data.GetQueryParameter(AppConstants.LinkQueryKeyProcessingNumber);
+
+                var navigationParameters = new NavigationParameters();
+                navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
+
             }
-            var destination = GetDestinationFromIntent(intent);
-            await AppInstance?.NavigateToSplashAsync(destination);
-        }
-
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-        private void RequestPermission()
-        {
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
+            else if (intent.HasExtra(EXTRA_KEY_DESTINATION))
             {
-                string[] permissions = new string[] {
-                    Android.Manifest.Permission.Bluetooth,
-                    Android.Manifest.Permission.BluetoothPrivileged,
-                    Android.Manifest.Permission.BluetoothAdmin,
-                };
+                int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
+                var destination = (Destination)Enum.ToObject(typeof(Destination), ordinal);
 
-                RequestPermissions(permissions, 0);
+                var navigationParameters = new NavigationParameters();
+                await AppInstance?.NavigateToSplashAsync(destination, navigationParameters);
             }
         }
 
