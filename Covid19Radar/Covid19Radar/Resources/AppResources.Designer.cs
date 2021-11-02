@@ -1702,5 +1702,11 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("InquiryAboutRegistrationReceptionTime", resourceCulture);
             }
         }
+        
+        public static string YourProcessingNumber {
+            get {
+                return ResourceManager.GetString("YourProcessingNumber", resourceCulture);
+            }
+        }
     }
 }

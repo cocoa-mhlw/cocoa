@@ -1217,4 +1217,8 @@ Note: this app does not collect users’ location information.</value>
     <value>(Every day from 9:00 to 17:00)​</value>
     <comment>（受付：毎日 午前9時から午後5時まで）</comment>
   </data>
+  <data name="YourProcessingNumber" xml:space="preserve">
+    <value>Your processing number</value>
+    <comment>あなた専用の処理番号</comment>
+  </data>
 </root>

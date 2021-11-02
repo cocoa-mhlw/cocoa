@@ -1107,4 +1107,8 @@
     <value>（受付：毎日 午前9時から午後5時まで）</value>
     <comment>（受付：毎日 午前9時から午後5時まで）</comment>
   </data>
+  <data name="YourProcessingNumber" xml:space="preserve">
+    <value>あなた専用の処理番号</value>
+    <comment>あなた専用の処理番号</comment>
+  </data>
 </root>
