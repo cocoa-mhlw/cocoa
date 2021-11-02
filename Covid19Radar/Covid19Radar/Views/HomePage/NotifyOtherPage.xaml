@@ -101,20 +101,31 @@
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
                 Margin="0, 15, 0, 0"
-                Style="{StaticResource DefaultLabel}"
-                Text="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
+                Style="{StaticResource DefaultLabel}">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding IsDeepLink}" Value="False">
+                        <Setter Property="Text" Value="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
+                    </DataTrigger>
+                    <DataTrigger TargetType="Label" Binding="{Binding IsDeepLink}" Value="True">
+                        <Setter Property="Text" Value="{x:Static resources:AppResources.ProcessingNumberDescriptionDeepLink}" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
             <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                Margin="0, 0, 0, 5"
+                AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessingNumberVisible}"
+                Margin="0, 0, 0, 0"
                 HorizontalOptions="Start"
                 Style="{StaticResource DefaultLabelColor}"
-                Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
+                Text="{x:Static resources:AppResources.NotifyOtherPageLabel}"
+                IsVisible="{Binding IsHowToObtainProcessingNumberVisible}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
                 </Label.GestureRecognizers>
             </Label>
-            <StackLayout Spacing="0">
+            <StackLayout Spacing="0"
+                Margin="0, 5, 0, 0">
                 <Frame
+                    Margin="3"
                     Padding="0"
                     BackgroundColor="#CECECE"
                     CornerRadius="7"
@@ -124,26 +135,26 @@
                     <Frame
                         Margin="3"
                         Padding="0"
-                        BackgroundColor="#CECECE"
-                        CornerRadius="7"
-                        HasShadow="False"
-                        HeightRequest="90"
-                        HorizontalOptions="FillAndExpand">
-                        <Frame
-                            Margin="3"
-                            Padding="0"
-                            BackgroundColor="White"
-                            CornerRadius="5"
-                            HasShadow="False">
-                            <Entry
-                                AutomationProperties.IsInAccessibleTree="True"
-                                CharacterSpacing="5"
-                                Keyboard="Numeric"
-                                MaxLength="{x:Static common:AppConstants.MaxDiagnosisUidCount}"
-                                Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"
-                                Style="{StaticResource DefaultEntry}"
-                                Text="{Binding DiagnosisUid}" />
-                        </Frame>
+                        BackgroundColor="White"
+                        CornerRadius="5"
+                        HasShadow="False">
+                        <Entry
+                            AutomationProperties.IsInAccessibleTree="True"
+                            CharacterSpacing="5"
+                            Keyboard="Numeric"
+                            IsReadOnly="{Binding IsProcessingNumberReadOnly}"
+                            MaxLength="{x:Static common:AppConstants.MaxDiagnosisUidCount}"
+                            Style="{StaticResource DefaultEntry}"
+                            Text="{Binding DiagnosisUid}">
+                            <Entry.Triggers>
+                                <DataTrigger TargetType="Entry" Binding="{Binding IsDeepLink}" Value="False">
+                                    <Setter Property="Placeholder" Value="{x:Static resources:AppResources.NotifyOtherPageLabel2}" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Entry" Binding="{Binding IsDeepLink}" Value="True">
+                                    <Setter Property="Placeholder" Value="{x:Static resources:AppResources.ProcessingNumberPlaceholderDeepLink}" />
+                                </DataTrigger>
+                            </Entry.Triggers>
+                         </Entry>
                     </Frame>
                 </Frame>
                 <Frame
@@ -173,11 +184,10 @@
                             IsVisible="{Binding IsConsentLinkVisible}"
                              >
                     <Label
-                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.IsInAccessibleTree="{Binding IsConsentLinkVisible}"
                         Margin="0, 0, 0, 5"
-                        HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultLabelColor}"
-                        Text="【重要】同意内容を確認">
+                        Text="{x:Static resources:AppResources.ConfirmAgreement}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Path=OnShowConsentPageClicked}" />
                         </Label.GestureRecognizers>
@@ -189,11 +199,49 @@
             <Button
                 AutomationId="NextButton"
                 AutomationProperties.IsInAccessibleTree="True"
-                AutomationProperties.Name="{x:Static resources:AppResources.NotifyOtherPageButton}"
                 Command="{Binding Path=OnClickRegister}"
-                IsEnabled="{Binding IsEnabled}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.NotifyOtherPageButton}" />
+                IsEnabled="{Binding IsNextButtonEnabled}"
+                Style="{StaticResource DefaultButton}">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding IsDeepLink}" Value="False">
+                        <Setter Property="AutomationProperties.Name" Value="{x:Static resources:AppResources.NotifyOtherPageButton}" />
+                        <Setter Property="Text" Value="{x:Static resources:AppResources.NotifyOtherPageButton}" />
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button" Binding="{Binding IsDeepLink}" Value="True">
+                        <Setter Property="AutomationProperties.Name" Value="{x:Static resources:AppResources.AgreeAndRegisterButton}" />
+                        <Setter Property="Text" Value="{x:Static resources:AppResources.AgreeAndRegisterButton}" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Frame
+                Margin="0,25,0,15"
+                Padding="10"
+                CornerRadius="10"
+                IsVisible="{Binding IsInqueryTelephoneNumberVisible}">
+                <StackLayout Spacing="10">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        Text="{x:Static resources:AppResources.InquiryAboutRegistrationTitle}"/>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
+                        Style="{StaticResource DefaultLabelColor}"
+                        FontSize="Large"
+                        TextDecorations="Underline"
+                        Text="{Binding InqueryTelephoneNumber}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=OnInqueryTelephoneNumberClicked}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.InquiryAboutRegistrationReceptionTime}" />
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ScrollView>
 </ContentPage>

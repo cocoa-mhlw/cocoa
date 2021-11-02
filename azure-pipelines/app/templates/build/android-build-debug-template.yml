@@ -22,7 +22,7 @@ steps:
     apksignerKeyPassword: '$(Android_KeyPassword)'
 
 - task: CopyFiles@2
-  displayName: 'Copy Files to: Build.ArtifactStagingDirectory'
+  displayName: 'Copy APK to: Build.ArtifactStagingDirectory'
   inputs:
     SourceFolder: '$(Build.BinariesDirectory)/Release'
     Contents: '*.apk'
@@ -31,11 +31,11 @@ steps:
 - script: |
     cd $(Build.ArtifactStagingDirectory)/
     ARCHIVE_FILE=`find *.apk | head -1`
-    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_v$(APP_VERSION)_debug_$(Environment).apk
+    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_debug_$(Environment)_v$(AppVersion)_$(buildVersion).apk
     ls -la
   displayName: 'Change archive name'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: archives_v$(APP_VERSION)_debug_$(Environment)'
+  displayName: 'Publish APK'
   inputs:
-    ArtifactName: 'archives_v$(APP_VERSION)_debug_$(Environment)'
+    ArtifactName: 'archives_debug_$(Environment)_v$(AppVersion)_$(buildVersion)'

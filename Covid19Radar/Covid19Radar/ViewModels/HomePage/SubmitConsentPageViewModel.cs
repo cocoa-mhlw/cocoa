@@ -9,11 +9,32 @@ namespace Covid19Radar.ViewModels
 {
     public class SubmitConsentPageViewModel : ViewModelBase
     {
+        private bool _isDeepLink = false;
+        public bool IsDeepLink
+        {
+            get => _isDeepLink;
+            set => SetProperty(ref _isDeepLink, value);
+        }
+
+        private bool _isProcessingNumberVisible = false;
+        public bool IsProcessingNumberVisible
+        {
+            get => _isProcessingNumberVisible;
+            set => SetProperty(ref _isProcessingNumberVisible, value);
+        }
+
+        private string _processingNumber = "";
+        public string ProcessingNumber
+        {
+            get => _processingNumber;
+            set => SetProperty(ref _processingNumber, value);
+        }
+
         private bool _isNextButtonVisible = true;
         public bool IsNextButtonVisible
         {
-            get { return _isNextButtonVisible; }
-            set { SetProperty(ref _isNextButtonVisible, value); }
+            get => _isNextButtonVisible;
+            set => SetProperty(ref _isNextButtonVisible, value);
         }
 
         public SubmitConsentPageViewModel() : base()
@@ -24,9 +45,19 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
-            if (parameters != null && parameters.ContainsKey(SubmitConsentPage.IsFromAppLinksKey))
+            if (parameters != null)
             {
-                IsNextButtonVisible = !parameters.GetValue<bool>(SubmitConsentPage.IsFromAppLinksKey);
+                if (parameters.ContainsKey(SubmitConsentPage.IsFromAppLinksKey))
+                {
+                    var isFromAppLinksKey = parameters.GetValue<bool>(SubmitConsentPage.IsFromAppLinksKey);
+                    IsDeepLink = isFromAppLinksKey;
+                    IsProcessingNumberVisible = isFromAppLinksKey;
+                    IsNextButtonVisible = !isFromAppLinksKey;
+                }
+                if (parameters.ContainsKey(SubmitConsentPage.ProcessingNumberKey))
+                {
+                    ProcessingNumber = parameters.GetValue<string>(SubmitConsentPage.ProcessingNumberKey);
+                }
             }
         }
     }

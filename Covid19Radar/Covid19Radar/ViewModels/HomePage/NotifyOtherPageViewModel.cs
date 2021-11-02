@@ -22,76 +22,108 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService loggerService;
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly ICloseApplicationService closeApplicationService;
+        private readonly IEssentialsService _essentialsService;
 
         private string _diagnosisUid;
         public string DiagnosisUid
         {
-            get { return _diagnosisUid; }
+            get => _diagnosisUid;
             set
             {
                 SetProperty(ref _diagnosisUid, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
+        private bool _isDeepLink = false;
+        public bool IsDeepLink
+        {
+            get => _isDeepLink;
+            set => SetProperty(ref _isDeepLink, value);
+        }
+
         private bool _isConsentLinkVisible;
         public bool IsConsentLinkVisible
         {
-            get { return _isConsentLinkVisible; }
-            set { SetProperty(ref _isConsentLinkVisible, value); }
+            get => _isConsentLinkVisible;
+            set => SetProperty(ref _isConsentLinkVisible, value);
         }
 
-        private bool _isProcessNumberEnabled;
-        public bool IsProcessNumberEnabled
+        private bool _isProcessingNumberReadOnly = false;
+        public bool IsProcessingNumberReadOnly
         {
-            get { return _isProcessNumberEnabled; }
-            set { SetProperty(ref _isProcessNumberEnabled, value); }
+            get => _isProcessingNumberReadOnly;
+            set => SetProperty(ref _isProcessingNumberReadOnly, value);
         }
 
-        private bool _isEnabled;
-        public bool IsEnabled
+        private bool _isHowToObtainProcessingNumberVisible = true;
+        public bool IsHowToObtainProcessingNumberVisible
         {
-            get { return _isEnabled; }
-            set { SetProperty(ref _isEnabled, value); }
+            get => _isHowToObtainProcessingNumberVisible;
+            set => SetProperty(ref _isHowToObtainProcessingNumberVisible, value);
         }
+
+        public string InqueryTelephoneNumber => AppResources.InquiryAboutRegistrationPhoneNumber;
+
+        private bool _isInqueryTelephoneNumberVisible;
+        public bool IsInqueryTelephoneNumberVisible
+        {
+            get => _isInqueryTelephoneNumberVisible;
+            set => SetProperty(ref _isInqueryTelephoneNumberVisible, value);
+        }
+
+        private bool _isNextButtonEnabled;
+        public bool IsNextButtonEnabled
+        {
+            get => _isNextButtonEnabled;
+            set => SetProperty(ref _isNextButtonEnabled, value);
+        }
+
         private bool _isVisibleWithSymptomsLayout;
         public bool IsVisibleWithSymptomsLayout
         {
-            get { return _isVisibleWithSymptomsLayout; }
+            get => _isVisibleWithSymptomsLayout;
             set
             {
                 SetProperty(ref _isVisibleWithSymptomsLayout, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
         private bool _isVisibleNoSymptomsLayout;
         public bool IsVisibleNoSymptomsLayout
         {
-            get { return _isVisibleNoSymptomsLayout; }
+            get => _isVisibleNoSymptomsLayout;
             set
             {
                 SetProperty(ref _isVisibleNoSymptomsLayout, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
         private DateTime _diagnosisDate;
+
         public DateTime DiagnosisDate
         {
-            get { return _diagnosisDate; }
-            set { SetProperty(ref _diagnosisDate, value); }
+            get => _diagnosisDate;
+            set => SetProperty(ref _diagnosisDate, value);
         }
+
         private int errorCount { get; set; }
 
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
             IExposureNotificationService exposureNotificationService,
-            ICloseApplicationService closeApplicationService
+            ICloseApplicationService closeApplicationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
             this.exposureNotificationService = exposureNotificationService;
             this.closeApplicationService = closeApplicationService;
+            _essentialsService = essentialsService;
             errorCount = 0;
             DiagnosisUid = "";
             DiagnosisDate = DateTime.Today;
@@ -101,20 +133,40 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
-            if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessNumberKey))
+            if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessingNumberKey))
             {
-                DiagnosisUid = parameters.GetValue<string>(NotifyOtherPage.ProcessNumberKey);
-                IsProcessNumberEnabled = false;
+                DiagnosisUid = parameters.GetValue<string>(NotifyOtherPage.ProcessingNumberKey);
+                IsDeepLink = true;
+                IsHowToObtainProcessingNumberVisible = false;
+                IsProcessingNumberReadOnly = true;
                 IsConsentLinkVisible = true;
+                IsInqueryTelephoneNumberVisible = true;
             }
         }
+
+        public Command OnInqueryTelephoneNumberClicked => new Command(() =>
+        {
+            loggerService.StartMethod();
+
+            try
+            {
+                var phoneNumber = Regex.Replace(InqueryTelephoneNumber, "[^0-9]", "");
+                _essentialsService.PhoneDialerOpen(phoneNumber);
+            }
+            catch (Exception exception)
+            {
+                loggerService.Exception("Exception occurred: PhoneDialer", exception);
+            }
+
+            loggerService.EndMethod();
+        });
 
         public Command OnShowConsentPageClicked => new Command(async () =>
         {
             loggerService.StartMethod();
 
             var param = new NavigationParameters();
-            param = SubmitConsentPage.BuildNavigationParams(isFromAppLinks: true, param);
+            param = SubmitConsentPage.BuildNavigationParams(true, _diagnosisUid, param);
             var result = await NavigationService.NavigateAsync("SubmitConsentPage", param);
 
             loggerService.EndMethod();

@@ -451,10 +451,6 @@
     <value>Sutikimas dėl teigiamos registracijos</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Sutikimas dėl teigiamos registracijos</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Versija</value>
     <comment>バージョン</comment>
