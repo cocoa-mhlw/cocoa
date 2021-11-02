@@ -33,9 +33,6 @@ namespace Covid19Radar.iOS
         private Lazy<ILoggerService> _loggerService
                     = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
-        private Lazy<ILoggerService> _loggerService
-                    = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
-
         private App? AppInstance
         {
             get
