@@ -9,6 +9,13 @@ namespace Covid19Radar.ViewModels
 {
     public class SubmitConsentPageViewModel : ViewModelBase
     {
+        private bool _isDeepLink = false;
+        public bool IsDeepLink
+        {
+            get => _isDeepLink;
+            set => SetProperty(ref _isDeepLink, value);
+        }
+
         private bool _isProcessingNumberVisible = false;
         public bool IsProcessingNumberVisible
         {
@@ -43,6 +50,7 @@ namespace Covid19Radar.ViewModels
                 if (parameters.ContainsKey(SubmitConsentPage.IsFromAppLinksKey))
                 {
                     var isFromAppLinksKey = parameters.GetValue<bool>(SubmitConsentPage.IsFromAppLinksKey);
+                    IsDeepLink = isFromAppLinksKey;
                     IsProcessingNumberVisible = isFromAppLinksKey;
                     IsNextButtonVisible = !isFromAppLinksKey;
                 }

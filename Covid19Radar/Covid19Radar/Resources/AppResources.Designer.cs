@@ -803,9 +803,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SubmitConsentPageTitle2 {
+        public static string SubmitConsentPageTitleDeepLink {
             get {
-                return ResourceManager.GetString("SubmitConsentPageTitle2", resourceCulture);
+                return ResourceManager.GetString("SubmitConsentPageTitleDeepLink", resourceCulture);
             }
         }
         

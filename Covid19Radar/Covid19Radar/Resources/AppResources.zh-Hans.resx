@@ -492,9 +492,9 @@
     <value>同意进行阳性登记</value>
     <comment>陽性登録への同意</comment>
   </data>
-	<data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>同意进行阳性登记</value>
-    <comment>陽性登録への同意</comment>
+  <data name="SubmitConsentPageTitleDeepLink" xml:space="preserve">
+    <value>同意内容</value>
+    <comment>同意内容</comment>
   </data>
 	<data name="VersionText" xml:space="preserve">
     <value>版本</value>

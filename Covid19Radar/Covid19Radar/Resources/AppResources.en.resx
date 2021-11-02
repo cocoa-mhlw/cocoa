@@ -491,9 +491,9 @@
     <value>Consent to positive registration</value>
     <comment>陽性登録への同意</comment>
   </data>
-	<data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Consent to positive registration</value>
-    <comment>陽性登録への同意</comment>
+  <data name="SubmitConsentPageTitleDeepLink" xml:space="preserve">
+    <value>Agreements</value>
+    <comment>同意内容</comment>
   </data>
 	<data name="VersionText" xml:space="preserve">
     <value>Version</value>
