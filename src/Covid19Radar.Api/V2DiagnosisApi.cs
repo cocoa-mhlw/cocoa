@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -81,7 +81,12 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Regions not supported.");
             }
 
-            // validation device 
+            // validation device
+            Logger.LogInformation("regions: " + (diagnosis?.Regions != null && diagnosis.Regions.Count() != 0 ? string.Join(", ", diagnosis.Regions) : "Empty") + ", " +
+                      $"platform: {diagnosis?.Platform}, " +
+                      $"deviceVerificationPayload: {diagnosis?.DeviceVerificationPayload}, " +
+                      $"appPackageName: {diagnosis?.AppPackageName}, " +
+                      $"padding: {diagnosis?.Padding}");
             if (false == await DeviceCheck.Validation(diagnosis, reqTime))
             {
                 Logger.LogInformation($"Invalid Device");
@@ -94,6 +99,7 @@ namespace Covid19Radar.Api
             {
                 return new NoContentResult();
             }
+
 
             // validatetion VerificationPayload
             var verificationResult = await VerificationService.VerificationAsync(diagnosis.VerificationPayload);

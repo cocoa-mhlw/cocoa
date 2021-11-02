@@ -13,12 +13,13 @@ namespace Covid19Radar.Views
     {
         public const string DestinationKey = "destination";
 
-        public static NavigationParameters CreateNavigationParams(Destination destination)
+        public static NavigationParameters BuildNavigationParams(
+            Destination destination,
+            NavigationParameters param
+            )
         {
-            return new NavigationParameters()
-            {
-                { DestinationKey, destination }
-            };
+            param.Add(DestinationKey, destination);
+            return param;
         }
 
         public SplashPage()

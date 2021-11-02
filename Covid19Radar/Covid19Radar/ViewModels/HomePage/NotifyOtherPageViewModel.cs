@@ -39,6 +39,20 @@ namespace Covid19Radar.ViewModels
                 IsEnabled = CheckRegisterButtonEnable();
             }
         }
+        private bool _isConsentLinkVisible;
+        public bool IsConsentLinkVisible
+        {
+            get { return _isConsentLinkVisible; }
+            set { SetProperty(ref _isConsentLinkVisible, value); }
+        }
+
+        private bool _isProcessNumberEnabled;
+        public bool IsProcessNumberEnabled
+        {
+            get { return _isProcessNumberEnabled; }
+            set { SetProperty(ref _isProcessNumberEnabled, value); }
+        }
+
         private bool _isEnabled;
         public bool IsEnabled
         {
@@ -91,6 +105,29 @@ namespace Covid19Radar.ViewModels
             ProcessNumber = "";
             DiagnosisDate = DateTime.Today;
         }
+
+        public override void Initialize(INavigationParameters parameters)
+        {
+            base.Initialize(parameters);
+
+            if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessNumberKey))
+            {
+                DiagnosisUid = parameters.GetValue<string>(NotifyOtherPage.ProcessNumberKey);
+                IsProcessNumberEnabled = false;
+                IsConsentLinkVisible = true;
+            }
+        }
+
+        public Command OnShowConsentPageClicked => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var param = new NavigationParameters();
+            param = SubmitConsentPage.BuildNavigationParams(isFromAppLinks: true, param);
+            var result = await NavigationService.NavigateAsync("SubmitConsentPage", param);
+
+            loggerService.EndMethod();
+        });
 
         public Command OnClickRegister => (new Command(async () =>
         {

@@ -19,8 +19,13 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
+using System.Linq;
 
 using FormsApplication = Xamarin.Forms.Application;
+using Prism.Navigation;
+using Covid19Radar.Views;
+using System;
+using CommonServiceLocator;
 
 namespace Covid19Radar.iOS
 {
@@ -87,7 +92,8 @@ namespace Covid19Radar.iOS
 
             _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
             {
-                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage);
+                NavigationParameters navigationParameters = new NavigationParameters();
+                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage, navigationParameters);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 
@@ -122,6 +128,45 @@ namespace Covid19Radar.iOS
 #else
                 exposureNotificationApiService.IsTest = false;
 #endif
+
+        public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+        {
+            if (userActivity.ActivityType == NSUserActivityType.BrowsingWeb && userActivity.WebPageUrl != null)
+            {
+                NavigateUniversalLinks(userActivity.WebPageUrl);
+                return true;
+            }
+            else
+            {
+                _loggerService.Value.Info($"Failed to handle ContinueUserActivity.");
+                return base.ContinueUserActivity(application, userActivity, completionHandler);
+            }
+        }
+
+        private void NavigateUniversalLinks(NSUrl url)
+        {
+            try
+            {
+                var urlComponents = new NSUrlComponents(url, true);
+                if (urlComponents.Path?.StartsWith("/cocoa/a/") == true)
+                {
+                    var processingNumber = urlComponents
+                        .QueryItems?
+                        .FirstOrDefault(item => item.Name == AppConstants.LinkQueryKeyProcessingNumber)?
+                        .Value;
+                    var navigationParameters = new NavigationParameters();
+
+                    if (!string.IsNullOrEmpty(processingNumber))
+                    {
+                        navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                    }
+
+                    InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
+                }
+            }
+            catch(Exception e)
+            {
+                _loggerService.Value.Exception("Failed to NavigateUniversalLinks", e);
             }
         }
 
