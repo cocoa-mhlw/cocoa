@@ -44,7 +44,7 @@ namespace Covid19Radar
 
         public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: false) { }
 
-        protected override async void OnInitialized()
+        protected override void OnInitialized()
         {
             InitializeComponent();
 
@@ -55,27 +55,13 @@ namespace Covid19Radar
 
             LogUnobservedTaskExceptions();
 
-            var navigationParameters = new NavigationParameters();
-            var result = await NavigateToSplashAsync(Destination.HomePage, navigationParameters);
-            if (!result.Success)
-            {
-                LoggerService.Info($"Failed transition.");
-
-                MainPage = new ExceptionPage
-                {
-                    BindingContext = new ExceptionPageViewModel()
-                    {
-                        Message = result.Exception.Message
-                    }
-                };
-                System.Diagnostics.Debugger.Break();
-            }
-
             LoggerService.EndMethod();
         }
 
         public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, NavigationParameters navigationParameters)
         {
+            LoggerService.Info($"Destination: {destination}");
+
             navigationParameters = SplashPage.BuildNavigationParams(destination, navigationParameters);
             return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParameters);
         }
