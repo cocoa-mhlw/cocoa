@@ -68,7 +68,11 @@ namespace Covid19Radar.ViewModels
             }
             else
             {
-                Destination destination = _navigationParameters.GetValue<Destination>(SplashPage.DestinationKey);
+                Destination destination = Destination.HomePage;
+                if (_navigationParameters.ContainsKey(SplashPage.DestinationKey))
+                {
+                    destination = _navigationParameters.GetValue<Destination>(SplashPage.DestinationKey);
+                }
                 _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
             }
 
