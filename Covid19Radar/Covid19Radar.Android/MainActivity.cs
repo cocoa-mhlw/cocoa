@@ -114,6 +114,7 @@ namespace Covid19Radar.Droid
 
                     var navigationParameters = new NavigationParameters();
                     navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+
                     await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
                 }
                 else

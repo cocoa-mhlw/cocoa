@@ -44,6 +44,13 @@ namespace Covid19Radar.ViewModels
 
             await _migrationService.MigrateAsync();
 
+            var destination = Destination.HomePage;
+            if (parameters.ContainsKey(SplashPage.DestinationKey))
+            {
+                _loggerService.Info($"Destination is set {destination}");
+                destination = parameters.GetValue<Destination>(SplashPage.DestinationKey);
+            }
+
             if (_userDataRepository.IsAllAgreed())
             {
                 _loggerService.Info("User data exists");
@@ -52,30 +59,22 @@ namespace Covid19Radar.ViewModels
 
                 if (_termsUpdateService.IsUpdated(TermsType.TermsOfService, termsUpdateInfo))
                 {
-                    parameters.Add("updateInfo", termsUpdateInfo);
                     _loggerService.Info($"Transition to ReAgreeTermsOfServicePage");
-                    _ = await NavigationService.NavigateAsync(nameof(ReAgreeTermsOfServicePage), parameters);
+
+                    ReAgreeTermsOfServicePage.BuildNavigationParams(termsUpdateInfo, destination, parameters);
+                    _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreeTermsOfServicePage), parameters);
                 }
                 else if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, termsUpdateInfo))
                 {
-                    parameters.Add("updatePrivacyPolicyInfo", termsUpdateInfo.PrivacyPolicy);
                     _loggerService.Info($"Transition to ReAgreePrivacyPolicyPage");
-                    _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), parameters);
-                }
-                else if (parameters.GetValue<Destination>(SplashPage.DestinationKey) == Destination.ContactedNotifyPage)
-                {
-                    _loggerService.Info($"Transition to DeepLinkDestination.ContactedNotifyPage");
-                    _ = await NavigationService.NavigateAsync(Destination.ContactedNotifyPage.ToPath());
-                }
-                else if (parameters.GetValue<Destination>(SplashPage.DestinationKey) == Destination.NotifyOtherPage)
-                {
-                    _loggerService.Info($"Transition to DeepLinkDestination.NotifyOtherPage");
-                    _ = await NavigationService.NavigateAsync(Destination.NotifyOtherPage.ToPath(), parameters);
+
+                    ReAgreePrivacyPolicyPage.BuildNavigationParams(termsUpdateInfo.PrivacyPolicy, destination, parameters);
+                    _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), parameters);
                 }
                 else
                 {
-                    _loggerService.Info($"Transition to HomePage");
-                    _ = await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
+                    _loggerService.Info($"Transition to {destination}");
+                    _ = await NavigationService.NavigateAsync(destination.ToPath(), parameters);
                 }
             }
             else

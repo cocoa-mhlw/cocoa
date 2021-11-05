@@ -11,15 +11,14 @@ namespace Covid19Radar.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SplashPage : ContentPage
     {
-        public const string DestinationKey = "destination";
+        public const string DestinationKey = "destination_splash";
 
-        public static NavigationParameters BuildNavigationParams(
+        public static void BuildNavigationParams(
             Destination destination,
-            NavigationParameters param
+            INavigationParameters param
             )
         {
             param.Add(DestinationKey, destination);
-            return param;
         }
 
         public SplashPage()
