@@ -74,13 +74,13 @@ namespace Covid19Radar
             LoggerService.EndMethod();
         }
 
-        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, NavigationParameters navigationParameters)
+        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, INavigationParameters navigationParameters)
         {
-            navigationParameters = SplashPage.BuildNavigationParams(destination, navigationParameters);
+            SplashPage.BuildNavigationParams(destination, navigationParameters);
             return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParameters);
         }
 
-        public async Task<INavigationResult> NavigateToAsync(Destination destination, NavigationParameters navigationParameters)
+        public async Task<INavigationResult> NavigateToAsync(Destination destination, INavigationParameters navigationParameters)
         {
             LoggerService.StartMethod();
 

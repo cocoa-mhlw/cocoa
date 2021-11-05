@@ -62,9 +62,9 @@ namespace Covid19Radar.ViewModels
             _userDataRepository.SaveLastUpdateDate(TermsType.PrivacyPolicy, UpdateDateTimeUtc);
 
             Destination destination = Destination.HomePage;
-            if (_navigationParameters.ContainsKey(SplashPage.DestinationKey))
+            if (_navigationParameters.ContainsKey(ReAgreePrivacyPolicyPage.DestinationKey))
             {
-                destination = _navigationParameters.GetValue<Destination>(SplashPage.DestinationKey);
+                destination = _navigationParameters.GetValue<Destination>(ReAgreePrivacyPolicyPage.DestinationKey);
             }
             _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
 
@@ -76,7 +76,7 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             base.Initialize(parameters);
-            TermsUpdateInfoModel.Detail updateInfo = (TermsUpdateInfoModel.Detail) parameters["updatePrivacyPolicyInfo"];
+            TermsUpdateInfoModel.Detail updateInfo = (TermsUpdateInfoModel.Detail) parameters[ReAgreePrivacyPolicyPage.UpdatePrivacyPolicyInfoKey];
             UpdateDateTimeUtc = updateInfo.UpdateDateTimeUtc;
             UpdateText = updateInfo.Text;
 
