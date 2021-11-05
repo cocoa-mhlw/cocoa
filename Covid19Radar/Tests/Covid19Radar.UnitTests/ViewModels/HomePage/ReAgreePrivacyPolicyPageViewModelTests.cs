@@ -103,7 +103,25 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTimeUtc));
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage)), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.HomePage.ToPath(), param), Times.Once());
+        }
+
+        [Fact]
+        public void OnClickReAgreeCommandWithDestinationTest()
+        {
+            var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
+            var updateInfo = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now };
+            var param = new NavigationParameters
+            {
+                { "destination", Destination.ContactedNotifyPage },
+                { "updatePrivacyPolicyInfo", updateInfo }
+            };
+            reAgreePrivacyPolicyPageViewModel.Initialize(param);
+
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTimeUtc));
+            reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
+
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.ContactedNotifyPage.ToPath(), param), Times.Once());
         }
     }
 }

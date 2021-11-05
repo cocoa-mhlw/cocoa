@@ -61,7 +61,11 @@ namespace Covid19Radar.ViewModels
 
             _userDataRepository.SaveLastUpdateDate(TermsType.PrivacyPolicy, UpdateDateTimeUtc);
 
-            Destination destination = _navigationParameters.GetValue<Destination>(SplashPage.DestinationKey);
+            Destination destination = Destination.HomePage;
+            if (_navigationParameters.ContainsKey(SplashPage.DestinationKey))
+            {
+                destination = _navigationParameters.GetValue<Destination>(SplashPage.DestinationKey);
+            }
             _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
 
             _loggerService.EndMethod();
