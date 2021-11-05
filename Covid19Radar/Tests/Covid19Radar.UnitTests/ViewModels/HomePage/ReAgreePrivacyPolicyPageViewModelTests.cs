@@ -111,11 +111,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
             var updateInfo = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now };
-            var param = new NavigationParameters
-            {
-                { "destination", Destination.ContactedNotifyPage },
-                { "updatePrivacyPolicyInfo", updateInfo }
-            };
+            var param = new NavigationParameters();
+            ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo, Destination.ContactedNotifyPage, param);
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTimeUtc));
