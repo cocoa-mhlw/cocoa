@@ -82,18 +82,18 @@ namespace Covid19Radar.Api
             }
 
             // validation support region
-            if (!submissionParameter.Regions.Any(_ => _supportRegions.Contains(_)))
-            {
-                _logger.LogInformation($"Regions not supported.");
-                return new BadRequestErrorMessageResult("Regions not supported.");
-            }
+            //if (!submissionParameter.Regions.Any(_ => _supportRegions.Contains(_)))
+            //{
+            //    _logger.LogInformation($"Regions not supported.");
+            //    return new BadRequestErrorMessageResult("Regions not supported.");
+            //}
 
             // validation device
-            if (!await _deviceValidationService.Validation(submissionParameter, reqTime))
-            {
-                _logger.LogInformation($"Invalid Device");
-                return new BadRequestErrorMessageResult("Invalid Device");
-            }
+            //if (!await _deviceValidationService.Validation(submissionParameter, reqTime))
+            //{
+            //    _logger.LogInformation($"Invalid Device");
+            //    return new BadRequestErrorMessageResult("Invalid Device");
+            //}
 
             // Check Chaff request for production
             // https://google.github.io/exposure-notifications-server/server_functional_requirements.html
@@ -103,11 +103,11 @@ namespace Covid19Radar.Api
             }
 
             // validatetion VerificationPayload
-            var verificationResult = await _verificationService.VerificationAsync(submissionParameter.VerificationPayload);
-            if (verificationResult != ((int)HttpStatusCode.OK))
-            {
-                return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
-            }
+            //var verificationResult = await _verificationService.VerificationAsync(submissionParameter.VerificationPayload);
+            //if (verificationResult != ((int)HttpStatusCode.OK))
+            //{
+            //    return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
+            //}
 
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             var keys = submissionParameter.Keys.Select(key => key.ToModel(submissionParameter, timestamp));
