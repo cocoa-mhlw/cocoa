@@ -34,7 +34,7 @@ namespace Covid19Radar.Api
 
         [FunctionName(nameof(InquiryLogApi))]
         public IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "inquirylog")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "inquirylog")] HttpRequest req)
         {
             Logger.LogInformation($"{nameof(Run)}");
 

@@ -52,7 +52,7 @@ namespace Covid19Radar.Api
 
         [FunctionName(nameof(V2DiagnosisApi))]
         public async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "v2/diagnosis")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "v2/diagnosis")] HttpRequest req)
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             Logger.LogInformation($"{nameof(RunAsync)}");

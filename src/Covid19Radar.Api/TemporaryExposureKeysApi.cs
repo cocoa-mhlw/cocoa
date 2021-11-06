@@ -40,7 +40,7 @@ namespace Covid19Radar.Api
         }
 
         public async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "TemporaryExposureKeys")] HttpRequest req)
         {
             // Check Valid Route
             IValidationServerService.ValidateResult validateResult = ValidationServerService.Validate(req);
@@ -64,7 +64,7 @@ namespace Covid19Radar.Api
         }
 
         public async Task<IActionResult> RunWithRegionAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "TemporaryExposureKeys/{region}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "TemporaryExposureKeys/{region}")] HttpRequest req,
             string region)
         {
             // Check Valid Route
