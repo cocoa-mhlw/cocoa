@@ -60,11 +60,11 @@ namespace Covid19Radar.Api
             _logger.LogInformation($"{nameof(RunAsync)}");
 
             // Check Valid Route
-            IValidationServerService.ValidateResult validateResult = _validationServerService.Validate(req);
-            if (!validateResult.IsValid)
-            {
-                return validateResult.ErrorActionResult;
-            }
+            //IValidationServerService.ValidateResult validateResult = _validationServerService.Validate(req);
+            //if (!validateResult.IsValid)
+            //{
+            //    return validateResult.ErrorActionResult;
+            //}
 
             var submissionParameter = JsonConvert.DeserializeObject<V3DiagnosisSubmissionParameter>(requestBody);
             submissionParameter.SetDaysSinceOnsetOfSymptoms();
