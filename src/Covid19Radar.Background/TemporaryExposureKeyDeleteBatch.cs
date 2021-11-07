@@ -26,7 +26,8 @@ namespace Covid19Radar.Background
         /// <param name="log">logger</param>
         /// <returns></returns>
         [FunctionName("TemporaryExposureKeyDeleteBatch")]
-        public async Task Run([TimerTrigger("0 45 14 * * *")] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 15 * * * *")] TimerInfo myTimer, ILogger log)
+        //public async Task Run([TimerTrigger("0 45 14 * * *")] TimerInfo myTimer, ILogger log)
         //public async Task Run([TimerTrigger("0 * * * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"{nameof(TemporaryExposureKeyDeleteBatch)} Timer trigger function executed at: {DateTime.Now}");
