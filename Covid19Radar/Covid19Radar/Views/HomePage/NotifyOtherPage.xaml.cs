@@ -21,12 +21,13 @@ namespace Covid19Radar.Views
             InitializeComponent();
         }
 
-        public static void BuildNavigationParams(
+        public static NavigationParameters BuildNavigationParams(
             string processingNumber,
-            INavigationParameters param
+            NavigationParameters param
             )
         {
             param.Add(ProcessingNumberKey, processingNumber);
+            return param;
         }
 
         void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)

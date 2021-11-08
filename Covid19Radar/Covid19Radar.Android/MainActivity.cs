@@ -105,8 +105,8 @@ namespace Covid19Radar.Droid
 
                 if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                 {
-                    INavigationParameters navigationParameters = new NavigationParameters();
-                    NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                    var navigationParameters = new NavigationParameters();
+                    navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
                     await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
                 }
                 else
