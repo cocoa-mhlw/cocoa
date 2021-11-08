@@ -6,6 +6,6 @@
 
 git clean -xdf --exclude=packages
 
-find . -name 'obj' | xargs rm -rf
-find . -name 'bin' | xargs rm -rf
+find . -type d -name 'obj' | xargs rm -rf
+find . -type d -name 'bin' | xargs rm -rf
 
