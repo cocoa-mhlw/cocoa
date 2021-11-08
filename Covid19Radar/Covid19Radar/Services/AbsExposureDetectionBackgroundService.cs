@@ -66,7 +66,8 @@ namespace Covid19Radar.Services
                     var targetDiagnosisKeyEntryList = diagnosisKeyEntryList;
 
 #if DEBUG
-                    // Do nothing
+                    targetDiagnosisKeyEntryList = targetDiagnosisKeyEntryList
+                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
 #else
                     targetDiagnosisKeyEntryList = targetDiagnosisKeyEntryList
                         .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
