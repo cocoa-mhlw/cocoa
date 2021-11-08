@@ -117,8 +117,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(true);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            param.Add("updatePrivacyPolicyInfo", updateInfo.PrivacyPolicy);
-            mockNavigationService.Verify(x => x.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), It.IsAny<NavigationParameters>()), Times.Once());
         }
 
         [Fact]
@@ -140,7 +139,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(false);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync(Destination.HomePage.ToPath(), param), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.HomePage.ToPath(), It.IsAny<NavigationParameters>()), Times.Once());
         }
 
         [Fact]
@@ -161,7 +160,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(false);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync(Destination.NotifyOtherPage.ToPath(), param), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.NotifyOtherPage.ToPath(), It.IsAny<NavigationParameters>()), Times.Once());
         }
     }
 }
