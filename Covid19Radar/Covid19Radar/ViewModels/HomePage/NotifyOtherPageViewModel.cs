@@ -30,13 +30,13 @@ namespace Covid19Radar.ViewModels
         private readonly ICloseApplicationService closeApplicationService;
         private readonly IEssentialsService _essentialsService;
 
-        private string _processNumber;
-        public string ProcessNumber
+        private string _processingNumber;
+        public string ProcessingNumber
         {
-            get { return _processNumber; }
+            get { return _processingNumber; }
             set
             {
-                SetProperty(ref _processNumber, value);
+                SetProperty(ref _processingNumber, value);
                 IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
@@ -134,7 +134,7 @@ namespace Covid19Radar.ViewModels
             this.closeApplicationService = closeApplicationService;
             _essentialsService = essentialsService;
             errorCount = 0;
-            ProcessNumber = "";
+            ProcessingNumber = "";
             DiagnosisDate = DateTime.Today;
         }
 
@@ -144,7 +144,7 @@ namespace Covid19Radar.ViewModels
 
             if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessingNumberKey))
             {
-                ProcessNumber = parameters.GetValue<string>(NotifyOtherPage.ProcessingNumberKey);
+                ProcessingNumber = parameters.GetValue<string>(NotifyOtherPage.ProcessingNumberKey);
                 IsDeepLink = true;
                 IsHowToObtainProcessingNumberVisible = false;
                 IsProcessingNumberReadOnly = true;
@@ -175,7 +175,7 @@ namespace Covid19Radar.ViewModels
             loggerService.StartMethod();
 
             var param = new NavigationParameters();
-            param = SubmitConsentPage.BuildNavigationParams(true, ProcessNumber, param);
+            param = SubmitConsentPage.BuildNavigationParams(true, ProcessingNumber, param);
             var result = await NavigationService.NavigateAsync("SubmitConsentPage", param);
 
             loggerService.EndMethod();
@@ -240,7 +240,7 @@ namespace Covid19Radar.ViewModels
 
 
                     // Init Dialog
-                    if (string.IsNullOrEmpty(ProcessNumber))
+                    if (string.IsNullOrEmpty(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag4Message,
@@ -252,7 +252,7 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                if (!Validator.IsValidProcessingNumber(ProcessNumber))
+                if (!Validator.IsValidProcessingNumber(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag5Message,
@@ -344,7 +344,7 @@ namespace Covid19Radar.ViewModels
                 IList<HttpStatusCode> httpStatusCodes = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                     _diagnosisDate,
                     filteredTemporaryExposureKeyList,
-                    ProcessNumber,
+                    ProcessingNumber,
                     idempotencyKey
                     );
 
@@ -444,7 +444,7 @@ namespace Covid19Radar.ViewModels
 
         public bool CheckRegisterButtonEnable()
         {
-            return ProcessNumber.Length == AppConstants.MaxProcessNumberLength && (IsVisibleWithSymptomsLayout || IsVisibleNoSymptomsLayout);
+            return ProcessingNumber.Length == AppConstants.MaxProcessingNumberLength && (IsVisibleWithSymptomsLayout || IsVisibleNoSymptomsLayout);
         }
 
         public async void OnGetTekHistoryAllowed()
