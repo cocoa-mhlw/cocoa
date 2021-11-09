@@ -6,15 +6,16 @@ using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
-using Microsoft.DotNet.PlatformAbstractions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
-using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net;
 using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace Covid19Radar.Api.Tests
 {
@@ -44,16 +45,24 @@ namespace Covid19Radar.Api.Tests
         }
 
         [DataTestMethod]
-        [DataRow(true, true, "RegionX", "xxxxx", "ios")]
-        [DataRow(true, true, "RegionX", "xxxxx", "")]
-        [DataRow(false, false, "Region1", "xxxxx", "ios")]
-        [DataRow(true, false, "Region1", "xxxxx", "ios")]
-        [DataRow(true, true, "Region1", "xxxxx", "ios")]
+        [DataRow(true, true, "NotSupportRegion", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "NotSupportRegion", "xxxxx", "", false, HttpStatusCode.BadRequest)]
+        [DataRow(false, false, "Region1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, false, "Region1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "Region1", "xxxxx", "ios", false, HttpStatusCode.NoContent)]
+        [DataRow(true, true, "NotSupportRegion", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "NotSupportRegion", "xxxxx", "", true, HttpStatusCode.BadRequest)]
+        [DataRow(false, false, "Region1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, false, "Region1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "Region1", "xxxxx", "ios", true, HttpStatusCode.NoContent)]
         public async Task RunAsyncMethod(bool isValid,
                                          bool isValidDevice,
                                          string region,
                                          string verificationPayload,
-                                         string platform)
+                                         string platform,
+                                         bool isChaffRequest,
+                                         HttpStatusCode expectedStatusCode
+            )
         {
             // preparation
             var config = new Mock<IConfiguration>();
@@ -104,10 +113,29 @@ namespace Covid19Radar.Api.Tests
                 await writer.FlushAsync();
             }
             stream.Seek(0, System.IO.SeekOrigin.Begin);
+
             context.Setup(_ => _.Request.Body).Returns(stream);
+
+            if (isChaffRequest)
+            {
+                IHeaderDictionary headers = new HeaderDictionary() {
+                    { "X-Chaff", "Foo" /* Server will check X-Chaff header existence, content no matter. */ }
+                };
+                context.Setup(_ => _.Request.Headers).Returns(headers);
+            }
+
             // action
-            await diagnosisApi.RunAsync(context.Object.Request);
+            var result = await diagnosisApi.RunAsync(context.Object.Request);
+
             // assert
+            if (result is StatusCodeResult statusCodeResult)
+            {
+                Assert.AreEqual(((int)expectedStatusCode), statusCodeResult.StatusCode);
+            }
+            else if (result is BadRequestErrorMessageResult)
+            {
+                Assert.AreEqual(expectedStatusCode, HttpStatusCode.BadRequest);
+            }
         }
     }
 }

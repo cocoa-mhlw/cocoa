@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -22,6 +22,8 @@ namespace Covid19Radar.Api
 {
     public class V2DiagnosisApi
     {
+        private const string CHAFF_HEADER = "X-Chaff";
+
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
         private readonly IDeviceValidationService DeviceCheck;
@@ -79,12 +81,25 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Regions not supported.");
             }
 
-            // validation device 
+            // validation device
+            Logger.LogInformation("regions: " + (diagnosis?.Regions != null && diagnosis.Regions.Count() != 0 ? string.Join(", ", diagnosis.Regions) : "Empty") + ", " +
+                      $"platform: {diagnosis?.Platform}, " +
+                      $"deviceVerificationPayload: {diagnosis?.DeviceVerificationPayload}, " +
+                      $"appPackageName: {diagnosis?.AppPackageName}, " +
+                      $"padding: {diagnosis?.Padding}");
             if (false == await DeviceCheck.Validation(diagnosis, reqTime))
             {
                 Logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
             }
+
+            // Check Chaff request for production
+            // https://google.github.io/exposure-notifications-server/server_functional_requirements.html
+            if (req.Headers?.ContainsKey(CHAFF_HEADER) ?? false)
+            {
+                return new NoContentResult();
+            }
+
 
             // validatetion VerificationPayload
             var verificationResult = await VerificationService.VerificationAsync(diagnosis.VerificationPayload);
