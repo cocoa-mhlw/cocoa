@@ -22,6 +22,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IDiagnosisKeyRegisterServer> mockDiagnosisKeyRegisterServer;
         private readonly Mock<ICloseApplicationService> mockCloseApplicationService;
+        private readonly Mock<IEssentialsService> mockEssentialsService;
 
         public NotifyOtherPageViewModelTests()
         {
@@ -30,6 +31,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockDiagnosisKeyRegisterServer = mockRepository.Create<IDiagnosisKeyRegisterServer>();
             mockCloseApplicationService = mockRepository.Create<ICloseApplicationService>();
+            mockEssentialsService = mockRepository.Create<IEssentialsService>();
         }
 
         private NotifyOtherPageViewModel CreateViewModel()
@@ -39,7 +41,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockLoggerService.Object,
                 new MockExposureNotificationApiService(mockLoggerService.Object),
                 mockDiagnosisKeyRegisterServer.Object,
-                mockCloseApplicationService.Object
+                mockCloseApplicationService.Object,
+                mockEssentialsService.Object
                 );
         }
 

@@ -10,20 +10,23 @@ trigger:
     include:
     - Covid19Radar
     - Covid19Radar.sln
+    - azure-pipelines/app
 
 variables:
 - group: app-settings-dev
+- name: AppVersion
+  value: '1.4.0'
 
 jobs:
 - job: build_ios
   pool:
-    vmImage: '$(VmImage)'
-    demands:
-    - xcode
-    - Xamarin.iOS
+    vmImage: 'macOS-11'
   variables:
   - group: ios-signing-distribution
-  - group: ios-build-environment
+  - name: XamarinSymlinkVersion
+    value: '6_12_8'
+  - name: XcodeVersion
+    value: '13.0'
   - name: DEVELOPER_DIR
     value: '/Applications/Xcode_$(XcodeVersion).app'
   steps:
@@ -31,13 +34,10 @@ jobs:
 
 - job: build_android
   pool:
-    vmImage: '$(VmImage)'
-    demands:
-    - MSBuild
-    - Xamarin.Android
-    - JDK
+    vmImage: 'macOS-11'
   variables:
   - group: android-signing-dev
-  - group: android-build-environment
+  - name: XamarinSymlinkVersion
+    value: '6_12_8'
   steps:
   - template: templates/build/android-build-debug-template.yml
