@@ -116,7 +116,7 @@ namespace Covid19Radar.Droid
                     navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
                     await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
                 }
-                else
+                else if (processingNumber != null)
                 {
                     _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
                     await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters());
@@ -151,7 +151,11 @@ namespace Covid19Radar.Droid
         {
             base.OnNewIntent(intent);
 
-            await NavigateToDestinationFromIntent(intent);
+            if (intent.Data != null)
+            {
+                _loggerService.Value.Debug($"Intent has Data");
+                await NavigateToDestinationFromIntent(intent);
+            }
         }
 
     }
