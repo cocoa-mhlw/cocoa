@@ -80,7 +80,7 @@ namespace Covid19Radar.iOS
 
             _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
             {
-                INavigationParameters navigationParameters = new NavigationParameters();
+                var navigationParameters = new NavigationParameters();
                 await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage, navigationParameters);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
@@ -176,8 +176,8 @@ namespace Covid19Radar.iOS
 
                     if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                     {
-                        INavigationParameters navigationParameters = new NavigationParameters();
-                        NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                        var navigationParameters = new NavigationParameters();
+                        NotifyOtherPage.PrepareNavigationParams(processingNumber, navigationParameters);
                         InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
                     }
                     else

@@ -14,7 +14,7 @@ namespace Covid19Radar.Views
         public const string UpdatePrivacyPolicyInfoKey = "updatePrivacyPolicyInfo";
         public const string DestinationKey = "destination_reagree_privacy_policy";
 
-        public static void BuildNavigationParams(
+        public static void PrepareNavigationParams(
             Model.TermsUpdateInfoModel.Detail privacyPolicyInfo,
             Destination destination,
             INavigationParameters param

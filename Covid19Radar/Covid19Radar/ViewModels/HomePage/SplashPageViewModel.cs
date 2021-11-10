@@ -61,14 +61,14 @@ namespace Covid19Radar.ViewModels
                 {
                     _loggerService.Info($"Transition to ReAgreeTermsOfServicePage");
 
-                    ReAgreeTermsOfServicePage.BuildNavigationParams(termsUpdateInfo, destination, parameters);
+                    ReAgreeTermsOfServicePage.PrepareNavigationParams(termsUpdateInfo, destination, parameters);
                     _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreeTermsOfServicePage), parameters);
                 }
                 else if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, termsUpdateInfo))
                 {
                     _loggerService.Info($"Transition to ReAgreePrivacyPolicyPage");
 
-                    ReAgreePrivacyPolicyPage.BuildNavigationParams(termsUpdateInfo.PrivacyPolicy, destination, parameters);
+                    ReAgreePrivacyPolicyPage.PrepareNavigationParams(termsUpdateInfo.PrivacyPolicy, destination, parameters);
                     _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), parameters);
                 }
                 else

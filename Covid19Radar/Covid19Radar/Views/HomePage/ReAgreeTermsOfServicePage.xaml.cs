@@ -14,7 +14,7 @@ namespace Covid19Radar.Views
         public const string UpdateInfoKey = "updateInfo";
         public const string DestinationKey = "destination_reagree_term_of_service";
 
-        public static void BuildNavigationParams(
+        public static void PrepareNavigationParams(
             Model.TermsUpdateInfoModel updateInfo,
             Destination destination,
             INavigationParameters param

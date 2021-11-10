@@ -13,7 +13,7 @@ namespace Covid19Radar.Views
     {
         public const string DestinationKey = "destination_splash";
 
-        public static void BuildNavigationParams(
+        public static void PrepareNavigationParams(
             Destination destination,
             INavigationParameters param
             )

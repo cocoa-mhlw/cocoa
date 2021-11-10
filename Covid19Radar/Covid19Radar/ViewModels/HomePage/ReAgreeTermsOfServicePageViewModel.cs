@@ -70,7 +70,7 @@ namespace Covid19Radar.ViewModels
 
             if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
             {
-                ReAgreePrivacyPolicyPage.BuildNavigationParams(UpdateInfo.PrivacyPolicy, destination, _navigationParameters);
+                ReAgreePrivacyPolicyPage.PrepareNavigationParams(UpdateInfo.PrivacyPolicy, destination, _navigationParameters);
                 _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), _navigationParameters);
             }
             else

@@ -153,7 +153,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
             var param = new NavigationParameters();
-            ReAgreeTermsOfServicePage.BuildNavigationParams(updateInfo, Destination.NotifyOtherPage, param);
+            ReAgreeTermsOfServicePage.PrepareNavigationParams(updateInfo, Destination.NotifyOtherPage, param);
 
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
