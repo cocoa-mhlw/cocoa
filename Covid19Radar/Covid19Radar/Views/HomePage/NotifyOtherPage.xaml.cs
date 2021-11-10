@@ -2,17 +2,19 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Common;
 using Covid19Radar.ViewModels;
 using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Text.RegularExpressions;
 
 namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotifyOtherPage : ContentPage
     {
-        public const string ProcessNumberKey = "processNumber";
+        public const string ProcessingNumberKey = "processingNumber";
 
         public NotifyOtherPage()
         {
@@ -20,11 +22,11 @@ namespace Covid19Radar.Views
         }
 
         public static NavigationParameters BuildNavigationParams(
-            string processNumber,
+            string processingNumber,
             NavigationParameters param
             )
         {
-            param.Add(ProcessNumberKey, processNumber);
+            param.Add(ProcessingNumberKey, processingNumber);
             return param;
         }
 

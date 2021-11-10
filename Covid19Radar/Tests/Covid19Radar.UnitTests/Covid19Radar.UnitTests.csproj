@@ -40,5 +40,6 @@
     <Folder Include="Services\Migration\" />
     <Folder Include="Common\" />
     <Folder Include="Repository\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 </Project>

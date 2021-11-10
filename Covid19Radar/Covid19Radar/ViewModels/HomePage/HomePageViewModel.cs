@@ -2,13 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Chino;
 using Covid19Radar.Common;
-using Covid19Radar.Model;
 using System;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
@@ -29,7 +27,6 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
-        private readonly IEssentialsService essentialsService;
 
         private string _pastDate;
         public string PastDate
@@ -74,8 +71,7 @@ namespace Covid19Radar.ViewModels
             ILocalNotificationService localNotificationService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             IDialogService dialogService,
-            IExternalNavigationService externalNavigationService,
-            IEssentialsService essentialsService
+            IExternalNavigationService externalNavigationService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
@@ -87,7 +83,6 @@ namespace Covid19Radar.ViewModels
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
-            this.essentialsService = essentialsService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -214,33 +209,35 @@ namespace Covid19Radar.ViewModels
             else if (
             statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
             || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+            )
+            {
+                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
+                if (isOK)
+                {
+                    try
+                    {
+                        await exposureNotificationApiService.StartExposureNotificationAsync();
+                        _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
+                    }
+                    catch (Exception ex)
+                    {
+                        loggerService.Exception("Failed to fetch exposure key.", ex);
+                    }
+                    finally
+                    {
+                        await UpdateView();
+                    }
+                }
+            }
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
             || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
             )
             {
                 bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
                 if (isOK)
                 {
-                    if (essentialsService.IsAndroid)
-                    {
-                        try
-                        {
-                            await exposureNotificationApiService.StartExposureNotificationAsync();
-                            _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
-                        }
-                        catch (Exception ex)
-                        {
-                            loggerService.Exception("Failed to fetch exposure key.", ex);
-                        }
-                        finally
-                        {
-                            await UpdateView();
-                        }
-                    }
-                    else if (essentialsService.IsIos)
-                    {
-                        externalNavigationService.NavigateAppSettings();
-                    }
+                    externalNavigationService.NavigateAppSettings();
                 }
             }
 

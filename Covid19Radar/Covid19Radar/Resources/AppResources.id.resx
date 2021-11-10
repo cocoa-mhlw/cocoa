@@ -452,10 +452,6 @@
     <value>Persetujuan bila terdaftar sebagai pengguna yang teruji positif COVID-19</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Persetujuan bila terdaftar sebagai pengguna yang teruji positif COVID-19</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Versi</value>
     <comment>バージョン</comment>

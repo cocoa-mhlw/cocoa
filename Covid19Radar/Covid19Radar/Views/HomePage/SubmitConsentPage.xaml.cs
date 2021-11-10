@@ -12,6 +12,7 @@ namespace Covid19Radar.Views
     public partial class SubmitConsentPage : ContentPage
     {
         public const string IsFromAppLinksKey = "fromAppLinks";
+        public const string ProcessingNumberKey = "prosessingNumber";
 
         public SubmitConsentPage()
         {
@@ -20,10 +21,12 @@ namespace Covid19Radar.Views
 
         public static NavigationParameters BuildNavigationParams(
             bool isFromAppLinks,
+            string processingNumber,
             NavigationParameters param
             )
         {
             param.Add(IsFromAppLinksKey, isFromAppLinks);
+            param.Add(ProcessingNumberKey, processingNumber);
             return param;
         }
 

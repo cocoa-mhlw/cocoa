@@ -451,10 +451,6 @@
     <value>Caniatâd i gofrestru'n gadarnhaol</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Caniatâd i gofrestru'n gadarnhaol</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Fersiwn</value>
     <comment>バージョン</comment>

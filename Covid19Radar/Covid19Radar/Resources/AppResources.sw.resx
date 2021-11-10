@@ -451,10 +451,6 @@
     <value>Idhini ya usajili chanya</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Idhini ya usajili chanya</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Toleo</value>
     <comment>バージョン</comment>

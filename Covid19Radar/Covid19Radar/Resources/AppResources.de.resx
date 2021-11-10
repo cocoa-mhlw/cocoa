@@ -451,10 +451,6 @@
     <value>Einverständnis zur Registrierung eines positiven Tests</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Einverständnis zur Registrierung eines positiven Tests</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Version</value>
     <comment>バージョン</comment>

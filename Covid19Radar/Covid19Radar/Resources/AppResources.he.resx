@@ -451,10 +451,6 @@
     <value>הסכמה להרשמה חיובית</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>הסכמה להרשמה חיובית</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>גירסה</value>
     <comment>バージョン</comment>

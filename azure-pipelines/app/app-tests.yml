@@ -11,6 +11,7 @@ trigger:
     include:
     - Covid19Radar
     - Covid19Radar.sln
+    - azure-pipelines/app
 
 jobs:
 - job: unit_tests

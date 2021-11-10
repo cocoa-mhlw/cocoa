@@ -1,7 +1,7 @@
 steps:
 - script: |
     SETTINGS_JSON_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json"
-    sed -i '' "s/APP_VERSION/$(APP_VERSION)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/APP_VERSION/$(AppVersion)/g" $SETTINGS_JSON_PATH
     sed -i '' "s/API_SECRET/$(API_SECRET)/g" $SETTINGS_JSON_PATH
     sed -i '' "s/API_KEY/$(API_KEY)/g" $SETTINGS_JSON_PATH
     sed -i '' "s/API_URL_BASE/$(API_URL_BASE)/g" $SETTINGS_JSON_PATH

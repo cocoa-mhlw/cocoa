@@ -30,6 +30,8 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _updateText, value); }
         }
 
+        private INavigationParameters _navigationParameters;
+
         public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
 
         public ReAgreeTermsOfServicePageViewModel(
@@ -61,15 +63,17 @@ namespace Covid19Radar.ViewModels
             _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTimeUtc);
             if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
             {
-                var param = new NavigationParameters
-                {
-                    { "updatePrivacyPolicyInfo", UpdateInfo.PrivacyPolicy }
-                };
-                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param);
+                _navigationParameters.Add("updatePrivacyPolicyInfo", UpdateInfo.PrivacyPolicy);
+                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), _navigationParameters);
             }
             else
             {
-                _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                Destination destination = Destination.HomePage;
+                if (_navigationParameters.ContainsKey(SplashPage.DestinationKey))
+                {
+                    destination = _navigationParameters.GetValue<Destination>(SplashPage.DestinationKey);
+                }
+                _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
             }
 
             _loggerService.EndMethod();
@@ -83,6 +87,8 @@ namespace Covid19Radar.ViewModels
             UpdateInfo = (TermsUpdateInfoModel) parameters["updateInfo"];
             UpdateDateTimeUtc = UpdateInfo.TermsOfService.UpdateDateTimeUtc;
             UpdateText = UpdateInfo.TermsOfService.Text;
+
+            _navigationParameters = parameters;
 
             _loggerService.EndMethod();
         }
