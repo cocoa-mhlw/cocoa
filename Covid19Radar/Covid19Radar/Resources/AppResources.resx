@@ -131,14 +131,6 @@
     <value>COVID-19 Contact App</value>
     <comment>App Name</comment>
   </data>
-	<data name="SettingsPageTitle" xml:space="preserve">
-    <value>Settings</value>
-    <comment>アプリの設定</comment>
-  </data>
-	<data name="SettingsPageButton1" xml:space="preserve">
-    <value>License</value>
-    <comment>ライセンス…</comment>
-  </data>
 	<data name="TitleLicenseAgreement" xml:space="preserve">
     <value>License</value>
     <comment>ライセンス</comment>
@@ -147,12 +139,12 @@
     <value>Status Settings</value>
     <comment>User Status Page Title</comment>
   </data>
-	<data name="ButtonOk" xml:space="preserve">
-    <value>OK</value>
-  </data>
 	<data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>Please check your network connection.</value>
     <comment>電波状況の良い場所でもう一度お試しください。</comment>
+  </data>
+	<data name="ButtonOk" xml:space="preserve">
+    <value>OK</value>
   </data>
 	<data name="ButtonNotNow" xml:space="preserve">
     <value>Not Now</value>
@@ -169,11 +161,11 @@
     <value>How to use</value>
     <comment>Tab How to use</comment>
   </data>
-	<data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
+  <data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
     <value>1 exposure</value>
     <comment>1回の接触</comment>
   </data>
-	<data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
+  <data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
     <value>{0} exposures</value>
     <comment>{0}回の接触</comment>
   </data>
@@ -200,12 +192,12 @@
 	<data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Submitting Diagnosis...</value>
   </data>
+	<data name="SettingsPageTitle" xml:space="preserve">
+    <value>Settings</value>
+    <comment>アプリの設定</comment>
+  </data>
 	<data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
-  </data>
-	<data name="ButtonReset" xml:space="preserve">
-    <value>Stop</value>
-    <comment>使用中止</comment>
   </data>
   <data name="ButtonRegister" xml:space="preserve">
     <value>Register</value>
@@ -214,16 +206,16 @@
 	<data name="LoadingTextDeleting" xml:space="preserve">
     <value>Deleting</value>
   </data>
-	<data name="HomePageHeader2Description" xml:space="preserve">
-    <value>Help protect your family and friends by anonymously registering test results.</value>
-    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
 	<data name="ButtonShare" xml:space="preserve">
     <value>Share</value>
   </data>
 	<data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Sharing positive information and anonymous notification to others</value>
     <comment>Button NotifyOtherPage</comment>
+  </data>
+	<data name="ButtonReset" xml:space="preserve">
+    <value>Stop</value>
+    <comment>使用中止</comment>
   </data>
 	<data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Privacy Policy</value>
@@ -247,34 +239,6 @@
     <value>Close the app</value>
     <comment>アプリを終了します。</comment>
   </data>
-	<data name="VersionText" xml:space="preserve">
-    <value>Version</value>
-    <comment>バージョン</comment>
-  </data>
-	<data name="SettingsPageLabel1" xml:space="preserve">
-    <value>Close contact recording</value>
-    <comment>接触の検出</comment>
-  </data>
-	<data name="SettingsPageDescription1" xml:space="preserve">
-    <value>Use of Bluetooth</value>
-    <comment>Bluetoothによる接触の検知</comment>
-  </data>
-	<data name="SettingsPageLabel2" xml:space="preserve">
-    <value>Notifications</value>
-    <comment>通知</comment>
-  </data>
-	<data name="SettingsPageDescription2" xml:space="preserve">
-    <value>Close contact notifications</value>
-    <comment>陽性者との接触通知</comment>
-  </data>
-	<data name="SettingsPageLabel3" xml:space="preserve">
-    <value>Stop using the app</value>
-    <comment>アプリの使用中止</comment>
-  </data>
-	<data name="SettingsPageDescription3" xml:space="preserve">
-    <value>Stop using and delete close contact records</value>
-    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
-  </data>
 	<data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Return to registration</value>
   </data>
@@ -284,25 +248,13 @@
 	<data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Would you like to register positively later?</value>
   </data>
+	<data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Help protect your family and friends by anonymously registering test results.</value>
+    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
+  </data>
 	<data name="HelpMenuPageTitle" xml:space="preserve">
     <value>How to use this app</value>
     <comment>使い方</comment>
-  </data>
-	<data name="HelpMenuPageLabel1" xml:space="preserve">
-    <value>What is a 'close contact'?</value>
-    <comment>どのようにして接触を記録していますか？</comment>
-  </data>
-	<data name="HelpMenuPageLabel2" xml:space="preserve">
-    <value>How do I check number of close contacts?</value>
-    <comment>接触の有無はどのように知ることができますか？</comment>
-  </data>
-	<data name="HelpMenuPageLabel3" xml:space="preserve">
-    <value>If you test positive for COVID-19</value>
-    <comment>新型コロナウイルスに感染していると判定されたら</comment>
-  </data>
-	<data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>How do I stop / delete close contact recording?</value>
-    <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
 	<data name="HelpPage1Title" xml:space="preserve">
     <value>What is a 'close contact'?</value>
@@ -340,6 +292,14 @@
     <value>Phones in close contact exchange their random codes. This information will not be used until either user registers positive test results with this app. The close contact history will be erased after 14 days. Note: The code changes regularly to protect your privacy.</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
+	<data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>Go to app settings</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+	<data name="HelpPage4Description" xml:space="preserve">
+    <value>From app settings, you can stop using the app and delete user data.</value>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
+  </data>
 	<data name="HelpPage2Description1" xml:space="preserve">
     <value>The app will notify you, if you were in close contact with COVID-19 positive user.</value>
     <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
@@ -364,14 +324,6 @@
     <value>If you had close contact with a COVID-19 positive user</value>
     <comment>陽性者との接触があった場合</comment>
   </data>
-	<data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>Go to app settings</value>
-    <comment>アプリの設定へ</comment>
-  </data>
-	<data name="HelpPage4Description" xml:space="preserve">
-    <value>From app settings, you can stop using the app and delete user data.</value>
-    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
-  </data>
 	<data name="HelpPage3Description1" xml:space="preserve">
     <value>If you tested positive</value>
     <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
@@ -383,6 +335,50 @@
 	<data name="HelpPage3Description3" xml:space="preserve">
     <value>Register by entering provided processing number into this app</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
+  </data>
+	<data name="SettingsPageButton1" xml:space="preserve">
+    <value>License</value>
+    <comment>ライセンス…</comment>
+  </data>
+	<data name="SettingsPageLabel1" xml:space="preserve">
+    <value>Close contact recording</value>
+    <comment>接触の検出</comment>
+  </data>
+	<data name="SettingsPageDescription1" xml:space="preserve">
+    <value>Use of Bluetooth</value>
+    <comment>Bluetoothによる接触の検知</comment>
+  </data>
+	<data name="SettingsPageLabel2" xml:space="preserve">
+    <value>Notifications</value>
+    <comment>通知</comment>
+  </data>
+	<data name="SettingsPageDescription2" xml:space="preserve">
+    <value>Close contact notifications</value>
+    <comment>陽性者との接触通知</comment>
+  </data>
+	<data name="SettingsPageLabel3" xml:space="preserve">
+    <value>Stop using the app</value>
+    <comment>アプリの使用中止</comment>
+  </data>
+	<data name="SettingsPageDescription3" xml:space="preserve">
+    <value>Stop using and delete close contact records</value>
+    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+  </data>
+	<data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>What is a 'close contact'?</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+	<data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>How do I check number of close contacts?</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+	<data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>If you test positive for COVID-19</value>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
+  </data>
+	<data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>How do I stop / delete close contact recording?</value>
+    <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
 	<data name="NotContactPageTitle" xml:space="preserve">
     <value>Close contacts for the past 14 days</value>
@@ -532,14 +528,6 @@
     <value>Register</value>
     <comment>登録する</comment>
   </data>
-	<data name="NotifyOtherPageDescription3" xml:space="preserve">
-    <value>Please enter below the processing number that you have received by SMS or email</value>
-    <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
-  </data>
-	<data name="NotifyOtherPageDescription5" xml:space="preserve">
-    <value>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will be notified.</value>
-    <comment>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</comment>
-  </data>
 	<data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>How to receive a processing number</value>
     <comment>処理番号の取得方法</comment>
@@ -604,10 +592,6 @@
     <value>Enter an 8-digit code</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
-	<data name="SubmitConsentPageButton" xml:space="preserve">
-    <value>Agree and register</value>
-    <comment>同意して陽性登録する</comment>
-  </data>
 	<data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>Consent to positive registration</value>
     <comment>陽性登録への同意</comment>
@@ -616,12 +600,16 @@
     <value>Agreements</value>
     <comment>同意内容</comment>
   </data>
+	<data name="VersionText" xml:space="preserve">
+    <value>Version</value>
+    <comment>バージョン</comment>
+  </data>
 	<data name="ExposureNotificationServiceMessage4" xml:space="preserve">
     <value>Bluetooth is turned off.Please turn in Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
 	<data name="ExposuresPageTitle" xml:space="preserve">
-    <value>A list of close contacts (past 14 days)</value>
+    <value>A list of close contacts</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
 	<data name="ExposuresPageLabel1" xml:space="preserve">
@@ -737,6 +725,9 @@
     <value>No close contact record present</value>
     <comment>接触記録がありません</comment>
   </data>
+	<data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
 	<data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
     <value>A new version of the app is available. Please update to the latest version.</value>
     <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
@@ -744,9 +735,6 @@
 	<data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
     <value>Update to latest version</value>
     <comment>最新版への更新</comment>
-  </data>
-	<data name="UrlVersion" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
   </data>
 	<data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
     <value>There is a problem with the contact record data</value>
@@ -883,14 +871,6 @@ please follow the app. guidance and check the Consultation Centers List to recei
     <value>Failed to send operationing information</value>
     <comment>動作情報の送信に失敗しました</comment>
   </data>
-	<data name="InquiryMailBody" xml:space="preserve">
-    <value>Content of inquiry：\r\n\r\n\r\n\r\n※You do not need to enter personal information such as your name and phone number.\r\n</value>
-    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
-  </data>
-	<data name="InquiryMailSubject" xml:space="preserve">
-    <value>Inquiries about contact information app</value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
-  </data>
 	<data name="Processing" xml:space="preserve">
     <value>Processing</value>
     <comment>処理中</comment>
@@ -902,18 +882,6 @@ please follow the app. guidance and check the Consultation Centers List to recei
 	<data name="Saving" xml:space="preserve">
     <value>Saving</value>
     <comment>保存中</comment>
-  </data>
-	<data name="SendIdMailBody1" xml:space="preserve">
-    <value>Operating information ID：</value>
-    <comment>動作情報ID：</comment>
-  </data>
-	<data name="SendIdMailBody2" xml:space="preserve">
-    <value>\r\n\r\n\r\n※ You do not need to enter personal information such as your name and phone number.\r\n\r\n※ Please send this email as it is without erasing or modifying the operating information ID\r\n</value>
-    <comment>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</comment>
-  </data>
-	<data name="SendIdMailSubject" xml:space="preserve">
-    <value>COCOA： Operating information ID</value>
-    <comment>COCOA 動作情報IDの送信</comment>
   </data>
 	<data name="Sending" xml:space="preserve">
     <value>Sending</value>
@@ -933,6 +901,26 @@ Storage :</value>
     <value>The Operating information file was saved successfully. You can view it「On My iPhone」 from Files app.</value>
     <comment>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</comment>
   </data>
+	<data name="InquiryMailBody" xml:space="preserve">
+    <value>Content of inquiry：\r\n\r\n\r\n\r\n※You do not need to enter personal information such as your name and phone number.\r\n</value>
+    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
+  </data>
+	<data name="InquiryMailSubject" xml:space="preserve">
+    <value>Inquiries about contact information app</value>
+    <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+	<data name="SendIdMailBody1" xml:space="preserve">
+    <value>Operating information ID：</value>
+    <comment>動作情報ID：</comment>
+  </data>
+	<data name="SendIdMailBody2" xml:space="preserve">
+    <value>\r\n\r\n\r\n※ You do not need to enter personal information such as your name and phone number.\r\n\r\n※ Please send this email as it is without erasing or modifying the operating information ID\r\n</value>
+    <comment>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</comment>
+  </data>
+	<data name="SendIdMailSubject" xml:space="preserve">
+    <value>COCOA： Operating information ID</value>
+    <comment>COCOA 動作情報IDの送信</comment>
+  </data>
 	<data name="UrlContactedForm" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
   </data>
@@ -940,6 +928,14 @@ Storage :</value>
     <value>
 ※The part preceding "/Android" , such as "Internal Storage”, may differ depending on your environment.</value>
     <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
+  </data>
+	<data name="NotifyOtherPageDescription3" xml:space="preserve">
+    <value>Please enter below the processing number that you have received by SMS or email</value>
+    <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
+  </data>
+	<data name="NotifyOtherPageDescription5" xml:space="preserve">
+    <value>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will be notified.</value>
+    <comment>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</comment>
   </data>
 	<data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Do you have any of the following symptoms？</value>
@@ -982,6 +978,10 @@ Storage :</value>
 	<data name="HelpPage3Description5" xml:space="preserve">
     <value>The only information included in the notification will be a randomly generated code. No personal information will be disclosed.</value>
     <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+  </data>
+	<data name="SubmitConsentPageButton" xml:space="preserve">
+    <value>Agree and register</value>
+    <comment>同意して陽性登録する</comment>
   </data>
 	<data name="SubmitConsentPageDescription1_1" xml:space="preserve">
     <value>Please read before continue the positive registration</value>
