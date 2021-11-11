@@ -2,12 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Common;
 using Covid19Radar.ViewModels;
 using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.Text.RegularExpressions;
 
 namespace Covid19Radar.Views
 {
@@ -21,12 +19,17 @@ namespace Covid19Radar.Views
             InitializeComponent();
         }
 
-        public static void PrepareNavigationParams(
+        public static INavigationParameters BuildNavigationParams(
             string processingNumber,
-            INavigationParameters param
+            INavigationParameters? baseParam = null
             )
         {
+            var param = new NavigationParameters();
+            param.CopyFrom(baseParam);
+
             param.Add(ProcessingNumberKey, processingNumber);
+
+            return param;
         }
 
         void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)

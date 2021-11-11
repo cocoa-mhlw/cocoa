@@ -165,8 +165,7 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var param = new NavigationParameters();
-            SubmitConsentPage.PrepareNavigationParams(true, _diagnosisUid, param);
+            var param = SubmitConsentPage.BuildNavigationParams(true, _diagnosisUid);
             var result = await NavigationService.NavigateAsync("SubmitConsentPage", param);
 
             loggerService.EndMethod();

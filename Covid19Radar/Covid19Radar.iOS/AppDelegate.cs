@@ -176,8 +176,7 @@ namespace Covid19Radar.iOS
 
                     if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                     {
-                        var navigationParameters = new NavigationParameters();
-                        NotifyOtherPage.PrepareNavigationParams(processingNumber, navigationParameters);
+                        var navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber);
                         InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
                     }
                     else

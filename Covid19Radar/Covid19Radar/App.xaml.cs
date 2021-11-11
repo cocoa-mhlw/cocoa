@@ -62,8 +62,8 @@ namespace Covid19Radar
         {
             LoggerService.Info($"Destination: {destination}");
 
-            navigationParameters = SplashPage.BuildNavigationParams(destination, navigationParameters);
-            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParameters);
+            var navigationParams = SplashPage.BuildNavigationParams(destination, navigationParameters);
+            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParams);
         }
 
         public async Task<INavigationResult> NavigateToAsync(Destination destination, INavigationParameters navigationParameters)

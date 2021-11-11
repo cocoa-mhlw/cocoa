@@ -112,9 +112,7 @@ namespace Covid19Radar.Droid
                 {
                     _loggerService.Value.Info("ProcessingNumber is valid.");
 
-                    var navigationParameters = new NavigationParameters();
-                    navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
-
+                    var navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber);
                     await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
                 }
                 else
