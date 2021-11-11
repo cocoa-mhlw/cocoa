@@ -164,7 +164,10 @@ namespace Covid19Radar.Droid
         {
             base.OnNewIntent(intent);
 
-            await NavigateToDestinationFromIntent(intent);
+            if (intent.Data != null)
+            {
+                await NavigateToDestinationFromIntent(intent);
+            }
         }
 
     }
