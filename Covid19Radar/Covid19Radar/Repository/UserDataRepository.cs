@@ -31,10 +31,6 @@ namespace Covid19Radar.Repository
 
         void RemoveAllUpdateDate();
 
-        long GetLastProcessTekTimestamp(string region);
-        void SetLastProcessTekTimestamp(string region, long created);
-        void RemoveLastProcessTekTimestamp();
-
         void SetCanConfirmExposure(bool canConfirmExposure);
         bool IsCanConfirmExposure();
 
@@ -85,11 +81,6 @@ namespace Covid19Radar.Repository
 
     public class UserDataRepository : IUserDataRepository
     {
-        private const string KEY_LAST_PROCESS_DIAGNOSIS_KEY_TIMESTAMP = "last_process_diagnosis_key_timestamp";
-
-        private const string KEY_DAILY_SUMMARIES = "daily_summaries";
-        private const string KEY_EXPOSURE_WINDOWS = "exposure_windows";
-
         private const string EMPTY_LIST_JSON = "[]";
 
         private readonly IPreferencesService _preferencesService;
@@ -112,7 +103,7 @@ namespace Covid19Radar.Repository
             {
                 var result = 0L;
 
-                var jsonString = _preferencesService.GetValue<string>(KEY_LAST_PROCESS_DIAGNOSIS_KEY_TIMESTAMP, null);
+                var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
                 if (!string.IsNullOrEmpty(jsonString))
                 {
                     var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
@@ -136,7 +127,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                var jsonString = _preferencesService.GetValue<string>(KEY_LAST_PROCESS_DIAGNOSIS_KEY_TIMESTAMP, null);
+                var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
 
                 Dictionary<string, long> newDict;
                 if (!string.IsNullOrEmpty(jsonString))
@@ -148,7 +139,7 @@ namespace Covid19Radar.Repository
                     newDict = new Dictionary<string, long>();
                 }
                 newDict[region] = timestamp;
-                _preferencesService.SetValue(KEY_LAST_PROCESS_DIAGNOSIS_KEY_TIMESTAMP, JsonConvert.SerializeObject(newDict));
+                _preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
 
                 return Task.CompletedTask;
             }
@@ -164,7 +155,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.RemoveValue(KEY_LAST_PROCESS_DIAGNOSIS_KEY_TIMESTAMP);
+                _preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
                 return Task.CompletedTask;
             }
             finally
@@ -266,8 +257,8 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.SetValue(KEY_DAILY_SUMMARIES, dailySummaryListJson);
-                _preferencesService.SetValue(KEY_EXPOSURE_WINDOWS, exposureWindowListJson);
+                _preferencesService.SetValue(PreferenceKey.DAILY_SUMMARIES, dailySummaryListJson);
+                _preferencesService.SetValue(PreferenceKey.EXPOSURE_WINDOWS, exposureWindowListJson);
                 return Task.CompletedTask;
             }
             finally
@@ -282,7 +273,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string dailySummariesJson = _preferencesService.GetValue(KEY_DAILY_SUMMARIES, EMPTY_LIST_JSON);
+                string dailySummariesJson = _preferencesService.GetValue(PreferenceKey.DAILY_SUMMARIES, EMPTY_LIST_JSON);
                 return Task.FromResult(
                     JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson)
                 );
@@ -306,7 +297,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string exposureWindowListJson = _preferencesService.GetValue(KEY_EXPOSURE_WINDOWS, EMPTY_LIST_JSON);
+                string exposureWindowListJson = _preferencesService.GetValue(PreferenceKey.EXPOSURE_WINDOWS, EMPTY_LIST_JSON);
                 return Task.FromResult(
                     JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson)
                 );
@@ -330,7 +321,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.RemoveValue(KEY_DAILY_SUMMARIES);
+                _preferencesService.RemoveValue(PreferenceKey.DAILY_SUMMARIES);
                 return Task.CompletedTask;
             }
             finally
@@ -345,7 +336,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.RemoveValue(KEY_EXPOSURE_WINDOWS);
+                _preferencesService.RemoveValue(PreferenceKey.EXPOSURE_WINDOWS);
                 return Task.CompletedTask;
             }
             finally
@@ -431,48 +422,6 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
             _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch);
             _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch);
-            _loggerService.EndMethod();
-        }
-
-        public long GetLastProcessTekTimestamp(string region)
-        {
-            _loggerService.StartMethod();
-            var result = 0L;
-            var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
-            if (!string.IsNullOrEmpty(jsonString))
-            {
-                var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
-                if (dict.ContainsKey(region))
-                {
-                    result = dict[region];
-                }
-            }
-            _loggerService.EndMethod();
-            return result;
-        }
-
-        public void SetLastProcessTekTimestamp(string region, long created)
-        {
-            _loggerService.StartMethod();
-            var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
-            Dictionary<string, long> newDict;
-            if (!string.IsNullOrEmpty(jsonString))
-            {
-                newDict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
-            }
-            else
-            {
-                newDict = new Dictionary<string, long>();
-            }
-            newDict[region] = created;
-            _preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
-            _loggerService.EndMethod();
-        }
-
-        public void RemoveLastProcessTekTimestamp()
-        {
-            _loggerService.StartMethod();
-            _preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
             _loggerService.EndMethod();
         }
 
