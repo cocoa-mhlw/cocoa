@@ -32,8 +32,11 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                await exposureNotificationApiService.StartExposureNotificationAsync();
-                await NavigationService.NavigateAsync(nameof(TutorialPage6));
+                var success = await exposureNotificationApiService.StartExposureNotificationAsync();
+                if (success)
+                {
+                    await NavigationService.NavigateAsync(nameof(TutorialPage6));
+                }
             }
             catch (ENException exception)
             {
