@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -30,6 +31,8 @@ namespace Covid19Radar.Services
         private readonly ILocalNotificationService _localNotificationService;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
+        private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
+
         private readonly IExposureDataCollectServer _exposureDataCollectServer;
 
         public ExposureDetectionService
@@ -38,6 +41,7 @@ namespace Covid19Radar.Services
             IUserDataRepository userDataRepository,
             ILocalNotificationService localNotificationService,
             IExposureRiskCalculationService exposureRiskCalculationService,
+            IExposureConfigurationRepository exposureConfigurationRepository,
             IExposureDataCollectServer exposureDataCollectServer
             )
         {
@@ -45,6 +49,7 @@ namespace Covid19Radar.Services
             _userDataRepository = userDataRepository;
             _localNotificationService = localNotificationService;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _exposureConfigurationRepository = exposureConfigurationRepository;
             _exposureDataCollectServer = exposureDataCollectServer;
         }
 
@@ -59,6 +64,12 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async () =>
             {
+                if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
+                {
+                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(DateTime.UtcNow);
+                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
+                }
+
                 await _userDataRepository.SetExposureDataAsync(
                     dailySummaries.ToList(),
                     exposureWindows.ToList()
@@ -95,6 +106,12 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async() =>
             {
+                if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
+                {
+                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(DateTime.UtcNow);
+                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
+                }
+
                 bool isNewExposureDetected = _userDataRepository.AppendExposureData(
                     exposureSummary,
                     exposureInformations.ToList(),
@@ -125,6 +142,12 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async () =>
             {
+                if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
+                {
+                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(DateTime.UtcNow);
+                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
+                }
+
                 await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     DeviceInfo.Model,
