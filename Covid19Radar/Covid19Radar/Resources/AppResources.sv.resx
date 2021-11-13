@@ -451,10 +451,6 @@
     <value>Samtycke till positiv registrering</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Samtycke till positiv registrering</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Versioner</value>
     <comment>バージョン</comment>

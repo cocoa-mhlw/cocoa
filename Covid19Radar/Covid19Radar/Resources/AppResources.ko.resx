@@ -451,10 +451,6 @@
     <value>양성 판정 등록에 동의</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>양성 판정 등록에 동의</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>버전</value>
     <comment>バージョン</comment>

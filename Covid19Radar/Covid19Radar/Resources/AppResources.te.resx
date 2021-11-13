@@ -451,10 +451,6 @@
     <value>పాజిటివ్ రిజిస్ట్రేషన్ కు సమ్మతి</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>పాజిటివ్ రిజిస్ట్రేషన్ కు సమ్మతి</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>సంస్కరణ</value>
     <comment>バージョン</comment>

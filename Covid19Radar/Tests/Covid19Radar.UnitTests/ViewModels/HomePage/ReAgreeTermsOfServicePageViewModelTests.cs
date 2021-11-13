@@ -117,11 +117,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(true);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            var resultParam = new NavigationParameters
-            {
-                {"updatePrivacyPolicyInfo", updateInfo.PrivacyPolicy }
-            };
-            mockNavigationService.Verify(x => x.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), resultParam), Times.Once());
+            param.Add("updatePrivacyPolicyInfo", updateInfo.PrivacyPolicy);
+            mockNavigationService.Verify(x => x.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param), Times.Once());
         }
 
         [Fact]
@@ -143,7 +140,30 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(false);
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage)), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.HomePage.ToPath(), param), Times.Once());
+        }
+
+        [Fact]
+        public void OnClickReAgreeCommandWithDestinationTest()
+        {
+            var reAgreeTermsOfServicePageViewModel = CreateViewModel();
+            var updateInfo = new TermsUpdateInfoModel
+            {
+                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
+            };
+            var param = new NavigationParameters
+            {
+                { "destination", Destination.NotifyOtherPage },
+                { "updateInfo", updateInfo }
+            };
+            reAgreeTermsOfServicePageViewModel.Initialize(param);
+
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTimeUtc));
+            mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, updateInfo)).Returns(false);
+            reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
+
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.NotifyOtherPage.ToPath(), param), Times.Once());
         }
     }
 }

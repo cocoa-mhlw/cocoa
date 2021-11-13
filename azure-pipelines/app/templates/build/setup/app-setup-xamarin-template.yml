@@ -1,9 +1,4 @@
 steps:
-- task: UseDotNet@2
-  displayName: 'Use .NET Core sdk $(DotnetCoreVersion)'
-  inputs:
-    version: '$(DotnetCoreVersion)'
-
 - script: |
     sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(XamarinSymlinkVersion)
     ls -l /Library/Frameworks/Mono.framework/Versions/

@@ -21,5 +21,8 @@ namespace Covid19Radar.Services
         string AppVersion { get; }
         string BuildNumber { get; }
         string AppPackageName { get; }
+
+        // PhoneDialer
+        void PhoneDialerOpen(string number);
     }
 }

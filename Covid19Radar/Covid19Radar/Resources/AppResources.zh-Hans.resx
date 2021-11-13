@@ -492,9 +492,9 @@
     <value>同意进行阳性登记</value>
     <comment>陽性登録への同意</comment>
   </data>
-	<data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>同意进行阳性登记</value>
-    <comment>陽性登録への同意</comment>
+  <data name="SubmitConsentPageTitleDeepLink" xml:space="preserve">
+    <value>同意内容</value>
+    <comment>同意内容</comment>
   </data>
 	<data name="VersionText" xml:space="preserve">
     <value>版本</value>
@@ -881,27 +881,27 @@
     <value>同意并进行阳性登记</value>
     <comment>同意して陽性登録する</comment>
   </data>
-	<data name="SubmitConsentPageDescription1" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_1" xml:space="preserve">
     <value>请在注册阳性之前阅览</value>
     <comment>陽性登録の前にお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>如果受理编号是正确的，在您症状开始或接受检查后的两天以内与您接触过的人（ 通常指1米以内彼此靠近15分钟以上的COCOA使用者 ）将得到通知。接受通知者不会知道可以识别您的信息。</value>
-    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+	<data name="SubmitConsentPageDescription1_2" xml:space="preserve">
+    <value>・如果在此应用中进行阳性注册，手机上每天生成的代码将上传到通知服务器</value>
+    <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
   </data>
-	<data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>・注册阳性后，与您接触过的人将得到通知</value>
-    <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
+	<data name="SubmitConsentPageDescription1_3" xml:space="preserve">
+    <value>・根据通知服务器的代码信息的判断结果，接触过的人将会受到通知</value>
+    <comment>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</comment>
   </data>
-	<data name="SubmitConsentPageDescription3" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_4" xml:space="preserve">
     <value>・接受通知者不会知道可以识别您的信息</value>
     <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
-	<data name="SubmitConsentPageDescription4" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_5" xml:space="preserve">
     <value>・为了预防感染扩大，请协助我们注册</value>
     <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
   </data>
-	<data name="SubmitConsentPageDescription5" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_6" xml:space="preserve">
     <value>详细请阅读以下</value>
     <comment>詳しくは以下をお読みください</comment>
   </data>
@@ -914,12 +914,16 @@
     <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
 	<data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>当您在保健所提出在COCOA上进行阳性注册后，管理系统将会通过手机号码或者邮箱地址通知您「受理编号」</value>
-    <comment>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</comment>
+    <value>当阳性信息上报到管理系统时，注册的手机号或邮箱会受到COCOA阳性注册所需的「受理编号」</value>
+    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</comment>
   </data>
 	<data name="SubmitConsentPageDescription9" xml:space="preserve">
-    <value>当您咋COCOA中输入受理编号后，您的手机将会通过管理系统来验证受理编号是否正确</value>
-    <comment>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+    <value>当在COCOA中注册受理编号时，手机会向管理系统查询是否是正确的受理编号</value>
+    <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+  </data>
+	<data name="SubmitConsentPageDescription10" xml:space="preserve">
+    <value>如果受理编号是正确的，在您症状开始或接受检查后的两天以内与您接触过的人（ 通常指1米以内彼此靠近15分钟以上的COCOA使用者 ）将得到通知。接受通知者不会知道可以识别您的信息。</value>
+    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
 	<data name="HelpPage3Description6" xml:space="preserve">
     <value>注册阳性信息</value>
@@ -1082,5 +1086,33 @@
   <data name="TroubleshootingPageDescription5" xml:space="preserve">
     <value>如您尝试上述措施后仍显示“无法确认有无接触”，请咨询客服。</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  </data>
+  <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
+    <value>阳性注册需要的受理编号</value>
+    <comment>陽性登録に必要な処理番号</comment>
+  </data>
+  <data name="ProcessingNumberPlaceholderDeepLink" xml:space="preserve">
+    <value>8位受理编号</value>
+    <comment>8桁の処理番号</comment>
+  </data>
+  <data name="ConfirmAgreement" xml:space="preserve">
+    <value>【重要】确认同意内容​</value>
+    <comment>【重要】同意内容を確認</comment>
+  </data>
+  <data name="AgreeAndRegisterButton" xml:space="preserve">
+    <value>同意并注册​</value>
+    <comment>同意して登録する</comment>
+  </data>
+  <data name="InquiryAboutRegistrationTitle" xml:space="preserve">
+    <value>注册有关的咨询​</value>
+    <comment>登録に関するお問い合わせ</comment>
+  </data>
+  <data name="InquiryAboutRegistrationReceptionTime" xml:space="preserve">
+    <value>（受理时间：每天9-17）​</value>
+    <comment>（受付：毎日 午前9時から午後5時まで）</comment>
+  </data>
+  <data name="YourProcessingNumber" xml:space="preserve">
+    <value>您专用的受理编号​</value>
+    <comment>あなた専用の処理番号</comment>
   </data>
 </root>

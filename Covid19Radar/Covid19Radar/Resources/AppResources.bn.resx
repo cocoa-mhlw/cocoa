@@ -451,10 +451,6 @@
     <value>ইতিবাচক নিবন্ধনে সম্মতি</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>ইতিবাচক নিবন্ধনে সম্মতি</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>সংস্করণ</value>
     <comment>バージョン</comment>

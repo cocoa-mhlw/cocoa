@@ -31,7 +31,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<AbsExposureDetectionBackgroundService> mockExposureDetectionBackgroundService;
         private readonly Mock<IDialogService> mockDialogService;
         private readonly Mock<IExternalNavigationService> mockExternalNavigationService;
-        private readonly Mock<IEssentialsService> mockEssentialsService;
 
         public HomePageViewModelTests()
         {
@@ -52,7 +51,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 );
             mockDialogService = mockRepository.Create<IDialogService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();
-            mockEssentialsService = mockRepository.Create<IEssentialsService>();
         }
 
         private HomePageViewModel CreateViewModel()
@@ -65,8 +63,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockLocalNotificationService.Object,
                 mockExposureDetectionBackgroundService.Object,
                 mockDialogService.Object,
-                mockExternalNavigationService.Object,
-                mockEssentialsService.Object);
+                mockExternalNavigationService.Object
+                );
         }
 
         [Theory]
@@ -140,8 +138,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_iOS.Disabled } as IList<int>));
             mockDialogService.Setup(x => x.ShowExposureNotificationOffWarningAsync()).ReturnsAsync(true);
-            mockEssentialsService.Setup(x => x.IsAndroid).Returns(false);
-            mockEssentialsService.Setup(x => x.IsIos).Returns(true);
             mockExposureDetectionBackgroundService.Setup(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>())).Returns(Task.CompletedTask);
 
             homePageViewModel.OnClickCheckStopReason.Execute(null);
@@ -161,8 +157,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.INACTIVATED } as IList<int>));
             mockDialogService.Setup(x => x.ShowExposureNotificationOffWarningAsync()).ReturnsAsync(true);
-            mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
-            mockEssentialsService.Setup(x => x.IsIos).Returns(false);
             mockExposureDetectionBackgroundService.Setup(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>())).Returns(Task.CompletedTask);
 
             homePageViewModel.OnClickCheckStopReason.Execute(null);

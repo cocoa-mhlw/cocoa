@@ -451,10 +451,6 @@
     <value>Consimțământul pentru înregistrarea pozitivă</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Consimțământul pentru înregistrarea pozitivă</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Versiune</value>
     <comment>バージョン</comment>

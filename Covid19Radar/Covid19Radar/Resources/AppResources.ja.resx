@@ -482,9 +482,9 @@
     <value>陽性登録への同意</value>
     <comment>陽性登録への同意</comment>
   </data>
-	<data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>陽性登録への同意</value>
-    <comment>陽性登録への同意</comment>
+  <data name="SubmitConsentPageTitleDeepLink" xml:space="preserve">
+    <value>同意内容</value>
+    <comment>同意内容</comment>
   </data>
 	<data name="VersionText" xml:space="preserve">
     <value>Version</value>
@@ -877,27 +877,27 @@
     <value>同意して陽性登録する</value>
     <comment>同意して陽性登録する</comment>
   </data>
-	<data name="SubmitConsentPageDescription1" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_1" xml:space="preserve">
     <value>陽性登録の前にお読みください</value>
     <comment>陽性登録の前にお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</value>
-    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+	<data name="SubmitConsentPageDescription1_2" xml:space="preserve">
+    <value>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</value>
+    <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
   </data>
-	<data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>・陽性登録すると、あなたと接触した人に通知が届きます</value>
-    <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
+	<data name="SubmitConsentPageDescription1_3" xml:space="preserve">
+    <value>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</value>
+    <comment>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</comment>
   </data>
-	<data name="SubmitConsentPageDescription3" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_4" xml:space="preserve">
     <value>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</value>
     <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
-	<data name="SubmitConsentPageDescription4" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_5" xml:space="preserve">
     <value>・感染拡大防止のため、登録にご協力をお願いします</value>
     <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
   </data>
-	<data name="SubmitConsentPageDescription5" xml:space="preserve">
+	<data name="SubmitConsentPageDescription1_6" xml:space="preserve">
     <value>詳しくは以下をお読みください</value>
     <comment>詳しくは以下をお読みください</comment>
   </data>
@@ -910,12 +910,16 @@
     <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
 	<data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</value>
-    <comment>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</comment>
+    <value>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</value>
+    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</comment>
   </data>
 	<data name="SubmitConsentPageDescription9" xml:space="preserve">
-    <value>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</value>
-    <comment>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+    <value>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</value>
+    <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+  </data>
+	<data name="SubmitConsentPageDescription10" xml:space="preserve">
+    <value>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</value>
+    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
 	<data name="HelpPage3Description6" xml:space="preserve">
     <value>陽性情報を登録</value>
@@ -1078,5 +1082,33 @@
   <data name="TroubleshootingPageDescription5" xml:space="preserve">
     <value>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  </data>
+  <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
+    <value>陽性登録に必要な処理番号</value>
+    <comment>陽性登録に必要な処理番号</comment>
+  </data>
+  <data name="ProcessingNumberPlaceholderDeepLink" xml:space="preserve">
+    <value>8桁の処理番号</value>
+    <comment>8桁の処理番号</comment>
+  </data>
+  <data name="ConfirmAgreement" xml:space="preserve">
+    <value>【重要】同意内容を確認</value>
+    <comment>【重要】同意内容を確認</comment>
+  </data>
+  <data name="AgreeAndRegisterButton" xml:space="preserve">
+    <value>同意して登録する</value>
+    <comment>同意して登録する</comment>
+  </data>
+  <data name="InquiryAboutRegistrationTitle" xml:space="preserve">
+    <value>登録に関するお問い合わせ</value>
+    <comment>登録に関するお問い合わせ</comment>
+  </data>
+  <data name="InquiryAboutRegistrationReceptionTime" xml:space="preserve">
+    <value>（受付：毎日 午前9時から午後5時まで）</value>
+    <comment>（受付：毎日 午前9時から午後5時まで）</comment>
+  </data>
+  <data name="YourProcessingNumber" xml:space="preserve">
+    <value>あなた専用の処理番号</value>
+    <comment>あなた専用の処理番号</comment>
   </data>
 </root>

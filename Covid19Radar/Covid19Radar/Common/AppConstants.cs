@@ -19,9 +19,9 @@ namespace Covid19Radar.Common
         /// <summary>
         /// Max Process Number length
         /// </summary>
-        public const int MaxProcessNumberLength = 8;
+        public const int MaxProcessingNumberLength = 8;
 
-        public const string processNumberRegex = @"\b[0-9]{8}\b";
+        public const string processingNumberRegex = @"\b[0-9]{8}\b";
 
         /// <summary>
         /// Number of days of exposure information to display

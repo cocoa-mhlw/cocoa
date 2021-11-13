@@ -31,17 +31,22 @@ namespace Covid19Radar.Droid.Services
 
         public override async Task StartAsync()
         {
+            await Client.StartAsync();
+        }
+
+        public override async Task<bool> StartExposureNotificationAsync()
+        {
             try
             {
-                await Client.StartAsync();
+                await StartAsync();
+                return true;
             }
             catch (ApiException apiException)
             {
                 if (apiException.StatusCode == CommonStatusCodes.ResolutionRequired)
                 {
                     apiException.Status.StartResolutionForResult(Platform.CurrentActivity, REQUEST_EN_START);
-                    throw new ENException(ENException.Code_Android.FAILED_UNAUTHORIZED,
-                        "StartAsync StartResolutionForResult");
+                    return false;
                 }
                 else
                 {

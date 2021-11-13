@@ -455,10 +455,6 @@
     <value>Оң тiркеуге келiсiм</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Оң тiркеуге келiсiм</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
     <value>Bluetooth өшірілген. Bluetooth- ты қосыңыз.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>

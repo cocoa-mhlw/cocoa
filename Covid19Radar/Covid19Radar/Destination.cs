@@ -15,14 +15,14 @@ namespace Covid19Radar
         NotifyOtherPage,
     }
 
-    internal static class DestinationExtensions
+    public static class DestinationExtensions
     {
         private static string SplashPagePath = "/" + nameof(SplashPage);
         private static string HomePagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage);
         private static string ContactedNotifyPagePath => HomePagePath + "/" + nameof(ContactedNotifyPage);
         private static string NotifyOtherPagePath => HomePagePath + "/" + nameof(NotifyOtherPage);
 
-        internal static string ToPath(this Destination destination)
+        public static string ToPath(this Destination destination)
         {
             return destination switch
             {

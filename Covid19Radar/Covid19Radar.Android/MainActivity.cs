@@ -16,6 +16,8 @@ using FormsApplication = Xamarin.Forms.Application;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Covid19Radar.Common;
+using Covid19Radar.Services.Logs;
+using CommonServiceLocator;
 
 namespace Covid19Radar.Droid
 {
@@ -44,6 +46,9 @@ namespace Covid19Radar.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         private const string EXTRA_KEY_DESTINATION = "key_destination";
+
+        private Lazy<ILoggerService> _loggerService
+                    = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
 
         internal static Intent NewIntent(Context context)
         {
@@ -100,10 +105,16 @@ namespace Covid19Radar.Droid
             {
                 var processingNumber = intent.Data.GetQueryParameter(AppConstants.LinkQueryKeyProcessingNumber);
 
-                var navigationParameters = new NavigationParameters();
-                navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
-                await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
-
+                if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
+                {
+                    var navigationParameters = new NavigationParameters();
+                    navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                    await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
+                }
+                else
+                {
+                    _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
+                }
             }
             else if (intent.HasExtra(EXTRA_KEY_DESTINATION))
             {

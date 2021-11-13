@@ -156,14 +156,17 @@ namespace Covid19Radar.iOS
                         .QueryItems?
                         .FirstOrDefault(item => item.Name == AppConstants.LinkQueryKeyProcessingNumber)?
                         .Value;
-                    var navigationParameters = new NavigationParameters();
 
-                    if (!string.IsNullOrEmpty(processingNumber))
+                    if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                     {
+                        var navigationParameters = new NavigationParameters();
                         navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                        InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
                     }
-
-                    InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
+                    else
+                    {
+                        _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
+                    }
                 }
             }
             catch(Exception e)
