@@ -77,7 +77,6 @@ namespace Covid19Radar.ViewModels
                 exposureConfigurationRepository.RemoveExposureConfiguration();
 
                 userDataRepository.RemoveStartDate();
-                await userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
                 userDataRepository.RemoveAllUpdateDate();
                 userDataRepository.RemoveAllExposureNotificationStatus();
 
