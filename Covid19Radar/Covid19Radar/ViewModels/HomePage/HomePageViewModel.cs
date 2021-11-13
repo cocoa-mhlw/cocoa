@@ -117,8 +117,11 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                _ = await exposureNotificationApiService.StartExposureNotificationAsync();
-                await UpdateView();
+                var success = await exposureNotificationApiService.StartExposureNotificationAsync();
+                if (success)
+                {
+                    await UpdateView();
+                }
 
             }
             catch (ENException exception)
