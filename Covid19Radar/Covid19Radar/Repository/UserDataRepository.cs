@@ -257,8 +257,8 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.SetValue(PreferenceKey.DAILY_SUMMARIES, dailySummaryListJson);
-                _preferencesService.SetValue(PreferenceKey.EXPOSURE_WINDOWS, exposureWindowListJson);
+                _preferencesService.SetValue(PreferenceKey.DailySummaries, dailySummaryListJson);
+                _preferencesService.SetValue(PreferenceKey.ExposureWindows, exposureWindowListJson);
                 return Task.CompletedTask;
             }
             finally
@@ -273,7 +273,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string dailySummariesJson = _preferencesService.GetValue(PreferenceKey.DAILY_SUMMARIES, EMPTY_LIST_JSON);
+                string dailySummariesJson = _preferencesService.GetValue(PreferenceKey.DailySummaries, EMPTY_LIST_JSON);
                 return Task.FromResult(
                     JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson)
                 );
@@ -297,7 +297,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string exposureWindowListJson = _preferencesService.GetValue(PreferenceKey.EXPOSURE_WINDOWS, EMPTY_LIST_JSON);
+                string exposureWindowListJson = _preferencesService.GetValue(PreferenceKey.ExposureWindows, EMPTY_LIST_JSON);
                 return Task.FromResult(
                     JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson)
                 );
@@ -321,7 +321,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.RemoveValue(PreferenceKey.DAILY_SUMMARIES);
+                _preferencesService.RemoveValue(PreferenceKey.DailySummaries);
                 return Task.CompletedTask;
             }
             finally
@@ -336,7 +336,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.RemoveValue(PreferenceKey.EXPOSURE_WINDOWS);
+                _preferencesService.RemoveValue(PreferenceKey.ExposureWindows);
                 return Task.CompletedTask;
             }
             finally
