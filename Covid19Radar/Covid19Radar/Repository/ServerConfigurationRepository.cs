@@ -225,12 +225,12 @@ namespace Covid19Radar.Repository
 
         public Task SaveAsync()
         {
-            throw new NotSupportedException();
+            return Task.CompletedTask;
         }
 
         public Task LoadAsync()
         {
-            throw new NotSupportedException();
+            return Task.CompletedTask;
         }
 
     }
