@@ -77,7 +77,6 @@ namespace Covid19Radar.ViewModels
                 exposureConfigurationRepository.RemoveExposureConfiguration();
 
                 userDataRepository.RemoveStartDate();
-                userDataRepository.RemoveLastProcessTekTimestamp();
                 userDataRepository.RemoveAllUpdateDate();
                 userDataRepository.RemoveAllExposureNotificationStatus();
 
