@@ -17,7 +17,32 @@ namespace Covid19Radar.Background.Extentions
                 KeyData = ByteString.CopyFrom(tek.KeyData),
                 RollingStartIntervalNumber = tek.RollingStartIntervalNumber,
                 RollingPeriod = tek.RollingPeriod,
-                TransmissionRiskLevel = tek.TransmissionRiskLevel
+                TransmissionRiskLevel = tek.TransmissionRiskLevel,
+                ReportType = ConvertToReportType(tek.ReportType),
+                DaysSinceOnsetOfSymptoms = tek.DaysSinceOnsetOfSymptoms,
+            };
+        }
+
+        /*
+         * enum ReportType {
+         *      UNKNOWN = 0;  // Never returned by the client API.
+         *      CONFIRMED_TEST = 1;
+         *      CONFIRMED_CLINICAL_DIAGNOSIS = 2;
+         *      SELF_REPORT = 3;
+         *      RECURSIVE = 4;  // Reserved for future use.
+         *      REVOKED = 5;  // Used to revoke a key, never returned by client API.
+         * }
+         */
+        private static TemporaryExposureKey.Types.ReportType ConvertToReportType(int reportType)
+        {
+            return reportType switch
+            {
+                1 => TemporaryExposureKey.Types.ReportType.ConfirmedTest,
+                2 => TemporaryExposureKey.Types.ReportType.ConfirmedClinicalDiagnosis,
+                3 => TemporaryExposureKey.Types.ReportType.SelfReport,
+                4 => TemporaryExposureKey.Types.ReportType.Recursive,
+                5 => TemporaryExposureKey.Types.ReportType.Revoked,
+                _ => TemporaryExposureKey.Types.ReportType.Unknown,
             };
         }
     }

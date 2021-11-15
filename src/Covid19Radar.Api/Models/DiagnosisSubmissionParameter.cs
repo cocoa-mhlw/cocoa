@@ -6,6 +6,7 @@ using Covid19Radar.Api.Common;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
+using static Covid19Radar.Background.Protobuf.TemporaryExposureKey.Types;
 
 namespace Covid19Radar.Api.Models
 {
@@ -45,6 +46,8 @@ namespace Covid19Radar.Api.Models
 					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
 					TransmissionRiskLevel = 4,
+					ReportType = (int)ReportType.Unknown,
+					DaysSinceOnsetOfSymptoms = 0,
 					Timestamp = timestamp,
 					Exported = false
 				};
