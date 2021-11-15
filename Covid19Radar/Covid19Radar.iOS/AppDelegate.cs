@@ -205,6 +205,11 @@ namespace Covid19Radar.iOS
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
         }
 
+        public void DiagnosisKeysDataMappingApplied()
+        {
+            _exposureDetectionService.Value.DiagnosisKeysDataMappingApplied();
+        }
+
         public void PreExposureDetected()
         {
             var exposureConfiguration = GetEnClient().ExposureConfiguration;

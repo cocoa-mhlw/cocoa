@@ -15,6 +15,8 @@ namespace Covid19Radar.Services
 {
     public interface IExposureDetectionService
     {
+        public void DiagnosisKeysDataMappingApplied();
+
         public void PreExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion);
 
         public void ExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows);
@@ -53,6 +55,19 @@ namespace Covid19Radar.Services
             _exposureDataCollectServer = exposureDataCollectServer;
         }
 
+        public void DiagnosisKeysDataMappingApplied()
+        {
+            _loggerService.StartMethod();
+
+            if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
+            {
+                _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(DateTime.UtcNow);
+                _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
+            }
+
+            _loggerService.EndMethod();
+        }
+
         public void PreExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion)
         {
             _loggerService.Debug("PreExposureDetected");
@@ -64,12 +79,6 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async () =>
             {
-                if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
-                {
-                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(DateTime.UtcNow);
-                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
-                }
-
                 await _userDataRepository.SetExposureDataAsync(
                     dailySummaries.ToList(),
                     exposureWindows.ToList()
@@ -106,12 +115,6 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async() =>
             {
-                if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
-                {
-                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(DateTime.UtcNow);
-                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
-                }
-
                 bool isNewExposureDetected = _userDataRepository.AppendExposureData(
                     exposureSummary,
                     exposureInformations.ToList(),
@@ -142,12 +145,6 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async () =>
             {
-                if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
-                {
-                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(DateTime.UtcNow);
-                    _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
-                }
-
                 await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     DeviceInfo.Model,
