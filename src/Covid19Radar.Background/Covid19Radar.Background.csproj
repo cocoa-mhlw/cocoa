@@ -19,6 +19,7 @@
     <PackageReference Include="System.Security.Cryptography.Cng" Version="4.7.0" />
     <PackageReference Include="System.Security.Cryptography.OpenSsl" Version="4.7.0" />
     <PackageReference Include="System.Security.Cryptography.Primitives" Version="4.3.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.19.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar.Api.Common\Covid19Radar.Api.Common.csproj" />
