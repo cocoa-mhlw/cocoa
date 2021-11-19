@@ -9,6 +9,7 @@ using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Linq;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -81,6 +82,20 @@ namespace Covid19Radar.Api.DataAccess
             _logger.LogInformation($"start {nameof(UpsertAsync)}");
             var pk = new PartitionKey(model.PartitionKey);
             await _db.TemporaryExposureKey.UpsertItemAsync(model, pk);
+        }
+
+        public async Task BulkUpsertAsync(IEnumerable<TemporaryExposureKeyModel> models)
+        {
+            _logger.LogInformation($"start {nameof(BulkUpsertAsync)}");
+
+            List<Task> concurrentTasks = new List<Task>();
+
+            foreach (var model in models) {
+                var pk = new PartitionKey(model.PartitionKey);
+                concurrentTasks.Add(_db.TemporaryExposureKey.UpsertItemAsync(model, pk));
+            }
+
+            await Task.WhenAll(concurrentTasks);
         }
     }
 }

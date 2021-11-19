@@ -19,7 +19,7 @@ namespace Covid19Radar.Api.Extensions
                                         new CosmosClientOptions() { 
                                             ConnectionMode = ConnectionMode.Direct,
                                             MaxRequestsPerTcpConnection = 16,
-
+                                            AllowBulkExecution = true,
                                         });
             });
         }

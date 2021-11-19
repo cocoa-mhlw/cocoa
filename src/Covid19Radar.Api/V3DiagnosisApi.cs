@@ -110,12 +110,9 @@ namespace Covid19Radar.Api
             }
 
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            var keys = submissionParameter.Keys.Select(key => key.ToModel(submissionParameter, timestamp));
 
-            foreach (var k in keys)
-            {
-                await _tekRepository.UpsertAsync(k);
-            }
+            var keys = submissionParameter.Keys.Select(key => key.ToModel(submissionParameter, timestamp));
+            await _tekRepository.BulkUpsertAsync(keys);
 
             return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
         }

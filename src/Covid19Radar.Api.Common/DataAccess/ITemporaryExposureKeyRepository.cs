@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.DataAccess
@@ -11,6 +12,7 @@ namespace Covid19Radar.Api.DataAccess
     {
 
         Task UpsertAsync(TemporaryExposureKeyModel model);
+        Task BulkUpsertAsync(IEnumerable<TemporaryExposureKeyModel> models);
         Task<TemporaryExposureKeyModel> GetAsync(string id);
         Task<TemporaryExposureKeyModel[]> GetNextAsync();
         Task<TemporaryExposureKeyModel[]> GetOutOfTimeKeysAsync();
