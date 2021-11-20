@@ -225,11 +225,13 @@ namespace Covid19Radar.Repository
 
         public Task SaveAsync()
         {
+            // Do nothing
             return Task.CompletedTask;
         }
 
         public Task LoadAsync()
         {
+            // Do nothing
             return Task.CompletedTask;
         }
 
