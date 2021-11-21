@@ -35,8 +35,7 @@ namespace Covid19Radar.UnitTests.Repository
                 mockLoggerService.Object
             );
 
-        [Fact]
-        public async void GetDiagnosisKeysListAsyncTests_Success()
+        private HttpClient CreateHttpClient(HttpStatusCode statusCode, HttpContent content)
         {
             var httpMessageHandler = new Mock<HttpMessageHandler>();
             httpMessageHandler.Protected()
@@ -44,23 +43,29 @@ namespace Covid19Radar.UnitTests.Repository
                     ItExpr.IsAny<CancellationToken>())
                 .Returns(Task.FromResult(new HttpResponseMessage
                 {
-                    StatusCode = HttpStatusCode.OK,
-                    Content = new StringContent(
+                    StatusCode = statusCode,
+                    Content = content,
+                }));
+            return new HttpClient(httpMessageHandler.Object, false);
+        }
+
+        [Fact]
+        public async void GetDiagnosisKeysListAsyncTests_Success()
+        {
+            var client = CreateHttpClient(
+                HttpStatusCode.OK,
+                new StringContent(
                         "[" +
-                        " {region: 1, url:\"https://example.com/1\", created: 12345678}, " +
-                        " {region: 2, url:\"https://example.com/2\", created: 87654321}" +
+                        "  {region: 1, url:\"https://example.com/1\", created: 12345678}, " +
+                        "  {region: 2, url:\"https://example.com/2\", created: 87654321}" +
                         "]",
                         Encoding.UTF8,
                         "application/json"
-                    ),
-                }));
-
-
-            var client = new HttpClient(httpMessageHandler.Object, false);
+                    )
+            );
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             var unitUnderTest = CreateRepository();
-
             var result = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
 
             Assert.Equal(2, result.Count);
@@ -79,21 +84,13 @@ namespace Covid19Radar.UnitTests.Repository
         [InlineData(System.Net.HttpStatusCode.InternalServerError)]
         public async void GetDiagnosisKeysListAsyncTests_HttpError(System.Net.HttpStatusCode statusCode)
         {
-            var httpMessageHandler = new Mock<HttpMessageHandler>();
-            httpMessageHandler.Protected()
-                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(),
-                    ItExpr.IsAny<CancellationToken>())
-                .Returns(Task.FromResult(new HttpResponseMessage
-                {
-                    StatusCode = statusCode,
-                    Content = new StringContent("", Encoding.UTF8, "application/json"),
-                }));
-
-            var client = new HttpClient(httpMessageHandler.Object, false);
+            var client = CreateHttpClient(
+                statusCode,
+                new StringContent("", Encoding.UTF8, "application/json")
+            );
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             var unitUnderTest = CreateRepository();
-
             var result = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
 
             Assert.Equal(0, result.Count);
@@ -102,22 +99,13 @@ namespace Covid19Radar.UnitTests.Repository
         [Fact]
         public async void DownloadDiagnosisKeysAsyncTests_Success()
         {
-            var httpMessageHandler = new Mock<HttpMessageHandler>();
-
-            var text = "";
-            var content = new ByteArrayContent(Encoding.UTF8.GetBytes(text));
+            var content = new ByteArrayContent(Encoding.UTF8.GetBytes(""));
             content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(@"application/zip");
 
-            httpMessageHandler.Protected()
-                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(),
-                    ItExpr.IsAny<CancellationToken>())
-                .Returns(Task.FromResult(new HttpResponseMessage
-                {
-                    StatusCode = HttpStatusCode.OK,
-                    Content = content,
-                }));
-
-            var client = new HttpClient(httpMessageHandler.Object, false);
+            var client = CreateHttpClient(
+                HttpStatusCode.OK,
+                content
+            );
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             var entry = new DiagnosisKeyEntry()
@@ -139,28 +127,18 @@ namespace Covid19Radar.UnitTests.Repository
             }
         }
 
-
         [Theory]
         [InlineData(System.Net.HttpStatusCode.NotFound)]
         [InlineData(System.Net.HttpStatusCode.InternalServerError)]
         public async void DownloadDiagnosisKeysAsyncTests_HttpError(System.Net.HttpStatusCode statusCode)
         {
-            var httpMessageHandler = new Mock<HttpMessageHandler>();
-
-            var text = "";
-            var content = new ByteArrayContent(Encoding.UTF8.GetBytes(text));
+            var content = new ByteArrayContent(Encoding.UTF8.GetBytes(""));
             content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(@"application/zip");
 
-            httpMessageHandler.Protected()
-                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(),
-                    ItExpr.IsAny<CancellationToken>())
-                .Returns(Task.FromResult(new HttpResponseMessage
-                {
-                    StatusCode = statusCode,
-                    Content = content,
-                }));
-
-            var client = new HttpClient(httpMessageHandler.Object, false);
+            var client = CreateHttpClient(
+                statusCode,
+                content
+            );
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             var entry = new DiagnosisKeyEntry()
