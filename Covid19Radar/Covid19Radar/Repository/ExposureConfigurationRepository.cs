@@ -16,12 +16,14 @@ namespace Covid19Radar.Repository
 {
     public interface IExposureConfigurationRepository
     {
-        public DateTime? GetExposureConfigurationDownloadedDateTime();
+        public string CurrentConfigFilePath { get; }
+
+        public DateTime GetExposureConfigurationDownloadedDateTime();
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated();
         public void SetDiagnosisKeysDataMappingConfigurationUpdated(bool updated);
         public void SetDiagnosisKeysDataMappingAppliedDateTime(DateTime dateTime);
-        public DateTime? GetDiagnosisKeysDataMappingConfigurationAppliedDateTime();
+        public DateTime GetDiagnosisKeysDataMappingConfigurationAppliedDateTime();
 
         public Task<ExposureConfiguration> GetExposureConfigurationAsync();
         public void RemoveExposureConfiguration();
@@ -66,6 +68,8 @@ namespace Covid19Radar.Repository
             _currentExposureConfigurationPath = Path.Combine(_configDir, CURRENT_CONFIG_FILENAME);
         }
 
+        public string CurrentConfigFilePath => _currentExposureConfigurationPath;
+
         private string PrepareConfigDir()
         {
             var configDir = _localPathService.ExposureConfigurationDirPath;
@@ -82,11 +86,11 @@ namespace Covid19Radar.Repository
 
             ExposureConfiguration currentExposureConfiguration = null;
 
-            if (File.Exists(_currentExposureConfigurationPath))
+            if (File.Exists(CurrentConfigFilePath))
             {
                 _loggerService.Debug("ExposureConfiguration file is found.");
 
-                string exposureConfigurationAsJson = await LoadAsync(_currentExposureConfigurationPath);
+                string exposureConfigurationAsJson = await LoadAsync(CurrentConfigFilePath);
 
                 try
                 {
@@ -104,7 +108,7 @@ namespace Covid19Radar.Repository
                 catch (JsonException exception)
                 {
                     _loggerService.Exception("JsonException. ExposureConfiguration file has been deleted.", exception);
-                    RemoveExposureConfiguration(_currentExposureConfigurationPath);
+                    RemoveExposureConfiguration(CurrentConfigFilePath);
                 }
             }
 
@@ -163,7 +167,7 @@ namespace Covid19Radar.Repository
 
             await SaveAsync(
                 JsonConvert.SerializeObject(currentExposureConfiguration, Formatting.Indented),
-                _currentExposureConfigurationPath);
+                CurrentConfigFilePath);
             SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
 
             _loggerService.EndMethod();
@@ -187,21 +191,13 @@ namespace Covid19Radar.Repository
 
         private bool IsExposureConfigurationOutdated(int retensionDays)
         {
-            DateTime? appliedDate = GetDiagnosisKeysDataMappingConfigurationAppliedDateTime();
-            if (appliedDate is null)
-            {
-                return true;
-            }
+            DateTime appliedDate = GetDiagnosisKeysDataMappingConfigurationAppliedDateTime();
             return (_dateTimeUtility.UtcNow - appliedDate) > TimeSpan.FromDays(retensionDays);
         }
 
         private bool IsDownloadedExposureConfigurationOutdated(int retensionDays)
         {
-            DateTime? downloadedDate = GetExposureConfigurationDownloadedDateTime();
-            if (downloadedDate is null)
-            {
-                return true;
-            }
+            DateTime downloadedDate = GetExposureConfigurationDownloadedDateTime();
             return (_dateTimeUtility.UtcNow - downloadedDate) > TimeSpan.FromDays(retensionDays);
         }
 
@@ -216,7 +212,7 @@ namespace Covid19Radar.Repository
 
         public void RemoveExposureConfiguration()
         {
-            RemoveExposureConfiguration(_currentExposureConfigurationPath);
+            RemoveExposureConfiguration(CurrentConfigFilePath);
         }
 
         private void RemoveExposureConfiguration(string path)
@@ -243,18 +239,13 @@ namespace Covid19Radar.Repository
             _loggerService.EndMethod();
         }
 
-        public DateTime? GetExposureConfigurationDownloadedDateTime()
+        public DateTime GetExposureConfigurationDownloadedDateTime()
         {
             _loggerService.StartMethod();
             try
             {
-                if (!_preferencesService.ContainsKey(PreferenceKey.ExposureConfigurationDownloadedEpoch))
-                {
-                    return null;
-                }
-
                 long epoch = _preferencesService.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, 0L);
-                return _dateTimeUtility.UnixEpoch.AddSeconds(epoch);
+                return DateTime.UnixEpoch.AddSeconds(epoch);
             }
             finally
             {
@@ -269,18 +260,13 @@ namespace Covid19Radar.Repository
             _loggerService.EndMethod();
         }
 
-        public DateTime? GetDiagnosisKeysDataMappingConfigurationAppliedDateTime()
+        public DateTime GetDiagnosisKeysDataMappingConfigurationAppliedDateTime()
         {
             _loggerService.StartMethod();
             try
             {
-                if (!_preferencesService.ContainsKey(PreferenceKey.ExposureConfigurationAppliedEpoch))
-                {
-                    return null;
-                }
-
                 long epoch = _preferencesService.GetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, 0L);
-                return _dateTimeUtility.UnixEpoch.AddSeconds(epoch);
+                return DateTime.UnixEpoch.AddSeconds(epoch);
             }
             finally
             {
