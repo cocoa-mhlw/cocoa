@@ -4,17 +4,17 @@
 
 using System;
 using System.IO;
-using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using Covid19Radar.UnitTests.Mocks;
 using Moq;
+using Moq.Protected;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -72,14 +72,16 @@ namespace Covid19Radar.UnitTests.Repository
                         Encoding.UTF8,
                         "application/json"
                     );
-            return new HttpClient(new MockHttpHandler((r, c) =>
-            {
-                return new HttpResponseMessage(HttpStatusCode.OK)
+            var httpMessageHandler = new Mock<HttpMessageHandler>();
+            httpMessageHandler.Protected()
+                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(),
+                    ItExpr.IsAny<CancellationToken>())
+                .Returns(Task.FromResult(new HttpResponseMessage
                 {
-                    StatusCode = HttpStatusCode.OK,
+                    StatusCode = System.Net.HttpStatusCode.OK,
                     Content = jsonContent,
-                };
-            }));
+                }));
+            return new HttpClient(httpMessageHandler.Object, false);
         }
 
         private readonly string CURRENT_JSON_PATH = Path.Combine("./", "current.json");
