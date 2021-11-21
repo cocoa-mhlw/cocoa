@@ -46,7 +46,10 @@ namespace Covid19Radar.UnitTests.Repository
                 {
                     StatusCode = HttpStatusCode.OK,
                     Content = new StringContent(
-                        "[{region: 1, url:\"https://example.com/1\", created: 12345678}, {region: 2, url:\"https://example.com/2\", created: 87654321}]",
+                        "[" +
+                        " {region: 1, url:\"https://example.com/1\", created: 12345678}, " +
+                        " {region: 2, url:\"https://example.com/2\", created: 87654321}" +
+                        "]",
                         Encoding.UTF8,
                         "application/json"
                     ),
