@@ -7,6 +7,7 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
@@ -96,7 +97,7 @@ namespace Covid19Radar.UnitTests.Repository
             => DateTime.SpecifyKind(new DateTime(2021, 11, 21), DateTimeKind.Utc);
 
         [Fact]
-        public void GetExposureConfigurationTest_firsttime()
+        public async Task GetExposureConfigurationTest_firsttime()
         {
             var date = Date;
 
@@ -109,7 +110,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(date);
 
             var unitUnderTest = CreateRepository();
-            var result = unitUnderTest.GetExposureConfigurationAsync().GetAwaiter().GetResult();
+            var result = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockServerConfigurationRepository.Verify(s => s.LoadAsync(), Times.Once());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, date.ToUnixEpoch()), Times.Once());
@@ -129,7 +130,7 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         [Fact]
-        public void GetExposureConfigurationTest_updated_but_not_cache_expired()
+        public async Task GetExposureConfigurationTest_updated_but_not_cache_expired()
         {
             var date = Date;
 
@@ -152,7 +153,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsExposureConfigurationUpdated, false)).Returns(false);
 
             var unitUnderTest = CreateRepository();
-            var result2 = unitUnderTest.GetExposureConfigurationAsync().GetAwaiter().GetResult();
+            var result2 = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, date.ToUnixEpoch()), Times.Never());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, date.ToUnixEpoch()), Times.Never());
@@ -162,7 +163,7 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         [Fact]
-        public void GetExposureConfigurationTest_updated_and_cache_expired()
+        public async Task GetExposureConfigurationTest_updated_and_cache_expired()
         {
             var date = Date;
             var cacheExpireDate = date + TimeSpan.FromDays(2) + TimeSpan.FromSeconds(1);
@@ -188,7 +189,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsExposureConfigurationUpdated, false)).Returns(false);
 
             var unitUnderTest = CreateRepository();
-            var result2 = unitUnderTest.GetExposureConfigurationAsync().GetAwaiter().GetResult();
+            var result2 = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Once());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Never());
@@ -199,7 +200,7 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         [Fact]
-        public void GetExposureConfigurationTest_updated_mapping_but_not_cache_expired()
+        public async Task GetExposureConfigurationTest_updated_mapping_but_not_cache_expired()
         {
             var date = Date;
             var cacheExpireDate = date + TimeSpan.FromDays(8);
@@ -224,9 +225,9 @@ namespace Covid19Radar.UnitTests.Repository
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsExposureConfigurationUpdated, false)).Returns(false);
 
             var unitUnderTest = CreateRepository();
-            var result2 = unitUnderTest.GetExposureConfigurationAsync().GetAwaiter().GetResult();
+            var result2 = await unitUnderTest.GetExposureConfigurationAsync();
 
-            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, date.ToUnixEpoch()), Times.Never());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Once());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, date.ToUnixEpoch()), Times.Never());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsExposureConfigurationUpdated, true), Times.Never());
 
@@ -234,7 +235,7 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         [Fact]
-        public void GetExposureConfigurationTest_updated_mapping_and_cache_expired()
+        public async Task GetExposureConfigurationTest_updated_mapping_and_cache_expired()
         {
             var date = Date;
             var cacheExpireDate = date + TimeSpan.FromDays(8) + TimeSpan.FromSeconds(1);
@@ -261,7 +262,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsExposureConfigurationUpdated, false)).Returns(false);
 
             var unitUnderTest = CreateRepository();
-            var result2 = unitUnderTest.GetExposureConfigurationAsync().GetAwaiter().GetResult();
+            var result2 = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Once());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Never());

@@ -5,6 +5,7 @@
 using System;
 using System.IO;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Common;
@@ -47,6 +48,8 @@ namespace Covid19Radar.Repository
 
         private string _currentExposureConfigurationPath;
 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         public ExposureConfigurationRepository(
             IHttpClientService httpClientService,
             ILocalPathService localPathService,
@@ -81,6 +84,20 @@ namespace Covid19Radar.Repository
         }
 
         public async Task<ExposureConfiguration> GetExposureConfigurationAsync()
+        {
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                return await GetExposureConfigurationInternalAsync();
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        private async Task<ExposureConfiguration> GetExposureConfigurationInternalAsync()
         {
             _loggerService.StartMethod();
 
@@ -131,6 +148,7 @@ namespace Covid19Radar.Repository
                 try
                 {
                     newExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
+                    SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
                 }
                 catch (JsonException exception)
                 {
@@ -165,14 +183,52 @@ namespace Covid19Radar.Repository
                 currentExposureConfiguration = newExposureConfiguration;
             }
 
-            await SaveAsync(
-                JsonConvert.SerializeObject(currentExposureConfiguration, Formatting.Indented),
-                CurrentConfigFilePath);
-            SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
+            string tmpFilePath = Path.Combine(_configDir, Guid.NewGuid().ToString());
 
-            _loggerService.EndMethod();
+            try
+            {
+                await SaveAsync(
+                    JsonConvert.SerializeObject(currentExposureConfiguration, Formatting.Indented),
+                    tmpFilePath
+                    );
+                Swap(tmpFilePath, CurrentConfigFilePath);
 
-            return currentExposureConfiguration;
+                return currentExposureConfiguration;
+            }
+            finally
+            {
+                File.Delete(tmpFilePath);
+
+                _loggerService.EndMethod();
+
+            }
+        }
+
+        private void Swap(string sourcePath, string destPath)
+        {
+            string tmpFilePath = Path.Combine(_configDir, Guid.NewGuid().ToString());
+
+            if (File.Exists(destPath))
+            {
+                // Backup
+                File.Move(destPath, tmpFilePath);
+            }
+
+            try
+            {
+                File.Move(sourcePath, destPath);
+                File.Delete(tmpFilePath);
+            }
+            catch(IOException exception)
+            {
+                _loggerService.Exception("IOException", exception);
+
+                // Restore
+                if (File.Exists(tmpFilePath))
+                {
+                    File.Move(tmpFilePath, destPath);
+                }
+            }
         }
 
         private bool IsUpdatedDiagnosisKeysDataMapping(
