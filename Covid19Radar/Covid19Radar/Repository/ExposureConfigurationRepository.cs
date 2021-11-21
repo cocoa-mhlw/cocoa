@@ -31,16 +31,18 @@ namespace Covid19Radar.Repository
 
     public class ExposureConfigurationRepository : IExposureConfigurationRepository
     {
-        private const string CONFIG_DIR = "exposure_configuration";
         private const string CURRENT_CONFIG_FILENAME = "current.json";
 
         private const int EXPOSURE_CONFIGURATION_FILE_RETENTION_DAYS = 2;
         private const int EXPOSURE_CONFIGURATION_RETENTION_DAYS = 7 + 1;
 
         private readonly HttpClient _client;
+        private readonly ILocalPathService _localPathService;
         private readonly IPreferencesService _preferencesService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILoggerService _loggerService;
+
+        private readonly IDateTimeUtility _dateTimeUtility = DateTimeUtility.Instance;
 
         private readonly string _configDir;
 
@@ -48,12 +50,14 @@ namespace Covid19Radar.Repository
 
         public ExposureConfigurationRepository(
             IHttpClientService httpClientService,
+            ILocalPathService localPathService,
             IPreferencesService preferencesService,
             IServerConfigurationRepository serverConfigurationRepository,
             ILoggerService loggerService
             )
         {
             _client = httpClientService.Create();
+            _localPathService = localPathService;
             _preferencesService = preferencesService;
             _serverConfigurationRepository = serverConfigurationRepository;
             _loggerService = loggerService;
@@ -65,9 +69,7 @@ namespace Covid19Radar.Repository
 
         private string PrepareConfigDir()
         {
-            var dir = FileSystem.AppDataDirectory;
-
-            var configDir = Path.Combine(dir, CONFIG_DIR);
+            var configDir = _localPathService.ExposureConfigurationDirPath;
             if (!Directory.Exists(configDir))
             {
                 Directory.CreateDirectory(configDir);
@@ -163,7 +165,7 @@ namespace Covid19Radar.Repository
             await SaveAsync(
                 JsonConvert.SerializeObject(currentExposureConfiguration, Formatting.Indented),
                 _currentExposureConfigurationPath);
-            SetExposureConfigurationDownloadedDateTime(DateTime.UtcNow);
+            SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
 
             _loggerService.EndMethod();
 
@@ -191,7 +193,7 @@ namespace Covid19Radar.Repository
             {
                 return true;
             }
-            return (DateTime.UtcNow - appliedDate) > TimeSpan.FromDays(retensionDays);
+            return (_dateTimeUtility.UtcNow - appliedDate) > TimeSpan.FromDays(retensionDays);
         }
 
         private bool IsDownloadedExposureConfigurationOutdated(int retensionDays)
@@ -201,7 +203,7 @@ namespace Covid19Radar.Repository
             {
                 return true;
             }
-            return (DateTime.UtcNow - downloadedDate) > TimeSpan.FromDays(retensionDays);
+            return (_dateTimeUtility.UtcNow - downloadedDate) > TimeSpan.FromDays(retensionDays);
         }
 
         private async Task<string> LoadAsync(string path)
@@ -253,7 +255,7 @@ namespace Covid19Radar.Repository
                 }
 
                 long epoch = _preferencesService.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, 0L);
-                return DateTime.UnixEpoch.AddSeconds(epoch);
+                return _dateTimeUtility.UnixEpoch.AddSeconds(epoch);
             }
             finally
             {
@@ -279,7 +281,7 @@ namespace Covid19Radar.Repository
                 }
 
                 long epoch = _preferencesService.GetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, 0L);
-                return DateTime.UnixEpoch.AddSeconds(epoch);
+                return _dateTimeUtility.UnixEpoch.AddSeconds(epoch);
             }
             finally
             {

@@ -41,5 +41,15 @@
     <Folder Include="Common\" />
     <Folder Include="Repository\" />
     <Folder Include="Common\" />
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Files\" />
+    <None Remove="Files\exposure_configuration1.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\exposure_configuration1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
