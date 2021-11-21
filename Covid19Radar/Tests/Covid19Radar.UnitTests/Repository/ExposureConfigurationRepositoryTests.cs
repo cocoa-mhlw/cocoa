@@ -4,6 +4,7 @@
 
 using System;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -65,25 +66,6 @@ namespace Covid19Radar.UnitTests.Repository
             }
         }
 
-        private static HttpClient SetupMockHttpClient(string responseJson)
-        {
-            var jsonContent = new StringContent(
-                        responseJson,
-                        Encoding.UTF8,
-                        "application/json"
-                    );
-            var httpMessageHandler = new Mock<HttpMessageHandler>();
-            httpMessageHandler.Protected()
-                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(),
-                    ItExpr.IsAny<CancellationToken>())
-                .Returns(Task.FromResult(new HttpResponseMessage
-                {
-                    StatusCode = System.Net.HttpStatusCode.OK,
-                    Content = jsonContent,
-                }));
-            return new HttpClient(httpMessageHandler.Object, false);
-        }
-
         private readonly string CURRENT_JSON_PATH = Path.Combine("./", "current.json");
 
         [Fact]
@@ -104,7 +86,12 @@ namespace Covid19Radar.UnitTests.Repository
             var date = Date;
 
             string content = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
-            var client = SetupMockHttpClient(content);
+            var jsonContent = new StringContent(
+                content,
+                Encoding.UTF8,
+                "application/json"
+            );
+            var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
@@ -144,7 +131,12 @@ namespace Covid19Radar.UnitTests.Repository
             ExposureConfiguration result1 = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson1);
 
             string testJson2 = GetTestJson(JSON_EXPOSURE_CONFIGURATION2);
-            var client = SetupMockHttpClient(testJson2);
+            var jsonContent = new StringContent(
+                testJson2,
+                Encoding.UTF8,
+                "application/json"
+            );
+            var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
@@ -180,7 +172,12 @@ namespace Covid19Radar.UnitTests.Repository
             string testJson2 = GetTestJson(JSON_EXPOSURE_CONFIGURATION2);
             ExposureConfiguration expectedResult = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson2);
 
-            var client = SetupMockHttpClient(testJson2);
+            var jsonContent = new StringContent(
+                testJson2,
+                Encoding.UTF8,
+                "application/json"
+            );
+            var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
@@ -215,7 +212,12 @@ namespace Covid19Radar.UnitTests.Repository
             ExposureConfiguration result1 = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson1);
 
             string testJson3 = GetTestJson(JSON_EXPOSURE_CONFIGURATION_MAPPING_UPDATED);
-            var client = SetupMockHttpClient(testJson3);
+            var jsonContent = new StringContent(
+                testJson3,
+                Encoding.UTF8,
+                "application/json"
+            );
+            var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
@@ -252,7 +254,12 @@ namespace Covid19Radar.UnitTests.Repository
             string testJson3 = GetTestJson(JSON_EXPOSURE_CONFIGURATION_MAPPING_UPDATED);
             ExposureConfiguration expectedResult = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson3);
 
-            var client = SetupMockHttpClient(testJson3);
+            var jsonContent = new StringContent(
+                testJson3,
+                Encoding.UTF8,
+                "application/json"
+            );
+            var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
