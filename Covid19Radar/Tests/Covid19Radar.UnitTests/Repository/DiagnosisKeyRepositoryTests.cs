@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Text;
 using System.IO;
-using System;
 
 namespace Covid19Radar.UnitTests.Repository
 {
