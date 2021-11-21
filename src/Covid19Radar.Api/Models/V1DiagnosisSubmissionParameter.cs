@@ -37,13 +37,8 @@ namespace Covid19Radar.Api.Models
 					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
 					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
-
-					// TODO: We should consider which report-type choose when accept submission from Legacy-COCOA.
-					//ReportType = (int)ReportType,
-
-					// TODO: We should consider what days-since-onset-of-symptoms assign when accept submission from Legacy-COCOA.
-					//DaysSinceOnsetOfSymptoms = DaysSinceOnsetOfSymptoms,
-
+					ReportType = Constants.ReportTypeMissingValue,
+					DaysSinceOnsetOfSymptoms = Constants.DaysSinceOnsetOfSymptomsMissingValue,
 					Timestamp = timestamp,
 					Exported = false
 				};
