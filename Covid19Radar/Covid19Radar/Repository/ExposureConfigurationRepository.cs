@@ -4,7 +4,6 @@
 
 using System;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Chino;
@@ -12,7 +11,6 @@ using Covid19Radar.Common;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
-using Xamarin.Essentials;
 
 namespace Covid19Radar.Repository
 {
@@ -40,9 +38,8 @@ namespace Covid19Radar.Repository
         private readonly ILocalPathService _localPathService;
         private readonly IPreferencesService _preferencesService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
+        private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
-
-        private readonly IDateTimeUtility _dateTimeUtility = DateTimeUtility.Instance;
 
         private readonly string _configDir;
 
@@ -53,6 +50,7 @@ namespace Covid19Radar.Repository
             ILocalPathService localPathService,
             IPreferencesService preferencesService,
             IServerConfigurationRepository serverConfigurationRepository,
+            IDateTimeUtility dateTimeUtility,
             ILoggerService loggerService
             )
         {
@@ -60,6 +58,7 @@ namespace Covid19Radar.Repository
             _localPathService = localPathService;
             _preferencesService = preferencesService;
             _serverConfigurationRepository = serverConfigurationRepository;
+            _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
 
             _configDir = PrepareConfigDir();

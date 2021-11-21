@@ -26,9 +26,8 @@ namespace Covid19Radar.UnitTests.Repository
         private readonly Mock<ILocalPathService> mockLocalPathService;
         private readonly Mock<IPreferencesService> mockPreferencesService;
         private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
-        private readonly Mock<ILoggerService> mockLoggerService;
-
         private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
+        private readonly Mock<ILoggerService> mockLoggerService;
 
         public ExposureConfigurationRepositoryTests()
         {
@@ -37,10 +36,8 @@ namespace Covid19Radar.UnitTests.Repository
             mockLocalPathService = mockRepository.Create<ILocalPathService>();
             mockPreferencesService = mockRepository.Create<IPreferencesService>();
             mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
-            mockLoggerService = mockRepository.Create<ILoggerService>();
-
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
-            DateTimeUtility.Instance = mockDateTimeUtility.Object;
+            mockLoggerService = mockRepository.Create<ILoggerService>();
         }
 
         private IExposureConfigurationRepository CreateRepository()
@@ -49,6 +46,7 @@ namespace Covid19Radar.UnitTests.Repository
                 mockLocalPathService.Object,
                 mockPreferencesService.Object,
                 mockServerConfigurationRepository.Object,
+                mockDateTimeUtility.Object,
                 mockLoggerService.Object
                 );
 
