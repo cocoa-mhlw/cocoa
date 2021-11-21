@@ -56,8 +56,6 @@ namespace Covid19Radar.UnitTests.Repository
             var client = new HttpClient(httpMessageHandler.Object, false);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
-
-
             var unitUnderTest = CreateRepository();
 
             var result = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
