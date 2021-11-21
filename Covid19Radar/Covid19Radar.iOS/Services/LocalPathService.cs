@@ -4,11 +4,11 @@
 
 using System;
 using System.IO;
-using Covid19Radar.Services.Logs;
+using Covid19Radar.Services;
 
-namespace Covid19Radar.iOS.Services.Logs
+namespace Covid19Radar.iOS.Services
 {
-    public class LogPathPlatformService : ILogPathPlatformService
+    public class LocalPathService : ILocalPathService
     {
         #region Instance Properties
 
@@ -40,7 +40,7 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Constructors
 
-        public LogPathPlatformService()
+        public LocalPathService()
         {
         }
 
