@@ -124,13 +124,11 @@ namespace Covid19Radar.UnitTests.Repository
                 Created = 12345678
             };
 
-            var unitUnderTest = CreateRepository();
-
             var tmpPath = Path.GetTempPath();
+            var unitUnderTest = CreateRepository();
             var result = await unitUnderTest.DownloadDiagnosisKeysAsync(entry, tmpPath, default);
             
-            var expectedOutputPath = Path.Combine(tmpPath, "1.zip");
-            Assert.Equal(expectedOutputPath, result);
+            Assert.Equal(Path.Combine(tmpPath, "1.zip"), result);
 
             if (File.Exists(result))
             {
@@ -169,19 +167,18 @@ namespace Covid19Radar.UnitTests.Repository
                 Created = 12345678
             };
 
-            var unitUnderTest = CreateRepository();
-
             var tmpPath = Path.GetTempPath();
 
             await Assert.ThrowsAsync<HttpRequestException>(async () =>
             {
+                var unitUnderTest = CreateRepository();
                 string result = await unitUnderTest.DownloadDiagnosisKeysAsync(entry, tmpPath, default);
             });
 
-            var expectedOutputPath = Path.Combine(tmpPath, "1.zip");
-            if (File.Exists(expectedOutputPath))
+            var outputPath = Path.Combine(tmpPath, "1.zip");
+            if (File.Exists(outputPath))
             {
-                File.Delete(expectedOutputPath);
+                File.Delete(outputPath);
             }
         }
     }
