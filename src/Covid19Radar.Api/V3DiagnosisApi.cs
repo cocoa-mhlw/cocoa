@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Covid19Radar.Api.DataAccess;
@@ -110,11 +111,13 @@ namespace Covid19Radar.Api
             }
 
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            var keys = submissionParameter.Keys.Select(key => key.ToModel(submissionParameter, timestamp));
-
-            foreach (var k in keys)
+            using (SHA256 sha256 = SHA256.Create())
             {
-                await _tekRepository.UpsertAsync(k);
+                var keys = submissionParameter.Keys.Select(key => key.ToModel(submissionParameter, timestamp, sha256));
+                foreach (var k in keys)
+                {
+                    await _tekRepository.UpsertAsync(k);
+                }
             }
 
             return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));

@@ -21,5 +21,15 @@ namespace Covid19Radar.Api.Common
         /// Active Rolling Period
         /// </summary>
         public const uint ActiveRollingPeriod = 144;
+
+        /// <summary>
+        /// Extra value when TemporaryExposureKey reoprtType missing.
+        /// </summary>
+        public const int ReportTypeMissingValue = -1;
+
+        /// <summary>
+        /// Extra value when TemporaryExposureKey daysSinceOnsetOfSymptoms missing.
+        /// </summary>
+        public const int DaysSinceOnsetOfSymptomsMissingValue = int.MinValue;
     }
 }
