@@ -9,13 +9,16 @@ using System.Linq;
 
 namespace Covid19Radar.Api.Models
 {
-	public class V1DiagnosisSubmissionParameter : DiagnosisSubmissionParameter, IUser
+	public class V1DiagnosisSubmissionParameter : DiagnosisSubmissionParameter, IUser, IDeviceVerification
 	{
+		private const int TRANSMISSION_RISK_LEVEL = 4;
+
 		[JsonProperty("userUuid")]
 		public string UserUuid { get; set; }
 
 		[JsonProperty("keys")]
 		public new Key[] Keys { get; set; }
+
 		public new class Key
 		{
 			[JsonProperty("keyData")]
@@ -53,6 +56,8 @@ namespace Covid19Radar.Api.Models
 				if (RollingStartNumber != 0 && (RollingStartNumber < oldest || RollingStartNumber > now)) return false;
 				return true;
 			}
+
+			internal string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, TransmissionRisk);
 		}
 
 		public override bool IsValid()

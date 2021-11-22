@@ -10,8 +10,8 @@ using System.Linq;
 namespace Covid19Radar.Api.Models
 {
 
-	public class DiagnosisSubmissionParameter : IPayload
-    {
+	public class DiagnosisSubmissionParameter : IPayload, IDeviceVerification
+	{
 		[JsonProperty("keys")]
 		public Key[] Keys { get; set; }
 		[JsonProperty("regions")]
@@ -29,7 +29,11 @@ namespace Covid19Radar.Api.Models
 		[JsonProperty("padding")]
 		public string Padding { get; set; }
 
-		public  class Key
+		[JsonIgnore]
+		public string KeysTextForDeviceVerification
+			=> string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+
+		public class Key
 		{
 			[JsonProperty("keyData")]
 			public string KeyData { get; set; }
@@ -64,6 +68,8 @@ namespace Covid19Radar.Api.Models
 				if (RollingStartNumber != 0 && (RollingStartNumber < oldest || RollingStartNumber > now)) return false;
 				return true;
 			}
+
+			public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod);
 		}
 
 		/// <summary>
@@ -81,5 +87,4 @@ namespace Covid19Radar.Api.Models
 			return true;
 		}
 	}
-
 }
