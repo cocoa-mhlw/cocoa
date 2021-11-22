@@ -14,7 +14,6 @@ using Covid19Radar.Views;
 using Moq;
 using Prism.Navigation;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 using Xunit;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
@@ -51,24 +50,29 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void InitializeTests()
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
-            var updateInfo = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = new DateTime(2020, 11, 02) };
-            var param = new NavigationParameters
+
+            var updateInfo = new TermsUpdateInfoModel
             {
-                { "updatePrivacyPolicyInfo", updateInfo }
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
+
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.HomePage);
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
-            Assert.Equal(updateInfo.Text, reAgreePrivacyPolicyPageViewModel.UpdateText);
+            Assert.Equal(updateInfo.PrivacyPolicy.Text, reAgreePrivacyPolicyPageViewModel.UpdateText);
         }
 
         [Fact]
         public void OpenWebViewCommandTests()
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
-            var param = new NavigationParameters
+
+            var updateInfo = new TermsUpdateInfoModel
             {
-                { "updatePrivacyPolicyInfo", new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now } }
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = DateTime.Now }
             };
+
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.HomePage);
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
             var actualCalls = 0;
@@ -93,14 +97,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void OnClickReAgreeCommandTests()
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
-            var updateInfo = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now };
-            var param = new NavigationParameters
+            var updateInfo = new TermsUpdateInfoModel
             {
-                { "updatePrivacyPolicyInfo", updateInfo }
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = DateTime.Now }
             };
+
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.HomePage);
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
-            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTimeUtc));
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.PrivacyPolicy.UpdateDateTimeUtc));
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
             mockNavigationService.Verify(x => x.NavigateAsync(Destination.HomePage.ToPath(), param), Times.Once());
@@ -110,11 +115,16 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void OnClickReAgreeCommandWithDestinationTest()
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
-            var updateInfo = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now };
-            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo, Destination.ContactedNotifyPage);
+
+            var updateInfo = new TermsUpdateInfoModel
+            {
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now }
+            };
+
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.ContactedNotifyPage);
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
-            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.UpdateDateTimeUtc));
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.PrivacyPolicy.UpdateDateTimeUtc));
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
             mockNavigationService.Verify(x => x.NavigateAsync(Destination.ContactedNotifyPage.ToPath(), param), Times.Once());
