@@ -451,10 +451,6 @@
     <value>நேர்மறை பதிவு ஒப்புதல்</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>நேர்மறை பதிவு ஒப்புதல்</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>பதிப்பு</value>
     <comment>バージョン</comment>

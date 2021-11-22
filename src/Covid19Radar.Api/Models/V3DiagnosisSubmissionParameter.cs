@@ -7,6 +7,8 @@ using Covid19Radar.Api.Extensions;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
@@ -40,6 +42,9 @@ namespace Covid19Radar.Api.Models
 		[JsonProperty("verificationPayload")]
 		public string VerificationPayload { get; set; }
 
+		[JsonProperty("idempotency_key")]
+		public string IdempotencyKey { get; set; }
+
 		// Random data to obscure the size of the request network packet sniffers.
 		[JsonProperty("padding")]
 		public string Padding { get; set; }
@@ -68,11 +73,17 @@ namespace Covid19Radar.Api.Models
 			public DateTime GetDate()
 				=> DateTimeOffset.FromUnixTimeSeconds(RollingStartNumber * TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC).Date;
 
-			public TemporaryExposureKeyModel ToModel(V3DiagnosisSubmissionParameter _, ulong timestamp)
+			public TemporaryExposureKeyModel ToModel(V3DiagnosisSubmissionParameter submissionParameter, ulong timestamp, SHA256 sha256)
 			{
+				var keyData = Convert.FromBase64String(KeyData);
+
+				var partitionKeySeed = $"{submissionParameter.IdempotencyKey},{keyData},{RollingStartNumber},{RollingPeriod}";
+				var partitionKey = Encoding.ASCII.GetString(sha256.ComputeHash(Encoding.ASCII.GetBytes(partitionKeySeed)));
+
 				return new TemporaryExposureKeyModel()
 				{
-					KeyData = Convert.FromBase64String(KeyData),
+					PartitionKey = partitionKey,
+					KeyData = keyData,
 					RollingPeriod = ((int)RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)RollingPeriod),
 					RollingStartIntervalNumber = (int)RollingStartNumber,
 					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,

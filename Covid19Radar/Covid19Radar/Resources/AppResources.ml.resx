@@ -451,10 +451,6 @@
     <value>പോസിറ്റീവ് രജിസ്ട്രേഷൻ സമ്മതം</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>പോസിറ്റീവ് രജിസ്ട്രേഷൻ സമ്മതം</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>പതിപ്പ്</value>
     <comment>バージョン</comment>

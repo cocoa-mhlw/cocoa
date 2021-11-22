@@ -28,63 +28,93 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
         private readonly ICloseApplicationService closeApplicationService;
+        private readonly IEssentialsService _essentialsService;
 
-        private string _processNumber;
-        public string ProcessNumber
+        private string _processingNumber;
+        public string ProcessingNumber
         {
-            get { return _processNumber; }
+            get { return _processingNumber; }
             set
             {
-                SetProperty(ref _processNumber, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                SetProperty(ref _processingNumber, value);
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
+        private bool _isDeepLink = false;
+        public bool IsDeepLink
+        {
+            get => _isDeepLink;
+            set => SetProperty(ref _isDeepLink, value);
+        }
+
         private bool _isConsentLinkVisible;
         public bool IsConsentLinkVisible
         {
-            get { return _isConsentLinkVisible; }
-            set { SetProperty(ref _isConsentLinkVisible, value); }
+            get => _isConsentLinkVisible;
+            set => SetProperty(ref _isConsentLinkVisible, value);
         }
 
-        private bool _isProcessNumberEnabled;
-        public bool IsProcessNumberEnabled
+        private bool _isProcessingNumberReadOnly = false;
+        public bool IsProcessingNumberReadOnly
         {
-            get { return _isProcessNumberEnabled; }
-            set { SetProperty(ref _isProcessNumberEnabled, value); }
+            get => _isProcessingNumberReadOnly;
+            set => SetProperty(ref _isProcessingNumberReadOnly, value);
         }
 
-        private bool _isEnabled;
-        public bool IsEnabled
+        private bool _isHowToObtainProcessingNumberVisible = true;
+        public bool IsHowToObtainProcessingNumberVisible
         {
-            get { return _isEnabled; }
-            set { SetProperty(ref _isEnabled, value); }
+            get => _isHowToObtainProcessingNumberVisible;
+            set => SetProperty(ref _isHowToObtainProcessingNumberVisible, value);
         }
+
+        public string InqueryTelephoneNumber => AppResources.InquiryAboutRegistrationPhoneNumber;
+
+        private bool _isInqueryTelephoneNumberVisible;
+        public bool IsInqueryTelephoneNumberVisible
+        {
+            get => _isInqueryTelephoneNumberVisible;
+            set => SetProperty(ref _isInqueryTelephoneNumberVisible, value);
+        }
+
+        private bool _isNextButtonEnabled;
+        public bool IsNextButtonEnabled
+        {
+            get => _isNextButtonEnabled;
+            set => SetProperty(ref _isNextButtonEnabled, value);
+        }
+
         private bool _isVisibleWithSymptomsLayout;
         public bool IsVisibleWithSymptomsLayout
         {
-            get { return _isVisibleWithSymptomsLayout; }
+            get => _isVisibleWithSymptomsLayout;
             set
             {
                 SetProperty(ref _isVisibleWithSymptomsLayout, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
         private bool _isVisibleNoSymptomsLayout;
         public bool IsVisibleNoSymptomsLayout
         {
-            get { return _isVisibleNoSymptomsLayout; }
+            get => _isVisibleNoSymptomsLayout;
             set
             {
                 SetProperty(ref _isVisibleNoSymptomsLayout, value);
-                IsEnabled = CheckRegisterButtonEnable();
+                IsNextButtonEnabled = CheckRegisterButtonEnable();
             }
         }
+
         private DateTime _diagnosisDate;
+
         public DateTime DiagnosisDate
         {
-            get { return _diagnosisDate; }
-            set { SetProperty(ref _diagnosisDate, value); }
+            get => _diagnosisDate;
+            set => SetProperty(ref _diagnosisDate, value);
         }
+
         private int errorCount { get; set; }
 
         public NotifyOtherPageViewModel(
@@ -92,7 +122,8 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             AbsExposureNotificationApiService exposureNotificationApiService,
             IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer,
-            ICloseApplicationService closeApplicationService
+            ICloseApplicationService closeApplicationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
@@ -101,8 +132,9 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
             this.closeApplicationService = closeApplicationService;
+            _essentialsService = essentialsService;
             errorCount = 0;
-            ProcessNumber = "";
+            ProcessingNumber = "";
             DiagnosisDate = DateTime.Today;
         }
 
@@ -110,20 +142,40 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
-            if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessNumberKey))
+            if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessingNumberKey))
             {
-                ProcessNumber = parameters.GetValue<string>(NotifyOtherPage.ProcessNumberKey);
-                IsProcessNumberEnabled = false;
+                ProcessingNumber = parameters.GetValue<string>(NotifyOtherPage.ProcessingNumberKey);
+                IsDeepLink = true;
+                IsHowToObtainProcessingNumberVisible = false;
+                IsProcessingNumberReadOnly = true;
                 IsConsentLinkVisible = true;
+                IsInqueryTelephoneNumberVisible = true;
             }
         }
+
+        public Command OnInqueryTelephoneNumberClicked => new Command(() =>
+        {
+            loggerService.StartMethod();
+
+            try
+            {
+                var phoneNumber = Regex.Replace(InqueryTelephoneNumber, "[^0-9]", "");
+                _essentialsService.PhoneDialerOpen(phoneNumber);
+            }
+            catch (Exception exception)
+            {
+                loggerService.Exception("Exception occurred: PhoneDialer", exception);
+            }
+
+            loggerService.EndMethod();
+        });
 
         public Command OnShowConsentPageClicked => new Command(async () =>
         {
             loggerService.StartMethod();
 
             var param = new NavigationParameters();
-            param = SubmitConsentPage.BuildNavigationParams(isFromAppLinks: true, param);
+            param = SubmitConsentPage.BuildNavigationParams(true, ProcessingNumber, param);
             var result = await NavigationService.NavigateAsync("SubmitConsentPage", param);
 
             loggerService.EndMethod();
@@ -188,7 +240,7 @@ namespace Covid19Radar.ViewModels
 
 
                     // Init Dialog
-                    if (string.IsNullOrEmpty(_processNumber))
+                    if (string.IsNullOrEmpty(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag4Message,
@@ -200,8 +252,7 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                Regex regex = new Regex(AppConstants.processNumberRegex);
-                if (!regex.IsMatch(_processNumber))
+                if (!Validator.IsValidProcessingNumber(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag5Message,
@@ -293,7 +344,7 @@ namespace Covid19Radar.ViewModels
                 IList<HttpStatusCode> httpStatusCodes = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                     _diagnosisDate,
                     filteredTemporaryExposureKeyList,
-                    _processNumber,
+                    ProcessingNumber,
                     idempotencyKey
                     );
 
@@ -393,7 +444,7 @@ namespace Covid19Radar.ViewModels
 
         public bool CheckRegisterButtonEnable()
         {
-            return ProcessNumber.Length == AppConstants.MaxProcessNumberLength && (IsVisibleWithSymptomsLayout || IsVisibleNoSymptomsLayout);
+            return ProcessingNumber.Length == AppConstants.MaxProcessingNumberLength && (IsVisibleWithSymptomsLayout || IsVisibleNoSymptomsLayout);
         }
 
         public async void OnGetTekHistoryAllowed()

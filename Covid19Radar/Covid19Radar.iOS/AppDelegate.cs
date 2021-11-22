@@ -156,14 +156,17 @@ namespace Covid19Radar.iOS
                         .QueryItems?
                         .FirstOrDefault(item => item.Name == AppConstants.LinkQueryKeyProcessingNumber)?
                         .Value;
-                    var navigationParameters = new NavigationParameters();
 
-                    if (!string.IsNullOrEmpty(processingNumber))
+                    if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                     {
+                        var navigationParameters = new NavigationParameters();
                         navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                        InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
                     }
-
-                    InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
+                    else
+                    {
+                        _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
+                    }
                 }
             }
             catch(Exception e)
@@ -182,7 +185,7 @@ namespace Covid19Radar.iOS
         {
             // Services
             container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
-            container.Register<ILogPathPlatformService, LogPathPlatformService>(Reuse.Singleton);
+            container.Register<ILocalPathService, LocalPathService>(Reuse.Singleton);
             container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, Services.SecureStorageService>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);

@@ -8,7 +8,7 @@ steps:
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_development_20221007.mobileprovision'
+    provProfileSecureFile: 'cocoa_development_20221028.mobileprovision'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -26,23 +26,35 @@ steps:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
     configuration: Debug
     signingIdentity: 'Apple Development'
-    signingProvisioningProfileID: 'c869a415-fe6c-42ff-8d5a-3933d0d46080'
+    signingProvisioningProfileID: 'dd12de18-d5ab-4797-8b01-79e38ef2a8a6'
 
 - task: CopyFiles@2
-  displayName: 'Copy Files to: Build.ArtifactStagingDirectory'
+  displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'
   inputs:
     SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/Debug
     Contents: '*.ipa'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - script: |
+    mkdir -p symbols
+    find . -type d -name '*.dSYM' | xargs -J % cp -v -R % $(System.DefaultWorkingDirectory)/symbols
+  displayName: Copy symbol files to staging
+
+- task: CopyFiles@2
+  displayName: 'Copy symbols to: Build.ArtifactStagingDirectory'
+  inputs:
+    Contents: |
+      **/symbols/**/*
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
     cd $(Build.ArtifactStagingDirectory)/
     ARCHIVE_FILE=`find *.ipa | head -1`
-    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_v$(APP_VERSION)_development_$(Environment).ipa
+    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_development_$(Environment)_v$(AppVersion)_$(buildVersion).ipa
     ls -la
   displayName: 'Change archive name'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: archives_v$(APP_VERSION)_development_$(Environment)'
+  displayName: 'Publish IPA and symbols'
   inputs:
-    ArtifactName: 'archives_v$(APP_VERSION)_development_$(Environment)'
+    ArtifactName: 'archives_development_$(Environment)_v$(AppVersion)_$(buildVersion)'

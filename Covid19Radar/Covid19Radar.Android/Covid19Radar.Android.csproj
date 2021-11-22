@@ -184,7 +184,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CloseApplicationService.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
-    <Compile Include="Services\Logs\LogPathPlatformService.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
@@ -200,6 +199,7 @@
     <Compile Include="Services\ExternalNavigationService.cs" />
     <Compile Include="Services\PlatformService.cs" />
     <Compile Include="Services\IPlatformService.cs" />
+    <Compile Include="Services\LocalPathService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />

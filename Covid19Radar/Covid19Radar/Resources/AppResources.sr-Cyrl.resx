@@ -451,10 +451,6 @@
     <value>Пристанак на позитивну регистрацију</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Пристанак на позитивну регистрацију</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Верзија</value>
     <comment>バージョン</comment>
