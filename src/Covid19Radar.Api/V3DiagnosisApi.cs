@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
@@ -25,6 +26,9 @@ namespace Covid19Radar.Api
 {
     public class V3DiagnosisApi
     {
+        private const int TRANSMISSION_RISK_LEVEL_INVALID = 0;
+        private const int TRANSMISSION_RISK_LEVEL_MEDIUM = 4;
+
         private const string CHAFF_HEADER = "X-Chaff";
 
         private readonly string[] _supportRegions;
@@ -70,6 +74,17 @@ namespace Covid19Radar.Api
 
             var submissionParameter = JsonConvert.DeserializeObject<V3DiagnosisSubmissionParameter>(requestBody);
             submissionParameter.SetDaysSinceOnsetOfSymptoms();
+
+            // Make compatible with Legacy-V1 mode.
+            foreach (var key in submissionParameter.Keys)
+            {
+                var transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_INVALID;
+                if (key.DaysSinceOnsetOfSymptoms >= Constants.DaysHasInfectiousness)
+                {
+                    transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_MEDIUM;
+                }
+                key.TransmissionRisk = transmissionRiskLevel;
+            }
 
             // Filter valid keys
             submissionParameter.Keys = submissionParameter.Keys.Where(key => key.IsValid()).ToArray();
