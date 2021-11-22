@@ -1229,4 +1229,8 @@ Note: this app does not collect users’ location information.</value>
     <value>Your processing number</value>
     <comment>あなた専用の処理番号</comment>
   </data>
+  <data name="Button" xml:space="preserve">
+    <value>button</value>
+    <comment>ボタン</comment>
+  </data>
 </root>
