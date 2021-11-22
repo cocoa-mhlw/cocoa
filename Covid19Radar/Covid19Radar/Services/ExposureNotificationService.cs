@@ -20,10 +20,6 @@ namespace Covid19Radar.Services
         Configuration GetConfiguration();
         void RemoveConfiguration();
 
-        long GetLastProcessTekTimestamp(string region);
-        void SetLastProcessTekTimestamp(string region, long created);
-        void RemoveLastProcessTekTimestamp();
-
         Task FetchExposureKeyAsync();
 
         List<UserExposureInfo> GetExposureInformationList();
@@ -114,48 +110,6 @@ namespace Covid19Radar.Services
         {
             loggerService.StartMethod();
             await ExposureNotification.UpdateKeysFromServer();
-            loggerService.EndMethod();
-        }
-
-        public long GetLastProcessTekTimestamp(string region)
-        {
-            loggerService.StartMethod();
-            var result = 0L;
-            var jsonString = preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
-            if (!string.IsNullOrEmpty(jsonString))
-            {
-                var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
-                if (dict.ContainsKey(region))
-                {
-                    result = dict[region];
-                }
-            }
-            loggerService.EndMethod();
-            return result;
-        }
-
-        public void SetLastProcessTekTimestamp(string region, long created)
-        {
-            loggerService.StartMethod();
-            var jsonString = preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
-            Dictionary<string, long> newDict;
-            if (!string.IsNullOrEmpty(jsonString))
-            {
-                newDict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
-            }
-            else
-            {
-                newDict = new Dictionary<string, long>();
-            }
-            newDict[region] = created;
-            preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
-            loggerService.EndMethod();
-        }
-
-        public void RemoveLastProcessTekTimestamp()
-        {
-            loggerService.StartMethod();
-            preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
             loggerService.EndMethod();
         }
 

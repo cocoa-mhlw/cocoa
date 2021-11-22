@@ -30,8 +30,7 @@
                                             Source="privacypolicy_img01.png" />
                 <Label Style="{StaticResource DefaultLabel}"
                        Text="{Binding UpdateText}" />
-                <Label Style="{StaticResource DefaultLabelColor}"
-                       HorizontalOptions="CenterAndExpand"
+                <Label Style="{StaticResource LinkLabelStyleMedium}"
                        Text="{x:Static resources:AppResources.ReAgreePrivacyPolicyTextLink}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding Path=OpenWebView}" />

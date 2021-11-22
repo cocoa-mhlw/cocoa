@@ -5,38 +5,32 @@
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
-    public enum TermsType
-    {
-        TermsOfService,
-        PrivacyPolicy
-    }
-
     public interface ITermsUpdateService
     {
         Task<TermsUpdateInfoModel> GetTermsUpdateInfo();
-        bool IsReAgree(TermsType termsType, TermsUpdateInfoModel privacyUpdateInfo);
-        void SaveLastUpdateDate(TermsType termsType, DateTime updateDate);
-        bool IsAllAgreed();
-        void RemoveAllUpdateDate();
+        bool IsUpdated(TermsType termsType, TermsUpdateInfoModel termsUpdateInfo);
     }
 
     public class TermsUpdateService : ITermsUpdateService
     {
         private readonly ILoggerService loggerService;
-        private readonly IPreferencesService preferencesService;
+        private readonly IUserDataRepository userDataRepository;
 
-        public TermsUpdateService(ILoggerService loggerService, IPreferencesService preferencesService)
+        public TermsUpdateService(
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository
+            )
         {
             this.loggerService = loggerService;
-            this.preferencesService = preferencesService;
+            this.userDataRepository = userDataRepository;
         }
 
         public async Task<TermsUpdateInfoModel> GetTermsUpdateInfo()
@@ -68,24 +62,16 @@ namespace Covid19Radar.Services
             }
         }
 
-        public bool IsReAgree(TermsType termsType, TermsUpdateInfoModel termsUpdateInfo)
+        public bool IsUpdated(TermsType termsType, TermsUpdateInfoModel termsUpdateInfo)
         {
             loggerService.StartMethod();
 
-            TermsUpdateInfoModel.Detail info = null;
-            string key = null;
-
-            switch (termsType)
+            TermsUpdateInfoModel.Detail info = termsType switch
             {
-                case TermsType.TermsOfService:
-                    info = termsUpdateInfo.TermsOfService;
-                    key = PreferenceKey.TermsOfServiceLastUpdateDateTime;
-                    break;
-                case TermsType.PrivacyPolicy:
-                    info = termsUpdateInfo.PrivacyPolicy;
-                    key = PreferenceKey.PrivacyPolicyLastUpdateDateTime;
-                    break;
-            }
+                TermsType.TermsOfService => termsUpdateInfo.TermsOfService,
+                TermsType.PrivacyPolicy => termsUpdateInfo.PrivacyPolicy,
+                _ => throw new NotSupportedException()
+            };
 
             if (info == null)
             {
@@ -93,39 +79,13 @@ namespace Covid19Radar.Services
                 return false;
             }
 
-            var lastUpdateDate = new DateTime();
-            if (preferencesService.ContainsKey(key))
-            {
-                lastUpdateDate = preferencesService.GetValue(key, lastUpdateDate);
-            }
+            var updateDatetime = info.UpdateDateTimeUtc;
 
-            loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
+            DateTime lastUpdateDate = userDataRepository.GetLastUpdateDate(termsType);
+            loggerService.Info($"termsType: {termsType}, lastUpdateDate: {lastUpdateDate}, updateDatetimeUtc: {updateDatetime}");
             loggerService.EndMethod();
 
-            return lastUpdateDate < info.UpdateDateTime;
-        }
-
-        public void SaveLastUpdateDate(TermsType termsType, DateTime updateDate)
-        {
-            loggerService.StartMethod();
-
-            var key = termsType == TermsType.TermsOfService ? PreferenceKey.TermsOfServiceLastUpdateDateTime : PreferenceKey.PrivacyPolicyLastUpdateDateTime;
-            preferencesService.SetValue(key, updateDate);
-
-            loggerService.EndMethod();
-        }
-
-        public bool IsAllAgreed()
-        {
-            return preferencesService.ContainsKey(PreferenceKey.TermsOfServiceLastUpdateDateTime) && preferencesService.ContainsKey(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
-        }
-
-        public void RemoveAllUpdateDate()
-        {
-            loggerService.StartMethod();
-            preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTime);
-            preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTime);
-            loggerService.EndMethod();
+            return lastUpdateDate < updateDatetime;
         }
     }
 }

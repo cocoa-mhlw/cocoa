@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -18,12 +19,13 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
+        private readonly IUserDataRepository userDataRepository;
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly ILocalNotificationService localNotificationService;
         private readonly IExposureNotificationStatusService exposureNotificationStatusService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
+        private readonly IEssentialsService essentialsService;
 
         private string _pastDate;
         public string PastDate
@@ -63,22 +65,24 @@ namespace Covid19Radar.ViewModels
         public HomePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataService userDataService,
+            IUserDataRepository userDataRepository,
             IExposureNotificationService exposureNotificationService,
             ILocalNotificationService localNotificationService,
             IExposureNotificationStatusService exposureNotificationStatusService,
             IDialogService dialogService,
-            IExternalNavigationService externalNavigationService
+            IExternalNavigationService externalNavigationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
+            this.userDataRepository = userDataRepository;
             this.exposureNotificationService = exposureNotificationService;
             this.localNotificationService = localNotificationService;
             this.exposureNotificationStatusService = exposureNotificationStatusService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
+            this.essentialsService = essentialsService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -100,6 +104,8 @@ namespace Covid19Radar.ViewModels
 
             try
             {
+                await localNotificationService.PrepareAsync();
+
                 await exposureNotificationService.StartExposureNotification();
                 await exposureNotificationService.FetchExposureKeyAsync();
             }
@@ -107,8 +113,6 @@ namespace Covid19Radar.ViewModels
             {
                 loggerService.Exception("Failed to fetch exposure key.", ex);
             }
-
-            await localNotificationService.PrepareAsync();
 
             await UpdateView();
 
@@ -118,6 +122,8 @@ namespace Covid19Radar.ViewModels
         public Command OnClickExposures => new Command(async () =>
         {
             loggerService.StartMethod();
+
+            await localNotificationService.DismissExposureNotificationAsync();
 
             var count = exposureNotificationService.GetExposureCountToDisplay();
             loggerService.Info($"Exposure count: {count}");
@@ -169,7 +175,26 @@ namespace Covid19Radar.ViewModels
                     bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
                     if (isOK)
                     {
-                        externalNavigationService.NavigateAppSettings();
+                        if (essentialsService.IsAndroid)
+                        {
+                            try
+                            {
+                                await exposureNotificationService.StartExposureNotification();
+                                await exposureNotificationService.FetchExposureKeyAsync();
+                            }
+                            catch (Exception ex)
+                            {
+                                loggerService.Exception("Failed to fetch exposure key.", ex);
+                            }
+                            finally
+                            {
+                                await UpdateView();
+                            }
+                        }
+                        else if (essentialsService.IsIos)
+                        {
+                            externalNavigationService.NavigateAppSettings();
+                        }
                     }
                 }
                 else if (enStopReason == ExposureNotificationStoppedReason.BluetoothOff)
@@ -201,7 +226,8 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var daysOfUse = userDataService.GetDaysOfUse();
+            var daysOfUse = userDataRepository.GetDaysOfUse();
+
             PastDate = daysOfUse.ToString();
 
             await exposureNotificationStatusService.UpdateStatuses();
@@ -223,7 +249,7 @@ namespace Covid19Radar.ViewModels
                     IsVisibleENStatusUnconfirmedLayout = false;
                     IsVisibleENStatusStoppedLayout = false;
 
-                    var latestUtcDate = exposureNotificationStatusService.LastConfirmedUtcDateTime;
+                    var latestUtcDate = userDataRepository.GetLastConfirmedDate();
                     if (latestUtcDate == null)
                     {
                         LatestConfirmationDate = AppResources.InProgressText;
@@ -240,7 +266,7 @@ namespace Covid19Radar.ViewModels
                             loggerService.Exception("Failed to conversion utc date time", ex);
                         }
                     }
-                    
+
                     break;
             }
 
@@ -250,7 +276,6 @@ namespace Covid19Radar.ViewModels
         public override async void OnAppearing()
         {
             base.OnAppearing();
-
             await UpdateView();
         }
 

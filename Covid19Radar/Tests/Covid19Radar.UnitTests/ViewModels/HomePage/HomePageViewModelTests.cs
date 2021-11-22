@@ -4,6 +4,7 @@
 
 
 using System;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -19,24 +20,26 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IUserDataService> mockUserDataService;
+        private readonly Mock<IUserDataRepository> mockUserDataRepository;
         private readonly Mock<IExposureNotificationService> mockExposureNotificationService;
         private readonly Mock<ILocalNotificationService> mockLocalNotificationService;
         private readonly Mock<IExposureNotificationStatusService> mockExposureNotificationStatusService;
         private readonly Mock<IDialogService> mockDialogService;
         private readonly Mock<IExternalNavigationService> mockExternalNavigationService;
+        private readonly Mock<IEssentialsService> mockEssentialsService;
 
         public HomePageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockUserDataService = mockRepository.Create<IUserDataService>();
+            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
             mockExposureNotificationService = mockRepository.Create<IExposureNotificationService>();
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
             mockExposureNotificationStatusService = mockRepository.Create<IExposureNotificationStatusService>();
             mockDialogService = mockRepository.Create<IDialogService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();
+            mockEssentialsService = mockRepository.Create<IEssentialsService>();
         }
 
         private HomePageViewModel CreateViewModel()
@@ -44,12 +47,13 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new HomePageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockUserDataService.Object,
+                mockUserDataRepository.Object,
                 mockExposureNotificationService.Object,
                 mockLocalNotificationService.Object,
                 mockExposureNotificationStatusService.Object,
                 mockDialogService.Object,
-                mockExternalNavigationService.Object);
+                mockExternalNavigationService.Object,
+                mockEssentialsService.Object);
         }
 
         [Theory]
@@ -57,7 +61,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         [InlineData(ExposureNotificationStatus.Stopped, false, false, true)]
         public void UpdateView_ENStatus_Unconfirmed_Stopped(ExposureNotificationStatus enStatus, bool isVisibleActiveLayoutResult, bool isVisibleUnconfirmedLayoutResult, bool isVisibleStoppedLayoutResult)
         {
-            var homePageViewModel = CreateViewModel();            
+            var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationStatusService.Setup(x => x.ExposureNotificationStatus).Returns(enStatus);
 
@@ -90,7 +94,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             var mockLastConfirmedUtcDateTime = DateTime.UtcNow;
             mockExposureNotificationStatusService.Setup(x => x.ExposureNotificationStatus).Returns(ExposureNotificationStatus.Active);
-            mockExposureNotificationStatusService.Setup(x => x.LastConfirmedUtcDateTime).Returns(mockLastConfirmedUtcDateTime);
+            mockUserDataRepository.Setup(x => x.GetLastConfirmedDate()).Returns(mockLastConfirmedUtcDateTime);
 
             homePageViewModel.OnAppearing();
 
@@ -103,17 +107,39 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Fact]
-        public void OnClickCheckStopReasonCommandTest_StoppedReason_ExposureNotificationOff_OK()
+        public void OnClickCheckStopReasonCommandTest_StoppedReason_ExposureNotificationOff_OK_iOS()
         {
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationStatusService.Setup(x => x.ExposureNotificationStoppedReason).Returns(ExposureNotificationStoppedReason.ExposureNotificationOff);
             mockDialogService.Setup(x => x.ShowExposureNotificationOffWarningAsync()).ReturnsAsync(true);
+            mockEssentialsService.Setup(x => x.IsAndroid).Returns(false);
+            mockEssentialsService.Setup(x => x.IsIos).Returns(true);
 
             homePageViewModel.OnClickCheckStopReason.Execute(null);
 
             mockDialogService.Verify(x => x.ShowExposureNotificationOffWarningAsync(), Times.Once());
             mockExternalNavigationService.Verify(x => x.NavigateAppSettings(), Times.Once());
+            mockExposureNotificationService.Verify(x => x.StartExposureNotification(), Times.Never());
+            mockExposureNotificationService.Verify(x => x.FetchExposureKeyAsync(), Times.Never());
+        }
+
+        [Fact]
+        public void OnClickCheckStopReasonCommandTest_StoppedReason_ExposureNotificationOff_OK_Android()
+        {
+            var homePageViewModel = CreateViewModel();
+
+            mockExposureNotificationStatusService.Setup(x => x.ExposureNotificationStoppedReason).Returns(ExposureNotificationStoppedReason.ExposureNotificationOff);
+            mockDialogService.Setup(x => x.ShowExposureNotificationOffWarningAsync()).ReturnsAsync(true);
+            mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
+            mockEssentialsService.Setup(x => x.IsIos).Returns(false);
+
+            homePageViewModel.OnClickCheckStopReason.Execute(null);
+
+            mockDialogService.Verify(x => x.ShowExposureNotificationOffWarningAsync(), Times.Once());
+            mockExternalNavigationService.Verify(x => x.NavigateAppSettings(), Times.Never());
+            mockExposureNotificationService.Verify(x => x.StartExposureNotification(), Times.Once());
+            mockExposureNotificationService.Verify(x => x.FetchExposureKeyAsync(), Times.Once());
         }
 
         [Fact]

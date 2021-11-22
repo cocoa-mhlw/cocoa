@@ -26,10 +26,8 @@ namespace Covid19Radar.Services
     {
         ExposureNotificationStatus ExposureNotificationStatus { get; }
         ExposureNotificationStoppedReason ExposureNotificationStoppedReason { get; }
-        DateTime? LastConfirmedUtcDateTime { get; }
 
         Task UpdateStatuses();
-        void RemoveAllExposureNotificationStatus();
     }
 
     public interface IExposureNotificationStatusPlatformService

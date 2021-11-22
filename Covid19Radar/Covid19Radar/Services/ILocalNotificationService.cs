@@ -11,5 +11,7 @@ namespace Covid19Radar.Services
         public Task PrepareAsync();
 
         public Task ShowExposureNotificationAsync();
+
+        public Task DismissExposureNotificationAsync();
     }
 }

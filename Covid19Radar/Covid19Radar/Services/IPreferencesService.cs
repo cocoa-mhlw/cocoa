@@ -8,9 +8,6 @@ namespace Covid19Radar.Services
 {
     public interface IPreferencesService
     {
-#nullable enable
-        DateTime? GetDateTime(string key);
-#nullable disable
         T GetValue<T>(string key, T defaultValue);
         void SetValue<T>(string key, T value);
         void RemoveValue(string key);
