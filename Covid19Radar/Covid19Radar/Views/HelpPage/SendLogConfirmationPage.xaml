@@ -60,9 +60,8 @@
                         <TapGestureRecognizer Command="{Binding Path=OnClickConfirmLogCommand}"/>
                     </Frame.GestureRecognizers>
                     <Label
-                    HorizontalTextAlignment="Center"
-                    Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}"
-                    TextColor="{StaticResource Primary}" />
+                        Style="{StaticResource LinkLabelStyleMedium}"
+                        Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}" />
                 </Frame>
                 <Button
                 Command="{Binding Path=OnClickSendLogCommand}"
