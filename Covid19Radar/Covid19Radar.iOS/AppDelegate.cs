@@ -59,9 +59,11 @@ namespace Covid19Radar.iOS
         //
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        public override bool FinishedLaunching(UIApplication app, NSDictionary launchOptions)
         {
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
+
+            UIView.AppearanceWhenContainedIn(new [] { typeof(UIAlertController) }).TintColor = new UIColor((nfloat)0x06 / 0xFF, (nfloat)0x6A / 0xFF, (nfloat)0xB9 / 0xFF, 1.0f);
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
@@ -85,8 +87,65 @@ namespace Covid19Radar.iOS
 
             LoadApplication(new App());
 
+            if (!IsUniversalLinks(launchOptions) && !IsLocalNotification(launchOptions))
+            {
+                InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters()));
+            }
+
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
-            return base.FinishedLaunching(app, options);
+            return base.FinishedLaunching(app, launchOptions);
+        }
+
+        private bool IsUniversalLinks(NSDictionary launchOptions)
+        {
+            if (launchOptions == null)
+            {
+                _loggerService.Value.Info("Not from universal links.");
+                return false;
+            }
+
+            if (!launchOptions.TryGetValue(UIApplication.LaunchOptionsUserActivityDictionaryKey, out NSObject result))
+            {
+                _loggerService.Value.Info("Not from universal links.");
+                return false;
+            }
+
+            if (result == null)
+            {
+                _loggerService.Value.Info("Not from universal links.");
+                return false;
+            }
+
+            _loggerService.Value.Debug($"LaunchOptionsUserActivityDictionaryKey result={result}");
+            _loggerService.Value.Info("From universal links.");
+
+            return true;
+        }
+
+        private bool IsLocalNotification(NSDictionary launchOptions)
+        {
+            if (launchOptions == null)
+            {
+                _loggerService.Value.Info("Not from local notification.");
+                return false;
+            }
+
+            if (!launchOptions.TryGetValue(UIApplication.LaunchOptionsLocalNotificationKey, out NSObject result))
+            {
+                _loggerService.Value.Info("Not from local notification.");
+                return false;
+            }
+
+            if (result == null)
+            {
+                _loggerService.Value.Info("Not from local notification.");
+                return false;
+            }
+
+            _loggerService.Value.Debug($"LaunchOptionsLocalNotificationKey result={result}");
+            _loggerService.Value.Info("From local notification.");
+
+            return true;
         }
 
         public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -124,6 +183,7 @@ namespace Covid19Radar.iOS
                     else
                     {
                         _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
+                        InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters()));
                     }
                 }
             }

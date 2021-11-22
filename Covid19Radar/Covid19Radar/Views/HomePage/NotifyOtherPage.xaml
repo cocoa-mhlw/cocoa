@@ -114,8 +114,7 @@
             <Label
                 AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessingNumberVisible}"
                 Margin="0, 0, 0, 0"
-                HorizontalOptions="Start"
-                Style="{StaticResource DefaultLabelColor}"
+                Style="{StaticResource LinkLabelStyleMedium}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageLabel}"
                 IsVisible="{Binding IsHowToObtainProcessingNumberVisible}">
                 <Label.GestureRecognizers>
@@ -186,7 +185,7 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsConsentLinkVisible}"
                         Margin="0, 0, 0, 5"
-                        Style="{StaticResource DefaultLabelColor}"
+                        Style="{StaticResource LinkLabelStyleMedium}"
                         Text="{x:Static resources:AppResources.ConfirmAgreement}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Path=OnShowConsentPageClicked}" />
@@ -228,9 +227,7 @@
                         Text="{x:Static resources:AppResources.InquiryAboutRegistrationTitle}"/>
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
-                        Style="{StaticResource DefaultLabelColor}"
-                        FontSize="Large"
-                        TextDecorations="Underline"
+                        Style="{StaticResource LinkLabelStyleLarge}"
                         Text="{Binding InqueryTelephoneNumber}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Path=OnInqueryTelephoneNumberClicked}" />

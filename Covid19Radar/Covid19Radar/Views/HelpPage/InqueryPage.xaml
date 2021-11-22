@@ -62,18 +62,8 @@
                     <TapGestureRecognizer Command="{Binding Path=OnClickAboutAppCommand}" />
                 </Frame.GestureRecognizers>
                 <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultLabelSmall}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
-                                <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span
-                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html"
-                                    TextColor="{StaticResource Primary}"
-                                    TextDecorations="Underline" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Style="{StaticResource DefaultLabelSmall}" Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
+                    <Label Style="{StaticResource LinkLabelStyleSmall}" Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html" />
                 </StackLayout>
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
