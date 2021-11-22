@@ -101,12 +101,19 @@ namespace Covid19Radar.Droid
 
         private async Task NavigateToDestinationFromIntent(Intent intent)
         {
+            _loggerService.Value.StartMethod();
+
+
             if (intent.Data != null)
             {
+                _loggerService.Value.Info("Intent has data.");
+
                 var processingNumber = intent.Data.GetQueryParameter(AppConstants.LinkQueryKeyProcessingNumber);
 
                 if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                 {
+                    _loggerService.Value.Info("ProcessingNumber is valid.");
+
                     var navigationParameters = new NavigationParameters();
                     navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
                     await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
@@ -114,6 +121,7 @@ namespace Covid19Radar.Droid
                 else
                 {
                     _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
+                    await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters());
                 }
             }
             else if (intent.HasExtra(EXTRA_KEY_DESTINATION))
@@ -121,9 +129,17 @@ namespace Covid19Radar.Droid
                 int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
                 var destination = (Destination)Enum.ToObject(typeof(Destination), ordinal);
 
+                _loggerService.Value.Info($"Intent has destination: {destination}");
+
                 var navigationParameters = new NavigationParameters();
                 await AppInstance?.NavigateToSplashAsync(destination, navigationParameters);
             }
+            else
+            {
+                await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters());
+            }
+
+            _loggerService.Value.EndMethod();
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
