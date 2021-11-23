@@ -40,11 +40,11 @@ jobs:
         xamarin-android-version: 11.2 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
         xcode-version: 12 # set the latest available Xcode 11
     - name: Build Cappuccino Common Project
-      run: msbuild ${{ github.workspace }}/Chino/Chino.Common/Chino.Common.csproj /restore /t:Rebuild /p:Configuration=Release
+      run: msbuild ${{ github.workspace }}/Chino/Chino.Common/Chino.Common.csproj /restore /t:Rebuild /p:Configuration=Release /p:BaseOutputPath=${{ matrix.Configuration }}/out
     - name: Build Cappuccino iOS Project
-      run: msbuild ${{ github.workspace }}/Chino/Chino.iOS/Chino.iOS.csproj /restore /t:Rebuild /p:Configuration=Release
+      run: msbuild ${{ github.workspace }}/Chino/Chino.iOS/Chino.iOS.csproj /restore /t:Rebuild /p:Configuration=Release /p:BaseOutputPath=${{ matrix.Configuration }}/out
     - name: Build iOS Project - ${{ matrix.Configuration }}
-      run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator
+      run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator /p:BaseOutputPath=${{ matrix.Configuration }}/out
   build_android:
     name: Build-Android
     runs-on: windows-latest
@@ -60,11 +60,11 @@ jobs:
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
     - name: Build Cappuccino Common Project
-      run: msbuild ${{ github.workspace }}/Chino/Chino.Common/Chino.Common.csproj /restore /t:Rebuild /p:Configuration=Release
+      run: msbuild ${{ github.workspace }}/Chino/Chino.Common/Chino.Common.csproj /restore /t:Rebuild /p:Configuration=Release /p:BaseOutputPath=${{ matrix.Configuration }}/out
     - name: Build Cappuccino Android Project
-      run: msbuild ${{ github.workspace }}/Chino/Chino.Android/Chino.Android.csproj /restore /t:Rebuild /p:Configuration=Release
+      run: msbuild ${{ github.workspace }}/Chino/Chino.Android/Chino.Android.csproj /restore /t:Rebuild /p:Configuration=Release /p:BaseOutputPath=${{ matrix.Configuration }}/out
     - name: Build Android Project - ${{ matrix.Configuration }}
-      run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
+      run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }} /p:BaseOutputPath=${{ matrix.Configuration }}/out
   test:
     name: Test
     runs-on: macos-latest # Tests must be executed on macos
