@@ -149,7 +149,7 @@ namespace Covid19Radar.UnitTests.Repository
         public async Task GetExposureConfigurationTest_updated_and_cache_expired()
         {
             var date = Date;
-            var cacheExpireDate = date + TimeSpan.FromDays(2) + TimeSpan.FromSeconds(1);
+            var cacheExpireDate = date + TimeSpan.FromDays(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays) + TimeSpan.FromSeconds(1);
 
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
             using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
@@ -191,7 +191,7 @@ namespace Covid19Radar.UnitTests.Repository
         public async Task GetExposureConfigurationTest_updated_mapping_but_not_cache_expired()
         {
             var date = Date;
-            var cacheExpireDate = date + TimeSpan.FromDays(8);
+            var cacheExpireDate = date + TimeSpan.FromDays(AppConstants.MinimumDiagnosisKeysDataMappingApplyIntervalDays);
 
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
             using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
@@ -231,7 +231,7 @@ namespace Covid19Radar.UnitTests.Repository
         public async Task GetExposureConfigurationTest_updated_mapping_and_cache_expired()
         {
             var date = Date;
-            var cacheExpireDate = date + TimeSpan.FromDays(8) + TimeSpan.FromSeconds(1);
+            var cacheExpireDate = date + TimeSpan.FromDays(AppConstants.MinimumDiagnosisKeysDataMappingApplyIntervalDays) + TimeSpan.FromSeconds(1);
 
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
             using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
