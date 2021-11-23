@@ -30,6 +30,9 @@ namespace Covid19Radar.Api.Common
         /// <summary>
         /// Extra value when TemporaryExposureKey daysSinceOnsetOfSymptoms missing.
         /// </summary>
-        public const int DaysSinceOnsetOfSymptomsMissingValue = int.MinValue;
+        /// <seealso href="https://developers.google.com/android/reference/com/google/android/gms/nearby/exposurenotification/TemporaryExposureKey#public-static-final-int-days_since_onset_of_symptoms_unknown">
+        /// TemporaryExposureKey.DAYS_SINCE_ONSET_OF_SYMPTOMS_UNKNOWN
+        /// </seealso>
+        public const int DaysSinceOnsetOfSymptomsMissingValue = int.MaxValue;
     }
 }
