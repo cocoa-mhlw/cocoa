@@ -39,8 +39,6 @@ jobs:
         xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
         xamarin-android-version: 11.2 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
         xcode-version: 12 # set the latest available Xcode 11
-    - name: Build Cappuccino Common Project
-      run: msbuild ${{ github.workspace }}/Chino/Chino.Common/Chino.Common.csproj /restore /t:Rebuild /p:Configuration=Release /p:BaseOutputPath=${{ matrix.Configuration }}/out
     - name: Build Cappuccino iOS Project
       run: msbuild ${{ github.workspace }}/Chino/Chino.iOS/Chino.iOS.csproj /restore /t:Rebuild /p:Configuration=Release /p:BaseOutputPath=${{ matrix.Configuration }}/out
     - name: Build iOS Project - ${{ matrix.Configuration }}
