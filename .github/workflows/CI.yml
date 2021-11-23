@@ -28,6 +28,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        submodules: true
     - name: Setup Xamarin
       uses: maxim-lobanov/setup-xamarin@v1
       with:
@@ -36,6 +39,10 @@ jobs:
         xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
         xamarin-android-version: 11.2 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
         xcode-version: 12 # set the latest available Xcode 11
+    - name: Build Cappuccino Common Project
+      run: msbuild ${{ github.workspace }}/Chino/Chino.Common/Chino.Common.csproj /restore /t:Rebuild /p:Configuration=Release
+    - name: Build Cappuccino iOS Project
+      run: msbuild ${{ github.workspace }}/Chino/Chino.iOS/Chino.iOS.csproj /restore /t:Rebuild /p:Configuration=Release
     - name: Build iOS Project - ${{ matrix.Configuration }}
       run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator
   build_android:
@@ -47,8 +54,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        submodules: true
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
+    - name: Build Cappuccino Common Project
+      run: msbuild ${{ github.workspace }}/Chino/Chino.Common/Chino.Common.csproj /restore /t:Rebuild /p:Configuration=Release
+    - name: Build Cappuccino Android Project
+      run: msbuild ${{ github.workspace }}/Chino/Chino.Android/Chino.Android.csproj /restore /t:Rebuild /p:Configuration=Release
     - name: Build Android Project - ${{ matrix.Configuration }}
       run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
   test:
@@ -58,6 +72,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        submodules: true
     - name: Execute Unit Tests
       run: dotnet test ${{ github.workspace }}/Covid19Radar/Tests/Covid19Radar.UnitTests/
       env:

@@ -173,9 +173,6 @@
     <PackageReference Include="Xamarin.AndroidX.RecyclerView">
       <Version>1.2.1</Version>
     </PackageReference>
-    <PackageReference Include="Chino.Android">
-      <Version>1.0.0-rc05</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -378,6 +375,12 @@
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{554EE1AB-B447-480C-90E5-C4F040891DE6}</Project>
       <Name>Covid19Radar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Chino\Chino.Android\Chino.Android.csproj">
+      <Name>Chino.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Chino\Chino.Common\Chino.Common.csproj">
+      <Name>Chino.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

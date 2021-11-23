@@ -30,6 +30,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        submodules: true
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
     - name: Build
@@ -43,6 +46,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        submodules: true
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
     - name: Build
@@ -56,6 +62,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        submodules: true
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
     - name: Build
@@ -67,6 +76,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        submodules: true
     - name: Execute Unit Tests
       run: dotnet test ${{ github.workspace }}/src/Covid19Radar.Api.Tests/
       env:

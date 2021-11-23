@@ -67,7 +67,6 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.967" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
     <PackageReference Include="CommonServiceLocator" Version="2.0.6" />
-    <PackageReference Include="Chino.Common" Version="1.0.0-rc05" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CustomDatePicker.cs" />
@@ -159,5 +158,8 @@
     <Compile Remove="ViewModels/Settings/EditServerConfigurationPageViewModel.cs" />
     <Compile Remove="Views/Settings/EditServerConfigurationPage.xaml.cs" />
     <EmbeddedResource Remove="Views/Settings/EditServerConfigurationPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Chino\Chino.Common\Chino.Common.csproj" />
   </ItemGroup>
 </Project>
