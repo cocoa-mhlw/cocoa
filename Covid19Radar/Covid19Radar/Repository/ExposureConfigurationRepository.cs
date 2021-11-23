@@ -207,7 +207,6 @@ namespace Covid19Radar.Repository
             try
             {
                 File.Move(sourcePath, destPath);
-                File.Delete(tmpFilePath);
             }
             catch(IOException exception)
             {
@@ -218,6 +217,10 @@ namespace Covid19Radar.Repository
                 {
                     File.Move(tmpFilePath, destPath);
                 }
+            }
+            finally
+            {
+                File.Delete(tmpFilePath);
             }
         }
 
