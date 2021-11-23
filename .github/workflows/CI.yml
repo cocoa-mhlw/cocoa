@@ -24,7 +24,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        Configuration: [Debug, Debug_Mock, Release]
+        Configuration: [Debug, Release]
     steps:
     - name: Checkout
       uses: actions/checkout@v2

@@ -197,7 +197,7 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG;USE_MOCK;</DefineConstants>
     <DebugType>full</DebugType>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <MtouchArch>ARM64</MtouchArch>
