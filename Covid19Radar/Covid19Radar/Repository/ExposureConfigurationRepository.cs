@@ -17,8 +17,6 @@ namespace Covid19Radar.Repository
 {
     public interface IExposureConfigurationRepository
     {
-        public string CurrentConfigFilePath { get; }
-
         public DateTime GetExposureConfigurationDownloadedDateTime();
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated();
@@ -32,8 +30,6 @@ namespace Covid19Radar.Repository
 
     public class ExposureConfigurationRepository : IExposureConfigurationRepository
     {
-        private const string CURRENT_CONFIG_FILENAME = "current.json";
-
         private readonly HttpClient _client;
         private readonly ILocalPathService _localPathService;
         private readonly IPreferencesService _preferencesService;
@@ -64,11 +60,8 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
 
             _configDir = PrepareConfigDir();
-
-            _currentExposureConfigurationPath = Path.Combine(_configDir, CURRENT_CONFIG_FILENAME);
+            _currentExposureConfigurationPath = localPathService.CurrentExposureConfigurationPath;
         }
-
-        public string CurrentConfigFilePath => _currentExposureConfigurationPath;
 
         private string PrepareConfigDir()
         {
@@ -100,11 +93,11 @@ namespace Covid19Radar.Repository
 
             ExposureConfiguration currentExposureConfiguration = null;
 
-            if (File.Exists(CurrentConfigFilePath))
+            if (File.Exists(_currentExposureConfigurationPath))
             {
                 _loggerService.Debug("ExposureConfiguration file is found.");
 
-                string exposureConfigurationAsJson = await LoadAsync(CurrentConfigFilePath);
+                string exposureConfigurationAsJson = await LoadAsync(_currentExposureConfigurationPath);
 
                 try
                 {
@@ -122,7 +115,7 @@ namespace Covid19Radar.Repository
                 catch (JsonException exception)
                 {
                     _loggerService.Exception("JsonException. ExposureConfiguration file has been deleted.", exception);
-                    RemoveExposureConfiguration(CurrentConfigFilePath);
+                    RemoveExposureConfiguration(_currentExposureConfigurationPath);
                 }
             }
 
@@ -188,7 +181,7 @@ namespace Covid19Radar.Repository
                     JsonConvert.SerializeObject(currentExposureConfiguration, Formatting.Indented),
                     tmpFilePath
                     );
-                Swap(tmpFilePath, CurrentConfigFilePath);
+                Swap(tmpFilePath, _currentExposureConfigurationPath);
 
                 return currentExposureConfiguration;
             }
@@ -265,7 +258,7 @@ namespace Covid19Radar.Repository
 
         public void RemoveExposureConfiguration()
         {
-            RemoveExposureConfiguration(CurrentConfigFilePath);
+            RemoveExposureConfiguration(_currentExposureConfigurationPath);
         }
 
         private void RemoveExposureConfiguration(string path)

@@ -7,7 +7,6 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Common;
@@ -15,7 +14,6 @@ using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Moq;
-using Moq.Protected;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -27,6 +25,8 @@ namespace Covid19Radar.UnitTests.Repository
         private const string JSON_EXPOSURE_CONFIGURATION1 = "exposure_configuration1.json";
         private const string JSON_EXPOSURE_CONFIGURATION2 = "exposure_configuration2.json";
         private const string JSON_EXPOSURE_CONFIGURATION_MAPPING_UPDATED = "exposure_configuration_update_infectiousness_for_days_since_onset_of_symptoms.json";
+
+        private readonly string CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH = "./dummy_for_test.json";
 
         private readonly MockRepository mockRepository;
         private readonly Mock<IHttpClientService> mockClientService;
@@ -66,17 +66,6 @@ namespace Covid19Radar.UnitTests.Repository
             }
         }
 
-        private readonly string CURRENT_JSON_PATH = Path.Combine("./", "current.json");
-
-        [Fact]
-        public void GetExposureConfigurationTest()
-        {
-            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
-            var unitUnderTest = CreateRepository();
-
-            Assert.Equal(CURRENT_JSON_PATH, unitUnderTest.CurrentConfigFilePath);
-        }
-
         private static DateTime Date
             => DateTime.SpecifyKind(new DateTime(2021, 11, 21), DateTimeKind.Utc);
 
@@ -94,7 +83,7 @@ namespace Covid19Radar.UnitTests.Repository
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
-            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
+            mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
             mockServerConfigurationRepository.Setup(x => x.ExposureConfigurationUrl).Returns("https://example.com/exposure_configuration.json");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(date);
 
@@ -124,7 +113,7 @@ namespace Covid19Radar.UnitTests.Repository
             var date = Date;
 
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
-            using (var writer = File.CreateText(CURRENT_JSON_PATH))
+            using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
             {
                 await writer.WriteAsync(testJson1);
             }
@@ -139,7 +128,7 @@ namespace Covid19Radar.UnitTests.Repository
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
-            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
+            mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
             mockServerConfigurationRepository.Setup(x => x.ExposureConfigurationUrl).Returns("https://example.com/exposure_configuration.json");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(date);
 
@@ -163,7 +152,7 @@ namespace Covid19Radar.UnitTests.Repository
             var cacheExpireDate = date + TimeSpan.FromDays(2) + TimeSpan.FromSeconds(1);
 
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
-            using (var writer = File.CreateText(CURRENT_JSON_PATH))
+            using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
             {
                 await writer.WriteAsync(testJson1);
             }
@@ -180,7 +169,7 @@ namespace Covid19Radar.UnitTests.Repository
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
-            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
+            mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
             mockServerConfigurationRepository.Setup(x => x.ExposureConfigurationUrl).Returns("https://example.com/exposure_configuration.json");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(cacheExpireDate);
 
@@ -205,7 +194,7 @@ namespace Covid19Radar.UnitTests.Repository
             var cacheExpireDate = date + TimeSpan.FromDays(8);
 
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
-            using (var writer = File.CreateText(CURRENT_JSON_PATH))
+            using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
             {
                 await writer.WriteAsync(testJson1);
             }
@@ -220,7 +209,7 @@ namespace Covid19Radar.UnitTests.Repository
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
-            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
+            mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
             mockServerConfigurationRepository.Setup(x => x.ExposureConfigurationUrl).Returns("https://example.com/exposure_configuration.json");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(cacheExpireDate);
 
@@ -245,7 +234,7 @@ namespace Covid19Radar.UnitTests.Repository
             var cacheExpireDate = date + TimeSpan.FromDays(8) + TimeSpan.FromSeconds(1);
 
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
-            using (var writer = File.CreateText(CURRENT_JSON_PATH))
+            using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
             {
                 await writer.WriteAsync(testJson1);
             }
@@ -262,7 +251,7 @@ namespace Covid19Radar.UnitTests.Repository
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
             mockClientService.Setup(x => x.Create()).Returns(client);
 
-            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
+            mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
             mockServerConfigurationRepository.Setup(x => x.ExposureConfigurationUrl).Returns("https://example.com/exposure_configuration.json");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(cacheExpireDate);
 
