@@ -97,10 +97,10 @@ namespace Covid19Radar.Repository
             {
                 _loggerService.Debug("ExposureConfiguration file is found.");
 
-                string exposureConfigurationAsJson = await LoadAsync(_currentExposureConfigurationPath);
-
                 try
                 {
+                    string exposureConfigurationAsJson = await LoadAsync(_currentExposureConfigurationPath);
+
                     currentExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
 
                     if (!IsDownloadedExposureConfigurationOutdated(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays))
@@ -111,6 +111,11 @@ namespace Covid19Radar.Repository
                     {
                         _loggerService.Info($"ExposureConfiguration is found but the file is outdated.");
                     }
+                }
+                catch (IOException exception)
+                {
+                    _loggerService.Exception("IOException. ExposureConfiguration file has been deleted.", exception);
+                    await RemoveExposureConfigurationAsync();
                 }
                 catch (JsonException exception)
                 {
