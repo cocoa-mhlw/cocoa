@@ -126,7 +126,7 @@ namespace Covid19Radar.UnitTests.Repository
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
             using (var writer = File.CreateText(CURRENT_JSON_PATH))
             {
-                writer.WriteAsync(testJson1).GetAwaiter().GetResult();
+                await writer.WriteAsync(testJson1);
             }
             ExposureConfiguration result1 = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson1);
 
@@ -165,7 +165,7 @@ namespace Covid19Radar.UnitTests.Repository
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
             using (var writer = File.CreateText(CURRENT_JSON_PATH))
             {
-                writer.WriteAsync(testJson1).GetAwaiter().GetResult();
+                await writer.WriteAsync(testJson1);
             }
             ExposureConfiguration result1 = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson1);
 
@@ -207,7 +207,7 @@ namespace Covid19Radar.UnitTests.Repository
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
             using (var writer = File.CreateText(CURRENT_JSON_PATH))
             {
-                writer.WriteAsync(testJson1).GetAwaiter().GetResult();
+                await writer.WriteAsync(testJson1);
             }
             ExposureConfiguration result1 = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson1);
 
@@ -247,7 +247,7 @@ namespace Covid19Radar.UnitTests.Repository
             string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
             using (var writer = File.CreateText(CURRENT_JSON_PATH))
             {
-                writer.WriteAsync(testJson1).GetAwaiter().GetResult();
+                await writer.WriteAsync(testJson1);
             }
             ExposureConfiguration result1 = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson1);
 
