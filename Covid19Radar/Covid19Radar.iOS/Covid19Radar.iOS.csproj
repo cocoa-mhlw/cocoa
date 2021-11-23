@@ -28,7 +28,7 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
@@ -45,7 +45,7 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
     <CodesignProvision>VS: net.kzmx.Covid19Radar Development</CodesignProvision>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
@@ -67,7 +67,7 @@
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchI18n>cjk</MtouchI18n>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <IntermediateOutputPath>
@@ -97,7 +97,7 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchI18n>cjk</MtouchI18n>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <MtouchFastDev>
     </MtouchFastDev>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -122,7 +122,7 @@
     <CodesignKey>Apple Distribution: Ministry of Health, Labour and Welfare - Japan (55EKK667LP)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchI18n>cjk</MtouchI18n>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
@@ -144,7 +144,7 @@
     <CodesignProvision>Covid19radar(distribution)</CodesignProvision>
     <CodesignKey>Apple Distribution: Ministry of Health, Labour and Welfare - Japan (55EKK667LP)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
     <ExternalConsole>false</ExternalConsole>
     <MtouchDebug>
