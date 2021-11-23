@@ -34,9 +34,6 @@ namespace Covid19Radar.Repository
     {
         private const string CURRENT_CONFIG_FILENAME = "current.json";
 
-        private const int EXPOSURE_CONFIGURATION_FILE_RETENTION_DAYS = 2;
-        private const int EXPOSURE_CONFIGURATION_RETENTION_DAYS = 7 + 1;
-
         private readonly HttpClient _client;
         private readonly ILocalPathService _localPathService;
         private readonly IPreferencesService _preferencesService;
@@ -113,7 +110,7 @@ namespace Covid19Radar.Repository
                 {
                     currentExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
 
-                    if (!IsDownloadedExposureConfigurationOutdated(EXPOSURE_CONFIGURATION_FILE_RETENTION_DAYS))
+                    if (!IsDownloadedExposureConfigurationOutdated(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays))
                     {
                         return currentExposureConfiguration;
                     }
@@ -168,14 +165,14 @@ namespace Covid19Radar.Repository
 
             if (IsUpdatedDiagnosisKeysDataMapping(currentExposureConfiguration, newExposureConfiguration))
             {
-                if (IsExposureConfigurationOutdated(EXPOSURE_CONFIGURATION_RETENTION_DAYS))
+                if (IsExposureConfigurationOutdated(AppConstants.MinimumDiagnosisKeysDataMappingApplyIntervalDays))
                 {
                     currentExposureConfiguration = newExposureConfiguration;
                     SetDiagnosisKeysDataMappingConfigurationUpdated(true);
                 }
                 else
                 {
-                    _loggerService.Info($"DiagnosisKeysDataMappingConfig has been changed but not updated, because current configuration is updated in {EXPOSURE_CONFIGURATION_RETENTION_DAYS} days.");
+                    _loggerService.Info($"DiagnosisKeysDataMappingConfig has been changed but not updated, because current configuration is updated in {AppConstants.MinimumDiagnosisKeysDataMappingApplyIntervalDays} days.");
                 }
             }
             else
