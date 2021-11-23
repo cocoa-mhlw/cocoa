@@ -34,8 +34,15 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Margin="0,0,0,5"
-                        Style="{StaticResource DefaultTitleLabel}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
+                        Style="{StaticResource DefaultTitleLabel}" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding NowDate}" />
+                                <Span Text="&#xa;" />
+                                <Span Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Margin="0,0,0,5"
