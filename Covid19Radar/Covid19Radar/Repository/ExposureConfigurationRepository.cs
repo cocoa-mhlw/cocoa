@@ -25,7 +25,7 @@ namespace Covid19Radar.Repository
         public DateTime GetDiagnosisKeysDataMappingConfigurationAppliedDateTime();
 
         public Task<ExposureConfiguration> GetExposureConfigurationAsync();
-        public void RemoveExposureConfiguration();
+        public Task RemoveExposureConfigurationAsync();
     }
 
     public class ExposureConfigurationRepository : IExposureConfigurationRepository
@@ -115,7 +115,7 @@ namespace Covid19Radar.Repository
                 catch (JsonException exception)
                 {
                     _loggerService.Exception("JsonException. ExposureConfiguration file has been deleted.", exception);
-                    RemoveExposureConfiguration(_currentExposureConfigurationPath);
+                    await RemoveExposureConfigurationAsync();
                 }
             }
 
@@ -256,20 +256,29 @@ namespace Covid19Radar.Repository
         private async Task SaveAsync(string exposureConfigurationAsJson, string outPath)
             => await File.WriteAllTextAsync(outPath, exposureConfigurationAsJson);
 
-        public void RemoveExposureConfiguration()
+        public async Task RemoveExposureConfigurationAsync()
         {
-            RemoveExposureConfiguration(_currentExposureConfigurationPath);
+            await RemoveExposureConfigurationAsync(_currentExposureConfigurationPath);
         }
 
-        private void RemoveExposureConfiguration(string path)
+        private async Task RemoveExposureConfigurationAsync(string path)
         {
-            if (!File.Exists(path))
-            {
-                _loggerService.Debug("No ExposureConfiguration file found.");
-                return;
-            }
+            await _semaphore.WaitAsync();
 
-            File.Delete(path);
+            try
+            {
+                if (!File.Exists(path))
+                {
+                    _loggerService.Debug("No ExposureConfiguration file found.");
+                    return;
+                }
+
+                File.Delete(path);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
         }
 
         public void SetDiagnosisKeysDataMappingConfigurationUpdated(bool updated)

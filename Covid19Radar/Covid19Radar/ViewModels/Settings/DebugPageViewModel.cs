@@ -205,7 +205,7 @@ namespace Covid19Radar.ViewModels
         public Command OnClickRemoveConfiguration => new Command(async () =>
         {
 
-            _exposureConfigurationRepository.RemoveExposureConfiguration();
+             await _exposureConfigurationRepository.RemoveExposureConfigurationAsync();
              await UpdateInfo("RemoveConfiguration");
         });
 
