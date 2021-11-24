@@ -13,7 +13,6 @@
         <ResourceDictionary>
 
             <!--  Colors  -->
-            <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="PrimaryLight">#BBDEFB</Color>
             <Color x:Key="PrimaryText">#212121</Color>
             <Color x:Key="SecondaryText">#757575</Color>
@@ -29,6 +28,8 @@
             <Color x:Key="NavBarText">#000000</Color>
             <Color x:Key="NavBarBackground">#FFFFFF</Color>
             <Color x:Key="HomePageLink">#066AB9</Color>
+            <Color x:Key="MenuIconColor">#066AB9</Color>
+            <Color x:Key="LinkColor">#066AB9</Color>
 
             <!--  Icons  -->
             <x:String x:Key="IconProfile">&#xf2bd;</x:String>
@@ -143,28 +144,12 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
-            <Style x:Key="DefaultLabelColor" TargetType="Label">
-                <Setter Property="HorizontalTextAlignment" Value="Start" />
-                <Setter Property="TextColor" Value="{StaticResource Primary}" />
-                <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-            </Style>
-
             <Style x:Key="DefaultLabel" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
-
-
-            <Style x:Key="DefaultLabelSmallColor" TargetType="Label">
-                <Setter Property="HorizontalTextAlignment" Value="Start" />
-                <Setter Property="TextColor" Value="{StaticResource Primary}" />
-                <Setter Property="FontSize" Value="Small" />
-                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-            </Style>
-
 
             <Style x:Key="DefaultLabelSmall" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
@@ -282,6 +267,33 @@
                 <Setter Property="OutlineColor" Value="LightGray" />
                 <Setter Property="BorderColor" Value="LightGray" />
                 <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="LinkLabelStyleLarge" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="TextColor" Value="{StaticResource LinkColor}" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="TextDecorations" Value="Underline" />
+            </Style>
+
+            <Style x:Key="LinkLabelStyleMedium" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="TextColor" Value="{StaticResource LinkColor}" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="TextDecorations" Value="Underline" />
+            </Style>
+
+            <Style x:Key="LinkLabelStyleSmall" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="TextColor" Value="{StaticResource LinkColor}" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="TextDecorations" Value="Underline" />
             </Style>
 
         </ResourceDictionary>

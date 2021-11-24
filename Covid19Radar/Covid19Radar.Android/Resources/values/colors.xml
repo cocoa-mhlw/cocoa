@@ -7,7 +7,7 @@
   <color name="splash_background">#1976D2</color>
   <color name="colorPrimary">#019AE8</color>
   <color name="colorPrimaryDark">#019AE8</color>
-  <color name="colorAccent">#019AE8</color>
+  <color name="colorAccent">#066AB9</color>
   <color name="ListViewSelected">#019AE8</color>
   <color name="ListViewHighlighted">#019AE8</color>
 </resources>

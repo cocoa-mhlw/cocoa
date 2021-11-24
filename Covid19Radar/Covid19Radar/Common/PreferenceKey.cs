@@ -6,7 +6,7 @@ namespace Covid19Radar.Common
 {
     public static class PreferenceKey
     {
-        // for preferences
+        // for UserDataRepository
         public static string AppVersion = "AppVersion";
         public static string LastProcessTekTimestamp = "LastProcessTekTimestamp";
         public static string ExposureNotificationConfiguration = "ExposureNotificationConfiguration";
@@ -20,6 +20,12 @@ namespace Covid19Radar.Common
 
         public const string DailySummaries = "DailySummaries";
         public const string ExposureWindows = "ExposureWindows";
+
+        // for ExposureConfigurationRepository
+        public const string IsExposureConfigurationUpdated = "IsExposureConfigurationUpdated";
+        public const string ExposureConfigurationDownloadedEpoch = "ExposureConfigurationDownloadedEpoch";
+        public const string ExposureConfigurationAppliedEpoch = "ExposureConfigurationAppliedEpoch";
+
 
         // for secure storage
         public static string ExposureInformation = "ExposureInformation";

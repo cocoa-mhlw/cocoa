@@ -169,11 +169,11 @@
     <value>How to use</value>
     <comment>Tab How to use</comment>
   </data>
-	<data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
+  <data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
     <value>1 exposure</value>
     <comment>1回の接触</comment>
   </data>
-	<data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
+  <data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
     <value>{0} exposures</value>
     <comment>{0}回の接触</comment>
   </data>
@@ -621,7 +621,7 @@
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
 	<data name="ExposuresPageTitle" xml:space="preserve">
-    <value>A list of close contacts (past 14 days)</value>
+    <value>A list of close contacts</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
 	<data name="ExposuresPageLabel1" xml:space="preserve">

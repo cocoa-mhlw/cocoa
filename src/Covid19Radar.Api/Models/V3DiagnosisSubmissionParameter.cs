@@ -16,7 +16,6 @@ namespace Covid19Radar.Api.Models
 	public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
 	{
 		public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
-		private const int TRANSMISSION_RISK_LEVEL = 4;
 
 		// RFC3339
 		// e.g. 2021-09-20T23:52:57.436+00:00
@@ -64,6 +63,9 @@ namespace Covid19Radar.Api.Models
 			[JsonProperty("rollingPeriod")]
 			public uint RollingPeriod { get; set; }
 
+			[JsonProperty("transmissionRisk")]
+			public int TransmissionRisk { get; set; }
+
 			[JsonProperty("reportType")]
 			public uint ReportType { get; set; }
 
@@ -86,7 +88,7 @@ namespace Covid19Radar.Api.Models
 					KeyData = keyData,
 					RollingPeriod = ((int)RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)RollingPeriod),
 					RollingStartIntervalNumber = (int)RollingStartNumber,
-					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
+					TransmissionRiskLevel = TransmissionRisk,
 					ReportType = (int)ReportType,
 					DaysSinceOnsetOfSymptoms = DaysSinceOnsetOfSymptoms,
 					Timestamp = timestamp,

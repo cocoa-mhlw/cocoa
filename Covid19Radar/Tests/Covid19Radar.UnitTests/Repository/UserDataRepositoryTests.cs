@@ -29,12 +29,12 @@ namespace Covid19Radar.UnitTests.Repository
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockPreferencesService = mockRepository.Create<IPreferencesService>();
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
-            DateTimeUtility.Instance = mockDateTimeUtility.Object;
         }
 
         private IUserDataRepository CreateRepository()
             => new UserDataRepository(
                 mockPreferencesService.Object,
+                mockDateTimeUtility.Object,
                 mockLoggerService.Object
                 );
 

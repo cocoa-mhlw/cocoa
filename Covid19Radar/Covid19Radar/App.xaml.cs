@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -43,7 +43,7 @@ namespace Covid19Radar
 
         public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: false) { }
 
-        protected override async void OnInitialized()
+        protected override void OnInitialized()
         {
             InitializeComponent();
 
@@ -54,27 +54,13 @@ namespace Covid19Radar
 
             LogUnobservedTaskExceptions();
 
-            var navigationParameters = new NavigationParameters();
-            var result = await NavigateToSplashAsync(Destination.HomePage, navigationParameters);
-            if (!result.Success)
-            {
-                LoggerService.Info($"Failed transition.");
-
-                MainPage = new ExceptionPage
-                {
-                    BindingContext = new ExceptionPageViewModel()
-                    {
-                        Message = result.Exception.Message
-                    }
-                };
-                System.Diagnostics.Debugger.Break();
-            }
-
             LoggerService.EndMethod();
         }
 
         public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, NavigationParameters navigationParameters)
         {
+            LoggerService.Info($"Destination: {destination}");
+
             navigationParameters = SplashPage.BuildNavigationParams(destination, navigationParameters);
             return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParameters);
         }
@@ -207,6 +193,9 @@ namespace Covid19Radar
             container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
+
+            // Utilities
+            container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
         }
 
         protected override void OnStart()

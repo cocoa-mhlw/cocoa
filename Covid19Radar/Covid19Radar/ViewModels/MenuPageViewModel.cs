@@ -14,6 +14,11 @@ namespace Covid19Radar.ViewModels
 {
     public class MenuPageViewModel : ViewModelBase
     {
+        private const string MenuIconColorDefault = "#066AB9";
+        private const string MenuIconColorSelected = "#FFF";
+        private const string MenuTextColorDefault = "#000";
+        private const string MenuTextColorSelected = "#FFF";
+
         public ObservableCollection<MainMenuModel> MenuItems { get; set; }
 
         private MainMenuModel selectedMenuItem;
@@ -33,8 +38,8 @@ namespace Covid19Radar.ViewModels
                 Icon = "\uf965",
                 PageName = nameof(HomePage),
                 Title = Resources.AppResources.HomePageTitle,
-                IconColor = "#019AE8",
-                TextColor = "#000"
+                IconColor = MenuIconColorDefault,
+                TextColor = MenuTextColorDefault
             });
 
             MenuItems.Add(new MainMenuModel()
@@ -42,8 +47,8 @@ namespace Covid19Radar.ViewModels
                 Icon = "\uf013",
                 PageName = nameof(SettingsPage),
                 Title = Resources.AppResources.SettingsPageTitle,
-                IconColor = "#019AE8",
-                TextColor = "#000"
+                IconColor = MenuIconColorDefault,
+                TextColor = MenuTextColorDefault
             });
 
             MenuItems.Add(new MainMenuModel()
@@ -51,32 +56,32 @@ namespace Covid19Radar.ViewModels
                 Icon = "\uf0e0",
                 PageName = nameof(InqueryPage),
                 Title = Resources.AppResources.InqueryPageTitle_Menu,
-                IconColor = "#019AE8",
-                TextColor = "#000"
+                IconColor = MenuIconColorDefault,
+                TextColor = MenuTextColorDefault
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf70e",
                 PageName = nameof(TermsofservicePage),
                 Title = Resources.AppResources.TermsofservicePageTitle,
-                IconColor = "#019AE8",
-                TextColor = "#000"
+                IconColor = MenuIconColorDefault,
+                TextColor = MenuTextColorDefault
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf70e",
                 PageName = nameof(PrivacyPolicyPage2),
                 Title = Resources.AppResources.PrivacyPolicyPageTitle,
-                IconColor = "#019AE8",
-                TextColor = "#000"
+                IconColor = MenuIconColorDefault,
+                TextColor = MenuTextColorDefault
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf70e",
                 PageName = nameof(WebAccessibilityPolicyPage),
                 Title = Resources.AppResources.WebAccessibilityPolicyPageTitle,
-                IconColor = "#019AE8",
-                TextColor = "#000"
+                IconColor = MenuIconColorDefault,
+                TextColor = MenuTextColorDefault
             });
 #if DEBUG
             MenuItems.Add(new MainMenuModel()
@@ -95,8 +100,8 @@ namespace Covid19Radar.ViewModels
         async void Navigate()
         {
             ClearSelectedItem();
-            SelectedMenuItem.IconColor = "#FFF";
-            SelectedMenuItem.TextColor = "#FFF";
+            SelectedMenuItem.IconColor = MenuIconColorSelected;
+            SelectedMenuItem.TextColor = MenuTextColorSelected;
             await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
             return;
         }
@@ -105,10 +110,9 @@ namespace Covid19Radar.ViewModels
         {
             MenuItems.ForEach(item =>
             {
-                item.IconColor = "#019AE8";
-                item.TextColor = "#000";
+                item.IconColor = MenuIconColorDefault;
+                item.TextColor = MenuTextColorDefault;
             });
         }
-
     }
 }
