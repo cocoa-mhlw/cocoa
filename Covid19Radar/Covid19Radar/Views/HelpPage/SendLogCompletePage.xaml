@@ -57,7 +57,7 @@
                                       TextDecorations="Underline">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Path=OnCopyCommand}"
-                                                              CommandParameter="{Binding LogId}" />
+                                                              />
                                     </Span.GestureRecognizers>
                                 </Span>
                             </FormattedString>
