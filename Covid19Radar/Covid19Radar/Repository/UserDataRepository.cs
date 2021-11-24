@@ -84,14 +84,17 @@ namespace Covid19Radar.Repository
         private const string EMPTY_LIST_JSON = "[]";
 
         private readonly IPreferencesService _preferencesService;
+        private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
 
         public UserDataRepository(
             IPreferencesService preferencesService,
+            IDateTimeUtility dateTimeUtility,
             ILoggerService loggerService
             )
         {
             _preferencesService = preferencesService;
+            _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
         }
 
@@ -287,7 +290,7 @@ namespace Covid19Radar.Repository
         public async Task<List<DailySummary>> GetDailySummariesAsync(int offsetDays)
         {
             return (await GetDailySummariesAsync())
-                .Where(dailySummary => dailySummary.GetDateTime().CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
+                .Where(dailySummary => dailySummary.GetDateTime().CompareTo(_dateTimeUtility.UtcNow.AddDays(offsetDays)) >= 0)
                 .ToList();
         }
 
@@ -311,7 +314,7 @@ namespace Covid19Radar.Repository
         public async Task<List<ExposureWindow>> GetExposureWindowsAsync(int offsetDays)
         {
             return (await GetExposureWindowsAsync())
-                .Where(dailySummary => dailySummary.GetDateTime().CompareTo(DateTimeUtility.Instance.UtcNow.AddDays(offsetDays)) >= 0)
+                .Where(dailySummary => dailySummary.GetDateTime().CompareTo(_dateTimeUtility.UtcNow.AddDays(offsetDays)) >= 0)
                 .ToList();
         }
 
@@ -363,7 +366,7 @@ namespace Covid19Radar.Repository
         public List<UserExposureInfo> GetExposureInformationList(int offsetDays)
         {
             _loggerService.StartMethod();
-            var date = DateTimeUtility.Instance.UtcNow.AddDays(offsetDays);
+            var date = _dateTimeUtility.UtcNow.AddDays(offsetDays);
             var list = GetExposureInformationList()?
                 .Where(x => x.Timestamp.CompareTo(date) >= 0)
                 .ToList();

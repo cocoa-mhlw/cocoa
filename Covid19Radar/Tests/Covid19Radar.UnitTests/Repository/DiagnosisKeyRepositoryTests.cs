@@ -1,15 +1,12 @@
 ﻿// This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
-using System.Threading;
 using System.Net.Http;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Moq;
 using Xunit;
-using Moq.Protected;
-using System.Threading.Tasks;
 using System.Net;
 using System.Text;
 using System.IO;
@@ -35,24 +32,10 @@ namespace Covid19Radar.UnitTests.Repository
                 mockLoggerService.Object
             );
 
-        private HttpClient CreateHttpClient(HttpStatusCode statusCode, HttpContent content)
-        {
-            var httpMessageHandler = new Mock<HttpMessageHandler>();
-            httpMessageHandler.Protected()
-                .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(),
-                    ItExpr.IsAny<CancellationToken>())
-                .Returns(Task.FromResult(new HttpResponseMessage
-                {
-                    StatusCode = statusCode,
-                    Content = content,
-                }));
-            return new HttpClient(httpMessageHandler.Object, false);
-        }
-
         [Fact]
         public async void GetDiagnosisKeysListAsyncTests_Success()
         {
-            var client = CreateHttpClient(
+            var client = HttpClientUtils.CreateHttpClient(
                 HttpStatusCode.OK,
                 new StringContent(
                         "[" +
@@ -80,11 +63,11 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         [Theory]
-        [InlineData(System.Net.HttpStatusCode.NotFound)]
-        [InlineData(System.Net.HttpStatusCode.InternalServerError)]
+        [InlineData(HttpStatusCode.NotFound)]
+        [InlineData(HttpStatusCode.InternalServerError)]
         public async void GetDiagnosisKeysListAsyncTests_HttpError(System.Net.HttpStatusCode statusCode)
         {
-            var client = CreateHttpClient(
+            var client = HttpClientUtils.CreateHttpClient(
                 statusCode,
                 new StringContent("", Encoding.UTF8, "application/json")
             );
@@ -102,7 +85,7 @@ namespace Covid19Radar.UnitTests.Repository
             var content = new ByteArrayContent(Encoding.UTF8.GetBytes(""));
             content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(@"application/zip");
 
-            var client = CreateHttpClient(
+            var client = HttpClientUtils.CreateHttpClient(
                 HttpStatusCode.OK,
                 content
             );
@@ -128,14 +111,14 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         [Theory]
-        [InlineData(System.Net.HttpStatusCode.NotFound)]
-        [InlineData(System.Net.HttpStatusCode.InternalServerError)]
+        [InlineData(HttpStatusCode.NotFound)]
+        [InlineData(HttpStatusCode.InternalServerError)]
         public async void DownloadDiagnosisKeysAsyncTests_HttpError(System.Net.HttpStatusCode statusCode)
         {
             var content = new ByteArrayContent(Encoding.UTF8.GetBytes(""));
             content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(@"application/zip");
 
-            var client = CreateHttpClient(
+            var client = HttpClientUtils.CreateHttpClient(
                 statusCode,
                 content
             );

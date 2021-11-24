@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -193,6 +193,9 @@ namespace Covid19Radar
             container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
+
+            // Utilities
+            container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
         }
 
         protected override void OnStart()

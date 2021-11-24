@@ -37,5 +37,19 @@ namespace Covid19Radar.Common
         /// Key of processing-number in AppLinks(Universal Links) query parameters.
         /// </summary>
         public const string LinkQueryKeyProcessingNumber = "pn";
+
+        /// <summary>
+        /// Number of day(s) that ExposureConfiguration file downloaded cache.
+        /// </summary>
+        public const int ExposureConfigurationFileDownloadCacheRetentionDays = 2;
+
+        /// <summary>
+        /// Number of days that minimum applicable interval DiagnosisKeysDataMapping.
+        /// </summary>
+        /// <seealso href="https://developers.google.com/android/reference/com/google/android/gms/nearby/exposurenotification/ExposureNotificationClient#setDiagnosisKeysDataMapping(com.google.android.gms.nearby.exposurenotification.DiagnosisKeysDataMapping)">
+        /// ExposureNotificationClient.setDiagnosisKeysDataMapping
+        /// </seealso>
+        public const int MinimumDiagnosisKeysDataMappingApplyIntervalDays = 7 + 1;
+
     }
 }
