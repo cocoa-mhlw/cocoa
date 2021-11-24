@@ -115,12 +115,12 @@ namespace Covid19Radar.Repository
                 catch (IOException exception)
                 {
                     _loggerService.Exception("IOException. ExposureConfiguration file has been deleted.", exception);
-                    await RemoveExposureConfigurationAsync();
+                    RemoveExposureConfigurationInternal();
                 }
                 catch (JsonException exception)
                 {
                     _loggerService.Exception("JsonException. ExposureConfiguration file has been deleted.", exception);
-                    await RemoveExposureConfigurationAsync();
+                    RemoveExposureConfigurationInternal();
                 }
             }
 
@@ -266,27 +266,27 @@ namespace Covid19Radar.Repository
 
         public async Task RemoveExposureConfigurationAsync()
         {
-            await RemoveExposureConfigurationAsync(_currentExposureConfigurationPath);
-        }
-
-        private async Task RemoveExposureConfigurationAsync(string path)
-        {
             await _semaphore.WaitAsync();
 
             try
             {
-                if (!File.Exists(path))
-                {
-                    _loggerService.Debug("No ExposureConfiguration file found.");
-                    return;
-                }
-
-                File.Delete(path);
+                RemoveExposureConfigurationInternal();
             }
             finally
             {
                 _semaphore.Release();
             }
+        }
+
+        private void RemoveExposureConfigurationInternal()
+        {
+            if (!File.Exists(_currentExposureConfigurationPath))
+            {
+                _loggerService.Debug("No ExposureConfiguration file found.");
+                return;
+            }
+
+            File.Delete(_currentExposureConfigurationPath);
         }
 
         public void SetDiagnosisKeysDataMappingConfigurationUpdated(bool updated)
