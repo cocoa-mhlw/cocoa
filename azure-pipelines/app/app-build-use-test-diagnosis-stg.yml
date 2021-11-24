@@ -13,7 +13,7 @@ trigger:
 variables:
 - group: app-settings-stg
 - name: AppVersion
-  value: '1.3.0'
+  value: '1.4.0'
 
 jobs:
 - job: build_ios
