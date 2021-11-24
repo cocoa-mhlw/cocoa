@@ -41,5 +41,23 @@
     <Folder Include="Common\" />
     <Folder Include="Repository\" />
     <Folder Include="Common\" />
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Files\" />
+    <None Remove="Files\exposure_configuration1.json" />
+    <None Remove="Files\exposure_configuration2.json" />
+    <None Remove="Files\exposure_configuration_update_infectiousness_for_days_since_onset_of_symptoms.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\exposure_configuration1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\exposure_configuration2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\exposure_configuration_update_infectiousness_for_days_since_onset_of_symptoms.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
