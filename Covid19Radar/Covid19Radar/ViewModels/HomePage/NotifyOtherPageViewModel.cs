@@ -216,7 +216,7 @@ namespace Covid19Radar.ViewModels
                         AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
-                    closeApplicationService.CloseApplication();
+                    await NavigationService.GoBackToRootAsync();
 
                     loggerService.Error($"Exceeded the number of trials.");
                     loggerService.EndMethod();
