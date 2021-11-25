@@ -1,0 +1,43 @@
+name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+  branches:
+    include:
+    - release/app
+    - develop/app
+    - feature/*
+  paths:
+    include:
+    - Covid19Radar
+    - Covid19Radar.sln
+    - azure-pipelines/app
+
+variables:
+- group: app-settings-dev
+- name: AppVersion
+  value: '1.4.0'
+
+jobs:
+- job: build_ios
+  pool:
+    vmImage: 'macOS-11'
+  variables:
+  - group: ios-signing-distribution
+  - name: XamarinSymlinkVersion
+    value: '6_12_8'
+  - name: XcodeVersion
+    value: '13.0'
+  - name: DEVELOPER_DIR
+    value: '/Applications/Xcode_$(XcodeVersion).app'
+  steps:
+  - template: templates/build/ios-build-adhoc-template.yml
+
+- job: build_android
+  pool:
+    vmImage: 'macOS-11'
+  variables:
+  - group: android-signing-dev
+  - name: XamarinSymlinkVersion
+    value: '6_12_8'
+  steps:
+  - template: templates/build/android-build-debug-template.yml

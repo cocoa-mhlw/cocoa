@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>מחיקה</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>שתף את האפליקציה</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>שתף</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>אם אתה חיובי עם קורונה חדש, בבקשה לשתף פעולה עם הרישום החיובי כדי להגן על האנשים סביבך.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>יישום זה הוא כל כך יעיל, כי אנשים רבים להתקין את זה, אז בבקשה לשתף את היישום עם אנשים סביבך.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>כיצד להשתמש ב</value>
@@ -323,14 +315,6 @@
     <value>תמיכה</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>בשימוש</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>בדוק את אנשי הקשר הקרובים</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>כאשר נבדק חיובי עבור COVID-19</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,19 +443,11 @@
     <value>הפעל Bluetooth</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>הזן קוד בן 8 ספרות</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>הסכמה להרשמה חיובית</value>
-    <comment>陽性登録への同意</comment>
-  </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
     <value>הסכמה להרשמה חיובית</value>
     <comment>陽性登録への同意</comment>
   </data>
@@ -512,29 +488,9 @@
     <value>מידע אודות יישום זה</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>ימים</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>הודעת החשיפה פעילה.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>ה-Bluetooth מכובה. נא הפעל את Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>הודעת החשיפה אינה זמינה. פתח את הגדרות המסוף והפעל את הודעת החשיפה.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>עליך להסכים לתנאי השימוש.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>אין תמיכה בהודעת חשיפה. נא לעדכן את מערכת ההפעלה לגירסה העדכנית. אם עדיין יש לך בעיות, אנא צרו איתנו קשר ב-appsupport@cov19.mhlw.go.jp.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>שגיאת חיבור רשת</value>

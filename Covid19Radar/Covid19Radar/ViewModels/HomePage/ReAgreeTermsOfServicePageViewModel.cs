@@ -5,6 +5,7 @@
 using System;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
@@ -16,11 +17,12 @@ namespace Covid19Radar.ViewModels
 {
     public class ReAgreeTermsOfServicePageViewModel : ViewModelBase
     {
-        private readonly ILoggerService loggerService;
-        private ITermsUpdateService _termsUpdateService;
+        private readonly ILoggerService _loggerService;
+        private readonly ITermsUpdateService _termsUpdateService;
+        private readonly IUserDataRepository _userDataRepository;
 
         private TermsUpdateInfoModel UpdateInfo;
-        private DateTime UpdateDateTime { get; set; }
+        private DateTime UpdateDateTimeUtc { get; set; }
         private string _updateText;
         public string UpdateText
         {
@@ -28,55 +30,67 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _updateText, value); }
         }
 
-                public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+        private INavigationParameters _navigationParameters;
 
-        public ReAgreeTermsOfServicePageViewModel(INavigationService navigationService, ILoggerService loggerService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+
+        public ReAgreeTermsOfServicePageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            ITermsUpdateService termsUpdateService,
+            IUserDataRepository userDataRepository
+            ) : base(navigationService)
         {
+            _loggerService = loggerService;
             _termsUpdateService = termsUpdateService;
-            this.loggerService = loggerService;
+            _userDataRepository = userDataRepository;
         }
 
         public Command OpenWebView => new Command(async () =>
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
             var url = Resources.AppResources.UrlTermOfUse;
             await BrowserOpenAsync(url, BrowserLaunchMode.SystemPreferred);
 
-            loggerService.EndMethod();
+            _loggerService.EndMethod();
         });
 
         public Command OnClickReAgreeCommand => new Command(async () =>
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
-            _termsUpdateService.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTime);
-            if (_termsUpdateService.IsReAgree(TermsType.PrivacyPolicy, UpdateInfo))
+            _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTimeUtc);
+            if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
             {
-                var param = new NavigationParameters
-                {
-                    { "updatePrivacyPolicyInfo", UpdateInfo.PrivacyPolicy }
-                };
-                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param);
+                _navigationParameters.Add("updatePrivacyPolicyInfo", UpdateInfo.PrivacyPolicy);
+                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), _navigationParameters);
             }
             else
             {
-                _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                Destination destination = Destination.HomePage;
+                if (_navigationParameters.ContainsKey(SplashPage.DestinationKey))
+                {
+                    destination = _navigationParameters.GetValue<Destination>(SplashPage.DestinationKey);
+                }
+                _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
             }
 
-            loggerService.EndMethod();
+            _loggerService.EndMethod();
         });
 
         public override void Initialize(INavigationParameters parameters)
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
             base.Initialize(parameters);
             UpdateInfo = (TermsUpdateInfoModel) parameters["updateInfo"];
-            UpdateDateTime = UpdateInfo.TermsOfService.UpdateDateTime;
+            UpdateDateTimeUtc = UpdateInfo.TermsOfService.UpdateDateTimeUtc;
             UpdateText = UpdateInfo.TermsOfService.Text;
 
-            loggerService.EndMethod();
+            _navigationParameters = parameters;
+
+            _loggerService.EndMethod();
         }
     }
 }

@@ -6,6 +6,12 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
@@ -31,5 +37,8 @@
     <Folder Include="ViewModels\HomePage\" />
     <Folder Include="Models\" />
     <Folder Include="Mocks\" />
+    <Folder Include="Services\Migration\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 </Project>

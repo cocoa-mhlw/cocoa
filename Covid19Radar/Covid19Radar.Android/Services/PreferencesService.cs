@@ -24,6 +24,38 @@ namespace Covid19Radar.Droid.Services
             return preference.Contains(key);
         }
 
+        public DateTime? GetDateTime(string key)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}, type={typeof(DateTime)}");
+
+                if (!ContainsKey(key))
+                {
+                    loggerService.Info($"{key} is not contained.");
+                    loggerService.EndMethod();
+                    return null;
+                }
+
+                var context = Android.App.Application.Context;
+                var preference = context.GetSharedPreferences(context.PackageName, Android.Content.FileCreationMode.Private);
+                try
+                {
+                    var valueString = preference.GetString(key, null);
+                    var value = DateTime.Parse(valueString);
+                    loggerService.EndMethod();
+                    return value;
+                }
+                catch (Exception)
+                {
+                    loggerService.Error($"Failed to get value of {key}");
+                    loggerService.EndMethod();
+                    return null;
+                }
+            }
+        }
+
         public T GetValue<T>(string key, T defaultValue)
         {
             lock (this)
@@ -33,6 +65,7 @@ namespace Covid19Radar.Droid.Services
 
                 if (!ContainsKey(key))
                 {
+                    loggerService.Info($"{key} is not contained.");
                     loggerService.EndMethod();
                     return defaultValue;
                 }
@@ -53,6 +86,9 @@ namespace Covid19Radar.Droid.Services
                         case int i:
                             value = preference.GetInt(key, i);
                             break;
+                        case long l:
+                            value = preference.GetLong(key, l);
+                            break;
                         case bool b:
                             value = preference.GetBoolean(key, b);
                             break;
@@ -61,10 +97,6 @@ namespace Covid19Radar.Droid.Services
                             break;
                         case string s:
                             value = preference.GetString(key, s);
-                            break;
-                        case DateTime d:
-                            var valueString = preference.GetString(key, d.ToString());
-                            value = DateTime.Parse(valueString);
                             break;
                         default:
                             loggerService.Info("Type is not supported.");
@@ -109,6 +141,9 @@ namespace Covid19Radar.Droid.Services
                         case int i:
                             editor.PutInt(key, i);
                             break;
+                        case long l:
+                            editor.PutLong(key, l);
+                            break;
                         case bool b:
                             editor.PutBoolean(key, b);
                             break;
@@ -117,10 +152,6 @@ namespace Covid19Radar.Droid.Services
                             break;
                         case string s:
                             editor.PutString(key, s);
-                            break;
-                        case DateTime d:
-                            var valueString = d.ToString();
-                            editor.PutString(key, valueString);
                             break;
                     }
                     result = editor.Commit();

@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Skrap tans</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Deel die program</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Deel</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>As jy positief is met die nuwe Corona, saamwerk asseblief met die positiewe registrasie om die mense rondom jou te beskerm.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Hierdie aansoek is so effektief dat baie mense dit installeer, so deel asseblief die aansoek met mense rondom jou.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Hoe om te gebruik</value>
@@ -323,10 +315,6 @@
     <value>Bystand</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>in gebruik</value>
-    <comment>使用中</comment>
-  </data>
   <data name="HomePageDescription2" xml:space="preserve">
     <value>Kontroleer noue kontakte</value>
     <comment>陽性者との接触を確認する(14日間)</comment>
@@ -471,10 +459,6 @@
     <value>Toestemming vir positiewe registrasie</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Toestemming vir positiewe registrasie</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Weergawe</value>
     <comment>バージョン</comment>
@@ -516,25 +500,9 @@
     <value>Dae</value>
     <comment>X日間</comment>
   </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Blootstellingskennisgewing is aktief.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth is afgeskakel. Skakel asseblief Bluetooth aan.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Blootstellingskennisgewing is versper. Maak die terminale instellings oop en skakel Blootstellingskennisgewing aan.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>Jy moet saamstem met die gebruiksvoorwaardes.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Blootstellingskennisgewing word nie ondersteun nie. Werk asseblief die OS by die nuutste weergawe. As jy nog probleme het, kontak ons asseblief by appsupport@cov19.mhlw.go.jp.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Netwerkverbinding-fout</value>

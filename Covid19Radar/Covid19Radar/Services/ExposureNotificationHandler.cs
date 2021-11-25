@@ -12,10 +12,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using CommonServiceLocator;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Services.Migration;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
@@ -28,9 +29,10 @@ namespace Covid19Radar.Services
         private ILoggerService LoggerService => ServiceLocator.Current.GetInstance<ILoggerService>();
         private IHttpDataService HttpDataService => ServiceLocator.Current.GetInstance<IHttpDataService>();
         private IExposureNotificationService ExposureNotificationService => ServiceLocator.Current.GetInstance<IExposureNotificationService>();
-        private IUserDataService UserDataService => ServiceLocator.Current.GetInstance<IUserDataService>();
+        private IMigrationService MigrationService => ServiceLocator.Current.GetInstance<IMigrationService>();
         private readonly IDeviceVerifier DeviceVerifier = ServiceLocator.Current.GetInstance<IDeviceVerifier>();
         private ILocalNotificationService LocalNotificationService => ServiceLocator.Current.GetInstance<ILocalNotificationService>();
+        private IUserDataRepository UserDataRepository => ServiceLocator.Current.GetInstance<IUserDataRepository>();
 
         public ExposureNotificationHandler()
         {
@@ -158,13 +160,11 @@ namespace Covid19Radar.Services
 
             try
             {
-                // Migrate from UserData.
-                // Since it may be executed during the migration when the application starts, execute it here as well.
-                await UserDataService.Migrate();
+                await MigrationService.MigrateAsync();
 
                 foreach (var serverRegion in AppSettings.Instance.SupportedRegions)
                 {
-                    var lastCreated = exposureNotificationService.GetLastProcessTekTimestamp(serverRegion);
+                    var lastCreated = UserDataRepository.GetLastProcessTekTimestamp(serverRegion);
                     loggerService.Info($"region: {serverRegion}, lastCreated: {lastCreated}");
 
                     cancellationToken.ThrowIfCancellationRequested();
@@ -183,7 +183,7 @@ namespace Covid19Radar.Services
                     loggerService.Info("C19R Submit Batches");
                     await submitBatches(downloadedFiles);
 
-                    exposureNotificationService.SetLastProcessTekTimestamp(serverRegion, newCreated);
+                    UserDataRepository.SetLastProcessTekTimestamp(serverRegion, newCreated);
                     loggerService.Info($"region: {serverRegion}, lastCreated: {newCreated}");
 
                     // delete all temporary files
@@ -200,11 +200,14 @@ namespace Covid19Radar.Services
                         }
                     }
                 }
+                UserDataRepository.SetCanConfirmExposure(true);
+                UserDataRepository.SetLastConfirmedDate(DateTime.UtcNow);
             }
             catch (Exception ex)
             {
                 // any exceptions, throw and wait for retry
                 loggerService.Exception("Fail to download files", ex);
+                UserDataRepository.SetCanConfirmExposure(false);
 
                 throw ex;
             }
@@ -234,18 +237,24 @@ namespace Covid19Radar.Services
             {
                 loggerService.Exception("Failed to create directory", ex);
                 loggerService.EndMethod();
-                // catch error return newCreated -1 / downloadedFiles 0
-                return (-1, downloadedFiles);
+                throw new Exception("Failed to create directory.");
             }
 
             var httpDataService = HttpDataService;
 
-            List<TemporaryExposureKeyExportFileModel> tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
-            if (tekList.Count == 0)
+            List<TemporaryExposureKeyExportFileModel> tekList;
+            try
             {
-                loggerService.EndMethod();
-                return (-1, downloadedFiles);
+                tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
+                loggerService.Info($"TEK list count: {tekList.Count}");
             }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed to get TEK list", ex);
+                loggerService.EndMethod();
+                throw new Exception("Failed to get TEK list.");
+            }
+
             Debug.WriteLine("C19R Fetch Exposure Key");
 
             var newCreated = startTimestamp;
@@ -270,6 +279,8 @@ namespace Covid19Radar.Services
                         catch (Exception ex)
                         {
                             loggerService.Exception("Fail to copy", ex);
+                            loggerService.EndMethod();
+                            throw new Exception("Failed to copy.");
                         }
                     }
                     newCreated = tekItem.Created;

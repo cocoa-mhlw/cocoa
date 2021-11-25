@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Eliminazione in corso</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Condividi l'app</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Condividi</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Se sei positivo al nuovo Corona virus, registrati anonimamente come positivo per proteggere le persone intorno a te.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>Più persone installano quest'applicazione, più sarà efficace. Condividi l'applicazione con le persone intorno a te.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Come si usa</value>
@@ -323,14 +315,6 @@
     <value>Aiuto</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>in uso</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>Controlla i contatti (14 giorni)</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Quando testato positivo per COVID-19</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,19 +443,11 @@
     <value>Attiva il Bluetooth</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>da</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>Immettere il codice di 8 cifre</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>Acconsento alla registrazione di positività</value>
-    <comment>陽性登録への同意</comment>
-  </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
     <value>Acconsento alla registrazione di positività</value>
     <comment>陽性登録への同意</comment>
   </data>
@@ -512,29 +488,9 @@
     <value>Informazioni sull'app</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>Giorni</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>La notifica di esposizione è attiva.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Il bluetooth è disattivato. Attiva il bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>La funzione "notifica di esposizione" è disabilitata. Attiva la notifica di esposizione dalle impostazioni del dispositivo.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>È necessario accettare le condizioni per l'utilizzo.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>La funzione "notifica di esposizione" non è supportata. Aggiorna il sistema operativo alla versione più recente. Se hai ancora problemi, contattaci a appsupport@cov19.mhlw.go.jp.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Errore di connessione</value>

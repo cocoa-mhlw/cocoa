@@ -80,10 +80,6 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Kustutan</value>
   </data>
-  <data name="HomePageHeader3Title" xml:space="preserve">
-    <value>Rakenduse jagamine</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Anna ühiskasutusse</value>
   </data>
@@ -122,10 +118,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Kui sa oled uue Corona suhtes positiivne, siis palun tee positiivse registreerimisega koostööd, et kaitsta inimesi enda ümber.</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="HomePageHeader3Description" xml:space="preserve">
-    <value>See rakendus on nii tõhus, et paljud inimesed seda installida, nii et palun jagage taotluse inimestega ümber.</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Kuidas kasutada</value>
@@ -323,14 +315,6 @@
     <value>Tugi</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-  <data name="HomePageDescription1" xml:space="preserve">
-    <value>kasutusel</value>
-    <comment>使用中</comment>
-  </data>
-  <data name="HomePageDescription2" xml:space="preserve">
-    <value>Kontrolli sulgemiskontakte</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>Kui COVID-19 suhtes on test positiivne</value>
     <comment>新型コロナウイルス陽性と診断されたら</comment>
@@ -459,19 +443,11 @@
     <value>Bluetoothi sisselülitamine</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-  <data name="HomePageDescription0" xml:space="preserve">
-    <value>~</value>
-    <comment>から</comment>
-  </data>
   <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>Sisestage 8-kohaline kood</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>Nõusolek positiivseks registreerimiseks</value>
-    <comment>陽性登録への同意</comment>
-  </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
     <value>Nõusolek positiivseks registreerimiseks</value>
     <comment>陽性登録への同意</comment>
   </data>
@@ -512,29 +488,9 @@
     <value>Teave selle rakenduse kohta</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>päeva</value>
-    <comment>X日間</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Särituse teavitus on aktiivne.</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth on välja lülitatud. Palun lülitage Bluetooth sisse.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Särituse teavitus on keelatud. Avage terminali sätted ja lülitage sisse säritusteatis.</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>Te peate nõustuma kasutustingimustega.</value>
     <comment>利用規約に同意する必要があります。</comment>
-  </data>
-  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Särituse teatist ei toetata. Värskendage operatsioonisüsteemi uusimale versioonile. Kui teil on veel probleeme, võtke meiega ühendust aadressil appsupport@cov19.mhlw.go.jp.</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Võrguühenduse tõrge</value>

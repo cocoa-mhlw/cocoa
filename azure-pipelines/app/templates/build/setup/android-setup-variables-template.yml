@@ -1,0 +1,52 @@
+steps:
+- script: |
+    MANIFEST_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.Android/Properties/AndroidManifest.xml"
+    sed -i '' "s/APP_PACKAGE_NAME/$(APP_PACKAGE_NAME)/g" $MANIFEST_PATH
+    sed -i '' "s/APP_VERSION/$(AppVersion)/g" $MANIFEST_PATH
+    sed -i '' "s/android:debuggable=\"true\"//g" $MANIFEST_PATH
+  displayName: 'Inject app settings into AndroidManifest.xml'
+
+- script: |
+    BUILD_VERSION="`date +%s`"
+    MANIFEST_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.Android/Properties/AndroidManifest.xml"
+    sed -i '' -e 's/android:versionCode="[0-9]*"/android:versionCode="'$BUILD_VERSION'"/g' $MANIFEST_PATH
+    echo "##vso[task.setvariable variable=buildVersion]$BUILD_VERSION"
+  displayName: 'Set build version'
+
+- script: |
+    ANDROID_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.Android"
+    for FILE in `\find $ANDROID_PATH/Resources/values-*/Strings.xml`; do
+      perl -pi -e "s/(<string name=\"app_name\">)(.*)(<\/string>)/\1\[$(Environment)\]\2\3/g" $FILE
+    done
+  displayName: 'Add environment name to app name'
+  condition: and(succeeded(), not(eq(variables['Environment'], 'prod')))
+
+- script: |
+    brew install imagemagick
+  displayName: 'Install ImageMagick'
+  condition: and(succeeded(), not(eq(variables['Environment'], 'prod')))
+
+- script: |
+    if [ $(Environment) = "dv" ]; then
+      FONT_COLOR=yellow
+    elif [ $(Environment) = "stg" ]; then
+      FONT_COLOR=green1
+    fi
+
+    ANDROID_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.Android"
+    for FILE in `\find $ANDROID_PATH/Resources/*/ic_launcher.png`; do
+      PointSize=$((`/usr/local/bin/identify -format "%[height]" $FILE` / 3))
+      StrokeWidth=$(($PointSize / 20))
+      /usr/local/bin/convert \
+        -font "Arial-Black" \
+        -gravity south \
+        -fill $FONT_COLOR \
+        -pointsize $PointSize \
+        -stroke black \
+        -strokewidth $StrokeWidth \
+        -draw "text 0,0 $(Environment)" \
+        $FILE $FILE
+    done
+
+  displayName: 'Add environment name to app icon'
+  condition: and(succeeded(), not(eq(variables['Environment'], 'prod')))

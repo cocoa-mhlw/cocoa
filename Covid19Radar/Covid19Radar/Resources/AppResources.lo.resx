@@ -143,10 +143,6 @@
     <value>ຊອກຮູ້ເພີ່ມເຕີມ</value>
     <comment>技術的な詳細について</comment>
   </data>
-  <data name="HomePagePastDays" xml:space="preserve">
-    <value>ວັນ</value>
-    <comment>X日間</comment>
-  </data>
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>ຈົດທະບຽນ</value>
     <comment>登録</comment>
