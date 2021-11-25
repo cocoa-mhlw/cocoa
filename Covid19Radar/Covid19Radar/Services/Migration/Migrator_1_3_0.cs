@@ -31,6 +31,8 @@ namespace Covid19Radar.Services.Migration
 
         public Task ExecuteAsync()
         {
+            _preferencesService.SetValue(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME, new DateTime().ToString());
+
             if (_preferencesService.ContainsKey(START_DATETIME))
             {
                 MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch, TimeSpan.Zero);
