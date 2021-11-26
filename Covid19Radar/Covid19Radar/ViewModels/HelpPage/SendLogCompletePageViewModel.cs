@@ -60,7 +60,8 @@ namespace Covid19Radar.ViewModels
             {
                 await CopyIdAsync(LogId);
                 await UserDialogs.Instance.AlertAsync(
-                    Resources.AppResources.SuccessMessageToCopyLogId,
+                    null,
+                    title: Resources.AppResources.SuccessMessageToCopyLogId,
                     okText: Resources.AppResources.ButtonOk);
             }
             catch (Exception ex)
