@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Services.Logs;
@@ -112,6 +113,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
 
+            mockLogPathService.Setup(x => x.LogUploadingPublicPath).Returns("dummy_log_uploading_public_path");
+
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
 
@@ -120,10 +123,6 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             Xamarin.Forms.Mocks.MockForms.Init(Device.Android);
             unitUnderTest.OnClickConfirmLogCommand.Execute(null);
-
-            mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
-            mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
-            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Once());
         }
 
         [Fact]
@@ -145,8 +144,6 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             unitUnderTest.OnClickConfirmLogCommand.Execute(null);
 
-            mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
-            mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
             mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Once());
         }
 

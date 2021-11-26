@@ -977,6 +977,14 @@
     <value>https://www.mhlw.go.jp/cocoa/webaccessibility_japanese.html</value>
     <comment>ウェブアクセシビリティ方針URL</comment>
   </data>
+  <data name="SendLogCompletePageCopyId" xml:space="preserve">
+    <value>動作情報ID（タップしてコピー）</value>
+    <comment>動作情報ID（タップしてコピー）</comment>
+  </data>
+  <data name="SuccessMessageToCopyLogId" xml:space="preserve">
+    <value>コピーしました</value>
+    <comment>コピーしました</comment>
+  </data>
   <data name="HomePageENStatusActiveTitle" xml:space="preserve">
     <value>動作中</value>
     <comment>動作中</comment>
