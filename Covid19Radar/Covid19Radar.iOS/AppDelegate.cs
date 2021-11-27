@@ -256,12 +256,15 @@ namespace Covid19Radar.iOS
             container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
             container.Register<ICloseApplicationService, CloseApplicationService>(Reuse.Singleton);
 #if USE_MOCK
-            container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
+            //container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
 #else
-            container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
+            //container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
+
+            container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
+
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
         }
 
