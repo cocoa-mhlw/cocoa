@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
+using TimeZoneConverter;
 
 namespace Covid19Radar.Services.Migration
 {
@@ -15,7 +16,10 @@ namespace Covid19Radar.Services.Migration
         private const string TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
 
-        private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
+        private readonly DateTime COCOA_RELEASE_DATE
+            = DateTime.SpecifyKind(new DateTime(2021, 06, 19, 9, 0, 0), DateTimeKind.Utc);
+
+        private readonly TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
 
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
@@ -33,7 +37,10 @@ namespace Covid19Radar.Services.Migration
         {
             if (_preferencesService.ContainsKey(START_DATETIME))
             {
-                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch, TimeSpan.Zero);
+                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch,
+                    timeZoneInfo: null,
+                    fallbackDateTime: DateTime.UtcNow
+                    );
             }
 
             if (_preferencesService.ContainsKey(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME))
@@ -41,7 +48,8 @@ namespace Covid19Radar.Services.Migration
                 MigrateDateTimeToEpoch(
                     TERMS_OF_SERVICE_LAST_UPDATE_DATETIME,
                     PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch,
-                    -TIME_DIFFERENCIAL_JST_UTC
+                    timeZoneInfo: TIMEZONE_JST,
+                    fallbackDateTime: COCOA_RELEASE_DATE
                     );
             }
 
@@ -50,26 +58,45 @@ namespace Covid19Radar.Services.Migration
                 MigrateDateTimeToEpoch(
                     PRIVACY_POLICY_LAST_UPDATE_DATETIME,
                     PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch,
-                    -TIME_DIFFERENCIAL_JST_UTC
+                    timeZoneInfo: TIMEZONE_JST,
+                    fallbackDateTime: COCOA_RELEASE_DATE
                     );
             }
 
             return Task.CompletedTask;
         }
 
-        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeSpan differential)
+        public void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeZoneInfo? timeZoneInfo, DateTime fallbackDateTime)
         {
             string dateTimeStr = _preferencesService.GetValue(dateTimeKey, DateTime.UtcNow.ToString());
-
+            
             DateTime dateTime;
             try
             {
-                dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr) + differential, DateTimeKind.Utc);
+                dateTime = DateTime.Parse(dateTimeStr);
+
+                // dateTime must be after COCOA_RELEASE_DATE.
+                if (dateTime < COCOA_RELEASE_DATE)
+                {
+                    dateTime = COCOA_RELEASE_DATE;
+                }
+
+                if (timeZoneInfo is null)
+                {
+                    dateTime = DateTime.SpecifyKind(dateTime, DateTimeKind.Utc);
+                }
+                else
+                {
+                    dateTime = TimeZoneInfo.ConvertTimeToUtc(
+                        DateTime.SpecifyKind(dateTime, DateTimeKind.Unspecified),
+                        timeZoneInfo
+                        );
+                }
             }
             catch (FormatException exception)
             {
                 _loggerService.Exception($"Parse dateTime FormatException occurred. {dateTimeStr}", exception);
-                dateTime = DateTime.UtcNow;
+                dateTime = fallbackDateTime;
             }
             _preferencesService.SetValue(epochKey, dateTime.ToUnixEpoch());
             _preferencesService.RemoveValue(dateTimeKey);

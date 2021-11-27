@@ -68,6 +68,7 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.967" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
     <PackageReference Include="CommonServiceLocator" Version="2.0.6" />
+    <PackageReference Include="TimeZoneConverter" Version="3.5.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CustomDatePicker.cs" />
