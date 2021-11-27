@@ -599,13 +599,13 @@
     <value>COVID-19接触のログ記録を有効にしてください</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
-  <data name="NotifyOtherPageDiagAppCloseTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDiagReturnHomeTitle" xml:space="preserve">
     <value>登録回数の上限に達しました</value>
     <comment>登録回数の上限に達しました</comment>
   </data>
-	<data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>アプリを終了します。</value>
-    <comment>アプリを終了します。</comment>
+	<data name="NotifyOtherPageDiagReturnHome" xml:space="preserve">
+    <value>ホームに戻ります。</value>
+    <comment>ホームに戻ります。</comment>
   </data>
 	<data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
     <value>処理番号が違います</value>

@@ -208,8 +208,8 @@ namespace Covid19Radar.ViewModels
                 if (errorCount >= AppConstants.MaxErrorCount)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiagAppClose,
-                        AppResources.NotifyOtherPageDiagAppCloseTitle,
+                        AppResources.NotifyOtherPageDiagReturnHome,
+                        AppResources.NotifyOtherPageDiagReturnHomeTitle,
                         AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
