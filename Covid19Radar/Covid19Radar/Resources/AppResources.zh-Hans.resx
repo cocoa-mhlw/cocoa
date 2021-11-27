@@ -601,13 +601,13 @@
     <value>请启用 COVID-19 接触日志</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
-  <data name="NotifyOtherPageDiagAppCloseTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDiagReturnHomeTitle" xml:space="preserve">
     <value>登记次数达到上限</value>
     <comment>登録回数の上限に達しました</comment>
   </data>
-	<data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>关闭应用。</value>
-    <comment>アプリを終了します。</comment>
+	<data name="NotifyOtherPageDiagReturnHome" xml:space="preserve">
+    <value>返回首页。</value>
+    <comment>ホームに戻ります。</comment>
   </data>
 	<data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
     <value>受理编号错误</value>

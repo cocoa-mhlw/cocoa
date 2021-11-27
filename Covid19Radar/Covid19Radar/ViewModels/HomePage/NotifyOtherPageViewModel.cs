@@ -27,7 +27,6 @@ namespace Covid19Radar.ViewModels
 
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
-        private readonly ICloseApplicationService closeApplicationService;
         private readonly IEssentialsService _essentialsService;
 
         private string _processingNumber;
@@ -122,7 +121,6 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             AbsExposureNotificationApiService exposureNotificationApiService,
             IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer,
-            ICloseApplicationService closeApplicationService,
             IEssentialsService essentialsService
             ) : base(navigationService)
         {
@@ -131,7 +129,6 @@ namespace Covid19Radar.ViewModels
             this.loggerService = loggerService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
-            this.closeApplicationService = closeApplicationService;
             _essentialsService = essentialsService;
             errorCount = 0;
             ProcessingNumber = "";
@@ -211,12 +208,12 @@ namespace Covid19Radar.ViewModels
                 if (errorCount >= AppConstants.MaxErrorCount)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiagAppClose,
-                        AppResources.NotifyOtherPageDiagAppCloseTitle,
+                        AppResources.NotifyOtherPageDiagReturnHome,
+                        AppResources.NotifyOtherPageDiagReturnHomeTitle,
                         AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
-                    closeApplicationService.CloseApplication();
+                    await NavigationService.GoBackToRootAsync();
 
                     loggerService.Error($"Exceeded the number of trials.");
                     loggerService.EndMethod();

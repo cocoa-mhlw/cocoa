@@ -965,15 +965,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotifyOtherPageDiagAppCloseTitle {
+        public static string NotifyOtherPageDiagReturnHomeTitle {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiagAppCloseTitle", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDiagReturnHomeTitle", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiagAppClose {
+        public static string NotifyOtherPageDiagReturnHome {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiagAppClose", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDiagReturnHome", resourceCulture);
             }
         }
         
