@@ -722,7 +722,7 @@
     <comment>登録回数の上限に達しました</comment>
   </data>
 	<data name="NotifyOtherPageDiagReturnHome" xml:space="preserve">
-    <value>Return home.</value>
+    <value>Return home</value>
     <comment>ホームに戻ります。</comment>
   </data>
 	<data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
