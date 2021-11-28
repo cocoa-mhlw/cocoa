@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -126,7 +127,9 @@ namespace Covid19Radar.Api
                 return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
             }
 
+            var newKeys = new List<TemporaryExposureKeyModel>();
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
             using (SHA256 sha256 = SHA256.Create())
             {
                 foreach (var k in submissionParameter.Keys)
@@ -141,10 +144,14 @@ namespace Covid19Radar.Api
                     foreach (var region in submissionParameter.Regions)
                     {
                         key.PartitionKey = region;
-
-                        await _tekRepository.UpsertAsync(key);
+                        newKeys.Add(key);
                     }
                 }
+            }
+
+            foreach (var key in newKeys)
+            {
+                await _tekRepository.UpsertAsync(key);
             }
 
             return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
