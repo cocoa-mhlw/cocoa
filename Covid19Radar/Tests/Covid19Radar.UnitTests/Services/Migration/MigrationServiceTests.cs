@@ -33,7 +33,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
         private DateTime JstNow => TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TIMEZONE_JST);
 
         private DateTime JstToUtc(DateTime dateTimeJst)
-            => TimeZoneInfo.ConvertTimeToUtc(DateTime.SpecifyKind(dateTimeJst, DateTimeKind.Unspecified));
+            => TimeZoneInfo.ConvertTimeToUtc(DateTime.SpecifyKind(dateTimeJst, DateTimeKind.Unspecified), TIMEZONE_JST);
 
         private readonly MockRepository _mockRepository = new MockRepository(MockBehavior.Default);
 
