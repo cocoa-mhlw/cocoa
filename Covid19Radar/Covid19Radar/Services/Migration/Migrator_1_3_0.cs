@@ -16,9 +16,6 @@ namespace Covid19Radar.Services.Migration
         private const string TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
 
-        private readonly DateTime COCOA_FIRST_RELEASE_DATE
-            = DateTime.SpecifyKind(new DateTime(2021, 06, 19, 9, 0, 0), DateTimeKind.Utc);
-
         private readonly TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
 
         private readonly IPreferencesService _preferencesService;
@@ -49,7 +46,7 @@ namespace Covid19Radar.Services.Migration
                     TERMS_OF_SERVICE_LAST_UPDATE_DATETIME,
                     PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch,
                     timeZoneInfo: TIMEZONE_JST,
-                    fallbackDateTime: COCOA_FIRST_RELEASE_DATE
+                    fallbackDateTime: AppConstants.COCOA_FIRST_RELEASE_DATE
                     );
             }
 
@@ -59,7 +56,7 @@ namespace Covid19Radar.Services.Migration
                     PRIVACY_POLICY_LAST_UPDATE_DATETIME,
                     PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch,
                     timeZoneInfo: TIMEZONE_JST,
-                    fallbackDateTime: COCOA_FIRST_RELEASE_DATE
+                    fallbackDateTime: AppConstants.COCOA_FIRST_RELEASE_DATE
                     );
             }
 
@@ -75,10 +72,10 @@ namespace Covid19Radar.Services.Migration
             {
                 dateTime = DateTime.Parse(dateTimeStr);
 
-                // dateTime must be after COCOA_RELEASE_DATE.
-                if (dateTime < COCOA_FIRST_RELEASE_DATE)
+                // dateTime must be after COCOA_FIRST_RELEASE_DATE.
+                if (dateTime < AppConstants.COCOA_FIRST_RELEASE_DATE)
                 {
-                    dateTime = COCOA_FIRST_RELEASE_DATE;
+                    dateTime = AppConstants.COCOA_FIRST_RELEASE_DATE;
                 }
 
                 if (timeZoneInfo is null)
