@@ -4,6 +4,7 @@
 
 using System;
 using Newtonsoft.Json;
+using TimeZoneConverter;
 
 namespace Covid19Radar.Model
 {
@@ -17,7 +18,7 @@ namespace Covid19Radar.Model
 
         public class Detail
         {
-            private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
+            private readonly TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
 
             [JsonProperty("text")]
             public string Text { get; set; }
@@ -29,7 +30,10 @@ namespace Covid19Radar.Model
             public DateTime UpdateDateTimeJst { get; set; }
 
             public DateTime UpdateDateTimeUtc
-                => DateTime.SpecifyKind(UpdateDateTimeJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+                => TimeZoneInfo.ConvertTimeToUtc(
+                        DateTime.SpecifyKind(UpdateDateTimeJst, DateTimeKind.Unspecified),
+                        TIMEZONE_JST
+                        );
         }
     }
 }

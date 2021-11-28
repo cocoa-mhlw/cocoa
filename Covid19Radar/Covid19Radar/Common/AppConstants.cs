@@ -2,10 +2,18 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
+
 namespace Covid19Radar.Common
 {
     public static class AppConstants
     {
+        /// <summary>
+        /// COCOA's birthday.
+        /// </summary>
+        public static readonly DateTime COCOA_FIRST_RELEASE_DATE
+            = DateTime.SpecifyKind(new DateTime(2020, 06, 19, 9, 0, 0), DateTimeKind.Utc);
+
         /// <summary>
         /// Number of days covered from the date of diagnosis or onset
         /// </summary>

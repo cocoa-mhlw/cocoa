@@ -13,6 +13,7 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Services.Migration;
 using Moq;
 using Newtonsoft.Json;
+using TimeZoneConverter;
 using Xunit;
 
 namespace Covid19Radar.UnitTests.Services.Migration
@@ -27,16 +28,12 @@ namespace Covid19Radar.UnitTests.Services.Migration
         private const string PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE = "TermsOfServiceLastUpdateDateTime";
         private const string PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE = "PrivacyPolicyLastUpdateDateTime";
 
-        private static readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
-        private static DateTime JstNow => DateTime.UtcNow + TIME_DIFFERENCIAL_JST_UTC;
+        private readonly TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
 
-        private static DateTime JstToUtc(DateTime dateTimeJst)
-            => DateTime.SpecifyKind(dateTimeJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+        private DateTime JstNow => TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TIMEZONE_JST);
 
-        private const string FORMAT_TERMS_UPDATE_DATETIME = "yyyy/MM/dd HH:mm:ss";
-
-        private static DateTime CreateTermsUpdateDateTime(DateTime dateTime)
-            => DateTime.ParseExact(dateTime.ToString(FORMAT_TERMS_UPDATE_DATETIME), FORMAT_TERMS_UPDATE_DATETIME, null);
+        private DateTime JstToUtc(DateTime dateTimeJst)
+            => TimeZoneInfo.ConvertTimeToUtc(DateTime.SpecifyKind(dateTimeJst, DateTimeKind.Unspecified), TIMEZONE_JST);
 
         private readonly MockRepository _mockRepository = new MockRepository(MockBehavior.Default);
 
@@ -907,12 +904,12 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
-            var termsOfServiceLastUpdateDateUtc = JstToUtc(DateTime.MinValue);
+            var termsOfServiceLastUpdateDateUtc = JstToUtc(AppConstants.COCOA_FIRST_RELEASE_DATE);
             Assert.Equal(termsOfServiceLastUpdateDateUtc.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
-            var privacyPolicyLastUpdateDateUtc = JstToUtc(DateTime.MinValue);
+            var privacyPolicyLastUpdateDateUtc = JstToUtc(AppConstants.COCOA_FIRST_RELEASE_DATE);
             Assert.Equal(privacyPolicyLastUpdateDateUtc.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp
