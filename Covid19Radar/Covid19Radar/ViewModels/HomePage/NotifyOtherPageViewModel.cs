@@ -28,6 +28,7 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
         private readonly IEssentialsService _essentialsService;
+        private readonly int delayForError;
 
         private string _processingNumber;
         public string ProcessingNumber
@@ -121,7 +122,8 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             AbsExposureNotificationApiService exposureNotificationApiService,
             IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer,
-            IEssentialsService essentialsService
+            IEssentialsService essentialsService,
+            int delayForError = 5000
             ) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
@@ -129,6 +131,7 @@ namespace Covid19Radar.ViewModels
             this.loggerService = loggerService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
+            this.delayForError = delayForError;
             _essentialsService = essentialsService;
             errorCount = 0;
             ProcessingNumber = "";
@@ -188,7 +191,7 @@ namespace Covid19Radar.ViewModels
                 AppResources.NotifyOtherPageDiag1Title,
                 AppResources.ButtonRegister,
                 AppResources.ButtonCancel);
-
+            
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
@@ -213,7 +216,7 @@ namespace Covid19Radar.ViewModels
                         AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
-                    await NavigationService.GoBackToRootAsync();
+                    await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
 
                     loggerService.Error($"Exceeded the number of trials.");
                     loggerService.EndMethod();
@@ -228,7 +231,7 @@ namespace Covid19Radar.ViewModels
                         AppResources.NotifyOtherPageDiag3Title,
                         AppResources.ButtonOk
                         );
-                    await Task.Delay(errorCount * 5000);
+                    await Task.Delay(errorCount * delayForError);
                 }
 
                 loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
