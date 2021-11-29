@@ -58,7 +58,40 @@ type: docs
 |  ExposureSummary  |  文字列  | JSON形式に変換された`UserDataModel.ExposureSummary` |
 |  ExposureInformation  |  文字列  | JSON形式に変換された`ObservableCollection<UserExposureInfo>` |
 
-### v1.0.0 - v1.2.1
+### v1.2.0 - v1.2.1
+
+ * Application.Propertiesに保存（`IApplicationPropertyService`）
+    * Xamarin.Forms固有のファイル永続化方式
+    * 実体ファイルはBinary XML形式
+ * 設定項目と接触情報は [UserDataModel](https://github.com/cocoa-mhlw/cocoa/blob/develop/Covid19Radar/Covid19Radar/Model/UserDataModel.cs) を、JSON形式に変換して保存されている
+ * 日付情報はDateTimeをToString()した結果（e.g. `2020/06/19 10:00:00`）
+ * 確認されている不具合
+     * Application.Propertiesの特性上、複数スレッドから書き込みをするとデータが壊れる事象が発生
+     * Androidのバックグラウンド処理時に設定の読み書きができない事象が発生
+       * 仕様上、Xamarin.Formsが初期化されていないタイミングではApplication.Propertiesにアクセスできない
+     * 日付情報の文字列変換時にフォーマットを指定していないため、日時を保存後に端末に設定されている地域や言語が変わった場合、ただしく日付が復元できなくなることがある
+
+#### 保存内容
+
+|  キー  |  形式  | 保存内容 |
+| ---- | ---- | ---- |
+|  UserData  |  文字列  | JSON形式に変換されたUserDataModel |
+|  TermsOfServiceLastUpdateDateTime  |  文字列  | 利用規約に合意した日時（JST） - `2020/06/19 10:00:00` |
+|  PrivacyPolicyLastUpdateDateTime  |  文字列  | プライバシーポリシーに合意した日時（JST） - `2020/06/19 10:00:00` |
+
+```
+public class UserDataModel
+{
+    public DateTime StartDateTime { get; set; }
+    public bool IsOptined { get; set; } = false;
+    public bool IsPolicyAccepted { get; set; } = false;
+    public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
+    public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
+    public UserExposureSummary ExposureSummary { get; set; }
+}
+```
+
+### v1.0.0 - v1.1.5
 
  * Application.Propertiesに保存（`IApplicationPropertyService`）
     * Xamarin.Forms固有のファイル永続化方式
