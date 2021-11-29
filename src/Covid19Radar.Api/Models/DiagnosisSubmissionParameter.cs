@@ -45,6 +45,8 @@ namespace Covid19Radar.Api.Models
 					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
 					TransmissionRiskLevel = 4,
+					ReportType = Constants.ReportTypeMissingValue,
+					DaysSinceOnsetOfSymptoms = Constants.DaysSinceOnsetOfSymptomsMissingValue,
 					Timestamp = timestamp,
 					Exported = false
 				};

@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using Covid19Radar.Api.Common;
 
 namespace Covid19Radar.Api.Models
 {
@@ -14,6 +15,8 @@ namespace Covid19Radar.Api.Models
         public int RollingPeriod { get; set; }
         public int RollingStartIntervalNumber { get; set; }
         public int TransmissionRiskLevel { get; set; }
+        public int ReportType { get; set; } = Constants.ReportTypeMissingValue;
+        public int DaysSinceOnsetOfSymptoms { get; set; } = Constants.DaysSinceOnsetOfSymptomsMissingValue;
         public long GetRollingStartUnixTimeSeconds() => RollingStartIntervalNumber * 10 * 60;
         public long GetRollingPeriodSeconds() => RollingPeriod * 10 * 60;
 
