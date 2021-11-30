@@ -1270,7 +1270,7 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("SendingError", resourceCulture);
             }
         }
-        
+
         public static string SuccessMessageToSaveOperatingInformationForAndroid {
             get {
                 return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid", resourceCulture);
@@ -1504,7 +1504,19 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("UrlWebAccessibilityPolicy", resourceCulture);
             }
         }
-        
+
+        public static string SendLogCompletePageCopyId {
+            get {
+                return ResourceManager.GetString("SendLogCompletePageCopyId", resourceCulture);
+            }
+        }
+
+        public static string SuccessMessageToCopyLogId {
+            get {
+                return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
+            }
+        }
+
         public static string HomePageENStatusActiveTitle {
             get {
                 return ResourceManager.GetString("HomePageENStatusActiveTitle", resourceCulture);
