@@ -4,6 +4,7 @@
 
 using System;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Moq;
@@ -15,12 +16,17 @@ namespace Covid19Radar.UnitTests.ViewModels
     public class SendLogCompletePageViewModelTests
     {
         private readonly MockRepository mockRepository;
+        private readonly Mock<IUserDialogs> mockUserDialogs;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
 
         public SendLogCompletePageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
+
+            mockUserDialogs = mockRepository.Create<IUserDialogs>();
+            UserDialogs.Instance = mockUserDialogs.Object;
+
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
         }
@@ -79,6 +85,28 @@ namespace Covid19Radar.UnitTests.ViewModels
             unitUnderTest.OnClickSendMailCommand.Execute(null);
 
             Assert.Equal(1, actualCalls);
+        }
+
+        [Fact]
+        public void OnCopyCommandTests()
+        {
+            var testLogId = "test-log-id";
+
+            var unitUnderTest = CreateViewModel();
+            unitUnderTest.Initialize(new NavigationParameters { { "logId", testLogId } });
+
+            string copyId = default;
+
+            unitUnderTest.CopyIdAsync = (LogId) =>
+            {
+                copyId = LogId;
+                return Task.CompletedTask;
+            };
+
+            unitUnderTest.OnCopyCommand.Execute(null);
+
+            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Once());
+            Assert.Equal(testLogId, copyId);
         }
 
         [Fact]
