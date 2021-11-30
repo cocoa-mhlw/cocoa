@@ -3,10 +3,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Covid19Radar.Api.Common;
@@ -125,17 +127,42 @@ namespace Covid19Radar.Api
                 return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
             }
 
+            var newKeys = new List<TemporaryExposureKeyModel>();
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
             using (SHA256 sha256 = SHA256.Create())
             {
-                var keys = submissionParameter.Keys.Select(key => key.ToModel(submissionParameter, timestamp, sha256));
-                foreach (var k in keys)
+                foreach (var k in submissionParameter.Keys)
                 {
-                    await _tekRepository.UpsertAsync(k);
+                    var idSeed = $"{submissionParameter.IdempotencyKey},{k.KeyData},{k.RollingStartNumber},{k.RollingPeriod}";
+                    var id = ByteArrayToString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
+
+                    var key = k.ToModel();
+                    key.id = id;
+                    key.Timestamp = timestamp;
+
+                    foreach (var region in submissionParameter.Regions)
+                    {
+                        key.PartitionKey = region;
+                        newKeys.Add(key);
+                    }
                 }
             }
 
+            foreach (var key in newKeys)
+            {
+                await _tekRepository.UpsertAsync(key);
+            }
+
             return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
+        }
+
+        public static string ByteArrayToString(byte[] byteArray)
+        {
+            StringBuilder hex = new StringBuilder(byteArray.Length * 2);
+            foreach (byte b in byteArray)
+                hex.AppendFormat("{0:x2}", b);
+            return hex.ToString();
         }
     }
 }
