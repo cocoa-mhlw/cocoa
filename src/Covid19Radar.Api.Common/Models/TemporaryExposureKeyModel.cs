@@ -21,7 +21,6 @@ namespace Covid19Radar.Api.Models
         public int DaysSinceOnsetOfSymptoms { get; set; } = Constants.DaysSinceOnsetOfSymptomsMissingValue;
         public long GetRollingStartUnixTimeSeconds() => RollingStartIntervalNumber * TIME_WINDOW_IN_SEC;
         public long GetRollingPeriodSeconds() => RollingPeriod * TIME_WINDOW_IN_SEC;
-
         public ulong Timestamp { get; set; }
         public bool Exported { get; set; }
     }
