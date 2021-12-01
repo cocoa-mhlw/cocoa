@@ -36,11 +36,13 @@
                                 <ViewCell>
                                     <!--  Main design for our menu items  -->
                                     <StackLayout
+                                        AutomationProperties.IsInAccessibleTree="True"
+                                        AutomationProperties.Name="{Binding ReadText}"
                                         Padding="20,10,0,10"
                                         Style="{StaticResource ImageLableStackLayout}"
                                         VerticalOptions="FillAndExpand">
                                         <Image
-                                            AutomationId="{Binding Title}"
+                                            AutomationProperties.IsInAccessibleTree="False"
                                             HeightRequest="35"
                                             WidthRequest="35">
                                             <Image.Source>
@@ -60,8 +62,8 @@
                                             </Image.Source>
                                         </Image>
                                         <Label
+                                            AutomationProperties.IsInAccessibleTree="False"
                                             VerticalOptions="Center"
-                                            AutomationId="{Binding Title}"
                                             FontSize="Default"
                                             Text="{Binding Title}">
                                             <Label.TextColor>

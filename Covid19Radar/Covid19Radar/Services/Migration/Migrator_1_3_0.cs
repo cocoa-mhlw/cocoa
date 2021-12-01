@@ -15,6 +15,7 @@ namespace Covid19Radar.Services.Migration
         private const string TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
 
+        private readonly DateTime FALLBACK_DATETIME = new DateTime(2020, 6, 19);
         private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
 
         private readonly IPreferencesService _preferencesService;
@@ -33,7 +34,7 @@ namespace Covid19Radar.Services.Migration
         {
             if (_preferencesService.ContainsKey(START_DATETIME))
             {
-                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch, TimeSpan.Zero);
+                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch, TimeSpan.Zero, DateTime.UtcNow);
             }
 
             if (_preferencesService.ContainsKey(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME))
@@ -41,7 +42,8 @@ namespace Covid19Radar.Services.Migration
                 MigrateDateTimeToEpoch(
                     TERMS_OF_SERVICE_LAST_UPDATE_DATETIME,
                     PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch,
-                    -TIME_DIFFERENCIAL_JST_UTC
+                    -TIME_DIFFERENCIAL_JST_UTC,
+                    FALLBACK_DATETIME
                     );
             }
 
@@ -50,27 +52,38 @@ namespace Covid19Radar.Services.Migration
                 MigrateDateTimeToEpoch(
                     PRIVACY_POLICY_LAST_UPDATE_DATETIME,
                     PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch,
-                    -TIME_DIFFERENCIAL_JST_UTC
+                    -TIME_DIFFERENCIAL_JST_UTC,
+                    FALLBACK_DATETIME
                     );
             }
 
             return Task.CompletedTask;
         }
 
-        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeSpan differential)
+        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeSpan differential, DateTime fallbackDateTime)
         {
-            string dateTimeStr = _preferencesService.GetValue(dateTimeKey, DateTime.UtcNow.ToString());
+            string dateTimeStr = _preferencesService.GetValue(dateTimeKey, fallbackDateTime.ToString());
 
             DateTime dateTime;
             try
             {
-                dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr) + differential, DateTimeKind.Utc);
+                dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
             }
             catch (FormatException exception)
             {
                 _loggerService.Exception($"Parse dateTime FormatException occurred. {dateTimeStr}", exception);
-                dateTime = DateTime.UtcNow;
+                dateTime = fallbackDateTime;
             }
+
+            try
+            {
+                dateTime += differential;
+            }
+            catch (ArgumentOutOfRangeException exception)
+            {
+                _loggerService.Exception($"{dateTimeStr} {differential} The added or subtracted value results in an un-representable DateTime.", exception);
+            }
+
             _preferencesService.SetValue(epochKey, dateTime.ToUnixEpoch());
             _preferencesService.RemoveValue(dateTimeKey);
         }
