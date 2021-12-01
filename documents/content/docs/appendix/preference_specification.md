@@ -34,11 +34,14 @@ type: docs
 
 
 ### v1.2.2 - v1.2.6
+ * Application.PropertiesからPreferenceServiceへのマイグレーション
  * 設定項目はAndroid/iOSプラットフォーム固有のKey-value storeに保存する（`IPreferencesService`）
  * 接触情報はJSON形式に変換後、`SecureStorageService`を通じて暗号化された状態で格納されている
  * 日付情報はDateTimeをToString()した結果（e.g. `2020/06/19 10:00:00`）
  * 確認されている不具合
      * 日付情報の文字列変換時にフォーマットを指定していないため、日時を保存後に端末に設定されている地域や言語が変わった場合、ただしく日付が復元できなくなることがある
+     * v1.1.5より前のバージョンで利用規約に合意していた（`UserDataModel.IsOptined`がtrue）場合、`TermsOfServiceLastUpdateDateTime`の値に `0001/01/01 00:00:00`が設定される。これは厳密には不具合ではなく仕様
+     * v1.1.5より前のバージョンでプライバシーポリシーに合意していた（`UserDataModel.IsPolicyAccepted`がtrue）ていて、v1.2.0でプライバシーポリシーの再同意を経ていない場合、`PrivacyPolicyLastUpdateDateTime`の値に `0001/01/01 00:00:00`が設定される。これは厳密には不具合ではなく仕様
  
 #### 保存内容
 
@@ -70,6 +73,8 @@ type: docs
      * Androidのバックグラウンド処理時に設定の読み書きができない事象が発生
        * 仕様上、Xamarin.Formsが初期化されていないタイミングではApplication.Propertiesにアクセスできない
      * 日付情報の文字列変換時にフォーマットを指定していないため、日時を保存後に端末に設定されている地域や言語が変わった場合、ただしく日付が復元できなくなることがある
+     * v1.1.5より前のバージョンで利用規約に合意していた（`UserDataModel.IsOptined`がtrue）場合、`TermsOfServiceLastUpdateDateTime`のキーは作成されない。これは厳密には不具合ではなく仕様
+       * v1.2.0からv1.2.1が運用されている期間内に、利用規約の再同意プロセスが利用されたことがないため
 
 #### 保存内容
 
