@@ -1119,4 +1119,8 @@
     <value>あなた専用の処理番号</value>
     <comment>あなた専用の処理番号</comment>
   </data>
+  <data name="Button" xml:space="preserve">
+    <value>ボタン</value>
+    <comment>ボタン</comment>
+  </data>
 </root>
