@@ -22,8 +22,7 @@ type: docs
 |  ExposureNotificationConfiguration  |  文字列  | JSON形式に変換された`Xamarin.ExposureNotifications.Configuration` |
 |  LastProcessTekTimestamp  |  文字列  | JSON形式に変換された`Dictionary<string, long>` キーはRegion（e.g. `440`）、数値はTEKのタイムスタンプ（e.g. `1632551138`） |
 |  CanConfirmExposure  |  Boolean  | 最後に試行した接触確認（診断キーのダウンロード・接触確認実行）が正常に完了したことを示すフラグ |
-|  LastConfirmedDateTimeEpoch  |  数値（long）  | 最後に
-接触確認を完了した日時のUNIX Epoch（e.g. `1592528400`） |
+|  LastConfirmedDateTimeEpoch  |  数値（long）  | 最後に接触確認を完了した日時のUNIX Epoch（e.g. `1592528400`） |
 
 ##### ISecureStorageService
 
