@@ -1115,4 +1115,8 @@
     <value>您专用的受理编号​</value>
     <comment>あなた専用の処理番号</comment>
   </data>
+  <data name="Button" xml:space="preserve">
+    <value>按钮</value>
+    <comment>ボタン</comment>
+  </data>
 </root>
