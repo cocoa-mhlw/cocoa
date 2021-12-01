@@ -6,22 +6,28 @@ type: docs
 
 ## 日本語
 
-https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_pp_00027.html
+ * https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_pp_00027.html
+ * https://www.mhlw.go.jp/cocoa/privacypolicy_japanese.html
+
 
 ### 接触確認アプリケーションプライバシーポリシー
 
+【2020年12月1日 プライバシーポリシー改定のお知らせ】
+
+これまで、接触確認アプリケーション（以下「本アプリ」といいます。）にて、陽性者の方が陽性登録を行う際に必要となる処理番号については、陽性登録後又は有効期限が切れた後はデータ上の保有はしておりませんでしたが、これを改め、問い合わせ等に対応する目的で処理番号を発行する管理システムのクラウド上にデータとして保有いたします。これに伴い、プライバシーポリシーを改訂しています。
+
 【2020年12月15日 プライバシーポリシー改定のお知らせ】
 
-これまで、接触確認アプリは、陽性である旨の登録がなされると、14日間遡って接触の可能性のある利用者に通知をする仕組みとなっていました。厚生労働省は、保健所が行う積極的疫学調査との整合性を図る観点から、これを改め、陽性となった利用者が発症日又は検査日を接触確認アプリに入力し、その約２日前以降（感染可能期間内）に陽性者と接触の可能性のある利用者に通知をするよう、接触確認アプリの修正版の配布を開始しました。これに伴い、プライバシーポリシーを改定しています。主な変更は以下のとおりです。
+これまで、本アプリは、陽性である旨の登録がなされると、14日間遡って接触の可能性のある利用者に通知をする仕組みとなっていました。厚生労働省は、保健所が行う積極的疫学調査との整合性を図る観点から、これを改め、陽性となった利用者が発症日又は検査日を本アプリに入力し、その約２日前以降（感染可能期間内）に陽性者と接触の可能性のある利用者に通知をするよう、本アプリの修正版の配布を開始しました。これに伴い、プライバシーポリシーを改定しています。主な変更は以下のとおりです。
 
- * 接触確認アプリの仕組みとして、陽性者が処理番号に加えて発症日又は検査日を入力し、その約２日前以降（感染可能期間内）に生成された日次鍵を通知サーバーに送信することにより、感染可能期間内にある陽性者との接触について通知する仕組みである旨を記載しました。
- * 厚生労働省が接触確認アプリを用いて取得する情報のうち、日次鍵については、感染可能期間内に生成されたもののみであることを明記しました。
- * 厚生労働省が、接触確認アプリに入力された発症日や検査日を取得したり、他のアプリ利用者に提供したりすることもないことを明記しました。
+ * 本アプリの仕組みとして、陽性者が処理番号に加えて発症日又は検査日を入力し、その約２日前以降（感染可能期間内）に生成された日次鍵を通知サーバーに送信することにより、感染可能期間内にある陽性者との接触について通知する仕組みである旨を記載しました。
+ * 厚生労働省が本アプリを用いて取得する情報のうち、日次鍵については、感染可能期間内に生成されたもののみであることを明記しました。
+ * 厚生労働省が、本アプリに入力された発症日や検査日を取得したり、他のアプリ利用者に提供したりすることもないことを明記しました。
 
 
 ○接触確認アプリケーションプライバシーポリシー
  
-厚生労働省は、接触確認アプリケーション（以下「本アプリ」といいます。）の提供に関し、適用ある法令を遵守するとともに、利用者のプライバシーの保護に最大限に配慮し、以下のポリシーにより、本アプリを提供します。
+厚生労働省は、本アプリの提供に関し、適用ある法令を遵守するとともに、利用者のプライバシーの保護に最大限に配慮し、以下のポリシーにより、本アプリを提供します。
  
 １ 本アプリの仕組み
 
@@ -31,7 +37,7 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_pp_00027.html
 
 ③ アプリ利用者及び近接した状態にある他のアプリ利用者がそれぞれのアプリ導入端末のBluetoothを起動している間に限り、Bluetoothを利用して、(i)自らのアプリ導入端末において生成され記録されている接触符号が、近接した状態にある他のアプリ利用者のアプリ導入端末に自動的に提供され、記録されるとともに、(ii)当該他のアプリ利用者のアプリ導入端末において生成され記録されている接触符号が、自らのアプリ導入端末に対して自動的に提供され、記録されます。
 
-④ アプリ利用者が、自らが陽性者（新型コロナウイルス感染症の陽性診断が確定した者をいいます。以下同じ。）であると判明した場合において、陽性者である旨をアプリにおいて登録する場合には、(i)(A)管理システム（新型コロナウイルスの陽性者及び濃厚接触者の情報を管理するため、厚生労働省が運用し、都道府県及び保健所設置市において利用される、新型コロナウイルス感染者等情報把握 * 管理支援システムをいいます。以下同じ。）に別途登録した自らの携帯電話番号又はメールアドレスに通知された処理番号（アプリ利用者が陽性者であると判明した場合に、管理システムから当該アプリ利用者に対して、ランダムに発行され、通知がされる無意かつ一時的な番号をいいます。以下同じ。）及び(B)当該陽性者に新型コロナウイルス感染症の症状がある場合は発症日、ない場合には検査日（発症日又は検査日の約２日前以降を「感染可能期間」とします。）を自らのアプリ導入端末に入力します。それにより、(ii)当該アプリ導入端末から通知サーバー（アプリ導入端末と連携して、アプリ利用者が必要事項に同意の上で端末から登録した日次鍵を管理し、一定の条件の下で当該日次鍵を他のアプリ利用者のアプリ導入端末に提供する機能を有する、厚生労働省が管理するサーバーをいいます。以下同じ。）を経由して管理システムに対し、入力された処理番号が陽性者に対して発行されたものであるか否かの照会が行われ、(iii)管理システムから通知サーバーに対し、当該照会された処理番号が陽性者に対して発行されたものであるか否かについての回答が行われます。
+④ アプリ利用者が、自らが陽性者（新型コロナウイルス感染症の陽性診断が確定した者をいいます。以下同じ。）であると判明した場合において、陽性者である旨をアプリにおいて登録する場合には、(i)(A)管理システム（新型コロナウイルスの陽性者及び濃厚接触者の情報を管理するため、厚生労働省が運用し、都道府県及び保健所設置市において利用される、新型コロナウイルス感染者等情報把握 * 管理支援システムをいいます。以下同じ。）に別途登録した自らの携帯電話番号又はメールアドレスに通知された処理番号（アプリ利用者が陽性者であると判明した場合に、管理システムから当該アプリ利用者に対して、ランダムに発行され、通知がされる無意な番号をいいます。以下同じ。）及び(B)当該陽性者に新型コロナウイルス感染症の症状がある場合は発症日、ない場合には検査日（発症日又は検査日の約２日前以降を「感染可能期間」とします。）を自らのアプリ導入端末に入力します。それにより、(ii)当該アプリ導入端末から通知サーバー（アプリ導入端末と連携して、アプリ利用者が必要事項に同意の上で端末から登録した日次鍵を管理し、一定の条件の下で当該日次鍵を他のアプリ利用者のアプリ導入端末に提供する機能を有する、厚生労働省が管理するサーバーをいいます。以下同じ。）を経由して管理システムに対し、入力された処理番号が陽性者に対して発行されたものであるか否かの照会が行われ、(iii)管理システムから通知サーバーに対し、当該照会された処理番号が陽性者に対して発行されたものであるか否かについての回答が行われます。
 
 ⑤ かかる照会の結果、当該照会された処理番号が陽性者に対して発行されたものである旨の回答が行われた場合は、陽性者自らのアプリ導入端末に記録された日次鍵（当該陽性者の感染可能期間内に生成されたものに限ります。）が、通知サーバーを経由して他のアプリ利用者のアプリ導入端末に自動的に提供され、当該他のアプリ利用者のアプリ導入端末において、最大で過去14日間分さかのぼって当該他のアプリ利用者のアプリ導入端末内に記録された接触符号の検索が自動的になされ、接触（概ね１メートル以内の距離で、15分以上の近接した状態をいいます。以下同じ。）にあたる接触符号の記録があることが判明した場合には、当該他のアプリ利用者のアプリ導入端末において、不特定の感染可能期間内にある陽性者との接触の可能性についての通知がされます。
  
@@ -58,7 +64,7 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_pp_00027.html
 
 (1) 処理番号
  * 厚生労働省は、本アプリにおいて陽性者でない者が陽性である旨の登録をすることを避けるために、厚生労働省が取得した２(1)①記載の陽性者の処理番号を使用します。すなわち、陽性者であるアプリ利用者が本アプリにおいて自ら陽性である旨の登録をする際に管理システムから当該陽性者に対して処理番号を発行の上通知し、陽性者がアプリ導入端末で処理番号を入力することにより厚生労働省の通知サーバーが取得した処理番号は、通知サーバーから管理システムに対する、入力された処理番号が陽性者に対して発行されたものであるか否かの照会に使用され、当該処理番号が陽性者に対して発行されたものであることが確認されてはじめて陽性である旨の登録が完了するという仕組みをとっています。
- * 厚生労働省は、かかる目的以外の用途には、取得した処理番号を用いません。処理番号は、入力された処理番号が陽性者に対して発行されたものであるか否かの確認が完了した後、アプリ、通知サーバー及び管理システムのそれぞれにおいて、直ちに削除されます。
+ * 処理番号は、入力された処理番号が陽性者に対して発行されたものであるか否かの確認が完了した後、管理システム内に保有します。
 
 (2) 日次鍵
  * 厚生労働省は、14日以内に感染可能期間内にある陽性者であるアプリ利用者と接触状態となったことのある可能性のある他のアプリ利用者に対してその旨を通知するために、厚生労働省が取得した２(1)②記載の陽性者の日次鍵（当該陽性者の感染可能期間内に生成されたものに限ります。以下、本(2)において同じ。）を使用します。すなわち、陽性者であるアプリ利用者の陽性登録完了により厚生労働省の通知サーバーが取得した陽性者の日次鍵が他のアプリ利用者のアプリ導入端末に提供され、当該端末内に記録された接触符号が自動的に検索された結果、接触にあたる接触符号があった場合に、当該他のアプリ利用者に対して感染可能期間内にある陽性者との接触可能性についての通知がなされるという仕組みをとっています。
@@ -101,23 +107,29 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_pp_00027.html
 
 ## English（英語）
 
-https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html
+ * https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html
+ * https://www.mhlw.go.jp/cocoa/privacypolicy_english.html
+
 
 ### Contact Confirmation Application Privacy Policy
 
+Notification of a Revision to the Privacy Policy on December 1, 2021
+
+The processing numbers required when a person who has tested positive for COVID-19 registers the result of his/her positive test in the contact confirmation application (hereinafter “the App”) have not been retained in the data after the positive registration or after the end of the expiration date previously. However, we have now changed this and shall retain processing numbers as data in the cloud of the management system that issues processing numbers to respond to inquiries. Accordingly, we have revised the privacy policy in line with this.
+
 Notification of a Revision to the Privacy Policy on December 15, 2020
 
-The contact confirmation application has until now employed a system that notifies users who may have been in contact with a person who has tested positive for COVID-19 over the past 14 days when a user registers that he/she has tested positive. The Ministry of Health, Labour and Welfare has now revised this from the perspective of ensuring consistency with the proactive epidemiological investigations conducted by health care centers. Therefore, we have started distributing a revised version of the contact confirmation application. In this version, a user who has tested positive for COVID-19 inputs the date of the onset of symptoms or the test date. The application then notifies users who may have been in contact with the said user who has tested positive for COVID-19 from approximately two days before that onward (within the infectable period). Accordingly, we have revised the privacy policy in line with this. The main changes are as follows.
+The App has until now employed a system that notifies users who may have been in contact with a person who has tested positive for COVID-19 over the past 14 days when a user registers that he/she has tested positive. The Ministry of Health, Labour and Welfare has now revised this from the perspective of ensuring consistency with the proactive epidemiological investigations conducted by health care centers. Therefore, we have started distributing a revised version of the App. In this version, a user who has tested positive for COVID-19 inputs the date of the onset of symptoms or the test date. The application then notifies users who may have been in contact with the said user who has tested positive for COVID-19 from approximately two days before that onward (within the infectable period). Accordingly, we have revised the privacy policy in line with this. The main changes are as follows.
 
-We have stated that there is a system which notifies users that they may have been in contact with a person who has tested positive for COVID-19 within the infectable period as the system of the contact confirmation application. We have stated that this system works by the person who has tested positive for COVID-19 inputting the date of the onset of symptoms or the test date in addition to the processing number and then sending the daily key generated from approximately two days before that onward (within the infectable period) to the notification server.
+We have stated that there is a system which notifies users that they may have been in contact with a person who has tested positive for COVID-19 within the infectable period as the system of the App. We have stated that this system works by the person who has tested positive for COVID-19 inputting the date of the onset of symptoms or the test date in addition to the processing number and then sending the daily key generated from approximately two days before that onward (within the infectable period) to the notification server.
 
-We have specified that this only applies to the daily key generated within the infectable period in the information obtained by the Ministry of Health, Labour and Welfare using the contact confirmation application.
-We have specified that the Ministry of Health, Labour and Welfare will not obtain or provide to other application users the date of the onset of symptoms or the test date input in the contact confirmation application.
+We have specified that this only applies to the daily key generated within the infectable period in the information obtained by the Ministry of Health, Labour and Welfare using the App.
+We have specified that the Ministry of Health, Labour and Welfare will not obtain or provide to other application users the date of the onset of symptoms or the test date input in the App.
  
  
 ○ Contact Confirmation Application Privacy Policy
  
-The Ministry of Health, Labour and Welfare is committed to complying with all applicable laws and regulations, and giving maximum consideration to users’ privacy, in the provision of the Contact Confirmation Application (“the App”). To that end, the App is provided in accordance with the following Privacy Policy.
+The Ministry of Health, Labour and Welfare is committed to complying with all applicable laws and regulations, and giving maximum consideration to users’ privacy, in the provision of the App. To that end, the App is provided in accordance with the following Privacy Policy.
  
 1 System of the App
 
@@ -127,7 +139,7 @@ B. In the App User’s App-Installed Device, a Contact Code (an identifier which
 
 C. Only when Bluetooth is enabled in the App-Installed Devices of the App User and another App User who is in a state of proximity with said App User, using Bluetooth, (i) the Contact Code generated and recorded in the App User’s own App-Installed Device is automatically provided to and recorded in the App-Installed Device of the other App User in a state of proximity with said App User, and (ii) the Contact Code generated and recorded in said other App User’s App-Installed Device is automatically provided to and recorded in the App User’s own App-Installed Device.
 
-D. In the event that the App User has determined that they are a Positive Tester (a person who has tested positive for COVID-19; the same applies hereinafter), when said App User registers that they are a Positive Tester in the App, (i) said App User inputs, to their own App-Installed Device, (A) a Processing Number (a temporary number without any special meaning, which is issued randomly and communicated to an App User from a Management System in the event that the App User has been determined to be a Positive Tester; the same applies hereinafter) sent to said App User’s mobile telephone number or email address, which has been registered separately with the Management System (a COVID-19 infected person information identification and management support system, operated by the Ministry of Health, Labour and Welfare and used by prefectures and cities where public health centers are located, for the purpose of managing information of Positive Testers for COVID-19 and people who have been in close contact with Positive Testers; the same applies hereinafter), and (B) the date of the onset of symptoms in the event the said Positive Tester has symptoms of COVID-19 or the test date in the event the said Positive Tester has no symptoms of COVID-19 (hereinafter the period from approximately two days before the date of the onset of symptoms or the test date onward shall be referred to as the “Infectable Period”), (ii) whether or not the input Processing Number is a Processing Number issued to a Positive Tester is verified with the Management System from said App User’s App-Installed Device via a Notification Server (a server, managed by the Ministry of Health, Labour and Welfare, which is linked to the App-Installed Device and which has a function for, when the App User has accepted necessary matters, managing the Daily Key registered from the App-Installed Device and providing said Daily Key to the App-Installed Device of another App User under a certain condition or conditions; the same applies hereinafter), and (iii) a response indicating whether or not the verified Processing Number is a Processing Number issued to a Positive Tester is provided to the Notification Server from the Management System.
+D. In the event that the App User has determined that they are a Positive Tester (a person who has tested positive for COVID-19; the same applies hereinafter), when said App User registers that they are a Positive Tester in the App, (i) said App User inputs, to their own App-Installed Device, (A) a Processing Number (a number without any special meaning, which is issued randomly and communicated to an App User from a Management System in the event that the App User has been determined to be a Positive Tester; the same applies hereinafter) sent to said App User’s mobile telephone number or email address, which has been registered separately with the Management System (a COVID-19 infected person information identification and management support system, operated by the Ministry of Health, Labour and Welfare and used by prefectures and cities where public health centers are located, for the purpose of managing information of Positive Testers for COVID-19 and people who have been in close contact with Positive Testers; the same applies hereinafter), and (B) the date of the onset of symptoms in the event the said Positive Tester has symptoms of COVID-19 or the test date in the event the said Positive Tester has no symptoms of COVID-19 (hereinafter the period from approximately two days before the date of the onset of symptoms or the test date onward shall be referred to as the “Infectable Period”), (ii) whether or not the input Processing Number is a Processing Number issued to a Positive Tester is verified with the Management System from said App User’s App-Installed Device via a Notification Server (a server, managed by the Ministry of Health, Labour and Welfare, which is linked to the App-Installed Device and which has a function for, when the App User has accepted necessary matters, managing the Daily Key registered from the App-Installed Device and providing said Daily Key to the App-Installed Device of another App User under a certain condition or conditions; the same applies hereinafter), and (iii) a response indicating whether or not the verified Processing Number is a Processing Number issued to a Positive Tester is provided to the Notification Server from the Management System.
 
 E. In the event where, as a result of said verification, a response indicating that the verified Processing Number is a Processing Number issued to a Positive Tester has been made, the Daily Key recorded in the App-Installed Device of the Positive Tester (only those generated within the Infectable Period of the said Positive Tester) is automatically provided to the App-Installed Device of said other App User via the Notification Server. In the App-Installed Device of said other App User, Contact Codes recorded in the App-Installed Device of said other App User within a maximum of the last 14 days are searched, and in the event where it is determined that a Contact Code equivalent to Contact (a state within which a person has been approximately 1 meter of another person for no less than 15 minutes; the same applies hereinafter) is recorded, a notification indicating that said other App User may have been in contact with an unspecified Positive Tester within the Infectable Period is made in the App-Installed Device of said other App User.
 
@@ -154,7 +166,7 @@ C. The operating information of the App necessary to improve the App in 1 above 
 
 (1) Processing Number
  * The Ministry of Health, Labour and Welfare uses the Processing Number of the Positive Tester, described in 2(1)A and obtained by the Ministry of Health, Labour and Welfare, to ensure that a person who uses the App but is not a Positive Tester is not registered as having tested positive. In other words, the system is such that a Processing Number, which has been obtained from the Notification Server of the Ministry of Health, Labour and Welfare by an App User who is a Positive Tester inputting the Processing Number in their App-Installed Device after the Processing Number has been issued to said Positive Tester from the Management System when said Positive Tester registers, in the App, that they are a Positive Tester, is used to verify whether or not the input Processing Number is a Processing Number that has been issued to a Positive Tester, and the Positive Tester is only registered as having tested positive upon it being confirmed that said Processing Number is a Processing Number that has been issued to a Positive Tester.
- * The Ministry of Health, Labour and Welfare will not use the obtained Processing Number for any purposes other than the stated purpose. The input Processing Number is deleted from the App, the Notification Server, and the Management System immediately upon completion of the confirmation as to whether or not the Processing Number has been issued for a Positive Tester.
+ * The Processing Number shall be retained in the Management System upon completion of the confirmation as to whether or not the input Processing Number has been issued for a Positive Tester.
 
 (2) Daily Key
  * The Ministry of Health, Labour and Welfare uses the Daily Key of the Positive Tester, described in 2(1)B and obtained by the Ministry of Health, Labour and Welfare (only those generated within the Infectable Period of the said Positive Tester; hereinafter the same in this section (2)), to notify another App User that they may have been in a state of Contact with an App User who is a Positive Tester within the Infectable Period in the previous 14 days. In other words, the system is such that the Daily Key of an App User who is a Positive Tester is obtained from the Notification Server of the Ministry of Health, Labour and Welfare upon said Positive Tester being registered as having tested positive and provided to the App-Installed Device of another App User, and in the event where an automatic search of Contact Codes recorded in said terminal has returned a Contact Code equivalent to Contact, a notification of potential Contact with a Positive Tester within the Infectable Period is provided to said other App User.
@@ -192,21 +204,26 @@ C. The operating information of the App necessary to improve the App in 1 above 
 ----
 
 ## 簡体中国語
-
-https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html
+ * https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html
+ * https://www.mhlw.go.jp/cocoa/privacypolicy_chinese.html
 
 ### 接触确认应用程序隐私保护方针
 
+【2021年12月1日　隐私保护方针修订通知】
+
+接触确认APP(以下简称“本APP”。)以往采取的机制是：在阳性者完成阳性登记之后或过期之后，则不再继续保存阳性者进行阳性登记时所需的受理编号，而本次，以应对用户的咨询等为目的，我们对其进行了修改，今后将在管理系统的云端上长期保存COCOA阳性登记所需的受理编号。为此我们修改了隐私保护方针。
+
 【2020年12月15日 隐私保护方针修订通知】
 
-接触确认APP以往采取的机制是：如某位使用者登记为阳性者，则通知过去14天内可能与其有过接触的其他使用者。为了配合保健所正在积极开展的流行病学调查，厚生劳动省从与流行病学调查保持吻合性的视角出发，开始发布APP修正版，改为由确认为阳性的使用者将其发病日或检查日输入到接触确认APP中，并通知在改日期的约2天前以后（感染可能期间内）有可能与该阳性者有过接触的使用者。为此，运营方对隐私保护方针做了修订。主要的变更点如下。
- * 明确注明，接触确认APP的运行机制改为：阳性者需要在受理编号的基础上输入发病日或检查日，并向通知服务器发送其约2天前以后（感染可能期间内）所生成的日更密钥，从而通知在感染可能期间内与该阳性者有过接触的APP使用者。
- * 明确注明，在厚生劳动省使用接触确认APP所获取的信息之中，只包括在感染可能期间内所生成的日更密钥。
- * 厚生劳动省还明确表示，不会获取阳性者在接触确认APP中输入的发病日或检查日，并将其提供给其他的APP使用者。
+如某位使用者登记为阳性者，则通知过去14天内可能与其有过接触的其他使用者。为了配合保健所正在积极开展的流行病学调查，厚生劳动省从与流行病学调查保持吻合性的视角出发，开始发布APP修正版，改为由确认为阳性的使用者将其发病日或检查日输入到本APP中，并通知在改日期的约2天前以后（感染可能期间内）有可能与该阳性者有过接触的使用者。为此，运营方对隐私保护方针做了修订。主要的变更点如下。
+
+ * 明确注明，本APP的运行机制改为：阳性者需要在受理编号的基础上输入发病日或检查日，并向通知服务器发送其约2天前以后（感染可能期间内）所生成的日更密钥，从而通知在感染可能期间内与该阳性者有过接触的APP使用者。
+ * 明确注明，在厚生劳动省使用本APP所获取的信息之中，只包括在感染可能期间内所生成的日更密钥。
+ * 厚生劳动省还明确表示，不会获取阳性者在本APP中输入的发病日或检查日，并将其提供给其他的APP使用者。
  
 ○接触确认应用程序隐私保护方针
 
-厚生劳动省在提供接触确认应用程序（以下简称“本APP”。）的过程中，应遵守其所适用的法律法规，最大限度地保护使用者的隐私，依据如下保护方针提供服务。
+在向使用者提供本APP的过程中，厚生劳动省应遵守其所适用的法律法规，最大限度地保护使用者的隐私，依据如下保护方针提供服务。
 
  
 １ 本APP的运行机制
@@ -217,7 +234,7 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html
 
 ③ APP使用者以及处于接近（在大约１米以内的距离保持15分以上的近距离接触的可能性较高的状态。下同。）状态的其他APP使用者各自启动其已安装APP的终端的蓝牙功能时，则使用蓝牙功能，(i)将自身的已安装APP的终端上所生成并记录的接触符号，自动提供给处于接近状态下的其他APP使用者的已安装APP的终端，并进行记录，(ii)将该其他APP使用者的已安装APP的终端上所生成并记录的接触符号自动提供至自身的已安装APP的终端中，并进行记录。
 
-④ APP使用者在查明自身为阳性者（确诊新型冠状病毒感染为阳性者。下同。）的情况下，如希望在APP中登记为阳性者，则执行如下事项：(i)将（A）在管理系统上（为了对新型冠状病毒的阳性者以及密切接触者的信息进行管理，而由厚生劳动省进行运营，用于都道府县以及设置保健所的市，对于新型冠状病毒感染者等信息进行掌握和管理的支援系统下同。）另行登录的自身手机号码或邮箱地址所接收到的受理编号（在查明某位APP使用者为阳性者的情况下，由管理系统向该APP使用者随机发行，进行通知的任意临时编号。下同。）以及(B)该阳性者有新冠病毒感染症状的情况下则将其发病日，没有新冠病毒感染症状的情况下则将其检查日（发病日或检查日的约2天前以后称为“感染可能期间”。）输入到自身的已安装APP的终端，从而(ii)该已安装APP的终端经由通知服务器（由厚生劳动省进行管理的具有如下功能的服务器：与已安装APP的终端进行联动，让APP使用者可以在同意必要事项的基础上对从终端上登录的日更密匙进行管理，并在一定的条件的下将该日更密匙提供给其他APP使用者的已安装APP的终端。下同。）前往管理系统查询，确认所输入的是否确为发行给该阳性者的受理编号，然后(iii)管理系统回答通知服务器，所查询的受理编号是否确为发行给该阳性者的受理编号。
+④ APP使用者在查明自身为阳性者（确诊新型冠状病毒感染为阳性者。下同。）的情况下，如希望在APP中登记为阳性者，则执行如下事项：(i)将（A）在管理系统上（为了对新型冠状病毒的阳性者以及密切接触者的信息进行管理，而由厚生劳动省进行运营，用于都道府县以及设置保健所的市，对于新型冠状病毒感染者等信息进行掌握和管理的支援系统下同。）另行登录的自身手机号码或邮箱地址所接收到的受理编号（在查明某位APP使用者为阳性者的情况下，由管理系统向该APP使用者随机发行，进行通知的任意编号。下同。）以及(B)该阳性者有新冠病毒感染症状的情况下则将其发病日，没有新冠病毒感染症状的情况下则将其检查日（发病日或检查日的约2天前以后称为“感染可能期间”。）输入到自身的已安装APP的终端，从而(ii)该已安装APP的终端经由通知服务器（由厚生劳动省进行管理的具有如下功能的服务器：与已安装APP的终端进行联动，让APP使用者可以在同意必要事项的基础上对从终端上登录的日更密匙进行管理，并在一定的条件的下将该日更密匙提供给其他APP使用者的已安装APP的终端。下同。）前往管理系统查询，确认所输入的是否确为发行给该阳性者的受理编号，然后(iii)管理系统回答通知服务器，所查询的受理编号是否确为发行给该阳性者的受理编号。
 
 ⑤ 相关查询的结果，如管理系统回答所查询的受理编号确为发行给该阳性者的受理编号，则记录于该阳性者自身的已安装APP的终端上的日更密匙（仅限在该阳性者的感染可能期间内所生成的日更密匙。）可以经由通知服务器自动提供至其他使用者的已安装APP的终端上，该其他使用者在其已安装APP的终端上最多可自动追溯搜索过去14天内该其他使用者的已安装APP的终端内所记录的接触符号，如查明存在符合接触状态（在大约１米以内的距离保持15分以上的接近状态。下同。）的接触符号记录，则该其他使用者的已安装APP的终端会收到可能与不特定的处于感染可能期间内的阳性者有过接触的通知。
  
@@ -245,7 +262,7 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html
 
 (1) 受理编号
  * 厚生劳动省为避免非阳性者在本APP中谎称阳性，将会使用在２(1)①中所获取的阳性者受理编号。换言之，所采用的运行机制如下：新型冠状病毒为阳性的APP使用者在本APP中将其自身登记为阳性时，管理系统会向该阳性者发行受理编号并进行通知，阳性者在已安装APP的终端上输入受理编号后，厚生劳动省的通知服务器所获取的受理编号将用于通知服务器向管理系统查询所输入的受理编号是否为向该阳性者发行的受理编号，确认该受理编号确为向该阳性者发行之后方可完成阳性者登记。
- * 厚生劳动省不会将所获取的受理编号用于原本目的之外的其他用途。在确认所输入受理编号是否为向该阳性者发行的受理编号之后，将立即在APP、通知服务器以及管理系统中分别删除该受理编号。
+ * 在确认所输入的受理编号是否为向该阳性者发行的受理编号之后，受理编号会被继续保存于系统内。
 
 (2) 日更密匙
  * 为了通知其他APP使用者其可能在14天内与处于感染可能期间内的阳性APP使用者有过接触，厚生劳动省会使用其所获取的２(1)②中所记载的阳性者的日更密匙（仅限在该阳性者的感染可能期间内所生成的日更密匙。在本(2)中下同。）。换言之，采用如下的运行机制：阳性APP使用者的阳性登记完成之后，厚生劳动省的通知服务器所获取的该阳性者的日更密匙将会提供至其他APP使用者的已安装APP的终端中，该终端内所记录的接触符号自动检索的结果，如存在符合接触状态的接触符号，该其他APP使用者会接到可能与处于感染可能期间内的阳性者有过接触的通知。
@@ -278,7 +295,7 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html
  
 ８ 业务委托
  * 厚生劳动省可能将本APP以及邮件服务台和呼叫中心的全部或部分业务委托给第三方（不仅包 括厚生劳动省的直接业务委托，还包括该业务受委托方所进行的二次委托。），并由该受托方负责处理通过本APP或通过邮件服务台和呼叫中心所获取的信息。此种情况下，厚生劳动省会对该受托方进行管理和监督，敦促其采取适当的安全管理措施。
- * 与厚生劳动省有业务委托关系，并且会处理通过本APP或通过邮件服务台和呼叫中心所获取的信息的受托方的详细信息，厚生劳动省将在接触确认APP的主页上进行公开。
+ * 与厚生劳动省有业务委托关系，并且会处理通过本APP或通过邮件服务台和呼叫中心所获取的信息的受托方的详细信息，厚生劳动省将在本APP的主页上进行公开。
  
 ９ 个人隐私问题的咨询方式
  * 本APP使用过程中涉及到个人隐私的相关问题的信息，将登载于本APP内或厚生劳动省的接触确认APP相关网站内，请向厚生劳动省指定的咨询窗口进行咨询。
