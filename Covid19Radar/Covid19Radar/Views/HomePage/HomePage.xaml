@@ -16,15 +16,6 @@
     NavigationPage.TitleIconImageSource="HeaderLogo.png"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            AutomationId="LabelMainTutorial"
-            Command="{prism:NavigateTo 'HelpMenuPage'}"
-            Order="Primary"
-            Priority="1"
-            Text="{x:Static resources:AppResources.MainTutorial}" />
-    </ContentPage.ToolbarItems>
-
     <ScrollView>
         <StackLayout
             Padding="15"

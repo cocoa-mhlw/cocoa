@@ -119,12 +119,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string MainTutorial {
-            get {
-                return ResourceManager.GetString("MainTutorial", resourceCulture);
-            }
-        }
-        
         public static string ExposuresPageExposureUnitPluralOnce {
             get {
                 return ResourceManager.GetString("ExposuresPageExposureUnitPluralOnce", resourceCulture);
@@ -314,6 +308,12 @@ namespace Covid19Radar.Resources {
         public static string HelpMenuPageTitle {
             get {
                 return ResourceManager.GetString("HelpMenuPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string HelpMenuPageMenu {
+            get {
+                return ResourceManager.GetString("HelpMenuPageMenu", resourceCulture);
             }
         }
         
@@ -1270,7 +1270,7 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("SendingError", resourceCulture);
             }
         }
-
+        
         public static string SuccessMessageToSaveOperatingInformationForAndroid {
             get {
                 return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid", resourceCulture);
@@ -1504,19 +1504,19 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("UrlWebAccessibilityPolicy", resourceCulture);
             }
         }
-
+        
         public static string SendLogCompletePageCopyId {
             get {
                 return ResourceManager.GetString("SendLogCompletePageCopyId", resourceCulture);
             }
         }
-
+        
         public static string SuccessMessageToCopyLogId {
             get {
                 return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
             }
         }
-
+        
         public static string HomePageENStatusActiveTitle {
             get {
                 return ResourceManager.GetString("HomePageENStatusActiveTitle", resourceCulture);
