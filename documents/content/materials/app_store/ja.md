@@ -2,6 +2,7 @@
 title: "日本語"
 weight: 10
 type: docs
+url: /materials/appstore/ja.html
 ---
 
 ## 日本語
