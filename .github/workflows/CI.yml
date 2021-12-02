@@ -7,11 +7,12 @@ on:
   push:
     branches: [ main, develop, 'feature/**' ]
     paths:
-      - 'Covid19Radar/**'
+      - '.github/workflows/CI.yml'
       - 'Covid19Radar.sln'
   pull_request:
     branches: [ main, develop, 'feature/**' ]
     paths:
+      - '.github/workflows/CI.yml'
       - 'Covid19Radar/**'
       - 'Covid19Radar.sln'
 jobs:
