@@ -2,18 +2,18 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="v1.3.0 - #   設定項目はAndroid/iOSプラットフォーム固有のKey-value storeに保存する（IPreferencesService） 接触情報はJSON形式に変換後、SecureStorageServiceを通じて暗号化された状態で格納されている 日付情報はUNIX Epoch（e.g. 1592528400）  保存内容 #  IPreferencesService #     キー 形式 保存内容     AppVersion 文字列 Preferenceが対応しているアプリのバージョン（e.g. 1.3.0）   StartDateTimeEpoch 数値（long） 利用開始日時のUNIX Epoch（e.g. 1592528400）   TermsOfServiceLastUpdateDateTimeEpoch 数値（long） 利用規約に合意した日時のUNIX Epoch（e.g. 1592528400）   PrivacyPolicyLastUpdateDateTimeEpoch 数値（long） プライバシーポリシーに合意した日時のUNIX Epoch（e.g. 1592528400）   ExposureNotificationConfiguration 文字列 JSON形式に変換されたXamarin.ExposureNotifications.Configuration   LastProcessTekTimestamp 文字列 JSON形式に変換されたDictionary<string, long> キーはRegion（e.g. 440）、数値はTEKのタイムスタンプ（e.g. 1632551138）   CanConfirmExposure Boolean 最後に試行した接触確認（診断キーのダウンロード・接触確認実行）が正常に完了したことを示すフラグ   LastConfirmedDateTimeEpoch 数値（long） 最後に   接触確認を完了した日時のUNIX Epoch（e.">
+<meta name=description content="v1.3.0 - #   設定項目はAndroid/iOSプラットフォーム固有のKey-value storeに保存する（IPreferencesService） 接触情報はJSON形式に変換後、SecureStorageServiceを通じて暗号化された状態で格納されている 日付情報はUNIX Epoch（e.g. 1592528400）  保存内容 #  IPreferencesService #     キー 形式 保存内容     AppVersion 文字列 Preferenceが対応しているアプリのバージョン（e.g. 1.3.0）   StartDateTimeEpoch 数値（long） 利用開始日時のUNIX Epoch（e.g. 1592528400）   TermsOfServiceLastUpdateDateTimeEpoch 数値（long） 利用規約に合意した日時のUNIX Epoch（e.g. 1592528400）   PrivacyPolicyLastUpdateDateTimeEpoch 数値（long） プライバシーポリシーに合意した日時のUNIX Epoch（e.g. 1592528400）   ExposureNotificationConfiguration 文字列 JSON形式に変換されたXamarin.ExposureNotifications.Configuration   LastProcessTekTimestamp 文字列 JSON形式に変換されたDictionary<string, long> キーはRegion（e.g. 440）、数値はTEKのタイムスタンプ（e.g. 1632551138）   CanConfirmExposure Boolean 最後に試行した接触確認（診断キーのダウンロード・接触確認実行）が正常に完了したことを示すフラグ   LastConfirmedDateTimeEpoch 数値（long） 最後に接触確認を完了した日時のUNIX Epoch（e.">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content="設定ファイルの仕様">
-<meta property="og:description" content="v1.3.0 - #   設定項目はAndroid/iOSプラットフォーム固有のKey-value storeに保存する（IPreferencesService） 接触情報はJSON形式に変換後、SecureStorageServiceを通じて暗号化された状態で格納されている 日付情報はUNIX Epoch（e.g. 1592528400）  保存内容 #  IPreferencesService #     キー 形式 保存内容     AppVersion 文字列 Preferenceが対応しているアプリのバージョン（e.g. 1.3.0）   StartDateTimeEpoch 数値（long） 利用開始日時のUNIX Epoch（e.g. 1592528400）   TermsOfServiceLastUpdateDateTimeEpoch 数値（long） 利用規約に合意した日時のUNIX Epoch（e.g. 1592528400）   PrivacyPolicyLastUpdateDateTimeEpoch 数値（long） プライバシーポリシーに合意した日時のUNIX Epoch（e.g. 1592528400）   ExposureNotificationConfiguration 文字列 JSON形式に変換されたXamarin.ExposureNotifications.Configuration   LastProcessTekTimestamp 文字列 JSON形式に変換されたDictionary<string, long> キーはRegion（e.g. 440）、数値はTEKのタイムスタンプ（e.g. 1632551138）   CanConfirmExposure Boolean 最後に試行した接触確認（診断キーのダウンロード・接触確認実行）が正常に完了したことを示すフラグ   LastConfirmedDateTimeEpoch 数値（long） 最後に   接触確認を完了した日時のUNIX Epoch（e.">
+<meta property="og:description" content="v1.3.0 - #   設定項目はAndroid/iOSプラットフォーム固有のKey-value storeに保存する（IPreferencesService） 接触情報はJSON形式に変換後、SecureStorageServiceを通じて暗号化された状態で格納されている 日付情報はUNIX Epoch（e.g. 1592528400）  保存内容 #  IPreferencesService #     キー 形式 保存内容     AppVersion 文字列 Preferenceが対応しているアプリのバージョン（e.g. 1.3.0）   StartDateTimeEpoch 数値（long） 利用開始日時のUNIX Epoch（e.g. 1592528400）   TermsOfServiceLastUpdateDateTimeEpoch 数値（long） 利用規約に合意した日時のUNIX Epoch（e.g. 1592528400）   PrivacyPolicyLastUpdateDateTimeEpoch 数値（long） プライバシーポリシーに合意した日時のUNIX Epoch（e.g. 1592528400）   ExposureNotificationConfiguration 文字列 JSON形式に変換されたXamarin.ExposureNotifications.Configuration   LastProcessTekTimestamp 文字列 JSON形式に変換されたDictionary<string, long> キーはRegion（e.g. 440）、数値はTEKのタイムスタンプ（e.g. 1632551138）   CanConfirmExposure Boolean 最後に試行した接触確認（診断キーのダウンロード・接触確認実行）が正常に完了したことを示すフラグ   LastConfirmedDateTimeEpoch 数値（long） 最後に接触確認を完了した日時のUNIX Epoch（e.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/docs/appendix/preference_specification/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-11-25T16:15:42+09:00">
+<meta property="article:modified_time" content="2021-12-02T15:02:42+09:00">
 <title>設定ファイルの仕様 | COCOA Open Source Project</title>
 <link rel=manifest href=/cocoa/manifest.json>
 <link rel=icon href=/cocoa/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
 <script defer src=/cocoa/flexsearch.min.js></script>
-<script defer src=/cocoa/en.search.min.ee25d6147e1dc1d3ed84e234435608848e15afc18b03ad5863b02d9f05fd74b2.js integrity="sha256-7iXWFH4dwdPthOI0Q1YIhI4Vr8GLA61YY7AtnwX9dLI=" crossorigin=anonymous></script>
+<script defer src=/cocoa/en.search.min.abb07aa381a558a8970b2c7a5ed162bb3b706172a2be5e8b6b305841d51dec7b.js integrity="sha256-q7B6o4GlWKiXCyx6XtFiuztwYXKivl6LazBYQdUd7Hs=" crossorigin=anonymous></script>
 </head>
 <body dir=ltr>
 <input type=checkbox class="hidden toggle" id=menu-control>
@@ -154,7 +154,8 @@ GitHubリポジトリ
 <ul>
 <li><a href=#v130-->v1.3.0 -</a></li>
 <li><a href=#v122---v126>v1.2.2 - v1.2.6</a></li>
-<li><a href=#v100---v121>v1.0.0 - v1.2.1</a></li>
+<li><a href=#v120---v121>v1.2.0 - v1.2.1</a></li>
+<li><a href=#v100---v115>v1.0.0 - v1.1.5</a></li>
 </ul>
 </li>
 </ul>
@@ -225,12 +226,7 @@ IPreferencesService
 <tr>
 <td>LastConfirmedDateTimeEpoch</td>
 <td>数値（long）</td>
-<td>最後に</td>
-</tr>
-<tr>
-<td>接触確認を完了した日時のUNIX Epoch（e.g. <code>1592528400</code>）</td>
-<td></td>
-<td></td>
+<td>最後に接触確認を完了した日時のUNIX Epoch（e.g. <code>1592528400</code>）</td>
 </tr>
 </tbody>
 </table>
@@ -264,12 +260,15 @@ v1.2.2 - v1.2.6
 <a class=anchor href=#v122---v126>#</a>
 </h3>
 <ul>
+<li>Application.PropertiesからPreferenceServiceへのマイグレーション</li>
 <li>設定項目はAndroid/iOSプラットフォーム固有のKey-value storeに保存する（<code>IPreferencesService</code>）</li>
 <li>接触情報はJSON形式に変換後、<code>SecureStorageService</code>を通じて暗号化された状態で格納されている</li>
 <li>日付情報はDateTimeをToString()した結果（e.g. <code>2020/06/19 10:00:00</code>）</li>
 <li>確認されている不具合
 <ul>
 <li>日付情報の文字列変換時にフォーマットを指定していないため、日時を保存後に端末に設定されている地域や言語が変わった場合、ただしく日付が復元できなくなることがある</li>
+<li>v1.1.5より前のバージョンで利用規約に合意していた（<code>UserDataModel.IsOptined</code>がtrue）場合、<code>TermsOfServiceLastUpdateDateTime</code>の値に <code>0001/01/01 00:00:00</code>が設定される。これは厳密には不具合ではなく仕様</li>
+<li>v1.1.5より前のバージョンでプライバシーポリシーに合意していた（<code>UserDataModel.IsPolicyAccepted</code>がtrue）ていて、v1.2.0でプライバシーポリシーの再同意を経ていない場合、<code>PrivacyPolicyLastUpdateDateTime</code>の値に <code>0001/01/01 00:00:00</code>が設定される。これは厳密には不具合ではなく仕様</li>
 </ul>
 </li>
 </ul>
@@ -337,9 +336,78 @@ ISecureStorageService
 </tr>
 </tbody>
 </table>
-<h3 id=v100---v121>
-v1.0.0 - v1.2.1
-<a class=anchor href=#v100---v121>#</a>
+<h3 id=v120---v121>
+v1.2.0 - v1.2.1
+<a class=anchor href=#v120---v121>#</a>
+</h3>
+<ul>
+<li>Application.Propertiesに保存（<code>IApplicationPropertyService</code>）
+<ul>
+<li>Xamarin.Forms固有のファイル永続化方式</li>
+<li>実体ファイルはBinary XML形式</li>
+</ul>
+</li>
+<li>設定項目と接触情報は <a href=https://github.com/cocoa-mhlw/cocoa/blob/develop/Covid19Radar/Covid19Radar/Model/UserDataModel.cs>UserDataModel</a> を、JSON形式に変換して保存されている</li>
+<li>日付情報はDateTimeをToString()した結果（e.g. <code>2020/06/19 10:00:00</code>）</li>
+<li>確認されている不具合
+<ul>
+<li>Application.Propertiesの特性上、複数スレッドから書き込みをするとデータが壊れる事象が発生</li>
+<li>Androidのバックグラウンド処理時に設定の読み書きができない事象が発生
+<ul>
+<li>仕様上、Xamarin.Formsが初期化されていないタイミングではApplication.Propertiesにアクセスできない</li>
+</ul>
+</li>
+<li>日付情報の文字列変換時にフォーマットを指定していないため、日時を保存後に端末に設定されている地域や言語が変わった場合、ただしく日付が復元できなくなることがある</li>
+<li>v1.1.5より前のバージョンで利用規約に合意していた（<code>UserDataModel.IsOptined</code>がtrue）場合、<code>TermsOfServiceLastUpdateDateTime</code>のキーは作成されない。これは厳密には不具合ではなく仕様
+<ul>
+<li>v1.2.0からv1.2.1が運用されている期間内に、利用規約の再同意プロセスが利用されたことがないため</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id=保存内容-2>
+保存内容
+<a class=anchor href=#%e4%bf%9d%e5%ad%98%e5%86%85%e5%ae%b9-2>#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>形式</th>
+<th>保存内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UserData</td>
+<td>文字列</td>
+<td>JSON形式に変換されたUserDataModel</td>
+</tr>
+<tr>
+<td>TermsOfServiceLastUpdateDateTime</td>
+<td>文字列</td>
+<td>利用規約に合意した日時（JST） - <code>2020/06/19 10:00:00</code></td>
+</tr>
+<tr>
+<td>PrivacyPolicyLastUpdateDateTime</td>
+<td>文字列</td>
+<td>プライバシーポリシーに合意した日時（JST） - <code>2020/06/19 10:00:00</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>public class UserDataModel
+{
+    public DateTime StartDateTime { get; set; }
+    public bool IsOptined { get; set; } = false;
+    public bool IsPolicyAccepted { get; set; } = false;
+    public Dictionary&lt;string, long&gt; LastProcessTekTimestamp { get; set; } = new Dictionary&lt;string, long&gt;();
+    public ObservableCollection&lt;UserExposureInfo&gt; ExposureInformation { get; set; } = new ObservableCollection&lt;UserExposureInfo&gt;();
+    public UserExposureSummary ExposureSummary { get; set; }
+}
+</code></pre><h3 id=v100---v115>
+v1.0.0 - v1.1.5
+<a class=anchor href=#v100---v115>#</a>
 </h3>
 <ul>
 <li>Application.Propertiesに保存（<code>IApplicationPropertyService</code>）
@@ -362,9 +430,9 @@ v1.0.0 - v1.2.1
 </ul>
 </li>
 </ul>
-<h4 id=保存内容-2>
+<h4 id=保存内容-3>
 保存内容
-<a class=anchor href=#%e4%bf%9d%e5%ad%98%e5%86%85%e5%ae%b9-2>#</a>
+<a class=anchor href=#%e4%bf%9d%e5%ad%98%e5%86%85%e5%ae%b9-3>#</a>
 </h4>
 <table>
 <thead>
@@ -409,7 +477,8 @@ v1.0.0 - v1.2.1
 <ul>
 <li><a href=#v130-->v1.3.0 -</a></li>
 <li><a href=#v122---v126>v1.2.2 - v1.2.6</a></li>
-<li><a href=#v100---v121>v1.0.0 - v1.2.1</a></li>
+<li><a href=#v120---v121>v1.2.0 - v1.2.1</a></li>
+<li><a href=#v100---v115>v1.0.0 - v1.1.5</a></li>
 </ul>
 </li>
 </ul>
