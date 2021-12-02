@@ -71,9 +71,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SettingsPageButton1 {
+        public static string SettingsPageLicenseButton {
             get {
-                return ResourceManager.GetString("SettingsPageButton1", resourceCulture);
+                return ResourceManager.GetString("SettingsPageLicenseButton", resourceCulture);
             }
         }
         
@@ -251,39 +251,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SettingsPageLabel1 {
+        public static string SettingsPageReinitializeLabel {
             get {
-                return ResourceManager.GetString("SettingsPageLabel1", resourceCulture);
+                return ResourceManager.GetString("SettingsPageReinitializeLabel", resourceCulture);
             }
         }
         
-        public static string SettingsPageDescription1 {
+        public static string SettingsPageReinitializeDescription {
             get {
-                return ResourceManager.GetString("SettingsPageDescription1", resourceCulture);
-            }
-        }
-        
-        public static string SettingsPageLabel2 {
-            get {
-                return ResourceManager.GetString("SettingsPageLabel2", resourceCulture);
-            }
-        }
-        
-        public static string SettingsPageDescription2 {
-            get {
-                return ResourceManager.GetString("SettingsPageDescription2", resourceCulture);
-            }
-        }
-        
-        public static string SettingsPageLabel3 {
-            get {
-                return ResourceManager.GetString("SettingsPageLabel3", resourceCulture);
-            }
-        }
-        
-        public static string SettingsPageDescription3 {
-            get {
-                return ResourceManager.GetString("SettingsPageDescription3", resourceCulture);
+                return ResourceManager.GetString("SettingsPageReinitializeDescription", resourceCulture);
             }
         }
         

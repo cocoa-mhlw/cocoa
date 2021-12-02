@@ -76,7 +76,7 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>設定</value>
-    <comment>アプリの設定</comment>
+    <comment>設定</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>キャンセル</value>
@@ -96,8 +96,8 @@
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
-    <value>使用中止</value>
-    <comment>使用中止</comment>
+    <value>アプリを初期化</value>
+    <comment>アプリを初期化</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>プライバシーポリシー</value>
@@ -442,33 +442,17 @@
     <value>メニュー</value>
     <comment>メニュー</comment>
   </data>
-  <data name="SettingsPageButton1" xml:space="preserve">
-    <value>ライセンス…</value>
-    <comment>ライセンス…</comment>
+  <data name="SettingsPageLicenseButton" xml:space="preserve">
+    <value>ライセンス表記</value>
+    <comment>ライセンス表記</comment>
   </data>
-  <data name="SettingsPageLabel1" xml:space="preserve">
-    <value>接触の検出</value>
-    <comment>接触の検出</comment>
+  <data name="SettingsPageReinitializeLabel" xml:space="preserve">
+    <value>アプリを初期化する</value>
+    <comment>アプリを初期化する</comment>
   </data>
-  <data name="SettingsPageDescription1" xml:space="preserve">
-    <value>Bluetoothによる接触の検知</value>
-    <comment>Bluetoothによる接触の検知</comment>
-  </data>
-  <data name="SettingsPageLabel2" xml:space="preserve">
-    <value>通知</value>
-    <comment>通知</comment>
-  </data>
-  <data name="SettingsPageDescription2" xml:space="preserve">
-    <value>陽性者との接触通知</value>
-    <comment>陽性者との接触通知</comment>
-  </data>
-  <data name="SettingsPageLabel3" xml:space="preserve">
-    <value>アプリの使用中止</value>
-    <comment>アプリの使用中止</comment>
-  </data>
-  <data name="SettingsPageDescription3" xml:space="preserve">
-    <value>使用を中止して過去14日間の接触履歴を消去</value>
-    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
+  <data name="SettingsPageReinitializeDescription" xml:space="preserve">
+    <value>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</value>
+    <comment>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</comment>
   </data>
   <data name="HomePageDescription0" xml:space="preserve">
     <value>利用開始から</value>
@@ -487,8 +471,8 @@
     <comment>同意内容</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
-    <value>Version</value>
-    <comment>バージョン</comment>
+    <value>アプリバージョン</value>
+    <comment>アプリバージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
     <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
