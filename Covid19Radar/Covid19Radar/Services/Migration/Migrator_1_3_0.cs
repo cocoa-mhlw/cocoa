@@ -17,6 +17,7 @@ namespace Covid19Radar.Services.Migration
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
 
         private readonly TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
+        private readonly DateTime FALLBACK_DATETIME = new DateTime(2020, 6, 19);
 
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
@@ -65,7 +66,7 @@ namespace Covid19Radar.Services.Migration
 
         private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeZoneInfo? timeZoneInfo, DateTime fallbackDateTime)
         {
-            string dateTimeStr = _preferencesService.GetValue(dateTimeKey, DateTime.UtcNow.ToString());
+            string dateTimeStr = _preferencesService.GetValue(dateTimeKey, fallbackDateTime.ToString());
 
             DateTime dateTime;
             try
@@ -95,6 +96,7 @@ namespace Covid19Radar.Services.Migration
                 _loggerService.Exception($"Parse dateTime FormatException occurred. {dateTimeStr}", exception);
                 dateTime = fallbackDateTime;
             }
+
             _preferencesService.SetValue(epochKey, dateTime.ToUnixEpoch());
             _preferencesService.RemoveValue(dateTimeKey);
         }

@@ -3,7 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.ComponentModel;
-using Xamarin.Forms;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.Model
 {
@@ -26,10 +26,7 @@ namespace Covid19Radar.Model
                     OnPropertyChanged("IconColor");
                 }
             }
-            get
-            {
-                return iconColor;
-            }
+            get => iconColor;
         }
         public string TextColor
         {
@@ -41,11 +38,10 @@ namespace Covid19Radar.Model
                     OnPropertyChanged("TextColor");
                 }
             }
-            get
-            {
-                return textColor;
-            }
+            get => textColor;
         }
+
+        public string ReadText => $"{Title} {AppResources.Button}";
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
