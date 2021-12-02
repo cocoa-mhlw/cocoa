@@ -904,12 +904,12 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
-            var termsOfServiceLastUpdateDateUtc = JstToUtc(AppConstants.COCOA_FIRST_RELEASE_DATE);
+            var termsOfServiceLastUpdateDateUtc = JstToUtc(new DateTime());
             Assert.Equal(termsOfServiceLastUpdateDateUtc.ToUnixEpoch(), termsOfServiceLastUpdateDateTimePref);
 
             // PrivacyPolicyLastUpdateDateTime
             var privacyPolicyLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch, 0L);
-            var privacyPolicyLastUpdateDateUtc = JstToUtc(AppConstants.COCOA_FIRST_RELEASE_DATE);
+            var privacyPolicyLastUpdateDateUtc = JstToUtc(new DateTime());
             Assert.Equal(privacyPolicyLastUpdateDateUtc.ToUnixEpoch(), privacyPolicyLastUpdateDateTimePref);
 
             // LastProcessTekTimestamp

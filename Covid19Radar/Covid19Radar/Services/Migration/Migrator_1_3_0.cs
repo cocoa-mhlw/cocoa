@@ -17,7 +17,6 @@ namespace Covid19Radar.Services.Migration
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
 
         private readonly TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
-        private readonly DateTime FALLBACK_DATETIME = new DateTime(2020, 6, 19);
 
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
@@ -68,16 +67,13 @@ namespace Covid19Radar.Services.Migration
         {
             string dateTimeStr = _preferencesService.GetValue(dateTimeKey, fallbackDateTime.ToString());
 
+            /// **Note**
+            /// `dateTime` still can be `0001/01/01 00:00:00` (= UNIX Epoch:`-62135596800`).
+            /// For compatibility reasons, do not change this behavior.
             DateTime dateTime;
             try
             {
                 dateTime = DateTime.Parse(dateTimeStr);
-
-                // dateTime must be after COCOA_FIRST_RELEASE_DATE.
-                if (dateTime < AppConstants.COCOA_FIRST_RELEASE_DATE)
-                {
-                    dateTime = AppConstants.COCOA_FIRST_RELEASE_DATE;
-                }
 
                 if (timeZoneInfo is null)
                 {
