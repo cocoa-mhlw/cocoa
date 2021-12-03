@@ -25,7 +25,7 @@ namespace Covid19Radar.UnitTests.Services
         private readonly Mock<IExposureConfigurationRepository> exposureConfigurationRepository;
         private readonly Mock<ILoggerService> loggerService;
         private readonly Mock<IUserDataRepository> userDataRepository;
-        private readonly IMock<IServerConfigurationRepository> serverConfigurationRepository;
+        private readonly Mock<IServerConfigurationRepository> serverConfigurationRepository;
 
 
         #endregion
@@ -67,12 +67,27 @@ namespace Covid19Radar.UnitTests.Services
         #region ExposureDetectionAsync()
 
         [Fact]
-        public void ExposureDetectionAsync_Success()
+        public async Task ExposureDetectionAsync_NoNewDiagnosisKeyFoundAsync()
         {
-            //var unitUnderTest = CreateService();
-            //unitUnderTest.ExposureDetectionAsync();
+            var unitUnderTest = CreateService();
 
-            Assert.True(true);
+            serverConfigurationRepository.Setup(x => x.Regions).Returns(new string[] { "440" });
+            serverConfigurationRepository.Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>())).Returns("https://example.com");
+            exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
+            exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList = new List<DiagnosisKeyEntry>() {
+                new DiagnosisKeyEntry() {
+                   Region = 0,
+                   Url = "",
+                   Created = 0L
+                }
+            };
+            diagnosisKeyRepository.Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(diagnosisKeyEntryList));
+            userDataRepository.Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>())).Returns(Task.FromResult(0L));
+
+            await unitUnderTest.ExposureDetectionAsync();
+
+            Assert.Equal<int>(0, exposureNotificationApiService.ProvideDiagnosisKeysAsync_CallCount);
         }
 
         #endregion
@@ -89,7 +104,7 @@ namespace Covid19Radar.UnitTests.Services
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-             IServerConfigurationRepository serverConfigurationRepository
+            IServerConfigurationRepository serverConfigurationRepository
         ) : base(
             diagnosisKeyRepository,
             exposureNotificationApiService,
@@ -120,17 +135,18 @@ namespace Covid19Radar.UnitTests.Services
 
         public override Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
         {
-            throw new NotImplementedException();
+            IList<ExposureNotificationStatus> statusList  = new List<ExposureNotificationStatus>();
+            return Task.FromResult(statusList);
         }
 
         public override Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
         {
-            throw new NotImplementedException();
+            return Task.FromResult(new List<TemporaryExposureKey>());
         }
 
         public override Task<long> GetVersionAsync()
         {
-            throw new NotImplementedException();
+            return Task.FromResult(0L);
         }
 
         public override Task<bool> IsEnabledAsync()
@@ -143,9 +159,12 @@ namespace Covid19Radar.UnitTests.Services
             throw new NotImplementedException();
         }
 
+        public int ProvideDiagnosisKeysAsync_CallCount = 0;
+
         public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, CancellationTokenSource cancellationTokenSource = null)
         {
-            throw new NotImplementedException();
+            ProvideDiagnosisKeysAsync_CallCount += 1;
+            return Task.FromResult(ProvideDiagnosisKeysResult.NoDiagnosisKeyFound);
         }
 
         public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, string token, CancellationTokenSource cancellationTokenSource = null)
