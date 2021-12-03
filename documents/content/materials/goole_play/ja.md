@@ -2,6 +2,7 @@
 title: "日本語"
 weight: 10
 type: docs
+url: /materials/googleplay/ja.html
 ---
 
 https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar&hl=ja
