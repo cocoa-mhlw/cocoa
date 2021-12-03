@@ -11,6 +11,7 @@ using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.Services
 {
@@ -112,7 +113,7 @@ namespace Covid19Radar.Services
 
         private string PrepareDir(string region)
         {
-            var cacheDir = FileSystem.CacheDirectory;
+            var cacheDir = AppUtils.CacheDirectory;
 
             var baseDir = Path.Combine(cacheDir, DIAGNOSIS_KEYS_DIR);
             if (!Directory.Exists(baseDir))

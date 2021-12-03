@@ -67,7 +67,7 @@ namespace Covid19Radar.UnitTests.Services
         #region ExposureDetectionAsync()
 
         [Fact]
-        public async Task ExposureDetectionAsync_NoNewDiagnosisKeyFoundAsync()
+        public async Task ExposureDetectionAsync_NoNewDiagnosisKeyFound()
         {
             var unitUnderTest = CreateService();
 
@@ -75,13 +75,7 @@ namespace Covid19Radar.UnitTests.Services
             serverConfigurationRepository.Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>())).Returns("https://example.com");
             exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
             exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
-            IList<DiagnosisKeyEntry> diagnosisKeyEntryList = new List<DiagnosisKeyEntry>() {
-                new DiagnosisKeyEntry() {
-                   Region = 0,
-                   Url = "",
-                   Created = 0L
-                }
-            };
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList = new List<DiagnosisKeyEntry>();
             diagnosisKeyRepository.Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(diagnosisKeyEntryList));
             userDataRepository.Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>())).Returns(Task.FromResult(0L));
 
@@ -90,9 +84,39 @@ namespace Covid19Radar.UnitTests.Services
             Assert.Equal<int>(0, exposureNotificationApiService.ProvideDiagnosisKeysAsync_CallCount);
         }
 
-        #endregion
+        public async Task ExposureDetectionAsync_NewDiagnosisKeyFound()
+        {
+            var unitUnderTest = CreateService();
 
-        #endregion
+            serverConfigurationRepository.Setup(x => x.Regions).Returns(new string[] { "440" });
+            serverConfigurationRepository.Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>())).Returns("https://example.com");
+            exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
+            exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList = new List<DiagnosisKeyEntry>() {
+                new DiagnosisKeyEntry
+                {
+                    Region = 440,
+                    Url = "https://example.com",
+                    Created = 0
+                }
+            };
+            diagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList));
+            userDataRepository
+                .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
+                .Returns(Task.FromResult(0L));
+            diagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(It.IsAny<DiagnosisKeyEntry>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult("filePath"));
+
+            await unitUnderTest.ExposureDetectionAsync();
+
+            Assert.Single(exposureNotificationApiService.ProvideDiagnosisKeysAsync_Args.keyFiles);
+        }
+    #endregion
+
+    #endregion
     }
 
     #region Test Target (Mock)
@@ -160,7 +184,7 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         public int ProvideDiagnosisKeysAsync_CallCount = 0;
-
+        public (List<string> keyFiles, ExposureConfiguration configuration, CancellationTokenSource cancellationTokenSource) ProvideDiagnosisKeysAsync_Args;
         public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, CancellationTokenSource cancellationTokenSource = null)
         {
             ProvideDiagnosisKeysAsync_CallCount += 1;
