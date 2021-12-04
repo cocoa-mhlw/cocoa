@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Chino;
 using System.Threading;
+using System.Linq;
+using System.IO;
 
 namespace Covid19Radar.UnitTests.Services
 {
@@ -21,7 +23,8 @@ namespace Covid19Radar.UnitTests.Services
 
         private readonly MockRepository mockRepository;
         private readonly Mock<IDiagnosisKeyRepository> diagnosisKeyRepository;
-        private readonly ExposureNotificationApiServiceMock exposureNotificationApiService;
+        //private readonly ExposureNotificationApiServiceMock exposureNotificationApiService;
+        private readonly Mock<AbsExposureNotificationApiService> exposureNotificationApiService;
         private readonly Mock<IExposureConfigurationRepository> exposureConfigurationRepository;
         private readonly Mock<ILoggerService> loggerService;
         private readonly Mock<IUserDataRepository> userDataRepository;
@@ -37,7 +40,7 @@ namespace Covid19Radar.UnitTests.Services
             mockRepository = new MockRepository(MockBehavior.Default);
             diagnosisKeyRepository = mockRepository.Create<IDiagnosisKeyRepository>();
             loggerService = mockRepository.Create<ILoggerService>();
-            exposureNotificationApiService = new ExposureNotificationApiServiceMock(loggerService.Object);
+            exposureNotificationApiService = new Mock<AbsExposureNotificationApiService>(loggerService.Object);//new ExposureNotificationApiServiceMock(loggerService.Object);
             exposureConfigurationRepository = mockRepository.Create<IExposureConfigurationRepository>();
             userDataRepository = mockRepository.Create<IUserDataRepository>();
             serverConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
@@ -52,12 +55,36 @@ namespace Covid19Radar.UnitTests.Services
 
             return new ExposureDetectionBackgroundServiceMock(
                 diagnosisKeyRepository.Object,
-                exposureNotificationApiService,
+                exposureNotificationApiService.Object,
                 exposureConfigurationRepository.Object,
                 loggerService.Object,
                 userDataRepository.Object,
                 serverConfigurationRepository.Object
                 );
+        }
+
+        private IList<DiagnosisKeyEntry> CreateMultipleDiagnosisKeyEntryList(int region)
+        {
+            return new List<DiagnosisKeyEntry>() {
+                new DiagnosisKeyEntry
+                {
+                    Region = region,
+                    Url = "https://example.com/1.zip",
+                    Created = 1638543600 // 2021/12/04 00:00:00
+                },
+                new DiagnosisKeyEntry
+                {
+                    Region = region,
+                    Url = "https://example.com/2.zip",
+                    Created = 1638630000 // 2021/12/05 00:00:00
+                },
+                new DiagnosisKeyEntry
+                {
+                    Region = region,
+                    Url = "https://example.com/3.zip",
+                    Created = 1638457200 // 2021/12/03 00:00:00
+                }
+            };
         }
 
         #endregion
@@ -69,54 +96,185 @@ namespace Covid19Radar.UnitTests.Services
         [Fact]
         public async Task ExposureDetectionAsync_NoNewDiagnosisKeyFound()
         {
-            var unitUnderTest = CreateService();
-
-            serverConfigurationRepository.Setup(x => x.Regions).Returns(new string[] { "440" });
-            serverConfigurationRepository.Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>())).Returns("https://example.com");
-            exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
-            exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
+            // Test Data
             IList<DiagnosisKeyEntry> diagnosisKeyEntryList = new List<DiagnosisKeyEntry>();
-            diagnosisKeyRepository.Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(diagnosisKeyEntryList));
-            userDataRepository.Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>())).Returns(Task.FromResult(0L));
 
-            await unitUnderTest.ExposureDetectionAsync();
-
-            Assert.Equal<int>(0, exposureNotificationApiService.ProvideDiagnosisKeysAsync_CallCount);
-        }
-
-        public async Task ExposureDetectionAsync_NewDiagnosisKeyFound()
-        {
-            var unitUnderTest = CreateService();
-
-            serverConfigurationRepository.Setup(x => x.Regions).Returns(new string[] { "440" });
-            serverConfigurationRepository.Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>())).Returns("https://example.com");
-            exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
-            exposureConfigurationRepository.Setup(x => x.GetExposureConfigurationAsync()).Returns(Task.FromResult(new ExposureConfiguration()));
-            IList<DiagnosisKeyEntry> diagnosisKeyEntryList = new List<DiagnosisKeyEntry>() {
-                new DiagnosisKeyEntry
-                {
-                    Region = 440,
-                    Url = "https://example.com",
-                    Created = 0
-                }
-            };
+            // Mock Setup
+            serverConfigurationRepository
+                .Setup(x => x.Regions)
+                .Returns(new string[] { "440" });
+            serverConfigurationRepository
+                .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
+                .Returns("https://example.com");
+            exposureConfigurationRepository
+                .Setup(x => x.GetExposureConfigurationAsync())
+                .Returns(Task.FromResult(new ExposureConfiguration()));
             diagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(diagnosisKeyEntryList));
             userDataRepository
                 .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
                 .Returns(Task.FromResult(0L));
-            diagnosisKeyRepository
-                .Setup(x => x.DownloadDiagnosisKeysAsync(It.IsAny<DiagnosisKeyEntry>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.FromResult("filePath"));
 
+
+            // Test Case
+            var unitUnderTest = CreateService();
             await unitUnderTest.ExposureDetectionAsync();
 
-            Assert.Single(exposureNotificationApiService.ProvideDiagnosisKeysAsync_Args.keyFiles);
-        }
-    #endregion
 
-    #endregion
+            // Assert
+            exposureNotificationApiService
+                .Verify(x => x.ProvideDiagnosisKeysAsync(
+                                It.IsAny<List<string>>(),
+                                It.IsAny<ExposureConfiguration>(),
+                                It.IsAny<CancellationTokenSource>()), Times.Never);
+        }
+
+        [Fact]
+        public async Task ExposureDetectionAsync_NewDiagnosisKeyFound()
+        {
+            // Test Data
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList = CreateMultipleDiagnosisKeyEntryList(440);
+
+            ExposureConfiguration exposureConfiguration = new ExposureConfiguration();
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
+            // Create Tmp Files
+            var tempPath = Path.GetTempPath();
+
+            // Mock Setup
+            diagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList));
+            diagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                    It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/1.zip"),
+                    It.IsAny<string>(),
+                    It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/1"));
+            diagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                    It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/2.zip"),
+                    It.IsAny<string>(),
+                    It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/2"));
+         
+            diagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/3.zip"),
+                     It.IsAny<string>(),
+                     It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/3"));
+
+            serverConfigurationRepository
+                .Setup(x => x.Regions)
+                .Returns(new string[] { "440" });
+            serverConfigurationRepository
+                .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
+                .Returns("https://example.com");
+
+            exposureConfigurationRepository
+                .Setup(x => x.GetExposureConfigurationAsync())
+                .Returns(Task.FromResult(exposureConfiguration));
+
+            userDataRepository
+                .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
+                .Returns(Task.FromResult(0L));
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectionAsync(cancellationTokenSource);
+
+
+            // Assert
+            exposureNotificationApiService
+                .Verify(x => x.ProvideDiagnosisKeysAsync(
+                                It.Is<List<string>>( s => s.SequenceEqual(new List<string>() { $"{tempPath}/diagnosis_keys/440/1", $"{tempPath}/diagnosis_keys/440/2", $"{tempPath}/diagnosis_keys/440/3" })),
+                                It.Is<ExposureConfiguration>(s => s.Equals(exposureConfiguration)),
+                                It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Once);
+            userDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", 1638630000), Times.Once);
+        }
+
+        [Fact]
+        public async Task ExposureDetectionAsync_MultiRegion()
+        {
+            // Test Data
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList440 = CreateMultipleDiagnosisKeyEntryList(440);
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList540 = CreateMultipleDiagnosisKeyEntryList(540);
+
+            ExposureConfiguration exposureConfiguration = new ExposureConfiguration();
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
+            // Mock Setup
+            diagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList440));
+            diagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList540));
+            diagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                    It.IsAny<DiagnosisKeyEntry>(),
+                    It.IsAny<string>(),
+                    It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult("DLFile"));
+
+            serverConfigurationRepository
+                .Setup(x => x.Regions)
+                .Returns(new string[] { "440", "540" });
+            serverConfigurationRepository
+                .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
+                .Returns("https://example.com");
+
+            exposureConfigurationRepository
+                .Setup(x => x.GetExposureConfigurationAsync())
+                .Returns(Task.FromResult(exposureConfiguration));
+
+            userDataRepository
+                .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
+                .Returns(Task.FromResult(0L));
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectionAsync(cancellationTokenSource);
+
+
+            // Assert
+            serverConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("440"), Times.Once);
+            serverConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("540"), Times.Once);
+
+            userDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("440"), Times.Once);
+            userDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("540"), Times.Once);
+
+            exposureNotificationApiService
+                .Verify(x => x.ProvideDiagnosisKeysAsync(
+                                It.Is<List<string>>(s => s.SequenceEqual(new List<string>() { "DLFile", "DLFile", "DLFile" })),
+                                It.Is<ExposureConfiguration>(s => s.Equals(exposureConfiguration)),
+                                It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Exactly(2));
+
+            userDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", 1638630000), Times.Once);
+            userDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("540", 1638630000), Times.Once);
+        }
+
+        [Fact]
+        public async Task ExposureDetectionAsync_FileRemoved()
+        {
+
+        }
+
+        [Fact]
+        public async Task ExposureDetectionAsync_ExceptionFileRemoved()
+        {
+
+        }
+
+        #endregion
+        #endregion
     }
 
     #region Test Target (Mock)
@@ -143,75 +301,6 @@ namespace Covid19Radar.UnitTests.Services
 
 
         public override void Schedule()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    class ExposureNotificationApiServiceMock : AbsExposureNotificationApiService
-    {
-        public ExposureNotificationApiServiceMock(
-            ILoggerService loggerService
-        ) : base(loggerService)
-        {
-
-        }
-
-        public override Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
-        {
-            IList<ExposureNotificationStatus> statusList  = new List<ExposureNotificationStatus>();
-            return Task.FromResult(statusList);
-        }
-
-        public override Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
-        {
-            return Task.FromResult(new List<TemporaryExposureKey>());
-        }
-
-        public override Task<long> GetVersionAsync()
-        {
-            return Task.FromResult(0L);
-        }
-
-        public override Task<bool> IsEnabledAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(List<string> keyFiles, CancellationTokenSource cancellationTokenSource = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int ProvideDiagnosisKeysAsync_CallCount = 0;
-        public (List<string> keyFiles, ExposureConfiguration configuration, CancellationTokenSource cancellationTokenSource) ProvideDiagnosisKeysAsync_Args;
-        public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, CancellationTokenSource cancellationTokenSource = null)
-        {
-            ProvideDiagnosisKeysAsync_CallCount += 1;
-            return Task.FromResult(ProvideDiagnosisKeysResult.NoDiagnosisKeyFound);
-        }
-
-        public override Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(List<string> keyFiles, ExposureConfiguration configuration, string token, CancellationTokenSource cancellationTokenSource = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Task RequestPreAuthorizedTemporaryExposureKeyReleaseAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Task StartAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Task StopAsync()
         {
             throw new NotImplementedException();
         }
