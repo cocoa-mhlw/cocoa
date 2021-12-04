@@ -23,6 +23,9 @@ namespace Covid19Radar.Api.Models
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
 
+        [JsonProperty("subRegions")]
+        public string[] SubRegions { get; set; }
+
         [JsonProperty("regions")]
         public string[] Regions { get; set; }
 

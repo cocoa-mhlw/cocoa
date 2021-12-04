@@ -13,6 +13,8 @@ namespace Covid19Radar.Api.Models
 
         public string id { get; set; } = Guid.NewGuid().ToString("N");
         public string PartitionKey { get; set; }
+        public string Region { get; set; }
+        public string SubRegion { get; set; }
         public byte[] KeyData { get; set; }
         public int RollingPeriod { get; set; }
         public int RollingStartIntervalNumber { get; set; }
@@ -23,6 +25,24 @@ namespace Covid19Radar.Api.Models
         public long GetRollingPeriodSeconds() => RollingPeriod * TIME_WINDOW_IN_SEC;
         public ulong Timestamp { get; set; }
         public bool Exported { get; set; }
-    }
 
+        public TemporaryExposureKeyModel Copy()
+        {
+            return new TemporaryExposureKeyModel()
+            {
+                id = id,
+                PartitionKey = PartitionKey,
+                Region = Region,
+                SubRegion = SubRegion,
+                KeyData = KeyData,
+                RollingPeriod = RollingPeriod,
+                RollingStartIntervalNumber = RollingStartIntervalNumber,
+                TransmissionRiskLevel = TransmissionRiskLevel,
+                ReportType = ReportType,
+                DaysSinceOnsetOfSymptoms = DaysSinceOnsetOfSymptoms,
+                Timestamp = Timestamp,
+                Exported = Exported,
+            };
+        }
+    }
 }

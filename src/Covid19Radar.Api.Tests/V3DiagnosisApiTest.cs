@@ -48,19 +48,30 @@ namespace Covid19Radar.Api.Tests
         }
 
         [DataTestMethod]
-        [DataRow(true, true, "NotSupportRegion", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
-        [DataRow(true, true, "NotSupportRegion", "xxxxx", "", false, HttpStatusCode.BadRequest)]
-        [DataRow(false, false, "Region1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
-        [DataRow(true, false, "Region1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
-        [DataRow(true, true, "Region1", "xxxxx", "ios", false, HttpStatusCode.OK)]
-        [DataRow(true, true, "NotSupportRegion", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
-        [DataRow(true, true, "NotSupportRegion", "xxxxx", "", true, HttpStatusCode.BadRequest)]
-        [DataRow(false, false, "Region1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
-        [DataRow(true, false, "Region1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
-        [DataRow(true, true, "Region1", "xxxxx", "ios", true, HttpStatusCode.OK)]
+        [DataRow(true, true, "NotSupportRegion", "subRegion1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "NotSupportRegion", "subRegion1", "xxxxx", "", false, HttpStatusCode.BadRequest)]
+        [DataRow(false, false, "Region1", "subRegion1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, false, "Region1", "subRegion1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "Region1", "subRegion1", "xxxxx", "ios", false, HttpStatusCode.OK)]
+        [DataRow(true, true, "NotSupportRegion", "subRegion1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "NotSupportRegion", "subRegion1", "xxxxx", "", true, HttpStatusCode.BadRequest)]
+        [DataRow(false, false, "Region1", "subRegion1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, false, "Region1", "subRegion1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "Region1", "subRegion1", "xxxxx", "ios", true, HttpStatusCode.OK)]
+        [DataRow(true, true, "NotSupportRegion", null, "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "NotSupportRegion", null, "xxxxx", "", false, HttpStatusCode.BadRequest)]
+        [DataRow(false, false, "Region1", null, "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, false, "Region1", null, "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "Region1", null, "xxxxx", "ios", false, HttpStatusCode.OK)]
+        [DataRow(true, true, "NotSupportRegion", null, "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "NotSupportRegion", null, "xxxxx", "", true, HttpStatusCode.BadRequest)]
+        [DataRow(false, false, "Region1", null, "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, false, "Region1", null, "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
+        [DataRow(true, true, "Region1", null, "xxxxx", "ios", true, HttpStatusCode.OK)]
         public async Task RunAsyncMethod(bool isValid,
                                          bool isValidDevice,
                                          string region,
+                                         string subRegion,
                                          string verificationPayload,
                                          string platform,
                                          bool isChaffRequest,
@@ -103,6 +114,7 @@ namespace Covid19Radar.Api.Tests
                 SymptomOnsetDate = dateTime.ToString(V3DiagnosisSubmissionParameter.FORMAT_SYMPTOM_ONSET_DATE),
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
+                SubRegions = new[] { subRegion },
                 Platform = platform,
                 DeviceVerificationPayload = "DeviceVerificationPayload",
                 AppPackageName = "Covid19Radar",
@@ -160,10 +172,11 @@ namespace Covid19Radar.Api.Tests
         }
 
         [DataTestMethod]
-        [DataRow(true, true, "Region1", "xxxxx", "ios", true, HttpStatusCode.OK)]
+        [DataRow(true, true, "Region1", null, "xxxxx", "ios", true, HttpStatusCode.OK)]
         public async Task SetDaysSinceOnsetOfSymptomsTest(bool isValid,
                                          bool isValidDevice,
                                          string region,
+                                         string subRegion,
                                          string verificationPayload,
                                          string platform,
                                          bool isChaffRequest,
@@ -206,6 +219,7 @@ namespace Covid19Radar.Api.Tests
                 SymptomOnsetDate = dateTime.ToString(V3DiagnosisSubmissionParameter.FORMAT_SYMPTOM_ONSET_DATE),
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
+                SubRegions = new[] { subRegion },
                 Platform = platform,
                 DeviceVerificationPayload = "DeviceVerificationPayload",
                 AppPackageName = "Covid19Radar",

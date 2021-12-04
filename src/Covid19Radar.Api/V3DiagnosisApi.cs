@@ -132,18 +132,37 @@ namespace Covid19Radar.Api
 
             using (SHA256 sha256 = SHA256.Create())
             {
+                var regions = submissionParameter.Regions;
+
+                var subRegions = submissionParameter.SubRegions ?? new string[0];
+
                 foreach (var k in submissionParameter.Keys)
                 {
                     var idSeed = $"{submissionParameter.IdempotencyKey},{k.KeyData},{k.RollingStartNumber},{k.RollingPeriod}";
                     var id = ByteArrayToString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
 
-                    foreach (var region in submissionParameter.Regions)
+                    foreach (var region in regions)
                     {
+                        // Region
                         var key = k.ToModel();
                         key.id = id;
-                        key.PartitionKey = region;
                         key.Timestamp = timestamp;
+                        key.PartitionKey = region;
+                        key.Region = region;
+                        key.SubRegion = null;
                         newKeys.Add(key);
+
+                        // Sub-regions
+                        foreach (var subRegion in subRegions)
+                        {
+                            key = k.ToModel();
+                            key.id = id;
+                            key.Timestamp = timestamp;
+                            key.PartitionKey = $"{region}-{subRegion}";
+                            key.Region = region;
+                            key.SubRegion = subRegion;
+                            newKeys.Add(key);
+                        }
                     }
                 }
             }
