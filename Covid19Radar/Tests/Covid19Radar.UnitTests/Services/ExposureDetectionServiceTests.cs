@@ -11,7 +11,6 @@ using Xunit;
 using Chino;
 using System.IO;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Covid19Radar.UnitTests.Services { 
     public class ExposureDetectionServiceTests: IDisposable
