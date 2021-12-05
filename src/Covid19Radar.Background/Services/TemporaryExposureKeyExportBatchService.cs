@@ -86,40 +86,48 @@ namespace Covid19Radar.Background.Services
                 }
             }
 
+            Logger.LogInformation($"FallbackDataForStoredByOldApis Count: {resultList.Count}");
+
             return resultList;
         }
 
         public async Task RunAsync()
         {
+            Logger.LogInformation($"start {nameof(RunAsync)}");
+
             try
             {
-                Logger.LogInformation($"start {nameof(RunAsync)}");
-
                 var items = FallbackDataForStoredByOldApis(await TekRepository.GetNextAsync());
 
                 var regions = items.GroupBy(item => item.Region);
 
+                Logger.LogInformation($"Regions Count: {regions.Count()}");
+
                 // Export by regions.
                 foreach (var regionGroup in regions)
                 {
-                    var regionItems = items.Where(item => item.Region == regionGroup.Key);
+                    Logger.LogInformation($"Region: {regionGroup.Key}");
 
                     // Export Region level.
                     await CreateAsync(
-                        items: regionItems.Where(item => string.IsNullOrEmpty(item.SubRegion)),
+                        items: regionGroup.Where(item => string.IsNullOrEmpty(item.SubRegion)),
                         region: regionGroup.Key,
                         subRegion: string.Empty
                         );
 
                     // Write Export Files json
-                    var modelsByRegion = await TekExportRepository.GetKeysAsync(0, regionGroup.Key);
+                    var modelsByRegion = await TekExportRepository.GetKeysAsync(0, regionGroup.Key, string.Empty);
                     await BlobService.WriteFilesJsonAsync(modelsByRegion, regionGroup.Key, string.Empty);
 
-                    var subRegions = regionItems.GroupBy(item => item.SubRegion);
+                    var subRegions = regionGroup
+                        .Where(item => !string.IsNullOrEmpty(item.SubRegion))
+                        .GroupBy(item => item.SubRegion);
 
                     // Export Sub-region level.
                     foreach (var subRegionGroup in subRegions)
                     {
+                        Logger.LogInformation($"Sub-region: {subRegionGroup.Key}");
+
                         await CreateAsync(
                             items: items.Select(item => item),
                             region: regionGroup.Key,
