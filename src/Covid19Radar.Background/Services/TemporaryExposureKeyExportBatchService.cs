@@ -71,7 +71,7 @@ namespace Covid19Radar.Background.Services
 
             foreach(var item in items)
             {
-                if(item.Region is not null)
+                if (!string.IsNullOrEmpty(item.Region))
                 {
                     resultList.Add(item);
                 }
@@ -104,19 +104,19 @@ namespace Covid19Radar.Background.Services
                 {
                     var regionItems = items.Where(item => item.Region == regionGroup.Key);
 
-                    // Export to Region.
+                    // Export Region level.
                     var regionExportedModels = await CreateAsync(
-                        items: regionItems.Where(item => item.SubRegion == null),
+                        items: regionItems.Where(item => string.IsNullOrEmpty(item.SubRegion)),
                         region: regionGroup.Key,
-                        subRegion: null
+                        subRegion: string.Empty
                         );
 
                     // Write Export Files json
-                    await BlobService.WriteFilesJsonAsync(regionExportedModels, regionGroup.Key, null);
+                    await BlobService.WriteFilesJsonAsync(regionExportedModels, regionGroup.Key, string.Empty);
 
                     var subRegions = regionItems.GroupBy(item => item.SubRegion);
 
-                    // Export by Subregions.
+                    // Export Sub-region level.
                     foreach (var subRegionGroup in subRegions)
                     {
                         var subRegionItems = items.Where(item => item.SubRegion == subRegionGroup.Key);
@@ -128,7 +128,7 @@ namespace Covid19Radar.Background.Services
                             );
 
                         // Write Export Files json
-                        await BlobService.WriteFilesJsonAsync(subRegionExportedModels, regionGroup.Key, null);
+                        await BlobService.WriteFilesJsonAsync(subRegionExportedModels, regionGroup.Key, subRegionGroup.Key);
                     }
                 }
             }
@@ -139,9 +139,9 @@ namespace Covid19Radar.Background.Services
             }
         }
 
-        private async Task<IEnumerable<TemporaryExposureKeyExportModel>> CreateAsync(IEnumerable<TemporaryExposureKeyModel> items, string region, string? subRegion)
+        private async Task<IEnumerable<TemporaryExposureKeyExportModel>> CreateAsync(IEnumerable<TemporaryExposureKeyModel> items, string region, string subRegion)
         {
-            Logger.LogInformation($"start {nameof(CreateAsync)} {region}-{subRegion ?? "global"}");
+            Logger.LogInformation($"start {nameof(CreateAsync)} {region}-{subRegion}");
 
             List<TemporaryExposureKeyExportModel> exportedModels = new List<TemporaryExposureKeyExportModel>();
 
@@ -152,16 +152,18 @@ namespace Covid19Radar.Background.Services
             {
                 var batchNum = (int)await Sequence.GetNextAsync(SequenceName, 1);
 
-                // Security considerations: Random Order TemporaryExposureKey
+                // User-privacy considerations: Random Order TemporaryExposureKey
                 var sorted = kv
                     .OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
 
-                var models = await CreateAsync((ulong)kv.Key.RollingStartUnixTimeSeconds,
-                    (ulong)(kv.Key.RollingStartUnixTimeSeconds + Constants.ActiveRollingPeriod * 10 * 60),
+                var models = await CreateAsync(
+                    (ulong)kv.Key.RollingStartUnixTimeSeconds,
+                    (ulong)(kv.Key.RollingStartUnixTimeSeconds + Constants.ActiveRollingPeriod * TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC),
                     region,
                     subRegion,
                     batchNum,
-                    sorted.ToArray());
+                    sorted.ToArray()
+                    );
                 exportedModels.AddRange(models);
 
                 foreach (var key in kv)
@@ -185,21 +187,23 @@ namespace Covid19Radar.Background.Services
             return s;
         }
 
-        public async Task<IEnumerable<TemporaryExposureKeyExportModel>> CreateAsync(ulong startTimestamp,
-                                      ulong endTimestamp,
-                                      string region,
-                                      string? subRegion,
-                                      int batchNum,
-                                      IEnumerable<TemporaryExposureKeyModel> keys)
+        public async Task<IEnumerable<TemporaryExposureKeyExportModel>> CreateAsync(
+            ulong startTimestamp,
+            ulong endTimestamp,
+            string region,
+            string subRegion,
+            int batchNum,
+            IEnumerable<TemporaryExposureKeyModel> keys
+            )
         {
             Logger.LogInformation($"start {nameof(CreateAsync)}");
 
             List<TemporaryExposureKeyExportModel> exportedModels = new List<TemporaryExposureKeyExportModel>();
 
             string partitionKey = region;
-            if (subRegion is not null)
+            if (!string.IsNullOrEmpty(subRegion))
             {
-                partitionKey += $"/{subRegion}";
+                partitionKey += $"-{subRegion}";
             }
 
             var current = keys;

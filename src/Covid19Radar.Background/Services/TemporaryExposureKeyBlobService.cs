@@ -43,12 +43,12 @@ namespace Covid19Radar.Background.Services
             BlobClient = StorageAccount.CreateCloudBlobClient();
         }
 
-        private static string GetBlobDirectory(TemporaryExposureKeyExportModel model)
+        private static string GetBlobDirectory(string region, string subRegion)
         {
-            var blobDirectoryString = $"{model.Region}";
-            if (model.SubRegion is not null)
+            var blobDirectoryString = $"{region}";
+            if (!string.IsNullOrEmpty(subRegion))
             {
-                blobDirectoryString += $"/{ model.SubRegion}";
+                blobDirectoryString += $"/{subRegion}";
             }
             return blobDirectoryString.ToLower();
         }
@@ -62,7 +62,7 @@ namespace Covid19Radar.Background.Services
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
-            var blobDirectory = cloudBlobContainer.GetDirectoryReference(GetBlobDirectory(model));
+            var blobDirectory = cloudBlobContainer.GetDirectoryReference(GetBlobDirectory(model.Region, model.SubRegion));
 
             // Filename is inferable as batch number
             var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
@@ -87,7 +87,7 @@ namespace Covid19Radar.Background.Services
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
-            var blobDirectory = cloudBlobContainer.GetDirectoryReference(GetBlobDirectory(model));
+            var blobDirectory = cloudBlobContainer.GetDirectoryReference(GetBlobDirectory(model.Region, model.SubRegion));
 
             // Filename is inferable as batch number
             var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
@@ -96,7 +96,7 @@ namespace Covid19Radar.Background.Services
             await blockBlob.DeleteIfExistsAsync();
         }
 
-        public async Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models, string region, string? subRegion)
+        public async Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models, string region, string subRegion)
         {
             Logger.LogInformation($"start {nameof(WriteFilesJsonAsync)}");
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
@@ -104,14 +104,14 @@ namespace Covid19Radar.Background.Services
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
 
             var urlPrefix = $"{TekExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{region}";
-            if (subRegion is not null)
+            if (!string.IsNullOrEmpty(subRegion))
             {
                 urlPrefix += $"/{subRegion}";
             }
 
             var postedGroupedRegions = models.GroupBy(_ => _.Region);
 
-            var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{region}".ToLower());
+            var blobDirectory = cloudBlobContainer.GetDirectoryReference(GetBlobDirectory(region, subRegion));
             var exportFileName = "list.json";
             var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
 

@@ -14,7 +14,7 @@ namespace Covid19Radar.Api.Models
         public string id { get; set; } = Guid.NewGuid().ToString("N");
         public string PartitionKey { get; set; }
         public string Region { get; set; }
-        public string SubRegion { get; set; }
+        public string SubRegion { get; set; } = string.Empty;
         public byte[] KeyData { get; set; }
         public int RollingPeriod { get; set; }
         public int RollingStartIntervalNumber { get; set; }

@@ -149,7 +149,7 @@ namespace Covid19Radar.Api
                         key.Timestamp = timestamp;
                         key.PartitionKey = region;
                         key.Region = region;
-                        key.SubRegion = null;
+                        key.SubRegion = string.Empty;
                         newKeys.Add(key);
 
                         // Sub-regions
