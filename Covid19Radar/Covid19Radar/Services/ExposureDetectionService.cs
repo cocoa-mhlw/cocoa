@@ -22,7 +22,7 @@ namespace Covid19Radar.Services
 
         public Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows);
 
-        public void ExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations);
+        public Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations);
 
         public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion);
     }
@@ -111,36 +111,33 @@ namespace Covid19Radar.Services
                 );
         }
 
-        public void ExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
             _loggerService.Info("ExposureDetected: Legacy-V1");
 
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
-            _ = Task.Run(async() =>
+            bool isNewExposureDetected = _userDataRepository.AppendExposureData(
+                exposureSummary,
+                exposureInformations.ToList(),
+                configurationV1.MinimumRiskScore
+                );
+
+            if (isNewExposureDetected)
             {
-                bool isNewExposureDetected = _userDataRepository.AppendExposureData(
-                    exposureSummary,
-                    exposureInformations.ToList(),
-                    configurationV1.MinimumRiskScore
-                    );
+                _ = _localNotificationService.ShowExposureNotificationAsync();
+            }
+            else
+            {
+                _loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
+            }
 
-                if (isNewExposureDetected)
-                {
-                    _ = _localNotificationService.ShowExposureNotificationAsync();
-                }
-                else
-                {
-                    _loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
-                }
-
-                await _exposureDataCollectServer.UploadExposureDataAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersion,
-                    exposureSummary, exposureInformations
-                    );
-            });
+            await _exposureDataCollectServer.UploadExposureDataAsync(
+                exposureConfiguration,
+                _deviceInfoUtility.Model,
+                enVersion,
+                exposureSummary, exposureInformations
+                );
         }
 
         public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion)

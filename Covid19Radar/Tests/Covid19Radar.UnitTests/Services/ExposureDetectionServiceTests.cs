@@ -20,7 +20,6 @@ namespace Covid19Radar.UnitTests.Services {
 
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> loggerService;
-        private readonly Mock<IUserDataRepository> userDataRepository;
         private readonly Mock<ILocalNotificationService> localNotificationService;
         private readonly Mock<IExposureDataCollectServer> exposureDataCollectServer;
         private readonly Mock<IDateTimeUtility> dateTimeUtility;
@@ -39,7 +38,6 @@ namespace Covid19Radar.UnitTests.Services {
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             loggerService = mockRepository.Create<ILoggerService>();
-            userDataRepository = mockRepository.Create<IUserDataRepository>();
             localNotificationService = mockRepository.Create<ILocalNotificationService>();
             exposureDataCollectServer = mockRepository.Create<IExposureDataCollectServer>();
 
@@ -75,11 +73,17 @@ namespace Covid19Radar.UnitTests.Services {
                 loggerService.Object
                 );
 
+            var userDataRepository = new UserDataRepository(
+                preferencesService.Object,
+                dateTimeUtility.Object,
+                loggerService.Object
+                );
+
             var exposureRiskCalculationService = new ExposureRiskCalculationService();
 
             return new ExposureDetectionService(
                 loggerService.Object,
-                userDataRepository.Object,
+                userDataRepository,
                 localNotificationService.Object,
                 exposureRiskCalculationService,
                 exposureConfigurationRepository,
@@ -199,7 +203,13 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService.
                 Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
                 .Returns(true);
-            exposureDataCollectServer.Setup(x => x.UploadExposureDataAsync(It.IsAny<ExposureConfiguration>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<List<DailySummary>>(), It.IsAny<List<ExposureWindow>>()));
+            exposureDataCollectServer
+                .Setup(x => x.UploadExposureDataAsync(
+                    It.IsAny<ExposureConfiguration>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<List<DailySummary>>(),
+                    It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("unknown");
 
 
@@ -212,7 +222,7 @@ namespace Covid19Radar.UnitTests.Services {
             localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
         }
 
-        [Fact(Skip = "always failed now")]
+        [Fact(Skip = "always failed")]
         public async void ExposureDetected_ExposureWindowHighRiskExposureNotDetected()
         {
             // Test Data
@@ -248,7 +258,13 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService.
                 Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
                 .Returns(true);
-            exposureDataCollectServer.Setup(x => x.UploadExposureDataAsync(It.IsAny<ExposureConfiguration>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<List<DailySummary>>(), It.IsAny<List<ExposureWindow>>()));
+            exposureDataCollectServer
+                .Setup(x => x.UploadExposureDataAsync(
+                    It.IsAny<ExposureConfiguration>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<List<DailySummary>>(),
+                    It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("unknown");
 
 
@@ -259,6 +275,115 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Assert
             localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Never);
+        }
+
+        #endregion
+
+        #region ExposureInformationDetected
+        [Fact]
+        public async void ExposureDetected_ExposureInformationHighRiskExposureDetected()
+        {
+            // Test Data
+            var exposureConfiguration = new ExposureConfiguration()
+            {
+                GoogleExposureConfig = new ExposureConfiguration.GoogleExposureConfiguration()
+                {
+                    MinimumRiskScore = 0
+                }
+            };
+            var exposureSummary = new ExposureSummary()
+            {
+                 MaximumRiskScore = 1
+            };
+            var exposureInformantion = new ExposureInformation()
+            {
+                AttenuationDurationsInMillis = new int[] { 0 },
+                AttenuationValue = 0,
+                DateMillisSinceEpoch = 0,
+                DurationInMillis = 0,
+                TotalRiskScore = 2,
+                TransmissionRiskLevel = RiskLevel.High
+            };
+            var exposureInformationList = new List<ExposureInformation>()
+            {
+                exposureInformantion
+            };
+            var enVersion = "2.0.0";
+
+            // Mock Setup
+            exposureDataCollectServer
+                .Setup(x => x.UploadExposureDataAsync(
+                    It.IsAny<ExposureConfiguration>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<ExposureSummary>(),
+                    It.IsAny<List<ExposureInformation>>()));
+            deviceInfoUtility.Setup(x => x.Model).Returns("unknown");
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformationList);
+
+
+            // Assert
+            localNotificationService
+                .Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+            preferencesService
+                .Verify(x => x.SetValue<string>("ExposureInformation", It.IsAny<string>()), Times.Once);
+        }
+
+        [Fact]
+        public async void ExposureDetected_ExposureInformationHighRiskExposureNotDetected()
+        {
+            // Test Data
+            var exposureConfiguration = new ExposureConfiguration()
+            {
+                GoogleExposureConfig = new ExposureConfiguration.GoogleExposureConfiguration()
+                {
+                    MinimumRiskScore = 3
+                }
+            };
+            var exposureSummary = new ExposureSummary()
+            {
+                MaximumRiskScore = 1
+            };
+            var exposureInformantion = new ExposureInformation()
+            {
+                AttenuationDurationsInMillis = new int[] { 0 },
+                AttenuationValue = 0,
+                DateMillisSinceEpoch = 0,
+                DurationInMillis = 0,
+                TotalRiskScore = 2,
+                TransmissionRiskLevel = RiskLevel.High
+            };
+            var exposureInformationList = new List<ExposureInformation>()
+            {
+                exposureInformantion
+            };
+            var enVersion = "2.0.0";
+
+            // Mock Setup
+            exposureDataCollectServer
+                .Setup(x => x.UploadExposureDataAsync(
+                    It.IsAny<ExposureConfiguration>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<ExposureSummary>(),
+                    It.IsAny<List<ExposureInformation>>()));
+            deviceInfoUtility.Setup(x => x.Model).Returns("unknown");
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformationList);
+
+
+            // Assert
+            localNotificationService
+                .Verify(x => x.ShowExposureNotificationAsync(), Times.Never);
+            preferencesService
+                .Verify(x => x.SetValue<string>("ExposureInformation", It.IsAny<string>()), Times.Never);
         }
 
         #endregion
