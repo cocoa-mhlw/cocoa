@@ -39,7 +39,7 @@ namespace Covid19Radar.UnitTests.Services
             mockRepository = new MockRepository(MockBehavior.Default);
             diagnosisKeyRepository = mockRepository.Create<IDiagnosisKeyRepository>();
             loggerService = mockRepository.Create<ILoggerService>();
-            exposureNotificationApiService = new Mock<AbsExposureNotificationApiService>(loggerService.Object);//new ExposureNotificationApiServiceMock(loggerService.Object);
+            exposureNotificationApiService = new Mock<AbsExposureNotificationApiService>(loggerService.Object);
             exposureConfigurationRepository = mockRepository.Create<IExposureConfigurationRepository>();
             userDataRepository = mockRepository.Create<IUserDataRepository>();
             serverConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
