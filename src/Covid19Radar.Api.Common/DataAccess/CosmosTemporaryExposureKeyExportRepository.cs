@@ -43,14 +43,23 @@ namespace Covid19Radar.Api.DataAccess
             return await _db.TemporaryExposureKeyExport.ReadItemAsync<TemporaryExposureKeyExportModel>(id, PartitionKey.Null);
         }
 
-        public async Task<TemporaryExposureKeyExportModel[]> GetKeysAsync(ulong sinceEpochSeconds)
+        public Task<TemporaryExposureKeyExportModel[]> GetKeysAsync(ulong sinceEpochSeconds)
+        {
+            return GetKeysAsync(sinceEpochSeconds, null, null);
+        }
+
+        public Task<TemporaryExposureKeyExportModel[]> GetKeysAsync(ulong sinceEpochSeconds, string region)
+        {
+            return GetKeysAsync(sinceEpochSeconds, region, null);
+        }
+
+        public async Task<TemporaryExposureKeyExportModel[]> GetKeysAsync(ulong sinceEpochSeconds, string? region, string? subRegion)
         {
             _logger.LogInformation($"start {nameof(GetKeysAsync)}");
 
+            // Older than `Constants.OutOfDateDays` days will not be retrieved.
             var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds();
-            // Only allow the last 14 days +
-            if (sinceEpochSeconds < oldest)
-                sinceEpochSeconds = oldest;
+            sinceEpochSeconds = Math.Max(sinceEpochSeconds, oldest);
 
             var items = await GetKeysAsyncCache.QueryWithCacheAsync(async () =>
             {
@@ -68,39 +77,24 @@ namespace Covid19Radar.Api.DataAccess
                 return e.ToArray();
             });
 
-            return items.Where(tek => tek.EndTimestamp >= sinceEpochSeconds).ToArray();
-        }
+            var query = items
+                .Where(tek => tek.EndTimestamp >= sinceEpochSeconds);
 
-        public async Task<TemporaryExposureKeyExportModel[]> GetKeysAsync(ulong sinceEpochSeconds, string region)
-        {
-            _logger.LogInformation($"start {nameof(GetKeysAsync)}");
-
-            var oldest = (ulong)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds();
-            // Only allow the last 14 days +
-            if (sinceEpochSeconds < oldest)
-                sinceEpochSeconds = oldest;
-
-            var items = await GetKeysAsyncCache.QueryWithCacheAsync(async () =>
+            if (region != null)
             {
-                var query = _db.TemporaryExposureKeyExport.GetItemLinqQueryable<TemporaryExposureKeyExportModel>(true)
-                    .Where(tek => !tek.Deleted)
-                    .ToFeedIterator();
+                query = query
+                    .Where(tek => tek.Region == region);
+            }
 
-                var e = Enumerable.Empty<TemporaryExposureKeyExportModel>();
-                while (query.HasMoreResults)
-                {
-                    var r = await query.ReadNextAsync();
-                    e = e.Concat(r.Resource);
-                }
+            if (subRegion != null)
+            {
+                query = query
+                    .Where(tek => tek.SubRegion == subRegion);
+            }
 
-                return e.ToArray();
-            });
-
-            return items
-                .Where(tek => tek.EndTimestamp >= sinceEpochSeconds)
-                .Where(tek => tek.Region == region)
-                .ToArray();
+            return query.ToArray();
         }
+
         public async Task<TemporaryExposureKeyExportModel[]> GetOutOfTimeKeysAsync()
         {
             _logger.LogInformation($"start {nameof(GetOutOfTimeKeysAsync)}");

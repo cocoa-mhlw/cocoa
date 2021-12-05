@@ -105,30 +105,30 @@ namespace Covid19Radar.Background.Services
                     var regionItems = items.Where(item => item.Region == regionGroup.Key);
 
                     // Export Region level.
-                    var regionExportedModels = await CreateAsync(
+                    await CreateAsync(
                         items: regionItems.Where(item => string.IsNullOrEmpty(item.SubRegion)),
                         region: regionGroup.Key,
                         subRegion: string.Empty
                         );
 
                     // Write Export Files json
-                    await BlobService.WriteFilesJsonAsync(regionExportedModels, regionGroup.Key, string.Empty);
+                    var modelsByRegion = await TekExportRepository.GetKeysAsync(0, regionGroup.Key);
+                    await BlobService.WriteFilesJsonAsync(modelsByRegion, regionGroup.Key, string.Empty);
 
                     var subRegions = regionItems.GroupBy(item => item.SubRegion);
 
                     // Export Sub-region level.
                     foreach (var subRegionGroup in subRegions)
                     {
-                        var subRegionItems = items.Where(item => item.SubRegion == subRegionGroup.Key);
-
-                        var subRegionExportedModels = await CreateAsync(
-                            items: subRegionItems,
+                        await CreateAsync(
+                            items: items.Select(item => item),
                             region: regionGroup.Key,
                             subRegion: subRegionGroup.Key
                             );
 
                         // Write Export Files json
-                        await BlobService.WriteFilesJsonAsync(subRegionExportedModels, regionGroup.Key, subRegionGroup.Key);
+                        var modelsBySubRegion = await TekExportRepository.GetKeysAsync(0, regionGroup.Key, subRegionGroup.Key);
+                        await BlobService.WriteFilesJsonAsync(modelsBySubRegion, regionGroup.Key, subRegionGroup.Key);
                     }
                 }
             }
@@ -139,11 +139,9 @@ namespace Covid19Radar.Background.Services
             }
         }
 
-        private async Task<IEnumerable<TemporaryExposureKeyExportModel>> CreateAsync(IEnumerable<TemporaryExposureKeyModel> items, string region, string subRegion)
+        private async Task CreateAsync(IEnumerable<TemporaryExposureKeyModel> items, string region, string subRegion)
         {
             Logger.LogInformation($"start {nameof(CreateAsync)} {region}-{subRegion}");
-
-            List<TemporaryExposureKeyExportModel> exportedModels = new List<TemporaryExposureKeyExportModel>();
 
             foreach (var kv in items.GroupBy(item => new
             {
@@ -156,7 +154,7 @@ namespace Covid19Radar.Background.Services
                 var sorted = kv
                     .OrderBy(_ => RandomNumberGenerator.GetInt32(int.MaxValue));
 
-                var models = await CreateAsync(
+                await CreateAsync(
                     (ulong)kv.Key.RollingStartUnixTimeSeconds,
                     (ulong)(kv.Key.RollingStartUnixTimeSeconds + Constants.ActiveRollingPeriod * TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC),
                     region,
@@ -164,7 +162,6 @@ namespace Covid19Radar.Background.Services
                     batchNum,
                     sorted.ToArray()
                     );
-                exportedModels.AddRange(models);
 
                 foreach (var key in kv)
                 {
@@ -172,8 +169,6 @@ namespace Covid19Radar.Background.Services
                     await TekRepository.UpsertAsync(key);
                 }
             }
-
-            return exportedModels;
         }
 
         public async Task<TEKSignature> CreateSignatureAsync(MemoryStream source, int batchNum, int batchSize)
@@ -187,7 +182,7 @@ namespace Covid19Radar.Background.Services
             return s;
         }
 
-        public async Task<IEnumerable<TemporaryExposureKeyExportModel>> CreateAsync(
+        public async Task CreateAsync(
             ulong startTimestamp,
             ulong endTimestamp,
             string region,
@@ -197,8 +192,6 @@ namespace Covid19Radar.Background.Services
             )
         {
             Logger.LogInformation($"start {nameof(CreateAsync)}");
-
-            List<TemporaryExposureKeyExportModel> exportedModels = new List<TemporaryExposureKeyExportModel>();
 
             string partitionKey = region;
             if (!string.IsNullOrEmpty(subRegion))
@@ -275,11 +268,7 @@ namespace Covid19Radar.Background.Services
                     await BlobService.WriteToBlobAsync(s, exportModel, bin, sig);
                 }
                 await TekExportRepository.UpdateAsync(exportModel);
-
-                exportedModels.Add(exportModel);
             }
-
-            return exportedModels;
         }
     }
 }
