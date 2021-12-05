@@ -117,7 +117,7 @@ namespace Covid19Radar.Services
 
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
-            Task.Run(async() =>
+            _ = Task.Run(async() =>
             {
                 bool isNewExposureDetected = _userDataRepository.AppendExposureData(
                     exposureSummary,
