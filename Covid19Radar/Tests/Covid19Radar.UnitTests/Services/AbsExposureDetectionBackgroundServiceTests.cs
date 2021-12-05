@@ -17,7 +17,7 @@ using System.IO;
 
 namespace Covid19Radar.UnitTests.Services
 {
-    public class AbsExposureDetectionBackgroundServiceTests
+    public class AbsExposureDetectionBackgroundServiceTests: IDisposable
     {
         #region Instance Properties
 
@@ -43,6 +43,16 @@ namespace Covid19Radar.UnitTests.Services
             exposureConfigurationRepository = mockRepository.Create<IExposureConfigurationRepository>();
             userDataRepository = mockRepository.Create<IUserDataRepository>();
             serverConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
+        }
+
+        #endregion
+
+        #region Destructor
+
+
+        public void Dispose()
+        {
+            Directory.Delete($"{Path.GetTempPath()}/diagnosis_keys/", true);
         }
 
         #endregion
@@ -258,11 +268,90 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public async Task ExposureDetectionAsync_FileRemoved()
+        public async Task ExposureDetectionAsync_DirectoryNotExistsAndFileRemoved()
         {
             // Test Data
             IList<DiagnosisKeyEntry> diagnosisKeyEntryList = CreateDiagnosisKeyEntryList(440);
             var tempPath = Path.GetTempPath();
+
+            // Mock Setup
+
+            ExposureConfiguration exposureConfiguration = new ExposureConfiguration();
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
+            // Mock Setup
+            diagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList));
+            diagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                    It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/1.zip"),
+                    It.IsAny<string>(),
+                    It.IsAny<CancellationToken>()))
+                .Callback(() => {
+                    Assert.True(Directory.Exists($"{tempPath}/diagnosis_keys/440/"));
+                    File.Create($"{tempPath}/diagnosis_keys/440/1.zip");
+                })
+                .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/1.zip"));
+            diagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                    It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/2.zip"),
+                    It.IsAny<string>(),
+                    It.IsAny<CancellationToken>()))
+                .Callback(() => {
+                    Assert.True(Directory.Exists($"{tempPath}/diagnosis_keys/440/"));
+                    File.Create($"{tempPath}/diagnosis_keys/440/2.zip");
+                })
+                .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/2.zip"));
+
+            diagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/3.zip"),
+                     It.IsAny<string>(),
+                     It.IsAny<CancellationToken>()))
+                .Callback(() => {
+                    Assert.True(Directory.Exists($"{tempPath}/diagnosis_keys/440/"));
+                    File.Create($"{tempPath}/diagnosis_keys/440/3.zip");
+                })
+                .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/3.zip"));
+
+
+            serverConfigurationRepository
+                .Setup(x => x.Regions)
+                .Returns(new string[] { "440" });
+            serverConfigurationRepository
+                .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
+                .Returns("https://example.com");
+
+            exposureConfigurationRepository
+                .Setup(x => x.GetExposureConfigurationAsync())
+                .Returns(Task.FromResult(exposureConfiguration));
+
+            userDataRepository
+                .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
+                .Returns(Task.FromResult(0L));
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectionAsync(cancellationTokenSource);
+
+
+            // Assert
+            diagnosisKeyRepository.VerifyAll();
+            Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/1.zip"));
+            Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/2.zip"));
+            Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/3.zip"));
+            Assert.True(Directory.Exists($"{tempPath}/diagnosis_keys/440/"));
+        }
+
+        [Fact]
+        public async Task ExposureDetectionAsync_DirectoryExistsAndFileRemoved()
+        {
+            // Test Data
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList = CreateDiagnosisKeyEntryList(440);
+            var tempPath = Path.GetTempPath();
+            Directory.CreateDirectory($"{tempPath}/diagnosis_keys/440/");
 
             // Mock Setup
 
