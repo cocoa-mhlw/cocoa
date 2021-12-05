@@ -258,7 +258,7 @@ namespace Covid19Radar.UnitTests.Services {
 
 
             // Assert
-            localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+            localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Never);
         }
 
         #endregion
