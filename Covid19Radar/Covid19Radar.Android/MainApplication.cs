@@ -16,6 +16,7 @@ using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
 using CommonServiceLocator;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Droid
 {
@@ -117,7 +118,10 @@ namespace Covid19Radar.Droid
             var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+            Task.Run(async () =>
+            {
+                await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+            });
         }
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
