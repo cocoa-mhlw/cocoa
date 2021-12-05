@@ -70,15 +70,26 @@ namespace Covid19Radar.ViewModels
                 privacyPolicyUpdateDateTimeUtc = termsUpdateInfo.PrivacyPolicy.UpdateDateTimeUtc.ToString();
             }
 
-            var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(async region =>
-            {
-                var ticks = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
-                new LastProcessTekTimestamp()
+            var subRegions = _serverConfigurationRepository.SubRegions.ToList();
+            subRegions.Add(string.Empty);
+
+            var combined = _serverConfigurationRepository.Regions.SelectMany(_ => subRegions,
+                (region, subRegion) => (region, subRegion));
+
+            var lastProcessTekTimestampList = "";
+
+            foreach (var pair in combined) {
+                var (region, subRegion) = pair;
+
+                var ticks = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region, subRegion);
+                var lptt = new LastProcessTekTimestamp()
                 {
                     Region = region,
+                    SubRegion = subRegion,
                     Ticks = ticks
                 }.ToString();
-            });
+                lastProcessTekTimestampList += lptt + "\n";
+            }
 
             string regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
             string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList);
@@ -102,7 +113,7 @@ namespace Covid19Radar.ViewModels
                 $"Legacy-V1 ExposureCount: {_userDataRepository.GetV1ExposureCount(AppConstants.DaysOfExposureInformationToDisplay)}",
                 $"DailySummaryCount: {dailySummaryCount}",
                 $"ExposureWindowCount: {exposureWindowCount}",
-                $"LastProcessTekTimestamp: {lastProcessTekTimestampsStr}",
+                $"LastProcessTekTimestamp:", $"{lastProcessTekTimestampsStr}",
                 $"ENstatus: {exposureNotificationStatus}",
                 $"Now: {DateTime.Now.ToLocalTime().ToString("F")}",
                 exception
@@ -111,7 +122,7 @@ namespace Covid19Radar.ViewModels
 
             // ServerConfiguration
             var serverRegions = string.Join(",", _serverConfigurationRepository.Regions);
-            var diagnosisKeyListProvideServerUrls = _serverConfigurationRepository.DiagnosisKeyListProvideServerUrls
+            var diagnosisKeyListProvideServerUrls = _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrls()
                 .Select(url => $"    * {url}");
 
             var serverConfiguration = new[]
@@ -230,14 +241,22 @@ namespace Covid19Radar.ViewModels
         private class LastProcessTekTimestamp
         {
             internal string Region;
+            internal string SubRegion;
 
             internal long Ticks;
 
             internal DateTimeOffset DateTime
-                => DateTimeOffset.FromUnixTimeMilliseconds(Ticks).ToLocalTime();
+                => DateTimeOffset.FromUnixTimeSeconds(Ticks).ToLocalTime();
 
             public override string ToString()
-                => $"{Region} - {DateTime:F}({Ticks})";
+            {
+                var key = Region;
+                if (!string.IsNullOrEmpty(SubRegion))
+                {
+                    key += $"-{SubRegion}";
+                }
+                return $"{key}: {DateTime:F}({Ticks})";
+            }
         }
     }
 }

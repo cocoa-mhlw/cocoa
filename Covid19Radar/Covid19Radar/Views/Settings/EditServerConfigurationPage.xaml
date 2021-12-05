@@ -36,8 +36,35 @@
                 Keyboard="Url"
                 Text="{Binding Regions}"
                 Margin="8, 0, 8, 16"
-                Placeholder="Regions or Cluster IDs, Comma sepalated">
+                Placeholder="Regions, Comma sepalated">
             </Entry>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="SubRegions"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding SubRegions}"
+                Margin="8, 0, 8, 16"
+                Placeholder="SubRegions, Comma sepalated">
+            </Entry>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="WithRegionLevel"
+                Margin="8, 0, 0, 4"
+                />
+            <Label
+                Style="{StaticResource DefaultLabelSmall}"
+                Text="Include Region-level access without using SubRegions placeholder."
+                Margin="8, 0, 0, 4"
+                />
+            <CheckBox
+                Margin="8, 0, 8, 16"
+                IsChecked="{Binding WithRegionLevel}"
+                />
 
             <Label
                 Style="{StaticResource DefaultLabel}"
@@ -49,18 +76,6 @@
                 Text="{Binding DiagnosisKeyRegisterApiEndpoint}"
                 Margin="8, 0, 8, 16"
                 Placeholder="DiagnosisKey registeration API endpoint"/>
-
-            <Label
-                Style="{StaticResource DefaultLabel}"
-                Text="DiagnosisKeyRegisterApiUrls"
-                Margin="8, 0, 0, 8"
-                />
-            <Label
-                Style="{StaticResource DefaultLabelSmall}"
-                TextColor="DarkCyan"
-                Text="{Binding DiagnosisKeyRegisterApiUrls}"
-                Margin="8, 0, 8, 16"
-                />
 
             <Label
                 Style="{StaticResource DefaultLabel}"

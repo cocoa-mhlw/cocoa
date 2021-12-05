@@ -170,8 +170,8 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
-            mockServerConfigurationRepository.Setup(x => x.DiagnosisKeyRegisterApiUrls)
-                .Returns(new List<string>() { IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/v3/diagnosis") });
+            mockServerConfigurationRepository.Setup(x => x.DiagnosisKeyRegisterApiUrl)
+                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/v3/diagnosis"));
 
             var unitUnderTest = CreateService();
 
@@ -192,14 +192,13 @@ namespace Covid19Radar.UnitTests.Services
                 Padding = "padding"
             };
 
-            var results = await unitUnderTest.PutSelfExposureKeysAsync(request);
+            var result = await unitUnderTest.PutSelfExposureKeysAsync(request);
 
             mockLoggerService.Verify(x => x.StartMethod("PutSelfExposureKeysAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.EndMethod("PutSelfExposureKeysAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
-            Assert.Equal(1, results.Count);
-            Assert.Equal(HttpStatusCode.NoContent, results[0]);
+            Assert.Equal(HttpStatusCode.NoContent, result);
             Assert.NotNull(requestContent);
 
             var stringContent = await requestContent.ReadAsStringAsync();

@@ -39,8 +39,8 @@ namespace Covid19Radar.Repository
 
         void RemoveAllExposureNotificationStatus();
 
-        Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region);
-        Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp);
+        Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region, string subRegion);
+        Task SetLastProcessDiagnosisKeyTimestampAsync(string region, string subRegion, long timestamp);
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
 
         // ExposureWindow mode
@@ -98,21 +98,33 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
-        public Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region)
+        private static string CreateKey(string region, string subRegion)
+        {
+            var key = region;
+            if (!string.IsNullOrEmpty(subRegion))
+            {
+                key += $"-{subRegion}";
+            }
+            return key;
+        }
+
+        public Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region, string subRegion)
         {
             _loggerService.StartMethod();
 
             try
             {
+                var key = CreateKey(region, subRegion);
+
                 var result = 0L;
 
                 var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
                 if (!string.IsNullOrEmpty(jsonString))
                 {
                     var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
-                    if (dict.ContainsKey(region))
+                    if (dict.ContainsKey(key))
                     {
-                        result = dict[region];
+                        result = dict[key];
                     }
                 }
 
@@ -124,12 +136,14 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp)
+        public Task SetLastProcessDiagnosisKeyTimestampAsync(string region, string subRegion, long timestamp)
         {
             _loggerService.StartMethod();
 
             try
             {
+                var key = CreateKey(region, subRegion);
+
                 var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
 
                 Dictionary<string, long> newDict;
@@ -141,7 +155,7 @@ namespace Covid19Radar.Repository
                 {
                     newDict = new Dictionary<string, long>();
                 }
-                newDict[region] = timestamp;
+                newDict[key] = timestamp;
                 _preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
 
                 return Task.CompletedTask;

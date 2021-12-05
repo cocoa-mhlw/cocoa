@@ -15,6 +15,8 @@ namespace Covid19Radar.Model
         public Key[] Keys { get; set; }
         [JsonProperty("regions")]
         public string[] Regions { get; set; }
+        [JsonProperty("subRegions")]
+        public string[] SubRegions { get; set; }
         [JsonProperty("platform")]
         public string Platform { get; set; }
         [JsonProperty("deviceVerificationPayload")]

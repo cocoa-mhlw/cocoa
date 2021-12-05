@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
@@ -26,6 +27,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<IDiagnosisKeyRegisterServer> mockDiagnosisKeyRegisterServer;
         private readonly Mock<IEssentialsService> mockEssentialsService;
         private readonly Mock<IUserDialogs> mockUserDialogs;
+        private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
 
         public NotifyOtherPageViewModelTests()
         {
@@ -36,6 +38,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockEssentialsService = mockRepository.Create<IEssentialsService>();
             mockUserDialogs = mockRepository.Create<IUserDialogs>();
             UserDialogs.Instance = mockUserDialogs.Object;
+            mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
         }
 
         private NotifyOtherPageViewModel CreateViewModel()
@@ -46,6 +49,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 new MockExposureNotificationApiService(mockLoggerService.Object),
                 mockDiagnosisKeyRegisterServer.Object,
                 mockEssentialsService.Object,
+                mockServerConfigurationRepository.Object,
                 0
                 );
         }

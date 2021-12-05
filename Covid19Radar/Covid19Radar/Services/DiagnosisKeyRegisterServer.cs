@@ -34,10 +34,12 @@ namespace Covid19Radar.Services
             _deviceVerifier = deviceVerifier;
         }
 
-        public async Task<IList<HttpStatusCode>> SubmitDiagnosisKeysAsync(
+        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,
+            string[] regions,
+            string[] subRegions,
             string idempotencyKey
             )
         {
@@ -62,8 +64,8 @@ namespace Covid19Radar.Services
                         );
                 }
 
-                var diagnosisInfo = await CreateSubmissionAsync(symptomOnsetDate, temporaryExposureKeys, processNumber, idempotencyKey);
-                IList<HttpStatusCode> httpStatusCode = await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
+                var diagnosisInfo = await CreateSubmissionAsync(symptomOnsetDate, temporaryExposureKeys, processNumber, regions, subRegions, idempotencyKey);
+                HttpStatusCode httpStatusCode = await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
 
                 return httpStatusCode;
             }
@@ -77,6 +79,8 @@ namespace Covid19Radar.Services
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,
+            string[] regions,
+            string[] subRegions,
             string idempotencyKey
             )
         {
@@ -105,7 +109,8 @@ namespace Covid19Radar.Services
             {
                 SymptomOnsetDate = symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
                 Keys = keys.ToArray(),
-                Regions = AppSettings.Instance.SupportedRegions,
+                Regions = regions,
+                SubRegions = subRegions,
                 Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
                 DeviceVerificationPayload = null,
                 AppPackageName = AppInfo.PackageName,

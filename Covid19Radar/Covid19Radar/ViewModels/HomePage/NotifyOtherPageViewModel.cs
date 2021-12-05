@@ -12,6 +12,7 @@ using Covid19Radar.Views;
 using System.Text.RegularExpressions;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
+using Covid19Radar.Repository;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
         private readonly IEssentialsService _essentialsService;
+        private readonly IServerConfigurationRepository _serverConfigurationRepository;
+
         private readonly int _delayForErrorMillis;
 
         private string _processingNumber;
@@ -125,6 +128,7 @@ namespace Covid19Radar.ViewModels
             AbsExposureNotificationApiService exposureNotificationApiService,
             IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer,
             IEssentialsService essentialsService,
+            IServerConfigurationRepository serverConfigurationRepository,
             int delayForErrorMillis = AppConstants.DelayForRegistrationErrorMillis
             ) : base(navigationService)
         {
@@ -135,14 +139,18 @@ namespace Covid19Radar.ViewModels
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
             _delayForErrorMillis = delayForErrorMillis;
             _essentialsService = essentialsService;
+            _serverConfigurationRepository = serverConfigurationRepository;
+
             errorCount = 0;
             ProcessingNumber = "";
             DiagnosisDate = DateTime.Today;
         }
 
-        public override void Initialize(INavigationParameters parameters)
+        public async override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
+
+            await _serverConfigurationRepository.LoadAsync();
 
             if (parameters != null && parameters.ContainsKey(NotifyOtherPage.ProcessingNumberKey))
             {
@@ -342,21 +350,18 @@ namespace Covid19Radar.ViewModels
                 // TODO: Save and use revoke operation.
                 string idempotencyKey = Guid.NewGuid().ToString();
 
-                IList<HttpStatusCode> httpStatusCodes = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+                HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                     _diagnosisDate,
                     filteredTemporaryExposureKeyList,
                     ProcessingNumber,
+                    _serverConfigurationRepository.Regions,
+                    _serverConfigurationRepository.SubRegions,
                     idempotencyKey
                     );
 
-                foreach(var statusCode in httpStatusCodes)
-                {
-                    loggerService.Info($"HTTP status is {httpStatusCodes}({(int)statusCode}).");
+                loggerService.Info($"HTTP status is {httpStatusCode}({(int)httpStatusCode}).");
 
-                    // Mainly, we expect that SubmitDiagnosisKeysAsync returns one result.
-                    // Multiple-results is for debug use only.
-                    ShowResult(statusCode);
-                }
+                ShowResult(httpStatusCode);
             }
             catch (ENException exception)
             {
@@ -365,6 +370,12 @@ namespace Covid19Radar.ViewModels
             catch (Exception exception)
             {
                 loggerService.Exception("SubmitDiagnosisKeys", exception);
+
+                await UserDialogs.Instance.AlertAsync(
+                    null,
+                    exception.Message,
+                    AppResources.ButtonOk
+                );
             }
             finally
             {
@@ -414,6 +425,10 @@ namespace Covid19Radar.ViewModels
                     break;
 
                 default:
+                    await UserDialogs.Instance.AlertAsync(
+                        null,
+                        $"{httpStatusCode} - {(int)httpStatusCode}",
+                        AppResources.ButtonOk);
                     loggerService.Error($"Unexpected status");
                     break;
             }
