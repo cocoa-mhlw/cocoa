@@ -2,6 +2,7 @@
 title: "利用規約"
 weight: 10
 type: docs
+url: /agreements/terms_of_use/
 ---
 
 ## 日本語
