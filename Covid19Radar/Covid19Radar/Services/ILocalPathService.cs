@@ -18,6 +18,9 @@ namespace Covid19Radar.Services
         string CurrentExposureConfigurationPath =>
             Path.Combine(ExposureConfigurationDirPath, CURRENT_EXPOSURE_CONFIGURATION_FILENAME);
 
+        string CacheDirectory =>
+            FileSystem.CacheDirectory;
+
         string LogsDirPath { get; }
         string LogUploadingTmpPath { get; }
         string LogUploadingPublicPath { get; }

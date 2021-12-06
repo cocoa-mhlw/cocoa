@@ -22,13 +22,13 @@ namespace Covid19Radar.UnitTests.Services
         #region Instance Properties
 
         private readonly MockRepository mockRepository;
-        private readonly Mock<IDiagnosisKeyRepository> diagnosisKeyRepository;
-        private readonly Mock<AbsExposureNotificationApiService> exposureNotificationApiService;
-        private readonly Mock<IExposureConfigurationRepository> exposureConfigurationRepository;
-        private readonly Mock<ILoggerService> loggerService;
-        private readonly Mock<IUserDataRepository> userDataRepository;
-        private readonly Mock<IServerConfigurationRepository> serverConfigurationRepository;
-
+        private readonly Mock<IDiagnosisKeyRepository> mockDiagnosisKeyRepository;
+        private readonly Mock<AbsExposureNotificationApiService> mockExposureNotificationApiService;
+        private readonly Mock<IExposureConfigurationRepository> mockExposureConfigurationRepository;
+        private readonly Mock<ILoggerService> mockLoggerService;
+        private readonly Mock<IUserDataRepository> mockUserDataRepository;
+        private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
+        private readonly Mock<ILocalPathService> mockLocalPathService;
 
         #endregion
 
@@ -37,12 +37,13 @@ namespace Covid19Radar.UnitTests.Services
         public AbsExposureDetectionBackgroundServiceTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
-            diagnosisKeyRepository = mockRepository.Create<IDiagnosisKeyRepository>();
-            loggerService = mockRepository.Create<ILoggerService>();
-            exposureNotificationApiService = new Mock<AbsExposureNotificationApiService>(loggerService.Object);
-            exposureConfigurationRepository = mockRepository.Create<IExposureConfigurationRepository>();
-            userDataRepository = mockRepository.Create<IUserDataRepository>();
-            serverConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
+            mockDiagnosisKeyRepository = mockRepository.Create<IDiagnosisKeyRepository>();
+            mockLoggerService = mockRepository.Create<ILoggerService>();
+            mockExposureNotificationApiService = new Mock<AbsExposureNotificationApiService>(mockLoggerService.Object);
+            mockExposureConfigurationRepository = mockRepository.Create<IExposureConfigurationRepository>();
+            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
+            mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
+            mockLocalPathService = mockRepository.Create<ILocalPathService>();
         }
 
         #endregion
@@ -63,12 +64,13 @@ namespace Covid19Radar.UnitTests.Services
         {
 
             return new ExposureDetectionBackgroundServiceMock(
-                diagnosisKeyRepository.Object,
-                exposureNotificationApiService.Object,
-                exposureConfigurationRepository.Object,
-                loggerService.Object,
-                userDataRepository.Object,
-                serverConfigurationRepository.Object
+                mockDiagnosisKeyRepository.Object,
+                mockExposureNotificationApiService.Object,
+                mockExposureConfigurationRepository.Object,
+                mockLoggerService.Object,
+                mockUserDataRepository.Object,
+                mockServerConfigurationRepository.Object,
+                mockLocalPathService.Object
                 );
         }
 
@@ -109,19 +111,22 @@ namespace Covid19Radar.UnitTests.Services
             IList<DiagnosisKeyEntry> diagnosisKeyEntryList = new List<DiagnosisKeyEntry>();
 
             // Mock Setup
-            serverConfigurationRepository
+            mockLocalPathService
+                .Setup(x => x.CacheDirectory)
+                .Returns(Path.GetTempPath());
+            mockServerConfigurationRepository
                 .Setup(x => x.Regions)
                 .Returns(new string[] { "440" });
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
                 .Returns("https://example.com");
-            exposureConfigurationRepository
+            mockExposureConfigurationRepository
                 .Setup(x => x.GetExposureConfigurationAsync())
                 .Returns(Task.FromResult(new ExposureConfiguration()));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(diagnosisKeyEntryList));
-            userDataRepository
+            mockUserDataRepository
                 .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
                 .Returns(Task.FromResult(0L));
 
@@ -132,7 +137,7 @@ namespace Covid19Radar.UnitTests.Services
 
 
             // Assert
-            exposureNotificationApiService
+            mockExposureNotificationApiService
                 .Verify(x => x.ProvideDiagnosisKeysAsync(
                                 It.IsAny<List<string>>(),
                                 It.IsAny<ExposureConfiguration>(),
@@ -149,41 +154,45 @@ namespace Covid19Radar.UnitTests.Services
             CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
             // Mock Setup
-            diagnosisKeyRepository
+            mockLocalPathService
+                .Setup(x => x.CacheDirectory)
+                .Returns(Path.GetTempPath());
+
+            mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(diagnosisKeyEntryList));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/1.zip"),
                     It.IsAny<string>(),
                     It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult($"file://tmp/diagnosis_keys/440/1"));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/2.zip"),
                     It.IsAny<string>(),
                     It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult($"file://tmp/diagnosis_keys/440/2"));
          
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                      It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/3.zip"),
                      It.IsAny<string>(),
                      It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult($"file://tmp/diagnosis_keys/440/3"));
 
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.Regions)
                 .Returns(new string[] { "440" });
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
                 .Returns("https://example.com");
 
-            exposureConfigurationRepository
+            mockExposureConfigurationRepository
                 .Setup(x => x.GetExposureConfigurationAsync())
                 .Returns(Task.FromResult(exposureConfiguration));
 
-            userDataRepository
+            mockUserDataRepository
                 .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
                 .Returns(Task.FromResult(0L));
 
@@ -194,12 +203,12 @@ namespace Covid19Radar.UnitTests.Services
 
 
             // Assert
-            exposureNotificationApiService
+            mockExposureNotificationApiService
                 .Verify(x => x.ProvideDiagnosisKeysAsync(
                                 It.Is<List<string>>( s => s.SequenceEqual(new List<string>() { $"file://tmp/diagnosis_keys/440/1", $"file://tmp/diagnosis_keys/440/2", $"file://tmp/diagnosis_keys/440/3" })),
                                 It.Is<ExposureConfiguration>(s => s.Equals(exposureConfiguration)),
                                 It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Once);
-            userDataRepository
+            mockUserDataRepository
                 .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", 1638630000), Times.Once);
         }
 
@@ -214,31 +223,35 @@ namespace Covid19Radar.UnitTests.Services
             CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
             // Mock Setup
-            diagnosisKeyRepository
+            mockLocalPathService
+                .Setup(x => x.CacheDirectory)
+                .Returns(Path.GetTempPath());
+
+            mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(diagnosisKeyEntryList440));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(diagnosisKeyEntryList540));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.IsAny<DiagnosisKeyEntry>(),
                     It.IsAny<string>(),
                     It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult("DLFile"));
 
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.Regions)
                 .Returns(new string[] { "440", "540" });
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
                 .Returns("https://example.com");
 
-            exposureConfigurationRepository
+            mockExposureConfigurationRepository
                 .Setup(x => x.GetExposureConfigurationAsync())
                 .Returns(Task.FromResult(exposureConfiguration));
 
-            userDataRepository
+            mockUserDataRepository
                 .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
                 .Returns(Task.FromResult(0L));
 
@@ -249,21 +262,21 @@ namespace Covid19Radar.UnitTests.Services
 
 
             // Assert
-            serverConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("440"), Times.Once);
-            serverConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("540"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("440"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("540"), Times.Once);
 
-            userDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("440"), Times.Once);
-            userDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("540"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("440"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("540"), Times.Once);
 
-            exposureNotificationApiService
+            mockExposureNotificationApiService
                 .Verify(x => x.ProvideDiagnosisKeysAsync(
                                 It.Is<List<string>>(s => s.SequenceEqual(new List<string>() { "DLFile", "DLFile", "DLFile" })),
                                 It.Is<ExposureConfiguration>(s => s.Equals(exposureConfiguration)),
                                 It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Exactly(2));
 
-            userDataRepository
+            mockUserDataRepository
                 .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", 1638630000), Times.Once);
-            userDataRepository
+            mockUserDataRepository
                 .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("540", 1638630000), Times.Once);
         }
 
@@ -280,10 +293,14 @@ namespace Covid19Radar.UnitTests.Services
             CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
             // Mock Setup
-            diagnosisKeyRepository
+            mockLocalPathService
+                .Setup(x => x.CacheDirectory)
+                .Returns(Path.GetTempPath());
+
+            mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(diagnosisKeyEntryList));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/1.zip"),
                     It.IsAny<string>(),
@@ -293,7 +310,7 @@ namespace Covid19Radar.UnitTests.Services
                     File.Create($"{tempPath}/diagnosis_keys/440/1.zip");
                 })
                 .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/1.zip"));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/2.zip"),
                     It.IsAny<string>(),
@@ -304,7 +321,7 @@ namespace Covid19Radar.UnitTests.Services
                 })
                 .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/2.zip"));
 
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                      It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/3.zip"),
                      It.IsAny<string>(),
@@ -316,18 +333,18 @@ namespace Covid19Radar.UnitTests.Services
                 .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/3.zip"));
 
 
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.Regions)
                 .Returns(new string[] { "440" });
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
                 .Returns("https://example.com");
 
-            exposureConfigurationRepository
+            mockExposureConfigurationRepository
                 .Setup(x => x.GetExposureConfigurationAsync())
                 .Returns(Task.FromResult(exposureConfiguration));
 
-            userDataRepository
+            mockUserDataRepository
                 .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
                 .Returns(Task.FromResult(0L));
 
@@ -338,7 +355,7 @@ namespace Covid19Radar.UnitTests.Services
 
 
             // Assert
-            diagnosisKeyRepository.VerifyAll();
+            mockDiagnosisKeyRepository.VerifyAll();
             Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/1.zip"));
             Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/2.zip"));
             Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/3.zip"));
@@ -359,10 +376,14 @@ namespace Covid19Radar.UnitTests.Services
             CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
             // Mock Setup
-            diagnosisKeyRepository
+            mockLocalPathService
+                .Setup(x => x.CacheDirectory)
+                .Returns(Path.GetTempPath());
+
+            mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(diagnosisKeyEntryList));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/1.zip"),
                     It.IsAny<string>(),
@@ -372,7 +393,7 @@ namespace Covid19Radar.UnitTests.Services
                     File.Create($"{tempPath}/diagnosis_keys/440/1.zip");
                 })
                 .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/1.zip"));
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/2.zip"),
                     It.IsAny<string>(),
@@ -383,7 +404,7 @@ namespace Covid19Radar.UnitTests.Services
                 })
                 .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/2.zip"));
 
-            diagnosisKeyRepository
+            mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                      It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/3.zip"),
                      It.IsAny<string>(),
@@ -395,18 +416,18 @@ namespace Covid19Radar.UnitTests.Services
                 .Returns(Task.FromResult($"{tempPath}/diagnosis_keys/440/3.zip"));
 
 
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.Regions)
                 .Returns(new string[] { "440" });
-            serverConfigurationRepository
+            mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
                 .Returns("https://example.com");
 
-            exposureConfigurationRepository
+            mockExposureConfigurationRepository
                 .Setup(x => x.GetExposureConfigurationAsync())
                 .Returns(Task.FromResult(exposureConfiguration));
 
-            userDataRepository
+            mockUserDataRepository
                 .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
                 .Returns(Task.FromResult(0L));
 
@@ -417,7 +438,7 @@ namespace Covid19Radar.UnitTests.Services
 
 
             // Assert
-            diagnosisKeyRepository.VerifyAll();
+            mockDiagnosisKeyRepository.VerifyAll();
             Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/1.zip"));
             Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/2.zip"));
             Assert.False(File.Exists($"{tempPath}/diagnosis_keys/440/3.zip"));
@@ -437,14 +458,16 @@ namespace Covid19Radar.UnitTests.Services
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IServerConfigurationRepository serverConfigurationRepository
+            IServerConfigurationRepository serverConfigurationRepository,
+            ILocalPathService localPathService
         ) : base(
             diagnosisKeyRepository,
             exposureNotificationApiService,
             exposureConfigurationRepository,
             loggerService,
             userDataRepository,
-            serverConfigurationRepository
+            serverConfigurationRepository,
+            localPathService
         )
         {
 

@@ -77,20 +77,5 @@ namespace Covid19Radar.Common
                 }
             }
         }
-
-        public static string CacheDirectory
-        {
-            get
-            {
-                // FileSystem.CacheDirectory is not testable because it needs a platform-specific environment.
-                // https://github.com/xamarin/Essentials/issues/520#issuecomment-437966781
-                if (DeviceInfo.Platform == DevicePlatform.Unknown)
-                {
-                    return Path.GetTempPath();
-                }
-
-                return FileSystem.CacheDirectory;
-            }
-        }
     }
 }

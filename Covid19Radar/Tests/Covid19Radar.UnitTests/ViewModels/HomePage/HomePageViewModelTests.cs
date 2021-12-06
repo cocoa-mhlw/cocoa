@@ -31,6 +31,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<AbsExposureDetectionBackgroundService> mockExposureDetectionBackgroundService;
         private readonly Mock<IDialogService> mockDialogService;
         private readonly Mock<IExternalNavigationService> mockExternalNavigationService;
+        private readonly Mock<ILocalPathService> mockLocalPathService;
 
         public HomePageViewModelTests()
         {
@@ -41,13 +42,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>(mockLoggerService.Object);
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
             mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
+            mockLocalPathService = mockRepository.Create<ILocalPathService>();
             mockExposureDetectionBackgroundService = mockRepository.Create<AbsExposureDetectionBackgroundService>(
                 mockRepository.Create<IDiagnosisKeyRepository>().Object,
                 mockExposureNotificationApiService.Object,
                 mockRepository.Create<IExposureConfigurationRepository>().Object,
                 mockLoggerService.Object,
                 mockUserDataRepository.Object,
-                mockServerConfigurationRepository.Object
+                mockServerConfigurationRepository.Object,
+                mockLocalPathService.Object
                 );
             mockDialogService = mockRepository.Create<IDialogService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();
