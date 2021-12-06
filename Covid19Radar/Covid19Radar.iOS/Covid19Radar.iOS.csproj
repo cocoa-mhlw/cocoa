@@ -68,7 +68,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchI18n>cjk</MtouchI18n>
     <LangVersion>latest</LangVersion>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <IntermediateOutputPath>
     </IntermediateOutputPath>

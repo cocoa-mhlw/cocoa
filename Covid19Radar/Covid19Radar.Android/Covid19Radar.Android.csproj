@@ -140,7 +140,7 @@
       <Version>8.1.97</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Work.Runtime">
-      <Version>2.5.0.3</Version>
+      <Version>2.6.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.7.0</Version>
@@ -165,7 +165,7 @@
       <Version>2.0.6</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Core">
-      <Version>1.7.0.1</Version>
+      <Version>1.6.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.RecyclerView">
       <Version>1.2.1.4</Version>
