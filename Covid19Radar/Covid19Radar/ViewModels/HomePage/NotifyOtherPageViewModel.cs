@@ -19,6 +19,8 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
+        public string HowToReceiveProcessingNumberReadText => $"{AppResources.NotifyOtherPageLabel} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly ICloseApplicationService closeApplicationService;

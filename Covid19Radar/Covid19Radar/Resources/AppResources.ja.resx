@@ -1107,4 +1107,8 @@
     <value>ボタン</value>
     <comment>ボタン</comment>
   </data>
+  <data name="List" xml:space="preserve">
+    <value>リスト</value>
+    <comment>リスト</comment>
+  </data>
 </root>

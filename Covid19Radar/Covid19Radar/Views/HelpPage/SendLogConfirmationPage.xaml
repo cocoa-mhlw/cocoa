@@ -18,10 +18,13 @@
             Margin="0"
             Padding="0">
             <StackLayout
-            BackgroundColor="{StaticResource Background}"
-            Padding="20"
-            Spacing="20">
-                <Label Style="{StaticResource DefaultLabel}">
+                BackgroundColor="{StaticResource Background}"
+                Padding="20"
+                Spacing="20">
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
+                    Style="{StaticResource DefaultLabel}">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription1}" />
@@ -42,7 +45,10 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label Style="{StaticResource DefaultLabelSmall}">
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="2"
+                    Style="{StaticResource DefaultLabelSmall}">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription6}" />
@@ -60,13 +66,18 @@
                         <TapGestureRecognizer Command="{Binding Path=OnClickConfirmLogCommand}"/>
                     </Frame.GestureRecognizers>
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="{Binding ConfirmingLogReadText}"
+                        TabIndex="3"
                         Style="{StaticResource LinkLabelStyleMedium}"
                         Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}" />
                 </Frame>
                 <Button
-                Command="{Binding Path=OnClickSendLogCommand}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.SendLogConfirmationPageButton1}" />
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="4"
+                    Command="{Binding Path=OnClickSendLogCommand}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.SendLogConfirmationPageButton1}" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

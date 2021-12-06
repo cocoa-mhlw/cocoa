@@ -1702,5 +1702,11 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("Button", resourceCulture);
             }
         }
+        
+        public static string List {
+            get {
+                return ResourceManager.GetString("List", resourceCulture);
+            }
+        }
     }
 }

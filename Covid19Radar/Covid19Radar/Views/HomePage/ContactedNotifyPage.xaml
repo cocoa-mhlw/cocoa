@@ -33,11 +33,13 @@
                         Source="InfoMark.png" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="1"
                         Margin="0,0,0,5"
                         Style="{StaticResource DefaultTitleLabel}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="2"
                         Margin="0,0,0,5"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
@@ -51,14 +53,14 @@
                     </Label>
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        AutomationProperties.Name="{x:Static resources:AppResources.ContactedNotifyPageButton2}"
+                        TabIndex="3"
                         Margin="0,0,0,20"
-                        AutomationId="ButtonShareApp"
                         Command="{Binding Path=OnClickByForm}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="4"
                         Margin="0"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
@@ -66,9 +68,8 @@
                 </StackLayout>
             </Frame>
             <Button
-                AutomationId="OnClickExposures"
                 AutomationProperties.IsInAccessibleTree="True"
-                AutomationProperties.Name="{x:Static resources:AppResources.ContactedNotifyPageButton1}"
+                TabIndex="5"
                 Command="{prism:NavigateTo 'ExposuresPage'}"
                 Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />

@@ -25,6 +25,8 @@
             </Grid.RowDefinitions>
             <Label
                 Grid.Row="0"
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="1"
                 Margin="20"
                 Padding="0"
                 Style="{StaticResource DefaultTitleLabel}"
@@ -45,9 +47,15 @@
                     </Grid.RowDefinitions>
                     <Label
                         Grid.Row="0"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="2"
                         Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SendLogCompletePageDescription2}" />
-                    <Label Grid.Row="1" Style="{StaticResource DefaultLabel}">
+                    <Label
+                        Grid.Row="1"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="3"
+                        Style="{StaticResource DefaultLabel}">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{x:Static resources:AppResources.SendLogCompletePageCopyId}" />
@@ -56,8 +64,7 @@
                                       TextColor="#2196F3"
                                       TextDecorations="Underline">
                                     <Span.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding Path=OnCopyCommand}"
-                                                              />
+                                        <TapGestureRecognizer Command="{Binding Path=OnCopyCommand}" />
                                     </Span.GestureRecognizers>
                                 </Span>
                             </FormattedString>
@@ -65,11 +72,15 @@
                     </Label>
                     <Button
                         Grid.Row="2"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="4"
                         Command="{Binding Path=OnClickSendMailCommand}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.SendLogCompletePageButton1}" />
                     <Button
                         Grid.Row="3"
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="5"
                         Command="{Binding Path=OnClickHomeCommand}"
                         Style="{StaticResource DefaultButtonGrayedOut}"
                         Text="{x:Static resources:AppResources.SendLogCompletePageButton2}" />

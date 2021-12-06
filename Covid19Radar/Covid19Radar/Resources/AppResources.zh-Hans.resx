@@ -1103,4 +1103,8 @@
     <value>按钮</value>
     <comment>ボタン</comment>
   </data>
+  <data name="List" xml:space="preserve">
+    <value>一览</value>
+    <comment>リスト</comment>
+  </data>
 </root>

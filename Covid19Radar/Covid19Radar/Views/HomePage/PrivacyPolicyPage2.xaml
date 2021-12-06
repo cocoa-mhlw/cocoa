@@ -17,6 +17,10 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <StackLayout Style="{StaticResource DefaultStackLayout}">
-        <views:NavigatePopoverWebView Source="{x:Static resources:AppResources.UrlPrivacyPolicy}" Style="{StaticResource DefaultWebView}" />
+        <views:NavigatePopoverWebView
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
+            Source="{x:Static resources:AppResources.UrlPrivacyPolicy}"
+            Style="{StaticResource DefaultWebView}" />
     </StackLayout>
 </ContentPage>

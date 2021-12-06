@@ -41,6 +41,7 @@
                     Grid.Row="0"
                     Grid.Column="1"
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
                     Style="{StaticResource DefaultLabel}"
                     VerticalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription1}" />
@@ -54,12 +55,14 @@
                     Grid.Row="1"
                     Grid.Column="1"
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="2"
                     Style="{StaticResource DefaultLabel}"
                     VerticalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription2}" />
             </Grid>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="3"
                 Style="{StaticResource DefaultLabel}">
                 <AutomationProperties.Name>
                     <OnPlatform x:TypeArguments="x:String">
@@ -75,6 +78,7 @@
             </Label>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="4"
                 Style="{StaticResource DefaultLabel}">
                 <AutomationProperties.Name>
                     <OnPlatform x:TypeArguments="x:String">

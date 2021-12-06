@@ -1217,4 +1217,8 @@ Note: this app does not collect users’ location information.</value>
     <value>button</value>
     <comment>ボタン</comment>
   </data>
+  <data name="List" xml:space="preserve">
+    <value>list</value>
+    <comment>リスト</comment>
+  </data>
 </root>

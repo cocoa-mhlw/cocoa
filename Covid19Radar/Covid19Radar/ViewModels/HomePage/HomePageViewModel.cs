@@ -18,6 +18,8 @@ namespace Covid19Radar.ViewModels
 {
     public class HomePageViewModel : ViewModelBase
     {
+        public string SharingThisAppReadText => $"{AppResources.HomePageDescription5} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository userDataRepository;
         private readonly IExposureNotificationService exposureNotificationService;
