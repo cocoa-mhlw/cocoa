@@ -658,8 +658,8 @@
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>Please input a valid processing number.</value>
-    <comment>正しい処理番号を入力してください。</comment>
+    <value>The processing number is incorrect or has expired.</value>
+    <comment>処理番号が誤っているか、有効期限が切れています。</comment>
   </data>
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
     <value>Cannot connect to registration center</value>
