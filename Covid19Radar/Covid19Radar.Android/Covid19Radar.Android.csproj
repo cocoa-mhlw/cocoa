@@ -159,7 +159,7 @@
       <Version>19.7.2-eap-alpha03</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
-      <Version>117.0.0-preview03</Version>
+      <Version>117.0.1.2</Version>
     </PackageReference>
     <PackageReference Include="CommonServiceLocator">
       <Version>2.0.6</Version>
