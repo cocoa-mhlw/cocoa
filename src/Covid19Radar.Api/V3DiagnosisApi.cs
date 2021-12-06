@@ -137,14 +137,14 @@ namespace Covid19Radar.Api
                     var idSeed = $"{submissionParameter.IdempotencyKey},{k.KeyData},{k.RollingStartNumber},{k.RollingPeriod}";
                     var id = ByteArrayToString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
 
-                    var key = k.ToModel();
-                    key.id = id;
-                    key.Timestamp = timestamp;
-
                     foreach (var region in submissionParameter.Regions)
                     {
+                        var key = k.ToModel();
+                        key.id = id;
                         key.PartitionKey = region;
-                        newKeys.Add(key);
+                        key.Timestamp = timestamp;
+
+                        await _tekRepository.UpsertAsync(key);
                     }
                 }
             }
