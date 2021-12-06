@@ -36,14 +36,14 @@
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
+                    Value="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
                     GroupName="CheckSymptoms" />
                 <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
+                    Value="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
                     GroupName="CheckSymptoms" />
             </StackLayout>
             <StackLayout Margin="0, 15, 0, 0"
