@@ -2,15 +2,18 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 using System;
+using System.Linq;
 using Covid19Radar.Services;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
+using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using Moq;
 using Xunit;
 using Chino;
 using System.IO;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.UnitTests.Services { 
     public class ExposureDetectionServiceTests: IDisposable
@@ -324,12 +327,14 @@ namespace Covid19Radar.UnitTests.Services {
             var unitUnderTest = CreateService();
             await unitUnderTest.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformationList);
 
-
+            
             // Assert
             localNotificationService
                 .Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+
+            var expectedSerializedData = JsonConvert.SerializeObject(exposureInformationList.Select(x => new UserExposureInfo(x)));
             preferencesService
-                .Verify(x => x.SetValue<string>("ExposureInformation", It.IsAny<string>()), Times.Once);
+                .Verify(x => x.SetValue<string>("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
         }
 
         [Fact]
