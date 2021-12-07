@@ -875,9 +875,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string ExposureNotificationHandler1ErrorMessage {
+        public static string ExposureNotificationHandler1ErrorTitle {
             get {
-                return ResourceManager.GetString("ExposureNotificationHandler1ErrorMessage", resourceCulture);
+                return ResourceManager.GetString("ExposureNotificationHandler1ErrorTitle", resourceCulture);
             }
         }
         

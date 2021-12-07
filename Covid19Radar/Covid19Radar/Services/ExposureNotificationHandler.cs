@@ -332,8 +332,8 @@ namespace Covid19Radar.Services
 
                     case HttpStatusCode.NotAcceptable:
                         await UserDialogs.Instance.AlertAsync(
-                            AppResources.ExposureNotificationHandler1ErrorMessage,
-                            AppResources.ProcessingNumberErrorDiagTitle,
+                            null,
+                            AppResources.ExposureNotificationHandler1ErrorTitle,
                             AppResources.ButtonOk);
 
                         loggerService.Error($"The diagnostic number is incorrect.");

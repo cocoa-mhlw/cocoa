@@ -657,7 +657,7 @@
     <value>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
-  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+  <data name="ExposureNotificationHandler1ErrorTitle" xml:space="preserve">
     <value>The processing number is incorrect or has expired.</value>
     <comment>処理番号が誤っているか、有効期限が切れています。</comment>
   </data>
