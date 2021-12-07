@@ -112,5 +112,11 @@ namespace Covid19Radar.ViewModels
                 item.TextColor = MenuTextColorDefault;
             });
         }
+
+        public Command OnCloseButton => new Command(async () =>
+        {
+            var currentMenuItem = SelectedMenuItem ?? MenuItems[0];
+            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + currentMenuItem.PageName);
+        });
     }
 }
