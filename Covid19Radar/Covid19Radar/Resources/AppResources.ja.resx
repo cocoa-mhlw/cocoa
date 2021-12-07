@@ -339,8 +339,8 @@
     <comment>プライバシーについて</comment>
   </data>
   <data name="TutorialPage2Description2" xml:space="preserve">
-    <value>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
-    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <value>氏名・電話番号などの個人情報や、GPS（※）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
+    <comment>氏名・電話番号などの個人情報や、GPS（※）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
     <value>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</value>
@@ -1110,5 +1110,9 @@
   <data name="List" xml:space="preserve">
     <value>リスト</value>
     <comment>リスト</comment>
+  </data>
+  <data name="TutorialPage2Annotation" xml:space="preserve">
+    <value>※位置を特定する仕組み</value>
+    <comment>※位置を特定する仕組み</comment>
   </data>
 </root>

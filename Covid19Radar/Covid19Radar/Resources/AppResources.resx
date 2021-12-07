@@ -1221,4 +1221,8 @@ Note: this app does not collect users’ location information.</value>
     <value>list</value>
     <comment>リスト</comment>
   </data>
+  <data name="TutorialPage2Annotation" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※位置を特定する仕組み</comment>
+  </data>
 </root>

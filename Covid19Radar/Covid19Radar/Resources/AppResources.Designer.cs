@@ -1708,5 +1708,11 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("List", resourceCulture);
             }
         }
+        
+        public static string TutorialPage2Annotation {
+            get {
+                return ResourceManager.GetString("TutorialPage2Annotation", resourceCulture);
+            }
+        }
     }
 }

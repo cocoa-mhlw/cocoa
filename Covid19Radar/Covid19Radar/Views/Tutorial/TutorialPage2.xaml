@@ -51,10 +51,15 @@
                     TabIndex="4"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.TutorialPage2Description4}" />
-                <Button
-                    Grid.Row="1"
+                <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    Margin="0, 10"
                     TabIndex="5"
+                    Style="{StaticResource AnnotationLabel}"
+                    Text="{x:Static resources:AppResources.TutorialPage2Annotation}" />
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="6"
                     Command="{prism:NavigateTo 'TutorialPage3'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.TutorialPage2Description5}" />

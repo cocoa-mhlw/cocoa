@@ -1107,4 +1107,8 @@
     <value>一览</value>
     <comment>リスト</comment>
   </data>
+  <data name="TutorialPage2Annotation" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※位置を特定する仕組み</comment>
+  </data>
 </root>
