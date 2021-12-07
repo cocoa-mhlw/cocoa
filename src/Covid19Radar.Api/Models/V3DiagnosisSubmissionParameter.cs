@@ -11,7 +11,6 @@ using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
-
     public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
         public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";

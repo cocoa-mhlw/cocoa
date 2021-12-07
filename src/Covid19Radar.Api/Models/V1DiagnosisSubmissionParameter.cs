@@ -57,7 +57,7 @@ namespace Covid19Radar.Api.Models
 				return true;
 			}
 
-            internal string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, TransmissionRisk);
+			internal string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, TransmissionRisk);
 		}
 
 		public override bool IsValid()
