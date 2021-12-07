@@ -17,6 +17,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentView>
     <ScrollView>
         <StackLayout
             Padding="15,15,15,20">
@@ -51,13 +52,12 @@
                 <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.NotifyOtherPageWithSymptomsDescription1}" />
-                <StackLayout Spacing="0"
-                                Margin="0, 5, 0, 10">
                     <Frame Padding="0"
                             BackgroundColor="#CECECE"
                             CornerRadius="7"
                             HasShadow="False"
-                            HorizontalOptions="FillAndExpand">
+                            HorizontalOptions="FillAndExpand"
+                            Margin="0, 5, 0, 10">
                         <Frame Margin="3"
                                 Padding="0"
                                 BackgroundColor="White"
@@ -71,32 +71,29 @@
                         </Frame>
                     </Frame>
                 </StackLayout>
-            </StackLayout>
             <StackLayout Margin="0, 15, 0, 0"
                             IsVisible="{Binding IsVisibleNoSymptomsLayout}">
-                <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
-                <StackLayout Spacing="0"
-                                Margin="0, 5, 0, 10">
-                    <Frame Padding="0"
-                            BackgroundColor="#CECECE"
-                            CornerRadius="7"
-                            HasShadow="False"
-                            HorizontalOptions="FillAndExpand">
-                        <Frame Margin="3"
-                                Padding="0"
-                                BackgroundColor="White"
-                                CornerRadius="5"
-                                HasShadow="False">
-                            <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
-                                                        MaximumDate="{x:Static x:DateTime.Now}"
-                                                        BackgroundColor="White"
-                                                        Format="d"
-                                                        Date="{Binding DiagnosisDate}"/>
-                        </Frame>
+            <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
+                <Frame Padding="0"
+                        BackgroundColor="#CECECE"
+                        CornerRadius="7"
+                        HasShadow="False"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0, 5, 0, 10">
+                    <Frame Margin="3"
+                            Padding="0"
+                            BackgroundColor="White"
+                            CornerRadius="5"
+                            HasShadow="False">
+                        <controls:CustomDatePicker AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
+                                                    MaximumDate="{x:Static x:DateTime.Now}"
+                                                    BackgroundColor="White"
+                                                    Format="d"
+                                                    Date="{Binding DiagnosisDate}"/>
                     </Frame>
-                </StackLayout>
+                </Frame>
             </StackLayout>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
@@ -153,7 +150,7 @@
                                     <Setter Property="Placeholder" Value="{x:Static resources:AppResources.ProcessingNumberPlaceholderDeepLink}" />
                                 </DataTrigger>
                             </Entry.Triggers>
-                         </Entry>
+                            </Entry>
                     </Frame>
                 </Frame>
                 <Frame
@@ -181,7 +178,7 @@
 
                 <StackLayout Spacing="10"
                             IsVisible="{Binding IsConsentLinkVisible}"
-                             >
+                                >
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsConsentLinkVisible}"
                         Margin="0, 0, 0, 5"
@@ -241,4 +238,5 @@
             </Frame>
         </StackLayout>
     </ScrollView>
+    </ContentView>
 </ContentPage>

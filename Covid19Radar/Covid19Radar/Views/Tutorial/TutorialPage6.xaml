@@ -16,6 +16,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentView>
     <ScrollView>
         <Grid Margin="20" Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
@@ -69,4 +70,5 @@
             </StackLayout>
         </Grid>
     </ScrollView>
+    </ContentView>
 </ContentPage>

@@ -16,6 +16,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentView>
     <ScrollView>
         <StackLayout
             Padding="10"
@@ -74,4 +75,5 @@
                 Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
         </StackLayout>
     </ScrollView>
+    </ContentView>
 </ContentPage>

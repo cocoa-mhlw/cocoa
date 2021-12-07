@@ -15,6 +15,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentView>
     <ScrollView>
         <StackLayout
             Padding="15"
@@ -27,11 +28,11 @@
                 <StackLayout Spacing="0">
 
                     <Label HorizontalTextAlignment="Start"
-                           Style="{StaticResource DefaultWebView}">
+                            Style="{StaticResource DefaultWebView}">
                     <Label.FormattedText>
                     <FormattedString>
-                      <Span Text="ServerConfiguration&#xa;"/>
-                      <Span Text="{Binding ServerConfigurationInfo}" />
+                        <Span Text="ServerConfiguration&#xa;"/>
+                        <Span Text="{Binding ServerConfigurationInfo}" />
                     </FormattedString>
                     </Label.FormattedText>
                     </Label>
@@ -45,8 +46,8 @@
                     <Label HorizontalTextAlignment="Start" Style="{StaticResource DefaultWebView}">
                     <Label.FormattedText>
                     <FormattedString>
-                      <Span Text="DEBUG INFO&#xa;"/>
-                      <Span Text="{Binding DebugInfo}" />
+                        <Span Text="DEBUG INFO&#xa;"/>
+                        <Span Text="{Binding DebugInfo}" />
                     </FormattedString>
                     </Label.FormattedText>
                     </Label>
@@ -227,4 +228,5 @@
             </Frame>
         </StackLayout>
     </ScrollView>
+    </ContentView>
 </ContentPage>

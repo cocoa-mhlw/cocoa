@@ -17,6 +17,7 @@
     NavigationPage.HasNavigationBar="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentView>
     <ScrollView>
         <Grid Style="{StaticResource HelpPageGridLayout}">
             <Grid.RowDefinitions>
@@ -67,4 +68,5 @@
             </StackLayout>
         </Grid>
     </ScrollView>
+    </ContentView>
 </ContentPage>

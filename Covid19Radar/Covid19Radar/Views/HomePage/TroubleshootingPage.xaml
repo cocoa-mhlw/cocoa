@@ -16,6 +16,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <ContentView>
     <ScrollView>
         <StackLayout
             Padding="20"
@@ -55,5 +56,6 @@
                 AutomationProperties.IsInAccessibleTree="True" />
         </StackLayout>
     </ScrollView>
+    </ContentView>
 </ContentPage>
 

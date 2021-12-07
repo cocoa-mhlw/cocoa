@@ -24,7 +24,7 @@
             Priority="1"
             Text="{x:Static resources:AppResources.MainTutorial}" />
     </ContentPage.ToolbarItems>
-
+    <ContentView>
     <ScrollView>
         <StackLayout
             Padding="15"
@@ -224,4 +224,5 @@
             </StackLayout>
         </StackLayout>
     </ScrollView>
+    </ContentView>
 </ContentPage>
