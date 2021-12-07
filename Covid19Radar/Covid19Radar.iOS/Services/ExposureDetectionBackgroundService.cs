@@ -51,8 +51,6 @@ namespace Covid19Radar.iOS.Services
         {
             _loggerService.StartMethod();
 
-            _loggerService.Debug($"BGTASK_IDENTIFIER: {BGTASK_IDENTIFIER}");
-
             var result = BGTaskScheduler.Shared.Register(BGTASK_IDENTIFIER, null, task =>
             {
                 _loggerService.Info("Background task has been started.");
@@ -70,11 +68,10 @@ namespace Covid19Radar.iOS.Services
                             .GetAwaiter().GetResult();
 
                         bool isUnauthorized = statuses
-                            .Where(status => status.Code == ExposureNotificationStatus.Code_iOS.Unauthorized)
-                            .Count() != 0;
+                            .Any(status => status.Code == ExposureNotificationStatus.Code_iOS.Unauthorized);
                         if (isUnauthorized)
                         {
-                            _loggerService.Error("Exposure notofication is not authorized.");
+                            _loggerService.Error("Exposure notification is not authorized.");
                             task.SetTaskCompleted(true);
                             return;
                         }
