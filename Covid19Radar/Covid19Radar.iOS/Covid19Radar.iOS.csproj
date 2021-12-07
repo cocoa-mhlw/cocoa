@@ -68,7 +68,7 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchI18n>cjk</MtouchI18n>
     <LangVersion>latest</LangVersion>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <IntermediateOutputPath>
     </IntermediateOutputPath>
@@ -361,9 +361,6 @@
     <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf">
-      <Version>3.19.1</Version>
-    </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
       <Version>7.1.0.431</Version>
     </PackageReference>
