@@ -143,8 +143,7 @@ namespace Covid19Radar.Api
                         key.id = id;
                         key.PartitionKey = region;
                         key.Timestamp = timestamp;
-
-                        await _tekRepository.UpsertAsync(key);
+                        newKeys.Add(key);
                     }
                 }
             }
