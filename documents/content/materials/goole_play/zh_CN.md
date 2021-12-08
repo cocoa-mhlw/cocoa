@@ -2,6 +2,7 @@
 title: "簡体中国語"
 weight: 30
 type: docs
+url: /materials/googleplay/zh_CN.html
 ---
 
 https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar&hl=zh_CN

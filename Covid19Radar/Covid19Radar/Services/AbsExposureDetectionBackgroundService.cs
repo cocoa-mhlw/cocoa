@@ -11,6 +11,7 @@ using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.Services
 {
@@ -24,6 +25,7 @@ namespace Covid19Radar.Services
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
+        private readonly ILocalPathService _localPathService;
 
         public AbsExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
@@ -31,7 +33,8 @@ namespace Covid19Radar.Services
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IServerConfigurationRepository serverConfigurationRepository
+            IServerConfigurationRepository serverConfigurationRepository,
+            ILocalPathService localPathService
             )
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
@@ -40,6 +43,7 @@ namespace Covid19Radar.Services
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
+            _localPathService = localPathService;
         }
 
         public abstract void Schedule();
@@ -113,7 +117,7 @@ namespace Covid19Radar.Services
 
         private string PrepareDir(string region)
         {
-            var cacheDir = FileSystem.CacheDirectory;
+            var cacheDir = _localPathService.CacheDirectory;
 
             var baseDir = Path.Combine(cacheDir, DIAGNOSIS_KEYS_DIR);
             if (!Directory.Exists(baseDir))

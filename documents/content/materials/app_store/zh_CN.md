@@ -2,6 +2,7 @@
 title: "簡体中国語"
 weight: 30
 type: docs
+url: /materials/appstore/zh_CN.html
 ---
 
 ## 簡体中国語

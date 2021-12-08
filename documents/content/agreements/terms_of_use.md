@@ -2,11 +2,13 @@
 title: "利用規約"
 weight: 10
 type: docs
+url: /agreements/terms_of_use/
 ---
 
 ## 日本語
 
-https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_rk_00028.html
+ * https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_rk_00028.html
+ * https://www.mhlw.go.jp/cocoa/kiyaku_japanese.html
 
 ### 接触確認アプリケーション利用規約
 
@@ -36,7 +38,7 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_rk_00028.html
 
 　十　「管理システム」とは、新型コロナウイルスの陽性者及び濃厚接触者の情報を管理するため、厚生労働省が運用し、都道府県及び保健所設置市において利用される、新型コロナウイルス感染者等情報把握・管理支援システムをいいます。
 
-　十一　「処理番号」とは、アプリ利用者が陽性者であると判明した場合に、管理システムから当該アプリ利用者に対して、ランダムに発行され、通知がされる無意かつ一時的な番号をいいます。
+　十一　「処理番号」とは、アプリ利用者が陽性者であると判明した場合に、管理システムから当該アプリ利用者に対して、ランダムに発行され、通知がされる無意な番号をいいます。
 
 （本利用規約への同意）  
 第３条　アプリ利用者は、本利用規約の定めに従って本アプリを利用しなければならず、本利用規約の内容を十分に理解した上で、本利用規約に同意しない限り、本アプリを利用できません。
@@ -165,7 +167,9 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_rk_00028.html
 
 ## English（英語）
 
-https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html
+ * https://www.mhlw.go.jp/stf/seisakunitsuite/english_rk_00031.html
+ * https://www.mhlw.go.jp/cocoa/kiyaku_english.html
+
 
 ### Contact Confirmation Application Terms and Conditions of Use
 
@@ -195,7 +199,7 @@ Article 2: The following words and terms shall have the following meanings when 
 
 (10) “Management System” means a COVID-19 infected person information identification and management support system, operated by the Ministry of Health, Labour and Welfare and used by prefectures and cities where public health centers are located, for the purpose of managing information of Positive Testers for COVID-19 and people who have been in close contact with Positive Testers.
 
-(11) “Processing Number” means a temporary number without any special meaning, which is issued randomly and communicated to an App User from the Management System in the event that the App User has been determined to be a Positive Tester.
+(11) “Processing Number” means a number without any special meaning, which is issued randomly and communicated to an App User from the Management System in the event that the App User has been determined to be a Positive Tester.
  
 (Acceptance of Terms and Conditions)  
 Article 3: 1 App Users shall use the App in accordance with these Terms and Conditions, and cannot use the App unless they have fully understood the content of, and have accepted, these Terms and Conditions.
@@ -322,7 +326,8 @@ Article 15: 1 These Terms and Conditions and all items pertaining to the use of 
 
 ## 簡体中国語
 
-https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html
+ * https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html
+ * https://www.mhlw.go.jp/cocoa/kiyaku_chinese.html
 
 ### 接触确认应用程序使用规则
 
@@ -354,7 +359,7 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html
 
 十　“管理系统”是指，为了对新型冠状病毒的阳性者以及密切接触者的信息进行管理，而由厚生劳动省进行运营，用于都道府县以及设置保健所的市，掌握和管理新型冠状病毒感染者等信息的支援系统。
 
-十一　“受理编号”是指，在查明某位APP使用者为阳性者的情况下，由管理系统向该APP使用者随机发行，进行通知的任意临时编号。
+十一　“受理编号”是指，在查明某位APP使用者为阳性者的情况下，由管理系统向该APP使用者随机发行，进行通知的任意编号。
  
 （认可本使用规则）  
 第３条　APP使用者必须遵循本使用规则中的规定事项使用本APP，充分理解本使用规则的内容并认可本使用规则，否则无法使用本APP。
@@ -413,7 +418,7 @@ https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_rk_00029.html
 
 ２　设置客户服务台的目的是，通过电子邮件受理来自APP使用者的关于本APP的咨询和协商，并给出答复，从而为本APP的使用者提供支援，并收集用于改善本APP功能等的信息。可接收邮件的时间原则上为每年365天、每天24小时。邮件服务器的运行状况等可能会导致偶尔无法接收邮件。此外，根据使用者所咨询的内容，可能需要一定时间后才能给出答复或无法给出答复。
 
-３　对于在本APP中收到可能与处于感染可能期间内的阳性者有过接触的通知的APP使用者，呼叫中心通过电话受理其咨询，根据需要将其引流至各地区的咨询窗口，在判明APP使用者自己为阳性者的情况下，为APP使用者提供支援，协助其从安装有该APP的终端向通知服务器发送处理编号以及记录于该APP使用者的安装有APP的终端中的日更密钥。呼叫中心并非由医生、保健师、护士等医疗专业人员应对APP使用者的健康咨询。呼叫中心的电话号码和工作时间请参照上文的通知，又或者运营方将电话号码发送给需要支援的APP使用者。由于电话线路的事故和拥堵等原因，可能出现电话无法接通或接通耗时的情况。此外，根据您所咨询的内容，运营方也有可能无法给出答复。
+３　对于在本APP中收到可能与处于感染可能期间内的阳性者有过接触的通知的APP使用者，呼叫中心通过电话受理其咨询，根据需要将其引流至各地区的咨询窗口，在判明APP使用者自己为阳性者的情况下，为APP使用者提供支援，协助其从安装有该APP的终端向通知服务器发送受理编号以及记录于该APP使用者的安装有APP的终端中的日更密钥。呼叫中心并非由医生、保健师、护士等医疗专业人员应对APP使用者的健康咨询。呼叫中心的电话号码和工作时间请参照上文的通知，又或者运营方将电话号码发送给需要支援的APP使用者。由于电话线路的事故和拥堵等原因，可能出现电话无法接通或接通耗时的情况。此外，根据您所咨询的内容，运营方也有可能无法给出答复。
 
 （禁止事项以及遵守事项）  
 第８条　APP使用者在使用本APP的过程中，不得进行如下各条款中所述的行为。

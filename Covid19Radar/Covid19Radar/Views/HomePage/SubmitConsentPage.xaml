@@ -55,22 +55,25 @@
                             FontAttributes="Bold"
                             TextColor="Black"
                             Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_1}"/>
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            Style="{StaticResource DefaultLabel}"
-                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_2}" />
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            Style="{StaticResource DefaultLabel}"
-                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_3}" />
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            Style="{StaticResource DefaultLabel}"
-                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_4}" />
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            Style="{StaticResource DefaultLabel}"
-                            Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_5}" />
+                        <StackLayout
+                            AutomationProperties.IsInAccessibleTree="False">
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_2}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_3}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_4}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_5}" />
+                        </StackLayout>
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
                             Style="{StaticResource DefaultLabel}"
