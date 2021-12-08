@@ -1709,9 +1709,27 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string TutorialPage2Annotation {
+        public static string GpsAnnotation {
             get {
-                return ResourceManager.GetString("TutorialPage2Annotation", resourceCulture);
+                return ResourceManager.GetString("GpsAnnotation", resourceCulture);
+            }
+        }
+        
+        public static string BluetoothAnnotation {
+            get {
+                return ResourceManager.GetString("BluetoothAnnotation", resourceCulture);
+            }
+        }
+        
+        public static string ScreenshotAnnotation {
+            get {
+                return ResourceManager.GetString("ScreenshotAnnotation", resourceCulture);
+            }
+        }
+        
+        public static string CocoaAnnotation {
+            get {
+                return ResourceManager.GetString("CocoaAnnotation", resourceCulture);
             }
         }
     }

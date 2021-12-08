@@ -57,9 +57,14 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Button
+                    <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="4"
+                        Style="{StaticResource AnnotationLabel}"
+                        Text="{x:Static resources:AppResources.CocoaAnnotation}" />
+                    <Button
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="5"
                         Command="{Binding Path=OnClickSendLogCommand}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.InqueryPageButton3}" />
@@ -73,12 +78,12 @@
                 <StackLayout Spacing="0">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="5"
+                        TabIndex="6"
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="6"
+                        TabIndex="7"
                         Style="{StaticResource LinkLabelStyleSmall}"
                         Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html" />
                 </StackLayout>

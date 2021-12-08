@@ -1221,8 +1221,20 @@ Note: this app does not collect users’ location information.</value>
     <value>list</value>
     <comment>リスト</comment>
   </data>
-  <data name="TutorialPage2Annotation" xml:space="preserve">
+  <data name="GpsAnnotation" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：※位置を特定する仕組み</comment>
+  </data>
+  <data name="BluetoothAnnotation" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※機器同士を繋ぐ無線通信システム</comment>
+  </data>
+  <data name="ScreenshotAnnotation" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※表示している画面の写真</comment>
+  </data>
+  <data name="CocoaAnnotation" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※本アプリのこと</comment>
   </data>
 </root>

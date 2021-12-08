@@ -56,7 +56,7 @@
                     Margin="0, 10"
                     TabIndex="5"
                     Style="{StaticResource AnnotationLabel}"
-                    Text="{x:Static resources:AppResources.TutorialPage2Annotation}" />
+                    Text="{x:Static resources:AppResources.GpsAnnotation}" />
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="6"

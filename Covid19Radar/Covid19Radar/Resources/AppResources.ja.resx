@@ -423,8 +423,8 @@
     <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage4Description" xml:space="preserve">
-    <value>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</value>
-    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
+    <value>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth（ブルートゥース）（※）通信を有効にしてください。</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth（ブルートゥース）（※）通信を有効にしてください。</comment>
   </data>
   <data name="TutorialPage4Label" xml:space="preserve">
     <value>技術的な詳細について</value>
@@ -624,9 +624,9 @@
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
     <value>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</value>
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショット（※）を保存してください。</value>
     <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショット（※）を保存してください。</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>確認しました</value>
@@ -652,8 +652,8 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/terms_update.json</value>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</value>
-    <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
+    <value>お問い合わせ後、動作情報を送信していただくことにより、COCOA（※）の改善に役立ちます。</value>
+    <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOA（※）の改善に役立ちます。</comment>
   </data>
   <data name="InqueryPageButton1" xml:space="preserve">
     <value>よくある質問</value>
@@ -1111,8 +1111,20 @@
     <value>リスト</value>
     <comment>リスト</comment>
   </data>
-  <data name="TutorialPage2Annotation" xml:space="preserve">
+  <data name="GpsAnnotation" xml:space="preserve">
     <value>※位置を特定する仕組み</value>
     <comment>※位置を特定する仕組み</comment>
+  </data>
+  <data name="BluetoothAnnotation" xml:space="preserve">
+    <value>※機器同士を繋ぐ無線通信システム</value>
+    <comment>※機器同士を繋ぐ無線通信システム</comment>
+  </data>
+  <data name="ScreenshotAnnotation" xml:space="preserve">
+    <value>※表示している画面の写真</value>
+    <comment>※表示している画面の写真</comment>
+  </data>
+  <data name="CocoaAnnotation" xml:space="preserve">
+    <value>※本アプリのこと</value>
+    <comment>※本アプリのこと</comment>
   </data>
 </root>
