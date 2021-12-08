@@ -1,0 +1,561 @@
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="COCOA アクセシビリティ改善プロジェクト #  2021年12月1日
+目次 #   はじめに アクセシビリティ方針の策定 課題の明確化と対応案の検討  はじめに #  私たちは、COCOAのアクセシビリティを改善するために、次の取り組みを行っています。 ※本資料では、「1」と「2の一部」を紹介させていただきます。
+ アクセシビリティ方針の策定 課題の明確化と対応案の検討 アプリの改修・検証 チェックフローとガイドラインの整備  アクセシビリティ方針の策定 #  始めに、改善を進めていく上で、基準となるアクセシビリティの方針を掲げました。 方針には日本産業規格の定める「JIS X 8341-3:2016」を採用しています。 ※正式名称は『高齢者・障害者等配慮設計指針－情報通信における機器，ソフトウェア及びサービス－第3部：ウェブコンテンツ』
+備考 #   「JIS X 8341-3:2016」はウェブサイトに対して適用されることが多いのですが、COCOAはスマートフォンにインストールするタイプのアプリです。 アプリに「JIS X 8341-3:2016」が適用できるのか？とお問い合わせいただく事がありますが、「JIS X 8341-3:2016」の適用範囲には「携帯端末などを用いて利用されるコンテンツ」が含まれています。 私たちは「JIS X 8341-3:2016」の内容を踏まえ、スマートフォンにインストールするタイプのアプリを「携帯端末などを用いて利用されるコンテンツ」と捉え、COCOAのアクセシビリティの確保と向上に取り組むための方針に 「JIS X 8341-3:2016」を採用することを決めました。  ポイント #   方針には日本産業規格の定める「JIS X 8341-3:2016」を採用  正式名称は『高齢者・障害者等配慮設計指針－情報通信における機器，ソフトウェア及びサービス－第3部：ウェブコンテンツ』   「JIS X 8341-3:2016」の適用範囲は次のとおり（原文から転載）  ウェブサイト ウェブアプリケーション ウェブシステム 携帯端末などを用いて利用されるコンテンツ イントラネットの業務用システム 電子マニュアル CD-ROM などの記録媒体を介して配布される電子文書   将来、アプリ専用のアクセシビリティ対応の規格が定まることがあれば、対応を検討  2021年11月現在では、アプリ専用のアクセシビリティ向上のための日本産業規格は定まっていない状況    課題の明確化と対応案の検討 #  アクセシビリティ観点での課題を明確化するために、次を実施しました。 ※本書では「A」の概要を紹介させていただきます。">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="COCOA アクセシビリティ改善プロジェクト">
+<meta property="og:description" content="COCOA アクセシビリティ改善プロジェクト #  2021年12月1日
+目次 #   はじめに アクセシビリティ方針の策定 課題の明確化と対応案の検討  はじめに #  私たちは、COCOAのアクセシビリティを改善するために、次の取り組みを行っています。 ※本資料では、「1」と「2の一部」を紹介させていただきます。
+ アクセシビリティ方針の策定 課題の明確化と対応案の検討 アプリの改修・検証 チェックフローとガイドラインの整備  アクセシビリティ方針の策定 #  始めに、改善を進めていく上で、基準となるアクセシビリティの方針を掲げました。 方針には日本産業規格の定める「JIS X 8341-3:2016」を採用しています。 ※正式名称は『高齢者・障害者等配慮設計指針－情報通信における機器，ソフトウェア及びサービス－第3部：ウェブコンテンツ』
+備考 #   「JIS X 8341-3:2016」はウェブサイトに対して適用されることが多いのですが、COCOAはスマートフォンにインストールするタイプのアプリです。 アプリに「JIS X 8341-3:2016」が適用できるのか？とお問い合わせいただく事がありますが、「JIS X 8341-3:2016」の適用範囲には「携帯端末などを用いて利用されるコンテンツ」が含まれています。 私たちは「JIS X 8341-3:2016」の内容を踏まえ、スマートフォンにインストールするタイプのアプリを「携帯端末などを用いて利用されるコンテンツ」と捉え、COCOAのアクセシビリティの確保と向上に取り組むための方針に 「JIS X 8341-3:2016」を採用することを決めました。  ポイント #   方針には日本産業規格の定める「JIS X 8341-3:2016」を採用  正式名称は『高齢者・障害者等配慮設計指針－情報通信における機器，ソフトウェア及びサービス－第3部：ウェブコンテンツ』   「JIS X 8341-3:2016」の適用範囲は次のとおり（原文から転載）  ウェブサイト ウェブアプリケーション ウェブシステム 携帯端末などを用いて利用されるコンテンツ イントラネットの業務用システム 電子マニュアル CD-ROM などの記録媒体を介して配布される電子文書   将来、アプリ専用のアクセシビリティ対応の規格が定まることがあれば、対応を検討  2021年11月現在では、アプリ専用のアクセシビリティ向上のための日本産業規格は定まっていない状況    課題の明確化と対応案の検討 #  アクセシビリティ観点での課題を明確化するために、次を実施しました。 ※本書では「A」の概要を紹介させていただきます。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/report/a11y_20211201.html"><meta property="article:section" content="report">
+<meta property="article:modified_time" content="2021-12-08T09:27:26+09:00">
+<title>COCOA アクセシビリティ改善プロジェクト | COCOA Open Source Project</title>
+<link rel=manifest href=/cocoa/manifest.json>
+<link rel=icon href=/cocoa/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
+<script defer src=/cocoa/flexsearch.min.js></script>
+<script defer src=/cocoa/en.search.min.3d4c218b67ed2fe3dd1a97d45fd4cb116d0286d780e8d5b902923862c5d989f2.js integrity="sha256-PUwhi2ftL+PdGpfUX9TLEW0ChteA6NW5ApI4YsXZifI=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/cocoa/><span>COCOA Open Source Project</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/>デジタル庁 GitHub運用方針</a>
+</li>
+<li>
+<span>Developments</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/branches/>ブランチ構成</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/>ビルド方法</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/maintainance_oss_licenses/>ライセンスの取り扱い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/multi_language/>多言語対応</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Contributions</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/guidelines/>貢献についてのガイドライン</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/handling_pullreqeust/>Pull Requestが取り込まれるまで</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors/>Contoributors</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors_covid19radars/>COVID-19Radar Contoributors</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Appendix</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/ios_local_notification/>iOS版の通知許可に関するお願い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/preference_specification/>設定ファイルの仕様</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<a href=https://github.com/cocoa-mhlw/cocoa target=_blank rel=noopener>
+GitHubリポジトリ
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/cocoa/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>COCOA アクセシビリティ改善プロジェクト</strong>
+<label for=toc-control>
+<img src=/cocoa/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#目次>目次</a></li>
+<li><a href=#はじめに>はじめに</a></li>
+<li><a href=#アクセシビリティ方針の策定>アクセシビリティ方針の策定</a>
+<ul>
+<li><a href=#備考>備考</a></li>
+<li><a href=#ポイント>ポイント</a></li>
+</ul>
+</li>
+<li><a href=#課題の明確化と対応案の検討>課題の明確化と対応案の検討</a>
+<ul>
+<li><a href=#ユーザーテスト全盲弱視晴眼の実施>ユーザーテスト（全盲・弱視・晴眼）の実施</a></li>
+<li><a href=#ユーザーテストの被験者さまとテスト結果の概要>ユーザーテストの被験者さまとテスト結果の概要</a></li>
+<li><a href=#ユーザーテストの被験者さまに操作いただいたタスク一覧>ユーザーテストの被験者さまに操作いただいたタスク一覧</a></li>
+<li><a href=#ユーザーテストの結果>ユーザーテストの結果</a></li>
+<li><a href=#ユーザーテストでの課題一覧2021年8月-テスト実施主な課題のみを抜粋>ユーザーテストでの課題一覧（2021年8月 テスト実施、主な課題のみを抜粋）</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h1 id=cocoa-アクセシビリティ改善プロジェクト>
+COCOA アクセシビリティ改善プロジェクト
+<a class=anchor href=#cocoa-%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b7%e3%83%93%e3%83%aa%e3%83%86%e3%82%a3%e6%94%b9%e5%96%84%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88>#</a>
+</h1>
+<p>2021年12月1日</p>
+<h2 id=目次>
+目次
+<a class=anchor href=#%e7%9b%ae%e6%ac%a1>#</a>
+</h2>
+<ol>
+<li>はじめに</li>
+<li>アクセシビリティ方針の策定</li>
+<li>課題の明確化と対応案の検討</li>
+</ol>
+<h2 id=はじめに>
+はじめに
+<a class=anchor href=#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab>#</a>
+</h2>
+<p>私たちは、COCOAのアクセシビリティを改善するために、次の取り組みを行っています。
+※本資料では、「1」と「2の一部」を紹介させていただきます。</p>
+<ol>
+<li>アクセシビリティ方針の策定</li>
+<li>課題の明確化と対応案の検討</li>
+<li>アプリの改修・検証</li>
+<li>チェックフローとガイドラインの整備</li>
+</ol>
+<h2 id=アクセシビリティ方針の策定>
+アクセシビリティ方針の策定
+<a class=anchor href=#%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b7%e3%83%93%e3%83%aa%e3%83%86%e3%82%a3%e6%96%b9%e9%87%9d%e3%81%ae%e7%ad%96%e5%ae%9a>#</a>
+</h2>
+<p>始めに、改善を進めていく上で、基準となるアクセシビリティの方針を掲げました。
+方針には日本産業規格の定める「JIS X 8341-3:2016」を採用しています。
+※正式名称は『高齢者・障害者等配慮設計指針－情報通信における機器，ソフトウェア及びサービス－第3部：ウェブコンテンツ』</p>
+<h3 id=備考>
+備考
+<a class=anchor href=#%e5%82%99%e8%80%83>#</a>
+</h3>
+<ul>
+<li>「JIS X 8341-3:2016」はウェブサイトに対して適用されることが多いのですが、COCOAはスマートフォンにインストールするタイプのアプリです。</li>
+<li>アプリに「JIS X 8341-3:2016」が適用できるのか？とお問い合わせいただく事がありますが、「JIS X 8341-3:2016」の適用範囲には「携帯端末などを用いて利用されるコンテンツ」が含まれています。</li>
+<li>私たちは「JIS X 8341-3:2016」の内容を踏まえ、スマートフォンにインストールするタイプのアプリを「携帯端末などを用いて利用されるコンテンツ」と捉え、COCOAのアクセシビリティの確保と向上に取り組むための方針に 「JIS X 8341-3:2016」を採用することを決めました。</li>
+</ul>
+<h3 id=ポイント>
+ポイント
+<a class=anchor href=#%e3%83%9d%e3%82%a4%e3%83%b3%e3%83%88>#</a>
+</h3>
+<ul>
+<li>方針には日本産業規格の定める「JIS X 8341-3:2016」を採用
+<ul>
+<li>正式名称は『高齢者・障害者等配慮設計指針－情報通信における機器，ソフトウェア及びサービス－第3部：ウェブコンテンツ』</li>
+</ul>
+</li>
+<li>「JIS X 8341-3:2016」の適用範囲は次のとおり（原文から転載）
+<ul>
+<li>ウェブサイト</li>
+<li>ウェブアプリケーション</li>
+<li>ウェブシステム</li>
+<li>携帯端末などを用いて利用されるコンテンツ</li>
+<li>イントラネットの業務用システム</li>
+<li>電子マニュアル</li>
+<li>CD-ROM などの記録媒体を介して配布される電子文書</li>
+</ul>
+</li>
+<li>将来、アプリ専用のアクセシビリティ対応の規格が定まることがあれば、対応を検討
+<ul>
+<li>2021年11月現在では、アプリ専用のアクセシビリティ向上のための日本産業規格は定まっていない状況</li>
+</ul>
+</li>
+</ul>
+<h2 id=課題の明確化と対応案の検討>
+課題の明確化と対応案の検討
+<a class=anchor href=#%e8%aa%b2%e9%a1%8c%e3%81%ae%e6%98%8e%e7%a2%ba%e5%8c%96%e3%81%a8%e5%af%be%e5%bf%9c%e6%a1%88%e3%81%ae%e6%a4%9c%e8%a8%8e>#</a>
+</h2>
+<p>アクセシビリティ観点での課題を明確化するために、次を実施しました。
+※本書では「A」の概要を紹介させていただきます。</p>
+<ul>
+<li>A. ユーザーテスト（弱視・全盲・晴眼）の実施
+<ul>
+<li>視覚障害をお持ちの者の方にユーザーテストにご参加いただき、フィードバックをいただきました。</li>
+</ul>
+</li>
+<li>B. 「JIS X 8341-3:2016」のチェック項目の確認
+<ul>
+<li>COCOAに当てはまる項目をチェックしました。</li>
+</ul>
+</li>
+<li>C. GitHub上での意見の収集
+<ul>
+<li>いただきましたご意見に対応しました。</li>
+<li><a href=https://github.com/cocoa-mhlw/cocoa/issues/164>https://github.com/cocoa-mhlw/cocoa/issues/164</a></li>
+</ul>
+</li>
+<li>D. その他、企業様・有志の方々からの情報連携
+<ul>
+<li>ご連絡いただけた情報に対応しました。</li>
+</ul>
+</li>
+</ul>
+<h3 id=ユーザーテスト全盲弱視晴眼の実施>
+ユーザーテスト（全盲・弱視・晴眼）の実施
+<a class=anchor href=#%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%83%86%e3%82%b9%e3%83%88%e5%85%a8%e7%9b%b2%e5%bc%b1%e8%a6%96%e6%99%b4%e7%9c%bc%e3%81%ae%e5%ae%9f%e6%96%bd>#</a>
+</h3>
+<p>実際の利用者さまにCOCOAを操作いただき、アクセシビリティ観点の課題を調査しました。
+なお、テストでは次の3つの分類の身体環境をお持ちの方にご協力いただきました。</p>
+<ul>
+<li>弱視</li>
+<li>全盲</li>
+<li>晴眼
+また、テストの被験者さまには、事前に用意したタスクをお伝えしてCOCOAを操作いただき、感じたこと（良かったことや課題に感じることなど）を発話いただく事で、課題を洗い出しました。</li>
+<li>タスクはCOCOAのすべての機能を網羅
+明確になった課題は、ひとつずつ対応方針を協議したうえで、改善を進めています。</li>
+</ul>
+<h3 id=ユーザーテストの被験者さまとテスト結果の概要>
+ユーザーテストの被験者さまとテスト結果の概要
+<a class=anchor href=#%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%83%86%e3%82%b9%e3%83%88%e3%81%ae%e8%a2%ab%e9%a8%93%e8%80%85%e3%81%95%e3%81%be%e3%81%a8%e3%83%86%e3%82%b9%e3%83%88%e7%b5%90%e6%9e%9c%e3%81%ae%e6%a6%82%e8%a6%81>#</a>
+</h3>
+<ul>
+<li>A
+<ul>
+<li>年齢
+<ul>
+<li>50代前半</li>
+</ul>
+</li>
+<li>身体環境
+<ul>
+<li>弱視（視野狭窄・色弱・夜盲、後天的）</li>
+</ul>
+</li>
+<li>テスト結果
+<ul>
+<li>使えないことはないが、多くの課題を感じる。</li>
+<li>特に、文章の内容が分かりにくい。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>B
+<ul>
+<li>年齢
+<ul>
+<li>40代前半</li>
+</ul>
+</li>
+<li>身体環境
+<ul>
+<li>全盲（先天的）</li>
+</ul>
+</li>
+<li>テスト結果
+<ul>
+<li>良くはないが、使えないことはない。</li>
+<li>操作性に大きな課題を感じる。</li>
+<li>アクセシビリティの度合いとしては、よくあるアプリと同等で、特別な配慮は感じない。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>C
+<ul>
+<li>年齢
+<ul>
+<li>30代後半</li>
+</ul>
+</li>
+<li>身体環境
+<ul>
+<li>晴眼</li>
+</ul>
+</li>
+<li>テスト結果
+<ul>
+<li>使っていくうえで大きな課題は感じないが、小さな課題は多く感じる。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id=ユーザーテストの被験者さまに操作いただいたタスク一覧>
+ユーザーテストの被験者さまに操作いただいたタスク一覧
+<a class=anchor href=#%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%83%86%e3%82%b9%e3%83%88%e3%81%ae%e8%a2%ab%e9%a8%93%e8%80%85%e3%81%95%e3%81%be%e3%81%ab%e6%93%8d%e4%bd%9c%e3%81%84%e3%81%9f%e3%81%a0%e3%81%84%e3%81%9f%e3%82%bf%e3%82%b9%e3%82%af%e4%b8%80%e8%a6%a7>#</a>
+</h3>
+<h4 id=ケース-その1陰性の場合>
+ケース その1（陰性の場合）
+<a class=anchor href=#%e3%82%b1%e3%83%bc%e3%82%b9-%e3%81%9d%e3%81%ae1%e9%99%b0%e6%80%a7%e3%81%ae%e5%a0%b4%e5%90%88>#</a>
+</h4>
+<ol>
+<li>「使い方」を学ぶ。</li>
+<li>「陽性者との接触」を確認する。</li>
+<li>接触があったので、「東京都台東区」の「保健所」の「電話番号」と「受付時間」を確認する。</li>
+<li>陽性者との接触が、いつ行われたのかを確認する。</li>
+<li>アプリを周りの人に知らせる。</li>
+<li>「利用規約」を読む。</li>
+<li>「プライバシーポリシー」を読む。</li>
+<li>「ウェブアクセシビリティ方針」から「担当部署」を確認する。</li>
+<li>「使用中止」を行い、「すべてのデータを削除」されるので、途中で止める。</li>
+<li>「よくある質問」から「アプリの仕組み」を確認する。</li>
+<li>「メールでお問い合わせ」を行う。</li>
+<li>「動作情報」を確認する。</li>
+<li>「接触確認アプリに関する情報」を確認する。</li>
+</ol>
+<h4 id=ケース-その2陽性になった場合>
+ケース その2（陽性になった場合）
+<a class=anchor href=#%e3%82%b1%e3%83%bc%e3%82%b9-%e3%81%9d%e3%81%ae2%e9%99%bd%e6%80%a7%e3%81%ab%e3%81%aa%e3%81%a3%e3%81%9f%e5%a0%b4%e5%90%88>#</a>
+</h4>
+<ol>
+<li>「陽性情報」を登録する。</li>
+</ol>
+<h3 id=ユーザーテストの結果>
+ユーザーテストの結果
+<a class=anchor href=#%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%83%86%e3%82%b9%e3%83%88%e3%81%ae%e7%b5%90%e6%9e%9c>#</a>
+</h3>
+<p>弱視・全盲の利用者さまにご協力いただいたため、晴眼者だけによるユーザーテストでは得られなかった、多くの課題を発見することが出来ました。
+※特に支援技術（スクリーンリーダーなど）観点の課題や、視野狭窄観点の課題など
+COCOAが誰にとっても使えるアプリであるように、今後も、多様性を大切にしたテストを行いながら、改善を進めてまいります。</p>
+<h3 id=ユーザーテストでの課題一覧2021年8月-テスト実施主な課題のみを抜粋>
+ユーザーテストでの課題一覧（2021年8月 テスト実施、主な課題のみを抜粋）
+<a class=anchor href=#%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e3%83%86%e3%82%b9%e3%83%88%e3%81%a7%e3%81%ae%e8%aa%b2%e9%a1%8c%e4%b8%80%e8%a6%a72021%e5%b9%b48%e6%9c%88-%e3%83%86%e3%82%b9%e3%83%88%e5%ae%9f%e6%96%bd%e4%b8%bb%e3%81%aa%e8%aa%b2%e9%a1%8c%e3%81%ae%e3%81%bf%e3%82%92%e6%8a%9c%e7%b2%8b>#</a>
+</h3>
+<h4 id=スクリーンリーダーでの使用感ボタンが読み上げられない>
+【スクリーンリーダーでの使用感】ボタンが読み上げられない。
+<a class=anchor href=#%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%83%aa%e3%83%bc%e3%83%80%e3%83%bc%e3%81%a7%e3%81%ae%e4%bd%bf%e7%94%a8%e6%84%9f%e3%83%9c%e3%82%bf%e3%83%b3%e3%81%8c%e8%aa%ad%e3%81%bf%e4%b8%8a%e3%81%92%e3%82%89%e3%82%8c%e3%81%aa%e3%81%84>#</a>
+</h4>
+<ul>
+<li>課題内容
+<ul>
+<li>スクリーンリーダーでボタンの内容が読み上げられないため、「何のボタンなのか？」が分からずに困惑する。</li>
+</ul>
+</li>
+<li>被験者
+<ul>
+<li>全盲</li>
+</ul>
+</li>
+<li>ステータス
+<ul>
+<li>対応済み</li>
+</ul>
+</li>
+</ul>
+<h4 id=スクリーンリーダーでの使用感フォーカス移動が出来ずにページ内に閉じ込められる>
+【スクリーンリーダーでの使用感】フォーカス移動が出来ずに、ページ内に閉じ込められる。
+<a class=anchor href=#%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%83%aa%e3%83%bc%e3%83%80%e3%83%bc%e3%81%a7%e3%81%ae%e4%bd%bf%e7%94%a8%e6%84%9f%e3%83%95%e3%82%a9%e3%83%bc%e3%82%ab%e3%82%b9%e7%a7%bb%e5%8b%95%e3%81%8c%e5%87%ba%e6%9d%a5%e3%81%9a%e3%81%ab%e3%83%9a%e3%83%bc%e3%82%b8%e5%86%85%e3%81%ab%e9%96%89%e3%81%98%e8%be%bc%e3%82%81%e3%82%89%e3%82%8c%e3%82%8b>#</a>
+</h4>
+<ul>
+<li>課題内容
+<ul>
+<li>特定の要素から他の要素へフォーカスを移動できなくなり、ページ内に閉じ込められて何もできなくなる。</li>
+</ul>
+</li>
+<li>被験者
+<ul>
+<li>全盲</li>
+</ul>
+</li>
+<li>ステータス
+<ul>
+<li>対応中</li>
+</ul>
+</li>
+</ul>
+<h4 id=スクリーンリーダーでの使用感代替テキストがないので画像の内容が分からない>
+【スクリーンリーダーでの使用感】代替テキストがないので、画像の内容が分からない。
+<a class=anchor href=#%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%83%aa%e3%83%bc%e3%83%80%e3%83%bc%e3%81%a7%e3%81%ae%e4%bd%bf%e7%94%a8%e6%84%9f%e4%bb%a3%e6%9b%bf%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88%e3%81%8c%e3%81%aa%e3%81%84%e3%81%ae%e3%81%a7%e7%94%bb%e5%83%8f%e3%81%ae%e5%86%85%e5%ae%b9%e3%81%8c%e5%88%86%e3%81%8b%e3%82%89%e3%81%aa%e3%81%84>#</a>
+</h4>
+<ul>
+<li>課題内容
+<ul>
+<li>スクリーンリーダーが画像を読み上げないので、画像の内容が分からずに困惑する。</li>
+</ul>
+</li>
+<li>被験者
+<ul>
+<li>全盲</li>
+</ul>
+</li>
+<li>ステータス
+<ul>
+<li>対応中</li>
+</ul>
+</li>
+</ul>
+<h4 id=視覚設計の統一が必要処理番号の取得方法がリンクだと気が付けない>
+【視覚設計の統一が必要】「処理番号の取得方法」が、リンクだと気が付けない。
+<a class=anchor href=#%e8%a6%96%e8%a6%9a%e8%a8%ad%e8%a8%88%e3%81%ae%e7%b5%b1%e4%b8%80%e3%81%8c%e5%bf%85%e8%a6%81%e5%87%a6%e7%90%86%e7%95%aa%e5%8f%b7%e3%81%ae%e5%8f%96%e5%be%97%e6%96%b9%e6%b3%95%e3%81%8c%e3%83%aa%e3%83%b3%e3%82%af%e3%81%a0%e3%81%a8%e6%b0%97%e3%81%8c%e4%bb%98%e3%81%91%e3%81%aa%e3%81%84>#</a>
+</h4>
+<ul>
+<li>課題内容
+<ul>
+<li>通常のテキストとリンクのテキストに、視覚的な差異（例えば、下線の有無など）がないため、リンクであることが分からない。</li>
+</ul>
+</li>
+<li>被験者
+<ul>
+<li>弱視、晴眼</li>
+</ul>
+</li>
+<li>ステータス
+<ul>
+<li>対応中</li>
+</ul>
+</li>
+</ul>
+<h4 id=同線設計のブラッシュアップが必要使い方へのリンクが見つけられない>
+【同線設計のブラッシュアップが必要】「使い方」へのリンクが、見つけられない。
+<a class=anchor href=#%e5%90%8c%e7%b7%9a%e8%a8%ad%e8%a8%88%e3%81%ae%e3%83%96%e3%83%a9%e3%83%83%e3%82%b7%e3%83%a5%e3%82%a2%e3%83%83%e3%83%97%e3%81%8c%e5%bf%85%e8%a6%81%e4%bd%bf%e3%81%84%e6%96%b9%e3%81%b8%e3%81%ae%e3%83%aa%e3%83%b3%e3%82%af%e3%81%8c%e8%a6%8b%e3%81%a4%e3%81%91%e3%82%89%e3%82%8c%e3%81%aa%e3%81%84>#</a>
+</h4>
+<ul>
+<li>課題内容
+<ul>
+<li>そもそも、「どこにリンクがあるのか？」リンク元が見つけられない。</li>
+<li>実際は画面右上にリンク元があるが、視野が狭いこともあり、見つけにくい。</li>
+</ul>
+</li>
+<li>被験者
+<ul>
+<li>弱視</li>
+</ul>
+</li>
+<li>ステータス
+<ul>
+<li>対応中</li>
+</ul>
+</li>
+</ul>
+<h4 id=コンテンツ自体のブレイクダウンが必要専門用語プッシュ通知などの意味が分からない>
+【コンテンツ自体のブレイクダウンが必要】「専門用語（プッシュ通知など）」の意味が分からない。
+<a class=anchor href=#%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e8%87%aa%e4%bd%93%e3%81%ae%e3%83%96%e3%83%ac%e3%82%a4%e3%82%af%e3%83%80%e3%82%a6%e3%83%b3%e3%81%8c%e5%bf%85%e8%a6%81%e5%b0%82%e9%96%80%e7%94%a8%e8%aa%9e%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5%e9%80%9a%e7%9f%a5%e3%81%aa%e3%81%a9%e3%81%ae%e6%84%8f%e5%91%b3%e3%81%8c%e5%88%86%e3%81%8b%e3%82%89%e3%81%aa%e3%81%84>#</a>
+</h4>
+<ul>
+<li>課題内容
+<ul>
+<li>専門用語の意味が分からなくて困惑する。</li>
+</ul>
+</li>
+<li>被験者
+<ul>
+<li>弱視、全盲、晴眼</li>
+</ul>
+</li>
+<li>ステータス
+<ul>
+<li>対応中</li>
+</ul>
+</li>
+</ul>
+<h4 id=コンテンツ自体のブレイクダウンが必要文章が難しいため理解に時間がかかる>
+【コンテンツ自体のブレイクダウンが必要】文章が難しいため、理解に時間がかかる。
+<a class=anchor href=#%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e8%87%aa%e4%bd%93%e3%81%ae%e3%83%96%e3%83%ac%e3%82%a4%e3%82%af%e3%83%80%e3%82%a6%e3%83%b3%e3%81%8c%e5%bf%85%e8%a6%81%e6%96%87%e7%ab%a0%e3%81%8c%e9%9b%a3%e3%81%97%e3%81%84%e3%81%9f%e3%82%81%e7%90%86%e8%a7%a3%e3%81%ab%e6%99%82%e9%96%93%e3%81%8c%e3%81%8b%e3%81%8b%e3%82%8b>#</a>
+</h4>
+<ul>
+<li>課題内容
+<ul>
+<li>内容が難しいのと、句点が中途半端が位置にあるため、読みにくい。</li>
+</ul>
+</li>
+<li>被験者
+<ul>
+<li>弱視</li>
+</ul>
+</li>
+<li>ステータス
+<ul>
+<li>対応中</li>
+</ul>
+</li>
+</ul>
+<h4 id=コンテンツの提示方法に配慮が必要色が薄くて見えにくい>
+【コンテンツの提示方法に配慮が必要】色が薄くて見えにくい。
+<a class=anchor href=#%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84%e3%81%ae%e6%8f%90%e7%a4%ba%e6%96%b9%e6%b3%95%e3%81%ab%e9%85%8d%e6%85%ae%e3%81%8c%e5%bf%85%e8%a6%81%e8%89%b2%e3%81%8c%e8%96%84%e3%81%8f%e3%81%a6%e8%a6%8b%e3%81%88%e3%81%ab%e3%81%8f%e3%81%84>#</a>
+</h4>
+<ul>
+<li>課題内容
+<ul>
+<li>文字色と背景色のコントラスト比率が低いため、見えにくい。</li>
+</ul>
+</li>
+<li>被験者
+<ul>
+<li>全盲</li>
+</ul>
+</li>
+<li>ステータス
+<ul>
+<li>対応中</li>
+</ul>
+</li>
+</ul>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#目次>目次</a></li>
+<li><a href=#はじめに>はじめに</a></li>
+<li><a href=#アクセシビリティ方針の策定>アクセシビリティ方針の策定</a>
+<ul>
+<li><a href=#備考>備考</a></li>
+<li><a href=#ポイント>ポイント</a></li>
+</ul>
+</li>
+<li><a href=#課題の明確化と対応案の検討>課題の明確化と対応案の検討</a>
+<ul>
+<li><a href=#ユーザーテスト全盲弱視晴眼の実施>ユーザーテスト（全盲・弱視・晴眼）の実施</a></li>
+<li><a href=#ユーザーテストの被験者さまとテスト結果の概要>ユーザーテストの被験者さまとテスト結果の概要</a></li>
+<li><a href=#ユーザーテストの被験者さまに操作いただいたタスク一覧>ユーザーテストの被験者さまに操作いただいたタスク一覧</a></li>
+<li><a href=#ユーザーテストの結果>ユーザーテストの結果</a></li>
+<li><a href=#ユーザーテストでの課題一覧2021年8月-テスト実施主な課題のみを抜粋>ユーザーテストでの課題一覧（2021年8月 テスト実施、主な課題のみを抜粋）</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>
