@@ -73,8 +73,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             Assert.Equal(expectResult, result);
         }
 
-
-
         [Fact]
         public void CheckRegisterButtonMaxErrorCountReturnHomeTest()
         {

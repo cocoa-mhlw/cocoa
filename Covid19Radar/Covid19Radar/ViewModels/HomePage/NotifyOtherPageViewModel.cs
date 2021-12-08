@@ -28,7 +28,7 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
         private readonly IEssentialsService _essentialsService;
-        private readonly int delayForError;
+        private readonly int _delayForErrorMillis;
 
         private string _processingNumber;
         public string ProcessingNumber
@@ -123,7 +123,7 @@ namespace Covid19Radar.ViewModels
             AbsExposureNotificationApiService exposureNotificationApiService,
             IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer,
             IEssentialsService essentialsService,
-            int delayForError = 5000
+            int delayForErrorMillis = AppConstants.DelayForRegistrationErrorMillis
             ) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
@@ -131,7 +131,7 @@ namespace Covid19Radar.ViewModels
             this.loggerService = loggerService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
-            this.delayForError = delayForError;
+            _delayForErrorMillis = delayForErrorMillis;
             _essentialsService = essentialsService;
             errorCount = 0;
             ProcessingNumber = "";
@@ -191,7 +191,6 @@ namespace Covid19Radar.ViewModels
                 AppResources.NotifyOtherPageDiag1Title,
                 AppResources.ButtonRegister,
                 AppResources.ButtonCancel);
-            
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
@@ -231,7 +230,7 @@ namespace Covid19Radar.ViewModels
                         AppResources.NotifyOtherPageDiag3Title,
                         AppResources.ButtonOk
                         );
-                    await Task.Delay(errorCount * delayForError);
+                    await Task.Delay(errorCount * _delayForErrorMillis);
                 }
 
                 loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
