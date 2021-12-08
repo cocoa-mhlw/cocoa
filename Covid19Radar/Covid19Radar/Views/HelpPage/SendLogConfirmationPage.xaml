@@ -13,7 +13,7 @@
     Style="{StaticResource DefaultPageStyle}"
     Title="{x:Static resources:AppResources.SendLogConfirmationPageTitle}"
     Visual="Material">
-    <ContentPage.Content>
+    <ContentView>
         <ScrollView
             Margin="0"
             Padding="0">
@@ -69,5 +69,5 @@
                 Text="{x:Static resources:AppResources.SendLogConfirmationPageButton1}" />
             </StackLayout>
         </ScrollView>
-    </ContentPage.Content>
+    </ContentView>
 </ContentPage>

@@ -17,6 +17,11 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
     <ScrollView>
         <StackLayout
             Padding="15,15,15,20">
@@ -36,14 +41,14 @@
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
+                    Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
                     GroupName="CheckSymptoms" />
                 <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
+                    Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
                     GroupName="CheckSymptoms" />
             </StackLayout>
             <StackLayout Margin="0, 15, 0, 0"
@@ -51,13 +56,12 @@
                 <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.NotifyOtherPageWithSymptomsDescription1}" />
-                <StackLayout Spacing="0"
-                                Margin="0, 5, 0, 10">
                     <Frame Padding="0"
                             BackgroundColor="#CECECE"
                             CornerRadius="7"
                             HasShadow="False"
-                            HorizontalOptions="FillAndExpand">
+                            HorizontalOptions="FillAndExpand"
+                            Margin="0, 5, 0, 10">
                         <Frame Margin="3"
                                 Padding="0"
                                 BackgroundColor="White"
@@ -71,19 +75,17 @@
                         </Frame>
                     </Frame>
                 </StackLayout>
-            </StackLayout>
             <StackLayout Margin="0, 15, 0, 0"
                             IsVisible="{Binding IsVisibleNoSymptomsLayout}">
                 <Label AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
-                <StackLayout Spacing="0"
-                                Margin="0, 5, 0, 10">
                     <Frame Padding="0"
                             BackgroundColor="#CECECE"
                             CornerRadius="7"
                             HasShadow="False"
-                            HorizontalOptions="FillAndExpand">
+                            HorizontalOptions="FillAndExpand"
+                            Margin="0, 5, 0, 10">
                         <Frame Margin="3"
                                 Padding="0"
                                 BackgroundColor="White"
@@ -96,7 +98,6 @@
                                                         Date="{Binding DiagnosisDate}"/>
                         </Frame>
                     </Frame>
-                </StackLayout>
             </StackLayout>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
@@ -241,4 +242,5 @@
             </Frame>
         </StackLayout>
     </ScrollView>
+    </ContentView>
 </ContentPage>
