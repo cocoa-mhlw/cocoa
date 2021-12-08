@@ -51,5 +51,9 @@ namespace Covid19Radar.Common
         /// </seealso>
         public const int MinimumDiagnosisKeysDataMappingApplyIntervalDays = 7 + 1;
 
+        /// <summary>
+        /// Delay for error in TEK re-registration.
+        /// </summary>
+        public const int DelayForRegistrationErrorMillis = 5000;
     }
 }
