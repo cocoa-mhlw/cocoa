@@ -159,8 +159,8 @@
     <comment>記録の停止／削除</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
-    <value>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+    <value>アプリを実行した際に、各スマートフォンで接触符号（※1）を生成して持ちます。氏名・電話番号などの個人情報やGPS（※2）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号（※1）を生成して持ちます。氏名・電話番号などの個人情報やGPS（※2）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>記録される接触の条件</value>
@@ -187,8 +187,8 @@
     <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
-    <value>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</value>
-    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <value>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</value>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>最近の接触件数の確認へはホーム画面からも移動することができます。</value>
@@ -676,16 +676,16 @@
     <comment>同意して送信する</comment>
   </data>
   <data name="SendLogConfirmationPageDescription1" xml:space="preserve">
-    <value>動作情報の送信により、COCOAの改善にご協力をお願いします。</value>
-    <comment>動作情報の送信により、COCOAの改善にご協力をお願いします。</comment>
+    <value>動作情報の送信により、COCOA（※）の改善にご協力をお願いします。</value>
+    <comment>動作情報の送信により、COCOA（※）の改善にご協力をお願いします。</comment>
   </data>
   <data name="SendLogConfirmationPageDescription2" xml:space="preserve">
     <value>送信される情報</value>
     <comment>送信される情報</comment>
   </data>
   <data name="SendLogConfirmationPageDescription3" xml:space="preserve">
-    <value>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</value>
-    <comment>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</comment>
+    <value>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS（※）、OSバージョン、端末機種）</value>
+    <comment>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS（※）、OSバージョン、端末機種）</comment>
   </data>
   <data name="SendLogConfirmationPageDescription4" xml:space="preserve">
     <value>送信されない情報</value>
@@ -730,8 +730,8 @@
 続いてメールで動作情報IDを送信してください</comment>
   </data>
   <data name="SendLogCompletePageDescription2" xml:space="preserve">
-    <value>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</value>
-    <comment>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</comment>
+    <value>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOA（※）の改善に活かすことができます。</value>
+    <comment>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOA（※）の改善に活かすことができます。</comment>
   </data>
   <data name="Error" xml:space="preserve">
     <value>エラー</value>
@@ -808,8 +808,8 @@
     <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
   </data>
   <data name="NotifyOtherPageDescription3" xml:space="preserve">
-    <value>SMSまたはメールで届いた処理番号を入力してください。</value>
-    <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
+    <value>SMS（※）またはメールで届いた処理番号を入力してください。</value>
+    <comment>SMS（※）またはメールで届いた処理番号を入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription5" xml:space="preserve">
     <value>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</value>
@@ -890,12 +890,12 @@
     <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
   </data>
   <data name="SubmitConsentPageDescription7" xml:space="preserve">
-    <value>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</value>
-    <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
+    <value>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</value>
+    <comment>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
   <data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</value>
-    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</comment>
+    <value>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOA（※）の陽性登録に必要な「処理番号」が通知されます</value>
+    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOA（※）の陽性登録に必要な「処理番号」が通知されます</comment>
   </data>
   <data name="SubmitConsentPageDescription9" xml:space="preserve">
     <value>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</value>
@@ -926,16 +926,16 @@
     <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>SMSまたはメールにて8桁の処理番号が送られてきます。</value>
-    <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
+    <value>SMS（※）またはメールにて8桁の処理番号が送られてきます。</value>
+    <comment>SMS（※）またはメールにて8桁の処理番号が送られてきます。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</value>
-    <comment>処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+    <value>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</value>
+    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</value>
-    <comment>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+    <value>・保健所からMy HER-SYS（マイハーシス）（※）の利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</value>
+    <comment>・保健所からMy HER-SYS（マイハーシス）（※）の利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>接触を通知</value>
@@ -948,10 +948,6 @@
   <data name="LocalExposureNotificationContent" xml:space="preserve">
     <value>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</value>
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
-  </data>
-  <data name="NoteSymbol" xml:space="preserve">
-    <value>※</value>
-    <comment>※</comment>
   </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>ウェブアクセシビリティ方針</value>
@@ -1111,20 +1107,48 @@
     <value>リスト</value>
     <comment>リスト</comment>
   </data>
-  <data name="GpsAnnotation" xml:space="preserve">
-    <value>※位置を特定する仕組み</value>
-    <comment>※位置を特定する仕組み</comment>
+  <data name="GpsAnnotationText" xml:space="preserve">
+    <value>位置を特定する仕組み</value>
+    <comment>位置を特定する仕組み</comment>
   </data>
-  <data name="BluetoothAnnotation" xml:space="preserve">
-    <value>※機器同士を繋ぐ無線通信システム</value>
-    <comment>※機器同士を繋ぐ無線通信システム</comment>
+  <data name="BluetoothAnnotationText" xml:space="preserve">
+    <value>機器同士を繋ぐ無線通信システム</value>
+    <comment>機器同士を繋ぐ無線通信システム</comment>
   </data>
-  <data name="ScreenshotAnnotation" xml:space="preserve">
-    <value>※表示している画面の写真</value>
-    <comment>※表示している画面の写真</comment>
+  <data name="ScreenshotAnnotationText" xml:space="preserve">
+    <value>表示している画面の写真</value>
+    <comment>表示している画面の写真</comment>
   </data>
-  <data name="CocoaAnnotation" xml:space="preserve">
-    <value>※本アプリのこと</value>
-    <comment>※本アプリのこと</comment>
+  <data name="CocoaAnnotationText" xml:space="preserve">
+    <value>本アプリのこと</value>
+    <comment>本アプリのこと</comment>
+  </data>
+  <data name="OsAnnotationText" xml:space="preserve">
+    <value>スマートフォンに搭載されている基本システム。AndroidやiOSのこと</value>
+    <comment>スマートフォンに搭載されている基本システム。AndroidやiOSのこと</comment>
+  </data>
+  <data name="SmsAnnotationText" xml:space="preserve">
+    <value>スマートフォン用のテキストでの連絡手段。ショートメッセージ</value>
+    <comment>スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
+  </data>
+  <data name="MyHerSysAnnotationText" xml:space="preserve">
+    <value>厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</value>
+    <comment>厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
+  </data>
+  <data name="RandomCodeAnnotationText" xml:space="preserve">
+    <value>利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</value>
+    <comment>利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</comment>
+  </data>
+  <data name="AnnotationSymbol" xml:space="preserve">
+    <value>※</value>
+    <comment>※</comment>
+  </data>
+  <data name="AnnotationSymbol1" xml:space="preserve">
+    <value>※1</value>
+    <comment>※1</comment>
+  </data>
+  <data name="AnnotationSymbol2" xml:space="preserve">
+    <value>※2</value>
+    <comment>※2</comment>
   </data>
 </root>

@@ -39,11 +39,33 @@
                     TabIndex="2"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="3"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol1}"/>
+                            <Span Text="{x:Static resources:AppResources.RandomCodeAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="4"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol2}"/>
+                            <Span Text="{x:Static resources:AppResources.BluetoothAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
             <StackLayout Spacing="15" Grid.Row="1">
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="3"
+                    TabIndex="5"
                     Style="{StaticResource DefaultTitleLabel}"
                     Text="{x:Static resources:AppResources.HelpPage1Description2Title}" />
                 <ffimageloading:CachedImage
@@ -52,14 +74,14 @@
                     Source="HelpPage22.png" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="4"
+                    TabIndex="6"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HelpPage1Description2Text}" />
             </StackLayout>
             <StackLayout Spacing="15" Grid.Row="2">
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="5"
+                    TabIndex="7"
                     Style="{StaticResource DefaultTitleLabel}"
                     Text="{x:Static resources:AppResources.HelpPage1Description3Title}" />
                 <ffimageloading:CachedImage
@@ -68,7 +90,7 @@
                     Source="HelpPage21.png" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="6"
+                    TabIndex="8"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HelpPage1Description3Text}" />
             </StackLayout>

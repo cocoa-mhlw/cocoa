@@ -30,11 +30,27 @@
                             <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription1}" />
                             <Span Text="{x:Static x:Environment.NewLine}" />
                             <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span FontSize="Small"
+                                  TextColor="{StaticResource SecondaryText}"
+                                  Text="{x:Static resources:AppResources.AnnotationSymbol}" />
+                            <Span FontSize="Small"
+                                  TextColor="{StaticResource SecondaryText}"
+                                  Text="{x:Static resources:AppResources.CocoaAnnotationText}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
                             <Span
                             FontAttributes="Bold"
                             Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription2}" />
                             <Span Text="{x:Static x:Environment.NewLine}" />
                             <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription3}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span FontSize="Small"
+                                  TextColor="{StaticResource SecondaryText}"
+                                  Text="{x:Static resources:AppResources.AnnotationSymbol}" />
+                            <Span FontSize="Small"
+                                  TextColor="{StaticResource SecondaryText}"
+                                  Text="{x:Static resources:AppResources.OsAnnotationText}" />
                             <Span Text="{x:Static x:Environment.NewLine}" />
                             <Span Text="{x:Static x:Environment.NewLine}" />
                             <Span

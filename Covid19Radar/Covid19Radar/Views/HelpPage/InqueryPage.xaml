@@ -60,8 +60,14 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="4"
-                        Style="{StaticResource AnnotationLabel}"
-                        Text="{x:Static resources:AppResources.CocoaAnnotation}" />
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="5"

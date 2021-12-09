@@ -1463,12 +1463,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NoteSymbol {
-            get {
-                return ResourceManager.GetString("NoteSymbol", resourceCulture);
-            }
-        }
-        
         public static string WebAccessibilityPolicyPageTitle {
             get {
                 return ResourceManager.GetString("WebAccessibilityPolicyPageTitle", resourceCulture);
@@ -1709,27 +1703,69 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string GpsAnnotation {
+        public static string GpsAnnotationText {
             get {
-                return ResourceManager.GetString("GpsAnnotation", resourceCulture);
+                return ResourceManager.GetString("GpsAnnotationText", resourceCulture);
             }
         }
         
-        public static string BluetoothAnnotation {
+        public static string BluetoothAnnotationText {
             get {
-                return ResourceManager.GetString("BluetoothAnnotation", resourceCulture);
+                return ResourceManager.GetString("BluetoothAnnotationText", resourceCulture);
             }
         }
         
-        public static string ScreenshotAnnotation {
+        public static string ScreenshotAnnotationText {
             get {
-                return ResourceManager.GetString("ScreenshotAnnotation", resourceCulture);
+                return ResourceManager.GetString("ScreenshotAnnotationText", resourceCulture);
             }
         }
         
-        public static string CocoaAnnotation {
+        public static string CocoaAnnotationText {
             get {
-                return ResourceManager.GetString("CocoaAnnotation", resourceCulture);
+                return ResourceManager.GetString("CocoaAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string OsAnnotationText {
+            get {
+                return ResourceManager.GetString("OsAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string SmsAnnotationText {
+            get {
+                return ResourceManager.GetString("SmsAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string MyHerSysAnnotationText {
+            get {
+                return ResourceManager.GetString("MyHerSysAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string RandomCodeAnnotationText {
+            get {
+                return ResourceManager.GetString("RandomCodeAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string AnnotationSymbol {
+            get {
+                return ResourceManager.GetString("AnnotationSymbol", resourceCulture);
+            }
+        }
+        
+        public static string AnnotationSymbol1 {
+            get {
+                return ResourceManager.GetString("AnnotationSymbol1", resourceCulture);
+            }
+        }
+        
+        public static string AnnotationSymbol2 {
+            get {
+                return ResourceManager.GetString("AnnotationSymbol2", resourceCulture);
             }
         }
     }

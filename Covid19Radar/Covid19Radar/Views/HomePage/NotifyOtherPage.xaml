@@ -140,6 +140,19 @@
                     <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
                 </Label.GestureRecognizers>
             </Label>
+            <Label
+                AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessingNumberVisible}"
+                TabIndex="11"
+                IsVisible="{Binding IsHowToObtainProcessingNumberVisible}"
+                Margin="0, 10, 0, 0"
+                Style="{StaticResource AnnotationLabel}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                        <Span Text="{x:Static resources:AppResources.SmsAnnotationText}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             <StackLayout Spacing="0" Margin="0, 5, 0, 0">
                 <Frame
                     Margin="3"
@@ -157,7 +170,7 @@
                         HasShadow="False">
                         <Entry
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="11"
+                            TabIndex="12"
                             CharacterSpacing="5"
                             Keyboard="Numeric"
                             IsReadOnly="{Binding IsProcessingNumberReadOnly}"
@@ -183,19 +196,19 @@
                     <StackLayout Spacing="10">
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="12"
+                            TabIndex="13"
                             FontSize="Medium"
                             FontAttributes="Bold"
                             TextColor="Black"
                             Text="{x:Static resources:AppResources.NotifyOtherPageDescription4}"/>
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="13"
+                            TabIndex="14"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.NotifyOtherPageDescription5}" />
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="14"
+                            TabIndex="15"
                             Style="{StaticResource DefaultLabelSmall}"
                             Text="{x:Static resources:AppResources.NotifyOtherPageDescription6}" />
                     </StackLayout>
@@ -206,7 +219,7 @@
                     IsVisible="{Binding IsConsentLinkVisible}">
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsConsentLinkVisible}"
-                        TabIndex="15"
+                        TabIndex="16"
                         Margin="0, 0, 0, 5"
                         Style="{StaticResource LinkLabelStyleMedium}"
                         Text="{x:Static resources:AppResources.ConfirmAgreement}">
@@ -220,7 +233,7 @@
 
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="16"
+                TabIndex="17"
                 Command="{Binding Path=OnClickRegister}"
                 IsEnabled="{Binding IsNextButtonEnabled}"
                 Style="{StaticResource DefaultButton}">
@@ -244,14 +257,14 @@
                 <StackLayout Spacing="10">
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
-                        TabIndex="17"
+                        TabIndex="18"
                         FontSize="Medium"
                         FontAttributes="Bold"
                         TextColor="Black"
                         Text="{x:Static resources:AppResources.InquiryAboutRegistrationTitle}"/>
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
-                        TabIndex="18"
+                        TabIndex="19"
                         Style="{StaticResource LinkLabelStyleLarge}"
                         Text="{Binding InqueryTelephoneNumber}">
                         <Label.GestureRecognizers>
@@ -260,7 +273,7 @@
                     </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
-                        TabIndex="19"
+                        TabIndex="20"
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.InquiryAboutRegistrationReceptionTime}" />
                 </StackLayout>

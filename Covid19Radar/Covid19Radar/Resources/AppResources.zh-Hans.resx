@@ -198,7 +198,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</value>
-    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>您可以在首页查看您的接触次数。</value>
@@ -894,8 +894,8 @@
     <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
   </data>
   <data name="SubmitConsentPageDescription7" xml:space="preserve">
-    <value>(※)作为新冠检测阳性时的联系方法</value>
-    <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
+    <value>※作为新冠检测阳性时的联系方法</value>
+    <comment>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
   <data name="SubmitConsentPageDescription8" xml:space="preserve">
     <value>当阳性信息上报到管理系统时，注册的手机号或邮箱会受到COCOA阳性注册所需的「受理编号」</value>
@@ -934,12 +934,12 @@
     <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>受理编号在发出后一小时内有效。 如果它已过期，您将收到一个新的受理编号。</value>
-    <comment>処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+    <value>・受理编号在发出后一小时内有效。 如果它已过期，您将收到一个新的受理编号。</value>
+    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>如果您从保健中心收到了My HER-SYS的使用指南，请从那里申请使用接触确认应用。</value>
-    <comment>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+    <value>・如果您从保健中心收到了My HER-SYS的使用指南，请从那里申请使用接触确认应用。</value>
+    <comment>・保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>接触通知</value>
@@ -952,10 +952,6 @@
   <data name="LocalExposureNotificationContent" xml:space="preserve">
     <value>您可能接触过感染新型冠状病毒的阳性登记者。点击查看详细信息。</value>
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
-  </data>
-  <data name="NoteSymbol" xml:space="preserve">
-    <value>*</value>
-    <comment>※</comment>
   </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>网页无障碍访问政策</value>
@@ -1107,20 +1103,48 @@
     <value>一览</value>
     <comment>リスト</comment>
   </data>
-  <data name="GpsAnnotation" xml:space="preserve">
+  <data name="GpsAnnotationText" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※位置を特定する仕組み</comment>
+    <comment>日本語のみ：位置を特定する仕組み</comment>
   </data>
-  <data name="BluetoothAnnotation" xml:space="preserve">
+  <data name="BluetoothAnnotationText" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※機器同士を繋ぐ無線通信システム</comment>
+    <comment>日本語のみ：機器同士を繋ぐ無線通信システム</comment>
   </data>
-  <data name="ScreenshotAnnotation" xml:space="preserve">
+  <data name="ScreenshotAnnotationText" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※表示している画面の写真</comment>
+    <comment>日本語のみ：表示している画面の写真</comment>
   </data>
   <data name="CocoaAnnotation" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※本アプリのこと</comment>
+    <comment>日本語のみ：本アプリのこと</comment>
+  </data>
+  <data name="OsAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：スマートフォンに搭載されている基本システム。AndroidやiOSのこと</comment>
+  </data>
+  <data name="SmsAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
+  </data>
+  <data name="MyHerSysAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
+  </data>
+  <data name="RandomCodeAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</comment>
+  </data>
+  <data name="AnnotationSymbol" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※</comment>
+  </data>
+  <data name="AnnotationSymbol1" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※1</comment>
+  </data>
+  <data name="AnnotationSymbol2" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※2</comment>
   </data>
 </root>

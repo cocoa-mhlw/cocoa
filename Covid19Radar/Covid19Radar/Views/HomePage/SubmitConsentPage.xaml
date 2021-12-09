@@ -90,13 +90,13 @@
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="9"
-                    Margin="0, 10, 0, 5"
+                    Margin="0, 10"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription6}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="10"
-                    Style="{StaticResource DefaultLabelSmall}"
+                    Style="{StaticResource AnnotationLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription7}" />
                 <Image
                     AutomationProperties.IsInAccessibleTree="False"
@@ -108,6 +108,18 @@
                     TabIndex="11"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription8}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="12"
+                    Margin="0, 10, 0, 0"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Image
                     AutomationProperties.IsInAccessibleTree="False"
                     Margin="0, 15"
@@ -115,7 +127,7 @@
                     HorizontalOptions="Center"/>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="12"
+                    TabIndex="13"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription9}" />
                 <Image
@@ -125,7 +137,7 @@
                     HorizontalOptions="Center"/>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="13"
+                    TabIndex="14"
                     Margin="0, 0, 0, 15"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription10}" />
@@ -133,7 +145,7 @@
             <Grid Grid.Row="1">
                 <Button
                     AutomationProperties.IsInAccessibleTree="{Binding IsNextButtonVisible}"
-                    TabIndex="14"
+                    TabIndex="15"
                     Command="{prism:NavigateTo 'NotifyOtherPage'}"
                     IsVisible="{Binding IsNextButtonVisible}"
                     Style="{StaticResource DefaultButton}"

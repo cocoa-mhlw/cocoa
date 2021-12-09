@@ -326,7 +326,7 @@
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>The app will notify you, if you were in close contact with COVID-19 positive user.</value>
-    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>You can check the number of your close contacts from the home screen.</value>
@@ -996,8 +996,8 @@ Storage :</value>
     <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
   </data>
   <data name="SubmitConsentPageDescription7" xml:space="preserve">
-    <value>(※)　It is the contact information that you gave during the visit if tested positive to COVID-19</value>
-    <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
+    <value>※ It is the contact information that you gave during the visit if tested positive to COVID-19</value>
+    <comment>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
   <data name="SubmitConsentPageDescription8" xml:space="preserve">
     <value>When your positivity information has been reported to the management system, on the registered phone number or email address you will receive the processing number required for COCOA positive registration</value>
@@ -1036,12 +1036,12 @@ Storage :</value>
     <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>The processing number will be valid for one hour after it is issued. If It's expired, you will receive a new processing number.</value>
-    <comment>処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+    <value>・ The processing number will be valid for one hour after it is issued. If It's expired, you will receive a new processing number.</value>
+    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>If you have received a usage guide for My HER-SYS from the health center, please apply to use the Contact Confirmation Application from there.</value>
-    <comment>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+    <value>・ If you have received a usage guide for My HER-SYS from the health center, please apply to use the Contact Confirmation Application from there.</value>
+    <comment>・保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>Exposure notification</value>
@@ -1054,10 +1054,6 @@ Storage :</value>
   <data name="LocalExposureNotificationContent" xml:space="preserve">
     <value>It is possible you have been in close proximity to a user who tested positive for COVID-19. Tap for more details.</value>
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
-  </data>
-  <data name="NoteSymbol" xml:space="preserve">
-    <value>* </value>
-    <comment>※</comment>
   </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>Web accessibility policy</value>
@@ -1221,20 +1217,48 @@ Note: this app does not collect users’ location information.</value>
     <value>list</value>
     <comment>リスト</comment>
   </data>
-  <data name="GpsAnnotation" xml:space="preserve">
+  <data name="GpsAnnotationText" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※位置を特定する仕組み</comment>
+    <comment>日本語のみ：位置を特定する仕組み</comment>
   </data>
-  <data name="BluetoothAnnotation" xml:space="preserve">
+  <data name="BluetoothAnnotationText" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※機器同士を繋ぐ無線通信システム</comment>
+    <comment>日本語のみ：機器同士を繋ぐ無線通信システム</comment>
   </data>
-  <data name="ScreenshotAnnotation" xml:space="preserve">
+  <data name="ScreenshotAnnotationText" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※表示している画面の写真</comment>
+    <comment>日本語のみ：表示している画面の写真</comment>
   </data>
-  <data name="CocoaAnnotation" xml:space="preserve">
+  <data name="CocoaAnnotationText" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※本アプリのこと</comment>
+    <comment>日本語のみ：本アプリのこと</comment>
+  </data>
+  <data name="OsAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：スマートフォンに搭載されている基本システム。AndroidやiOSのこと</comment>
+  </data>
+  <data name="SmsAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
+  </data>
+  <data name="MyHerSysAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
+  </data>
+  <data name="RandomCodeAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</comment>
+  </data>
+  <data name="AnnotationSymbol" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※</comment>
+  </data>
+  <data name="AnnotationSymbol1" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※1</comment>
+  </data>
+  <data name="AnnotationSymbol2" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※2</comment>
   </data>
 </root>

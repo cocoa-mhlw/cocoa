@@ -55,8 +55,14 @@
                     AutomationProperties.IsInAccessibleTree="True"
                     Margin="0, 10"
                     TabIndex="5"
-                    Style="{StaticResource AnnotationLabel}"
-                    Text="{x:Static resources:AppResources.GpsAnnotation}" />
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.GpsAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="6"
