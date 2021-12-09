@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,17 +12,20 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Moq;
 using Prism.Navigation;
+using Acr.UserDialogs;
 using Xunit;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
-    public class NotifyOtherPageViewModelTests
+    public class NotifyOtherPageViewModelTests: IDisposable
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IDiagnosisKeyRegisterServer> mockDiagnosisKeyRegisterServer;
         private readonly Mock<IEssentialsService> mockEssentialsService;
+        private readonly Mock<IUserDialogs> mockUserDialogs;
 
         public NotifyOtherPageViewModelTests()
         {
@@ -30,6 +34,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockDiagnosisKeyRegisterServer = mockRepository.Create<IDiagnosisKeyRegisterServer>();
             mockEssentialsService = mockRepository.Create<IEssentialsService>();
+            mockUserDialogs = mockRepository.Create<IUserDialogs>();
+            UserDialogs.Instance = mockUserDialogs.Object;
         }
 
         private NotifyOtherPageViewModel CreateViewModel()
@@ -39,8 +45,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockLoggerService.Object,
                 new MockExposureNotificationApiService(mockLoggerService.Object),
                 mockDiagnosisKeyRegisterServer.Object,
-                mockEssentialsService.Object
+                mockEssentialsService.Object,
+                0
                 );
+        }
+
+        public void Dispose()
+        {
+            UserDialogs.Instance = null;
         }
 
         [Theory]
@@ -59,6 +71,54 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var result = vm.CheckRegisterButtonEnable();
 
             Assert.Equal(expectResult, result);
+        }
+
+        [Fact]
+        public void CheckRegisterButtonMaxErrorCountReturnHomeTest()
+        {
+            mockUserDialogs
+                .Setup(x => x.ConfirmAsync(
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    null)
+                )
+                .Returns(Task.FromResult(true));
+
+            mockUserDialogs
+                .Setup(x => x.AlertAsync(
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    null)
+                )
+                .Returns(Task.FromResult(true));
+
+            var vm = CreateViewModel();
+            vm.ProcessingNumber = "1";
+
+            vm.OnClickRegister.Execute(null);
+            vm.OnClickRegister.Execute(null);
+            vm.OnClickRegister.Execute(null);
+
+            mockUserDialogs.Verify(x => x.AlertAsync(
+                AppResources.NotifyOtherPageDiag5Message,
+                AppResources.ProcessingNumberErrorDiagTitle,
+                AppResources.ButtonOk,
+                null
+            ), Times.Exactly(3));
+
+            vm.OnClickRegister.Execute(null);
+
+            mockUserDialogs.Verify(x => x.AlertAsync(
+                AppResources.NotifyOtherPageDiagReturnHome,
+                AppResources.NotifyOtherPageDiagReturnHomeTitle,
+                AppResources.ButtonOk,
+                null
+            ), Times.Once());
+
+            mockNavigationService.Verify(x => x.NavigateAsync("/MenuPage/NavigationPage/HomePage"), Times.Once());
         }
     }
 

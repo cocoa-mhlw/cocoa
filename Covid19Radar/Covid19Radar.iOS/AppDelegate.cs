@@ -24,8 +24,6 @@ using System.Linq;
 using FormsApplication = Xamarin.Forms.Application;
 using Prism.Navigation;
 using Covid19Radar.Views;
-using System;
-using CommonServiceLocator;
 
 namespace Covid19Radar.iOS
 {
