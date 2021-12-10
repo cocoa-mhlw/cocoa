@@ -5,20 +5,18 @@
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
-using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using DryIoc;
 using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using System;
-using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Migration;
 using Covid19Radar.Repository;
+using DryIoc;
 
 /*
  * Our mission...is
@@ -99,8 +97,8 @@ namespace Covid19Radar
             registerPlatformTypes(container);
             RegisterCommonTypes(container);
 
-            var serviceLocator = new ContainerServiceLocator(container);
-            ServiceLocator.SetLocatorProvider(() => serviceLocator);
+            PrismContainerExtension.Init(container);
+            ContainerLocator.SetContainerExtension(() => PrismContainerExtension.Current);
         }
 
         private static Rules GetContainerRules()
@@ -109,12 +107,6 @@ namespace Covid19Radar
                     .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
                     .WithoutFastExpressionCompiler()
                     .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Throw);
-        }
-
-        protected override IContainerExtension CreateContainerExtension()
-        {
-            var container = (ServiceLocator.Current as ContainerServiceLocator).CopyContainerWithRegistrations();
-            return new DryIocContainerExtension(container);
         }
 
         // Workaround for fixing DryIoc.ContainerException.

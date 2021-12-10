@@ -8,11 +8,11 @@ using Android.Content;
 using Android.Runtime;
 using AndroidX.Work;
 using Chino;
-using CommonServiceLocator;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Java.Util.Concurrent;
+using Prism.Ioc;
 using Xamarin.Essentials;
 
 namespace Covid19Radar.Droid.Services
@@ -81,13 +81,13 @@ namespace Covid19Radar.Droid.Services
     public class BackgroundWorker : Worker
     {
         private readonly Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
-            = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
+            = new Lazy<AbsExposureNotificationApiService>(() => ContainerLocator.Current.Resolve<AbsExposureNotificationApiService>());
 
         private readonly Lazy<ILoggerService> _loggerService
-            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+            = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
         private readonly Lazy<AbsExposureDetectionBackgroundService> _backgroundService
-            = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsExposureDetectionBackgroundService>());
 
         public BackgroundWorker(Context context, WorkerParameters workerParameters)
             : base(context, workerParameters)

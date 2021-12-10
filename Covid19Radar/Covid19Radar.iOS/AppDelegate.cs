@@ -5,7 +5,6 @@
 using System;
 using System.Collections.Generic;
 using Chino;
-using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.iOS.Services;
 using Covid19Radar.iOS.Services.Logs;
@@ -24,6 +23,7 @@ using System.Linq;
 using FormsApplication = Xamarin.Forms.Application;
 using Prism.Navigation;
 using Covid19Radar.Views;
+using Prism.Ioc;
 
 namespace Covid19Radar.iOS
 {
@@ -34,16 +34,16 @@ namespace Covid19Radar.iOS
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IExposureNotificationHandler
     {
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationClient
-            = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
+            = new Lazy<AbsExposureNotificationApiService>(() => ContainerLocator.Current.Resolve<AbsExposureNotificationApiService>());
 
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
-            = new Lazy<AbsExposureDetectionBackgroundService>(() => ServiceLocator.Current.GetInstance<AbsExposureDetectionBackgroundService>());
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsExposureDetectionBackgroundService>());
 
         private Lazy<IExposureDetectionService> _exposureDetectionService
-            = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
+            = new Lazy<IExposureDetectionService>(() => ContainerLocator.Current.Resolve<IExposureDetectionService>());
 
         private Lazy<ILoggerService> _loggerService
-            = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+            = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
         private App? AppInstance
         {
