@@ -342,7 +342,7 @@ namespace Covid19Radar.Services
                     case HttpStatusCode.InternalServerError:
                     case HttpStatusCode.ServiceUnavailable:
                         await UserDialogs.Instance.AlertAsync(
-                            "",
+                            null,
                             AppResources.ExposureNotificationHandler2ErrorMessage,
                             AppResources.ButtonOk);
 
@@ -351,7 +351,7 @@ namespace Covid19Radar.Services
 
                     case HttpStatusCode.BadRequest:
                         await UserDialogs.Instance.AlertAsync(
-                            "",
+                            null,
                             AppResources.ExposureNotificationHandler3ErrorMessage,
                             Resources.AppResources.ButtonOk);
 

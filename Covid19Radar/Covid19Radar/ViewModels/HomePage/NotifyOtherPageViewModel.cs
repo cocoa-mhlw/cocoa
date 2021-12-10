@@ -180,7 +180,7 @@ namespace Covid19Radar.ViewModels
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "",
+                    null,
                     AppResources.NotifyOtherPageDiag2Title,
                     AppResources.ButtonOk
                     );
@@ -281,7 +281,7 @@ namespace Covid19Radar.ViewModels
                 await Xamarin.ExposureNotifications.ExposureNotification.SubmitSelfDiagnosisAsync();
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(
-                    "",
+                    null,
                     AppResources.NotifyOtherPageDialogSubmittedTitle,
                     AppResources.ButtonOk
                 );
