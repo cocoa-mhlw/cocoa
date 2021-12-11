@@ -8,12 +8,14 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Moq;
+using Newtonsoft.Json;
 using Prism.Navigation;
 using Xunit;
 
@@ -24,7 +26,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IUserDataRepository> mockUserDataRepository;
+        private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
+        private readonly Mock<IPreferencesService> mockPreferenceService;
+        private readonly UserDataRepository userDataRepository;
         private readonly Mock<AbsExposureNotificationApiService> mockExposureNotificationApiService;
         private readonly Mock<ILocalNotificationService> mockLocalNotificationService;
         private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
@@ -38,7 +42,13 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
+            mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
+            mockPreferenceService = mockRepository.Create<IPreferencesService>();
+            userDataRepository = new UserDataRepository(
+                    mockPreferenceService.Object,
+                    mockDateTimeUtility.Object,
+                    mockLoggerService.Object
+                );
             mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>(mockLoggerService.Object);
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
             mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
@@ -48,7 +58,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockExposureNotificationApiService.Object,
                 mockRepository.Create<IExposureConfigurationRepository>().Object,
                 mockLoggerService.Object,
-                mockUserDataRepository.Object,
+                userDataRepository,
                 mockServerConfigurationRepository.Object,
                 mockLocalPathService.Object
                 );
@@ -61,13 +71,87 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new HomePageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockUserDataRepository.Object,
+                userDataRepository,
                 mockExposureNotificationApiService.Object,
                 mockLocalNotificationService.Object,
                 mockExposureDetectionBackgroundService.Object,
                 mockDialogService.Object,
                 mockExternalNavigationService.Object
                 );
+        }
+
+        [Fact]
+        public void Initialize_CheckExposureNotificationSettings()
+        {
+            var homePageViewModel = CreateViewModel();
+            var parameters = new NavigationParameters();
+
+            homePageViewModel.Initialize(parameters);
+
+            mockLocalNotificationService
+                .Verify(x => x.PrepareAsync(), Times.Once);
+            mockExposureDetectionBackgroundService
+                .Verify(x => x.ExposureDetectionAsync(null), Times.Once);
+            mockExposureNotificationApiService
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
+        }
+
+        [Fact]
+        public void OnResume_CheckExposureNotificationSettings()
+        {
+            mockExposureNotificationApiService
+               .Setup(x => x.GetStatusCodesAsync())
+               .Returns(Task.FromResult(new List<int>() as IList<int>));
+
+            mockPreferenceService
+                .Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true))
+                .Returns(true);
+
+            var homePageViewModel = CreateViewModel();
+            var parameters = new NavigationParameters();
+
+            homePageViewModel.OnResume();
+
+            mockExposureNotificationApiService
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
+        }
+
+        [Fact]
+        public void OnEnabled_CheckExposureNotificationSettings()
+        {
+            mockExposureNotificationApiService
+               .Setup(x => x.GetStatusCodesAsync())
+               .Returns(Task.FromResult(new List<int>() as IList<int>));
+
+            mockPreferenceService
+                .Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true))
+                .Returns(true);
+
+            var homePageViewModel = CreateViewModel();
+            var parameters = new NavigationParameters();
+
+            homePageViewModel.OnEnabled();
+
+            mockExposureNotificationApiService
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
+        }
+
+        [Fact]
+        public void OnDeclined_CheckExposureNotificationSettings()
+        {
+            mockExposureNotificationApiService
+               .Setup(x => x.GetStatusCodesAsync())
+               .Returns(Task.FromResult(new List<int>() as IList<int>));
+
+            mockPreferenceService
+                .Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true))
+                .Returns(true);
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnDeclined();
+
+            mockExposureNotificationApiService
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Never);
         }
 
         [Theory]
@@ -85,7 +169,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { status } as IList<int>));
-            mockUserDataRepository.Setup(x => x.IsCanConfirmExposure()).Returns(isCanConfirmExposure);
+
+            mockPreferenceService.Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true)).Returns(isCanConfirmExposure);
 
             homePageViewModel.OnAppearing();
 
@@ -101,7 +186,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
-            mockUserDataRepository.Setup(x => x.IsCanConfirmExposure()).Returns(true);
+            mockPreferenceService.Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true)).Returns(true);
 
             homePageViewModel.OnAppearing();
 
@@ -119,8 +204,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var mockLastConfirmedUtcDateTime = DateTime.UtcNow;
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
-            mockUserDataRepository.Setup(x => x.GetLastConfirmedDate()).Returns(mockLastConfirmedUtcDateTime);
-            mockUserDataRepository.Setup(x => x.IsCanConfirmExposure()).Returns(true);
+            mockPreferenceService
+                .Setup(x => x.ContainsKey(PreferenceKey.LastConfirmedDateTimeEpoch))
+                .Returns(true);
+            mockPreferenceService
+                .Setup(x => x.GetValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L))
+                .Returns(mockLastConfirmedUtcDateTime.ToUnixEpoch());
+            mockPreferenceService
+                .Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true))
+                .Returns(true);
 
             homePageViewModel.OnAppearing();
 
@@ -244,5 +336,100 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockDialogService.Verify(x => x.ShowLocationOffWarningAsync(), Times.Once());
             mockExternalNavigationService.Verify(x => x.NavigateLocationSettings(), Times.Never());
         }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-1)]
+        [InlineData(-2)]
+        [InlineData(-3)]
+        [InlineData(-4)]
+        [InlineData(-5)]
+        [InlineData(-6)]
+        [InlineData(-7)]
+        [InlineData(-8)]
+        [InlineData(-9)]
+        [InlineData(-10)]
+        [InlineData(-11)]
+        [InlineData(-12)]
+        [InlineData(-13)]
+        [InlineData(-14)]
+        public void OnClickExposuresTest_NavigateContactedNotifyPage(int offset)
+        {
+            var utcNow = DateTime.UtcNow;
+            var dailySummaries = new List<DailySummary>()
+            {
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = utcNow.AddDays(-30).ToUnixEpoch() * 1000 // Seconds -> milliseconds
+                },
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = utcNow.AddDays(-20).ToUnixEpoch() * 1000 // Seconds -> milliseconds
+                },
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = utcNow.AddDays(offset).ToUnixEpoch() * 1000 // Seconds -> milliseconds
+                }
+            };
+
+            var serializeDailySummaries = JsonConvert.SerializeObject(dailySummaries);
+
+            mockDateTimeUtility
+                .Setup(x => x.UtcNow)
+                .Returns(utcNow);
+
+            mockPreferenceService
+                .Setup(x => x.GetValue(PreferenceKey.DailySummaries, It.IsAny<string>()))
+                .Returns(serializeDailySummaries);
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnClickExposures.Execute(null);
+
+            mockNavigationService
+                .Verify(x => x.NavigateAsync("ContactedNotifyPage"), Times.Once);
+        }
+
+        [Theory]
+        [InlineData(-15)]
+        [InlineData(-16)]
+        [InlineData(-17)]
+        [InlineData(-18)]
+        [InlineData(-19)]
+        public void OnClickExposuresTest_NavigateNotContactPage(int offset)
+        {
+            var utcNow = DateTime.UtcNow;
+            var dailySummaries = new List<DailySummary>()
+            {
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = utcNow.AddDays(-30).ToUnixEpoch() * 1000 // Seconds -> milliseconds
+                },
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = utcNow.AddDays(-20).ToUnixEpoch() * 1000 // Seconds -> milliseconds
+                },
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = utcNow.AddDays(offset).ToUnixEpoch() * 1000 // Seconds -> milliseconds
+                }
+            };
+
+            var serializeDailySummaries = JsonConvert.SerializeObject(dailySummaries);
+
+            mockDateTimeUtility
+                .Setup(x => x.UtcNow)
+                .Returns(utcNow);
+
+            mockPreferenceService
+                .Setup(x => x.GetValue(PreferenceKey.DailySummaries, It.IsAny<string>()))
+                .Returns(serializeDailySummaries);
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnClickExposures.Execute(null);
+
+            mockNavigationService
+                .Verify(x => x.NavigateAsync("NotContactPage"), Times.Once);
+        }
+
     }
 }
