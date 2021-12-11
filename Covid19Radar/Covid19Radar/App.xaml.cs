@@ -120,6 +120,17 @@ namespace Covid19Radar
             base.RegisterRequiredTypes(containerRegistry);
         }
 
+        // Workaround for fixing DryIoc.ContainerException.
+        protected override void RegisterRequiredTypes(IContainerRegistry containerRegistry)
+        {
+            if (!FirstLoad)
+            {
+                return;
+            }
+
+            base.RegisterRequiredTypes(containerRegistry);
+        }
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Workaround for fixing DryIoc.ContainerException.
