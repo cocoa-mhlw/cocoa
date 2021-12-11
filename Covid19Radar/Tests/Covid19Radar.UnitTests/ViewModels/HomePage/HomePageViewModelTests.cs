@@ -80,6 +80,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 );
         }
 
+        private DailySummary CreateDailySummaryWithDayOffset(DateTime date, int dayOffset)
+        {
+            return new DailySummary()
+            {
+                DateMillisSinceEpoch = date.AddDays(dayOffset).ToUnixEpoch() * 1000 // seconds -> milliseconds
+            };
+        }
+
         [Fact]
         public void Initialize_CheckExposureNotificationSettings()
         {
@@ -353,23 +361,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         [InlineData(-12)]
         [InlineData(-13)]
         [InlineData(-14)]
-        public void OnClickExposuresTest_NavigateContactedNotifyPage(int offset)
+        public void OnClickExposuresTest_NavigateContactedNotifyPage(int dayOffset)
         {
             var utcNow = DateTime.UtcNow;
             var dailySummaries = new List<DailySummary>()
             {
-                new DailySummary()
-                {
-                    DateMillisSinceEpoch = utcNow.AddDays(-30).ToUnixEpoch() * 1000 // Seconds -> milliseconds
-                },
-                new DailySummary()
-                {
-                    DateMillisSinceEpoch = utcNow.AddDays(-20).ToUnixEpoch() * 1000 // Seconds -> milliseconds
-                },
-                new DailySummary()
-                {
-                    DateMillisSinceEpoch = utcNow.AddDays(offset).ToUnixEpoch() * 1000 // Seconds -> milliseconds
-                }
+                CreateDailySummaryWithDayOffset(utcNow, -30),
+                CreateDailySummaryWithDayOffset(utcNow, -20),
+                CreateDailySummaryWithDayOffset(utcNow, dayOffset)
             };
 
             var serializeDailySummaries = JsonConvert.SerializeObject(dailySummaries);
@@ -395,23 +394,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         [InlineData(-17)]
         [InlineData(-18)]
         [InlineData(-19)]
-        public void OnClickExposuresTest_NavigateNotContactPage(int offset)
+        public void OnClickExposuresTest_NavigateNotContactPage(int dayOffset)
         {
             var utcNow = DateTime.UtcNow;
             var dailySummaries = new List<DailySummary>()
             {
-                new DailySummary()
-                {
-                    DateMillisSinceEpoch = utcNow.AddDays(-30).ToUnixEpoch() * 1000 // Seconds -> milliseconds
-                },
-                new DailySummary()
-                {
-                    DateMillisSinceEpoch = utcNow.AddDays(-20).ToUnixEpoch() * 1000 // Seconds -> milliseconds
-                },
-                new DailySummary()
-                {
-                    DateMillisSinceEpoch = utcNow.AddDays(offset).ToUnixEpoch() * 1000 // Seconds -> milliseconds
-                }
+                CreateDailySummaryWithDayOffset(utcNow, -30),
+                CreateDailySummaryWithDayOffset(utcNow, -20),
+                CreateDailySummaryWithDayOffset(utcNow, dayOffset),
             };
 
             var serializeDailySummaries = JsonConvert.SerializeObject(dailySummaries);
