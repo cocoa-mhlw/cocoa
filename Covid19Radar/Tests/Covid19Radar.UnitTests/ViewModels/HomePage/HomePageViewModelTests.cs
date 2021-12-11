@@ -112,7 +112,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true))
+                .Setup(x => x.GetValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -132,7 +132,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true))
+                .Setup(x => x.GetValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -152,7 +152,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true))
+                .Setup(x => x.GetValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -176,9 +176,12 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationApiService
-                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { status } as IList<int>));
+                .Setup(x => x.GetStatusCodesAsync())
+                .Returns(Task.FromResult(new List<int>() { status } as IList<int>));
 
-            mockPreferenceService.Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true)).Returns(isCanConfirmExposure);
+            mockPreferenceService
+                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Returns(isCanConfirmExposure);
 
             homePageViewModel.OnAppearing();
 
@@ -193,8 +196,11 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationApiService
-                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
-            mockPreferenceService.Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true)).Returns(true);
+                .Setup(x => x.GetStatusCodesAsync())
+                .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
+            mockPreferenceService
+                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Returns(true);
 
             homePageViewModel.OnAppearing();
 
@@ -213,13 +219,13 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
             mockPreferenceService
-                .Setup(x => x.ContainsKey(PreferenceKey.LastConfirmedDateTimeEpoch))
+                .Setup(x => x.ContainsKey("LastConfirmedDateTimeEpoch"))
                 .Returns(true);
             mockPreferenceService
-                .Setup(x => x.GetValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L))
+                .Setup(x => x.GetValue("LastConfirmedDateTimeEpoch", 0L))
                 .Returns(mockLastConfirmedUtcDateTime.ToUnixEpoch());
             mockPreferenceService
-                .Setup(x => x.GetValue(PreferenceKey.CanConfirmExposure, true))
+                .Setup(x => x.GetValue("CanConfirmExposure", true))
                 .Returns(true);
 
             homePageViewModel.OnAppearing();
@@ -378,7 +384,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Returns(utcNow);
 
             mockPreferenceService
-                .Setup(x => x.GetValue(PreferenceKey.DailySummaries, It.IsAny<string>()))
+                .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
 
             var homePageViewModel = CreateViewModel();
@@ -411,7 +417,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Returns(utcNow);
 
             mockPreferenceService
-                .Setup(x => x.GetValue(PreferenceKey.DailySummaries, It.IsAny<string>()))
+                .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
 
             var homePageViewModel = CreateViewModel();
