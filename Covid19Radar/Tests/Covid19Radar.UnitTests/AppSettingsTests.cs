@@ -8,7 +8,8 @@ namespace Covid19Radar.UnitTests
 {
     public class AppSettingsTests
     {
-        [Fact(Skip = "Under consideration")]
+        // TODO: Maintain the tests for debug and release compatibility.
+        [Fact(Skip = "For debugging COCOA2, this test will be skipped.")]
         public void SettingsTests()
         {
             var settings = new AppSettings();
