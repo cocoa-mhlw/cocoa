@@ -86,8 +86,7 @@ namespace Covid19Radar.Services
 
                 bool isHighRiskExposureDetected = dailySummaries
                     .Select(dailySummary => _exposureRiskCalculationService.CalcRiskLevel(dailySummary))
-                    .Where(riskLevel => riskLevel >= RiskLevel.High)
-                    .Count() > 0;
+                    .Any(riskLevel => riskLevel >= RiskLevel.High);
 
                 if (isHighRiskExposureDetected)
                 {

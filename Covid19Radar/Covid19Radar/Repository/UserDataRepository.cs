@@ -182,6 +182,8 @@ namespace Covid19Radar.Repository
             exposueWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
 
             await SaveExposureDataAsync(dailySummaryList, exposueWindowList);
+
+            _loggerService.EndMethod();
         }
 
         public void SetStartDate(DateTime dateTime)

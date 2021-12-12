@@ -141,8 +141,8 @@ namespace Covid19Radar.Services
 
     public class MockCommonUtils
     {
-        public string CdnUrlBase { get => AppSettings.Instance.CdnUrlBase; }
-        public string ApiUrlBase { get => AppSettings.Instance.ApiUrlBase; }
+        public string CdnUrlBase => AppSettings.Instance.CdnUrlBase;
+        public string ApiUrlBase => AppSettings.Instance.ApiUrlBase;
 
         public bool IsDownloadRequired()
                 => Regex.IsMatch(CdnUrlBase, @"^https://.*\..*\..*/$");

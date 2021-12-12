@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Covid19Radar.Common;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 
@@ -20,34 +19,22 @@ namespace Covid19Radar.Repository
 
         public string DiagnosisKeyRegisterApiEndpoint { get; set; }
 
-        public virtual IList<string> DiagnosisKeyRegisterApiUrls
-        {
-            get
-            {
-                return Regions
+        public virtual IList<string> DiagnosisKeyRegisterApiUrls => Regions
                     .Select(region => DiagnosisKeyRegisterApiEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
                     .Where(url => url != null)
                     .Distinct()
                     .ToList();
-            }
-        }
 
         public string DiagnosisKeyListProvideServerEndpoint { get; set; }
 
         public virtual string GetDiagnosisKeyListProvideServerUrl(string region)
             => DiagnosisKeyListProvideServerEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region);
 
-        public virtual IList<string> DiagnosisKeyListProvideServerUrls
-        {
-            get
-            {
-                return Regions
+        public virtual IList<string> DiagnosisKeyListProvideServerUrls => Regions
                     .Select(region => DiagnosisKeyListProvideServerEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
                     .Where(url => url != null)
                     .Distinct()
                     .ToList();
-            }
-        }
 
         public string InquiryLogApiEndpoint { get; set; }
 
@@ -55,17 +42,11 @@ namespace Covid19Radar.Repository
 
         public string? ExposureDataCollectServerEndpoint { get; set; }
 
-        public virtual IList<string> ExposureDataCollectServerUrls
-        {
-            get
-            {
-                return Regions
+        public virtual IList<string> ExposureDataCollectServerUrls => Regions
                     .Select(region => ExposureDataCollectServerEndpoint?.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
                     .Where(url => url != null)
                     .Distinct()
                     .ToList();
-            }
-        }
 
         public Task SaveAsync();
 
