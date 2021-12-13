@@ -1205,18 +1205,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SaveCompleted {
-            get {
-                return ResourceManager.GetString("SaveCompleted", resourceCulture);
-            }
-        }
-        
-        public static string Saving {
-            get {
-                return ResourceManager.GetString("Saving", resourceCulture);
-            }
-        }
-        
         public static string SendIdMailBody1 {
             get {
                 return ResourceManager.GetString("SendIdMailBody1", resourceCulture);
@@ -1247,27 +1235,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SuccessMessageToSaveOperatingInformationForAndroid {
-            get {
-                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid", resourceCulture);
-            }
-        }
-        
-        public static string SuccessMessageToSaveOperatingInformationForIOS {
-            get {
-                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForIOS", resourceCulture);
-            }
-        }
-        
         public static string UrlContactedForm {
             get {
                 return ResourceManager.GetString("UrlContactedForm", resourceCulture);
-            }
-        }
-        
-        public static string SuccessMessageToSaveOperatingInformationForAndroid2 {
-            get {
-                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid2", resourceCulture);
             }
         }
         

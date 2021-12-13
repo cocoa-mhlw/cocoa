@@ -879,14 +879,6 @@ please follow the app. guidance and check the Consultation Centers List to recei
     <value>Processing</value>
     <comment>処理中</comment>
   </data>
-  <data name="SaveCompleted" xml:space="preserve">
-    <value>Save completed</value>
-    <comment>保存完了</comment>
-  </data>
-  <data name="Saving" xml:space="preserve">
-    <value>Saving</value>
-    <comment>保存中</comment>
-  </data>
   <data name="SendIdMailBody1" xml:space="preserve">
     <value>Operating information ID：</value>
     <comment>動作情報ID：</comment>
@@ -907,23 +899,8 @@ please follow the app. guidance and check the Consultation Centers List to recei
     <value>Sending error</value>
     <comment>送信エラー</comment>
   </data>
-  <data name="SuccessMessageToSaveOperatingInformationForAndroid" xml:space="preserve">
-    <value>Please check the following folder from the OS "Settings" → "Storage" → "Files" or by using a file management application.
-Storage :</value>
-    <comment>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
-保存場所：</comment>
-  </data>
-  <data name="SuccessMessageToSaveOperatingInformationForIOS" xml:space="preserve">
-    <value>The Operating information file was saved successfully. You can view it「On My iPhone」 from Files app.</value>
-    <comment>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</comment>
-  </data>
   <data name="UrlContactedForm" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot2.html</value>
-  </data>
-  <data name="SuccessMessageToSaveOperatingInformationForAndroid2" xml:space="preserve">
-    <value>
-※The part preceding "/Android" , such as "Internal Storage”, may differ depending on your environment.</value>
-    <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Do you have any of the following symptoms？</value>

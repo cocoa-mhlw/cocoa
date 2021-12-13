@@ -757,14 +757,6 @@
     <value>处理中</value>
     <comment>処理中</comment>
   </data>
-  <data name="SaveCompleted" xml:space="preserve">
-    <value>已保存</value>
-    <comment>保存完了</comment>
-  </data>
-  <data name="Saving" xml:space="preserve">
-    <value>保存中</value>
-    <comment>保存中</comment>
-  </data>
   <data name="Sending" xml:space="preserve">
     <value>发送中</value>
     <comment>送信中</comment>
@@ -772,16 +764,6 @@
   <data name="SendingError" xml:space="preserve">
     <value>发送失败</value>
     <comment>送信エラー</comment>
-  </data>
-  <data name="SuccessMessageToSaveOperatingInformationForAndroid" xml:space="preserve">
-    <value>请使用操作系统的“设置”→“存储”→“文件”或文件管理应用程序查看以下文件夹。
-保存位置：</value>
-    <comment>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
-保存場所：</comment>
-  </data>
-  <data name="SuccessMessageToSaveOperatingInformationForIOS" xml:space="preserve">
-    <value>操作信息确认文件已保存。 您可以从文件应用的「我的iPhone」中查看它。</value>
-    <comment>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</comment>
   </data>
   <data name="InquiryMailBody" xml:space="preserve">
     <value>意见反馈正文：\r\n\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n</value>
@@ -805,11 +787,6 @@
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot2.html</value>
-  </data>
-  <data name="SuccessMessageToSaveOperatingInformationForAndroid2" xml:space="preserve">
-    <value>
-*对于“ / Android”之前的部分，根据您的环境而异，例如“内部存储”等不同表示。</value>
-    <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
   </data>
   <data name="NotifyOtherPageDescription3" xml:space="preserve">
     <value>请输入通过短信或电子邮件收到的受理编号</value>
