@@ -57,7 +57,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="{x:Static resources:AppResources.AnnotationSymbol2}"/>
-                            <Span Text="{x:Static resources:AppResources.BluetoothAnnotationText}"/>
+                            <Span Text="{x:Static resources:AppResources.GpsAnnotationText}"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
