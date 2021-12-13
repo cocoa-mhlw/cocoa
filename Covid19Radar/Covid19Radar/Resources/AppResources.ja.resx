@@ -540,8 +540,8 @@
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorTitle" xml:space="preserve">
-    <value>処理番号が誤っているか、有効期限が切れています。</value>
-    <comment>処理番号が誤っているか、有効期限が切れています。</comment>
+    <value>処理番号が誤っているか、有効期限が切れています</value>
+    <comment>処理番号が誤っているか、有効期限が切れています</comment>
   </data>
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
     <value>センターに接続できません</value>

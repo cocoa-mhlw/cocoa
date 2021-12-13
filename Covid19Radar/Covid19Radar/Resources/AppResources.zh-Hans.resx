@@ -542,8 +542,8 @@
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorTitle" xml:space="preserve">
-    <value>受理编号错误或者失效。</value>
-    <comment>処理番号が誤っているか、有効期限が切れています。</comment>
+    <value>受理编号错误或者失效</value>
+    <comment>処理番号が誤っているか、有効期限が切れています</comment>
   </data>
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
     <value>无法连接到登记服务中心</value>
