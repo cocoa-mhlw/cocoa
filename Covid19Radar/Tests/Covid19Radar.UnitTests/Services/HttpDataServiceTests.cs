@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
@@ -79,7 +78,7 @@ namespace Covid19Radar.UnitTests.Services
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
-                .Returns(Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
+                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
 
@@ -108,7 +107,7 @@ namespace Covid19Radar.UnitTests.Services
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
-                .Returns(Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
+                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
 
@@ -136,7 +135,7 @@ namespace Covid19Radar.UnitTests.Services
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
-                .Returns(Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
+                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
 
@@ -172,7 +171,7 @@ namespace Covid19Radar.UnitTests.Services
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.DiagnosisKeyRegisterApiUrls)
-                .Returns(new List<string>() { Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/v3/diagnosis") });
+                .Returns(new List<string>() { IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/v3/diagnosis") });
 
             var unitUnderTest = CreateService();
 

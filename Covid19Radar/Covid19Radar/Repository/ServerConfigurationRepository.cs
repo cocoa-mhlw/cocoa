@@ -2,7 +2,6 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -71,6 +70,26 @@ namespace Covid19Radar.Repository
         public Task SaveAsync();
 
         public Task LoadAsync();
+
+        public static string CombineAsUrl(params string[] paths)
+        {
+            if (paths is null || paths.Length == 0)
+            {
+                return string.Empty;
+            }
+
+            var filteredPaths = paths.Where(path => !string.IsNullOrEmpty(path));
+            var lastPath = filteredPaths.Last();
+            var hasLastSlash = lastPath.Last() == '/';
+
+            var combinedUrl = string.Join('/', filteredPaths.Select(path => path.TrimStart('/').TrimEnd('/')));
+
+            if (hasLastSlash)
+            {
+                return combinedUrl + '/';
+            }
+            return combinedUrl;
+        }
     }
 
     public class DebugServerConfigurationRepository : IServerConfigurationRepository
@@ -161,7 +180,7 @@ namespace Covid19Radar.Repository
     {
         public string UserRegisterApiEndpoint
         {
-            get => Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
+            get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
             set
             {
                 // Do nothing
@@ -170,7 +189,7 @@ namespace Covid19Radar.Repository
 
         public string InquiryLogApiEndpoint
         {
-            get => Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+            get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
             set
             {
                 // Do nothing
@@ -188,7 +207,7 @@ namespace Covid19Radar.Repository
 
         public string DiagnosisKeyRegisterApiEndpoint
         {
-            get => Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
+            get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
             set
             {
                 // Do nothing
@@ -207,7 +226,11 @@ namespace Covid19Radar.Repository
         public string ExposureConfigurationUrl
         {
             // TODO: Replace url for RELEASE.
-            get => Utils.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino", "configuration.json");
+            get => IServerConfigurationRepository.CombineAsUrl(
+                AppSettings.Instance.ExposureConfigurationUrlBase,
+                "exposure_configuration/Cappuccino",
+                "configuration.json"
+                );
             set
             {
                 // Do nothing
@@ -246,21 +269,21 @@ namespace Covid19Radar.Repository
         public int Version = 1;
 
         [JsonProperty("user_register_api_endpoint")]
-        public string UserRegisterApiEndpoint = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
+        public string UserRegisterApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
 
         [JsonProperty("inquiry_log_api_endpoint")]
-        public string? InquiryLogApiEndpoint = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+        public string? InquiryLogApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
 
         [JsonProperty("regions")]
         public string Regions = string.Join(",", AppSettings.Instance.SupportedRegions);
 
         [JsonProperty("diagnosis_key_register_api_endpoint")]
         public string DiagnosisKeyRegisterApiEndpoint
-            = Utils.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
 
         [JsonProperty("diagnosis_key_list_provide_server_endpoint")]
         public string DiagnosisKeyListProvideServerEndpoint
-            = Utils.CombineAsUrl(
+            = IServerConfigurationRepository.CombineAsUrl(
                 AppSettings.Instance.CdnUrlBase,
                 AppSettings.Instance.BlobStorageContainerName,
                 PLACEHOLDER_REGION,
@@ -269,7 +292,7 @@ namespace Covid19Radar.Repository
 
         [JsonProperty("exposure_configuration_url")]
         public string? ExposureConfigurationUrl
-            = Utils.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino", "configuration.json");
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino", "configuration.json");
 
         [JsonProperty("exposure_data_collect_server_endpoint")]
         public string? ExposureDataCollectServerEndpoint = null;
