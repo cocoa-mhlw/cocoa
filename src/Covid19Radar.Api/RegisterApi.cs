@@ -63,15 +63,21 @@ namespace Covid19Radar.Api
 
         private async Task<IActionResult> Register(string userUuid)
         {
-            var newItem = new UserModel();
-            newItem.UserUuid = userUuid;
-            newItem.ProtectSecret = DUMMY_PROTECT_SECRET;
+            var newItem = new UserModel()
+            {
+                UserUuid = userUuid,
+                ProtectSecret = DUMMY_PROTECT_SECRET
+            };
             await UserRepository.Create(newItem);
-            var result = new RegisterResultModel();
-            // set dummy Uuid
-            result.UserUuid = DUMMY_UUID;
-            result.Secret = DUMMY_SECRET;
-            result.JumpConsistentSeed = newItem.JumpConsistentSeed;
+
+            var result = new RegisterResultModel()
+            {
+                // set dummy infos
+                UserUuid = DUMMY_UUID,
+                Secret = DUMMY_SECRET,
+                JumpConsistentSeed = newItem.JumpConsistentSeed,
+            };
+
             return new OkObjectResult(result);
         }
     }
