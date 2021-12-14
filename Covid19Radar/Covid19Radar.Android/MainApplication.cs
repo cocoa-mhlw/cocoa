@@ -15,8 +15,8 @@ using Covid19Radar.Droid.Services.Migration;
 using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
-using CommonServiceLocator;
 using AndroidX.AppCompat.App;
+using Prism.Ioc;
 
 namespace Covid19Radar.Droid
 {
@@ -37,10 +37,10 @@ namespace Covid19Radar.Droid
 
 
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
-            = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
+            = new Lazy<AbsExposureNotificationApiService>(() => ContainerLocator.Current.Resolve<AbsExposureNotificationApiService>());
 
         private Lazy<IExposureDetectionService> _exposureDetectionService
-            = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
+            = new Lazy<IExposureDetectionService>(() => ContainerLocator.Current.Resolve<IExposureDetectionService>());
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {

@@ -17,7 +17,7 @@ using Covid19Radar.Views;
 using Prism.Navigation;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
-using CommonServiceLocator;
+using Prism.Ioc;
 
 namespace Covid19Radar.Droid
 {
@@ -48,7 +48,7 @@ namespace Covid19Radar.Droid
         private const string EXTRA_KEY_DESTINATION = "key_destination";
 
         private Lazy<ILoggerService> _loggerService
-                    = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+                    = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
         internal static Intent NewIntent(Context context)
         {
