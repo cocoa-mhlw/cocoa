@@ -296,6 +296,10 @@
                 <Setter Property="TextDecorations" Value="Underline" />
             </Style>
 
+            <Style x:Key="AnnotationLabel" TargetType="Label" BasedOn="{StaticResource DefaultLabelSmall}">
+                <Setter Property="TextColor" Value="{StaticResource SecondaryText}" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>
