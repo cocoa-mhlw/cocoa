@@ -16,6 +16,7 @@ using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
 using CommonServiceLocator;
+using AndroidX.AppCompat.App;
 
 namespace Covid19Radar.Droid
 {
@@ -60,6 +61,8 @@ namespace Covid19Radar.Droid
         public override void OnCreate()
         {
             base.OnCreate();
+
+            AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
