@@ -23,6 +23,8 @@
         </Grid.RowDefinitions>
         <Label
             Grid.Row="0"
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
             Margin="0,0,0,20"
             Style="{StaticResource DefaultTitleLabel}"
             Text="{x:Static resources:AppResources.TutorialPage2Description1}" />
@@ -36,21 +38,34 @@
                     Source="TutorialPage20.png" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="2"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.TutorialPage2Description2}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="3"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.TutorialPage2Description3}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="4"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.TutorialPage2Description4}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Margin="0, 10"
+                    TabIndex="5"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.GpsAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
-                    AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage2Description5}"
-                    Grid.Row="1"
-                    AutomationId="NextButton"
+                    TabIndex="6"
                     Command="{prism:NavigateTo 'TutorialPage3'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.TutorialPage2Description5}" />
