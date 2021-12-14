@@ -541,7 +541,7 @@
     <value>暴露通知无法启动。请打开设置，开启暴露通知后打开蓝牙。</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
-  <data name="ExposureNotificationHandler1ErrorTitle" xml:space="preserve">
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>受理编号错误或者失效</value>
     <comment>処理番号が誤っているか、有効期限が切れています</comment>
   </data>

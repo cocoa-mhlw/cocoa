@@ -44,7 +44,7 @@
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
+                    Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
                     GroupName="CheckSymptoms" />
                 <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
@@ -52,7 +52,7 @@
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
-                    Text="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
+                    Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
                     GroupName="CheckSymptoms" />
             </StackLayout>
             <StackLayout
@@ -179,7 +179,7 @@
                             CharacterSpacing="5"
                             Keyboard="Numeric"
                             IsReadOnly="{Binding IsProcessingNumberReadOnly}"
-                            MaxLength="{x:Static common:AppConstants.MaxDiagnosisUidCount}"
+                            MaxLength="{x:Static common:AppConstants.MaxProcessingNumberLength}"
                             Style="{StaticResource DefaultEntry}"
                             Text="{Binding DiagnosisUid}">
                             <Entry.Triggers>
