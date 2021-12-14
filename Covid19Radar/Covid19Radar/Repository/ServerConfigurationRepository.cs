@@ -52,6 +52,16 @@ namespace Covid19Radar.Repository
 
         public Task LoadAsync();
 
+        /// <summary>
+        /// Combine paths for constructing URL.
+        ///
+        /// `Path.Combine method` will remove elements before, if any element have `/` as head of string.
+        /// This method keep all elements and combine these for constructing URL.
+        ///
+        /// See `Covid19Radar.UnitTests.Repository.ServerConfigurationRepositoryTests` for check behavior the method.
+        /// </summary>
+        /// <param name="paths"></param>
+        /// <returns></returns>
         public static string CombineAsUrl(params string[] paths)
         {
             if (paths is null || paths.Length == 0)
