@@ -31,6 +31,11 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
+
+        // Workaround for fixing DryIoc.ContainerException.
+        // https://github.com/PrismLibrary/Prism/issues/2529
+        private static bool FirstLoad = true;
+
         private ILoggerService LoggerService;
         private ILogFileService LogFileService;
 
@@ -53,6 +58,8 @@ namespace Covid19Radar
             LogFileService.SetSkipBackupAttributeToLogDir();
 
             LogUnobservedTaskExceptions();
+
+            FirstLoad = false;
 
             LoggerService.EndMethod();
         }
@@ -82,6 +89,11 @@ namespace Covid19Radar
         // Initialize IOC container
         public static void InitializeServiceLocator(Action<IContainer> registerPlatformTypes)
         {
+            if (!FirstLoad)
+            {
+                return;
+            }
+
             var container = new Container(GetContainerRules());
 
             registerPlatformTypes(container);
@@ -105,8 +117,25 @@ namespace Covid19Radar
             return new DryIocContainerExtension(container);
         }
 
+        // Workaround for fixing DryIoc.ContainerException.
+        protected override void RegisterRequiredTypes(IContainerRegistry containerRegistry)
+        {
+            if (!FirstLoad)
+            {
+                return;
+            }
+
+            base.RegisterRequiredTypes(containerRegistry);
+        }
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            // Workaround for fixing DryIoc.ContainerException.
+            if (!FirstLoad)
+            {
+                return;
+            }
+
             // Base and Navigation
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MenuPage>();
