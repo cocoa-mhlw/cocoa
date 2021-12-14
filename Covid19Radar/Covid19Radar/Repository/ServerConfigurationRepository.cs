@@ -246,8 +246,13 @@ namespace Covid19Radar.Repository
     {
         public const string PLACEHOLDER_REGION = "{region}";
 
-        [JsonProperty("version")]
-        public int Version = 1;
+        /// <summary>
+        /// Specifies the format version of configuration file.
+        /// If any events will be occurred that require migration process.(e.g. Add/delete member, change structure, or rename key)
+        /// This value will be increment.
+        /// </summary>
+        [JsonProperty("format_version")]
+        public int FormatVersion = 1;
 
         [JsonProperty("user_register_api_endpoint")]
         public string UserRegisterApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
