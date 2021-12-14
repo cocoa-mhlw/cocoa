@@ -388,7 +388,7 @@ namespace Covid19Radar.ViewModels
 
                 case HttpStatusCode.NotAcceptable:
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.ExposureNotificationHandler1ErrorMessage,
+                        AppResources.ExposureNotificationHandler1ErrorTitle,
                         AppResources.ProcessingNumberErrorDiagTitle,
                         AppResources.ButtonOk);
                     loggerService.Error($"The process number is incorrect.");
