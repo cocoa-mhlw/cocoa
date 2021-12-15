@@ -29,14 +29,14 @@
             <StackLayout Grid.Row="0">
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HelpPage4Description}" />
             </StackLayout>
             <Grid Grid.Row="1">
                 <Button
-                    AutomationId="OnClickSetting"
                     AutomationProperties.IsInAccessibleTree="True"
-                    AutomationProperties.Name="{x:Static resources:AppResources.HelpPage4ButtonText}"
+                    TabIndex="2"
                     Command="{Binding Path=OnClickSetting}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.HelpPage4ButtonText}" />

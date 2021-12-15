@@ -5,20 +5,18 @@
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
-using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using DryIoc;
 using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using System;
-using CommonServiceLocator;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Migration;
 using Covid19Radar.Repository;
+using DryIoc;
 
 /*
  * Our mission...is
@@ -31,6 +29,11 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
+
+        // Workaround for fixing DryIoc.ContainerException.
+        // https://github.com/PrismLibrary/Prism/issues/2529
+        private static bool FirstLoad = true;
+
         private ILoggerService LoggerService;
         private ILogFileService LogFileService;
 
@@ -53,6 +56,8 @@ namespace Covid19Radar
             LogFileService.SetSkipBackupAttributeToLogDir();
 
             LogUnobservedTaskExceptions();
+
+            FirstLoad = false;
 
             LoggerService.EndMethod();
         }
@@ -82,13 +87,18 @@ namespace Covid19Radar
         // Initialize IOC container
         public static void InitializeServiceLocator(Action<IContainer> registerPlatformTypes)
         {
+            if (!FirstLoad)
+            {
+                return;
+            }
+
             var container = new Container(GetContainerRules());
 
             registerPlatformTypes(container);
             RegisterCommonTypes(container);
 
-            var serviceLocator = new ContainerServiceLocator(container);
-            ServiceLocator.SetLocatorProvider(() => serviceLocator);
+            PrismContainerExtension.Init(container);
+            ContainerLocator.SetContainerExtension(() => PrismContainerExtension.Current);
         }
 
         private static Rules GetContainerRules()
@@ -99,14 +109,25 @@ namespace Covid19Radar
                     .WithDefaultIfAlreadyRegistered(IfAlreadyRegistered.Throw);
         }
 
-        protected override IContainerExtension CreateContainerExtension()
+        // Workaround for fixing DryIoc.ContainerException.
+        protected override void RegisterRequiredTypes(IContainerRegistry containerRegistry)
         {
-            var container = (ServiceLocator.Current as ContainerServiceLocator).CopyContainerWithRegistrations();
-            return new DryIocContainerExtension(container);
+            if (!FirstLoad)
+            {
+                return;
+            }
+
+            base.RegisterRequiredTypes(containerRegistry);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            // Workaround for fixing DryIoc.ContainerException.
+            if (!FirstLoad)
+            {
+                return;
+            }
+
             // Base and Navigation
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MenuPage>();

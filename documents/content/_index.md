@@ -24,6 +24,9 @@ COCOAのリポジトリは次のURLです。
  * [Pull Requestが取り込まれるまで]({{<relref "handling_pullreqeust">}})
  * [Contributors]({{<relref "contributors">}})
 
+## レポート
+ * [COCOA アクセシビリティ改善プロジェクト - 2021/12/01](report/a11y_20211201.html)
+
 ## 素材（掲載されている情報等）
  * 同意事項
     * [プライバシーポリシー](agreements/privacy_policy/)

@@ -161,9 +161,6 @@
     <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
       <Version>117.0.1.2</Version>
     </PackageReference>
-    <PackageReference Include="CommonServiceLocator">
-      <Version>2.0.6</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Core">
       <Version>1.6.0.3</Version>
     </PackageReference>
@@ -357,6 +354,30 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-ja-xxhdpi\alert_workaround_img.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-ja-xhdpi\icon_close.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-ja-xxhdpi\icon_close.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_close.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_close.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-zh-xhdpi\icon_close.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-zh-xxhdpi\icon_close.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

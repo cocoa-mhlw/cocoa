@@ -62,7 +62,7 @@ namespace Covid19Radar.Services
             if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
             {
                 _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(DateTime.UtcNow);
-                _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
+                _exposureConfigurationRepository.SetIsDiagnosisKeysDataMappingConfigurationUpdated(false);
             }
 
             _loggerService.EndMethod();

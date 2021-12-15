@@ -18,31 +18,68 @@
             Margin="0"
             Padding="0">
             <StackLayout
-            BackgroundColor="{StaticResource Background}"
-            Padding="20"
-            Spacing="20">
-                <Label Style="{StaticResource DefaultLabel}">
+                BackgroundColor="{StaticResource Background}"
+                Padding="20"
+                Spacing="20">
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription1}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="2"
+                    Style="{StaticResource AnnotationLabel}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription1}" />
-                            <Span Text="{x:Static x:Environment.NewLine}" />
-                            <Span Text="{x:Static x:Environment.NewLine}" />
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}" />
+                            <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="3"
+                    Style="{StaticResource DefaultLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
                             <Span
-                            FontAttributes="Bold"
-                            Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription2}" />
+                                FontAttributes="Bold"
+                                Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription2}" />
                             <Span Text="{x:Static x:Environment.NewLine}" />
                             <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription3}" />
-                            <Span Text="{x:Static x:Environment.NewLine}" />
-                            <Span Text="{x:Static x:Environment.NewLine}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="4"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}" />
+                            <Span Text="{x:Static resources:AppResources.OsAnnotationText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="5"
+                    Style="{StaticResource DefaultLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
                             <Span
-                            FontAttributes="Bold"
-                            Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription4}" />
+                                FontAttributes="Bold"
+                                Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription4}" />
                             <Span Text="{x:Static x:Environment.NewLine}" />
                             <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription5}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label Style="{StaticResource DefaultLabelSmall}">
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="6"
+                    Style="{StaticResource DefaultLabelSmall}">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription6}" />
@@ -60,13 +97,18 @@
                         <TapGestureRecognizer Command="{Binding Path=OnClickConfirmLogCommand}"/>
                     </Frame.GestureRecognizers>
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="{Binding ConfirmingLogReadText}"
+                        TabIndex="7"
                         Style="{StaticResource LinkLabelStyleMedium}"
                         Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}" />
                 </Frame>
                 <Button
-                Command="{Binding Path=OnClickSendLogCommand}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.SendLogConfirmationPageButton1}" />
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="4"
+                    Command="{Binding Path=OnClickSendLogCommand}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.SendLogConfirmationPageButton1}" />
             </StackLayout>
         </ScrollView>
     </ContentView>
