@@ -24,7 +24,6 @@ namespace Covid19Radar.Views
 
         #region Instance Fields
 
-        private CancellationTokenSource _cancellationTokenSource;
         private CachedImage _homeActiveIconImage;
         private readonly SemaphoreSlim _semaphoreForAnimation = new SemaphoreSlim(1, 1);
 
@@ -50,55 +49,35 @@ namespace Covid19Radar.Views
             StartAnimation();
         }
 
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-
-            StopAnimation();
-        }
-
         #endregion
 
         #region Other Private Methods
 
         private void StartAnimation()
         {
-            StopAnimation();
-
-            var cancellationTokenSource = new CancellationTokenSource();
-            _cancellationTokenSource = cancellationTokenSource;
-
             _ = Task.Run(async () =>
             {
-                _semaphoreForAnimation.Wait();
-                while (!cancellationTokenSource.IsCancellationRequested)
+                if (_semaphoreForAnimation.CurrentCount == 0)
                 {
-                    _ = _homeActiveIconImage.FadeTo(0.25, length: 0);
-                    await _homeActiveIconImage.RelScaleTo(ANIMATION_SCALE_VALUE,
-                        length: ANIMATION_SCALEIN_DURATION_IN_MILLIS,
-                        easing: Easing.Linear
-                        );
-                    await _homeActiveIconImage.FadeTo(0.0);
-                    await _homeActiveIconImage.RelScaleTo(-ANIMATION_SCALE_VALUE,
-                        length: ANIMATION_SCALEOUT_DURATION_IN_MILLIS,
-                        easing: Easing.Linear
-                        );
-                    await Task.Delay(ANIMATION_INTERVAL_IN_MILLIS);
+                    return;
                 }
-                cancellationTokenSource.Dispose();
-                _semaphoreForAnimation.Release();
-            },
-            cancellationTokenSource.Token);
-        }
 
-        private void StopAnimation()
-        {
-            if (_cancellationTokenSource is null)
-            {
-                return;
-            }
-            _cancellationTokenSource.Cancel();
-            _cancellationTokenSource = null;
+                _semaphoreForAnimation.Wait();
+
+                _ = _homeActiveIconImage.FadeTo(0.25, length: 0);
+                await _homeActiveIconImage.RelScaleTo(ANIMATION_SCALE_VALUE,
+                    length: ANIMATION_SCALEIN_DURATION_IN_MILLIS,
+                    easing: Easing.Linear
+                    );
+                await _homeActiveIconImage.FadeTo(0.0);
+                await _homeActiveIconImage.RelScaleTo(-ANIMATION_SCALE_VALUE,
+                    length: ANIMATION_SCALEOUT_DURATION_IN_MILLIS,
+                    easing: Easing.Linear
+                    );
+                await Task.Delay(ANIMATION_INTERVAL_IN_MILLIS);
+
+                _semaphoreForAnimation.Release();
+            });
         }
 
         #endregion
