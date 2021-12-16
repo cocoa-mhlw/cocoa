@@ -181,7 +181,7 @@
                             IsReadOnly="{Binding IsProcessingNumberReadOnly}"
                             MaxLength="{x:Static common:AppConstants.MaxProcessingNumberLength}"
                             Style="{StaticResource DefaultEntry}"
-                            Text="{Binding DiagnosisUid}">
+                            Text="{Binding ProcessingNumber}">
                             <Entry.Triggers>
                                 <DataTrigger TargetType="Entry" Binding="{Binding IsDeepLink}" Value="False">
                                     <Setter Property="Placeholder" Value="{x:Static resources:AppResources.NotifyOtherPageLabel2}" />
