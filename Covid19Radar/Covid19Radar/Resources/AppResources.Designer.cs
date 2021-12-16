@@ -959,18 +959,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFound {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFound", resourceCulture);
-            }
-        }
-        
-        public static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle", resourceCulture);
-            }
-        }
-        
         public static string AppUtilsGetNewVersionDescription {
             get {
                 return ResourceManager.GetString("AppUtilsGetNewVersionDescription", resourceCulture);

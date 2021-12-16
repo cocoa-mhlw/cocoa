@@ -713,14 +713,6 @@
     <value>Incorrect processing number</value>
     <comment>処理番号が違います</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>Registration is not necessary.</value>
-    <comment>登録する必要はありません。</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>No close contact record present</value>
-    <comment>接触記録がありません</comment>
-  </data>
   <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
     <value>A new version of the app is available. Please update to the latest version.</value>
     <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>

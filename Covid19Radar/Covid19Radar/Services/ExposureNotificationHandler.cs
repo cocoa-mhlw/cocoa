@@ -391,13 +391,6 @@ namespace Covid19Radar.Services
             Debug.WriteLine($"C19R {beforeKey}");
             Debug.WriteLine($"C19R {afterKey}");
 
-            if (keys.Count() == 0)
-            {
-                loggerService.Error($"Temporary exposure keys is empty.");
-                loggerService.EndMethod();
-                throw new InvalidDataException();
-            }
-
             // Generate Padding
             var padding = GetPadding();
 

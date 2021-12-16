@@ -595,14 +595,6 @@
     <value>処理番号が違います</value>
     <comment>処理番号が違います</comment>
   </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>登録する必要はありません。</value>
-    <comment>登録する必要はありません。</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>接触記録がありません</value>
-    <comment>接触記録がありません</comment>
-  </data>
   <data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
   </data>
