@@ -313,12 +313,10 @@
     <BundleResource Include="Resources\Base.lproj\HelpPage31%403x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage32%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage32%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\Base.lproj\notify_img01%402x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img01%403x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%402x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%403x.png" />
-    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage20%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage20%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage21%402x.png" />
