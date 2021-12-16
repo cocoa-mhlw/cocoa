@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using AndroidX.Work;
-using CommonServiceLocator;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Services.Migration;
+using Prism.Ioc;
 using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.Droid.Services.Migration
@@ -19,7 +19,7 @@ namespace Covid19Radar.Droid.Services.Migration
     [IntentFilter(new[] { Intent.ActionMyPackageReplaced })]
     public class AppVersionUpgradeReceiver : BroadcastReceiver
     {
-        private readonly ILoggerService _loggerService = ServiceLocator.Current.GetInstance<ILoggerService>();
+        private readonly ILoggerService _loggerService = ContainerLocator.Current.Resolve<ILoggerService>();
 
         public override void OnReceive(Context context, Intent intent)
         {
@@ -43,8 +43,8 @@ namespace Covid19Radar.Droid.Services.Migration
 
     public class UpgradeWorker : Worker
     {
-        private readonly ILoggerService _loggerService = ServiceLocator.Current.GetInstance<ILoggerService>();
-        private readonly IMigrationService _migrationService = ServiceLocator.Current.GetInstance<IMigrationService>();
+        private readonly ILoggerService _loggerService = ContainerLocator.Current.Resolve<ILoggerService>();
+        private readonly IMigrationService _migrationService = ContainerLocator.Current.Resolve<IMigrationService>();
 
         public UpgradeWorker(
             Context context,
