@@ -55,6 +55,11 @@ namespace Covid19Radar.Views
 
         private void StartAnimation()
         {
+            if (!Animation.IsEnabled)
+            {
+                return;
+            }
+
             _ = Task.Run(async () =>
             {
                 if (_semaphoreForAnimation.CurrentCount == 0)
