@@ -18,6 +18,7 @@ using Prism.Navigation;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
 using CommonServiceLocator;
+using AndroidX.AppCompat.App;
 
 namespace Covid19Radar.Droid
 {
@@ -82,6 +83,8 @@ namespace Covid19Radar.Droid
             ToolbarResource = Resource.Layout.Toolbar;
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
+
+            AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
 
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
