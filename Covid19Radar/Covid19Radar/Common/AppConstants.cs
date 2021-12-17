@@ -17,11 +17,11 @@ namespace Covid19Radar.Common
         public const int MaxErrorCount = 3;
 
         /// <summary>
-        /// Max diagnosis UID Count
+        /// Max Process Number length
         /// </summary>
-        public const int MaxDiagnosisUidCount = 8;
+        public const int MaxProcessingNumberLength = 8;
 
-        public const string positiveRegex = @"\b[0-9]{8}\b";
+        public const string processingNumberRegex = @"\b[0-9]{8}\b";
 
         /// <summary>
         /// Number of days of exposure information to display
@@ -37,5 +37,23 @@ namespace Covid19Radar.Common
         /// Key of processing-number in AppLinks(Universal Links) query parameters.
         /// </summary>
         public const string LinkQueryKeyProcessingNumber = "pn";
+
+        /// <summary>
+        /// Number of day(s) that ExposureConfiguration file downloaded cache.
+        /// </summary>
+        public const int ExposureConfigurationFileDownloadCacheRetentionDays = 2;
+
+        /// <summary>
+        /// Number of days that minimum applicable interval DiagnosisKeysDataMapping.
+        /// </summary>
+        /// <seealso href="https://developers.google.com/android/reference/com/google/android/gms/nearby/exposurenotification/ExposureNotificationClient#setDiagnosisKeysDataMapping(com.google.android.gms.nearby.exposurenotification.DiagnosisKeysDataMapping)">
+        /// ExposureNotificationClient.setDiagnosisKeysDataMapping
+        /// </seealso>
+        public const int MinimumDiagnosisKeysDataMappingApplyIntervalDays = 7 + 1;
+
+        /// <summary>
+        /// Delay for error in TEK re-registration.
+        /// </summary>
+        public const int DelayForRegistrationErrorMillis = 5000;
     }
 }

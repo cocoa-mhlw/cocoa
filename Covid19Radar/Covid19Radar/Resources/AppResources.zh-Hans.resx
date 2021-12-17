@@ -3,58 +3,54 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <root>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="ButtonAgree" xml:space="preserve">
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
     <value>同意</value>
   </data>
-	<data name="HomePageTitle" xml:space="preserve">
+  <data name="HomePageTitle" xml:space="preserve">
     <value>主页</value>
     <comment>Home Title</comment>
   </data>
-	<data name="AppName" xml:space="preserve">
+  <data name="AppName" xml:space="preserve">
     <value>新型肺炎密切接触者查询APP</value>
     <comment>App Name</comment>
   </data>
-	<data name="TitleLicenseAgreement" xml:space="preserve">
+  <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>授权</value>
     <comment>ライセンス</comment>
   </data>
-	<data name="TitileUserStatusSettings" xml:space="preserve">
+  <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>状态设置</value>
     <comment>User Status Page Title</comment>
   </data>
-	<data name="DialogNetworkConnectionError" xml:space="preserve">
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>请检查您的网络连接。</value>
     <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
-	<data name="ButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-	<data name="ButtonNotNow" xml:space="preserve">
+  <data name="ButtonNotNow" xml:space="preserve">
     <value>暂不</value>
   </data>
-	<data name="MainExposures" xml:space="preserve">
+  <data name="MainExposures" xml:space="preserve">
     <value>暴露</value>
     <comment>Tab Button</comment>
   </data>
-	<data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
     <comment>Health care jurisdiction page</comment>
-  </data>
-	<data name="MainTutorial" xml:space="preserve">
-    <value>指南</value>
-    <comment>Tab How to use</comment>
   </data>
   <data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
     <value>1次接触</value>
@@ -64,34 +60,34 @@
     <value>{0}次接触</value>
     <comment>{0}回の接触</comment>
   </data>
-	<data name="ExposuresPageNoExposures" xml:space="preserve">
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>无已知暴露数据</value>
     <comment>If not found exposures data</comment>
   </data>
-	<data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>如果您接触过确诊为 COVID-19 阳性结果的人，您将收到通知。</value>
     <comment>exposures comment</comment>
   </data>
-	<data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>请再输入受理编号。</value>
     <comment>処理番号を再度入力してください。</comment>
   </data>
-	<data name="NotifyOtherPageDialogExceptionTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionTitle" xml:space="preserve">
     <value>无法登记阳性信息</value>
     <comment>陽性情報を登録できませんでした</comment>
   </data>
-	<data name="NotifyOtherPageDialogSubmittedTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedTitle" xml:space="preserve">
     <value>登记完成</value>
     <comment>登録が完了しました</comment>
   </data>
-	<data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>正在提交诊断结果...</value>
   </data>
-	<data name="SettingsPageTitle" xml:space="preserve">
+  <data name="SettingsPageTitle" xml:space="preserve">
     <value>设置</value>
-    <comment>アプリの設定</comment>
+    <comment>設定</comment>
   </data>
-	<data name="ButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>取消</value>
     <comment>キャンセル</comment>
   </data>
@@ -99,31 +95,31 @@
     <value>登记</value>
     <comment>登録</comment>
   </data>
-	<data name="LoadingTextDeleting" xml:space="preserve">
+  <data name="LoadingTextDeleting" xml:space="preserve">
     <value>正在删除</value>
   </data>
-	<data name="ButtonShare" xml:space="preserve">
+  <data name="ButtonShare" xml:space="preserve">
     <value>共享</value>
   </data>
-	<data name="ButtonNotifyOtherPage" xml:space="preserve">
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>分享感染信息，并向他人发送匿名通知</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
-	<data name="ButtonReset" xml:space="preserve">
-    <value>停止使用</value>
-    <comment>使用中止</comment>
+  <data name="ButtonReset" xml:space="preserve">
+    <value>初始化应用</value>
+    <comment>アプリを初期化</comment>
   </data>
-	<data name="PrivacyPolicyPageTitle" xml:space="preserve">
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>隐私政策</value>
   </data>
-	<data name="LoadingTextRegistering" xml:space="preserve">
+  <data name="LoadingTextRegistering" xml:space="preserve">
     <value>正在等待注册</value>
   </data>
-	<data name="SettingsPageDialogResetText" xml:space="preserve">
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
     <value>所有数据将被删除，终止使用本应用吗？</value>
     <comment>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</comment>
   </data>
-	<data name="SettingsPageDialogResetTitle" xml:space="preserve">
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
     <value>终止使用本应用</value>
     <comment>アプリの使用を中止します</comment>
   </data>
@@ -131,364 +127,352 @@
     <value>数据已删除</value>
     <comment>データを削除しました</comment>
   </data>
-	<data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>关闭应用。</value>
     <comment>アプリを終了します。</comment>
   </data>
-	<data name="ButtonReturnToRegistration" xml:space="preserve">
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>返回注册</value>
   </data>
-	<data name="PositiveRegistrationText" xml:space="preserve">
+  <data name="PositiveRegistrationText" xml:space="preserve">
     <value>正注册</value>
   </data>
-	<data name="PositiveRegistrationConfirmText" xml:space="preserve">
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>以后要积极注册吗？</value>
   </data>
-	<data name="HomePageHeader2Description" xml:space="preserve">
+  <data name="HomePageHeader2Description" xml:space="preserve">
     <value>为确保您周围的人的健康，请登记感染情况（匿名）</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
-	<data name="HelpMenuPageTitle" xml:space="preserve">
+  <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>使用方法</value>
     <comment>使い方</comment>
   </data>
-	<data name="HelpPage1Title" xml:space="preserve">
+  <data name="HelpMenuPageMenu" xml:space="preserve">
+    <value>指南</value>
+    <comment>使い方</comment>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
     <value>接触的记录方法</value>
     <comment>接触の記録方法</comment>
   </data>
-	<data name="HelpPage2Title" xml:space="preserve">
+  <data name="HelpPage2Title" xml:space="preserve">
     <value>跟阳性患者的密切接触的查询方式</value>
     <comment>接触の確認方法</comment>
   </data>
-	<data name="HelpPage3Title" xml:space="preserve">
+  <data name="HelpPage3Title" xml:space="preserve">
     <value>如果确诊为阳性</value>
     <comment>感染していると判定されたら</comment>
   </data>
-	<data name="HelpPage4Title" xml:space="preserve">
+  <data name="HelpPage4Title" xml:space="preserve">
     <value>停止记录/删除</value>
     <comment>記録の停止／削除</comment>
   </data>
-	<data name="HelpPage1Description1Text" xml:space="preserve">
+  <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>使用此APP时，每个手机都会生成一个随机代码，不会收集个人信息和GPS位置信息。</value>
     <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
-	<data name="HelpPage1Description2Title" xml:space="preserve">
+  <data name="HelpPage1Description2Title" xml:space="preserve">
     <value>记录密切接触的条件</value>
     <comment>記録される接触の条件</comment>
   </data>
-	<data name="HelpPage1Description2Text" xml:space="preserve">
+  <data name="HelpPage1Description2Text" xml:space="preserve">
     <value>在1米范围内持续15分钟以上的接触，会记录为“密切接触”</value>
     <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
-	<data name="HelpPage1Description3Title" xml:space="preserve">
+  <data name="HelpPage1Description3Title" xml:space="preserve">
     <value>记录密切接触信息</value>
     <comment>接触情報の記録 </comment>
   </data>
-	<data name="HelpPage1Description3Text" xml:space="preserve">
+  <data name="HelpPage1Description3Text" xml:space="preserve">
     <value>此时把接触方的随机代码记录到APP里，在任何用户向此APP登记阳性测试结果之前，不会使用此信息，14天后信息会自动删除。*为了保护您的隐私，代码会定期更改。</value>
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
-	<data name="HelpPage4ButtonText" xml:space="preserve">
+  <data name="HelpPage4ButtonText" xml:space="preserve">
     <value>前往设置</value>
     <comment>アプリの設定へ</comment>
   </data>
-	<data name="HelpPage4Description" xml:space="preserve">
+  <data name="HelpPage4Description" xml:space="preserve">
     <value>您可以在应用设置中选择停止使用该应用并删除用户数据。</value>
     <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
-	<data name="HelpPage2Description1" xml:space="preserve">
+  <data name="HelpPage2Description1" xml:space="preserve">
     <value>如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</value>
-    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</comment>
   </data>
-	<data name="HelpPage2Description2" xml:space="preserve">
+  <data name="HelpPage2Description2" xml:space="preserve">
     <value>您可以在首页查看您的接触次数。</value>
     <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
   </data>
-	<data name="HelpPage2Description3" xml:space="preserve">
+  <data name="HelpPage2Description3" xml:space="preserve">
     <value>您可以查看密切接触日期的一览。并可获得如有症状时的具体应对指南。</value>
     <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
   </data>
-	<data name="HelpPage2Label1" xml:space="preserve">
+  <data name="HelpPage2Label1" xml:space="preserve">
     <value>新消息通知</value>
     <comment>通知</comment>
   </data>
-	<data name="HelpPage2Label2" xml:space="preserve">
+  <data name="HelpPage2Label2" xml:space="preserve">
     <value>首页</value>
     <comment>ホーム画面</comment>
   </data>
-	<data name="HelpPage2Label3" xml:space="preserve">
+  <data name="HelpPage2Label3" xml:space="preserve">
     <value>如果您与登记阳性的人有过密切接触</value>
     <comment>陽性者との接触があった場合</comment>
   </data>
-	<data name="HelpPage3Description1" xml:space="preserve">
+  <data name="HelpPage3Description1" xml:space="preserve">
     <value>如果做检测之后确诊为阳性</value>
     <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
-	<data name="HelpPage3Description2" xml:space="preserve">
+  <data name="HelpPage3Description2" xml:space="preserve">
     <value>保健所等官方机构会给您开具“受理编号”。</value>
     <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
   </data>
-	<data name="HelpPage3Description3" xml:space="preserve">
+  <data name="HelpPage3Description3" xml:space="preserve">
     <value>使用该应用登记您的受理编号。</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
-	<data name="SettingsPageButton1" xml:space="preserve">
-    <value>授权</value>
-    <comment>ライセンス…</comment>
+  <data name="SettingsPageLicenseButton" xml:space="preserve">
+    <value>显示许可证</value>
+    <comment>ライセンス表記</comment>
   </data>
-	<data name="SettingsPageLabel1" xml:space="preserve">
-    <value>查出密切接触</value>
-    <comment>接触の検出</comment>
+  <data name="SettingsPageReinitializeLabel" xml:space="preserve">
+    <value>初始化应用</value>
+    <comment>アプリを初期化する</comment>
   </data>
-	<data name="SettingsPageDescription1" xml:space="preserve">
-    <value>基于蓝牙功能的接触者检测</value>
-    <comment>Bluetoothによる接触の検知</comment>
+  <data name="SettingsPageReinitializeDescription" xml:space="preserve">
+    <value>删除过去14天的接触履历并回到初始状态。接触通知将不再表示直到再次使用应用。</value>
+    <comment>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</comment>
   </data>
-	<data name="SettingsPageLabel2" xml:space="preserve">
-    <value>通知</value>
-    <comment>通知</comment>
-  </data>
-	<data name="SettingsPageDescription2" xml:space="preserve">
-    <value>跟阳性患者的密切接触消息通知</value>
-    <comment>陽性者との接触通知</comment>
-  </data>
-	<data name="SettingsPageLabel3" xml:space="preserve">
-    <value>停止使用APP</value>
-    <comment>アプリの使用中止</comment>
-  </data>
-	<data name="SettingsPageDescription3" xml:space="preserve">
-    <value>停止使用APP并删除14天以内的密切接触记录</value>
-    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
-  </data>
-	<data name="HelpMenuPageLabel1" xml:space="preserve">
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
     <value>如何记录密切接触</value>
     <comment>どのようにして接触を記録していますか？</comment>
   </data>
-	<data name="HelpMenuPageLabel2" xml:space="preserve">
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
     <value>如何获知是否有密切接触</value>
     <comment>接触の有無はどのように知ることができますか？</comment>
   </data>
-	<data name="HelpMenuPageLabel3" xml:space="preserve">
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
     <value>如果确诊为新型冠状病毒感染为阳性</value>
     <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
-	<data name="HelpMenuPageLabel4" xml:space="preserve">
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>如何停止记录/删除密切接触记录</value>
     <comment>接触の記録を停止／情報を削除するには</comment>
   </data>
-	<data name="NotContactPageTitle" xml:space="preserve">
+  <data name="NotContactPageTitle" xml:space="preserve">
     <value>查询过去14天内里的接触情况</value>
     <comment>過去14日間の接触</comment>
   </data>
-	<data name="NotContactPageLabel1" xml:space="preserve">
+  <data name="NotContactPageLabel1" xml:space="preserve">
     <value>您没有查出跟阳性患者的密切接触</value>
     <comment>陽性者との接触は確認されませんでした</comment>
   </data>
-	<data name="NotContactPageDescription1" xml:space="preserve">
+  <data name="NotContactPageDescription1" xml:space="preserve">
     <value>为了进一步地防范疫情的扩散，请遵循日本政府提倡的“新生活模式”。</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
-	<data name="NotContactPageButtonText" xml:space="preserve">
+  <data name="NotContactPageButtonText" xml:space="preserve">
     <value>分享此APP</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
-	<data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
     <value>感谢提供检查结果</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>
   </data>
-	<data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
     <value>本次注册为匿名注册，您不必输入姓名或任何其他个人信息。另外，该应用不会记录并通知密切接触的地点信息。</value>
     <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
-	<data name="TutorialPage3Title" xml:space="preserve">
+  <data name="TutorialPage3Title" xml:space="preserve">
     <value>使用条款</value>
     <comment>利用規約</comment>
   </data>
-	<data name="TutorialPage3ButtonText" xml:space="preserve">
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
     <value>我同意使用条款</value>
     <comment>規約に同意して次へ</comment>
   </data>
-	<data name="TutorialPage6Label1" xml:space="preserve">
+  <data name="TutorialPage6Label1" xml:space="preserve">
     <value>感谢您的注册</value>
     <comment>ご登録いただきありがとうございました</comment>
   </data>
-	<data name="TutorialPage6ButtonText1" xml:space="preserve">
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
     <value>首页</value>
     <comment>ホーム画面へ</comment>
   </data>
-	<data name="TutorialPage6ButtonText2" xml:space="preserve">
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
     <value>使用方法引导（如何使用本APP）</value>
     <comment>使い方を学ぶ</comment>
   </data>
-	<data name="HelpPage1MainTitle" xml:space="preserve">
+  <data name="HelpPage1MainTitle" xml:space="preserve">
     <value>设备识别</value>
     <comment>端末の識別</comment>
   </data>
-	<data name="ContactedNotifyPageButton1" xml:space="preserve">
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
     <value>和阳性患者的密切接触一览</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-	<data name="ContactedNotifyPageCountText" xml:space="preserve">
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>times</value>
     <comment>件</comment>
   </data>
-	<data name="ContactedNotifyPageMainText" xml:space="preserve">
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>查询跟阳性患者的密切接触情况</value>
     <comment>陽性者との接触確認</comment>
   </data>
-	<data name="ContactedNotifyPageTitle" xml:space="preserve">
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
     <value>查询过去14天内里的接触情况</value>
     <comment>過去14日間の接触</comment>
   </data>
-	<data name="InqueryPageTitle" xml:space="preserve">
+  <data name="InqueryPageTitle" xml:space="preserve">
     <value>帮助与反馈</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
-	<data name="InqueryPageTitle_Menu" xml:space="preserve">
+  <data name="InqueryPageTitle_Menu" xml:space="preserve">
     <value>帮助与反馈</value>
     <comment>お問い合わせ（メニュー）</comment>
   </data>
-	<data name="HomePageDescription2" xml:space="preserve">
+  <data name="HomePageDescription2" xml:space="preserve">
     <value>确认与阳性者接触的结果</value>
     <comment>陽性者との接触結果を確認</comment>
   </data>
-	<data name="HomePageDescription3" xml:space="preserve">
+  <data name="HomePageDescription3" xml:space="preserve">
     <value>确诊新型冠状病毒呈阳性</value>
     <comment>陽性と診断されたら</comment>
   </data>
-	<data name="HomePageDescription4" xml:space="preserve">
+  <data name="HomePageDescription4" xml:space="preserve">
     <value>登记阳性信息</value>
     <comment>陽性情報の登録</comment>
   </data>
-	<data name="HomePageDescription5" xml:space="preserve">
+  <data name="HomePageDescription5" xml:space="preserve">
     <value>分享此APP</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
-	<data name="HomePageTitle1" xml:space="preserve">
+  <data name="HomePageTitle1" xml:space="preserve">
     <value>主页</value>
     <comment>ホーム</comment>
   </data>
-	<data name="TermsofservicePageTitle" xml:space="preserve">
+  <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>使用条款</value>
     <comment>利用規約</comment>
   </data>
-	<data name="TutorialPage2Description1" xml:space="preserve">
+  <data name="TutorialPage2Description1" xml:space="preserve">
     <value>关于隐私保护</value>
     <comment>プライバシーについて</comment>
   </data>
-	<data name="TutorialPage2Description2" xml:space="preserve">
+  <data name="TutorialPage2Description2" xml:space="preserve">
     <value>本应用不会使用和记录姓名，电话等个人信息，也不会收集GPS等手机位置信息</value>
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
-	<data name="TutorialPage2Description3" xml:space="preserve">
+  <data name="TutorialPage2Description3" xml:space="preserve">
     <value>所有数据都会加密并保存在手机本地存储，所有数据14天后会自动删除。政府机构或第三方机构不会以任何方式跟踪监视您的手机</value>
     <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
   </data>
-	<data name="TutorialPage2Description4" xml:space="preserve">
+  <data name="TutorialPage2Description4" xml:space="preserve">
     <value>您可以随时停止APP的记录，在设置内设为关闭，或者删掉APP</value>
     <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
   </data>
-	<data name="TutorialPage2Description5" xml:space="preserve">
+  <data name="TutorialPage2Description5" xml:space="preserve">
     <value>阅读使用条款</value>
     <comment>利用規約へ</comment>
   </data>
-	<data name="TutorialPage2Title" xml:space="preserve">
+  <data name="TutorialPage2Title" xml:space="preserve">
     <value>关于隐私保护</value>
     <comment>プライバシーについて</comment>
   </data>
-	<data name="TutorialPage5Description1" xml:space="preserve">
+  <data name="TutorialPage5Description1" xml:space="preserve">
     <value>开启接收通知</value>
     <comment>通知をご利用いただくために</comment>
   </data>
-	<data name="TutorialPage5Description2" xml:space="preserve">
+  <data name="TutorialPage5Description2" xml:space="preserve">
     <value>为了即时收到密切接触信息，请开启新消息通知</value>
     <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
   </data>
-	<data name="TutorialPage5Description3" xml:space="preserve">
+  <data name="TutorialPage5Description3" xml:space="preserve">
     <value>开启</value>
     <comment>有効にする</comment>
   </data>
-	<data name="TutorialPage5Description4" xml:space="preserve">
+  <data name="TutorialPage5Description4" xml:space="preserve">
     <value>稍后设置</value>
     <comment>あとで設定する</comment>
   </data>
-	<data name="TutorialPage5Title" xml:space="preserve">
+  <data name="TutorialPage5Title" xml:space="preserve">
     <value>To use notifications</value>
     <comment>通知をご利用いただくために</comment>
   </data>
-	<data name="MenuPageTitle" xml:space="preserve">
+  <data name="MenuPageTitle" xml:space="preserve">
     <value>菜单</value>
     <comment>メニュー</comment>
   </data>
-	<data name="NotifyOtherPageButton" xml:space="preserve">
+  <data name="NotifyOtherPageButton" xml:space="preserve">
     <value>登记</value>
     <comment>登録する</comment>
   </data>
-	<data name="NotifyOtherPageLabel" xml:space="preserve">
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>如何获得受理编号</value>
     <comment>処理番号の取得方法</comment>
   </data>
-	<data name="NotifyOtherPageTitle" xml:space="preserve">
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
     <value>登记阳性信息</value>
     <comment>陽性情報の登録</comment>
   </data>
-	<data name="TutorialPage1Button" xml:space="preserve">
+  <data name="TutorialPage1Button" xml:space="preserve">
     <value>下一页</value>
     <comment>次へ</comment>
   </data>
-	<data name="TutorialPage1Description1" xml:space="preserve">
+  <data name="TutorialPage1Description1" xml:space="preserve">
     <value>该APP可以识别运行此APP的手机之间的密切接触</value>
     <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
   </data>
-	<data name="TutorialPage1Description2" xml:space="preserve">
+  <data name="TutorialPage1Description2" xml:space="preserve">
     <value>如果您确诊新型冠状病毒肺炎，您可以匿名登记信息</value>
     <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
-	<data name="TutorialPage1Description3" xml:space="preserve">
+  <data name="TutorialPage1Description3" xml:space="preserve">
     <value>如果您与登记阳性的人有过密切接触，本APP会通知你潜在的感染，并提供保护你健康的指导</value>
     <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
   </data>
-	<data name="TutorialPage1Title1" xml:space="preserve">
+  <data name="TutorialPage1Title1" xml:space="preserve">
     <value>APP功能介绍</value>
     <comment>このアプリでできること</comment>
   </data>
-	<data name="TutorialPage1Title2" xml:space="preserve">
+  <data name="TutorialPage1Title2" xml:space="preserve">
     <value>APP功能介绍</value>
     <comment>このアプリでできること</comment>
   </data>
-	<data name="TutorialPage4Button1" xml:space="preserve">
+  <data name="TutorialPage4Button1" xml:space="preserve">
     <value>开启</value>
     <comment>有効にする</comment>
   </data>
-	<data name="TutorialPage4Button2" xml:space="preserve">
+  <data name="TutorialPage4Button2" xml:space="preserve">
     <value>稍后设置</value>
     <comment>あとで設定する</comment>
   </data>
-	<data name="TutorialPage4Description" xml:space="preserve">
+  <data name="TutorialPage4Description" xml:space="preserve">
     <value>为了即时收到密切接触信息，请开启手机的蓝牙模式</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
-	<data name="TutorialPage4Label" xml:space="preserve">
+  <data name="TutorialPage4Label" xml:space="preserve">
     <value>更多相关技术的详细信息</value>
     <comment>技術的な詳細について</comment>
   </data>
-	<data name="TutorialPage4Title1" xml:space="preserve">
+  <data name="TutorialPage4Title1" xml:space="preserve">
     <value>开启蓝牙</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-	<data name="TutorialPage4Title2" xml:space="preserve">
+  <data name="TutorialPage4Title2" xml:space="preserve">
     <value>开启蓝牙</value>
     <comment>接触検知をご利用いただくために</comment>
   </data>
-	<data name="HomePageDescription0" xml:space="preserve">
+  <data name="HomePageDescription0" xml:space="preserve">
     <value>开始使用后</value>
     <comment>利用開始から</comment>
   </data>
-	<data name="NotifyOtherPageLabel2" xml:space="preserve">
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
     <value>请输入八位受理编号</value>
     <comment>8桁の処理番号を入力してください</comment>
   </data>
-	<data name="SubmitConsentPageTitle1" xml:space="preserve">
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>同意进行阳性登记</value>
     <comment>陽性登録への同意</comment>
   </data>
@@ -496,48 +480,48 @@
     <value>同意内容</value>
     <comment>同意内容</comment>
   </data>
-	<data name="VersionText" xml:space="preserve">
-    <value>版本</value>
-    <comment>バージョン</comment>
+  <data name="VersionText" xml:space="preserve">
+    <value>应用版本</value>
+    <comment>アプリバージョン</comment>
   </data>
-	<data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
     <value>蓝牙已关闭。请启用设备的蓝牙。</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
-	<data name="ExposuresPageTitle" xml:space="preserve">
+  <data name="ExposuresPageTitle" xml:space="preserve">
     <value>密切接触一览（14天内）</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
-	<data name="ExposuresPageLabel1" xml:space="preserve">
+  <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>以下日期确认到您与阳性患者存在密切接触。</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
   </data>
-	<data name="UrlContactedPhone" xml:space="preserve">
+  <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
-	<data name="LocalNotificationDescription" xml:space="preserve">
+  <data name="LocalNotificationDescription" xml:space="preserve">
     <value>您有可能与潜在的 COVID-19 阳性患者有近距离接触。点击了解详情。</value>
     <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
   </data>
-	<data name="LocalNotificationTitle" xml:space="preserve">
+  <data name="LocalNotificationTitle" xml:space="preserve">
     <value>可能的 COVID-19 暴露</value>
     <comment>Possible COVID-19 Exposure</comment>
   </data>
-	<data name="LocalNotificationPermittedDescription" xml:space="preserve">
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
     <value>如您想关闭，请在应用设置中进行变更</value>
   </data>
-	<data name="LocalNotificationPermittedTitle" xml:space="preserve">
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>启用通知</value>
   </data>
-	<data name="InqueryPageDescription3" xml:space="preserve">
+  <data name="InqueryPageDescription3" xml:space="preserve">
     <value>有关该应用的信息</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
-	<data name="HomePagePastDays" xml:space="preserve">
+  <data name="HomePagePastDays" xml:space="preserve">
     <value>天</value>
     <comment>X日</comment>
   </data>
-	<data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
     <value>您必须同意使用条款。</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
@@ -545,417 +529,394 @@
     <value>接触通知功能已停止</value>
     <comment>接触通知機能が停止しています</comment>
   </data>
-	<data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>网络连接错误</value>
     <comment>通信に失敗しました。</comment>
   </data>
-	<data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
     <value>暴露通知启动错误</value>
     <comment>Exposure Notification起動エラー</comment>
   </data>
-	<data name="DialogExposureNotificationStartupError" xml:space="preserve">
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
     <value>暴露通知无法启动。请打开设置，开启暴露通知后打开蓝牙。</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
-	<data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>请输入正确的受理编号。</value>
-    <comment>正しい処理番号を入力してください。</comment>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>受理编号错误或者失效</value>
+    <comment>処理番号が誤っているか、有効期限が切れています</comment>
   </data>
-	<data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
     <value>无法连接到登记服务中心</value>
     <comment>センターに接続できません</comment>
   </data>
-	<data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
     <value>是否登记？</value>
     <comment>よろしいですか？</comment>
   </data>
-	<data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
     <value>阳性信息登记</value>
     <comment>陽性情報の登録をします</comment>
   </data>
-	<data name="NotifyOtherPageDiag2Title" xml:space="preserve">
+  <data name="NotifyOtherPageDiag2Title" xml:space="preserve">
     <value>登记已取消</value>
     <comment>登録をキャンセルしました</comment>
   </data>
-	<data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
     <value>请稍等。</value>
     <comment>しばらくそのままでお待ちください。</comment>
   </data>
-	<data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
     <value>登记开始</value>
     <comment>登録を開始します</comment>
   </data>
-	<data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
     <value>未输入受理编号</value>
     <comment>処理番号が入力されていません</comment>
   </data>
-	<data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
     <value>请输入半角数字的受理编号。</value>
     <comment>処理番号は半角数字で入力してください。</comment>
   </data>
-	<data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
     <value>必须启用 COVID-19 接触日志才可进行阳性登记，请在应用或系统设置中启用设定。</value>
     <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
-	<data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
     <value>请启用 COVID-19 接触日志</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
-  <data name="NotifyOtherPageDiagAppCloseTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDiagReturnHomeTitle" xml:space="preserve">
     <value>登记次数达到上限</value>
     <comment>登録回数の上限に達しました</comment>
   </data>
-	<data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>关闭应用。</value>
-    <comment>アプリを終了します。</comment>
+	<data name="NotifyOtherPageDiagReturnHome" xml:space="preserve">
+    <value>返回首页。</value>
+    <comment>ホームに戻ります。</comment>
   </data>
-	<data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
+  <data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
     <value>受理编号错误</value>
     <comment>処理番号が違います</comment>
   </data>
-	<data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>不需要登记。</value>
     <comment>登録する必要はありません。</comment>
   </data>
-	<data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
     <value>没有接触记录</value>
     <comment>接触記録がありません</comment>
   </data>
-	<data name="UrlVersion" xml:space="preserve">
+  <data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
   </data>
-	<data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
     <value>应用的新版本可用。请更新到最新版本。</value>
     <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
   </data>
-	<data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
     <value>更新到最新版本</value>
     <comment>最新版への更新</comment>
   </data>
-	<data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
     <value>联系人记录数据有问题</value>
     <comment>接触記録データに問題があります</comment>
   </data>
-	<data name="ContactedNotifyPageButton2" xml:space="preserve">
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
     <value>寻找咨询中心</value>
     <comment>検査等の相談先を探す</comment>
   </data>
-	<data name="ContactedNotifyPageDescription1" xml:space="preserve">
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
     <value>・如果您有发烧，既往病状等症状，或者与经检测COVID-19呈阳性的人接触过，如果你想进行检查方面咨询，请按照本应用的指导，查看咨询中心列表以进行咨询。
 ・请保存以下“感染者的接触一览”的屏幕截图，身体检查时可能需要</value>
     <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
 ・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
   </data>
-	<data name="ReAgreeCheckButton" xml:space="preserve">
+  <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>同意</value>
     <comment>確認しました</comment>
   </data>
-	<data name="ReAgreePrivacyPolicyPageTitle" xml:space="preserve">
+  <data name="ReAgreePrivacyPolicyPageTitle" xml:space="preserve">
     <value>隐私政策的修订</value>
     <comment>プライバシーポリシーの改定</comment>
   </data>
-	<data name="ReAgreePrivacyPolicyTextLink" xml:space="preserve">
+  <data name="ReAgreePrivacyPolicyTextLink" xml:space="preserve">
     <value>阅读隐私政策</value>
     <comment>プライバシーポリシーを確認する</comment>
   </data>
-	<data name="ReAgreeTermsOfServiceTextLink" xml:space="preserve">
+  <data name="ReAgreeTermsOfServiceTextLink" xml:space="preserve">
     <value>查看利用规约</value>
     <comment>利用規約を確認する</comment>
   </data>
-	<data name="ReAgreeTermsOfServiceTitle" xml:space="preserve">
+  <data name="ReAgreeTermsOfServiceTitle" xml:space="preserve">
     <value>利用规约修订</value>
     <comment>利用規約の改定</comment>
   </data>
-	<data name="UrlTermsUpdate" xml:space="preserve">
+  <data name="UrlTermsUpdate" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/terms_update.json</value>
   </data>
-	<data name="InqueryPageDescription2" xml:space="preserve">
+  <data name="InqueryPageDescription2" xml:space="preserve">
     <value>提交反馈后，请与我们分享运行信息，以帮助我们改进COCOA</value>
     <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
   </data>
-	<data name="InqueryPageButton1" xml:space="preserve">
+  <data name="InqueryPageButton1" xml:space="preserve">
     <value>帮助</value>
     <comment>よくある質問</comment>
   </data>
-	<data name="InqueryPageButton2" xml:space="preserve">
+  <data name="InqueryPageButton2" xml:space="preserve">
     <value>反馈</value>
     <comment>メールでお問い合わせ</comment>
   </data>
-	<data name="InqueryPageButton3" xml:space="preserve">
+  <data name="InqueryPageButton3" xml:space="preserve">
     <value>上传运行信息</value>
     <comment>動作情報を送信</comment>
   </data>
-	<data name="InqueryPageDescription1" xml:space="preserve">
+  <data name="InqueryPageDescription1" xml:space="preserve">
     <value>请帮助我们改进应用。</value>
     <comment>アプリの改善にご協力ください</comment>
   </data>
-	<data name="SendLogConfirmationPageButton1" xml:space="preserve">
+  <data name="SendLogConfirmationPageButton1" xml:space="preserve">
     <value>同意并提交运行信息</value>
     <comment>同意して送信する</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription1" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription1" xml:space="preserve">
     <value>关于传送APP运行信息
 向COCOA的运营方传送APP运行信息，从而协助COCOA进行改善。</value>
     <comment>動作情報の送信により、COCOAの改善にご協力をお願いします。</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription2" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription2" xml:space="preserve">
     <value>被传送的信息：</value>
     <comment>送信される情報</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription3" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription3" xml:space="preserve">
     <value>用于协助调查故障原因的COCOA APP运行信息以及系统运行环境信息（包括COCOA APP的版本、何种OS、OS的版本、设备机种）</value>
     <comment>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription4" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription4" xml:space="preserve">
     <value>不会被传送的信息：</value>
     <comment>送信されない情報</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription5" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription5" xml:space="preserve">
     <value>电话号码、电子邮件等可识别个人身份的信息以及定位信息</value>
     <comment>電話番号やメールアドレスなどの個人識別可能な情報や位置情報</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription6" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription6" xml:space="preserve">
     <value>・完成信息传送之后，将前往[通过电子邮件发送APP运行信息ID]界面，可通过APP运行信息ID（为刚刚传送的信息所设置的ID），向运营方发送邮件，咨询您的故障内容。此种情况下，所传送的信息将与所咨询的内容产生关联，用于改善COCOA APP。</value>
     <comment>・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription7" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription7" xml:space="preserve">
     <value>・关于所传送的信息，仅限厚生劳动省以及受厚生劳动省委托维护运营COCOA APP的业务员办，仅用于改善COCOA APP的目的，完成对故障情况的调查之后，运营方将立即删除该信息。未经使用者同意，绝不会将该信息提供给第三方。</value>
     <comment>・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription8" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription8" xml:space="preserve">
     <value>・点击[确认即将发送的APP运行信息]，即可确认信息的具体内容。</value>
     <comment>・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</comment>
   </data>
-	<data name="SendLogConfirmationPageTextLink1" xml:space="preserve">
+  <data name="SendLogConfirmationPageTextLink1" xml:space="preserve">
     <value>查看用户日志</value>
     <comment>動作情報を確認する</comment>
   </data>
-	<data name="SendLogConfirmationPageTitle" xml:space="preserve">
+  <data name="SendLogConfirmationPageTitle" xml:space="preserve">
     <value>关于运行信息</value>
     <comment>動作情報の送信について</comment>
   </data>
-	<data name="SendLogCompletePageButton1" xml:space="preserve">
+  <data name="SendLogCompletePageButton1" xml:space="preserve">
     <value>提交运行信息ID</value>
     <comment>メールで動作情報IDを送信する</comment>
   </data>
-	<data name="SendLogCompletePageButton2" xml:space="preserve">
+  <data name="SendLogCompletePageButton2" xml:space="preserve">
     <value>返回主页</value>
     <comment>終了してホームに戻る</comment>
   </data>
-	<data name="SendLogCompletePageDescription1" xml:space="preserve">
+  <data name="SendLogCompletePageDescription1" xml:space="preserve">
     <value>APP运行信息已经成功发送，
 接下来请您通过电子邮件发送您的APP运行信息ID</value>
     <comment>動作情報を送信しました
 続いてメールで動作情報IDを送信してください</comment>
   </data>
-	<data name="SendLogCompletePageDescription2" xml:space="preserve">
+  <data name="SendLogCompletePageDescription2" xml:space="preserve">
     <value>您所传送的信息将与邮件咨询的内容相关联，活用于今后的解决方案或者改善COCOA APP。
 </value>
     <comment>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</comment>
   </data>
-	<data name="Error" xml:space="preserve">
+  <data name="Error" xml:space="preserve">
     <value>失败</value>
     <comment>エラー</comment>
   </data>
-	<data name="FailedMessageToGetOperatingInformation" xml:space="preserve">
+  <data name="FailedMessageToGetOperatingInformation" xml:space="preserve">
     <value>无法获取操作信息。 请再试一次。</value>
     <comment>動作情報の取得に失敗しました。もう一度やり直してください。</comment>
   </data>
-	<data name="FailedMessageToSaveOperatingInformation" xml:space="preserve">
+  <data name="FailedMessageToSaveOperatingInformation" xml:space="preserve">
     <value>保存操作信息确认文件失败。</value>
     <comment>動作情報の確認用ファイルの保存に失敗しました。</comment>
   </data>
-	<data name="FailedMessageToSendOperatingInformation" xml:space="preserve">
+  <data name="FailedMessageToSendOperatingInformation" xml:space="preserve">
     <value>无法发送操作信息。</value>
     <comment>動作情報の送信に失敗しました</comment>
   </data>
-	<data name="Processing" xml:space="preserve">
+  <data name="Processing" xml:space="preserve">
     <value>处理中</value>
     <comment>処理中</comment>
   </data>
-	<data name="SaveCompleted" xml:space="preserve">
-    <value>已保存</value>
-    <comment>保存完了</comment>
-  </data>
-	<data name="Saving" xml:space="preserve">
-    <value>保存中</value>
-    <comment>保存中</comment>
-  </data>
-	<data name="Sending" xml:space="preserve">
+  <data name="Sending" xml:space="preserve">
     <value>发送中</value>
     <comment>送信中</comment>
   </data>
-	<data name="SendingError" xml:space="preserve">
+  <data name="SendingError" xml:space="preserve">
     <value>发送失败</value>
     <comment>送信エラー</comment>
   </data>
-	<data name="SuccessMessageToSaveOperatingInformationForAndroid" xml:space="preserve">
-    <value>请使用操作系统的“设置”→“存储”→“文件”或文件管理应用程序查看以下文件夹。
-保存位置：</value>
-    <comment>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
-保存場所：</comment>
-  </data>
-	<data name="SuccessMessageToSaveOperatingInformationForIOS" xml:space="preserve">
-    <value>操作信息确认文件已保存。 您可以从文件应用的「我的iPhone」中查看它。</value>
-    <comment>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</comment>
-  </data>
-	<data name="InquiryMailBody" xml:space="preserve">
+  <data name="InquiryMailBody" xml:space="preserve">
     <value>意见反馈正文：\r\n\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n</value>
     <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
   </data>
-	<data name="InquiryMailSubject" xml:space="preserve">
+  <data name="InquiryMailSubject" xml:space="preserve">
     <value>Cocoa的意见反馈​</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-	<data name="SendIdMailBody1" xml:space="preserve">
+  <data name="SendIdMailBody1" xml:space="preserve">
     <value>操作信息ID：</value>
     <comment>動作情報ID：</comment>
   </data>
-	<data name="SendIdMailBody2" xml:space="preserve">
+  <data name="SendIdMailBody2" xml:space="preserve">
     <value>\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n\r\n※请不要删除或修改操作信息ID，直接发送此电子邮件。\r\n</value>
     <comment>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</comment>
   </data>
-	<data name="SendIdMailSubject" xml:space="preserve">
+  <data name="SendIdMailSubject" xml:space="preserve">
     <value>COCOA:操作信息ID</value>
     <comment>COCOA 動作情報IDの送信</comment>
   </data>
-	<data name="UrlContactedForm" xml:space="preserve">
+  <data name="UrlContactedForm" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot2.html</value>
   </data>
-	<data name="SuccessMessageToSaveOperatingInformationForAndroid2" xml:space="preserve">
-    <value>
-*对于“ / Android”之前的部分，根据您的环境而异，例如“内部存储”等不同表示。</value>
-    <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
-  </data>
-	<data name="NotifyOtherPageDescription3" xml:space="preserve">
+  <data name="NotifyOtherPageDescription3" xml:space="preserve">
     <value>请输入通过短信或电子邮件收到的受理编号</value>
     <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
   </data>
-	<data name="NotifyOtherPageDescription5" xml:space="preserve">
+  <data name="NotifyOtherPageDescription5" xml:space="preserve">
     <value>在您症状开始或接受检查后的两天以内与您接触过的人将得到通知</value>
     <comment>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</comment>
   </data>
-	<data name="NotifyOtherPageDescription1" xml:space="preserve">
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>您有下面的症状吗？</value>
     <comment>次のような症状がありますか？</comment>
   </data>
-	<data name="NotifyOtherPageDescription2" xml:space="preserve">
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>发烧，咳嗽，呼吸困难，全身无力，喉咙痛，流鼻水，鼻子堵塞，头疼，关节痛，肌肉疼，腹泻，恶心，呕吐等</value>
     <comment>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</comment>
   </data>
-	<data name="NotifyOtherPageDescription4" xml:space="preserve">
+  <data name="NotifyOtherPageDescription4" xml:space="preserve">
     <value>登记后</value>
     <comment>登録すると</comment>
   </data>
-	<data name="NotifyOtherPageDescription6" xml:space="preserve">
+  <data name="NotifyOtherPageDescription6" xml:space="preserve">
     <value>＊注册完全是匿名的，不会透露姓名或联系方法等个人信息
 ＊不会记录接触发生地的信息，也不会透露给他人</value>
     <comment>※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
 ※接触した場所がどこなのか記録されたり、他の人に知られることもありません</comment>
   </data>
-	<data name="NotifyOtherPageNoSymptomsDescription1" xml:space="preserve">
+  <data name="NotifyOtherPageNoSymptomsDescription1" xml:space="preserve">
     <value>请输入最近接受新冠病毒检查的日期。</value>
     <comment>直近の新型コロナウイルス感染症の検査を受けた日を入力してください。</comment>
   </data>
-	<data name="NotifyOtherPageRadioButtonNo" xml:space="preserve">
+  <data name="NotifyOtherPageRadioButtonNo" xml:space="preserve">
     <value>没有</value>
     <comment>ない</comment>
   </data>
-	<data name="NotifyOtherPageRadioButtonYes" xml:space="preserve">
+  <data name="NotifyOtherPageRadioButtonYes" xml:space="preserve">
     <value>有</value>
     <comment>ある</comment>
   </data>
-	<data name="NotifyOtherPageWithSymptomsDescription1" xml:space="preserve">
+  <data name="NotifyOtherPageWithSymptomsDescription1" xml:space="preserve">
     <value>请输入症状开始的日期。（请输入您记得的最早的日期。输入的日期谁都无法看到）</value>
     <comment>症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</comment>
   </data>
-	<data name="HelpPage3Description4" xml:space="preserve">
+  <data name="HelpPage3Description4" xml:space="preserve">
     <value>在您症状开始或接受检查后的两天以内与您接触过的人将得到通知</value>
     <comment>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</comment>
   </data>
-	<data name="HelpPage3Description5" xml:space="preserve">
+  <data name="HelpPage3Description5" xml:space="preserve">
     <value>通知中只包含随机符号。 不会发送姓名，位置信息等任何个人信息。</value>
     <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
-	<data name="SubmitConsentPageButton" xml:space="preserve">
+  <data name="SubmitConsentPageButton" xml:space="preserve">
     <value>同意并进行阳性登记</value>
     <comment>同意して陽性登録する</comment>
   </data>
-	<data name="SubmitConsentPageDescription1_1" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_1" xml:space="preserve">
     <value>请在注册阳性之前阅览</value>
     <comment>陽性登録の前にお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription1_2" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_2" xml:space="preserve">
     <value>・如果在此应用中进行阳性注册，手机上每天生成的代码将上传到通知服务器</value>
     <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
   </data>
-	<data name="SubmitConsentPageDescription1_3" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_3" xml:space="preserve">
     <value>・根据通知服务器的代码信息的判断结果，接触过的人将会受到通知</value>
     <comment>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</comment>
   </data>
-	<data name="SubmitConsentPageDescription1_4" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_4" xml:space="preserve">
     <value>・接受通知者不会知道可以识别您的信息</value>
     <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
-	<data name="SubmitConsentPageDescription1_5" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_5" xml:space="preserve">
     <value>・为了预防感染扩大，请协助我们注册</value>
     <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
   </data>
-	<data name="SubmitConsentPageDescription1_6" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_6" xml:space="preserve">
     <value>详细请阅读以下</value>
     <comment>詳しくは以下をお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription6" xml:space="preserve">
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
     <value>您分享(※)给保健所或者医疗机构的手机号码和邮箱地址将被注册到「新型冠状病毒感染症等信息掌握・管理支援系统」这个全国性质的系统（下面称呼为「管理系统」）</value>
     <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
   </data>
-	<data name="SubmitConsentPageDescription7" xml:space="preserve">
-    <value>(※)作为新冠检测阳性时的联系方法</value>
-    <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
+  <data name="SubmitConsentPageDescription7" xml:space="preserve">
+    <value>※作为新冠检测阳性时的联系方法</value>
+    <comment>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
-	<data name="SubmitConsentPageDescription8" xml:space="preserve">
+  <data name="SubmitConsentPageDescription8" xml:space="preserve">
     <value>当阳性信息上报到管理系统时，注册的手机号或邮箱会受到COCOA阳性注册所需的「受理编号」</value>
     <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</comment>
   </data>
-	<data name="SubmitConsentPageDescription9" xml:space="preserve">
+  <data name="SubmitConsentPageDescription9" xml:space="preserve">
     <value>当在COCOA中注册受理编号时，手机会向管理系统查询是否是正确的受理编号</value>
     <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
   </data>
-	<data name="SubmitConsentPageDescription10" xml:space="preserve">
+  <data name="SubmitConsentPageDescription10" xml:space="preserve">
     <value>如果受理编号是正确的，在您症状开始或接受检查后的两天以内与您接触过的人（ 通常指1米以内彼此靠近15分钟以上的COCOA使用者 ）将得到通知。接受通知者不会知道可以识别您的信息。</value>
     <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
-	<data name="HelpPage3Description6" xml:space="preserve">
+  <data name="HelpPage3Description6" xml:space="preserve">
     <value>注册阳性信息</value>
     <comment>陽性情報を登録</comment>
   </data>
-	<data name="UrlPrivacyPolicy" xml:space="preserve">
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://www.mhlw.go.jp/cocoa/privacypolicy_chinese.html</value>
     <comment>プライバシーポリシーURL</comment>
   </data>
-	<data name="UrlTermOfUse" xml:space="preserve">
+  <data name="UrlTermOfUse" xml:space="preserve">
     <value>https://www.mhlw.go.jp/cocoa/kiyaku_chinese.html</value>
     <comment>利用規約URL</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageTitle" xml:space="preserve">
+  <data name="HowToReceiveProcessingNumberPageTitle" xml:space="preserve">
     <value>如何获得受理编号</value>
     <comment>処理番号の取得方法</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
+  <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
     <value>如果保健中心与您联系，请说明您想使用接触确认应用登记阳性检测结果。</value>
     <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
+  <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
     <value>您将通过短信或电子邮件收到一个8位数的受理编号。</value>
     <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>受理编号在发出后一小时内有效。 如果它已过期，您将收到一个新的受理编号。</value>
-    <comment>処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+  <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
+    <value>・受理编号在发出后一小时内有效。 如果它已过期，您将收到一个新的受理编号。</value>
+    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>如果您从保健中心收到了My HER-SYS的使用指南，请从那里申请使用接触确认应用。</value>
-    <comment>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+  <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
+    <value>・如果您从保健中心收到了My HER-SYS的使用指南，请从那里申请使用接触确认应用。</value>
+    <comment>・保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>接触通知</value>
@@ -968,10 +929,6 @@
   <data name="LocalExposureNotificationContent" xml:space="preserve">
     <value>您可能接触过感染新型冠状病毒的阳性登记者。点击查看详细信息。</value>
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
-  </data>
-	<data name="NoteSymbol" xml:space="preserve">
-    <value>*</value>
-    <comment>※</comment>
   </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>网页无障碍访问政策</value>
@@ -1118,5 +1075,53 @@
   <data name="Button" xml:space="preserve">
     <value>按钮</value>
     <comment>ボタン</comment>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>一览</value>
+    <comment>リスト</comment>
+  </data>
+  <data name="GpsAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：位置を特定する仕組み</comment>
+  </data>
+  <data name="BluetoothAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：機器同士を繋ぐ無線通信システム</comment>
+  </data>
+  <data name="ScreenshotAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：表示している画面の写真</comment>
+  </data>
+  <data name="CocoaAnnotation" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：本アプリのこと</comment>
+  </data>
+  <data name="OsAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：スマートフォンに搭載されている基本システム。AndroidやiOSのこと</comment>
+  </data>
+  <data name="SmsAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
+  </data>
+  <data name="MyHerSysAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
+  </data>
+  <data name="RandomCodeAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</comment>
+  </data>
+  <data name="AnnotationSymbol" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※</comment>
+  </data>
+  <data name="AnnotationSymbol1" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※1</comment>
+  </data>
+  <data name="AnnotationSymbol2" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※2</comment>
   </data>
 </root>

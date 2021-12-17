@@ -61,6 +61,14 @@ namespace Covid19Radar.ViewModels
             });
             MenuItems.Add(new MainMenuModel()
             {
+                Icon = "\uf0eb",
+                PageName = nameof(HelpMenuPage),
+                Title = Resources.AppResources.HelpMenuPageMenu,
+                IconColor = MenuIconColorDefault,
+                TextColor = MenuTextColorDefault
+            });
+            MenuItems.Add(new MainMenuModel()
+            {
                 Icon = "\uf70e",
                 PageName = nameof(TermsofservicePage),
                 Title = Resources.AppResources.TermsofservicePageTitle,
@@ -83,6 +91,16 @@ namespace Covid19Radar.ViewModels
                 IconColor = MenuIconColorDefault,
                 TextColor = MenuTextColorDefault
             });
+#if DEBUG
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf013",
+                PageName = nameof(DebugPage),
+                Title = "Debug",
+                IconColor = "#019AE8",
+                TextColor = "#000"
+            });
+#endif
 
             NavigateCommand = new DelegateCommand(Navigate);
         }
@@ -104,5 +122,11 @@ namespace Covid19Radar.ViewModels
                 item.TextColor = MenuTextColorDefault;
             });
         }
+
+        public Command OnCloseButton => new Command(async () =>
+        {
+            var currentMenuItem = SelectedMenuItem ?? MenuItems[0];
+            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + currentMenuItem.PageName);
+        });
     }
 }

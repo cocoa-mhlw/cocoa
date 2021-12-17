@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -16,6 +17,8 @@ namespace Covid19Radar.ViewModels
 {
     public class SendLogConfirmationPageViewModel : ViewModelBase
     {
+        public string ConfirmingLogReadText => $"{AppResources.SendLogConfirmationPageTextLink1} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
         private readonly ILogFileService logFileService;
         private readonly ILogUploadService logUploadService;

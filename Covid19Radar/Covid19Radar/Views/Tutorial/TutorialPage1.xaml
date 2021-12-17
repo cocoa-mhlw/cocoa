@@ -22,8 +22,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Label
-            AutomationProperties.IsInAccessibleTree="True"
             Grid.Row="0"
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
             Margin="0,0,0,20"
             Style="{StaticResource DefaultTitleLabel}"
             Text="{x:Static resources:AppResources.TutorialPage1Title2}" />
@@ -43,15 +44,16 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <ffimageloading:CachedImage
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="0"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Aspect="AspectFit"
                             Source="TutorialPage10.png" />
                         <Label
-                            AutomationProperties.IsInAccessibleTree="True"
                             Grid.Row="0"
                             Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="2"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.TutorialPage1Description1}"
                             VerticalTextAlignment="Center" />
@@ -65,15 +67,16 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <ffimageloading:CachedImage
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="0"
                             Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Aspect="AspectFit"
                             Source="TutorialPage11.png" />
                         <Label
-                            AutomationProperties.IsInAccessibleTree="True"
                             Grid.Row="0"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="3"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.TutorialPage1Description2}"
                             VerticalTextAlignment="Center" />
@@ -87,15 +90,16 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <ffimageloading:CachedImage
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="0"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Aspect="AspectFit"
                             Source="TutorialPage12.png" />
                         <Label
-                            AutomationProperties.IsInAccessibleTree="True"
                             Grid.Row="0"
                             Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="4"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.TutorialPage1Description3}"
                             VerticalTextAlignment="Center" />
@@ -103,9 +107,8 @@
                 </StackLayout>
                 <Button
                     Grid.Row="1"
-                    AutomationId="NextButton"
                     AutomationProperties.IsInAccessibleTree="True"
-                    AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage1Button}"
+                    TabIndex="5"
                     Command="{prism:NavigateTo 'TutorialPage2'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.TutorialPage1Button}" />

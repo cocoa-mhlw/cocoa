@@ -16,6 +16,11 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
@@ -25,6 +30,7 @@
             <StackLayout Grid.Row="0">
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultTitleLabel}">
                     <Label.FormattedText>
@@ -35,6 +41,7 @@
                 </Label>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="2"
                     Margin="0,0,0,0"
                     HorizontalOptions="Center"
                     Style="{StaticResource DefaultLabel}">
@@ -52,13 +59,13 @@
             </StackLayout>
             <Grid Grid.Row="1">
                 <Button
-                    AutomationId="OnClickShareApp"
                     AutomationProperties.IsInAccessibleTree="True"
-                    AutomationProperties.Name="{x:Static resources:AppResources.NotContactPageButtonText}"
+                    TabIndex="3"
                     Command="{Binding Path=OnClickShareApp}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.NotContactPageButtonText}" />
             </Grid>
         </Grid>
     </ScrollView>
+    </ContentView>
 </ContentPage>

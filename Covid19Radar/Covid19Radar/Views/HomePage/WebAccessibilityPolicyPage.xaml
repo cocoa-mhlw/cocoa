@@ -18,8 +18,9 @@
     Visual="Material">
     <StackLayout Style="{StaticResource DefaultStackLayout}">
         <views:NavigatePopoverWebView
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
             Source="{x:Static resources:AppResources.UrlWebAccessibilityPolicy}"
             Style="{StaticResource DefaultWebView}" />
     </StackLayout>
 </ContentPage>
-
