@@ -284,6 +284,197 @@ namespace Covid19Radar.UnitTests.Services
                 .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("540", string.Empty, 1638630000), Times.Once);
         }
 
+
+        [Fact]
+        public async Task ExposureDetectionAsync_MultiRegion_MultiSubRegion()
+        {
+            // Test Data
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList440 = CreateDiagnosisKeyEntryList(440);
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList540 = CreateDiagnosisKeyEntryList(540);
+
+            ExposureConfiguration exposureConfiguration = new ExposureConfiguration();
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
+            // Mock Setup
+            mockLocalPathService
+                .Setup(x => x.CacheDirectory)
+                .Returns(Path.GetTempPath());
+
+            mockDiagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList440));
+            mockDiagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList540));
+
+            mockDiagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                    It.IsAny<DiagnosisKeyEntry>(),
+                    It.IsAny<string>(),
+                    It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult("DLFile"));
+
+            mockServerConfigurationRepository
+                .Setup(x => x.Regions)
+                .Returns(new string[] { "440", "540" });
+            mockServerConfigurationRepository
+                .Setup(x => x.SubRegions)
+                .Returns(new string[] { "111111", "222222" });
+            mockServerConfigurationRepository
+                .Setup(x => x.WithRegionLevel)
+                .Returns(false);
+            mockServerConfigurationRepository
+                .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns("https://example.com");
+
+            mockExposureConfigurationRepository
+                .Setup(x => x.GetExposureConfigurationAsync())
+                .Returns(Task.FromResult(exposureConfiguration));
+
+            mockUserDataRepository
+                .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.FromResult(0L));
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectionAsync(cancellationTokenSource);
+
+
+            // Assert
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("440", "111111"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("540", "111111"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("440", "222222"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("540", "222222"), Times.Once);
+
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("440", "111111"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("540", "111111"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("440", "222222"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("540", "222222"), Times.Once);
+
+            mockExposureNotificationApiService
+                .Verify(x => x.ProvideDiagnosisKeysAsync(
+                                It.Is<List<string>>(s => s.SequenceEqual(new List<string>() {
+                                    "DLFile", "DLFile", "DLFile",
+                                    "DLFile", "DLFile", "DLFile",
+                                })),
+                                It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Exactly(2));
+
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", "111111", 1638630000), Times.Once);
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("540", "111111", 1638630000), Times.Once);
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", "222222", 1638630000), Times.Once);
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("540", "222222", 1638630000), Times.Once);
+        }
+
+
+        [Fact]
+        public async Task ExposureDetectionAsync_MultiRegion_MultiSubRegion_WithRegionLevel_True()
+        {
+            // Test Data
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList440 = CreateDiagnosisKeyEntryList(440);
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList540 = CreateDiagnosisKeyEntryList(540);
+
+            ExposureConfiguration exposureConfiguration = new ExposureConfiguration();
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
+            // Mock Setup
+            mockLocalPathService
+                .Setup(x => x.CacheDirectory)
+                .Returns(Path.GetTempPath());
+
+            mockDiagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList440));
+            mockDiagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(diagnosisKeyEntryList540));
+
+            mockDiagnosisKeyRepository
+                .Setup(x => x.DownloadDiagnosisKeysAsync(
+                    It.IsAny<DiagnosisKeyEntry>(),
+                    It.IsAny<string>(),
+                    It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult("DLFile"));
+
+            mockServerConfigurationRepository
+                .Setup(x => x.Regions)
+                .Returns(new string[] { "440", "540" });
+            mockServerConfigurationRepository
+                .Setup(x => x.SubRegions)
+                .Returns(new string[] { "111111", "222222" });
+            mockServerConfigurationRepository
+                .Setup(x => x.WithRegionLevel)
+                .Returns(true);
+            mockServerConfigurationRepository
+                .Setup(x => x.WithRegionLevel)
+                .Returns(true);
+            mockServerConfigurationRepository
+                .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns("https://example.com");
+
+            mockExposureConfigurationRepository
+                .Setup(x => x.GetExposureConfigurationAsync())
+                .Returns(Task.FromResult(exposureConfiguration));
+
+            mockUserDataRepository
+                .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>(), It.IsAny<string>()))
+                .Returns(Task.FromResult(0L));
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectionAsync(cancellationTokenSource);
+
+
+            // Assert
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("440", "111111"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("540", "111111"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("440", "222222"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("540", "222222"), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("440", string.Empty), Times.Once);
+            mockServerConfigurationRepository.Verify(x => x.GetDiagnosisKeyListProvideServerUrl("540", string.Empty), Times.Once);
+
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("440", "111111"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("540", "111111"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("440", "222222"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("540", "222222"), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("440", string.Empty), Times.Once);
+            mockUserDataRepository.Verify(x => x.GetLastProcessDiagnosisKeyTimestampAsync("540", string.Empty), Times.Once);
+
+            mockExposureNotificationApiService
+                .Verify(x => x.ProvideDiagnosisKeysAsync(
+                                It.Is<List<string>>(s => s.SequenceEqual(new List<string>() {
+                                    "DLFile", "DLFile", "DLFile",
+                                    "DLFile", "DLFile", "DLFile",
+                                })),
+                                It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Exactly(2));
+
+            mockExposureNotificationApiService
+                .Verify(x => x.ProvideDiagnosisKeysAsync(
+                                It.Is<List<string>>(s => s.SequenceEqual(new List<string>() {
+                                    "DLFile", "DLFile", "DLFile"
+                                })),
+                                It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Exactly(2));
+
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", "111111", 1638630000), Times.Once);
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("540", "111111", 1638630000), Times.Once);
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", "222222", 1638630000), Times.Once);
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("540", "222222", 1638630000), Times.Once);
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", string.Empty, 1638630000), Times.Once);
+            mockUserDataRepository
+                .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("540", string.Empty, 1638630000), Times.Once);
+        }
+
+
         [Fact]
         public async Task ExposureDetectionAsync_DirectoryNotExistsAndFileRemoved()
         {
