@@ -23,18 +23,15 @@ namespace Covid19Radar.Api
         private const string DUMMY_UUID = "000000000000000000000000000000000";
         private const string DUMMY_SECRET = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
 
-        private readonly ICryptionService Cryption;
         private readonly ILogger<RegisterApi> Logger;
         private readonly IUserRepository UserRepository;
         private readonly IValidationServerService ValidationServerService;
 
         public RegisterApi(
             IUserRepository userRepository,
-            ICryptionService cryption,
             IValidationServerService validationServerService,
             ILogger<RegisterApi> logger)
         {
-            Cryption = cryption;
             Logger = logger;
             UserRepository = userRepository;
             ValidationServerService = validationServerService;
