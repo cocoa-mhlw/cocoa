@@ -188,9 +188,6 @@ namespace Covid19Radar.UnitTests.Services
                 .Setup(x => x.SubRegions)
                 .Returns(new string[] { });
             mockServerConfigurationRepository
-                .Setup(x => x.WithRegionLevel)
-                .Returns(true);
-            mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>(), It.IsAny<string>()))
                 .Returns("https://example.com");
 
@@ -251,9 +248,6 @@ namespace Covid19Radar.UnitTests.Services
             mockServerConfigurationRepository
                 .Setup(x => x.SubRegions)
                 .Returns(new string[] { });
-            mockServerConfigurationRepository
-                .Setup(x => x.WithRegionLevel)
-                .Returns(true);
             mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>(), It.IsAny<string>()))
                 .Returns("https://example.com");
@@ -350,9 +344,6 @@ namespace Covid19Radar.UnitTests.Services
                 .Setup(x => x.SubRegions)
                 .Returns(new string[] { });
             mockServerConfigurationRepository
-                .Setup(x => x.WithRegionLevel)
-                .Returns(true);
-            mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>(), It.IsAny<string>()))
                 .Returns("https://example.com");
 
@@ -438,9 +429,6 @@ namespace Covid19Radar.UnitTests.Services
             mockServerConfigurationRepository
                 .Setup(x => x.SubRegions)
                 .Returns(new string[] { });
-            mockServerConfigurationRepository
-                .Setup(x => x.WithRegionLevel)
-                .Returns(true);
             mockServerConfigurationRepository
                 .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>(), It.IsAny<string>()))
                 .Returns("https://example.com");

@@ -103,7 +103,8 @@ namespace Covid19Radar.Services
                 #endregion
 
                 #region Regoin leval
-                if (_serverConfigurationRepository.WithRegionLevel)
+                var withRegionLevel = !subRegions.Any() || _serverConfigurationRepository.WithRegionLevel;
+                if (withRegionLevel)
                 {
                     try
                     {
