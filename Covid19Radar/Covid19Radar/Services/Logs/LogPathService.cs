@@ -12,10 +12,10 @@ namespace Covid19Radar.Services.Logs
     {
         #region Instance Properties
 
-        public string LogsDirPath => logPathDependencyService.LogsDirPath;
+        public string LogsDirPath => localPathService.LogsDirPath;
         public string LogFileWildcardName => logFilePrefix + "*." + logFileExtension;
-        public string LogUploadingTmpPath => logPathDependencyService.LogUploadingTmpPath;
-        public string LogUploadingPublicPath => logPathDependencyService.LogUploadingPublicPath;
+        public string LogUploadingTmpPath => localPathService.LogUploadingTmpPath;
+        public string LogUploadingPublicPath => localPathService.LogUploadingPublicPath;
         public string LogUploadingFileWildcardName => logUploadingFilePrefix + "*." + logUploadingFileExtension;
 
         #endregion
@@ -31,15 +31,15 @@ namespace Covid19Radar.Services.Logs
 
         #region Instance Fields
 
-        private readonly ILogPathPlatformService logPathDependencyService;
+        private readonly ILocalPathService localPathService;
 
         #endregion
 
         #region Constructors
 
-        public LogPathService(ILogPathPlatformService logPathDependencyService)
+        public LogPathService(ILocalPathService localPathService)
         {
-            this.logPathDependencyService = logPathDependencyService;
+            this.localPathService = localPathService;
         }
 
         #endregion

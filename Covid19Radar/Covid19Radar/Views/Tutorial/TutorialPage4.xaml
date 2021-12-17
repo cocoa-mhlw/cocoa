@@ -22,8 +22,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Label
-            AutomationProperties.IsInAccessibleTree="True"
             Grid.Row="0"
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
             Margin="0,0,0,20"
             Style="{StaticResource DefaultTitleLabel}"
             Text="{x:Static resources:AppResources.TutorialPage4Title2}" />
@@ -42,24 +43,34 @@
                         Source="TutorialPage40.png" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="2"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.TutorialPage4Description}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="3"
+                        Margin="0, 10"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.BluetoothAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                </Label>
                 </StackLayout>
                 <Grid Grid.Row="1">
                     <StackLayout>
                         <Button
-                            AutomationId="EnableButton"
                             AutomationProperties.IsInAccessibleTree="True"
-                            AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage4Button1}"
+                            TabIndex="4"
                             Command="{Binding Path=OnClickEnable}"
                             Style="{StaticResource DefaultButton}"
                             Text="{x:Static resources:AppResources.TutorialPage4Button1}" />
-
                         <Button
-                            Margin="0,10,0,0"
-                            AutomationId="DisableButton"
                             AutomationProperties.IsInAccessibleTree="True"
-                            AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage4Button2}"
+                            TabIndex="5"
+                            Margin="0,10,0,0"
                             Command="{Binding Path=OnClickDisable}"
                             Style="{StaticResource DefaultButtonGrayedOut}"
                             Text="{x:Static resources:AppResources.TutorialPage4Button2}" />

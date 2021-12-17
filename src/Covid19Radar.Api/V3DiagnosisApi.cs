@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -10,6 +11,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
@@ -25,6 +27,9 @@ namespace Covid19Radar.Api
 {
     public class V3DiagnosisApi
     {
+        private const int TRANSMISSION_RISK_LEVEL_INVALID = 0;
+        private const int TRANSMISSION_RISK_LEVEL_MEDIUM = 4;
+
         private const string CHAFF_HEADER = "X-Chaff";
 
         private readonly string[] _supportRegions;
@@ -71,6 +76,17 @@ namespace Covid19Radar.Api
             var submissionParameter = JsonConvert.DeserializeObject<V3DiagnosisSubmissionParameter>(requestBody);
             submissionParameter.SetDaysSinceOnsetOfSymptoms();
 
+            // Make compatible with Legacy-V1 mode.
+            foreach (var key in submissionParameter.Keys)
+            {
+                var transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_INVALID;
+                if (key.DaysSinceOnsetOfSymptoms >= Constants.DaysHasInfectiousness)
+                {
+                    transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_MEDIUM;
+                }
+                key.TransmissionRisk = transmissionRiskLevel;
+            }
+
             // Filter valid keys
             submissionParameter.Keys = submissionParameter.Keys.Where(key => key.IsValid()).ToArray();
 
@@ -111,7 +127,9 @@ namespace Covid19Radar.Api
                 return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
             }
 
+            var newKeys = new List<TemporaryExposureKeyModel>();
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
             using (SHA256 sha256 = SHA256.Create())
             {
                 foreach (var k in submissionParameter.Keys)
@@ -125,10 +143,14 @@ namespace Covid19Radar.Api
                         key.id = id;
                         key.PartitionKey = region;
                         key.Timestamp = timestamp;
-
-                        await _tekRepository.UpsertAsync(key);
+                        newKeys.Add(key);
                     }
                 }
+            }
+
+            foreach (var key in newKeys)
+            {
+                await _tekRepository.UpsertAsync(key);
             }
 
             return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));

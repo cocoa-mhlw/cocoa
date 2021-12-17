@@ -8,6 +8,9 @@ namespace Covid19Radar.Model
 {
     public class DiagnosisSubmissionParameter
     {
+        [JsonProperty("symptomOnsetDate")]
+        public string SymptomOnsetDate { get; set; }
+
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
         [JsonProperty("regions")]
@@ -21,6 +24,10 @@ namespace Covid19Radar.Model
         // Some signature / code confirming authorization by the verification authority.
         [JsonProperty("verificationPayload")]
         public string VerificationPayload { get; set; }
+
+        [JsonProperty("idempotency_key")]
+        public string IdempotencyKey { get; set; }
+
         // Random data to obscure the size of the request network packet sniffers.
         [JsonProperty("padding")]
         public string Padding { get; set; }

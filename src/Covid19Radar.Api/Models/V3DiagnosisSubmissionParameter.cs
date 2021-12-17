@@ -7,14 +7,13 @@ using Covid19Radar.Api.Extensions;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
+using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
     public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
         public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
-
-        private const int TIME_WINDOW_IN_SEC = 60 * 10;
 
         // RFC3339
         // e.g. 2021-09-20T23:52:57.436+00:00
@@ -72,7 +71,7 @@ namespace Covid19Radar.Api.Models
             public int DaysSinceOnsetOfSymptoms { get; set; }
 
             public DateTime GetDate()
-                => DateTimeOffset.FromUnixTimeSeconds(RollingStartNumber * TIME_WINDOW_IN_SEC).Date;
+                => DateTimeOffset.FromUnixTimeSeconds(RollingStartNumber * TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC).Date;
 
             public TemporaryExposureKeyModel ToModel()
             {
@@ -111,8 +110,8 @@ namespace Covid19Radar.Api.Models
                 return true;
             }
 
-			public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType, DaysSinceOnsetOfSymptoms);
-		}
+            public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType, DaysSinceOnsetOfSymptoms);
+        }
 
         /// <summary>
         /// Validation

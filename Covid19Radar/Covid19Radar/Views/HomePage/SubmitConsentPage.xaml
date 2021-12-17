@@ -24,70 +24,84 @@
         </DataTrigger>
     </ContentPage.Triggers>
 
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-
             <StackLayout Grid.Row="0">
                 <StackLayout
                     IsVisible="{Binding IsProcessingNumberVisible}">
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsProcessingNumberVisible}"
+                        TabIndex="1"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.YourProcessingNumber}"/>
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsProcessingNumberVisible}"
+                        TabIndex="2"
                         Style="{StaticResource DefaultLabel}"
                         HorizontalTextAlignment="Center"
                         Text="{Binding ProcessingNumber}"/>
                 </StackLayout>
-                <Frame Margin="0,15"
-                       Padding="15"
-                       BackgroundColor="#FFF3DD"
-                       CornerRadius="10">
+                <Frame
+                    Margin="0,15"
+                    Padding="15"
+                    BackgroundColor="#FFF3DD"
+                    CornerRadius="10">
                     <StackLayout Spacing="10">
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="3"
                             FontSize="Large"
                             FontAttributes="Bold"
                             TextColor="Black"
                             Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_1}"/>
-                        <StackLayout
-                            AutomationProperties.IsInAccessibleTree="False">
+                        <StackLayout>
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
+                                TabIndex="4"
                                 Style="{StaticResource DefaultLabel}"
                                 Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_2}" />
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
+                                TabIndex="5"
                                 Style="{StaticResource DefaultLabel}"
                                 Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_3}" />
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
+                                TabIndex="6"
                                 Style="{StaticResource DefaultLabel}"
                                 Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_4}" />
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
+                                TabIndex="7"
                                 Style="{StaticResource DefaultLabel}"
                                 Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_5}" />
                         </StackLayout>
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="8"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.SubmitConsentPageDescription1_6}" />
                     </StackLayout>
                 </Frame>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    Margin="0, 10, 0, 5"
+                    TabIndex="9"
+                    Margin="0, 10"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription6}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource DefaultLabelSmall}"
+                    TabIndex="10"
+                    Style="{StaticResource AnnotationLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription7}" />
                 <Image
                     AutomationProperties.IsInAccessibleTree="False"
@@ -96,8 +110,21 @@
                     HorizontalOptions="Center"/>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="11"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription8}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="12"
+                    Margin="0, 10, 0, 0"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Image
                     AutomationProperties.IsInAccessibleTree="False"
                     Margin="0, 15"
@@ -105,6 +132,7 @@
                     HorizontalOptions="Center"/>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="13"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription9}" />
                 <Image
@@ -114,15 +142,15 @@
                     HorizontalOptions="Center"/>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="14"
                     Margin="0, 0, 0, 15"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription10}" />
             </StackLayout>
             <Grid Grid.Row="1">
                 <Button
-                    AutomationId="NextButton"
                     AutomationProperties.IsInAccessibleTree="{Binding IsNextButtonVisible}"
-                    AutomationProperties.Name="{x:Static resources:AppResources.SubmitConsentPageButton}"
+                    TabIndex="15"
                     Command="{prism:NavigateTo 'NotifyOtherPage'}"
                     IsVisible="{Binding IsNextButtonVisible}"
                     Style="{StaticResource DefaultButton}"
@@ -130,4 +158,5 @@
             </Grid>
         </Grid>
     </ScrollView>
+    </ContentView>
 </ContentPage>
