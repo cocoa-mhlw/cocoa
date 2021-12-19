@@ -8,10 +8,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Android.Gms.SafetyNet;
-using Covid19Radar.Droid.Services;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Droid.Services
 {
@@ -47,7 +45,7 @@ namespace Covid19Radar.Droid.Services
                 string.Join(",", keys.OrderBy(k => k.KeyData).Select(k => GetKeyStringCore(k)));
 
             static string GetKeyStringCore(DiagnosisSubmissionParameter.Key k) =>
-                string.Join(".", k.KeyData, k.RollingStartNumber, k.RollingPeriod);
+                string.Join(".", k.KeyData, k.RollingStartNumber, k.RollingPeriod, k.ReportType);
 
             static string GetRegionString(IEnumerable<string> regions) =>
                 string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));

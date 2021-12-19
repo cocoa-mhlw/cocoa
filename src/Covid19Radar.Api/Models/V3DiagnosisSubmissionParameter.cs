@@ -105,7 +105,7 @@ namespace Covid19Radar.Api.Models
                 return true;
             }
 
-            public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType, DaysSinceOnsetOfSymptoms);
+            public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType);
         }
 
         /// <summary>
