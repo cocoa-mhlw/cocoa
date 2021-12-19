@@ -67,14 +67,7 @@ namespace Covid19Radar.Services
                     var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
-                    var targetDiagnosisKeyEntryList = diagnosisKeyEntryList;
-
-#if DEBUG
-                    // Do nothing
-#else
-                    targetDiagnosisKeyEntryList = targetDiagnosisKeyEntryList
-                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
-#endif
+                    var targetDiagnosisKeyEntryList = FilterDiagnosisKeysAfterLastProcessTimestamp(diagnosisKeyEntryList, lastProcessTimestamp);
 
                     if (targetDiagnosisKeyEntryList.Count() == 0)
                     {
@@ -112,6 +105,24 @@ namespace Covid19Radar.Services
                     RemoveFiles(downloadedFileNameList);
                 }
             }
+        }
+
+        private static IList<DiagnosisKeyEntry> FilterDiagnosisKeysAfterLastProcessTimestamp(
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList,
+            long lastProcessTimestamp
+            )
+        {
+
+#if EN_DEBUG
+            // [NOTE] This is trick for inspecting to behavior ExposureNotification API.
+            // We're able to reset the diagnosisKeys exposure detecting state by change an app that handling EN API.
+            // And so, we have to disable diagnosisKeys filter by lastProcessTimestamp.
+            return diagnosisKeyEntryList;
+#else
+            return diagnosisKeyEntryList
+                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
+#endif
+
         }
 
         private string PrepareDir(string region)
