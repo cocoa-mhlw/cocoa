@@ -196,7 +196,7 @@ namespace Covid19Radar.ViewModels
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "",
+                    null,
                     AppResources.NotifyOtherPageDiag2Title,
                     AppResources.ButtonOk
                     );
@@ -381,7 +381,7 @@ namespace Covid19Radar.ViewModels
                     loggerService.Info($"Successfully submit DiagnosisKeys.");
 
                     await UserDialogs.Instance.AlertAsync(
-                        "",
+                        null,
                         AppResources.NotifyOtherPageDialogSubmittedTitle,
                         AppResources.ButtonOk
                     );
@@ -399,7 +399,7 @@ namespace Covid19Radar.ViewModels
                 case HttpStatusCode.InternalServerError:
                 case HttpStatusCode.ServiceUnavailable:
                     await UserDialogs.Instance.AlertAsync(
-                        "",
+                        null,
                         AppResources.ExposureNotificationHandler2ErrorMessage,
                         AppResources.ButtonOk);
                     loggerService.Error($"Cannot connect to the server.");
@@ -407,7 +407,7 @@ namespace Covid19Radar.ViewModels
 
                 case HttpStatusCode.BadRequest:
                     await UserDialogs.Instance.AlertAsync(
-                        "",
+                        null,
                         AppResources.ExposureNotificationHandler3ErrorMessage,
                         AppResources.ButtonOk);
                     loggerService.Error($"There is a problem with the record data.");
