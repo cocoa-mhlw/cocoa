@@ -66,7 +66,7 @@ namespace Covid19Radar.Api.Services
             using (var sha = SHA256.Create())
             {
                 payload.TransactionId = Convert.ToBase64String(
-                    sha.ComputeHash(Encoding.UTF8.GetBytes(deviceVerification.TransactionId))
+                    sha.ComputeHash(Encoding.UTF8.GetBytes(deviceVerification.TransactionIdSeed))
                     );
             }
 

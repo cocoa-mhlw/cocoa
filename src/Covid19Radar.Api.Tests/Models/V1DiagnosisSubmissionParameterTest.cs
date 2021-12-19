@@ -5,16 +5,14 @@
 using System;
 using System.Linq;
 using System.Text;
-using Covid19Radar.Api.Common;
 using Covid19Radar.Api.Models;
-using Microsoft.VisualBasic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Covid19Radar.Api.Tests.Models
 {
     [TestClass]
     [TestCategory("Models")]
-    public class DiagnosisSubmissionParameterTest
+    public class V1DiagnosisSubmissionParameterTest
     {
         [TestMethod]
         public void CreateMethod()

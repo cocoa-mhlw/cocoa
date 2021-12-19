@@ -10,7 +10,7 @@ using System.Linq;
 namespace Covid19Radar.Api.Models
 {
 
-	public class V2DiagnosisSubmissionParameter : IPayload, IDeviceVerification
+    public class V2DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
 		[JsonProperty("keys")]
 		public Key[] Keys { get; set; }
@@ -40,7 +40,7 @@ namespace Covid19Radar.Api.Models
 			=> DeviceVerificationPayload;
 
 		[JsonIgnore]
-		public string TransactionId
+		public string TransactionIdSeed
 			=> AppPackageName
 				+ KeysTextForDeviceVerification
 				+ IAndroidDeviceVerification.GetRegionString(Regions);

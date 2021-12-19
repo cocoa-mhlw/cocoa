@@ -58,8 +58,9 @@ namespace Covid19Radar.Api.Models
             => DeviceVerificationPayload;
 
         [JsonIgnore]
-        public string TransactionId
-            => AppPackageName
+        public string TransactionIdSeed
+            => SymptomOnsetDate
+                +AppPackageName
                 + KeysTextForDeviceVerification
                 + IAndroidDeviceVerification.GetRegionString(Regions);
 
@@ -73,7 +74,7 @@ namespace Covid19Radar.Api.Models
 
         [JsonIgnore]
         public string ClearText
-            => string.Join("|", AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
+            => string.Join("|", SymptomOnsetDate, AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
 
         #endregion
 
@@ -132,7 +133,7 @@ namespace Covid19Radar.Api.Models
                 return true;
             }
 
-			public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType, DaysSinceOnsetOfSymptoms);
+			public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType);
 		}
 
         /// <summary>

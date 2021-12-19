@@ -8,6 +8,6 @@ namespace Covid19Radar.Api.Models
     {
         public string DeviceToken { get; }
 
-        public string TransactionId { get; }
+        public string TransactionIdSeed { get; }
     }
 }
