@@ -69,7 +69,7 @@ namespace Covid19Radar.Services
             if (_exposureConfigurationRepository.IsDiagnosisKeysDataMappingConfigurationUpdated())
             {
                 _exposureConfigurationRepository.SetDiagnosisKeysDataMappingAppliedDateTime(_dateTimeUtility.UtcNow);
-                _exposureConfigurationRepository.SetDiagnosisKeysDataMappingConfigurationUpdated(false);
+                _exposureConfigurationRepository.SetIsDiagnosisKeysDataMappingConfigurationUpdated(false);
             }
 
             _loggerService.EndMethod();
@@ -91,8 +91,7 @@ namespace Covid19Radar.Services
 
             bool isHighRiskExposureDetected = dailySummaries
                 .Select(dailySummary => _exposureRiskCalculationService.CalcRiskLevel(dailySummary))
-                .Where(riskLevel => riskLevel >= RiskLevel.High)
-                .Count() > 0;
+                .Any(riskLevel => riskLevel >= RiskLevel.High);
 
             if (isHighRiskExposureDetected)
             {

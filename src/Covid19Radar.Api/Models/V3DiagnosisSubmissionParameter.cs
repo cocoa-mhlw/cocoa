@@ -11,7 +11,6 @@ using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
-
     public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
         public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
@@ -98,14 +97,9 @@ namespace Covid19Radar.Api.Models
                 if (string.IsNullOrWhiteSpace(KeyData)) return false;
                 if (RollingPeriod > Constants.ActiveRollingPeriod) return false;
 
-                var dateTime = DateTime.UtcNow;
+                var dateTime = DateTime.UtcNow.Date;
                 var todayRollingStartNumber = dateTime.ToRollingStartNumber();
 
-                // 00:00:00.000
-                dateTime = dateTime.AddHours(-dateTime.Hour)
-                    .AddMinutes(-dateTime.Minute)
-                    .AddSeconds(-dateTime.Second)
-                    .AddMilliseconds(-dateTime.Millisecond);
                 var oldestRollingStartNumber = dateTime.AddDays(Constants.OutOfDateDays).ToRollingStartNumber();
                 if (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > todayRollingStartNumber) return false;
                 return true;

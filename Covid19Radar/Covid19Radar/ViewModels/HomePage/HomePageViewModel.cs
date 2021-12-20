@@ -20,6 +20,8 @@ namespace Covid19Radar.ViewModels
 {
     public class HomePageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
+        public string SharingThisAppReadText => $"{AppResources.HomePageDescription5} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository _userDataRepository;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
@@ -117,8 +119,8 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                var success = await exposureNotificationApiService.StartExposureNotificationAsync();
-                if (success)
+                var isSuccess = await exposureNotificationApiService.StartExposureNotificationAsync();
+                if (isSuccess)
                 {
                     await UpdateView();
                 }

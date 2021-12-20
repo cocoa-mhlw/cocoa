@@ -20,7 +20,7 @@ namespace Covid19Radar.Repository
         public DateTime GetExposureConfigurationDownloadedDateTime();
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated();
-        public void SetDiagnosisKeysDataMappingConfigurationUpdated(bool updated);
+        public void SetIsDiagnosisKeysDataMappingConfigurationUpdated(bool isUpdated);
         public void SetDiagnosisKeysDataMappingAppliedDateTime(DateTime dateTime);
         public DateTime GetDiagnosisKeysDataMappingConfigurationAppliedDateTime();
 
@@ -105,6 +105,7 @@ namespace Covid19Radar.Repository
 
                     if (!IsDownloadedExposureConfigurationOutdated(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays))
                     {
+                        _loggerService.EndMethod();
                         return currentExposureConfiguration;
                     }
                     else
@@ -158,6 +159,7 @@ namespace Covid19Radar.Repository
 
             if (newExposureConfiguration is null)
             {
+                _loggerService.EndMethod();
                 return currentExposureConfiguration;
             }
 
@@ -166,7 +168,7 @@ namespace Covid19Radar.Repository
                 if (IsExposureConfigurationOutdated(AppConstants.MinimumDiagnosisKeysDataMappingApplyIntervalDays))
                 {
                     currentExposureConfiguration = newExposureConfiguration;
-                    SetDiagnosisKeysDataMappingConfigurationUpdated(true);
+                    SetIsDiagnosisKeysDataMappingConfigurationUpdated(true);
                 }
                 else
                 {
@@ -289,8 +291,8 @@ namespace Covid19Radar.Repository
             File.Delete(_currentExposureConfigurationPath);
         }
 
-        public void SetDiagnosisKeysDataMappingConfigurationUpdated(bool updated)
-            => _preferencesService.SetValue(PreferenceKey.IsExposureConfigurationUpdated, updated);
+        public void SetIsDiagnosisKeysDataMappingConfigurationUpdated(bool isUpdated)
+            => _preferencesService.SetValue(PreferenceKey.IsExposureConfigurationUpdated, isUpdated);
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated()
             => _preferencesService.GetValue(PreferenceKey.IsExposureConfigurationUpdated, true);

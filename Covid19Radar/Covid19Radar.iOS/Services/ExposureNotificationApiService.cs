@@ -18,18 +18,12 @@ namespace Covid19Radar.iOS.Services
 
         public string UserExplanation
         {
-            set
-            {
-                _exposureNotificationClient.UserExplanation = value;
-            }
+            set => _exposureNotificationClient.UserExplanation = value;
         }
 
         public bool IsTest
         {
-            set
-            {
-                _exposureNotificationClient.IsTest = value;
-            }
+            set => _exposureNotificationClient.IsTest = value;
         }
 
         public ExposureNotificationApiService(

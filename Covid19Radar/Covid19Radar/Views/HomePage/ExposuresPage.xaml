@@ -16,9 +16,13 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <StackLayout BackgroundColor="#FFFFFF" Style="{StaticResource DefaultStackLayout}">
-        <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
+        <Label
+            Style="{StaticResource DefaultLabel}"
+            Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
         <BoxView Style="{StaticResource DefaultLineStyle}" />
-        <CollectionView BackgroundColor="#FFFFFF" ItemsSource="{Binding Exposures}">
+        <CollectionView
+            BackgroundColor="#FFFFFF"
+            ItemsSource="{Binding Exposures}">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical" />
             </CollectionView.ItemsLayout>
@@ -27,8 +31,11 @@
                     <StackLayout HorizontalOptions="FillAndExpand">
                         <Frame Style="{StaticResource FrameCardViewStyle}">
                             <StackLayout Style="{StaticResource DetailsStackLayout}">
-                                <Label Style="{StaticResource CardLabelSmall}" Text="{Binding ExposureDate}" />
-                                <Label Style="{StaticResource CardLabelSmall}">
+                                <Label
+                                    Style="{StaticResource CardLabelSmall}"
+                                    Text="{Binding ExposureDate}" />
+                                <Label
+                                    Style="{StaticResource CardLabelSmall}">
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span Text="{Binding ExposurePluralizeCount}" />
@@ -42,8 +49,12 @@
             </CollectionView.ItemTemplate>
             <CollectionView.EmptyView>
                 <StackLayout Orientation="Vertical">
-                    <Label Style="{DynamicResource DefaultSubSubTitleLabel}" Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
-                    <Label Style="{DynamicResource DefaultLabelLittle}" Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
+                    <Label
+                        Style="{DynamicResource DefaultSubSubTitleLabel}"
+                        Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
+                    <Label
+                        Style="{DynamicResource DefaultLabelLittle}"
+                        Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
                 </StackLayout>
             </CollectionView.EmptyView>
         </CollectionView>

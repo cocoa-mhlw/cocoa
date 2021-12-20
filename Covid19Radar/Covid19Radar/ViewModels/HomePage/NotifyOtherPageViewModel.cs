@@ -23,11 +23,14 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
+        public string HowToReceiveProcessingNumberReadText => $"{AppResources.NotifyOtherPageLabel} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
 
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
         private readonly IEssentialsService _essentialsService;
+        private readonly int _delayForErrorMillis;
 
         private string _processingNumber;
         public string ProcessingNumber
@@ -121,7 +124,8 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             AbsExposureNotificationApiService exposureNotificationApiService,
             IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer,
-            IEssentialsService essentialsService
+            IEssentialsService essentialsService,
+            int delayForErrorMillis = AppConstants.DelayForRegistrationErrorMillis
             ) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
@@ -129,6 +133,7 @@ namespace Covid19Radar.ViewModels
             this.loggerService = loggerService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
+            _delayForErrorMillis = delayForErrorMillis;
             _essentialsService = essentialsService;
             errorCount = 0;
             ProcessingNumber = "";
@@ -188,11 +193,10 @@ namespace Covid19Radar.ViewModels
                 AppResources.NotifyOtherPageDiag1Title,
                 AppResources.ButtonRegister,
                 AppResources.ButtonCancel);
-
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
-                    "",
+                    null,
                     AppResources.NotifyOtherPageDiag2Title,
                     AppResources.ButtonOk
                     );
@@ -213,7 +217,7 @@ namespace Covid19Radar.ViewModels
                         AppResources.ButtonOk
                     );
                     UserDialogs.Instance.HideLoading();
-                    await NavigationService.GoBackToRootAsync();
+                    await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
 
                     loggerService.Error($"Exceeded the number of trials.");
                     loggerService.EndMethod();
@@ -228,7 +232,7 @@ namespace Covid19Radar.ViewModels
                         AppResources.NotifyOtherPageDiag3Title,
                         AppResources.ButtonOk
                         );
-                    await Task.Delay(errorCount * 5000);
+                    await Task.Delay(errorCount * _delayForErrorMillis);
                 }
 
                 loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
@@ -377,7 +381,7 @@ namespace Covid19Radar.ViewModels
                     loggerService.Info($"Successfully submit DiagnosisKeys.");
 
                     await UserDialogs.Instance.AlertAsync(
-                        "",
+                        null,
                         AppResources.NotifyOtherPageDialogSubmittedTitle,
                         AppResources.ButtonOk
                     );
@@ -395,7 +399,7 @@ namespace Covid19Radar.ViewModels
                 case HttpStatusCode.InternalServerError:
                 case HttpStatusCode.ServiceUnavailable:
                     await UserDialogs.Instance.AlertAsync(
-                        "",
+                        null,
                         AppResources.ExposureNotificationHandler2ErrorMessage,
                         AppResources.ButtonOk);
                     loggerService.Error($"Cannot connect to the server.");
@@ -403,7 +407,7 @@ namespace Covid19Radar.ViewModels
 
                 case HttpStatusCode.BadRequest:
                     await UserDialogs.Instance.AlertAsync(
-                        "",
+                        null,
                         AppResources.ExposureNotificationHandler3ErrorMessage,
                         AppResources.ButtonOk);
                     loggerService.Error($"There is a problem with the record data.");

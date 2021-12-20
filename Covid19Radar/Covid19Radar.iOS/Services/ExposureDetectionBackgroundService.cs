@@ -33,14 +33,16 @@ namespace Covid19Radar.iOS.Services
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IServerConfigurationRepository serverConfigurationRepository
+            IServerConfigurationRepository serverConfigurationRepository,
+            ILocalPathService localPathService
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
                 exposureConfigurationRepository,
                 loggerService,
                 userDataRepository,
-                serverConfigurationRepository
+                serverConfigurationRepository,
+                localPathService
                 )
         {
             _exposureNotificationApiService = exposureNotificationApiService;
@@ -50,8 +52,6 @@ namespace Covid19Radar.iOS.Services
         public override void Schedule()
         {
             _loggerService.StartMethod();
-
-            _loggerService.Debug($"BGTASK_IDENTIFIER: {BGTASK_IDENTIFIER}");
 
             var result = BGTaskScheduler.Shared.Register(BGTASK_IDENTIFIER, null, task =>
             {
@@ -70,11 +70,10 @@ namespace Covid19Radar.iOS.Services
                             .GetAwaiter().GetResult();
 
                         bool isUnauthorized = statuses
-                            .Where(status => status.Code == ExposureNotificationStatus.Code_iOS.Unauthorized)
-                            .Count() != 0;
+                            .Any(status => status.Code == ExposureNotificationStatus.Code_iOS.Unauthorized);
                         if (isUnauthorized)
                         {
-                            _loggerService.Error("Exposure notofication is not authorized.");
+                            _loggerService.Error("Exposure notification is not authorized.");
                             task.SetTaskCompleted(true);
                             return;
                         }

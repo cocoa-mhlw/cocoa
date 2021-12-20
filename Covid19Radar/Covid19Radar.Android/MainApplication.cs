@@ -15,8 +15,8 @@ using Covid19Radar.Droid.Services.Migration;
 using Chino;
 using Chino.Android.Google;
 using System.Collections.Generic;
-using CommonServiceLocator;
 using System.Threading.Tasks;
+using Prism.Ioc;
 
 namespace Covid19Radar.Droid
 {
@@ -35,12 +35,17 @@ namespace Covid19Radar.Droid
             = new JobSetting(INITIAL_BACKOFF_MILLIS, Android.App.Job.BackoffPolicy.Linear, true);
         private readonly JobSetting _exposureNotDetectedJobSetting = null;
 
-
         private Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
-            = new Lazy<AbsExposureNotificationApiService>(() => ServiceLocator.Current.GetInstance<AbsExposureNotificationApiService>());
+            = new Lazy<AbsExposureNotificationApiService>(() => ContainerLocator.Current.Resolve<AbsExposureNotificationApiService>());
 
         private Lazy<IExposureDetectionService> _exposureDetectionService
-            = new Lazy<IExposureDetectionService>(() => ServiceLocator.Current.GetInstance<IExposureDetectionService>());
+            = new Lazy<IExposureDetectionService>(() => ContainerLocator.Current.Resolve<IExposureDetectionService>());
+
+        private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsExposureDetectionBackgroundService>());
+
+        private Lazy<ILoggerService> _loggerService
+            = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
@@ -68,6 +73,15 @@ namespace Covid19Radar.Droid
             if (_exposureNotificationApiService.Value is ExposureNotificationApiService exposureNotificationApiService)
             {
                 SetupENClient(exposureNotificationApiService.Client);
+            }
+
+            try
+            {
+                _exposureDetectionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("failed to Scheduling", exception);
             }
         }
 

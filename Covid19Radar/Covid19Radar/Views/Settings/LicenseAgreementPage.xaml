@@ -7,15 +7,17 @@
     x:Class="Covid19Radar.Views.LicenseAgreementPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns:views="clr-namespace:Covid19Radar.Views"
     Title="{Binding Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-        <views:NavigatePopoverWebView Source="{Binding Url}" Style="{StaticResource DefaultWebView}" />
+        <views:NavigatePopoverWebView
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
+            Source="{Binding Url}"
+            Style="{StaticResource DefaultWebView}" />
 </ContentPage>

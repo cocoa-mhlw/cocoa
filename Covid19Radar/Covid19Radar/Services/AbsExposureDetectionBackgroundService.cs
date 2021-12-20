@@ -11,6 +11,7 @@ using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.Services
 {
@@ -24,6 +25,7 @@ namespace Covid19Radar.Services
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
+        private readonly ILocalPathService _localPathService;
 
         public AbsExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
@@ -31,7 +33,8 @@ namespace Covid19Radar.Services
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IServerConfigurationRepository serverConfigurationRepository
+            IServerConfigurationRepository serverConfigurationRepository,
+            ILocalPathService localPathService
             )
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
@@ -40,6 +43,7 @@ namespace Covid19Radar.Services
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
+            _localPathService = localPathService;
         }
 
         public abstract void Schedule();
@@ -63,14 +67,7 @@ namespace Covid19Radar.Services
                     var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
-                    var targetDiagnosisKeyEntryList = diagnosisKeyEntryList;
-
-#if DEBUG
-                    // Do nothing
-#else
-                    targetDiagnosisKeyEntryList = targetDiagnosisKeyEntryList
-                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
-#endif
+                    var targetDiagnosisKeyEntryList = FilterDiagnosisKeysAfterLastProcessTimestamp(diagnosisKeyEntryList, lastProcessTimestamp);
 
                     if (targetDiagnosisKeyEntryList.Count() == 0)
                     {
@@ -110,9 +107,27 @@ namespace Covid19Radar.Services
             }
         }
 
+        private static IList<DiagnosisKeyEntry> FilterDiagnosisKeysAfterLastProcessTimestamp(
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList,
+            long lastProcessTimestamp
+            )
+        {
+
+#if EN_DEBUG
+            // [NOTE] This is trick for inspecting to behavior ExposureNotification API.
+            // We're able to reset the diagnosisKeys exposure detecting state by change an app that handling EN API.
+            // And so, we have to disable diagnosisKeys filter by lastProcessTimestamp.
+            return diagnosisKeyEntryList;
+#else
+            return diagnosisKeyEntryList
+                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
+#endif
+
+        }
+
         private string PrepareDir(string region)
         {
-            var cacheDir = FileSystem.CacheDirectory;
+            var cacheDir = _localPathService.CacheDirectory;
 
             var baseDir = Path.Combine(cacheDir, DIAGNOSIS_KEYS_DIR);
             if (!Directory.Exists(baseDir))
