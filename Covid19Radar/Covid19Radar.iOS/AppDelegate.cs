@@ -23,6 +23,8 @@ using System.Linq;
 using FormsApplication = Xamarin.Forms.Application;
 using Prism.Navigation;
 using Covid19Radar.Views;
+using System;
+using System.Threading.Tasks;
 using Prism.Ioc;
 
 namespace Covid19Radar.iOS
@@ -284,7 +286,10 @@ namespace Covid19Radar.iOS
             var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+            _ = Task.Run(async () =>
+            {
+                await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+            });
         }
 
         public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
@@ -292,7 +297,10 @@ namespace Covid19Radar.iOS
             var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
+            _ = Task.Run(async () =>
+            {
+                await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
+            });
         }
 
         public void ExposureNotDetected()

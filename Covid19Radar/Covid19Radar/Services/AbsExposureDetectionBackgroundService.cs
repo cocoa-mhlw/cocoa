@@ -67,15 +67,7 @@ namespace Covid19Radar.Services
                     var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
-                    var targetDiagnosisKeyEntryList = diagnosisKeyEntryList;
-
-#if DEBUG
-                    targetDiagnosisKeyEntryList = targetDiagnosisKeyEntryList
-                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
-#else
-                    targetDiagnosisKeyEntryList = targetDiagnosisKeyEntryList
-                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
-#endif
+                    var targetDiagnosisKeyEntryList = FilterDiagnosisKeysAfterLastProcessTimestamp(diagnosisKeyEntryList, lastProcessTimestamp);
 
                     if (targetDiagnosisKeyEntryList.Count() == 0)
                     {
@@ -113,6 +105,22 @@ namespace Covid19Radar.Services
                     RemoveFiles(downloadedFileNameList);
                 }
             }
+        }
+
+        private static IList<DiagnosisKeyEntry> FilterDiagnosisKeysAfterLastProcessTimestamp(
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList,
+            long lastProcessTimestamp
+            )
+        {
+
+#if EN_DEBUG
+            return diagnosisKeyEntryList
+                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
+#else
+            return diagnosisKeyEntryList
+                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
+#endif
+
         }
 
         private string PrepareDir(string region)

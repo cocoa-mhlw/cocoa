@@ -217,6 +217,7 @@ namespace Covid19Radar
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
+            container.Register<IDeviceInfoUtility, DeviceInfoUtility>(Reuse.Singleton);
         }
 
         protected override void OnStart()
