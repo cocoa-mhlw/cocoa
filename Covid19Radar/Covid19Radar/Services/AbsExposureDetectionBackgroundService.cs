@@ -16,8 +16,6 @@ namespace Covid19Radar.Services
 {
     public abstract class AbsExposureDetectionBackgroundService : IBackgroundService
     {
-        private const string DIAGNOSIS_KEYS_DIR = "diagnosis_keys";
-
         private readonly IDiagnosisKeyRepository _diagnosisKeyRepository;
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
@@ -175,19 +173,14 @@ namespace Covid19Radar.Services
 
                 _loggerService.Info($"diagnosisKeyListProvideServerUrl: {diagnosisKeyListProvideServerUrl}");
 
-                var tmpDir = PrepareDir(region, subRegion);
+                var diagnosisKeysDir = ILocalPathService.GetDiagnosisKeysDir(_localPathService.CacheDirectory, region, subRegion);
+                _ = Directory.CreateDirectory(diagnosisKeysDir);
 
                 var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                 var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region, subRegion);
-                var targetDiagnosisKeyEntryList = diagnosisKeyEntryList;
+                var targetDiagnosisKeyEntryList = FilterDiagnosisKeysAfterLastProcessTimestamp(diagnosisKeyEntryList, lastProcessTimestamp);
 
-#if DEBUG
-                // Do nothing
-#else
-                targetDiagnosisKeyEntryList = targetDiagnosisKeyEntryList
-                    .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
-#endif
 
                 if (targetDiagnosisKeyEntryList.Count() == 0)
                 {
@@ -197,7 +190,7 @@ namespace Covid19Radar.Services
 
                 foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
                 {
-                    string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir, cancellationToken);
+                    string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, diagnosisKeysDir, cancellationToken);
 
                     _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
 
@@ -233,37 +226,6 @@ namespace Covid19Radar.Services
             return diagnosisKeyEntryList
                         .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
 #endif
-
-        }
-
-        private string PrepareDir(string region, string subRegion)
-        {
-            var cacheDir = _localPathService.CacheDirectory;
-
-            var dir = Path.Combine(cacheDir, DIAGNOSIS_KEYS_DIR);
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
-
-            dir = Path.Combine(dir, region);
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
-
-            if (!string.IsNullOrEmpty(subRegion))
-            {
-                return dir;
-            }
-
-            dir = Path.Combine(dir, subRegion);
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
-
-            return dir;
         }
 
         private void RemoveFiles(List<DiagnosisKeyFile> fileList)
