@@ -1726,5 +1726,17 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("AnnotationSymbol2", resourceCulture);
             }
         }
+        
+        public static string HomePageImageAnnotationText {
+            get {
+                return ResourceManager.GetString("HomePageImageAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string ContactedPageImageAnnotationText {
+            get {
+                return ResourceManager.GetString("ContactedPageImageAnnotationText", resourceCulture);
+            }
+        }
     }
 }

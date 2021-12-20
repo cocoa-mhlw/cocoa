@@ -1120,4 +1120,12 @@
     <value>※2</value>
     <comment>※2</comment>
   </data>
+  <data name="HomePageImageAnnotationText" xml:space="preserve">
+    <value>「ホーム」画面のイメージ画像</value>
+    <comment>「ホーム」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedPageImageAnnotationText" xml:space="preserve">
+    <value>「陽性者との接触確認」画面のイメージ画像</value>
+    <comment>「陽性者との接触確認」画面のイメージ画像</comment>
+  </data>
 </root>

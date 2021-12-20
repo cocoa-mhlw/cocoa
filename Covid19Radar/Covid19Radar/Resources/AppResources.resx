@@ -1230,4 +1230,12 @@ Note: this app does not collect users’ location information.</value>
     <value></value>
     <comment>日本語のみ：※2</comment>
   </data>
+  <data name="HomePageImageAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：「ホーム」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedPageImageAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：「陽性者との接触確認」画面のイメージ画像</comment>
+  </data>
 </root>
