@@ -100,14 +100,9 @@ namespace Covid19Radar.Api.Models
                 if (string.IsNullOrWhiteSpace(KeyData)) return false;
                 if (RollingPeriod > Constants.ActiveRollingPeriod) return false;
 
-                var dateTime = DateTime.UtcNow;
+                var dateTime = DateTime.UtcNow.Date;
                 var todayRollingStartNumber = dateTime.ToRollingStartNumber();
 
-                // 00:00:00.000
-                dateTime = dateTime.AddHours(-dateTime.Hour)
-                    .AddMinutes(-dateTime.Minute)
-                    .AddSeconds(-dateTime.Second)
-                    .AddMilliseconds(-dateTime.Millisecond);
                 var oldestRollingStartNumber = dateTime.AddDays(Constants.OutOfDateDays).ToRollingStartNumber();
                 if (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > todayRollingStartNumber) return false;
                 return true;

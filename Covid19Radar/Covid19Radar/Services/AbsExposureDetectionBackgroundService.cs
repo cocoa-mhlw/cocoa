@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
-using Xamarin.Essentials;
-using Covid19Radar.Common;
 using Chino;
 
 namespace Covid19Radar.Services
@@ -218,6 +216,24 @@ namespace Covid19Radar.Services
             _loggerService.EndMethod();
 
             return downloadedFileList;
+        }
+
+        private static IList<DiagnosisKeyEntry> FilterDiagnosisKeysAfterLastProcessTimestamp(
+            IList<DiagnosisKeyEntry> diagnosisKeyEntryList,
+            long lastProcessTimestamp
+            )
+        {
+
+#if EN_DEBUG
+            // [NOTE] This is trick for inspecting to behavior ExposureNotification API.
+            // We're able to reset the diagnosisKeys exposure detecting state by change an app that handling EN API.
+            // And so, we have to disable diagnosisKeys filter by lastProcessTimestamp.
+            return diagnosisKeyEntryList;
+#else
+            return diagnosisKeyEntryList
+                        .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
+#endif
+
         }
 
         private string PrepareDir(string region, string subRegion)

@@ -131,7 +131,7 @@ namespace Covid19Radar.Services
 
         private static string GetPadding(Random random = null)
         {
-            if (random == null)
+            if (random is null)
             {
                 random = new Random();
             }

@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Covid19Radar.Common;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 
@@ -72,22 +71,26 @@ namespace Covid19Radar.Repository
 
         public string? ExposureDataCollectServerEndpoint { get; set; }
 
-        public virtual IList<string> ExposureDataCollectServerUrls
-        {
-            get
-            {
-                return Regions
+        public virtual IList<string> ExposureDataCollectServerUrls => Regions
                     .Select(region => ExposureDataCollectServerEndpoint?.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
                     .Where(url => url != null)
                     .Distinct()
                     .ToList();
-            }
-        }
 
         public Task SaveAsync();
 
         public Task LoadAsync();
 
+        /// <summary>
+        /// Combine paths for constructing URL.
+        ///
+        /// `Path.Combine method` will remove elements before, if any element have `/` as head of string.
+        /// This method keep all elements and combine these for constructing URL.
+        ///
+        /// See `Covid19Radar.UnitTests.Repository.ServerConfigurationRepositoryTests` for check behavior the method.
+        /// </summary>
+        /// <param name="paths"></param>
+        /// <returns></returns>
         public static string CombineAsUrl(params string[] paths)
         {
             if (paths is null || paths.Length == 0)
@@ -329,8 +332,13 @@ namespace Covid19Radar.Repository
         public const string PLACEHOLDER_REGION = "{region}";
         public const string PLACEHOLDER_SUBREGION = "{subregion}";
 
-        [JsonProperty("version")]
-        public int Version = 1;
+        /// <summary>
+        /// Specifies the format version of configuration file.
+        /// If any events will be occurred that require migration process.(e.g. Add/delete member, change structure, or rename key)
+        /// This value will be increment.
+        /// </summary>
+        [JsonProperty("format_version")]
+        public int FormatVersion = 1;
 
         [JsonProperty("user_register_api_endpoint")]
         public string UserRegisterApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
