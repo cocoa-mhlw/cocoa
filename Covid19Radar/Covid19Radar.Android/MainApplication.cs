@@ -118,7 +118,7 @@ namespace Covid19Radar.Droid
             var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            Task.Run(async () =>
+            _ = Task.Run(async () =>
             {
                 await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
             });
@@ -129,7 +129,7 @@ namespace Covid19Radar.Droid
             var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            Task.Run(async () =>
+            _ = Task.Run(async () =>
             {
                 await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
             });

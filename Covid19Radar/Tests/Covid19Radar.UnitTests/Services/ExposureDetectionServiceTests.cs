@@ -66,7 +66,7 @@ namespace Covid19Radar.UnitTests.Services {
 
         private ExposureDetectionService CreateService()
         {
-            var exposureConfigurationRepository = new  ExposureConfigurationRepository(
+            var exposureConfigurationRepository = new ExposureConfigurationRepository(
                 clientService.Object,
                 localPathService.Object,
                 preferencesService.Object,
@@ -212,7 +212,7 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<string>(),
                     It.IsAny<List<DailySummary>>(),
                     It.IsAny<List<ExposureWindow>>()));
-            deviceInfoUtility.Setup(x => x.Model).Returns("unknown");
+            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
 
             // Test Case
@@ -267,7 +267,7 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<string>(),
                     It.IsAny<List<DailySummary>>(),
                     It.IsAny<List<ExposureWindow>>()));
-            deviceInfoUtility.Setup(x => x.Model).Returns("unknown");
+            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
 
             // Test Case
@@ -320,7 +320,7 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<string>(),
                     It.IsAny<ExposureSummary>(),
                     It.IsAny<List<ExposureInformation>>()));
-            deviceInfoUtility.Setup(x => x.Model).Returns("unknown");
+            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
 
             // Test Case
@@ -375,7 +375,7 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<string>(),
                     It.IsAny<ExposureSummary>(),
                     It.IsAny<List<ExposureInformation>>()));
-            deviceInfoUtility.Setup(x => x.Model).Returns("unknown");
+            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
 
             // Test Case
