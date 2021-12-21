@@ -119,8 +119,8 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                var success = await exposureNotificationApiService.StartExposureNotificationAsync();
-                if (success)
+                var isSuccess = await exposureNotificationApiService.StartExposureNotificationAsync();
+                if (isSuccess)
                 {
                     await UpdateView();
                 }
