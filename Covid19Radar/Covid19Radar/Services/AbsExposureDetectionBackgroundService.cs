@@ -85,7 +85,6 @@ namespace Covid19Radar.Services
                     var downloadedFileNames = string.Join("\n", downloadedFileNameList);
                     _loggerService.Debug(downloadedFileNames);
 
-                    _exposureNotificationApiService.ExposureConfiguration = exposureConfiguration;
                     await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
                         exposureConfiguration,

@@ -23,7 +23,7 @@ namespace Covid19Radar.Services
 
         public Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations);
 
-        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion);
+        public Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion);
     }
 
     public class ExposureDetectionService : IExposureDetectionService
@@ -138,18 +138,15 @@ namespace Covid19Radar.Services
                 );
         }
 
-        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion)
+        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion)
         {
             _loggerService.Info("ExposureNotDetected");
 
-            _ = Task.Run(async () =>
-            {
-                await _exposureDataCollectServer.UploadExposureDataAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersion
-                    );
-            });
+            await _exposureDataCollectServer.UploadExposureDataAsync(
+                exposureConfiguration,
+                _deviceInfoUtility.Model,
+                enVersion
+                );
         }
     }
 }
