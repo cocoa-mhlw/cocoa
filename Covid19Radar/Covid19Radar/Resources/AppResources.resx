@@ -384,6 +384,18 @@
     <value>Share this app</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+  <data name="LowRiskContactPageTitle" xml:space="preserve">
+    <value>Low lisk close contacts with COVID-19 positive users</value>
+    <comment>リスクが極めて低い陽性者との接触状況</comment>
+  </data>
+  <data name="LowRiskContactPageLabel" xml:space="preserve">
+    <value>A low risk　signal has been recieved for 14 days</value>
+    <comment>直近14日間に、リスクが極めて低い陽性者との接触がありました</comment>
+  </data>
+  <data name="LowRiskContactPageDescription" xml:space="preserve">
+    <value>A low risk　signal has been recieved. It is few meters away. Please stay with preventing Infection.</value>
+    <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+  </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
     <value>Thank you for registering your test results!</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>

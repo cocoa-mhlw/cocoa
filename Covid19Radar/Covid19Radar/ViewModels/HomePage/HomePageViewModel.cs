@@ -148,6 +148,9 @@ namespace Covid19Radar.ViewModels
 
             await localNotificationService.DismissExposureNotificationAsync();
 
+            await NavigationService.NavigateAsync(nameof(LowRiskContactPage));
+            return;
+
             loggerService.Info($"Exposure count: {count}");
             if (count > 0)
             {

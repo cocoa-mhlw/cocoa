@@ -362,6 +362,8 @@
     <BundleResource Include="Resources\ja.lproj\icon_menu%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_information%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_information%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
