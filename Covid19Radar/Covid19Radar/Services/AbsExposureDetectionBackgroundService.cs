@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
-using Xamarin.Essentials;
-using Covid19Radar.Common;
 
 namespace Covid19Radar.Services
 {
@@ -87,6 +85,7 @@ namespace Covid19Radar.Services
                     var downloadedFileNames = string.Join("\n", downloadedFileNameList);
                     _loggerService.Debug(downloadedFileNames);
 
+                    _exposureNotificationApiService.ExposureConfiguration = exposureConfiguration;
                     await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
                         exposureConfiguration,

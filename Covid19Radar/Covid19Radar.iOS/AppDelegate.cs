@@ -23,7 +23,6 @@ using System.Linq;
 using FormsApplication = Xamarin.Forms.Application;
 using Prism.Navigation;
 using Covid19Radar.Views;
-using System;
 using System.Threading.Tasks;
 using Prism.Ioc;
 
@@ -182,7 +181,7 @@ namespace Covid19Radar.iOS
             {
                 exposureNotificationApiService.UserExplanation = AppResources.LocalNotificationDescription;
 
-#if DEBUG
+#if EN_DEBUG
                 exposureNotificationApiService.IsTest = true;
 #else
                 exposureNotificationApiService.IsTest = false;

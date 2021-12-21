@@ -10,7 +10,6 @@ using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
-using Xamarin.Essentials;
 
 namespace Covid19Radar.Services
 {
