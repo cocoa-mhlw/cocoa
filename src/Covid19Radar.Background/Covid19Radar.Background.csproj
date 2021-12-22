@@ -26,6 +26,9 @@
     <ProjectReference Include="..\Covid19Radar.Api.Common\Covid19Radar.Api.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Converters\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -45,6 +48,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converters\" />
   </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties host_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

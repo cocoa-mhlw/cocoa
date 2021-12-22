@@ -1,17 +1,13 @@
-﻿/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-
-using Covid19Radar.Api.Common;
+﻿using Covid19Radar.Api.Common;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Background.Protobuf;
 using Google.Protobuf;
 
-namespace Covid19Radar.Background.Extentions
+namespace Covid19Radar.Background.Converters
 {
-    public static class TemporaryExposureKeyModelExtension
+    public static class TemporaryExposureKeyConverter
     {
-        public static TemporaryExposureKey ToKey(this TemporaryExposureKeyModel tek)
+        public static TemporaryExposureKey ConvertToKey(TemporaryExposureKeyModel tek)
         {
             var key = new TemporaryExposureKey()
             {

@@ -5,10 +5,7 @@
 using Covid19Radar.Background.Protobuf;
 using Google.Protobuf;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Covid19Radar.Api.Tests.Protobuf
 {

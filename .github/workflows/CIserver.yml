@@ -60,14 +60,36 @@ jobs:
       uses: microsoft/setup-msbuild@v1
     - name: Build
       run: msbuild ${{ github.workspace }}/src/Covid19Radar.Background/Covid19Radar.Background.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
-  test:
-    name: Test-ServerApi
+  test_common:
+    name: Test-ServerApi-Common
     runs-on: ubuntu-latest
     needs: [build_serverapi, build_serverapi_common, build_serverapi_background]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Execute Unit Tests
+      run: dotnet test ${{ github.workspace }}/src/Covid19Radar.Api.Common.Tests/
+      env:
+        DOTNET_CLI_TELEMETRY_OPTOUT: true
+  test_api:
+    name: Test-ServerApi
+    runs-on: ubuntu-latest
+    needs: [test_common]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Execute Unit Tests
       run: dotnet test ${{ github.workspace }}/src/Covid19Radar.Api.Tests/
+      env:
+        DOTNET_CLI_TELEMETRY_OPTOUT: true
+  test_background:
+    name: Test-ServerBackground
+    runs-on: ubuntu-latest
+    needs: [test_common]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Execute Unit Tests
+      run: dotnet test ${{ github.workspace }}/src/Covid19Radar.Background.Tests/
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: true

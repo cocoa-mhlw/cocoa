@@ -2,10 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
-using Covid19Radar.Api.Common;
 using Covid19Radar.Api.Models;
-using Covid19Radar.Background.Extentions;
+using Covid19Radar.Api.Tests.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Covid19Radar.Api.Tests.Common.Models
@@ -27,7 +25,7 @@ namespace Covid19Radar.Api.Tests.Common.Models
             // preparation
             var model = new TemporaryExposureKeyModel();
             // model property access
-            Helper.ModelTestHelper.PropetiesTest(model);
+            ModelTestHelper.PropetiesTest(model);
         }
 
         [DataTestMethod]
@@ -54,20 +52,6 @@ namespace Covid19Radar.Api.Tests.Common.Models
             model.RollingStartIntervalNumber = start;
             // action
             Assert.AreEqual(expected, model.GetRollingStartUnixTimeSeconds());
-        }
-
-        [TestMethod]
-        public void ToKeyMethodTest()
-        {
-            // preparation
-            var model = new TemporaryExposureKeyModel();
-            model.KeyData = new byte[64];
-            // action
-            var actual = model.ToKey();
-            CollectionAssert.AreEqual(model.KeyData, actual.KeyData.ToByteArray());
-            Assert.AreEqual(model.RollingPeriod, actual.RollingPeriod);
-            Assert.AreEqual(model.RollingStartIntervalNumber, actual.RollingStartIntervalNumber);
-            Assert.AreEqual(model.TransmissionRiskLevel, actual.TransmissionRiskLevel);
         }
 
     }

@@ -5,7 +5,7 @@
 using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
-using Covid19Radar.Background.Extentions;
+using Covid19Radar.Background.Converters;
 using Covid19Radar.Background.Protobuf;
 using Google.Protobuf;
 using Microsoft.Extensions.Configuration;
@@ -211,7 +211,7 @@ namespace Covid19Radar.Background.Services
             while (current.Any())
             {
                 var exportKeyModels = current.Take(MaxKeysPerFile).ToArray();
-                var exportKeys = exportKeyModels.Select(_ => _.ToKey()).ToArray();
+                var exportKeys = exportKeyModels.Select(key => TemporaryExposureKeyConverter.ConvertToKey(key)).ToArray();
                 current = current.Skip(MaxKeysPerFile);
 
                 var signatureInfo = SignatureService.Create();
