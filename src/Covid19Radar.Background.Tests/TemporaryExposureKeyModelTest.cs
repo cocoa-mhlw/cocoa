@@ -6,7 +6,7 @@ using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Tests.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Covid19Radar.Api.Tests.Common.Models
+namespace Covid19Radar.Background.Tests.Common.Models
 {
     [TestClass]
     [TestCategory("Models")]

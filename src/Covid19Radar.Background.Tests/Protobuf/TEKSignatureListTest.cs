@@ -7,7 +7,7 @@ using Google.Protobuf;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 
-namespace Covid19Radar.Api.Tests.Protobuf
+namespace Covid19Radar.Background.Tests.Protobuf
 {
     [TestClass]
     [TestCategory("Protobuf")]
@@ -26,7 +26,7 @@ namespace Covid19Radar.Api.Tests.Protobuf
             // preparation
             var model = new TEKSignatureList();
             // model property access
-            Helper.ModelTestHelper.PropetiesTest(model);
+            Covid19Radar.Api.Tests.Helper.ModelTestHelper.PropetiesTest(model);
         }
 
         [TestMethod]
