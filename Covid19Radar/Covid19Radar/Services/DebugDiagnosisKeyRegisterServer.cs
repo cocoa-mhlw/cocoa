@@ -115,7 +115,7 @@ namespace Covid19Radar.Services
 
         public IList<Tek> temporaryExposureKeys;
 
-        [JsonProperty("idempotency_key")]
+        [JsonProperty("keys")]
         public string IdempotencyKey { get; set; }
 
         public RequestDiagnosisKey(
@@ -144,14 +144,14 @@ namespace Covid19Radar.Services
     [JsonObject]
     public class Tek
     {
-        public readonly string key;
+        public readonly string keyData;
         public readonly long rollingStartNumber;
         public readonly long rollingPeriod;
         public int reportType;
 
         public Tek(TemporaryExposureKey tek)
         {
-            key = Convert.ToBase64String(tek.KeyData);
+            keyData = Convert.ToBase64String(tek.KeyData);
             rollingStartNumber = tek.RollingStartIntervalNumber;
             rollingPeriod = tek.RollingPeriod;
             reportType = (int)ReportType.ConfirmedClinicalDiagnosis;
