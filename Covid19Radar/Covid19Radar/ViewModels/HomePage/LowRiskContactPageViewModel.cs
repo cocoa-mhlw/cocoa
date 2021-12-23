@@ -39,13 +39,6 @@ namespace Covid19Radar.ViewModels
             TotalContactMinutes = $"直近14日間に合計{totalNumberOfExposureMinutes}分間";
         }
 
-        private string _totalContactMinutes;
-        public string TotalContactMinutes
-        {
-            get => _totalContactMinutes;
-            set => SetProperty(ref _totalContactMinutes, value);
-        }
-
         private async Task<int> calcTotalNumberOfExposureMinutes()
         {
             var windows = await userDataRepository.GetExposureWindowsAsync();
@@ -58,5 +51,12 @@ namespace Covid19Radar.ViewModels
 
         private int aggregateSecondsSinceLastScans(Chino.ExposureWindow window) =>
             window.ScanInstances.Select(x => x.SecondsSinceLastScan).Aggregate(0, (sum, x) => sum + x);
+
+        private string _totalContactMinutes;
+        public string TotalContactMinutes
+        {
+            get => _totalContactMinutes;
+            set => SetProperty(ref _totalContactMinutes, value);
+        }
     }
 }
