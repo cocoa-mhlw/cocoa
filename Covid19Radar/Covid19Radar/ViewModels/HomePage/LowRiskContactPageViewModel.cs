@@ -42,11 +42,13 @@ namespace Covid19Radar.ViewModels
         private async Task<int> calcTotalNumberOfExposureMinutes()
         {
             var windows = await userDataRepository.GetExposureWindowsAsync();
-            var numberOfExposureMinutesList = windows
+            var numberOfExposureSecondsList = windows
                 .ToArray()
                 .Select(aggregateSecondsSinceLastScans);
 
-            return numberOfExposureMinutesList.Aggregate(0, (sum, x) => sum + x);
+            var totalNumberOfExposureSeconds = numberOfExposureSecondsList.Aggregate(0, (sum, x) => sum + x);
+
+            return totalNumberOfExposureSeconds / 60;
         }
 
         private int aggregateSecondsSinceLastScans(Chino.ExposureWindow window) =>
