@@ -12,8 +12,6 @@ namespace Covid19Radar.Api.Models
 {
     public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
-        public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
-
         private const int TIME_WINDOW_IN_SEC = 60 * 10;
 
         // RFC3339
@@ -152,7 +150,7 @@ namespace Covid19Radar.Api.Models
 
         public void SetDaysSinceOnsetOfSymptoms()
         {
-            var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null).ToUniversalTime().Date;
+            var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, Constants.FORMAT_TIMESTAMP, null).ToUniversalTime().Date;
             foreach (var key in Keys)
             {
                 var dateOffset = key.GetDate() - symptomOnsetDate;

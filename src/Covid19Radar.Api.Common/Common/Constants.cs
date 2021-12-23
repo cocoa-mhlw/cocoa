@@ -10,6 +10,11 @@ namespace Covid19Radar.Api.Common
     public static class Constants
     {
         /// <summary>
+        /// Timestamp format - RFC 3339
+        /// </summary>
+        public const string FORMAT_TIMESTAMP = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
+
+        /// <summary>
         /// Number of days not processed or deleted
         /// </summary>
         public const int OutOfDateDays = -14;

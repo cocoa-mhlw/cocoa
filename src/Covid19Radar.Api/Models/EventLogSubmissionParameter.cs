@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using Covid19Radar.Api.Common;
 using Newtonsoft.Json;
 
 namespace Covid19Radar.Api.Models
@@ -46,5 +48,34 @@ namespace Covid19Radar.Api.Models
             => string.Join(",", EventLogs.Select(el => el.ClearText));
 
         #endregion
+
+        public class EventLog
+        {
+            [JsonProperty("has_concent")]
+            public bool HasConsent { get; } = false;
+
+            [JsonProperty("epoch")]
+            public long Epoch { get; }
+
+            [JsonProperty("type")]
+            public string Type { get; }
+
+            [JsonProperty("subtype")]
+            public string Subtype { get; }
+
+            [JsonProperty("content")]
+            public readonly string Content;
+
+            [JsonProperty("timestamp")]
+            public string Timestamp
+            {
+                get => DateTime.UnixEpoch.AddSeconds(Epoch).ToString(Constants.FORMAT_TIMESTAMP);
+            }
+
+            [JsonIgnore]
+            public long Created { get; internal set; }
+
+            public string ClearText => string.Join(".", HasConsent, Epoch, Type, Subtype, Content);
+        }
     }
 }
