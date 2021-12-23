@@ -1,0 +1,32 @@
+{
+  "idempotency_key": "E09585E4-A6A9-4E4A-84C3-0FB8B23B2498",
+  "platform": "Android",
+  "appPackageName": "jp.go.mhlw.covid19radar",
+  "deviceVerificationPayload": "dummy value",
+  "event_logs": [
+    {
+      "has_concent": true,
+      "epoch": 1640256881,
+      "type": "ExposureNotification",
+      "subtype": "ExposureData",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam",
+      "timestamp": "2021-12-23T19:02:05.123456+0900"
+    },
+    {
+      "has_concent": true,
+      "epoch": 1640257311,
+      "type": "ExposureNotification",
+      "subtype": "ExposureData",
+      "content": "Aenean sit amet dui blandit, faucibus neque sollicitudin, sollicitudin nisi. Vivamus mattis felis vitae lorem ultrices interdum. Nam massa orci, hendrerit in mauris at, ultricies eleifend tortor. Etiam neque dolor, tincidunt a scelerisque id, commodo at purus. Mauris ac ultrices quam. Aliquam elementum diam venenatis orci tempor finibus. Donec ultricies interdum tortor, vitae imperdiet orci porta ac.",
+      "timestamp": "2021-12-23T22:05:05.123456+0900"
+    },
+    {
+      "has_concent": true,
+      "epoch": 1640258212,
+      "type": "ExposureNotification",
+      "subtype": "ExposureData",
+      "content": "Etiam venenatis condimentum maximus. Morbi eu consectetur erat. Nam in tellus velit. Cras accumsan mattis lectus quis vulputate. Fusce bibendum odio risus, eget hendrerit enim volutpat nec. Praesent sagittis, metus et ullamcorper interdum, lacus dolor consectetur quam, ut euismod elit erat quis nisi. Phasellus ac condimentum lorem. Etiam suscipit, odio at elementum malesuada, nisl metus posuere lorem, non sollicitudin quam justo ac enim. Vestibulum finibus, sapien et dignissim commodo, felis quam tincidunt odio, ac luctus tortor nibh ut nunc. Phasellus lobortis posuere rutrum. Donec dictum nec quam ac cursus. Aliquam erat volutpat. In vitae ullamcorper ipsum. Maecenas vestibulum nibh purus. Aliquam erat volutpat.",
+      "timestamp": "2021-12-23T22:05:05.123456+0900"
+    }
+  ]
+}

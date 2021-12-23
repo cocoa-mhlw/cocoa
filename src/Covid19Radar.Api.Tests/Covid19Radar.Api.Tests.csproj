@@ -27,4 +27,16 @@
     <ProjectReference Include="..\Covid19Radar.Background\Covid19Radar.Background.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Files\" />
+    <None Remove="Files\eventlog_submission_parameter1.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\eventlog_submission_parameter1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

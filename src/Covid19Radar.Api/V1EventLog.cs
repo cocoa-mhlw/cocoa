@@ -4,6 +4,7 @@
 
 using System;
 using System.IO;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,17 +24,19 @@ namespace Covid19Radar.Api
 {
     public class V1EventLog
     {
+        private const string HEADER_CONTENT_LENGTH = "Content-Length";
+
         private readonly IEventLogRepository _eventLogRepository;
         private readonly IValidationServerService _validationServerService;
         private readonly IDeviceValidationService _deviceValidationService;
 
-        private readonly ILogger<RegisterApi> _logger;
+        private readonly ILogger<V1EventLog> _logger;
 
         public V1EventLog(
             IEventLogRepository eventLogRepository,
             IValidationServerService validationServerService,
             IDeviceValidationService deviceValidationService,
-            ILogger<RegisterApi> logger
+            ILogger<V1EventLog> logger
             )
         {
             _eventLogRepository = eventLogRepository;
@@ -47,8 +50,29 @@ namespace Covid19Radar.Api
         [HttpTrigger(AuthorizationLevel.Function, "put", Route = "v1/event_log")] HttpRequest req
         )
         {
-            var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             _logger.LogInformation($"{nameof(RunAsync)}");
+
+            // Check Content-Length.
+            long contentLength = -1;
+            string contentLengthHeader = req.Headers[HEADER_CONTENT_LENGTH].ToString();
+            long.TryParse(contentLengthHeader, out contentLength);
+
+            if (contentLength < 0)
+            {
+                return new BadRequestErrorMessageResult("HTTP-Heaer Content-Length must be set.");
+            }
+            else if(contentLength > Constants.MAX_EVENT_LOG_PAYLOAD)
+            {
+                return new StatusCodeResult((int)HttpStatusCode.RequestEntityTooLarge);
+            }
+
+            var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+
+            // Check RequestBody size.
+            if (Encoding.ASCII.GetBytes(requestBody).LongLength > Constants.MAX_EVENT_LOG_PAYLOAD)
+            {
+                return new StatusCodeResult((int)HttpStatusCode.RequestEntityTooLarge);
+            }
 
             // Check Valid Route
             IValidationServerService.ValidateResult validateResult = _validationServerService.Validate(req);

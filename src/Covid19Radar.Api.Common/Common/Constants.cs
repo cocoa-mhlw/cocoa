@@ -44,5 +44,10 @@ namespace Covid19Radar.Api.Common
         /// TemporaryExposureKey.DAYS_SINCE_ONSET_OF_SYMPTOMS_UNKNOWN
         /// </seealso>
         public const int DaysSinceOnsetOfSymptomsMissingValue = int.MaxValue;
+
+        /// <summary>
+        /// Limit to the size of an EventLog-payload.
+        /// </summary>
+        public const long MAX_EVENT_LOG_PAYLOAD = 1024 * 1024 * 10;
     }
 }
