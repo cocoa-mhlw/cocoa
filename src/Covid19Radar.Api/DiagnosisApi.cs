@@ -88,7 +88,7 @@ namespace Covid19Radar.Api
                       $"deviceVerificationPayload: {diagnosis?.DeviceVerificationPayload}, " +
                       $"appPackageName: {diagnosis?.AppPackageName}, " +
                       $"padding: {diagnosis?.Padding}");
-            if (false == await DeviceCheck.Validation(diagnosis, reqTime)) 
+            if (false == await DeviceCheck.Validation(diagnosis.Platform, diagnosis, reqTime))
             {
                 Logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
