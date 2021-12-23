@@ -10,9 +10,9 @@ using System.Linq;
 namespace Covid19Radar.Api.Models
 {
 
-	public class DiagnosisSubmissionParameter : IPayload, IDeviceVerification
+    public class V2DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
-		private const int TRANSMISSION_RISK_LEVEL = 4;
+		public const int TRANSMISSION_RISK_LEVEL = 4;
 
 		[JsonProperty("keys")]
 		public Key[] Keys { get; set; }
@@ -35,6 +35,31 @@ namespace Covid19Radar.Api.Models
 		public string KeysTextForDeviceVerification
 			=> string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
 
+		#region Apple Device Check
+
+		[JsonIgnore]
+		public string DeviceToken
+			=> DeviceVerificationPayload;
+
+		[JsonIgnore]
+		public string TransactionIdSeed
+			=> AppPackageName
+				+ KeysTextForDeviceVerification
+				+ IAndroidDeviceVerification.GetRegionString(Regions);
+
+		#endregion
+
+		#region Android SafetyNet Attestation API
+
+		[JsonIgnore]
+		public string JwsPayload
+			=> DeviceVerificationPayload;
+
+		[JsonIgnore]
+		public string ClearText
+			=> string.Join("|", AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
+
+		#endregion
 		public class Key
 		{
 			[JsonProperty("keyData")]
@@ -43,7 +68,8 @@ namespace Covid19Radar.Api.Models
 			public uint RollingStartNumber { get; set; }
 			[JsonProperty("rollingPeriod")]
 			public uint RollingPeriod { get; set; }
-			public TemporaryExposureKeyModel ToModel(DiagnosisSubmissionParameter _, ulong timestamp)
+
+			public TemporaryExposureKeyModel ToModel(V2DiagnosisSubmissionParameter _, ulong timestamp)
 			{
 				return new TemporaryExposureKeyModel()
 				{

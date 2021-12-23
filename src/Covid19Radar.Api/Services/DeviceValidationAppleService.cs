@@ -55,22 +55,19 @@ namespace Covid19Radar.Api.Services
         /// <remarks>
         /// https://developer.apple.com/documentation/devicecheck/accessing_and_modifying_per-device_data
         /// </remarks>
-        public async Task<bool> Validation(IAppleDeviceVerification appleDeviceVerification, DateTimeOffset requestTime, AuthorizedAppInformation app)
+        public async Task<bool> Validation(IAppleDeviceVerification deviceVerification, DateTimeOffset requestTime, AuthorizedAppInformation app)
         {
             var payload = new ApplePayload()
             {
-                DeviceToken = appleDeviceVerification.DeviceVerificationPayload,
+                DeviceToken = deviceVerification.DeviceToken,
                 Timestamp = requestTime.ToUnixTimeMilliseconds()
             };
 
             using (var sha = SHA256.Create())
             {
-                var value = Encoding.UTF8.GetBytes(
-                    appleDeviceVerification.AppPackageName
-                    + appleDeviceVerification.KeysTextForDeviceVerification
-                    + string.Join(',', appleDeviceVerification.Regions)
+                payload.TransactionId = Convert.ToBase64String(
+                    sha.ComputeHash(Encoding.UTF8.GetBytes(deviceVerification.TransactionIdSeed))
                     );
-                payload.TransactionId = Convert.ToBase64String(sha.ComputeHash(value));
             }
 
             Logger.LogInformation($"{nameof(Validation)} DeviceCheckKeyId:{app.DeviceCheckKeyId} DeviceCheckTeamId:{app.DeviceCheckTeamId} DeviceCheckPrivateKey:{app.DeviceCheckPrivateKey}");
