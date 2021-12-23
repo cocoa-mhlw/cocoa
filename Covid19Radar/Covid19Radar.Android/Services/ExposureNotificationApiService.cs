@@ -5,7 +5,6 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Android.Content;
 using Android.Gms.Common.Apis;
 using Chino;
 using Chino.Android.Google;
@@ -47,6 +46,11 @@ namespace Covid19Radar.Droid.Services
                 {
                     apiException.Status.StartResolutionForResult(Platform.CurrentActivity, REQUEST_EN_START);
                     return false;
+                }
+                else if(apiException.StatusCode == CommonStatusCodes.ApiNotConnected)
+                {
+                    throw new ENException(ENException.Code_Android.FAILED_NOT_SUPPORTED,
+                        "StartExposureNotificationAsync ApiNotConnected");
                 }
                 else
                 {

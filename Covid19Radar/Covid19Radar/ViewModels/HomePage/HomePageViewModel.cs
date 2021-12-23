@@ -202,6 +202,12 @@ namespace Covid19Radar.ViewModels
                 }
             }
             else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.USER_PROFILE_NOT_SUPPORT)
+            )
+            {
+                await dialogService.ShowUserProfileNotSupportAsync();
+            }
+            else if (
             statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED)
             )
             {
@@ -266,7 +272,8 @@ namespace Covid19Radar.ViewModels
                 || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
                 || statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
                 || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
-                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED);
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.USER_PROFILE_NOT_SUPPORT);
             var canConfirmExposure = _userDataRepository.IsCanConfirmExposure();
 
             if (isStopped)

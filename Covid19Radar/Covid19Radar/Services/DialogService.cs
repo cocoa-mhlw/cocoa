@@ -55,6 +55,14 @@ namespace Covid19Radar.Services
                 AppResources.ButtonCancel);
         }
 
+        public async Task ShowUserProfileNotSupportAsync()
+        {
+            await AlertAsync(
+                "User-profile is not suppoted",
+                "ユーザープロファイルはサポートしていません。",
+                AppResources.ButtonOk);
+        }
+
         public async Task<bool> ConfirmAsync(string message, string title = null, string okText = null, string cancelText = null) =>
             await UserDialogs.Instance.ConfirmAsync(message, title, okText, cancelText);
 
