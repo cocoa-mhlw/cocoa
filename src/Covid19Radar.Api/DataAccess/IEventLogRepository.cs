@@ -9,6 +9,6 @@ namespace Covid19Radar.Api.DataAccess
 {
     public interface IEventLogRepository
     {
-        Task UpsertAsync(EventLog eventLog);
+        Task UpsertAsync(EventLogModel eventLog);
     }
 }

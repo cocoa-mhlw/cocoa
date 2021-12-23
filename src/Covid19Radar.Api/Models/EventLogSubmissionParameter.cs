@@ -72,9 +72,6 @@ namespace Covid19Radar.Api.Models
                 get => DateTime.UnixEpoch.AddSeconds(Epoch).ToString(Constants.FORMAT_TIMESTAMP);
             }
 
-            [JsonIgnore]
-            public long Created { get; internal set; }
-
             public string ClearText => string.Join(".", HasConsent, Epoch, Type, Subtype, Content);
         }
     }

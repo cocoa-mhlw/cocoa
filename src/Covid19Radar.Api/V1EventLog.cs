@@ -1,7 +1,14 @@
-﻿using System;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using System;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
@@ -60,21 +67,37 @@ namespace Covid19Radar.Api
                 return new BadRequestErrorMessageResult("Invalid Device");
             }
 
-            foreach (var eventLog in submissionParameter.EventLogs)
+            var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            using (SHA256 sha256 = SHA256.Create())
             {
-                // For considering user-privacy safe.
-                if (!eventLog.HasConsent)
+                foreach (var eventLog in submissionParameter.EventLogs)
                 {
-                    _logger.LogError("No consent log detected.");
-                    continue;
-                }
+                    // For considering user-privacy safe.
+                    if (!eventLog.HasConsent)
+                    {
+                        _logger.LogError("No consent log detected.");
+                        continue;
+                    }
 
-                eventLog.Created = requestTime.ToUnixTimeSeconds();
-                await _eventLogRepository.UpsertAsync(eventLog);
+                    string id = ByteArrayUtils.ToHexString(sha256.ComputeHash(Encoding.ASCII.GetBytes(eventLog.ClearText)));
+
+                    var eventLogModel = new EventLogModel(
+                        eventLog.HasConsent,
+                        eventLog.Epoch,
+                        eventLog.Type,
+                        eventLog.Subtype,
+                        eventLog.Content,
+                        eventLog.Timestamp
+                        )
+                    {
+                        id = id,
+                        Created = timestamp,
+                    };
+                    await _eventLogRepository.UpsertAsync(eventLogModel);
+                }
             }
 
             return new OkObjectResult("");
         }
-
     }
 }

@@ -24,9 +24,9 @@ namespace Covid19Radar.Api.DataAccess
             _logger = logger;
         }
 
-        public async Task UpsertAsync(EventLog eventLog)
+        public async Task UpsertAsync(EventLogModel eventLog)
         {
-            ItemResponse<EventLog> recordAdded = await _db.EventLog.CreateItemAsync(eventLog, new PartitionKey());
+            ItemResponse<EventLogModel> recordAdded = await _db.EventLog.CreateItemAsync(eventLog, new PartitionKey());
             _logger.LogInformation($"{nameof(UpsertAsync)} RequestCharge:{recordAdded.RequestCharge}");
         }
     }
