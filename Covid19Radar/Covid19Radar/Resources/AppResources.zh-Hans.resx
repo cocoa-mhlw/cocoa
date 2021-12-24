@@ -116,12 +116,12 @@
     <value>正在等待注册</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>所有数据将被删除，终止使用本应用吗？</value>
-    <comment>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</comment>
+    <value>删除所有数据并将应用恢复到初始状态？</value>
+    <comment>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</comment>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>终止使用本应用</value>
-    <comment>アプリの使用を中止します</comment>
+    <value>应用初始化</value>
+    <comment>アプリの初期化を行います</comment>
   </data>
   <data name="SettingsPageDialogResetCompletedTitle" xml:space="preserve">
     <value>数据已删除</value>
@@ -165,8 +165,8 @@
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>停止记录/删除</value>
-    <comment>記録の停止／削除</comment>
+    <value>应用初始化</value>
+    <comment>アプリの初期化</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>使用此APP时，每个手机都会生成一个随机代码，不会收集个人信息和GPS位置信息。</value>
@@ -192,9 +192,13 @@
     <value>前往设置</value>
     <comment>アプリの設定へ</comment>
   </data>
-  <data name="HelpPage4Description" xml:space="preserve">
-    <value>您可以在应用设置中选择停止使用该应用并删除用户数据。</value>
-    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
+  <data name="HelpPage4Description1" xml:space="preserve">
+    <value>通过在菜单设置中选择“初始化应用”，您可以删除过去14天保存的接触履历并将应用恢复到初始状态。</value>
+    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+  </data>
+  <data name="HelpPage4Description2" xml:space="preserve">
+    <value>在您再次开始使用该应用程序之前，不会记录接触和接受通知。</value>
+    <comment>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</value>
@@ -257,8 +261,8 @@
     <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>如何停止记录/删除密切接触记录</value>
-    <comment>接触の記録を停止／情報を削除するには</comment>
+    <value>删除接触记录并将应用恢复到初始状态</value>
+    <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
     <value>查询过去14天内里的接触情况</value>

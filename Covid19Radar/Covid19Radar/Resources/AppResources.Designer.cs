@@ -413,9 +413,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string HelpPage4Description {
+        public static string HelpPage4Description1 {
             get {
-                return ResourceManager.GetString("HelpPage4Description", resourceCulture);
+                return ResourceManager.GetString("HelpPage4Description1", resourceCulture);
+            }
+        }
+        
+        public static string HelpPage4Description2 {
+            get {
+                return ResourceManager.GetString("HelpPage4Description2", resourceCulture);
             }
         }
         
