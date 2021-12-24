@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+using System;
 using System.Linq;
 using Covid19Radar.Api.Common;
 using Newtonsoft.Json;
@@ -8,19 +12,19 @@ namespace Covid19Radar.Api.Models
     public class EventLogSubmissionParameter : IDeviceVerification
     {
         [JsonProperty("idempotency_key")]
-        public string IdempotencyKey { get; set; }
+        public string IdempotencyKey;
 
         [JsonProperty("platform")]
-        public string Platform { get; set; }
+        public string Platform;
 
         [JsonProperty("appPackageName")]
-        public string AppPackageName { get; set; }
+        public string AppPackageName;
 
         [JsonProperty("deviceVerificationPayload")]
-        public string DeviceVerificationPayload { get; set; }
+        public string DeviceVerificationPayload;
 
         [JsonProperty("event_logs")]
-        public EventLog[] EventLogs { get; set; }
+        public EventLog[] EventLogs;
 
         #region Apple Device Check
 
@@ -48,31 +52,31 @@ namespace Covid19Radar.Api.Models
             => string.Join(",", EventLogs.Select(el => el.ClearText));
 
         #endregion
+    }
 
-        public class EventLog
+    public class EventLog
+    {
+        [JsonProperty("has_consent")]
+        public bool HasConsent;
+
+        [JsonProperty("epoch")]
+        public long Epoch;
+
+        [JsonProperty("type")]
+        public string Type;
+
+        [JsonProperty("subtype")]
+        public string Subtype;
+
+        [JsonProperty("content")]
+        public string Content;
+
+        [JsonIgnore]
+        public string Timestamp
         {
-            [JsonProperty("has_concent")]
-            public bool HasConsent { get; } = false;
-
-            [JsonProperty("epoch")]
-            public long Epoch { get; }
-
-            [JsonProperty("type")]
-            public string Type { get; }
-
-            [JsonProperty("subtype")]
-            public string Subtype { get; }
-
-            [JsonProperty("content")]
-            public readonly string Content;
-
-            [JsonProperty("timestamp")]
-            public string Timestamp
-            {
-                get => DateTime.UnixEpoch.AddSeconds(Epoch).ToString(Constants.FORMAT_TIMESTAMP);
-            }
-
-            public string ClearText => string.Join(".", HasConsent, Epoch, Type, Subtype, Content);
+            get => DateTime.UnixEpoch.AddSeconds(Epoch).ToString(Constants.FORMAT_TIMESTAMP);
         }
+
+        public string ClearText => string.Join(".", HasConsent, Epoch, Type, Subtype, Content);
     }
 }

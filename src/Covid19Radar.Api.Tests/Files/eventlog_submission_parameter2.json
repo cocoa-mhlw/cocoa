@@ -19,7 +19,7 @@
       "content": "Aenean sit amet dui blandit, faucibus neque sollicitudin, sollicitudin nisi. Vivamus mattis felis vitae lorem ultrices interdum. Nam massa orci, hendrerit in mauris at, ultricies eleifend tortor. Etiam neque dolor, tincidunt a scelerisque id, commodo at purus. Mauris ac ultrices quam. Aliquam elementum diam venenatis orci tempor finibus. Donec ultricies interdum tortor, vitae imperdiet orci porta ac."
     },
     {
-      "has_consent": true,
+      "has_consent": false,
       "epoch": 1640258212,
       "type": "ExposureNotification",
       "subtype": "ExposureData",

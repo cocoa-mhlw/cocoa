@@ -8,7 +8,6 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.Http;
 using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
@@ -58,15 +57,18 @@ namespace Covid19Radar.Api
                 return new StatusCodeResult((int)HttpStatusCode.BadRequest);
             }
 
-            long contentLength = -1;
             string contentLengthHeader = req.Headers[HEADER_CONTENT_LENGTH].ToString();
-            long.TryParse(contentLengthHeader, out contentLength);
+            bool isNumeric = long.TryParse(contentLengthHeader, out long contentLength);
 
-            if (contentLength < 0)
+            if (!isNumeric)
             {
                 return new StatusCodeResult((int)HttpStatusCode.BadRequest);
             }
-            else if(contentLength > Constants.MAX_EVENT_LOG_PAYLOAD)
+            else if (contentLength < 0)
+            {
+                return new StatusCodeResult((int)HttpStatusCode.BadRequest);
+            }
+            else if (contentLength > Constants.MAX_SIZE_EVENT_LOG_PAYLOAD_BYTES)
             {
                 return new StatusCodeResult((int)HttpStatusCode.RequestEntityTooLarge);
             }
@@ -74,7 +76,7 @@ namespace Covid19Radar.Api
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
 
             // Check RequestBody size.
-            if (Encoding.ASCII.GetBytes(requestBody).LongLength > Constants.MAX_EVENT_LOG_PAYLOAD)
+            if (Encoding.ASCII.GetBytes(requestBody).LongLength > Constants.MAX_SIZE_EVENT_LOG_PAYLOAD_BYTES)
             {
                 return new StatusCodeResult((int)HttpStatusCode.RequestEntityTooLarge);
             }
@@ -93,7 +95,17 @@ namespace Covid19Radar.Api
                 }
             }
 
-            var submissionParameter = JsonConvert.DeserializeObject<EventLogSubmissionParameter>(requestBody);
+            EventLogSubmissionParameter submissionParameter;
+            try
+            {
+                submissionParameter = JsonConvert.DeserializeObject<EventLogSubmissionParameter>(requestBody);
+            }
+            catch(JsonSerializationException e)
+            {
+                _logger.LogError(e.ToString());
+                return new StatusCodeResult((int)HttpStatusCode.BadRequest);
+            }
+
             var requestTime = DateTimeOffset.UtcNow;
 
             // validation device
@@ -133,7 +145,7 @@ namespace Covid19Radar.Api
                 }
             }
 
-            return new StatusCodeResult((int)HttpStatusCode.OK);
+            return new StatusCodeResult((int)HttpStatusCode.Created);
         }
 
     }

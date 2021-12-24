@@ -48,6 +48,6 @@ namespace Covid19Radar.Api.Common
         /// <summary>
         /// Limit to the size of an EventLog-payload.
         /// </summary>
-        public const long MAX_EVENT_LOG_PAYLOAD = 1024 * 1024 * 10;
+        public const long MAX_SIZE_EVENT_LOG_PAYLOAD_BYTES = 1024 * 1024 * 10;
     }
 }

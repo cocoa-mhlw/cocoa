@@ -22,6 +22,9 @@ namespace Covid19Radar.Api.Tests
     [TestCategory("Api")]
     public class V1EventLogTests
     {
+        private const string NOT_OVER_LIMIT_CONTENT_LENGTH = "10485760"; // Constants.MAX_SIZE_EVENT_LOG_PAYLOAD_BYTES
+        private const string OVER_LIMIT_CONTENT_LENGTH = "10485761"; // Constants.MAX_SIZE_EVENT_LOG_PAYLOAD_BYTES + 1
+
         private static string GetTestJson(string fileName)
         {
             var path = TestDataUtils.GetLocalFilePath(fileName);
@@ -49,18 +52,24 @@ namespace Covid19Radar.Api.Tests
         }
 
         [DataTestMethod]
-        [DataRow(true, true, -1, "eventlog_submission_parameter1.json", HttpStatusCode.BadRequest)]
-        [DataRow(false, false, 250, "eventlog_submission_parameter1.json", 418)]
-        [DataRow(true, false, 250, "eventlog_submission_parameter1.json", HttpStatusCode.BadRequest)]
-        [DataRow(false, true, 250, "eventlog_submission_parameter1.json", 418)]
-        [DataRow(true, true, 250, "eventlog_submission_parameter1.json", HttpStatusCode.OK)]
-        [DataRow(true, true, Constants.MAX_EVENT_LOG_PAYLOAD + 1, "eventlog_submission_parameter1.json", HttpStatusCode.RequestEntityTooLarge)]
+        [DataRow(true, true, null, "eventlog_submission_parameter1.json", HttpStatusCode.BadRequest, 0)]
+        [DataRow(true, true, "Hello", "eventlog_submission_parameter1.json", HttpStatusCode.BadRequest, 0)]
+        [DataRow(true, true, "-1", "eventlog_submission_parameter1.json", HttpStatusCode.BadRequest, 0)]
+        [DataRow(false, false, "250", "eventlog_submission_parameter1.json", 418, 0)]
+        [DataRow(true, false, "250", "eventlog_submission_parameter1.json", HttpStatusCode.BadRequest, 0)]
+        [DataRow(false, true, "250", "eventlog_submission_parameter1.json", 418, 0)]
+        [DataRow(true, true, "250", "eventlog_submission_parameter1.json", HttpStatusCode.Created, 3)]
+        [DataRow(true, true, NOT_OVER_LIMIT_CONTENT_LENGTH, "eventlog_submission_parameter1.json", HttpStatusCode.Created, 3)]
+        [DataRow(true, true, OVER_LIMIT_CONTENT_LENGTH, "eventlog_submission_parameter1.json", HttpStatusCode.RequestEntityTooLarge, 0)]
+        [DataRow(true, true, "250", "eventlog_submission_parameter2.json", HttpStatusCode.Created, 2)]
+        [DataRow(true, true, "250", "eventlog_submission_parameter_broken.json", HttpStatusCode.BadRequest, 0)]
         public async Task RunAsyncMethod(
             bool isValidRoute,
             bool isValidDevice,
-            long contentLength,
+            string contentLength,
             string jsonFileName,
-            int expectedStatusCode
+            int expectedStatusCode,
+            int expectedSavedItemCount
     )
         {
             // preparation
@@ -98,10 +107,10 @@ namespace Covid19Radar.Api.Tests
 
             // Conetnt-Length header
             context.Setup(_ => _.Request.Headers).Returns(new HeaderDictionary());
-            if (contentLength >= 0)
+            if (contentLength != null)
             {
                 IHeaderDictionary headers = new HeaderDictionary() {
-                    { "Content-Length", $"{contentLength}" }
+                    { "Content-Length", contentLength }
                 };
                 context.Setup(_ => _.Request.Headers).Returns(headers);
             }
@@ -115,16 +124,19 @@ namespace Covid19Radar.Api.Tests
                 await writer.FlushAsync();
             }
             stream.Seek(0, SeekOrigin.Begin);
-            context.Setup(_ => _.Request.Body).Returns(stream);
+            context.Setup(x => x.Request.Body).Returns(stream);
 
             // action
             var result = await eventLogApi.RunAsync(context.Object.Request);
 
+            Assert.IsTrue(result is StatusCodeResult);
             if (result is StatusCodeResult statusCodeResult)
             {
                 Assert.AreEqual(expectedStatusCode, statusCodeResult.StatusCode);
             }
 
+            eventLogRepository
+                .Verify(x => x.UpsertAsync(It.IsAny<EventLogModel>()), Times.Exactly(expectedSavedItemCount));
         }
     }
 }
