@@ -53,13 +53,18 @@ namespace Covid19Radar.Api
             _logger.LogInformation($"{nameof(RunAsync)}");
 
             // Check Content-Length.
+            if (!req.Headers.ContainsKey(HEADER_CONTENT_LENGTH))
+            {
+                return new StatusCodeResult((int)HttpStatusCode.BadRequest);
+            }
+
             long contentLength = -1;
             string contentLengthHeader = req.Headers[HEADER_CONTENT_LENGTH].ToString();
             long.TryParse(contentLengthHeader, out contentLength);
 
             if (contentLength < 0)
             {
-                return new BadRequestErrorMessageResult("HTTP-Heaer Content-Length must be set.");
+                return new StatusCodeResult((int)HttpStatusCode.BadRequest);
             }
             else if(contentLength > Constants.MAX_EVENT_LOG_PAYLOAD)
             {
@@ -78,7 +83,14 @@ namespace Covid19Radar.Api
             IValidationServerService.ValidateResult validateResult = _validationServerService.Validate(req);
             if (!validateResult.IsValid)
             {
-                return validateResult.ErrorActionResult;
+                if(validateResult.ErrorActionResult is BadRequestResult)
+                {
+                    return new StatusCodeResult((int)HttpStatusCode.BadRequest);
+                }
+                else
+                {
+                    return validateResult.ErrorActionResult;
+                }
             }
 
             var submissionParameter = JsonConvert.DeserializeObject<EventLogSubmissionParameter>(requestBody);
@@ -88,7 +100,7 @@ namespace Covid19Radar.Api
             if (!await _deviceValidationService.Validation(submissionParameter.Platform, submissionParameter, requestTime))
             {
                 _logger.LogInformation($"Invalid Device");
-                return new BadRequestErrorMessageResult("Invalid Device");
+                return new StatusCodeResult((int)HttpStatusCode.BadRequest);
             }
 
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
@@ -121,7 +133,8 @@ namespace Covid19Radar.Api
                 }
             }
 
-            return new OkObjectResult("");
+            return new StatusCodeResult((int)HttpStatusCode.OK);
         }
+
     }
 }
