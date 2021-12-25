@@ -20,6 +20,13 @@ namespace Covid19Radar.Common
             return nonce;
         }
 
+        public static byte[] CreateAndroidNonceV3(V1EventLogRequest eventLogRequest)
+        {
+            var cleartext = GetNonceClearTextV3(eventLogRequest);
+            var nonce = GetSha256(cleartext);
+            return nonce;
+        }
+
         public static string GetNonceClearTextV3(DiagnosisSubmissionParameter submission)
         {
             return string.Join("|", submission.SymptomOnsetDate, submission.AppPackageName, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
@@ -33,6 +40,10 @@ namespace Covid19Radar.Common
             static string GetRegionString(IEnumerable<string> regions) =>
                 string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));
         }
+
+        public static string GetNonceClearTextV3(V1EventLogRequest eventLogRequest)
+            => string.Join("|", eventLogRequest.AppPackageName, eventLogRequest.EventLogs.Select(log => log.ClearText));
+
         #endregion
 
         #region V1/V2DiagnosisApi

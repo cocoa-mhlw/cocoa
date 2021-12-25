@@ -10,7 +10,6 @@ using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
-using Xamarin.Essentials;
 
 namespace Covid19Radar.Services
 {
@@ -36,6 +35,8 @@ namespace Covid19Radar.Services
 
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
 
+        private readonly IEventLogService _eventLogService;
+
         private readonly IExposureDataCollectServer _exposureDataCollectServer;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly IDeviceInfoUtility _deviceInfoUtility;
@@ -47,6 +48,7 @@ namespace Covid19Radar.Services
             ILocalNotificationService localNotificationService,
             IExposureRiskCalculationService exposureRiskCalculationService,
             IExposureConfigurationRepository exposureConfigurationRepository,
+            IEventLogService eventLogService,
             IExposureDataCollectServer exposureDataCollectServer,
             IDateTimeUtility dateTimeUtility,
             IDeviceInfoUtility deviceInfoUtility
@@ -57,6 +59,7 @@ namespace Covid19Radar.Services
             _localNotificationService = localNotificationService;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _exposureConfigurationRepository = exposureConfigurationRepository;
+            _eventLogService = eventLogService;
             _exposureDataCollectServer = exposureDataCollectServer;
             _dateTimeUtility = dateTimeUtility;
             _deviceInfoUtility = deviceInfoUtility;
@@ -102,12 +105,35 @@ namespace Covid19Radar.Services
                 _loggerService.Info($"DailySummary: {dailySummaries.Count}, but no high-risk exposure detected");
             }
 
-            await _exposureDataCollectServer.UploadExposureDataAsync(
-                exposureConfiguration,
-                _deviceInfoUtility.Model,
-                enVersion,
-                dailySummaries, exposureWindows
-                );
+            try
+            {
+                await _exposureDataCollectServer.UploadExposureDataAsync(
+                    exposureConfiguration,
+                    _deviceInfoUtility.Model,
+                    enVersion,
+                    dailySummaries, exposureWindows
+                    );
+            }
+            catch (Exception e)
+            {
+                _loggerService.Exception("UploadExposureDataAsync", e);
+            }
+
+            string idempotencyKey = Guid.NewGuid().ToString();
+            try
+            {
+                await _eventLogService.SendExposureDataAsync(
+                    idempotencyKey,
+                    exposureConfiguration,
+                    _deviceInfoUtility.Model,
+                    enVersion,
+                    dailySummaries, exposureWindows
+                    );
+            }
+            catch (Exception e)
+            {
+                _loggerService.Exception("SendExposureDataAsync", e);
+            }
         }
 
         public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
@@ -131,12 +157,35 @@ namespace Covid19Radar.Services
                 _loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
             }
 
-            await _exposureDataCollectServer.UploadExposureDataAsync(
-                exposureConfiguration,
-                _deviceInfoUtility.Model,
-                enVersion,
-                exposureSummary, exposureInformations
-                );
+            try
+            {
+                await _exposureDataCollectServer.UploadExposureDataAsync(
+                    exposureConfiguration,
+                    _deviceInfoUtility.Model,
+                    enVersion,
+                    exposureSummary, exposureInformations
+                    );
+            }
+            catch (Exception e)
+            {
+                _loggerService.Exception("UploadExposureDataAsync", e);
+            }
+
+            string idempotencyKey = Guid.NewGuid().ToString();
+            try
+            {
+                await _eventLogService.SendExposureDataAsync(
+                    idempotencyKey,
+                    exposureConfiguration,
+                    _deviceInfoUtility.Model,
+                    enVersion,
+                    exposureSummary, exposureInformations
+                    );
+            }
+            catch (Exception e)
+            {
+                _loggerService.Exception("SendExposureDataAsync", e);
+            }
         }
 
         public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion)
@@ -145,11 +194,33 @@ namespace Covid19Radar.Services
 
             _ = Task.Run(async () =>
             {
-                await _exposureDataCollectServer.UploadExposureDataAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersion
-                    );
+                try
+                {
+                    await _exposureDataCollectServer.UploadExposureDataAsync(
+                        exposureConfiguration,
+                        _deviceInfoUtility.Model,
+                        enVersion
+                        );
+                }
+                catch (Exception e)
+                {
+                    _loggerService.Exception("UploadExposureDataAsync", e);
+                }
+
+                string idempotencyKey = Guid.NewGuid().ToString();
+                try
+                {
+                    await _eventLogService.SendExposureDataAsync(
+                        idempotencyKey,
+                        exposureConfiguration,
+                        _deviceInfoUtility.Model,
+                        enVersion
+                        );
+                }
+                catch (Exception e)
+                {
+                    _loggerService.Exception("SendExposureDataAsync", e);
+                }
             });
         }
     }
