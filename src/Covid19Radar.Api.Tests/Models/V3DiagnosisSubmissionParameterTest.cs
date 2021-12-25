@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -28,7 +29,38 @@ namespace Covid19Radar.Api.Tests.Models
             Helper.ModelTestHelper.PropetiesTest(model);
         }
 
-        private static V3DiagnosisSubmissionParameter.Key CreateDiagnosisKey (
+        [DataTestMethod]
+        [DataRow("KEYDATA", 0, 0, 0, true)]
+        [DataRow("KEYDATA", 145, 0, 0, false)]
+        [DataRow("KEYDATA", 144, -15, 0, false)]
+        [DataRow("KEYDATA", 144, -14, 0, true)]
+        [DataRow("KEYDATA", 144, -6, 0, true)]
+        [DataRow("KEYDATA", 144, -5, 0, true)]
+        [DataRow("KEYDATA", 144, -4, 0, true)]
+        [DataRow("KEYDATA", 144, -3, 0, true)]
+        [DataRow("KEYDATA", 144, -2, 0, true)]
+        [DataRow("KEYDATA", 144, -1, 0, true)]
+        [DataRow("KEYDATA", 144, 0, 0, true)]
+        [DataRow("KEYDATA", 144, 0, -14, true)]
+        [DataRow("KEYDATA", 144, 0, 14, true)]
+        [DataRow("KEYDATA", 144, 0, -15, false)]
+        [DataRow("KEYDATA", 144, 0, 15, false)]
+        [DataRow("KEYDATA", 144, 1, 0, false)]
+        public void KeyValidationTest(string keyData, int rollingPeriod, int rollingStartNummberDayOffset, int daysSinceOnsetOfSymptoms, bool isValid)
+        {
+            var dateTime = DateTime.UtcNow.Date;
+
+            var key = CreateDiagnosisKey(
+                keyData,
+                (int)dateTime.AddDays(rollingStartNummberDayOffset).ToRollingStartNumber(),
+                rollingPeriod,
+                1,
+                daysSinceOnsetOfSymptoms
+            );
+            Assert.AreEqual(isValid, key.IsValid());
+        }
+
+        private static V3DiagnosisSubmissionParameter.Key CreateDiagnosisKey(
             string keyData,
             int rollingStartNumber,
             int rollingPeriod,
@@ -39,7 +71,8 @@ namespace Covid19Radar.Api.Tests.Models
             var keyDataBytes = Encoding.UTF8.GetBytes(keyData);
             var keyDataBase64 = Convert.ToBase64String(keyDataBytes);
 
-            return new V3DiagnosisSubmissionParameter.Key() {
+            return new V3DiagnosisSubmissionParameter.Key()
+            {
                 KeyData = keyDataBase64,
                 RollingStartNumber = (uint)rollingStartNumber,
                 RollingPeriod = (uint)rollingPeriod,
@@ -52,7 +85,7 @@ namespace Covid19Radar.Api.Tests.Models
         public void DeviceVerificationTest()
         {
             var platform = "Android";
-            var dummyDiagnosisKeyDataList = new [] {
+            var dummyDiagnosisKeyDataList = new[] {
                 CreateDiagnosisKey("KeyData1", 10000, 140, 1, -1),
                 CreateDiagnosisKey("KeyData2", 20000, 141, 1, 0),
                 CreateDiagnosisKey("KeyData3", 30000, 142, 1, 1),

@@ -16,6 +16,9 @@ namespace Covid19Radar.Api.Models
 
         private const int TIME_WINDOW_IN_SEC = 60 * 10;
 
+        private const int MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS = -14;
+        private const int MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS = 14;
+
         // RFC3339
         // e.g. 2021-09-20T23:52:57.436+00:00
         [JsonProperty("symptomOnsetDate")]
@@ -129,7 +132,16 @@ namespace Covid19Radar.Api.Models
                 var todayRollingStartNumber = dateTime.ToRollingStartNumber();
 
                 var oldestRollingStartNumber = dateTime.AddDays(Constants.OutOfDateDays).ToRollingStartNumber();
-                if (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > todayRollingStartNumber) return false;
+                if (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > todayRollingStartNumber)
+                {
+                    return false;
+                }
+
+                if (DaysSinceOnsetOfSymptoms < MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS
+                    || DaysSinceOnsetOfSymptoms > MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS)
+                {
+                    return false;
+                }
                 return true;
             }
 
