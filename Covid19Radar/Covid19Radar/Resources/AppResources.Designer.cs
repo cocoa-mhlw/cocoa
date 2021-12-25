@@ -413,9 +413,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string HelpPage4Description {
+        public static string HelpPage4Description1 {
             get {
-                return ResourceManager.GetString("HelpPage4Description", resourceCulture);
+                return ResourceManager.GetString("HelpPage4Description1", resourceCulture);
+            }
+        }
+        
+        public static string HelpPage4Description2 {
+            get {
+                return ResourceManager.GetString("HelpPage4Description2", resourceCulture);
             }
         }
         
@@ -956,18 +962,6 @@ namespace Covid19Radar.Resources {
         public static string ProcessingNumberErrorDiagTitle {
             get {
                 return ResourceManager.GetString("ProcessingNumberErrorDiagTitle", resourceCulture);
-            }
-        }
-        
-        public static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFound {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFound", resourceCulture);
-            }
-        }
-        
-        public static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle", resourceCulture);
             }
         }
         
@@ -1736,6 +1730,18 @@ namespace Covid19Radar.Resources {
         public static string AnnotationSymbol2 {
             get {
                 return ResourceManager.GetString("AnnotationSymbol2", resourceCulture);
+            }
+        }
+        
+        public static string HomePageImageAnnotationText {
+            get {
+                return ResourceManager.GetString("HomePageImageAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string ContactedPageImageAnnotationText {
+            get {
+                return ResourceManager.GetString("ContactedPageImageAnnotationText", resourceCulture);
             }
         }
     }

@@ -11,6 +11,7 @@
         AutomationProperties.IsInAccessibleTree="True"
         AutomationProperties.Name="{Binding ReadText}"
         Padding="20,10,0,10"
+        Spacing="0"
         Style="{StaticResource ImageLableStackLayout}"
         VerticalOptions="FillAndExpand">
         <Label
@@ -24,16 +25,9 @@
         <Image
             AutomationProperties.IsInAccessibleTree="False"
             HeightRequest="35"
+            Margin="20, 0"
             VerticalOptions="Center"
             HorizontalOptions="EndAndExpand"
-            WidthRequest="35">
-            <Image.Source>
-                <FontImageSource
-                    FontFamily="FA-S"
-                    Glyph="{Binding Icon}"
-                    Size="30"
-                    Color="#019AE8" />
-            </Image.Source>
-        </Image>
+            Source="icon_arrow.png" />
     </StackLayout>
 </ContentView>

@@ -292,17 +292,6 @@ namespace Covid19Radar.ViewModels
                 loggerService.Info($"Successfully submit the diagnostic number.");
                 loggerService.EndMethod();
             }
-            catch (InvalidDataException ex)
-            {
-                errorCount++;
-                UserDialogs.Instance.Alert(
-                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFound,
-                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle,
-                    AppResources.ButtonOk
-                );
-                loggerService.Exception("Failed to submit UID invalid data.", ex);
-                loggerService.EndMethod();
-            }
             catch (Exception ex)
             {
                 errorCount++;

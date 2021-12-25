@@ -60,29 +60,57 @@
                     TabIndex="3"
                     Style="{StaticResource DefaultTitleLabel}"
                     Text="{x:Static resources:AppResources.HelpPage2Label2}" />
-                <ffimageloading:CachedImage
-                    AutomationProperties.IsInAccessibleTree="False"
-                    Aspect="AspectFit"
-                    Source="HelpPage31.png" />
+                <StackLayout>
+                    <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Aspect="AspectFit"
+                        Source="HelpPage31.png" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="4"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.HomePageImageAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="4"
+                    TabIndex="5"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HelpPage2Description2}" />
             </StackLayout>
             <StackLayout Grid.Row="2"  Spacing="20">
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="5"
+                    TabIndex="6"
                     Style="{StaticResource DefaultTitleLabel}"
                     Text="{x:Static resources:AppResources.HelpPage2Label3}" />
-                <ffimageloading:CachedImage
-                    AutomationProperties.IsInAccessibleTree="False"
-                    Aspect="AspectFit"
-                    Source="HelpPage32.png" />
+                <StackLayout>
+                    <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Aspect="AspectFit"
+                        Source="HelpPage32.png" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="7"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.ContactedPageImageAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="6"
+                    TabIndex="8"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HelpPage2Description3}" />
             </StackLayout>
