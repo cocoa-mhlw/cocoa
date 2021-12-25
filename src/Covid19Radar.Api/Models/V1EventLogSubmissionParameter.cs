@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Api.Models
 {
-    public class EventLogSubmissionParameter : IDeviceVerification
+    public class V1EventLogSubmissionParameter : IDeviceVerification
     {
         [JsonProperty("idempotency_key")]
         public string IdempotencyKey;

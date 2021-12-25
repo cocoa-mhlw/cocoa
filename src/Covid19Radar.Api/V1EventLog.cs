@@ -95,10 +95,10 @@ namespace Covid19Radar.Api
                 }
             }
 
-            EventLogSubmissionParameter submissionParameter;
+            V1EventLogSubmissionParameter submissionParameter;
             try
             {
-                submissionParameter = JsonConvert.DeserializeObject<EventLogSubmissionParameter>(requestBody);
+                submissionParameter = JsonConvert.DeserializeObject<V1EventLogSubmissionParameter>(requestBody);
             }
             catch(JsonSerializationException e)
             {
