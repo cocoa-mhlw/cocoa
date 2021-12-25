@@ -42,7 +42,15 @@ namespace Covid19Radar.Common
         }
 
         public static string GetNonceClearTextV3(V1EventLogRequest eventLogRequest)
-            => string.Join("|", eventLogRequest.AppPackageName, eventLogRequest.EventLogs.Select(log => log.ClearText));
+        {
+            return string.Join("|", eventLogRequest.AppPackageName, GetListClearText(eventLogRequest.EventLogs));
+
+            static string GetListClearText(V1EventLogRequest.EventLog[] eventLogs)
+                => string.Join(",", eventLogs.Select(log => GetClearText(log)));
+
+            static string GetClearText(V1EventLogRequest.EventLog log)
+                => string.Join(".", log.HasConsent, log.Epoch, log.Type, log.Subtype, log.Content);
+        }
 
         #endregion
 

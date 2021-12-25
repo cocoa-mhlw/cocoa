@@ -48,8 +48,6 @@ namespace Covid19Radar.Model
             {
                 get => DateTime.UnixEpoch.AddSeconds(Epoch).ToString(AppConstants.FORMAT_TIMESTAMP);
             }
-
-            public string ClearText => string.Join(".", HasConsent, Epoch, Type, Subtype, Content);
         }
     }
 }
