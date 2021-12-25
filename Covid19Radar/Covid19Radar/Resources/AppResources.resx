@@ -228,12 +228,12 @@
     <value>Waiting for register</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>Do you really want to delete all the data and stop the usage of the app?</value>
-    <comment>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</comment>
+    <value>All the data will be deleted, and the app will be restored to its initial state. Do you want to continue?</value>
+    <comment>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</comment>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>Stop app usage</value>
-    <comment>アプリの使用を中止します</comment>
+    <value>Reinitialize the app</value>
+    <comment>アプリの初期化を行います</comment>
   </data>
   <data name="SettingsPageDialogResetCompletedTitle" xml:space="preserve">
     <value>Data have been deleted</value>
@@ -285,8 +285,8 @@
     <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>How do I stop / delete close contact recording?</value>
-    <comment>接触の記録を停止／情報を削除するには</comment>
+    <value>How to delete the close contact history and reinitialize the app</value>
+    <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>What is a 'close contact'?</value>
@@ -301,8 +301,8 @@
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>Stop / delete close contact history</value>
-    <comment>記録の停止／削除</comment>
+    <value>Reinitialize the app</value>
+    <comment>アプリの初期化</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>When you run this app, each smartphone will generate a random code. No personal information and no location information including GPS data is collected.</value>
@@ -352,9 +352,13 @@
     <value>Go to app settings</value>
     <comment>アプリの設定へ</comment>
   </data>
-  <data name="HelpPage4Description" xml:space="preserve">
-    <value>From app settings, you can stop using the app and delete user data.</value>
-    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
+  <data name="HelpPage4Description1" xml:space="preserve">
+    <value>By selecting from the app setting [Reinitialize the app] you can delete the saved contact history of the last 14 days and restores the app to its initial state.</value>
+    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+  </data>
+  <data name="HelpPage4Description2" xml:space="preserve">
+    <value>Contact notification will not be sent until the app will be used again.​</value>
+    <comment>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>If you tested positive</value>
@@ -712,14 +716,6 @@
   <data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
     <value>Incorrect processing number</value>
     <comment>処理番号が違います</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>Registration is not necessary.</value>
-    <comment>登録する必要はありません。</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>No close contact record present</value>
-    <comment>接触記録がありません</comment>
   </data>
   <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
     <value>A new version of the app is available. Please update to the latest version.</value>
@@ -1237,5 +1233,13 @@ Note: this app does not collect users’ location information.</value>
   <data name="AnnotationSymbol2" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：※2</comment>
+  </data>
+  <data name="HomePageImageAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：「ホーム」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedPageImageAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：「陽性者との接触確認」画面のイメージ画像</comment>
   </data>
 </root>

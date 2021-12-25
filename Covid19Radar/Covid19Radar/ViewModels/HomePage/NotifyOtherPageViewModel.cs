@@ -240,8 +240,8 @@ namespace Covid19Radar.ViewModels
                 if (errorCount > 0)
 
 
-                    // Init Dialog
-                    if (string.IsNullOrEmpty(ProcessingNumber))
+                // Init Dialog
+                if (string.IsNullOrEmpty(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag4Message,
@@ -287,18 +287,6 @@ namespace Covid19Radar.ViewModels
                 await SubmitDiagnosisKeys();
 
                 UserDialogs.Instance.HideLoading();
-            }
-            catch (InvalidDataException ex)
-            {
-                UserDialogs.Instance.HideLoading();
-
-                errorCount++;
-                UserDialogs.Instance.Alert(
-                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFound,
-                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle,
-                    AppResources.ButtonOk
-                );
-                loggerService.Exception("Failed to submit DiagnosisKeys invalid data.", ex);
             }
             catch (Exception ex)
             {
