@@ -3,9 +3,11 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using System;
+using System.IO;
 using System.Text;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Newtonsoft.Json;
 using Xunit;
 
 namespace Covid19Radar.UnitTests.Common
@@ -120,6 +122,37 @@ namespace Covid19Radar.UnitTests.Common
                 EXPECTED_CLEAR_TEXT_V3,
                 clearText
                 );
+        }
+    }
+
+    public class DeviceVerifierUtilsEventLogParametersTests
+    {
+        private const string JSON_EVENTLOG_SUBMISSION_PARAMETERS1 = "eventlog_submission_parameter1.json";
+        private const string EXPECTED_CLEAR_TEXT_FILENAME = "eventlog_submission_parameter1-cleartext.txt";
+
+        private static string GetTestJson(string fileName)
+        {
+            var path = TestDataUtils.GetLocalFilePath(fileName);
+            using (var reader = File.OpenText(path))
+            {
+                return reader.ReadToEnd();
+            }
+        }
+
+        [Fact]
+        public void AndroidClearTextTestV3()
+        {
+            string expectedClearText = GetTestJson(EXPECTED_CLEAR_TEXT_FILENAME);
+            string eventLogsText = GetTestJson(JSON_EVENTLOG_SUBMISSION_PARAMETERS1);
+
+            V1EventLogRequest eventLogRequest = JsonConvert.DeserializeObject<V1EventLogRequest>(eventLogsText);
+
+            string clearText = DeviceVerifierUtils.GetNonceClearTextV3(eventLogRequest);
+            Assert.Equal(
+                expectedClearText,
+                clearText
+                );
+
         }
     }
 }
