@@ -7,11 +7,6 @@ namespace Covid19Radar.Common
     public static class AppConstants
     {
         /// <summary>
-        /// Number of days covered from the date of diagnosis or onset
-        /// </summary>
-        public const int DaysToSendTek = -3;
-
-        /// <summary>
         /// Max Error Count
         /// </summary>
         public const int MaxErrorCount = 3;
