@@ -25,13 +25,27 @@
         <StackLayout
             Padding="20"
             Spacing="20">
-            <ffimageloading:CachedImage
-                AutomationProperties.IsInAccessibleTree="False"
-                Aspect="AspectFit"
-                Source="alert_workaround_img.png" />
+            <StackLayout>
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="alert_workaround_img.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.HomePageImageAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="1"
+                TabIndex="2"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.TroubleshootingPageDescription1}" />
             <Frame
@@ -41,26 +55,26 @@
                 <StackLayout Spacing="10">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
+                        TabIndex="3"
                         Style="{StaticResource DefaultLabel}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.TroubleshootingPageDescription2}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
+                        TabIndex="4"
                         Style="{StaticResource DefaultLabel}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.TroubleshootingPageDescription3}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="4"
+                        TabIndex="5"
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.TroubleshootingPageDescription4}" />
                 </StackLayout>
             </Frame>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="5"
+                TabIndex="6"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.TroubleshootingPageDescription5}" />
         </StackLayout>

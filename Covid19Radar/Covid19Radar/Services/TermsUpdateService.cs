@@ -21,6 +21,8 @@ namespace Covid19Radar.Services
 
     public class TermsUpdateService : ITermsUpdateService
     {
+        private const double TimeoutSeconds = 5.0;
+
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository userDataRepository;
 
@@ -42,6 +44,8 @@ namespace Covid19Radar.Services
             {
                 try
                 {
+                    client.Timeout = TimeSpan.FromSeconds(TimeoutSeconds);
+
                     var json = await client.GetStringAsync(uri);
                     loggerService.Info($"uri: {uri}");
                     loggerService.Info($"TermsUpdateInfo: {json}");

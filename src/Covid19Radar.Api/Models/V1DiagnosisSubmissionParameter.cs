@@ -9,10 +9,8 @@ using System.Linq;
 
 namespace Covid19Radar.Api.Models
 {
-	public class V1DiagnosisSubmissionParameter : DiagnosisSubmissionParameter, IUser, IDeviceVerification
+	public class V1DiagnosisSubmissionParameter : V2DiagnosisSubmissionParameter, IUser
 	{
-		private const int TRANSMISSION_RISK_LEVEL = 4;
-
 		[JsonProperty("userUuid")]
 		public string UserUuid { get; set; }
 

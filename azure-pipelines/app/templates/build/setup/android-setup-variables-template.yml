@@ -15,7 +15,7 @@ steps:
 
 - script: |
     ANDROID_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.Android"
-    for FILE in `\find $ANDROID_PATH/Resources/values-*/Strings.xml`; do
+    for FILE in `\find $ANDROID_PATH/Resources/values*/Strings.xml`; do
       perl -pi -e "s/(<string name=\"app_name\">)(.*)(<\/string>)/\1\[$(Environment)\]\2\3/g" $FILE
     done
   displayName: 'Add environment name to app name'

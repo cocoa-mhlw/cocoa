@@ -53,6 +53,33 @@ namespace Covid19Radar.Api.Models
         public string KeysTextForDeviceVerification
             => string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
 
+        #region Apple Device Check
+
+        [JsonIgnore]
+        public string DeviceToken
+            => DeviceVerificationPayload;
+
+        [JsonIgnore]
+        public string TransactionIdSeed
+            => SymptomOnsetDate
+                +AppPackageName
+                + KeysTextForDeviceVerification
+                + IAndroidDeviceVerification.GetRegionString(Regions);
+
+        #endregion
+
+        #region Android SafetyNet Attestation API
+
+        [JsonIgnore]
+        public string JwsPayload
+            => DeviceVerificationPayload;
+
+        [JsonIgnore]
+        public string ClearText
+            => string.Join("|", SymptomOnsetDate, AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
+
+        #endregion
+
         public class Key
         {
             [JsonProperty("keyData")]
@@ -108,7 +135,7 @@ namespace Covid19Radar.Api.Models
                 return true;
             }
 
-            public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType, DaysSinceOnsetOfSymptoms);
+            public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType);
         }
 
         /// <summary>

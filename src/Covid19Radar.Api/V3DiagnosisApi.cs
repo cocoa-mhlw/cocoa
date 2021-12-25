@@ -107,7 +107,7 @@ namespace Covid19Radar.Api
             }
 
             // validation device
-            if (!await _deviceValidationService.Validation(submissionParameter, reqTime))
+            if (!await _deviceValidationService.Validation(submissionParameter.Platform, submissionParameter, reqTime))
             {
                 _logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
