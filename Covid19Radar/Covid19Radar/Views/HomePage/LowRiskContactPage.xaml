@@ -60,8 +60,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountPrefixText}" />
-                                        <Span Text="{Binding TotalContactMinutes}" />
-                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountSuffixText}" />
+                                        <Span Text="{Binding TotalContactTime}" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>

@@ -396,9 +396,13 @@
     <value>In the last 14 days, </value>
     <comment>直近14日間に合計</comment>
   </data>
-  <data name="LowRiskContactPageCountSuffixText" xml:space="preserve">
-    <value>minutes</value>
-    <comment>分間</comment>
+  <data name="LowRiskContactPageCountSuffixHourText" xml:space="preserve">
+    <value>h</value>
+    <comment>時間</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixMinutesText" xml:space="preserve">
+    <value>min</value>
+    <comment>分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
     <value>A signal has been recieved from COVID-19 positive users. But it is few meters away and has no risk. Please stay with preventing Infection.</value>

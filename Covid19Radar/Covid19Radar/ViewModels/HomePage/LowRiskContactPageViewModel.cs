@@ -31,32 +31,47 @@ namespace Covid19Radar.ViewModels
             base.Initialize(parameters);
 
             loggerService.StartMethod();
-            loggerService.EndMethod();
 
-            var totalNumberOfExposureMinutes = await calcTotalNumberOfExposureMinutes();
-            TotalContactMinutes = totalNumberOfExposureMinutes.ToString();
+            var exposureSeconds = await getTotalNumberOfExposureSeconds();
+            TotalContactTime = makeTotalContactTimeString(exposureSeconds);
+
+            loggerService.EndMethod();
         }
 
-        private async Task<int> calcTotalNumberOfExposureMinutes()
+        private string makeTotalContactTimeString(int exposureSeconds)
+        {
+            var totalNumberOfExposureMinutes = exposureSeconds / 60;
+            var exposureHours = totalNumberOfExposureMinutes / 60;
+            var exposureMinutes = totalNumberOfExposureMinutes % 60;
+
+            var sb = new System.Text.StringBuilder();
+            if (0 < exposureHours)
+            {
+                sb.Append($"{exposureHours}{AppResources.LowRiskContactPageCountSuffixHourText}");
+            }
+            sb.Append($"{exposureMinutes}{AppResources.LowRiskContactPageCountSuffixMinutesText}");
+            return sb.ToString();
+        }
+
+        private async Task<int> getTotalNumberOfExposureSeconds()
         {
             var windows = await userDataRepository.GetExposureWindowsAsync();
             var numberOfExposureSecondsList = windows
                 .ToArray()
                 .Select(aggregateSecondsSinceLastScans);
-
-            var totalNumberOfExposureSeconds = numberOfExposureSecondsList.Aggregate(0, (sum, x) => sum + x);
-
-            return totalNumberOfExposureSeconds / 60;
+            var totalNumberOfExposureSeconds = numberOfExposureSecondsList
+                .Aggregate(0, (sum, x) => sum + x);
+            return totalNumberOfExposureSeconds;
         }
 
         private int aggregateSecondsSinceLastScans(Chino.ExposureWindow window) =>
             window.ScanInstances.Select(x => x.SecondsSinceLastScan).Aggregate(0, (sum, x) => sum + x);
 
-        private string _totalContactMinutes;
-        public string TotalContactMinutes
+        private string _totalContactTime;
+        public string TotalContactTime
         {
-            get => _totalContactMinutes;
-            set => SetProperty(ref _totalContactMinutes, value);
+            get => _totalContactTime;
+            set => SetProperty(ref _totalContactTime, value);
         }
     }
 }
