@@ -20,77 +20,66 @@
         Workaround for fixing ScrollView truncates items issue.
         https://github.com/xamarin/Xamarin.Forms/issues/13597
     -->
-    <ContentView BackgroundColor="#EEEEEE">
+    <ContentView BackgroundColor="White">
         <ScrollView>
-            <Grid Style="{StaticResource DefaultGridLayout}">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <ffimageloading:CachedImage
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-			            WidthRequest="80"
-                        HeightRequest="80"
-			            DownsampleToViewSize="true"
-                        AutomationProperties.IsInAccessibleTree="False"
-                        Margin="0,20,0,0"
-                        Source="icon_information.png" />
+            <StackLayout
+                Padding="10"
+                BackgroundColor="#FFFFFF"
+                Spacing="10">
                 <Frame
-                    Grid.Row="1"
-                    Margin="0,20,0,0" 
-                    Padding="20"
-                    BackgroundColor="White"
-                    CornerRadius="10">
-                    <StackLayout>
-                        <Label
+                        Grid.Row="1"
+                        Margin="0,20,0,0" 
+                        Padding="20"
+                        BackgroundColor="#FFF3DD"
+                        CornerRadius="10">
+                        <StackLayout>
+                            <ffimageloading:CachedImage
+                                AutomationProperties.IsInAccessibleTree="False"
+                                Margin="0,0,0,20"
+                                Aspect="AspectFit"
+                                Source="InfoMark.png" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                TabIndex="1"
+                                Margin="0,0,0,10"
+                                HorizontalOptions="Center"
+                                Style="{StaticResource DefaultTitleLabel}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageLabel}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="1"
-                            HorizontalOptions="Center"
+                            TabIndex="2"
+                            Margin="0,0,0,20"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
                             Style="{StaticResource DefaultTitleLabel}">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="{x:Static resources:AppResources.LowRiskContactPageLabel}" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
-                        Margin="0,20,0,0"
-                        FontSize="Large"
-                        HorizontalTextAlignment="Center"
-                        Style="{StaticResource DefaultTitleLabel}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountPrefixText}" />
-                                <Span Text="{Binding TotalContactMinutes}" />
-                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountSuffixText}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
-                </Frame>
-                <Frame
-                    Grid.Row="2"
-                    Margin="0,20,0,20"
-                    Padding="20"
-                    BackgroundColor="White">
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource DefaultLabel}"
-                        >
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageDescription}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </Frame>
-            </Grid>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountPrefixText}" />
+                                        <Span Text="{Binding TotalContactMinutes}" />
+                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountSuffixText}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="2"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource PrimaryText}"
+                            >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageDescription}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+            </StackLayout>
         </ScrollView>
     </ContentView>
 </ContentPage>

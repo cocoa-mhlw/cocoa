@@ -255,12 +255,12 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="LowRiskContactPageTitle" xml:space="preserve">
-    <value>リスクが極めて低い陽性者との接触状況</value>
-    <comment>リスクが極めて低い陽性者との接触状況</comment>
+    <value>リスクが極めて低い接触</value>
+    <comment>リスクが極めて低い接触</comment>
   </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>直近14日間に、リスクが極めて低い陽性者との接触がありました</value>
-    <comment>直近14日間に、リスクが極めて低い陽性者との接触がありました</comment>
+    <value>陽性者とリスクが極めて低い接触がありました</value>
+    <comment>陽性者とリスクが極めて低い接触がありました</comment>
   </data>
   <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
     <value>直近14日間に合計</value>

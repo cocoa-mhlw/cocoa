@@ -277,12 +277,12 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
     <data name="LowRiskContactPageTitle" xml:space="preserve">
-    <value>与风险极低的阳性人士的接触状态</value>
-    <comment>リスクが極めて低い陽性者との接触状況</comment>
+    <value>极低风险接触</value>
+    <comment>リスクが極めて低い接触</comment>
   </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>已收到低风险信号14天</value>
-    <comment>直近14日間に、リスクが極めて低い陽性者との接触がありました</comment>
+    <value>与阳性者接触的风险非常低</value>
+    <comment>陽性者とリスクが極めて低い接触がありました</comment>
   </data>
   <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
     <value>过去14天总共</value>
