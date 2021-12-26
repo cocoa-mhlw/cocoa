@@ -45,11 +45,22 @@ namespace Covid19Radar.ViewModels
             var exposureMinutes = totalNumberOfExposureMinutes % 60;
 
             var sb = new System.Text.StringBuilder();
-            if (0 < exposureHours)
+            if (exposureHours == 0 && exposureMinutes == 0)
             {
-                sb.Append($"{exposureHours}{AppResources.LowRiskContactPageCountSuffixHourText}");
+                sb.Append($"0{AppResources.LowRiskContactPageCountSuffixMinutesText}");
             }
-            sb.Append($"{exposureMinutes}{AppResources.LowRiskContactPageCountSuffixMinutesText}");
+            else
+            {
+                if (0 < exposureHours)
+                {
+                    sb.Append($"{exposureHours}{AppResources.LowRiskContactPageCountSuffixHourText}");
+                }
+                if (0 < exposureMinutes)
+                {
+                    sb.Append($"{exposureMinutes}{AppResources.LowRiskContactPageCountSuffixMinutesText}");
+                }
+            }
+            
             return sb.ToString();
         }
 
