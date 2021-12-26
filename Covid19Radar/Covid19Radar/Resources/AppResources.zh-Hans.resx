@@ -297,7 +297,7 @@
     <comment>分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>A low risk　signal has been recieved. It is few meters away. Please stay with preventing Infection.</value>
+    <value>我收到了来自阳性者智能手机的信号，但没有风险，因为它在几米之外。 活动区域有阳性人士，请继续注意预防感染。</value>
     <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
