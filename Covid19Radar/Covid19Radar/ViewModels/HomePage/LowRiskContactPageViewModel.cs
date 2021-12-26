@@ -2,12 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Resources;
 using Covid19Radar.Repository;
 using Prism.Navigation;
-using Xamarin.Forms;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -36,7 +34,7 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
 
             var totalNumberOfExposureMinutes = await calcTotalNumberOfExposureMinutes();
-            TotalContactMinutes = $"直近14日間に合計{totalNumberOfExposureMinutes}分間";
+            TotalContactMinutes = totalNumberOfExposureMinutes.ToString();
         }
 
         private async Task<int> calcTotalNumberOfExposureMinutes()

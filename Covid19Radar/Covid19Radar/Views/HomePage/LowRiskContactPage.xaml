@@ -28,15 +28,15 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                    <ffimageloading:CachedImage
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-			                WidthRequest="80"
-                            HeightRequest="80"
-			                DownsampleToViewSize="true"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            Margin="0,20,0,0"
-                            Source="icon_information.png" />
+                <ffimageloading:CachedImage
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+			            WidthRequest="80"
+                        HeightRequest="80"
+			            DownsampleToViewSize="true"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Margin="0,20,0,0"
+                        Source="icon_information.png" />
                 <Frame
                     Grid.Row="1"
                     Margin="0,20,0,0" 
@@ -47,6 +47,7 @@
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
                             TabIndex="1"
+                            HorizontalOptions="Center"
                             Style="{StaticResource DefaultTitleLabel}">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -55,16 +56,19 @@
                             </Label.FormattedText>
                         </Label>
                         <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="2"
-                            Margin="0,20,0,0"
-                            HorizontalOptions="Center"
-                            Style="{StaticResource DefaultLabelLarge}">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="{Binding TotalContactMinutes}" />
-                                </FormattedString>
-                            </Label.FormattedText>
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="2"
+                        Margin="0,20,0,0"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource DefaultTitleLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountPrefixText}" />
+                                <Span Text="{Binding TotalContactMinutes}" />
+                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountSuffixText}" />
+                            </FormattedString>
+                        </Label.FormattedText>
                         </Label>
                     </StackLayout>
                 </Frame>

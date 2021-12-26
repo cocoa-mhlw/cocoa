@@ -473,6 +473,18 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskContactPageCountPrefixText {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageCountPrefixText", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPageCountSuffixText {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageCountSuffixText", resourceCulture);
+            }
+        }
+        
         public static string LowRiskContactPageDescription {
             get {
                 return ResourceManager.GetString("LowRiskContactPageDescription", resourceCulture);

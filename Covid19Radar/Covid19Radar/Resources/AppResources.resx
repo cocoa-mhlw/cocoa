@@ -392,6 +392,14 @@
     <value>A low risk　signal has been recieved for 14 days</value>
     <comment>直近14日間に、リスクが極めて低い陽性者との接触がありました</comment>
   </data>
+  <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
+    <value>In the last 14 days, </value>
+    <comment>直近14日間に合計</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixText" xml:space="preserve">
+    <value>minutes</value>
+    <comment>分間</comment>
+  </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
     <value>A low risk　signal has been recieved. It is few meters away. Please stay with preventing Infection.</value>
     <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>

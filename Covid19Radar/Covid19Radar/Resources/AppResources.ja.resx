@@ -262,6 +262,14 @@
     <value>直近14日間に、リスクが極めて低い陽性者との接触がありました</value>
     <comment>直近14日間に、リスクが極めて低い陽性者との接触がありました</comment>
   </data>
+  <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
+    <value>直近14日間に合計</value>
+    <comment>直近14日間に合計</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixText" xml:space="preserve">
+    <value>分間</value>
+    <comment>分間</comment>
+  </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
     <value>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
     <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
