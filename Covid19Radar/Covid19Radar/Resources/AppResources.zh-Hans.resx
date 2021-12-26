@@ -288,7 +288,7 @@
     <value>过去14天总共</value>
     <comment>直近14日間に合計</comment>
   </data>
-    <data name="LowRiskContactPageCountSuffixHourText" xml:space="preserve">
+    <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>小时</value>
     <comment>時間</comment>
   </data>

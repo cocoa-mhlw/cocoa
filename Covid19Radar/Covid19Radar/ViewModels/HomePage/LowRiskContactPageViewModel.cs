@@ -53,7 +53,7 @@ namespace Covid19Radar.ViewModels
             {
                 if (0 < exposureHours)
                 {
-                    sb.Append($"{exposureHours}{AppResources.LowRiskContactPageCountSuffixHourText}");
+                    sb.Append($"{exposureHours}{AppResources.LowRiskContactPageCountSuffixHoursText}");
                 }
                 if (0 < exposureMinutes)
                 {

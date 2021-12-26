@@ -479,9 +479,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string LowRiskContactPageCountSuffixHourText {
+        public static string LowRiskContactPageCountSuffixHoursText {
             get {
-                return ResourceManager.GetString("LowRiskContactPageCountSuffixHourText", resourceCulture);
+                return ResourceManager.GetString("LowRiskContactPageCountSuffixHoursText", resourceCulture);
             }
         }
         
