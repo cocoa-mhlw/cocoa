@@ -3,14 +3,21 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using BackgroundTasks;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Foundation;
 using Xamarin.Essentials;
 
 namespace Covid19Radar.iOS.Services.Logs
 {
-    public class LogPeriodicDeleteService : ILogPeriodicDeleteService
+    public class LogPeriodicDeleteService : AbsLogPeriodicDeleteService
     {
+        #region Constants
+
+        private const double ONE_DAY_IN_SECONDS = 1 * 24 * 60 * 60;
+
+        #endregion
+
         #region Static Fields
 
         private static readonly string identifier = AppInfo.PackageName + ".delete-old-logs";
@@ -19,7 +26,6 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Instance Fields
 
-        private readonly ILoggerService loggerService;
         private readonly ILogFileService logFileService;
 
         #endregion
@@ -29,9 +35,8 @@ namespace Covid19Radar.iOS.Services.Logs
         public LogPeriodicDeleteService(
             ILoggerService loggerService,
             ILogFileService logFileService
-            )
+            ) : base(loggerService)
         {
-            this.loggerService = loggerService;
             this.logFileService = logFileService;
         }
 
@@ -39,7 +44,7 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region ILogPeriodicDeleteService Methods
 
-        public void Init()
+        public override void Schedule()
         {
             loggerService.StartMethod();
 
@@ -95,9 +100,8 @@ namespace Covid19Radar.iOS.Services.Logs
         {
             loggerService.StartMethod();
 
-            var oneDay = 1 * 24 * 60 * 60;
             var request = new BGAppRefreshTaskRequest(identifier);
-            request.EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(oneDay); // Fetch no earlier than 1 day from now
+            request.EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS); // Fetch no earlier than 1 day from now
 
             loggerService.Info($"request.EarliestBeginDate: {request.EarliestBeginDate}");
 
