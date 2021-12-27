@@ -56,7 +56,7 @@ namespace Covid19Radar.ViewModels
             var exposureMinutes = totalNumberOfExposureMinutes % 60;
 
             var sb = new System.Text.StringBuilder();
-            if (exposureHours == 0 && exposureMinutes == 0)
+            if (exposureHours <= 0 && exposureMinutes <= 0)
             {
                 sb.Append($"0{AppResources.LowRiskContactPageCountSuffixMinutesText}");
             }
