@@ -106,12 +106,12 @@
     <value>登録中</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</value>
-    <comment>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</comment>
+    <value>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</value>
+    <comment>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</comment>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>アプリの使用を中止します</value>
-    <comment>アプリの使用を中止します</comment>
+    <value>アプリの初期化を行います</value>
+    <comment>アプリの初期化を行います</comment>
   </data>
   <data name="SettingsPageDialogResetCompletedTitle" xml:space="preserve">
     <value>データを削除しました</value>
@@ -155,8 +155,8 @@
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>記録の停止／削除</value>
-    <comment>記録の停止／削除</comment>
+    <value>アプリの初期化</value>
+    <comment>アプリの初期化</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>アプリを実行した際に、各スマートフォンで接触符号（※1）を生成して持ちます。氏名・電話番号などの個人情報やGPS（※2）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
@@ -182,9 +182,13 @@
     <value>アプリの設定へ</value>
     <comment>アプリの設定へ</comment>
   </data>
-  <data name="HelpPage4Description" xml:space="preserve">
-    <value>アプリの設定から、アプリの使用中止と利用者情報の削除を行うことができます。</value>
-    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
+  <data name="HelpPage4Description1" xml:space="preserve">
+    <value>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</value>
+    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+  </data>
+  <data name="HelpPage4Description2" xml:space="preserve">
+    <value>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</value>
+    <comment>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</value>
@@ -235,8 +239,8 @@
     <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>接触の記録を停止／情報を削除するには</value>
-    <comment>接触の記録を停止／情報を削除するには</comment>
+    <value>接触の記録を削除してアプリを初期状態に戻すには</value>
+    <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
     <value>過去14日間の接触</value>
@@ -594,14 +598,6 @@
   <data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
     <value>処理番号が違います</value>
     <comment>処理番号が違います</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>登録する必要はありません。</value>
-    <comment>登録する必要はありません。</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>接触記録がありません</value>
-    <comment>接触記録がありません</comment>
   </data>
   <data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
@@ -1127,5 +1123,13 @@
   <data name="AnnotationSymbol2" xml:space="preserve">
     <value>※2</value>
     <comment>※2</comment>
+  </data>
+  <data name="HomePageImageAnnotationText" xml:space="preserve">
+    <value>「ホーム」画面のイメージ画像</value>
+    <comment>「ホーム」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedPageImageAnnotationText" xml:space="preserve">
+    <value>「陽性者との接触確認」画面のイメージ画像</value>
+    <comment>「陽性者との接触確認」画面のイメージ画像</comment>
   </data>
 </root>

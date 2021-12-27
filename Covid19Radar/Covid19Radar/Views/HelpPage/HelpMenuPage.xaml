@@ -37,5 +37,8 @@
         <ListView.Behaviors>
             <prism:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
         </ListView.Behaviors>
+        <ListView.Footer>
+            <StackLayout AutomationProperties.IsInAccessibleTree="False" />
+        </ListView.Footer>
     </ListView>
 </ContentPage>
