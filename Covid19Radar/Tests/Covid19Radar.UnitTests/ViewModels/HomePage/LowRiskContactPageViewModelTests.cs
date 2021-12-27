@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Globalization;
 using Covid19Radar.Resources;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
@@ -190,7 +191,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
         [Theory]
         [InlineData(new int[] { -5 }, "0分")]
-        public void Initialize_Time_Irregular(int[] seconds, string expected)
+        public void Initialize_Time_Irregular_Time(int[] seconds, string expected)
         {
             var originalCalture = AppResources.Culture;
             AppResources.Culture = new CultureInfo("ja-JP");
@@ -226,6 +227,31 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockUserDataRepository
                 .Verify(x => x.GetExposureWindowsAsync(), Times.Once);
             Assert.Equal(expected, lowRiskContactPageViewModel.TotalContactTime);
+
+            AppResources.Culture = originalCalture;
+        }
+
+        [Fact]
+        public void Initialize_Time_Irregular_ParseError()
+        {
+            var originalCalture = AppResources.Culture;
+            AppResources.Culture = new CultureInfo("ja-JP");
+
+            var date = DateTime.UtcNow.Date;
+
+            var dummyExposureWindowList = new List<ExposureWindow>();
+
+            mockUserDataRepository
+                .Setup(x => x.GetExposureWindowsAsync())
+                .Throws(new JsonSerializationException("parse error mock"));
+
+            var lowRiskContactPageViewModel = CreateViewModel();
+            var parameters = new NavigationParameters();
+            lowRiskContactPageViewModel.Initialize(parameters);
+
+            mockUserDataRepository
+                .Verify(x => x.GetExposureWindowsAsync(), Times.Once);
+            Assert.Equal("0分", lowRiskContactPageViewModel.TotalContactTime);
 
             AppResources.Culture = originalCalture;
         }

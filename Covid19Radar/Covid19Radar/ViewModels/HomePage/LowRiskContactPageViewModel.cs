@@ -40,6 +40,7 @@ namespace Covid19Radar.ViewModels
             }
             catch (Exception exception)
             {
+                TotalContactTime = makeTotalContactTimeString(0);
                 loggerService.Exception("failed to get TotalContactTime", exception);
             }
 
