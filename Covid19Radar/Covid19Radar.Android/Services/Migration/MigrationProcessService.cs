@@ -69,14 +69,17 @@ namespace Covid19Radar.Droid.Services.Migration
     public class MigrationProccessService : IMigrationProcessService
     {
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
+        private readonly AbsLogPeriodicDeleteService _logPeriodicDeleteService;
         private readonly ILoggerService _loggerService;
 
         public MigrationProccessService(
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
+            AbsLogPeriodicDeleteService logPeriodicDeleteService,
             ILoggerService loggerService
             )
         {
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
+            _logPeriodicDeleteService = logPeriodicDeleteService;
             _loggerService = loggerService;
         }
 
@@ -86,6 +89,7 @@ namespace Covid19Radar.Droid.Services.Migration
 
             await new WorkManagerMigrator(
                 _exposureDetectionBackgroundService,
+                _logPeriodicDeleteService,
                 _loggerService
                 ).ExecuteAsync();
 
