@@ -317,12 +317,22 @@ namespace Covid19Radar.ViewModels
 
                 loggerService.Info($"TemporaryExposureKeys-count: {temporaryExposureKeyList.Count()}");
 
+                IList<TemporaryExposureKey> filteredTemporaryExposureKeyList
+                    = TemporaryExposureKeyUtils.FiilterTemporaryExposureKeys(
+                        temporaryExposureKeyList,
+                        _diagnosisDate,
+                        AppConstants.DaysToSendTek,
+                        loggerService
+                        );
+
+                loggerService.Info($"FilteredTemporaryExposureKeys-count: {filteredTemporaryExposureKeyList.Count()}");
+
                 // TODO: Save and use revoke operation.
                 string idempotencyKey = Guid.NewGuid().ToString();
 
                 IList<HttpStatusCode> httpStatusCodes = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                     _diagnosisDate,
-                    temporaryExposureKeyList,
+                    filteredTemporaryExposureKeyList,
                     ProcessingNumber,
                     idempotencyKey
                     );
