@@ -187,5 +187,47 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             AppResources.Culture = originalCalture;
         }
+
+        [Theory]
+        [InlineData(new int[] { -5 }, "0分")]
+        public void Initialize_Time_Irregular(int[] seconds, string expected)
+        {
+            var originalCalture = AppResources.Culture;
+            AppResources.Culture = new CultureInfo("ja-JP");
+
+            var date = DateTime.UtcNow.Date;
+
+            var dummyExposureWindowList = new List<ExposureWindow>();
+
+            foreach (var second in seconds)
+            {
+                dummyExposureWindowList.Add(
+                    new ExposureWindow()
+                    {
+                        ScanInstances = new List<ScanInstance>()
+                        {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = second
+                            }
+                        }
+                    }
+                );
+            }
+
+            mockUserDataRepository
+                .Setup(x => x.GetExposureWindowsAsync())
+                .Returns(Task.FromResult(dummyExposureWindowList));
+
+            var lowRiskContactPageViewModel = CreateViewModel();
+            var parameters = new NavigationParameters();
+            lowRiskContactPageViewModel.Initialize(parameters);
+
+            mockUserDataRepository
+                .Verify(x => x.GetExposureWindowsAsync(), Times.Once);
+            Assert.Equal(expected, lowRiskContactPageViewModel.TotalContactTime);
+
+            AppResources.Culture = originalCalture;
+        }
     }
 }

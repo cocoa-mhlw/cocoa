@@ -8,6 +8,7 @@ using Covid19Radar.Repository;
 using Prism.Navigation;
 using System.Linq;
 using System.Threading.Tasks;
+using System;
 
 namespace Covid19Radar.ViewModels
 {
@@ -32,14 +33,23 @@ namespace Covid19Radar.ViewModels
 
             loggerService.StartMethod();
 
-            var exposureSeconds = await getTotalNumberOfExposureSeconds();
-            TotalContactTime = makeTotalContactTimeString(exposureSeconds);
+            try
+            {
+                var exposureSeconds = await getTotalNumberOfExposureSeconds();
+                TotalContactTime = makeTotalContactTimeString(exposureSeconds);
+            }
+            catch (Exception exception)
+            {
+                loggerService.Exception("failed to get TotalContactTime", exception);
+            }
 
             loggerService.EndMethod();
         }
 
         private string makeTotalContactTimeString(int exposureSeconds)
         {
+            loggerService.StartMethod();
+
             var totalNumberOfExposureMinutes = exposureSeconds / 60;
             var exposureHours = totalNumberOfExposureMinutes / 60;
             var exposureMinutes = totalNumberOfExposureMinutes % 60;
@@ -72,7 +82,7 @@ namespace Covid19Radar.ViewModels
                 .Select(aggregateSecondsSinceLastScans);
             var totalNumberOfExposureSeconds = numberOfExposureSecondsList
                 .Aggregate(0, (sum, x) => sum + x);
-            return totalNumberOfExposureSeconds;
+            return Math.Max(0, totalNumberOfExposureSeconds);
         }
 
         private int aggregateSecondsSinceLastScans(Chino.ExposureWindow window) =>
