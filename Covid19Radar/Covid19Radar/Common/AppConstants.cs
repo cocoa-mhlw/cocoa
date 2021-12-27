@@ -9,7 +9,7 @@ namespace Covid19Radar.Common
         /// <summary>
         /// Number of days covered from the date of diagnosis or onset
         /// </summary>
-        public const int DaysToSendTek = -3;
+        public const int DaysToSendTek = -15;
 
         /// <summary>
         /// Max Error Count
