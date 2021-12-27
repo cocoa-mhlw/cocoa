@@ -43,9 +43,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Theory]
-        [InlineData(new int[]{ 5 }, "0分")]
         [InlineData(new int[]{ 60 }, "1分")]
-        [InlineData(new int[] { 5432 }, "1時間30分")]
         [InlineData(new int[] { 60, 60 }, "2分")]
         [InlineData(new int[] { 60 * 60 }, "1時間")]
         [InlineData(new int[] { 60 * 59, 60 * 5 }, "1時間4分")]
@@ -92,9 +90,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Theory]
-        [InlineData(new int[] { 5 }, "0min")]
         [InlineData(new int[] { 60 }, "1min")]
-        [InlineData(new int[] { 5432 }, "1h30min")]
         [InlineData(new int[] { 60, 60 }, "2min")]
         [InlineData(new int[] { 60 * 60 }, "1h")]
         [InlineData(new int[] { 60 * 59, 60 * 5 }, "1h4min")]
@@ -141,9 +137,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Theory]
-        [InlineData(new int[] { 5 }, "0分钟")]
         [InlineData(new int[] { 60 }, "1分钟")]
-        [InlineData(new int[] { 5432 }, "1小时30分钟")]
         [InlineData(new int[] { 60, 60 }, "2分钟")]
         [InlineData(new int[] { 60 * 60 }, "1小时")]
         [InlineData(new int[] { 60 * 59, 60 * 5 }, "1小时4分钟")]
@@ -190,7 +184,13 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Theory]
+        [InlineData(new int[] { 5 }, "0分")]
         [InlineData(new int[] { -5 }, "0分")]
+        [InlineData(new int[] { 59 }, "0分")]
+        [InlineData(new int[] { 61 }, "1分")]
+        [InlineData(new int[] { 3599 }, "59分")]
+        [InlineData(new int[] { 3601 }, "1時間")]
+        [InlineData(new int[] { 5432 }, "1時間30分")]
         public void Initialize_Time_Irregular_Time(int[] seconds, string expected)
         {
             var originalCalture = AppResources.Culture;
