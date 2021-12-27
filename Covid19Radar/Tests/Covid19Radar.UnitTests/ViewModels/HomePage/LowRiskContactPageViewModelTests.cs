@@ -224,7 +224,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Fact]
-        public void Initialize_Time_Irregular_ParseError()
+        public void Initialize_Time_Irregular_ParseError_ja()
         {
             var originalCalture = AppResources.Culture;
             AppResources.Culture = new CultureInfo("ja-JP");
@@ -240,6 +240,49 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockUserDataRepository
                 .Verify(x => x.GetExposureWindowsAsync(), Times.Once);
             Assert.Equal("0分", lowRiskContactPageViewModel.TotalContactTime);
+
+            AppResources.Culture = originalCalture;
+        }
+
+        [Fact]
+        public void Initialize_Time_Irregular_ParseError_en()
+        {
+            var originalCalture = AppResources.Culture;
+            AppResources.Culture = new CultureInfo("en-US");
+
+            mockUserDataRepository
+                .Setup(x => x.GetExposureWindowsAsync())
+                .Throws(new JsonSerializationException("parse error mock"));
+
+            var lowRiskContactPageViewModel = CreateViewModel();
+            var parameters = new NavigationParameters();
+            lowRiskContactPageViewModel.Initialize(parameters);
+
+            mockUserDataRepository
+                .Verify(x => x.GetExposureWindowsAsync(), Times.Once);
+            Assert.Equal("0min", lowRiskContactPageViewModel.TotalContactTime);
+
+            AppResources.Culture = originalCalture;
+        }
+
+
+        [Fact]
+        public void Initialize_Time_Irregular_ParseError_zh()
+        {
+            var originalCalture = AppResources.Culture;
+            AppResources.Culture = new CultureInfo("zh-Hans");
+
+            mockUserDataRepository
+                .Setup(x => x.GetExposureWindowsAsync())
+                .Throws(new JsonSerializationException("parse error mock"));
+
+            var lowRiskContactPageViewModel = CreateViewModel();
+            var parameters = new NavigationParameters();
+            lowRiskContactPageViewModel.Initialize(parameters);
+
+            mockUserDataRepository
+                .Verify(x => x.GetExposureWindowsAsync(), Times.Once);
+            Assert.Equal("0分钟", lowRiskContactPageViewModel.TotalContactTime);
 
             AppResources.Culture = originalCalture;
         }

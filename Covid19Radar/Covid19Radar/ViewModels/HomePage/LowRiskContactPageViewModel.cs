@@ -14,8 +14,10 @@ namespace Covid19Radar.ViewModels
 {
     public class LowRiskContactPageViewModel: ViewModelBase
     {
-        private readonly ILoggerService loggerService;
-        private readonly IUserDataRepository userDataRepository;
+        private const int PLACEHOLDER_MINUTES = 0;
+
+        private readonly ILoggerService _loggerService;
+        private readonly IUserDataRepository _userDataRepository;
 
         public LowRiskContactPageViewModel(
             INavigationService navigationService,
@@ -23,15 +25,15 @@ namespace Covid19Radar.ViewModels
             IUserDataRepository userDataRepository) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
-            this.loggerService = loggerService;
-            this.userDataRepository = userDataRepository;
+            this._loggerService = loggerService;
+            this._userDataRepository = userDataRepository;
         }
 
         public override async void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
 
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
             try
             {
@@ -40,16 +42,16 @@ namespace Covid19Radar.ViewModels
             }
             catch (Exception exception)
             {
-                TotalContactTime = "0分";
-                loggerService.Exception("failed to get TotalContactTime", exception);
+                TotalContactTime = $"{PLACEHOLDER_MINUTES}{AppResources.LowRiskContactPageCountSuffixMinutesText}";
+                _loggerService.Exception("failed to get TotalContactTime", exception);
             }
 
-            loggerService.EndMethod();
+            _loggerService.EndMethod();
         }
 
         private string makeTotalContactTimeString(int exposureSeconds)
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
             var totalNumberOfExposureMinutes = exposureSeconds / 60;
             var exposureHours = totalNumberOfExposureMinutes / 60;
@@ -58,7 +60,7 @@ namespace Covid19Radar.ViewModels
             var sb = new System.Text.StringBuilder();
             if (exposureHours <= 0 && exposureMinutes <= 0)
             {
-                sb.Append($"0{AppResources.LowRiskContactPageCountSuffixMinutesText}");
+                sb.Append($"{PLACEHOLDER_MINUTES}{AppResources.LowRiskContactPageCountSuffixMinutesText}");
             }
             else
             {
@@ -77,7 +79,7 @@ namespace Covid19Radar.ViewModels
 
         private async Task<int> getTotalNumberOfExposureSeconds()
         {
-            var windows = await userDataRepository.GetExposureWindowsAsync();
+            var windows = await _userDataRepository.GetExposureWindowsAsync();
             var numberOfExposureSecondsList = windows
                 .ToArray()
                 .Select(aggregateSecondsSinceLastScans);
