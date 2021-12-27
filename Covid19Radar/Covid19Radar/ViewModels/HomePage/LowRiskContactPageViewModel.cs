@@ -9,12 +9,14 @@ using Prism.Navigation;
 using System.Linq;
 using System.Threading.Tasks;
 using System;
+using Chino;
+using System.IO;
 
 namespace Covid19Radar.ViewModels
 {
     public class LowRiskContactPageViewModel: ViewModelBase
     {
-        private const int PLACEHOLDER_MINUTES = 0;
+        private const int EXPOSURE_NOT_FOUND_VALUE_IN_MINUTES = 0;
 
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
@@ -37,30 +39,35 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                var exposureSeconds = await getTotalNumberOfExposureSeconds();
-                TotalContactTime = makeTotalContactTimeString(exposureSeconds);
+                var exposureSeconds = await GetTotalNumberOfExposureSeconds();
+                TotalContactTime = MakeTotalContactTimeString(exposureSeconds);
             }
             catch (Exception exception)
             {
-                TotalContactTime = $"{PLACEHOLDER_MINUTES}{AppResources.LowRiskContactPageCountSuffixMinutesText}";
+                TotalContactTime = $"{EXPOSURE_NOT_FOUND_VALUE_IN_MINUTES}{AppResources.LowRiskContactPageCountSuffixMinutesText}";
                 _loggerService.Exception("failed to get TotalContactTime", exception);
             }
 
             _loggerService.EndMethod();
         }
 
-        private string makeTotalContactTimeString(int exposureSeconds)
+        private string MakeTotalContactTimeString(int exposureSeconds)
         {
             _loggerService.StartMethod();
+
+            if (exposureSeconds < 0)
+            {
+                throw new InvalidDataException();
+            }
 
             var totalNumberOfExposureMinutes = exposureSeconds / 60;
             var exposureHours = totalNumberOfExposureMinutes / 60;
             var exposureMinutes = totalNumberOfExposureMinutes % 60;
 
             var sb = new System.Text.StringBuilder();
-            if (exposureHours <= 0 && exposureMinutes <= 0)
+            if (exposureHours == 0 && exposureMinutes == 0)
             {
-                sb.Append($"{PLACEHOLDER_MINUTES}{AppResources.LowRiskContactPageCountSuffixMinutesText}");
+                sb.Append($"{EXPOSURE_NOT_FOUND_VALUE_IN_MINUTES}{AppResources.LowRiskContactPageCountSuffixMinutesText}");
             }
             else
             {
@@ -77,18 +84,17 @@ namespace Covid19Radar.ViewModels
             return sb.ToString();
         }
 
-        private async Task<int> getTotalNumberOfExposureSeconds()
+        private async Task<int> GetTotalNumberOfExposureSeconds()
         {
             var windows = await _userDataRepository.GetExposureWindowsAsync();
             var numberOfExposureSecondsList = windows
-                .ToArray()
-                .Select(aggregateSecondsSinceLastScans);
+                .Select(AggregateSecondsSinceLastScans);
             var totalNumberOfExposureSeconds = numberOfExposureSecondsList
                 .Aggregate(0, (sum, x) => sum + x);
-            return Math.Max(0, totalNumberOfExposureSeconds);
+            return totalNumberOfExposureSeconds;
         }
 
-        private int aggregateSecondsSinceLastScans(Chino.ExposureWindow window) =>
+        private int AggregateSecondsSinceLastScans(ExposureWindow window) =>
             window.ScanInstances.Select(x => x.SecondsSinceLastScan).Aggregate(0, (sum, x) => sum + x);
 
         private string _totalContactTime;
