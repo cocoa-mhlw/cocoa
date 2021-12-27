@@ -54,8 +54,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var originalCalture = AppResources.Culture;
             AppResources.Culture = new CultureInfo("ja-JP");
 
-            var date = DateTime.UtcNow.Date;
-
             var dummyExposureWindowList = new List<ExposureWindow>();
 
             foreach (var second in seconds)
@@ -101,8 +99,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var originalCalture = AppResources.Culture;
             AppResources.Culture = new CultureInfo("en-US");
 
-            var date = DateTime.UtcNow.Date;
-
             var dummyExposureWindowList = new List<ExposureWindow>();
 
             foreach (var second in seconds)
@@ -147,8 +143,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             var originalCalture = AppResources.Culture;
             AppResources.Culture = new CultureInfo("zh-Hans");
-
-            var date = DateTime.UtcNow.Date;
 
             var dummyExposureWindowList = new List<ExposureWindow>();
 
@@ -196,8 +190,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var originalCalture = AppResources.Culture;
             AppResources.Culture = new CultureInfo("ja-JP");
 
-            var date = DateTime.UtcNow.Date;
-
             var dummyExposureWindowList = new List<ExposureWindow>();
 
             foreach (var second in seconds)
@@ -236,10 +228,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             var originalCalture = AppResources.Culture;
             AppResources.Culture = new CultureInfo("ja-JP");
-
-            var date = DateTime.UtcNow.Date;
-
-            var dummyExposureWindowList = new List<ExposureWindow>();
 
             mockUserDataRepository
                 .Setup(x => x.GetExposureWindowsAsync())
