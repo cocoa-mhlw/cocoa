@@ -50,7 +50,7 @@ COCOA開発チームがアプリリリースする際に利用します。コミ
 ##### EN_DEBUG
 ExposureNotificationをデバッグする目的のシンボルです。設定すると診断キーの重複チェックをスキップするほか、iOS版ではTEKを取得する際にTestモードで取得します。
 
-切替内容に関する詳細は、[DEBUGマクロ](https://github.com/cocoa-mhlw/cocoa/search?q=%22if+EN_DEBUG%22)を参照してください。
+切替内容に関する詳細は、[EN_DEBUGマクロ](https://github.com/cocoa-mhlw/cocoa/search?q=%22if+EN_DEBUG%22)を参照してください。
 
 ### ビルド＆実行手順
 Debug_Mockを例にしてビルド手順を説明します。手順は色々あると思いますが、エディタの左上にある構成選択から適切な構成を選択して再生ボタン(▶︎)をクリックする方法を紹介します。
