@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using TimeZoneConverter;
 
 namespace Covid19Radar.Common
 {
@@ -13,6 +14,11 @@ namespace Covid19Radar.Common
         /// </summary>
         public static readonly DateTime COCOA_FIRST_RELEASE_DATE
             = DateTime.SpecifyKind(new DateTime(2020, 06, 19, 9, 0, 0), DateTimeKind.Utc);
+
+        /// <summary>
+        /// Japan Standard Time (JST), UTC +9
+        /// </summary>
+        public static TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
 
         /// <summary>
         /// Number of days covered from the date of diagnosis or onset

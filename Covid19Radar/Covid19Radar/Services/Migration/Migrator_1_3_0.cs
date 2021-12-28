@@ -6,7 +6,6 @@ using System;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
-using TimeZoneConverter;
 
 namespace Covid19Radar.Services.Migration
 {
@@ -15,8 +14,6 @@ namespace Covid19Radar.Services.Migration
         private const string START_DATETIME = "StartDateTime";
         private const string TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
-
-        private readonly TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
 
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
@@ -45,7 +42,7 @@ namespace Covid19Radar.Services.Migration
                 MigrateDateTimeToEpoch(
                     TERMS_OF_SERVICE_LAST_UPDATE_DATETIME,
                     PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch,
-                    timeZoneInfo: TIMEZONE_JST,
+                    timeZoneInfo: AppConstants.TIMEZONE_JST,
                     fallbackDateTime: AppConstants.COCOA_FIRST_RELEASE_DATE
                     );
             }
@@ -55,7 +52,7 @@ namespace Covid19Radar.Services.Migration
                 MigrateDateTimeToEpoch(
                     PRIVACY_POLICY_LAST_UPDATE_DATETIME,
                     PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch,
-                    timeZoneInfo: TIMEZONE_JST,
+                    timeZoneInfo: AppConstants.TIMEZONE_JST,
                     fallbackDateTime: AppConstants.COCOA_FIRST_RELEASE_DATE
                     );
             }
