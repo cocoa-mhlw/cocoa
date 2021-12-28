@@ -20,40 +20,58 @@
         <StackLayout
             Padding="20"
             Spacing="20">
-            <ffimageloading:CachedImage
-                Aspect="AspectFit"
-                Source="alert_workaround_img.png"
-                AutomationProperties.IsInAccessibleTree="False" />
+            <StackLayout>
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="alert_workaround_img.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.HomePageImageAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
             <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="2"
                 Style="{StaticResource DefaultLabel}"
-                Text="{x:Static resources:AppResources.TroubleshootingPageDescription1}"
-                AutomationProperties.IsInAccessibleTree="True" />
+                Text="{x:Static resources:AppResources.TroubleshootingPageDescription1}" />
             <Frame
                 Padding="15"
                 BackgroundColor="#FFF3DD"
                 CornerRadius="10">
                 <StackLayout Spacing="10">
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="3"
                         Style="{StaticResource DefaultLabel}"
                         FontAttributes="Bold"
-                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription2}"
-                        AutomationProperties.IsInAccessibleTree="True" />
+                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription2}" />
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="4"
                         Style="{StaticResource DefaultLabel}"
                         FontAttributes="Bold"
-                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription3}"
-                        AutomationProperties.IsInAccessibleTree="True" />
+                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription3}" />
                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="5"
                         Style="{StaticResource DefaultLabelSmall}"
-                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription4}"
-                        AutomationProperties.IsInAccessibleTree="True" />
+                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription4}" />
                 </StackLayout>
             </Frame>
             <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="6"
                 Style="{StaticResource DefaultLabel}"
-                Text="{x:Static resources:AppResources.TroubleshootingPageDescription5}"
-                AutomationProperties.IsInAccessibleTree="True" />
+                Text="{x:Static resources:AppResources.TroubleshootingPageDescription5}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
-

@@ -332,8 +332,8 @@ namespace Covid19Radar.Services
 
                     case HttpStatusCode.NotAcceptable:
                         await UserDialogs.Instance.AlertAsync(
-                            AppResources.ExposureNotificationHandler1ErrorMessage,
-                            AppResources.ProcessingNumberErrorDiagTitle,
+                            null,
+                            AppResources.ExposureNotificationHandler1ErrorTitle,
                             AppResources.ButtonOk);
 
                         loggerService.Error($"The diagnostic number is incorrect.");
@@ -390,13 +390,6 @@ namespace Covid19Radar.Services
             var afterKey = JsonConvert.SerializeObject(keys.ToList());
             Debug.WriteLine($"C19R {beforeKey}");
             Debug.WriteLine($"C19R {afterKey}");
-
-            if (keys.Count() == 0)
-            {
-                loggerService.Error($"Temporary exposure keys is empty.");
-                loggerService.EndMethod();
-                throw new InvalidDataException();
-            }
 
             // Generate Padding
             var padding = GetPadding();

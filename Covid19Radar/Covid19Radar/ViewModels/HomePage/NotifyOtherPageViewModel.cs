@@ -19,6 +19,8 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
+        public string HowToReceiveProcessingNumberReadText => $"{AppResources.NotifyOtherPageLabel} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
         private readonly IExposureNotificationService exposureNotificationService;
         private readonly ICloseApplicationService closeApplicationService;
@@ -288,17 +290,6 @@ namespace Covid19Radar.ViewModels
                 await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 
                 loggerService.Info($"Successfully submit the diagnostic number.");
-                loggerService.EndMethod();
-            }
-            catch (InvalidDataException ex)
-            {
-                errorCount++;
-                UserDialogs.Instance.Alert(
-                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFound,
-                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle,
-                    AppResources.ButtonOk
-                );
-                loggerService.Exception("Failed to submit UID invalid data.", ex);
                 loggerService.EndMethod();
             }
             catch (Exception ex)

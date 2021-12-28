@@ -313,14 +313,10 @@
     <BundleResource Include="Resources\Base.lproj\HelpPage31%403x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage32%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage32%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\IconHamburger%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\IconHamburger%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\Base.lproj\notify_img01%402x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img01%403x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%402x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%403x.png" />
-    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage20%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage20%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage21%402x.png" />
@@ -350,6 +346,20 @@
     <BundleResource Include="Resources\Base.lproj\alert_workaround_img%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\alert_workaround_img%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\alert_workaround_img%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_close%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_close%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_close%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_close%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\icon_close%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\icon_close%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_menu%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_menu%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_menu%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_menu%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_arrow%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_arrow%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

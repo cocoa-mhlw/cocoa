@@ -71,9 +71,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SettingsPageButton1 {
+        public static string SettingsPageLicenseButton {
             get {
-                return ResourceManager.GetString("SettingsPageButton1", resourceCulture);
+                return ResourceManager.GetString("SettingsPageLicenseButton", resourceCulture);
             }
         }
         
@@ -116,12 +116,6 @@ namespace Covid19Radar.Resources {
         public static string NotifyOthersLearnMoreUrl {
             get {
                 return ResourceManager.GetString("NotifyOthersLearnMoreUrl", resourceCulture);
-            }
-        }
-        
-        public static string MainTutorial {
-            get {
-                return ResourceManager.GetString("MainTutorial", resourceCulture);
             }
         }
         
@@ -257,39 +251,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SettingsPageLabel1 {
+        public static string SettingsPageReinitializeLabel {
             get {
-                return ResourceManager.GetString("SettingsPageLabel1", resourceCulture);
+                return ResourceManager.GetString("SettingsPageReinitializeLabel", resourceCulture);
             }
         }
         
-        public static string SettingsPageDescription1 {
+        public static string SettingsPageReinitializeDescription {
             get {
-                return ResourceManager.GetString("SettingsPageDescription1", resourceCulture);
-            }
-        }
-        
-        public static string SettingsPageLabel2 {
-            get {
-                return ResourceManager.GetString("SettingsPageLabel2", resourceCulture);
-            }
-        }
-        
-        public static string SettingsPageDescription2 {
-            get {
-                return ResourceManager.GetString("SettingsPageDescription2", resourceCulture);
-            }
-        }
-        
-        public static string SettingsPageLabel3 {
-            get {
-                return ResourceManager.GetString("SettingsPageLabel3", resourceCulture);
-            }
-        }
-        
-        public static string SettingsPageDescription3 {
-            get {
-                return ResourceManager.GetString("SettingsPageDescription3", resourceCulture);
+                return ResourceManager.GetString("SettingsPageReinitializeDescription", resourceCulture);
             }
         }
         
@@ -314,6 +284,12 @@ namespace Covid19Radar.Resources {
         public static string HelpMenuPageTitle {
             get {
                 return ResourceManager.GetString("HelpMenuPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string HelpMenuPageMenu {
+            get {
+                return ResourceManager.GetString("HelpMenuPageMenu", resourceCulture);
             }
         }
         
@@ -437,9 +413,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string HelpPage4Description {
+        public static string HelpPage4Description1 {
             get {
-                return ResourceManager.GetString("HelpPage4Description", resourceCulture);
+                return ResourceManager.GetString("HelpPage4Description1", resourceCulture);
+            }
+        }
+        
+        public static string HelpPage4Description2 {
+            get {
+                return ResourceManager.GetString("HelpPage4Description2", resourceCulture);
             }
         }
         
@@ -899,9 +881,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string ExposureNotificationHandler1ErrorMessage {
+        public static string ExposureNotificationHandler1ErrorTitle {
             get {
-                return ResourceManager.GetString("ExposureNotificationHandler1ErrorMessage", resourceCulture);
+                return ResourceManager.GetString("ExposureNotificationHandler1ErrorTitle", resourceCulture);
             }
         }
         
@@ -980,18 +962,6 @@ namespace Covid19Radar.Resources {
         public static string ProcessingNumberErrorDiagTitle {
             get {
                 return ResourceManager.GetString("ProcessingNumberErrorDiagTitle", resourceCulture);
-            }
-        }
-        
-        public static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFound {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFound", resourceCulture);
-            }
-        }
-        
-        public static string NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle", resourceCulture);
             }
         }
         
@@ -1229,18 +1199,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SaveCompleted {
-            get {
-                return ResourceManager.GetString("SaveCompleted", resourceCulture);
-            }
-        }
-        
-        public static string Saving {
-            get {
-                return ResourceManager.GetString("Saving", resourceCulture);
-            }
-        }
-        
         public static string SendIdMailBody1 {
             get {
                 return ResourceManager.GetString("SendIdMailBody1", resourceCulture);
@@ -1270,28 +1228,10 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("SendingError", resourceCulture);
             }
         }
-
-        public static string SuccessMessageToSaveOperatingInformationForAndroid {
-            get {
-                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid", resourceCulture);
-            }
-        }
-        
-        public static string SuccessMessageToSaveOperatingInformationForIOS {
-            get {
-                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForIOS", resourceCulture);
-            }
-        }
         
         public static string UrlContactedForm {
             get {
                 return ResourceManager.GetString("UrlContactedForm", resourceCulture);
-            }
-        }
-        
-        public static string SuccessMessageToSaveOperatingInformationForAndroid2 {
-            get {
-                return ResourceManager.GetString("SuccessMessageToSaveOperatingInformationForAndroid2", resourceCulture);
             }
         }
         
@@ -1487,12 +1427,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NoteSymbol {
-            get {
-                return ResourceManager.GetString("NoteSymbol", resourceCulture);
-            }
-        }
-        
         public static string WebAccessibilityPolicyPageTitle {
             get {
                 return ResourceManager.GetString("WebAccessibilityPolicyPageTitle", resourceCulture);
@@ -1504,19 +1438,19 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("UrlWebAccessibilityPolicy", resourceCulture);
             }
         }
-
+        
         public static string SendLogCompletePageCopyId {
             get {
                 return ResourceManager.GetString("SendLogCompletePageCopyId", resourceCulture);
             }
         }
-
+        
         public static string SuccessMessageToCopyLogId {
             get {
                 return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
             }
         }
-
+        
         public static string HomePageENStatusActiveTitle {
             get {
                 return ResourceManager.GetString("HomePageENStatusActiveTitle", resourceCulture);
@@ -1724,6 +1658,90 @@ namespace Covid19Radar.Resources {
         public static string Button {
             get {
                 return ResourceManager.GetString("Button", resourceCulture);
+            }
+        }
+        
+        public static string List {
+            get {
+                return ResourceManager.GetString("List", resourceCulture);
+            }
+        }
+        
+        public static string GpsAnnotationText {
+            get {
+                return ResourceManager.GetString("GpsAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string BluetoothAnnotationText {
+            get {
+                return ResourceManager.GetString("BluetoothAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string ScreenshotAnnotationText {
+            get {
+                return ResourceManager.GetString("ScreenshotAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string CocoaAnnotationText {
+            get {
+                return ResourceManager.GetString("CocoaAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string OsAnnotationText {
+            get {
+                return ResourceManager.GetString("OsAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string SmsAnnotationText {
+            get {
+                return ResourceManager.GetString("SmsAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string MyHerSysAnnotationText {
+            get {
+                return ResourceManager.GetString("MyHerSysAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string RandomCodeAnnotationText {
+            get {
+                return ResourceManager.GetString("RandomCodeAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string AnnotationSymbol {
+            get {
+                return ResourceManager.GetString("AnnotationSymbol", resourceCulture);
+            }
+        }
+        
+        public static string AnnotationSymbol1 {
+            get {
+                return ResourceManager.GetString("AnnotationSymbol1", resourceCulture);
+            }
+        }
+        
+        public static string AnnotationSymbol2 {
+            get {
+                return ResourceManager.GetString("AnnotationSymbol2", resourceCulture);
+            }
+        }
+        
+        public static string HomePageImageAnnotationText {
+            get {
+                return ResourceManager.GetString("HomePageImageAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string ContactedPageImageAnnotationText {
+            get {
+                return ResourceManager.GetString("ContactedPageImageAnnotationText", resourceCulture);
             }
         }
     }

@@ -41,6 +41,7 @@
                     Grid.Row="0"
                     Grid.Column="1"
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
                     Style="{StaticResource DefaultLabel}"
                     VerticalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription1}" />
@@ -50,41 +51,47 @@
                     AutomationProperties.IsInAccessibleTree="False"
                     Aspect="AspectFit"
                     Source="notify_img02.png" />
-                <Label
+                <StackLayout
                     Grid.Row="1"
                     Grid.Column="1"
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource DefaultLabel}"
-                    VerticalTextAlignment="Center"
-                    Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription2}" />
+                    VerticalOptions="Center">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="2"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription2}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="3"
+                        Margin="0, 10, 0, 0"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.SmsAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
             </Grid>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                Style="{StaticResource DefaultLabel}">
-                <AutomationProperties.Name>
-                    <OnPlatform x:TypeArguments="x:String">
-                        <On Platform="iOS" Value="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
-                    </OnPlatform>
-                </AutomationProperties.Name>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="{x:Static resources:AppResources.NoteSymbol}" />
-                        <Span Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                TabIndex="4"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                Style="{StaticResource DefaultLabel}">
-                <AutomationProperties.Name>
-                    <OnPlatform x:TypeArguments="x:String">
-                        <On Platform="iOS" Value="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
-                    </OnPlatform>
-                </AutomationProperties.Name>
+                TabIndex="5"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="6"
+                Style="{StaticResource AnnotationLabel}">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="{x:Static resources:AppResources.NoteSymbol}" />
-                        <Span Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
+                        <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                        <Span Text="{x:Static resources:AppResources.MyHerSysAnnotationText}"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>

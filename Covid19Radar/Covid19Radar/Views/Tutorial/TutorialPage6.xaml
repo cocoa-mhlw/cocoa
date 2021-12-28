@@ -30,6 +30,7 @@
                     Source="TutorialPage60.png" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
                     Margin="0,0,0,30"
                     Style="{StaticResource DefaultTitleLabel}">
                     <Label.FormattedText>
@@ -40,6 +41,7 @@
                 </Label>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="2"
                     Margin="0,0,0,30"
                     Style="{StaticResource DefaultTitleLabel}"
                     VerticalTextAlignment="Center">
@@ -52,17 +54,15 @@
             </StackLayout>
             <StackLayout Grid.Row="1" Margin="0,0,0,20">
                 <Button
-                    AutomationId="NextButton"
                     AutomationProperties.IsInAccessibleTree="True"
-                    AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage6ButtonText1}"
+                    TabIndex="3"
                     Command="{prism:NavigateTo '/MenuPage/NavigationPage/HomePage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.TutorialPage6ButtonText1}" />
                 <Button
-                    Margin="0,10,0,0"
-                    AutomationId="NextButton"
                     AutomationProperties.IsInAccessibleTree="True"
-                    AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage6ButtonText2}"
+                    TabIndex="4"
+                    Margin="0,10,0,0"
                     Command="{prism:NavigateTo '/MenuPage/NavigationPage/HelpMenuPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.TutorialPage6ButtonText2}" />

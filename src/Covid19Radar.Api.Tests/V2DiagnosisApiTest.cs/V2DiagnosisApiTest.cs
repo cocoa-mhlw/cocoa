@@ -11,7 +11,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
-using System.Diagnostics;
 using System.Net;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
@@ -79,7 +78,7 @@ namespace Covid19Radar.Api.Tests
 
 
             var deviceCheck = new Mock<IDeviceValidationService>();
-            deviceCheck.Setup(_ => _.Validation(It.IsAny<DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
+            deviceCheck.Setup(_ => _.Validation(It.IsAny<string>(), It.IsAny<V2DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.V2DiagnosisApi>();
             var diagnosisApi = new V2DiagnosisApi(config.Object,
@@ -94,16 +93,16 @@ namespace Covid19Radar.Api.Tests
             RandomNumberGenerator.Create().GetBytes(keydata);
             var keyDataString = Convert.ToBase64String(keydata);
             var startNumber = (uint)DateTimeOffset.UtcNow.ToUnixTimeSeconds() / 600;
-            var bodyJson = new DiagnosisSubmissionParameter()
+            var bodyJson = new V2DiagnosisSubmissionParameter()
             {
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
                 Platform = platform,
                 DeviceVerificationPayload = "DeviceVerificationPayload",
                 AppPackageName = "Covid19Radar",
-                Keys = new DiagnosisSubmissionParameter.Key[] {
-                    new DiagnosisSubmissionParameter.Key() { KeyData = keyDataString, RollingPeriod = 0, RollingStartNumber = startNumber },
-                    new DiagnosisSubmissionParameter.Key() { KeyData = keyDataString, RollingPeriod = 0, RollingStartNumber = startNumber } }
+                Keys = new V2DiagnosisSubmissionParameter.Key[] {
+                    new V2DiagnosisSubmissionParameter.Key() { KeyData = keyDataString, RollingPeriod = 0, RollingStartNumber = startNumber },
+                    new V2DiagnosisSubmissionParameter.Key() { KeyData = keyDataString, RollingPeriod = 0, RollingStartNumber = startNumber } }
             };
             var bodyString = Newtonsoft.Json.JsonConvert.SerializeObject(bodyJson);
             using var stream = new System.IO.MemoryStream();
