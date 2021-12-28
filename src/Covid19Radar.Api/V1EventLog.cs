@@ -102,7 +102,7 @@ namespace Covid19Radar.Api
             }
             catch(JsonSerializationException e)
             {
-                _logger.LogError(e.ToString());
+                _logger.LogError("JsonSerializationException occurred.");
                 return new StatusCodeResult((int)HttpStatusCode.BadRequest);
             }
 
