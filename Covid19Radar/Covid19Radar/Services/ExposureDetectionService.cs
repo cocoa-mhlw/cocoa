@@ -23,7 +23,7 @@ namespace Covid19Radar.Services
 
         public Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations);
 
-        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion);
+        public Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion);
     }
 
     public class ExposureDetectionService : IExposureDetectionService
@@ -188,40 +188,37 @@ namespace Covid19Radar.Services
             }
         }
 
-        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration, string enVersion)
+        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion)
         {
             _loggerService.Info("ExposureNotDetected");
 
-            _ = Task.Run(async () =>
+            try
             {
-                try
-                {
-                    await _exposureDataCollectServer.UploadExposureDataAsync(
-                        exposureConfiguration,
-                        _deviceInfoUtility.Model,
-                        enVersion
-                        );
-                }
-                catch (Exception e)
-                {
-                    _loggerService.Exception("UploadExposureDataAsync", e);
-                }
+                await _exposureDataCollectServer.UploadExposureDataAsync(
+                    exposureConfiguration,
+                    _deviceInfoUtility.Model,
+                    enVersion
+                    );
+            }
+            catch (Exception e)
+            {
+                _loggerService.Exception("UploadExposureDataAsync", e);
+            }
 
-                string idempotencyKey = Guid.NewGuid().ToString();
-                try
-                {
-                    await _eventLogService.SendExposureDataAsync(
-                        idempotencyKey,
-                        exposureConfiguration,
-                        _deviceInfoUtility.Model,
-                        enVersion
-                        );
-                }
-                catch (Exception e)
-                {
-                    _loggerService.Exception("SendExposureDataAsync", e);
-                }
-            });
+            string idempotencyKey = Guid.NewGuid().ToString();
+            try
+            {
+                await _eventLogService.SendExposureDataAsync(
+                    idempotencyKey,
+                    exposureConfiguration,
+                    _deviceInfoUtility.Model,
+                    enVersion
+                    );
+            }
+            catch (Exception e)
+            {
+                _loggerService.Exception("SendExposureDataAsync", e);
+            }
         }
     }
 }
