@@ -39,6 +39,12 @@ namespace Covid19Radar.Common
         public const string LinkQueryKeyProcessingNumber = "pn";
 
         /// <summary>
+        /// DiagnosisApi version.
+        /// (e.g. v2, v3)
+        /// </summary>
+        public const string DiagnosisApiVersionCode = "v3";
+
+        /// <summary>
         /// Number of day(s) that ExposureConfiguration file downloaded cache.
         /// </summary>
         public const int ExposureConfigurationFileDownloadCacheRetentionDays = 2;
