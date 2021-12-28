@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Covid19Radar.Common;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 
@@ -273,7 +274,7 @@ namespace Covid19Radar.Repository
 
         public string DiagnosisKeyRegisterApiEndpoint
         {
-            get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
+            get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppConstants.DiagnosisApiVersionCode, "diagnosis");
             set
             {
                 // Do nothing
@@ -357,7 +358,7 @@ namespace Covid19Radar.Repository
 
         [JsonProperty("diagnosis_key_register_api_endpoint")]
         public string DiagnosisKeyRegisterApiEndpoint
-            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppConstants.DiagnosisApiVersionCode, "diagnosis");
 
         [JsonProperty("diagnosis_key_list_provide_server_endpoint")]
         public string DiagnosisKeyListProvideServerEndpoint
@@ -370,7 +371,7 @@ namespace Covid19Radar.Repository
 
         [JsonProperty("exposure_configuration_url")]
         public string? ExposureConfigurationUrl
-            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino", "configuration.json");
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration", "configuration.json");
 
         [JsonProperty("exposure_data_collect_server_endpoint")]
         public string? ExposureDataCollectServerEndpoint = null;
