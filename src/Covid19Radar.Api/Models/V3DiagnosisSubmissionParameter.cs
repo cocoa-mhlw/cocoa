@@ -17,7 +17,7 @@ namespace Covid19Radar.Api.Models
 
         /*
          * [Important]
-         * `daysSinceOnsetOfSymptoms` value must be greater equal -14 and lesser equal 14.
+         * The value `daysSinceOnsetOfSymptoms` must be less than or equal to `-14` and greater than or equal to `+14`.
          *
          * If any diagnosis-keys file CONTAMINATED by out of range value(e.g. -199, 62) that provide detectExposure/provideDiagnosisKeys method,
          * ExposureNotification API for Android doesn't return any result(ExposureDetected/ExposureNotDetected) to BroadcastReceiver.
