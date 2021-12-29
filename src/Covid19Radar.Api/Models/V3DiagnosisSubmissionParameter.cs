@@ -15,6 +15,13 @@ namespace Covid19Radar.Api.Models
     {
         public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
 
+        /*
+         * [Important]
+         * `daysSinceOnsetOfSymptoms` value must be greater equal -14 and lesser equal 14.
+         *
+         * If any diagnosis-keys file CONTAMINATED by out of range value(e.g. -199, 62) that provide detectExposure/provideDiagnosisKeys method,
+         * ExposureNotification API for Android doesn't return any result(ExposureDetected/ExposureNotDetected) to BroadcastReceiver.
+         */
         private const int MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS = -14;
         private const int MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS = 14;
 
