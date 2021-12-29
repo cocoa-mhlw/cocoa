@@ -77,6 +77,9 @@ namespace Covid19Radar.Repository
         void RemoveExposureInformation();
         void RemoveOutOfDateExposureInformation(int offsetDays);
         int GetV1ExposureCount(int offsetDays);
+
+        void SetIsSendEventLogEnabled(bool isSendLogEnabled);
+        bool IsSendEventLogEnabled();
     }
 
     public class UserDataRepository : IUserDataRepository
@@ -543,6 +546,31 @@ namespace Covid19Radar.Repository
             _preferencesService.RemoveValue(PreferenceKey.CanConfirmExposure);
             _preferencesService.RemoveValue(PreferenceKey.LastConfirmedDateTimeEpoch);
             _loggerService.EndMethod();
+        }
+
+        public void SetIsSendEventLogEnabled(bool isSendEventLogEnabled)
+        {
+            _loggerService.StartMethod();
+
+            _preferencesService.SetValue(PreferenceKey.IsSendEventLogEnabled, isSendEventLogEnabled);
+
+            _loggerService.EndMethod();
+        }
+
+        public bool IsSendEventLogEnabled()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                return _preferencesService.GetValue(
+                    PreferenceKey.IsSendEventLogEnabled,
+                    AppConstants.DEFAULT_SEND_EVENT_LOG_ENABLED
+                    );
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
     }
 }

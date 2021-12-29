@@ -18,6 +18,12 @@ namespace Covid19Radar.Droid.Services
             return GetSafetyNetAttestationAsync(nonce);
         }
 
+        public Task<string> VerifyAsync(V1EventLogRequest eventLogRequest)
+        {
+            var nonce = DeviceVerifierUtils.CreateAndroidNonceV3(eventLogRequest);
+            return GetSafetyNetAttestationAsync(nonce);
+        }
+
         /// <summary>
         /// Verification device information required for positive submissions
         /// </summary>

@@ -135,7 +135,7 @@ namespace Covid19Radar.Api
                 foreach (var k in submissionParameter.Keys)
                 {
                     var idSeed = $"{submissionParameter.IdempotencyKey},{k.KeyData},{k.RollingStartNumber},{k.RollingPeriod}";
-                    var id = ByteArrayToString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
+                    var id = ByteArrayUtils.ToHexString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
 
                     foreach (var region in submissionParameter.Regions)
                     {
@@ -154,14 +154,6 @@ namespace Covid19Radar.Api
             }
 
             return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
-        }
-
-        public static string ByteArrayToString(byte[] byteArray)
-        {
-            StringBuilder hex = new StringBuilder(byteArray.Length * 2);
-            foreach (byte b in byteArray)
-                hex.AppendFormat("{0:x2}", b);
-            return hex.ToString();
         }
     }
 }
