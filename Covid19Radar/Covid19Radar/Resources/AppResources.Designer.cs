@@ -503,6 +503,24 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskNotContactPageTitle {
+            get {
+                return ResourceManager.GetString("LowRiskNotContactPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskNotContactPageLabel {
+            get {
+                return ResourceManager.GetString("LowRiskNotContactPageLabel", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskNotContactPageDescription {
+            get {
+                return ResourceManager.GetString("LowRiskNotContactPageDescription", resourceCulture);
+            }
+        }
+        
         public static string ThankYouNotifyOtherPageLabel1 {
             get {
                 return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
