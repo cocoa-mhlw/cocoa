@@ -13,8 +13,6 @@ namespace Covid19Radar.Api.Models
 {
     public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
-        public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
-
         /*
          * [Important]
          * The value `daysSinceOnsetOfSymptoms` must be less than or equal to `+14` and greater than or equal to `-14`.
@@ -170,7 +168,7 @@ namespace Covid19Radar.Api.Models
 
         public void SetDaysSinceOnsetOfSymptoms()
         {
-            var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null).ToUniversalTime().Date;
+            var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, Constants.FORMAT_TIMESTAMP, null).ToUniversalTime().Date;
             foreach (var key in Keys)
             {
                 var dateOffset = key.GetDate() - symptomOnsetDate;

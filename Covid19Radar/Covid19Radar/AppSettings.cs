@@ -30,7 +30,6 @@ namespace Covid19Radar
             AppStoreUrl = j.Value<string>("appStoreUrl");
             GooglePlayUrl = j.Value<string>("googlePlayUrl");
             ApiUrlBase = j.Value<string>("apiUrlBase");
-            DiagnosisApiVersion = j.Value<string>("diagnosisApiVersion");
             ApiSecret = j.Value<string>("apiSecret");
             ApiKey = j.Value<string>("apiKey");
             CdnUrlBase = j.Value<string>("cdnUrlBase");
@@ -47,7 +46,6 @@ namespace Covid19Radar
         public string SupportEmail { get; }
         public string AppVersion { get; }
         public string ApiUrlBase { get; }
-        public string DiagnosisApiVersion { get; }
         public string ApiSecret { get; }
         public string ApiKey { get; }
         public string AppStoreUrl { get; }

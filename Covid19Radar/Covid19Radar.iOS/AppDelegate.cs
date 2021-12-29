@@ -23,7 +23,6 @@ using System.Linq;
 using FormsApplication = Xamarin.Forms.Application;
 using Prism.Navigation;
 using Covid19Radar.Views;
-using System;
 using System.Threading.Tasks;
 using Prism.Ioc;
 
@@ -182,7 +181,7 @@ namespace Covid19Radar.iOS
             {
                 exposureNotificationApiService.UserExplanation = AppResources.LocalNotificationDescription;
 
-#if DEBUG
+#if EN_DEBUG
                 exposureNotificationApiService.IsTest = true;
 #else
                 exposureNotificationApiService.IsTest = false;
@@ -270,17 +269,15 @@ namespace Covid19Radar.iOS
             _exposureDetectionService.Value.DiagnosisKeysDataMappingApplied();
         }
 
-        public void PreExposureDetected()
+        public void PreExposureDetected(ExposureConfiguration exposureConfiguration)
         {
-            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
             _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
         }
 
-        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows, ExposureConfiguration exposureConfiguration)
         {
-            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
             _ = Task.Run(async () =>
@@ -289,9 +286,8 @@ namespace Covid19Radar.iOS
             });
         }
 
-        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
         {
-            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
             _ = Task.Run(async () =>
@@ -300,12 +296,14 @@ namespace Covid19Radar.iOS
             });
         }
 
-        public void ExposureNotDetected()
+        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration)
         {
-            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.ExposureNotDetected(exposureConfiguration, enVersion);
+            _ = Task.Run(async () =>
+            {
+                await _exposureDetectionService.Value.ExposureNotDetectedAsync(exposureConfiguration, enVersion);
+            });
         }
     }
 }

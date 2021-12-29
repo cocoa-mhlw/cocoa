@@ -119,17 +119,15 @@ namespace Covid19Radar.Droid
             container.Register<IPlatformService, PlatformService>(Reuse.Singleton);
         }
 
-        public void PreExposureDetected()
+        public void PreExposureDetected(ExposureConfiguration exposureConfiguration)
         {
-            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
             _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
         }
 
-        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows, ExposureConfiguration exposureConfiguration)
         {
-            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
             _ = Task.Run(async () =>
@@ -138,9 +136,8 @@ namespace Covid19Radar.Droid
             });
         }
 
-        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
         {
-            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
             _ = Task.Run(async () =>
@@ -149,12 +146,14 @@ namespace Covid19Radar.Droid
             });
         }
 
-        public void ExposureNotDetected()
+        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration)
         {
-            var exposureConfiguration = GetEnClient().ExposureConfiguration;
             var enVersion = GetEnClient().GetVersionAsync()
                 .GetAwaiter().GetResult().ToString();
-            _exposureDetectionService.Value.ExposureNotDetected(exposureConfiguration, enVersion);
+            _ = Task.Run(async () =>
+            {
+                await _exposureDetectionService.Value.ExposureNotDetectedAsync(exposureConfiguration, enVersion);
+            });
         }
     }
 }
