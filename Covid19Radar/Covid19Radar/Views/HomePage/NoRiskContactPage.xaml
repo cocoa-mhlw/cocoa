@@ -4,14 +4,14 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <ContentPage
-    x:Class="Covid19Radar.Views.LowRiskNotContactPage"
+    x:Class="Covid19Radar.Views.NoRiskContactPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="{x:Static resources:AppResources.LowRiskNotContactPageTitle}"
+    Title="{x:Static resources:AppResources.NoRiskContactPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -35,7 +35,7 @@
                     Style="{StaticResource DefaultTitleLabel}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="{x:Static resources:AppResources.LowRiskNotContactPageLabel}" />
+                            <Span Text="{x:Static resources:AppResources.NoRiskContactPageLabel}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
@@ -47,7 +47,7 @@
                     Style="{StaticResource DefaultLabel}">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="{x:Static resources:AppResources.LowRiskNotContactPageDescription}" />
+                            <Span Text="{x:Static resources:AppResources.NoRiskContactPageDescription}" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
