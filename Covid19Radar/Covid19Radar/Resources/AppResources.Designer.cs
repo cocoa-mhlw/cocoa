@@ -521,6 +521,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string NoRiskContactPageButtonText {
+            get {
+                return ResourceManager.GetString("NoRiskContactPageButtonText", resourceCulture);
+            }
+        }
+        
         public static string ThankYouNotifyOtherPageLabel1 {
             get {
                 return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);

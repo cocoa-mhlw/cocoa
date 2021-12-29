@@ -63,7 +63,7 @@
                     TabIndex="3"
                     Command="{Binding Path=OnClickShareApp}"
                     Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.NotContactPageButtonText}" />
+                    Text="{x:Static resources:AppResources.NoRiskContactPageButtonText}" />
             </Grid>
         </Grid>
     </ScrollView>
