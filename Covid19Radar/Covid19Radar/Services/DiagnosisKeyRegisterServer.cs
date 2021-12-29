@@ -95,6 +95,7 @@ namespace Covid19Radar.Services
                 KeyData = Convert.ToBase64String(k.KeyData),
                 RollingStartNumber = (uint)k.RollingStartIntervalNumber,
                 RollingPeriod = (uint)k.RollingPeriod,
+                ReportType = (uint)k.ReportType,
             });
 
             // Generate Padding
