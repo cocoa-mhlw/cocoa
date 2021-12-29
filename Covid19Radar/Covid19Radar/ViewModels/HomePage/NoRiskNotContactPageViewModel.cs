@@ -14,7 +14,6 @@ namespace Covid19Radar.ViewModels
 
         public NoRiskContactPageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
         {
-            Title = Resources.AppResources.TitileUserStatusSettings;
             this.loggerService = loggerService;
         }
 
