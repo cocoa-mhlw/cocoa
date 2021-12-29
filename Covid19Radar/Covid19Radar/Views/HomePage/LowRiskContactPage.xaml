@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    x:Class="Covid19Radar.Views.LowRiskContactPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    Title="{x:Static resources:AppResources.LowRiskContactPageTitle}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView BackgroundColor="White">
+        <ScrollView>
+            <StackLayout
+                Padding="10"
+                BackgroundColor="#FFFFFF"
+                Spacing="10">
+                <Frame
+                        Grid.Row="1"
+                        Margin="0,20,0,0" 
+                        Padding="20"
+                        BackgroundColor="#FFF3DD"
+                        CornerRadius="10">
+                        <StackLayout>
+                            <ffimageloading:CachedImage
+                                AutomationProperties.IsInAccessibleTree="False"
+                                Margin="0,0,0,20"
+                                Aspect="AspectFit"
+                                Source="InfoMark.png" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                TabIndex="1"
+                                Margin="0,0,0,10"
+                                HorizontalOptions="Center"
+                                Style="{StaticResource DefaultTitleLabel}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageLabel}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="2"
+                            Margin="0,0,0,20"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource DefaultTitleLabel}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountPrefixText}" />
+                                        <Span Text="{Binding TotalContactTime}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="2"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource PrimaryText}"
+                            >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageDescription}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
+</ContentPage>

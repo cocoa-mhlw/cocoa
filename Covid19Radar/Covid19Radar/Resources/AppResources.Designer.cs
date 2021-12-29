@@ -467,6 +467,42 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskContactPageTitle {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPageLabel {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageLabel", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPageCountPrefixText {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageCountPrefixText", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPageCountSuffixHoursText {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageCountSuffixHoursText", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPageCountSuffixMinutesText {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageCountSuffixMinutesText", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPageDescription {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageDescription", resourceCulture);
+            }
+        }
+        
         public static string ThankYouNotifyOtherPageLabel1 {
             get {
                 return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
