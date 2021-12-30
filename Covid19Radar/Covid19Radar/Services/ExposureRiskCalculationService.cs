@@ -11,10 +11,18 @@ using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Services
 {
+    public enum RiskNotification: int
+    {
+        ContactWithLowRisk,
+        NoContact,
+        Unknown
+    }
+
     public interface IExposureRiskCalculationService
     {
         RiskLevel CalcRiskLevel(DailySummary dailySummary);
         Task<bool> HasContact();
+        Task<RiskNotification> GetRiskNotification();
     }
 
     public class ExposureRiskCalculationService : IExposureRiskCalculationService
@@ -35,8 +43,10 @@ namespace Covid19Radar.Services
         {
             _loggerService.StartMethod();
 
-            var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var userExposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+            var dailySummaryList = await _userDataRepository
+                .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var userExposureInformationList = _userDataRepository
+                .GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
             var count = dailySummaryList.Count() + userExposureInformationList.Count();
 
@@ -45,6 +55,28 @@ namespace Covid19Radar.Services
 
             return (count > 0); 
         }
+
+        // TODO:  We should make consideration later.
+        public async Task<RiskNotification> GetRiskNotification()
+        {
+            if (!(await HasContact())) {
+                return RiskNotification.NoContact;
+            }
+
+            var summaries = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var riskLevels = summaries.Select(x => CalcRiskLevel(x));
+
+
+            if (riskLevels.Any(x => x == RiskLevel.LowMedium || x == RiskLevel.Low || x == RiskLevel.Lowest))
+            {
+                return RiskNotification.ContactWithLowRisk;
+            }
+            else
+            {
+                return RiskNotification.Unknown;
+            }
+        }
+
 
         // TODO:  We should make consideration later.
         public RiskLevel CalcRiskLevel(DailySummary dailySummary)
