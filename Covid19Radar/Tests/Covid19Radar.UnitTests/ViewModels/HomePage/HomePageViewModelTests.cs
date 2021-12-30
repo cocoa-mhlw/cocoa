@@ -36,6 +36,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<IDialogService> mockDialogService;
         private readonly Mock<IExternalNavigationService> mockExternalNavigationService;
         private readonly Mock<ILocalPathService> mockLocalPathService;
+        private readonly ExposureRiskCalculationService exposureRiskCalculationService;
 
         public HomePageViewModelTests()
         {
@@ -64,6 +65,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 );
             mockDialogService = mockRepository.Create<IDialogService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();
+            exposureRiskCalculationService = new ExposureRiskCalculationService(
+                userDataRepository,
+                mockLoggerService.Object
+                );
         }
 
         private HomePageViewModel CreateViewModel()
@@ -76,7 +81,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockLocalNotificationService.Object,
                 mockExposureDetectionBackgroundService.Object,
                 mockDialogService.Object,
-                mockExternalNavigationService.Object
+                mockExternalNavigationService.Object,
+                exposureRiskCalculationService
                 );
         }
 

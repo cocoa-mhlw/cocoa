@@ -83,7 +83,10 @@ namespace Covid19Radar.UnitTests.Services {
                 loggerService.Object
                 );
 
-            var exposureRiskCalculationService = new ExposureRiskCalculationService();
+            var exposureRiskCalculationService = new ExposureRiskCalculationService(
+                userDataRepository,
+                loggerService.Object
+                );
 
             return new ExposureDetectionService(
                 loggerService.Object,
