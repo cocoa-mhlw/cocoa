@@ -13,6 +13,7 @@ namespace Covid19Radar.Services
 {
     public enum RiskNotification: int
     {
+        ContactWithHighRisk,
         ContactWithLowRisk,
         NoContact,
         Unknown
@@ -21,7 +22,6 @@ namespace Covid19Radar.Services
     public interface IExposureRiskCalculationService
     {
         RiskLevel CalcRiskLevel(DailySummary dailySummary);
-        Task<bool> HasContact();
         Task<RiskNotification> GetRiskNotification();
     }
 
@@ -63,9 +63,9 @@ namespace Covid19Radar.Services
                 return RiskNotification.NoContact;
             }
 
-            var summaries = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var summaries = await _userDataRepository
+                .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
             var riskLevels = summaries.Select(x => CalcRiskLevel(x));
-
 
             if (riskLevels.Any(x => x == RiskLevel.LowMedium || x == RiskLevel.Low || x == RiskLevel.Lowest))
             {
@@ -73,7 +73,7 @@ namespace Covid19Radar.Services
             }
             else
             {
-                return RiskNotification.Unknown;
+                return RiskNotification.ContactWithHighRisk;
             }
         }
 
@@ -81,7 +81,5 @@ namespace Covid19Radar.Services
         // TODO:  We should make consideration later.
         public RiskLevel CalcRiskLevel(DailySummary dailySummary)
             => RiskLevel.High;
-
-
     }
 }

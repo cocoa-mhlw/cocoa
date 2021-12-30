@@ -146,18 +146,25 @@ namespace Covid19Radar.ViewModels
 
             await localNotificationService.DismissExposureNotificationAsync();
 
-            if (await _exposureRiskCalculationService.HasContact())
+            var riskNotification = await _exposureRiskCalculationService.GetRiskNotification();
+
+            switch (riskNotification)
             {
-                await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
-                loggerService.EndMethod();
-                return;
+                case RiskNotification.ContactWithHighRisk:
+                    await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
+                    break;
+                case RiskNotification.ContactWithLowRisk:
+                    await NavigationService.NavigateAsync(nameof(LowRiskContactPage));
+                    break;
+                case RiskNotification.NoContact:
+                    await NavigationService.NavigateAsync(nameof(NoRiskContactPage));
+                    break;
+                case RiskNotification.Unknown:
+                    await NavigationService.NavigateAsync(nameof(NotContactPage));
+                    break;
             }
-            else
-            {
-                await NavigationService.NavigateAsync(nameof(NotContactPage));
-                loggerService.EndMethod();
-                return;
-            }
+
+            loggerService.EndMethod();
         });
 
         public Command OnClickShareApp => new Command(() =>
