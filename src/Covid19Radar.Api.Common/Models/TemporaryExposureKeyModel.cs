@@ -44,5 +44,22 @@ namespace Covid19Radar.Api.Models
                 Exported = Exported,
             };
         }
+
+        public bool HasValidDaysSinceOnsetOfSymptoms()
+        {
+            if (DaysSinceOnsetOfSymptoms == Constants.DaysSinceOnsetOfSymptomsMissingValue)
+            {
+                return true;
+            }
+
+            if (DaysSinceOnsetOfSymptoms >= Constants.MinDaysSinceOnsetOfSymptoms
+                && DaysSinceOnsetOfSymptoms <= Constants.MaxDaysSinceOnsetOfSymptoms)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
     }
 }

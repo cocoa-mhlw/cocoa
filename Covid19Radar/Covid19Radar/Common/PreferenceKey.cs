@@ -18,6 +18,8 @@ namespace Covid19Radar.Common
         public static string CanConfirmExposure = "CanConfirmExposure";
         public static string LastConfirmedDateTimeEpoch = "LastConfirmedDateTimeEpoch";
 
+        public static string IsSendEventLogEnabled = "IsSendEventLogEnabled";
+
         public const string DailySummaries = "DailySummaries";
         public const string ExposureWindows = "ExposureWindows";
 
