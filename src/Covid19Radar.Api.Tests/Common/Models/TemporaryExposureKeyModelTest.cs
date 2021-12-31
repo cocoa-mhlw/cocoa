@@ -71,7 +71,6 @@ namespace Covid19Radar.Api.Tests.Common.Models
         }
 
         [DataTestMethod]
-        [DataRow(Constants.DaysSinceOnsetOfSymptomsMissingValue, true)]
         [DataRow(+15, false)]
         [DataRow(+14, true)]
         [DataRow(+13, true)]
@@ -103,7 +102,8 @@ namespace Covid19Radar.Api.Tests.Common.Models
         [DataRow(-13, true)]
         [DataRow(-14, true)]
         [DataRow(-15, false)]
-        public void GetRollingStartUnixTimeSecondsMethod(int daysSinceOnsetOfSymptoms, bool expectHasValid)
+        [DataRow(Constants.DaysSinceOnsetOfSymptomsMissingValue, true)]
+        public void GetDaysSinceOnsetOfSymptomsMethod(int daysSinceOnsetOfSymptoms, bool expectHasValid)
         {
             // preparation
             var model = new TemporaryExposureKeyModel()
