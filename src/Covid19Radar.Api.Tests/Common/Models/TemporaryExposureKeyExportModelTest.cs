@@ -27,15 +27,5 @@ namespace Covid19Radar.Api.Tests.Common.Models
             Helper.ModelTestHelper.PropetiesTest(model);
         }
 
-        [TestMethod]
-        public void DaysTest()
-        {
-            // preparation
-            var model = new TemporaryExposureKeyExportModel();
-
-            // model property access
-            Helper.ModelTestHelper.PropetiesTest(model);
-        }
-
     }
 }

@@ -134,7 +134,7 @@ namespace Covid19Radar.Api.Models
                 }
 
                 if (DaysSinceOnsetOfSymptoms < Constants.MinDaysSinceOnsetOfSymptoms
-                    || DaysSinceOnsetOfSymptoms > Constants.MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS)
+                    || DaysSinceOnsetOfSymptoms > Constants.MaxDaysSinceOnsetOfSymptoms)
                 {
                     return false;
                 }
