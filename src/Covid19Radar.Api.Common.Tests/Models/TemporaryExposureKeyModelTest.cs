@@ -54,20 +54,6 @@ namespace Covid19Radar.Api.Tests.Common.Models
             Assert.AreEqual(expected, model.GetRollingStartUnixTimeSeconds());
         }
 
-        [TestMethod]
-        public void ToKeyMethodTest()
-        {
-            // preparation
-            var model = new TemporaryExposureKeyModel();
-            model.KeyData = new byte[64];
-            // action
-            var actual = model.ToKey();
-            CollectionAssert.AreEqual(model.KeyData, actual.KeyData.ToByteArray());
-            Assert.AreEqual(model.RollingPeriod, actual.RollingPeriod);
-            Assert.AreEqual(model.RollingStartIntervalNumber, actual.RollingStartIntervalNumber);
-            Assert.AreEqual(model.TransmissionRiskLevel, actual.TransmissionRiskLevel);
-        }
-
         [DataTestMethod]
         [DataRow(+15, false)]
         [DataRow(+14, true)]
