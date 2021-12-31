@@ -172,7 +172,7 @@ namespace Covid19Radar.Api
                 await _tekRepository.UpsertAsync(key);
             }
 
-            return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
+            return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter.Keys));
         }
     }
 }
