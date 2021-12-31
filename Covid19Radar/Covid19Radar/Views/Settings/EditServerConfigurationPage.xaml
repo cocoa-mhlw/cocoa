@@ -137,6 +137,17 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
+                Text="EventLogApiEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding EventLogApiEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="EventLog sending API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
                 Text="UserRegisterApiEndpoint"
                 Margin="8, 0, 0, 8"
                 />

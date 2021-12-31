@@ -209,6 +209,10 @@
                     Style="{StaticResource DefaultButton}"
                     Text="LowRiskContactPage" />
                 <Button
+                    Command="{prism:NavigateTo 'NoRiskContactPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="NoRiskContactPage" />
+                <Button
                     Command="{prism:NavigateTo 'ContactedNotifyPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="ContactedNotifyPage" />

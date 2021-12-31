@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Models;
@@ -111,7 +112,7 @@ namespace Covid19Radar.Api.Tests
 
             var bodyJson = new V3DiagnosisSubmissionParameter()
             {
-                SymptomOnsetDate = dateTime.ToString(V3DiagnosisSubmissionParameter.FORMAT_SYMPTOM_ONSET_DATE),
+                SymptomOnsetDate = dateTime.ToString(Constants.FORMAT_TIMESTAMP),
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
                 SubRegions = new[] { subRegion },
@@ -216,7 +217,7 @@ namespace Covid19Radar.Api.Tests
 
             var bodyJson = new V3DiagnosisSubmissionParameter()
             {
-                SymptomOnsetDate = dateTime.ToString(V3DiagnosisSubmissionParameter.FORMAT_SYMPTOM_ONSET_DATE),
+                SymptomOnsetDate = dateTime.ToString(Constants.FORMAT_TIMESTAMP),
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
                 SubRegions = new[] { subRegion },
