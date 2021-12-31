@@ -48,6 +48,16 @@ namespace Covid19Radar.Api.Common
         /// <summary>
         /// Limit to the size of an EventLog-payload.
         /// </summary>
-        public const long MAX_SIZE_EVENT_LOG_PAYLOAD_BYTES = 1024 * 1024 * 10;
+        public const long MaxSizeEventLogPayloadBytes = 1024 * 1024 * 10;
+
+        /*
+         * [Important]
+         * The value `daysSinceOnsetOfSymptoms` must be less than or equal to `+14` and greater than or equal to `-14`.
+         *
+         * If any diagnosis-keys file CONTAMINATED by out of range value(e.g. -199, 62) that provide detectExposure/provideDiagnosisKeys method,
+         * ExposureNotification API for Android doesn't return any result(ExposureDetected/ExposureNotDetected) to BroadcastReceiver.
+         */
+        public const int MinDaysSinceOnsetOfSymptoms = -14;
+        public const int MaxDaysSinceOnsetOfSymptoms = +14;
     }
 }

@@ -97,7 +97,8 @@ namespace Covid19Radar.Background.Services
 
             try
             {
-                var items = FallbackDataForStoredByOldApis(await TekRepository.GetNextAsync());
+                var items = FallbackDataForStoredByOldApis(await TekRepository.GetNextAsync())
+                    .Where(key => key.HasValidDaysSinceOnsetOfSymptoms());
 
                 var regions = items.GroupBy(item => item.Region);
 
@@ -129,7 +130,7 @@ namespace Covid19Radar.Background.Services
                         Logger.LogInformation($"Sub-region: {subRegionGroup.Key}");
 
                         await CreateAsync(
-                            items: items.Select(item => item),
+                            items: subRegionGroup.Select(item => item),
                             region: regionGroup.Key,
                             subRegion: subRegionGroup.Key
                             );
@@ -149,7 +150,7 @@ namespace Covid19Radar.Background.Services
 
         private async Task CreateAsync(IEnumerable<TemporaryExposureKeyModel> items, string region, string subRegion)
         {
-            Logger.LogInformation($"start {nameof(CreateAsync)} {region}-{subRegion}");
+            Logger.LogInformation($"start {nameof(CreateAsync)} {region}-{subRegion}, itemCount: {items.Count()}");
 
             foreach (var kv in items.GroupBy(item => new
             {
@@ -199,7 +200,7 @@ namespace Covid19Radar.Background.Services
             IEnumerable<TemporaryExposureKeyModel> keys
             )
         {
-            Logger.LogInformation($"start {nameof(CreateAsync)}");
+            Logger.LogInformation($"start {nameof(CreateAsync)}, startTimestamp: {startTimestamp}, endTimestamp: {endTimestamp}, batchNum: {batchNum}, keyCount: {keys.Count()}");
 
             string partitionKey = region;
             if (!string.IsNullOrEmpty(subRegion))
