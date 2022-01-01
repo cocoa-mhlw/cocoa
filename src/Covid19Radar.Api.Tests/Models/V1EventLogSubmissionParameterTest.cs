@@ -12,7 +12,7 @@ namespace Covid19Radar.Api.Tests.Models
 {
     [TestClass]
     [TestCategory("Models")]
-    public class DiagnosisApiTest
+    public class V1EventLogSubmissionParameterTest
     {
         private const string JSON_EVENTLOG_SUBMISSION_PARAMETERS1 = "eventlog_submission_parameter1.json";
         private const string EXPECTED_CLEAR_TEXT_FILENAME = "eventlog_submission_parameter1-cleartext.txt";
