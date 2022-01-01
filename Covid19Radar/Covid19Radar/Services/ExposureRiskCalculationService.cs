@@ -23,6 +23,7 @@ namespace Covid19Radar.Services
     {
         RiskLevel CalcRiskLevel(DailySummary dailySummary);
         Task<RiskNotification> GetRiskNotification();
+        Task<bool> HasContact();
     }
 
     public class ExposureRiskCalculationService : IExposureRiskCalculationService
