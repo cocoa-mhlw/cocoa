@@ -72,11 +72,24 @@ namespace Covid19Radar.Repository
 
         public string? ExposureDataCollectServerEndpoint { get; set; }
 
-        public virtual IList<string> ExposureDataCollectServerUrls => Regions
-                    .Select(region => ExposureDataCollectServerEndpoint?.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
-                    .Where(url => url != null)
-                    .Distinct()
-                    .ToList();
+        public virtual IList<string> ExposureDataCollectServerUrls
+        {
+            get {
+                var combined = Regions.SelectMany(_ => SubRegions,
+                    (region, subRegion) => (region, subRegion));
+
+                return combined.Select(pair =>
+                {
+                    var (region, subRegion) = pair;
+                    return ExposureDataCollectServerEndpoint
+                            .Replace(ServerConfiguration.PLACEHOLDER_REGION, region)
+                            .Replace(ServerConfiguration.PLACEHOLDER_SUBREGION, subRegion);
+                })
+                .Where(url => url != null)
+                .Distinct()
+                .ToList();
+            }
+        }
 
         public string? EventLogApiEndpoint { get; set; }
 
@@ -347,8 +360,8 @@ namespace Covid19Radar.Repository
     [JsonObject]
     public class ServerConfiguration
     {
-        public const string PLACEHOLDER_REGION = "{region}";
-        public const string PLACEHOLDER_SUBREGION = "{subregion}";
+        public const string PLACEHOLDER_REGION = "[region]";
+        public const string PLACEHOLDER_SUBREGION = "[subregion]";
 
         /// <summary>
         /// Specifies the format version of configuration file.
