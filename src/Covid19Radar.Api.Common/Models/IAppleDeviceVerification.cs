@@ -6,16 +6,8 @@ namespace Covid19Radar.Api.Models
 {
     public interface IAppleDeviceVerification
     {
-		public string Platform { get; set; }
+        public string DeviceToken { get; }
 
-		public string AppPackageName { get; set; }
-
-		public string[] Regions { get; }
-
-		public string KeysTextForDeviceVerification { get; }
-
-		public string DeviceVerificationPayload { get; }
-
-		public string VerificationPayload { get; set; }
-	}
+        public string TransactionIdSeed { get; }
+    }
 }

@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
-using Xamarin.Essentials;
-using Covid19Radar.Common;
 
 namespace Covid19Radar.Services
 {

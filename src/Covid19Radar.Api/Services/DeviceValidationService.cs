@@ -31,13 +31,13 @@ namespace Covid19Radar.Api.Services
 
         protected DeviceValidationService() { }
 
-        public async Task<bool> Validation(IDeviceVerification deviceVerification, DateTimeOffset requestTime)
+        public async Task<bool> Validation(string platform, IDeviceVerification deviceVerification, DateTimeOffset requestTime)
         {
-            var app = await AuthApp.GetAsync(deviceVerification.Platform);
+            var app = await AuthApp.GetAsync(platform);
             // unsupported
             if (app == null) return false;
             if (!app.DeviceValidationEnabled) return true;
-            return deviceVerification.Platform switch
+            return platform switch
             {
                 "android" => Android.Validation(deviceVerification, requestTime, app),
                 "ios" => await Apple.Validation(deviceVerification, requestTime, app),

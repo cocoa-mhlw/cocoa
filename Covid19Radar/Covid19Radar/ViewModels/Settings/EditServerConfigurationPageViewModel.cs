@@ -84,6 +84,13 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposureDataCollectServerUrls, value); }
         }
 
+        private string _eventLogApiEndpoint;
+        public string EventLogApiEndpoint
+        {
+            get { return _eventLogApiEndpoint; }
+            set { SetProperty(ref _eventLogApiEndpoint, value); }
+        }
+
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
 
         public EditServerConfigurationPageViewModel(
@@ -105,6 +112,7 @@ namespace Covid19Radar.ViewModels
                 InquiryLogApiEndpoint = _serverConfigurationRepository.InquiryLogApiEndpoint;
                 ExposureConfigurationUrl = _serverConfigurationRepository.ExposureConfigurationUrl;
                 ExposureDataCollectServerEndpoint = _serverConfigurationRepository.ExposureDataCollectServerEndpoint;
+                EventLogApiEndpoint = _serverConfigurationRepository.EventLogApiEndpoint;
 
                 UpdateUrls();
             });
@@ -116,6 +124,7 @@ namespace Covid19Radar.ViewModels
             _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint = DiagnosisKeyRegisterApiEndpoint;
             _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint = DiagnosisKeyListProvideServerEndpoint;
             _serverConfigurationRepository.ExposureDataCollectServerEndpoint = ExposureDataCollectServerEndpoint;
+            _serverConfigurationRepository.EventLogApiEndpoint = EventLogApiEndpoint;
 
             var diagnosisKeyRegisterApiUrls = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls;
             DiagnosisKeyRegisterApiUrls = string.Join(Environment.NewLine, diagnosisKeyRegisterApiUrls);
@@ -140,6 +149,7 @@ namespace Covid19Radar.ViewModels
             _serverConfigurationRepository.InquiryLogApiEndpoint = InquiryLogApiEndpoint;
             _serverConfigurationRepository.ExposureConfigurationUrl = ExposureConfigurationUrl;
             _serverConfigurationRepository.ExposureDataCollectServerEndpoint = ExposureDataCollectServerEndpoint;
+            _serverConfigurationRepository.EventLogApiEndpoint = EventLogApiEndpoint;
 
             await _serverConfigurationRepository.SaveAsync();
 

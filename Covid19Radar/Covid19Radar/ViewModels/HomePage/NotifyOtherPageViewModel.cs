@@ -23,6 +23,8 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
+        private const ReportType DEFAULT_REPORT_TYPE = ReportType.ConfirmedTest;
+
         public string HowToReceiveProcessingNumberReadText => $"{AppResources.NotifyOtherPageLabel} {AppResources.Button}";
 
         private readonly ILoggerService loggerService;
@@ -240,8 +242,8 @@ namespace Covid19Radar.ViewModels
                 if (errorCount > 0)
 
 
-                    // Init Dialog
-                    if (string.IsNullOrEmpty(ProcessingNumber))
+                // Init Dialog
+                if (string.IsNullOrEmpty(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.NotifyOtherPageDiag4Message,
@@ -288,18 +290,6 @@ namespace Covid19Radar.ViewModels
 
                 UserDialogs.Instance.HideLoading();
             }
-            catch (InvalidDataException ex)
-            {
-                UserDialogs.Instance.HideLoading();
-
-                errorCount++;
-                UserDialogs.Instance.Alert(
-                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFound,
-                    AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle,
-                    AppResources.ButtonOk
-                );
-                loggerService.Exception("Failed to submit DiagnosisKeys invalid data.", ex);
-            }
             catch (Exception ex)
             {
                 UserDialogs.Instance.HideLoading();
@@ -338,6 +328,12 @@ namespace Covid19Radar.ViewModels
                         );
 
                 loggerService.Info($"FilteredTemporaryExposureKeys-count: {filteredTemporaryExposureKeyList.Count()}");
+
+                // Set reportType
+                foreach (var tek in filteredTemporaryExposureKeyList)
+                {
+                    tek.ReportType = DEFAULT_REPORT_TYPE;
+                }
 
                 // TODO: Save and use revoke operation.
                 string idempotencyKey = Guid.NewGuid().ToString();
