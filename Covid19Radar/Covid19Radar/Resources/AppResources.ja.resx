@@ -263,8 +263,8 @@
     <comment>リスクが極めて低い接触</comment>
   </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>陽性者とリスクが極めて低い接触がありました</value>
-    <comment>陽性者とリスクが極めて低い接触がありました</comment>
+    <value>陽性登録者とリスクが極めて低い接触がありました</value>
+    <comment>陽性登録者とリスクが極めて低い接触がありました</comment>
   </data>
   <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
     <value>直近14日間に合計</value>
@@ -279,16 +279,16 @@
     <comment>分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
-    <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+    <value>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
+    <comment>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
   <data name="NoRiskContactPageTitle" xml:space="preserve">
     <value>直近14日間の接触</value>
     <comment>直近14日間の接触</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
-    <value>リスクが低いものを含め陽性者との接触はありません</value>
-    <comment>リスクが低いものを含め陽性者との接触はありません</comment>
+    <value>リスクが低いものを含め陽性登録者との接触はありません</value>
+    <comment>リスクが低いものを含め陽性登録者との接触はありません</comment>
   </data>
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</value>

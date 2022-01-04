@@ -285,8 +285,8 @@
     <comment>リスクが極めて低い接触</comment>
   </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>与阳性者接触的风险非常低</value>
-    <comment>陽性者とリスクが極めて低い接触がありました</comment>
+    <value>与阳性注册者接触的风险非常低</value>
+    <comment>陽性登録者とリスクが極めて低い接触がありました</comment>
   </data>
   <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
     <value>过去14天总共</value>
@@ -301,16 +301,16 @@
     <comment>分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>我收到了来自阳性者智能手机的信号，但没有风险，因为它在几米之外。 活动区域有阳性人士，请继续注意预防感染。</value>
-    <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+    <value>我收到了阳性注册人的智能手机的信号，但没有风险，因为它在几米之外。活动区域有阳性登记者，请继续注意预防感染。</value>
+    <comment>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
   <data name="NoRiskContactPageTitle" xml:space="preserve">
     <value>过去14天的联系方式</value>
     <comment>直近14日間の接触</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
-    <value>不接触阳性者，包括低风险者</value>
-    <comment>リスクが低いものを含め陽性者との接触はありません</comment>
+    <value>不接触阳性注册者，包括低风险者</value>
+    <comment>リスクが低いものを含め陽性登録者との接触はありません</comment>
   </data>
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>似乎在行动领域没有积极的注册人。 请继续注意预防感染。</value>
