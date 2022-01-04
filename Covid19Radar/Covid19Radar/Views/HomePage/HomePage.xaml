@@ -28,8 +28,7 @@
             Spacing="15">
             <StackLayout IsVisible="{Binding IsVisibleENStatusActiveLayout}">
                 <StackLayout 
-                    Spacing="8"
-                    IsVisible="{Binding IsVisibleENStatusActiveLayout}">
+                    Spacing="8">
                     <StackLayout
                         Orientation="Horizontal"
                         HorizontalOptions="Center"
