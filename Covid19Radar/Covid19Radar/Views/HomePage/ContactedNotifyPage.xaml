@@ -91,6 +91,12 @@
                 Command="{prism:NavigateTo 'ExposuresPage'}"
                 Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
+            <Button
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="6"
+                Command="{prism:NavigateTo 'ExposureCheckPage'}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.ExposureCheckTitle}" />
         </StackLayout>
     </ScrollView>
     </ContentView>
