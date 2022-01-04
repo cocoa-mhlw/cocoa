@@ -370,7 +370,7 @@
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
-  <data name="HomePageDescription6" xml:space="preserve">
+  <data name="ExposureCheckTitle" xml:space="preserve">
     <value>接触確認の動作状況</value>
     <comment>接触確認の動作状況</comment>
   </data>

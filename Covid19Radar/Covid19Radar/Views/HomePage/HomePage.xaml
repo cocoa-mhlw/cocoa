@@ -65,7 +65,7 @@
                         AutomationProperties.Name="{Binding SharingThisAppReadText}"
                         TabIndex="19"
                         Style="{StaticResource DefaultLabelCaptionColor}"
-                        Text="{x:Static resources:AppResources.HomePageDescription6}">
+                        Text="{x:Static resources:AppResources.ExposureCheckTitle}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Path=OnClickExposureCheck}" />
                         </Label.GestureRecognizers>

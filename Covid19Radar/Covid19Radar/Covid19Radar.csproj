@@ -23,6 +23,8 @@
     <Compile Remove="Controls\**" />
     <EmbeddedResource Remove="Controls\**" />
     <None Remove="Controls\**" />
+    <None Remove="Views\ExposureCheck\" />
+    <None Remove="ViewModels\ExposureCheckPage\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -150,6 +152,8 @@
     <Folder Include="Controls\" />
     <Folder Include="Services\Migration\" />
     <Folder Include="Repository\" />
+    <Folder Include="Views\ExposureCheck\" />
+    <Folder Include="ViewModels\ExposureCheckPage\" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)'=='Release'">
     <Compile Remove="ViewModels/Settings/DebugPageViewModel.cs" />

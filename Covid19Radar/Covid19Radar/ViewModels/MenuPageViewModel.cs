@@ -41,7 +41,14 @@ namespace Covid19Radar.ViewModels
                 IconColor = MenuIconColorDefault,
                 TextColor = MenuTextColorDefault
             });
-
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf965",
+                PageName = nameof(ExposureCheckPage),
+                Title = Resources.AppResources.ExposureCheckTitle,
+                IconColor = MenuIconColorDefault,
+                TextColor = MenuTextColorDefault
+            });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf013",

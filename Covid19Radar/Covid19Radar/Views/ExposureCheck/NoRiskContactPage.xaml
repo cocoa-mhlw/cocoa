@@ -3,24 +3,14 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<ContentPage
+<StackLayout
     x:Class="Covid19Radar.Views.NoRiskContactPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="{x:Static resources:AppResources.NoRiskContactPageTitle}"
-    ios:Page.UseSafeArea="true"
-    prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <!--
-        Workaround for fixing ScrollView truncates items issue.
-        https://github.com/xamarin/Xamarin.Forms/issues/13597
-    -->
-    <ContentView>
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
@@ -67,5 +57,4 @@
             </Grid>
         </Grid>
     </ScrollView>
-    </ContentView>
-</ContentPage>
+</StackLayout>

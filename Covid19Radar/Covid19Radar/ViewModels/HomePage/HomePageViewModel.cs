@@ -166,14 +166,7 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            if (await _exposureRiskCalculationService.HasLowRiskContact())
-            {
-                await NavigationService.NavigateAsync(nameof(LowRiskContactPage));
-            }
-            else
-            {
-                await NavigationService.NavigateAsync(nameof(NoRiskContactPage));
-            }
+            await NavigationService.NavigateAsync(nameof(ExposureCheckPage));
 
             loggerService.EndMethod();
         });
