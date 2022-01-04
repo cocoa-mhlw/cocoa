@@ -12,6 +12,8 @@ using System;
 using Chino;
 using System.IO;
 using Covid19Radar.Services;
+using Xamarin.Forms;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.ViewModels
 {
@@ -140,5 +142,14 @@ namespace Covid19Radar.ViewModels
             get { return _isVisibleLowRiskContact; }
             set { SetProperty(ref _isVisibleLowRiskContact, value); }
         }
+
+        public Command OnClickShareApp => new Command(() =>
+        {
+            _loggerService.StartMethod();
+
+            AppUtils.PopUpShare();
+
+            _loggerService.EndMethod();
+        });
     }
 }

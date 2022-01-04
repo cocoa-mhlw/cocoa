@@ -17,11 +17,13 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <ContentView>
-        <StackLayout >
+        <ScrollView>
+        <StackLayout>
             <views:NoRiskContactLayout
                 IsVisible="{Binding IsVisibleNoRiskContact}" />
             <views:LowRiskContactLayout
                 IsVisible="{Binding IsVisibleLowRiskContact}" />
         </StackLayout>
+        </ScrollView>
     </ContentView>
 </ContentPage>
