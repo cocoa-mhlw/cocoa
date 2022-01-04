@@ -18,9 +18,9 @@
     Visual="Material">
     <ContentView>
         <StackLayout >
-            <views:NoRiskContactPage
+            <views:NoRiskContactLayout
                 IsVisible="{Binding IsVisibleNoRiskContact}" />
-            <views:LowRiskContactPage
+            <views:LowRiskContactLayout
                 IsVisible="{Binding IsVisibleLowRiskContact}" />
         </StackLayout>
     </ContentView>
