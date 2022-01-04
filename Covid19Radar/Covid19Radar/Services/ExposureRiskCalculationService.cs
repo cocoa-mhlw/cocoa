@@ -52,11 +52,13 @@ namespace Covid19Radar.Services
         // TODO:  We should make consideration later.
         public async Task<bool> HasLowRiskContact()
         {
-            if (!(await HasContact())) {
+            if (await HasContact())
+            {
+                return true;
+            } else
+            {
                 return false;
             }
-
-            return true;
         }
 
 
