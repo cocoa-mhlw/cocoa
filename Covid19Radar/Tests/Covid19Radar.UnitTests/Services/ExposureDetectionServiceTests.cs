@@ -205,9 +205,15 @@ namespace Covid19Radar.UnitTests.Services {
             };
 
             // Mock Setup
-            preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+            preferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
                 .Returns(true);
+            preferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Returns("[]");
+            preferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Returns("[]");
             exposureDataCollectServer
                 .Setup(x => x.UploadExposureDataAsync(
                     It.IsAny<ExposureConfiguration>(),
@@ -225,6 +231,114 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Assert
             localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+        }
+
+        [Fact]
+        public async void ExposureDetected_Multiple()
+        {
+            // Test Data
+            var exposureConfiguration = new ExposureConfiguration();
+            var enVersion = "2.0.0";
+
+            var existDailySummaries = new List<DailySummary>() {
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = 0,
+                    DaySummary = new ExposureSummaryData(),
+                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                    ConfirmedTestSummary = new ExposureSummaryData(),
+                    RecursiveSummary = new ExposureSummaryData(),
+                    SelfReportedSummary = new ExposureSummaryData()
+                }
+            };
+            var existExposureWindows = new List<ExposureWindow>()
+            {
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.High,
+                    DateMillisSinceEpoch = 0,
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.Unknown,
+                    ScanInstances = new List<ScanInstance>()
+                }
+            };
+
+            var newDailySummaries = new List<DailySummary>() {
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = 10,
+                    DaySummary = new ExposureSummaryData(),
+                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                    ConfirmedTestSummary = new ExposureSummaryData(),
+                    RecursiveSummary = new ExposureSummaryData(),
+                    SelfReportedSummary = new ExposureSummaryData()
+                }
+            };
+            var newExposureWindows = new List<ExposureWindow>()
+            {
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.High,
+                    DateMillisSinceEpoch = 0,
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.Unknown,
+                    ScanInstances = new List<ScanInstance>()
+                },
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.Medium,
+                    DateMillisSinceEpoch = 0,
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.ConfirmedTest,
+                    ScanInstances = new List<ScanInstance>()
+                }
+            };
+
+            // Mock Setup
+            preferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                .Returns(false);
+            exposureDataCollectServer
+                .Setup(x => x.UploadExposureDataAsync(
+                    It.IsAny<ExposureConfiguration>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<List<DailySummary>>(),
+                    It.IsAny<List<ExposureWindow>>()));
+            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
+
+            preferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Returns(JsonConvert.SerializeObject(existDailySummaries));
+            preferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Returns(JsonConvert.SerializeObject(existExposureWindows));
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectedAsync(exposureConfiguration, enVersion, newDailySummaries, newExposureWindows);
+
+
+            var expectedDailySummaries = new List<DailySummary>() {
+                existDailySummaries[0],
+                newDailySummaries[0]
+            };
+            var expectedExposureWindows = new List<ExposureWindow>()
+            {
+                existExposureWindows[0],
+                newExposureWindows[1]
+            };
+
+            var expectedDailySummariesJson = JsonConvert.SerializeObject(expectedDailySummaries);
+            var expectedExposureWindowsJson = JsonConvert.SerializeObject(expectedExposureWindows);
+
+            // Assert
+            preferencesService.Verify(x => x.SetValue("DailySummaries", expectedDailySummariesJson), Times.Once);
+            preferencesService.Verify(x => x.SetValue("ExposureWindows", expectedExposureWindowsJson), Times.Once);
+            localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+
+
         }
 
         [Fact(Skip = "always failed")]

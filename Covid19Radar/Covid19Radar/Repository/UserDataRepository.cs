@@ -49,12 +49,6 @@ namespace Covid19Radar.Repository
             List<ExposureWindow> exposueWindowList
             );
 
-        Task<bool> AppendExposureDataAsync(
-            List<DailySummary> dailySummaryList,
-            List<ExposureWindow> exposueWindowList,
-            bool ignoreDuplicate = true
-            );
-
         Task<List<DailySummary>> GetDailySummariesAsync();
         Task<List<DailySummary>> GetDailySummariesAsync(int offsetDays);
         Task RemoveDailySummariesAsync();
@@ -171,6 +165,9 @@ namespace Covid19Radar.Repository
         }
 
         #region ExposureWindow mode
+        private readonly DailySummary.Comparer _dailySummaryComparer = new DailySummary.Comparer();
+        private readonly ExposureWindow.Comparer _exposureWindowComparer = new ExposureWindow.Comparer();
+
         public async Task SetExposureDataAsync(
             List<DailySummary> dailySummaryList,
             List<ExposureWindow> exposueWindowList
@@ -178,13 +175,18 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
 
-            dailySummaryList.AddRange(dailySummaryList);
-            exposueWindowList.AddRange(exposueWindowList);
+            List<DailySummary> existDailySummaryList = await GetDailySummariesAsync();
+            List<ExposureWindow> existExposureWindowList = await GetExposureWindowsAsync();
 
-            dailySummaryList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
-            exposueWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
+            List<DailySummary> newDailySummaryList = existDailySummaryList.Union(dailySummaryList).ToList();
+            newDailySummaryList.Sort(_dailySummaryComparer);
 
-            await SaveExposureDataAsync(dailySummaryList, exposueWindowList);
+            List<ExposureWindow> newExposureWindowList = existExposureWindowList.Union(exposueWindowList).ToList();
+            newExposureWindowList.Sort(_exposureWindowComparer);
+
+            Console.WriteLine(JsonConvert.SerializeObject(newExposureWindowList));
+
+            await SaveExposureDataAsync(newDailySummaryList, newExposureWindowList);
 
             _loggerService.EndMethod();
         }
@@ -213,47 +215,6 @@ namespace Covid19Radar.Repository
             _preferencesService.RemoveValue(PreferenceKey.StartDateTimeEpoch);
 
             _loggerService.EndMethod();
-        }
-
-        public async Task<bool> AppendExposureDataAsync(
-            List<DailySummary> dailySummaryList,
-            List<ExposureWindow> exposueWindowList,
-            bool ignoreDuplicate = true
-            )
-        {
-            _loggerService.StartMethod();
-
-            List<DailySummary> existDailySummaryList = await GetDailySummariesAsync();
-            List<ExposureWindow> existExposureWindowList = await GetExposureWindowsAsync();
-
-            bool isNewExposureDetected = false;
-
-            foreach (var dailySummary in dailySummaryList)
-            {
-                if (!ignoreDuplicate || !existDailySummaryList.Contains(dailySummary))
-                {
-                    existDailySummaryList.Add(dailySummary);
-                    isNewExposureDetected = true;
-                }
-            }
-
-            foreach (var exposureWindow in exposueWindowList)
-            {
-                if (!ignoreDuplicate || !existExposureWindowList.Contains(exposureWindow))
-                {
-                    existExposureWindowList.Add(exposureWindow);
-                    isNewExposureDetected = true;
-                }
-            }
-
-            existDailySummaryList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
-            existExposureWindowList.Sort((a, b) => a.DateMillisSinceEpoch.CompareTo(b.DateMillisSinceEpoch));
-
-            await SaveExposureDataAsync(existDailySummaryList, existExposureWindowList);
-
-            _loggerService.EndMethod();
-
-            return isNewExposureDetected;
         }
 
         private Task SaveExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
