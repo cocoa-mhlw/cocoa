@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
@@ -17,8 +18,6 @@ namespace Covid19Radar.Services
 {
     public class DiagnosisKeyRegisterServer : IDiagnosisKeyRegisterServer
     {
-        private const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
-
         private readonly ILoggerService _loggerService;
         private readonly IHttpDataService _httpDataService;
         private readonly IDeviceVerifier _deviceVerifier;
@@ -95,6 +94,7 @@ namespace Covid19Radar.Services
                 KeyData = Convert.ToBase64String(k.KeyData),
                 RollingStartNumber = (uint)k.RollingStartIntervalNumber,
                 RollingPeriod = (uint)k.RollingPeriod,
+                ReportType = (uint)k.ReportType,
             });
 
             // Generate Padding
@@ -103,7 +103,7 @@ namespace Covid19Radar.Services
             // Create the submission
             var submission = new DiagnosisSubmissionParameter()
             {
-                SymptomOnsetDate = symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
+                SymptomOnsetDate = symptomOnsetDate.ToString(AppConstants.FORMAT_TIMESTAMP),
                 Keys = keys.ToArray(),
                 Regions = AppSettings.Instance.SupportedRegions,
                 Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),

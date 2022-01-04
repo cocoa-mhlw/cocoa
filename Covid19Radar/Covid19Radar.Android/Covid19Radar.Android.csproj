@@ -168,7 +168,7 @@
       <Version>1.2.1.4</Version>
     </PackageReference>
     <PackageReference Include="Chino.Android">
-      <Version>1.0.0-rc07</Version>
+      <Version>1.0.0-rc08</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -381,6 +381,14 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_arrow.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_arrow.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -586,11 +594,5 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values-en\Strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values-ja\Strings.xml" />
   </ItemGroup>
 </Project>

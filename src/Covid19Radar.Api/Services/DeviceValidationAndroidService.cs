@@ -39,11 +39,10 @@ namespace Covid19Radar.Api.Services
         /// Validation Android
         /// </summary>
         /// <returns>True when successful.</returns>
-        public bool Validation(IAndroidDeviceVerification androidDeviceVerification, DateTimeOffset requestTime, AuthorizedAppInformation app)
+        public bool Validation(IAndroidDeviceVerification deviceVerification, DateTimeOffset requestTime, AuthorizedAppInformation app)
         {
-            byte[] expectedNonce = GetAndroidNonce(androidDeviceVerification);
-
-            var claims = ParsePayload(androidDeviceVerification.DeviceVerificationPayload);
+            byte[] expectedNonce = GetSha256(deviceVerification.ClearText);
+            var claims = ParsePayload(deviceVerification.JwsPayload);
 
             // Validate the nonce
             if (Convert.ToBase64String(claims.Nonce) != Convert.ToBase64String(expectedNonce))
@@ -216,19 +215,6 @@ namespace Covid19Radar.Api.Services
 
             public bool BasicIntegrity { get; }
         }
-
-        private static byte[] GetAndroidNonce(IAndroidDeviceVerification submission)
-        {
-            var cleartext = GetAndroidNonceClearText(submission);
-            var nonce = GetSha256(cleartext);
-            return nonce;
-        }
-
-        private static string GetAndroidNonceClearText(IAndroidDeviceVerification submission)
-                => string.Join("|", submission.AppPackageName, submission.KeysTextForDeviceVerification, GetRegionString(submission.Regions), submission.VerificationPayload);
-
-        private static string GetRegionString(string[] regions)
-            => string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));
 
         private static byte[] GetSha256(string text)
         {
