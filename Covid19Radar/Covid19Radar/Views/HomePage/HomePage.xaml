@@ -62,7 +62,6 @@
 
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        AutomationProperties.Name="{Binding SharingThisAppReadText}"
                         TabIndex="19"
                         Style="{StaticResource DefaultLabelCaptionColor}"
                         Text="{x:Static resources:AppResources.ExposureCheckTitle}">

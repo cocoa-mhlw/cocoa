@@ -467,12 +467,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string LowRiskContactPageTitle {
-            get {
-                return ResourceManager.GetString("LowRiskContactPageTitle", resourceCulture);
-            }
-        }
-        
         public static string LowRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("LowRiskContactPageLabel", resourceCulture);
@@ -500,12 +494,6 @@ namespace Covid19Radar.Resources {
         public static string LowRiskContactPageDescription {
             get {
                 return ResourceManager.GetString("LowRiskContactPageDescription", resourceCulture);
-            }
-        }
-        
-        public static string NoRiskContactPageTitle {
-            get {
-                return ResourceManager.GetString("NoRiskContactPageTitle", resourceCulture);
             }
         }
         

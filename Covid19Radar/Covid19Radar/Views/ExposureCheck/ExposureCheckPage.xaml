@@ -11,12 +11,12 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:views="clr-namespace:Covid19Radar.Views"
-    Title="{x:Static resources:AppResources.LowRiskContactPageTitle}"
+    Title="{x:Static resources:AppResources.ExposureCheckTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentView BackgroundColor="White">
+    <ContentView>
         <StackLayout >
             <views:NoRiskContactPage
                 IsVisible="{Binding IsVisibleNoRiskContact}" />
