@@ -11,18 +11,10 @@ using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Services
 {
-    public enum RiskNotification: int
-    {
-        ContactWithHighRisk,
-        ContactWithLowRisk,
-        NoContact,
-        Unknown
-    }
-
     public interface IExposureRiskCalculationService
     {
         RiskLevel CalcRiskLevel(DailySummary dailySummary);
-        Task<RiskNotification> GetRiskNotification();
+        Task<bool> HasLowRiskContact();
         Task<bool> HasContact();
     }
 
@@ -58,24 +50,13 @@ namespace Covid19Radar.Services
         }
 
         // TODO:  We should make consideration later.
-        public async Task<RiskNotification> GetRiskNotification()
+        public async Task<bool> HasLowRiskContact()
         {
             if (!(await HasContact())) {
-                return RiskNotification.NoContact;
+                return false;
             }
 
-            var summaries = await _userDataRepository
-                .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var riskLevels = summaries.Select(x => CalcRiskLevel(x));
-
-            if (riskLevels.Any(x => x == RiskLevel.LowMedium || x == RiskLevel.Low || x == RiskLevel.Lowest))
-            {
-                return RiskNotification.ContactWithLowRisk;
-            }
-            else
-            {
-                return RiskNotification.ContactWithHighRisk;
-            }
+            return true;
         }
 
 

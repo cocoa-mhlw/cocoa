@@ -146,7 +146,6 @@ namespace Covid19Radar.ViewModels
 
             await localNotificationService.DismissExposureNotificationAsync();
 
-            var riskNotification = await _exposureRiskCalculationService.GetRiskNotification();
             if (await _exposureRiskCalculationService.HasContact())
             {
                 await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
@@ -158,6 +157,22 @@ namespace Covid19Radar.ViewModels
                 await NavigationService.NavigateAsync(nameof(NotContactPage));
                 loggerService.EndMethod();
                 return;
+            }
+
+            loggerService.EndMethod();
+        });
+
+        public Command OnClickExposureCheck => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            if (await _exposureRiskCalculationService.HasLowRiskContact())
+            {
+                await NavigationService.NavigateAsync(nameof(LowRiskContactPage));
+            }
+            else
+            {
+                await NavigationService.NavigateAsync(nameof(NoRiskContactPage));
             }
 
             loggerService.EndMethod();

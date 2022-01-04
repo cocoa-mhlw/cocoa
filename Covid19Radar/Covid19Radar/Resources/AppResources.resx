@@ -500,6 +500,10 @@
     <value>Share this app</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+  <data name="ExposureCheckTitle" xml:space="preserve">
+    <value>Status of exposure check</value>
+    <comment>接触確認の動作状況</comment>
+  </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>Home</value>
     <comment>ホーム</comment>

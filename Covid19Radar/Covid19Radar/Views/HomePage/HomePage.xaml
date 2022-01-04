@@ -27,34 +27,51 @@
             BackgroundColor="#EEEEEE"
             Spacing="15">
             <StackLayout IsVisible="{Binding IsVisibleENStatusActiveLayout}">
-                <StackLayout
-                    Orientation="Horizontal"
-                    HorizontalOptions="Center"
-                    Spacing="16">
-                    <StackLayout.Margin>
-                        <OnPlatform
-                            x:TypeArguments="Thickness"
-                            Android="0, 10"
-                            iOS="0, 10, 0, 0" />
-                    </StackLayout.Margin>
-                    <Grid>
-                        <ffimageloading:CachedImage
-                            AutomationProperties.IsInAccessibleTree="False"
-                            Aspect="AspectFit"
-                            Source="home_active_icon.png" />
-                        <ffimageloading:CachedImage
-                            x:Name="home_active_icon"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            Aspect="AspectFit"
-                            Source="home_active_icon.png" />
-                    </Grid>
+                <StackLayout 
+                    Spacing="8"
+                    IsVisible="{Binding IsVisibleENStatusActiveLayout}">
+                    <StackLayout
+                        Orientation="Horizontal"
+                        HorizontalOptions="Center"
+                        Spacing="16">
+                        <StackLayout.Margin>
+                            <OnPlatform
+                                x:TypeArguments="Thickness"
+                                Android="0, 10"
+                                iOS="0, 10, 0, 0" />
+                        </StackLayout.Margin>
+                        <Grid>
+                            <ffimageloading:CachedImage
+                                AutomationProperties.IsInAccessibleTree="False"
+                                Aspect="AspectFit"
+                                Source="home_active_icon.png" />
+                            <ffimageloading:CachedImage
+                                x:Name="home_active_icon"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                Aspect="AspectFit"
+                                Source="home_active_icon.png" />
+                        </Grid>
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
+                            TabIndex="1"
+                            Style="{StaticResource DefaultLabelLarge}"
+                            FontAttributes="Bold"
+                            Text="{x:Static resources:AppResources.HomePageENStatusActiveTitle}" />
+                    </StackLayout>
+                
+
                     <Label
-                        AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
-                        TabIndex="1"
-                        Style="{StaticResource DefaultLabelLarge}"
-                        FontAttributes="Bold"
-                        Text="{x:Static resources:AppResources.HomePageENStatusActiveTitle}" />
-                </StackLayout>
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="{Binding SharingThisAppReadText}"
+                        TabIndex="19"
+                        Style="{StaticResource DefaultLabelCaptionColor}"
+                        Text="{x:Static resources:AppResources.HomePageDescription6}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=OnClickExposureCheck}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                 </StackLayout>
+
                 <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="Center"
