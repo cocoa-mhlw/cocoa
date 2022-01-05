@@ -258,10 +258,6 @@
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
-  <data name="LowRiskContactPageTitle" xml:space="preserve">
-    <value>リスクが極めて低い接触</value>
-    <comment>リスクが極めて低い接触</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者とリスクが極めて低い接触がありました</value>
     <comment>陽性登録者とリスクが極めて低い接触がありました</comment>
@@ -281,10 +277,6 @@
   <data name="LowRiskContactPageDescription" xml:space="preserve">
     <value>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
     <comment>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
-  </data>
-  <data name="NoRiskContactPageTitle" xml:space="preserve">
-    <value>直近14日間の接触</value>
-    <comment>直近14日間の接触</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>リスクが低いものを含め陽性登録者との接触はありません</value>
