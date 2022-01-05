@@ -162,15 +162,6 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         });
 
-        public Command OnClickExposureCheck => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            await NavigationService.NavigateAsync(nameof(ExposureCheckPage));
-
-            loggerService.EndMethod();
-        });
-
         public Command OnClickShareApp => new Command(() =>
         {
             loggerService.StartMethod();
