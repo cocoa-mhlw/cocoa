@@ -162,7 +162,7 @@
                 Keyboard="Url"
                 Text="{Binding LogStorageEndpoint}"
                 Margin="8, 0, 8, 16"
-                Placeholder="Inquiry-log submission API endpoint"/>
+                Placeholder="Inquiry-log storage endpoint"/>
 
             <Button
                 Command="{Binding OnSave}"
