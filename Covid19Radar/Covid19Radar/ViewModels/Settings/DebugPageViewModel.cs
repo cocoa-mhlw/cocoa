@@ -123,7 +123,8 @@ namespace Covid19Radar.ViewModels
                 $"ExposureDataCollectServerEndpoint: {_serverConfigurationRepository.ExposureDataCollectServerEndpoint}",
                 $"EventLogApiEndpoint: {_serverConfigurationRepository.EventLogApiEndpoint}",
                 $"UserRegisterApiEndpoint: {_serverConfigurationRepository.UserRegisterApiEndpoint}",
-                $"InquiryLogApiUrl: {_serverConfigurationRepository.InquiryLogApiEndpoint}",
+                $"InquiryLogApiUrl: {_serverConfigurationRepository.InquiryLogApiUrl}",
+                $"LogStorageEndpoint: {_serverConfigurationRepository.LogStorageEndpoint}",
             };
             ServerConfigurationInfo = string.Join(Environment.NewLine, serverConfiguration);
         }

@@ -21,11 +21,18 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _userRegisterApiEndpoint, value); }
         }
 
-        private string _inquiryLogApiEndpoint;
-        public string InquiryLogApiEndpoint
+        private string _inquiryLogApiUrl;
+        public string InquiryLogApiUrl
         {
-            get { return _inquiryLogApiEndpoint; }
-            set { SetProperty(ref _inquiryLogApiEndpoint, value); }
+            get { return _inquiryLogApiUrl; }
+            set { SetProperty(ref _inquiryLogApiUrl, value); }
+        }
+
+        private string _logStorageEndpoint;
+        public string LogStorageEndpoint
+        {
+            get { return _logStorageEndpoint; }
+            set { SetProperty(ref _logStorageEndpoint, value); }
         }
 
         private string _regions;
@@ -109,7 +116,8 @@ namespace Covid19Radar.ViewModels
                 Regions = string.Join(",", _serverConfigurationRepository.Regions);
                 DiagnosisKeyRegisterApiEndpoint = _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint;
                 DiagnosisKeyListProvideServerEndpoint = _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint;
-                InquiryLogApiEndpoint = _serverConfigurationRepository.InquiryLogApiEndpoint;
+                InquiryLogApiUrl = _serverConfigurationRepository.InquiryLogApiUrl;
+                LogStorageEndpoint = _serverConfigurationRepository.LogStorageEndpoint;
                 ExposureConfigurationUrl = _serverConfigurationRepository.ExposureConfigurationUrl;
                 ExposureDataCollectServerEndpoint = _serverConfigurationRepository.ExposureDataCollectServerEndpoint;
                 EventLogApiEndpoint = _serverConfigurationRepository.EventLogApiEndpoint;
@@ -146,7 +154,8 @@ namespace Covid19Radar.ViewModels
                 .ToArray();
             _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint = DiagnosisKeyRegisterApiEndpoint;
             _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint = DiagnosisKeyListProvideServerEndpoint;
-            _serverConfigurationRepository.InquiryLogApiEndpoint = InquiryLogApiEndpoint;
+            _serverConfigurationRepository.InquiryLogApiUrl = InquiryLogApiUrl;
+            _serverConfigurationRepository.LogStorageEndpoint = LogStorageEndpoint;
             _serverConfigurationRepository.ExposureConfigurationUrl = ExposureConfigurationUrl;
             _serverConfigurationRepository.ExposureDataCollectServerEndpoint = ExposureDataCollectServerEndpoint;
             _serverConfigurationRepository.EventLogApiEndpoint = EventLogApiEndpoint;
