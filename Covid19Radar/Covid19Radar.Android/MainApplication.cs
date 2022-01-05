@@ -156,5 +156,15 @@ namespace Covid19Radar.Droid
                 await _exposureDetectionService.Value.ExposureNotDetectedAsync(exposureConfiguration, enVersion);
             });
         }
+
+        public void ExceptionOccurred(ENException exception)
+        {
+            _loggerService.Value.Exception($"ENExcepiton occurred, Code:{exception.Code}, Message:{exception.Message}", exception);
+        }
+
+        public void ExceptionOccurred(Exception exception)
+        {
+            _loggerService.Value.Exception("ENExcepiton occurred", exception);
+        }
     }
 }
