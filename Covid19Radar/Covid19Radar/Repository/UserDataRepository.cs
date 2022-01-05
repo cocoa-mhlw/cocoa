@@ -184,8 +184,6 @@ namespace Covid19Radar.Repository
             List<ExposureWindow> newExposureWindowList = existExposureWindowList.Union(exposueWindowList).ToList();
             newExposureWindowList.Sort(_exposureWindowComparer);
 
-            Console.WriteLine(JsonConvert.SerializeObject(newExposureWindowList));
-
             await SaveExposureDataAsync(newDailySummaryList, newExposureWindowList);
 
             _loggerService.EndMethod();
