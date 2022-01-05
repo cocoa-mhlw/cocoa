@@ -18,12 +18,12 @@
     Visual="Material">
     <ContentView>
         <ScrollView>
-        <StackLayout>
-            <views:NoRiskContactLayout
-                IsVisible="{Binding IsVisibleNoRiskContact}" />
-            <views:LowRiskContactLayout
-                IsVisible="{Binding IsVisibleLowRiskContact}" />
-        </StackLayout>
+            <StackLayout>
+                <views:NoRiskContactLayout
+                    IsVisible="{Binding IsVisibleNoRiskContact}" />
+                <views:LowRiskContactLayout
+                    IsVisible="{Binding IsVisibleLowRiskContact}" />
+            </StackLayout>
         </ScrollView>
     </ContentView>
 </ContentPage>
