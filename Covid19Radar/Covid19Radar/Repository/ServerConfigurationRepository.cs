@@ -39,6 +39,15 @@ namespace Covid19Radar.Repository
 
         public string InquiryLogApiEndpoint { get; set; }
 
+        public string? InquiryLogApiUrl
+        {
+            get
+            {
+                var inquiryLogApiEndpoint = InquiryLogApiEndpoint ?? "";
+                return CombineAsUrl(inquiryLogApiEndpoint, "inquirylog");
+            }
+        }
+
         public string ExposureConfigurationUrl { get; set; }
 
         public string? ExposureDataCollectServerEndpoint { get; set; }
@@ -286,7 +295,7 @@ namespace Covid19Radar.Repository
         public string UserRegisterApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
 
         [JsonProperty("inquiry_log_api_endpoint")]
-        public string? InquiryLogApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.LogStorageEndpoint, "inquirylog");
+        public string? InquiryLogApiEndpoint = AppSettings.Instance.LogStorageEndpoint;
 
         [JsonProperty("regions")]
         public string Regions = string.Join(",", AppSettings.Instance.SupportedRegions);
