@@ -185,13 +185,6 @@
                 <Setter Property="FontSize" Value="Body" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
-            
-            <Style x:Key="DefaultLabelCaptionColor" TargetType="Label">
-                <Setter Property="HorizontalTextAlignment" Value="Center" />
-                <Setter Property="TextColor" Value="{StaticResource HomePageLink}" />
-                <Setter Property="FontSize" Value="Caption" />
-                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-            </Style>
 
             <Style x:Key="DefaultWebView" TargetType="WebView">
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
