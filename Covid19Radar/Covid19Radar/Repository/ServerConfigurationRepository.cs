@@ -37,7 +37,9 @@ namespace Covid19Radar.Repository
                     .Distinct()
                     .ToList();
 
-        public string InquiryLogApiEndpoint { get; set; }
+        public string? InquiryLogApiUrl { get; set; }
+
+        public string LogStorageEndpoint { get; set; }
 
         public string ExposureConfigurationUrl { get; set; }
 
@@ -113,10 +115,16 @@ namespace Covid19Radar.Repository
             set => _serverConfiguration.UserRegisterApiEndpoint = value;
         }
 
-        public string InquiryLogApiEndpoint
+        public string LogStorageEndpoint
         {
-            get => _serverConfiguration.InquiryLogApiEndpoint;
-            set => _serverConfiguration.InquiryLogApiEndpoint = value;
+            get => _serverConfiguration.LogStorageEndpoint;
+            set => _serverConfiguration.LogStorageEndpoint = value;
+        }
+
+        public string InquiryLogApiUrl
+        {
+            get => _serverConfiguration.InquiryLogApiUrl;
+            set => _serverConfiguration.InquiryLogApiUrl = value;
         }
 
         public string[] Regions
@@ -187,9 +195,18 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string InquiryLogApiEndpoint
+        public string InquiryLogApiUrl
         {
             get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+            set
+            {
+                // Do nothing
+            }
+        }
+
+        public string LogStorageEndpoint
+        {
+            get => AppSettings.Instance.LogStorageEndpoint;
             set
             {
                 // Do nothing
@@ -285,8 +302,11 @@ namespace Covid19Radar.Repository
         [JsonProperty("user_register_api_endpoint")]
         public string UserRegisterApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
 
-        [JsonProperty("inquiry_log_api_endpoint")]
-        public string? InquiryLogApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+        [JsonProperty("inquiry_log_api")]
+        public string? InquiryLogApiUrl = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+
+        [JsonProperty("log_storage_endpoint")]
+        public string? LogStorageEndpoint = AppSettings.Instance.LogStorageEndpoint;
 
         [JsonProperty("regions")]
         public string Regions = string.Join(",", AppSettings.Instance.SupportedRegions);
