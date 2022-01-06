@@ -17,6 +17,11 @@
     NavigationPage.HasNavigationBar="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
     <ScrollView>
         <Grid Style="{StaticResource HelpPageGridLayout}">
             <Grid.RowDefinitions>
@@ -96,4 +101,5 @@
             </StackLayout>
         </Grid>
     </ScrollView>
+    </ContentView>
 </ContentPage>

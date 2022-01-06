@@ -9,6 +9,8 @@ namespace Covid19Radar.Api.Models
 {
     public class TemporaryExposureKeyModel
     {
+        public const int TIME_WINDOW_IN_SEC = 60 * 10;
+
         public string id { get; set; } = Guid.NewGuid().ToString("N");
         public string PartitionKey { get; set; }
         public byte[] KeyData { get; set; }
@@ -17,9 +19,8 @@ namespace Covid19Radar.Api.Models
         public int TransmissionRiskLevel { get; set; }
         public int ReportType { get; set; } = Constants.ReportTypeMissingValue;
         public int DaysSinceOnsetOfSymptoms { get; set; } = Constants.DaysSinceOnsetOfSymptomsMissingValue;
-        public long GetRollingStartUnixTimeSeconds() => RollingStartIntervalNumber * 10 * 60;
-        public long GetRollingPeriodSeconds() => RollingPeriod * 10 * 60;
-
+        public long GetRollingStartUnixTimeSeconds() => RollingStartIntervalNumber * TIME_WINDOW_IN_SEC;
+        public long GetRollingPeriodSeconds() => RollingPeriod * TIME_WINDOW_IN_SEC;
         public ulong Timestamp { get; set; }
         public bool Exported { get; set; }
     }

@@ -91,6 +91,16 @@ namespace Covid19Radar.ViewModels
                 IconColor = MenuIconColorDefault,
                 TextColor = MenuTextColorDefault
             });
+#if DEBUG
+            MenuItems.Add(new MainMenuModel()
+            {
+                Icon = "\uf013",
+                PageName = nameof(DebugPage),
+                Title = "Debug",
+                IconColor = "#019AE8",
+                TextColor = "#000"
+            });
+#endif
 
             NavigateCommand = new DelegateCommand(Navigate);
         }

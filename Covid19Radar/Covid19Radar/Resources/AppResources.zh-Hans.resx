@@ -280,6 +280,46 @@
     <value>分享此APP</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+    <data name="LowRiskContactPageTitle" xml:space="preserve">
+    <value>极低风险接触</value>
+    <comment>リスクが極めて低い接触</comment>
+  </data>
+  <data name="LowRiskContactPageLabel" xml:space="preserve">
+    <value>与阳性者接触的风险非常低</value>
+    <comment>陽性者とリスクが極めて低い接触がありました</comment>
+  </data>
+  <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
+    <value>过去14天总共</value>
+    <comment>直近14日間に合計</comment>
+  </data>
+    <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
+    <value>小时</value>
+    <comment>時間</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixMinutesText" xml:space="preserve">
+    <value>分钟</value>
+    <comment>分</comment>
+  </data>
+  <data name="LowRiskContactPageDescription" xml:space="preserve">
+    <value>我收到了来自阳性者智能手机的信号，但没有风险，因为它在几米之外。 活动区域有阳性人士，请继续注意预防感染。</value>
+    <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+  </data>
+  <data name="NoRiskContactPageTitle" xml:space="preserve">
+    <value>过去14天的联系方式</value>
+    <comment>直近14日間の接触</comment>
+  </data>
+  <data name="NoRiskContactPageLabel" xml:space="preserve">
+    <value>不接触阳性者，包括低风险者</value>
+    <comment>リスクが低いものを含め陽性者との接触はありません</comment>
+  </data>
+  <data name="NoRiskContactPageDescription" xml:space="preserve">
+    <value>似乎在行动领域没有积极的注册人。 请继续注意预防感染。</value>
+    <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
+  </data>
+  <data name="NoRiskContactPageButtonText" xml:space="preserve">
+    <value>分享此APP</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
     <value>感谢提供检查结果</value>
     <comment>陽性のご登録をいただきありがとうございました</comment>
@@ -545,7 +585,7 @@
     <value>暴露通知无法启动。请打开设置，开启暴露通知后打开蓝牙。</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
-  <data name="ExposureNotificationHandler1ErrorTitle" xml:space="preserve">
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>受理编号错误或者失效</value>
     <comment>処理番号が誤っているか、有効期限が切れています</comment>
   </data>
@@ -589,13 +629,13 @@
     <value>请启用 COVID-19 接触日志</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
-  <data name="NotifyOtherPageDiagAppCloseTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDiagReturnHomeTitle" xml:space="preserve">
     <value>登记次数达到上限</value>
     <comment>登録回数の上限に達しました</comment>
   </data>
-  <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>关闭应用。</value>
-    <comment>アプリを終了します。</comment>
+	<data name="NotifyOtherPageDiagReturnHome" xml:space="preserve">
+    <value>返回首页。</value>
+    <comment>ホームに戻ります。</comment>
   </data>
   <data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
     <value>受理编号错误</value>

@@ -12,6 +12,8 @@ namespace Covid19Radar.Api.Models
 
     public class V2DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
+		public const int TRANSMISSION_RISK_LEVEL = 4;
+
 		[JsonProperty("keys")]
 		public Key[] Keys { get; set; }
 		[JsonProperty("regions")]
@@ -74,7 +76,7 @@ namespace Covid19Radar.Api.Models
 					KeyData = Convert.FromBase64String(this.KeyData),
 					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
-					TransmissionRiskLevel = 4,
+					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
 					ReportType = Constants.ReportTypeMissingValue,
 					DaysSinceOnsetOfSymptoms = Constants.DaysSinceOnsetOfSymptomsMissingValue,
 					Timestamp = timestamp,
@@ -89,9 +91,9 @@ namespace Covid19Radar.Api.Models
 			{
 				if (string.IsNullOrWhiteSpace(KeyData)) return false;
 				if (RollingPeriod != 0 && RollingPeriod > Constants.ActiveRollingPeriod) return false;
-				var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds() / 600;
-				var oldest = new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
-				if (RollingStartNumber != 0 && (RollingStartNumber < oldest || RollingStartNumber > now)) return false;
+				var nowRollingStartNumber = DateTimeOffset.UtcNow.ToUnixTimeSeconds() / TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC;
+				var oldestRollingStartNumber = new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / TemporaryExposureKeyModel.TIME_WINDOW_IN_SEC;
+				if (RollingStartNumber != 0 && (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > nowRollingStartNumber)) return false;
 				return true;
 			}
 

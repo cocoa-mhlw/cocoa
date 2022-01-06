@@ -14,7 +14,13 @@ namespace Covid19Radar.Droid.Services
     {
         public Task<string> VerifyAsync(DiagnosisSubmissionParameter submission)
         {
-            var nonce = DeviceVerifierUtils.CreateAndroidNonceV2(submission);
+            var nonce = DeviceVerifierUtils.CreateAndroidNonceV3(submission);
+            return GetSafetyNetAttestationAsync(nonce);
+        }
+
+        public Task<string> VerifyAsync(V1EventLogRequest eventLogRequest)
+        {
+            var nonce = DeviceVerifierUtils.CreateAndroidNonceV3(eventLogRequest);
             return GetSafetyNetAttestationAsync(nonce);
         }
 
