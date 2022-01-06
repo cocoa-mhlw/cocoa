@@ -16,26 +16,55 @@ namespace Covid19Radar.Repository
     {
         public string[] Regions { get; set; }
 
+        public string[] SubRegions { get; set; }
+
+        public bool WithRegionLevel { get; set; }
+
         public string UserRegisterApiEndpoint { get; set; }
 
         public string DiagnosisKeyRegisterApiEndpoint { get; set; }
 
-        public virtual IList<string> DiagnosisKeyRegisterApiUrls => Regions
-                    .Select(region => DiagnosisKeyRegisterApiEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
-                    .Where(url => url != null)
-                    .Distinct()
-                    .ToList();
+        public virtual string DiagnosisKeyRegisterApiUrl
+        {
+            get
+            {
+                return DiagnosisKeyRegisterApiEndpoint;
+            }
+        }
 
         public string DiagnosisKeyListProvideServerEndpoint { get; set; }
 
-        public virtual string GetDiagnosisKeyListProvideServerUrl(string region)
-            => DiagnosisKeyListProvideServerEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region);
+        public virtual string GetDiagnosisKeyListProvideServerUrl(string region, string subRegion)
+        {
+            return DiagnosisKeyListProvideServerEndpoint
+                    .Replace(ServerConfiguration.PLACEHOLDER_REGION, region)
+                    .Replace(ServerConfiguration.PLACEHOLDER_SUBREGION, subRegion
+                    );
+        }
 
-        public virtual IList<string> DiagnosisKeyListProvideServerUrls => Regions
-                    .Select(region => DiagnosisKeyListProvideServerEndpoint.Replace(ServerConfiguration.PLACEHOLDER_REGION, region))
-                    .Where(url => url != null)
-                    .Distinct()
-                    .ToList();
+        public virtual IList<string> GetDiagnosisKeyListProvideServerUrls()
+        {
+            var subRegions = SubRegions.ToList();
+            if (WithRegionLevel)
+            {
+                subRegions.Add("");
+            }
+
+            var combined = Regions.SelectMany(_ => subRegions,
+                (region, subRegion) => (region, subRegion));
+
+            return combined.Select(pair => {
+                    var (region, subRegion) = pair;
+                    return DiagnosisKeyListProvideServerEndpoint
+                            .Replace(ServerConfiguration.PLACEHOLDER_REGION, region)
+                            .Replace(ServerConfiguration.PLACEHOLDER_SUBREGION, subRegion
+                            );
+                    }
+                )
+                .Where(url => url != null)
+                .Distinct()
+                .ToList();
+        }
 
         public string? InquiryLogApiUrl { get; set; }
 
@@ -129,8 +158,36 @@ namespace Covid19Radar.Repository
 
         public string[] Regions
         {
-            get => _serverConfiguration.Regions.Split(",").Where(region => !string.IsNullOrEmpty(region)).ToArray();
+            get
+            {
+                var regions = _serverConfiguration.Regions.Split(",").Where(region => !string.IsNullOrEmpty(region)).ToArray();
+                if (regions.Length > 0)
+                {
+                    return regions;
+                }
+                return new string[] { "" };
+            }
             set => _serverConfiguration.Regions = string.Join(",", value);
+        }
+
+        public string[] SubRegions
+        {
+            get
+            {
+                var subRegions = _serverConfiguration.SubRegions.Split(",").Where(region => !string.IsNullOrEmpty(region)).ToArray();
+                if (subRegions.Length > 0)
+                {
+                    return subRegions;
+                }
+                return new string[] { "" };
+            }
+            set => _serverConfiguration.SubRegions = string.Join(",", value);
+        }
+
+        public bool WithRegionLevel
+        {
+            get => _serverConfiguration.WithRegionLevel;
+            set => _serverConfiguration.WithRegionLevel = value;
         }
 
         public string DiagnosisKeyRegisterApiEndpoint
@@ -222,6 +279,24 @@ namespace Covid19Radar.Repository
             }
         }
 
+        public string[] SubRegions
+        {
+            get => new string[0];
+            set
+            {
+                //  Do nothing
+            }
+        }
+
+        public bool WithRegionLevel
+        {
+            get => true;
+            set
+            {
+                //  Do nothing
+            }
+        }
+
         public string DiagnosisKeyRegisterApiEndpoint
         {
             get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppConstants.DiagnosisApiVersionCode, "diagnosis");
@@ -290,6 +365,7 @@ namespace Covid19Radar.Repository
     public class ServerConfiguration
     {
         public const string PLACEHOLDER_REGION = "{region}";
+        public const string PLACEHOLDER_SUBREGION = "{subregion}";
 
         /// <summary>
         /// Specifies the format version of configuration file.
@@ -310,6 +386,12 @@ namespace Covid19Radar.Repository
 
         [JsonProperty("regions")]
         public string Regions = string.Join(",", AppSettings.Instance.SupportedRegions);
+
+        [JsonProperty("sub_regions")]
+        public string SubRegions = "";
+
+        [JsonProperty("with_region_level")]
+        public bool WithRegionLevel = true;
 
         [JsonProperty("diagnosis_key_register_api_endpoint")]
         public string DiagnosisKeyRegisterApiEndpoint

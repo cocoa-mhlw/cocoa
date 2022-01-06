@@ -42,18 +42,25 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _regions, value); }
         }
 
+        private string _subRegions;
+        public string SubRegions
+        {
+            get { return _subRegions; }
+            set { SetProperty(ref _subRegions, value); }
+        }
+
+        private bool _withRegionLevel;
+        public bool WithRegionLevel
+        {
+            get { return _withRegionLevel; }
+            set { SetProperty(ref _withRegionLevel, value); }
+        }
+
         private string _diagnosisKeyRegisterApiEndpoint;
         public string DiagnosisKeyRegisterApiEndpoint
         {
             get { return _diagnosisKeyRegisterApiEndpoint; }
             set { SetProperty(ref _diagnosisKeyRegisterApiEndpoint, value); }
-        }
-
-        private string _diagnosisKeyRegisterApiUrls;
-        public string DiagnosisKeyRegisterApiUrls
-        {
-            get { return _diagnosisKeyRegisterApiUrls; }
-            set { SetProperty(ref _diagnosisKeyRegisterApiUrls, value); }
         }
 
         private string _diagnosisKeyListProvideServerEndpoint;
@@ -114,6 +121,8 @@ namespace Covid19Radar.ViewModels
 
                 UserRegisterApiEndpoint = _serverConfigurationRepository.UserRegisterApiEndpoint;
                 Regions = string.Join(",", _serverConfigurationRepository.Regions);
+                SubRegions = string.Join(",", _serverConfigurationRepository.SubRegions);
+                WithRegionLevel = _serverConfigurationRepository.WithRegionLevel;
                 DiagnosisKeyRegisterApiEndpoint = _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint;
                 DiagnosisKeyListProvideServerEndpoint = _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint;
                 InquiryLogApiUrl = _serverConfigurationRepository.InquiryLogApiUrl;
@@ -129,15 +138,14 @@ namespace Covid19Radar.ViewModels
         private void UpdateUrls()
         {
             _serverConfigurationRepository.Regions = Regions.Replace(" ", "").Split(",").Distinct().ToArray();
+            _serverConfigurationRepository.SubRegions = SubRegions.Replace(" ", "").Split(",").Distinct().ToArray();
+            _serverConfigurationRepository.WithRegionLevel = WithRegionLevel;
             _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint = DiagnosisKeyRegisterApiEndpoint;
             _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint = DiagnosisKeyListProvideServerEndpoint;
             _serverConfigurationRepository.ExposureDataCollectServerEndpoint = ExposureDataCollectServerEndpoint;
             _serverConfigurationRepository.EventLogApiEndpoint = EventLogApiEndpoint;
 
-            var diagnosisKeyRegisterApiUrls = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls;
-            DiagnosisKeyRegisterApiUrls = string.Join(Environment.NewLine, diagnosisKeyRegisterApiUrls);
-
-            var diagnosisKeyListProvideServerUrls = _serverConfigurationRepository.DiagnosisKeyListProvideServerUrls;
+            var diagnosisKeyListProvideServerUrls = _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrls();
             DiagnosisKeyListProvideServerUrls = string.Join(Environment.NewLine, diagnosisKeyListProvideServerUrls);
 
             var exposureDataCollectServerUrls = _serverConfigurationRepository.ExposureDataCollectServerUrls;
@@ -152,6 +160,12 @@ namespace Covid19Radar.ViewModels
                 .Split(",")
                 .Distinct()
                 .ToArray();
+            _serverConfigurationRepository.SubRegions = SubRegions
+                .Replace(" ", "")
+                .Split(",")
+                .Distinct()
+                .ToArray();
+            _serverConfigurationRepository.WithRegionLevel = WithRegionLevel;
             _serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint = DiagnosisKeyRegisterApiEndpoint;
             _serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint = DiagnosisKeyListProvideServerEndpoint;
             _serverConfigurationRepository.InquiryLogApiUrl = InquiryLogApiUrl;

@@ -35,10 +35,12 @@ namespace Covid19Radar.Services
             _httpClient = httpClientService.Create();
         }
 
-        public async Task<IList<HttpStatusCode>> SubmitDiagnosisKeysAsync(
+        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string _,
+            string[] regions,
+            string[] subRegions,
             string idempotencyKey
             )
         {
@@ -56,14 +58,13 @@ namespace Covid19Radar.Services
                 RequestDiagnosisKey request = new RequestDiagnosisKey(
                     symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
                     temporaryExposureKeys,
+                    regions,
+                    subRegions,
                     idempotencyKey,
                     ReportType.ConfirmedClinicalDiagnosis
                     );
 
-                var tasks = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls.Select(url => SubmitDiagnosisKeysAsync(request, url));
-                HttpStatusCode[] statuses = await Task.WhenAll(tasks);
-
-                return statuses.ToList();
+                return await SubmitDiagnosisKeysAsync(request, _serverConfigurationRepository.DiagnosisKeyRegisterApiUrl);
             }
             finally
             {
@@ -106,19 +107,29 @@ namespace Covid19Radar.Services
         [JsonProperty("symptomOnsetDate")]
         public string SymptomOnsetDate { get; set; }
 
+        [JsonProperty("regions")]
+        public IList<string> Regions { get; set; }
+
+        [JsonProperty("sub_regions")]
+        public IList<string> SubRegions { get; set; }
+
         public IList<Tek> temporaryExposureKeys;
 
-        [JsonProperty("idempotency_key")]
+        [JsonProperty("keys")]
         public string IdempotencyKey { get; set; }
 
         public RequestDiagnosisKey(
             string symptomOnsetDate,
             IList<TemporaryExposureKey> teks,
+            string[] regions,
+            string[] subRegions,
             string idempotencyKey,
             ReportType defaultRportType = ReportType.ConfirmedTest
             )
         {
             SymptomOnsetDate = symptomOnsetDate;
+            Regions = regions;
+            SubRegions = subRegions;
             temporaryExposureKeys = teks.Select(tek =>
             {
                 return new Tek(tek)
@@ -133,14 +144,14 @@ namespace Covid19Radar.Services
     [JsonObject]
     public class Tek
     {
-        public readonly string key;
+        public readonly string keyData;
         public readonly long rollingStartNumber;
         public readonly long rollingPeriod;
         public int reportType;
 
         public Tek(TemporaryExposureKey tek)
         {
-            key = Convert.ToBase64String(tek.KeyData);
+            keyData = Convert.ToBase64String(tek.KeyData);
             rollingStartNumber = tek.RollingStartIntervalNumber;
             rollingPeriod = tek.RollingPeriod;
             reportType = (int)ReportType.ConfirmedClinicalDiagnosis;

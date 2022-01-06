@@ -43,6 +43,16 @@ namespace Covid19Radar.Background.Services
             BlobClient = StorageAccount.CreateCloudBlobClient();
         }
 
+        private static string GetBlobDirectory(string region, string subRegion)
+        {
+            var blobDirectoryString = $"{region}";
+            if (!string.IsNullOrEmpty(subRegion))
+            {
+                blobDirectoryString += $"/{subRegion}";
+            }
+            return blobDirectoryString.ToLower();
+        }
+
         public async Task WriteToBlobAsync(Stream s, TemporaryExposureKeyExportModel model, TemporaryExposureKeyExport bin, TEKSignatureList sig)
         {
             Logger.LogInformation($"start {nameof(WriteToBlobAsync)}");
@@ -52,7 +62,7 @@ namespace Covid19Radar.Background.Services
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
-            var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{model.Region}".ToLower());
+            var blobDirectory = cloudBlobContainer.GetDirectoryReference(GetBlobDirectory(model.Region, model.SubRegion));
 
             // Filename is inferable as batch number
             var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
@@ -77,7 +87,7 @@ namespace Covid19Radar.Background.Services
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
-            var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{model.Region}".ToLower());
+            var blobDirectory = cloudBlobContainer.GetDirectoryReference(GetBlobDirectory(model.Region, model.SubRegion));
 
             // Filename is inferable as batch number
             var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
@@ -86,43 +96,47 @@ namespace Covid19Radar.Background.Services
             await blockBlob.DeleteIfExistsAsync();
         }
 
-        public async Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models, string[] supportRegions)
+        public async Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models, string region, string subRegion)
         {
             Logger.LogInformation($"start {nameof(WriteFilesJsonAsync)}");
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
 
-            var postedGroupedRegions = models.GroupBy(_ => _.Region);
-            foreach (var region in supportRegions)
+            var urlPrefix = $"{TekExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{region}";
+            if (!string.IsNullOrEmpty(subRegion))
             {
-                var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{region}".ToLower());
-                var exportFileName = "list.json";
-                var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
+                urlPrefix += $"/{subRegion}";
+            }
 
-                var grp = postedGroupedRegions?.FirstOrDefault(_ => _.Key == region);
+            var postedGroupedRegions = models.GroupBy(_ => _.Region);
 
-                var filesJson = "[]";
-                if (grp != null)
+            var blobDirectory = cloudBlobContainer.GetDirectoryReference(GetBlobDirectory(region, subRegion));
+            var exportFileName = "list.json";
+            var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
+
+            var grp = postedGroupedRegions?.FirstOrDefault(_ => _.Key == region);
+
+            var filesJson = "[]";
+            if (grp != null)
+            {
+                var files = grp.Select(_ => new TemporaryExposureKeyExportFileModel()
                 {
-                    var files = grp.Select(_ => new TemporaryExposureKeyExportFileModel()
-                    {
-                        Region = region,
-                        Created = _.TimestampSecondsSinceEpoch,
-                        Url = $"{TekExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{region}/{_.BatchNum}.zip"
-                    }).ToArray();
+                    Region = region,
+                    Created = _.TimestampSecondsSinceEpoch,
+                    Url = $"{urlPrefix}/{_.BatchNum}.zip"
+                }).ToArray();
 
-                    filesJson = JsonConvert.SerializeObject(files);
-                }
-                using (var stream = new MemoryStream())
-                using (var writer = new StreamWriter(stream))
-                {
-                    await writer.WriteAsync(filesJson);
-                    await writer.FlushAsync();
-                    await stream.FlushAsync();
-                    stream.Position = 0;
-                    await blockBlob.UploadFromStreamAsync(stream);
-                }
+                filesJson = JsonConvert.SerializeObject(files);
+            }
+            using (var stream = new MemoryStream())
+            using (var writer = new StreamWriter(stream))
+            {
+                await writer.WriteAsync(filesJson);
+                await writer.FlushAsync();
+                await stream.FlushAsync();
+                stream.Position = 0;
+                await blockBlob.UploadFromStreamAsync(stream);
             }
 
         }

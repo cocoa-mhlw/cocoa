@@ -7,22 +7,11 @@ using Covid19Radar.Api.Extensions;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
-using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
     public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
-        /*
-         * [Important]
-         * The value `daysSinceOnsetOfSymptoms` must be less than or equal to `+14` and greater than or equal to `-14`.
-         *
-         * If any diagnosis-keys file CONTAMINATED by out of range value(e.g. -199, 62) that provide detectExposure/provideDiagnosisKeys method,
-         * ExposureNotification API for Android doesn't return any result(ExposureDetected/ExposureNotDetected) to BroadcastReceiver.
-         */
-        private const int MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS = -14;
-        private const int MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS = 14;
-
         // RFC3339
         // e.g. 2021-09-20T23:52:57.436+00:00
         [JsonProperty("symptomOnsetDate")]
@@ -30,6 +19,9 @@ namespace Covid19Radar.Api.Models
 
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
+
+        [JsonProperty("subRegions")]
+        public string[] SubRegions { get; set; }
 
         [JsonProperty("regions")]
         public string[] Regions { get; set; }
@@ -141,8 +133,8 @@ namespace Covid19Radar.Api.Models
                     return false;
                 }
 
-                if (DaysSinceOnsetOfSymptoms < MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS
-                    || DaysSinceOnsetOfSymptoms > MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS)
+                if (DaysSinceOnsetOfSymptoms < Constants.MinDaysSinceOnsetOfSymptoms
+                    || DaysSinceOnsetOfSymptoms > Constants.MaxDaysSinceOnsetOfSymptoms)
                 {
                     return false;
                 }
