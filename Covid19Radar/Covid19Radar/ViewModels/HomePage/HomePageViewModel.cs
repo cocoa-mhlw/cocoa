@@ -29,7 +29,6 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
-        private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
         private string _pastDate;
         public string PastDate
@@ -74,8 +73,7 @@ namespace Covid19Radar.ViewModels
             ILocalNotificationService localNotificationService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             IDialogService dialogService,
-            IExternalNavigationService externalNavigationService,
-            IExposureRiskCalculationService exposureRiskCalculationService
+            IExternalNavigationService externalNavigationService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
@@ -87,7 +85,6 @@ namespace Covid19Radar.ViewModels
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
-            this._exposureRiskCalculationService = exposureRiskCalculationService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -144,9 +141,16 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
+            var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var userExposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+
+            var count = dailySummaryList.Count() + userExposureInformationList.Count();
+
             await localNotificationService.DismissExposureNotificationAsync();
 
-            if (await _exposureRiskCalculationService.HasContact())
+            loggerService.Info($"Exposure count: {count}");
+
+            if (count > 0)
             {
                 await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
                 loggerService.EndMethod();
@@ -158,8 +162,6 @@ namespace Covid19Radar.ViewModels
                 loggerService.EndMethod();
                 return;
             }
-
-            loggerService.EndMethod();
         });
 
         public Command OnClickShareApp => new Command(() =>

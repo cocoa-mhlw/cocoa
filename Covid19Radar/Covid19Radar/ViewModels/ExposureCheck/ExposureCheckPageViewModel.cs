@@ -7,16 +7,12 @@ using Covid19Radar.Resources;
 using Covid19Radar.Repository;
 using Prism.Navigation;
 using System.Linq;
-using System.Threading.Tasks;
-using System;
 using Chino;
-using System.IO;
 using Covid19Radar.Services;
-using Xamarin.Forms;
 using Covid19Radar.Common;
-using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using System.Collections.Generic;
 
 namespace Covid19Radar.ViewModels
 {
@@ -26,7 +22,6 @@ namespace Covid19Radar.ViewModels
 
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
-        private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
         public ObservableCollection<ExposureCheckScoreModel> ExposureCheckScores { get; set; }
 
@@ -47,13 +42,11 @@ namespace Covid19Radar.ViewModels
         public ExposureCheckPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository,
-            IExposureRiskCalculationService exposureRiskCalculationService) : base(navigationService)
+            IUserDataRepository userDataRepository) : base(navigationService)
         {
             Title = AppResources.TitileUserStatusSettings;
             this._loggerService = loggerService;
             this._userDataRepository = userDataRepository;
-            this._exposureRiskCalculationService = exposureRiskCalculationService;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
         }
@@ -64,12 +57,14 @@ namespace Covid19Radar.ViewModels
 
             _loggerService.StartMethod();
 
-            if (await _exposureRiskCalculationService.HasContact())
+            var summaries = await _userDataRepository
+                .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            if (summaries.Count() < 0)
             {
                 IsVisibleLowRiskContact = true;
                 IsVisibleNoRiskContact = false;
 
-                SetupExposureCheckScores();
+                SetupExposureCheckScores(summaries);
             }
             else
             {
@@ -80,9 +75,8 @@ namespace Covid19Radar.ViewModels
             _loggerService.EndMethod();
         }
 
-        private async void SetupExposureCheckScores()
+        private void SetupExposureCheckScores(List<DailySummary> summaries)
         {
-            var summaries = await _userDataRepository.GetDailySummariesAsync();
             summaries.Reverse();
             foreach (var summary in summaries)
             {
