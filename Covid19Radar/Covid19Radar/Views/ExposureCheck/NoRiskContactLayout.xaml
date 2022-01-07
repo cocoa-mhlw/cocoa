@@ -40,11 +40,6 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <ffimageloading:CachedImage
-                AutomationProperties.IsInAccessibleTree="False"
-                Margin="0,20,0,0"
-                Aspect="AspectFit"
-                Source="Nocontact10.png" />
         </StackLayout>
         <Grid Grid.Row="1">
             <Button

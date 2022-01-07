@@ -16,14 +16,11 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentView>
-        <ScrollView>
-            <StackLayout>
-                <views:NoRiskContactLayout
-                    IsVisible="{Binding IsVisibleNoRiskContact}" />
-                <views:LowRiskContactLayout
-                    IsVisible="{Binding IsVisibleLowRiskContact}" />
-            </StackLayout>
-        </ScrollView>
-    </ContentView>
+        <StackLayout Style="{StaticResource DefaultStackLayout}">
+            <views:NoRiskContactLayout
+                IsVisible="{Binding IsVisibleNoRiskContact}" />
+            <views:LowRiskContactLayout
+                IsVisible="{Binding IsVisibleLowRiskContact}" />
+        </StackLayout>
+
 </ContentPage>

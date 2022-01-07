@@ -11,60 +11,96 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     ios:Page.UseSafeArea="true"
-    Style="{StaticResource DefaultPageStyle}"
+    Style="{StaticResource DefaultStackLayout}"
     Visual="Material"
-    Padding="10"
     BackgroundColor="#FFFFFF"
     Spacing="10">
-    <Frame
-        Grid.Row="1"
-        Margin="0,20,0,0" 
-        Padding="20"
-        BackgroundColor="#FFF3DD"
-        CornerRadius="10">
-        <StackLayout>
-            <ffimageloading:CachedImage
-                AutomationProperties.IsInAccessibleTree="False"
-                Margin="0,0,0,20"
-                Aspect="AspectFit"
-                Source="InfoMark.png" />
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="1"
-                Margin="0,0,0,10"
-                HorizontalOptions="Center"
-                Style="{StaticResource DefaultTitleLabel}">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageLabel}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="2"
-                Margin="0,0,0,20"
-                FontSize="Large"
-                HorizontalTextAlignment="Center"
-                Style="{StaticResource DefaultTitleLabel}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="{x:Static resources:AppResources.LowRiskContactPageCountPrefixText}" />
-                            <Span Text="{Binding TotalContactTime}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-            </Label>
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="2"
-                HorizontalOptions="Center"
-                Style="{StaticResource PrimaryText}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="{x:Static resources:AppResources.LowRiskContactPageDescription}" />
-                        </FormattedString>
-                    </Label.FormattedText>
-            </Label>
-        </StackLayout>
-    </Frame>
+    <CollectionView
+        VerticalOptions="FillAndExpand"
+        BackgroundColor="#FFFFFF"
+        ItemsSource="{Binding ExposureCheckScores}">
+        <CollectionView.Header>
+            <StackLayout
+                Padding="20, 20, 20, 10">
+                <Frame
+                    Padding="20"
+                    BackgroundColor="#FFF3DD"
+                    CornerRadius="10">
+        
+                    <StackLayout>
+                        <ffimageloading:CachedImage
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Margin="0,0,0,20"
+                            Aspect="AspectFit"
+                            Source="InfoMark.png" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="1"
+                            Margin="0,0,0,10"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource DefaultTitleLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{x:Static resources:AppResources.LowRiskContactPageLabel}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            TabIndex="2"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource PrimaryText}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageDescription}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="StartAndExpand"
+                    Padding="0, 20, 0, 0"
+                    >
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        VerticalOptions="Center"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="スコア"></Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        VerticalOptions="Center"
+                        Style="{StaticResource DefaultLabelCaption}"
+                        Text="（20.0以上が濃厚接触の可能性の通知対象）"></Label>
+                </StackLayout>
+            </StackLayout>
+        </CollectionView.Header>
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout
+                    Padding="20, 0, 20, 0"
+                    HorizontalOptions="FillAndExpand">
+                    <Frame Style="{StaticResource FrameCardViewStyle}">
+                        <StackLayout Style="{StaticResource DetailsStackLayout}">
+                            <Label
+                                Style="{StaticResource CardLabelSmall}"
+                                Text="{Binding Date}" />
+                            <Label
+                                Style="{StaticResource CardLabelSmall}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Sum}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </StackLayout>
