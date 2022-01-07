@@ -87,10 +87,10 @@
                     <Frame Style="{StaticResource FrameCardViewStyle}">
                         <StackLayout Style="{StaticResource DetailsStackLayout}">
                             <Label
-                                Style="{StaticResource CardLabelSmall}"
+                                Style="{StaticResource CardLabel}"
                                 Text="{Binding Date}" />
                             <Label
-                                Style="{StaticResource CardLabelSmall}">
+                                Style="{StaticResource CardLabel}">
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span Text="{Binding Sum}" />

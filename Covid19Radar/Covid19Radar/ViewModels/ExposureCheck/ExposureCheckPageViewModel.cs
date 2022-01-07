@@ -64,7 +64,7 @@ namespace Covid19Radar.ViewModels
 
             _loggerService.StartMethod();
 
-            if (await _exposureRiskCalculationService.HasLowRiskContact())
+            if (await _exposureRiskCalculationService.HasContact())
             {
                 IsVisibleLowRiskContact = true;
                 IsVisibleNoRiskContact = false;
@@ -89,10 +89,9 @@ namespace Covid19Radar.ViewModels
                 ExposureCheckScores.Add(
                         new ExposureCheckScoreModel()
                         {
-                            Sum = summary.DaySummary.ScoreSum.ToString(),
+                            Sum = summary.DaySummary.ScoreSum.ToString("0.00"),
                             Date = summary.GetDateTime().ToLocalTime().ToString("D", CultureInfo.CurrentCulture)
-                        }
-                    );
+                        });
             }
         }
     }

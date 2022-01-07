@@ -14,7 +14,6 @@ namespace Covid19Radar.Services
     public interface IExposureRiskCalculationService
     {
         RiskLevel CalcRiskLevel(DailySummary dailySummary);
-        Task<bool> HasLowRiskContact();
         Task<bool> HasContact();
     }
 
@@ -48,19 +47,6 @@ namespace Covid19Radar.Services
 
             return (count > 0); 
         }
-
-        // TODO:  We should make consideration later.
-        public async Task<bool> HasLowRiskContact()
-        {
-            if (await HasContact())
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
-        }
-
 
         // TODO:  We should make consideration later.
         public RiskLevel CalcRiskLevel(DailySummary dailySummary)

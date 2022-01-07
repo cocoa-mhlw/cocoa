@@ -243,6 +243,12 @@
 
             <!--  Collection List  -->
 
+            <Style x:Key="CardLabel" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+
             <Style x:Key="CardLabelSmall" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
