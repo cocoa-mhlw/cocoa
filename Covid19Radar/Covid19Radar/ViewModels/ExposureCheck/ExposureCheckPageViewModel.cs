@@ -83,7 +83,7 @@ namespace Covid19Radar.ViewModels
         private async void SetupExposureCheckScores()
         {
             var summaries = await _userDataRepository.GetDailySummariesAsync();
-
+            summaries.Reverse();
             foreach (var summary in summaries)
             {
                 ExposureCheckScores.Add(
