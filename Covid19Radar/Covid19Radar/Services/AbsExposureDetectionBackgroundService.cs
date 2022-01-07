@@ -61,7 +61,6 @@ namespace Covid19Radar.Services
                 {
                     var tmpDir = PrepareDir(region);
 
-                    var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
                     var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
@@ -87,7 +86,6 @@ namespace Covid19Radar.Services
 
                     await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
-                        exposureConfiguration,
                         cancellationTokenSource
                         );
 

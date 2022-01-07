@@ -140,7 +140,6 @@ namespace Covid19Radar.UnitTests.Services
             mockExposureNotificationApiService
                 .Verify(x => x.ProvideDiagnosisKeysAsync(
                                 It.IsAny<List<string>>(),
-                                It.IsAny<ExposureConfiguration>(),
                                 It.IsAny<CancellationTokenSource>()), Times.Never);
         }
 
@@ -206,7 +205,6 @@ namespace Covid19Radar.UnitTests.Services
             mockExposureNotificationApiService
                 .Verify(x => x.ProvideDiagnosisKeysAsync(
                                 It.Is<List<string>>( s => s.SequenceEqual(new List<string>() { $"file://tmp/diagnosis_keys/440/1", $"file://tmp/diagnosis_keys/440/2", $"file://tmp/diagnosis_keys/440/3" })),
-                                It.Is<ExposureConfiguration>(s => s.Equals(exposureConfiguration)),
                                 It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Once);
             mockUserDataRepository
                 .Verify(x => x.SetLastProcessDiagnosisKeyTimestampAsync("440", 1638630000), Times.Once);
@@ -271,7 +269,6 @@ namespace Covid19Radar.UnitTests.Services
             mockExposureNotificationApiService
                 .Verify(x => x.ProvideDiagnosisKeysAsync(
                                 It.Is<List<string>>(s => s.SequenceEqual(new List<string>() { "DLFile", "DLFile", "DLFile" })),
-                                It.Is<ExposureConfiguration>(s => s.Equals(exposureConfiguration)),
                                 It.Is<CancellationTokenSource>(s => s.Equals(cancellationTokenSource))), Times.Exactly(2));
 
             mockUserDataRepository
