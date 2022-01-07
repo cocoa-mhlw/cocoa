@@ -59,7 +59,7 @@ namespace Covid19Radar.ViewModels
 
             var summaries = await _userDataRepository
                 .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            if (summaries.Count() < 0)
+            if (0 < summaries.Count())
             {
                 IsVisibleLowRiskContact = true;
                 IsVisibleNoRiskContact = false;
