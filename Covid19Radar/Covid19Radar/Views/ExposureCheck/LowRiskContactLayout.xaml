@@ -67,12 +67,12 @@
                         AutomationProperties.IsInAccessibleTree="True"
                         VerticalOptions="Center"
                         Style="{StaticResource DefaultLabel}"
-                        Text="スコア"></Label>
+                        Text="{x:Static resources:AppResources.LowRiskContactPageHeaderTextPrefix}"></Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         VerticalOptions="Center"
                         Style="{StaticResource DefaultLabelCaption}"
-                        Text="（20.0以上が濃厚接触の可能性の通知対象）"></Label>
+                        Text="{x:Static resources:AppResources.LowRiskContactPageHeaderTextSuffix}"></Label>
                 </StackLayout>
             </StackLayout>
         </CollectionView.Header>
@@ -102,5 +102,13 @@
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
+        <CollectionView.Footer>
+            <StackLayout
+                Padding="20">
+                <Label
+                    Style="{StaticResource DefaultLabelCaptionStartAlignment}"
+                    Text="{x:Static resources:AppResources.LowRiskContactPageAnnotationDecription}" />
+            </StackLayout>
+        </CollectionView.Footer>
     </CollectionView>
 </StackLayout>

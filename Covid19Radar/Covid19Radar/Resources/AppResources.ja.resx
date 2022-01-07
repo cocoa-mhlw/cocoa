@@ -278,6 +278,18 @@
     <value>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
     <comment>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
+  <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
+    <value>スコア</value>
+    <comment>スコア</comment>
+  </data>
+  <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
+    <value>（20.0以上が濃厚接触の可能性の通知対象）</value>
+    <comment>（20.0以上が濃厚接触の可能性の通知対象）</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
+    <value>※スコアは、信号強度と受信時間を元に算出されており、1m以内・15分以上の接触があると20.0以上になります。</value>
+    <comment>※スコアは、信号強度と受信時間を元に算出されており、1m以内・15分以上の接触があると20.0以上になります。</comment>
+  </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>リスクが低いものを含め陽性登録者との接触はありません</value>
     <comment>リスクが低いものを含め陽性登録者との接触はありません</comment>
