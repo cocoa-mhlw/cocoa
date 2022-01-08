@@ -120,6 +120,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="UrlGitHubRepository" xml:space="preserve">
+    <value>https://github.com/cocoa-mhlw/cocoa/</value>
+    <comment>https://github.com/cocoa-mhlw/cocoa/</comment>
+  </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Agree</value>
   </data>

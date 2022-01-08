@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Acr.UserDialogs;
@@ -65,6 +66,14 @@ namespace Covid19Radar.ViewModels
             _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), navigationParams);
 
             loggerService.EndMethod();
+        });
+
+        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+
+        public ICommand OpenGitHub => new Command(async () =>
+        {
+            var url = AppResources.UrlGitHubRepository;
+            await BrowserOpenAsync(url, BrowserLaunchMode.SystemPreferred);
         });
 
         public ICommand OnChangeResetData => new Command(async () =>

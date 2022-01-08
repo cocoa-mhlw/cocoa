@@ -47,6 +47,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string UrlGitHubRepository {
+            get {
+                return ResourceManager.GetString("UrlGitHubRepository", resourceCulture);
+            }
+        }
+        
         public static string ButtonAgree {
             get {
                 return ResourceManager.GetString("ButtonAgree", resourceCulture);
