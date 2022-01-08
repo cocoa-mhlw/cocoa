@@ -16,7 +16,6 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly ILoggerService _loggerService;
-        private readonly IUserDataService _userDataService;
         private readonly IMigrationService _migrationService;
         private readonly IUserDataRepository _userDataRepository;
 
@@ -25,14 +24,12 @@ namespace Covid19Radar.ViewModels
             ITermsUpdateService termsUpdateService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IUserDataService userDataService,
             IMigrationService migrationService
             ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
-            _userDataService = userDataService;
             _migrationService = migrationService;
         }
 
