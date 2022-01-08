@@ -5,10 +5,10 @@
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Resources;
 using Covid19Radar.Repository;
+using Covid19Radar.Model;
 using Prism.Navigation;
 using System.Linq;
 using Chino;
-using Covid19Radar.Services;
 using Covid19Radar.Common;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -99,12 +99,5 @@ namespace Covid19Radar.ViewModels
                         });
             }
         }
-    }
-
-    public class ExposureCheckScoreModel
-    {
-
-        public string Sum { get; set; }
-        public string Date { get; set; }
     }
 }
