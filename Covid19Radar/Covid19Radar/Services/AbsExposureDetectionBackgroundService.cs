@@ -25,6 +25,8 @@ namespace Covid19Radar.Services
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILocalPathService _localPathService;
 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         public AbsExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
@@ -47,6 +49,20 @@ namespace Covid19Radar.Services
         public abstract void Schedule();
 
         public virtual async Task ExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
+        {
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                await InternalExposureDetectionAsync(cancellationTokenSource);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        private async Task InternalExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
