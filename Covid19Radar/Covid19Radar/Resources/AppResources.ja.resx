@@ -1172,4 +1172,24 @@
     <value>「陽性者との接触確認」画面のイメージ画像</value>
     <comment>「陽性者との接触確認」画面のイメージ画像</comment>
   </data>
+  <data name="OpenSourceLicense" xml:space="preserve">
+    <value>オープンソースライセンス</value>
+    <comment>オープンソースライセンス</comment>
+  </data>
+  <data name="OpenSourceLicense_Description1" xml:space="preserve">
+    <value>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</comment>
+  </data>
+  <data name="OpenSourceLicense_Description2" xml:space="preserve">
+    <value>COCOAのソースコードは次のURLから入手できます。</value>
+    <comment>COCOAのソースコードは次のURLから入手できます。</comment>
+  </data>
+  <data name="UrlGitHubRepository" xml:space="preserve">
+    <value>https://github.com/cocoa-mhlw/cocoa/</value>
+    <comment>https://github.com/cocoa-mhlw/cocoa/</comment>
+  </data>
+  <data name="OpenSourceLicense_GetSourceCode" xml:space="preserve">
+    <value>ソースコードを入手</value>
+    <comment>ソースコードを入手</comment>
+  </data>
 </root>
