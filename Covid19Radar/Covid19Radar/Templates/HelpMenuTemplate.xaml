@@ -7,33 +7,27 @@
     x:Class="Covid19Radar.Templates.HelpMenuTemplate"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <StackLayout>
-        <StackLayout
-            Padding="20,10,0,10"
-            Style="{StaticResource ImageLableStackLayout}"
-            VerticalOptions="FillAndExpand">
-            <Label
-                AutomationId="{Binding Title}"
-                FontSize="Default"
-                Text="{Binding Title}"
-                LineBreakMode="WordWrap"
-                MaxLines="2"
-                TextColor="{StaticResource NavBarText}"
-                VerticalOptions="Center" />
-            <Image
-                AutomationId="{Binding Title}"
-                HeightRequest="35"
-                VerticalOptions="Center"
-                HorizontalOptions="EndAndExpand"
-                WidthRequest="35">
-                <Image.Source>
-                    <FontImageSource
-                        FontFamily="FA-S"
-                        Glyph="{Binding Icon}"
-                        Size="30"
-                        Color="#019AE8" />
-                </Image.Source>
-            </Image>
-        </StackLayout>
+    <StackLayout
+        AutomationProperties.IsInAccessibleTree="True"
+        AutomationProperties.Name="{Binding ReadText}"
+        Padding="20,10,0,10"
+        Spacing="0"
+        Style="{StaticResource ImageLableStackLayout}"
+        VerticalOptions="FillAndExpand">
+        <Label
+            AutomationProperties.IsInAccessibleTree="False"
+            FontSize="Default"
+            Text="{Binding Title}"
+            LineBreakMode="WordWrap"
+            MaxLines="2"
+            TextColor="{StaticResource NavBarText}"
+            VerticalOptions="Center" />
+        <Image
+            AutomationProperties.IsInAccessibleTree="False"
+            HeightRequest="35"
+            Margin="20, 0"
+            VerticalOptions="Center"
+            HorizontalOptions="EndAndExpand"
+            Source="icon_arrow.png" />
     </StackLayout>
 </ContentView>

@@ -3,8 +3,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -15,6 +17,8 @@ namespace Covid19Radar.ViewModels
 {
     public class SendLogConfirmationPageViewModel : ViewModelBase
     {
+        public string ConfirmingLogReadText => $"{AppResources.SendLogConfirmationPageTextLink1} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
         private readonly ILogFileService logFileService;
         private readonly ILogUploadService logUploadService;
@@ -141,7 +145,6 @@ namespace Covid19Radar.ViewModels
 
         private void CopyZipFileToPublicPath()
         {
-            UserDialogs.Instance.ShowLoading(Resources.AppResources.Saving);
 
             _ = TaskRun(() =>
             {
@@ -149,7 +152,6 @@ namespace Covid19Radar.ViewModels
 
                 BeginInvokeOnMainThread(async () =>
                 {
-                    UserDialogs.Instance.HideLoading();
 
                     if (!result)
                     {
@@ -160,21 +162,21 @@ namespace Covid19Radar.ViewModels
                     }
                     else
                     {
-                        string message = null;
-                        switch (Device.RuntimePlatform)
-                        {
-                            case Device.Android:
-                                message = Resources.AppResources.SuccessMessageToSaveOperatingInformationForAndroid + logPathService.LogUploadingPublicPath + Resources.AppResources.SuccessMessageToSaveOperatingInformationForAndroid2;
-                                break;
-                            case Device.iOS:
-                                message = Resources.AppResources.SuccessMessageToSaveOperatingInformationForIOS;
-                                break;
-                        }
+                        var publicPath = logPathService.LogUploadingPublicPath;
+                        var logUploadingFileName = logFileService.LogUploadingFileName(LogId);
+                        var path = Path.Combine(publicPath, logUploadingFileName);
 
-                        await UserDialogs.Instance.AlertAsync(
-                            message,
-                            Resources.AppResources.SaveCompleted,
-                            Resources.AppResources.ButtonOk);
+                        try
+                        {
+                            await Share.RequestAsync(new ShareFileRequest
+                            {
+                                File = new ShareFile(path)
+                            });
+                        }
+                        catch (NotImplementedInReferenceAssemblyException exception)
+                        {
+                            loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+                        }
                     }
                 });
             });

@@ -37,7 +37,7 @@ namespace Covid19Radar.Views
             var button = (RadioButton)sender;
             if (button.IsChecked)
             {
-                (BindingContext as NotifyOtherPageViewModel).OnClickRadioButtonIsTrueCommand(button.Text);
+                (BindingContext as NotifyOtherPageViewModel).OnClickRadioButtonIsTrueCommand(button.Content.ToString());
             }
         }
     }

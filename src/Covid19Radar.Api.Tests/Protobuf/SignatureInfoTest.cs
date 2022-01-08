@@ -5,10 +5,7 @@
 using Covid19Radar.Background.Protobuf;
 using Google.Protobuf;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Covid19Radar.Api.Tests.Protobuf
 {
@@ -63,8 +60,6 @@ namespace Covid19Radar.Api.Tests.Protobuf
         {
             // preparation
             var instance = new SignatureInfo();
-            instance.AndroidPackage = "AndroidPackage";
-            instance.AppBundleId = "AppBundleId";
             instance.SignatureAlgorithm = "SignatureAlgorithm";
             instance.VerificationKeyId = "VerificationKeyId";
             instance.VerificationKeyVersion = "VerificationKeyVersion";
@@ -106,19 +101,11 @@ namespace Covid19Radar.Api.Tests.Protobuf
         {
             // preparation
             var instance = new SignatureInfo();
-            instance.AndroidPackage = "AndroidPackage";
-            instance.AppBundleId = "AppBundleId";
             instance.SignatureAlgorithm = "SignatureAlgorithm";
             instance.VerificationKeyId = "VerificationKeyId";
             instance.VerificationKeyVersion = "VerificationKeyVersion";
             var actual = instance.Clone();
             // action assert
-            actual.ClearAndroidPackage();
-            Assert.AreNotEqual(instance, actual);
-            actual = instance.Clone();
-            actual.ClearAppBundleId();
-            Assert.AreNotEqual(instance, actual);
-            actual = instance.Clone();
             actual.ClearSignatureAlgorithm();
             Assert.AreNotEqual(instance, actual);
             actual = instance.Clone();

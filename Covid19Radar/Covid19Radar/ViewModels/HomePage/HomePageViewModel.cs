@@ -2,10 +2,12 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using Chino;
 using Covid19Radar.Common;
+using System;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -16,16 +18,17 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HomePageViewModel : ViewModelBase
+    public class HomePageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
+        public string SharingThisAppReadText => $"{AppResources.HomePageDescription5} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
-        private readonly IUserDataRepository userDataRepository;
-        private readonly IExposureNotificationService exposureNotificationService;
+        private readonly IUserDataRepository _userDataRepository;
+        private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
-        private readonly IExposureNotificationStatusService exposureNotificationStatusService;
+        private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
-        private readonly IEssentialsService essentialsService;
 
         private string _pastDate;
         public string PastDate
@@ -66,23 +69,22 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IExposureNotificationService exposureNotificationService,
+            AbsExposureNotificationApiService exposureNotificationApiService,
             ILocalNotificationService localNotificationService,
-            IExposureNotificationStatusService exposureNotificationStatusService,
+            AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             IDialogService dialogService,
-            IExternalNavigationService externalNavigationService,
-            IEssentialsService essentialsService
+            IExternalNavigationService externalNavigationService
             ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
+
             this.loggerService = loggerService;
-            this.userDataRepository = userDataRepository;
-            this.exposureNotificationService = exposureNotificationService;
+            this._userDataRepository = userDataRepository;
+            this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
-            this.exposureNotificationStatusService = exposureNotificationStatusService;
+            this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
-            this.essentialsService = essentialsService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -102,30 +104,50 @@ namespace Covid19Radar.ViewModels
             // Check Version
             AppUtils.CheckVersion(loggerService);
 
-            try
-            {
-                await localNotificationService.PrepareAsync();
+            await localNotificationService.PrepareAsync();
 
-                await exposureNotificationService.StartExposureNotification();
-                await exposureNotificationService.FetchExposureKeyAsync();
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Failed to fetch exposure key.", ex);
-            }
+            await StartExposureNotificationAsync();
 
-            await UpdateView();
+            _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
 
             loggerService.EndMethod();
+        }
+
+        private async Task StartExposureNotificationAsync()
+        {
+            loggerService.StartMethod();
+
+            try
+            {
+                var isSuccess = await exposureNotificationApiService.StartExposureNotificationAsync();
+                if (isSuccess)
+                {
+                    await UpdateView();
+                }
+
+            }
+            catch (ENException exception)
+            {
+                loggerService.Exception("Failed to exposure notification start.", exception);
+                await UpdateView();
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
         }
 
         public Command OnClickExposures => new Command(async () =>
         {
             loggerService.StartMethod();
 
+            var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var userExposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+
+            var count = dailySummaryList.Count() + userExposureInformationList.Count();
+
             await localNotificationService.DismissExposureNotificationAsync();
 
-            var count = exposureNotificationService.GetExposureCountToDisplay();
             loggerService.Info($"Exposure count: {count}");
             if (count > 0)
             {
@@ -142,13 +164,13 @@ namespace Covid19Radar.ViewModels
         });
 
         public Command OnClickShareApp => new Command(() =>
-       {
-           loggerService.StartMethod();
+        {
+            loggerService.StartMethod();
 
-           AppUtils.PopUpShare();
+            AppUtils.PopUpShare();
 
-           loggerService.EndMethod();
-       });
+            loggerService.EndMethod();
+        });
 
         public Command OnClickQuestionIcon => new Command(() =>
         {
@@ -166,57 +188,62 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var enStopReason = exposureNotificationStatusService.ExposureNotificationStoppedReason;
+            var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
 
-            try
+            if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
+            )
             {
-                if (enStopReason == ExposureNotificationStoppedReason.ExposureNotificationOff)
+                bool isOK = await dialogService.ShowBluetoothOffWarningAsync();
+                if (isOK)
                 {
-                    bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
-                    if (isOK)
-                    {
-                        if (essentialsService.IsAndroid)
-                        {
-                            try
-                            {
-                                await exposureNotificationService.StartExposureNotification();
-                                await exposureNotificationService.FetchExposureKeyAsync();
-                            }
-                            catch (Exception ex)
-                            {
-                                loggerService.Exception("Failed to fetch exposure key.", ex);
-                            }
-                            finally
-                            {
-                                await UpdateView();
-                            }
-                        }
-                        else if (essentialsService.IsIos)
-                        {
-                            externalNavigationService.NavigateAppSettings();
-                        }
-                    }
+                    externalNavigationService.NavigateBluetoothSettings();
                 }
-                else if (enStopReason == ExposureNotificationStoppedReason.BluetoothOff)
+            }
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED)
+            )
+            {
+                bool isOK = await dialogService.ShowLocationOffWarningAsync();
+                if (isOK)
                 {
-                    bool isOK = await dialogService.ShowBluetoothOffWarningAsync();
-                    if (isOK)
-                    {
-                        externalNavigationService.NavigateBluetoothSettings();
-                    }
+                    externalNavigationService.NavigateLocationSettings();
                 }
-                else if (enStopReason == ExposureNotificationStoppedReason.GpsOff)
+            }
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
+            )
+            {
+                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
+                if (isOK)
                 {
-                    bool isOK = await dialogService.ShowLocationOffWarningAsync();
-                    if (isOK)
+                    try
                     {
-                        externalNavigationService.NavigateLocationSettings();
+                        await exposureNotificationApiService.StartExposureNotificationAsync();
+                        _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
+                    }
+                    catch (Exception ex)
+                    {
+                        loggerService.Exception("Failed to fetch exposure key.", ex);
+                    }
+                    finally
+                    {
+                        await UpdateView();
                     }
                 }
             }
-            catch (PlatformNotSupportedException ex)
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
+            )
             {
-                loggerService.Exception("Exception", ex);
+                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
+                if (isOK)
+                {
+                    externalNavigationService.NavigateAppSettings();
+                }
             }
 
             loggerService.EndMethod();
@@ -226,48 +253,57 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var daysOfUse = userDataRepository.GetDaysOfUse();
+            var daysOfUse = _userDataRepository.GetDaysOfUse();
 
             PastDate = daysOfUse.ToString();
 
-            await exposureNotificationStatusService.UpdateStatuses();
+            var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
 
-            switch (exposureNotificationStatusService.ExposureNotificationStatus)
+            var isStopped =
+                statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED);
+            var canConfirmExposure = _userDataRepository.IsCanConfirmExposure();
+
+            if (isStopped)
             {
-                case ExposureNotificationStatus.Unconfirmed:
-                    IsVisibleENStatusActiveLayout = false;
-                    IsVisibleENStatusUnconfirmedLayout = true;
-                    IsVisibleENStatusStoppedLayout = false;
-                    break;
-                case ExposureNotificationStatus.Stopped:
-                    IsVisibleENStatusActiveLayout = false;
-                    IsVisibleENStatusUnconfirmedLayout = false;
-                    IsVisibleENStatusStoppedLayout = true;
-                    break;
-                default:
-                    IsVisibleENStatusActiveLayout = true;
-                    IsVisibleENStatusUnconfirmedLayout = false;
-                    IsVisibleENStatusStoppedLayout = false;
+                IsVisibleENStatusActiveLayout = false;
+                IsVisibleENStatusUnconfirmedLayout = false;
+                IsVisibleENStatusStoppedLayout = true;
+            }
+            else if (!canConfirmExposure)
+            {
+                IsVisibleENStatusActiveLayout = false;
+                IsVisibleENStatusUnconfirmedLayout = true;
+                IsVisibleENStatusStoppedLayout = false;
+            }
+            else
+            {
+                IsVisibleENStatusActiveLayout = true;
+                IsVisibleENStatusUnconfirmedLayout = false;
+                IsVisibleENStatusStoppedLayout = false;
 
-                    var latestUtcDate = userDataRepository.GetLastConfirmedDate();
-                    if (latestUtcDate == null)
+                var latestUtcDate = _userDataRepository.GetLastConfirmedDate();
+                if (latestUtcDate == null)
+                {
+                    LatestConfirmationDate = AppResources.InProgressText;
+                }
+                else
+                {
+                    try
                     {
-                        LatestConfirmationDate = AppResources.InProgressText;
+                        var latestLocalDate = latestUtcDate.Value.ToLocalTime();
+                        LatestConfirmationDate = latestLocalDate.ToString(AppResources.DateTimeFormatToDisplayOnHomePage);
                     }
-                    else
+                    catch (FormatException ex)
                     {
-                        try
-                        {
-                            var latestLocalDate = latestUtcDate.Value.ToLocalTime();
-                            LatestConfirmationDate = latestLocalDate.ToString(AppResources.DateTimeFormatToDisplayOnHomePage);
-                        }
-                        catch (FormatException ex)
-                        {
-                            loggerService.Exception("Failed to conversion utc date time", ex);
-                        }
+                        loggerService.Exception("Failed to conversion utc date time", ex);
                     }
-
-                    break;
+                }
             }
 
             loggerService.EndMethod();
@@ -282,7 +318,28 @@ namespace Covid19Radar.ViewModels
         public override async void OnResume()
         {
             base.OnResume();
+
+            await StartExposureNotificationAsync();
+
             await UpdateView();
+        }
+
+        public async void OnEnabled()
+        {
+            loggerService.StartMethod();
+
+            await StartExposureNotificationAsync();
+
+            loggerService.EndMethod();
+        }
+
+        public async void OnDeclined()
+        {
+            loggerService.StartMethod();
+
+            await UpdateView();
+
+            loggerService.EndMethod();
         }
     }
 }

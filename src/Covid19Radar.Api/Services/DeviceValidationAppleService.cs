@@ -9,7 +9,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Cryptography;
@@ -56,34 +55,19 @@ namespace Covid19Radar.Api.Services
         /// <remarks>
         /// https://developer.apple.com/documentation/devicecheck/accessing_and_modifying_per-device_data
         /// </remarks>
-        public async Task<bool> Validation(DiagnosisSubmissionParameter param, DateTimeOffset requestTime, AuthorizedAppInformation app)
+        public async Task<bool> Validation(IAppleDeviceVerification deviceVerification, DateTimeOffset requestTime, AuthorizedAppInformation app)
         {
             var payload = new ApplePayload()
             {
-                DeviceToken = param.DeviceVerificationPayload,
+                DeviceToken = deviceVerification.DeviceToken,
                 Timestamp = requestTime.ToUnixTimeMilliseconds()
             };
 
-            var keysText = string.Empty;
-            if (param is V1DiagnosisSubmissionParameter) 
+            using (var sha = SHA256.Create())
             {
-                keysText = (param as V1DiagnosisSubmissionParameter).Keys
-                    .OrderBy(_ => _.KeyData)
-                    .Select(_ => _.KeyData)
-                    .Aggregate((a, b) => a + b);
-            }
-            else
-            {
-                keysText = param.Keys
-                     .OrderBy(_ => _.KeyData)
-                     .Select(_ => _.KeyData)
-                     .Aggregate((a, b) => a + b);
-            }
-
-            using (var sha = System.Security.Cryptography.SHA256.Create())
-            {
-                var value = System.Text.Encoding.UTF8.GetBytes(param.AppPackageName + keysText + string.Join(',', param.Regions));
-                payload.TransactionId = Convert.ToBase64String(sha.ComputeHash(value));
+                payload.TransactionId = Convert.ToBase64String(
+                    sha.ComputeHash(Encoding.UTF8.GetBytes(deviceVerification.TransactionIdSeed))
+                    );
             }
 
             Logger.LogInformation($"{nameof(Validation)} DeviceCheckKeyId:{app.DeviceCheckKeyId} DeviceCheckTeamId:{app.DeviceCheckTeamId} DeviceCheckPrivateKey:{app.DeviceCheckPrivateKey}");
@@ -117,8 +101,10 @@ namespace Covid19Radar.Api.Services
                 //        break;
                 //}
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                {
                     // FIXME: When call iOS Device check, return error sometimes, Until the cause is known, ignored device check
                     return true;
+                }
 
                 return true;
             }

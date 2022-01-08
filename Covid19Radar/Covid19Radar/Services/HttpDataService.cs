@@ -9,19 +9,20 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Net;
 using Newtonsoft.Json;
+using Covid19Radar.Repository;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Covid19Radar.Services
 {
     public class HttpDataService : IHttpDataService
     {
         private readonly ILoggerService loggerService;
-        private readonly ISecureStorageService secureStorageService;
-        private readonly IApplicationPropertyService applicationPropertyService;
+        private readonly IServerConfigurationRepository serverConfigurationRepository;
 
         private readonly HttpClient apiClient; // API key based client.
         private readonly HttpClient httpClient;
@@ -30,24 +31,20 @@ namespace Covid19Radar.Services
         public HttpDataService(
             ILoggerService loggerService,
             IHttpClientService httpClientService,
-            ISecureStorageService secureStorageService,
-            IApplicationPropertyService applicationPropertyService
+            IServerConfigurationRepository serverConfigurationRepository
             )
         {
             this.loggerService = loggerService;
-            this.secureStorageService = secureStorageService;
-            this.applicationPropertyService = applicationPropertyService;
+            this.serverConfigurationRepository = serverConfigurationRepository;
 
             // Create API key based client.
             apiClient = httpClientService.Create();
-            apiClient.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
             apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             apiClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
             apiClient.DefaultRequestHeaders.Add("x-api-key", AppSettings.Instance.ApiKey);
 
             // Create client.
             httpClient = httpClientService.Create();
-            httpClient.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
 
@@ -61,7 +58,9 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
             try
             {
-                string url = AppSettings.Instance.ApiUrlBase + "/register";
+                await serverConfigurationRepository.LoadAsync();
+
+                string url = serverConfigurationRepository.UserRegisterApiEndpoint;
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
                 var result = await PostAsync(url, content);
                 if (result != null)
@@ -79,37 +78,27 @@ namespace Covid19Radar.Services
             return false;
         }
 
-        public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
-        {
-            loggerService.StartMethod();
-            var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/v2/diagnosis";
-            var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
-            HttpStatusCode status = await PutAsync(url, content);
-            loggerService.EndMethod();
-            return status;
-        }
-
-        public async Task<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
+        public async Task<IList<HttpStatusCode>> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             loggerService.StartMethod();
 
-            string container = AppSettings.Instance.BlobStorageContainerName;
-            string url = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
-            var result = await GetCdnAsync(url, cancellationToken);
-            if (result == null)
+            try
             {
-                loggerService.Error("Fail to download");
-                loggerService.EndMethod();
-                throw new Exception("Failed to download TEK list.");
-            }
-            loggerService.Info("Success to download");
-            loggerService.EndMethod();
-            return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
-        }
+                await serverConfigurationRepository.LoadAsync();
 
-        public async Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
-        {
-            return await GetCdnStreamAsync(url, cancellationToken);
+                var diagnosisKeyRegisterApiUrls = serverConfigurationRepository.DiagnosisKeyRegisterApiUrls;
+                var tasks = diagnosisKeyRegisterApiUrls.Select(async url =>
+                {
+                    var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+                    return await PutAsync(url, content);
+                });
+
+                return await Task.WhenAll(tasks);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
         }
 
         public async Task<ApiResponse<LogStorageSas>> GetLogStorageSas()
@@ -121,8 +110,10 @@ namespace Covid19Radar.Services
 
             try
             {
-                var requestUrl = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/inquirylog";
-                var response = await apiClient.GetAsync(requestUrl);
+                await serverConfigurationRepository.LoadAsync();
+
+                var url = serverConfigurationRepository.InquiryLogApiUrl;
+                var response = await apiClient.GetAsync(url);
 
                 statusCode = (int)response.StatusCode;
                 loggerService.Info($"Response status: {statusCode}");
@@ -228,7 +219,6 @@ namespace Covid19Radar.Services
             }
         }
 
-
         private async Task<string> PostAsync(string url, HttpContent body)
         {
             HttpResponseMessage result = await httpClient.PostAsync(url, body);
@@ -245,6 +235,5 @@ namespace Covid19Radar.Services
             await result.Content.ReadAsStringAsync();
             return result.StatusCode;
         }
-
     }
 }

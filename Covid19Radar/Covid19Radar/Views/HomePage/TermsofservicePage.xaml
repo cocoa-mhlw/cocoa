@@ -7,7 +7,6 @@
     x:Class="Covid19Radar.Views.TermsofservicePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
@@ -18,7 +17,10 @@
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
     <StackLayout Style="{StaticResource DefaultStackLayout}">
-        <views:NavigatePopoverWebView Source="{x:Static resources:AppResources.UrlTermOfUse}" Style="{StaticResource DefaultWebView}" />
+        <views:NavigatePopoverWebView
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
+            Source="{x:Static resources:AppResources.UrlTermOfUse}"
+            Style="{StaticResource DefaultWebView}" />
     </StackLayout>
-
 </ContentPage>

@@ -13,7 +13,7 @@ trigger:
 variables:
 - group: app-settings-prod
 - name: AppVersion
-  value: '1.3.0'
+  value: '1.4.1'
 
 jobs:
 - job: build_ios
@@ -21,12 +21,7 @@ jobs:
     vmImage: 'macOS-11'
   variables:
   - group: ios-signing-distribution
-  - name: XamarinSymlinkVersion
-    value: '6_12_8'
-  - name: XcodeVersion
-    value: '13.0'
-  - name: DEVELOPER_DIR
-    value: '/Applications/Xcode_$(XcodeVersion).app'
+  - template: templates/variables/ios-build-environment-variables.yml
   steps:
   - template: templates/build/ios-build-appstore-template.yml
 
@@ -35,7 +30,6 @@ jobs:
     vmImage: 'macOS-11'
   variables:
   - group: android-signing-prod
-  - name: XamarinSymlinkVersion
-    value: '6_12_8'
+  - template: templates/variables/android-build-environment-variables.yml
   steps:
   - template: templates/build/android-build-release-template.yml
