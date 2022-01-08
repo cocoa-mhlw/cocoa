@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    x:Class="Covid19Radar.Views.SendLogSettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{x:Static resources:AppResources.AppName}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
+    <ScrollView>
+        <Grid Margin="20" Style="{StaticResource DefaultGridLayout}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout
+                Grid.Row="0"
+                Margin="0,0,0,10"
+                >
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="1"
+                    Margin="0,0,0,20"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="COCOAの改善にご協力ください"
+                    />
+
+                <ffimageloading:CachedImage
+                    Margin="0,0,0,20"
+                    Aspect="AspectFit"
+                    Scale="0.9"
+                    Source="TutorialPage50.png"
+                    />
+
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="2"
+                    Style="{StaticResource DefaultLabel}"
+                    Margin="0,0,0,10"
+                    Text="情報の送信を有効にして、COCOAの改善にご協力ください。"
+                    />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="4"
+                    Style="{StaticResource DefaultLabel}"
+                    Margin="0,0,0,10"
+                    Text="送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。"
+                    />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="5"
+                    Style="{StaticResource DefaultLabel}"
+                    Margin="0,0,0,10"
+                    Text="送信してくださった情報は、接触判定の精度向上など、COCOAの改善等に用います。送信する情報の具体的な内容、利用方法についてはプライバシーポリシーを確認してください。"
+                    />
+
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="6"
+                    Style="{StaticResource LinkLabelStyleMedium}"
+                    Margin="0,0,0,20"
+                    Text="プライバシーポリシー">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Path=OpenPrivacyPolicy}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="7"
+                    Style="{StaticResource DefaultLabel}"
+                    Margin="0,0,0,10"
+                    Text="改善への協力は、COCOAの設定画面からいつでも設定できます。"
+                    />
+
+            </StackLayout>
+            <StackLayout
+                Grid.Row="1"
+                Margin="0,0,0,20"
+                >
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="8"
+                    Command="{Binding Path=OnClickEnableSendLog}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="COCOAの改善に協力する"
+                    />
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="9"
+                    Margin="0,10,0,0"
+                    Command="{Binding Path=OnClickDisableSendLog}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="あとで設定する"
+                    />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+    </ContentView>
+</ContentPage>

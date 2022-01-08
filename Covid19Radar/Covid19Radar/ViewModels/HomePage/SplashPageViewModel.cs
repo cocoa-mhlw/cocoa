@@ -79,6 +79,15 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
+                if (_userDataRepository.GetSendEventLogState() == SendEventLogState.NotSet)
+                {
+                    _loggerService.Info($"Transition to SendLogSettingsPage");
+
+                    var navigationParams = SendLogSettingsPage.BuildNavigationParams(destination, parameters);
+                    _ = await NavigationService.NavigateAsync("/" + nameof(SendLogSettingsPage), navigationParams);
+                    return;
+                }
+
                 _loggerService.Info($"Transition to {destination}");
                 _ = await NavigationService.NavigateAsync(destination.ToPath(), parameters);
             }
