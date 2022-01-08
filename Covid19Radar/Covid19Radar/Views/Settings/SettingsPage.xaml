@@ -117,7 +117,7 @@
                 Margin="15, 0"
                 Style="{StaticResource DefaultLabelSmall}"
                 TextColor="{StaticResource SecondaryText}"
-                Text="接触確認アプリ『COCOA』は無料のオープンソースソフトウェアです。COCOAは Mozilla Public License 2.0の条項下で提供されます。" />
+                Text="接触確認アプリ『COCOA』は無料のオープンソースソフトウェアです。COCOAは Mozilla Public License 2.0 の条項下で提供されます。" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
                 TabIndex="11"

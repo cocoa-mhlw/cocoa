@@ -73,7 +73,7 @@ namespace Covid19Radar.ViewModels
         public ICommand OpenGitHub => new Command(async () =>
         {
             var url = AppResources.UrlGitHubRepository;
-            await BrowserOpenAsync(url, BrowserLaunchMode.SystemPreferred);
+            await BrowserOpenAsync(url, BrowserLaunchMode.External);
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
