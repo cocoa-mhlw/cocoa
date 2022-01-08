@@ -13,6 +13,7 @@ using Covid19Radar.Common;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Collections.Generic;
+using System;
 
 namespace Covid19Radar.ViewModels
 {
@@ -57,27 +58,37 @@ namespace Covid19Radar.ViewModels
 
             _loggerService.StartMethod();
 
-            var summaries = await _userDataRepository
-                .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            if (0 < summaries.Count())
+            try
             {
-                IsVisibleLowRiskContact = true;
-                IsVisibleNoRiskContact = false;
+                var summaries = await _userDataRepository
+                    .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                if (0 < summaries.Count())
+                {
+                    IsVisibleLowRiskContact = true;
+                    IsVisibleNoRiskContact = false;
 
-                SetupExposureCheckScores(summaries);
+                    SetupExposureCheckScores(summaries);
+                }
+                else
+                {
+                    IsVisibleLowRiskContact = false;
+                    IsVisibleNoRiskContact = true;
+                }
             }
-            else
+            catch (Exception exception)
             {
-                IsVisibleLowRiskContact = false;
-                IsVisibleNoRiskContact = true;
+                _loggerService.Exception("Exception occurred", exception);
             }
-
-            _loggerService.EndMethod();
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
 
         private void SetupExposureCheckScores(List<DailySummary> summaries)
         {
-            summaries.Reverse();
+            summaries.Sort((a, b) => b.GetDateTime().CompareTo(a.GetDateTime()));
+
             foreach (var summary in summaries)
             {
                 ExposureCheckScores.Add(
