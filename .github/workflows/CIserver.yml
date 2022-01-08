@@ -6,9 +6,20 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ main, develop, 'feature/**' ]
+    paths:
+      - '.github/workflows/CIserver.yml'
+      - 'src/**'
+      - 'Covid19Radar.Functions.sln'
+      - 'Covid19Radar.Functions.runsettings'
+      - 'Nuget.config'
   pull_request:
     branches: [ main, develop, 'feature/**' ]
-
+    paths:
+      - '.github/workflows/CIserver.yml'
+      - 'src/**'
+      - 'Covid19Radar.Functions.sln'
+      - 'Covid19Radar.Functions.runsettings'
+      - 'Nuget.config'
 jobs:
   build_serverapi:
     name: Build-ServerApi

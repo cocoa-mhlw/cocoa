@@ -6,14 +6,11 @@ using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
-using Microsoft.DotNet.PlatformAbstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
-using System.Collections.Generic;
 using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Tests
@@ -30,15 +27,13 @@ namespace Covid19Radar.Api.Tests
             config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
             var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
-            var validation = new Mock<IValidationUserService>();
             var validationServer = new Mock<IValidationServerService>();
-            var deviceCheck = new Mock<IV1DeviceValidationService>();
+            var deviceCheck = new Mock<IDeviceValidationService>();
             var verification = new Mock<IVerificationService>();
-            var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
+            var logger = new Mock.LoggerMock<DiagnosisApi>();
             var diagnosisApi = new DiagnosisApi(config.Object,
                                                 diagnosisRepo.Object,
                                                 tekRepo.Object,
-                                                validation.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
@@ -68,23 +63,17 @@ namespace Covid19Radar.Api.Tests
                                                             It.IsAny<TemporaryExposureKeyModel[]>()))
                 .ReturnsAsync(new DiagnosisModel());
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
-            var validation = new Mock<IValidationUserService>();
             var validationServer = new Mock<IValidationServerService>();
             validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
 
-            var validationResult = new IValidationUserService.ValidateResult()
-            {
-                IsValid = isValid
-            };
-            validation.Setup(_ => _.ValidateAsync(It.IsAny<HttpRequest>(), It.IsAny<IUser>())).ReturnsAsync(validationResult);
-            var deviceCheck = new Mock<IV1DeviceValidationService>();
-            deviceCheck.Setup(_ => _.Validation(It.IsAny<V1DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
+
+            var deviceCheck = new Mock<IDeviceValidationService>();
+            deviceCheck.Setup(_ => _.Validation(It.IsAny<string>(), It.IsAny<V1DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var verification = new Mock<IVerificationService>();
-            var logger = new Mock.LoggerMock<Covid19Radar.Api.DiagnosisApi>();
+            var logger = new Mock.LoggerMock<DiagnosisApi>();
             var diagnosisApi = new DiagnosisApi(config.Object,
                                                 diagnosisRepo.Object,
                                                 tekRepo.Object,
-                                                validation.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,

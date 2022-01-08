@@ -17,27 +17,28 @@
     BackgroundColor="#FFFFFF"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ScrollView>
-        <StackLayout Style="{StaticResource DefaultStackLayout}">
-            <ListView
-                x:Name="list_view"
-                ItemsSource="{Binding MenuItems}"
-                HasUnevenRows="True"
-                SelectedItem="{Binding SelectedMenuItem}"
-                SeparatorColor="#E0E0E0"
-                SeparatorVisibility="Default"
-                Footer="">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <template:HelpMenuTemplate />
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-                <ListView.Behaviors>
-                    <prism:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
-                </ListView.Behaviors>
-            </ListView>
-        </StackLayout>
-    </ScrollView>
+    <ListView
+        x:Name="list_view"
+        AutomationProperties.IsInAccessibleTree="True"
+        AutomationProperties.Name="{x:Static resources:AppResources.List}"
+        TabIndex="1"
+        ItemsSource="{Binding MenuItems}"
+        HasUnevenRows="True"
+        SelectedItem="{Binding SelectedMenuItem}"
+        SeparatorColor="#E0E0E0"
+        SeparatorVisibility="Default">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <template:HelpMenuTemplate />
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Behaviors>
+            <prism:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
+        </ListView.Behaviors>
+        <ListView.Footer>
+            <StackLayout AutomationProperties.IsInAccessibleTree="False" />
+        </ListView.Footer>
+    </ListView>
 </ContentPage>

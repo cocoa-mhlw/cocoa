@@ -1,0 +1,60 @@
+steps:
+- task: InstallAppleCertificate@2
+  displayName: 'Install an Apple certificate'
+  inputs:
+    certSecureFile: 'cocoa_distribution_20220610.p12'
+    certPwd: '$(iOS_CertificatePassword)'
+
+- task: InstallAppleProvisioningProfile@1
+  displayName: 'Install an Apple provisioning profile'
+  inputs:
+    provProfileSecureFile: 'cocoa_adhoc_20220610_9.mobileprovision'
+
+- template: setup/ios-setup-variables-template.yml
+  parameters:
+    configuration: release
+
+- template: setup/app-setup-variables-template.yml
+
+- template: setup/ios-setup-xamarin-template.yml
+
+- template: setup/app-setup-xamarin-template.yml
+
+- task: XamariniOS@2
+  displayName: 'Build Covid19Radar.iOS.csproj'
+  inputs:
+    solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
+    configuration: AppStore
+    signingIdentity: 'Apple Distribution'
+    signingProvisioningProfileID: '7709385b-3077-4d4d-a5a5-84f86f4ee1ba'
+
+- task: CopyFiles@2
+  displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/AppStore
+    Contents: '*.ipa'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    mkdir -p symbols
+    find . -type d -name '*.dSYM' | xargs -J % cp -v -R % $(System.DefaultWorkingDirectory)/symbols
+  displayName: Copy symbol files to staging
+
+- task: CopyFiles@2
+  displayName: 'Copy symbols to: Build.ArtifactStagingDirectory'
+  inputs:
+    Contents: |
+      **/symbols/**/*
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    cd $(Build.ArtifactStagingDirectory)/
+    ARCHIVE_FILE=`find *.ipa | head -1`
+    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion).ipa
+    ls -la
+  displayName: 'Change archive name'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish IPA and symbols'
+  inputs:
+    ArtifactName: 'archives_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion)'

@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.DataAccess;
-using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -32,16 +31,16 @@ namespace Covid19Radar.Api.Services
 
         protected DeviceValidationService() { }
 
-        public async Task<bool> Validation(DiagnosisSubmissionParameter param, DateTimeOffset requestTime)
+        public async Task<bool> Validation(string platform, IDeviceVerification deviceVerification, DateTimeOffset requestTime)
         {
-            var app = await AuthApp.GetAsync(param.Platform);
+            var app = await AuthApp.GetAsync(platform);
             // unsupported
             if (app == null) return false;
             if (!app.DeviceValidationEnabled) return true;
-            return param.Platform switch
+            return platform switch
             {
-                "android" => Android.Validation(param, param.GetAndroidNonce(), requestTime, app),
-                "ios" => await Apple.Validation(param, requestTime, app),
+                "android" => Android.Validation(deviceVerification, requestTime, app),
+                "ios" => await Apple.Validation(deviceVerification, requestTime, app),
                 _ => false,
             };
         }

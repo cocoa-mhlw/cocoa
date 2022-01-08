@@ -7,8 +7,6 @@ using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Api.Startup))]
 
@@ -23,7 +21,6 @@ namespace Covid19Radar.Api
             builder.Services.AddCosmosClient();
             builder.Services.AddSingleton<ICryptionService, CryptionService>();
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
-            builder.Services.AddSingleton<IValidationUserService, ValidationUserService>();
             builder.Services.AddSingleton<IValidationServerService, ValidationServerService>();
             builder.Services.AddSingleton<IValidationInquiryLogService, ValidationInquiryLogService>();
             builder.Services.AddSingleton<IAuthorizedAppRepository, ConfigAuthorizedAppRepository>();
@@ -35,8 +32,8 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<IVerificationService, CustomVerificationService>();
             builder.Services.AddSingleton<ICustomVerificationStatusRepository, CustomVerificationStatusRepository>();
             builder.Services.AddSingleton<IInquiryLogBlobService, InquiryLogBlobService>();
-            builder.Services.AddSingleton<IV1DeviceValidationService, V1DeviceValidationService>();
             builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
+            builder.Services.AddSingleton<IEventLogRepository, CosmosEventLogRepository>();
         }
     }
 }

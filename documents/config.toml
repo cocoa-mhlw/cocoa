@@ -1,0 +1,23 @@
+baseURL = "https://cocoa-mhlw.github.io/cocoa"
+languageCode = "ja-JP"
+title = "COCOA Open Source Project"
+theme = "book"
+enableGitInfo = true
+
+[markup]
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 2
+
+[menu]
+# [[menu.before]]
+[[menu.after]]
+  name = "GitHubリポジトリ"
+  url = "https://github.com/cocoa-mhlw/cocoa"
+  weight = 1
+# [[menu.after]]
+
+[params]
+  BookTheme = 'light'

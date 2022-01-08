@@ -3,960 +3,1173 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <root>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>2.0</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="ButtonAgree" xml:space="preserve">
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ButtonAgree" xml:space="preserve">
     <value>同意する</value>
   </data>
-	<data name="HomePageTitle" xml:space="preserve">
+  <data name="HomePageTitle" xml:space="preserve">
     <value>ホーム</value>
     <comment>Home Title</comment>
   </data>
-	<data name="AppName" xml:space="preserve">
+  <data name="AppName" xml:space="preserve">
     <value>新型コロナウイルス接触確認アプリ</value>
     <comment>App Name</comment>
   </data>
-	<data name="TitleLicenseAgreement" xml:space="preserve">
+  <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>ライセンス</value>
     <comment>ライセンス</comment>
   </data>
-	<data name="TitileUserStatusSettings" xml:space="preserve">
+  <data name="TitileUserStatusSettings" xml:space="preserve">
     <value>ステータス設定</value>
     <comment>User Status Page Title</comment>
   </data>
-	<data name="DialogNetworkConnectionError" xml:space="preserve">
+  <data name="DialogNetworkConnectionError" xml:space="preserve">
     <value>電波状況の良い場所でもう一度お試しください。</value>
     <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
-	<data name="ButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-	<data name="ButtonNotNow" xml:space="preserve">
+  <data name="ButtonNotNow" xml:space="preserve">
     <value>あとで設定する</value>
   </data>
-	<data name="MainExposures" xml:space="preserve">
+  <data name="MainExposures" xml:space="preserve">
     <value>Exposure</value>
     <comment>Tab Button</comment>
   </data>
-	<data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://microsoft.com/</value>
     <comment>Health care jurisdiction page</comment>
   </data>
-	<data name="MainTutorial" xml:space="preserve">
-    <value>使い方</value>
-    <comment>Tab How to use</comment>
-  </data>
-	<data name="ExposuresPageNoExposures" xml:space="preserve">
+  <data name="ExposuresPageNoExposures" xml:space="preserve">
     <value>既知の接触はありません</value>
     <comment>If not found exposures data</comment>
   </data>
-	<data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
+  <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
     <value>COVID-19陽性を報告した人と接触していた場合は、通知されます。</value>
     <comment>exposures comment</comment>
   </data>
-	<data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
-    <value>後でもう一度試してください。</value>
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
+    <value>処理番号を再度入力してください。</value>
+    <comment>処理番号を再度入力してください。</comment>
   </data>
-	<data name="ButtonFailed" xml:space="preserve">
-    <value>失敗</value>
+  <data name="NotifyOtherPageDialogExceptionTitle" xml:space="preserve">
+    <value>陽性情報を登録できませんでした</value>
+    <comment>陽性情報を登録できませんでした</comment>
   </data>
-	<data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
-    <value>診断結果の提出</value>
+  <data name="NotifyOtherPageDialogSubmittedTitle" xml:space="preserve">
+    <value>登録が完了しました</value>
   </data>
-	<data name="ButtonComplete" xml:space="preserve">
-    <value>完了しました</value>
-  </data>
-	<data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>診断を提出します。</value>
   </data>
-	<data name="SettingsPageTitle" xml:space="preserve">
+  <data name="SettingsPageTitle" xml:space="preserve">
     <value>設定</value>
-    <comment>アプリの設定</comment>
+    <comment>設定</comment>
   </data>
-	<data name="ButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>キャンセル</value>
   </data>
-	<data name="LoadingTextDeleting" xml:space="preserve">
-    <value>削除しています</value>
-  </data>
-	<data name="HomePageHeader3Title" xml:space="preserve">
-    <value>本アプリを広めましょう</value>
-    <comment>本アプリを広めましょう</comment>
-  </data>
-	<data name="ButtonShare" xml:space="preserve">
-    <value>共有する</value>
-  </data>
-	<data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>陽性情報の登録と他者への匿名通知へ</value>
-    <comment>Button NotifyOtherPage</comment>
-  </data>
-	<data name="ButtonReset" xml:space="preserve">
-    <value>使用中止</value>
-    <comment>使用中止</comment>
-  </data>
-	<data name="PrivacyPolicyPageTitle" xml:space="preserve">
-    <value>プライバシーポリシー</value>
-  </data>
-	<data name="LoadingTextRegistering" xml:space="preserve">
-    <value>登録中</value>
-  </data>
-	<data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>すべてのデータをリセットしますか?</value>
-  </data>
-	<data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>すべてのデータを削除する</value>
-  </data>
-	<data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
-    <value>すべての設定とデータが削除されました。アプリケーションを再起動してください。</value>
-  </data>
-	<data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>登録に戻る</value>
-  </data>
-	<data name="PositiveRegistrationText" xml:space="preserve">
-    <value>陽性登録</value>
-  </data>
-	<data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>後で陽性の登録をしますか？</value>
-  </data>
-	<data name="HomePageHeader2Description" xml:space="preserve">
-    <value>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</value>
-    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-	<data name="HomePageHeader3Description" xml:space="preserve">
-    <value>本アプリは多くの方にお使いいただくほど効果を発揮します。</value>
-    <comment>本アプリは多くの方にお使いいただくほど効果を発揮します。</comment>
-  </data>
-	<data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>使い方</value>
-    <comment>使い方</comment>
-  </data>
-	<data name="HelpPage1Title" xml:space="preserve">
-    <value>接触の記録方法</value>
-    <comment>接触の記録方法</comment>
-  </data>
-	<data name="HelpPage2Title" xml:space="preserve">
-    <value>接触の確認方法</value>
-    <comment>接触の確認方法</comment>
-  </data>
-	<data name="HelpPage3Title" xml:space="preserve">
-    <value>感染していると判定されたら</value>
-    <comment>感染していると判定されたら</comment>
-  </data>
-	<data name="HelpPage4Title" xml:space="preserve">
-    <value>記録の停止／削除</value>
-    <comment>記録の停止／削除</comment>
-  </data>
-	<data name="HelpPage1Description1Text" xml:space="preserve">
-    <value>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
-    <comment>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
-  </data>
-	<data name="HelpPage1Description2Title" xml:space="preserve">
-    <value>記録される接触の条件</value>
-    <comment>記録される接触の条件</comment>
-  </data>
-	<data name="HelpPage1Description2Text" xml:space="preserve">
-    <value>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</value>
-    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
-  </data>
-	<data name="HelpPage1Description3Title" xml:space="preserve">
-    <value>接触情報の記録</value>
-    <comment>接触情報の記録 </comment>
-  </data>
-	<data name="HelpPage1Description3Text" xml:space="preserve">
-    <value>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</value>
-    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
-  </data>
-	<data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>アプリの設定へ</value>
-    <comment>アプリの設定へ</comment>
-  </data>
-	<data name="HelpPage4Description" xml:space="preserve">
-    <value>アプリの設定から、アプリの使用中止と利用者情報の削除を行うことができます。</value>
-    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
-  </data>
-	<data name="HelpPage2Description1" xml:space="preserve">
-    <value>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</value>
-    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
-  </data>
-	<data name="HelpPage2Description2" xml:space="preserve">
-    <value>最近の接触件数の確認へはホーム画面からも移動することができます。</value>
-    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
-  </data>
-	<data name="HelpPage2Description3" xml:space="preserve">
-    <value>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</value>
-    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
-  </data>
-	<data name="HelpPage2Label1" xml:space="preserve">
-    <value>通知</value>
-    <comment>通知</comment>
-  </data>
-	<data name="HelpPage2Label2" xml:space="preserve">
-    <value>ホーム画面</value>
-    <comment>ホーム画面</comment>
-  </data>
-	<data name="HelpPage2Label3" xml:space="preserve">
-    <value>陽性者との接触があった場合</value>
-    <comment>陽性者との接触があった場合</comment>
-  </data>
-	<data name="HelpPage3Description1" xml:space="preserve">
-    <value>検査により新型コロナウイルスの感染が確認された場合。</value>
-    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
-  </data>
-	<data name="HelpPage3Description2" xml:space="preserve">
-    <value>保健所等公的機関から登録用の「処理番号」が発行されます。</value>
-    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
-  </data>
-	<data name="HelpPage3Description3" xml:space="preserve">
-    <value>本アプリを用いて処理番号の登録を行います。</value>
-    <comment>本アプリを用いて処理番号の登録を行います。</comment>
-  </data>
-	<data name="HelpMenuPageLabel1" xml:space="preserve">
-    <value>どのようにして接触を記録していますか？</value>
-    <comment>どのようにして接触を記録していますか？</comment>
-  </data>
-	<data name="HelpMenuPageLabel2" xml:space="preserve">
-    <value>接触の有無はどのように知ることができますか？</value>
-    <comment>接触の有無はどのように知ることができますか？</comment>
-  </data>
-	<data name="HelpMenuPageLabel3" xml:space="preserve">
-    <value>新型コロナウイルスに感染していると判定されたら</value>
-    <comment>新型コロナウイルスに感染していると判定されたら</comment>
-  </data>
-	<data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>接触の記録を停止／情報を削除するには</value>
-    <comment>接触の記録を停止／情報を削除するには</comment>
-  </data>
-	<data name="NotContactPageTitle" xml:space="preserve">
-    <value>過去14日間の接触</value>
-    <comment>過去14日間の接触</comment>
-  </data>
-	<data name="NotContactPageLabel1" xml:space="preserve">
-    <value>陽性者との接触は確認されませんでした</value>
-    <comment>陽性者との接触は確認されませんでした</comment>
-  </data>
-	<data name="NotContactPageDescription1" xml:space="preserve">
-    <value>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</value>
-    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
-  </data>
-	<data name="NotContactPageButtonText" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
-	<data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>陽性のご登録をいただきありがとうございました</value>
-    <comment>陽性のご登録をいただきありがとうございました</comment>
-  </data>
-	<data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
-    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
-  </data>
-	<data name="TutorialPage3Title" xml:space="preserve">
-    <value>利用規約</value>
-    <comment>利用規約</comment>
-  </data>
-	<data name="TutorialPage3ButtonText" xml:space="preserve">
-    <value>規約に同意して次へ</value>
-    <comment>規約に同意して次へ</comment>
-  </data>
-	<data name="TutorialPage6Label1" xml:space="preserve">
-    <value>ご登録いただきありがとうございました</value>
-    <comment>ご登録いただきありがとうございました</comment>
-  </data>
-	<data name="TutorialPage6ButtonText1" xml:space="preserve">
-    <value>ホーム画面へ</value>
-    <comment>ホーム画面へ</comment>
-  </data>
-	<data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>使い方を学ぶ</value>
-    <comment>使い方を学ぶ</comment>
-  </data>
-	<data name="HelpPage1MainTitle" xml:space="preserve">
-    <value>端末の識別</value>
-    <comment>端末の識別</comment>
-  </data>
-	<data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>陽性者との接触一覧</value>
-    <comment>陽性者との接触一覧</comment>
-  </data>
-	<data name="ContactedNotifyPageCountText" xml:space="preserve">
-    <value>件</value>
-    <comment>件</comment>
-  </data>
-	<data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>陽性者との接触確認</value>
-    <comment>陽性者との接触確認</comment>
-  </data>
-	<data name="ContactedNotifyPageTitle" xml:space="preserve">
-    <value>過去14日間の接触</value>
-    <comment>過去14日間の接触</comment>
-  </data>
-	<data name="InqueryPageTitle" xml:space="preserve">
-    <value>アプリに関するお問い合わせ</value>
-    <comment>アプリに関するお問い合わせ</comment>
-  </data>
-	<data name="InqueryPageTitle_Menu" xml:space="preserve">
-    <value>お問い合わせ</value>
-    <comment>お問い合わせ（メニュー）</comment>
-  </data>
-	<data name="HomePageDescription1" xml:space="preserve">
-    <value>使用中</value>
-    <comment>使用中</comment>
-  </data>
-	<data name="HomePageDescription2" xml:space="preserve">
-    <value>陽性者との接触を確認する</value>
-    <comment>陽性者との接触を確認する(14日間)</comment>
-  </data>
-	<data name="HomePageDescription3" xml:space="preserve">
-    <value>新型コロナウイルス陽性と診断されたら</value>
-    <comment>新型コロナウイルス陽性と診断されたら</comment>
-  </data>
-	<data name="HomePageDescription4" xml:space="preserve">
-    <value>陽性情報の登録</value>
-    <comment>陽性情報の登録</comment>
-  </data>
-	<data name="HomePageDescription5" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
-	<data name="HomePageTitle1" xml:space="preserve">
-    <value>ホーム</value>
-    <comment>ホーム</comment>
-  </data>
-	<data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>利用規約</value>
-    <comment>利用規約</comment>
-  </data>
-	<data name="TutorialPage2Description1" xml:space="preserve">
-    <value>プライバシーについて</value>
-    <comment>プライバシーについて</comment>
-  </data>
-	<data name="TutorialPage2Description2" xml:space="preserve">
-    <value>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
-    <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
-  </data>
-	<data name="TutorialPage2Description3" xml:space="preserve">
-    <value>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</value>
-    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
-  </data>
-	<data name="TutorialPage2Description4" xml:space="preserve">
-    <value>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</value>
-    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
-  </data>
-	<data name="TutorialPage2Description5" xml:space="preserve">
-    <value>利用規約へ</value>
-    <comment>利用規約へ</comment>
-  </data>
-	<data name="TutorialPage2Title" xml:space="preserve">
-    <value>プライバシーについて</value>
-    <comment>プライバシーについて</comment>
-  </data>
-	<data name="TutorialPage5Description1" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
-    <comment>通知をご利用いただくために</comment>
-  </data>
-	<data name="TutorialPage5Description2" xml:space="preserve">
-    <value>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</value>
-    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
-  </data>
-	<data name="TutorialPage5Description3" xml:space="preserve">
-    <value>有効にする</value>
-    <comment>有効にする</comment>
-  </data>
-	<data name="TutorialPage5Description4" xml:space="preserve">
-    <value>あとで設定する</value>
-    <comment>あとで設定する</comment>
-  </data>
-	<data name="TutorialPage5Title" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
-    <comment>通知をご利用いただくために</comment>
-  </data>
-	<data name="NotifyOtherPageButton" xml:space="preserve">
-    <value>登録する</value>
-    <comment>登録する</comment>
-  </data>
-	<data name="NotifyOtherPageLabel" xml:space="preserve">
-    <value>処理番号の取得方法</value>
-    <comment>処理番号の取得方法</comment>
-  </data>
-	<data name="NotifyOtherPageTitle" xml:space="preserve">
-    <value>陽性情報の登録</value>
-    <comment>陽性情報の登録</comment>
-  </data>
-	<data name="TutorialPage1Button" xml:space="preserve">
-    <value>次へ</value>
-    <comment>次へ</comment>
-  </data>
-	<data name="TutorialPage1Description1" xml:space="preserve">
-    <value>本アプリをスマートフォンに設定した人どうしの接触を記録します。</value>
-    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
-  </data>
-	<data name="TutorialPage1Description2" xml:space="preserve">
-    <value>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</value>
-    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
-  </data>
-	<data name="TutorialPage1Description3" xml:space="preserve">
-    <value>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</value>
-    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
-  </data>
-	<data name="TutorialPage1Title1" xml:space="preserve">
-    <value>このアプリでできること</value>
-    <comment>このアプリでできること</comment>
-  </data>
-	<data name="TutorialPage1Title2" xml:space="preserve">
-    <value>このアプリでできること</value>
-    <comment>このアプリでできること</comment>
-  </data>
-	<data name="TutorialPage4Button1" xml:space="preserve">
-    <value>有効にする</value>
-    <comment>有効にする</comment>
-  </data>
-	<data name="TutorialPage4Button2" xml:space="preserve">
-    <value>あとで設定する</value>
-    <comment>あとで設定する</comment>
-  </data>
-	<data name="TutorialPage4Description" xml:space="preserve">
-    <value>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</value>
-    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
-  </data>
-	<data name="TutorialPage4Label" xml:space="preserve">
-    <value>技術的な詳細について</value>
-    <comment>技術的な詳細について</comment>
-  </data>
-	<data name="TutorialPage4Title1" xml:space="preserve">
-    <value>接触検知をご利用いただくために</value>
-    <comment>接触検知をご利用いただくために</comment>
-  </data>
-	<data name="TutorialPage4Title2" xml:space="preserve">
-    <value>接触検知をご利用いただくために</value>
-    <comment>接触検知をご利用いただくために</comment>
-  </data>
-	<data name="MenuPageTitle" xml:space="preserve">
-    <value>メニュー</value>
-    <comment>メニュー</comment>
-  </data>
-	<data name="SettingsPageButton1" xml:space="preserve">
-    <value>ライセンス…</value>
-    <comment>ライセンス…</comment>
-  </data>
-	<data name="SettingsPageLabel1" xml:space="preserve">
-    <value>接触の検出</value>
-    <comment>接触の検出</comment>
-  </data>
-	<data name="SettingsPageDescription1" xml:space="preserve">
-    <value>Bluetoothによる接触の検知</value>
-    <comment>Bluetoothによる接触の検知</comment>
-  </data>
-	<data name="SettingsPageLabel2" xml:space="preserve">
-    <value>通知</value>
-    <comment>通知</comment>
-  </data>
-	<data name="SettingsPageDescription2" xml:space="preserve">
-    <value>陽性者との接触通知</value>
-    <comment>陽性者との接触通知</comment>
-  </data>
-	<data name="SettingsPageLabel3" xml:space="preserve">
-    <value>アプリの使用中止</value>
-    <comment>アプリの使用中止</comment>
-  </data>
-	<data name="SettingsPageDescription3" xml:space="preserve">
-    <value>使用を中止して過去14日間の接触履歴を消去</value>
-    <comment>使用を中止して過去14日間の接触履歴を消去</comment>
-  </data>
-	<data name="HomePageDescription0" xml:space="preserve">
-    <value>から</value>
-    <comment>から</comment>
-  </data>
-	<data name="NotifyOtherPageLabel2" xml:space="preserve">
-    <value>8桁の処理番号を入力してください</value>
-    <comment>8桁の処理番号を入力してください</comment>
-  </data>
-	<data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>陽性登録への同意</value>
-    <comment>陽性登録への同意</comment>
-  </data>
-	<data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>陽性登録への同意</value>
-    <comment>陽性登録への同意</comment>
-  </data>
-	<data name="VersionText" xml:space="preserve">
-    <value>Version</value>
-    <comment>バージョン</comment>
-  </data>
-	<data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-	<data name="ExposuresPageTitle" xml:space="preserve">
-    <value>過去14日間の接触一覧</value>
-    <comment>過去14日間の接触一覧</comment>
-  </data>
-	<data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>以下の日に陽性者との接触が確認されました。</value>
-    <comment>以下の日に陽性者との接触が確認されました。</comment>
-  </data>
-	<data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
-  </data>
-	<data name="LocalNotificationDescription" xml:space="preserve">
-    <value>新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら</value>
-    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
-  </data>
-	<data name="LocalNotificationTitle" xml:space="preserve">
-    <value>新型コロナウイルス陽性登録者との接触の可能性</value>
-    <comment>Possible COVID-19 Exposure</comment>
-  </data>
-	<data name="LocalNotificationPermittedDescription" xml:space="preserve">
-    <value>通知を無効にしたい場合は、アプリの設定から変更できます</value>
-  </data>
-	<data name="LocalNotificationPermittedTitle" xml:space="preserve">
-    <value>通知を有効にしました</value>
-  </data>
-	<data name="InqueryPageDescription3" xml:space="preserve">
-    <value>接触確認アプリに関する情報</value>
-    <comment>接触確認アプリに関する情報</comment>
-  </data>
-	<data name="HomePagePastDays" xml:space="preserve">
-    <value>日間</value>
-    <comment>X日間</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Notification機能は許諾の状態です。</value>
-    <comment>Exposure Notification機能は許諾の状態です。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</value>
-    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
-    <value>利用規約に同意する必要があります。</value>
-    <comment>利用規約に同意する必要があります。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</value>
-    <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
-  </data>
-	<data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</value>
-    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
-  </data>
-	<data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
-    <value>通信に失敗しました。</value>
-    <comment>通信に失敗しました。</comment>
-  </data>
-	<data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Exposure Notification起動エラー</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-	<data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
-  </data>
-	<data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>アプリで入力された処理番号が違います</value>
-    <comment>アプリで入力された処理番号が違います</comment>
-  </data>
-	<data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
-    <value>センターに接続できません</value>
-    <comment>センターに接続できません</comment>
-  </data>
-	<data name="NotifyOtherPageDiag1Message" xml:space="preserve">
-    <value>陽性情報を登録しますか?</value>
-    <comment>陽性情報を登録しますか?</comment>
-  </data>
-	<data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+  <data name="ButtonRegister" xml:space="preserve">
     <value>登録</value>
     <comment>登録</comment>
   </data>
-	<data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>キャンセルしました</value>
-    <comment>キャンセルしました</comment>
+  <data name="LoadingTextDeleting" xml:space="preserve">
+    <value>削除しています</value>
   </data>
-	<data name="NotifyOtherPageDiag3Message" xml:space="preserve">
-    <value>登録開始までしばらくそのままでお待ちください</value>
-    <comment>登録開始までしばらくそのままでお待ちください</comment>
+  <data name="ButtonShare" xml:space="preserve">
+    <value>共有する</value>
   </data>
-	<data name="NotifyOtherPageDiag3Title" xml:space="preserve">
-    <value>登録待ち</value>
-    <comment>登録待ち</comment>
+  <data name="ButtonNotifyOtherPage" xml:space="preserve">
+    <value>陽性情報の登録と他者への匿名通知へ</value>
+    <comment>Button NotifyOtherPage</comment>
   </data>
-	<data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+  <data name="ButtonReset" xml:space="preserve">
+    <value>アプリを初期化</value>
+    <comment>アプリを初期化</comment>
+  </data>
+  <data name="PrivacyPolicyPageTitle" xml:space="preserve">
+    <value>プライバシーポリシー</value>
+  </data>
+  <data name="LoadingTextRegistering" xml:space="preserve">
+    <value>登録中</value>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</value>
+    <comment>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</comment>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>アプリの初期化を行います</value>
+    <comment>アプリの初期化を行います</comment>
+  </data>
+  <data name="SettingsPageDialogResetCompletedTitle" xml:space="preserve">
+    <value>データを削除しました</value>
+    <comment>データを削除しました</comment>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>アプリを終了します。</value>
+    <comment>アプリを終了します。</comment>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>登録に戻る</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>陽性登録</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>後で陽性の登録をしますか？</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</value>
+    <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
+  </data>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>使い方</value>
+    <comment>使い方</comment>
+  </data>
+  <data name="HelpMenuPageMenu" xml:space="preserve">
+    <value>使い方</value>
+    <comment>使い方</comment>
+  </data>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>接触の記録方法</value>
+    <comment>接触の記録方法</comment>
+  </data>
+  <data name="HelpPage2Title" xml:space="preserve">
+    <value>接触の確認方法</value>
+    <comment>接触の確認方法</comment>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>感染していると判定されたら</value>
+    <comment>感染していると判定されたら</comment>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>アプリの初期化</value>
+    <comment>アプリの初期化</comment>
+  </data>
+  <data name="HelpPage1Description1Text" xml:space="preserve">
+    <value>アプリを実行した際に、各スマートフォンで接触符号（※1）を生成して持ちます。氏名・電話番号などの個人情報やGPS（※2）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
+    <comment>アプリを実行した際に、各スマートフォンで接触符号（※1）を生成して持ちます。氏名・電話番号などの個人情報やGPS（※2）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="HelpPage1Description2Title" xml:space="preserve">
+    <value>記録される接触の条件</value>
+    <comment>記録される接触の条件</comment>
+  </data>
+  <data name="HelpPage1Description2Text" xml:space="preserve">
+    <value>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</value>
+    <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
+  </data>
+  <data name="HelpPage1Description3Title" xml:space="preserve">
+    <value>接触情報の記録</value>
+    <comment>接触情報の記録 </comment>
+  </data>
+  <data name="HelpPage1Description3Text" xml:space="preserve">
+    <value>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</value>
+    <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
+  </data>
+  <data name="HelpPage4ButtonText" xml:space="preserve">
+    <value>アプリの設定へ</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description1" xml:space="preserve">
+    <value>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</value>
+    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+  </data>
+  <data name="HelpPage4Description2" xml:space="preserve">
+    <value>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</value>
+    <comment>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</comment>
+  </data>
+  <data name="HelpPage2Description1" xml:space="preserve">
+    <value>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</value>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</comment>
+  </data>
+  <data name="HelpPage2Description2" xml:space="preserve">
+    <value>最近の接触件数の確認へはホーム画面からも移動することができます。</value>
+    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
+  </data>
+  <data name="HelpPage2Description3" xml:space="preserve">
+    <value>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</value>
+    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
+  </data>
+  <data name="HelpPage2Label1" xml:space="preserve">
+    <value>通知</value>
+    <comment>通知</comment>
+  </data>
+  <data name="HelpPage2Label2" xml:space="preserve">
+    <value>ホーム画面</value>
+    <comment>ホーム画面</comment>
+  </data>
+  <data name="HelpPage2Label3" xml:space="preserve">
+    <value>陽性者との接触があった場合</value>
+    <comment>陽性者との接触があった場合</comment>
+  </data>
+  <data name="HelpPage3Description1" xml:space="preserve">
+    <value>検査により新型コロナウイルスの感染が確認された場合。</value>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
+  </data>
+  <data name="HelpPage3Description2" xml:space="preserve">
+    <value>保健所等公的機関から登録用の「処理番号」が発行されます。</value>
+    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+  </data>
+  <data name="HelpPage3Description3" xml:space="preserve">
+    <value>本アプリを用いて処理番号の登録を行います。</value>
+    <comment>本アプリを用いて処理番号の登録を行います。</comment>
+  </data>
+  <data name="HelpMenuPageLabel1" xml:space="preserve">
+    <value>どのようにして接触を記録していますか？</value>
+    <comment>どのようにして接触を記録していますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel2" xml:space="preserve">
+    <value>接触の有無はどのように知ることができますか？</value>
+    <comment>接触の有無はどのように知ることができますか？</comment>
+  </data>
+  <data name="HelpMenuPageLabel3" xml:space="preserve">
+    <value>新型コロナウイルスに感染していると判定されたら</value>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
+  </data>
+  <data name="HelpMenuPageLabel4" xml:space="preserve">
+    <value>接触の記録を削除してアプリを初期状態に戻すには</value>
+    <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
+  </data>
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>過去14日間の接触</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="NotContactPageLabel1" xml:space="preserve">
+    <value>陽性者との接触は確認されませんでした</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+  <data name="NotContactPageDescription1" xml:space="preserve">
+    <value>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+  <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>アプリを周りの人に知らせる</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="LowRiskContactPageTitle" xml:space="preserve">
+    <value>リスクが極めて低い接触</value>
+    <comment>リスクが極めて低い接触</comment>
+  </data>
+  <data name="LowRiskContactPageLabel" xml:space="preserve">
+    <value>陽性者とリスクが極めて低い接触がありました</value>
+    <comment>陽性者とリスクが極めて低い接触がありました</comment>
+  </data>
+  <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
+    <value>直近14日間に合計</value>
+    <comment>直近14日間に合計</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
+    <value>時間</value>
+    <comment>時間</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixMinutesText" xml:space="preserve">
+    <value>分</value>
+    <comment>分</comment>
+  </data>
+  <data name="LowRiskContactPageDescription" xml:space="preserve">
+    <value>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
+    <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+  </data>
+  <data name="NoRiskContactPageTitle" xml:space="preserve">
+    <value>直近14日間の接触</value>
+    <comment>直近14日間の接触</comment>
+  </data>
+  <data name="NoRiskContactPageLabel" xml:space="preserve">
+    <value>リスクが低いものを含め陽性者との接触はありません</value>
+    <comment>リスクが低いものを含め陽性者との接触はありません</comment>
+  </data>
+  <data name="NoRiskContactPageDescription" xml:space="preserve">
+    <value>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</value>
+    <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
+  </data>
+  <data name="NoRiskContactPageButtonText" xml:space="preserve">
+    <value>アプリを周りの人に知らせる</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
+    <value>陽性のご登録をいただきありがとうございました</value>
+    <comment>陽性のご登録をいただきありがとうございました</comment>
+  </data>
+  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
+    <value>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
+    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+  </data>
+  <data name="TutorialPage3Title" xml:space="preserve">
+    <value>利用規約</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage3ButtonText" xml:space="preserve">
+    <value>規約に同意して次へ</value>
+    <comment>規約に同意して次へ</comment>
+  </data>
+  <data name="TutorialPage6Label1" xml:space="preserve">
+    <value>ご登録いただきありがとうございました</value>
+    <comment>ご登録いただきありがとうございました</comment>
+  </data>
+  <data name="TutorialPage6ButtonText1" xml:space="preserve">
+    <value>ホーム画面へ</value>
+    <comment>ホーム画面へ</comment>
+  </data>
+  <data name="TutorialPage6ButtonText2" xml:space="preserve">
+    <value>使い方を学ぶ</value>
+    <comment>使い方を学ぶ</comment>
+  </data>
+  <data name="HelpPage1MainTitle" xml:space="preserve">
+    <value>端末の識別</value>
+    <comment>端末の識別</comment>
+  </data>
+  <data name="ContactedNotifyPageButton1" xml:space="preserve">
+    <value>陽性者との接触一覧</value>
+    <comment>陽性者との接触一覧</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>件</value>
+    <comment>件</comment>
+  </data>
+  <data name="ContactedNotifyPageMainText" xml:space="preserve">
+    <value>陽性者との接触確認</value>
+    <comment>陽性者との接触確認</comment>
+  </data>
+  <data name="ContactedNotifyPageTitle" xml:space="preserve">
+    <value>過去14日間の接触</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+  <data name="InqueryPageTitle" xml:space="preserve">
+    <value>アプリに関するお問い合わせ</value>
+    <comment>アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="InqueryPageTitle_Menu" xml:space="preserve">
+    <value>お問い合わせ</value>
+    <comment>お問い合わせ（メニュー）</comment>
+  </data>
+  <data name="HomePageDescription2" xml:space="preserve">
+    <value>陽性者との接触結果を確認</value>
+    <comment>陽性者との接触結果を確認</comment>
+  </data>
+  <data name="HomePageDescription3" xml:space="preserve">
+    <value>陽性と診断されたら</value>
+    <comment>陽性と診断されたら</comment>
+  </data>
+  <data name="HomePageDescription4" xml:space="preserve">
+    <value>陽性情報の登録</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="HomePageDescription5" xml:space="preserve">
+    <value>アプリを周りの人に知らせる</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="HomePageTitle1" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>ホーム</comment>
+  </data>
+  <data name="TermsofservicePageTitle" xml:space="preserve">
+    <value>利用規約</value>
+    <comment>利用規約</comment>
+  </data>
+  <data name="TutorialPage2Description1" xml:space="preserve">
+    <value>プライバシーについて</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage2Description2" xml:space="preserve">
+    <value>氏名・電話番号などの個人情報や、GPS（※）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
+    <comment>氏名・電話番号などの個人情報や、GPS（※）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
+  </data>
+  <data name="TutorialPage2Description3" xml:space="preserve">
+    <value>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</value>
+    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+  </data>
+  <data name="TutorialPage2Description4" xml:space="preserve">
+    <value>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</value>
+    <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
+  </data>
+  <data name="TutorialPage2Description5" xml:space="preserve">
+    <value>利用規約へ</value>
+    <comment>利用規約へ</comment>
+  </data>
+  <data name="TutorialPage2Title" xml:space="preserve">
+    <value>プライバシーについて</value>
+    <comment>プライバシーについて</comment>
+  </data>
+  <data name="TutorialPage5Description1" xml:space="preserve">
+    <value>通知をご利用いただくために</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage5Description2" xml:space="preserve">
+    <value>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</value>
+    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage5Description3" xml:space="preserve">
+    <value>有効にする</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage5Description4" xml:space="preserve">
+    <value>あとで設定する</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage5Title" xml:space="preserve">
+    <value>通知をご利用いただくために</value>
+    <comment>通知をご利用いただくために</comment>
+  </data>
+  <data name="NotifyOtherPageButton" xml:space="preserve">
+    <value>登録する</value>
+    <comment>登録する</comment>
+  </data>
+  <data name="NotifyOtherPageLabel" xml:space="preserve">
+    <value>処理番号の取得方法</value>
+    <comment>処理番号の取得方法</comment>
+  </data>
+  <data name="NotifyOtherPageTitle" xml:space="preserve">
+    <value>陽性情報の登録</value>
+    <comment>陽性情報の登録</comment>
+  </data>
+  <data name="TutorialPage1Button" xml:space="preserve">
+    <value>次へ</value>
+    <comment>次へ</comment>
+  </data>
+  <data name="TutorialPage1Description1" xml:space="preserve">
+    <value>本アプリをスマートフォンに設定した人どうしの接触を記録します。</value>
+    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  </data>
+  <data name="TutorialPage1Description2" xml:space="preserve">
+    <value>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</value>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+  </data>
+  <data name="TutorialPage1Description3" xml:space="preserve">
+    <value>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</value>
+    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+  </data>
+  <data name="TutorialPage1Title1" xml:space="preserve">
+    <value>このアプリでできること</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage1Title2" xml:space="preserve">
+    <value>このアプリでできること</value>
+    <comment>このアプリでできること</comment>
+  </data>
+  <data name="TutorialPage4Button1" xml:space="preserve">
+    <value>有効にする</value>
+    <comment>有効にする</comment>
+  </data>
+  <data name="TutorialPage4Button2" xml:space="preserve">
+    <value>あとで設定する</value>
+    <comment>あとで設定する</comment>
+  </data>
+  <data name="TutorialPage4Description" xml:space="preserve">
+    <value>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth（ブルートゥース）（※）通信を有効にしてください。</value>
+    <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth（ブルートゥース）（※）通信を有効にしてください。</comment>
+  </data>
+  <data name="TutorialPage4Label" xml:space="preserve">
+    <value>技術的な詳細について</value>
+    <comment>技術的な詳細について</comment>
+  </data>
+  <data name="TutorialPage4Title1" xml:space="preserve">
+    <value>接触検知をご利用いただくために</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="TutorialPage4Title2" xml:space="preserve">
+    <value>接触検知をご利用いただくために</value>
+    <comment>接触検知をご利用いただくために</comment>
+  </data>
+  <data name="MenuPageTitle" xml:space="preserve">
+    <value>メニュー</value>
+    <comment>メニュー</comment>
+  </data>
+  <data name="SettingsPageLicenseButton" xml:space="preserve">
+    <value>ライセンス表記</value>
+    <comment>ライセンス表記</comment>
+  </data>
+  <data name="SettingsPageReinitializeLabel" xml:space="preserve">
+    <value>アプリを初期化する</value>
+    <comment>アプリを初期化する</comment>
+  </data>
+  <data name="SettingsPageReinitializeDescription" xml:space="preserve">
+    <value>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</value>
+    <comment>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</comment>
+  </data>
+  <data name="HomePageDescription0" xml:space="preserve">
+    <value>利用開始から</value>
+    <comment>利用開始から</comment>
+  </data>
+  <data name="NotifyOtherPageLabel2" xml:space="preserve">
+    <value>8桁の処理番号を入力してください</value>
+    <comment>8桁の処理番号を入力してください</comment>
+  </data>
+  <data name="SubmitConsentPageTitle1" xml:space="preserve">
+    <value>陽性登録への同意</value>
+    <comment>陽性登録への同意</comment>
+  </data>
+  <data name="SubmitConsentPageTitleDeepLink" xml:space="preserve">
+    <value>同意内容</value>
+    <comment>同意内容</comment>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>アプリバージョン</value>
+    <comment>アプリバージョン</comment>
+  </data>
+  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
+    <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposuresPageExposureUnitPluralOnce" xml:space="preserve">
+    <value>1回の接触</value>
+    <comment>1回の接触</comment>
+  </data>
+  <data name="ExposuresPageExposureUnitPlural" xml:space="preserve">
+    <value>{0}回の接触</value>
+    <comment>{0}回の接触</comment>
+  </data>
+  <data name="ExposuresPageTitle" xml:space="preserve">
+    <value>過去14日間の接触一覧</value>
+    <comment>過去14日間の接触一覧</comment>
+  </data>
+  <data name="ExposuresPageLabel1" xml:space="preserve">
+    <value>以下の日に陽性者との接触が確認されました。</value>
+    <comment>以下の日に陽性者との接触が確認されました。</comment>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
+  </data>
+  <data name="LocalNotificationDescription" xml:space="preserve">
+    <value>新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら</value>
+    <comment>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</comment>
+  </data>
+  <data name="LocalNotificationTitle" xml:space="preserve">
+    <value>新型コロナウイルス陽性登録者との接触の可能性</value>
+    <comment>Possible COVID-19 Exposure</comment>
+  </data>
+  <data name="LocalNotificationPermittedDescription" xml:space="preserve">
+    <value>通知を無効にしたい場合は、アプリの設定から変更できます</value>
+  </data>
+  <data name="LocalNotificationPermittedTitle" xml:space="preserve">
+    <value>通知を有効にしました</value>
+  </data>
+  <data name="InqueryPageDescription3" xml:space="preserve">
+    <value>接触確認アプリに関する情報</value>
+    <comment>接触確認アプリに関する情報</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>日</value>
+    <comment>日</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>利用規約に同意する必要があります。</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationRestrictedTitle" xml:space="preserve">
+    <value>接触通知機能が停止しています</value>
+    <comment>接触通知機能が停止しています</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>通信に失敗しました。</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Exposure Notification起動エラー</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
+    <value>処理番号が誤っているか、有効期限が切れています</value>
+    <comment>処理番号が誤っているか、有効期限が切れています</comment>
+  </data>
+  <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
+    <value>センターに接続できません</value>
+    <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+    <value>よろしいですか？</value>
+    <comment>よろしいですか？</comment>
+  </data>
+  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+    <value>陽性情報の登録をします</value>
+    <comment>陽性情報の登録をします</comment>
+  </data>
+  <data name="NotifyOtherPageDiag2Title" xml:space="preserve">
+    <value>登録をキャンセルしました</value>
+    <comment>登録をキャンセルしました</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+    <value>しばらくそのままでお待ちください。</value>
+    <comment>しばらくそのままでお待ちください。</comment>
+  </data>
+  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+    <value>登録を開始します</value>
+    <comment>登録を開始します</comment>
+  </data>
+  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
     <value>処理番号が入力されていません</value>
     <comment>処理番号が入力されていません</comment>
   </data>
-	<data name="NotifyOtherPageDiag5Message" xml:space="preserve">
-    <value>処理番号のフォーマットが一致していません</value>
-    <comment>処理番号のフォーマットが一致していません</comment>
+  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+    <value>処理番号は半角数字で入力してください。</value>
+    <comment>処理番号は半角数字で入力してください。</comment>
   </data>
-	<data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
     <value>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</value>
     <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
-	<data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
     <value>COVID-19接触のログ記録を有効にしてください</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
-	<data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>登録回数上限になりました。アプリケーションを終了します</value>
-    <comment>登録回数上限になりました。アプリケーションを終了します</comment>
+  <data name="NotifyOtherPageDiagReturnHomeTitle" xml:space="preserve">
+    <value>登録回数の上限に達しました</value>
+    <comment>登録回数の上限に達しました</comment>
   </data>
-	<data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
-    <value>登録エラー</value>
-    <comment>登録エラー</comment>
+	<data name="NotifyOtherPageDiagReturnHome" xml:space="preserve">
+    <value>ホームに戻ります。</value>
+    <comment>ホームに戻ります。</comment>
   </data>
-	<data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</value>
-    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  <data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
+    <value>処理番号が違います</value>
+    <comment>処理番号が違います</comment>
   </data>
-	<data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>該当接触なし</value>
-    <comment>該当接触なし</comment>
-  </data>
-	<data name="UrlVersion" xml:space="preserve">
+  <data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
   </data>
-	<data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
     <value>新しいバージョンのアプリが利用可能です。最新バージョンにアップデートしてください。</value>
     <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
   </data>
-	<data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
     <value>最新バージョンに更新</value>
     <comment>最新版への更新</comment>
   </data>
-	<data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
     <value>連絡先レコードデータに問題があります</value>
     <comment>接触記録データに問題があります</comment>
   </data>
-	<data name="ContactedNotifyPageButton2" xml:space="preserve">
+  <data name="ContactedNotifyPageButton2" xml:space="preserve">
     <value>検査等の相談先を探す</value>
     <comment>検査等の相談先を探す</comment>
   </data>
-	<data name="ContactedNotifyPageDescription1" xml:space="preserve">
+  <data name="ContactedNotifyPageDescription1" xml:space="preserve">
     <value>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</value>
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショット（※）を保存してください。</value>
     <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショット（※）を保存してください。</comment>
   </data>
-	<data name="ReAgreeCheckButton" xml:space="preserve">
+  <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>確認しました</value>
     <comment>確認しました</comment>
   </data>
-	<data name="ReAgreePrivacyPolicyPageTitle" xml:space="preserve">
+  <data name="ReAgreePrivacyPolicyPageTitle" xml:space="preserve">
     <value>プライバシーポリシーの改定</value>
     <comment>プライバシーポリシーの改定</comment>
   </data>
-	<data name="ReAgreePrivacyPolicyTextLink" xml:space="preserve">
+  <data name="ReAgreePrivacyPolicyTextLink" xml:space="preserve">
     <value>プライバシーポリシーを確認する</value>
     <comment>プライバシーポリシーを確認する</comment>
   </data>
-	<data name="ReAgreeTermsOfServiceTextLink" xml:space="preserve">
+  <data name="ReAgreeTermsOfServiceTextLink" xml:space="preserve">
     <value>利用規約を確認する</value>
     <comment>利用規約を確認する</comment>
   </data>
-	<data name="ReAgreeTermsOfServiceTitle" xml:space="preserve">
+  <data name="ReAgreeTermsOfServiceTitle" xml:space="preserve">
     <value>利用規約の改定</value>
     <comment>利用規約の改定</comment>
   </data>
-	<data name="UrlTermsUpdate" xml:space="preserve">
+  <data name="UrlTermsUpdate" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/terms_update.json</value>
   </data>
-	<data name="InqueryPageDescription2" xml:space="preserve">
-    <value>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</value>
-    <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
+  <data name="InqueryPageDescription2" xml:space="preserve">
+    <value>お問い合わせ後、動作情報を送信していただくことにより、COCOA（※）の改善に役立ちます。</value>
+    <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOA（※）の改善に役立ちます。</comment>
   </data>
-	<data name="InqueryPageButton1" xml:space="preserve">
+  <data name="InqueryPageButton1" xml:space="preserve">
     <value>よくある質問</value>
     <comment>よくある質問</comment>
   </data>
-	<data name="InqueryPageButton2" xml:space="preserve">
+  <data name="InqueryPageButton2" xml:space="preserve">
     <value>メールでお問い合わせ</value>
     <comment>メールでお問い合わせ</comment>
   </data>
-	<data name="InqueryPageButton3" xml:space="preserve">
+  <data name="InqueryPageButton3" xml:space="preserve">
     <value>動作情報を送信</value>
     <comment>動作情報を送信</comment>
   </data>
-	<data name="InqueryPageDescription1" xml:space="preserve">
+  <data name="InqueryPageDescription1" xml:space="preserve">
     <value>アプリの改善にご協力ください</value>
     <comment>アプリの改善にご協力ください</comment>
   </data>
-	<data name="SendLogConfirmationPageButton1" xml:space="preserve">
+  <data name="SendLogConfirmationPageButton1" xml:space="preserve">
     <value>同意して送信する</value>
     <comment>同意して送信する</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription1" xml:space="preserve">
-    <value>動作情報の送信により、COCOAの改善にご協力をお願いします。</value>
-    <comment>動作情報の送信により、COCOAの改善にご協力をお願いします。</comment>
+  <data name="SendLogConfirmationPageDescription1" xml:space="preserve">
+    <value>動作情報の送信により、COCOA（※）の改善にご協力をお願いします。</value>
+    <comment>動作情報の送信により、COCOA（※）の改善にご協力をお願いします。</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription2" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription2" xml:space="preserve">
     <value>送信される情報</value>
     <comment>送信される情報</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription3" xml:space="preserve">
-    <value>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</value>
-    <comment>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</comment>
+  <data name="SendLogConfirmationPageDescription3" xml:space="preserve">
+    <value>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS（※）、OSバージョン、端末機種）</value>
+    <comment>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS（※）、OSバージョン、端末機種）</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription4" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription4" xml:space="preserve">
     <value>送信されない情報</value>
     <comment>送信されない情報</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription5" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription5" xml:space="preserve">
     <value>電話番号やメールアドレスなどの個人識別可能な情報や位置情報</value>
     <comment>電話番号やメールアドレスなどの個人識別可能な情報や位置情報</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription6" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription6" xml:space="preserve">
     <value>・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</value>
     <comment>・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription7" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription7" xml:space="preserve">
     <value>・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</value>
     <comment>・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</comment>
   </data>
-	<data name="SendLogConfirmationPageDescription8" xml:space="preserve">
+  <data name="SendLogConfirmationPageDescription8" xml:space="preserve">
     <value>・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</value>
     <comment>・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</comment>
   </data>
-	<data name="SendLogConfirmationPageTextLink1" xml:space="preserve">
+  <data name="SendLogConfirmationPageTextLink1" xml:space="preserve">
     <value>動作情報を確認する</value>
     <comment>動作情報を確認する</comment>
   </data>
-	<data name="SendLogConfirmationPageTitle" xml:space="preserve">
+  <data name="SendLogConfirmationPageTitle" xml:space="preserve">
     <value>動作情報の送信について</value>
     <comment>動作情報の送信について</comment>
   </data>
-	<data name="SendLogCompletePageButton1" xml:space="preserve">
+  <data name="SendLogCompletePageButton1" xml:space="preserve">
     <value>メールで動作情報IDを送信する</value>
     <comment>メールで動作情報IDを送信する</comment>
   </data>
-	<data name="SendLogCompletePageButton2" xml:space="preserve">
+  <data name="SendLogCompletePageButton2" xml:space="preserve">
     <value>終了してホームに戻る</value>
     <comment>終了してホームに戻る</comment>
   </data>
-	<data name="SendLogCompletePageDescription1" xml:space="preserve">
+  <data name="SendLogCompletePageDescription1" xml:space="preserve">
     <value>動作情報を送信しました
 続いてメールで動作情報IDを送信してください</value>
     <comment>動作情報を送信しました
 続いてメールで動作情報IDを送信してください</comment>
   </data>
-	<data name="SendLogCompletePageDescription2" xml:space="preserve">
-    <value>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</value>
-    <comment>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</comment>
+  <data name="SendLogCompletePageDescription2" xml:space="preserve">
+    <value>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOA（※）の改善に活かすことができます。</value>
+    <comment>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOA（※）の改善に活かすことができます。</comment>
   </data>
-	<data name="Error" xml:space="preserve">
+  <data name="Error" xml:space="preserve">
     <value>エラー</value>
     <comment>エラー</comment>
   </data>
-	<data name="FailedMessageToGetOperatingInformation" xml:space="preserve">
+  <data name="FailedMessageToGetOperatingInformation" xml:space="preserve">
     <value>動作情報の取得に失敗しました。もう一度やり直してください。</value>
     <comment>動作情報の取得に失敗しました。もう一度やり直してください。</comment>
   </data>
-	<data name="FailedMessageToSaveOperatingInformation" xml:space="preserve">
+  <data name="FailedMessageToSaveOperatingInformation" xml:space="preserve">
     <value>動作情報の確認用ファイルの保存に失敗しました。</value>
     <comment>動作情報の確認用ファイルの保存に失敗しました。</comment>
   </data>
-	<data name="FailedMessageToSendOperatingInformation" xml:space="preserve">
+  <data name="FailedMessageToSendOperatingInformation" xml:space="preserve">
     <value>動作情報の送信に失敗しました</value>
     <comment>動作情報の送信に失敗しました</comment>
   </data>
-	<data name="Processing" xml:space="preserve">
+  <data name="Processing" xml:space="preserve">
     <value>処理中</value>
     <comment>処理中</comment>
   </data>
-	<data name="SaveCompleted" xml:space="preserve">
-    <value>保存完了</value>
-    <comment>保存完了</comment>
-  </data>
-	<data name="Saving" xml:space="preserve">
-    <value>保存中</value>
-    <comment>保存中</comment>
-  </data>
-	<data name="Sending" xml:space="preserve">
+  <data name="Sending" xml:space="preserve">
     <value>送信中</value>
     <comment>送信中</comment>
   </data>
-	<data name="SendingError" xml:space="preserve">
+  <data name="SendingError" xml:space="preserve">
     <value>送信エラー</value>
     <comment>送信エラー</comment>
   </data>
-	<data name="SuccessMessageToSaveOperatingInformationForAndroid" xml:space="preserve">
-    <value>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
-保存場所：</value>
-    <comment>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
-保存場所：</comment>
-  </data>
-	<data name="SuccessMessageToSaveOperatingInformationForIOS" xml:space="preserve">
-    <value>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</value>
-    <comment>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</comment>
-  </data>
-	<data name="InquiryMailBody" xml:space="preserve">
+  <data name="InquiryMailBody" xml:space="preserve">
     <value>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</value>
     <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
   </data>
-	<data name="InquiryMailSubject" xml:space="preserve">
+  <data name="InquiryMailSubject" xml:space="preserve">
     <value>接触確認アプリに関するお問い合わせ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
-	<data name="SendIdMailBody1" xml:space="preserve">
+  <data name="SendIdMailBody1" xml:space="preserve">
     <value>動作情報ID：</value>
     <comment>動作情報ID：</comment>
   </data>
-	<data name="SendIdMailBody2" xml:space="preserve">
+  <data name="SendIdMailBody2" xml:space="preserve">
     <value>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</value>
     <comment>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</comment>
   </data>
-	<data name="SendIdMailSubject" xml:space="preserve">
+  <data name="SendIdMailSubject" xml:space="preserve">
     <value>COCOA 動作情報IDの送信</value>
     <comment>COCOA 動作情報IDの送信</comment>
   </data>
-	<data name="UrlContactedForm" xml:space="preserve">
+  <data name="UrlContactedForm" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot2.html</value>
   </data>
-	<data name="SuccessMessageToSaveOperatingInformationForAndroid2" xml:space="preserve">
-    <value>
-※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</value>
-    <comment>※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</comment>
+  <data name="NotifyOtherPageDescription3" xml:space="preserve">
+    <value>SMS（※）またはメールで届いた処理番号を入力してください。</value>
+    <comment>SMS（※）またはメールで届いた処理番号を入力してください。</comment>
   </data>
-	<data name="NotifyOtherPageDescription3" xml:space="preserve">
-    <value>SMSまたはメールで届いた処理番号を入力してください。</value>
-    <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
-  </data>
-	<data name="NotifyOtherPageDescription5" xml:space="preserve">
+  <data name="NotifyOtherPageDescription5" xml:space="preserve">
     <value>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</value>
     <comment>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</comment>
   </data>
-	<data name="NotifyOtherPageDescription1" xml:space="preserve">
+  <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>次のような症状がありますか？</value>
     <comment>次のような症状がありますか？</comment>
   </data>
-	<data name="NotifyOtherPageDescription2" xml:space="preserve">
+  <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</value>
     <comment>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</comment>
   </data>
-	<data name="NotifyOtherPageDescription4" xml:space="preserve">
+  <data name="NotifyOtherPageDescription4" xml:space="preserve">
     <value>登録すると</value>
     <comment>登録すると</comment>
   </data>
-	<data name="NotifyOtherPageDescription6" xml:space="preserve">
+  <data name="NotifyOtherPageDescription6" xml:space="preserve">
     <value>※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
 ※接触した場所がどこなのか記録されたり、他の人に知られることもありません</value>
     <comment>※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
 ※接触した場所がどこなのか記録されたり、他の人に知られることもありません</comment>
   </data>
-	<data name="NotifyOtherPageNoSymptomsDescription1" xml:space="preserve">
+  <data name="NotifyOtherPageNoSymptomsDescription1" xml:space="preserve">
     <value>直近の新型コロナウイルス感染症の検査を受けた日を入力してください。</value>
     <comment>直近の新型コロナウイルス感染症の検査を受けた日を入力してください。</comment>
   </data>
-	<data name="NotifyOtherPageRadioButtonNo" xml:space="preserve">
+  <data name="NotifyOtherPageRadioButtonNo" xml:space="preserve">
     <value>ない</value>
     <comment>ない</comment>
   </data>
-	<data name="NotifyOtherPageRadioButtonYes" xml:space="preserve">
+  <data name="NotifyOtherPageRadioButtonYes" xml:space="preserve">
     <value>ある</value>
     <comment>ある</comment>
   </data>
-	<data name="NotifyOtherPageWithSymptomsDescription1" xml:space="preserve">
+  <data name="NotifyOtherPageWithSymptomsDescription1" xml:space="preserve">
     <value>症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</value>
     <comment>症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</comment>
   </data>
-	<data name="HelpPage3Description4" xml:space="preserve">
+  <data name="HelpPage3Description4" xml:space="preserve">
     <value>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</value>
     <comment>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</comment>
   </data>
-	<data name="HelpPage3Description5" xml:space="preserve">
+  <data name="HelpPage3Description5" xml:space="preserve">
     <value>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</value>
     <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
-	<data name="SubmitConsentPageButton" xml:space="preserve">
+  <data name="SubmitConsentPageButton" xml:space="preserve">
     <value>同意して陽性登録する</value>
     <comment>同意して陽性登録する</comment>
   </data>
-	<data name="SubmitConsentPageDescription1" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_1" xml:space="preserve">
     <value>陽性登録の前にお読みください</value>
     <comment>陽性登録の前にお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</value>
-    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  <data name="SubmitConsentPageDescription1_2" xml:space="preserve">
+    <value>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</value>
+    <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
   </data>
-	<data name="SubmitConsentPageDescription2" xml:space="preserve">
-    <value>・陽性登録すると、あなたと接触した人に通知が届きます</value>
-    <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
+  <data name="SubmitConsentPageDescription1_3" xml:space="preserve">
+    <value>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</value>
+    <comment>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</comment>
   </data>
-	<data name="SubmitConsentPageDescription3" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_4" xml:space="preserve">
     <value>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</value>
     <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
-	<data name="SubmitConsentPageDescription4" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_5" xml:space="preserve">
     <value>・感染拡大防止のため、登録にご協力をお願いします</value>
     <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
   </data>
-	<data name="SubmitConsentPageDescription5" xml:space="preserve">
+  <data name="SubmitConsentPageDescription1_6" xml:space="preserve">
     <value>詳しくは以下をお読みください</value>
     <comment>詳しくは以下をお読みください</comment>
   </data>
-	<data name="SubmitConsentPageDescription6" xml:space="preserve">
+  <data name="SubmitConsentPageDescription6" xml:space="preserve">
     <value>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</value>
     <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
   </data>
-	<data name="SubmitConsentPageDescription7" xml:space="preserve">
-    <value>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</value>
-    <comment>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
+  <data name="SubmitConsentPageDescription7" xml:space="preserve">
+    <value>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</value>
+    <comment>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
   </data>
-	<data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</value>
-    <comment>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</comment>
+  <data name="SubmitConsentPageDescription8" xml:space="preserve">
+    <value>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOA（※）の陽性登録に必要な「処理番号」が通知されます</value>
+    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOA（※）の陽性登録に必要な「処理番号」が通知されます</comment>
   </data>
-	<data name="SubmitConsentPageDescription9" xml:space="preserve">
-    <value>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</value>
-    <comment>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
+  <data name="SubmitConsentPageDescription9" xml:space="preserve">
+    <value>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</value>
+    <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
   </data>
-	<data name="HelpPage3Description6" xml:space="preserve">
+  <data name="SubmitConsentPageDescription10" xml:space="preserve">
+    <value>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</value>
+    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  </data>
+  <data name="HelpPage3Description6" xml:space="preserve">
     <value>陽性情報を登録</value>
     <comment>陽性情報を登録</comment>
   </data>
-	<data name="UrlPrivacyPolicy" xml:space="preserve">
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://www.mhlw.go.jp/cocoa/privacypolicy_japanese.html</value>
     <comment>プライバシーポリシーURL</comment>
   </data>
-	<data name="UrlTermOfUse" xml:space="preserve">
+  <data name="UrlTermOfUse" xml:space="preserve">
     <value>https://www.mhlw.go.jp/cocoa/kiyaku_japanese.html</value>
     <comment>利用規約URL</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageTitle" xml:space="preserve">
+  <data name="HowToReceiveProcessingNumberPageTitle" xml:space="preserve">
     <value>処理番号の取得方法</value>
     <comment>処理番号の取得方法</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝え下さい。</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝え下さい。</comment>
+  <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
+    <value>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</value>
+    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>SMSまたはメールにて8桁の処理番号が送られてきます。</value>
-    <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
+  <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
+    <value>SMS（※）またはメールにて8桁の処理番号が送られてきます。</value>
+    <comment>SMS（※）またはメールにて8桁の処理番号が送られてきます。</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</value>
-    <comment>処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+  <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
+    <value>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</value>
+    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
   </data>
-	<data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</value>
-    <comment>保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+  <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
+    <value>・保健所からMy HER-SYS（マイハーシス）（※）の利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</value>
+    <comment>・保健所からMy HER-SYS（マイハーシス）（※）の利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
   </data>
-	<data name="NoteSymbol" xml:space="preserve">
+  <data name="AndroidNotificationChannelName" xml:space="preserve">
+    <value>接触を通知</value>
+    <comment>接触を通知</comment>
+  </data>
+  <data name="LocalExposureNotificationTitle" xml:space="preserve">
+    <value>重要なお知らせ</value>
+    <comment>重要なお知らせ</comment>
+  </data>
+  <data name="LocalExposureNotificationContent" xml:space="preserve">
+    <value>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</value>
+    <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
+  </data>
+  <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
+    <value>ウェブアクセシビリティ方針</value>
+    <comment>ウェブアクセシビリティ方針</comment>
+  </data>
+  <data name="UrlWebAccessibilityPolicy" xml:space="preserve">
+    <value>https://www.mhlw.go.jp/cocoa/webaccessibility_japanese.html</value>
+    <comment>ウェブアクセシビリティ方針URL</comment>
+  </data>
+  <data name="SendLogCompletePageCopyId" xml:space="preserve">
+    <value>動作情報ID（タップしてコピー）</value>
+    <comment>動作情報ID（タップしてコピー）</comment>
+  </data>
+  <data name="SuccessMessageToCopyLogId" xml:space="preserve">
+    <value>コピーしました</value>
+    <comment>コピーしました</comment>
+  </data>
+  <data name="HomePageENStatusActiveTitle" xml:space="preserve">
+    <value>動作中</value>
+    <comment>動作中</comment>
+  </data>
+  <data name="HomePageENStatusActiveDescription" xml:space="preserve">
+    <value>接触有無の最新確認日時</value>
+    <comment>接触有無の最新確認日時</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedTitle" xml:space="preserve">
+    <value>接触有無を確認できません</value>
+    <comment>接触有無を確認できません</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedDescription1" xml:space="preserve">
+    <value>接触有無が確認できませんでした。</value>
+    <comment>接触有無が確認できませんでした。</comment>
+  </data>
+  <data name="HomePageENStatusUnconfirmedDescription2" xml:space="preserve">
+    <value>解決のため、対処方法を確認してください。</value>
+    <comment>解決のため、対処方法を確認してください。</comment>
+  </data>
+  <data name="HomePageTroubleshootingButtonText" xml:space="preserve">
+    <value>対処方法を確認</value>
+    <comment>対処方法を確認</comment>
+  </data>
+  <data name="HomePageENStatusStoppedTitle" xml:space="preserve">
+    <value>停止中</value>
+    <comment>停止中</comment>
+  </data>
+  <data name="HomePageENStatusStoppedDescription1" xml:space="preserve">
+    <value>現在、接触を記録できていません。</value>
+    <comment>現在、接触を記録できていません。</comment>
+  </data>
+  <data name="HomePageENStatusStoppedDescription2" xml:space="preserve">
+    <value>接触通知を有効にするため、必要な対処方法を確認してください。</value>
+    <comment>接触通知を有効にするため、必要な対処方法を確認してください。</comment>
+  </data>
+  <data name="LatestConfirmationDateExplanationDialogText" xml:space="preserve">
+    <value>陽性者との接触の有無を1日に1回程度確認しており、最新の確認日時を表示しています。</value>
+    <comment>陽性者との接触の有無を1日に1回程度確認しており、最新の確認日時を表示しています。</comment>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>閉じる</value>
+    <comment>閉じる</comment>
+  </data>
+  <data name="HomePageQuestionIconAccessibilityTextiOS" xml:space="preserve">
+    <value>詳しい説明</value>
+    <comment>詳しい説明</comment>
+  </data>
+  <data name="HomePageQuestionIconAccessibilityTextAndroid" xml:space="preserve">
+    <value>詳しい説明ボタン</value>
+    <comment>詳しい説明ボタン</comment>
+  </data>
+  <data name="InProgressText" xml:space="preserve">
+    <value>取得中</value>
+    <comment>取得中</comment>
+  </data>
+  <data name="DateTimeFormatToDisplayOnHomePage" xml:space="preserve">
+    <value>yyyy年MM月dd日 HH時mm分</value>
+    <comment>ホーム画面の最新確認日時のフォーマット</comment>
+  </data>
+  <data name="ToSettingsButton" xml:space="preserve">
+    <value>設定へ</value>
+    <comment>設定へ</comment>
+  </data>
+  <data name="CheckSettingsDialogTitle" xml:space="preserve">
+    <value>設定をご確認ください</value>
+    <comment>設定をご確認ください</comment>
+  </data>
+  <data name="ExposureNotificationOffWarningDialogMessage" xml:space="preserve">
+    <value>アプリを利用するため、スマートフォンの接触通知設定をオンにしてください。</value>
+    <comment>アプリを利用するため、スマートフォンの接触通知設定をオンにしてください。</comment>
+  </data>
+  <data name="BluetoothOffWarningDialogMessage" xml:space="preserve">
+    <value>接触記録のため、Bluetooth設定をオンにしてください。</value>
+    <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>
+  </data>
+  <data name="LocationOffWarningDialogMessage" xml:space="preserve">
+    <value>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
+なお、本アプリで利用者の位置情報を収集することはありません。</value>
+    <comment>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
+なお、本アプリで利用者の位置情報を収集することはありません。</comment>
+  </data>
+  <data name="TroubleshootingPageTitle" xml:space="preserve">
+    <value>対処方法</value>
+    <comment>対処方法</comment>
+  </data>
+  <data name="TroubleshootingPageDescription1" xml:space="preserve">
+    <value>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</value>
+    <comment>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription2" xml:space="preserve">
+    <value>・アプリの再起動を行ってください。</value>
+    <comment>・アプリの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription3" xml:space="preserve">
+    <value>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</value>
+    <comment>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription4" xml:space="preserve">
+    <value>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</value>
+    <comment>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</comment>
+  </data>
+  <data name="TroubleshootingPageDescription5" xml:space="preserve">
+    <value>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</value>
+    <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  </data>
+  <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
+    <value>陽性登録に必要な処理番号</value>
+    <comment>陽性登録に必要な処理番号</comment>
+  </data>
+  <data name="ProcessingNumberPlaceholderDeepLink" xml:space="preserve">
+    <value>8桁の処理番号</value>
+    <comment>8桁の処理番号</comment>
+  </data>
+  <data name="ConfirmAgreement" xml:space="preserve">
+    <value>【重要】同意内容を確認</value>
+    <comment>【重要】同意内容を確認</comment>
+  </data>
+  <data name="AgreeAndRegisterButton" xml:space="preserve">
+    <value>同意して登録する</value>
+    <comment>同意して登録する</comment>
+  </data>
+  <data name="InquiryAboutRegistrationTitle" xml:space="preserve">
+    <value>登録に関するお問い合わせ</value>
+    <comment>登録に関するお問い合わせ</comment>
+  </data>
+  <data name="InquiryAboutRegistrationReceptionTime" xml:space="preserve">
+    <value>（受付：毎日 午前9時から午後5時まで）</value>
+    <comment>（受付：毎日 午前9時から午後5時まで）</comment>
+  </data>
+  <data name="YourProcessingNumber" xml:space="preserve">
+    <value>あなた専用の処理番号</value>
+    <comment>あなた専用の処理番号</comment>
+  </data>
+  <data name="Button" xml:space="preserve">
+    <value>ボタン</value>
+    <comment>ボタン</comment>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>リスト</value>
+    <comment>リスト</comment>
+  </data>
+  <data name="GpsAnnotationText" xml:space="preserve">
+    <value>位置を特定する仕組み</value>
+    <comment>位置を特定する仕組み</comment>
+  </data>
+  <data name="BluetoothAnnotationText" xml:space="preserve">
+    <value>機器同士を繋ぐ無線通信システム</value>
+    <comment>機器同士を繋ぐ無線通信システム</comment>
+  </data>
+  <data name="ScreenshotAnnotationText" xml:space="preserve">
+    <value>表示している画面の写真</value>
+    <comment>表示している画面の写真</comment>
+  </data>
+  <data name="CocoaAnnotationText" xml:space="preserve">
+    <value>本アプリのこと</value>
+    <comment>本アプリのこと</comment>
+  </data>
+  <data name="OsAnnotationText" xml:space="preserve">
+    <value>スマートフォンに搭載されている基本システム。AndroidやiOSのこと</value>
+    <comment>スマートフォンに搭載されている基本システム。AndroidやiOSのこと</comment>
+  </data>
+  <data name="SmsAnnotationText" xml:space="preserve">
+    <value>スマートフォン用のテキストでの連絡手段。ショートメッセージ</value>
+    <comment>スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
+  </data>
+  <data name="MyHerSysAnnotationText" xml:space="preserve">
+    <value>厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</value>
+    <comment>厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
+  </data>
+  <data name="RandomCodeAnnotationText" xml:space="preserve">
+    <value>利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</value>
+    <comment>利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</comment>
+  </data>
+  <data name="AnnotationSymbol" xml:space="preserve">
     <value>※</value>
     <comment>※</comment>
+  </data>
+  <data name="AnnotationSymbol1" xml:space="preserve">
+    <value>※1</value>
+    <comment>※1</comment>
+  </data>
+  <data name="AnnotationSymbol2" xml:space="preserve">
+    <value>※2</value>
+    <comment>※2</comment>
+  </data>
+  <data name="HomePageImageAnnotationText" xml:space="preserve">
+    <value>「ホーム」画面のイメージ画像</value>
+    <comment>「ホーム」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedPageImageAnnotationText" xml:space="preserve">
+    <value>「陽性者との接触確認」画面のイメージ画像</value>
+    <comment>「陽性者との接触確認」画面のイメージ画像</comment>
   </data>
 </root>

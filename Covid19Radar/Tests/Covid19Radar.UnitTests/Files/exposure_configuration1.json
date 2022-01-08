@@ -1,0 +1,209 @@
+
+{
+  "google_exposure_config": {
+    "attenuation_scores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "attenuation_weight": 50,
+    "days_since_last_exposure_scores": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "days_since_last_exposure_weight": 50,
+    "duration_at_attenuation_thresholds": [
+      50,
+      70
+    ],
+    "duration_scores": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "duration_weight": 50,
+    "minimum_risk_score": 21,
+    "transmission_risk_scores": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "transmission_risk_weight": 50
+  },
+  "google_diagnosis_keys_data_mapping_config": {
+    "infectiousness_when_days_since_onset_missing": 1,
+    "report_type_when_missing": 1,
+    "infectiousness_for_days_since_onset_of_symptoms": {
+      "-14": 0,
+      "-13": 0,
+      "-12": 0,
+      "-11": 0,
+      "-10": 0,
+      "-9": 0,
+      "-8": 0,
+      "-7": 0,
+      "-6": 0,
+      "-5": 1,
+      "-4": 1,
+      "-3": 1,
+      "-2": 2,
+      "-1": 2,
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0
+    }
+  },
+  "google_daily_summaries_config": {
+    "attenuation_bucket_threshold_db": [
+      50,
+      70,
+      90
+    ],
+    "attenuation_bucket_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "days_since_exposure_threshold": 0,
+    "infectiousness_weights": {
+      "High": 1.0,
+      "Standard": 1.0
+    },
+    "minimum_window_score": 0.0,
+    "report_type_weights": {
+      "ConfirmedClinicalDiagnosis": 1.0,
+      "ConfirmedTest": 1.0,
+      "SelfReport": 1.0,
+      "Recursive": 1.0
+    }
+  },
+  "apple_exposure_config_v1": {
+    "attenuation_level_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "days_since_last_exposure_level_values": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "duration_level_values": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "transmission_risk_level_values": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "minimum_risk_score": 21,
+    "minimum_risk_score_full_range": 0.0
+  },
+  "apple_exposure_config_v2": {
+    "infectiousness_when_days_since_onset_missing": 1,
+    "attenuation_duration_thresholds": [
+      50,
+      70,
+      90
+    ],
+    "immediate_duration_weight": 100.0,
+    "near_duration_weight": 100.0,
+    "medium_duration_weight": 100.0,
+    "other_duration_weight": 100.0,
+    "DaysSinceLastExposureThreshold": 0,
+    "infectiousness_for_days_since_onset_of_symptoms": {
+      "-14": 1,
+      "-13": 1,
+      "-12": 1,
+      "-11": 1,
+      "-10": 1,
+      "-9": 1,
+      "-8": 1,
+      "-7": 1,
+      "-6": 1,
+      "-5": 1,
+      "-4": 1,
+      "-3": 1,
+      "-2": 1,
+      "-1": 1,
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 1
+    },
+    "infectiousness_high_weight": 100.0,
+    "infectiousness_standard_weight": 100.0,
+    "report_type_confirmed_clinical_diagnosis_weight": 100.0,
+    "report_type_confirmed_test_weight": 100.0,
+    "report_type_recursive_weight": 100.0,
+    "report_type_self_reported_weight": 100.0,
+    "report_type_none_map": 1
+  }
+}

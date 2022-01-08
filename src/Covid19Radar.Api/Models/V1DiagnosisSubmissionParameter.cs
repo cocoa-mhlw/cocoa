@@ -9,13 +9,14 @@ using System.Linq;
 
 namespace Covid19Radar.Api.Models
 {
-	public class V1DiagnosisSubmissionParameter : DiagnosisSubmissionParameter, IUser
+	public class V1DiagnosisSubmissionParameter : V2DiagnosisSubmissionParameter, IUser
 	{
 		[JsonProperty("userUuid")]
 		public string UserUuid { get; set; }
 
 		[JsonProperty("keys")]
 		public new Key[] Keys { get; set; }
+
 		public new class Key
 		{
 			[JsonProperty("keyData")]
@@ -26,14 +27,16 @@ namespace Covid19Radar.Api.Models
 			public uint RollingPeriod { get; set; }
 			[JsonProperty("transmissionRisk")]
 			public int TransmissionRisk { get; set; }
-			public TemporaryExposureKeyModel ToModel(V1DiagnosisSubmissionParameter p, ulong timestamp)
+			public TemporaryExposureKeyModel ToModel(V1DiagnosisSubmissionParameter _, ulong timestamp)
 			{
 				return new TemporaryExposureKeyModel()
 				{
 					KeyData = Convert.FromBase64String(this.KeyData),
 					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
-					TransmissionRiskLevel = 4,
+					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
+					ReportType = Constants.ReportTypeMissingValue,
+					DaysSinceOnsetOfSymptoms = Constants.DaysSinceOnsetOfSymptomsMissingValue,
 					Timestamp = timestamp,
 					Exported = false
 				};
@@ -51,6 +54,8 @@ namespace Covid19Radar.Api.Models
 				if (RollingStartNumber != 0 && (RollingStartNumber < oldest || RollingStartNumber > now)) return false;
 				return true;
 			}
+
+			internal string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, TransmissionRisk);
 		}
 
 		public override bool IsValid()

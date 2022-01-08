@@ -35,11 +35,3 @@ sed -i '' "s/LOG_STORAGE_ACCOUNT_NAME/$LOG_STORAGE_ACCOUNT_NAME/g" $APP_CONSTANT
 # Print out file for reference
 cat $APP_CONSTANT_FILE
 echo "Updated id!"
-
-# Download Runtime
-curl -L -O https://bosstoragemirror.blob.core.windows.net/wrench/jenkins/d16-6/29c4ea73109b377a71866c53a6d43033d5c5e90b/49/package/notarized/xamarin.ios-13.18.2.1.pkg
-curl -L -O https://bosstoragemirror.blob.core.windows.net/wrench/jenkins/d16-6/29c4ea73109b377a71866c53a6d43033d5c5e90b/49/package/notarized/xamarin.mac-6.18.2.1.pkg
-
-# Install Runtime
-sudo installer -store -pkg "xamarin.ios-13.18.2.1.pkg" -target /
-sudo installer -store -pkg "xamarin.mac-6.18.2.1.pkg" -target /

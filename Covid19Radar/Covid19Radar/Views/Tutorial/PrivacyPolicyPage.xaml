@@ -24,16 +24,21 @@
         </Grid.RowDefinitions>
         <Label
             Grid.Row="0"
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
             Margin="0,0,0,20"
             Style="{StaticResource DefaultTitleLabel}"
             Text="{x:Static resources:AppResources.PrivacyPolicyPageTitle}" />
         <views:NavigatePopoverWebView
             Grid.Row="1"
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="2"
             Source="{x:Static resources:AppResources.UrlPrivacyPolicy}"
             Style="{StaticResource DefaultWebView}" />
         <Button
             Grid.Row="2"
-            AutomationId="ButtonAgree"
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="3"
             Command="{Binding Path=OnClickAgree}"
             Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.ButtonAgree}" />

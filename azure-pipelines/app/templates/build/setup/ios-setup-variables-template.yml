@@ -1,0 +1,103 @@
+parameters:
+- name: configuration
+  type: string
+
+steps:
+- script: |
+    INFO_PLIST_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS/Info.plist"
+    sed -i '' "s/APP_PACKAGE_NAME/$(APP_PACKAGE_NAME)/g" $INFO_PLIST_PATH
+    sed -i '' "s/APP_VERSION/$(AppVersion)/g" $INFO_PLIST_PATH
+  displayName: 'Inject app settings into Info.plist'
+
+- script: |
+    BUILD_VERSION="`date +%s`"
+    INFO_PLIST_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS/Info.plist"
+    /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_VERSION" $INFO_PLIST_PATH
+    echo "##vso[task.setvariable variable=buildVersion]$BUILD_VERSION"
+  displayName: 'Set build version'
+
+- script: |
+    EN_IOS_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Xamarin.ExposureNotification/ExposureNotification.ios.cs"
+    sed -i '' "s/GetDiagnosisKeysAsync/GetTestDiagnosisKeysAsync/g" $EN_IOS_PATH
+
+    ENTITLEMENTS_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS/Entitlements.plist"
+    /usr/libexec/PlistBuddy -c "Add :com.apple.developer.exposure-notification-test bool true" $ENTITLEMENTS_PATH
+    /usr/libexec/PlistBuddy -c "Add :com.apple.developer.exposure-notification-test-skip-file-verification bool true" $ENTITLEMENTS_PATH
+
+  displayName: 'Use get test diagnosis keys method'
+  condition: and(succeeded(), eq('${{ parameters.configuration }}', 'debug'))
+
+- script: |
+    IOS_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS"
+    INFO_PLIST_PATH="$IOS_PATH/Info.plist"
+
+    BundleDisplayName=`/usr/libexec/PlistBuddy -c "print :CFBundleDisplayName" "$INFO_PLIST_PATH"`
+    /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName [$(Environment)]$BundleDisplayName" "$INFO_PLIST_PATH"
+
+    for FILE in `\find $IOS_PATH/Resources/*.lproj/InfoPlist.strings`; do
+      perl -pi -e "s/(CFBundleDisplayName)=\"(.*)\"/\1=\"\[$(Environment)\]\2\"/g" $FILE
+    done
+
+  displayName: 'Add environment name to app name'
+  condition: and(succeeded(), not(eq(variables['Environment'], 'prod')))
+
+- script: |
+    brew install imagemagick
+  displayName: 'Install ImageMagick'
+  condition: and(succeeded(), or(eq('${{ parameters.configuration }}', 'debug'), not(eq(variables['Environment'], 'prod'))))
+
+- script: |
+    if [ $(Environment) = "dv" ]; then
+      FONT_COLOR=yellow
+    elif [ $(Environment) = "stg" ]; then
+      FONT_COLOR=green1
+    fi
+
+    IOS_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS"
+    for FILE in `\find $IOS_PATH/Assets.xcassets/AppIcons.appiconset/*.png`; do
+      PointSize=$((`/usr/local/bin/identify -format "%[height]" $FILE` / 3))
+      StrokeWidth=$(($PointSize / 20))
+      /usr/local/bin/convert \
+        -font "Arial-Black" \
+        -gravity south \
+        -fill $FONT_COLOR \
+        -pointsize $PointSize \
+        -stroke black \
+        -strokewidth $StrokeWidth \
+        -draw "text 0,0 $(Environment)" \
+        $FILE $FILE
+    done
+
+  displayName: 'Add environment name to app icon for release'
+  condition: and(succeeded(), and(eq('${{ parameters.configuration }}', 'release'), not(eq(variables['Environment'], 'prod'))))
+
+- script: |
+    if [ $(Environment) = "dv" ]; then
+      FONT_COLOR=yellow
+    elif [ $(Environment) = "stg" ]; then
+      FONT_COLOR=green1
+    elif [ $(Environment) = "prod" ]; then
+      FONT_COLOR=blue
+    fi
+
+    IOS_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS"
+    for FILE in `\find $IOS_PATH/Assets.xcassets/AppIcons.appiconset/*.png`; do
+      PointSize=$((`/usr/local/bin/identify -format "%[height]" $FILE` / 3))
+      StrokeWidth=$(($PointSize / 20))
+      /usr/local/bin/convert \
+        -font "Arial-Black" \
+        -gravity south \
+        -fill $FONT_COLOR \
+        -pointsize $PointSize \
+        -stroke black \
+        -strokewidth $StrokeWidth \
+        -draw "text 0,0 $(Environment)" \
+        -fill OrangeRed \
+        -pointsize $(($PointSize / 2)) \
+        -strokewidth $(($StrokeWidth / 2)) \
+        -draw "text 0,0 debug" \
+        $FILE $FILE
+    done
+
+  displayName: 'Add environment name to app icon for debug'
+  condition: and(succeeded(), eq('${{ parameters.configuration }}', 'debug'))

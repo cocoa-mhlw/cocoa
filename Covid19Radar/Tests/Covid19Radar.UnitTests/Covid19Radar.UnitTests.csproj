@@ -6,18 +6,25 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 <PrivateAssets>all</PrivateAssets>
 </PackageReference>
-    <PackageReference Include="coverlet.collector" Version="1.3.0"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    <PackageReference Include="coverlet.collector" Version="3.1.0"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 <PrivateAssets>all</PrivateAssets>
 </PackageReference>
-    <PackageReference Include="Moq" Version="4.15.1" />
-    <PackageReference Include="Microsoft.CodeCoverage" Version="16.8.0" />
-    <PackageReference Include="Xamarin.Forms.Mocks" Version="4.6.0.1" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="17.0.0" />
+    <PackageReference Include="Xamarin.Forms.Mocks" Version="4.7.0.1" />
+    <PackageReference Include="Chino.Common" Version="1.0.0-rc09" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,5 +38,35 @@
     <Folder Include="ViewModels\HomePage\" />
     <Folder Include="Models\" />
     <Folder Include="Mocks\" />
+    <Folder Include="Services\Migration\" />
+    <Folder Include="Common\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Common\" />
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Files\" />
+    <None Remove="Files\exposure_configuration1.json" />
+    <None Remove="Files\exposure_configuration2.json" />
+    <None Remove="Files\exposure_configuration_update_infectiousness_for_days_since_onset_of_symptoms.json" />
+    <None Remove="Files\eventlog_submission_parameter1.json" />
+    <None Remove="Files\eventlog_submission_parameter1-cleartext.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\exposure_configuration1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\exposure_configuration2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\exposure_configuration_update_infectiousness_for_days_since_onset_of_symptoms.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\eventlog_submission_parameter1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\eventlog_submission_parameter1-cleartext.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

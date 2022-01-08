@@ -1,0 +1,26 @@
+name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+  branches:
+    include:
+    - release/app
+  paths:
+    include:
+    - Covid19Radar
+    - Covid19Radar.sln
+    - azure-pipelines/app
+
+variables:
+- group: app-settings-stg
+- name: AppVersion
+  value: '1.4.1'
+
+jobs:
+- job: build_ios
+  pool:
+    vmImage: 'macOS-11'
+  variables:
+  - group: ios-signing-development
+  - template: templates/variables/ios-build-environment-variables.yml
+  steps:
+  - template: templates/build/ios-build-development-template.yml

@@ -27,7 +27,6 @@ namespace Covid19Radar
             var j = JObject.Parse(json);
 
             AppVersion = j.Value<string>("appVersion");
-            LicenseUrl = j.Value<string>("licenseUrl");
             AppStoreUrl = j.Value<string>("appStoreUrl");
             GooglePlayUrl = j.Value<string>("googlePlayUrl");
             ApiUrlBase = j.Value<string>("apiUrlBase");
@@ -35,6 +34,7 @@ namespace Covid19Radar
             ApiKey = j.Value<string>("apiKey");
             CdnUrlBase = j.Value<string>("cdnUrlBase");
             BlobStorageContainerName = j.Value<string>("blobStorageContainerName");
+            ExposureConfigurationUrlBase = j.Value<string>("exposureConfigurationUrlBase");
             SupportedRegions = j.Value<string>("supportedRegions").ToUpperInvariant().Split(';', ',', ':');
             AndroidSafetyNetApiKey = j.Value<string>("androidSafetyNetApiKey");
             SupportEmail = j.Value<string>("supportEmail");
@@ -45,7 +45,6 @@ namespace Covid19Radar
 
         public string SupportEmail { get; }
         public string AppVersion { get; }
-        public string LicenseUrl { get; }
         public string ApiUrlBase { get; }
         public string ApiSecret { get; }
         public string ApiKey { get; }
@@ -56,6 +55,8 @@ namespace Covid19Radar
         public string[] SupportedRegions { get; }
 
         public string BlobStorageContainerName { get; }
+
+        public string ExposureConfigurationUrlBase { get; }
 
         public string AndroidSafetyNetApiKey { get; }
 

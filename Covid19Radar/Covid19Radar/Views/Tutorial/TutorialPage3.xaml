@@ -7,7 +7,6 @@
     x:Class="Covid19Radar.Views.TutorialPage3"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
@@ -25,6 +24,8 @@
         </Grid.RowDefinitions>
         <Label
             Grid.Row="0"
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="1"
             Margin="0,0,0,20"
             Style="{StaticResource DefaultTitleLabel}"
             Text="{x:Static resources:AppResources.TutorialPage3Title}" />
@@ -35,6 +36,8 @@
                 IsVisible="false"
                 Progress="0.0" />
             <views:NavigatePopoverWebView
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="2"
                 HorizontalOptions="FillAndExpand"
                 Navigated="OnNavigated"
                 Navigating="OnNavigating"
@@ -44,7 +47,8 @@
         </StackLayout>
         <Button
             Grid.Row="2"
-            AutomationId="NextButton"
+            AutomationProperties.IsInAccessibleTree="True"
+            TabIndex="3"
             Command="{Binding Path=OnClickAgree}"
             Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.TutorialPage3ButtonText}" />
