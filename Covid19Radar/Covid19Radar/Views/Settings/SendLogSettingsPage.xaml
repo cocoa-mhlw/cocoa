@@ -58,7 +58,7 @@
                     TabIndex="3"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
-                    Text="送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。"
+                    Text="送信は匿名で行われます。送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。"
                     />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"

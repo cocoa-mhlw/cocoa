@@ -84,7 +84,7 @@ namespace Covid19Radar.ViewModels
                     _loggerService.Info($"Transition to SendLogSettingsPage");
 
                     var navigationParams = SendLogSettingsPage.BuildNavigationParams(destination, parameters);
-                    _ = await NavigationService.NavigateAsync("/" + nameof(SendLogSettingsPage), navigationParams);
+                    _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), navigationParams);
                     return;
                 }
 
