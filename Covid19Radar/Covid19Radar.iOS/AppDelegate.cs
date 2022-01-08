@@ -275,25 +275,25 @@ namespace Covid19Radar.iOS
 
         public async Task PreExposureDetectedAsync(ExposureConfiguration exposureConfiguration)
         {
-            var enVersion = (await GetEnClient().GetVersionAsync()).ToString();
+            long enVersion = await GetEnClient().GetVersionAsync();
             _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
         }
 
         public async Task ExposureDetectedAsync(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows, ExposureConfiguration exposureConfiguration)
         {
-            var enVersion = (await GetEnClient().GetVersionAsync()).ToString();
+            long enVersion = await GetEnClient().GetVersionAsync();
             await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
         }
 
         public async Task ExposureDetectedAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
         {
-            var enVersion = (await GetEnClient().GetVersionAsync()).ToString();
+            long enVersion = await GetEnClient().GetVersionAsync();
             await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
         }
 
         public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration)
         {
-            var enVersion = (await GetEnClient().GetVersionAsync()).ToString();
+            long enVersion = await GetEnClient().GetVersionAsync();
             await _exposureDetectionService.Value.ExposureNotDetectedAsync(exposureConfiguration, enVersion);
         }
 
