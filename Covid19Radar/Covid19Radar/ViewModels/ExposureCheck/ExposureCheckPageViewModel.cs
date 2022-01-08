@@ -19,8 +19,6 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposureCheckPageViewModel : ViewModelBase
     {
-        private const int EXPOSURE_NOT_FOUND_VALUE_IN_MINUTES = 0;
-
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
 
@@ -45,7 +43,6 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             IUserDataRepository userDataRepository) : base(navigationService)
         {
-            Title = AppResources.TitileUserStatusSettings;
             this._loggerService = loggerService;
             this._userDataRepository = userDataRepository;
 

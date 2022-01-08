@@ -76,7 +76,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockLocalNotificationService.Object,
                 mockExposureDetectionBackgroundService.Object,
                 mockDialogService.Object,
-                mockExternalNavigationService.Object);
+                mockExternalNavigationService.Object
+                );
         }
 
         private DailySummary CreateDailySummaryWithDayOffset(DateTime date, int dayOffset)
