@@ -2,27 +2,33 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Model;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
+using Covid19Radar.Model;
+using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Services
 {
     class HttpDataServiceMock : IHttpDataService
     {
+        private readonly ILoggerService _logger;
+
         private readonly HttpClient downloadClient;
         private readonly MockCommonUtils mockCommonUtils = new MockCommonUtils();
 
-        public HttpDataServiceMock(IHttpClientService httpClientService)
+        public HttpDataServiceMock(
+            IHttpClientService httpClientService,
+            ILoggerService loggerService
+            )
         {
             downloadClient = httpClientService.Create();
+            _logger = loggerService;
         }
 
         // copy from ./HttpDataService.cs
@@ -96,7 +102,7 @@ namespace Covid19Radar.Services
 
         async Task<bool> IHttpDataService.PostRegisterUserAsync()
         {
-            Debug.WriteLine("HttpDataServiceMock::PostRegisterUserAsync called");
+            _logger.Debug("HttpDataServiceMock::PostRegisterUserAsync called");
             var result = mockCommonUtils.GetRegisterDataType() switch
             {
                 1 => false,
@@ -124,7 +130,7 @@ namespace Covid19Radar.Services
             }
             return Task.Factory.StartNew<IList<HttpStatusCode>>(() =>
             {
-                Debug.WriteLine("HttpDataServiceMock::PutSelfExposureKeysAsync called");
+                _logger.Debug("HttpDataServiceMock::PutSelfExposureKeysAsync called");
                 return new List<HttpStatusCode>() { code };
             });
         }
@@ -133,7 +139,7 @@ namespace Covid19Radar.Services
         {
             return Task.Factory.StartNew(() =>
             {
-                Debug.WriteLine("HttpDataServiceMock::GetStorageKey called");
+                _logger.Debug("HttpDataServiceMock::GetStorageKey called");
                 return new ApiResponse<LogStorageSas>((int)HttpStatusCode.OK, new LogStorageSas { SasToken = "sv=2012-02-12&se=2015-07-08T00%3A12%3A08Z&sr=c&sp=wl&sig=t%2BbzU9%2B7ry4okULN9S0wst%2F8MCUhTjrHyV9rDNLSe8g%3Dsss" });
             });
         }

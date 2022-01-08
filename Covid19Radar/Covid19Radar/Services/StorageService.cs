@@ -52,8 +52,7 @@ namespace Covid19Radar.Services
             }
             catch (Exception ex)
             {
-                loggerService.Error("Failed upload to storage");
-                System.Diagnostics.Debug.WriteLine($"Exception: {ex}");
+                loggerService.Exception("Failed upload to storage", ex);
             }
 
             loggerService.EndMethod();

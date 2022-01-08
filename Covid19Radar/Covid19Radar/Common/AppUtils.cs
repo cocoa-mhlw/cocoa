@@ -67,7 +67,6 @@ namespace Covid19Radar.Common
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(ex.ToString());
                     loggerService.Exception("Failed to check version.", ex);
                 }
                 finally

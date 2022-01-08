@@ -49,7 +49,7 @@ namespace Covid19Radar.ViewModels
             }
             catch (Exception ex)
             {
-                loggerService.Exception("Exception", ex);
+                loggerService.Exception("Failed to compose the email.", ex);
                 loggerService.EndMethod();
             }
         });

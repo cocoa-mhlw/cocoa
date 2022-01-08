@@ -66,9 +66,9 @@ namespace Covid19Radar.Services.Logs
                 loggerService.EndMethod();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                loggerService.Error("Failed to create uploading file");
+                loggerService.Exception("Failed to create uploading file", ex);
                 loggerService.EndMethod();
                 return false;
             }
@@ -90,9 +90,9 @@ namespace Covid19Radar.Services.Logs
                 loggerService.EndMethod();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                loggerService.Error("Failed to copy log file");
+                loggerService.Exception("Failed to copy log file", ex);
                 loggerService.EndMethod();
                 return false;
             }
@@ -121,9 +121,9 @@ namespace Covid19Radar.Services.Logs
                 loggerService.EndMethod();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                loggerService.Error("Failed to delete uploading file");
+                loggerService.Exception("Failed to delete uploading file", ex);
                 loggerService.EndMethod();
                 return false;
             }
