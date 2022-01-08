@@ -10,13 +10,12 @@ using System.Threading.Tasks;
 using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
+using Chino;
 
 namespace Covid19Radar.Services
 {
     public abstract class AbsExposureDetectionBackgroundService : IBackgroundService
     {
-        private const string DIAGNOSIS_KEYS_DIR = "diagnosis_keys";
-
         private readonly IDiagnosisKeyRepository _diagnosisKeyRepository;
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
@@ -52,57 +51,164 @@ namespace Covid19Radar.Services
 
             await _serverConfigurationRepository.LoadAsync();
 
-            foreach (var region in _serverConfigurationRepository.Regions)
-            {
-                var diagnosisKeyListProvideServerUrl = _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region);
+            var regions = _serverConfigurationRepository.Regions.ToList();
+            var subRegions = _serverConfigurationRepository.SubRegions.ToList();
 
-                List<string> downloadedFileNameList = new List<string>();
+            var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
+
+            foreach (var region in regions)
+            {
+                List<DiagnosisKeyFile> diagnosisKeyFileList = new List<DiagnosisKeyFile>();
+
+                #region Sub-regoin leval
                 try
                 {
-                    var tmpDir = PrepareDir(region);
-
-                    var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
-                    var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
-
-                    var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
-                    var targetDiagnosisKeyEntryList = FilterDiagnosisKeysAfterLastProcessTimestamp(diagnosisKeyEntryList, lastProcessTimestamp);
-
-                    if (targetDiagnosisKeyEntryList.Count() == 0)
+                    foreach (var subRegion in subRegions)
                     {
-                        _loggerService.Info($"No new diagnosis-key found on {diagnosisKeyListProvideServerUrl}");
-                        continue;
+                        var files = await DownloadFiles(region, subRegion, cancellationToken);
+
+                        _loggerService.Info($"Sub-region: {subRegion}, {files.Count} files downloaded.");
+
+                        diagnosisKeyFileList.AddRange(files);
                     }
 
-                    foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
+                    _loggerService.Info($"Region: {region}, Sub-region level, {diagnosisKeyFileList.Count} files downloaded.");
+
+                    await DetectExposure(diagnosisKeyFileList, exposureConfiguration, cancellationTokenSource);
+
+                    // Save LastProcessDiagnosisKeyTimestamp after DetectExposure was succeeded.
+                    var subRegionGroup = diagnosisKeyFileList.GroupBy(file => file.SubRegion);
+                    foreach (var sr in subRegionGroup)
                     {
-                        string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir, cancellationToken);
-
-                        _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
-
-                        downloadedFileNameList.Add(filePath);
+                        var latestProcessTimestamp = sr
+                            .Select(diagnosisKeyFile => diagnosisKeyFile.Created)
+                            .Max();
+                        await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(region, sr.Key, latestProcessTimestamp);
                     }
 
-                    var downloadedFileNames = string.Join("\n", downloadedFileNameList);
-                    _loggerService.Debug(downloadedFileNames);
-
-                    await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
-                        downloadedFileNameList,
-                        exposureConfiguration,
-                        cancellationTokenSource
-                        );
-
-                    // Save LastProcessDiagnosisKeyTimestamp after ProvideDiagnosisKeysAsync was succeeded.
-                    var latestProcessTimestamp = targetDiagnosisKeyEntryList
-                        .Select(diagnosisKeyEntry => diagnosisKeyEntry.Created)
-                        .Max();
-                    await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(region, latestProcessTimestamp);
-
+                }
+                catch (Exception exception)
+                {
+                    _loggerService.Exception("Exception occurred at Sub-region level.", exception);
                 }
                 finally
                 {
-                    RemoveFiles(downloadedFileNameList);
+                    RemoveFiles(diagnosisKeyFileList);
+                    diagnosisKeyFileList.Clear();
+                }
+                #endregion
+
+                #region Regoin leval
+                var withRegionLevel = !subRegions.Any() || _serverConfigurationRepository.WithRegionLevel;
+                if (withRegionLevel)
+                {
+                    try
+                    {
+                        diagnosisKeyFileList = await DownloadFiles(region, string.Empty, cancellationToken);
+
+                        _loggerService.Info($"Region {diagnosisKeyFileList.Count} files downloaded.");
+
+                        await DetectExposure(diagnosisKeyFileList, exposureConfiguration, cancellationTokenSource);
+
+                        // Save LastProcessDiagnosisKeyTimestamp after DetectExposure was succeeded.
+                        var latestProcessTimestamp = diagnosisKeyFileList
+                            .Select(diagnosisKeyFile => diagnosisKeyFile.Created)
+                            .Max();
+                        await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(region, string.Empty, latestProcessTimestamp);
+                    }
+                    catch (Exception exception)
+                    {
+                        _loggerService.Exception("Exception occurred at Region level.", exception);
+                    }
+                    finally
+                    {
+                        RemoveFiles(diagnosisKeyFileList);
+                        diagnosisKeyFileList.Clear();
+                    }
+                }
+                #endregion
+            }
+        }
+
+        private async Task DetectExposure(
+            List<DiagnosisKeyFile> downloadedFileList,
+            ExposureConfiguration exposureConfiguration,
+            CancellationTokenSource cancellationTokenSource
+            )
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                _exposureNotificationApiService.ExposureConfiguration = exposureConfiguration;
+
+                _loggerService.Info("Run DetectExposure/ProvideDiagnosisKeysAsync.");
+
+                await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
+                    downloadedFileList.Select(file => file.Path).ToList(),
+                    cancellationTokenSource
+                    );
+
+                _loggerService.Info("Finish DetectExposure/ProvideDiagnosisKeysAsync.");
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task<List<DiagnosisKeyFile>> DownloadFiles(
+            string region,
+            string subRegion,
+            CancellationToken cancellationToken
+            )
+        {
+            _loggerService.StartMethod();
+
+            List<DiagnosisKeyFile> downloadedFileList = new List<DiagnosisKeyFile>();
+
+            try
+            {
+                var diagnosisKeyListProvideServerUrl = _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region, subRegion);
+
+                _loggerService.Info($"diagnosisKeyListProvideServerUrl: {diagnosisKeyListProvideServerUrl}");
+
+                var diagnosisKeysDir = ILocalPathService.GetDiagnosisKeysDir(_localPathService.CacheDirectory, region, subRegion);
+                _ = Directory.CreateDirectory(diagnosisKeysDir);
+
+                var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
+
+                var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region, subRegion);
+                var targetDiagnosisKeyEntryList = FilterDiagnosisKeysAfterLastProcessTimestamp(diagnosisKeyEntryList, lastProcessTimestamp);
+
+
+                if (targetDiagnosisKeyEntryList.Count() == 0)
+                {
+                    _loggerService.Info($"No new diagnosis-key found on {diagnosisKeyListProvideServerUrl}");
+                    return downloadedFileList;
+                }
+
+                foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
+                {
+                    string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, diagnosisKeysDir, cancellationToken);
+
+                    _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
+
+                    downloadedFileList.Add(new DiagnosisKeyFile(region, subRegion, diagnosisKeyEntry.Created, filePath));
                 }
             }
+            catch (Exception)
+            {
+                RemoveFiles(downloadedFileList);
+                downloadedFileList.Clear();
+            }
+
+            var downloadedFilePaths = string.Join("\n", downloadedFileList.Select(file => file.Path));
+            _loggerService.Debug(downloadedFilePaths);
+
+            _loggerService.EndMethod();
+
+            return downloadedFileList;
         }
 
         private static IList<DiagnosisKeyEntry> FilterDiagnosisKeysAfterLastProcessTimestamp(
@@ -120,39 +226,41 @@ namespace Covid19Radar.Services
             return diagnosisKeyEntryList
                         .Where(diagnosisKeyEntry => diagnosisKeyEntry.Created > lastProcessTimestamp).ToList();
 #endif
-
         }
 
-        private string PrepareDir(string region)
-        {
-            var cacheDir = _localPathService.CacheDirectory;
-
-            var baseDir = Path.Combine(cacheDir, DIAGNOSIS_KEYS_DIR);
-            if (!Directory.Exists(baseDir))
-            {
-                Directory.CreateDirectory(baseDir);
-            }
-
-            var dir = Path.Combine(baseDir, region);
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
-            return dir;
-        }
-
-        private void RemoveFiles(List<string> fileList)
+        private void RemoveFiles(List<DiagnosisKeyFile> fileList)
         {
             foreach (var file in fileList)
             {
                 try
                 {
-                    File.Delete(file);
+                    File.Delete(file.Path);
                 }
                 catch (Exception exception)
                 {
                     _loggerService.Exception("Exception occurred", exception);
                 }
+            }
+        }
+
+        private class DiagnosisKeyFile
+        {
+            public readonly string Region;
+            public readonly string SubRegion;
+            public readonly long Created;
+            public readonly string Path;
+
+            public DiagnosisKeyFile(
+                string region,
+                string subRegion,
+                long created,
+                string path
+                )
+            {
+                Region = region;
+                SubRegion = subRegion;
+                Created = created;
+                Path = path;
             }
         }
     }

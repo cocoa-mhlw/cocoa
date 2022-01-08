@@ -70,5 +70,48 @@ namespace Covid19Radar.Api.Tests.Common.Models
             Assert.AreEqual(model.TransmissionRiskLevel, actual.TransmissionRiskLevel);
         }
 
+        [DataTestMethod]
+        [DataRow(+15, false)]
+        [DataRow(+14, true)]
+        [DataRow(+13, true)]
+        [DataRow(+12, true)]
+        [DataRow(+11, true)]
+        [DataRow(+10, true)]
+        [DataRow(+9, true)]
+        [DataRow(+8, true)]
+        [DataRow(+7, true)]
+        [DataRow(+6, true)]
+        [DataRow(+5, true)]
+        [DataRow(+4, true)]
+        [DataRow(+3, true)]
+        [DataRow(+2, true)]
+        [DataRow(+1, true)]
+        [DataRow(0, true)]
+        [DataRow(-1, true)]
+        [DataRow(-2, true)]
+        [DataRow(-3, true)]
+        [DataRow(-4, true)]
+        [DataRow(-5, true)]
+        [DataRow(-6, true)]
+        [DataRow(-7, true)]
+        [DataRow(-8, true)]
+        [DataRow(-9, true)]
+        [DataRow(-10, true)]
+        [DataRow(-11, true)]
+        [DataRow(-12, true)]
+        [DataRow(-13, true)]
+        [DataRow(-14, true)]
+        [DataRow(-15, false)]
+        [DataRow(Constants.DaysSinceOnsetOfSymptomsMissingValue, true)]
+        public void GetDaysSinceOnsetOfSymptomsMethod(int daysSinceOnsetOfSymptoms, bool expectHasValid)
+        {
+            // preparation
+            var model = new TemporaryExposureKeyModel()
+            {
+                DaysSinceOnsetOfSymptoms = daysSinceOnsetOfSymptoms
+            };
+
+            Assert.AreEqual(expectHasValid, model.HasValidDaysSinceOnsetOfSymptoms());
+        }
     }
 }

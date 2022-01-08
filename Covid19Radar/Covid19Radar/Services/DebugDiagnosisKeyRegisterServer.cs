@@ -9,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
@@ -22,23 +23,28 @@ namespace Covid19Radar.Services
         private readonly ILoggerService _loggerService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
 
+        private readonly string _platform;
         private readonly HttpClient _httpClient;
 
         public DebugDiagnosisKeyRegisterServer(
             ILoggerService loggerService,
             IServerConfigurationRepository serverConfigurationRepository,
-            IHttpClientService httpClientService
+            IHttpClientService httpClientService,
+            IEssentialsService essentialsService
             )
         {
             _loggerService = loggerService;
             _serverConfigurationRepository = serverConfigurationRepository;
             _httpClient = httpClientService.Create();
+            _platform = essentialsService.Platform;
         }
 
-        public async Task<IList<HttpStatusCode>> SubmitDiagnosisKeysAsync(
+        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string _,
+            string[] regions,
+            string[] subRegions,
             string idempotencyKey
             )
         {
@@ -53,17 +59,25 @@ namespace Covid19Radar.Services
             {
                 await _serverConfigurationRepository.LoadAsync();
 
-                RequestDiagnosisKey request = new RequestDiagnosisKey(
-                    symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
-                    temporaryExposureKeys,
-                    idempotencyKey,
-                    ReportType.ConfirmedClinicalDiagnosis
-                    );
+                var keys = temporaryExposureKeys.Select(key => new DiagnosisSubmissionParameter.Key()
+                {
+                    KeyData = Convert.ToBase64String(key.KeyData),
+                    RollingStartNumber = (uint)key.RollingStartIntervalNumber,
+                    RollingPeriod = (uint)key.RollingPeriod,
+                    ReportType = (uint)key.ReportType
+                }).ToArray();
 
-                var tasks = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls.Select(url => SubmitDiagnosisKeysAsync(request, url));
-                HttpStatusCode[] statuses = await Task.WhenAll(tasks);
+                DiagnosisSubmissionParameter parameter = new DiagnosisSubmissionParameter()
+                {
+                    SymptomOnsetDate = symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
+                    Keys = keys,
+                    Regions = regions,
+                    SubRegions = subRegions,
+                    Platform = _platform,
+                    IdempotencyKey = idempotencyKey
+                };
 
-                return statuses.ToList();
+                return await SubmitDiagnosisKeysAsync(parameter, _serverConfigurationRepository.DiagnosisKeyRegisterApiUrl);
             }
             finally
             {
@@ -72,7 +86,7 @@ namespace Covid19Radar.Services
         }
 
         private async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
-            RequestDiagnosisKey request,
+            DiagnosisSubmissionParameter parameter,
             string diagnosisKeyRegisterApiEndpoint
         )
         {
@@ -80,7 +94,7 @@ namespace Covid19Radar.Services
 
             try
             {
-                string requestJson = JsonConvert.SerializeObject(request);
+                string requestJson = JsonConvert.SerializeObject(parameter);
                 StringContent httpContent = new StringContent(requestJson);
 
                 _loggerService.Debug($"diagnosisKeyRegisterApiEndpoint: {diagnosisKeyRegisterApiEndpoint}");
@@ -97,53 +111,6 @@ namespace Covid19Radar.Services
             {
                 _loggerService.EndMethod();
             }
-        }
-    }
-
-    [JsonObject]
-    public class RequestDiagnosisKey
-    {
-        [JsonProperty("symptomOnsetDate")]
-        public string SymptomOnsetDate { get; set; }
-
-        public IList<Tek> temporaryExposureKeys;
-
-        [JsonProperty("idempotency_key")]
-        public string IdempotencyKey { get; set; }
-
-        public RequestDiagnosisKey(
-            string symptomOnsetDate,
-            IList<TemporaryExposureKey> teks,
-            string idempotencyKey,
-            ReportType defaultRportType = ReportType.ConfirmedTest
-            )
-        {
-            SymptomOnsetDate = symptomOnsetDate;
-            temporaryExposureKeys = teks.Select(tek =>
-            {
-                return new Tek(tek)
-                {
-                    reportType = (int)defaultRportType,
-                };
-            }).ToList();
-            IdempotencyKey = idempotencyKey;
-        }
-    }
-
-    [JsonObject]
-    public class Tek
-    {
-        public readonly string key;
-        public readonly long rollingStartNumber;
-        public readonly long rollingPeriod;
-        public int reportType;
-
-        public Tek(TemporaryExposureKey tek)
-        {
-            key = Convert.ToBase64String(tek.KeyData);
-            rollingStartNumber = tek.RollingStartIntervalNumber;
-            rollingPeriod = tek.RollingPeriod;
-            reportType = (int)ReportType.ConfirmedClinicalDiagnosis;
         }
     }
 }

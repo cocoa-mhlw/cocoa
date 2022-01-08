@@ -68,7 +68,7 @@ namespace Covid19Radar.Api
             {
                 return new StatusCodeResult((int)HttpStatusCode.BadRequest);
             }
-            else if (contentLength > Constants.MAX_SIZE_EVENT_LOG_PAYLOAD_BYTES)
+            else if (contentLength > Constants.MaxSizeEventLogPayloadBytes)
             {
                 return new StatusCodeResult((int)HttpStatusCode.RequestEntityTooLarge);
             }
@@ -76,7 +76,7 @@ namespace Covid19Radar.Api
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
 
             // Check RequestBody size.
-            if (Encoding.ASCII.GetBytes(requestBody).LongLength > Constants.MAX_SIZE_EVENT_LOG_PAYLOAD_BYTES)
+            if (Encoding.ASCII.GetBytes(requestBody).LongLength > Constants.MaxSizeEventLogPayloadBytes)
             {
                 return new StatusCodeResult((int)HttpStatusCode.RequestEntityTooLarge);
             }

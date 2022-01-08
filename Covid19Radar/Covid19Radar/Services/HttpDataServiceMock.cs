@@ -105,7 +105,7 @@ namespace Covid19Radar.Services
             return await Task.FromResult(result);
         }
 
-        Task<IList<HttpStatusCode>> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+        Task<HttpStatusCode> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             var code = HttpStatusCode.OK; // default. for PutSelfExposureKeys NG
             var dataType = mockCommonUtils.GetDiagnosisDataType();
@@ -122,10 +122,10 @@ namespace Covid19Radar.Services
                         break;
                 }
             }
-            return Task.Factory.StartNew<IList<HttpStatusCode>>(() =>
+            return Task.Factory.StartNew(() =>
             {
                 Debug.WriteLine("HttpDataServiceMock::PutSelfExposureKeysAsync called");
-                return new List<HttpStatusCode>() { code };
+                return code;
             });
         }
 
