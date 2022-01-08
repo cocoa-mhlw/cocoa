@@ -25,11 +25,10 @@ namespace Covid19Radar.UnitTests.Services.Migration
         const string APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY = "TermsOfServiceLastUpdateDateTime";
         const string APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY = "PrivacyPolicyLastUpdateDateTime";
 
-        private const string PREFERENCE_KEY_EXPOSURE_SUMMARY = "ExposureSummary";
-
         private const string PREFERENCE_KEY_START_DATETIME = "StartDateTime";
         private const string PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE = "TermsOfServiceLastUpdateDateTime";
         private const string PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE = "PrivacyPolicyLastUpdateDateTime";
+        private const string PREFERENCE_KEY_EXPOSURE_SUMMARY = "ExposureSummary";
 
         private readonly TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
 
@@ -107,21 +106,11 @@ namespace Covid19Radar.UnitTests.Services.Migration
             //Assert.True(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY));
             //Assert.True(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
 
-            // TermsOfServiceLastUpdateDateTime
-            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_TERMS_OF_SERVICE_LAST_UPDATE_DATE));
-
-            // PrivacyPolicyLastUpdateDateTime
-            Assert.False(_dummyPreferencesService.ContainsKey(PREFERENCE_KEY_PRIVACY_POLICY_LAST_UPDATE_DATE));
-
-            // LastProcessTekTimestamp
-            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            var lastProcessTekTimestampString = _dummyPreferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
-
-            // ExposureNotificationConfiguration
-            Assert.False(_dummyPreferencesService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
-
-            Assert.False(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
+            string userData = (string)_dummyApplicationPropertyService.GetProperties(APPLICATION_PROPERTY_USER_DATA_KEY);
+            Assert.Equal(
+                "{\"StartDateTime\":\"0001-01-01T00:00:00\",\"IsOptined\":false,\"IsPolicyAccepted\":false,\"LastProcessTekTimestamp\":{},\"ExposureInformation\":[],\"ExposureSummary\":null}",
+                userData
+                );
         }
 
         [Fact]
