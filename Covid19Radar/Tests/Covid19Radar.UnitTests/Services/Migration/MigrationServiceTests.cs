@@ -99,14 +99,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
             await CreateService()
                 .MigrateAsync();
 
-            // Application-properties must not be exist
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_USER_DATA_KEY));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_TERMS_OF_SERVICE_LAST_UPDATE_DATE_KEY));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_PRIVACY_POLICY_LAST_UPDATE_DATE_KEY));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureNotificationConfiguration));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.LastProcessTekTimestamp));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            Assert.False(_dummyApplicationPropertyService.ContainsKey(PreferenceKey.ExposureInformation));
+            Assert.True(_dummyApplicationPropertyService.ContainsKey(APPLICATION_PROPERTY_USER_DATA_KEY));
 
             /// **NOTE**
             /// v1.2.0 makes couple of values that `TermsOfServiceLastUpdateDateTime` and `PrivacyPolicyLastUpdateDateTime` in application properties.
