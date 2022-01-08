@@ -24,6 +24,11 @@
         </DataTrigger>
     </ContentPage.Triggers>
 
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
     <ScrollView>
         <Grid Style="{StaticResource DefaultGridLayout}">
             <Grid.RowDefinitions>
@@ -153,4 +158,5 @@
             </Grid>
         </Grid>
     </ScrollView>
+    </ContentView>
 </ContentPage>

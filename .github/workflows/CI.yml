@@ -10,12 +10,14 @@ on:
       - '.github/workflows/CI.yml'
       - 'Covid19Radar/**'
       - 'Covid19Radar.sln'
+      - 'Nuget.config'
   pull_request:
     branches: [ main, develop, 'feature/**' ]
     paths:
       - '.github/workflows/CI.yml'
       - 'Covid19Radar/**'
       - 'Covid19Radar.sln'
+      - 'Nuget.config'
 jobs:
   build_ios:
     name: Build-iOS
@@ -51,7 +53,7 @@ jobs:
       run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
   test:
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: macos-latest # Tests must be executed on macOs. If don't, tests will fail.
     needs: [build_ios, build_android]
     steps:
     - name: Checkout

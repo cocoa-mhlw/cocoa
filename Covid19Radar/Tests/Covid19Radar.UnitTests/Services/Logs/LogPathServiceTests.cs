@@ -4,6 +4,7 @@
 
 using System;
 using System.IO;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Moq;
 using Xunit;
@@ -24,17 +25,17 @@ namespace Covid19Radar.UnitTests.Services.Logs
         [InlineData(9999, 12, 31, "cocoa_log_99991231.csv")]
         public void LogFilePath_Success(int year, int month, int day, string expected)
         {
-            var mockILogPathDependencyService = CreateDefaultMockILogPathDependencyService();
-            var logPathService = CreateDefaultLogPathService(mockILogPathDependencyService);
+            var mockILocalPathService = CreateDefaultMockILocalPathService();
+            var logPathService = CreateDefaultLogPathService(mockILocalPathService);
             var dateTime = new DateTime(year, month, day);
             var jstDateTime = TimeZoneInfo.ConvertTime(dateTime, JstTimeZoneInfo());
 
             var actual = logPathService.LogFilePath(jstDateTime);
 
             Assert.Equal(Path.Combine("~/.cocoa/logs", expected), actual);
-            Mock.Get(mockILogPathDependencyService).Verify(s => s.LogsDirPath, Times.Once());
-            Mock.Get(mockILogPathDependencyService).Verify(s => s.LogUploadingTmpPath, Times.Never());
-            Mock.Get(mockILogPathDependencyService).Verify(s => s.LogUploadingPublicPath, Times.Never());
+            Mock.Get(mockILocalPathService).Verify(s => s.LogsDirPath, Times.Once());
+            Mock.Get(mockILocalPathService).Verify(s => s.LogUploadingTmpPath, Times.Never());
+            Mock.Get(mockILocalPathService).Verify(s => s.LogUploadingPublicPath, Times.Never());
         }
 
         #endregion
@@ -43,14 +44,14 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
         #region Other Private Methods
 
-        private LogPathService CreateDefaultLogPathService(ILogPathPlatformService logPathDependencyService)
+        private LogPathService CreateDefaultLogPathService(ILocalPathService localPathService)
         {
-            return new LogPathService(logPathDependencyService);
+            return new LogPathService(localPathService);
         }
 
-        private ILogPathPlatformService CreateDefaultMockILogPathDependencyService()
+        private ILocalPathService CreateDefaultMockILocalPathService()
         {
-            var mock = Mock.Of<ILogPathPlatformService>(s =>
+            var mock = Mock.Of<ILocalPathService>(s =>
             s.LogsDirPath == "~/.cocoa/logs" &&
             s.LogUploadingTmpPath == "~/.cocoa/tmp" &&
             s.LogUploadingPublicPath == "~/.cocoa/public"

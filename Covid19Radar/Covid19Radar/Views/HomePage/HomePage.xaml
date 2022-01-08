@@ -16,6 +16,11 @@
     NavigationPage.TitleIconImageSource="HeaderLogo.png"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
     <ScrollView>
         <StackLayout
             Padding="15"
@@ -244,4 +249,5 @@
             </StackLayout>
         </StackLayout>
     </ScrollView>
+    </ContentView>
 </ContentPage>

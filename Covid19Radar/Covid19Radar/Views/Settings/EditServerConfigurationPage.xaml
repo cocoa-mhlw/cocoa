@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    x:Class="Covid19Radar.Views.EditServerConfigurationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:System="clr-namespace:System;assembly=netstandard"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
+    <ScrollView>
+        <StackLayout
+            Padding="0"
+            BackgroundColor="{StaticResource Background}"
+            Spacing="0">
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="Regions"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding Regions}"
+                Margin="8, 0, 8, 16"
+                Placeholder="Regions or Cluster IDs, Comma sepalated">
+            </Entry>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="DiagnosisKeyRegisterApiEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding DiagnosisKeyRegisterApiEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="DiagnosisKey registeration API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="DiagnosisKeyRegisterApiUrls"
+                Margin="8, 0, 0, 8"
+                />
+            <Label
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="DarkCyan"
+                Text="{Binding DiagnosisKeyRegisterApiUrls}"
+                Margin="8, 0, 8, 16"
+                />
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="DiagnosisKeyListEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding DiagnosisKeyListProvideServerEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="DiagnosisKey-list(list.json) endpoint">
+            </Entry>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="DiagnosisKeyListProvideServerUrls"
+                Margin="8, 0, 0, 8"
+                />
+            <Label
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="DarkCyan"
+                Text="{Binding DiagnosisKeyListProvideServerUrls}"
+                Margin="8, 0, 8, 16"
+                />
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="ExposureConfigurationUrl"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding ExposureConfigurationUrl}"
+                Margin="8, 0, 8, 16"
+                Placeholder="ExposureConfiguration url"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="ExposureDataCollectServerEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding ExposureDataCollectServerEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="ExposureData collect API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="ExposureDataCollectServerUrls"
+                Margin="8, 0, 0, 8"
+                />
+            <Label
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="DarkCyan"
+                Text="{Binding ExposureDataCollectServerUrls}"
+                Margin="8, 0, 8, 16"
+                />
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="EventLogApiEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding EventLogApiEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="EventLog sending API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="UserRegisterApiEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding UserRegisterApiEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="User registration API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="InquiryLogApiUrl"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding InquiryLogApiUrl}"
+                Margin="8, 0, 8, 16"
+                Placeholder="Inquiry-log submission API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="LogStorageEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding LogStorageEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="Inquiry-log storage endpoint"/>
+
+            <Button
+                Command="{Binding OnSave}"
+                HorizontalOptions="Center"
+                Style="{StaticResource DefaultButton}"
+                Text="Save"
+                VerticalOptions="Start" />
+        </StackLayout>
+    </ScrollView>
+    </ContentView>
+</ContentPage>

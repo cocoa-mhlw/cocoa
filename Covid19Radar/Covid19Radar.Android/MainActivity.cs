@@ -7,7 +7,9 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Content;
 using Acr.UserDialogs;
+using Covid19Radar.Droid.Services;
 using System;
+using Prism.Common;
 using System.Threading.Tasks;
 
 using FormsApplication = Xamarin.Forms.Application;
@@ -15,7 +17,8 @@ using Covid19Radar.Views;
 using Prism.Navigation;
 using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
-using CommonServiceLocator;
+using Prism.Ioc;
+using AndroidX.AppCompat.App;
 
 namespace Covid19Radar.Droid
 {
@@ -46,7 +49,7 @@ namespace Covid19Radar.Droid
         private const string EXTRA_KEY_DESTINATION = "key_destination";
 
         private Lazy<ILoggerService> _loggerService
-                    = new Lazy<ILoggerService>(() => ServiceLocator.Current.GetInstance<ILoggerService>());
+                    = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
         internal static Intent NewIntent(Context context)
         {
@@ -80,6 +83,8 @@ namespace Covid19Radar.Droid
             ToolbarResource = Resource.Layout.Toolbar;
             base.SetTheme(Resource.Style.MainTheme);
             base.OnCreate(savedInstanceState);
+
+            AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
 
             Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
@@ -144,7 +149,34 @@ namespace Covid19Radar.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
-            Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
+            var isOk = (resultCode == Result.Ok);
+
+            FireExposureNotificationEvent(requestCode, isOk);
+        }
+
+        private void FireExposureNotificationEvent(int requestCode, bool isOk)
+        {
+            Action<IExposureNotificationEventCallback> action = requestCode switch
+            {
+                ExposureNotificationApiService.REQUEST_EN_START
+                    => new Action<IExposureNotificationEventCallback>(callback =>
+                    {
+                        if(isOk)
+                        {
+                            callback.OnEnabled();
+                        }
+                        else
+                        {
+                            callback.OnDeclined();
+                        }
+                    }),
+                ExposureNotificationApiService.REQUEST_GET_TEK_HISTORY
+                    => new Action<IExposureNotificationEventCallback>(callback => { callback.OnGetTekHistoryAllowed(); }),
+                ExposureNotificationApiService.REQUEST_PREAUTHORIZE_KEYS
+                    => new Action<IExposureNotificationEventCallback>(callback => { callback.OnPreauthorizeAllowed(); }),
+                _ => new Action<IExposureNotificationEventCallback>(callback => { /* do nothing */ }),
+            };
+            PageUtilities.InvokeViewAndViewModelAction(PageUtilities.GetCurrentPage(AppInstance.MainPage), action);
         }
 
         protected async override void OnNewIntent(Intent intent)

@@ -27,14 +27,14 @@ namespace Covid19Radar.Api.Models
 			public uint RollingPeriod { get; set; }
 			[JsonProperty("transmissionRisk")]
 			public int TransmissionRisk { get; set; }
-			public TemporaryExposureKeyModel ToModel(V1DiagnosisSubmissionParameter p, ulong timestamp)
+			public TemporaryExposureKeyModel ToModel(V1DiagnosisSubmissionParameter _, ulong timestamp)
 			{
 				return new TemporaryExposureKeyModel()
 				{
 					KeyData = Convert.FromBase64String(this.KeyData),
 					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
 					RollingStartIntervalNumber = (int)this.RollingStartNumber,
-					TransmissionRiskLevel = 4,
+					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
 					ReportType = Constants.ReportTypeMissingValue,
 					DaysSinceOnsetOfSymptoms = Constants.DaysSinceOnsetOfSymptomsMissingValue,
 					Timestamp = timestamp,

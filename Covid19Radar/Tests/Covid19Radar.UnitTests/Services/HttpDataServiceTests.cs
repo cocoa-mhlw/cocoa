@@ -3,10 +3,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.UnitTests.Mocks;
@@ -24,8 +26,7 @@ namespace Covid19Radar.UnitTests.Services
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IHttpClientService> mockHttpClientService;
-        private readonly Mock<ISecureStorageService> mockSecureStorageService;
-        private readonly Mock<IApplicationPropertyService> mockApplicationPropertyService;
+        private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
 
         #endregion
 
@@ -36,8 +37,7 @@ namespace Covid19Radar.UnitTests.Services
             mockRepository = new MockRepository(MockBehavior.Default);
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockHttpClientService = mockRepository.Create<IHttpClientService>();
-            mockSecureStorageService = mockRepository.Create<ISecureStorageService>();
-            mockApplicationPropertyService = mockRepository.Create<IApplicationPropertyService>();
+            mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
         }
 
         #endregion
@@ -49,8 +49,7 @@ namespace Covid19Radar.UnitTests.Services
             return new HttpDataService(
                 mockLoggerService.Object,
                 mockHttpClientService.Object,
-                mockSecureStorageService.Object,
-                mockApplicationPropertyService.Object
+                mockServerConfigurationRepository.Object
                 );
         }
 
@@ -78,10 +77,10 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+            mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
+                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
-
-            mockSecureStorageService.Reset();
 
             var result = await unitUnderTest.PostRegisterUserAsync();
 
@@ -107,10 +106,10 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+            mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
+                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
-
-            mockSecureStorageService.Reset();
 
             var result = await unitUnderTest.PostRegisterUserAsync();
 
@@ -135,10 +134,10 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+            mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
+                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
-
-            mockSecureStorageService.Reset();
 
             var result = await unitUnderTest.PostRegisterUserAsync();
 
@@ -160,7 +159,7 @@ namespace Covid19Radar.UnitTests.Services
             var mockHttpClient = new HttpClient(new MockHttpHandler((r, c) =>
             {
                 var absoluteUri = r.RequestUri.AbsoluteUri;
-                if (absoluteUri.EndsWith("/api/v2/diagnosis"))
+                if (absoluteUri.EndsWith("/api/v3/diagnosis"))
                 {
                     requestContent = r.Content;
                     var response = new HttpResponseMessage(HttpStatusCode.NoContent);
@@ -171,10 +170,10 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+            mockServerConfigurationRepository.Setup(x => x.DiagnosisKeyRegisterApiUrls)
+                .Returns(new List<string>() { IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/v3/diagnosis") });
 
             var unitUnderTest = CreateService();
-
-            mockSecureStorageService.Reset();
 
             var request = new DiagnosisSubmissionParameter()
             {
@@ -193,13 +192,14 @@ namespace Covid19Radar.UnitTests.Services
                 Padding = "padding"
             };
 
-            var result = await unitUnderTest.PutSelfExposureKeysAsync(request);
+            var results = await unitUnderTest.PutSelfExposureKeysAsync(request);
 
             mockLoggerService.Verify(x => x.StartMethod("PutSelfExposureKeysAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.EndMethod("PutSelfExposureKeysAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
-            Assert.Equal(HttpStatusCode.NoContent, result);
+            Assert.Equal(1, results.Count);
+            Assert.Equal(HttpStatusCode.NoContent, results[0]);
             Assert.NotNull(requestContent);
 
             var stringContent = await requestContent.ReadAsStringAsync();

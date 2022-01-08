@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -126,13 +127,15 @@ namespace Covid19Radar.Api
                 return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
             }
 
+            var newKeys = new List<TemporaryExposureKeyModel>();
             var timestamp = (ulong)DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
             using (SHA256 sha256 = SHA256.Create())
             {
                 foreach (var k in submissionParameter.Keys)
                 {
                     var idSeed = $"{submissionParameter.IdempotencyKey},{k.KeyData},{k.RollingStartNumber},{k.RollingPeriod}";
-                    var id = ByteArrayToString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
+                    var id = ByteArrayUtils.ToHexString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
 
                     foreach (var region in submissionParameter.Regions)
                     {
@@ -140,21 +143,17 @@ namespace Covid19Radar.Api
                         key.id = id;
                         key.PartitionKey = region;
                         key.Timestamp = timestamp;
-
-                        await _tekRepository.UpsertAsync(key);
+                        newKeys.Add(key);
                     }
                 }
             }
 
-            return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
-        }
+            foreach (var key in newKeys)
+            {
+                await _tekRepository.UpsertAsync(key);
+            }
 
-        public static string ByteArrayToString(byte[] byteArray)
-        {
-            StringBuilder hex = new StringBuilder(byteArray.Length * 2);
-            foreach (byte b in byteArray)
-                hex.AppendFormat("{0:x2}", b);
-            return hex.ToString();
+            return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
         }
     }
 }
