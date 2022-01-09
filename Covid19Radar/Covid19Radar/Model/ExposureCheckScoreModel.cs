@@ -9,13 +9,15 @@ namespace Covid19Radar.Model
     public class ExposureCheckScoreModel
     {
         public double DailySummaryScoreSum { get; set; }
-        public DateTime DateTime { get; set; }
+        public long DateMillisSinceEpoch { get; set; }
 
         public string DateTimeString
         {
             get
             {
-                return DateTime.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
+                return DateTimeOffset.UnixEpoch
+                    .AddMilliseconds(DateMillisSinceEpoch).UtcDateTime
+                    .ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
             }
         }
 

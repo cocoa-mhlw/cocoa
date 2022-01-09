@@ -92,7 +92,7 @@ namespace Covid19Radar.ViewModels
                         new ExposureCheckScoreModel()
                         {
                             DailySummaryScoreSum = summary.DaySummary.ScoreSum,
-                            DateTime = summary.GetDateTime()
+                            DateMillisSinceEpoch = summary.DateMillisSinceEpoch
                         });
             }
         }

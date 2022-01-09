@@ -76,9 +76,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             Assert.False(exposureCheckPageViewModel.IsVisibleNoRiskContact);
             Assert.Equal(2, exposureCheckPageViewModel.ExposureCheckScores.Count());
             Assert.Equal("17.80", exposureCheckPageViewModel.ExposureCheckScores[0].DailySummaryScoreSumString);
-            Assert.Equal(DateTime.UnixEpoch.AddMilliseconds((1000 * 60 * 60 * 24) * 2), exposureCheckPageViewModel.ExposureCheckScores[0].DateTime);
+            Assert.Equal((1000 * 60 * 60 * 24) * 2, exposureCheckPageViewModel.ExposureCheckScores[0].DateMillisSinceEpoch);
             Assert.Equal("1.23", exposureCheckPageViewModel.ExposureCheckScores[1].DailySummaryScoreSumString);
-            Assert.Equal(DateTime.UnixEpoch.AddMilliseconds(1000 * 60 * 60 * 24), exposureCheckPageViewModel.ExposureCheckScores[1].DateTime);
+            Assert.Equal(1000 * 60 * 60 * 24, exposureCheckPageViewModel.ExposureCheckScores[1].DateMillisSinceEpoch);
         }
 
         [Fact]
