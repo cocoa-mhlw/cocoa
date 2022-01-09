@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using Prism.Navigation;
 using Chino;
 
 namespace Covid19Radar
@@ -26,6 +27,19 @@ namespace Covid19Radar
         {
             TimeSpan elapsedTime = dateTime.ToUniversalTime() - DateTime.UnixEpoch;
             return (long)elapsedTime.TotalSeconds;
+        }
+
+        public static void CopyFrom(this INavigationParameters param, INavigationParameters? from)
+        {
+            if (from is null)
+            {
+                return;
+            }
+
+            foreach (var key in from.Keys)
+            {
+                param.Add(key, from[key]);
+            }
         }
     }
 }
