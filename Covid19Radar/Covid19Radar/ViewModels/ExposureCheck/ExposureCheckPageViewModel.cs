@@ -3,7 +3,6 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using Covid19Radar.Services.Logs;
-using Covid19Radar.Resources;
 using Covid19Radar.Repository;
 using Covid19Radar.Model;
 using Prism.Navigation;
@@ -11,7 +10,6 @@ using System.Linq;
 using Chino;
 using Covid19Radar.Common;
 using System.Collections.ObjectModel;
-using System.Globalization;
 using System.Collections.Generic;
 using System;
 
@@ -21,6 +19,7 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
 
         public ObservableCollection<ExposureCheckScoreModel> ExposureCheckScores { get; set; }
 
@@ -41,10 +40,13 @@ namespace Covid19Radar.ViewModels
         public ExposureCheckPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository) : base(navigationService)
+            IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository
+            ) : base(navigationService)
         {
             this._loggerService = loggerService;
             this._userDataRepository = userDataRepository;
+            _exposureDataRepository = exposureDataRepository;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
         }
@@ -57,7 +59,7 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                var summaries = await _userDataRepository
+                var summaries = await _exposureDataRepository
                     .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
                 if (0 < summaries.Count())
                 {

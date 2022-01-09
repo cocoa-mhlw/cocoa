@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
     public class ContactedNotifyPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
-        private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
 
         private string _exposureCount;
         public string ExposureCount
@@ -28,11 +28,11 @@ namespace Covid19Radar.ViewModels
         public ContactedNotifyPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository
+            IExposureDataRepository exposureDataRepository
             ) : base(navigationService)
         {
             this.loggerService = loggerService;
-            _userDataRepository = userDataRepository;
+            _exposureDataRepository = exposureDataRepository;
 
             Title = AppResources.TitileUserStatusSettings;
         }
@@ -41,8 +41,8 @@ namespace Covid19Radar.ViewModels
         {
             base.Initialize(parameters);
 
-            var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var userExposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+            var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
             ExposureCount = (dailySummaryList.Count() + userExposureInformationList.Count()).ToString();
         }
 

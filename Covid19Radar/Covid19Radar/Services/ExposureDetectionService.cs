@@ -30,6 +30,8 @@ namespace Covid19Radar.Services
     {
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
+
         private readonly ILocalNotificationService _localNotificationService;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
@@ -45,6 +47,7 @@ namespace Covid19Radar.Services
         (
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository,
             ILocalNotificationService localNotificationService,
             IExposureRiskCalculationService exposureRiskCalculationService,
             IExposureConfigurationRepository exposureConfigurationRepository,
@@ -56,6 +59,7 @@ namespace Covid19Radar.Services
         {
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
+            _exposureDataRepository = exposureDataRepository;
             _localNotificationService = localNotificationService;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _exposureConfigurationRepository = exposureConfigurationRepository;
@@ -87,7 +91,7 @@ namespace Covid19Radar.Services
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
 
-            await _userDataRepository.SetExposureDataAsync(
+            await _exposureDataRepository.SetExposureDataAsync(
                 dailySummaries.ToList(),
                 exposureWindows.ToList()
                 );
@@ -142,7 +146,7 @@ namespace Covid19Radar.Services
 
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
-            bool isNewExposureDetected = _userDataRepository.AppendExposureData(
+            bool isNewExposureDetected = _exposureDataRepository.AppendExposureData(
                 exposureSummary,
                 exposureInformations.ToList(),
                 configurationV1.MinimumRiskScore

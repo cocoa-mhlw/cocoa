@@ -12,7 +12,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using System.Linq;
-using System;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
@@ -22,6 +21,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
+        private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
 
         public ExposureCheckPageViewModelTests()
         {
@@ -30,6 +30,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
+            mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
         }
 
         private ExposureCheckPageViewModel CreateViewModel()
@@ -37,14 +38,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new ExposureCheckPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockUserDataRepository.Object
+                mockUserDataRepository.Object,
+                mockExposureDataRepository.Object
                 );
         }
 
         [Fact]
         public void LowRiskPage_Initialize_Display()
         {
-            mockUserDataRepository
+            mockExposureDataRepository
                 .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
                 .Returns(Task.FromResult(new List<DailySummary>()
                 {
@@ -84,7 +86,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         [Fact]
         public void NoRiskPage_Initialize_Display()
         {
-            mockUserDataRepository
+            mockExposureDataRepository
                 .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
                 .Returns(Task.FromResult(new List<DailySummary>()));
 
