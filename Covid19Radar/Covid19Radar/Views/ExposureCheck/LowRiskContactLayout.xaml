@@ -88,12 +88,12 @@
                         <StackLayout Style="{StaticResource DetailsStackLayout}">
                             <Label
                                 Style="{StaticResource CardLabel}"
-                                Text="{Binding Date}" />
+                                Text="{Binding DateTimeString}" />
                             <Label
                                 Style="{StaticResource CardLabel}">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="{Binding Sum}" />
+                                        <Span Text="{Binding DailySummaryScoreSumString}" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>

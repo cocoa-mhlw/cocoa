@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using System.Linq;
+using System;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
@@ -53,15 +54,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                         {
                             ScoreSum = 1.23456
                         },
-                        DateMillisSinceEpoch = 1
+                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24)
                     },
                     new DailySummary()
                     {
                         DaySummary = new ExposureSummaryData()
                         {
-                            ScoreSum = 7.890123
+                            ScoreSum = 17.8
                         },
-                        DateMillisSinceEpoch = 2
+                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 2
                     }
                 }));
 
@@ -69,11 +70,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var parameters = new NavigationParameters();
             exposureCheckPageViewModel.Initialize(parameters);
 
+            
+
             Assert.True(exposureCheckPageViewModel.IsVisibleLowRiskContact);
             Assert.False(exposureCheckPageViewModel.IsVisibleNoRiskContact);
             Assert.Equal(2, exposureCheckPageViewModel.ExposureCheckScores.Count());
-            Assert.Equal("7.89", exposureCheckPageViewModel.ExposureCheckScores[0].Sum);
-            Assert.Equal("1.23", exposureCheckPageViewModel.ExposureCheckScores[1].Sum);
+            Assert.Equal("17.80", exposureCheckPageViewModel.ExposureCheckScores[0].DailySummaryScoreSumString);
+            Assert.Equal(DateTime.UnixEpoch.AddMilliseconds((1000 * 60 * 60 * 24) * 2), exposureCheckPageViewModel.ExposureCheckScores[0].DateTime);
+            Assert.Equal("1.23", exposureCheckPageViewModel.ExposureCheckScores[1].DailySummaryScoreSumString);
+            Assert.Equal(DateTime.UnixEpoch.AddMilliseconds(1000 * 60 * 60 * 24), exposureCheckPageViewModel.ExposureCheckScores[1].DateTime);
         }
 
         [Fact]

@@ -91,8 +91,8 @@ namespace Covid19Radar.ViewModels
                 ExposureCheckScores.Add(
                         new ExposureCheckScoreModel()
                         {
-                            Sum = summary.DaySummary.ScoreSum.ToString("0.00"),
-                            Date = summary.GetDateTime().ToLocalTime().ToString("D", CultureInfo.CurrentCulture)
+                            DailySummaryScoreSum = summary.DaySummary.ScoreSum,
+                            DateTime = summary.GetDateTime()
                         });
             }
         }
