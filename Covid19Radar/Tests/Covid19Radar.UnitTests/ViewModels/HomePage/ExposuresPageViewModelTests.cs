@@ -28,6 +28,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
+            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
         }
 
