@@ -58,7 +58,7 @@
     <EmbeddedResource Include="Resources\Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.561" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
     <PackageReference Include="Prism.Forms" Version="8.1.97" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
@@ -68,7 +68,7 @@
     <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.1" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2291" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.10.0" />
-    <PackageReference Include="Chino.Common" Version="1.0.0-rc08" />
+    <PackageReference Include="Chino.Common" Version="1.0.0-rc09" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="8.0.62" />
   </ItemGroup>
   <ItemGroup>

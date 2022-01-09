@@ -85,6 +85,11 @@ namespace Covid19Radar.Services
         public void PreExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion)
         {
             _loggerService.Debug("PreExposureDetected");
+
+            if (exposureConfiguration == null)
+            {
+                _loggerService.Error("PreExposureDetected is called but exposureConfiguration is null.");
+            }
         }
 
         public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)

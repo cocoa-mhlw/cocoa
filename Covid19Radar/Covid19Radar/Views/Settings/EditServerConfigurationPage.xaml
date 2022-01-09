@@ -144,14 +144,25 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="InquiryLogApiEndpoint"
+                Text="InquiryLogApiUrl"
                 Margin="8, 0, 0, 8"
                 />
             <Entry
                 Keyboard="Url"
-                Text="{Binding InquiryLogApiEndpoint}"
+                Text="{Binding InquiryLogApiUrl}"
                 Margin="8, 0, 8, 16"
                 Placeholder="Inquiry-log submission API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="LogStorageEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding LogStorageEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="Inquiry-log storage endpoint"/>
 
             <Button
                 Command="{Binding OnSave}"

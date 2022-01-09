@@ -112,7 +112,7 @@ namespace Covid19Radar.Services
             {
                 await serverConfigurationRepository.LoadAsync();
 
-                var url = serverConfigurationRepository.InquiryLogApiEndpoint;
+                var url = serverConfigurationRepository.InquiryLogApiUrl;
                 var response = await apiClient.GetAsync(url);
 
                 statusCode = (int)response.StatusCode;
