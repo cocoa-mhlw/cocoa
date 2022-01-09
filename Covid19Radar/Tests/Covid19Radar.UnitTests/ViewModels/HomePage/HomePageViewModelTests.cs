@@ -28,6 +28,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
         private readonly Mock<IPreferencesService> mockPreferenceService;
+        private readonly Mock<ISecureStorageService> mockSecureStorageService;
         private readonly Mock<AbsExposureNotificationApiService> mockExposureNotificationApiService;
         private readonly Mock<ILocalNotificationService> mockLocalNotificationService;
         private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
@@ -45,6 +46,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
             mockPreferenceService = mockRepository.Create<IPreferencesService>();
+            mockSecureStorageService = mockRepository.Create<ISecureStorageService>();
             mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>(mockLoggerService.Object);
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
             mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
@@ -68,6 +70,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 );
             exposureDataRepository = new ExposureDataRepository(
                     mockPreferenceService.Object,
+                    mockSecureStorageService.Object,
                     mockDateTimeUtility.Object,
                     mockLoggerService.Object
                 );
