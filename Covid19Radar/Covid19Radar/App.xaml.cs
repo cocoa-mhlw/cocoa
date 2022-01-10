@@ -181,6 +181,7 @@ namespace Covid19Radar
         {
             // Services
             container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
+            container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
