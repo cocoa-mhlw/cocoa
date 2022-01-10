@@ -40,12 +40,21 @@ namespace Covid19Radar.Services
             var allScanInstances = exposureWindowList
                 .SelectMany(ew => ew.ScanInstances);
 
-            double secondsSinceLastScanSum =
-                allScanInstances
+            double secondsSinceLastScanSum = allScanInstances
                 .Sum(si => si.SecondsSinceLastScan);
             double weightedDurationAverage = dailySummary.DaySummary.WeightedDurationSum / secondsSinceLastScanSum;
-            double typicalAttenuationDbMax = allScanInstances.Max(si => si.TypicalAttenuationDb);
-            double typicalAttenuationDbMin = allScanInstances.Min(si => si.TypicalAttenuationDb);
+
+            double typicalAttenuationDbMax = 0;
+            if (allScanInstances.Count() > 0)
+            {
+                typicalAttenuationDbMax = allScanInstances.Max(si => si.TypicalAttenuationDb);
+            }
+
+            double typicalAttenuationDbMin = 0;
+            if (allScanInstances.Count() > 0)
+            {
+                typicalAttenuationDbMin = allScanInstances.Min(si => si.TypicalAttenuationDb);
+            }
 
             if (configuration.DailySummary_DaySummary_ScoreSum.Cond(dailySummary.DaySummary.ScoreSum))
             {

@@ -49,6 +49,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockPreferenceService = mockRepository.Create<IPreferencesService>();
             mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>(mockLoggerService.Object);
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
+            mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
             mockExposureConfigurationRepository = mockRepository.Create<IExposureConfigurationRepository>();
             mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();

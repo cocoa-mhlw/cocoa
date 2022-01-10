@@ -46,7 +46,6 @@ namespace Covid19Radar.Repository
             )
         {
             _client = httpClientService.Create();
-            _client.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
 
             _localPathService = localPathService;
             _preferencesService = preferencesService;
@@ -124,6 +123,7 @@ namespace Covid19Radar.Repository
 
             V1ExposureRiskCalculationConfiguration newExposureRiskCalculationConfiguration = null;
 
+            _client.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
             var response = await _client.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
