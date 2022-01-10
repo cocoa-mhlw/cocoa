@@ -23,6 +23,8 @@
     <Compile Remove="Controls\**" />
     <EmbeddedResource Remove="Controls\**" />
     <None Remove="Controls\**" />
+    <None Remove="Views\ExposureCheck\" />
+    <None Remove="ViewModels\ExposureCheckPage\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,7 +68,7 @@
     <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.1" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2291" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.10.0" />
-    <PackageReference Include="Chino.Common" Version="1.0.0-rc09" />
+    <PackageReference Include="Chino.Common" Version="1.0.0-rc10" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="8.0.62" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +152,8 @@
     <Folder Include="Controls\" />
     <Folder Include="Services\Migration\" />
     <Folder Include="Repository\" />
+    <Folder Include="Views\ExposureCheck\" />
+    <Folder Include="ViewModels\ExposureCheck\" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)'=='Release'">
     <Compile Remove="ViewModels/Settings/DebugPageViewModel.cs" />

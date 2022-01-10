@@ -3,12 +3,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Common;
-using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Prism.Navigation;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
@@ -19,6 +17,7 @@ namespace Covid19Radar.ViewModels
     public class ExposuresPageViewModel : ViewModelBase
     {
         private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
 
         public ObservableCollection<ExposureSummary> _exposures;
 
@@ -30,10 +29,12 @@ namespace Covid19Radar.ViewModels
 
         public ExposuresPageViewModel(
             INavigationService navigationService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository
             ) : base(navigationService)
         {
             _userDataRepository = userDataRepository;
+            _exposureDataRepository = exposureDataRepository;
 
             Title = AppResources.MainExposures;
             _exposures = new ObservableCollection<ExposureSummary>();
@@ -50,10 +51,10 @@ namespace Covid19Radar.ViewModels
         public async Task InitExposures()
         {
             var exposureWindowList
-                = await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
             var userExposureInformationList
-                = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
             if (exposureWindowList.Count() > 0)
             {

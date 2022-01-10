@@ -258,13 +258,9 @@
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
-  <data name="LowRiskContactPageTitle" xml:space="preserve">
-    <value>リスクが極めて低い接触</value>
-    <comment>リスクが極めて低い接触</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>陽性者とリスクが極めて低い接触がありました</value>
-    <comment>陽性者とリスクが極めて低い接触がありました</comment>
+    <value>陽性登録者とリスクが極めて低い接触がありました</value>
+    <comment>陽性登録者とリスクが極めて低い接触がありました</comment>
   </data>
   <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
     <value>直近14日間に合計</value>
@@ -279,16 +275,24 @@
     <comment>分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
-    <comment>陽性者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+    <value>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
+    <comment>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
-  <data name="NoRiskContactPageTitle" xml:space="preserve">
-    <value>直近14日間の接触</value>
-    <comment>直近14日間の接触</comment>
+  <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
+    <value>スコア</value>
+    <comment>スコア</comment>
+  </data>
+  <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
+    <value>（20.0以上が濃厚接触の可能性の通知対象）</value>
+    <comment>（20.0以上が濃厚接触の可能性の通知対象）</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
+    <value>※スコアは、信号強度と受信時間を元に算出されており、1m以内・15分以上の接触があると20.0以上になります。</value>
+    <comment>※スコアは、信号強度と受信時間を元に算出されており、1m以内・15分以上の接触があると20.0以上になります。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
-    <value>リスクが低いものを含め陽性者との接触はありません</value>
-    <comment>リスクが低いものを含め陽性者との接触はありません</comment>
+    <value>リスクが低いものを含め陽性登録者との接触はありません</value>
+    <comment>リスクが低いものを含め陽性登録者との接触はありません</comment>
   </data>
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</value>
@@ -369,6 +373,10 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="ExposureCheckTitle" xml:space="preserve">
+    <value>接触確認の動作状況</value>
+    <comment>接触確認の動作状況</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>ホーム</value>

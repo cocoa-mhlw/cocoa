@@ -24,6 +24,7 @@ namespace Covid19Radar.ViewModels
 
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
@@ -69,6 +70,7 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILocalNotificationService localNotificationService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
@@ -80,6 +82,7 @@ namespace Covid19Radar.ViewModels
 
             this.loggerService = loggerService;
             this._userDataRepository = userDataRepository;
+            this._exposureDataRepository = exposureDataRepository;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
@@ -141,8 +144,8 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var dailySummaryList = await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var userExposureInformationList = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+            var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
             var count = dailySummaryList.Count() + userExposureInformationList.Count();
 

@@ -36,6 +36,8 @@ jobs:
         xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
         xamarin-android-version: 12 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
         xcode-version: 13 # set the latest available Xcode 13
+    - name: Deploy nuget packages - ${{ matrix.Configuration }}
+      run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/ | true
     - name: Build iOS Project - ${{ matrix.Configuration }}
       run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator
   build_android:
@@ -47,6 +49,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Deploy nuget packages - ${{ matrix.Configuration }}
+      run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/| true
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
     - name: Build Android Project - ${{ matrix.Configuration }}

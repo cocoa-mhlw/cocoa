@@ -14,7 +14,6 @@ using Covid19Radar.Views;
 using Moq;
 using Prism.Navigation;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 using Xunit;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
@@ -56,10 +55,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
                 PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
-            var param = new NavigationParameters
-            {
-                { "updateInfo", updateInfo }
-            };
+
+            var param = ReAgreeTermsOfServicePage.BuildNavigationParams(updateInfo, Destination.HomePage);
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
             Assert.Equal(updateInfo.TermsOfService.Text, reAgreeTermsOfServicePageViewModel.UpdateText);
@@ -74,10 +71,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
                 PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
-            var param = new NavigationParameters
-            {
-                { "updateInfo", updateInfo }
-            };
+
+            var param = ReAgreeTermsOfServicePage.BuildNavigationParams(updateInfo, Destination.HomePage);
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
             var actualCalls = 0;
@@ -107,10 +102,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
                 PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
-            var param = new NavigationParameters
-            {
-                { "updateInfo", updateInfo }
-            };
+
+            var param = ReAgreeTermsOfServicePage.BuildNavigationParams(updateInfo, Destination.HomePage);
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTimeUtc));
@@ -118,7 +111,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
             param.Add("updatePrivacyPolicyInfo", updateInfo.PrivacyPolicy);
-            mockNavigationService.Verify(x => x.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), It.IsAny<NavigationParameters>()), Times.Once());
         }
 
         [Fact]
@@ -130,10 +123,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
                 PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
-            var param = new NavigationParameters
-            {
-                { "updateInfo", updateInfo }
-            };
+
+            var param = ReAgreeTermsOfServicePage.BuildNavigationParams(updateInfo, Destination.HomePage);
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTimeUtc));
@@ -152,11 +143,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 TermsOfService = new TermsUpdateInfoModel.Detail { Text = "利用規約テキスト", UpdateDateTimeJst = new DateTime(2020, 11, 01) },
                 PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "プライバシーポリシーテキスト", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
             };
-            var param = new NavigationParameters
-            {
-                { "destination", Destination.NotifyOtherPage },
-                { "updateInfo", updateInfo }
-            };
+
+            var param = ReAgreeTermsOfServicePage.BuildNavigationParams(updateInfo, Destination.NotifyOtherPage);
             reAgreeTermsOfServicePageViewModel.Initialize(param);
 
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, updateInfo.TermsOfService.UpdateDateTimeUtc));

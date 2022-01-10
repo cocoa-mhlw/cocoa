@@ -25,6 +25,7 @@ using Prism.Navigation;
 using Covid19Radar.Views;
 using System.Threading.Tasks;
 using Prism.Ioc;
+using Covid19Radar.Repository;
 
 namespace Covid19Radar.iOS
 {
@@ -45,6 +46,9 @@ namespace Covid19Radar.iOS
 
         private Lazy<ILoggerService> _loggerService
             = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
+
+        private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
+            = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
         private App? AppInstance
         {
@@ -93,7 +97,7 @@ namespace Covid19Radar.iOS
 
             _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
             {
-                NavigationParameters navigationParameters = new NavigationParameters();
+                var navigationParameters = new NavigationParameters();
                 await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage, navigationParameters);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
@@ -180,13 +184,6 @@ namespace Covid19Radar.iOS
             if (GetEnClient() is ExposureNotificationApiService exposureNotificationApiService)
             {
                 exposureNotificationApiService.UserExplanation = AppResources.LocalNotificationDescription;
-
-
-#if EN_DEBUG
-                exposureNotificationApiService.IsTest = true;
-#else
-                exposureNotificationApiService.IsTest = false;
-#endif
             }
         }
 
@@ -218,8 +215,7 @@ namespace Covid19Radar.iOS
 
                     if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
                     {
-                        var navigationParameters = new NavigationParameters();
-                        navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                        var navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber);
                         InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters));
                     }
                     else
@@ -268,56 +264,51 @@ namespace Covid19Radar.iOS
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
         }
 
-        public void DiagnosisKeysDataMappingApplied()
+        public Task<ExposureConfiguration> GetExposureConfigurationAsync()
         {
-            _exposureDetectionService.Value.DiagnosisKeysDataMappingApplied();
+            return _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
         }
 
-        public void PreExposureDetected(ExposureConfiguration exposureConfiguration)
+        public Task DiagnosisKeysDataMappingAppliedAsync()
         {
-            var enVersion = GetEnClient().GetVersionAsync()
-                .GetAwaiter().GetResult().ToString();
+            _exposureDetectionService.Value.DiagnosisKeysDataMappingApplied();
+            return Task.CompletedTask;
+        }
+
+        public async Task PreExposureDetectedAsync(ExposureConfiguration exposureConfiguration)
+        {
+            long enVersion = await GetEnClient().GetVersionAsync();
             _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
         }
 
-        public void ExposureDetected(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows, ExposureConfiguration exposureConfiguration)
+        public async Task ExposureDetectedAsync(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows, ExposureConfiguration exposureConfiguration)
         {
-            var enVersion = GetEnClient().GetVersionAsync()
-                .GetAwaiter().GetResult().ToString();
-            _ = Task.Run(async () =>
-            {
-                await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
-            });
+            long enVersion = await GetEnClient().GetVersionAsync();
+            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
         }
 
-        public void ExposureDetected(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
+        public async Task ExposureDetectedAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
         {
-            var enVersion = GetEnClient().GetVersionAsync()
-                .GetAwaiter().GetResult().ToString();
-            _ = Task.Run(async () =>
-            {
-                await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
-            });
+            long enVersion = await GetEnClient().GetVersionAsync();
+            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
         }
 
-        public void ExposureNotDetected(ExposureConfiguration exposureConfiguration)
+        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration)
         {
-            var enVersion = GetEnClient().GetVersionAsync()
-                .GetAwaiter().GetResult().ToString();
-            _ = Task.Run(async () =>
-            {
-                await _exposureDetectionService.Value.ExposureNotDetectedAsync(exposureConfiguration, enVersion);
-            });
+            long enVersion = await GetEnClient().GetVersionAsync();
+            await _exposureDetectionService.Value.ExposureNotDetectedAsync(exposureConfiguration, enVersion);
         }
 
-        public void ExceptionOccurred(ENException exception)
+        public Task ExceptionOccurredAsync(ENException exception)
         {
             _loggerService.Value.Exception($"ENExcepiton occurred, Code:{exception.Code}, Message:{exception.Message}", exception);
+            return Task.CompletedTask;
         }
 
-        public void ExceptionOccurred(Exception exception)
+        public Task ExceptionOccurredAsync(Exception exception)
         {
             _loggerService.Value.Exception("ENExcepiton occurred", exception);
+            return Task.CompletedTask;
         }
     }
 }

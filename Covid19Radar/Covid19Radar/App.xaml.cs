@@ -62,15 +62,15 @@ namespace Covid19Radar
             LoggerService.EndMethod();
         }
 
-        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, NavigationParameters navigationParameters)
+        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, INavigationParameters navigationParameters)
         {
             LoggerService.Info($"Destination: {destination}");
 
-            navigationParameters = SplashPage.BuildNavigationParams(destination, navigationParameters);
-            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParameters);
+            var navigationParams = SplashPage.BuildNavigationParams(destination, navigationParameters);
+            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParams);
         }
 
-        public async Task<INavigationResult> NavigateToAsync(Destination destination, NavigationParameters navigationParameters)
+        public async Task<INavigationResult> NavigateToAsync(Destination destination, INavigationParameters navigationParameters)
         {
             LoggerService.StartMethod();
 
@@ -165,8 +165,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotContactPage>();
-            containerRegistry.RegisterForNavigation<NoRiskContactPage>();
-            containerRegistry.RegisterForNavigation<LowRiskContactPage>();
+            containerRegistry.RegisterForNavigation<ExposureCheckPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
             containerRegistry.RegisterForNavigation<SubmitConsentPage>();
             containerRegistry.RegisterForNavigation<ExposuresPage>();
@@ -182,6 +181,7 @@ namespace Covid19Radar
         {
             // Services
             container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
+            container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
