@@ -51,7 +51,7 @@
                     TabIndex="2"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
-                    Text="情報の送信を有効にして、COCOAの改善にご協力ください。"
+                    Text="接触データの自動送信を有効にしてCOCOAの改善にご協力ください。"
                     />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
@@ -65,7 +65,7 @@
                     TabIndex="4"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
-                    Text="送信してくださった情報は、接触判定の精度向上など、COCOAの改善等に用います。送信する情報の具体的な内容、利用方法についてはプライバシーポリシーを確認してください。"
+                    Text="送信してくださった情報は、接触判定の精度向上などCOCOAの改善に用います。送信する情報の具体的な内容、利用方法についてはプライバシーポリシーを確認してください。"
                     />
 
                 <Label
@@ -84,7 +84,7 @@
                     TabIndex="6"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
-                    Text="改善への協力は、COCOAの設定画面からいつでも設定できます。"
+                    Text="改善への協力はCOCOAの設定画面からいつでも設定できます。"
                     />
 
             </StackLayout>
