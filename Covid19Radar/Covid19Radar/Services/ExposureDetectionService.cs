@@ -17,13 +17,13 @@ namespace Covid19Radar.Services
     {
         public void DiagnosisKeysDataMappingApplied();
 
-        public void PreExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion);
+        public void PreExposureDetected(ExposureConfiguration exposureConfiguration, long enVersion);
 
-        public Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows);
+        public Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows);
 
-        public Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations);
+        public Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations);
 
-        public Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion);
+        public Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion);
     }
 
     public class ExposureDetectionService : IExposureDetectionService
@@ -82,7 +82,7 @@ namespace Covid19Radar.Services
             _loggerService.EndMethod();
         }
 
-        public void PreExposureDetected(ExposureConfiguration exposureConfiguration, string enVersion)
+        public void PreExposureDetected(ExposureConfiguration exposureConfiguration, long enVersion)
         {
             _loggerService.Debug("PreExposureDetected");
 
@@ -92,9 +92,11 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
+        public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion, IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
+
+            var enVersionStr = enVersion.ToString();
 
             var (newDailySummaries, newExposureWindows) = await _exposureDataRepository.SetExposureDataAsync(
                 dailySummaries.ToList(),
@@ -122,7 +124,7 @@ namespace Covid19Radar.Services
                 await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
-                    enVersion,
+                    enVersionStr,
                     dailySummaries, exposureWindows
                     );
             }
@@ -138,7 +140,7 @@ namespace Covid19Radar.Services
                     idempotencyKey,
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
-                    enVersion,
+                    enVersionStr,
                     dailySummaries, exposureWindows
                     );
             }
@@ -148,9 +150,11 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
+        public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
             _loggerService.Info("ExposureDetected: Legacy-V1");
+
+            var enVersionStr = enVersion.ToString();
 
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
@@ -174,7 +178,7 @@ namespace Covid19Radar.Services
                 await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
-                    enVersion,
+                    enVersionStr,
                     exposureSummary, exposureInformations
                     );
             }
@@ -190,7 +194,7 @@ namespace Covid19Radar.Services
                     idempotencyKey,
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
-                    enVersion,
+                    enVersionStr,
                     exposureSummary, exposureInformations
                     );
             }
@@ -200,16 +204,18 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, string enVersion)
+        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion)
         {
             _loggerService.Info("ExposureNotDetected");
+
+            var enVersionStr = enVersion.ToString();
 
             try
             {
                 await _exposureDataCollectServer.UploadExposureDataAsync(
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
-                    enVersion
+                    enVersionStr
                     );
             }
             catch (Exception e)
@@ -224,7 +230,7 @@ namespace Covid19Radar.Services
                     idempotencyKey,
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
-                    enVersion
+                    enVersionStr
                     );
             }
             catch (Exception e)

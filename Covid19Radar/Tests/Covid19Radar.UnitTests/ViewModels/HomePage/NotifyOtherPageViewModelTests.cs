@@ -152,14 +152,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
         public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
             List<string> keyFiles,
-            ExposureConfiguration configuration,
-            CancellationTokenSource cancellationTokenSource = null
-            )
-            => ProvideDiagnosisKeysResult.Completed;
-
-        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
-            List<string> keyFiles,
-            ExposureConfiguration configuration,
             string token,
             CancellationTokenSource cancellationTokenSource = null
             )

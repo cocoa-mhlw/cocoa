@@ -25,6 +25,8 @@ namespace Covid19Radar.Services
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILocalPathService _localPathService;
 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         public AbsExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
@@ -48,6 +50,20 @@ namespace Covid19Radar.Services
 
         public virtual async Task ExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                await InternalExposureDetectionAsync(cancellationTokenSource);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        private async Task InternalExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
+        {
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
             await _serverConfigurationRepository.LoadAsync();
@@ -61,7 +77,6 @@ namespace Covid19Radar.Services
                 {
                     var tmpDir = PrepareDir(region);
 
-                    var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
                     var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
@@ -87,7 +102,6 @@ namespace Covid19Radar.Services
 
                     await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
-                        exposureConfiguration,
                         cancellationTokenSource
                         );
 
