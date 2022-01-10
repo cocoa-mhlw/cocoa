@@ -21,11 +21,6 @@ namespace Covid19Radar.iOS.Services
             set => _exposureNotificationClient.UserExplanation = value;
         }
 
-        public bool IsTest
-        {
-            set => _exposureNotificationClient.IsTest = value;
-        }
-
         public ExposureNotificationApiService(
             ILoggerService loggerService
             ) : base(loggerService)
@@ -49,18 +44,10 @@ namespace Covid19Radar.iOS.Services
 
         public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
             List<string> keyFiles,
-            ExposureConfiguration configuration,
-            CancellationTokenSource cancellationTokenSource = null
-            )
-            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, configuration, cancellationTokenSource);
-
-        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
-            List<string> keyFiles,
-            ExposureConfiguration configuration,
             string token,
             CancellationTokenSource cancellationTokenSource = null
             )
-            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, configuration, token, cancellationTokenSource);
+            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, token, cancellationTokenSource);
 
         public override Task<bool> IsEnabledAsync()
             => _exposureNotificationClient.IsEnabledAsync();
