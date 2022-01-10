@@ -17,7 +17,7 @@ namespace Covid19Radar.Repository
     public interface IExposureDataRepository
     {
         // ExposureWindow mode
-        Task SetExposureDataAsync(
+        Task<(List<DailySummary>, List<ExposureWindow>)> SetExposureDataAsync(
             List<DailySummary> dailySummaryList,
             List<ExposureWindow> exposueWindowList
             );
@@ -69,7 +69,7 @@ namespace Covid19Radar.Repository
         private readonly DailySummary.Comparer _dailySummaryComparer = new DailySummary.Comparer();
         private readonly ExposureWindow.Comparer _exposureWindowComparer = new ExposureWindow.Comparer();
 
-        public async Task SetExposureDataAsync(
+        public async Task<(List<DailySummary>, List<ExposureWindow>)> SetExposureDataAsync(
             List<DailySummary> dailySummaryList,
             List<ExposureWindow> exposueWindowList
             )
@@ -79,18 +79,22 @@ namespace Covid19Radar.Repository
             List<DailySummary> existDailySummaryList = await GetDailySummariesAsync();
             List<ExposureWindow> existExposureWindowList = await GetExposureWindowsAsync();
 
-            List<DailySummary> newDailySummaryList = existDailySummaryList.Union(dailySummaryList).ToList();
-            newDailySummaryList.Sort(_dailySummaryComparer);
+            List<DailySummary> unionDailySummaryList = existDailySummaryList.Union(dailySummaryList).ToList();
+            List<ExposureWindow> unionExposureWindowList = existExposureWindowList.Union(exposueWindowList).ToList();
+            unionDailySummaryList.Sort(_dailySummaryComparer);
+            unionExposureWindowList.Sort(_exposureWindowComparer);
 
-            List<ExposureWindow> newExposureWindowList = existExposureWindowList.Union(exposueWindowList).ToList();
-            newExposureWindowList.Sort(_exposureWindowComparer);
+            await SaveExposureDataAsync(unionDailySummaryList, unionExposureWindowList);
 
-            await SaveExposureDataAsync(newDailySummaryList, newExposureWindowList);
+            List<DailySummary> newDailySummaryList = unionDailySummaryList.Except(existDailySummaryList).ToList();
+            List<ExposureWindow> newExposureWindowList = unionExposureWindowList.Except(existExposureWindowList).ToList();
 
             _loggerService.EndMethod();
+
+            return (newDailySummaryList, newExposureWindowList);
         }
 
-        private Task SaveExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
+        private Task SaveExposureDataAsync(List<DailySummary> dailySummaryList, List<ExposureWindow> exposureWindowList)
         {
             _loggerService.StartMethod();
 

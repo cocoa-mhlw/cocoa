@@ -96,13 +96,16 @@ namespace Covid19Radar.Services
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
 
-            await _exposureDataRepository.SetExposureDataAsync(
+            var (newDailySummaries, newExposureWindows) = await _exposureDataRepository.SetExposureDataAsync(
                 dailySummaries.ToList(),
                 exposureWindows.ToList()
                 );
 
-            bool isHighRiskExposureDetected = dailySummaries
-                .Select(dailySummary => _exposureRiskCalculationService.CalcRiskLevel(dailySummary))
+            bool isHighRiskExposureDetected = newDailySummaries
+                .Select(ds => _exposureRiskCalculationService.CalcRiskLevel(
+                    ds,
+                    newExposureWindows.Where(ew => ew.DateMillisSinceEpoch == ds.DateMillisSinceEpoch).ToList())
+                )
                 .Any(riskLevel => riskLevel >= RiskLevel.High);
 
             if (isHighRiskExposureDetected)
