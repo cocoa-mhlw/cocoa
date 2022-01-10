@@ -253,7 +253,7 @@ namespace Covid19Radar.Repository
             // TODO: Replace url for RELEASE.
             get => IServerConfigurationRepository.CombineAsUrl(
                 AppSettings.Instance.ExposureConfigurationUrlBase,
-                "exposure_configuration/Cappuccino",
+                "exposure_configuration",
                 "configuration.json"
                 );
             set
@@ -267,7 +267,7 @@ namespace Covid19Radar.Repository
             // TODO: Replace url for RELEASE.
             get => IServerConfigurationRepository.CombineAsUrl(
                 AppSettings.Instance.ExposureConfigurationUrlBase,
-                "exposure_configuration/Cappuccino",
+                "exposure_configuration",
                 "risk_calculation_configuration.json"
                 );
             set
