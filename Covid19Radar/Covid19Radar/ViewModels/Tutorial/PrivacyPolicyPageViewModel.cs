@@ -43,7 +43,13 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             _userDataRepository.SaveLastUpdateDate(TermsType.PrivacyPolicy, DateTime.Now);
-            await NavigationService.NavigateAsync(nameof(TutorialPage4));
+
+            INavigationParameters navigationParameters
+                = SendLogSettingsPage.BuildNavigationParams(Destination.TutorialPage4_EnableExposureNotification);
+            await NavigationService.NavigateAsync(
+                Destination.SendLogSettingsPage.ToPath(),
+                navigationParameters
+                );
 
             _loggerService.EndMethod();
         });
