@@ -184,7 +184,7 @@ namespace Covid19Radar.UnitTests.Services {
         {
             // Test Data
             var exposureConfiguration = new ExposureConfiguration();
-            var enVersion = "2.0.0";
+            var enVersion = 2;
 
             // TODO under consideration
             var dailySummaries = new List<DailySummary>() {
@@ -245,7 +245,7 @@ namespace Covid19Radar.UnitTests.Services {
         {
             // Test Data
             var exposureConfiguration = new ExposureConfiguration();
-            var enVersion = "2.0.0";
+            var enVersion = 2;
 
             var existDailySummaries = new List<DailySummary>() {
                 new DailySummary()
@@ -353,7 +353,7 @@ namespace Covid19Radar.UnitTests.Services {
         {
             // Test Data
             var exposureConfiguration = new ExposureConfiguration();
-            var enVersion = "2.0.0";
+            var enVersion = 2;
 
             // TODO under consideration
             var dailySummaries = new List<DailySummary>() {
@@ -434,7 +434,7 @@ namespace Covid19Radar.UnitTests.Services {
             {
                 exposureInformantion
             };
-            var enVersion = "2.0.0";
+            var enVersion = 2;
 
             // Mock Setup
             exposureDataCollectServer
@@ -489,7 +489,7 @@ namespace Covid19Radar.UnitTests.Services {
             {
                 exposureInformantion
             };
-            var enVersion = "2.0.0";
+            var enVersion = 2;
 
             // Mock Setup
             exposureDataCollectServer
