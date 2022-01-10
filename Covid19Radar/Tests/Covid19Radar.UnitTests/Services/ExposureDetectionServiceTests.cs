@@ -24,6 +24,7 @@ namespace Covid19Radar.UnitTests.Services {
         private readonly Mock<ILoggerService> loggerService;
         private readonly Mock<ILocalNotificationService> localNotificationService;
         private readonly Mock<IExposureDataCollectServer> exposureDataCollectServer;
+        private readonly Mock<IExposureRiskCalculationConfigurationRepository> exposureRiskCalculationConfigurationRepository;
         private readonly Mock<IExposureRiskCalculationService> exposureRiskCalculationService;
         private readonly Mock<IEventLogService> eventLogService;
         private readonly Mock<IDateTimeUtility> dateTimeUtility;
@@ -44,6 +45,7 @@ namespace Covid19Radar.UnitTests.Services {
             loggerService = mockRepository.Create<ILoggerService>();
             localNotificationService = mockRepository.Create<ILocalNotificationService>();
             exposureDataCollectServer = mockRepository.Create<IExposureDataCollectServer>();
+            exposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             exposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
             eventLogService = mockRepository.Create<IEventLogService>();
 
@@ -96,6 +98,7 @@ namespace Covid19Radar.UnitTests.Services {
                 userDataRepository,
                 exposureDataRepository,
                 localNotificationService.Object,
+                exposureRiskCalculationConfigurationRepository.Object,
                 exposureRiskCalculationService.Object,
                 exposureConfigurationRepository,
                 eventLogService.Object,
@@ -230,7 +233,7 @@ namespace Covid19Radar.UnitTests.Services {
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
             exposureRiskCalculationService
-                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
 
 
@@ -294,7 +297,7 @@ namespace Covid19Radar.UnitTests.Services {
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
             exposureRiskCalculationService
-                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.Low);
 
             // Test Case
@@ -350,7 +353,7 @@ namespace Covid19Radar.UnitTests.Services {
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
             exposureRiskCalculationService
-                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
 
 

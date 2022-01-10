@@ -31,6 +31,9 @@ namespace Covid19Radar.ViewModels
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
 
+        private readonly IExposureConfigurationRepository exposureConfigurationRepository;
+        private readonly IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository;
+
         private string _pastDate;
         public string PastDate
         {
@@ -74,6 +77,8 @@ namespace Covid19Radar.ViewModels
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILocalNotificationService localNotificationService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
+            IExposureConfigurationRepository exposureConfigurationRepository,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IDialogService dialogService,
             IExternalNavigationService externalNavigationService
             ) : base(navigationService)
@@ -86,6 +91,8 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
+            this.exposureConfigurationRepository = exposureConfigurationRepository;
+            this.exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
         }
@@ -106,6 +113,11 @@ namespace Covid19Radar.ViewModels
 
             // Check Version
             AppUtils.CheckVersion(loggerService);
+
+            // Load necessary files asynchronous
+            _ = exposureConfigurationRepository.GetExposureConfigurationAsync();
+            _ = exposureRiskCalculationConfigurationRepository
+                .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
 
             await localNotificationService.PrepareAsync();
 

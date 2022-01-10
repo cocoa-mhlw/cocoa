@@ -3,26 +3,71 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.Collections.Generic;
+using System.Linq;
 using Chino;
+using Covid19Radar.Model;
+using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Services
 {
     public interface IExposureRiskCalculationService
     {
-        RiskLevel CalcRiskLevel(DailySummary dailySummary, List<ExposureWindow> exposureWindowList);
+        RiskLevel CalcRiskLevel(
+            DailySummary dailySummary,
+            List<ExposureWindow> exposureWindowList,
+            V1ExposureRiskCalculationConfiguration configuration
+            );
     }
 
     public class ExposureRiskCalculationService : IExposureRiskCalculationService
     {
-        // TODO: refine
-        private const double THRESHOLD_SCORE_SUM = 2000.0;
+        private readonly ILoggerService _loggerService;
 
-        public RiskLevel CalcRiskLevel(DailySummary dailySummary, List<ExposureWindow> exposureWindowList)
+
+        public ExposureRiskCalculationService(
+            ILoggerService loggerService
+            )
         {
-            if (dailySummary.DaySummary.ScoreSum >= THRESHOLD_SCORE_SUM)
+            _loggerService = loggerService;
+        }
+
+        public RiskLevel CalcRiskLevel(
+            DailySummary dailySummary,
+            List<ExposureWindow> exposureWindowList,
+            V1ExposureRiskCalculationConfiguration configuration
+            )
+        {
+            var allScanInstances = exposureWindowList
+                .SelectMany(ew => ew.ScanInstances);
+
+            double secondsSinceLastScanSum =
+                allScanInstances
+                .Sum(si => si.SecondsSinceLastScan);
+            double weightedDurationAverage = dailySummary.DaySummary.WeightedDurationSum / secondsSinceLastScanSum;
+            double typicalAttenuationDbMax = allScanInstances.Max(si => si.TypicalAttenuationDb);
+            double typicalAttenuationDbMin = allScanInstances.Min(si => si.TypicalAttenuationDb);
+
+            if (configuration.DailySummary_DaySummary_ScoreSum.Cond(dailySummary.DaySummary.ScoreSum))
             {
                 return RiskLevel.High;
             }
+            if (configuration.DailySummary_WeightedDurationAverage.Cond(weightedDurationAverage))
+            {
+                return RiskLevel.High;
+            }
+            if (configuration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Cond(secondsSinceLastScanSum))
+            {
+                return RiskLevel.High;
+            }
+            if (configuration.ExposureWindow_ScanInstance_TypicalAttenuationDb_Max.Cond(typicalAttenuationDbMax))
+            {
+                return RiskLevel.High;
+            }
+            if (configuration.ExposureWindow_ScanInstance_TypicalAttenuationDb_Min.Cond(typicalAttenuationDbMin))
+            {
+                return RiskLevel.High;
+            }
+
             return RiskLevel.Low;
         }
 

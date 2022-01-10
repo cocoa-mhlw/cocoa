@@ -29,6 +29,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
         private readonly Mock<IPreferencesService> mockPreferenceService;
         private readonly Mock<AbsExposureNotificationApiService> mockExposureNotificationApiService;
+        private readonly Mock<IExposureConfigurationRepository> mockExposureConfigurationRepository;
+        private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
         private readonly Mock<ILocalNotificationService> mockLocalNotificationService;
         private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
         private readonly IUserDataRepository userDataRepository;
@@ -47,7 +49,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockPreferenceService = mockRepository.Create<IPreferencesService>();
             mockExposureNotificationApiService = mockRepository.Create<AbsExposureNotificationApiService>(mockLoggerService.Object);
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
-            mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
+            mockExposureConfigurationRepository = mockRepository.Create<IExposureConfigurationRepository>();
+            mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
+            mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
             mockLocalPathService = mockRepository.Create<ILocalPathService>();
             mockDialogService = mockRepository.Create<IDialogService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();
@@ -84,6 +88,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockExposureNotificationApiService.Object,
                 mockLocalNotificationService.Object,
                 mockExposureDetectionBackgroundService.Object,
+                mockExposureConfigurationRepository.Object,
+                mockExposureRiskCalculationConfigurationRepository.Object,
                 mockDialogService.Object,
                 mockExternalNavigationService.Object
                 );
