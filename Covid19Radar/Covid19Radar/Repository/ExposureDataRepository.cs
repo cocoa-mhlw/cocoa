@@ -94,7 +94,7 @@ namespace Covid19Radar.Repository
             return (newDailySummaryList, newExposureWindowList);
         }
 
-        private Task SaveExposureDataAsync(List<DailySummary> dailySummaryList, List<ExposureWindow> exposureWindowList)
+        private Task SaveExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
         {
             _loggerService.StartMethod();
 
