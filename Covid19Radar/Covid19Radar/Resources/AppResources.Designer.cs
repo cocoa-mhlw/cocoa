@@ -1852,5 +1852,35 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("OpenSourceLicense_GetSourceCode", resourceCulture);
             }
         }
+        
+        public static string InqueryBeta {
+            get {
+                return ResourceManager.GetString("InqueryBeta", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Description1 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Description1", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Description2 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Description2", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Description3 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Description3", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBetaViaGitHub {
+            get {
+                return ResourceManager.GetString("InqueryBetaViaGitHub", resourceCulture);
+            }
+        }
     }
 }

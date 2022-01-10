@@ -26,6 +26,12 @@ namespace Covid19Radar.ViewModels
             this.loggerService = loggerService;
         }
 
+        public Command OpenGitHub => new Command(async () =>
+        {
+            var url = AppResources.UrlGitHubRepository;
+            await BrowserOpenAsync(url, BrowserLaunchMode.External);
+        });
+
         public Command OnClickQuestionCommand => new Command(async () =>
         {
             loggerService.StartMethod();

@@ -1204,4 +1204,25 @@
     <value>ソースコードを入手</value>
     <comment>ソースコードを入手</comment>
   </data>
+
+  <data name="InqueryBeta" xml:space="preserve">
+    <value>COCOA(Beta)</value>
+    <comment>COCOA(Beta)</comment>
+  </data>
+  <data name="InqueryBeta_Description1" xml:space="preserve">
+    <value>COCOA(Beta)は新しい機能をテストするための実験的なバージョンです。</value>
+    <comment>COCOA(Beta)は新しい機能をテストするための実験的なバージョンです。</comment>
+  </data>
+  <data name="InqueryBeta_Description2" xml:space="preserve">
+    <value>COCOA(Beta)は安定版ではないため、通常のサポートは行っていません。メール等、通常のサポートをご希望の方はベータ版のご利用を中止して、安定版をお使いください。</value>
+    <comment>COCOA(Beta)は安定版ではないため、通常のサポートは行っていません。メール等、通常のサポートをご希望の方はベータ版のご利用を中止して、安定版のCOCOAをお使いください。</comment>
+  </data>
+  <data name="InqueryBeta_Description3" xml:space="preserve">
+    <value>何か問題等ありましたら、次のGitHubからIssue等を投稿してください（GitHubのアカウントが必要です）。</value>
+    <comment>何か問題等ありましたら、次のGitHubからIssue等を投稿してください（GitHubのアカウントが必要です）。</comment>
+  </data>
+  <data name="InqueryBetaViaGitHub" xml:space="preserve">
+    <value>GitHubを開く</value>
+    <comment>GitHubを開く</comment>
+  </data>
 </root>

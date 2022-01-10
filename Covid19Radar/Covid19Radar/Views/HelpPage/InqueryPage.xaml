@@ -22,84 +22,53 @@
     <ContentView>
     <ScrollView>
         <StackLayout
-            Padding="10"
             BackgroundColor="{StaticResource Background}"
             Spacing="0">
-            <Frame Padding="10" HasShadow="False">
-                <Button
-                    AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="1"
-                    Command="{Binding Path=OnClickQuestionCommand}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.InqueryPageButton1}" />
-            </Frame>
+
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="1"
+                Margin="15, 20, 15, 15"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.InqueryBeta}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="2"
+                Margin="15, 0"
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="{StaticResource SecondaryText}"
+                Text="{x:Static resources:AppResources.InqueryBeta_Description1}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="3"
+                Margin="15, 5"
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="{StaticResource SecondaryText}"
+                Text="{x:Static resources:AppResources.InqueryBeta_Description2}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="4"
+                Margin="15, 5"
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="{StaticResource SecondaryText}"
+                Text="{x:Static resources:AppResources.InqueryBeta_Description3}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="5"
+                Margin="15, 5"
+                Style="{StaticResource DefaultLabelSmall}"
+                Text="{x:Static resources:AppResources.UrlGitHubRepository}" />
+
+            <Button
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="6"
+                Margin="20, 20, 20, 10"
+                Command="{Binding OpenGitHub}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.InqueryBetaViaGitHub}" />
+
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <StackLayout Spacing="10">
-                    <Button
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
-                        Command="{Binding Path=OnClickEmailCommand}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.InqueryPageButton2}" />
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <StackLayout Spacing="10">
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
-                        Style="{StaticResource DefaultLabelSmall}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span
-                                    FontAttributes="Bold"
-                                    FontSize="Small"
-                                    Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
-                                <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription2}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="4"
-                        Style="{StaticResource AnnotationLabel}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                                <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="5"
-                        Command="{Binding Path=OnClickSendLogCommand}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.InqueryPageButton3}" />
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickAboutAppCommand}" />
-                </Frame.GestureRecognizers>
-                <StackLayout Spacing="0">
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="6"
-                        Style="{StaticResource DefaultLabelSmall}"
-                        Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="7"
-                        Style="{StaticResource LinkLabelStyleSmall}"
-                        Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html" />
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
+
         </StackLayout>
     </ScrollView>
     </ContentView>
