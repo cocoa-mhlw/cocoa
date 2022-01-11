@@ -476,7 +476,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
-                .Returns(RiskLevel.High);
+                .Returns(RiskLevel.Low);
 
             var homePageViewModel = CreateViewModel();
             homePageViewModel.OnClickExposures.Execute(null);
