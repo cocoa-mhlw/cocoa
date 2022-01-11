@@ -133,7 +133,7 @@ namespace Covid19Radar.Services
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
                     enVersionStr,
-                    dailySummaries, exposureWindows
+                    newDailySummaries, newExposureWindows
                     );
             }
             catch (Exception e)
@@ -149,7 +149,7 @@ namespace Covid19Radar.Services
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
                     enVersionStr,
-                    dailySummaries, exposureWindows
+                    newDailySummaries, newExposureWindows
                     );
             }
             catch (Exception e)
