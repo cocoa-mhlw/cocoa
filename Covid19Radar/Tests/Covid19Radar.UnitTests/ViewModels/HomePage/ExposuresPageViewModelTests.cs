@@ -10,6 +10,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Covid19Radar.ViewModels;
 using Moq;
 using Prism.Navigation;
@@ -23,6 +24,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
+        private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
 
         public ExposurePageViewModelTests()
         {
@@ -30,13 +32,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
+            mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
         }
 
         private ExposuresPageViewModel CreateViewModel()
         {
             return new ExposuresPageViewModel(
                 mockNavigationService.Object,
-                mockExposureDataRepository.Object
+                mockExposureDataRepository.Object,
+                mockExposureRiskCalculationService.Object
                 );
         }
 
