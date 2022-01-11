@@ -112,7 +112,8 @@ namespace Covid19Radar.ViewModels
         public void SetExposureTime(int exposureDurationInSec)
         {
             var timeSpan = TimeSpan.FromSeconds(exposureDurationInSec);
-            _description = string.Format("{0:#.##}分間の接触", timeSpan.TotalMinutes);
+            var totalMinutes = Math.Ceiling(timeSpan.TotalMinutes);
+            _description = string.Format(AppResources.ExposurePageExposureDuration, totalMinutes);
         }
 
         private static string PluralizeCount(int count)

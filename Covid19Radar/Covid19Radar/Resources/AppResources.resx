@@ -1299,12 +1299,15 @@ Note: this app does not collect users’ location information.</value>
     <comment>年月日以降</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
-    <value>Total {1:#.##} min exposure in 1 days</value>
-    <comment>{0}日間に合計{1:#.##}分間の接触</comment>
+    <value>Total {1:#} min exposure in 1 days</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
   </data>
   <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
-    <value>Total {1:#.##} min exposure in {0} days</value>
-    <comment>{0}日間に合計{1:#.##}分間の接触</comment>
+    <value>Total {1:#} min exposure in {0} days</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
   </data>
-
+  <data name="ExposurePageExposureDuration" xml:space="preserve">
+    <value>{0:#} min exposure</value>
+    <comment>{0:#}分間の接触</comment>
+  </data>
 </root>

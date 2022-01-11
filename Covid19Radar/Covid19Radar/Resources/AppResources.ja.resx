@@ -1189,11 +1189,15 @@
     <comment>年月日以降</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
-    <value>1日間に合計{1:#.##}分間の接触</value>
-    <comment>{0}日間に合計{1:#.##}分間の接触</comment>
+    <value>1日間に合計{1:#}分間の接触</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
   </data>
   <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
-    <value>{0}日間に合計{1:#.##}分間の接触</value>
-    <comment>{0}日間に合計{1:#.##}分間の接触</comment>
+    <value>{0}日間に合計{1:#}分間の接触</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ExposurePageExposureDuration" xml:space="preserve">
+    <value>{0:#}分間の接触</value>
+    <comment>{0:#}分間の接触</comment>
   </data>
 </root>

@@ -78,6 +78,7 @@ namespace Covid19Radar.ViewModels
                 contactedNotifyPageExposureDurationFormat = AppResources.ContactedNotifyPageExposureDuration;
             }
             TimeSpan timeSpan = TimeSpan.FromSeconds(exposureDurationInSec);
+            var totalMinutes = Math.Ceiling(timeSpan.TotalMinutes);
 
             if (userExposureInformationList.Count() > 0 && dayCount > 0)
             {
@@ -91,11 +92,11 @@ namespace Covid19Radar.ViewModels
                 ExposureCount = string.Format(AppResources.ContactedNotifyPageCountHeader, beforeDate.ToString("D")) + "\n"
                     + string.Format(AppResources.ContactedNotifyPageCountText, userExposureInformationList.Count());
                 ExposureDurationInMinutes = string.Format(AppResources.ContactedNotifyPageExposureDurationHeader, afterDate.ToString("D")) + "\n"
-                    + string.Format(contactedNotifyPageExposureDurationFormat, dayCount, timeSpan.TotalMinutes);
+                    + string.Format(contactedNotifyPageExposureDurationFormat, dayCount, totalMinutes);
             }
             else if (exposureDurationInSec > 0)
             {
-                ExposureDurationInMinutes = string.Format(contactedNotifyPageExposureDurationFormat, dayCount, timeSpan.TotalMinutes);
+                ExposureDurationInMinutes = string.Format(contactedNotifyPageExposureDurationFormat, dayCount, totalMinutes);
             }
             else if (userExposureInformationList.Count() > 0)
             {

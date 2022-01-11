@@ -1840,5 +1840,11 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("ContactedNotifyPageExposureDuration", resourceCulture);
             }
         }
+        
+        public static string ExposurePageExposureDuration {
+            get {
+                return ResourceManager.GetString("ExposurePageExposureDuration", resourceCulture);
+            }
+        }
     }
 }
