@@ -63,5 +63,70 @@ namespace Covid19Radar.UnitTests.Models
             Assert.NotNull(deserialized);
             Assert.Equal(expected, deserialized);
         }
+
+        [Fact]
+        public void ThresholdNOPTest()
+        {
+            var thresholdJson = "{\"op\":\"NOP\",\"value\":0.0}";
+            V1ExposureRiskCalculationConfiguration.Threshold threshold
+                = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration.Threshold>(thresholdJson);
+
+            Assert.NotNull(threshold);
+            Assert.False(threshold.Cond(0.0));
+            Assert.False(threshold.Cond(0.1));
+            Assert.False(threshold.Cond(-0.1));
+        }
+
+        [Fact]
+        public void ThresholdGteTest()
+        {
+            var thresholdJson = "{\"op\":\">=\",\"value\":0.0}";
+            V1ExposureRiskCalculationConfiguration.Threshold threshold
+                = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration.Threshold>(thresholdJson);
+
+            Assert.NotNull(threshold);
+            Assert.True(threshold.Cond(0.0));
+            Assert.True(threshold.Cond(0.1));
+            Assert.False(threshold.Cond(-0.1));
+        }
+
+        [Fact]
+        public void ThresholdGtTest()
+        {
+            var thresholdJson = "{\"op\":\">\",\"value\":0.0}";
+            V1ExposureRiskCalculationConfiguration.Threshold threshold
+                = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration.Threshold>(thresholdJson);
+
+            Assert.NotNull(threshold);
+            Assert.False(threshold.Cond(0.0));
+            Assert.True(threshold.Cond(0.1));
+            Assert.False(threshold.Cond(-0.1));
+        }
+
+        [Fact]
+        public void ThresholdLteTest()
+        {
+            var thresholdJson = "{\"op\":\"<=\",\"value\":0.0}";
+            V1ExposureRiskCalculationConfiguration.Threshold threshold
+                = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration.Threshold>(thresholdJson);
+
+            Assert.NotNull(threshold);
+            Assert.True(threshold.Cond(0.0));
+            Assert.False(threshold.Cond(0.1));
+            Assert.True(threshold.Cond(-0.1));
+        }
+
+        [Fact]
+        public void ThresholdLtTest()
+        {
+            var thresholdJson = "{\"op\":\"<\",\"value\":0.0}";
+            V1ExposureRiskCalculationConfiguration.Threshold threshold
+                = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration.Threshold>(thresholdJson);
+
+            Assert.NotNull(threshold);
+            Assert.False(threshold.Cond(0.0));
+            Assert.False(threshold.Cond(0.1));
+            Assert.True(threshold.Cond(-0.1));
+        }
     }
 }
