@@ -179,9 +179,14 @@ namespace Covid19Radar
 
         private static void RegisterCommonTypes(IContainer container)
         {
-            // Services
+            // Repositories
             container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
             container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
+            container.Register<IEventLogRepository, EventLogRepository>(Reuse.Singleton);
+            container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
+            container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
+
+            // Services
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
@@ -214,8 +219,6 @@ namespace Covid19Radar
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
             container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
-            container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
-            container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
             container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
 
             // Utilities

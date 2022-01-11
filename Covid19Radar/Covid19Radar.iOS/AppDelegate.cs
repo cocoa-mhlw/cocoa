@@ -44,6 +44,9 @@ namespace Covid19Radar.iOS
         private Lazy<IExposureDetectionService> _exposureDetectionService
             = new Lazy<IExposureDetectionService>(() => ContainerLocator.Current.Resolve<IExposureDetectionService>());
 
+        private Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
+            = new Lazy<AbsEventLogSubmissionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsEventLogSubmissionBackgroundService>());
+
         private Lazy<ILoggerService> _loggerService
             = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
@@ -111,16 +114,30 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
+            ScheduleBackgroundTasks();
+
+            return base.FinishedLaunching(app, launchOptions);
+        }
+
+        private void ScheduleBackgroundTasks()
+        {
             try
             {
                 _exposureDetectionBackgroundService.Value.Schedule();
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("failed to Scheduling", exception);
+                _loggerService.Value.Exception("failed to Scheduling ExposureDetectionBackgroundService", exception);
             }
 
-            return base.FinishedLaunching(app, launchOptions);
+            try
+            {
+                _eventLogSubmissionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("failed to Scheduling EventLogSubmissionBackgroundService", exception);
+            }
         }
 
         private bool IsUniversalLinks(NSDictionary launchOptions)
@@ -259,6 +276,7 @@ namespace Covid19Radar.iOS
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
+            container.Register<AbsEventLogSubmissionBackgroundService, EventLogSubmissionBackgroundService>(Reuse.Singleton);
         }
 
         public Task<ExposureConfiguration> GetExposureConfigurationAsync()

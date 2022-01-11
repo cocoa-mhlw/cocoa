@@ -71,5 +71,9 @@ namespace Covid19Radar.Common
         /// 
         /// </summary>
         public const bool DEFAULT_SEND_EVENT_LOG_ENABLED = true;
+
+        public const long MAX_LOG_REQUEST_SIZE_IN_BYTES = 8 * 1024 * 1024; // 8 MiB
+
+        public static int MAX_RETRY = 4;
     }
 }

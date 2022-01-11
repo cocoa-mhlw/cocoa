@@ -12,11 +12,16 @@ namespace Covid19Radar.Services
         private const string EXPOSURE_CONFIGURATION_DIR = "exposure_configuration";
         private const string CURRENT_EXPOSURE_CONFIGURATION_FILENAME = "current.json";
 
+        private const string EVENT_LOG_QUEUE_DIR = "event_log_queue";
+
         string ExposureConfigurationDirPath =>
             Path.Combine(FileSystem.AppDataDirectory, EXPOSURE_CONFIGURATION_DIR);
 
         string CurrentExposureConfigurationPath =>
             Path.Combine(ExposureConfigurationDirPath, CURRENT_EXPOSURE_CONFIGURATION_FILENAME);
+
+        string EventLogDirPath =>
+            Path.Combine(FileSystem.AppDataDirectory, EVENT_LOG_QUEUE_DIR);
 
         string CacheDirectory =>
             FileSystem.CacheDirectory;

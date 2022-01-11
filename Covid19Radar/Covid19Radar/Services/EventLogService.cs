@@ -7,142 +7,111 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Chino;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
-using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
     public interface IEventLogService
     {
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation
-            );
+        public Task SendAllAsync(long maxSize, int maxRetry);
 
-        public Task SendExposureDataAsync(
+        public Task SendAsync(
             string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows
-            );
-
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion
+            List<EventLog> eventLogList
             );
     }
 
     public class EventLogService : IEventLogService
     {
         private readonly IUserDataRepository _userDataRepository;
+        private readonly IEventLogRepository _eventLogRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
+        private readonly IEventLogService _eventLogService;
         private readonly IEssentialsService _essentialsService;
         private readonly IDeviceVerifier _deviceVerifier;
-        private readonly IDateTimeUtility _dateTimeUtility;
         private readonly HttpClient _httpClient;
 
         private readonly ILoggerService _loggerService;
 
         public EventLogService(
             IUserDataRepository userDataRepository,
+            IEventLogRepository eventLogRepository,
             IServerConfigurationRepository serverConfigurationRepository,
+            IEventLogService eventLogService,
             IEssentialsService essentialsService,
             IDeviceVerifier deviceVerifier,
-            IDateTimeUtility dateTimeUtility,
             IHttpClientService httpClientService,
             ILoggerService loggerService
             )
         {
             _userDataRepository = userDataRepository;
+            _eventLogRepository = eventLogRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
+            _eventLogService = eventLogService;
             _essentialsService = essentialsService;
             _deviceVerifier = deviceVerifier;
-            _dateTimeUtility = dateTimeUtility;
             _httpClient = httpClientService.Create();
             _loggerService = loggerService;
         }
 
-        public async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation
-            )
+        public async Task SendAllAsync(long maxSize, int maxRetry)
         {
-            var data = new ExposureData(exposureConfiguration,
-                exposureSummary, exposureInformation
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
+            _loggerService.StartMethod();
 
-            await SendExposureDataAsync(idempotencyKey, data);
+            try
+            {
+                List<EventLog> eventLogList
+                    = await _eventLogRepository.GetLogsAsync(maxSize);
+
+                if (eventLogList.Count == 0)
+                {
+                    _loggerService.Info($"No Event-logs found.");
+                    return;
+                }
+
+                _loggerService.Info($"{eventLogList.Count} found Event-logs.");
+
+                string idempotencyKey = Guid.NewGuid().ToString();
+
+                for (var retryCount = 0; retryCount < maxRetry; retryCount++)
+                {
+                    try
+                    {
+                        await _eventLogService.SendAsync(idempotencyKey, eventLogList);
+                        _loggerService.Info($"Send complete.");
+
+                        _loggerService.Info($"Clean up...");
+                        foreach (var eventLog in eventLogList)
+                        {
+                            await _eventLogRepository.RemoveAsync(eventLog);
+                        }
+                        _loggerService.Info($"Done.");
+                        break;
+                    }
+                    catch (Exception exception)
+                    {
+                        _loggerService.Exception("Exception occurred, SendAsync", exception);
+                    }
+                }
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
 
-        public async Task SendExposureDataAsync(
+        public async Task SendAsync(
             string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows
-            )
-        {
-            var data = new ExposureData(exposureConfiguration,
-                dailySummaries, exposureWindows
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
-
-            await SendExposureDataAsync(idempotencyKey, data);
-        }
-
-        public async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion
-            )
-        {
-            var data = new ExposureData(
-                exposureConfiguration
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
-
-            await SendExposureDataAsync(idempotencyKey, data);
-        }
-
-
-        private async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureData exposureData
+            List<EventLog> eventLogList
             )
         {
             _loggerService.StartMethod();
 
             bool hasConsent = _userDataRepository.IsSendEventLogEnabled();
 
-            if(!hasConsent)
+            if (!hasConsent)
             {
                 _loggerService.Debug($"No consent log.");
                 _loggerService.EndMethod();
@@ -156,23 +125,12 @@ namespace Covid19Radar.Services
 
             try
             {
-                var contentJson = exposureData.ToJsonString();
-
-                var eventLog = new V1EventLogRequest.EventLog() {
-                    HasConsent = hasConsent,
-                    Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
-                    Type = "ExposureData",
-                    Subtype = "Debug",
-                    Content = contentJson,
-                };
-                var eventLogs = new[] { eventLog };
-
                 var request = new V1EventLogRequest()
                 {
                     IdempotencyKey = idempotencyKey,
                     Platform = _essentialsService.Platform,
                     AppPackageName = _essentialsService.AppPackageName,
-                    EventLogs = eventLogs,
+                    EventLogs = eventLogList,
                 };
 
                 request.DeviceVerificationPayload = await _deviceVerifier.VerifyAsync(request);
@@ -199,66 +157,5 @@ namespace Covid19Radar.Services
                 _loggerService.EndMethod();
             }
         }
-    }
-
-    public class ExposureData
-    {
-        private string _device = "unknown_device";
-
-        [JsonProperty("device")]
-        public string Device
-        {
-            get
-            {
-                return _device;
-            }
-            set
-            {
-                string device = value.Replace(" ", "_");
-                _device = device;
-            }
-        }
-
-        [JsonProperty("en_version")]
-        public string? EnVersion;
-
-        [JsonProperty("exposure_summary")]
-        public readonly ExposureSummary? exposureSummary;
-
-        [JsonProperty("exposure_informations")]
-        public readonly IList<ExposureInformation>? exposureInformations;
-
-        [JsonProperty("daily_summaries")]
-        public readonly IList<DailySummary>? dailySummaries;
-
-        [JsonProperty("exposure_windows")]
-        public readonly IList<ExposureWindow>? exposureWindows;
-
-        [JsonProperty("exposure_configuration")]
-        public readonly ExposureConfiguration exposureConfiguration;
-
-        public ExposureData(ExposureConfiguration exposureConfiguration)
-            : this(exposureConfiguration, null, null, null, null) { }
-
-        public ExposureData(ExposureConfiguration exposureConfiguration,
-            ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
-            : this(exposureConfiguration, exposureSummary, exposureInformations, null, null) { }
-
-        public ExposureData(ExposureConfiguration exposureConfiguration,
-            IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
-            : this(exposureConfiguration, null, null, dailySummaries, exposureWindows) { }
-
-        public ExposureData(ExposureConfiguration exposureConfiguration,
-            ExposureSummary? exposureSummary, IList<ExposureInformation>? exposureInformations,
-            IList<DailySummary>? dailySummaries, IList<ExposureWindow>? exposureWindows)
-        {
-            this.exposureConfiguration = exposureConfiguration;
-            this.exposureSummary = exposureSummary;
-            this.exposureInformations = exposureInformations;
-            this.dailySummaries = dailySummaries;
-            this.exposureWindows = exposureWindows;
-        }
-
-        public string ToJsonString() => JsonConvert.SerializeObject(this, Formatting.Indented);
     }
 }

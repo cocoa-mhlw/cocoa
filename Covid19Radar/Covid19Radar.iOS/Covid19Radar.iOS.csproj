@@ -291,6 +291,7 @@
     <Compile Include="Services\ExternalNavigationService.cs" />
     <None Include="EntitlementsDebug.plist" />
     <Compile Include="Services\LocalPathService.cs" />
+    <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
