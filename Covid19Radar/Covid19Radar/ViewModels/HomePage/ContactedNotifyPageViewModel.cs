@@ -60,18 +60,20 @@ namespace Covid19Radar.ViewModels
             var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
             var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
+            int dayCount = 0;
             long exposureDurationInSec = 0;
             foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
             {
                 var dailySummary = dailySummaryMap[ew.Key];
+
                 RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList());
                 if (riskLevel >= RiskLevel.High)
                 {
                     exposureDurationInSec += ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
+                    dayCount += 1;
                 }
             }
 
-            int dayCount = dailySummaryList.Count();
             string contactedNotifyPageExposureDurationFormat = AppResources.ContactedNotifyPageExposureDurationOne;
             if (dayCount >= 1)
             {
