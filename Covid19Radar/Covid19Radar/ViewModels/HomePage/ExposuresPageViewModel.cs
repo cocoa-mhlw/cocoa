@@ -2,9 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Prism.Navigation;
 using System;
 using System.Collections.ObjectModel;
@@ -17,6 +19,7 @@ namespace Covid19Radar.ViewModels
     public class ExposuresPageViewModel : ViewModelBase
     {
         private readonly IExposureDataRepository _exposureDataRepository;
+        private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
         public ObservableCollection<ExposureSummary> _exposures;
 
@@ -28,10 +31,12 @@ namespace Covid19Radar.ViewModels
 
         public ExposuresPageViewModel(
             INavigationService navigationService,
-            IExposureDataRepository exposureDataRepository
+            IExposureDataRepository exposureDataRepository,
+            IExposureRiskCalculationService exposureRiskCalculationService
             ) : base(navigationService)
         {
             _exposureDataRepository = exposureDataRepository;
+            _exposureRiskCalculationService = exposureRiskCalculationService;
 
             Title = AppResources.MainExposures;
             _exposures = new ObservableCollection<ExposureSummary>();
@@ -62,6 +67,13 @@ namespace Covid19Radar.ViewModels
                 foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
                     var dailySummary = dailySummaryMap[ew.Key];
+
+                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList());
+                    if (riskLevel < RiskLevel.High)
+                    {
+                        break;
+                    }
+
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ew.Key,
