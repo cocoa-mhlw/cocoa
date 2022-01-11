@@ -24,7 +24,7 @@
     <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="Microsoft.CodeCoverage" Version="17.0.0" />
     <PackageReference Include="Xamarin.Forms.Mocks" Version="4.7.0.1" />
-    <PackageReference Include="Chino.Common" Version="1.0.0-rc09" />
+    <PackageReference Include="Chino.Common" Version="1.0.0-rc10" />
   </ItemGroup>
 
   <ItemGroup>
