@@ -16,7 +16,6 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase
     {
-        private readonly IUserDataRepository _userDataRepository;
         private readonly IExposureDataRepository _exposureDataRepository;
 
         public ObservableCollection<ExposureSummary> _exposures;
@@ -29,11 +28,9 @@ namespace Covid19Radar.ViewModels
 
         public ExposuresPageViewModel(
             INavigationService navigationService,
-            IUserDataRepository userDataRepository,
             IExposureDataRepository exposureDataRepository
             ) : base(navigationService)
         {
-            _userDataRepository = userDataRepository;
             _exposureDataRepository = exposureDataRepository;
 
             Title = AppResources.MainExposures;
@@ -50,22 +47,29 @@ namespace Covid19Radar.ViewModels
 
         public async Task InitExposures()
         {
+            var dailySummaryList
+                = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
+
             var exposureWindowList
                 = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
             var userExposureInformationList
                 = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
-            if (exposureWindowList.Count() > 0)
+            if (dailySummaryList.Count() > 0)
             {
                 foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
+                    var dailySummary = dailySummaryMap[ew.Key];
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ew.Key,
-                        ExposureDate = ew.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureDate = dailySummary.GetDateTime().ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
                     };
-                    ens.SetExposureCount(ew.Count());
+                    var exposureDurationInSec = ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
+                    ens.SetExposureTime(exposureDurationInSec);
+
                     _exposures.Add(ens);
                 }
             }
@@ -87,10 +91,8 @@ namespace Covid19Radar.ViewModels
             Exposures = new ObservableCollection<ExposureSummary>(
                 _exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp)
                 );
-
         }
     }
-
 
     public class ExposureSummary
     {
@@ -98,12 +100,19 @@ namespace Covid19Radar.ViewModels
 
         public string ExposureDate { get; set; }
 
-        private string _exposurePluralizeCount;
+        private string _description;
 
-        public string ExposurePluralizeCount => _exposurePluralizeCount;
+        public string Description => _description;
 
-        public void SetExposureCount(int value) {
-            _exposurePluralizeCount = PluralizeCount(value);
+        public void SetExposureCount(int value)
+        {
+            _description = PluralizeCount(value);
+        }
+
+        public void SetExposureTime(int exposureDurationInSec)
+        {
+            var timeSpan = TimeSpan.FromSeconds(exposureDurationInSec);
+            _description = string.Format("{0:#.##}分間の接触", timeSpan.TotalMinutes);
         }
 
         private static string PluralizeCount(int count)

@@ -468,10 +468,6 @@
     <value>A list of close contacts with COVID-19 positive users</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageCountText" xml:space="preserve">
-    <value>times</value>
-    <comment>件</comment>
-  </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>Number of confirmed close contacts with COVID-19 positive users</value>
     <comment>陽性者との接触確認</comment>
@@ -1290,4 +1286,25 @@ Note: this app does not collect users’ location information.</value>
     <value></value>
     <comment>日本語のみ：「陽性者との接触確認」画面のイメージ画像</comment>
   </data>
+  <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
+    <value>Before {0}</value>
+    <comment>年月日以前</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>{0} times</value>
+    <comment>{0} 件</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationHeader" xml:space="preserve">
+    <value>After {0}</value>
+    <comment>年月日以降</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
+    <value>Total {1:#.##} min exposure in 1 days</value>
+    <comment>{0}日間に合計{1:#.##}分間の接触</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
+    <value>Total {1:#.##} min exposure in {0} days</value>
+    <comment>{0}日間に合計{1:#.##}分間の接触</comment>
+  </data>
+
 </root>

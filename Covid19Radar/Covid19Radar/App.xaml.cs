@@ -181,7 +181,6 @@ namespace Covid19Radar
         {
             // Services
             container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
-            container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
@@ -193,9 +192,11 @@ namespace Covid19Radar
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
 
 #if USE_MOCK
+            container.Register<IExposureDataRepository, ExposureDataRepositoryMock>(Reuse.Singleton);
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
 #else
+            container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
             container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif

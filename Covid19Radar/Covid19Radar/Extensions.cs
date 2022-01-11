@@ -29,6 +29,12 @@ namespace Covid19Radar
             return (long)elapsedTime.TotalSeconds;
         }
 
+        public static long ToUnixEpochMillis(this DateTime dateTime)
+        {
+            TimeSpan elapsedTime = dateTime.ToUniversalTime() - DateTime.UnixEpoch;
+            return (long)elapsedTime.TotalMilliseconds;
+        }
+
         public static void CopyFrom(this INavigationParameters param, INavigationParameters? from)
         {
             if (from is null)
