@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
@@ -28,18 +29,18 @@ namespace Covid19Radar.Services
         private readonly IUserDataRepository _userDataRepository;
         private readonly IEventLogRepository _eventLogRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
-        private readonly IEventLogService _eventLogService;
         private readonly IEssentialsService _essentialsService;
         private readonly IDeviceVerifier _deviceVerifier;
         private readonly HttpClient _httpClient;
 
         private readonly ILoggerService _loggerService;
 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         public EventLogService(
             IUserDataRepository userDataRepository,
             IEventLogRepository eventLogRepository,
             IServerConfigurationRepository serverConfigurationRepository,
-            IEventLogService eventLogService,
             IEssentialsService essentialsService,
             IDeviceVerifier deviceVerifier,
             IHttpClientService httpClientService,
@@ -49,7 +50,6 @@ namespace Covid19Radar.Services
             _userDataRepository = userDataRepository;
             _eventLogRepository = eventLogRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
-            _eventLogService = eventLogService;
             _essentialsService = essentialsService;
             _deviceVerifier = deviceVerifier;
             _httpClient = httpClientService.Create();
@@ -57,6 +57,20 @@ namespace Covid19Radar.Services
         }
 
         public async Task SendAllAsync(long maxSize, int maxRetry)
+        {
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                await SendAllInternalAsync(maxSize, maxRetry);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        private async Task SendAllInternalAsync(long maxSize, int maxRetry)
         {
             _loggerService.StartMethod();
 
@@ -79,7 +93,7 @@ namespace Covid19Radar.Services
                 {
                     try
                     {
-                        await _eventLogService.SendAsync(idempotencyKey, eventLogList);
+                        await SendAsync(idempotencyKey, eventLogList);
                         _loggerService.Info($"Send complete.");
 
                         _loggerService.Info($"Clean up...");
