@@ -84,6 +84,8 @@ namespace Covid19Radar.Services
                     var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
+                    _loggerService.Info($"Region: {region}, lastProcessTimestamp: {lastProcessTimestamp}");
+
                     var targetDiagnosisKeyEntryList = FilterDiagnosisKeysAfterLastProcessTimestamp(diagnosisKeyEntryList, lastProcessTimestamp);
 
                     if (targetDiagnosisKeyEntryList.Count() == 0)
