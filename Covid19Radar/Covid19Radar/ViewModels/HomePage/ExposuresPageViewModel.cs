@@ -71,7 +71,7 @@ namespace Covid19Radar.ViewModels
                     RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList());
                     if (riskLevel < RiskLevel.High)
                     {
-                        break;
+                        continue;
                     }
 
                     var ens = new ExposureSummary()
