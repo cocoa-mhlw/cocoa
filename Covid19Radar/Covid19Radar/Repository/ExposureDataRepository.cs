@@ -51,16 +51,19 @@ namespace Covid19Radar.Repository
         private const string EMPTY_LIST_JSON = "[]";
 
         private readonly IPreferencesService _preferencesService;
+        private readonly ISecureStorageService _secureStorageService;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
 
         public ExposureDataRepository(
             IPreferencesService preferencesService,
+            ISecureStorageService secureStorageService,
             IDateTimeUtility dateTimeUtility,
             ILoggerService loggerService
             )
         {
             _preferencesService = preferencesService;
+            _secureStorageService = secureStorageService;
             _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
         }
@@ -193,7 +196,7 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
             List<UserExposureInfo> result = null;
-            var exposureInformationJson = _preferencesService.GetValue<string>(PreferenceKey.ExposureInformation, null);
+            var exposureInformationJson = _secureStorageService.GetValue<string>(PreferenceKey.ExposureInformation, null);
             if (!string.IsNullOrEmpty(exposureInformationJson))
             {
                 result = JsonConvert.DeserializeObject<List<UserExposureInfo>>(exposureInformationJson);
@@ -221,7 +224,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.SetValue(PreferenceKey.ExposureInformation, exposureInformationListJson);
+                _secureStorageService.SetValue(PreferenceKey.ExposureInformation, exposureInformationListJson);
             }
             finally
             {
@@ -269,7 +272,7 @@ namespace Covid19Radar.Repository
         public void RemoveExposureInformation()
         {
             _loggerService.StartMethod();
-            _preferencesService.RemoveValue(PreferenceKey.ExposureInformation);
+            _secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
             _loggerService.EndMethod();
         }
 
