@@ -338,10 +338,6 @@
     <value>陽性者との接触一覧</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageCountText" xml:space="preserve">
-    <value>件</value>
-    <comment>件</comment>
-  </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>陽性者との接触確認</value>
     <comment>陽性者との接触確認</comment>
@@ -1179,5 +1175,33 @@
   <data name="ContactedPageImageAnnotationText" xml:space="preserve">
     <value>「陽性者との接触確認」画面のイメージ画像</value>
     <comment>「陽性者との接触確認」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
+    <value>{0}以前</value>
+    <comment>年月日以前</comment>
+  </data>
+  <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
+    <value>1 件</value>
+    <comment>1 件</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>{0} 件</value>
+    <comment>{0} 件</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationHeader" xml:space="preserve">
+    <value>{0}以降</value>
+    <comment>年月日以降</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
+    <value>1日間に合計{1:#}分間の接触</value>
+    <comment>1日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
+    <value>{0}日間に合計{1:#}分間の接触</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ExposurePageExposureDuration" xml:space="preserve">
+    <value>{0:#}分間の接触</value>
+    <comment>{0:#}分間の接触</comment>
   </data>
 </root>

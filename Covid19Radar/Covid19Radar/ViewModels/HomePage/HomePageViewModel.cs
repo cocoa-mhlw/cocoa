@@ -25,6 +25,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository _userDataRepository;
         private readonly IExposureDataRepository _exposureDataRepository;
+        private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
@@ -71,6 +72,7 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IExposureDataRepository exposureDataRepository,
+            IExposureRiskCalculationService exposureRiskCalculationService,
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILocalNotificationService localNotificationService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
@@ -83,6 +85,7 @@ namespace Covid19Radar.ViewModels
             this.loggerService = loggerService;
             this._userDataRepository = userDataRepository;
             this._exposureDataRepository = exposureDataRepository;
+            this._exposureRiskCalculationService = exposureRiskCalculationService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
@@ -145,14 +148,28 @@ namespace Covid19Radar.ViewModels
             loggerService.StartMethod();
 
             var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
+            var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+
             var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
-            var count = dailySummaryList.Count() + userExposureInformationList.Count();
+            var hasExposure = dailySummaryList.Count() > 0 || userExposureInformationList.Count() > 0;
+            var hasHighRiskExposure = userExposureInformationList.Count() > 0;
+
+            foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
+            {
+                var dailySummary = dailySummaryMap[ew.Key];
+                RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList());
+                if (riskLevel >= RiskLevel.High)
+                {
+                    hasHighRiskExposure = true;
+                    break;
+                }
+            }
 
             await localNotificationService.DismissExposureNotificationAsync();
 
-            loggerService.Info($"Exposure count: {count}");
-            if (count > 0)
+            if (hasHighRiskExposure)
             {
                 await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
                 loggerService.EndMethod();
@@ -160,7 +177,7 @@ namespace Covid19Radar.ViewModels
             }
             else
             {
-                await NavigationService.NavigateAsync(nameof(NotContactPage));
+                await NavigationService.NavigateAsync(nameof(ExposureCheckPage));
                 loggerService.EndMethod();
                 return;
             }
