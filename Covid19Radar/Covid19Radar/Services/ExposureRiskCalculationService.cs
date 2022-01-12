@@ -89,12 +89,10 @@ namespace Covid19Radar.Services
             return RiskLevel.Low;
         }
 
-        private Task LogAsync(V1ExposureRiskCalculationConfiguration configuration)
+        private async Task LogAsync(V1ExposureRiskCalculationConfiguration configuration)
         {
             string serializedJson = JsonConvert.SerializeObject(configuration);
             _loggerService.Info(serializedJson);
-
-            return Task.CompletedTask;
         }
     }
 }
