@@ -4,9 +4,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
@@ -37,12 +39,19 @@ namespace Covid19Radar.Services
             V1ExposureRiskCalculationConfiguration configuration
             )
         {
+            _ = LogAsync(configuration);
+
             var allScanInstances = exposureWindowList
                 .SelectMany(ew => ew.ScanInstances);
 
             double secondsSinceLastScanSum = allScanInstances
                 .Sum(si => si.SecondsSinceLastScan);
-            double weightedDurationAverage = dailySummary.DaySummary.WeightedDurationSum / secondsSinceLastScanSum;
+
+            double weightedDurationAverage = 0;
+            if (secondsSinceLastScanSum > 0)
+            {
+                weightedDurationAverage = dailySummary.DaySummary.WeightedDurationSum / secondsSinceLastScanSum;
+            }
 
             double typicalAttenuationDbMax = 0;
             if (allScanInstances.Count() > 0)
@@ -80,5 +89,12 @@ namespace Covid19Radar.Services
             return RiskLevel.Low;
         }
 
+        private Task LogAsync(V1ExposureRiskCalculationConfiguration configuration)
+        {
+            string serializedJson = JsonConvert.SerializeObject(configuration);
+            _loggerService.Info(serializedJson);
+
+            return Task.CompletedTask;
+        }
     }
 }
