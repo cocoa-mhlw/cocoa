@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.Services
 {
@@ -24,6 +25,7 @@ namespace Covid19Radar.Services
         private readonly IUserDataRepository _userDataRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILocalPathService _localPathService;
+        private readonly IDateTimeUtility _dateTimeUtility;
 
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
@@ -34,7 +36,8 @@ namespace Covid19Radar.Services
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository,
-            ILocalPathService localPathService
+            ILocalPathService localPathService,
+            IDateTimeUtility dateTimeUtility
             )
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
@@ -44,6 +47,7 @@ namespace Covid19Radar.Services
             _userDataRepository = userDataRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
             _localPathService = localPathService;
+            _dateTimeUtility = dateTimeUtility;
         }
 
         public abstract void Schedule();
@@ -111,6 +115,13 @@ namespace Covid19Radar.Services
                         .Max();
                     await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(region, latestProcessTimestamp);
 
+                    _userDataRepository.SetLastConfirmedDate(_dateTimeUtility.UtcNow);
+                    _userDataRepository.SetCanConfirmExposure(true);
+                }
+                catch(Exception)
+                {
+                    _userDataRepository.SetCanConfirmExposure(false);
+                    throw;
                 }
                 finally
                 {
