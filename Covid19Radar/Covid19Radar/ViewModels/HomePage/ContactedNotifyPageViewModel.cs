@@ -56,6 +56,12 @@ namespace Covid19Radar.ViewModels
 
             var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
+            string contactedNotifyPageCountFormat = AppResources.ContactedNotifyPageCountOneText;
+            if (userExposureInformationList.Count() > 1)
+            {
+                contactedNotifyPageCountFormat = AppResources.ContactedNotifyPageCountText;
+            }
+
             var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
             var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
             var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
@@ -75,7 +81,7 @@ namespace Covid19Radar.ViewModels
             }
 
             string contactedNotifyPageExposureDurationFormat = AppResources.ContactedNotifyPageExposureDurationOne;
-            if (dayCount >= 1)
+            if (dayCount > 1)
             {
                 contactedNotifyPageExposureDurationFormat = AppResources.ContactedNotifyPageExposureDuration;
             }
@@ -92,7 +98,7 @@ namespace Covid19Radar.ViewModels
                 var afterDate = DateTimeOffset.UnixEpoch.AddMilliseconds(afterDateMillisSinceEpoch).UtcDateTime;
 
                 ExposureCount = string.Format(AppResources.ContactedNotifyPageCountHeader, beforeDate.ToString("D")) + "\n"
-                    + string.Format(AppResources.ContactedNotifyPageCountText, userExposureInformationList.Count());
+                    + string.Format(contactedNotifyPageCountFormat, userExposureInformationList.Count());
                 ExposureDurationInMinutes = string.Format(AppResources.ContactedNotifyPageExposureDurationHeader, afterDate.ToString("D")) + "\n"
                     + string.Format(contactedNotifyPageExposureDurationFormat, dayCount, totalMinutes);
             }
@@ -102,7 +108,7 @@ namespace Covid19Radar.ViewModels
             }
             else if (userExposureInformationList.Count() > 0)
             {
-                ExposureCount = string.Format(AppResources.ContactedNotifyPageCountText, userExposureInformationList.Count());
+                ExposureCount = string.Format(contactedNotifyPageCountFormat, userExposureInformationList.Count());
             }
         }
 

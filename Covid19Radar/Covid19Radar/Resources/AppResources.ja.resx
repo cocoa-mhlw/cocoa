@@ -1180,6 +1180,10 @@
     <value>{0}以前</value>
     <comment>年月日以前</comment>
   </data>
+  <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
+    <value>1 件</value>
+    <comment>1 件</comment>
+  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>{0} 件</value>
     <comment>{0} 件</comment>
@@ -1190,7 +1194,7 @@
   </data>
   <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
     <value>1日間に合計{1:#}分間の接触</value>
-    <comment>{0}日間に合計{1:#}分間の接触</comment>
+    <comment>1日間に合計{1:#}分間の接触</comment>
   </data>
   <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
     <value>{0}日間に合計{1:#}分間の接触</value>

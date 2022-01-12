@@ -1817,6 +1817,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ContactedNotifyPageCountOneText {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageCountOneText", resourceCulture);
+            }
+        }
+        
         public static string ContactedNotifyPageCountText {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageCountText", resourceCulture);

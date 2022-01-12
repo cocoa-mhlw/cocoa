@@ -1290,6 +1290,10 @@ Note: this app does not collect users’ location information.</value>
     <value>Before {0}</value>
     <comment>年月日以前</comment>
   </data>
+  <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
+    <value>1 time</value>
+    <comment>1 件</comment>
+  </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>{0} times</value>
     <comment>{0} 件</comment>
@@ -1299,7 +1303,7 @@ Note: this app does not collect users’ location information.</value>
     <comment>年月日以降</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
-    <value>Total {1:#} min exposure in 1 days</value>
+    <value>Total {1:#} min exposure in 1 day</value>
     <comment>{0}日間に合計{1:#}分間の接触</comment>
   </data>
   <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
