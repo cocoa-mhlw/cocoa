@@ -255,14 +255,6 @@ namespace Covid19Radar.Repository
             _loggerService.EndMethod();
         }
 
-        public int GetV1ExposureCount(int offsetDays)
-        {
-            _loggerService.StartMethod();
-            var exposureInformationList = GetExposureInformationList(offsetDays);
-            _loggerService.EndMethod();
-            return exposureInformationList.Count;
-        }
-
     }
 }
 #endregion

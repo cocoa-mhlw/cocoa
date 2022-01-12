@@ -3,6 +3,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Chino;
 using Covid19Radar.Common;
@@ -368,7 +369,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockPreferencesService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, day, 0, 0, 0));
 
-            var result = unitUnderTest.GetV1ExposureCount(AppConstants.DaysOfExposureInformationToDisplay);
+            var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count();
 
             Assert.Equal(expectedCount, result);
         }
@@ -381,7 +382,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockPreferencesService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns((string)(object)null);
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, 1, 0, 0, 0));
 
-            var result = unitUnderTest.GetV1ExposureCount(AppConstants.DaysOfExposureInformationToDisplay);
+            var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count();
 
             Assert.Equal(0, result);
         }

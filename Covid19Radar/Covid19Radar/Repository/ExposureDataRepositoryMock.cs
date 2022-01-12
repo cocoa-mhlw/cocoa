@@ -117,11 +117,6 @@ namespace Covid19Radar.Repository
         public async Task<List<ExposureWindow>> GetExposureWindowsAsync(int offsetDays)
             => await GetExposureWindowsAsync();
 
-        public int GetV1ExposureCount(int offsetDays)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<UserExposureInfo> GetExposureInformationList()
             => dummyUserExposureInfos;
 

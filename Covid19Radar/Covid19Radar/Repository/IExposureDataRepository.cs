@@ -38,6 +38,5 @@ namespace Covid19Radar.Repository
 
         void RemoveExposureInformation();
         void RemoveOutOfDateExposureInformation(int offsetDays);
-        int GetV1ExposureCount(int offsetDays);
     }
 }
