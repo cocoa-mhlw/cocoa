@@ -2,13 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Chino;
 using Covid19Radar.Common;
-using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Prism.Navigation;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
@@ -18,7 +18,9 @@ namespace Covid19Radar.ViewModels
 {
     public class ExposuresPageViewModel : ViewModelBase
     {
-        private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
+        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
+        private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
         public ObservableCollection<ExposureSummary> _exposures;
 
@@ -30,10 +32,14 @@ namespace Covid19Radar.ViewModels
 
         public ExposuresPageViewModel(
             INavigationService navigationService,
-            IUserDataRepository userDataRepository
+            IExposureDataRepository exposureDataRepository,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
+            IExposureRiskCalculationService exposureRiskCalculationService
             ) : base(navigationService)
         {
-            _userDataRepository = userDataRepository;
+            _exposureDataRepository = exposureDataRepository;
+            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
+            _exposureRiskCalculationService = exposureRiskCalculationService;
 
             Title = AppResources.MainExposures;
             _exposures = new ObservableCollection<ExposureSummary>();
@@ -49,22 +55,43 @@ namespace Covid19Radar.ViewModels
 
         public async Task InitExposures()
         {
+            var exposureRiskCalculationConfiguration
+                = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+
+            var dailySummaryList
+                = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
+
             var exposureWindowList
-                = await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
             var userExposureInformationList
-                = _userDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
-            if (exposureWindowList.Count() > 0)
+            if (dailySummaryList.Count() > 0)
             {
                 foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
+                    var dailySummary = dailySummaryMap[ew.Key];
+
+                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
+                        dailySummary,
+                        ew.ToList(),
+                        exposureRiskCalculationConfiguration
+                        );
+                    if (riskLevel < RiskLevel.High)
+                    {
+                        continue;
+                    }
+
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ew.Key,
-                        ExposureDate = ew.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureDate = dailySummary.GetDateTime().ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
                     };
-                    ens.SetExposureCount(ew.Count());
+                    var exposureDurationInSec = ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
+                    ens.SetExposureTime(exposureDurationInSec);
+
                     _exposures.Add(ens);
                 }
             }
@@ -86,10 +113,8 @@ namespace Covid19Radar.ViewModels
             Exposures = new ObservableCollection<ExposureSummary>(
                 _exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp)
                 );
-
         }
     }
-
 
     public class ExposureSummary
     {
@@ -97,12 +122,20 @@ namespace Covid19Radar.ViewModels
 
         public string ExposureDate { get; set; }
 
-        private string _exposurePluralizeCount;
+        private string _description;
 
-        public string ExposurePluralizeCount => _exposurePluralizeCount;
+        public string Description => _description;
 
-        public void SetExposureCount(int value) {
-            _exposurePluralizeCount = PluralizeCount(value);
+        public void SetExposureCount(int value)
+        {
+            _description = PluralizeCount(value);
+        }
+
+        public void SetExposureTime(int exposureDurationInSec)
+        {
+            var timeSpan = TimeSpan.FromSeconds(exposureDurationInSec);
+            var totalMinutes = Math.Ceiling(timeSpan.TotalMinutes);
+            _description = string.Format(AppResources.ExposurePageExposureDuration, totalMinutes);
         }
 
         private static string PluralizeCount(int count)

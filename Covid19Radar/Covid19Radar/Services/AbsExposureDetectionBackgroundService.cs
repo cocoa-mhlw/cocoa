@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Common;
 
 namespace Covid19Radar.Services
 {
@@ -24,6 +25,9 @@ namespace Covid19Radar.Services
         private readonly IUserDataRepository _userDataRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILocalPathService _localPathService;
+        private readonly IDateTimeUtility _dateTimeUtility;
+
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
         public AbsExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,
@@ -32,7 +36,8 @@ namespace Covid19Radar.Services
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository,
-            ILocalPathService localPathService
+            ILocalPathService localPathService,
+            IDateTimeUtility dateTimeUtility
             )
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
@@ -42,11 +47,26 @@ namespace Covid19Radar.Services
             _userDataRepository = userDataRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
             _localPathService = localPathService;
+            _dateTimeUtility = dateTimeUtility;
         }
 
         public abstract void Schedule();
 
         public virtual async Task ExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
+        {
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                await InternalExposureDetectionAsync(cancellationTokenSource);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        private async Task InternalExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
@@ -61,10 +81,11 @@ namespace Covid19Radar.Services
                 {
                     var tmpDir = PrepareDir(region);
 
-                    var exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
                     var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
+                    _loggerService.Info($"Region: {region}, lastProcessTimestamp: {lastProcessTimestamp}");
+
                     var targetDiagnosisKeyEntryList = FilterDiagnosisKeysAfterLastProcessTimestamp(diagnosisKeyEntryList, lastProcessTimestamp);
 
                     if (targetDiagnosisKeyEntryList.Count() == 0)
@@ -87,7 +108,6 @@ namespace Covid19Radar.Services
 
                     await _exposureNotificationApiService.ProvideDiagnosisKeysAsync(
                         downloadedFileNameList,
-                        exposureConfiguration,
                         cancellationTokenSource
                         );
 
@@ -97,6 +117,13 @@ namespace Covid19Radar.Services
                         .Max();
                     await _userDataRepository.SetLastProcessDiagnosisKeyTimestampAsync(region, latestProcessTimestamp);
 
+                    _userDataRepository.SetLastConfirmedDate(_dateTimeUtility.UtcNow);
+                    _userDataRepository.SetCanConfirmExposure(true);
+                }
+                catch(Exception)
+                {
+                    _userDataRepository.SetCanConfirmExposure(false);
+                    throw;
                 }
                 finally
                 {

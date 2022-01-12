@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
@@ -19,6 +20,7 @@ namespace Covid19Radar.ViewModels
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
         private readonly ICloseApplicationService _closeApplicationService;
@@ -70,23 +72,26 @@ namespace Covid19Radar.ViewModels
                 privacyPolicyUpdateDateTimeUtc = termsUpdateInfo.PrivacyPolicy.UpdateDateTimeUtc.ToString();
             }
 
-            var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(async region =>
+            var lastProcessTekTimestampList = new List<LastProcessTekTimestamp>();
+
+            foreach(var region in AppSettings.Instance.SupportedRegions)
             {
                 var ticks = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
-                new LastProcessTekTimestamp()
+                var lastProcessTekTimestamp = new LastProcessTekTimestamp()
                 {
                     Region = region,
                     Ticks = ticks
-                }.ToString();
-            });
+                };
+                lastProcessTekTimestampList.Add(lastProcessTekTimestamp);
+            };
 
             string regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
-            string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList);
+            string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList.Select(lptt => lptt.ToString()));
 
             var exposureNotificationStatus = await _exposureNotificationApiService.IsEnabledAsync();
 
-            var dailySummaryCount = (await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
-            var exposureWindowCount = (await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
+            var dailySummaryCount = (await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
+            var exposureWindowCount = (await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
 
             // ../../settings.json
             var settings = new[] {
@@ -99,7 +104,7 @@ namespace Covid19Radar.ViewModels
                 $"PrivacyPolicyUpdatedDateTimeUtc: {privacyPolicyUpdateDateTimeUtc}",
                 $"StartDate: {_userDataRepository.GetStartDate().ToLocalTime().ToString("F")}",
                 $"DaysOfUse: {_userDataRepository.GetDaysOfUse()}",
-                $"Legacy-V1 ExposureCount: {_userDataRepository.GetV1ExposureCount(AppConstants.DaysOfExposureInformationToDisplay)}",
+                $"Legacy-V1 ExposureCount: {_exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count()}",
                 $"DailySummaryCount: {dailySummaryCount}",
                 $"ExposureWindowCount: {exposureWindowCount}",
                 $"LastProcessTekTimestamp: {lastProcessTekTimestampsStr}",
@@ -120,6 +125,7 @@ namespace Covid19Radar.ViewModels
                 $"DiagnosisKeyRegisterApiEndpoint: {_serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint}",
                 $"DiagnosisKeyListProvideServerEndpoint: {_serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint}",
                 $"ExposureConfigurationUrl: {_serverConfigurationRepository.ExposureConfigurationUrl}",
+                $"ExposureRiskCalculationConfigurationUrl: {_serverConfigurationRepository.ExposureRiskCalculationConfigurationUrl}",
                 $"ExposureDataCollectServerEndpoint: {_serverConfigurationRepository.ExposureDataCollectServerEndpoint}",
                 $"EventLogApiEndpoint: {_serverConfigurationRepository.EventLogApiEndpoint}",
                 $"UserRegisterApiEndpoint: {_serverConfigurationRepository.UserRegisterApiEndpoint}",
@@ -134,6 +140,7 @@ namespace Covid19Radar.ViewModels
             ITermsUpdateService termsUpdateService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             ICloseApplicationService closeApplicationService,
@@ -144,6 +151,7 @@ namespace Covid19Radar.ViewModels
             _termsUpdateService = termsUpdateService;
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _userDataRepository = userDataRepository;
+            _exposureDataRepository = exposureDataRepository;
             _exposureNotificationApiService = exposureNotificationApiService;
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             _closeApplicationService = closeApplicationService;
@@ -200,7 +208,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickRemoveExposureInformation => new Command(async () =>
         {
-            _userDataRepository.RemoveExposureInformation();
+            _exposureDataRepository.RemoveExposureInformation();
             await UpdateInfo("RemoveExposureInformation");
         });
 
