@@ -9,10 +9,10 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.Services
 {
-    public class IExposureRiskCalculationServiceTests
+    public class ExposureRiskCalculationServiceTests
     {
 
-        public IExposureRiskCalculationServiceTests()
+        public ExposureRiskCalculationServiceTests()
         {
         }
 
