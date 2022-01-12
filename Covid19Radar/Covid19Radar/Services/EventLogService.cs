@@ -31,7 +31,6 @@ namespace Covid19Radar.Services
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly IEssentialsService _essentialsService;
         private readonly IDeviceVerifier _deviceVerifier;
-        private readonly IDateTimeUtility _dateTimeUtility;
         private readonly IHttpClientService _httpClientService;
 
         private readonly ILoggerService _loggerService;
@@ -53,7 +52,6 @@ namespace Covid19Radar.Services
             _serverConfigurationRepository = serverConfigurationRepository;
             _essentialsService = essentialsService;
             _deviceVerifier = deviceVerifier;
-            _dateTimeUtility = dateTimeUtility;
             _httpClientService = httpClientService;
             _loggerService = loggerService;
         }
