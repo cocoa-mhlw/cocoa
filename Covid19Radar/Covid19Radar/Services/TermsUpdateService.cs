@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
@@ -24,14 +23,17 @@ namespace Covid19Radar.Services
         private const double TimeoutSeconds = 5.0;
 
         private readonly ILoggerService loggerService;
+        private readonly IHttpClientService httpClientService;
         private readonly IUserDataRepository userDataRepository;
 
         public TermsUpdateService(
             ILoggerService loggerService,
+            IHttpClientService httpClientService,
             IUserDataRepository userDataRepository
             )
         {
             this.loggerService = loggerService;
+            this.httpClientService = httpClientService;
             this.userDataRepository = userDataRepository;
         }
 
@@ -40,7 +42,7 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
 
             var uri = AppResources.UrlTermsUpdate;
-            using (var client = new HttpClient())
+            using (var client = httpClientService.Create())
             {
                 try
                 {
