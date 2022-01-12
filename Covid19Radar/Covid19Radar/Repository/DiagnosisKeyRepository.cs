@@ -8,7 +8,6 @@ using System.IO;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
@@ -39,7 +38,7 @@ namespace Covid19Radar.Repository
     {
         private const long BUFFER_LENGTH = 4 * 1024 * 1024;
 
-        private readonly HttpClient _client;
+        private readonly IHttpClientService _httpClientService;
         private readonly ILoggerService _loggerService;
 
         public DiagnosisKeyRepository(
@@ -47,22 +46,25 @@ namespace Covid19Radar.Repository
             ILoggerService loggerService
             )
         {
-            _client = httpClientService.Create();
+            _httpClientService = httpClientService;
             _loggerService = loggerService;
         }
 
         public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken)
         {
-            HttpResponseMessage response = await _client.GetAsync(url, cancellationToken);
-            if (response.IsSuccessStatusCode)
+            using (var client = _httpClientService.Create())
             {
-                string content = await response.Content.ReadAsStringAsync();
-                _loggerService.Debug(content);
-                return JsonConvert.DeserializeObject<List<DiagnosisKeyEntry>>(content);
-            }
-            else
-            {
-                _loggerService.Debug($"GetDiagnosisKeysListAsync {response.StatusCode}");
+                HttpResponseMessage response = await client.GetAsync(url, cancellationToken);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    _loggerService.Debug(content);
+                    return JsonConvert.DeserializeObject<List<DiagnosisKeyEntry>>(content);
+                }
+                else
+                {
+                    _loggerService.Debug($"GetDiagnosisKeysListAsync {response.StatusCode}");
+                }
             }
 
             return new List<DiagnosisKeyEntry>();
@@ -71,32 +73,35 @@ namespace Covid19Radar.Repository
         public async Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir, CancellationToken cancellationToken)
         {
             Uri uri = new Uri(diagnosisKeyEntry.Url);
-            HttpResponseMessage response = await _client.GetAsync(uri, cancellationToken);
-            if (response.IsSuccessStatusCode)
+
+            using (var client = _httpClientService.Create())
             {
-                string fileName = uri.Segments[uri.Segments.Length - 1];
-                string outputPath = Path.Combine(outputDir, fileName);
-
-                byte[] buffer = new byte[BUFFER_LENGTH];
-
-                using BufferedStream bs = new BufferedStream(await response.Content.ReadAsStreamAsync());
-                using FileStream fs = File.OpenWrite(outputPath);
-
-                int len = 0;
-                while ((len = await bs.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                HttpResponseMessage response = await client.GetAsync(uri, cancellationToken);
+                if (response.IsSuccessStatusCode)
                 {
-                    await fs.WriteAsync(buffer, 0, len);
-                }
+                    string fileName = uri.Segments[uri.Segments.Length - 1];
+                    string outputPath = Path.Combine(outputDir, fileName);
 
-                return outputPath;
-            }
-            else
-            {
-                _loggerService.Debug($"DownloadDiagnosisKeysAsync {response.StatusCode}");
-                throw new HttpRequestException($"Request failed with status code {response.StatusCode}");
+                    byte[] buffer = new byte[BUFFER_LENGTH];
+
+                    using BufferedStream bs = new BufferedStream(await response.Content.ReadAsStreamAsync());
+                    using FileStream fs = File.OpenWrite(outputPath);
+
+                    int len = 0;
+                    while ((len = await bs.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                    {
+                        await fs.WriteAsync(buffer, 0, len);
+                    }
+
+                    return outputPath;
+                }
+                else
+                {
+                    _loggerService.Debug($"DownloadDiagnosisKeysAsync {response.StatusCode}");
+                    throw new HttpRequestException($"Request failed with status code {response.StatusCode}");
+                }
             }
         }
-
     }
 
 }
