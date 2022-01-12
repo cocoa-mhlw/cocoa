@@ -202,14 +202,13 @@ namespace Covid19Radar
 
 #if DEBUG
             container.Register<IServerConfigurationRepository, DebugServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IDiagnosisKeyRegisterServer, DebugDiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
 #else
             container.Register<IServerConfigurationRepository, ReleaseServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IExposureDataCollectServer, ReleaseExposureDataCollectServer>(Reuse.Singleton);
 #endif
 
+            container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IDialogService, DialogService>(Reuse.Singleton);
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
             container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);
