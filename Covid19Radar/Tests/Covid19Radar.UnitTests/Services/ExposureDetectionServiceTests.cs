@@ -24,6 +24,7 @@ namespace Covid19Radar.UnitTests.Services {
         private readonly Mock<ILoggerService> loggerService;
         private readonly Mock<ILocalNotificationService> localNotificationService;
         private readonly Mock<IExposureDataCollectServer> exposureDataCollectServer;
+        private readonly Mock<IExposureRiskCalculationService> exposureRiskCalculationService;
         private readonly Mock<IEventLogService> eventLogService;
         private readonly Mock<IDateTimeUtility> dateTimeUtility;
         private readonly Mock<IDeviceInfoUtility> deviceInfoUtility;
@@ -44,6 +45,7 @@ namespace Covid19Radar.UnitTests.Services {
             loggerService = mockRepository.Create<ILoggerService>();
             localNotificationService = mockRepository.Create<ILocalNotificationService>();
             exposureDataCollectServer = mockRepository.Create<IExposureDataCollectServer>();
+            exposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
             eventLogService = mockRepository.Create<IEventLogService>();
 
             clientService = mockRepository.Create<IHttpClientService>();
@@ -92,14 +94,12 @@ namespace Covid19Radar.UnitTests.Services {
                 loggerService.Object
                 );
 
-            var exposureRiskCalculationService = new ExposureRiskCalculationService();
-
             return new ExposureDetectionService(
                 loggerService.Object,
                 userDataRepository,
                 exposureDataRepository,
                 localNotificationService.Object,
-                exposureRiskCalculationService,
+                exposureRiskCalculationService.Object,
                 exposureConfigurationRepository,
                 eventLogService.Object,
                 exposureDataCollectServer.Object,
@@ -183,13 +183,12 @@ namespace Covid19Radar.UnitTests.Services {
 
         #region ExposureWindowsDetected
         [Fact]
-        public async void ExposureDetected_ExposureWindowHighRiskExposureDetected()
+        public async void ExposureDetected_HighRiskExposureDetected()
         {
             // Test Data
             var exposureConfiguration = new ExposureConfiguration();
             var enVersion = 2;
 
-            // TODO under consideration
             var dailySummaries = new List<DailySummary>() {
                 new DailySummary()
                 {
@@ -233,6 +232,10 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
+            exposureRiskCalculationService
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
+                .Returns(RiskLevel.High);
+
 
             // Test Case
             var unitUnderTest = CreateService();
@@ -244,121 +247,12 @@ namespace Covid19Radar.UnitTests.Services {
         }
 
         [Fact]
-        public async void ExposureDetected_Multiple()
+        public async void ExposureDetected_HighRiskExposureNotDetected()
         {
             // Test Data
             var exposureConfiguration = new ExposureConfiguration();
             var enVersion = 2;
 
-            var existDailySummaries = new List<DailySummary>() {
-                new DailySummary()
-                {
-                    DateMillisSinceEpoch = 0,
-                    DaySummary = new ExposureSummaryData(),
-                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
-                    ConfirmedTestSummary = new ExposureSummaryData(),
-                    RecursiveSummary = new ExposureSummaryData(),
-                    SelfReportedSummary = new ExposureSummaryData()
-                }
-            };
-            var existExposureWindows = new List<ExposureWindow>()
-            {
-                new ExposureWindow()
-                {
-                    CalibrationConfidence = CalibrationConfidence.High,
-                    DateMillisSinceEpoch = 0,
-                    Infectiousness = Infectiousness.High,
-                    ReportType = ReportType.Unknown,
-                    ScanInstances = new List<ScanInstance>()
-                }
-            };
-
-            var newDailySummaries = new List<DailySummary>() {
-                new DailySummary()
-                {
-                    DateMillisSinceEpoch = 10,
-                    DaySummary = new ExposureSummaryData(),
-                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
-                    ConfirmedTestSummary = new ExposureSummaryData(),
-                    RecursiveSummary = new ExposureSummaryData(),
-                    SelfReportedSummary = new ExposureSummaryData()
-                }
-            };
-            var newExposureWindows = new List<ExposureWindow>()
-            {
-                new ExposureWindow()
-                {
-                    CalibrationConfidence = CalibrationConfidence.High,
-                    DateMillisSinceEpoch = 0,
-                    Infectiousness = Infectiousness.High,
-                    ReportType = ReportType.Unknown,
-                    ScanInstances = new List<ScanInstance>()
-                },
-                new ExposureWindow()
-                {
-                    CalibrationConfidence = CalibrationConfidence.Medium,
-                    DateMillisSinceEpoch = 0,
-                    Infectiousness = Infectiousness.High,
-                    ReportType = ReportType.ConfirmedTest,
-                    ScanInstances = new List<ScanInstance>()
-                }
-            };
-
-            // Mock Setup
-            preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
-                .Returns(false);
-            exposureDataCollectServer
-                .Setup(x => x.UploadExposureDataAsync(
-                    It.IsAny<ExposureConfiguration>(),
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    It.IsAny<List<DailySummary>>(),
-                    It.IsAny<List<ExposureWindow>>()));
-            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
-
-            preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
-                .Returns(JsonConvert.SerializeObject(existDailySummaries));
-            preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
-                .Returns(JsonConvert.SerializeObject(existExposureWindows));
-
-
-            // Test Case
-            var unitUnderTest = CreateService();
-            await unitUnderTest.ExposureDetectedAsync(exposureConfiguration, enVersion, newDailySummaries, newExposureWindows);
-
-
-            var expectedDailySummaries = new List<DailySummary>() {
-                existDailySummaries[0],
-                newDailySummaries[0]
-            };
-            var expectedExposureWindows = new List<ExposureWindow>()
-            {
-                existExposureWindows[0],
-                newExposureWindows[1]
-            };
-
-            var expectedDailySummariesJson = JsonConvert.SerializeObject(expectedDailySummaries);
-            var expectedExposureWindowsJson = JsonConvert.SerializeObject(expectedExposureWindows);
-
-            // Assert
-            preferencesService.Verify(x => x.SetValue("DailySummaries", expectedDailySummariesJson), Times.Once);
-            preferencesService.Verify(x => x.SetValue("ExposureWindows", expectedExposureWindowsJson), Times.Once);
-            localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
-
-
-        }
-
-        [Fact(Skip = "always failed")]
-        public async void ExposureDetected_ExposureWindowHighRiskExposureNotDetected()
-        {
-            // Test Data
-            var exposureConfiguration = new ExposureConfiguration();
-            var enVersion = 2;
-
-            // TODO under consideration
             var dailySummaries = new List<DailySummary>() {
                 new DailySummary()
                 {
@@ -387,6 +281,12 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService.
                 Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
                 .Returns(true);
+            preferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Returns("[]");
+            preferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Returns("[]");
             exposureDataCollectServer
                 .Setup(x => x.UploadExposureDataAsync(
                     It.IsAny<ExposureConfiguration>(),
@@ -396,6 +296,9 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
+            exposureRiskCalculationService
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
+                .Returns(RiskLevel.Low);
 
             // Test Case
             var unitUnderTest = CreateService();
@@ -448,6 +351,10 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<ExposureSummary>(),
                     It.IsAny<List<ExposureInformation>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
+
+            exposureRiskCalculationService
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
+                .Returns(RiskLevel.High);
 
 
             // Test Case
