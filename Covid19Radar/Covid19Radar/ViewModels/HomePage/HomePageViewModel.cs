@@ -15,6 +15,7 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
+using Covid19Radar.Model;
 
 namespace Covid19Radar.ViewModels
 {
@@ -31,6 +32,9 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
+
+        private readonly IExposureConfigurationRepository exposureConfigurationRepository;
+        private readonly IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository;
 
         private string _pastDate;
         public string PastDate
@@ -76,6 +80,8 @@ namespace Covid19Radar.ViewModels
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILocalNotificationService localNotificationService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
+            IExposureConfigurationRepository exposureConfigurationRepository,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IDialogService dialogService,
             IExternalNavigationService externalNavigationService
             ) : base(navigationService)
@@ -89,6 +95,8 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
+            this.exposureConfigurationRepository = exposureConfigurationRepository;
+            this.exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
         }
@@ -109,6 +117,11 @@ namespace Covid19Radar.ViewModels
 
             // Check Version
             AppUtils.CheckVersion(loggerService);
+
+            // Load necessary files asynchronous
+            _ = exposureConfigurationRepository.GetExposureConfigurationAsync();
+            _ = exposureRiskCalculationConfigurationRepository
+                .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
 
             await localNotificationService.PrepareAsync();
 
@@ -147,6 +160,9 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
+            var exposureRiskCalculationConfiguration = await exposureRiskCalculationConfigurationRepository
+                .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+
             var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
             var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
             var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
@@ -159,7 +175,11 @@ namespace Covid19Radar.ViewModels
             foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
             {
                 var dailySummary = dailySummaryMap[ew.Key];
-                RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList());
+                RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
+                    dailySummary,
+                    ew.ToList(),
+                    exposureRiskCalculationConfiguration
+                    );
                 if (riskLevel >= RiskLevel.High)
                 {
                     hasHighRiskExposure = true;

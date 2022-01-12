@@ -34,6 +34,7 @@ namespace Covid19Radar.Services
 
         private readonly ILocalNotificationService _localNotificationService;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
 
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
 
@@ -49,6 +50,7 @@ namespace Covid19Radar.Services
             IUserDataRepository userDataRepository,
             IExposureDataRepository exposureDataRepository,
             ILocalNotificationService localNotificationService,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IEventLogService eventLogService,
@@ -62,6 +64,7 @@ namespace Covid19Radar.Services
             _exposureDataRepository = exposureDataRepository;
             _localNotificationService = localNotificationService;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _eventLogService = eventLogService;
             _exposureDataCollectServer = exposureDataCollectServer;
@@ -103,10 +106,15 @@ namespace Covid19Radar.Services
                 exposureWindows.ToList()
                 );
 
+            var exposureRiskCalculationConfiguration = await _exposureRiskCalculationConfigurationRepository
+                .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+
             bool isHighRiskExposureDetected = newDailySummaries
                 .Select(ds => _exposureRiskCalculationService.CalcRiskLevel(
-                    ds,
-                    newExposureWindows.Where(ew => ew.DateMillisSinceEpoch == ds.DateMillisSinceEpoch).ToList())
+                        ds,
+                        newExposureWindows.Where(ew => ew.DateMillisSinceEpoch == ds.DateMillisSinceEpoch).ToList(),
+                        exposureRiskCalculationConfiguration
+                    )
                 )
                 .Any(riskLevel => riskLevel >= RiskLevel.High);
 

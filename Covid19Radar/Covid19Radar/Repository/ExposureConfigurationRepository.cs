@@ -29,6 +29,8 @@ namespace Covid19Radar.Repository
 
     public class ExposureConfigurationRepository : IExposureConfigurationRepository
     {
+        private const int TIMEOUT_SECONDS = 10;
+
         private readonly IHttpClientService _httpClientService;
         private readonly ILocalPathService _localPathService;
         private readonly IPreferencesService _preferencesService;
@@ -136,6 +138,8 @@ namespace Covid19Radar.Repository
 
             using (var client = _httpClientService.Create())
             {
+                client.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
+
                 var response = await client.GetAsync(url);
                 if (response.IsSuccessStatusCode)
                 {

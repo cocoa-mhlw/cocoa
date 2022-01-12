@@ -43,6 +43,8 @@ namespace Covid19Radar.Repository
 
         public string ExposureConfigurationUrl { get; set; }
 
+        public string ExposureRiskCalculationConfigurationUrl { get; set; }
+
         public string? ExposureDataCollectServerEndpoint { get; set; }
 
         public virtual IList<string> ExposureDataCollectServerUrls => Regions
@@ -151,6 +153,12 @@ namespace Covid19Radar.Repository
             set => _serverConfiguration.ExposureConfigurationUrl = value;
         }
 
+        public string ExposureRiskCalculationConfigurationUrl
+        {
+            get => _serverConfiguration.ExposureRiskCalculationConfigurationUrl;
+            set => _serverConfiguration.ExposureRiskCalculationConfigurationUrl = value;
+        }
+
         public string DiagnosisKeyListProvideServerEndpoint
         {
             get => _serverConfiguration.DiagnosisKeyListProvideServerEndpoint;
@@ -245,8 +253,22 @@ namespace Covid19Radar.Repository
             // TODO: Replace url for RELEASE.
             get => IServerConfigurationRepository.CombineAsUrl(
                 AppSettings.Instance.ExposureConfigurationUrlBase,
-                "exposure_configuration/Cappuccino",
+                "exposure_configuration",
                 "configuration.json"
+                );
+            set
+            {
+                // Do nothing
+            }
+        }
+
+        public string ExposureRiskCalculationConfigurationUrl
+        {
+            // TODO: Replace url for RELEASE.
+            get => IServerConfigurationRepository.CombineAsUrl(
+                AppSettings.Instance.ExposureConfigurationUrlBase,
+                "exposure_configuration",
+                "risk_calculation_configuration.json"
                 );
             set
             {
@@ -331,6 +353,10 @@ namespace Covid19Radar.Repository
         [JsonProperty("exposure_configuration_url")]
         public string? ExposureConfigurationUrl
             = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration", "configuration.json");
+
+        [JsonProperty("exposure_risk_calculation_configuration_url")]
+        public string? ExposureRiskCalculationConfigurationUrl
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration", "risk_calculation_configuration.json");
 
         [JsonProperty("exposure_data_collect_server_endpoint")]
         public string? ExposureDataCollectServerEndpoint = null;
