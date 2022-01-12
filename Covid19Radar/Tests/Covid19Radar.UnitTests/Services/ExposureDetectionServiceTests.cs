@@ -34,6 +34,7 @@ namespace Covid19Radar.UnitTests.Services {
         private readonly Mock<IHttpClientService> clientService;
         private readonly Mock<ILocalPathService> localPathService;
         private readonly Mock<IPreferencesService> preferencesService;
+        private readonly Mock<ISecureStorageService> secureStorageService;
         private readonly Mock<IServerConfigurationRepository> serverConfigurationRepository;
         #endregion
 
@@ -52,6 +53,7 @@ namespace Covid19Radar.UnitTests.Services {
             clientService = mockRepository.Create<IHttpClientService>();
             localPathService = mockRepository.Create<ILocalPathService>();
             preferencesService = mockRepository.Create<IPreferencesService>();
+            secureStorageService = mockRepository.Create<ISecureStorageService>();
             serverConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
             dateTimeUtility = mockRepository.Create<IDateTimeUtility>();
             deviceInfoUtility = mockRepository.Create<IDeviceInfoUtility>();
@@ -89,6 +91,7 @@ namespace Covid19Radar.UnitTests.Services {
 
             var exposureDataRepository = new ExposureDataRepository(
                 preferencesService.Object,
+                secureStorageService.Object,
                 dateTimeUtility.Object,
                 loggerService.Object
                 );
@@ -367,7 +370,7 @@ namespace Covid19Radar.UnitTests.Services {
                 .Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
 
             var expectedSerializedData = JsonConvert.SerializeObject(exposureInformationList.Select(x => new UserExposureInfo(x)));
-            preferencesService
+            secureStorageService
                 .Verify(x => x.SetValue<string>("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
         }
 
@@ -420,7 +423,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Assert
             localNotificationService
                 .Verify(x => x.ShowExposureNotificationAsync(), Times.Never);
-            preferencesService
+            secureStorageService
                 .Verify(x => x.SetValue<string>("ExposureInformation", It.IsAny<string>()), Times.Never);
         }
 

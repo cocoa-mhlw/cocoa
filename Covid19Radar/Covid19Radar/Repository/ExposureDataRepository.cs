@@ -14,53 +14,24 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Repository
 {
-    public interface IExposureDataRepository
-    {
-        // ExposureWindow mode
-        Task<(List<DailySummary>, List<ExposureWindow>)> SetExposureDataAsync(
-            List<DailySummary> dailySummaryList,
-            List<ExposureWindow> exposueWindowList
-            );
-
-        Task<List<DailySummary>> GetDailySummariesAsync();
-        Task<List<DailySummary>> GetDailySummariesAsync(int offsetDays);
-        Task RemoveDailySummariesAsync();
-
-        Task<List<ExposureWindow>> GetExposureWindowsAsync();
-        Task<List<ExposureWindow>> GetExposureWindowsAsync(int offsetDays);
-        Task RemoveExposureWindowsAsync();
-
-        // Legacy v1 mode
-        List<UserExposureInfo> GetExposureInformationList();
-        List<UserExposureInfo> GetExposureInformationList(int offsetDays);
-
-        void SetExposureInformation(List<UserExposureInfo> informationList);
-        bool AppendExposureData(
-            ExposureSummary exposureSummary,
-            List<ExposureInformation> exposureInformationList,
-            int minimumRiskScore
-            );
-
-        void RemoveExposureInformation();
-        void RemoveOutOfDateExposureInformation(int offsetDays);
-        int GetV1ExposureCount(int offsetDays);
-    }
-
     public class ExposureDataRepository : IExposureDataRepository
     {
         private const string EMPTY_LIST_JSON = "[]";
 
         private readonly IPreferencesService _preferencesService;
+        private readonly ISecureStorageService _secureStorageService;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
 
         public ExposureDataRepository(
             IPreferencesService preferencesService,
+            ISecureStorageService secureStorageService,
             IDateTimeUtility dateTimeUtility,
             ILoggerService loggerService
             )
         {
             _preferencesService = preferencesService;
+            _secureStorageService = secureStorageService;
             _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
         }
@@ -197,7 +168,7 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
             List<UserExposureInfo> result = null;
-            var exposureInformationJson = _preferencesService.GetValue<string>(PreferenceKey.ExposureInformation, null);
+            var exposureInformationJson = _secureStorageService.GetValue<string>(PreferenceKey.ExposureInformation, null);
             if (!string.IsNullOrEmpty(exposureInformationJson))
             {
                 result = JsonConvert.DeserializeObject<List<UserExposureInfo>>(exposureInformationJson);
@@ -225,7 +196,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.SetValue(PreferenceKey.ExposureInformation, exposureInformationListJson);
+                _secureStorageService.SetValue(PreferenceKey.ExposureInformation, exposureInformationListJson);
             }
             finally
             {
@@ -273,7 +244,7 @@ namespace Covid19Radar.Repository
         public void RemoveExposureInformation()
         {
             _loggerService.StartMethod();
-            _preferencesService.RemoveValue(PreferenceKey.ExposureInformation);
+            _secureStorageService.RemoveValue(PreferenceKey.ExposureInformation);
             _loggerService.EndMethod();
         }
 
@@ -285,14 +256,6 @@ namespace Covid19Radar.Repository
             SetExposureInformation(informationList);
 
             _loggerService.EndMethod();
-        }
-
-        public int GetV1ExposureCount(int offsetDays)
-        {
-            _loggerService.StartMethod();
-            var exposureInformationList = GetExposureInformationList(offsetDays);
-            _loggerService.EndMethod();
-            return exposureInformationList.Count;
         }
 
     }

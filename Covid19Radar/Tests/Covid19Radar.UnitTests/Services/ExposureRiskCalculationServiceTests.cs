@@ -33,15 +33,17 @@ namespace Covid19Radar.UnitTests.Services
                 );
         }
 
-        [Fact]
-        public void LowRiskExposureTest()
+        [Theory]
+        [InlineData(V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL, 2000, 1999, RiskLevel.Low)]
+        [InlineData(V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL, 2000, 2000, RiskLevel.High)]
+        public void RiskExposureTest(string scoreSumOp, double scoreSumValue, double scoreSum, RiskLevel expected)
         {
 
             var configuration = new V1ExposureRiskCalculationConfiguration() {
                 DailySummary_DaySummary_ScoreSum = new V1ExposureRiskCalculationConfiguration.Threshold()
                 {
-                    Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
-                    Value = 2000.0
+                    Op = scoreSumOp,
+                    Value = scoreSumValue
                 }
             };
 
@@ -50,7 +52,7 @@ namespace Covid19Radar.UnitTests.Services
                     DateMillisSinceEpoch = 0,
                     DaySummary = new ExposureSummaryData()
                     {
-                        ScoreSum = 1999.0
+                        ScoreSum = scoreSum
                     },
                     ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
                     ConfirmedTestSummary = new ExposureSummaryData(),
@@ -74,55 +76,11 @@ namespace Covid19Radar.UnitTests.Services
 
             RiskLevel result = service.CalcRiskLevel(dailySummary, exposureWindows, configuration);
 
-            Assert.Equal(RiskLevel.Low, result);
+            Assert.Equal(expected, result);
         }
 
         [Fact]
         public void HighRiskExposureTest1()
-        {
-            var configuration = new V1ExposureRiskCalculationConfiguration()
-            {
-                DailySummary_DaySummary_ScoreSum = new V1ExposureRiskCalculationConfiguration.Threshold()
-                {
-                    Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
-                    Value = 2000.0
-                }
-            };
-
-            var dailySummary = new DailySummary()
-            {
-                DateMillisSinceEpoch = 0,
-                DaySummary = new ExposureSummaryData()
-                {
-                    ScoreSum = 2000.0
-                },
-                ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
-                ConfirmedTestSummary = new ExposureSummaryData(),
-                RecursiveSummary = new ExposureSummaryData(),
-                SelfReportedSummary = new ExposureSummaryData()
-            };
-
-            var exposureWindows = new List<ExposureWindow>()
-            {
-                new ExposureWindow()
-                {
-                    CalibrationConfidence = CalibrationConfidence.High,
-                    DateMillisSinceEpoch = 0,
-                    Infectiousness = Infectiousness.High,
-                    ReportType = ReportType.Unknown,
-                    ScanInstances = new List<ScanInstance>()
-                }
-            };
-
-            IExposureRiskCalculationService service = CreateService();
-
-            RiskLevel result = service.CalcRiskLevel(dailySummary, exposureWindows, configuration);
-
-            Assert.Equal(RiskLevel.High, result);
-        }
-
-        [Fact]
-        public void HighRiskExposureTest2()
         {
             var configuration = new V1ExposureRiskCalculationConfiguration()
             {
@@ -178,7 +136,7 @@ namespace Covid19Radar.UnitTests.Services
 
 
         [Fact]
-        public void HighRiskExposureTest3()
+        public void HighRiskExposureTest2()
         {
             var configuration = new V1ExposureRiskCalculationConfiguration()
             {

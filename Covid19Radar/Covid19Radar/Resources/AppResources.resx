@@ -372,18 +372,6 @@
     <value>Register by entering provided processing number into this app</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
-  <data name="NotContactPageTitle" xml:space="preserve">
-    <value>Close contacts for the past 14 days</value>
-    <comment>過去14日間の接触</comment>
-  </data>
-  <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>No close contacts with COVID-19 positive users</value>
-    <comment>陽性者との接触は確認されませんでした</comment>
-  </data>
-  <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>Please keep practicing 'New Lifestyle' recommended by the government.</value>
-    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
-  </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
     <value>Share this app</value>
     <comment>アプリを周りの人に知らせる</comment>
@@ -467,10 +455,6 @@
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
     <value>A list of close contacts with COVID-19 positive users</value>
     <comment>陽性者との接触一覧</comment>
-  </data>
-  <data name="ContactedNotifyPageCountText" xml:space="preserve">
-    <value>times</value>
-    <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>Number of confirmed close contacts with COVID-19 positive users</value>
@@ -1289,5 +1273,33 @@ Note: this app does not collect users’ location information.</value>
   <data name="ContactedPageImageAnnotationText" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：「陽性者との接触確認」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
+    <value>Before {0}</value>
+    <comment>年月日以前</comment>
+  </data>
+  <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
+    <value>1 time</value>
+    <comment>1 件</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>{0} times</value>
+    <comment>{0} 件</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationHeader" xml:space="preserve">
+    <value>After {0}</value>
+    <comment>年月日以降</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
+    <value>Total {1:#} min exposure in 1 day</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
+    <value>Total {1:#} min exposure in {0} days</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ExposurePageExposureDuration" xml:space="preserve">
+    <value>{0:#} min exposure</value>
+    <comment>{0:#}分間の接触</comment>
   </data>
 </root>

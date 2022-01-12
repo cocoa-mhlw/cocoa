@@ -81,9 +81,6 @@
     <Compile Update="Views\HelpPage\InqueryPage.xaml.cs">
       <DependentUpon>InqueryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\NotContactPage.xaml.cs">
-      <DependentUpon>NotContactPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\HomePage\ContactedNotifyPage.xaml.cs">
       <DependentUpon>ContactedNotifyPage.xaml</DependentUpon>
     </Compile>
