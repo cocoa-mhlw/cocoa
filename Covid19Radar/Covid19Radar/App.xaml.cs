@@ -164,7 +164,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
             containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
-            containerRegistry.RegisterForNavigation<NotContactPage>();
             containerRegistry.RegisterForNavigation<ExposureCheckPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
             containerRegistry.RegisterForNavigation<SubmitConsentPage>();
@@ -198,23 +197,24 @@ namespace Covid19Radar
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
 
 #if USE_MOCK
+            container.Register<IExposureDataRepository, ExposureDataRepositoryMock>(Reuse.Singleton);
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
 #else
+            container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
             container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
 
 #if DEBUG
             container.Register<IServerConfigurationRepository, DebugServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IDiagnosisKeyRegisterServer, DebugDiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
 #else
             container.Register<IServerConfigurationRepository, ReleaseServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IExposureDataCollectServer, ReleaseExposureDataCollectServer>(Reuse.Singleton);
 #endif
 
+            container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IDialogService, DialogService>(Reuse.Singleton);
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
             container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);

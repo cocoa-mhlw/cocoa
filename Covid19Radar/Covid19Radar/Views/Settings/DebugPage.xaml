@@ -200,10 +200,6 @@
                     Command="{prism:NavigateTo 'NotifyOtherPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="NotifyOtherPage" />
-                <Button
-                    Command="{prism:NavigateTo 'NotContactPage'}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="NotContactPage" />
                  <Button
                     Command="{prism:NavigateTo 'ExposureCheckPage'}"
                     Style="{StaticResource DefaultButton}"

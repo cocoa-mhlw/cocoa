@@ -98,13 +98,16 @@ namespace Covid19Radar.Services
 
             var enVersionStr = enVersion.ToString();
 
-            await _exposureDataRepository.SetExposureDataAsync(
+            var (newDailySummaries, newExposureWindows) = await _exposureDataRepository.SetExposureDataAsync(
                 dailySummaries.ToList(),
                 exposureWindows.ToList()
                 );
 
-            bool isHighRiskExposureDetected = dailySummaries
-                .Select(dailySummary => _exposureRiskCalculationService.CalcRiskLevel(dailySummary))
+            bool isHighRiskExposureDetected = newDailySummaries
+                .Select(ds => _exposureRiskCalculationService.CalcRiskLevel(
+                    ds,
+                    newExposureWindows.Where(ew => ew.DateMillisSinceEpoch == ds.DateMillisSinceEpoch).ToList())
+                )
                 .Any(riskLevel => riskLevel >= RiskLevel.High);
 
             if (isHighRiskExposureDetected)
@@ -122,7 +125,7 @@ namespace Covid19Radar.Services
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
                     enVersionStr,
-                    dailySummaries, exposureWindows
+                    newDailySummaries, newExposureWindows
                     );
             }
             catch (Exception e)
@@ -137,7 +140,7 @@ namespace Covid19Radar.Services
                     exposureConfiguration,
                     _deviceInfoUtility.Model,
                     enVersionStr,
-                    dailySummaries, exposureWindows,
+                    newDailySummaries, newExposureWindows,
                     AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES
                     );
             }

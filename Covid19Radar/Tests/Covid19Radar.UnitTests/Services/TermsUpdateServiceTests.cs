@@ -18,6 +18,7 @@ namespace Covid19Radar.UnitTests.Services
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IPreferencesService> mockPreferencesService;
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
+        private readonly Mock<IHttpClientService> mockHttpClientService;
 
         public TermsUpdateServiceTests()
         {
@@ -25,12 +26,14 @@ namespace Covid19Radar.UnitTests.Services
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockPreferencesService = mockRepository.Create<IPreferencesService>();
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
+            mockHttpClientService = mockRepository.Create<IHttpClientService>();
         }
 
         private TermsUpdateService CreateService()
         {
             return new TermsUpdateService(
                 mockLoggerService.Object,
+                mockHttpClientService.Object,
                 mockUserDataRepository.Object
                 );
         }

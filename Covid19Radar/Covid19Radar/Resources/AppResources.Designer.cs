@@ -443,24 +443,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotContactPageTitle {
-            get {
-                return ResourceManager.GetString("NotContactPageTitle", resourceCulture);
-            }
-        }
-        
-        public static string NotContactPageLabel1 {
-            get {
-                return ResourceManager.GetString("NotContactPageLabel1", resourceCulture);
-            }
-        }
-        
-        public static string NotContactPageDescription1 {
-            get {
-                return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
-            }
-        }
-        
         public static string NotContactPageButtonText {
             get {
                 return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
@@ -584,12 +566,6 @@ namespace Covid19Radar.Resources {
         public static string ContactedNotifyPageButton1 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageButton1", resourceCulture);
-            }
-        }
-        
-        public static string ContactedNotifyPageCountText {
-            get {
-                return ResourceManager.GetString("ContactedNotifyPageCountText", resourceCulture);
             }
         }
         
@@ -1814,6 +1790,48 @@ namespace Covid19Radar.Resources {
         public static string ContactedPageImageAnnotationText {
             get {
                 return ResourceManager.GetString("ContactedPageImageAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageCountHeader {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageCountHeader", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageCountOneText {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageCountOneText", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageCountText {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageCountText", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageExposureDurationHeader {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageExposureDurationHeader", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageExposureDurationOne {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageExposureDurationOne", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageExposureDuration {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageExposureDuration", resourceCulture);
+            }
+        }
+        
+        public static string ExposurePageExposureDuration {
+            get {
+                return ResourceManager.GetString("ExposurePageExposureDuration", resourceCulture);
             }
         }
     }
