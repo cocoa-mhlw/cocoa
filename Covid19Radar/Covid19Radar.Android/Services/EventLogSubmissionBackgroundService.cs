@@ -55,6 +55,7 @@ namespace Covid19Radar.Droid.Services
                 )
                 .SetConstraints(new Constraints.Builder()
                    .SetRequiresBatteryNotLow(true)
+                   .SetRequiredNetworkType(NetworkType.Connected)
                    .Build())
                 .SetBackoffCriteria(BackoffPolicy.Linear, BACKOFF_DELAY_IN_MINUTES, TimeUnit.Minutes);
             return workRequestBuilder.Build();

@@ -82,17 +82,20 @@ namespace Covid19Radar.iOS.Services
         {
             _loggerService.StartMethod();
 
-            var request = new BGAppRefreshTaskRequest(IDENTIFIER)
+            var bgTaskRequest = new BGProcessingTaskRequest(IDENTIFIER)
             {
-                EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS)
+                EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS),
+                RequiresNetworkConnectivity = true
             };
 
-            _loggerService.Info($"request.EarliestBeginDate: {request.EarliestBeginDate}");
+            _loggerService.Info($"request.EarliestBeginDate: {bgTaskRequest.EarliestBeginDate}");
 
-            _ = BGTaskScheduler.Shared.Submit(request, out var error);
+            _ = BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
             if (error != null)
             {
-                _loggerService.Error($"Could not schedule app refresh. Error: {error}");
+                NSErrorException exception = new NSErrorException(error);
+                _loggerService.Exception("BGTaskScheduler submit failed.", exception);
+                throw exception;
             }
 
             _loggerService.EndMethod();
