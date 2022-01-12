@@ -22,6 +22,8 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
+        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
+
         private string _exposureDurationInMinutes;
         public string ExposureDurationInMinutes
         {
@@ -40,12 +42,14 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
-            IExposureRiskCalculationService exposureRiskCalculationService
+            IExposureRiskCalculationService exposureRiskCalculationService,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository
             ) : base(navigationService)
         {
             this.loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
 
             Title = AppResources.TitileUserStatusSettings;
         }
@@ -53,6 +57,9 @@ namespace Covid19Radar.ViewModels
         public override async void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
+
+            var exposureRiskCalculationConfiguration
+                = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: false);
 
             var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 
@@ -72,7 +79,7 @@ namespace Covid19Radar.ViewModels
             {
                 var dailySummary = dailySummaryMap[ew.Key];
 
-                RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList());
+                RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList(), exposureRiskCalculationConfiguration);
                 if (riskLevel >= RiskLevel.High)
                 {
                     exposureDurationInSec += ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));

@@ -19,6 +19,7 @@ namespace Covid19Radar.ViewModels
     public class ExposuresPageViewModel : ViewModelBase
     {
         private readonly IExposureDataRepository _exposureDataRepository;
+        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
         public ObservableCollection<ExposureSummary> _exposures;
@@ -32,10 +33,12 @@ namespace Covid19Radar.ViewModels
         public ExposuresPageViewModel(
             INavigationService navigationService,
             IExposureDataRepository exposureDataRepository,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IExposureRiskCalculationService exposureRiskCalculationService
             ) : base(navigationService)
         {
             _exposureDataRepository = exposureDataRepository;
+            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
 
             Title = AppResources.MainExposures;
@@ -52,6 +55,9 @@ namespace Covid19Radar.ViewModels
 
         public async Task InitExposures()
         {
+            var exposureRiskCalculationConfiguration
+                = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+
             var dailySummaryList
                 = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
             var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
@@ -68,7 +74,11 @@ namespace Covid19Radar.ViewModels
                 {
                     var dailySummary = dailySummaryMap[ew.Key];
 
-                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList());
+                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
+                        dailySummary,
+                        ew.ToList(),
+                        exposureRiskCalculationConfiguration
+                        );
                     if (riskLevel < RiskLevel.High)
                     {
                         continue;
