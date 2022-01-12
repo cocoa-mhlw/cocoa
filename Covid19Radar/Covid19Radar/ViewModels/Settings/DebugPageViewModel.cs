@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
@@ -71,18 +72,21 @@ namespace Covid19Radar.ViewModels
                 privacyPolicyUpdateDateTimeUtc = termsUpdateInfo.PrivacyPolicy.UpdateDateTimeUtc.ToString();
             }
 
-            var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(async region =>
+            var lastProcessTekTimestampList = new List<LastProcessTekTimestamp>();
+
+            foreach(var region in AppSettings.Instance.SupportedRegions)
             {
                 var ticks = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
-                new LastProcessTekTimestamp()
+                var lastProcessTekTimestamp = new LastProcessTekTimestamp()
                 {
                     Region = region,
                     Ticks = ticks
-                }.ToString();
-            });
+                };
+                lastProcessTekTimestampList.Add(lastProcessTekTimestamp);
+            };
 
             string regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
-            string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList);
+            string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList.Select(lptt => lptt.ToString()));
 
             var exposureNotificationStatus = await _exposureNotificationApiService.IsEnabledAsync();
 
