@@ -22,17 +22,17 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
-        private readonly Mock<IUserDataRepository> mockUserDataRepository;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
+        private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
 
         public ExposurePageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
-            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
             mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
+            mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
         }
 
         private ExposuresPageViewModel CreateViewModel()
@@ -40,6 +40,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new ExposuresPageViewModel(
                 mockNavigationService.Object,
                 mockExposureDataRepository.Object,
+                mockExposureRiskCalculationConfigurationRepository.Object,
                 mockExposureRiskCalculationService.Object
                 );
         }

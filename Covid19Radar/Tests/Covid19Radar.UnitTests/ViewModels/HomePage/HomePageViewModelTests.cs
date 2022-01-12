@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -428,7 +429,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Returns(serializeExposureWindows);
 
             mockExposureRiskCalculationService
-                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
 
             var homePageViewModel = CreateViewModel();
@@ -485,7 +486,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Returns(serializeExposureWindows);
 
             mockExposureRiskCalculationService
-                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>()))
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.Low);
 
             var homePageViewModel = CreateViewModel();
