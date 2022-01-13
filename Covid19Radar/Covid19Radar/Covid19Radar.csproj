@@ -68,7 +68,7 @@
     <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.1" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2291" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
-    <PackageReference Include="Chino.Common" Version="1.0.0-rc10" />
+    <PackageReference Include="Chino.Common" Version="1.0.0-rc11" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="8.0.62" />
   </ItemGroup>
   <ItemGroup>
