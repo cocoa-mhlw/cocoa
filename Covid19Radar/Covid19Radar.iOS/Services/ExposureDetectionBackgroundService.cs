@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using BackgroundTasks;
 using Chino;
+using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -34,7 +35,8 @@ namespace Covid19Radar.iOS.Services
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository,
-            ILocalPathService localPathService
+            ILocalPathService localPathService,
+            IDateTimeUtility dateTimeUtility
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
@@ -42,7 +44,8 @@ namespace Covid19Radar.iOS.Services
                 loggerService,
                 userDataRepository,
                 serverConfigurationRepository,
-                localPathService
+                localPathService,
+                dateTimeUtility
                 )
         {
             _exposureNotificationApiService = exposureNotificationApiService;
