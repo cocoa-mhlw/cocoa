@@ -285,11 +285,7 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
-
                 await SubmitDiagnosisKeys();
-
-                UserDialogs.Instance.HideLoading();
             }
             catch (Exception ex)
             {
@@ -335,6 +331,8 @@ namespace Covid19Radar.ViewModels
                 {
                     tek.ReportType = DEFAULT_REPORT_TYPE;
                 }
+
+                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
 
                 // TODO: Save and use revoke operation.
                 string idempotencyKey = Guid.NewGuid().ToString();
