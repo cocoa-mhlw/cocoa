@@ -1487,18 +1487,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SendLogCompletePageCopyId {
-            get {
-                return ResourceManager.GetString("SendLogCompletePageCopyId", resourceCulture);
-            }
-        }
-        
-        public static string SuccessMessageToCopyLogId {
-            get {
-                return ResourceManager.GetString("SuccessMessageToCopyLogId", resourceCulture);
-            }
-        }
-        
         public static string HomePageENStatusActiveTitle {
             get {
                 return ResourceManager.GetString("HomePageENStatusActiveTitle", resourceCulture);

@@ -12,3 +12,5 @@ steps:
   displayName: 'NuGet restore'
   inputs:
     restoreSolution: Covid19Radar.sln
+    feedsToUse: config
+    nugetConfigPath: DevOpsNuget.config
