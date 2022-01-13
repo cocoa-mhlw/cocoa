@@ -2,7 +2,7 @@
   "format_version": 1,
   "DailySummary_DaySummary_ScoreSum": {
     "op": ">=",
-    "value": 2000.0
+    "value": 1170.0
   },
   "DailySummary_DaySummary_WeightedDurationAverage": {
     "op": "NOP",
