@@ -23,7 +23,7 @@ namespace Covid19Radar.Droid.Services
         internal const int INTERVAL_IN_MINUTES = 4 * 60;
         internal const int BACKOFF_DELAY_IN_MINUTES = 1 * 60;
 
-        internal const string CURRENT_WORK_NAME = "cocoa-202201",;
+        internal const string CURRENT_WORK_NAME = "cocoa-202201";
 
         private readonly ILoggerService _loggerService;
 
