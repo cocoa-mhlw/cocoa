@@ -5,6 +5,7 @@
 using System;
 using System.Threading.Tasks;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -16,20 +17,36 @@ namespace Covid19Radar.ViewModels
     public class InqueryPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
+        private readonly IEssentialsService essentialService;
 
         public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
 
-        public InqueryPageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
+        public InqueryPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IEssentialsService eseentialService
+            ) : base(navigationService)
         {
             Title = AppResources.InqueryPageTitle;
             this.loggerService = loggerService;
+            this.essentialService = eseentialService;
         }
 
         public Command OpenGitHub => new Command(async () =>
         {
             var url = AppResources.UrlGitHubRepository;
             await BrowserOpenAsync(url, BrowserLaunchMode.External);
+        });
+
+        public Command OnClickUseStable => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var url = essentialService.StoreUrl;
+            await BrowserOpenAsync(url, BrowserLaunchMode.External);
+
+            loggerService.EndMethod();
         });
 
         public Command OnClickQuestionCommand => new Command(async () =>

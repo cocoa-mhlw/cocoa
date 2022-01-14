@@ -1335,6 +1335,10 @@ Note: this app does not collect users’ location information.</value>
     <value>Open GitHub</value>
     <comment>GitHubを開く</comment>
   </data>
+  <data name="InqueryBetaViaGitHubInstallStable" xml:space="preserve">
+    <value>Use Stable veriosn</value>
+    <comment>安定版をインストール</comment>
+  </data>
 
   <data name="Beta_Splash_WelcomeBeta" xml:space="preserve">
     <value>Welcome COCOA(Beta)!!</value>
@@ -1365,7 +1369,7 @@ Note: this app does not collect users’ location information.</value>
     <comment>COCOA(Beta)を利用する</comment>
   </data>
   <data name="Beta_Splash_InstallStable" xml:space="preserve">
-    <value>Use Stable veriosn.</value>
+    <value>Use Stable veriosn</value>
     <comment>安定版をインストール</comment>
   </data>
 </root>

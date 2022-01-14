@@ -67,6 +67,15 @@
                 Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.InqueryBetaViaGitHub}" />
 
+            <Button
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="7"
+                Margin="0,10,0,10"
+                Command="{Binding Path=OnClickUseStable}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.InqueryBetaViaGitHubInstallStable}"
+                />
+
             <BoxView Style="{StaticResource DefaultLineStyle}" />
 
         </StackLayout>

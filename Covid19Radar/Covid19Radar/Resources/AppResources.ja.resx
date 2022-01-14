@@ -1225,6 +1225,10 @@
     <value>GitHubを開く</value>
     <comment>GitHubを開く</comment>
   </data>
+  <data name="InqueryBetaViaGitHubInstallStable" xml:space="preserve">
+    <value>安定版をインストール</value>
+    <comment>安定版をインストール</comment>
+  </data>
 
   <data name="Beta_Splash_WelcomeBeta" xml:space="preserve">
     <value>COCOA(Beta)へようこそ！</value>

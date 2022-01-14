@@ -1883,6 +1883,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string InqueryBetaViaGitHubInstallStable {
+            get {
+                return ResourceManager.GetString("InqueryBetaViaGitHubInstallStable", resourceCulture);
+            }
+        }
+        
         public static string Beta_Splash_WelcomeBeta {
             get {
                 return ResourceManager.GetString("Beta_Splash_WelcomeBeta", resourceCulture);
