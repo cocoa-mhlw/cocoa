@@ -38,33 +38,31 @@ namespace Covid19Radar.Repository
     {
         private const long BUFFER_LENGTH = 4 * 1024 * 1024;
 
-        private readonly IHttpClientService _httpClientService;
         private readonly ILoggerService _loggerService;
+
+        private readonly HttpClient _httpClient;
 
         public DiagnosisKeyRepository(
             IHttpClientService httpClientService,
             ILoggerService loggerService
             )
         {
-            _httpClientService = httpClientService;
+            _httpClient = httpClientService.Create();
             _loggerService = loggerService;
         }
 
         public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken)
         {
-            using (var client = _httpClientService.Create())
+            HttpResponseMessage response = await _httpClient.GetAsync(url, cancellationToken);
+            if (response.IsSuccessStatusCode)
             {
-                HttpResponseMessage response = await client.GetAsync(url, cancellationToken);
-                if (response.IsSuccessStatusCode)
-                {
-                    string content = await response.Content.ReadAsStringAsync();
-                    _loggerService.Debug(content);
-                    return JsonConvert.DeserializeObject<List<DiagnosisKeyEntry>>(content);
-                }
-                else
-                {
-                    _loggerService.Debug($"GetDiagnosisKeysListAsync {response.StatusCode}");
-                }
+                string content = await response.Content.ReadAsStringAsync();
+                _loggerService.Debug(content);
+                return JsonConvert.DeserializeObject<List<DiagnosisKeyEntry>>(content);
+            }
+            else
+            {
+                _loggerService.Debug($"GetDiagnosisKeysListAsync {response.StatusCode}");
             }
 
             return new List<DiagnosisKeyEntry>();
@@ -74,32 +72,29 @@ namespace Covid19Radar.Repository
         {
             Uri uri = new Uri(diagnosisKeyEntry.Url);
 
-            using (var client = _httpClientService.Create())
+            HttpResponseMessage response = await _httpClient.GetAsync(uri, cancellationToken);
+            if (response.IsSuccessStatusCode)
             {
-                HttpResponseMessage response = await client.GetAsync(uri, cancellationToken);
-                if (response.IsSuccessStatusCode)
+                string fileName = uri.Segments[uri.Segments.Length - 1];
+                string outputPath = Path.Combine(outputDir, fileName);
+
+                byte[] buffer = new byte[BUFFER_LENGTH];
+
+                using BufferedStream bs = new BufferedStream(await response.Content.ReadAsStreamAsync());
+                using FileStream fs = File.OpenWrite(outputPath);
+
+                int len = 0;
+                while ((len = await bs.ReadAsync(buffer, 0, buffer.Length)) > 0)
                 {
-                    string fileName = uri.Segments[uri.Segments.Length - 1];
-                    string outputPath = Path.Combine(outputDir, fileName);
-
-                    byte[] buffer = new byte[BUFFER_LENGTH];
-
-                    using BufferedStream bs = new BufferedStream(await response.Content.ReadAsStreamAsync());
-                    using FileStream fs = File.OpenWrite(outputPath);
-
-                    int len = 0;
-                    while ((len = await bs.ReadAsync(buffer, 0, buffer.Length)) > 0)
-                    {
-                        await fs.WriteAsync(buffer, 0, len);
-                    }
-
-                    return outputPath;
+                    await fs.WriteAsync(buffer, 0, len);
                 }
-                else
-                {
-                    _loggerService.Debug($"DownloadDiagnosisKeysAsync {response.StatusCode}");
-                    throw new HttpRequestException($"Request failed with status code {response.StatusCode}");
-                }
+
+                return outputPath;
+            }
+            else
+            {
+                _loggerService.Debug($"DownloadDiagnosisKeysAsync {response.StatusCode}");
+                throw new HttpRequestException($"Request failed with status code {response.StatusCode}");
             }
         }
     }

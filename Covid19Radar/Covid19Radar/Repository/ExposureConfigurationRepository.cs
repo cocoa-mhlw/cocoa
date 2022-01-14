@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Chino;
@@ -32,12 +33,13 @@ namespace Covid19Radar.Repository
     {
         private const int TIMEOUT_SECONDS = 10;
 
-        private readonly IHttpClientService _httpClientService;
         private readonly ILocalPathService _localPathService;
         private readonly IPreferencesService _preferencesService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
+
+        private readonly HttpClient _httpClient;
 
         private readonly string _configDir;
 
@@ -54,12 +56,14 @@ namespace Covid19Radar.Repository
             ILoggerService loggerService
             )
         {
-            _httpClientService = httpClientService;
             _localPathService = localPathService;
             _preferencesService = preferencesService;
             _serverConfigurationRepository = serverConfigurationRepository;
             _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
+
+            _httpClient = httpClientService.Create();
+            _httpClient.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
 
             _configDir = PrepareConfigDir();
             _currentExposureConfigurationPath = localPathService.CurrentExposureConfigurationPath;
@@ -137,31 +141,26 @@ namespace Covid19Radar.Repository
 
             ExposureConfiguration newExposureConfiguration = null;
 
-            using (var client = _httpClientService.Create())
+            var response = await _httpClient.GetAsync(url);
+            if (response.IsSuccessStatusCode)
             {
-                client.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
+                string exposureConfigurationAsJson = await response.Content.ReadAsStringAsync();
+                _loggerService.Debug(exposureConfigurationAsJson);
 
-                var response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
+                try
                 {
-                    string exposureConfigurationAsJson = await response.Content.ReadAsStringAsync();
-                    _loggerService.Debug(exposureConfigurationAsJson);
-
-                    try
-                    {
-                        newExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
-                        SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
-                    }
-                    catch (JsonException exception)
-                    {
-                        _loggerService.Exception("JsonException.", exception);
-                    }
-
+                    newExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
+                    SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
                 }
-                else
+                catch (JsonException exception)
                 {
-                    _loggerService.Warning($"Download ExposureConfiguration failed from {url}");
+                    _loggerService.Exception("JsonException.", exception);
                 }
+
+            }
+            else
+            {
+                _loggerService.Warning($"Download ExposureConfiguration failed from {url}");
             }
 
             if (newExposureConfiguration is null)
