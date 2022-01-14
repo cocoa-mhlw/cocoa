@@ -282,6 +282,16 @@ namespace Covid19Radar.Repository
                 {
                     InfectiousnessWhenDaysSinceOnsetMissing = Infectiousness.High,
                     ReportTypeNoneMap = ReportType.ConfirmedTest,
+                    AttenuationDurationThresholds = new int[] {
+                        50,
+                        54,
+                        65
+                    },
+                    ImmediateDurationWeight = 250.0,
+                    NearDurationWeight = 130.0,
+                    MediumDurationWeight = 60.0,
+                    OtherDurationWeight = 1.0,
+                    DaysSinceLastExposureThreshold = 0,
                     InfectiousnessForDaysSinceOnsetOfSymptoms = new Dictionary<long, Infectiousness>()
                     {
                         { -14, Infectiousness.None },
