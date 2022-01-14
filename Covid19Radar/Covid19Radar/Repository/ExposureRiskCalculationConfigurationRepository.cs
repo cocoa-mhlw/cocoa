@@ -24,7 +24,6 @@ namespace Covid19Radar.Repository
 
         private readonly IHttpClientService _httpClientService;
         private readonly ILocalPathService _localPathService;
-        private readonly IPreferencesService _preferencesService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILoggerService _loggerService;
 
@@ -37,14 +36,12 @@ namespace Covid19Radar.Repository
         public ExposureRiskCalculationConfigurationRepository(
             IHttpClientService httpClientService,
             ILocalPathService localPathService,
-            IPreferencesService preferencesService,
             IServerConfigurationRepository serverConfigurationRepository,
             ILoggerService loggerService
             )
         {
             _httpClientService = httpClientService;
             _localPathService = localPathService;
-            _preferencesService = preferencesService;
             _serverConfigurationRepository = serverConfigurationRepository;
             _loggerService = loggerService;
 
@@ -107,7 +104,7 @@ namespace Covid19Radar.Repository
 
             if (currentConfiguration is null)
             {
-                currentConfiguration = new V1ExposureRiskCalculationConfiguration();
+                currentConfiguration = CreateDefaultConfiguration();
             }
             else if(preferCache)
             {
@@ -115,7 +112,7 @@ namespace Covid19Radar.Repository
             }
 
             await _serverConfigurationRepository.LoadAsync();
-            string url = _serverConfigurationRepository.ExposureConfigurationUrl;
+            string url = _serverConfigurationRepository.ExposureRiskCalculationConfigurationUrl;
 
             V1ExposureRiskCalculationConfiguration newExposureRiskCalculationConfiguration = null;
 
@@ -169,6 +166,18 @@ namespace Covid19Radar.Repository
                 _loggerService.EndMethod();
 
             }
+        }
+
+        private static V1ExposureRiskCalculationConfiguration CreateDefaultConfiguration()
+        {
+            return new V1ExposureRiskCalculationConfiguration()
+            {
+                DailySummary_DaySummary_ScoreSum = new V1ExposureRiskCalculationConfiguration.Threshold()
+                {
+                    Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
+                    Value = 1170.0,
+                }
+            };
         }
 
         private void RemoveExposureRiskCalculationConfiguration()

@@ -24,7 +24,7 @@
 		<string>telephony</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>13.5</string>
+	<string>13.7</string>
 	<key>CFBundleName</key>
 	<string>Covid19Radar</string>
 	<key>CFBundleDisplayName</key>

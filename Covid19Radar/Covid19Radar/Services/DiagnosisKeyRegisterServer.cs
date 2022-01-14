@@ -81,13 +81,6 @@ namespace Covid19Radar.Services
         {
             _loggerService.StartMethod();
 
-            if (temporaryExposureKeys.Count() == 0)
-            {
-                _loggerService.Error($"Temporary exposure keys is empty.");
-                _loggerService.EndMethod();
-                throw new InvalidDataException();
-            }
-
             // Create the network keys
             var keys = temporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key
             {
