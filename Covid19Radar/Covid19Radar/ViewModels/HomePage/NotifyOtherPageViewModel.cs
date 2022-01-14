@@ -240,9 +240,6 @@ namespace Covid19Radar.ViewModels
 
                 loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
 
-                if (errorCount > 0)
-
-
                 // Init Dialog
                 if (string.IsNullOrEmpty(ProcessingNumber))
                 {
@@ -351,6 +348,11 @@ namespace Covid19Radar.ViewModels
                     // Mainly, we expect that SubmitDiagnosisKeysAsync returns one result.
                     // Multiple-results is for debug use only.
                     ShowResult(statusCode);
+                }
+
+                if (httpStatusCodes.Any(statusCode => statusCode != HttpStatusCode.OK))
+                {
+                    errorCount++;
                 }
             }
             catch (ENException exception)
