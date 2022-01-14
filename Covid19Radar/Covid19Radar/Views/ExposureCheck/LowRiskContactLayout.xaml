@@ -24,15 +24,9 @@
                 Padding="20, 20, 20, 10">
                 <Frame
                     Padding="20"
-                    BackgroundColor="#FFF3DD"
                     CornerRadius="10">
         
                     <StackLayout>
-                        <ffimageloading:CachedImage
-                            AutomationProperties.IsInAccessibleTree="False"
-                            Margin="0,0,0,20"
-                            Aspect="AspectFit"
-                            Source="InfoMark.png" />
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
                             TabIndex="1"
