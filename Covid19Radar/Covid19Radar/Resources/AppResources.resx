@@ -1335,4 +1335,37 @@ Note: this app does not collect users’ location information.</value>
     <value>Open GitHub</value>
     <comment>GitHubを開く</comment>
   </data>
+
+  <data name="Beta_Splash_WelcomeBeta" xml:space="preserve">
+    <value>Welcome COCOA(Beta)!!</value>
+    <comment>COCOA(Beta)へようこそ！</comment>
+  </data>
+  <data name="Beta_Splash_Description1" xml:space="preserve">
+    <value>COCOA(Beta) is the experimental version of COCOA, that is COCOA open source project uses to test out new features before it adds them to the stable release.</value>
+    <comment>COCOA(Beta)は、新しい機能をテストするための実験的なバージョンです。</comment>
+  </data>
+  <data name="Beta_Splash_Description2" xml:space="preserve">
+    <value>COCOA(Beta) is not a stable version. Please understand that there is a possibility that not only the experimental functions but also the basic functions of COCOA (Diagnosis submission and exposure detection) may not work properly.</value>
+    <comment>COCOA(Beta)は安定版ではありません。実験的な機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご理解ください。</comment>
+  </data>
+  <data name="Beta_Splash_Description3" xml:space="preserve">
+    <value>We do not provide normal support such as e-mail. If you find a new issue, please let us know by filing a bug.</value>
+    <comment>COCOA(Beta)では通常のサポートは行っていません。何か問題等ありましたら、開発中のGitHubからIssue等を投稿してください。</comment>
+  </data>
+  <data name="Beta_Splash_GitHub" xml:space="preserve">
+    <value>GitHub</value>
+    <comment>GitHubリポジトリ</comment>
+  </data>
+  <data name="Beta_Splash_GitHubAccountRequired" xml:space="preserve">
+    <value>(GitHub account is required)</value>
+    <comment>（GitHubのアカウントが必要です）</comment>
+  </data>
+  <data name="Beta_Splash_Acknowledge" xml:space="preserve">
+    <value>Use COCOA(Beta)</value>
+    <comment>COCOA(Beta)を利用する</comment>
+  </data>
+  <data name="Beta_Splash_InstallStable" xml:space="preserve">
+    <value>Use Stable veriosn.</value>
+    <comment>安定版をインストール</comment>
+  </data>
 </root>

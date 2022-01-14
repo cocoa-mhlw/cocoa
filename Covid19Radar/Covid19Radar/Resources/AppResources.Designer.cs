@@ -1882,5 +1882,53 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("InqueryBetaViaGitHub", resourceCulture);
             }
         }
+        
+        public static string Beta_Splash_WelcomeBeta {
+            get {
+                return ResourceManager.GetString("Beta_Splash_WelcomeBeta", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_Description1 {
+            get {
+                return ResourceManager.GetString("Beta_Splash_Description1", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_Description2 {
+            get {
+                return ResourceManager.GetString("Beta_Splash_Description2", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_Description3 {
+            get {
+                return ResourceManager.GetString("Beta_Splash_Description3", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_GitHub {
+            get {
+                return ResourceManager.GetString("Beta_Splash_GitHub", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_GitHubAccountRequired {
+            get {
+                return ResourceManager.GetString("Beta_Splash_GitHubAccountRequired", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_Acknowledge {
+            get {
+                return ResourceManager.GetString("Beta_Splash_Acknowledge", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_InstallStable {
+            get {
+                return ResourceManager.GetString("Beta_Splash_InstallStable", resourceCulture);
+            }
+        }
     }
 }

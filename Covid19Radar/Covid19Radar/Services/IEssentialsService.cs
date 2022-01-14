@@ -24,5 +24,8 @@ namespace Covid19Radar.Services
 
         // PhoneDialer
         void PhoneDialerOpen(string number);
+
+        // Store URL
+        string StoreUrl { get; }
     }
 }

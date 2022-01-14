@@ -1225,4 +1225,37 @@
     <value>GitHubを開く</value>
     <comment>GitHubを開く</comment>
   </data>
+
+  <data name="Beta_Splash_WelcomeBeta" xml:space="preserve">
+    <value>COCOA(Beta)へようこそ！</value>
+    <comment>COCOA(Beta)へようこそ！</comment>
+  </data>
+  <data name="Beta_Splash_Description1" xml:space="preserve">
+    <value>COCOA(Beta)は、新しい機能をテストするための実験的なバージョンです。</value>
+    <comment>COCOA(Beta)は、新しい機能をテストするための実験的なバージョンです。</comment>
+  </data>
+  <data name="Beta_Splash_Description2" xml:space="preserve">
+    <value>COCOA(Beta)は安定版ではありません。Beta版の実験機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご理解ください。</value>
+    <comment>COCOA(Beta)は安定版ではありません。Beta版の実験機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご理解ください。</comment>
+  </data>
+  <data name="Beta_Splash_Description3" xml:space="preserve">
+    <value>COCOA(Beta)では通常のサポートは行っていません。何か問題等ありましたら、GitHubからIssue等を投稿してください。</value>
+    <comment>COCOA(Beta)では通常のサポートは行っていません。何か問題等ありましたら、開発中のGitHubからIssue等を投稿してください。</comment>
+  </data>
+  <data name="Beta_Splash_GitHub" xml:space="preserve">
+    <value>GitHubリポジトリ</value>
+    <comment>GitHubリポジトリ</comment>
+  </data>
+  <data name="Beta_Splash_GitHubAccountRequired" xml:space="preserve">
+    <value>（GitHubのアカウントが必要です）</value>
+    <comment>（GitHubのアカウントが必要です）</comment>
+  </data>
+  <data name="Beta_Splash_Acknowledge" xml:space="preserve">
+    <value>COCOA(Beta)を利用する</value>
+    <comment>COCOA(Beta)を利用する</comment>
+  </data>
+  <data name="Beta_Splash_InstallStable" xml:space="preserve">
+    <value>安定版をインストール</value>
+    <comment>安定版をインストール</comment>
+  </data>
 </root>
