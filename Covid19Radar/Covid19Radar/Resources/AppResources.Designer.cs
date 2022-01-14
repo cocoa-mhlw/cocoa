@@ -959,18 +959,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotifyOtherPageDiag3Message {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDiag3Message", resourceCulture);
-            }
-        }
-        
-        public static string NotifyOtherPageDiag3Title {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDiag3Title", resourceCulture);
-            }
-        }
-        
         public static string NotifyOtherPageDiag4Message {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag4Message", resourceCulture);
@@ -992,18 +980,6 @@ namespace Covid19Radar.Resources {
         public static string NotifyOtherPageDiag6Title {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag6Title", resourceCulture);
-            }
-        }
-        
-        public static string NotifyOtherPageDiagReturnHomeTitle {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDiagReturnHomeTitle", resourceCulture);
-            }
-        }
-        
-        public static string NotifyOtherPageDiagReturnHome {
-            get {
-                return ResourceManager.GetString("NotifyOtherPageDiagReturnHome", resourceCulture);
             }
         }
         

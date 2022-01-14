@@ -13,7 +13,6 @@ using System.Text.RegularExpressions;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
-using System.IO;
 using System.Collections.Generic;
 using Chino;
 using System.Net;
@@ -119,8 +118,6 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref _diagnosisDate, value);
         }
 
-        private int errorCount { get; set; }
-
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -137,7 +134,6 @@ namespace Covid19Radar.ViewModels
             this.diagnosisKeyRegisterServer = diagnosisKeyRegisterServer;
             _delayForErrorMillis = delayForErrorMillis;
             _essentialsService = essentialsService;
-            errorCount = 0;
             ProcessingNumber = "";
             DiagnosisDate = DateTime.Today;
         }
@@ -212,34 +208,6 @@ namespace Covid19Radar.ViewModels
             // Check helthcare authority positive api check here!!
             try
             {
-                if (errorCount >= AppConstants.MaxErrorCount)
-                {
-                    await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiagReturnHome,
-                        AppResources.NotifyOtherPageDiagReturnHomeTitle,
-                        AppResources.ButtonOk
-                    );
-                    UserDialogs.Instance.HideLoading();
-                    await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
-
-                    loggerService.Error($"Exceeded the number of trials.");
-                    loggerService.EndMethod();
-                    return;
-                }
-
-                loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
-
-                if (errorCount > 0)
-                {
-                    await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
-                        AppResources.NotifyOtherPageDiag3Title,
-                        AppResources.ButtonOk
-                        );
-                    await Task.Delay(errorCount * _delayForErrorMillis);
-                }
-
-                loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
-
                 // Init Dialog
                 if (string.IsNullOrEmpty(ProcessingNumber))
                 {
@@ -248,7 +216,6 @@ namespace Covid19Radar.ViewModels
                         AppResources.ProcessingNumberErrorDiagTitle,
                         AppResources.ButtonOk
                     );
-                    errorCount++;
                     loggerService.Error($"No diagnostic number entered.");
                     return;
                 }
@@ -260,7 +227,6 @@ namespace Covid19Radar.ViewModels
                         AppResources.ProcessingNumberErrorDiagTitle,
                         AppResources.ButtonOk
                     );
-                    errorCount++;
                     loggerService.Error($"Incorrect process number format.");
                     return;
                 }
@@ -288,7 +254,6 @@ namespace Covid19Radar.ViewModels
             {
                 UserDialogs.Instance.HideLoading();
 
-                errorCount++;
                 UserDialogs.Instance.Alert(
                     AppResources.NotifyOtherPageDialogExceptionText,
                     AppResources.NotifyOtherPageDialogExceptionTitle,
@@ -348,11 +313,6 @@ namespace Covid19Radar.ViewModels
                     // Mainly, we expect that SubmitDiagnosisKeysAsync returns one result.
                     // Multiple-results is for debug use only.
                     ShowResult(statusCode);
-                }
-
-                if (httpStatusCodes.Any(statusCode => statusCode != HttpStatusCode.OK))
-                {
-                    errorCount++;
                 }
             }
             catch (ENException exception)
