@@ -107,7 +107,7 @@ namespace Covid19Radar.Repository
 
             if (currentConfiguration is null)
             {
-                currentConfiguration = new V1ExposureRiskCalculationConfiguration();
+                currentConfiguration = CreateDefaultConfiguration();
             }
             else if(preferCache)
             {
@@ -169,6 +169,18 @@ namespace Covid19Radar.Repository
                 _loggerService.EndMethod();
 
             }
+        }
+
+        private static V1ExposureRiskCalculationConfiguration CreateDefaultConfiguration()
+        {
+            return new V1ExposureRiskCalculationConfiguration()
+            {
+                DailySummary_DaySummary_ScoreSum = new V1ExposureRiskCalculationConfiguration.Threshold()
+                {
+                    Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
+                    Value = 1170.0,
+                }
+            };
         }
 
         private void RemoveExposureRiskCalculationConfiguration()

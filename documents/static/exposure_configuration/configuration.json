@@ -51,7 +51,7 @@
     "transmission_risk_weight": 50
   },
   "google_diagnosis_keys_data_mapping_config": {
-    "infectiousness_when_days_since_onset_missing": 1,
+    "infectiousness_when_days_since_onset_missing": 2,
     "report_type_when_missing": 1,
     "infectiousness_for_days_since_onset_of_symptoms": {
       "-14": 0,
@@ -155,7 +155,7 @@
     "minimum_risk_score_full_range": 0.0
   },
   "apple_exposure_config_v2": {
-    "infectiousness_when_days_since_onset_missing": 1,
+    "infectiousness_when_days_since_onset_missing": 2,
     "attenuation_duration_thresholds": [
       50,
       54,
