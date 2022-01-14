@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Net.Http;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
@@ -31,6 +32,9 @@ namespace Covid19Radar.UnitTests.Services
 
         private TermsUpdateService CreateService()
         {
+            mockHttpClientService.Setup(x => x.Create())
+                .Returns(new HttpClient());
+
             return new TermsUpdateService(
                 mockLoggerService.Object,
                 mockHttpClientService.Object,

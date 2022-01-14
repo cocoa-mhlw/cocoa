@@ -4,6 +4,7 @@
 
 using System;
 using System.IO;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
@@ -22,10 +23,11 @@ namespace Covid19Radar.Repository
     {
         private const double TIMEOUT_SECONDS = 10.0;
 
-        private readonly IHttpClientService _httpClientService;
         private readonly ILocalPathService _localPathService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILoggerService _loggerService;
+
+        private readonly HttpClient _httpClient;
 
         private readonly string _configDir;
 
@@ -40,10 +42,12 @@ namespace Covid19Radar.Repository
             ILoggerService loggerService
             )
         {
-            _httpClientService = httpClientService;
             _localPathService = localPathService;
             _serverConfigurationRepository = serverConfigurationRepository;
             _loggerService = loggerService;
+
+            _httpClient = httpClientService.Create();
+            _httpClient.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
 
             _configDir = PrepareConfigDir();
             _currentPath = localPathService.CurrentExposureRiskCalculationConfigurationPath;
@@ -116,29 +120,25 @@ namespace Covid19Radar.Repository
 
             V1ExposureRiskCalculationConfiguration newExposureRiskCalculationConfiguration = null;
 
-            using (var client = _httpClientService.Create())
+            var response = await _httpClient.GetAsync(url);
+            if (response.IsSuccessStatusCode)
             {
-                client.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
-                var response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
-                    _loggerService.Debug(exposureRiskCalculationConfigurationAsJson);
+                string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
+                _loggerService.Debug(exposureRiskCalculationConfigurationAsJson);
 
-                    try
-                    {
-                        newExposureRiskCalculationConfiguration = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(exposureRiskCalculationConfigurationAsJson);
-                    }
-                    catch (JsonException exception)
-                    {
-                        _loggerService.Exception("JsonException.", exception);
-                    }
-
-                }
-                else
+                try
                 {
-                    _loggerService.Warning($"Download ExposureRiskCalculationConfiguration failed from {url}");
+                    newExposureRiskCalculationConfiguration = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(exposureRiskCalculationConfigurationAsJson);
                 }
+                catch (JsonException exception)
+                {
+                    _loggerService.Exception("JsonException.", exception);
+                }
+
+            }
+            else
+            {
+                _loggerService.Warning($"Download ExposureRiskCalculationConfiguration failed from {url}");
             }
 
             if (newExposureRiskCalculationConfiguration is null)

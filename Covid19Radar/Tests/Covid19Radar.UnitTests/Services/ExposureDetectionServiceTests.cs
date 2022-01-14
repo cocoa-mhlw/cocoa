@@ -14,6 +14,7 @@ using Chino;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace Covid19Radar.UnitTests.Services { 
     public class ExposureDetectionServiceTests: IDisposable
@@ -74,6 +75,9 @@ namespace Covid19Radar.UnitTests.Services {
 
         private ExposureDetectionService CreateService()
         {
+            clientService.Setup(x => x.Create())
+                .Returns(new HttpClient());
+
             var exposureConfigurationRepository = new ExposureConfigurationRepository(
                 clientService.Object,
                 localPathService.Object,

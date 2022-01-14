@@ -51,9 +51,10 @@ namespace Covid19Radar.Services
         private readonly IEssentialsService _essentialsService;
         private readonly IDeviceVerifier _deviceVerifier;
         private readonly IDateTimeUtility _dateTimeUtility;
-        private readonly IHttpClientService _httpClientService;
 
         private readonly ILoggerService _loggerService;
+
+        private readonly HttpClient _httpClient;
 
         public EventLogService(
             IUserDataRepository userDataRepository,
@@ -70,8 +71,9 @@ namespace Covid19Radar.Services
             _essentialsService = essentialsService;
             _deviceVerifier = deviceVerifier;
             _dateTimeUtility = dateTimeUtility;
-            _httpClientService = httpClientService;
             _loggerService = loggerService;
+
+            _httpClient = httpClientService.Create();
         }
 
         public async Task SendExposureDataAsync(
@@ -183,18 +185,15 @@ namespace Covid19Radar.Services
 
                 Uri uri = new Uri(exposureDataCollectServerEndpoint);
 
-                using (var client = _httpClientService.Create())
+                HttpResponseMessage response = await _httpClient.PutAsync(uri, httpContent);
+                if (response.IsSuccessStatusCode)
                 {
-                    HttpResponseMessage response = await client.PutAsync(uri, httpContent);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        var responseJson = await response.Content.ReadAsStringAsync();
-                        _loggerService.Debug($"{responseJson}");
-                    }
-                    else
-                    {
-                        _loggerService.Info($"UploadExposureDataAsync {response.StatusCode}");
-                    }
+                    var responseJson = await response.Content.ReadAsStringAsync();
+                    _loggerService.Debug($"{responseJson}");
+                }
+                else
+                {
+                    _loggerService.Info($"UploadExposureDataAsync {response.StatusCode}");
                 }
             }
             finally
