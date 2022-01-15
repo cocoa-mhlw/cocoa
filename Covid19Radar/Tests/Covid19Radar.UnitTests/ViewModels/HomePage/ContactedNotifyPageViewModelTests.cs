@@ -30,11 +30,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
         private readonly Mock<IDialogService> mockDialogService;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
-        private readonly CultureInfo originalCalture;
+        private readonly CultureInfo originalAppResourceCalture;
+        private readonly CultureInfo originalThreadCalture;
+        private readonly CultureInfo originalThreadUICalture;
 
         public ContactedNotifyPageViewModelTests()
         {
-            originalCalture = AppResources.Culture;
+            originalAppResourceCalture = AppResources.Culture;
+            originalThreadCalture = Thread.CurrentThread.CurrentCulture;
+            originalThreadUICalture = Thread.CurrentThread.CurrentUICulture;
             AppResources.Culture = new CultureInfo("ja-JP");
             Thread.CurrentThread.CurrentCulture = new CultureInfo("ja-JP");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("ja-JP");
@@ -50,7 +54,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
         public void Dispose()
         {
-            AppResources.Culture = originalCalture;
+            AppResources.Culture = originalAppResourceCalture;
+            Thread.CurrentThread.CurrentCulture = originalThreadCalture;
+            Thread.CurrentThread.CurrentUICulture = originalThreadUICalture;
         }
 
         private ContactedNotifyPageViewModel CreateViewModel()
