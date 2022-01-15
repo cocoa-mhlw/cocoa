@@ -311,12 +311,14 @@ namespace Covid19Radar.ViewModels
 
             if (isStopped)
             {
+                loggerService.Info("isStopped");
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = false;
                 IsVisibleENStatusStoppedLayout = true;
             }
             else if (!canConfirmExposure)
             {
+                loggerService.Info("canConfirmExposure is false");
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
