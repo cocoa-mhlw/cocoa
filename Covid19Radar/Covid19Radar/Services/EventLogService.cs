@@ -44,6 +44,7 @@ namespace Covid19Radar.Services
             );
     }
 
+#if EVENT_LOG_ENABLED
     public class EventLogService : IEventLogService
     {
         private readonly IUserDataRepository _userDataRepository;
@@ -203,6 +204,7 @@ namespace Covid19Radar.Services
             }
         }
     }
+#endif
 
     public class ExposureData
     {
