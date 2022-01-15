@@ -64,7 +64,7 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                loggerService.EndMethod();
+                loggerService.StartMethod();
 
                 var exposureRiskCalculationConfiguration
                     = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
