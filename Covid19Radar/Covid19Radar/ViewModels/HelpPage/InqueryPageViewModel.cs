@@ -41,6 +41,16 @@ namespace Covid19Radar.ViewModels
             this.essentialService = eseentialService;
         }
 
+        public override void Destroy()
+        {
+            base.Destroy();
+            loggerService.StartMethod();
+
+            logFileService.DeleteAllLogUploadingFiles();
+
+            loggerService.EndMethod();
+        }
+
         public Command OpenGitHub => new Command(async () =>
         {
             var url = AppResources.UrlGitHubRepository;
