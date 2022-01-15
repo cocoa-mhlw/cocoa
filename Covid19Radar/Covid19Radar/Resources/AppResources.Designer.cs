@@ -1871,9 +1871,27 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string InqueryBeta_Description3 {
+        public static string InqueryBeta_InstallStable {
             get {
-                return ResourceManager.GetString("InqueryBeta_Description3", resourceCulture);
+                return ResourceManager.GetString("InqueryBeta_InstallStable", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_DeveloperCommunity {
+            get {
+                return ResourceManager.GetString("InqueryBeta_DeveloperCommunity", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Community_Description1 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Community_Description1", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Community_Description2 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Community_Description2", resourceCulture);
             }
         }
         
@@ -1883,9 +1901,21 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string InqueryBetaViaGitHubInstallStable {
+        public static string InqueryBeta_Community_Description3 {
             get {
-                return ResourceManager.GetString("InqueryBetaViaGitHubInstallStable", resourceCulture);
+                return ResourceManager.GetString("InqueryBeta_Community_Description3", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Community_Description4 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Community_Description4", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBetaShareLog {
+            get {
+                return ResourceManager.GetString("InqueryBetaShareLog", resourceCulture);
             }
         }
         

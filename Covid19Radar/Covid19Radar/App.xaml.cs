@@ -183,7 +183,6 @@ namespace Covid19Radar
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
-            container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
             container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
             container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
             container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
@@ -202,10 +201,8 @@ namespace Covid19Radar
 
 #if DEBUG
             container.Register<IServerConfigurationRepository, DebugServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
 #else
             container.Register<IServerConfigurationRepository, ReleaseServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IExposureDataCollectServer, ReleaseExposureDataCollectServer>(Reuse.Singleton);
 #endif
 
             container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
@@ -216,7 +213,13 @@ namespace Covid19Radar
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
-            container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
+
+            // Beta
+            container.Register<ILogUploadService, LogUploadServiceNop>(Reuse.Singleton);
+
+            // Privacy
+            container.Register<IExposureDataCollectServer, DebugExposureDataCollectServerNop>(Reuse.Singleton);
+            container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);

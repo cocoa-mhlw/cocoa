@@ -1324,20 +1324,45 @@ Note: this app does not collect users’ location information.</value>
     <comment>COCOA(Beta)は新しい機能をテストするための実験的なバージョンです。</comment>
   </data>
   <data name="InqueryBeta_Description2" xml:space="preserve">
-    <value>COCOA(Beta) is not a stable version, we do not provide normal support such as e-mail. If you wish to receive regular support, please stop using COCOA(Beta) and use the stable version.</value>
-    <comment>COCOA(Beta)は安定版ではないため、通常のサポートは行っていません。メール等、通常のサポートをご希望の方はベータ版のご利用を中止して、安定版のCOCOAをお使いください。</comment>
+    <value>We do not provide support by e-mail or phone at this time. If you would like regular support, please use the stable version.</value>
+    <comment>COCOA(Beta)は安定版ではないため、現時点ではメールや電話でのサポートは行っていません。通常サポートをご希望の方は安定版をお使いください。</comment>
   </data>
-  <data name="InqueryBeta_Description3" xml:space="preserve">
-    <value>If you find a new issue, please let us know by filing a bug. (GitHub account is required)</value>
-    <comment>何か問題等ありましたら、GitHubからIssue等を投稿してください（GitHubのアカウントが必要です）。</comment>
+    <data name="InqueryBeta_InstallStable" xml:space="preserve">
+    <value>Install stable version</value>
+    <comment>安定版をインストール</comment>
+  </data>
+
+  <data name="InqueryBeta_DeveloperCommunity" xml:space="preserve">
+    <value>Community</value>
+    <comment>開発コミュニティ</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description1" xml:space="preserve">
+    <value>COCOA is open source software, made available to you under the Mozilla Public License 2.0 (MPL).</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description2" xml:space="preserve">
+    <value>If you have any problems, please let the community know (GitHub account is required).</value>
+    <comment>なにか問題があれば、開発コミュニティまでお知らせください（GitHubのアカウントが必要です）。</comment>
+  </data>
+  <data name="InqueryBetaViaGitHub" xml:space="preserve">
+    <value>Community</value>
+    <comment>開発コミュニティを開く</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description3" xml:space="preserve">
+    <value> * The community may ask you to share the operation log in order to investigate the cause of problems. If an error occurs, please get and save the logs.</value>
+    <comment>※ 不具合等の原因究明のために動作ログの共有を求める場合があります。下のボタンから動作ログを取得・保存してください。</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description4" xml:space="preserve">
+    <value>Thank you for your cooperation!</value>
+    <comment>ご協力ありがとうございます！</comment>
   </data>
   <data name="InqueryBetaViaGitHub" xml:space="preserve">
     <value>Open GitHub</value>
     <comment>GitHubを開く</comment>
   </data>
-  <data name="InqueryBetaViaGitHubInstallStable" xml:space="preserve">
-    <value>Use Stable veriosn</value>
-    <comment>安定版をインストール</comment>
+  <data name="InqueryBetaShareLog" xml:space="preserve">
+    <value>動作ログを取得</value>
+    <comment>動作ログを取得</comment>
   </data>
 
   <data name="Beta_Splash_WelcomeBeta" xml:space="preserve">
@@ -1353,12 +1378,12 @@ Note: this app does not collect users’ location information.</value>
     <comment>COCOA(Beta)は安定版ではありません。実験的な機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご理解ください。</comment>
   </data>
   <data name="Beta_Splash_Description3" xml:space="preserve">
-    <value>We do not provide normal support such as e-mail. If you find a new issue, please let us know by filing a bug.</value>
-    <comment>COCOA(Beta)では通常のサポートは行っていません。何か問題等ありましたら、開発中のGitHubからIssue等を投稿してください。</comment>
+    <value>We do not provide support by e-mail or phone at this time. If you have any problems, please let the community know.</value>
+    <comment>COCOA(Beta)では通常のサポートは行っていません。何か問題等ありましたら開発コミュニティまでお知らせください。</comment>
   </data>
   <data name="Beta_Splash_GitHub" xml:space="preserve">
-    <value>GitHub</value>
-    <comment>GitHubリポジトリ</comment>
+    <value>Community</value>
+    <comment>開発コミュニティ</comment>
   </data>
   <data name="Beta_Splash_GitHubAccountRequired" xml:space="preserve">
     <value>(GitHub account is required)</value>
