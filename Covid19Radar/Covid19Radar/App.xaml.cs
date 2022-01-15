@@ -214,12 +214,13 @@ namespace Covid19Radar
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
 
-            // Beta
-            container.Register<ILogUploadService, LogUploadServiceNop>(Reuse.Singleton);
-
             // Privacy
             container.Register<IExposureDataCollectServer, DebugExposureDataCollectServerNop>(Reuse.Singleton);
             container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
+
+            // Beta
+            container.Register<ILogUploadService, LogUploadServiceNop>(Reuse.Singleton);
+            container.Register<ICheckVersionService, CheckVersionServiceNop>(Reuse.Singleton);
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
