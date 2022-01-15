@@ -55,7 +55,7 @@ namespace Covid19Radar.Services
                 AppResources.ButtonCancel);
         }
 
-        public async Task ShowUnknownErrorAsync()
+        public async Task ShowUnknownErrorWaringAsync()
         {
             await AlertAsync(
                 AppResources.InqueryDialogExceptionDescription,

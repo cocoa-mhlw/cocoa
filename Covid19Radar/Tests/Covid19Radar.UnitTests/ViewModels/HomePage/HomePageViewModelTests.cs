@@ -555,10 +555,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
 
             mockDialogService
-                .Verify(x => x.ShowUnknownErrorAsync(), Times.Once);
+                .Verify(x => x.ShowUnknownErrorWaringAsync(), Times.Once);
             mockNavigationService
                 .Verify(x => x.NavigateAsync(It.IsAny<String>()), Times.Never);
         }
-
     }
 }

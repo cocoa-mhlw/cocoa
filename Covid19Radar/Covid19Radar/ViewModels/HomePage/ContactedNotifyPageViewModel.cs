@@ -22,6 +22,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService loggerService;
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly IDialogService _dialogService;
 
         private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
 
@@ -44,13 +45,15 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
-            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
+            IDialogService dialogService
             ) : base(navigationService)
         {
             this.loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
+            _dialogService = dialogService;
 
             Title = AppResources.TitileUserStatusSettings;
         }
@@ -126,11 +129,7 @@ namespace Covid19Radar.ViewModels
             catch(Exception exception)
             {
                 loggerService.Exception("failed to risk calculation", exception);
-                await UserDialogs.Instance.AlertAsync(
-                    AppResources.InqueryDialogExceptionDescription,
-                    AppResources.InqueryDialogExceptionTitle,
-                    AppResources.ButtonOk
-                );
+                await _dialogService.ShowUnknownErrorWaringAsync();
             }
             finally
             {
