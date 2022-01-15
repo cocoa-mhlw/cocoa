@@ -41,8 +41,15 @@ namespace Covid19Radar.Repository
         Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp);
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
 
-        void SetIsSendEventLogEnabled(bool isSendLogEnabled);
-        bool IsSendEventLogEnabled();
+        void SetSendEventLogState(SendEventLogState sendEventLogState);
+        SendEventLogState GetSendEventLogState();
+    }
+
+    public enum SendEventLogState
+    {
+        NotSet = 0,
+        Disable = -1,
+        Enable = 1
     }
 
     public class UserDataRepository : IUserDataRepository
@@ -246,24 +253,25 @@ namespace Covid19Radar.Repository
             _loggerService.EndMethod();
         }
 
-        public void SetIsSendEventLogEnabled(bool isSendEventLogEnabled)
+        public void SetSendEventLogState(SendEventLogState sendEventLogState)
         {
             _loggerService.StartMethod();
 
-            _preferencesService.SetValue(PreferenceKey.IsSendEventLogEnabled, isSendEventLogEnabled);
+            _preferencesService.SetValue(PreferenceKey.SendEventLogState, (int)sendEventLogState);
 
             _loggerService.EndMethod();
         }
 
-        public bool IsSendEventLogEnabled()
+        public SendEventLogState GetSendEventLogState()
         {
             _loggerService.StartMethod();
             try
             {
-                return _preferencesService.GetValue(
-                    PreferenceKey.IsSendEventLogEnabled,
-                    AppConstants.DEFAULT_SEND_EVENT_LOG_ENABLED
+                int state = _preferencesService.GetValue(
+                    PreferenceKey.SendEventLogState,
+                    (int)SendEventLogState.NotSet
                     );
+                return (SendEventLogState)state;
             }
             finally
             {
