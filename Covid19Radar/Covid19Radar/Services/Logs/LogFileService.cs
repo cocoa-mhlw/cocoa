@@ -74,27 +74,30 @@ namespace Covid19Radar.Services.Logs
             }
         }
 
-        public bool CopyLogUploadingFileToPublicPath(string logUploadingFileName)
+        public string CopyLogUploadingFileToPublicPath(string logPath)
         {
             loggerService.StartMethod();
             try
             {
+                var logFileName = Path.GetFileName(logPath);
                 var tmpPath = logPathService.LogUploadingTmpPath;
                 var publicPath = logPathService.LogUploadingPublicPath;
                 if (string.IsNullOrEmpty(tmpPath) || string.IsNullOrEmpty(publicPath))
                 {
                     loggerService.EndMethod();
-                    return false;
+                    return null;
                 }
-                File.Copy(Path.Combine(tmpPath, logUploadingFileName), Path.Combine(publicPath, logUploadingFileName), true);
+                var destPath = Path.Combine(publicPath, logFileName);
+                File.Copy(logPath, destPath, true);
                 loggerService.EndMethod();
-                return true;
+
+                return destPath;
             }
             catch (Exception)
             {
                 loggerService.Error("Failed to copy log file");
                 loggerService.EndMethod();
-                return false;
+                return null;
             }
         }
 

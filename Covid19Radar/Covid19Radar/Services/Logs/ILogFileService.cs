@@ -10,7 +10,7 @@ namespace Covid19Radar.Services.Logs
         string CreateLogId();
         string LogUploadingFileName(string logId);
         bool CreateLogUploadingFileToTmpPath(string logUploadingFileName);
-        bool CopyLogUploadingFileToPublicPath(string logUploadingFileName);
+        string CopyLogUploadingFileToPublicPath(string logPath);
         bool DeleteAllLogUploadingFiles();
 
         // Log rotate
