@@ -50,19 +50,110 @@ namespace Covid19Radar.Repository
             List<DailySummary> existDailySummaryList = await GetDailySummariesAsync();
             List<ExposureWindow> existExposureWindowList = await GetExposureWindowsAsync();
 
-            List<DailySummary> unionDailySummaryList = existDailySummaryList.Union(dailySummaryList).ToList();
+            List<DailySummary> filteredExistDailySummaryList = new List<DailySummary>();
+
+            // Filter and merge DailySummaries that have same DateMillisSinceEpoch value.
+            foreach (var existDailySummary in existDailySummaryList)
+            {
+                var conflictDailySummaryList = dailySummaryList
+                    .Where(ds => ds.DateMillisSinceEpoch == existDailySummary.DateMillisSinceEpoch);
+
+                if (conflictDailySummaryList.Count() == 0)
+                {
+                    filteredExistDailySummaryList.Add(existDailySummary);
+                    continue;
+                }
+
+                DailySummary newDailySummary = conflictDailySummaryList.First();
+
+                if (existDailySummary.Equals(newDailySummary))
+                {
+                    filteredExistDailySummaryList.Add(existDailySummary);
+                }
+                else
+                {
+                    MergeData(existDailySummary, newDailySummary);
+                }
+            }
+
+            List<DailySummary> unionDailySummaryList = filteredExistDailySummaryList.Union(dailySummaryList).ToList();
             List<ExposureWindow> unionExposureWindowList = existExposureWindowList.Union(exposueWindowList).ToList();
             unionDailySummaryList.Sort(_dailySummaryComparer);
             unionExposureWindowList.Sort(_exposureWindowComparer);
 
             await SaveExposureDataAsync(unionDailySummaryList, unionExposureWindowList);
 
-            List<DailySummary> newDailySummaryList = unionDailySummaryList.Except(existDailySummaryList).ToList();
+            List<DailySummary> newDailySummaryList = unionDailySummaryList.Except(filteredExistDailySummaryList).ToList();
             List<ExposureWindow> newExposureWindowList = unionExposureWindowList.Except(existExposureWindowList).ToList();
 
             _loggerService.EndMethod();
 
             return (newDailySummaryList, newExposureWindowList);
+        }
+
+        private void MergeData(DailySummary from, DailySummary to)
+        {
+            _loggerService.StartMethod();
+
+            if (from.DateMillisSinceEpoch != to.DateMillisSinceEpoch)
+            {
+                _loggerService.Info($"DateMillisSinceEpoch is not match: {from.DateMillisSinceEpoch}, {to.DateMillisSinceEpoch}");
+                return;
+            }
+
+            if (from.DaySummary != null && to.DaySummary == null)
+            {
+                to.DaySummary = new ExposureSummaryData();
+            }
+            if (from.ConfirmedTestSummary != null && to.ConfirmedTestSummary == null)
+            {
+                to.ConfirmedTestSummary = new ExposureSummaryData();
+            }
+            if (from.ConfirmedClinicalDiagnosisSummary != null && to.ConfirmedClinicalDiagnosisSummary == null)
+            {
+                to.ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData();
+            }
+            if (from.SelfReportedSummary != null && to.SelfReportedSummary == null)
+            {
+                to.SelfReportedSummary = new ExposureSummaryData();
+            }
+            if (from.RecursiveSummary != null && to.RecursiveSummary == null)
+            {
+                to.RecursiveSummary = new ExposureSummaryData();
+            }
+
+            if (from.DaySummary != null)
+            {
+                to.DaySummary.ScoreSum += from.DaySummary.ScoreSum;
+                to.DaySummary.MaximumScore += from.DaySummary.MaximumScore;
+                to.DaySummary.WeightedDurationSum += from.DaySummary.WeightedDurationSum;
+            }
+            if (from.ConfirmedTestSummary != null)
+            {
+                to.ConfirmedTestSummary.ScoreSum += from.ConfirmedTestSummary.ScoreSum;
+                to.ConfirmedTestSummary.MaximumScore += from.ConfirmedTestSummary.MaximumScore;
+                to.ConfirmedTestSummary.WeightedDurationSum += from.ConfirmedTestSummary.WeightedDurationSum;
+            }
+            if (from.ConfirmedClinicalDiagnosisSummary != null)
+            {
+                to.ConfirmedClinicalDiagnosisSummary.ScoreSum += from.ConfirmedClinicalDiagnosisSummary.ScoreSum;
+                to.ConfirmedClinicalDiagnosisSummary.MaximumScore += from.ConfirmedClinicalDiagnosisSummary.MaximumScore;
+                to.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum += from.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum;
+            }
+            if (from.SelfReportedSummary != null)
+            {
+                to.SelfReportedSummary.ScoreSum += from.SelfReportedSummary.ScoreSum;
+                to.SelfReportedSummary.MaximumScore += from.SelfReportedSummary.MaximumScore;
+                to.SelfReportedSummary.WeightedDurationSum += from.SelfReportedSummary.WeightedDurationSum;
+            }
+            if (from.RecursiveSummary != null)
+            {
+                to.RecursiveSummary.ScoreSum += from.RecursiveSummary.ScoreSum;
+                to.RecursiveSummary.MaximumScore += from.RecursiveSummary.MaximumScore;
+                to.RecursiveSummary.WeightedDurationSum += from.RecursiveSummary.WeightedDurationSum;
+            }
+
+            _loggerService.EndMethod();
         }
 
         private Task SaveExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)
@@ -91,9 +182,9 @@ namespace Covid19Radar.Repository
             try
             {
                 string dailySummariesJson = _preferencesService.GetValue(PreferenceKey.DailySummaries, EMPTY_LIST_JSON);
-                return Task.FromResult(
-                    JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson)
-                );
+                List<DailySummary> dailySummaryList = JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson);
+
+                return Task.FromResult(dailySummaryList);
             }
             finally
             {

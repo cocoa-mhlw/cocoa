@@ -210,6 +210,158 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         [Fact]
+        public async void SetExposureDataTests_Merge()
+        {
+            var existDailySummaries = new List<DailySummary>() {
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = 110,
+                    DaySummary = new ExposureSummaryData()
+                    {
+                        ScoreSum = 110,
+                    },
+                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                    ConfirmedTestSummary = new ExposureSummaryData(),
+                    RecursiveSummary = new ExposureSummaryData(),
+                    SelfReportedSummary = new ExposureSummaryData()
+                },
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = 10,
+                    DaySummary = new ExposureSummaryData()
+                    {
+                        ScoreSum = 100,
+                    },
+                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                    ConfirmedTestSummary = new ExposureSummaryData(),
+                    RecursiveSummary = new ExposureSummaryData(),
+                    SelfReportedSummary = new ExposureSummaryData()
+                }
+            };
+            var existExposureWindows = new List<ExposureWindow>()
+            {
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.High,
+                    DateMillisSinceEpoch = 0,
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.Unknown,
+                    ScanInstances = new List<ScanInstance>()
+                }
+            };
+
+            var addDailySummaries = new List<DailySummary>() {
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = 110,
+                    DaySummary = new ExposureSummaryData()
+                    {
+                        ScoreSum = 110,
+                    },
+                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                    ConfirmedTestSummary = new ExposureSummaryData(),
+                    RecursiveSummary = new ExposureSummaryData(),
+                    SelfReportedSummary = new ExposureSummaryData()
+                },
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = 10,
+                    DaySummary = new ExposureSummaryData()
+                    {
+                        ScoreSum = 20,
+                    },
+                    ConfirmedTestSummary = new ExposureSummaryData()
+                    {
+                        ScoreSum = 10,
+                    },
+                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                    RecursiveSummary = new ExposureSummaryData(),
+                    SelfReportedSummary = new ExposureSummaryData()
+                }
+            };
+            var addExposureWindows = new List<ExposureWindow>()
+            {
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.High,
+                    DateMillisSinceEpoch = 0,
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.Unknown,
+                    ScanInstances = new List<ScanInstance>()
+                },
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.Medium,
+                    DateMillisSinceEpoch = 0,
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.ConfirmedTest,
+                    ScanInstances = new List<ScanInstance>()
+                }
+            };
+
+            var mergedDailySummary = new DailySummary()
+            {
+                DateMillisSinceEpoch = 10,
+                DaySummary = new ExposureSummaryData()
+                {
+                    ScoreSum = 120,
+                },
+                ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                ConfirmedTestSummary = new ExposureSummaryData()
+                {
+                    ScoreSum = 10,
+                },
+                RecursiveSummary = new ExposureSummaryData(),
+                SelfReportedSummary = new ExposureSummaryData()
+            };
+
+            var expectedDailySummaries = new List<DailySummary>()
+            {
+                mergedDailySummary,
+                existDailySummaries[0],
+            };
+            var expectedExposureWindows = new List<ExposureWindow>()
+            {
+                existExposureWindows[0],
+                addExposureWindows[1]
+            };
+
+            var expectedNewDailySummaries = new List<DailySummary>()
+            {
+                mergedDailySummary
+            };
+            var expectedNewExposureWindows = new List<ExposureWindow>()
+            {
+                addExposureWindows[1]
+            };
+
+            // Mock Setup
+            mockPreferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Returns(JsonConvert.SerializeObject(existDailySummaries));
+            mockPreferencesService
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Returns(JsonConvert.SerializeObject(existExposureWindows));
+
+            var unitUnderTest = CreateRepository();
+
+            var (newDailySummaryList, newExposureWindowList) = await unitUnderTest.SetExposureDataAsync(
+                addDailySummaries,
+                addExposureWindows
+                );
+
+            var expectedDailySummariesJson = JsonConvert.SerializeObject(expectedDailySummaries);
+            var expectedExposureWindowsJson = JsonConvert.SerializeObject(expectedExposureWindows);
+
+            // Assert
+            Assert.Equal(expectedNewDailySummaries, newDailySummaryList);
+            Assert.Equal(expectedNewExposureWindows, newExposureWindowList);
+            mockPreferencesService.Verify(x => x.SetValue("DailySummaries", expectedDailySummariesJson), Times.Once);
+            mockPreferencesService.Verify(x => x.SetValue("ExposureWindows", expectedExposureWindowsJson), Times.Once);
+
+        }
+
+        [Fact]
         public void GetExposureInformationListTests_Success()
         {
             var unitUnderTest = CreateRepository();
