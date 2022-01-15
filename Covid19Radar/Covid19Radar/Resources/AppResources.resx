@@ -472,6 +472,15 @@
     <value>Support</value>
     <comment>お問い合わせ（メニュー）</comment>
   </data>
+  <data name="InqueryDialogExceptionTitle" xml:space="preserve">
+    <value>Unknown error</value>
+    <comment>不明なエラー</comment>
+  </data>
+  <data name="InqueryDialogExceptionDescription" xml:space="preserve">
+    <value>We apologize for the inconvinience. Please try again later and send operating information from inquery.</value>
+    <comment>ご不便おかけして申し訳ありません。時間をおいて再度お試しください。また、「お問い合わせ」より動作情報の送信ご協力ください。</comment>
+  </data>
+
   <data name="HomePageDescription2" xml:space="preserve">
     <value>Check contact with positive testers</value>
     <comment>陽性者との接触結果を確認</comment>
