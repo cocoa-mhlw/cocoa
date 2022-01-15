@@ -2,9 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
-using System.IO;
-using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
@@ -23,7 +20,6 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly Mock<ILogFileService> mockLogFileService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ILogUploadService> mockLogUploadService;
-        private readonly Mock<ILogPathService> mockLogPathService;
 
         public SendLogConfirmationPageViewModelTests()
         {
@@ -36,21 +32,17 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService = mockRepository.Create<ILogFileService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockLogUploadService = mockRepository.Create<ILogUploadService>();
-            mockLogPathService = mockRepository.Create<ILogPathService>();
         }
 
         private SendLogConfirmationPageViewModel CreateViewModel()
         {
             var vm = new SendLogConfirmationPageViewModel(
                 mockNavigationService.Object,
-                mockLogFileService.Object,
                 mockLoggerService.Object,
-                mockLogUploadService.Object,
-                mockLogPathService.Object)
-            {
-                BeginInvokeOnMainThread = new Action<Action>((a) => { a.Invoke(); }),
-                TaskRun = new Func<Action, Task>((a) => { a.Invoke(); return Task.CompletedTask; })
-            };
+                mockLogFileService.Object,
+                mockLogUploadService.Object
+                );
+
             return vm;
         }
 
@@ -62,7 +54,8 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             var testZipFileName = "test-zip-file-name";
             mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
+            var testPublicZipFileName = "test-public-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(testPublicZipFileName);
 
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
@@ -86,7 +79,8 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             var testZipFileName = "test-zip-file-name";
             mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(false);
+            var testPublicZipFileName = "test-public-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(testPublicZipFileName);
 
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
@@ -110,10 +104,10 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             var testZipFileName = "test-zip-file-name";
             mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
-            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
-
-            mockLogPathService.Setup(x => x.LogUploadingPublicPath).Returns("dummy_log_uploading_public_path");
+            var testPublicZipFileName = "test-public-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(testPublicZipFileName);
+            var testPublicZipFilePath = "test-public-zip-file-path";
+            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(testPublicZipFilePath);
 
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
@@ -133,8 +127,10 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             var testZipFileName = "test-zip-file-name";
             mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
-            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(false);
+            var testPublicZipFileName = "test-public-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(testPublicZipFileName);
+            var testPublicZipFilePath = "test-public-zip-file-path";
+            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(testPublicZipFilePath);
 
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
@@ -155,8 +151,10 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             var testZipFileName = "test-zip-file-name";
             mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
-            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
+            var testPublicZipFileName = "test-public-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(testPublicZipFileName);
+            var testPublicZipFilePath = "test-public-zip-file-path";
+            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(testPublicZipFilePath);
             mockLogFileService.Setup(x => x.DeleteAllLogUploadingFiles()).Returns(true);
 
             var unitUnderTest = CreateViewModel();
@@ -186,8 +184,10 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             var testZipFileName = "test-zip-file-name";
             mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
-            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
+            var testPublicZipFileName = "test-public-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(testPublicZipFileName);
+            var testPublicZipFilePath = "test-public-zip-file-path";
+            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(testPublicZipFilePath);
 
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
@@ -215,8 +215,10 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             var testZipFileName = "test-zip-file-name";
             mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
-            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
+            var testPublicZipFileName = "test-public-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(testPublicZipFileName);
+            var testPublicZipFilePath = "test-public-zip-file-path";
+            mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(testPublicZipFilePath);
             mockLogFileService.Setup(x => x.DeleteAllLogUploadingFiles()).Returns(false);
 
             var unitUnderTest = CreateViewModel();

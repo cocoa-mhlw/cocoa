@@ -67,9 +67,9 @@ namespace Covid19Radar.Services.Logs
 
                 return zipFilePath;
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                loggerService.Error("Failed to create uploading file");
+                loggerService.Exception("Failed to create uploading file", exception);
                 return null;
             }
             finally

@@ -4,6 +4,8 @@
 
 using System;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Moq;
@@ -18,6 +20,11 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
+        private readonly Mock<ILogFileService> mockLogFileService;
+        private readonly Mock<ILogPathService> mockLogPathService;
+        private readonly Mock<IEssentialsService> mockEssentialService;
+
+        private readonly Mock<IUserDialogs> mockUserDialogs;
 
 
         public InqueryPageViewModelTests()
@@ -25,13 +32,23 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
+            mockLogFileService = mockRepository.Create<ILogFileService>();
+            mockLogPathService = mockRepository.Create<ILogPathService>();
+            mockEssentialService = mockRepository.Create<IEssentialsService>();
+
+            mockUserDialogs = mockRepository.Create<IUserDialogs>();
+            UserDialogs.Instance = mockUserDialogs.Object;
         }
 
         private InqueryPageViewModel CreateViewModel()
         {
             var vm = new InqueryPageViewModel(
                 mockNavigationService.Object,
-                mockLoggerService.Object);
+                mockLoggerService.Object,
+                mockLogFileService.Object,
+                mockLogPathService.Object,
+                mockEssentialService.Object
+                );
             return vm;
         }
 
@@ -62,12 +79,15 @@ namespace Covid19Radar.UnitTests.ViewModels
         [Fact]
         public void OnClickSendLogCommandTests()
         {
+            mockLogFileService.Setup(x => x.CreateZipFile(It.IsAny<string>()))
+                .Returns("dummyFile");
+
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
 
             unitUnderTest.OnClickSendLogCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync("SendLogConfirmationPage"), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync("SendLogConfirmationPage", It.IsAny<INavigationParameters>()), Times.Once());
         }
 
         [Fact]
