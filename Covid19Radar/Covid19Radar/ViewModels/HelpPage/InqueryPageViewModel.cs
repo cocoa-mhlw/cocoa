@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -58,11 +59,11 @@ namespace Covid19Radar.ViewModels
             {
                 UserDialogs.Instance.ShowLoading(AppResources.Processing);
 
-                var (result, logId, zipFilePath) = CreateZipFile();
+                var (logId, zipFilePath) = CreateZipFile();
 
                 UserDialogs.Instance.HideLoading();
 
-                if (!result)
+                if (zipFilePath is null)
                 {
                     // Failed to create ZIP file
                     await UserDialogs.Instance.AlertAsync(
@@ -72,8 +73,10 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
+                loggerService.Info($"zipFilePath: {zipFilePath}");
+
                 INavigationParameters navigationParameters
-                = SendLogConfirmationPage.BuildNavigationParams(logId, zipFilePath);
+                    = SendLogConfirmationPage.BuildNavigationParams(logId, zipFilePath);
 
                 _ = await NavigationService.NavigateAsync(nameof(SendLogConfirmationPage), navigationParameters);
             }
@@ -91,11 +94,11 @@ namespace Covid19Radar.ViewModels
             {
                 UserDialogs.Instance.ShowLoading(AppResources.Processing);
 
-                var (result, logId, zipFilePath) = CreateZipFile();
+                var (logId, zipFilePath) = CreateZipFile();
 
                 UserDialogs.Instance.HideLoading();
 
-                if (!result)
+                if (zipFilePath is null)
                 {
                     // Failed to create ZIP file
                     await UserDialogs.Instance.AlertAsync(
@@ -104,6 +107,8 @@ namespace Covid19Radar.ViewModels
                         AppResources.ButtonOk);
                     return;
                 }
+
+                loggerService.Info($"zipFilePath: {zipFilePath}");
 
                 string sharePath = logFileService.CopyLogUploadingFileToPublicPath(zipFilePath);
 
@@ -118,7 +123,6 @@ namespace Covid19Radar.ViewModels
                 {
                     loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
                 }
-
             }
             finally
             {
@@ -155,18 +159,16 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         });
 
-        public Action<Action> BeginInvokeOnMainThread { get; set; } = MainThread.BeginInvokeOnMainThread;
-
-        private (bool, string, string) CreateZipFile()
+        private (string, string) CreateZipFile()
         {
             string logId = logFileService.CreateLogId();
-            string zipFilePath = logFileService.LogUploadingFileName(logId);
+            string zipFileName = logFileService.CreateZipFileName(logId);
 
             logFileService.Rotate();
 
-            var result = logFileService.CreateLogUploadingFileToTmpPath(zipFilePath);
+            var zipFilePath = logFileService.CreateZipFile(zipFileName);
 
-            return (result, logId, zipFilePath);
+            return (logId, zipFilePath);
         }
     }
 }

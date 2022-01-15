@@ -20,16 +20,16 @@ namespace Covid19Radar.Views
         }
 
         public static INavigationParameters BuildNavigationParams(
-            string logIdKey,
-            string ZipFilePathKey,
+            string logId,
+            string zipFilePath,
             INavigationParameters? baseParam = null
             )
         {
             var param = new NavigationParameters();
             param.CopyFrom(baseParam);
 
-            param.Add(LogIdKey, logIdKey);
-            param.Add(ZipFilePathKey, ZipFilePathKey);
+            param.Add(LogIdKey, logId);
+            param.Add(ZipFilePathKey, zipFilePath);
 
             return param;
         }

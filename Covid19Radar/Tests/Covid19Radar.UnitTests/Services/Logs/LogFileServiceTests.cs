@@ -35,7 +35,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var logFileService = CreateDefaultLogFileService(mockILogPathService);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
+            var fileName = logFileService.CreateZipFileName(logId);
             Assert.Equal(fileName, "cocoa_log_" + logId + ".zip");
         }
 
@@ -50,8 +50,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
             RecreateDir(tmpDirPath);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
-            var result = logFileService.CreateLogUploadingFileToTmpPath(fileName);
+            var fileName = logFileService.CreateZipFileName(logId);
+            var result = logFileService.CreateZipFile(fileName);
             Assert.True(result);
 
             var uploadingFilePath = tmpDirPath + fileName;
@@ -68,8 +68,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
             RecreateDir(tmpDirPath);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
-            var result = logFileService.CreateLogUploadingFileToTmpPath(fileName);
+            var fileName = logFileService.CreateZipFileName(logId);
+            var result = logFileService.CreateZipFile(fileName);
             Assert.False(result);
 
             var uploadingFilePath = tmpDirPath + fileName;
@@ -86,8 +86,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
             RecreateDir(tmpDirPath);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
-            var result = logFileService.CreateLogUploadingFileToTmpPath(fileName);
+            var fileName = logFileService.CreateZipFileName(logId);
+            var result = logFileService.CreateZipFile(fileName);
             Assert.False(result);
 
             var uploadingFilePath = tmpDirPath + fileName;
@@ -106,8 +106,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
             RecreateDir(tmpDirPath);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
-            var result = logFileService.CreateLogUploadingFileToTmpPath(fileName);
+            var fileName = logFileService.CreateZipFileName(logId);
+            var result = logFileService.CreateZipFile(fileName);
             Assert.True(result);
             result = logFileService.CopyLogUploadingFileToPublicPath(fileName);
             Assert.True(result);
@@ -128,8 +128,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
             RecreateDir(tmpDirPath);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
-            var result = logFileService.CreateLogUploadingFileToTmpPath(fileName);
+            var fileName = logFileService.CreateZipFileName(logId);
+            var result = logFileService.CreateZipFile(fileName);
             Assert.True(result);
             result = logFileService.CopyLogUploadingFileToPublicPath(fileName);
             Assert.False(result);
@@ -145,7 +145,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var logFileService = CreateDefaultLogFileService(mockILogPathService);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
+            var fileName = logFileService.CreateZipFileName(logId);
             var result = logFileService.CopyLogUploadingFileToPublicPath(fileName);
             Assert.False(result);
 
@@ -160,7 +160,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var logFileService = CreateDefaultLogFileService(mockILogPathService);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
+            var fileName = logFileService.CreateZipFileName(logId);
             var result = logFileService.CopyLogUploadingFileToPublicPath(fileName);
             Assert.False(result);
 
@@ -179,8 +179,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
             RecreateDir(tmpDirPath);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
-            var result = logFileService.CreateLogUploadingFileToTmpPath(fileName);
+            var fileName = logFileService.CreateZipFileName(logId);
+            var result = logFileService.CreateZipFile(fileName);
             Assert.True(result);
 
             result = logFileService.DeleteAllLogUploadingFiles();
@@ -211,8 +211,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
             RecreateDir(tmpDirPath);
 
             var logId = logFileService.CreateLogId();
-            var fileName = logFileService.LogUploadingFileName(logId);
-            var result = logFileService.CreateLogUploadingFileToTmpPath(fileName);
+            var fileName = logFileService.CreateZipFileName(logId);
+            var result = logFileService.CreateZipFile(fileName);
             Assert.True(result);
 
             DeleteDirIfExists(tmpDirPath);

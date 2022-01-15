@@ -61,15 +61,15 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
 
             var testZipFileName = "test-zip-file-name";
-            mockLogFileService.Setup(x => x.LogUploadingFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(true);
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
 
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
 
             mockLogFileService.Verify(x => x.CreateLogId(), Times.Once());
-            mockLogFileService.Verify(x => x.LogUploadingFileName(testLogId), Times.Once());
-            mockLogFileService.Verify(x => x.CreateLogUploadingFileToTmpPath(testZipFileName), Times.Once());
+            mockLogFileService.Verify(x => x.CreateZipFileName(testLogId), Times.Once());
+            mockLogFileService.Verify(x => x.CreateZipFile(testZipFileName), Times.Once());
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
@@ -85,15 +85,15 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
 
             var testZipFileName = "test-zip-file-name";
-            mockLogFileService.Setup(x => x.LogUploadingFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(false);
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(false);
 
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
 
             mockLogFileService.Verify(x => x.CreateLogId(), Times.Once());
-            mockLogFileService.Verify(x => x.LogUploadingFileName(testLogId), Times.Once());
-            mockLogFileService.Verify(x => x.CreateLogUploadingFileToTmpPath(testZipFileName), Times.Once());
+            mockLogFileService.Verify(x => x.CreateZipFileName(testLogId), Times.Once());
+            mockLogFileService.Verify(x => x.CreateZipFile(testZipFileName), Times.Once());
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
@@ -109,8 +109,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
 
             var testZipFileName = "test-zip-file-name";
-            mockLogFileService.Setup(x => x.LogUploadingFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(true);
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
 
             mockLogPathService.Setup(x => x.LogUploadingPublicPath).Returns("dummy_log_uploading_public_path");
@@ -132,8 +132,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
 
             var testZipFileName = "test-zip-file-name";
-            mockLogFileService.Setup(x => x.LogUploadingFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(true);
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(false);
 
             var unitUnderTest = CreateViewModel();
@@ -154,8 +154,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
 
             var testZipFileName = "test-zip-file-name";
-            mockLogFileService.Setup(x => x.LogUploadingFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(true);
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.DeleteAllLogUploadingFiles()).Returns(true);
 
@@ -185,8 +185,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
 
             var testZipFileName = "test-zip-file-name";
-            mockLogFileService.Setup(x => x.LogUploadingFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(true);
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
 
             var unitUnderTest = CreateViewModel();
@@ -214,8 +214,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
 
             var testZipFileName = "test-zip-file-name";
-            mockLogFileService.Setup(x => x.LogUploadingFileName(testLogId)).Returns(testZipFileName);
-            mockLogFileService.Setup(x => x.CreateLogUploadingFileToTmpPath(testZipFileName)).Returns(true);
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(true);
             mockLogFileService.Setup(x => x.DeleteAllLogUploadingFiles()).Returns(false);
 

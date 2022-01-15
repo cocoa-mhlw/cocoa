@@ -7,6 +7,7 @@ using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -25,16 +26,41 @@ namespace Covid19Radar.ViewModels
         public SendLogConfirmationPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
+            ILogFileService logFileService,
             ILogUploadService logUploadService
             ) : base(navigationService)
         {
             this.loggerService = loggerService;
+            this.logFileService = logFileService;
             this.logUploadService = logUploadService;
         }
 
-        public Command OnClickConfirmLogCommand => new Command(() =>
+        public Command OnClickConfirmLogCommand => new Command(async () =>
         {
             loggerService.StartMethod();
+
+            string sharePath = logFileService.CopyLogUploadingFileToPublicPath(ZipFilePath);
+
+            if (sharePath is null)
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.FailedMessageToSaveOperatingInformation,
+                    AppResources.Error,
+                    AppResources.ButtonOk);
+                return;
+            }
+
+            try
+            {
+                await Share.RequestAsync(new ShareFileRequest
+                {
+                    File = new ShareFile(sharePath)
+                });
+            }
+            catch (NotImplementedInReferenceAssemblyException exception)
+            {
+                loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+            }
 
             loggerService.EndMethod();
         });
@@ -88,7 +114,9 @@ namespace Covid19Radar.ViewModels
             base.Initialize(parameters);
 
             LogId = parameters.GetValue<string>(SendLogConfirmationPage.LogIdKey);
-            ZipFilePath = parameters.GetValue<string>(SendLogConfirmationPage.LogIdKey);
+            ZipFilePath = parameters.GetValue<string>(SendLogConfirmationPage.ZipFilePathKey);
+
+            loggerService.Info($"ZipFilePath: {ZipFilePath}");
 
             loggerService.EndMethod();
         }

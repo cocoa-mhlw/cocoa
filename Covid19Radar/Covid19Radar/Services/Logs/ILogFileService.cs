@@ -8,8 +8,8 @@ namespace Covid19Radar.Services.Logs
     {
         // Log upload
         string CreateLogId();
-        string LogUploadingFileName(string logId);
-        bool CreateLogUploadingFileToTmpPath(string logUploadingFileName);
+        string CreateZipFileName(string logId);
+        string CreateZipFile(string fileName);
         string CopyLogUploadingFileToPublicPath(string logPath);
         bool DeleteAllLogUploadingFiles();
 
