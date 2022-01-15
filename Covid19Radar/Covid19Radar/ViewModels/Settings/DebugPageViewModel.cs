@@ -25,6 +25,7 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
         private readonly ICloseApplicationService _closeApplicationService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
+        private readonly ILocalNotificationService _localNotificationService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -144,7 +145,8 @@ namespace Covid19Radar.ViewModels
             AbsExposureNotificationApiService exposureNotificationApiService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             ICloseApplicationService closeApplicationService,
-            IServerConfigurationRepository serverConfigurationRepository
+            IServerConfigurationRepository serverConfigurationRepository,
+            ILocalNotificationService localNotificationService
             ) : base(navigationService)
         {
             Title = "Title:Debug";
@@ -156,6 +158,7 @@ namespace Covid19Radar.ViewModels
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             _closeApplicationService = closeApplicationService;
             _serverConfigurationRepository = serverConfigurationRepository;
+            _localNotificationService = localNotificationService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -198,6 +201,11 @@ namespace Covid19Radar.ViewModels
             await _exposureNotificationApiService.StopAsync();
             UserDialogs.Instance.HideLoading();
             await UpdateInfo("StopExposureNotification");
+        });
+
+        public Command OnClickShowExposureNotification => new Command(async () =>
+        {
+            await _localNotificationService.ShowExposureNotificationAsync();
         });
 
         public Command OnClickRemoveStartDate => new Command(async () =>

@@ -23,6 +23,9 @@ namespace Covid19Radar.Services
         private readonly IHttpClientService httpClientService;
         private readonly IServerConfigurationRepository serverConfigurationRepository;
 
+        private readonly HttpClient apiClient;
+        private readonly HttpClient httpClient;
+
         public HttpDataService(
             ILoggerService loggerService,
             IHttpClientService httpClientService,
@@ -32,6 +35,9 @@ namespace Covid19Radar.Services
             this.loggerService = loggerService;
             this.httpClientService = httpClientService;
             this.serverConfigurationRepository = serverConfigurationRepository;
+
+            apiClient = CreateApiClient();
+            httpClient = CreateHttpClient();
         }
 
         private HttpClient CreateApiClient()
@@ -115,18 +121,15 @@ namespace Covid19Radar.Services
 
                 var url = serverConfigurationRepository.InquiryLogApiUrl;
 
-                using (var apiClient = CreateApiClient())
+                var response = await apiClient.GetAsync(url);
+
+                statusCode = (int)response.StatusCode;
+                loggerService.Info($"Response status: {statusCode}");
+
+                if (statusCode == (int)HttpStatusCode.OK)
                 {
-                    var response = await apiClient.GetAsync(url);
-
-                    statusCode = (int)response.StatusCode;
-                    loggerService.Info($"Response status: {statusCode}");
-
-                    if (statusCode == (int)HttpStatusCode.OK)
-                    {
-                        var content = await response.Content.ReadAsStringAsync();
-                        logStorageSas = JsonConvert.DeserializeObject<LogStorageSas>(content);
-                    }
+                    var content = await response.Content.ReadAsStringAsync();
+                    logStorageSas = JsonConvert.DeserializeObject<LogStorageSas>(content);
                 }
             }
             catch (Exception ex)
@@ -141,25 +144,19 @@ namespace Covid19Radar.Services
 
         private async Task<string> PostAsync(string url, HttpContent body)
         {
-            using (var httpClient = CreateHttpClient())
+            HttpResponseMessage result = await httpClient.PostAsync(url, body);
+            if (result.StatusCode == HttpStatusCode.OK)
             {
-                HttpResponseMessage result = await httpClient.PostAsync(url, body);
-                if (result.StatusCode == HttpStatusCode.OK)
-                {
-                    return await result.Content.ReadAsStringAsync();
-                }
+                return await result.Content.ReadAsStringAsync();
             }
             return null;
         }
 
         private async Task<HttpStatusCode> PutAsync(string url, HttpContent body)
         {
-            using (var httpClient = CreateHttpClient())
-            {
-                var result = await httpClient.PutAsync(url, body);
-                await result.Content.ReadAsStringAsync();
-                return result.StatusCode;
-            }
+            var result = await httpClient.PutAsync(url, body);
+            await result.Content.ReadAsStringAsync();
+            return result.StatusCode;
         }
     }
 }

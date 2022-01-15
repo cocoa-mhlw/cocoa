@@ -12,6 +12,7 @@ using Covid19Radar.Common;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
@@ -98,5 +99,14 @@ namespace Covid19Radar.ViewModels
                         });
             }
         }
+
+        public Command OnClickShareApp => new Command(() =>
+        {
+            _loggerService.StartMethod();
+
+            AppUtils.PopUpShare();
+
+            _loggerService.EndMethod();
+        });
     }
 }
