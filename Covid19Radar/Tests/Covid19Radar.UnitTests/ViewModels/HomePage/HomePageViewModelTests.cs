@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Chino;
@@ -538,6 +539,25 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             mockNavigationService
                 .Verify(x => x.NavigateAsync("ExposureCheckPage"), Times.Once);
+        }
+
+
+        [Fact]
+        public void OnClickExposuresTest_Exception()
+        {
+
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(true))
+                .Throws(new HttpRequestException());
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnClickExposures.Execute(null);
+
+
+            mockDialogService
+                .Verify(x => x.ShowUnknownErrorAsync(), Times.Once);
+            mockNavigationService
+                .Verify(x => x.NavigateAsync(It.IsAny<String>()), Times.Never);
         }
 
     }

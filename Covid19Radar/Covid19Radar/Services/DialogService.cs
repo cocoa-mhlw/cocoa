@@ -55,6 +55,16 @@ namespace Covid19Radar.Services
                 AppResources.ButtonCancel);
         }
 
+        public async Task ShowUnknownErrorAsync()
+        {
+            await AlertAsync(
+                AppResources.InqueryDialogExceptionDescription,
+                AppResources.InqueryDialogExceptionTitle,
+                AppResources.ButtonOk);
+        }
+
+
+
         public async Task<bool> ConfirmAsync(string message, string title = null, string okText = null, string cancelText = null) =>
             await UserDialogs.Instance.ConfirmAsync(message, title, okText, cancelText);
 

@@ -205,11 +205,7 @@ namespace Covid19Radar.ViewModels
             catch (Exception exception)
             {
                 loggerService.Exception("failed to risk calculation", exception);
-                await UserDialogs.Instance.AlertAsync(
-                    AppResources.InqueryDialogExceptionDescription,
-                    AppResources.InqueryDialogExceptionTitle,
-                    AppResources.ButtonOk
-                );
+                await dialogService.ShowUnknownErrorAsync();
             }
             finally
             {
