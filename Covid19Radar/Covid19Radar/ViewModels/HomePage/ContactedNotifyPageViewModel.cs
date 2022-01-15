@@ -13,7 +13,6 @@ using System.Linq;
 using Covid19Radar.Services;
 using Chino;
 using System;
-using Acr.UserDialogs;
 
 namespace Covid19Radar.ViewModels
 {
