@@ -25,6 +25,8 @@
             BackgroundColor="{StaticResource Background}"
             Spacing="0">
 
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
                 TabIndex="1"
@@ -34,7 +36,7 @@
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
                 TabIndex="2"
-                Margin="15, 0"
+                Margin="15, 5"
                 Style="{StaticResource DefaultLabelSmall}"
                 TextColor="{StaticResource SecondaryText}"
                 Text="{x:Static resources:AppResources.InqueryBeta_Description1}" />
@@ -45,36 +47,72 @@
                 Style="{StaticResource DefaultLabelSmall}"
                 TextColor="{StaticResource SecondaryText}"
                 Text="{x:Static resources:AppResources.InqueryBeta_Description2}" />
-            <Label
+            <Button
                 AutomationProperties.IsInAccessibleTree="True"
                 TabIndex="4"
-                Margin="15, 5"
-                Style="{StaticResource DefaultLabelSmall}"
-                TextColor="{StaticResource SecondaryText}"
-                Text="{x:Static resources:AppResources.InqueryBeta_Description3}" />
+                Margin="20, 15, 20, 20"
+                Command="{Binding OnClickUseStable}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.InqueryBeta_InstallStable}" />
+
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
                 TabIndex="5"
+                Margin="15, 20, 15, 15"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.InqueryBeta_DeveloperCommunity}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="6"
+                Margin="15, 5"
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="{StaticResource SecondaryText}"
+                Text="{x:Static resources:AppResources.InqueryBeta_Community_Description1}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="7"
+                Margin="15, 5"
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="{StaticResource SecondaryText}"
+                Text="{x:Static resources:AppResources.InqueryBeta_Community_Description2}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="8"
                 Margin="15, 5"
                 Style="{StaticResource DefaultLabelSmall}"
                 Text="{x:Static resources:AppResources.UrlGitHubRepository}" />
 
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="6"
-                Margin="20, 20, 20, 10"
+                TabIndex="9"
+                Margin="20, 15, 20, 20"
                 Command="{Binding OpenGitHub}"
                 Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.InqueryBetaViaGitHub}" />
 
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="10"
+                Margin="15, 15"
+                Style="{StaticResource DefaultLabelSmall}"
+                Text="{x:Static resources:AppResources.InqueryBeta_Community_Description3}" />
+
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="7"
-                Margin="0,10,0,10"
-                Command="{Binding Path=OnClickUseStable}"
+                TabIndex="11"
+                Margin="20, 15, 20, 20"
+                Command="{Binding OnClickShareLogCommand}"
                 Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.InqueryBetaViaGitHubInstallStable}"
-                />
+                Text="{x:Static resources:AppResources.InqueryBetaShareLog}" />
+
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                TabIndex="12"
+                Margin="15, 15"
+                Style="{StaticResource DefaultLabelSmall}"
+                Text="{x:Static resources:AppResources.InqueryBeta_Community_Description4}" />
 
             <BoxView Style="{StaticResource DefaultLineStyle}" />
 

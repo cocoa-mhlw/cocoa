@@ -1214,20 +1214,41 @@
     <comment>COCOA(Beta)は新しい機能をテストするための実験的なバージョンです。</comment>
   </data>
   <data name="InqueryBeta_Description2" xml:space="preserve">
-    <value>COCOA(Beta)は安定版ではないため、通常のサポートは行っていません。メール等、通常のサポートをご希望の方はベータ版のご利用を中止して、安定版をお使いください。</value>
-    <comment>COCOA(Beta)は安定版ではないため、通常のサポートは行っていません。メール等、通常のサポートをご希望の方はベータ版のご利用を中止して、安定版のCOCOAをお使いください。</comment>
+    <value>COCOA(Beta)は安定版ではないため、現時点ではメールや電話でのサポートは行っていません。通常のサポートをご希望の方は安定版をお使いください。</value>
+    <comment>COCOA(Beta)は安定版ではないため、現時点ではメールや電話でのサポートは行っていません。通常のサポートをご希望の方は安定版をお使いください。</comment>
   </data>
-  <data name="InqueryBeta_Description3" xml:space="preserve">
-    <value>何か問題等ありましたら、次のGitHubからIssue等を投稿してください（GitHubのアカウントが必要です）。</value>
-    <comment>何か問題等ありましたら、次のGitHubからIssue等を投稿してください（GitHubのアカウントが必要です）。</comment>
-  </data>
-  <data name="InqueryBetaViaGitHub" xml:space="preserve">
-    <value>GitHubを開く</value>
-    <comment>GitHubを開く</comment>
-  </data>
-  <data name="InqueryBetaViaGitHubInstallStable" xml:space="preserve">
+    <data name="InqueryBeta_InstallStable" xml:space="preserve">
     <value>安定版をインストール</value>
     <comment>安定版をインストール</comment>
+  </data>
+
+  <data name="InqueryBeta" xml:space="preserve">
+    <value>COCOA(Beta)</value>
+    <comment>COCOA(Beta)</comment>
+  </data>
+  <data name="InqueryBeta_DeveloperCommunity" xml:space="preserve">
+    <value>開発コミュニティ</value>
+    <comment>開発コミュニティ</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description1" xml:space="preserve">
+    <value>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description2" xml:space="preserve">
+    <value>なにか問題がありましたら、開発コミュニティまでお知らせください（GitHubのアカウントが必要です）。</value>
+    <comment>なにか問題がありましたら、開発コミュニティまでお知らせください（GitHubのアカウントが必要です）。</comment>
+  </data>
+  <data name="InqueryBetaViaGitHub" xml:space="preserve">
+    <value>開発コミュニティを開く</value>
+    <comment>開発コミュニティを開く</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description3" xml:space="preserve">
+    <value>※ 不具合等の原因究明のために動作ログの共有をお願いする場合があります。下のボタンから動作ログを取得・保存してください。</value>
+    <comment>※ 不具合等の原因究明のために動作ログの共有をお願いする場合があります。下のボタンから動作ログを取得・保存してください。</comment>
+  </data>
+    <data name="InqueryBeta_Community_Description4" xml:space="preserve">
+    <value>ご協力ありがとうございます！</value>
+    <comment>ご協力ありがとうございます！</comment>
   </data>
 
   <data name="Beta_Splash_WelcomeBeta" xml:space="preserve">
@@ -1239,24 +1260,24 @@
     <comment>COCOA(Beta)は、新しい機能をテストするための実験的なバージョンです。</comment>
   </data>
   <data name="Beta_Splash_Description2" xml:space="preserve">
-    <value>COCOA(Beta)は安定版ではありません。Beta版の実験機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご理解ください。</value>
-    <comment>COCOA(Beta)は安定版ではありません。Beta版の実験機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご理解ください。</comment>
+    <value>COCOA(Beta)は安定版ではありません。Beta版の実験機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご了承ください。</value>
+    <comment>COCOA(Beta)は安定版ではありません。Beta版の実験機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご了承ください。</comment>
   </data>
   <data name="Beta_Splash_Description3" xml:space="preserve">
-    <value>COCOA(Beta)では通常のサポートは行っていません。何か問題等ありましたら、GitHubからIssue等を投稿してください。</value>
-    <comment>COCOA(Beta)では通常のサポートは行っていません。何か問題等ありましたら、開発中のGitHubからIssue等を投稿してください。</comment>
+    <value>COCOA(Beta)では、現時点では通常のサポートは行っていません。なにか問題がありましたら開発コミュニティまでお知らせください。</value>
+    <comment>COCOA(Beta)では、現時点では通常のサポートは行っていません。なにか問題がありましたら開発コミュニティまでお知らせください。</comment>
   </data>
   <data name="Beta_Splash_GitHub" xml:space="preserve">
-    <value>GitHubリポジトリ</value>
-    <comment>GitHubリポジトリ</comment>
+    <value>開発コミュニティ</value>
+    <comment>開発コミュニティ</comment>
   </data>
   <data name="Beta_Splash_GitHubAccountRequired" xml:space="preserve">
     <value>（GitHubのアカウントが必要です）</value>
     <comment>（GitHubのアカウントが必要です）</comment>
   </data>
   <data name="Beta_Splash_Acknowledge" xml:space="preserve">
-    <value>COCOA(Beta)を利用する</value>
-    <comment>COCOA(Beta)を利用する</comment>
+    <value>確認して利用する</value>
+    <comment>確認して利用する</comment>
   </data>
   <data name="Beta_Splash_InstallStable" xml:space="preserve">
     <value>安定版をインストール</value>
