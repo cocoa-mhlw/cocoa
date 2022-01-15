@@ -91,6 +91,57 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
+        public void OnClickSendLogCommand_CreateZipSuccess()
+        {
+            var testLogId = "test-log-id";
+            mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
+
+            var testZipFileName = "test-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            var testPublicZipFileName = "test-public-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns(testPublicZipFileName);
+
+            var unitUnderTest = CreateViewModel();
+            unitUnderTest.Initialize(new NavigationParameters());
+
+            unitUnderTest.OnClickSendLogCommand.Execute(null);
+
+            mockLogFileService.Verify(x => x.CreateLogId(), Times.Once());
+            mockLogFileService.Verify(x => x.CreateZipFileName(testLogId), Times.Once());
+            mockLogFileService.Verify(x => x.CreateZipFile(testZipFileName), Times.Once());
+
+            mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
+            mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
+            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
+
+            mockNavigationService.Verify(x => x.NavigateAsync(It.IsAny<string>()), Times.Never());
+        }
+
+        [Fact]
+        public void OnClickSendLogCommand_CreateZipFailure()
+        {
+            var testLogId = "test-log-id";
+            mockLogFileService.Setup(x => x.CreateLogId()).Returns(testLogId);
+
+            var testZipFileName = "test-zip-file-name";
+            mockLogFileService.Setup(x => x.CreateZipFileName(testLogId)).Returns(testZipFileName);
+            mockLogFileService.Setup(x => x.CreateZipFile(testZipFileName)).Returns<string>(null);
+
+            var unitUnderTest = CreateViewModel();
+            unitUnderTest.Initialize(new NavigationParameters());
+
+            unitUnderTest.OnClickSendLogCommand.Execute(null);
+
+            mockLogFileService.Verify(x => x.CreateLogId(), Times.Once());
+            mockLogFileService.Verify(x => x.CreateZipFileName(testLogId), Times.Once());
+            mockLogFileService.Verify(x => x.CreateZipFile(testZipFileName), Times.Once());
+
+            mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
+            mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
+            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Once());
+        }
+
+        [Fact]
         public void OnClickEmailCommandTests_Success()
         {
             var unitUnderTest = CreateViewModel();
