@@ -39,7 +39,7 @@ namespace Covid19Radar.Services
             );
     }
 
-    public class ReleaseExposureDataCollectServer : IExposureDataCollectServer
+    public class DebugExposureDataCollectServerNop : IExposureDataCollectServer
     {
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
@@ -48,7 +48,7 @@ namespace Covid19Radar.Services
             ExposureSummary exposureSummary,
             IList<ExposureInformation> exposureInformation
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
 
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
@@ -57,14 +57,14 @@ namespace Covid19Radar.Services
             IList<DailySummary> dailySummaries,
             IList<ExposureWindow> exposureWindows
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
 
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
     }
 
 #if DEBUG
@@ -190,7 +190,6 @@ namespace Covid19Radar.Services
             }
         }
     }
-#endif
 
     public class ExposureRequest
     {
@@ -286,4 +285,5 @@ namespace Covid19Radar.Services
         public readonly string? Uri;
 
     }
+#endif
 }
