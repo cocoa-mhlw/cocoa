@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Common;
@@ -20,7 +21,7 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
-    public class ContactedNotifyPageViewModelTests: IDisposable
+    public class ContactedNotifyPageViewModelTests : IDisposable
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
@@ -35,6 +36,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             originalCalture = AppResources.Culture;
             AppResources.Culture = new CultureInfo("ja-JP");
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("ja-JP");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ja-JP");
 
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
@@ -64,18 +67,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Fact]
-        public void OnClickExposuresTest_()
+        public void OnClickExposuresTest_Initialize()
         {
-
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(true))
-                .Returns(Task.FromResult(new V1ExposureRiskCalculationConfiguration()
-                {
-                    DailySummary_DaySummary_ScoreSum = new V1ExposureRiskCalculationConfiguration.Threshold() {
-                        Op = "=",
-                        Value = 1.0
-                    }
-                })); ;
             mockExposureDataRepository
                 .Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay))
                 .Returns(new List<UserExposureInfo>()
@@ -89,11 +82,93 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new DailySummary()
                     {
+                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365
+                    }
+                }));
+            mockExposureDataRepository
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Returns(Task.FromResult(new List<ExposureWindow>()
+                {
+                    new ExposureWindow()
+                    {
                         DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365,
-                        DaySummary = new ExposureSummaryData()
-                        {
-                            ScoreSum = 1.0
+                        ScanInstances = new List<ScanInstance>() {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = 60
+                            }
                         }
+                    }
+                }));
+            mockExposureRiskCalculationService
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
+                .Returns(RiskLevel.High);
+
+            var contactedNotifyViewModel = CreateViewModel();
+            contactedNotifyViewModel.Initialize(new NavigationParameters());
+
+            Assert.Equal("0001年1月1日 月曜日以前\n2 件", contactedNotifyViewModel.ExposureCount);
+            Assert.Equal("1971年1月1日 金曜日以降\n1日間に合計1分間の接触", contactedNotifyViewModel.ExposureDurationInMinutes);
+        }
+
+        [Fact]
+        public void OnClickExposuresTest_Initialize_NoExposureInformation_HighRisk()
+        {
+            mockExposureDataRepository
+                .Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay))
+                .Returns(new List<UserExposureInfo>());
+            mockExposureDataRepository
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Returns(Task.FromResult(new List<DailySummary>()
+                {
+                    new DailySummary()
+                    {
+                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365
+                    }
+                }));
+            mockExposureDataRepository
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Returns(Task.FromResult(new List<ExposureWindow>()
+                {
+                    new ExposureWindow()
+                    {
+                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365,
+                        ScanInstances = new List<ScanInstance>() {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = 60
+                            }
+                        }
+                    }
+                }));
+            mockExposureRiskCalculationService
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
+                .Returns(RiskLevel.High);
+
+            var contactedNotifyViewModel = CreateViewModel();
+            contactedNotifyViewModel.Initialize(new NavigationParameters());
+
+            Assert.Null(contactedNotifyViewModel.ExposureCount);
+            Assert.Equal("1日間に合計1分間の接触", contactedNotifyViewModel.ExposureDurationInMinutes);
+        }
+
+        [Fact]
+        public void OnClickExposuresTest_Initialize_NoExposureInformation_NoHighRisk()
+        {
+            mockExposureDataRepository
+                .Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay))
+                .Returns(new List<UserExposureInfo>()
+                {
+                    new UserExposureInfo(),
+                    new UserExposureInfo()
+                });
+            mockExposureDataRepository
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Returns(Task.FromResult(new List<DailySummary>()
+                {
+                    new DailySummary()
+                    {
+                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365
                     }
                 }));
             mockExposureDataRepository
@@ -112,17 +187,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     }
                 }));
 
-
             var contactedNotifyViewModel = CreateViewModel();
             contactedNotifyViewModel.Initialize(new NavigationParameters());
 
+            Assert.Null(contactedNotifyViewModel.ExposureDurationInMinutes);
             Assert.Equal("2 件", contactedNotifyViewModel.ExposureCount);
-            Assert.Equal("", contactedNotifyViewModel.ExposureDurationInMinutes);
         }
 
-
         [Fact]
-        public void OnClickExposuresTest_Exception()
+        public void OnClickExposuresTest_Initialize_Exception()
         {
 
             mockExposureRiskCalculationConfigurationRepository
