@@ -374,6 +374,7 @@ namespace Covid19Radar.ViewModels
             switch (httpStatusCode)
             {
                 case HttpStatusCode.OK:
+                case HttpStatusCode.NoContent:
                     // Success
                     loggerService.Info($"Successfully submit DiagnosisKeys.");
 
