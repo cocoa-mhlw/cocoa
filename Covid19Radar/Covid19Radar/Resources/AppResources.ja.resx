@@ -271,12 +271,12 @@
     <comment>スコア</comment>
   </data>
   <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
-    <value>（1170以上が接触の可能性の通知対象）</value>
-    <comment>（1170以上が接触の可能性の通知対象）</comment>
+    <value>（{0:#}{1:#}が接触の可能性の通知対象）</value>
+    <comment>（{0:#}{1:#}が接触の可能性の通知対象）</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で 1170 以上になるように設定しています。</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で 1170 以上になるように設定しています。</comment>
+    <value>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンからの信号を受信していません</value>
@@ -1192,4 +1192,26 @@
     <value>{0:#}分間の接触</value>
     <comment>{0:#}分間の接触</comment>
   </data>
+
+  <data name="ThresholdTextOperatorGt" xml:space="preserve">
+    <value>を超える値</value>
+    <comment>を超える値</comment>
+  </data>
+  <data name="ThresholdTextOperatorLt" xml:space="preserve">
+    <value>未満</value>
+    <comment>未満</comment>
+  </data>
+  <data name="ThresholdTextOperatorGte" xml:space="preserve">
+    <value>以上</value>
+    <comment>以上</comment>
+  </data>
+  <data name="ThresholdTextOperatorLte" xml:space="preserve">
+    <value>以下</value>
+    <comment>以下</comment>
+  </data>
+  <data name="ThresholdTextOperatorEqual" xml:space="preserve">
+    <value>と同じ</value>
+    <comment>と同じ</comment>
+  </data>
+
 </root>

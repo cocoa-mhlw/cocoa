@@ -13,13 +13,14 @@ using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System;
 using Xamarin.Forms;
+using Covid19Radar.Views;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.ViewModels
 {
     public class ExposureCheckPageViewModel : ViewModelBase
     {
         private readonly ILoggerService _loggerService;
-        private readonly IUserDataRepository _userDataRepository;
         private readonly IExposureDataRepository _exposureDataRepository;
 
         public ObservableCollection<ExposureCheckScoreModel> ExposureCheckScores { get; set; }
@@ -38,15 +39,29 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isVisibleLowRiskContact, value); }
         }
 
+        private string _lowRiskContactPageHeaderTextSuffix;
+        public string LowRiskContactPageHeaderTextSuffix
+        {
+            get { return _lowRiskContactPageHeaderTextSuffix; }
+            set { SetProperty(ref _lowRiskContactPageHeaderTextSuffix, value); }
+        }
+
+        private string _lowRiskContactPageAnnotationDecription;
+        public string LowRiskContactPageAnnotationDecription
+        {
+            get { return _lowRiskContactPageAnnotationDecription; }
+            set { SetProperty(ref _lowRiskContactPageAnnotationDecription, value); }
+        }
+
+        private V1ExposureRiskCalculationConfiguration _exposureRiskCalculationConfiguration;
+
         public ExposureCheckPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository,
             IExposureDataRepository exposureDataRepository
             ) : base(navigationService)
         {
-            this._loggerService = loggerService;
-            this._userDataRepository = userDataRepository;
+            _loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
@@ -57,6 +72,11 @@ namespace Covid19Radar.ViewModels
             base.Initialize(parameters);
 
             _loggerService.StartMethod();
+
+            _exposureRiskCalculationConfiguration
+                = parameters.GetValue<V1ExposureRiskCalculationConfiguration>(ExposureCheckPage.ExposureRiskCalculationConfigurationKey);
+
+            ShowExposureRiskCalculationConfiguration();
 
             try
             {
@@ -83,6 +103,35 @@ namespace Covid19Radar.ViewModels
             {
                 _loggerService.EndMethod();
             }
+        }
+
+        private void ShowExposureRiskCalculationConfiguration()
+        {
+            LowRiskContactPageHeaderTextSuffix
+                = string.Format(
+                    AppResources.LowRiskContactPageHeaderTextSuffix,
+                    _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value,
+                    OperatorToString(_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op)
+                );
+            LowRiskContactPageAnnotationDecription
+                = string.Format(
+                    AppResources.LowRiskContactPageAnnotationDecription,
+                    _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value,
+                    OperatorToString(_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op)
+                );
+        }
+
+        private static string OperatorToString(string op)
+        {
+            return op switch
+            {
+                ">=" => AppResources.ThresholdTextOperatorGte,
+                ">" => AppResources.ThresholdTextOperatorGt,
+                "=" => AppResources.ThresholdTextOperatorEqual,
+                "<" => AppResources.ThresholdTextOperatorLt,
+                "<=" => AppResources.ThresholdTextOperatorLte,
+                _ => AppResources.ThresholdTextOperatorEqual
+            };
         }
 
         private void SetupExposureCheckScores(List<DailySummary> summaries)
