@@ -217,7 +217,6 @@ namespace Covid19Radar
             container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
 
             // Privacy
-            container.Register<IExposureDataCollectServer, DebugExposureDataCollectServerNop>(Reuse.Singleton);
             container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
 
             // Beta
