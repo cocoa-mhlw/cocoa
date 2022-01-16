@@ -280,7 +280,7 @@ namespace Covid19Radar.UnitTests.Repository
                 DateMillisSinceEpoch = 10,
                 DaySummary = new ExposureSummaryData()
                 {
-                    ScoreSum = 120,
+                    ScoreSum = 100, // max(100, 20)
                 },
                 ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
                 ConfirmedTestSummary = new ExposureSummaryData()
