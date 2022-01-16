@@ -21,7 +21,6 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService loggerService;
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
-        private readonly IDialogService _dialogService;
 
         private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
 
@@ -44,15 +43,12 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
-            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
-            IDialogService dialogService
-            ) : base(navigationService)
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository) : base(navigationService)
         {
             this.loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
-            _dialogService = dialogService;
 
             Title = AppResources.TitileUserStatusSettings;
         }

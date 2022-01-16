@@ -28,7 +28,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
-        private readonly Mock<IDialogService> mockDialogService;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
         private readonly CultureInfo originalAppResourceCalture;
         private readonly CultureInfo originalThreadCalture;
@@ -47,7 +46,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
-            mockDialogService = mockRepository.Create<IDialogService>();
             mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
         }
@@ -67,8 +65,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     mockLoggerService.Object,
                     mockExposureDataRepository.Object,
                     mockExposureRiskCalculationService.Object,
-                    mockExposureRiskCalculationConfigurationRepository.Object,
-                    mockDialogService.Object
+                    mockExposureRiskCalculationConfigurationRepository.Object
                 );
         }
 
