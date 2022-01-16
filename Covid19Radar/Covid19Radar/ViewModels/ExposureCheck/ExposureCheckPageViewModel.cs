@@ -16,6 +16,8 @@ using Xamarin.Forms;
 using Covid19Radar.Views;
 using Covid19Radar.Resources;
 
+using Threshold = Covid19Radar.Model.V1ExposureRiskCalculationConfiguration.Threshold;
+
 namespace Covid19Radar.ViewModels
 {
     public class ExposureCheckPageViewModel : ViewModelBase
@@ -108,8 +110,8 @@ namespace Covid19Radar.ViewModels
         private void ShowExposureRiskCalculationConfiguration()
         {
             if (_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op
-                    == V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_NOP) {
-                _loggerService.Info("_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op");
+                    == Threshold.OPERATION_NOP) {
+                _loggerService.Info("_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op = NOP");
                 return;
             }
 
@@ -131,12 +133,12 @@ namespace Covid19Radar.ViewModels
         {
             return op switch
             {
-                ">=" => AppResources.ThresholdTextOperatorGte,
-                ">" => AppResources.ThresholdTextOperatorGt,
-                "=" => AppResources.ThresholdTextOperatorEqual,
-                "<" => AppResources.ThresholdTextOperatorLt,
-                "<=" => AppResources.ThresholdTextOperatorLte,
-                "NOP" => string.Empty,
+                Threshold.OPERATION_GREATER_EQUAL => AppResources.ThresholdTextOperatorGte,
+                Threshold.OPERATION_GREATER => AppResources.ThresholdTextOperatorGt,
+                Threshold.OPERATION_EQUAL => AppResources.ThresholdTextOperatorEqual,
+                Threshold.OPERATION_LESS => AppResources.ThresholdTextOperatorLt,
+                Threshold.OPERATION_LESS_EQUAL => AppResources.ThresholdTextOperatorLte,
+                Threshold.OPERATION_NOP => string.Empty,
                 _ => string.Empty
             };
         }
