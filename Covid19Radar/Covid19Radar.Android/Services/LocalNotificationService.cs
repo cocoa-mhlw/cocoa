@@ -61,11 +61,13 @@ namespace Covid19Radar.Droid.Services
             _loggerService.StartMethod();
 
             Intent intent = MainActivity.NewIntent(Platform.AppContext, Destination.ContactedNotifyPage);
+            intent.AddFlags(ActivityFlags.ClearTask);
+
             PendingIntent pendingIntent = PendingIntent.GetActivity(
                 Platform.AppContext,
                 REQUEST_CODE,
                 intent,
-                PendingIntentFlags.UpdateCurrent
+                PendingIntentFlags.CancelCurrent | PendingIntentFlags.Immutable
                 );
 
             var notification = new NotificationCompat
