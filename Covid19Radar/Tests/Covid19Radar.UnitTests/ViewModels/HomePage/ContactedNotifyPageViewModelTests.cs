@@ -211,8 +211,13 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var contactedNotifyViewModel = CreateViewModel();
             contactedNotifyViewModel.Initialize(new NavigationParameters());
 
-            mockDialogService
-                .Verify(x => x.ShowHomePageUnknownErrorWaringAsync(), Times.Once);
+            mockLoggerService
+                .Verify(x => x.Exception(
+                    "Failed to Initialize",
+                    It.IsAny<Exception>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<int>()), Times.Once);
         }
     }
 }
