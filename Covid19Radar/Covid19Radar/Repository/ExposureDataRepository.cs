@@ -2,6 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -72,7 +73,7 @@ namespace Covid19Radar.Repository
                 }
                 else
                 {
-                    MergeData(existDailySummary, newDailySummary);
+                    MergeDailySummarySelectMaxValues(existDailySummary, newDailySummary);
                 }
             }
 
@@ -91,7 +92,12 @@ namespace Covid19Radar.Repository
             return (newDailySummaryList, newExposureWindowList);
         }
 
-        private void MergeData(DailySummary from, DailySummary to)
+        /// <summary>
+        /// Select and merge the maximum values of each DailySummary objects.
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        private void MergeDailySummarySelectMaxValues(DailySummary from, DailySummary to)
         {
             _loggerService.StartMethod();
 
@@ -124,33 +130,33 @@ namespace Covid19Radar.Repository
 
             if (from.DaySummary != null)
             {
-                to.DaySummary.ScoreSum += from.DaySummary.ScoreSum;
-                to.DaySummary.MaximumScore += from.DaySummary.MaximumScore;
-                to.DaySummary.WeightedDurationSum += from.DaySummary.WeightedDurationSum;
+                to.DaySummary.ScoreSum = Math.Max(from.DaySummary.ScoreSum, to.DaySummary.ScoreSum);
+                to.DaySummary.MaximumScore = Math.Max(from.DaySummary.MaximumScore, to.DaySummary.MaximumScore);
+                to.DaySummary.WeightedDurationSum = Math.Max(from.DaySummary.WeightedDurationSum, to.DaySummary.WeightedDurationSum);
             }
             if (from.ConfirmedTestSummary != null)
             {
-                to.ConfirmedTestSummary.ScoreSum += from.ConfirmedTestSummary.ScoreSum;
-                to.ConfirmedTestSummary.MaximumScore += from.ConfirmedTestSummary.MaximumScore;
-                to.ConfirmedTestSummary.WeightedDurationSum += from.ConfirmedTestSummary.WeightedDurationSum;
+                to.ConfirmedTestSummary.ScoreSum = Math.Max(from.ConfirmedTestSummary.ScoreSum, to.ConfirmedTestSummary.ScoreSum);
+                to.ConfirmedTestSummary.MaximumScore = Math.Max(from.ConfirmedTestSummary.MaximumScore, to.ConfirmedTestSummary.MaximumScore);
+                to.ConfirmedTestSummary.WeightedDurationSum = Math.Max(from.ConfirmedTestSummary.WeightedDurationSum, to.ConfirmedTestSummary.WeightedDurationSum);
             }
             if (from.ConfirmedClinicalDiagnosisSummary != null)
             {
-                to.ConfirmedClinicalDiagnosisSummary.ScoreSum += from.ConfirmedClinicalDiagnosisSummary.ScoreSum;
-                to.ConfirmedClinicalDiagnosisSummary.MaximumScore += from.ConfirmedClinicalDiagnosisSummary.MaximumScore;
-                to.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum += from.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum;
+                to.ConfirmedClinicalDiagnosisSummary.ScoreSum = Math.Max(from.ConfirmedClinicalDiagnosisSummary.ScoreSum, to.ConfirmedClinicalDiagnosisSummary.ScoreSum);
+                to.ConfirmedClinicalDiagnosisSummary.MaximumScore = Math.Max(from.ConfirmedClinicalDiagnosisSummary.MaximumScore, to.ConfirmedClinicalDiagnosisSummary.MaximumScore);
+                to.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum = Math.Max(from.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum, to.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum);
             }
             if (from.SelfReportedSummary != null)
             {
-                to.SelfReportedSummary.ScoreSum += from.SelfReportedSummary.ScoreSum;
-                to.SelfReportedSummary.MaximumScore += from.SelfReportedSummary.MaximumScore;
-                to.SelfReportedSummary.WeightedDurationSum += from.SelfReportedSummary.WeightedDurationSum;
+                to.SelfReportedSummary.ScoreSum = Math.Max(from.SelfReportedSummary.ScoreSum, to.SelfReportedSummary.ScoreSum);
+                to.SelfReportedSummary.MaximumScore = Math.Max(from.SelfReportedSummary.MaximumScore, to.SelfReportedSummary.MaximumScore);
+                to.SelfReportedSummary.WeightedDurationSum = Math.Max(from.SelfReportedSummary.WeightedDurationSum, to.SelfReportedSummary.WeightedDurationSum);
             }
             if (from.RecursiveSummary != null)
             {
-                to.RecursiveSummary.ScoreSum += from.RecursiveSummary.ScoreSum;
-                to.RecursiveSummary.MaximumScore += from.RecursiveSummary.MaximumScore;
-                to.RecursiveSummary.WeightedDurationSum += from.RecursiveSummary.WeightedDurationSum;
+                to.RecursiveSummary.ScoreSum = Math.Max(from.RecursiveSummary.ScoreSum, to.RecursiveSummary.ScoreSum);
+                to.RecursiveSummary.MaximumScore = Math.Max(from.RecursiveSummary.MaximumScore, to.RecursiveSummary.MaximumScore);
+                to.RecursiveSummary.WeightedDurationSum = Math.Max(from.RecursiveSummary.WeightedDurationSum, to.RecursiveSummary.WeightedDurationSum);
             }
 
             _loggerService.EndMethod();
