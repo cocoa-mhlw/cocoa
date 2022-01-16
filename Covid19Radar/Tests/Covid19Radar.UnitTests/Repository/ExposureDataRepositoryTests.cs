@@ -210,7 +210,7 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         [Fact]
-        public async void SetExposureDataTests_Merge()
+        public async void SetExposureDataTests_MergeDuplicateDailySummaries()
         {
             var existDailySummaries = new List<DailySummary>() {
                 new DailySummary()
@@ -240,14 +240,6 @@ namespace Covid19Radar.UnitTests.Repository
             };
             var existExposureWindows = new List<ExposureWindow>()
             {
-                new ExposureWindow()
-                {
-                    CalibrationConfidence = CalibrationConfidence.High,
-                    DateMillisSinceEpoch = 0,
-                    Infectiousness = Infectiousness.High,
-                    ReportType = ReportType.Unknown,
-                    ScanInstances = new List<ScanInstance>()
-                }
             };
 
             var addDailySummaries = new List<DailySummary>() {
@@ -281,22 +273,6 @@ namespace Covid19Radar.UnitTests.Repository
             };
             var addExposureWindows = new List<ExposureWindow>()
             {
-                new ExposureWindow()
-                {
-                    CalibrationConfidence = CalibrationConfidence.High,
-                    DateMillisSinceEpoch = 0,
-                    Infectiousness = Infectiousness.High,
-                    ReportType = ReportType.Unknown,
-                    ScanInstances = new List<ScanInstance>()
-                },
-                new ExposureWindow()
-                {
-                    CalibrationConfidence = CalibrationConfidence.Medium,
-                    DateMillisSinceEpoch = 0,
-                    Infectiousness = Infectiousness.High,
-                    ReportType = ReportType.ConfirmedTest,
-                    ScanInstances = new List<ScanInstance>()
-                }
             };
 
             var mergedDailySummary = new DailySummary()
@@ -320,19 +296,10 @@ namespace Covid19Radar.UnitTests.Repository
                 mergedDailySummary,
                 existDailySummaries[0],
             };
-            var expectedExposureWindows = new List<ExposureWindow>()
-            {
-                existExposureWindows[0],
-                addExposureWindows[1]
-            };
 
             var expectedNewDailySummaries = new List<DailySummary>()
             {
                 mergedDailySummary
-            };
-            var expectedNewExposureWindows = new List<ExposureWindow>()
-            {
-                addExposureWindows[1]
             };
 
             // Mock Setup
@@ -351,13 +318,10 @@ namespace Covid19Radar.UnitTests.Repository
                 );
 
             var expectedDailySummariesJson = JsonConvert.SerializeObject(expectedDailySummaries);
-            var expectedExposureWindowsJson = JsonConvert.SerializeObject(expectedExposureWindows);
 
             // Assert
             Assert.Equal(expectedNewDailySummaries, newDailySummaryList);
-            Assert.Equal(expectedNewExposureWindows, newExposureWindowList);
             mockPreferencesService.Verify(x => x.SetValue("DailySummaries", expectedDailySummariesJson), Times.Once);
-            mockPreferencesService.Verify(x => x.SetValue("ExposureWindows", expectedExposureWindowsJson), Times.Once);
 
         }
 
