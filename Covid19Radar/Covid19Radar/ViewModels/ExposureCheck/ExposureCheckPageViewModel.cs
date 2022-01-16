@@ -107,6 +107,12 @@ namespace Covid19Radar.ViewModels
 
         private void ShowExposureRiskCalculationConfiguration()
         {
+            if (_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op
+                    == V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_NOP) {
+                _loggerService.Info("_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op");
+                return;
+            }
+
             LowRiskContactPageHeaderTextSuffix
                 = string.Format(
                     AppResources.LowRiskContactPageHeaderTextSuffix,
@@ -130,7 +136,8 @@ namespace Covid19Radar.ViewModels
                 "=" => AppResources.ThresholdTextOperatorEqual,
                 "<" => AppResources.ThresholdTextOperatorLt,
                 "<=" => AppResources.ThresholdTextOperatorLte,
-                _ => AppResources.ThresholdTextOperatorEqual
+                "NOP" => string.Empty,
+                _ => string.Empty
             };
         }
 
