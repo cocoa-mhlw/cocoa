@@ -15,26 +15,25 @@ namespace Covid19Radar.Services
         }
 
         public Task SendExposureDataAsync(
-            string idempotencyKey, ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
+            string idempotencyKey,
+            ExposureConfiguration exposureConfiguration,
+            string deviceModel, string enVersion,
             ExposureSummary exposureSummary,
             IList<ExposureInformation> exposureInformation
             )
         {
-
+            // do nothing
             return Task.CompletedTask;
         }
 
         public Task SendExposureDataAsync(
             string idempotencyKey,
             ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows
+            string deviceModel, string enVersion,
+            IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows
             )
         {
+            // do nothing
             return Task.CompletedTask;
         }
 
@@ -45,6 +44,7 @@ namespace Covid19Radar.Services
             string enVersion
             )
         {
+            // do nothing
             return Task.CompletedTask;
         }
     }

@@ -24,7 +24,7 @@ namespace Covid19Radar.UnitTests.Services {
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> loggerService;
         private readonly Mock<ILocalNotificationService> localNotificationService;
-        private readonly Mock<IExposureDataCollectServer> exposureDataCollectServer;
+        private readonly Mock<IDebugExposureDataCollectServer> exposureDataCollectServer;
         private readonly Mock<IExposureRiskCalculationConfigurationRepository> exposureRiskCalculationConfigurationRepository;
         private readonly Mock<IExposureRiskCalculationService> exposureRiskCalculationService;
         private readonly Mock<IEventLogService> eventLogService;
@@ -46,7 +46,7 @@ namespace Covid19Radar.UnitTests.Services {
             mockRepository = new MockRepository(MockBehavior.Default);
             loggerService = mockRepository.Create<ILoggerService>();
             localNotificationService = mockRepository.Create<ILocalNotificationService>();
-            exposureDataCollectServer = mockRepository.Create<IExposureDataCollectServer>();
+            exposureDataCollectServer = mockRepository.Create<IDebugExposureDataCollectServer>();
             exposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             exposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
             eventLogService = mockRepository.Create<IEventLogService>();

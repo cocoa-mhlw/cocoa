@@ -366,6 +366,14 @@
     <value>ホーム</value>
     <comment>ホーム</comment>
   </data>
+  <data name="HomePageDialogExceptionTitle" xml:space="preserve">
+    <value>確認画面へのアクセスに失敗しました</value>
+    <comment>確認画面へのアクセスに失敗しました</comment>
+  </data>
+  <data name="HomePageDialogExceptionDescription" xml:space="preserve">
+    <value>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+  </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>利用規約</value>
     <comment>利用規約</comment>

@@ -160,49 +160,60 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickExposures => new Command(async () =>
         {
-            loggerService.StartMethod();
-
-            var exposureRiskCalculationConfiguration = await exposureRiskCalculationConfigurationRepository
-                .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
-
-            var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
-            var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
-
-            var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
-
-            var hasExposure = dailySummaryList.Count() > 0 || userExposureInformationList.Count() > 0;
-            var hasHighRiskExposure = userExposureInformationList.Count() > 0;
-
-            foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
+            try
             {
-                var dailySummary = dailySummaryMap[ew.Key];
-                RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
-                    dailySummary,
-                    ew.ToList(),
-                    exposureRiskCalculationConfiguration
-                    );
-                if (riskLevel >= RiskLevel.High)
+                loggerService.StartMethod();
+
+                var exposureRiskCalculationConfiguration = await exposureRiskCalculationConfigurationRepository
+                    .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+
+                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
+                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+
+                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+
+                var hasExposure = dailySummaryList.Count() > 0 || userExposureInformationList.Count() > 0;
+                var hasHighRiskExposure = userExposureInformationList.Count() > 0;
+
+                foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
-                    hasHighRiskExposure = true;
-                    break;
+                    var dailySummary = dailySummaryMap[ew.Key];
+                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
+                        dailySummary,
+                        ew.ToList(),
+                        exposureRiskCalculationConfiguration
+                        );
+                    if (riskLevel >= RiskLevel.High)
+                    {
+                        hasHighRiskExposure = true;
+                        break;
+                    }
+                }
+
+                await localNotificationService.DismissExposureNotificationAsync();
+
+                if (hasHighRiskExposure)
+                {
+                    await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
+                    return;
+                }
+                else
+                {
+                    await NavigationService.NavigateAsync(nameof(ExposureCheckPage));
+                    return;
                 }
             }
-
-            await localNotificationService.DismissExposureNotificationAsync();
-
-            if (hasHighRiskExposure)
+            catch (Exception exception)
             {
-                await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
-                loggerService.EndMethod();
-                return;
+                loggerService.Exception("Failed to Initialize", exception);
+                await dialogService.ShowHomePageUnknownErrorWaringAsync();
             }
-            else
+            finally
             {
-                await NavigationService.NavigateAsync(nameof(ExposureCheckPage));
                 loggerService.EndMethod();
-                return;
             }
+
         });
 
         public Command OnClickShareApp => new Command(() =>

@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
-    public interface IExposureDataCollectServer
+    public interface IDebugExposureDataCollectServer
     {
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
@@ -39,7 +39,7 @@ namespace Covid19Radar.Services
             );
     }
 
-    public class DebugExposureDataCollectServerNop : IExposureDataCollectServer
+    public class DebugExposureDataCollectServerNop : IDebugExposureDataCollectServer
     {
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
@@ -67,8 +67,11 @@ namespace Covid19Radar.Services
             => Task.CompletedTask;
     }
 
+/// For user-privacy, this class is used for DEBUG only.
+/// Below #if is intented safe-guard for prevent contamination.
+/// DO NOT REMOVE.
 #if DEBUG
-    public class DebugExposureDataCollectServer : IExposureDataCollectServer
+    public class DebugExposureDataCollectServer : IDebugExposureDataCollectServer
     {
         private readonly ILoggerService _loggerService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
