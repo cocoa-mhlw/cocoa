@@ -182,9 +182,9 @@ namespace Covid19Radar.Repository
             try
             {
                 string dailySummariesJson = _preferencesService.GetValue(PreferenceKey.DailySummaries, EMPTY_LIST_JSON);
-                List<DailySummary> dailySummaryList = JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson);
-
-                return Task.FromResult(dailySummaryList);
+                return Task.FromResult(
+                    JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson)
+                );
             }
             finally
             {
