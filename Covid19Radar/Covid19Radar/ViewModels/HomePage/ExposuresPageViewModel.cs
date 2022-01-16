@@ -7,6 +7,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using System;
 using System.Collections.ObjectModel;
@@ -21,6 +22,7 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly ILoggerService _loggerService;
 
         public ObservableCollection<ExposureSummary> _exposures;
 
@@ -34,12 +36,14 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
-            IExposureRiskCalculationService exposureRiskCalculationService
+            IExposureRiskCalculationService exposureRiskCalculationService,
+            ILoggerService loggerService
             ) : base(navigationService)
         {
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _loggerService = loggerService;
 
             Title = AppResources.MainExposures;
             _exposures = new ObservableCollection<ExposureSummary>();
@@ -72,6 +76,12 @@ namespace Covid19Radar.ViewModels
             {
                 foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
+                    if (!dailySummaryMap.ContainsKey(ew.Key))
+                    {
+                        _loggerService.Warning($"ExposureWindow: {ew.Key} found, but that is not contained the list of dailySummary.");
+                        continue;
+                    }
+
                     var dailySummary = dailySummaryMap[ew.Key];
 
                     RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
