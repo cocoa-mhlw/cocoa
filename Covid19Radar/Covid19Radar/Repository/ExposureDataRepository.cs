@@ -57,14 +57,24 @@ namespace Covid19Radar.Repository
             foreach (var existDailySummary in existDailySummaryList)
             {
                 var conflictDailySummaryList = dailySummaryList
-                    .Where(ds => ds.DateMillisSinceEpoch == existDailySummary.DateMillisSinceEpoch);
+                    .Where(ds => ds.DateMillisSinceEpoch == existDailySummary.DateMillisSinceEpoch)
+                    .ToList();
 
-                if (conflictDailySummaryList.Count() == 0)
+                var conflictDailySummaryListCount = conflictDailySummaryList.Count();
+                if (conflictDailySummaryListCount == 0)
                 {
                     filteredExistDailySummaryList.Add(existDailySummary);
                     continue;
                 }
+                else if (conflictDailySummaryListCount > 1)
+                {
+                    _loggerService.Warning($"The list conflictDailySummaryList count should be 1 but {conflictDailySummaryListCount}." +
+                        "conflictDailySummaryList will be sorted and selected first value.");
+                    conflictDailySummaryList.Sort(_dailySummaryComparer);
+                }
 
+                // `conflictDailySummaryList` count must be 1,
+                // because the DailySummary objects that have same DateMillisSinceEpoch value must be saved after merge.
                 DailySummary newDailySummary = conflictDailySummaryList.First();
 
                 if (existDailySummary.Equals(newDailySummary))
@@ -107,53 +117,56 @@ namespace Covid19Radar.Repository
                 return;
             }
 
-            if (from.DaySummary != null && to.DaySummary == null)
-            {
-                to.DaySummary = new ExposureSummaryData();
-            }
-            if (from.ConfirmedTestSummary != null && to.ConfirmedTestSummary == null)
-            {
-                to.ConfirmedTestSummary = new ExposureSummaryData();
-            }
-            if (from.ConfirmedClinicalDiagnosisSummary != null && to.ConfirmedClinicalDiagnosisSummary == null)
-            {
-                to.ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData();
-            }
-            if (from.SelfReportedSummary != null && to.SelfReportedSummary == null)
-            {
-                to.SelfReportedSummary = new ExposureSummaryData();
-            }
-            if (from.RecursiveSummary != null && to.RecursiveSummary == null)
-            {
-                to.RecursiveSummary = new ExposureSummaryData();
-            }
-
             if (from.DaySummary != null)
             {
+                if (to.DaySummary == null)
+                {
+                    to.DaySummary = new ExposureSummaryData();
+                }
                 to.DaySummary.ScoreSum = Math.Max(from.DaySummary.ScoreSum, to.DaySummary.ScoreSum);
                 to.DaySummary.MaximumScore = Math.Max(from.DaySummary.MaximumScore, to.DaySummary.MaximumScore);
                 to.DaySummary.WeightedDurationSum = Math.Max(from.DaySummary.WeightedDurationSum, to.DaySummary.WeightedDurationSum);
             }
+
             if (from.ConfirmedTestSummary != null)
             {
+                if (to.ConfirmedTestSummary == null)
+                {
+                    to.ConfirmedTestSummary = new ExposureSummaryData();
+                }
                 to.ConfirmedTestSummary.ScoreSum = Math.Max(from.ConfirmedTestSummary.ScoreSum, to.ConfirmedTestSummary.ScoreSum);
                 to.ConfirmedTestSummary.MaximumScore = Math.Max(from.ConfirmedTestSummary.MaximumScore, to.ConfirmedTestSummary.MaximumScore);
                 to.ConfirmedTestSummary.WeightedDurationSum = Math.Max(from.ConfirmedTestSummary.WeightedDurationSum, to.ConfirmedTestSummary.WeightedDurationSum);
             }
+
             if (from.ConfirmedClinicalDiagnosisSummary != null)
             {
+                if (to.ConfirmedClinicalDiagnosisSummary == null)
+                {
+                    to.ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData();
+                }
                 to.ConfirmedClinicalDiagnosisSummary.ScoreSum = Math.Max(from.ConfirmedClinicalDiagnosisSummary.ScoreSum, to.ConfirmedClinicalDiagnosisSummary.ScoreSum);
                 to.ConfirmedClinicalDiagnosisSummary.MaximumScore = Math.Max(from.ConfirmedClinicalDiagnosisSummary.MaximumScore, to.ConfirmedClinicalDiagnosisSummary.MaximumScore);
                 to.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum = Math.Max(from.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum, to.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum);
             }
+
             if (from.SelfReportedSummary != null)
             {
+                if (to.SelfReportedSummary == null)
+                {
+                    to.SelfReportedSummary = new ExposureSummaryData();
+                }
                 to.SelfReportedSummary.ScoreSum = Math.Max(from.SelfReportedSummary.ScoreSum, to.SelfReportedSummary.ScoreSum);
                 to.SelfReportedSummary.MaximumScore = Math.Max(from.SelfReportedSummary.MaximumScore, to.SelfReportedSummary.MaximumScore);
                 to.SelfReportedSummary.WeightedDurationSum = Math.Max(from.SelfReportedSummary.WeightedDurationSum, to.SelfReportedSummary.WeightedDurationSum);
             }
+
             if (from.RecursiveSummary != null)
             {
+                if (to.RecursiveSummary == null)
+                {
+                    to.RecursiveSummary = new ExposureSummaryData();
+                }
                 to.RecursiveSummary.ScoreSum = Math.Max(from.RecursiveSummary.ScoreSum, to.RecursiveSummary.ScoreSum);
                 to.RecursiveSummary.MaximumScore = Math.Max(from.RecursiveSummary.MaximumScore, to.RecursiveSummary.MaximumScore);
                 to.RecursiveSummary.WeightedDurationSum = Math.Max(from.RecursiveSummary.WeightedDurationSum, to.RecursiveSummary.WeightedDurationSum);
