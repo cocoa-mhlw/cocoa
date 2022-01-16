@@ -2,6 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -50,19 +51,128 @@ namespace Covid19Radar.Repository
             List<DailySummary> existDailySummaryList = await GetDailySummariesAsync();
             List<ExposureWindow> existExposureWindowList = await GetExposureWindowsAsync();
 
-            List<DailySummary> unionDailySummaryList = existDailySummaryList.Union(dailySummaryList).ToList();
+            List<DailySummary> filteredExistDailySummaryList = new List<DailySummary>();
+
+            // Filter and merge DailySummaries that have same DateMillisSinceEpoch value.
+            foreach (var existDailySummary in existDailySummaryList)
+            {
+                var conflictDailySummaryList = dailySummaryList
+                    .Where(ds => ds.DateMillisSinceEpoch == existDailySummary.DateMillisSinceEpoch)
+                    .ToList();
+
+                var conflictDailySummaryListCount = conflictDailySummaryList.Count();
+                if (conflictDailySummaryListCount == 0)
+                {
+                    filteredExistDailySummaryList.Add(existDailySummary);
+                    continue;
+                }
+                else if (conflictDailySummaryListCount > 1)
+                {
+                    _loggerService.Warning($"The list conflictDailySummaryList count should be 1 but {conflictDailySummaryListCount}." +
+                        "conflictDailySummaryList will be sorted and selected first value.");
+                    conflictDailySummaryList.Sort(_dailySummaryComparer);
+                }
+
+                // `conflictDailySummaryList` count must be 1,
+                // because the DailySummary objects that have same DateMillisSinceEpoch value must be saved after merge.
+                DailySummary newDailySummary = conflictDailySummaryList.First();
+
+                if (existDailySummary.Equals(newDailySummary))
+                {
+                    filteredExistDailySummaryList.Add(existDailySummary);
+                }
+                else
+                {
+                    MergeDailySummarySelectMaxValues(existDailySummary, newDailySummary);
+                }
+            }
+
+            List<DailySummary> unionDailySummaryList = filteredExistDailySummaryList.Union(dailySummaryList).ToList();
             List<ExposureWindow> unionExposureWindowList = existExposureWindowList.Union(exposueWindowList).ToList();
             unionDailySummaryList.Sort(_dailySummaryComparer);
             unionExposureWindowList.Sort(_exposureWindowComparer);
 
             await SaveExposureDataAsync(unionDailySummaryList, unionExposureWindowList);
 
-            List<DailySummary> newDailySummaryList = unionDailySummaryList.Except(existDailySummaryList).ToList();
+            List<DailySummary> newDailySummaryList = unionDailySummaryList.Except(filteredExistDailySummaryList).ToList();
             List<ExposureWindow> newExposureWindowList = unionExposureWindowList.Except(existExposureWindowList).ToList();
 
             _loggerService.EndMethod();
 
             return (newDailySummaryList, newExposureWindowList);
+        }
+
+        /// <summary>
+        /// Select and merge the maximum values of each DailySummary objects.
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+        private void MergeDailySummarySelectMaxValues(DailySummary from, DailySummary to)
+        {
+            _loggerService.StartMethod();
+
+            if (from.DateMillisSinceEpoch != to.DateMillisSinceEpoch)
+            {
+                _loggerService.Info($"DateMillisSinceEpoch is not match: {from.DateMillisSinceEpoch}, {to.DateMillisSinceEpoch}");
+                return;
+            }
+
+            if (from.DaySummary != null)
+            {
+                if (to.DaySummary == null)
+                {
+                    to.DaySummary = new ExposureSummaryData();
+                }
+                to.DaySummary.ScoreSum = Math.Max(from.DaySummary.ScoreSum, to.DaySummary.ScoreSum);
+                to.DaySummary.MaximumScore = Math.Max(from.DaySummary.MaximumScore, to.DaySummary.MaximumScore);
+                to.DaySummary.WeightedDurationSum = Math.Max(from.DaySummary.WeightedDurationSum, to.DaySummary.WeightedDurationSum);
+            }
+
+            if (from.ConfirmedTestSummary != null)
+            {
+                if (to.ConfirmedTestSummary == null)
+                {
+                    to.ConfirmedTestSummary = new ExposureSummaryData();
+                }
+                to.ConfirmedTestSummary.ScoreSum = Math.Max(from.ConfirmedTestSummary.ScoreSum, to.ConfirmedTestSummary.ScoreSum);
+                to.ConfirmedTestSummary.MaximumScore = Math.Max(from.ConfirmedTestSummary.MaximumScore, to.ConfirmedTestSummary.MaximumScore);
+                to.ConfirmedTestSummary.WeightedDurationSum = Math.Max(from.ConfirmedTestSummary.WeightedDurationSum, to.ConfirmedTestSummary.WeightedDurationSum);
+            }
+
+            if (from.ConfirmedClinicalDiagnosisSummary != null)
+            {
+                if (to.ConfirmedClinicalDiagnosisSummary == null)
+                {
+                    to.ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData();
+                }
+                to.ConfirmedClinicalDiagnosisSummary.ScoreSum = Math.Max(from.ConfirmedClinicalDiagnosisSummary.ScoreSum, to.ConfirmedClinicalDiagnosisSummary.ScoreSum);
+                to.ConfirmedClinicalDiagnosisSummary.MaximumScore = Math.Max(from.ConfirmedClinicalDiagnosisSummary.MaximumScore, to.ConfirmedClinicalDiagnosisSummary.MaximumScore);
+                to.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum = Math.Max(from.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum, to.ConfirmedClinicalDiagnosisSummary.WeightedDurationSum);
+            }
+
+            if (from.SelfReportedSummary != null)
+            {
+                if (to.SelfReportedSummary == null)
+                {
+                    to.SelfReportedSummary = new ExposureSummaryData();
+                }
+                to.SelfReportedSummary.ScoreSum = Math.Max(from.SelfReportedSummary.ScoreSum, to.SelfReportedSummary.ScoreSum);
+                to.SelfReportedSummary.MaximumScore = Math.Max(from.SelfReportedSummary.MaximumScore, to.SelfReportedSummary.MaximumScore);
+                to.SelfReportedSummary.WeightedDurationSum = Math.Max(from.SelfReportedSummary.WeightedDurationSum, to.SelfReportedSummary.WeightedDurationSum);
+            }
+
+            if (from.RecursiveSummary != null)
+            {
+                if (to.RecursiveSummary == null)
+                {
+                    to.RecursiveSummary = new ExposureSummaryData();
+                }
+                to.RecursiveSummary.ScoreSum = Math.Max(from.RecursiveSummary.ScoreSum, to.RecursiveSummary.ScoreSum);
+                to.RecursiveSummary.MaximumScore = Math.Max(from.RecursiveSummary.MaximumScore, to.RecursiveSummary.MaximumScore);
+                to.RecursiveSummary.WeightedDurationSum = Math.Max(from.RecursiveSummary.WeightedDurationSum, to.RecursiveSummary.WeightedDurationSum);
+            }
+
+            _loggerService.EndMethod();
         }
 
         private Task SaveExposureDataAsync(IList<DailySummary> dailySummaryList, IList<ExposureWindow> exposureWindowList)

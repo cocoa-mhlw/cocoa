@@ -144,9 +144,9 @@ namespace Covid19Radar.Services
             _loggerService.StartMethod();
 
             SendEventLogState sendEventLogState = _userDataRepository.GetSendEventLogState();
-            bool isEnabled = sendEventLogState != SendEventLogState.Enable;
+            bool isEnabled = sendEventLogState == SendEventLogState.Enable;
 
-            if (isEnabled)
+            if (!isEnabled)
             {
                 _loggerService.Debug($"Send event-log function is not enabled.");
                 _loggerService.EndMethod();
