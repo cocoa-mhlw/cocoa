@@ -473,12 +473,12 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="InqueryDialogExceptionTitle" xml:space="preserve">
-    <value>Unknown error</value>
-    <comment>不明なエラー</comment>
+    <value>Failed to calculate exposure</value>
+    <comment>リスク判定に失敗しました</comment>
   </data>
   <data name="InqueryDialogExceptionDescription" xml:space="preserve">
-    <value>We apologize for the inconvinience. Please try again later and send operating information from inquery.</value>
-    <comment>ご不便おかけして申し訳ありません。時間をおいて再度お試しください。また、「お問い合わせ」より動作情報の送信にご協力ください。</comment>
+    <value>We apologize for the inconvinience. The network may be unstable or the server may be busy. Please try again later.</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
     <value>Check contact with positive testers</value>

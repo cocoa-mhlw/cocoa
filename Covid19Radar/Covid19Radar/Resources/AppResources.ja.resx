@@ -342,6 +342,14 @@
     <value>お問い合わせ</value>
     <comment>お問い合わせ（メニュー）</comment>
   </data>
+  <data name="InqueryDialogExceptionTitle" xml:space="preserve">
+    <value>リスク判定に失敗しました</value>
+    <comment>リスク判定に失敗しました</comment>
+  </data>
+  <data name="InqueryDialogExceptionDescription" xml:space="preserve">
+    <value>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+  </data>
   <data name="HomePageDescription2" xml:space="preserve">
     <value>陽性者との接触結果を確認</value>
     <comment>陽性者との接触結果を確認</comment>
