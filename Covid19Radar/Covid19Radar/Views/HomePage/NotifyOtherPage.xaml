@@ -254,6 +254,42 @@
                 </Button.Triggers>
             </Button>
 
+            <!-- Copy from HelpPage/InqueryPage -->
+            <StackLayout
+                Margin="0, 20, 0, 0"
+                IsVisible="{Binding IsInqueryVisible}"
+                >
+                <BoxView Style="{StaticResource DefaultLineStyle}" />
+
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="18"
+                    Margin="15, 20, 15, 15"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.InqueryBeta}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="19"
+                    Margin="15, 5"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    TextColor="{StaticResource SecondaryText}"
+                    Text="{x:Static resources:AppResources.InqueryBeta_Description1}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="20"
+                    Margin="15, 5"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    TextColor="{StaticResource SecondaryText}"
+                    Text="{x:Static resources:AppResources.InqueryBeta_Description2}" />
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="21"
+                    Margin="20, 15, 20, 20"
+                    Command="{Binding OnClickUseStable}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.InqueryBeta_InstallStable}" />
+            </StackLayout>
+
             <Frame
                 Margin="0,25,0,15"
                 Padding="10"
