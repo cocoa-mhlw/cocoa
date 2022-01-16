@@ -629,6 +629,18 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string HomePageDialogExceptionTitle {
+            get {
+                return ResourceManager.GetString("HomePageDialogExceptionTitle", resourceCulture);
+            }
+        }
+        
+        public static string HomePageDialogExceptionDescription {
+            get {
+                return ResourceManager.GetString("HomePageDialogExceptionDescription", resourceCulture);
+            }
+        }
+        
         public static string TermsofservicePageTitle {
             get {
                 return ResourceManager.GetString("TermsofservicePageTitle", resourceCulture);

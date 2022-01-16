@@ -496,6 +496,14 @@
     <value>Home</value>
     <comment>ホーム</comment>
   </data>
+  <data name="HomePageDialogExceptionTitle" xml:space="preserve">
+    <value>Failed to access the risk check page</value>
+    <comment>確認画面へのアクセスに失敗しました</comment>
+  </data>
+  <data name="HomePageDialogExceptionDescription" xml:space="preserve">
+    <value>We apologize for the inconvinience. The network may be unstable or the server may be busy. Please try again later.</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+  </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Term of use</value>
     <comment>利用規約</comment>

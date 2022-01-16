@@ -120,25 +120,27 @@ namespace Covid19Radar.Repository
 
             V1ExposureRiskCalculationConfiguration newExposureRiskCalculationConfiguration = null;
 
-            var response = await _httpClient.GetAsync(url);
-            if (response.IsSuccessStatusCode)
+            try
             {
-                string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
-                _loggerService.Debug(exposureRiskCalculationConfigurationAsJson);
-
-                try
+                var response = await _httpClient.GetAsync(url);
+                if (response.IsSuccessStatusCode)
                 {
+                    string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
+                    _loggerService.Debug(exposureRiskCalculationConfigurationAsJson);
                     newExposureRiskCalculationConfiguration = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(exposureRiskCalculationConfigurationAsJson);
                 }
-                catch (JsonException exception)
+                else
                 {
-                    _loggerService.Exception("JsonException.", exception);
+                    _loggerService.Warning($"Download ExposureRiskCalculationConfiguration failed from {url}");
                 }
-
             }
-            else
+            catch (JsonException exception)
             {
-                _loggerService.Warning($"Download ExposureRiskCalculationConfiguration failed from {url}");
+                _loggerService.Exception("JsonException.", exception);
+            }
+            catch (HttpRequestException exception)
+            {
+                _loggerService.Exception("HttpRequestException.", exception);
             }
 
             if (newExposureRiskCalculationConfiguration is null)
