@@ -74,7 +74,7 @@ namespace Covid19Radar.Services
             _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
 
-            _httpClient = httpClientService.Create();
+            _httpClient = httpClientService.CreateApiClient();
         }
 
         public async Task SendExposureDataAsync(
@@ -144,9 +144,9 @@ namespace Covid19Radar.Services
             _loggerService.StartMethod();
 
             SendEventLogState sendEventLogState = _userDataRepository.GetSendEventLogState();
-            bool isEnabled = sendEventLogState != SendEventLogState.Enable;
+            bool isEnabled = sendEventLogState == SendEventLogState.Enable;
 
-            if (isEnabled)
+            if (!isEnabled)
             {
                 _loggerService.Debug($"Send event-log function is not enabled.");
                 _loggerService.EndMethod();
