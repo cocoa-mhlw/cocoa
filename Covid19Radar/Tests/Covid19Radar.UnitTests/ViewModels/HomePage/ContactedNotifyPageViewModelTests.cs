@@ -212,7 +212,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             contactedNotifyViewModel.Initialize(new NavigationParameters());
 
             mockDialogService
-                .Verify(x => x.ShowUnknownErrorWaringAsync(), Times.Once);
+                .Verify(x => x.ShowHomePageUnknownErrorWaringAsync(), Times.Once);
         }
     }
 }

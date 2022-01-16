@@ -593,18 +593,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string InqueryDialogExceptionTitle {
-            get {
-                return ResourceManager.GetString("InqueryDialogExceptionTitle", resourceCulture);
-            }
-        }
-        
-        public static string InqueryDialogExceptionDescription {
-            get {
-                return ResourceManager.GetString("InqueryDialogExceptionDescription", resourceCulture);
-            }
-        }
-        
         public static string HomePageDescription2 {
             get {
                 return ResourceManager.GetString("HomePageDescription2", resourceCulture);
@@ -638,6 +626,18 @@ namespace Covid19Radar.Resources {
         public static string HomePageTitle1 {
             get {
                 return ResourceManager.GetString("HomePageTitle1", resourceCulture);
+            }
+        }
+        
+        public static string HomePageDialogExceptionTitle {
+            get {
+                return ResourceManager.GetString("HomePageDialogExceptionTitle", resourceCulture);
+            }
+        }
+        
+        public static string HomePageDialogExceptionDescription {
+            get {
+                return ResourceManager.GetString("HomePageDialogExceptionDescription", resourceCulture);
             }
         }
         

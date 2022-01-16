@@ -128,7 +128,6 @@ namespace Covid19Radar.ViewModels
             catch(Exception exception)
             {
                 loggerService.Exception("Failed to Initialize", exception);
-                await _dialogService.ShowUnknownErrorWaringAsync();
             }
             finally
             {

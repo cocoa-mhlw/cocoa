@@ -55,11 +55,11 @@ namespace Covid19Radar.Services
                 AppResources.ButtonCancel);
         }
 
-        public async Task ShowUnknownErrorWaringAsync()
+        public async Task ShowHomePageUnknownErrorWaringAsync()
         {
             await AlertAsync(
-                AppResources.InqueryDialogExceptionDescription,
-                AppResources.InqueryDialogExceptionTitle,
+                AppResources.HomePageDialogExceptionDescription,
+                AppResources.HomePageDialogExceptionTitle,
                 AppResources.ButtonOk);
         }
 
