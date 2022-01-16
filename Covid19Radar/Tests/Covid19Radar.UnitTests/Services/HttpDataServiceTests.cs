@@ -76,7 +76,7 @@ namespace Covid19Radar.UnitTests.Services
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
 
-            mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+            mockHttpClientService.Setup(x => x.CreateHttpClient()).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
                 .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
@@ -105,7 +105,7 @@ namespace Covid19Radar.UnitTests.Services
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
 
-            mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+            mockHttpClientService.Setup(x => x.CreateHttpClient()).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
                 .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
@@ -133,7 +133,7 @@ namespace Covid19Radar.UnitTests.Services
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
 
-            mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+            mockHttpClientService.Setup(x => x.CreateApiClient()).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
                 .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
@@ -169,7 +169,7 @@ namespace Covid19Radar.UnitTests.Services
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
 
-            mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+            mockHttpClientService.Setup(x => x.CreateHttpClient()).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.DiagnosisKeyRegisterApiUrls)
                 .Returns(new List<string>() { IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/v3/diagnosis") });
 
