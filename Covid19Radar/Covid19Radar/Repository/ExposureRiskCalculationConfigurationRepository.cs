@@ -127,7 +127,8 @@ namespace Covid19Radar.Repository
                 {
                     string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
                     _loggerService.Debug(exposureRiskCalculationConfigurationAsJson);
-                    newExposureRiskCalculationConfiguration = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(exposureRiskCalculationConfigurationAsJson);
+                    newExposureRiskCalculationConfiguration
+                        = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(exposureRiskCalculationConfigurationAsJson);
                 }
                 else
                 {
@@ -149,17 +150,27 @@ namespace Covid19Radar.Repository
                 return currentConfiguration;
             }
 
+            if (newExposureRiskCalculationConfiguration == currentConfiguration)
+            {
+                _loggerService.Info("ExposureRiskCalculationConfiguration have not been changed.");
+                _loggerService.EndMethod();
+
+                return currentConfiguration;
+            }
+
+            _loggerService.Info("ExposureRiskCalculationConfiguration have been changed.");
+
             string tmpFilePath = Path.Combine(_configDir, Guid.NewGuid().ToString());
 
             try
             {
                 await SaveAsync(
-                    JsonConvert.SerializeObject(currentConfiguration, Formatting.Indented),
+                    JsonConvert.SerializeObject(newExposureRiskCalculationConfiguration, Formatting.Indented),
                     tmpFilePath
                     );
                 Swap(tmpFilePath, _currentPath);
 
-                return currentConfiguration;
+                return newExposureRiskCalculationConfiguration;
             }
             finally
             {
