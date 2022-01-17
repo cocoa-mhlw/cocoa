@@ -66,7 +66,9 @@
                         AutomationProperties.IsInAccessibleTree="True"
                         VerticalOptions="Center"
                         Style="{StaticResource DefaultLabelCaption}"
-                        Text="{x:Static resources:AppResources.LowRiskContactPageHeaderTextSuffix}"></Label>
+                        Text="{Binding LowRiskContactPageHeaderTextSuffix}"
+                        >
+                    </Label>
                 </StackLayout>
             </StackLayout>
         </CollectionView.Header>
@@ -101,7 +103,7 @@
                 Padding="20">
                 <Label
                     Style="{StaticResource DefaultLabelCaptionStartAlignment}"
-                    Text="{x:Static resources:AppResources.LowRiskContactPageAnnotationDecription}" />
+                    Text="{Binding LowRiskContactPageAnnotationDecription}" />
             </StackLayout>
         </CollectionView.Footer>
     </CollectionView>

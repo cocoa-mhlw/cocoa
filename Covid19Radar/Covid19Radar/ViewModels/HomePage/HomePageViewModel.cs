@@ -200,7 +200,9 @@ namespace Covid19Radar.ViewModels
                 }
                 else
                 {
-                    await NavigationService.NavigateAsync(nameof(ExposureCheckPage));
+                    INavigationParameters navigaitonParameters
+                        = ExposureCheckPage.BuildNavigationParams(exposureRiskCalculationConfiguration);
+                    await NavigationService.NavigateAsync(nameof(ExposureCheckPage), navigaitonParameters);
                     return;
                 }
             }

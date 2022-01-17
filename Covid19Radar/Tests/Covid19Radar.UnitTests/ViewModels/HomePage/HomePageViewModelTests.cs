@@ -498,7 +498,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnClickExposures.Execute(null);
 
             mockNavigationService
-                .Verify(x => x.NavigateAsync("ExposureCheckPage"), Times.Once);
+                .Verify(x => x.NavigateAsync("ExposureCheckPage", It.IsAny<INavigationParameters>()), Times.Once);
         }
 
         [Theory]
@@ -541,7 +541,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnClickExposures.Execute(null);
 
             mockNavigationService
-                .Verify(x => x.NavigateAsync("ExposureCheckPage"), Times.Once);
+                .Verify(x => x.NavigateAsync("ExposureCheckPage", It.IsAny<INavigationParameters>()), Times.Once);
         }
 
 

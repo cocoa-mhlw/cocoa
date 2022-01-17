@@ -1817,6 +1817,41 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string Beta_Splash_InstallStable {
+            get {
+                return ResourceManager.GetString("Beta_Splash_InstallStable", resourceCulture);
+            }
+        }
+        public static string ThresholdTextOperatorGt {
+            get {
+                return ResourceManager.GetString("ThresholdTextOperatorGt", resourceCulture);
+            }
+        }
+        
+        public static string ThresholdTextOperatorLt {
+            get {
+                return ResourceManager.GetString("ThresholdTextOperatorLt", resourceCulture);
+            }
+        }
+        
+        public static string ThresholdTextOperatorGte {
+            get {
+                return ResourceManager.GetString("ThresholdTextOperatorGte", resourceCulture);
+            }
+        }
+        
+        public static string ThresholdTextOperatorLte {
+            get {
+                return ResourceManager.GetString("ThresholdTextOperatorLte", resourceCulture);
+            }
+        }
+        
+        public static string ThresholdTextOperatorEqual {
+            get {
+                return ResourceManager.GetString("ThresholdTextOperatorEqual", resourceCulture);
+            }
+        }
+
         public static string ContactedNotifyPageExposureDurationOne {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageExposureDurationOne", resourceCulture);
@@ -1973,10 +2008,5 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string Beta_Splash_InstallStable {
-            get {
-                return ResourceManager.GetString("Beta_Splash_InstallStable", resourceCulture);
-            }
-        }
     }
 }

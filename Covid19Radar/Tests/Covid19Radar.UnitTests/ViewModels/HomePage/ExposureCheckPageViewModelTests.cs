@@ -12,6 +12,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using System.Linq;
+using Covid19Radar.Views;
+using Covid19Radar.Model;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
@@ -20,7 +22,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IUserDataRepository> mockUserDataRepository;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
 
         public ExposureCheckPageViewModelTests()
@@ -29,7 +30,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
         }
 
@@ -38,7 +38,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new ExposureCheckPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockUserDataRepository.Object,
                 mockExposureDataRepository.Object
                 );
         }
@@ -69,7 +68,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 }));
 
             var exposureCheckPageViewModel = CreateViewModel();
-            var parameters = new NavigationParameters();
+            var parameters = ExposureCheckPage.BuildNavigationParams(new V1ExposureRiskCalculationConfiguration());
             exposureCheckPageViewModel.Initialize(parameters);
 
             
@@ -91,7 +90,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Returns(Task.FromResult(new List<DailySummary>()));
 
             var exposureCheckPageViewModel = CreateViewModel();
-            var parameters = new NavigationParameters();
+            var parameters = ExposureCheckPage.BuildNavigationParams(new V1ExposureRiskCalculationConfiguration());
             exposureCheckPageViewModel.Initialize(parameters);
             Assert.False(exposureCheckPageViewModel.IsVisibleLowRiskContact);
             Assert.True(exposureCheckPageViewModel.IsVisibleNoRiskContact);
