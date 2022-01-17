@@ -108,6 +108,7 @@ namespace Covid19Radar.Services
 
             var exposureRiskCalculationConfiguration = await _exposureRiskCalculationConfigurationRepository
                 .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+            _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
             bool isHighRiskExposureDetected = newDailySummaries
                 .Select(ds => _exposureRiskCalculationService.CalcRiskLevel(

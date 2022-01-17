@@ -198,5 +198,118 @@ namespace Covid19Radar.UnitTests.Services
 
             Assert.Equal(RiskLevel.High, result);
         }
+
+        [Fact]
+        public void RiskExposureTest_AllNOP()
+        {
+            var configuration = new V1ExposureRiskCalculationConfiguration()
+            {
+                // All conditions are NOP
+            };
+
+            var dailySummary = new DailySummary()
+            {
+                DateMillisSinceEpoch = 0,
+                DaySummary = new ExposureSummaryData()
+                {
+                    ScoreSum = 2000.0
+                },
+                ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                ConfirmedTestSummary = new ExposureSummaryData(),
+                RecursiveSummary = new ExposureSummaryData(),
+                SelfReportedSummary = new ExposureSummaryData()
+            };
+
+            var exposureWindows = new List<ExposureWindow>()
+            {
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.High,
+                    DateMillisSinceEpoch = 0,
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.Unknown,
+                    ScanInstances = new List<ScanInstance>()
+                    {
+                        new ScanInstance()
+                        {
+                            SecondsSinceLastScan = 600,
+                            TypicalAttenuationDb = 1
+                        },
+                        new ScanInstance()
+                        {
+                            SecondsSinceLastScan = 600,
+                            TypicalAttenuationDb = 10
+                        }
+                    }
+                }
+            };
+
+            IExposureRiskCalculationService service = CreateService();
+
+            RiskLevel result = service.CalcRiskLevel(dailySummary, exposureWindows, configuration);
+
+            Assert.Equal(RiskLevel.Low, result);
+        }
+
+        [Fact]
+        public void RiskExposureTest_AND()
+        {
+            var configuration = new V1ExposureRiskCalculationConfiguration()
+            {
+                DailySummary_DaySummary_ScoreSum = new V1ExposureRiskCalculationConfiguration.Threshold()
+                {
+                    Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
+                    Value = 1170.0
+                },
+                ExposureWindow_ScanInstance_SecondsSinceLastScanSum = new V1ExposureRiskCalculationConfiguration.Threshold()
+                {
+                    Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
+                    Value = 900.0
+                },
+            };
+
+            var dailySummary = new DailySummary()
+            {
+                DateMillisSinceEpoch = 0,
+                DaySummary = new ExposureSummaryData()
+                {
+                    ScoreSum = 1170.0
+                },
+                ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                ConfirmedTestSummary = new ExposureSummaryData(),
+                RecursiveSummary = new ExposureSummaryData(),
+                SelfReportedSummary = new ExposureSummaryData()
+            };
+
+            var exposureWindows = new List<ExposureWindow>()
+            {
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.High,
+                    DateMillisSinceEpoch = 0,
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.Unknown,
+                    ScanInstances = new List<ScanInstance>()
+                    {
+                        new ScanInstance()
+                        {
+                            SecondsSinceLastScan = 600,
+                            TypicalAttenuationDb = 1
+                        },
+                        new ScanInstance()
+                        {
+                            SecondsSinceLastScan = 240,
+                            TypicalAttenuationDb = 10
+                        }
+                    }
+                }
+            };
+
+            IExposureRiskCalculationService service = CreateService();
+
+            RiskLevel result = service.CalcRiskLevel(dailySummary, exposureWindows, configuration);
+
+            Assert.Equal(RiskLevel.Low, result);
+        }
     }
 }
