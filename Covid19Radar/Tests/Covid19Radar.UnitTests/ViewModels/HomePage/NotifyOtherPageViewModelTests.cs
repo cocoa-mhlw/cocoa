@@ -14,7 +14,6 @@ using Moq;
 using Prism.Navigation;
 using Acr.UserDialogs;
 using Xunit;
-using Covid19Radar.Resources;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
@@ -71,54 +70,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var result = vm.CheckRegisterButtonEnable();
 
             Assert.Equal(expectResult, result);
-        }
-
-        [Fact]
-        public void CheckRegisterButtonMaxErrorCountReturnHomeTest()
-        {
-            mockUserDialogs
-                .Setup(x => x.ConfirmAsync(
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    null)
-                )
-                .Returns(Task.FromResult(true));
-
-            mockUserDialogs
-                .Setup(x => x.AlertAsync(
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    null)
-                )
-                .Returns(Task.FromResult(true));
-
-            var vm = CreateViewModel();
-            vm.ProcessingNumber = "1";
-
-            vm.OnClickRegister.Execute(null);
-            vm.OnClickRegister.Execute(null);
-            vm.OnClickRegister.Execute(null);
-
-            mockUserDialogs.Verify(x => x.AlertAsync(
-                AppResources.NotifyOtherPageDiag5Message,
-                AppResources.ProcessingNumberErrorDiagTitle,
-                AppResources.ButtonOk,
-                null
-            ), Times.Exactly(3));
-
-            vm.OnClickRegister.Execute(null);
-
-            mockUserDialogs.Verify(x => x.AlertAsync(
-                AppResources.NotifyOtherPageDiagReturnHome,
-                AppResources.NotifyOtherPageDiagReturnHomeTitle,
-                AppResources.ButtonOk,
-                null
-            ), Times.Once());
-
-            mockNavigationService.Verify(x => x.NavigateAsync("/MenuPage/NavigationPage/HomePage"), Times.Once());
         }
     }
 
