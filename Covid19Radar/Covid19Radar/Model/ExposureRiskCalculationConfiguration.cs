@@ -74,12 +74,13 @@ namespace Covid19Radar.Model
             {
                 return Op switch
                 {
+                    OPERATION_NOP => true,
                     OPERATION_EQUAL => this.Value == value,
                     OPERATION_GREATER => this.Value < value,
                     OPERATION_GREATER_EQUAL => this.Value <= value,
                     OPERATION_LESS => this.Value > value,
                     OPERATION_LESS_EQUAL => this.Value >= value,
-                    _ => true
+                    _ => false
                 };
             }
 
