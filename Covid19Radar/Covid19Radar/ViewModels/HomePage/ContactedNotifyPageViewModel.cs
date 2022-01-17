@@ -63,6 +63,7 @@ namespace Covid19Radar.ViewModels
 
                 var exposureRiskCalculationConfiguration
                     = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+                loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
                 var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
 

@@ -4,11 +4,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
-using Newtonsoft.Json;
+
+using Threshold = Covid19Radar.Model.V1ExposureRiskCalculationConfiguration.Threshold;
 
 namespace Covid19Radar.Services
 {
@@ -39,7 +39,17 @@ namespace Covid19Radar.Services
             V1ExposureRiskCalculationConfiguration configuration
             )
         {
-            _ = LogAsync(configuration);
+            if (
+                configuration.DailySummary_DaySummary_ScoreSum.Op == Threshold.OPERATION_NOP
+                && configuration.DailySummary_WeightedDurationAverage.Op == Threshold.OPERATION_NOP
+                && configuration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Op == Threshold.OPERATION_NOP
+                && configuration.ExposureWindow_ScanInstance_TypicalAttenuationDb_Max.Op == Threshold.OPERATION_NOP
+                && configuration.ExposureWindow_ScanInstance_TypicalAttenuationDb_Min.Op == Threshold.OPERATION_NOP
+                )
+            {
+                _loggerService.Info("All conditions are NOP.");
+                return RiskLevel.Low;
+            }
 
             var allScanInstances = exposureWindowList
                 .SelectMany(ew => ew.ScanInstances);
@@ -65,34 +75,18 @@ namespace Covid19Radar.Services
                 typicalAttenuationDbMin = allScanInstances.Min(si => si.TypicalAttenuationDb);
             }
 
-            if (configuration.DailySummary_DaySummary_ScoreSum.Cond(dailySummary.DaySummary.ScoreSum))
-            {
-                return RiskLevel.High;
-            }
-            if (configuration.DailySummary_WeightedDurationAverage.Cond(weightedDurationAverage))
-            {
-                return RiskLevel.High;
-            }
-            if (configuration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Cond(secondsSinceLastScanSum))
-            {
-                return RiskLevel.High;
-            }
-            if (configuration.ExposureWindow_ScanInstance_TypicalAttenuationDb_Max.Cond(typicalAttenuationDbMax))
-            {
-                return RiskLevel.High;
-            }
-            if (configuration.ExposureWindow_ScanInstance_TypicalAttenuationDb_Min.Cond(typicalAttenuationDbMin))
+            // AND
+            if (configuration.DailySummary_DaySummary_ScoreSum.Cond(dailySummary.DaySummary.ScoreSum)
+                && configuration.DailySummary_WeightedDurationAverage.Cond(weightedDurationAverage)
+                && configuration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Cond(secondsSinceLastScanSum)
+                && configuration.ExposureWindow_ScanInstance_TypicalAttenuationDb_Max.Cond(typicalAttenuationDbMax)
+                && configuration.ExposureWindow_ScanInstance_TypicalAttenuationDb_Min.Cond(typicalAttenuationDbMin)
+                )
             {
                 return RiskLevel.High;
             }
 
             return RiskLevel.Low;
-        }
-
-        private async Task LogAsync(V1ExposureRiskCalculationConfiguration configuration)
-        {
-            string serializedJson = JsonConvert.SerializeObject(configuration);
-            _loggerService.Info(serializedJson);
         }
     }
 }

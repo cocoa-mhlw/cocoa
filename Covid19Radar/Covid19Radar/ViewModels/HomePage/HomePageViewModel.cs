@@ -164,6 +164,7 @@ namespace Covid19Radar.ViewModels
 
                 var exposureRiskCalculationConfiguration = await exposureRiskCalculationConfigurationRepository
                     .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+                loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
                 var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
                 var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());

@@ -239,6 +239,9 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
+            exposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             exposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -302,6 +305,10 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<List<DailySummary>>(),
                     It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
+
+            exposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
 
             exposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))

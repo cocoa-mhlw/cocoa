@@ -50,6 +50,9 @@ namespace Covid19Radar.Model
             return HashCode.Combine(FormatVersion, DailySummary_DaySummary_ScoreSum, DailySummary_WeightedDurationAverage, ExposureWindow_ScanInstance_SecondsSinceLastScanSum, ExposureWindow_ScanInstance_TypicalAttenuationDb_Max, ExposureWindow_ScanInstance_TypicalAttenuationDb_Min);
         }
 
+        public override string ToString()
+            => JsonConvert.SerializeObject(this);
+
         [JsonObject]
         public class Threshold
         {
@@ -71,6 +74,7 @@ namespace Covid19Radar.Model
             {
                 return Op switch
                 {
+                    OPERATION_NOP => true,
                     OPERATION_EQUAL => this.Value == value,
                     OPERATION_GREATER => this.Value < value,
                     OPERATION_GREATER_EQUAL => this.Value <= value,
