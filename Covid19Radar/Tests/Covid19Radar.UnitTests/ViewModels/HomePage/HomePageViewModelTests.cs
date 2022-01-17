@@ -430,6 +430,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -487,6 +490,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.Low);
@@ -533,6 +539,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockPreferenceService
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
 
             var homePageViewModel = CreateViewModel();
             homePageViewModel.OnClickExposures.Execute(null);
@@ -546,6 +555,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void OnClickExposuresTest_Exception()
         {
 
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationConfigurationRepository
                 .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(true))
                 .Throws(new HttpRequestException());
