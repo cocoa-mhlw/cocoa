@@ -401,12 +401,12 @@
     <comment>スコア</comment>
   </data>
   <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
-    <value>(Possibility of close contact is 20.0 or more)</value>
-    <comment>（20.0以上が濃厚接触の可能性の通知対象）</comment>
+    <value>(Possibility of close contact is {1:#} {0:#})</value>
+    <comment>（{0:#}{1:#}が接触の可能性の通知対象）</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>※Score is calculated with signal strength and reception time. When you contact with a positive user for 15 minutes within 1 meter, It will be over 20.0.</value>
-    <comment>※スコアは、信号強度と受信時間を元に算出されており、1m以内・15分以上の接触があると20.0以上になります。</comment>
+    <value>※Score is calculated with signal strength and reception time. When you contact with a positive user for 15 minutes within 1 meter, It will be {1:#} {0:#}.</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No contact has been received with COVID-19 positive users for 14 days.</value>
@@ -1302,4 +1302,26 @@ Note: this app does not collect users’ location information.</value>
     <value>{0:#} min exposure</value>
     <comment>{0:#}分間の接触</comment>
   </data>
+
+  <data name="ThresholdTextOperatorGt" xml:space="preserve">
+    <value>over</value>
+    <comment>を超える値</comment>
+  </data>
+  <data name="ThresholdTextOperatorLt" xml:space="preserve">
+    <value>under</value>
+    <comment>未満</comment>
+  </data>
+  <data name="ThresholdTextOperatorGte" xml:space="preserve">
+    <value>over or equal</value>
+    <comment>以上</comment>
+  </data>
+  <data name="ThresholdTextOperatorLte" xml:space="preserve">
+    <value>under or equal</value>
+    <comment>以下</comment>
+  </data>
+  <data name="ThresholdTextOperatorEqual" xml:space="preserve">
+    <value>equal</value>
+    <comment>と同じ</comment>
+  </data>
+
 </root>
