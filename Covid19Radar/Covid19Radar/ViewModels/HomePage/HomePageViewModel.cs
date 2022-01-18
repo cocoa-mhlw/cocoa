@@ -160,7 +160,7 @@ namespace Covid19Radar.ViewModels
         {
             try
             {
-                UserDialogs.Instance.ShowLoading();
+                UserDialogs.Instance.ShowLoading(AppResources.Loading);
                 loggerService.StartMethod();
 
                 var exposureRiskCalculationConfiguration = await exposureRiskCalculationConfigurationRepository
