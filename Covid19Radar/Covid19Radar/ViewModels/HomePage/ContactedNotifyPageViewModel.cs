@@ -81,6 +81,12 @@ namespace Covid19Radar.ViewModels
                 long exposureDurationInSec = 0;
                 foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
+                    if (!dailySummaryMap.ContainsKey(ew.Key))
+                    {
+                        loggerService.Warning($"ExposureWindow: {ew.Key} found, but that is not contained the list of dailySummary.");
+                        continue;
+                    }
+
                     var dailySummary = dailySummaryMap[ew.Key];
 
                     RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList(), exposureRiskCalculationConfiguration);
