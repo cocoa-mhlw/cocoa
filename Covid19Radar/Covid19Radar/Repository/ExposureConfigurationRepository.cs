@@ -215,14 +215,14 @@ namespace Covid19Radar.Repository
                 GoogleDailySummariesConfig = new DailySummariesConfig()
                 {
                     AttenuationBucketThresholdDb = new List<int>() {
-                        50,
-                        54,
+                        46,
+                        60,
                         65
                     },
                     AttenuationBucketWeights = new List<double>() {
+                        1.0,
                         2.5,
                         1.3,
-                        0.6,
                         0.01
                     },
                     DaysSinceExposureThreshold = 0,
@@ -282,13 +282,13 @@ namespace Covid19Radar.Repository
                     InfectiousnessWhenDaysSinceOnsetMissing = Infectiousness.High,
                     ReportTypeNoneMap = ReportType.ConfirmedTest,
                     AttenuationDurationThresholds = new int[] {
-                        50,
-                        54,
+                        46,
+                        60,
                         65
                     },
-                    ImmediateDurationWeight = 250.0,
-                    NearDurationWeight = 130.0,
-                    MediumDurationWeight = 60.0,
+                    ImmediateDurationWeight = 100.0,
+                    NearDurationWeight = 250.0,
+                    MediumDurationWeight = 130.0,
                     OtherDurationWeight = 1.0,
                     DaysSinceLastExposureThreshold = 0,
                     InfectiousnessForDaysSinceOnsetOfSymptoms = new Dictionary<long, Infectiousness>()
