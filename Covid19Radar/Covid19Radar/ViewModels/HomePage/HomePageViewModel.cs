@@ -163,6 +163,7 @@ namespace Covid19Radar.ViewModels
         {
             try
             {
+                UserDialogs.Instance.ShowLoading(AppResources.Loading);
                 loggerService.StartMethod();
 
                 var exposureRiskCalculationConfiguration = await exposureRiskCalculationConfigurationRepository
@@ -195,6 +196,8 @@ namespace Covid19Radar.ViewModels
 
                 await localNotificationService.DismissExposureNotificationAsync();
 
+                UserDialogs.Instance.HideLoading();
+
                 if (hasHighRiskExposure)
                 {
                     await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
@@ -210,6 +213,7 @@ namespace Covid19Radar.ViewModels
             }
             catch (Exception exception)
             {
+                UserDialogs.Instance.HideLoading();
                 loggerService.Exception("Failed to Initialize", exception);
                 await dialogService.ShowHomePageUnknownErrorWaringAsync();
             }
