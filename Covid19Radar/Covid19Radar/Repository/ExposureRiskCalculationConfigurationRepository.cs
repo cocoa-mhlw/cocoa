@@ -115,6 +115,7 @@ namespace Covid19Radar.Repository
             }
             else if(preferCache)
             {
+                _loggerService.EndMethod();
                 return currentConfiguration;
             }
 
