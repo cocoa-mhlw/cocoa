@@ -122,19 +122,6 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
-            var exposureDurationThresholdTimeSpan = TimeSpan.FromSeconds(_exposureRiskCalculationConfiguration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Value);
-            var exposureDurationThresholdInMinute = Math.Ceiling(exposureDurationThresholdTimeSpan.TotalMinutes);
-
-            LowRiskContactPageHeaderTextSuffix = "";
-                //= string.Format(
-                //    AppResources.LowRiskContactPageHeaderTextSuffix,
-                //    _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value,
-                //    _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value,
-                //    OperatorToString(_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op),
-                //    exposureDurationThresholdInMinute,
-                //    OperatorToString(_exposureRiskCalculationConfiguration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Op)
-                //);
-
             LowRiskContactPageAnnotationDecription
                 = string.Format(
                     AppResources.LowRiskContactPageAnnotationDecription,

@@ -26,14 +26,14 @@ namespace Covid19Radar.Repository
 
         private List<DailySummary> dummyDailySummaries = new List<DailySummary>()
         {
-            new DailySummary()
-            {
-                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
-                DaySummary = new ExposureSummaryData()
-                {
-                    ScoreSum = 1350
-                }
-            },
+            //new DailySummary()
+            //{
+            //    DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
+            //    DaySummary = new ExposureSummaryData()
+            //    {
+            //        ScoreSum = 1350
+            //    }
+            //},
             new DailySummary()
             {
                 DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 11), DateTimeKind.Utc).ToUnixEpoch() * 1000,
@@ -54,17 +54,17 @@ namespace Covid19Radar.Repository
 
         private List<ExposureWindow> dummyExposureWindows = new List<ExposureWindow>()
         {
-            new ExposureWindow()
-            {
-                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
-                ScanInstances = new List<ScanInstance>()
-                {
-                    new ScanInstance()
-                    {
-                        SecondsSinceLastScan = 1200,
-                    },
-                }
-            },
+            //new ExposureWindow()
+            //{
+            //    DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
+            //    ScanInstances = new List<ScanInstance>()
+            //    {
+            //        new ScanInstance()
+            //        {
+            //            SecondsSinceLastScan = 1200,
+            //        },
+            //    }
+            //},
             new ExposureWindow()
             {
                 DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 11), DateTimeKind.Utc).ToUnixEpoch() * 1000,
