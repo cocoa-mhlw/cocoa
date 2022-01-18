@@ -19,6 +19,8 @@ steps:
 - template: setup/ios-setup-xamarin-template.yml
 
 - template: setup/app-setup-xamarin-template.yml
+  parameters:
+    configuration: release
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj'
