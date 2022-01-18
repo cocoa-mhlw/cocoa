@@ -131,8 +131,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             mockLocalNotificationService
                 .Verify(x => x.PrepareAsync(), Times.Once);
-            mockExposureDetectionBackgroundService
-                .Verify(x => x.ExposureDetectionAsync(null), Times.Once);
             mockExposureNotificationApiService
                 .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
         }
