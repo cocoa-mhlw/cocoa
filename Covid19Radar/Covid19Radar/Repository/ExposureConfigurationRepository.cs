@@ -215,14 +215,14 @@ namespace Covid19Radar.Repository
                 GoogleDailySummariesConfig = new DailySummariesConfig()
                 {
                     AttenuationBucketThresholdDb = new List<int>() {
-                        50,
-                        54,
+                        46,
+                        60,
                         65
                     },
                     AttenuationBucketWeights = new List<double>() {
+                        1.0,
                         2.5,
                         1.3,
-                        0.6,
                         0.01
                     },
                     DaysSinceExposureThreshold = 0,
