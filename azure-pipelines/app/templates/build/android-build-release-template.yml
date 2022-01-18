@@ -4,6 +4,8 @@ steps:
 - template: setup/app-setup-variables-template.yml
 
 - template: setup/app-setup-xamarin-template.yml
+  parameters:
+    configuration: release
 
 - task: XamarinAndroid@1
   displayName: 'Build Covid19Radar.Android.csproj'
