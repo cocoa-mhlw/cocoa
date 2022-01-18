@@ -248,8 +248,7 @@ namespace Covid19Radar.Repository
                 AppSettings.Instance.BlobStorageContainerName,
                 PLACEHOLDER_REGION,
                 "list.json"
-                )
-;
+                );
             set
             {
                 // Do nothing
