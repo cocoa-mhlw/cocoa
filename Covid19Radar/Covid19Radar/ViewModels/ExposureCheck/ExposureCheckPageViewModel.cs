@@ -45,18 +45,18 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isVisibleLowRiskContact, value); }
         }
 
-        private string _lowRiskContactPageAnnotationDecription;
-        public string LowRiskContactPageAnnotationDecription
-        {
-            get { return _lowRiskContactPageAnnotationDecription; }
-            set { SetProperty(ref _lowRiskContactPageAnnotationDecription, value); }
-        }
-
         private string _lowRiskContactPageHeaderTextSuffix;
         public string LowRiskContactPageHeaderTextSuffix
         {
             get { return _lowRiskContactPageHeaderTextSuffix; }
             set { SetProperty(ref _lowRiskContactPageHeaderTextSuffix, value); }
+        }
+
+        private string _lowRiskContactPageAnnotationDecription;
+        public string LowRiskContactPageAnnotationDecription
+        {
+            get { return _lowRiskContactPageAnnotationDecription; }
+            set { SetProperty(ref _lowRiskContactPageAnnotationDecription, value); }
         }
 
         private V1ExposureRiskCalculationConfiguration _exposureRiskCalculationConfiguration;
