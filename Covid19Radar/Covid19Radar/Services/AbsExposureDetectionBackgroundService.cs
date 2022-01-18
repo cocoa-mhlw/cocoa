@@ -73,15 +73,15 @@ namespace Covid19Radar.Services
 
         private async Task InternalExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
-            if (!_exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
+            bool isEnabled = await _exposureNotificationApiService.IsEnabledAsync();
+            if (!isEnabled)
             {
                 _loggerService.Debug($"EN API is not enabled.");
                 return;
             }
 
-            IEnumerable<int> statuseCodes = _exposureNotificationApiService.GetStatusesAsync()
-                .GetAwaiter().GetResult()
-                .Select(status => status.Code);
+            IEnumerable<ExposureNotificationStatus> statuses = await _exposureNotificationApiService.GetStatusesAsync();
+            IEnumerable<int> statuseCodes = statuses.Select(status => status.Code);
 
             bool isActivated = statuseCodes.Contains(ExposureNotificationStatus.Code_Android.ACTIVATED)
                 | statuseCodes.Contains(ExposureNotificationStatus.Code_iOS.Active);
