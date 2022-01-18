@@ -19,6 +19,8 @@ namespace Covid19Radar.ViewModels
 {
     public class SettingsPageViewModel : ViewModelBase
     {
+        private const string VERSION_SUFFIX = "-beta01";
+
         private readonly ILoggerService loggerService;
         private string _AppVersion;
 
@@ -43,11 +45,11 @@ namespace Covid19Radar.ViewModels
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILogFileService logFileService,
             AbsExposureNotificationApiService exposureNotificationApiService,
-            ICloseApplicationService closeApplicationService
+            ICloseApplicationService closeApplicationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
-            AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
             this.exposureDataRepository = exposureDataRepository;
@@ -55,6 +57,8 @@ namespace Covid19Radar.ViewModels
             this.logFileService = logFileService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.closeApplicationService = closeApplicationService;
+
+            AppVer = essentialsService.AppVersion + VERSION_SUFFIX;
         }
 
         public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
