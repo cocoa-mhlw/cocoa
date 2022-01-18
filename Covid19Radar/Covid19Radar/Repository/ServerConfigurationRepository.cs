@@ -194,6 +194,8 @@ namespace Covid19Radar.Repository
 
     public class ReleaseServerConfigurationRepository : IServerConfigurationRepository
     {
+        public const string PLACEHOLDER_REGION = "{region}";
+
         public string UserRegisterApiEndpoint
         {
             get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
@@ -241,7 +243,13 @@ namespace Covid19Radar.Repository
 
         public string DiagnosisKeyListProvideServerEndpoint
         {
-            get => null;
+            get => IServerConfigurationRepository.CombineAsUrl(
+                AppSettings.Instance.CdnUrlBase,
+                AppSettings.Instance.BlobStorageContainerName,
+                PLACEHOLDER_REGION,
+                "list.json"
+                )
+;
             set
             {
                 // Do nothing
