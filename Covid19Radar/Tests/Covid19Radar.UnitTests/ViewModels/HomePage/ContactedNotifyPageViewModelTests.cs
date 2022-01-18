@@ -103,6 +103,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                         }
                     }
                 }));
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -144,6 +147,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                         }
                     }
                 }));
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -189,6 +195,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                         }
                     }
                 }));
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
 
             var contactedNotifyViewModel = CreateViewModel();
             contactedNotifyViewModel.Initialize(new NavigationParameters());
