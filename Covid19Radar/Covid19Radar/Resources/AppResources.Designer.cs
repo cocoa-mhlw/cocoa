@@ -197,6 +197,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string Loading {
+            get {
+                return ResourceManager.GetString("Loading", resourceCulture);
+            }
+        }
+        
         public static string ButtonShare {
             get {
                 return ResourceManager.GetString("ButtonShare", resourceCulture);

@@ -56,12 +56,16 @@ namespace Covid19Radar.Services
         {
             await _semaphore.WaitAsync();
 
+            _loggerService.StartMethod();
+
             try
             {
                 await InternalExposureDetectionAsync(cancellationTokenSource);
             }
             finally
             {
+                _loggerService.EndMethod();
+
                 _semaphore.Release();
             }
         }
@@ -74,7 +78,11 @@ namespace Covid19Radar.Services
 
             foreach (var region in _serverConfigurationRepository.Regions)
             {
+                _loggerService.Info($"Region: {region}");
+
                 var diagnosisKeyListProvideServerUrl = _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region);
+
+                _loggerService.Info($"diagnosisKeyListProvideServerUrl: {diagnosisKeyListProvideServerUrl}");
 
                 List<string> downloadedFileNameList = new List<string>();
                 try
@@ -94,11 +102,13 @@ namespace Covid19Radar.Services
                         continue;
                     }
 
+                    _loggerService.Info($"{targetDiagnosisKeyEntryList.Count()} new keys found.");
+
                     foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
                     {
                         string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir, cancellationToken);
 
-                        _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
+                        _loggerService.Info($"URL {diagnosisKeyEntry.Url} have been downloaded.");
 
                         downloadedFileNameList.Add(filePath);
                     }

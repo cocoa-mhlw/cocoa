@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
@@ -23,7 +24,7 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
-    public class HomePageViewModelTests
+    public class HomePageViewModelTests: IDisposable
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
@@ -86,6 +87,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     mockDateTimeUtility.Object,
                     mockLoggerService.Object
                 );
+
+            var mockUserDialogs = mockRepository.Create<IUserDialogs>();
+            UserDialogs.Instance = mockUserDialogs.Object;
+        }
+
+        public void Dispose()
+        {
+            UserDialogs.Instance = null;
         }
 
         private HomePageViewModel CreateViewModel()
