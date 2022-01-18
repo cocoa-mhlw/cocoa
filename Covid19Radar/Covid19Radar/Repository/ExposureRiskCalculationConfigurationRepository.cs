@@ -65,6 +65,8 @@ namespace Covid19Radar.Repository
 
         public async Task<V1ExposureRiskCalculationConfiguration> GetExposureRiskCalculationConfigurationAsync(bool preferCache)
         {
+            _loggerService.StartMethod();
+
             await _semaphore.WaitAsync();
 
             try
@@ -73,6 +75,7 @@ namespace Covid19Radar.Repository
             }
             finally
             {
+                _loggerService.EndMethod();
                 _semaphore.Release();
             }
         }
