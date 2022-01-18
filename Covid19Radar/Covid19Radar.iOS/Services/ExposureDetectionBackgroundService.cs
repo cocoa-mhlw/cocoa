@@ -69,6 +69,13 @@ namespace Covid19Radar.iOS.Services
                 {
                     try
                     {
+                        if (!_exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
+                        {
+                            _loggerService.Debug($"Exposure notification is not enabled.");
+                            task.SetTaskCompleted(true);
+                            return;
+                        }
+
                         IList<ExposureNotificationStatus> statuses = _exposureNotificationApiService.GetStatusesAsync()
                             .GetAwaiter().GetResult();
 

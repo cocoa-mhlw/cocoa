@@ -3,7 +3,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Android.Content;
 using Android.Runtime;
 using AndroidX.Work;
@@ -108,6 +110,19 @@ namespace Covid19Radar.Droid.Services
             if (!exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
             {
                 loggerService.Debug($"EN API is not enabled." +
+                    $" worker will start after {ExposureDetectionBackgroundService.INTERVAL_IN_MINUTES} minutes later.");
+                return Result.InvokeSuccess();
+            }
+
+            IList<ExposureNotificationStatus> statuses = exposureNotificationApiService.GetStatusesAsync()
+                .GetAwaiter().GetResult();
+
+            bool isActivated = statuses
+                .Select(status => status.Code)
+                .Contains(ExposureNotificationStatus.Code_Android.ACTIVATED);
+            if (!isActivated)
+            {
+                loggerService.Debug($"EN API is not ACTIVATED." +
                     $" worker will start after {ExposureDetectionBackgroundService.INTERVAL_IN_MINUTES} minutes later.");
                 return Result.InvokeSuccess();
             }
