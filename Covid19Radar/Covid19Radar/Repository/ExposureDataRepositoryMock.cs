@@ -39,6 +39,14 @@ namespace Covid19Radar.Repository
                 DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 11), DateTimeKind.Utc).ToUnixEpoch() * 1000,
                 DaySummary = new ExposureSummaryData()
                 {
+                    ScoreSum = 1350
+                }
+            },
+            new DailySummary()
+            {
+                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 12), DateTimeKind.Utc).ToUnixEpoch() * 1000,
+                DaySummary = new ExposureSummaryData()
+                {
                     ScoreSum = 1000
                 }
             },
@@ -53,7 +61,7 @@ namespace Covid19Radar.Repository
                 {
                     new ScanInstance()
                     {
-                        SecondsSinceLastScan = 840,
+                        SecondsSinceLastScan = 1200,
                     },
                 }
             },
@@ -64,7 +72,18 @@ namespace Covid19Radar.Repository
                 {
                     new ScanInstance()
                     {
-                        SecondsSinceLastScan = 1000,
+                        SecondsSinceLastScan = 840,
+                    },
+                }
+            },
+            new ExposureWindow()
+            {
+                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 12), DateTimeKind.Utc).ToUnixEpoch() * 1000,
+                ScanInstances = new List<ScanInstance>()
+                {
+                    new ScanInstance()
+                    {
+                        SecondsSinceLastScan = 1200,
                     },
                 }
             },

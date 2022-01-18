@@ -14,6 +14,9 @@ using Covid19Radar.Common;
 using System.Linq;
 using Covid19Radar.Views;
 using Covid19Radar.Model;
+using Covid19Radar.Services;
+
+using Threshold = Covid19Radar.Model.V1ExposureRiskCalculationConfiguration.Threshold;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
@@ -23,22 +26,25 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
+        private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
 
         public ExposureCheckPageViewModelTests()
         {
-
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
+            mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
         }
+
 
         private ExposureCheckPageViewModel CreateViewModel()
         {
             return new ExposureCheckPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockExposureDataRepository.Object
+                mockExposureDataRepository.Object,
+                mockExposureRiskCalculationService.Object
                 );
         }
 
@@ -47,39 +53,110 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             mockExposureDataRepository
                 .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
-                .Returns(Task.FromResult(new List<DailySummary>()
+                .ReturnsAsync(new List<DailySummary>()
                 {
                     new DailySummary()
                     {
+                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24),
                         DaySummary = new ExposureSummaryData()
                         {
-                            ScoreSum = 1.23456
+                            ScoreSum = 1700
                         },
-                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24)
                     },
                     new DailySummary()
                     {
+                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 2,
                         DaySummary = new ExposureSummaryData()
                         {
-                            ScoreSum = 17.8
+                            ScoreSum = 1700
                         },
-                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 2
-                    }
-                }));
+                    },
+                    new DailySummary()
+                    {
+                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 3,
+                        DaySummary = new ExposureSummaryData()
+                        {
+                            ScoreSum = 1000
+                        },
+                    },
+                });
+
+            mockExposureDataRepository
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .ReturnsAsync(new List<ExposureWindow>()
+                {
+                    new ExposureWindow()
+                    {
+                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24),
+                        ScanInstances = new List<ScanInstance>()
+                        {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = 900,
+                            }
+                        },
+                    },
+                    new ExposureWindow()
+                    {
+                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 2,
+                        ScanInstances = new List<ScanInstance>()
+                        {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = 840,
+                            }
+                        },
+                    },
+                    new ExposureWindow()
+                    {
+                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 3,
+                        ScanInstances = new List<ScanInstance>()
+                        {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = 840,
+                            }
+                        },
+                    },
+                });
+
+            var riskConfiguration = new V1ExposureRiskCalculationConfiguration()
+            {
+                DailySummary_DaySummary_ScoreSum = new Threshold()
+                {
+                    Op = Threshold.OPERATION_GREATER_EQUAL,
+                    Value = 1170,
+                },
+                ExposureWindow_ScanInstance_SecondsSinceLastScanSum = new Threshold()
+                {
+                    Op = Threshold.OPERATION_GREATER_EQUAL,
+                    Value = 900,
+                },
+            };
 
             var exposureCheckPageViewModel = CreateViewModel();
-            var parameters = ExposureCheckPage.BuildNavigationParams(new V1ExposureRiskCalculationConfiguration());
-            exposureCheckPageViewModel.Initialize(parameters);
+            var parameters = ExposureCheckPage.BuildNavigationParams(riskConfiguration);
 
-            
+            exposureCheckPageViewModel.Initialize(parameters);
 
             Assert.True(exposureCheckPageViewModel.IsVisibleLowRiskContact);
             Assert.False(exposureCheckPageViewModel.IsVisibleNoRiskContact);
-            Assert.Equal(2, exposureCheckPageViewModel.ExposureCheckScores.Count());
-            Assert.Equal("17.80", exposureCheckPageViewModel.ExposureCheckScores[0].DailySummaryScoreSumString);
-            Assert.Equal((1000 * 60 * 60 * 24) * 2, exposureCheckPageViewModel.ExposureCheckScores[0].DateMillisSinceEpoch);
-            Assert.Equal("1.23", exposureCheckPageViewModel.ExposureCheckScores[1].DailySummaryScoreSumString);
-            Assert.Equal(1000 * 60 * 60 * 24, exposureCheckPageViewModel.ExposureCheckScores[1].DateMillisSinceEpoch);
+
+            Assert.Equal(3, exposureCheckPageViewModel.ExposureCheckScores.Count());
+
+            // Sort DESC
+            Assert.Equal((1000 * 60 * 60 * 24) * 3, exposureCheckPageViewModel.ExposureCheckScores[0].DateMillisSinceEpoch);
+            Assert.Equal((1000 * 60 * 60 * 24) * 2, exposureCheckPageViewModel.ExposureCheckScores[1].DateMillisSinceEpoch);
+            Assert.Equal(1000 * 60 * 60 * 24, exposureCheckPageViewModel.ExposureCheckScores[2].DateMillisSinceEpoch);
+
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[0].IsScoreVisible);
+            Assert.False(exposureCheckPageViewModel.ExposureCheckScores[0].IsDurationTimeVisible);
+
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[1].IsScoreVisible);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[1].IsDurationTimeVisible);
+
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[2].IsScoreVisible);
+            Assert.False(exposureCheckPageViewModel.ExposureCheckScores[2].IsDurationTimeVisible);
         }
 
         [Fact]

@@ -91,7 +91,7 @@
                                 >
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="{Binding Reason}" />
+                                        <Span Text="{Binding Description}" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>

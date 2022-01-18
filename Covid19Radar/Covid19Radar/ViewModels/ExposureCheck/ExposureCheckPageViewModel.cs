@@ -27,7 +27,6 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService _loggerService;
         private readonly IExposureDataRepository _exposureDataRepository;
-        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
         public ObservableCollection<ExposureCheckScoreModel> ExposureCheckScores { get; set; }
@@ -66,14 +65,11 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
-            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IExposureRiskCalculationService exposureRiskCalculationService
-
             ) : base(navigationService)
         {
             _loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
-            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
@@ -177,6 +173,7 @@ namespace Covid19Radar.ViewModels
 
             var exposureWindowList
                 = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+            exposureWindowList.Sort((a, b) => b.DateMillisSinceEpoch.CompareTo(a.DateMillisSinceEpoch));
 
             var userExposureInformationList
                 = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
@@ -201,25 +198,24 @@ namespace Covid19Radar.ViewModels
                     continue;
                 }
 
-                List<string> reason = CreateReason(dailySummary, ew.ToList());
-
-                ExposureCheckScores.Add(
-                        new ExposureCheckScoreModel()
-                        {
-                            DateTimeString = DateTimeOffset.UnixEpoch
-                                    .AddMilliseconds(dailySummary.DateMillisSinceEpoch).UtcDateTime
-                                    .ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-                            Reason = string.Join("\n", reason),
-                        });
+                ExposureCheckScoreModel exposureCheckModel = CreateExposureCheckScoreModel(dailySummary, ew.ToList());
+                ExposureCheckScores.Add(exposureCheckModel);
             }
         }
 
-        private List<string> CreateReason(DailySummary dailySummary, List<ExposureWindow> exposureWindowList)
+        private ExposureCheckScoreModel CreateExposureCheckScoreModel(DailySummary dailySummary, List<ExposureWindow> exposureWindowList)
         {
+            var exposureCheckModel = new ExposureCheckScoreModel()
+            {
+                DateMillisSinceEpoch = dailySummary.DateMillisSinceEpoch,
+            };
+
             var descriptionList = new List<string>();
 
             if (!_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Cond(dailySummary.DaySummary.ScoreSum))
             {
+                exposureCheckModel.IsScoreVisible = true;
+
                 var description =  string.Format(
                     AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied,
                     dailySummary.DaySummary.ScoreSum,
@@ -241,8 +237,11 @@ namespace Covid19Radar.ViewModels
 
             var exposureDurationInSec = exposureWindowList.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
 
-            if (!_exposureRiskCalculationConfiguration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Cond(exposureDurationInSec))
+            if (!exposureCheckModel.IsScoreVisible
+                && !_exposureRiskCalculationConfiguration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Cond(exposureDurationInSec))
             {
+                exposureCheckModel.IsDurationTimeVisible = true;
+
                 var exposureDurationTimeSpan = TimeSpan.FromSeconds(exposureDurationInSec);
                 var exposureDurationInMinute = Math.Ceiling(exposureDurationTimeSpan.TotalMinutes);
 
@@ -258,7 +257,11 @@ namespace Covid19Radar.ViewModels
                 descriptionList.Add(description);
             }
 
-            return descriptionList;
+            // Score is always visible
+            exposureCheckModel.IsScoreVisible = true;
+            exposureCheckModel.Description = string.Join("\n", descriptionList);
+
+            return exposureCheckModel;
         }
 
         public Command OnClickShareApp => new Command(() =>
@@ -273,7 +276,16 @@ namespace Covid19Radar.ViewModels
 
     public class ExposureCheckScoreModel
     {
-        public string DateTimeString { get; set; }
-        public string Reason { get; set; }
+        public long DateMillisSinceEpoch { get; set; }
+
+        public string DateTimeString => DateTimeOffset.UnixEpoch
+                .AddMilliseconds(DateMillisSinceEpoch).UtcDateTime
+                .ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
+
+        public bool IsScoreVisible { get; set; }
+
+        public bool IsDurationTimeVisible { get; set; }
+
+        public string Description { get; set; }
     }
 }
