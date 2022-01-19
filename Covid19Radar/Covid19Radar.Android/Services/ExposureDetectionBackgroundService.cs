@@ -85,9 +85,6 @@ namespace Covid19Radar.Droid.Services
     [Preserve]
     public class BackgroundWorker : Worker
     {
-        private readonly Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
-            = new Lazy<AbsExposureNotificationApiService>(() => ContainerLocator.Current.Resolve<AbsExposureNotificationApiService>());
-
         private readonly Lazy<ILoggerService> _loggerService
             = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
@@ -101,31 +98,10 @@ namespace Covid19Radar.Droid.Services
 
         public override Result DoWork()
         {
-            var exposureNotificationApiService = _exposureNotificationApiService.Value;
             var loggerService = _loggerService.Value;
             var backgroundService = _backgroundService.Value;
 
             loggerService.StartMethod();
-
-            if (!exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
-            {
-                loggerService.Debug($"EN API is not enabled." +
-                    $" worker will start after {ExposureDetectionBackgroundService.INTERVAL_IN_MINUTES} minutes later.");
-                return Result.InvokeSuccess();
-            }
-
-            IList<ExposureNotificationStatus> statuses = exposureNotificationApiService.GetStatusesAsync()
-                .GetAwaiter().GetResult();
-
-            bool isActivated = statuses
-                .Select(status => status.Code)
-                .Contains(ExposureNotificationStatus.Code_Android.ACTIVATED);
-            if (!isActivated)
-            {
-                loggerService.Debug($"EN API is not ACTIVATED." +
-                    $" worker will start after {ExposureDetectionBackgroundService.INTERVAL_IN_MINUTES} minutes later.");
-                return Result.InvokeSuccess();
-            }
 
             try
             {

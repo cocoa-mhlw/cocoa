@@ -399,6 +399,11 @@ namespace Covid19Radar.ViewModels
 
             await StartExposureNotificationAsync();
 
+            _ = Task.Run(async () => {
+                await exposureDetectionBackgroundService.ExposureDetectionAsync();
+                await UpdateView();
+            });
+
             loggerService.EndMethod();
         }
 

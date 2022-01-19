@@ -24,7 +24,6 @@ namespace Covid19Radar.iOS.Services
 
         private const int TIMEOUT_IN_MILLIS = 60 * 60 * 1000;
 
-        private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly ILoggerService _loggerService;
 
 
@@ -48,7 +47,6 @@ namespace Covid19Radar.iOS.Services
                 dateTimeUtility
                 )
         {
-            _exposureNotificationApiService = exposureNotificationApiService;
             _loggerService = loggerService;
         }
 
@@ -69,25 +67,6 @@ namespace Covid19Radar.iOS.Services
                 {
                     try
                     {
-                        if (!_exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
-                        {
-                            _loggerService.Debug($"Exposure notification is not enabled.");
-                            task.SetTaskCompleted(true);
-                            return;
-                        }
-
-                        IList<ExposureNotificationStatus> statuses = _exposureNotificationApiService.GetStatusesAsync()
-                            .GetAwaiter().GetResult();
-
-                        bool isUnauthorized = statuses
-                            .Any(status => status.Code == ExposureNotificationStatus.Code_iOS.Unauthorized);
-                        if (isUnauthorized)
-                        {
-                            _loggerService.Error("Exposure notification is not authorized.");
-                            task.SetTaskCompleted(true);
-                            return;
-                        }
-
                         await ExposureDetectionAsync(cancellationTokenSource);
                         task.SetTaskCompleted(true);
                     }
