@@ -352,6 +352,11 @@ namespace Covid19Radar.ViewModels
             catch (Exception exception)
             {
                 loggerService.Exception("SubmitDiagnosisKeys", exception);
+
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOther_Dialog_NoConnection,
+                    AppResources.ExposureNotificationHandler2ErrorMessage,
+                    AppResources.ButtonOk);
             }
         }
 
