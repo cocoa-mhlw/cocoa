@@ -88,6 +88,10 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>削除しています</value>
   </data>
+  <data name="Loading" xml:space="preserve">
+    <value>読み込み中</value>
+    <comment>読み込み中</comment>
+  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>共有する</value>
   </data>
@@ -133,10 +137,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="Loading" xml:space="preserve">
-    <value>読み込み中</value>
-    <comment>読み込み中</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>使い方</value>
