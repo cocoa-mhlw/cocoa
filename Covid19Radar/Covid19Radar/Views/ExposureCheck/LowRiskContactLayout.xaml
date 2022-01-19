@@ -67,8 +67,7 @@
                         VerticalOptions="Center"
                         Style="{StaticResource DefaultLabelCaption}"
                         Text="{Binding LowRiskContactPageHeaderTextSuffix}"
-                        >
-                    </Label>
+                        ></Label>
                 </StackLayout>
             </StackLayout>
         </CollectionView.Header>
@@ -84,12 +83,15 @@
                         <StackLayout Style="{StaticResource DetailsStackLayout}">
                             <Label
                                 Style="{StaticResource CardLabel}"
-                                Text="{Binding DateTimeString}" />
+                                Text="{Binding DateTimeString}"
+                                Margin="0, 0, 0, 10"
+                                />
                             <Label
-                                Style="{StaticResource CardLabel}">
+                                Style="{StaticResource CardLabelSmall}"
+                                >
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="{Binding DailySummaryScoreSumString}" />
+                                        <Span Text="{Binding Description}" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
