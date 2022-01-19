@@ -13,7 +13,6 @@ using System.Text.RegularExpressions;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
-using System.IO;
 using System.Collections.Generic;
 using Chino;
 using System.Net;
@@ -121,6 +120,9 @@ namespace Covid19Radar.ViewModels
 
         private int errorCount { get; set; }
 
+        // TODO: Save and use for revoke operation.
+        private string idempotencyKey = Guid.NewGuid().ToString();
+
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -219,7 +221,6 @@ namespace Covid19Radar.ViewModels
                         AppResources.NotifyOtherPageDiagReturnHomeTitle,
                         AppResources.ButtonOk
                     );
-                    UserDialogs.Instance.HideLoading();
                     await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
 
                     loggerService.Error($"Exceeded the number of trials.");
@@ -275,19 +276,20 @@ namespace Covid19Radar.ViewModels
                        AppResources.NotifyOtherPageDiag6Title,
                        AppResources.ButtonOk
                     );
-                    UserDialogs.Instance.HideLoading();
                     await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 
                     loggerService.Warning($"Exposure notification is disable.");
                     return;
                 }
 
-                await SubmitDiagnosisKeys();
+                // UserDialogs.Instance.Loading must be executed in MainThread.
+                using (UserDialogs.Instance.Loading(AppResources.LoadingTextRegistering))
+                {
+                    await SubmitDiagnosisKeys();
+                }
             }
             catch (Exception ex)
             {
-                UserDialogs.Instance.HideLoading();
-
                 errorCount++;
                 UserDialogs.Instance.Alert(
                     AppResources.NotifyOtherPageDialogExceptionText,
@@ -329,28 +331,16 @@ namespace Covid19Radar.ViewModels
                     tek.ReportType = DEFAULT_REPORT_TYPE;
                 }
 
-                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
-
-                // TODO: Save and use revoke operation.
-                string idempotencyKey = Guid.NewGuid().ToString();
-
-                IList<HttpStatusCode> httpStatusCodes = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+                HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                     _diagnosisDate,
                     filteredTemporaryExposureKeyList,
                     ProcessingNumber,
                     idempotencyKey
                     );
 
-                foreach(var statusCode in httpStatusCodes)
-                {
-                    loggerService.Info($"HTTP status is {httpStatusCodes}({(int)statusCode}).");
+                ShowResult(httpStatusCode);
 
-                    // Mainly, we expect that SubmitDiagnosisKeysAsync returns one result.
-                    // Multiple-results is for debug use only.
-                    ShowResult(statusCode);
-                }
-
-                if (httpStatusCodes.Any(statusCode => statusCode != HttpStatusCode.OK))
+                if (httpStatusCode != HttpStatusCode.OK)
                 {
                     errorCount++;
                 }
@@ -362,15 +352,18 @@ namespace Covid19Radar.ViewModels
             catch (Exception exception)
             {
                 loggerService.Exception("SubmitDiagnosisKeys", exception);
-            }
-            finally
-            {
-                UserDialogs.Instance.HideLoading();
+
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOther_Dialog_NoConnection,
+                    AppResources.NotifyOtherPageDialogExceptionTitle,
+                    AppResources.ButtonOk);
             }
         }
 
         private async void ShowResult(HttpStatusCode httpStatusCode)
         {
+            loggerService.Info($"HTTP status is {httpStatusCode}({(int)httpStatusCode}).");
+
             switch (httpStatusCode)
             {
                 case HttpStatusCode.OK:
@@ -450,7 +443,11 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            await SubmitDiagnosisKeys();
+            // UserDialogs.Instance.Loading must be executde in MainThread.
+            using (UserDialogs.Instance.Loading(AppResources.LoadingTextRegistering))
+            {
+                await SubmitDiagnosisKeys();
+            }
 
             loggerService.EndMethod();
         }
