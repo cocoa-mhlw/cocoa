@@ -977,6 +977,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string NotifyOther_Dialog_NoConnection {
+            get {
+                return ResourceManager.GetString("NotifyOther_Dialog_NoConnection", resourceCulture);
+            }
+        }
+        
         public static string NotifyOtherPageDiag1Message {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag1Message", resourceCulture);
