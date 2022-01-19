@@ -165,12 +165,8 @@ namespace Covid19Radar.ViewModels
 
             // EN Enabled Check
             var isEnEnabled = await exposureNotificationApiService.IsEnabledAsync();
-            var enStatusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
 
-            var isEnActivated = enStatusCodes.Contains(ExposureNotificationStatus.Code_iOS.Active)
-                || enStatusCodes.Contains(ExposureNotificationStatus.Code_Android.ACTIVATED);
-
-            if (!isEnEnabled || !isEnActivated)
+            if (!isEnEnabled)
             {
                 loggerService.Warning($"Exposure notification is not enabled or activated.");
 
