@@ -316,9 +316,12 @@ namespace Covid19Radar.ViewModels
             }
             catch (Exception ex)
             {
-                UserDialogs.Instance.HideLoading();
-
                 errorCount++;
+
+                // Workarround for that HideLoading conflicts with AlertAsync on iOS.
+                await Task.Delay(_delayForErrorMillis);
+
+                UserDialogs.Instance.HideLoading();
 
                 UserDialogs.Instance.Alert(
                     AppResources.NotifyOtherPageDialogExceptionText,
