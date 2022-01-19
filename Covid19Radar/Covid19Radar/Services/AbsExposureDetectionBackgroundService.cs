@@ -92,8 +92,6 @@ namespace Covid19Radar.Services
                 return;
             }
 
-            _userDataRepository.SetCanConfirmExposure(true);
-
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
             await _serverConfigurationRepository.LoadAsync();
@@ -166,17 +164,16 @@ namespace Covid19Radar.Services
                 }
                 catch (Exception exception)
                 {
+                    canConfirmExposure = false;
                     _loggerService.Exception($"Exception occurred: {region}", exception);
-                    _userDataRepository.SetCanConfirmExposure(false);
                     throw;
                 }
                 finally
                 {
                     RemoveFiles(downloadedFileNameList);
+                    _userDataRepository.SetCanConfirmExposure(canConfirmExposure);
                 }
             }
-
-            _userDataRepository.SetCanConfirmExposure(canConfirmExposure);
         }
 
         private static IList<DiagnosisKeyEntry> FilterDiagnosisKeysAfterLastProcessTimestamp(
