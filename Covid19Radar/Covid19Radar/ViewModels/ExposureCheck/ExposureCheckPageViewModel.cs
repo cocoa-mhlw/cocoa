@@ -205,9 +205,7 @@ namespace Covid19Radar.ViewModels
 
                 var description =  string.Format(
                     AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied,
-                    dailySummary.DaySummary.ScoreSum,
-                    _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value,
-                    OperatorToString(_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op)
+                    dailySummary.DaySummary.ScoreSum
                     );
                 descriptionList.Add(description);
             }
@@ -215,9 +213,7 @@ namespace Covid19Radar.ViewModels
             {
                 var description = string.Format(
                     AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied,
-                    dailySummary.DaySummary.ScoreSum,
-                    _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value,
-                    OperatorToString(_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op)
+                    dailySummary.DaySummary.ScoreSum
                     );
                 descriptionList.Add(description);
             }
@@ -237,9 +233,7 @@ namespace Covid19Radar.ViewModels
 
                 var description = string.Format(
                     AppResources.LowRiskContactPage_ExposureDuration_Description_Unsatisfied,
-                    exposureDurationInMinute,
-                    exposureDurationThresholdInMinute,
-                    OperatorToString(_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Op)
+                    exposureDurationInMinute
                     );
                 descriptionList.Add(description);
             }

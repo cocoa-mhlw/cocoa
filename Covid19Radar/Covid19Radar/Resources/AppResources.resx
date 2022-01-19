@@ -405,20 +405,20 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>Score: {0:#.##} (Threshold: {2:#} {1:#.##})</value>
-    <comment>スコア: {0:#.##}（基準値: {1:#.##}{2:#}）</comment>
+    <value>Score: {0:#.##}</value>
+    <comment>スコア: {0:#.##}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>Score: {0:#.##} (Threshold: {2:#} {1:#.##})</value>
-    <comment>スコア: {0:#.##}（基準値: {1:#.##}{2:#}）のため通知の対象外</comment>
+    <value>Score: {0:#.##}</value>
+    <comment>スコア: {0:#.##}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
-    <value>{0:#} min exposure (Threshold {2:#} {1:#} min)</value>
-    <comment>{0:#}分間の接触（基準値: {1:#}分間{2:#}）</comment>
+    <value>{0:#} min exposure</value>
+    <comment>{0:#}分間の接触</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
-    <value>{0:#} min exposure (Threshold {2:#} {1:#} min)</value>
-    <comment>{0:#}分間の接触（基準値: {1:#}分間{2:#}）のため通知の対象外</comment>
+    <value>{0:#} min exposure</value>
+    <comment>{0:#}分間の接触のため通知の対象外</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
     <value>※Score is calculated with signal strength and reception time. When you contact with a positive user for 15 minutes within 1 meter, It will be {1:#} {0:#}.</value>
