@@ -251,6 +251,9 @@ namespace Covid19Radar.ViewModels
 
                 loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
 
+                // UserDialogs.Instance.Loading must be executed in MainThread.
+                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
+
                 if (errorCount > 0)
                 {
                     await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
@@ -286,9 +289,6 @@ namespace Covid19Radar.ViewModels
                     loggerService.Error($"Incorrect process number format.");
                     return;
                 }
-
-                // UserDialogs.Instance.Loading must be executed in MainThread.
-                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
 
                 await SubmitDiagnosisKeys();
 
