@@ -4,7 +4,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -33,7 +32,7 @@ namespace Covid19Radar.Services
             _deviceVerifier = deviceVerifier;
         }
 
-        public async Task<IList<HttpStatusCode>> SubmitDiagnosisKeysAsync(
+        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,
@@ -62,9 +61,7 @@ namespace Covid19Radar.Services
                 }
 
                 var diagnosisInfo = await CreateSubmissionAsync(symptomOnsetDate, temporaryExposureKeys, processNumber, idempotencyKey);
-                IList<HttpStatusCode> httpStatusCode = await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
-
-                return httpStatusCode;
+                return await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
             }
             finally
             {
