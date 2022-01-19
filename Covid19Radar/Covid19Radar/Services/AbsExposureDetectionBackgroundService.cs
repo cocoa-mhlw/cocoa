@@ -167,7 +167,7 @@ namespace Covid19Radar.Services
                 catch (Exception exception)
                 {
                     _loggerService.Exception($"Exception occurred: {region}", exception);
-                    canConfirmExposure = false;
+                    _userDataRepository.SetCanConfirmExposure(false);
                     throw;
                 }
                 finally
