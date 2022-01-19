@@ -323,11 +323,12 @@ namespace Covid19Radar.ViewModels
 
                 UserDialogs.Instance.HideLoading();
 
-                UserDialogs.Instance.Alert(
-                    AppResources.NotifyOtherPageDialogExceptionText,
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOther_Dialog_NoConnection,
                     AppResources.NotifyOtherPageDialogExceptionTitle,
                     AppResources.ButtonOk
-                );
+                    );
+
                 loggerService.Exception("Failed to submit DiagnosisKeys.", ex);
             }
             finally
