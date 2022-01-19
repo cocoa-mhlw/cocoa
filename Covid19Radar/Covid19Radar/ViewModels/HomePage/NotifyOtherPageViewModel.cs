@@ -355,7 +355,7 @@ namespace Covid19Radar.ViewModels
 
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOther_Dialog_NoConnection,
-                    AppResources.ExposureNotificationHandler2ErrorMessage,
+                    AppResources.NotifyOtherPageDialogExceptionTitle,
                     AppResources.ButtonOk);
             }
         }
