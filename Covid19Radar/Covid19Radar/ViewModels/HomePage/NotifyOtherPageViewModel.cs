@@ -159,6 +159,31 @@ namespace Covid19Radar.ViewModels
             }
         }
 
+        public override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // EN Enabled Check
+            var isEnEnabled = await exposureNotificationApiService.IsEnabledAsync();
+            var enStatusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
+
+            var isEnActivated = enStatusCodes.Contains(ExposureNotificationStatus.Code_iOS.Active)
+                || enStatusCodes.Contains(ExposureNotificationStatus.Code_Android.ACTIVATED);
+
+            if (!isEnEnabled || !isEnActivated)
+            {
+                loggerService.Warning($"Exposure notification is not enabled or activated.");
+
+                await UserDialogs.Instance.AlertAsync(
+                   AppResources.NotifyOtherPageDiag6Message,
+                   AppResources.NotifyOtherPageDiag6Title,
+                   AppResources.ButtonOk
+                );
+                await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                return;
+            }
+        }
+
         public Command OnInqueryTelephoneNumberClicked => new Command(() =>
         {
             loggerService.StartMethod();
@@ -263,22 +288,6 @@ namespace Covid19Radar.ViewModels
                     );
                     errorCount++;
                     loggerService.Error($"Incorrect process number format.");
-                    return;
-                }
-
-                // EN Enabled Check
-                var enabled = await exposureNotificationApiService.IsEnabledAsync();
-
-                if (!enabled)
-                {
-                    await UserDialogs.Instance.AlertAsync(
-                       AppResources.NotifyOtherPageDiag6Message,
-                       AppResources.NotifyOtherPageDiag6Title,
-                       AppResources.ButtonOk
-                    );
-                    await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-
-                    loggerService.Warning($"Exposure notification is disable.");
                     return;
                 }
 
