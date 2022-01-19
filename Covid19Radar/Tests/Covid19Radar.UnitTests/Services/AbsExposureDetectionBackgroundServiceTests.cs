@@ -57,7 +57,11 @@ namespace Covid19Radar.UnitTests.Services
 
         public void Dispose()
         {
-            Directory.Delete($"{Path.GetTempPath()}/diagnosis_keys/", true);
+            var dir = $"{Path.GetTempPath()}/diagnosis_keys/";
+            if (Directory.Exists(dir))
+            {
+                Directory.Delete(dir, true);
+            }
         }
 
         #endregion
@@ -374,6 +378,14 @@ namespace Covid19Radar.UnitTests.Services
             mockLocalPathService
                 .Setup(x => x.CacheDirectory)
                 .Returns(Path.GetTempPath());
+
+            // Setup ExposureNotification API
+            mockExposureNotificationApiService.Setup(x => x.IsEnabledAsync())
+                .ReturnsAsync(true);
+            mockExposureNotificationApiService.Setup(x => x.GetStatusesAsync())
+                .ReturnsAsync(new List<ExposureNotificationStatus>() {
+                    new ExposureNotificationStatus(ExposureNotificationStatus.Code_Android.ACTIVATED)
+                });
 
             mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
