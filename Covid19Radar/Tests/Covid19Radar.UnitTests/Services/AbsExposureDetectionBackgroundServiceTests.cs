@@ -382,9 +382,9 @@ namespace Covid19Radar.UnitTests.Services
             // Setup ExposureNotification API
             mockExposureNotificationApiService.Setup(x => x.IsEnabledAsync())
                 .ReturnsAsync(true);
-            mockExposureNotificationApiService.Setup(x => x.GetStatusesAsync())
-                .ReturnsAsync(new List<ExposureNotificationStatus>() {
-                    new ExposureNotificationStatus(ExposureNotificationStatus.Code_Android.ACTIVATED)
+            mockExposureNotificationApiService.Setup(x => x.GetStatusCodesAsync())
+                .ReturnsAsync(new List<int>() {
+                    ExposureNotificationStatus.Code_Android.ACTIVATED,
                 });
 
             mockDiagnosisKeyRepository
