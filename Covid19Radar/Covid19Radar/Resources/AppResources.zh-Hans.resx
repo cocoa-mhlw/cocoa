@@ -276,6 +276,22 @@
     <value>与阳性注册者接触的风险非常低</value>
     <comment>TODO:陽性登録者とリスクが極めて低い接触がありました</comment>
   </data>
+  <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
+    <value>スコア: {0:#.##}</value>
+    <comment>TODO:スコア: {0:#.##}</comment>
+  </data>
+  <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
+    <value>スコア: {0:#.##}</value>
+    <comment>TODO:スコア: {0:#.##}</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
+    <value>{0:#}分間の接触</value>
+    <comment>TODO:{0:#}分間の接触</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
+    <value>{0:#}分間の接触のため通知の対象外</value>
+    <comment>TODO:{0:#}分間の接触のため通知の対象外</comment>
+  </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>小时</value>
     <comment>TODO:時間</comment>
