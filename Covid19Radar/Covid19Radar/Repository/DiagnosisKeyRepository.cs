@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Covid19Radar.Repository
 {
     public interface IDiagnosisKeyRepository
     {
-        public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken);
+        public Task<(HttpStatusCode, IList<DiagnosisKeyEntry>)> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken);
 
         public Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir, CancellationToken cancellationToken);
     }
@@ -51,21 +52,22 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
-        public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken)
+        public async Task<(HttpStatusCode, IList<DiagnosisKeyEntry>)> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken)
         {
             HttpResponseMessage response = await _httpClient.GetAsync(url, cancellationToken);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
                 _loggerService.Debug(content);
-                return JsonConvert.DeserializeObject<List<DiagnosisKeyEntry>>(content);
+
+                return (response.StatusCode, JsonConvert.DeserializeObject<List<DiagnosisKeyEntry>>(content));
             }
             else
             {
                 _loggerService.Debug($"GetDiagnosisKeysListAsync {response.StatusCode}");
             }
 
-            return new List<DiagnosisKeyEntry>();
+            return (response.StatusCode, new List<DiagnosisKeyEntry>());
         }
 
         public async Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir, CancellationToken cancellationToken)
