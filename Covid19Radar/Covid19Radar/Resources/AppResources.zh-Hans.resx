@@ -646,8 +646,8 @@
     <comment>処理番号は半角数字で入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>必须启用 COVID-19 接触日志才可进行阳性登记，请在应用或系统设置中启用设定。</value>
-    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+    <value>必须启用 接触通知，请在应用或系统设置中启用设定。</value>
+    <comment>陽性記録の登録を行う為に接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
     <value>请启用 COVID-19 接触日志</value>

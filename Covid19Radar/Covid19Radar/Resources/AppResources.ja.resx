@@ -640,8 +640,8 @@
     <comment>処理番号は半角数字で入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</value>
-    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+    <value>陽性記録の登録を行うために接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</value>
+    <comment>陽性記録の登録を行うために接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
     <value>COVID-19接触のログ記録を有効にしてください</value>
