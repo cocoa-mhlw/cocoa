@@ -11,6 +11,7 @@ using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Common;
+using Chino;
 
 namespace Covid19Radar.Services
 {
@@ -72,6 +73,27 @@ namespace Covid19Radar.Services
 
         private async Task InternalExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
+            bool isEnabled = await _exposureNotificationApiService.IsEnabledAsync();
+            if (!isEnabled)
+            {
+                _loggerService.Debug($"EN API is not enabled.");
+                return;
+            }
+
+            IEnumerable<ExposureNotificationStatus> statuses = await _exposureNotificationApiService.GetStatusesAsync();
+            IEnumerable<int> statuseCodes = statuses.Select(status => status.Code);
+
+            bool isActivated = statuseCodes.Contains(ExposureNotificationStatus.Code_Android.ACTIVATED)
+                | statuseCodes.Contains(ExposureNotificationStatus.Code_iOS.Active);
+
+            if (!isActivated)
+            {
+                _loggerService.Debug($"EN API is not ACTIVATED.");
+                return;
+            }
+
+            _userDataRepository.SetCanConfirmExposure(true);
+
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
             await _serverConfigurationRepository.LoadAsync();

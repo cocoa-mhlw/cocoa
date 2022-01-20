@@ -384,10 +384,6 @@
     <value>A low risk signal has been recieved</value>
     <comment>陽性登録者とリスクが極めて低い接触がありました</comment>
   </data>
-  <data name="LowRiskContactPageCountPrefixText" xml:space="preserve">
-    <value>In the last 14 days, </value>
-    <comment>直近14日間に合計</comment>
-  </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>h</value>
     <comment>時間</comment>
@@ -400,13 +396,29 @@
     <value>A signal has been recieved from COVID-19 positive users. But it is few meters away and has no risk. Please stay with preventing Infection.</value>
     <comment>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
-  <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
-    <value>Score</value>
-    <comment>スコア</comment>
-  </data>
   <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
     <value>(Possibility of close contact is {1:#} {0:#})</value>
     <comment>（{0:#}{1:#}が接触の可能性の通知対象）</comment>
+  </data>
+  <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
+    <value>Received signal</value>
+    <comment>受信した信号</comment>
+  </data>
+  <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
+    <value>Score: {0:#.##}</value>
+    <comment>スコア: {0:#.##}</comment>
+  </data>
+  <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
+    <value>Score: {0:#.##}</value>
+    <comment>スコア: {0:#.##}</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
+    <value>{0:#} min exposure</value>
+    <comment>{0:#}分間の接触</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
+    <value>{0:#} min exposure</value>
+    <comment>{0:#}分間の接触のため通知の対象外</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
     <value>※Score is calculated with signal strength and reception time. When you contact with a positive user for 15 minutes within 1 meter, It will be {1:#} {0:#}.</value>
@@ -712,6 +724,10 @@
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
     <value>Cannot connect to registration center</value>
     <comment>センターに接続できません</comment>
+  </data>
+  <data name="NotifyOther_Dialog_NoConnection" xml:space="preserve">
+    <value>We apologize for the inconvinience. The network may be unstable or the server may be busy. Please try again later.</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
     <value>Do you want to register it?</value>
