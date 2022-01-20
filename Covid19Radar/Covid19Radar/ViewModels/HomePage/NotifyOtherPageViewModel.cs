@@ -230,6 +230,9 @@ namespace Covid19Radar.ViewModels
 
                 loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
 
+                // UserDialogs.Instance.Loading must be executed in MainThread.
+                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
+
                 if (errorCount > 0)
                 {
                     await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
@@ -282,20 +285,50 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                // UserDialogs.Instance.Loading must be executed in MainThread.
-                using (UserDialogs.Instance.Loading(AppResources.LoadingTextRegistering))
+                await SubmitDiagnosisKeys();
+
+                UserDialogs.Instance.HideLoading();
+            }
+            catch (ENException exception)
+            {
+                loggerService.Exception("GetTemporaryExposureKeyHistoryAsync", exception);
+
+                if (exception.Code == ENException.Code_iOS.NotAuthorized)
                 {
-                    await SubmitDiagnosisKeys();
+                    loggerService.Info("GetTekHistory request is declined by user.");
+
+                    // Workarround for that HideLoading conflicts with AlertAsync on iOS.
+                    await Task.Delay(_delayForErrorMillis);
+
+                    UserDialogs.Instance.HideLoading();
+
+                    await UserDialogs.Instance.AlertAsync(
+                        null,
+                        AppResources.NotifyOtherPageDiag2Title,
+                        AppResources.ButtonOk
+                        );
                 }
+                else
+                {
+                    UserDialogs.Instance.HideLoading();
+                }
+
             }
             catch (Exception ex)
             {
                 errorCount++;
-                UserDialogs.Instance.Alert(
-                    AppResources.NotifyOtherPageDialogExceptionText,
+
+                // Workarround for that HideLoading conflicts with AlertAsync on iOS.
+                await Task.Delay(_delayForErrorMillis);
+
+                UserDialogs.Instance.HideLoading();
+
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOther_Dialog_NoConnection,
                     AppResources.NotifyOtherPageDialogExceptionTitle,
                     AppResources.ButtonOk
-                );
+                    );
+
                 loggerService.Exception("Failed to submit DiagnosisKeys.", ex);
             }
             finally
@@ -308,55 +341,39 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.Info($"Submit DiagnosisKeys.");
 
-            try
-            {
-                List<TemporaryExposureKey> temporaryExposureKeyList
-                    = await exposureNotificationApiService.GetTemporaryExposureKeyHistoryAsync();
+            List<TemporaryExposureKey> temporaryExposureKeyList
+                = await exposureNotificationApiService.GetTemporaryExposureKeyHistoryAsync();
 
-                loggerService.Info($"TemporaryExposureKeys-count: {temporaryExposureKeyList.Count()}");
+            loggerService.Info($"TemporaryExposureKeys-count: {temporaryExposureKeyList.Count()}");
 
-                IList<TemporaryExposureKey> filteredTemporaryExposureKeyList
-                    = TemporaryExposureKeyUtils.FiilterTemporaryExposureKeys(
-                        temporaryExposureKeyList,
-                        _diagnosisDate,
-                        AppConstants.DaysToSendTek,
-                        loggerService
-                        );
-
-                loggerService.Info($"FilteredTemporaryExposureKeys-count: {filteredTemporaryExposureKeyList.Count()}");
-
-                // Set reportType
-                foreach (var tek in filteredTemporaryExposureKeyList)
-                {
-                    tek.ReportType = DEFAULT_REPORT_TYPE;
-                }
-
-                HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+            IList<TemporaryExposureKey> filteredTemporaryExposureKeyList
+                = TemporaryExposureKeyUtils.FiilterTemporaryExposureKeys(
+                    temporaryExposureKeyList,
                     _diagnosisDate,
-                    filteredTemporaryExposureKeyList,
-                    ProcessingNumber,
-                    idempotencyKey
+                    AppConstants.DaysToSendTek,
+                    loggerService
                     );
 
-                ShowResult(httpStatusCode);
+            loggerService.Info($"FilteredTemporaryExposureKeys-count: {filteredTemporaryExposureKeyList.Count()}");
 
-                if (httpStatusCode != HttpStatusCode.OK)
-                {
-                    errorCount++;
-                }
-            }
-            catch (ENException exception)
+            // Set reportType
+            foreach (var tek in filteredTemporaryExposureKeyList)
             {
-                loggerService.Exception("GetTemporaryExposureKeyHistoryAsync", exception);
+                tek.ReportType = DEFAULT_REPORT_TYPE;
             }
-            catch (Exception exception)
-            {
-                loggerService.Exception("SubmitDiagnosisKeys", exception);
 
-                await UserDialogs.Instance.AlertAsync(
-                    AppResources.NotifyOther_Dialog_NoConnection,
-                    AppResources.NotifyOtherPageDialogExceptionTitle,
-                    AppResources.ButtonOk);
+            HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+                _diagnosisDate,
+                filteredTemporaryExposureKeyList,
+                ProcessingNumber,
+                idempotencyKey
+                );
+
+            ShowResult(httpStatusCode);
+
+            if (httpStatusCode != HttpStatusCode.OK)
+            {
+                errorCount++;
             }
         }
 
@@ -443,13 +460,47 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            // UserDialogs.Instance.Loading must be executde in MainThread.
-            using (UserDialogs.Instance.Loading(AppResources.LoadingTextRegistering))
+            try
             {
-                await SubmitDiagnosisKeys();
+                // UserDialogs.Instance.Loading must be executde in MainThread.
+                using (UserDialogs.Instance.Loading(AppResources.LoadingTextRegistering))
+                {
+                    await SubmitDiagnosisKeys();
+                }
             }
+            catch (ENException exception)
+            {
+                loggerService.Exception("GetTemporaryExposureKeyHistoryAsync", exception);
+            }
+            catch (Exception ex)
+            {
+                errorCount++;
+                UserDialogs.Instance.Alert(
+                    AppResources.NotifyOtherPageDialogExceptionText,
+                    AppResources.NotifyOtherPageDialogExceptionTitle,
+                    AppResources.ButtonOk
+                );
+                loggerService.Exception("Failed to submit DiagnosisKeys.", ex);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+        }
+
+        public async void OnGetTekHistoryDecline()
+        {
+            loggerService.StartMethod();
+
+            loggerService.Info("GetTekHistory request is declined by user.");
+            await UserDialogs.Instance.AlertAsync(
+                null,
+                AppResources.NotifyOtherPageDiag2Title,
+                AppResources.ButtonOk
+                );
 
             loggerService.EndMethod();
         }
+
     }
 }
