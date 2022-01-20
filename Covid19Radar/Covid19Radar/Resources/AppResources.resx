@@ -215,8 +215,8 @@
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="Loading" xml:space="preserve">
-    <value>TODO:Loading</value>
-    <comment>読み込み中</comment>
+    <value>Loading</value>
+    <comment>TODO:読み込み中</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Share</value>
@@ -381,8 +381,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>TODO:A low risk signal has been recieved</value>
-    <comment>陽性登録者とリスクが極めて低い接触がありました</comment>
+    <value>A low risk signal has been recieved</value>
+    <comment>TODO:陽性登録者とリスクが極めて低い接触がありました</comment>
   </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>h</value>
@@ -397,12 +397,12 @@
     <comment>陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
   <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
-    <value>TODO:Score</value>
-    <comment>受信した信号</comment>
+    <value>Score</value>
+    <comment>TODO:受信した信号</comment>
   </data>
   <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
-    <value>TODO:(Possibility of close contact is {1:#} {0:#})</value>
-    <comment>（{0:#}{1:#}が接触の可能性の通知対象）</comment>
+    <value>(Possibility of close contact is {1:#} {0:#})</value>
+    <comment>TODO:（{0:#}{1:#}が接触の可能性の通知対象）</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
     <value>Score: {0:#.##}</value>
@@ -421,16 +421,16 @@
     <comment>{0:#}分間の接触のため通知の対象外</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>TODO:※Score is calculated with signal strength and reception time. When you contact with a positive user for 15 minutes within 1 meter, It will be {1:#} {0:#}.</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>※Score is calculated with signal strength and reception time. When you contact with a positive user for 15 minutes within 1 meter, It will be {1:#} {0:#}.</value>
+    <comment>TODO:※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
-    <value>TODO:No contact has been received with COVID-19 positive users for 14 days.</value>
-    <comment>14日間のうちに、リスクが低いものを含め陽性登録者との接触はありません</comment>
+    <value>No contact has been received with COVID-19 positive users for 14 days.</value>
+    <comment>TODO:14日間のうちに、リスクが低いものを含め陽性登録者との接触はありません</comment>
   </data>
   <data name="NoRiskContactPageDescription" xml:space="preserve">
-    <value>TODO:There is no positive user in your territory so far. Please stay with preventing Infection.</value>
-    <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
+    <value>There is no positive user in your territory so far. Please stay with preventing Infection.</value>
+    <comment>TODO:行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
   </data>
   <data name="NoRiskContactPageButtonText" xml:space="preserve">
     <value>Share this app</value>
@@ -513,12 +513,12 @@
     <comment>ホーム</comment>
   </data>
   <data name="HomePageDialogExceptionTitle" xml:space="preserve">
-    <value>TODO:Failed to access the risk check page</value>
-    <comment>確認画面へのアクセスに失敗しました</comment>
+    <value>Failed to access the risk check page</value>
+    <comment>TODO:確認画面へのアクセスに失敗しました</comment>
   </data>
   <data name="HomePageDialogExceptionDescription" xml:space="preserve">
-    <value>TODO:We apologize for the inconvinience. The network may be unstable or the server may be busy. Please try again later.</value>
-    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+    <value>We apologize for the inconvinience. The network may be unstable or the server may be busy. Please try again later.</value>
+    <comment>TODO:ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Term of use</value>
@@ -533,8 +533,8 @@
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>TODO:All data is encrypted and saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</value>
-    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+    <value>All data is encrypted and saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</value>
+    <comment>TODO:接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>You can stop recording close contacts with other users anytime by changing app settings or deleting the app.</value>
@@ -1296,53 +1296,53 @@ Note: this app does not collect users’ location information.</value>
   </data>
 
   <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
-    <value>TODO:Before {0}</value>
-    <comment>年月日以前</comment>
+    <value>Before {0}</value>
+    <comment>TODO:年月日以前</comment>
   </data>
   <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
-    <value>TODO:1 time</value>
-    <comment>1 件</comment>
+    <value>1 time</value>
+    <comment>TODO:1 件</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
-    <value>TODO:{0} times</value>
-    <comment>{0} 件</comment>
+    <value>{0} times</value>
+    <comment>TODO:{0} 件</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationHeader" xml:space="preserve">
-    <value>TODO:After {0}</value>
-    <comment>年月日以降</comment>
+    <value>After {0}</value>
+    <comment>TODO:年月日以降</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
-    <value>TODO:Total {1:#} min exposure in 1 day</value>
-    <comment>{0}日間に合計{1:#}分間の接触</comment>
+    <value>Total {1:#} min exposure in 1 day</value>
+    <comment>TODO:{0}日間に合計{1:#}分間の接触</comment>
   </data>
   <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
-    <value>TODO:Total {1:#} min exposure in {0} days</value>
-    <comment>{0}日間に合計{1:#}分間の接触</comment>
+    <value>Total {1:#} min exposure in {0} days</value>
+    <comment>TODO:{0}日間に合計{1:#}分間の接触</comment>
   </data>
   <data name="ExposurePageExposureDuration" xml:space="preserve">
-    <value>TODO:{0:#} min exposure</value>
-    <comment>{0:#}分間の接触</comment>
+    <value>{0:#} min exposure</value>
+    <comment>TODO:{0:#}分間の接触</comment>
   </data>
 
   <data name="ThresholdTextOperatorGt" xml:space="preserve">
-    <value>TODO:over</value>
-    <comment>を超える値</comment>
+    <value>over</value>
+    <comment>TODO:を超える値</comment>
   </data>
   <data name="ThresholdTextOperatorLt" xml:space="preserve">
-    <value>TODO:under</value>
-    <comment>未満</comment>
+    <value>under</value>
+    <comment>TODO:未満</comment>
   </data>
   <data name="ThresholdTextOperatorGte" xml:space="preserve">
-    <value>TODO:over or equal</value>
-    <comment>以上</comment>
+    <value>over or equal</value>
+    <comment>TODO:以上</comment>
   </data>
   <data name="ThresholdTextOperatorLte" xml:space="preserve">
-    <value>TODO:under or equal</value>
-    <comment>以下</comment>
+    <value>under or equal</value>
+    <comment>TODO:以下</comment>
   </data>
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
-    <value>TODO:equal</value>
-    <comment>と同じ</comment>
+    <value>equal</value>
+    <comment>TODO:と同じ</comment>
   </data>
 
 </root>
