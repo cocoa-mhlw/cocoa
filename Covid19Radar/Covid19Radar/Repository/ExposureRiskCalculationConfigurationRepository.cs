@@ -113,7 +113,7 @@ namespace Covid19Radar.Repository
             {
                 currentConfiguration = CreateDefaultConfiguration();
             }
-            else if(preferCache)
+            else if (preferCache)
             {
                 _loggerService.EndMethod();
                 return currentConfiguration;
@@ -154,7 +154,7 @@ namespace Covid19Radar.Repository
                 return currentConfiguration;
             }
 
-            if (newExposureRiskCalculationConfiguration == currentConfiguration)
+            if (newExposureRiskCalculationConfiguration.Equals(currentConfiguration))
             {
                 _loggerService.Info("ExposureRiskCalculationConfiguration have not been changed.");
                 _loggerService.EndMethod();
