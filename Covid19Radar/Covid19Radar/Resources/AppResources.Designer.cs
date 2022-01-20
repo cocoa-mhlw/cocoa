@@ -479,15 +479,39 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskContactPageHeaderTextSuffix {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageHeaderTextSuffix", resourceCulture);
+            }
+        }
+        
         public static string LowRiskContactPageHeaderTextPrefix {
             get {
                 return ResourceManager.GetString("LowRiskContactPageHeaderTextPrefix", resourceCulture);
             }
         }
         
-        public static string LowRiskContactPageHeaderTextSuffix {
+        public static string LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied {
             get {
-                return ResourceManager.GetString("LowRiskContactPageHeaderTextSuffix", resourceCulture);
+                return ResourceManager.GetString("LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied {
+            get {
+                return ResourceManager.GetString("LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPage_ExposureDuration_Description_Satisfied {
+            get {
+                return ResourceManager.GetString("LowRiskContactPage_ExposureDuration_Description_Satisfied", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPage_ExposureDuration_Description_Unsatisfied {
+            get {
+                return ResourceManager.GetString("LowRiskContactPage_ExposureDuration_Description_Unsatisfied", resourceCulture);
             }
         }
         
@@ -950,6 +974,12 @@ namespace Covid19Radar.Resources {
         public static string ExposureNotificationHandler2ErrorMessage {
             get {
                 return ResourceManager.GetString("ExposureNotificationHandler2ErrorMessage", resourceCulture);
+            }
+        }
+        
+        public static string NotifyOther_Dialog_NoConnection {
+            get {
+                return ResourceManager.GetString("NotifyOther_Dialog_NoConnection", resourceCulture);
             }
         }
         
