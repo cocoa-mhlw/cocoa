@@ -5,7 +5,7 @@
     "DurationWeight": 50,
     "DaysSinceLastExposureWeight": 50,
     "TransmissionRiskScores": [
-        7,
+        1,
         7,
         7,
         7,
