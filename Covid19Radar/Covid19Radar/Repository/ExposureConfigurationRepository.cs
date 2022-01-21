@@ -426,8 +426,8 @@ namespace Covid19Radar.Repository
                     },
                     TransmissionRiskLevelValues = new int[]
                     {
-                        1,
-                        7,
+                        0,
+                        0,
                         7,
                         7,
                         7,

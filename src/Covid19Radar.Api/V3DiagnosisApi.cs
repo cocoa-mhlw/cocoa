@@ -27,7 +27,7 @@ namespace Covid19Radar.Api
 {
     public class V3DiagnosisApi
     {
-        private const int TRANSMISSION_RISK_LEVEL_INVALID = 0;
+        private const int TRANSMISSION_RISK_LEVEL_LOWEST = 1;
         private const int TRANSMISSION_RISK_LEVEL_MEDIUM = 4;
 
         private const string CHAFF_HEADER = "X-Chaff";
@@ -79,7 +79,7 @@ namespace Covid19Radar.Api
             // Make compatible with Legacy-V1 mode.
             foreach (var key in submissionParameter.Keys)
             {
-                var transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_INVALID;
+                var transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_LOWEST;
                 if (key.DaysSinceOnsetOfSymptoms >= Constants.DaysHasInfectiousness)
                 {
                     transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_MEDIUM;
