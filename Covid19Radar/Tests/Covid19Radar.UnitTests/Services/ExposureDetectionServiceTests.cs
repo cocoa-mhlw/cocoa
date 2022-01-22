@@ -126,7 +126,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Mock Setup
             dateTimeUtility.Setup(x => x.UtcNow).Returns(utcNow);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), true))
+                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), true))
                 .Returns(true);
 
 
@@ -147,7 +147,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), It.Is<bool>(x => x == false)),
+                    x => x.SetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.Is<bool>(x => x == false)),
                     Times.Once
                 );
         }
@@ -161,7 +161,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Mock Setup
             dateTimeUtility.Setup(x => x.UtcNow).Returns(utcNow);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
 
 
@@ -182,7 +182,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), It.IsAny<bool>()),
+                    x => x.SetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.IsAny<bool>()),
                      Times.Never
                 );
         }
@@ -222,7 +222,7 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Mock Setup
             preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
             preferencesService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
@@ -289,7 +289,7 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Mock Setup
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
             preferencesService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
