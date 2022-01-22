@@ -132,9 +132,12 @@ namespace Covid19Radar.Repository
                 }
             }
 
+            // Cache not exist (first time. probably...)
             if (currentExposureConfiguration is null)
             {
                 currentExposureConfiguration = CreateDefaultConfiguration();
+                SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
+                SetIsDiagnosisKeysDataMappingConfigurationUpdated(true);
             }
 
             await _serverConfigurationRepository.LoadAsync();
@@ -531,10 +534,10 @@ namespace Covid19Radar.Repository
         }
 
         public void SetIsDiagnosisKeysDataMappingConfigurationUpdated(bool isUpdated)
-            => _preferencesService.SetValue(PreferenceKey.IsExposureConfigurationUpdated, isUpdated);
+            => _preferencesService.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, isUpdated);
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated()
-            => _preferencesService.GetValue(PreferenceKey.IsExposureConfigurationUpdated, true);
+            => _preferencesService.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true);
 
         private void SetExposureConfigurationDownloadedDateTime(DateTime dateTime)
         {
