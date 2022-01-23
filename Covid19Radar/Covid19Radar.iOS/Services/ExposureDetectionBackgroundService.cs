@@ -22,7 +22,7 @@ namespace Covid19Radar.iOS.Services
     {
         private static string BGTASK_IDENTIFIER => AppInfo.PackageName + ".exposure-detection";
 
-        private const double MINIMUM_INTERVAL_SECONDS_FOR_NEXT_BGTASK = 60 * 60 * 4;
+        private const double MINIMUM_INTERVAL_SECONDS_FOR_NEXT_BGTASK = 60 * 60 * 3;
 
         private readonly ILoggerService _loggerService;
 
