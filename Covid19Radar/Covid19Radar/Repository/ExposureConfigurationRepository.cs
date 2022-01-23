@@ -109,6 +109,8 @@ namespace Covid19Radar.Repository
 
                     currentExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
 
+                    _loggerService.Info("Cached:" + exposureConfigurationAsJson);
+
                     if (!IsDownloadedExposureConfigurationOutdated(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays))
                     {
                         _loggerService.EndMethod();
@@ -145,11 +147,13 @@ namespace Covid19Radar.Repository
             if (response.IsSuccessStatusCode)
             {
                 string exposureConfigurationAsJson = await response.Content.ReadAsStringAsync();
-                _loggerService.Debug(exposureConfigurationAsJson);
 
                 try
                 {
                     newExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
+
+                    _loggerService.Info("Downloaded:" + exposureConfigurationAsJson);
+
                     SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
                 }
                 catch (JsonException exception)
