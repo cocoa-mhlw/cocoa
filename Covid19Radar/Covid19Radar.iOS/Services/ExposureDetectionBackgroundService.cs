@@ -107,6 +107,7 @@ namespace Covid19Radar.iOS.Services
 
             try
             {
+                // added EarliestBeginDate to avoid repeat execution
                 BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
                     RequiresNetworkConnectivity = true,
