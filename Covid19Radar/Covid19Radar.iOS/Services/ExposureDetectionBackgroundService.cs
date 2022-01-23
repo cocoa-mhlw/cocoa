@@ -120,6 +120,10 @@ namespace Covid19Radar.iOS.Services
                     throw exception;
                 }
             }
+            catch (Exception exception)
+            {
+                _loggerService.Exception("Scheduling is failed with an unexpected error", exception);
+            }
             finally
             {
                 _loggerService.EndMethod();
