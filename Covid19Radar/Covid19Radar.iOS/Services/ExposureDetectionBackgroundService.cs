@@ -22,7 +22,7 @@ namespace Covid19Radar.iOS.Services
     {
         private static string BGTASK_IDENTIFIER => AppInfo.PackageName + ".exposure-detection";
 
-        private const int TIMEOUT_IN_MILLIS = 60 * 60 * 1000;
+        private const double MINIMUM_INTERVAL_SECONDS_FOR_NEXT_BGTASK = 60 * 60 * 4;
 
         private readonly ILoggerService _loggerService;
 
@@ -109,7 +109,8 @@ namespace Covid19Radar.iOS.Services
             {
                 BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
-                    RequiresNetworkConnectivity = true
+                    RequiresNetworkConnectivity = true,
+                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(MINIMUM_INTERVAL_SECONDS_FOR_NEXT_BGTASK)
                 };
 
                 BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
