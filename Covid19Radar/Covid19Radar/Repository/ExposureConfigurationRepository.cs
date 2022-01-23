@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -133,9 +134,12 @@ namespace Covid19Radar.Repository
                 }
             }
 
+            // Cache not exist (first time. probably...)
             if (currentExposureConfiguration is null)
             {
                 currentExposureConfiguration = CreateDefaultConfiguration();
+                SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
+                SetIsDiagnosisKeysDataMappingConfigurationUpdated(true);
             }
 
             await _serverConfigurationRepository.LoadAsync();
@@ -481,13 +485,10 @@ namespace Covid19Radar.Repository
             ExposureConfiguration exposureConfiguration2
             )
         {
-            return
-                (exposureConfiguration1.GoogleDiagnosisKeysDataMappingConfig
-                    != exposureConfiguration2.GoogleDiagnosisKeysDataMappingConfig)
-                ||
-                (exposureConfiguration1.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms
-                    != exposureConfiguration2.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms);
-
+            var googleDiagnosisKeysDataMappingConfigUpdated = !exposureConfiguration1.GoogleDiagnosisKeysDataMappingConfig.Equals(exposureConfiguration2.GoogleDiagnosisKeysDataMappingConfig);
+            var appleInfectiousnessForDaysSinceOnsetOfSymptoms = !exposureConfiguration1.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms
+                .SequenceEqual(exposureConfiguration2.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms);
+            return googleDiagnosisKeysDataMappingConfigUpdated || appleInfectiousnessForDaysSinceOnsetOfSymptoms;
         }
 
         private bool IsExposureConfigurationOutdated(int retensionDays)
@@ -537,10 +538,10 @@ namespace Covid19Radar.Repository
         }
 
         public void SetIsDiagnosisKeysDataMappingConfigurationUpdated(bool isUpdated)
-            => _preferencesService.SetValue(PreferenceKey.IsExposureConfigurationUpdated, isUpdated);
+            => _preferencesService.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, isUpdated);
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated()
-            => _preferencesService.GetValue(PreferenceKey.IsExposureConfigurationUpdated, true);
+            => _preferencesService.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true);
 
         private void SetExposureConfigurationDownloadedDateTime(DateTime dateTime)
         {
