@@ -245,7 +245,6 @@ namespace Covid19Radar.ViewModels
                     await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
 
                     loggerService.Error($"Exceeded the number of trials.");
-                    loggerService.EndMethod();
                     return;
                 }
 
@@ -275,6 +274,7 @@ namespace Covid19Radar.ViewModels
                     );
                     errorCount++;
                     loggerService.Error($"No diagnostic number entered.");
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -287,6 +287,7 @@ namespace Covid19Radar.ViewModels
                     );
                     errorCount++;
                     loggerService.Error($"Incorrect process number format.");
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -303,6 +304,7 @@ namespace Covid19Radar.ViewModels
                     await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 
                     loggerService.Warning($"Exposure notification is disable.");
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
