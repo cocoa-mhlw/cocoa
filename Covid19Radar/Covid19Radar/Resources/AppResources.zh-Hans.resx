@@ -99,7 +99,7 @@
     <value>正在删除</value>
   </data>
   <data name="Loading" xml:space="preserve">
-    <value>Loading</value>
+    <value>负载</value>
     <comment>TODO:読み込み中</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
@@ -278,15 +278,15 @@
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
     <value>分数: {0:#.##}</value>
-    <comment>TODO:スコア: {0:#.##}</comment>
+    <comment>スコア: {0:#.##}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
     <value>分数: {0:#.##}</value>
-    <comment>TODO:スコア: {0:#.##}</comment>
+    <comment>スコア: {0:#.##}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
-    <value>{0:#}分間の接触</value>
-    <comment>TODO:{0:#}分間の接触</comment>
+    <value>接触时间为{0:#}分钟</value>
+    <comment>{0:#}分間の接触</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
     <value>接触时间为{0:#}分钟，因此不进行通知推送</value>
@@ -294,11 +294,11 @@
   </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>小时</value>
-    <comment>TODO:時間</comment>
+    <comment>時間</comment>
   </data>
   <data name="LowRiskContactPageCountSuffixMinutesText" xml:space="preserve">
     <value>分钟</value>
-    <comment>TODO:分</comment>
+    <comment>分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
     <value>收到了来自阳性登记者所持智能手机的信号，但是信号强度并未超出基准值。您的行动范围内有阳性登记者，请继续注意防止感染。</value>
@@ -307,10 +307,6 @@
   <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
     <value>收到的信号</value>
     <comment>受信した信号</comment>
-  </data>
-  <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
-    <value>（{0:#}{1:#}以告知密切接触的可能性为准）</value>
-    <comment>TODO:（{0:#}{1:#}が接触の可能性の通知対象）</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
     <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为{0:#}{1:#}。</value>
@@ -430,7 +426,7 @@
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
     <value>所有数据都会加密并保存在手机本地存储，所有数据14天后会自动删除。政府机构或第三方机构不会以任何方式跟踪监视您的手机</value>
-    <comment>TODO:接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+    <comment>TODO:接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>您可以随时停止APP的记录，在设置内设为关闭，或者删掉APP</value>
@@ -1195,19 +1191,19 @@
 
   <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
     <value>{0}以前</value>
-    <comment>TODO:年月日以前</comment>
+    <comment>年月日以前</comment>
   </data>
   <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
     <value>1 件</value>
-    <comment>TODO:1 件</comment>
+    <comment>1 件</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>{0} 件</value>
-    <comment>TODO:{0} 件</comment>
+    <comment>{0} 件</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationHeader" xml:space="preserve">
     <value>{0}以降</value>
-    <comment>TODO:年月日以降</comment>
+    <comment>年月日以降</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
     <value>1天内共有{1:#}分钟的接触</value>
@@ -1219,28 +1215,28 @@
   </data>
   <data name="ExposurePageExposureDuration" xml:space="preserve">
     <value>{0:#}分钟的接触</value>
-    <comment>TODO:{0:#}分間の接触</comment>
+    <comment>{0:#}分間の接触</comment>
   </data>
 
   <data name="ThresholdTextOperatorGt" xml:space="preserve">
     <value>超出</value>
-    <comment>TODO:を超える値</comment>
+    <comment>を超える値</comment>
   </data>
   <data name="ThresholdTextOperatorLt" xml:space="preserve">
-    <value>未満</value>
-    <comment>TODO:未満</comment>
+    <value>少于</value>
+    <comment>未満</comment>
   </data>
   <data name="ThresholdTextOperatorGte" xml:space="preserve">
     <value>以上</value>
-    <comment>TODO:以上</comment>
+    <comment>以上</comment>
   </data>
   <data name="ThresholdTextOperatorLte" xml:space="preserve">
     <value>以下</value>
-    <comment>TODO:以下</comment>
+    <comment>以下</comment>
   </data>
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
     <value></value>
-    <comment>TODO:と同じ</comment>
+    <comment>と同じ</comment>
   </data>
 
 </root>

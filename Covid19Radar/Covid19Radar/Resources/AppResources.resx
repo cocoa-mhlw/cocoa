@@ -216,7 +216,7 @@
   </data>
   <data name="Loading" xml:space="preserve">
     <value>Loading</value>
-    <comment>TODO:読み込み中</comment>
+    <comment>読み込み中</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Share</value>
@@ -386,11 +386,11 @@
   </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>h</value>
-    <comment>TODO:時間</comment>
+    <comment>時間</comment>
   </data>
   <data name="LowRiskContactPageCountSuffixMinutesText" xml:space="preserve">
     <value>min</value>
-    <comment>TODO:分</comment>
+    <comment>分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
     <value>A signal from the smartphone of a person who has registered as positive for COVID-19 was received. However, the signal did not exceed the standard value. There was a person who has registered positive for COVID-19 within your sphere of activities. Therefore, please continue to pay attention to preventing COVID-19 infections.</value>
@@ -399,10 +399,6 @@
   <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
     <value>Received signal</value>
     <comment>受信した信号</comment>
-  </data>
-  <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
-    <value>(Possibility of close contact is {1:#} {0:#})</value>
-    <comment>TODO:（{0:#}{1:#}が接触の可能性の通知対象）</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
     <value>Score: {0:#.##}</value>
@@ -413,8 +409,8 @@
     <comment>スコア: {0:#.##}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
-    <value>{0:#} min exposure</value>
-    <comment>TODO:{0:#}分間の接触</comment>
+    <value>{0:#} minutes of contact</value>
+    <comment>{0:#}分間の接触</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
     <value>Not subject to notification because it was contact for {0:#} minutes</value>
@@ -533,8 +529,8 @@
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>All data is encrypted and saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</value>
-    <comment>TODO:接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+    <value>All data is saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</value>
+    <comment>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>You can stop recording close contacts with other users anytime by changing app settings or deleting the app.</value>
@@ -727,7 +723,7 @@
   </data>
   <data name="NotifyOther_Dialog_NoConnection" xml:space="preserve">
     <value>We apologize for the inconvinience. The network may be unstable or the server may be busy. Please try again later.</value>
-    <comment>TODO:ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
     <value>Do you want to register it?</value>
@@ -1297,19 +1293,19 @@ Note: this app does not collect users’ location information.</value>
 
   <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
     <value>Before {0}</value>
-    <comment>TODO:年月日以前</comment>
+    <comment>年月日以前</comment>
   </data>
   <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
     <value>1 time</value>
-    <comment>TODO:1 件</comment>
+    <comment>1 件</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>{0} times</value>
-    <comment>TODO:{0} 件</comment>
+    <comment>{0} 件</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationHeader" xml:space="preserve">
     <value>After {0}</value>
-    <comment>TODO:年月日以降</comment>
+    <comment>年月日以降</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
     <value>A total of {1:#} minutes of contact over 1 day</value>
@@ -1321,28 +1317,28 @@ Note: this app does not collect users’ location information.</value>
   </data>
   <data name="ExposurePageExposureDuration" xml:space="preserve">
     <value>{0:#} minutes of contact</value>
-    <comment>TODO:{0:#}分間の接触</comment>
+    <comment>{0:#}分間の接触</comment>
   </data>
 
   <data name="ThresholdTextOperatorGt" xml:space="preserve">
     <value>over</value>
-    <comment>TODO:を超える値</comment>
+    <comment>を超える値</comment>
   </data>
   <data name="ThresholdTextOperatorLt" xml:space="preserve">
     <value>under</value>
-    <comment>TODO:未満</comment>
+    <comment>未満</comment>
   </data>
   <data name="ThresholdTextOperatorGte" xml:space="preserve">
     <value>or more</value>
-    <comment>TODO:以上</comment>
+    <comment>以上</comment>
   </data>
   <data name="ThresholdTextOperatorLte" xml:space="preserve">
     <value>or less</value>
-    <comment>TODO:以下</comment>
+    <comment>以下</comment>
   </data>
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
     <value></value>
-    <comment>TODO:と同じ</comment>
+    <comment>と同じ</comment>
   </data>
 
 </root>
