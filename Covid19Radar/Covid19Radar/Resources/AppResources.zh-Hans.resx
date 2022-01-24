@@ -290,7 +290,7 @@
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
     <value>接触时间为{0:#}分钟，因此不进行通知推送</value>
-    <comment>TODO:{0:#}分間の接触のため通知の対象外</comment>
+    <comment>{0:#}分間の接触のため通知の対象外</comment>
   </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>小时</value>
