@@ -4,6 +4,8 @@ trigger:
   branches:
     include:
     - release/app
+    - develop/app
+    - feature/*
   paths:
     include:
     - Covid19Radar
@@ -11,7 +13,7 @@ trigger:
     - azure-pipelines/app
 
 variables:
-- group: app-settings-stg
+- group: app-settings-dev
 - name: AppVersion
   value: '2.0.0'
 
@@ -20,10 +22,12 @@ jobs:
   pool:
     vmImage: 'macOS-11'
   variables:
-  - group: ios-signing-distribution
+  - group: ios-signing-development
   - template: templates/variables/ios-build-environment-variables.yml
   steps:
-  - template: templates/build/ios-build-adhoc-template.yml
+  - template: templates/build/ios-build-development-template.yml
+    parameters:
+      isDefineDebug: true
 
 - job: build_android
   pool:
@@ -32,4 +36,4 @@ jobs:
   - group: android-signing-dev
   - template: templates/variables/android-build-environment-variables.yml
   steps:
-  - template: templates/build/android-build-adhoc-template.yml
+  - template: templates/build/android-build-development-template.yml

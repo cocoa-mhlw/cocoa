@@ -34,4 +34,4 @@ jobs:
   - group: android-signing-dev
   - template: templates/variables/android-build-environment-variables.yml
   steps:
-  - template: templates/build/android-build-debug-template.yml
+  - template: templates/build/android-build-adhoc-template.yml
