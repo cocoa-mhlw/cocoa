@@ -362,6 +362,7 @@
     <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%403x.png" />
     <BundleResource Include="Resources\Base.lproj\icon_arrow%402x.png" />
     <BundleResource Include="Resources\Base.lproj\icon_arrow%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_check_page_head.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

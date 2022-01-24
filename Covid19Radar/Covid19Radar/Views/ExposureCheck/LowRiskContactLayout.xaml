@@ -13,54 +13,56 @@
     ios:Page.UseSafeArea="true"
     Style="{StaticResource DefaultStackLayout}"
     Visual="Material"
-    BackgroundColor="#FFFFFF"
     Spacing="10">
     <CollectionView
         VerticalOptions="FillAndExpand"
-        BackgroundColor="#FFFFFF"
+        BackgroundColor="#EEEEEE"
         ItemsSource="{Binding ExposureCheckScores}">
         <CollectionView.Header>
-            <StackLayout
-                Padding="20, 20, 20, 10">
-                <Frame
-                    Padding="20"
-                    CornerRadius="10">
-        
-                    <StackLayout>
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="1"
-                            Margin="0,0,0,10"
-                            HorizontalOptions="Center"
-                            Style="{StaticResource DefaultTitleLabel}">
+            <StackLayout>
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Margin="0,0,0,15"
+                    Aspect="AspectFill"
+                    Source="exposure_check_page_head.png" />
+                <StackLayout
+                    Margin="20,20,20,10">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="1"
+                        Margin="0,0,0,20"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        FontAttributes="Bold"
+                        >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageLabel}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="2"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource PrimaryText}">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="{x:Static resources:AppResources.LowRiskContactPageLabel}" />
+                                    <Span Text="{x:Static resources:AppResources.LowRiskContactPageDescription}" />
                                 </FormattedString>
                             </Label.FormattedText>
-                        </Label>
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="2"
-                            HorizontalOptions="Center"
-                            Style="{StaticResource PrimaryText}">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="{x:Static resources:AppResources.LowRiskContactPageDescription}" />
-                                    </FormattedString>
-                                </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
-                </Frame>
+                    </Label>
+                </StackLayout>
                 <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="StartAndExpand"
-                    Padding="0, 20, 0, 0"
+                    Padding="20, 25, 0, 10"
                     >
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         VerticalOptions="Center"
                         Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.LowRiskContactPageHeaderTextPrefix}"></Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
