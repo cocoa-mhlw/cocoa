@@ -56,7 +56,7 @@
                 <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="StartAndExpand"
-                    Padding="20, 25, 0, 10"
+                    Padding="20, 10, 0, 10"
                     >
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"

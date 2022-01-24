@@ -199,21 +199,27 @@ namespace Covid19Radar.ViewModels
 
             var descriptionList = new List<string>();
 
-            if (!_exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Cond(dailySummary.DaySummary.ScoreSum))
-            {
-                exposureCheckModel.IsScoreVisible = true;
+            var ratio = dailySummary.DaySummary.ScoreSum / _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value * 100;
 
-                var description =  string.Format(
-                    AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied,
-                    dailySummary.DaySummary.ScoreSum
+            if (1.0 > ratio)
+            {
+                descriptionList.Add("1未満");
+            }
+            else if (100.0 >= ratio)
+            {
+                var description = string.Format(
+                    AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied,
+                    ratio
                     );
                 descriptionList.Add(description);
             }
             else
             {
+                exposureCheckModel.IsDurationTimeVisible = true;
+
                 var description = string.Format(
-                    AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied,
-                    dailySummary.DaySummary.ScoreSum
+                    AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied,
+                    ratio
                     );
                 descriptionList.Add(description);
             }
