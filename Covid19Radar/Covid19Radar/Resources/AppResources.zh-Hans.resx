@@ -614,8 +614,8 @@
     <comment>センターに接続できません</comment>
   </data>
   <data name="NotifyOther_Dialog_NoConnection" xml:space="preserve">
-    <value>We apologize for the inconvinience. The network may be unstable or the server may be busy. Please try again later.</value>
-    <comment>TODO:ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+    <value>给您造成不便我们深感抱歉。可能由于网络不稳定或服务器繁忙。请您稍后重试。</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
     <value>是否登记？</value>
