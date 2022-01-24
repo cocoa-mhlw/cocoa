@@ -273,15 +273,15 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>与阳性注册者接触的风险非常低</value>
-    <comment>TODO:陽性登録者とリスクが極めて低い接触がありました</comment>
+    <value>来自阳性登录者所持智能手机的信号低于基准值</value>
+    <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>スコア: {0:#.##}</value>
+    <value>分数: {0:#.##}</value>
     <comment>TODO:スコア: {0:#.##}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>スコア: {0:#.##}</value>
+    <value>分数: {0:#.##}</value>
     <comment>TODO:スコア: {0:#.##}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
@@ -289,7 +289,7 @@
     <comment>TODO:{0:#}分間の接触</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
-    <value>{0:#}分間の接触のため通知の対象外</value>
+    <value>接触时间为{0:#}分钟，因此不进行通知推送</value>
     <comment>TODO:{0:#}分間の接触のため通知の対象外</comment>
   </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
@@ -301,28 +301,28 @@
     <comment>TODO:分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>我收到了阳性注册人的智能手机的信号，但没有风险，因为它在几米之外。活动区域有阳性登记者，请继续注意预防感染。</value>
-    <comment>TODO:陽性登録者のスマートフォンの信号を受信しましたが、数m以上離れておりリスクはありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+    <value>收到了来自阳性登录者所持智能手机的信号，但是信号强度并未超出基准值。您的行动范围内有阳性登记者，请继续注意防止感染。</value>
+    <comment>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
   <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
-    <value>受信した信号</value>
-    <comment>TODO:受信した信号</comment>
+    <value>收到的信号</value>
+    <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
-    <value>（20.0以上以告知密切接触的可能性为准）</value>
-    <comment>TODO:（20.0以上が濃厚接触の可能性の通知対象）</comment>
+    <value>（{0:#}{1:#}以告知密切接触的可能性为准）</value>
+    <comment>TODO:（{0:#}{1:#}が接触の可能性の通知対象）</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>※核心是根据信号强度和接收时间计算的，如果在 1m 范围内有接触并持续 15 分钟或更长时间，则为 20.0 或更多。</value>
-    <comment>TODO:※スコアは、信号強度と受信時間を元に算出されており、1m以内・15分以上の接触があると20.0以上になります。</comment>
+    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为{0:#}{1:#}。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
-    <value>不接触阳性注册者，包括低风险者</value>
-    <comment>TODO:リスクが低いものを含め陽性登録者との接触はありません</comment>
+    <value>未收到来自阳性登录者所持智能手机的信号</value>
+    <comment>リスクが低いものを含め陽性登録者との接触はありません</comment>
   </data>
   <data name="NoRiskContactPageDescription" xml:space="preserve">
-    <value>似乎在行动领域没有积极的注册人。 请继续注意预防感染。</value>
-    <comment>TODO:行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
+    <value>您的行动范围内似乎没有阳性登记者。请继续注意防止感染。</value>
+    <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
   </data>
   <data name="NoRiskContactPageButtonText" xml:space="preserve">
     <value>分享此APP</value>
@@ -401,20 +401,20 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>联系确认的操作状态</value>
-    <comment>TODO:接触確認の動作状況</comment>
+    <value>不存在高于基准值的信号</value>
+    <comment>基準値を超える信号はありません</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>主页</value>
     <comment>ホーム</comment>
   </data>
   <data name="HomePageDialogExceptionTitle" xml:space="preserve">
-    <value>確認画面へのアクセスに失敗しました</value>
-    <comment>TODO:確認画面へのアクセスに失敗しました</comment>
+    <value>问确认界面失败</value>
+    <comment>確認画面へのアクセスに失敗しました</comment>
   </data>
   <data name="HomePageDialogExceptionDescription" xml:space="preserve">
-    <value>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</value>
-    <comment>TODO:ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+    <value>给您造成不便我们深感抱歉。可能由于网络不稳定或服务器繁忙。请您稍后重试。</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>使用条款</value>
@@ -1210,15 +1210,15 @@
     <comment>TODO:年月日以降</comment>
   </data>
   <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
-    <value>1日間に合計{1:#}分間の接触</value>
-    <comment>TODO:1日間に合計{1:#}分間の接触</comment>
+    <value>1天内共有{1:#}分钟的接触</value>
+    <comment>1日間に合計{1:#}分間の接触</comment>
   </data>
   <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
-    <value>{0}日間に合計{1:#}分間の接触</value>
-    <comment>TODO:{0}日間に合計{1:#}分間の接触</comment>
+    <value>{0}天内共有{1:#}分钟的接触</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
   </data>
   <data name="ExposurePageExposureDuration" xml:space="preserve">
-    <value>{0:#}分間の接触</value>
+    <value>{0:#}分钟的接触</value>
     <comment>TODO:{0:#}分間の接触</comment>
   </data>
 
