@@ -273,7 +273,7 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>来自阳性登录者所持智能手机的信号低于基准值</value>
+    <value>来自阳性登记者所持智能手机的信号低于基准值</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>TODO:分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>收到了来自阳性登录者所持智能手机的信号，但是信号强度并未超出基准值。您的行动范围内有阳性登记者，请继续注意防止感染。</value>
+    <value>收到了来自阳性登记者所持智能手机的信号，但是信号强度并未超出基准值。您的行动范围内有阳性登记者，请继续注意防止感染。</value>
     <comment>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
   <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
@@ -317,7 +317,7 @@
     <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
-    <value>未收到来自阳性登录者所持智能手机的信号</value>
+    <value>未收到来自阳性登记者所持智能手机的信号</value>
     <comment>リスクが低いものを含め陽性登録者との接触はありません</comment>
   </data>
   <data name="NoRiskContactPageDescription" xml:space="preserve">
@@ -1223,7 +1223,7 @@
   </data>
 
   <data name="ThresholdTextOperatorGt" xml:space="preserve">
-    <value>を超える値</value>
+    <value>超出</value>
     <comment>TODO:を超える値</comment>
   </data>
   <data name="ThresholdTextOperatorLt" xml:space="preserve">
@@ -1239,7 +1239,7 @@
     <comment>TODO:以下</comment>
   </data>
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
-    <value>と同じ</value>
+    <value></value>
     <comment>TODO:と同じ</comment>
   </data>
 
