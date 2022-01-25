@@ -33,18 +33,11 @@ namespace Covid19Radar.ViewModels
 
         public ObservableCollection<ExposureCheckScoreModel> ExposureCheckScores { get; set; }
 
-        private bool _isVisibleNoRiskContact;
-        public bool IsVisibleNoRiskContact
+        private bool _isExposureDetected;
+        public bool IsExposureDetected
         {
-            get { return _isVisibleNoRiskContact; }
-            set { SetProperty(ref _isVisibleNoRiskContact, value); }
-        }
-
-        private bool _isVisibleLowRiskContact;
-        public bool IsVisibleLowRiskContact
-        {
-            get { return _isVisibleLowRiskContact; }
-            set { SetProperty(ref _isVisibleLowRiskContact, value); }
+            get { return _isExposureDetected; }
+            set { SetProperty(ref _isExposureDetected, value); }
         }
 
         private string _lowRiskContactPageHeaderTextSuffix;
@@ -96,18 +89,9 @@ namespace Covid19Radar.ViewModels
             {
                 var summaries = await _exposureDataRepository
                     .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-                if (0 < summaries.Count())
-                {
-                    IsVisibleLowRiskContact = true;
-                    IsVisibleNoRiskContact = false;
+                IsExposureDetected = 0 < summaries.Count();
 
-                    _ = Setup(summaries);
-                }
-                else
-                {
-                    IsVisibleLowRiskContact = false;
-                    IsVisibleNoRiskContact = true;
-                }
+                _ = Setup(summaries);
             }
             catch (Exception exception)
             {

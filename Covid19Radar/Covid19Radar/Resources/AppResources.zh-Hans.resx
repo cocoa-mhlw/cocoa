@@ -397,8 +397,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>不存在高于基准值的信号</value>
-    <comment>基準値を超える信号はありません</comment>
+    <value>查询过去14天内里的接触情况</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>主页</value>

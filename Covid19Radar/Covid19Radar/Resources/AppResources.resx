@@ -501,8 +501,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>There is no signal exceeding the standard value</value>
-    <comment>基準値を超える信号はありません</comment>
+    <value>Close contacts for the past 14 days</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>Home</value>
