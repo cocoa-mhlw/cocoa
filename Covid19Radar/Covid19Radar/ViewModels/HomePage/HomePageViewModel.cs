@@ -128,8 +128,14 @@ namespace Covid19Radar.ViewModels
             await StartExposureNotificationAsync();
 
             _ = Task.Run(async () => {
-                await exposureDetectionBackgroundService.ExposureDetectionAsync();
-                await UpdateView();
+                try
+                {
+                    await exposureDetectionBackgroundService.ExposureDetectionAsync();
+                }
+                finally
+                {
+                    await UpdateView();
+                }
             });
 
             loggerService.EndMethod();
@@ -400,8 +406,14 @@ namespace Covid19Radar.ViewModels
             await StartExposureNotificationAsync();
 
             _ = Task.Run(async () => {
-                await exposureDetectionBackgroundService.ExposureDetectionAsync();
-                await UpdateView();
+                try
+                {
+                    await exposureDetectionBackgroundService.ExposureDetectionAsync();
+                }
+                finally
+                {
+                    await UpdateView();
+                }
             });
 
             loggerService.EndMethod();

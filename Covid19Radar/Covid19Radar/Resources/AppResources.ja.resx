@@ -289,10 +289,6 @@
     <value>受信した信号</value>
     <comment>受信した信号</comment>
   </data>
-  <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
-    <value>（基準値は{0:#}。スコア{1:#}{2:#}かつ{3:#}分{4:#}の接触が接触の可能性の通知対象）</value>
-    <comment>（{0:#}{1:#}が接触の可能性の通知対象）</comment>
-  </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
     <value>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</value>
     <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
