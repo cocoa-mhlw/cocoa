@@ -98,6 +98,14 @@
                                 </Label.FormattedText>
                             </Label>
                         </StackLayout>
+                        <Frame.Triggers>
+                            <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="False">
+                                <Setter Property="Style" Value="{StaticResource FrameCardViewStyle_Diabled}" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="True">
+                                <Setter Property="Style" Value="{StaticResource FrameCardViewStyle}" />
+                            </DataTrigger>
+                        </Frame.Triggers>
                     </Frame>
                 </StackLayout>
             </DataTemplate>

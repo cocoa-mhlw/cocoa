@@ -28,6 +28,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService _loggerService;
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly IUserDataRepository _userDataRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
 
         public ObservableCollection<ExposureCheckScoreModel> ExposureCheckScores { get; set; }
@@ -67,12 +68,14 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
+            IUserDataRepository userDataRepository,
             IDateTimeUtility dateTimeUtility
             ) : base(navigationService)
         {
             _loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _userDataRepository = userDataRepository;
             _dateTimeUtility = dateTimeUtility;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
@@ -147,6 +150,20 @@ namespace Covid19Radar.ViewModels
             };
         }
 
+        private int GetLastOffsetDay()
+        {
+            var dayOfUse = _userDataRepository.GetDaysOfUse();
+
+            var daysOffset = Math.Min(
+                dayOfUse,
+                14 // 2 weeks
+                );
+
+            _loggerService.Debug($"daysOffset: {daysOffset}");
+
+            return daysOffset;
+        }
+
         private async Task Setup(List<DailySummary> dailySummaryList)
         {
             _loggerService.StartMethod();
@@ -165,27 +182,30 @@ namespace Covid19Radar.ViewModels
 
             var exposureWindowList
                 = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            exposureWindowList.Sort((a, b) => b.DateMillisSinceEpoch.CompareTo(a.DateMillisSinceEpoch));
 
             _loggerService.Debug($"exposureWindowList {exposureWindowList.Count}");
 
-            var dates = Enumerable.Range(AppConstants.DaysOfExposureInformationToDisplay, 14)
-                .Select(offset => _dateTimeUtility.UtcNow.AddDays(offset).Date);
+            var daysOffset = GetLastOffsetDay();
 
-            foreach (var date in dates)
+            var dates = Enumerable.Range(-daysOffset, daysOffset)
+                .Select(offset => _dateTimeUtility.UtcNow.AddDays(offset).Date.ToUnixEpochMillis())
+                .ToList();
+            dates.Sort((a, b) => b.CompareTo(a));
+
+            foreach (var dateMillisSinceEpoch in dates)
             {
-                _loggerService.Debug($"Date {date}");
+                _loggerService.Debug($"Date {dateMillisSinceEpoch}");
 
-                if (!dailySummaryMap.ContainsKey(date.Ticks))
+                if (!dailySummaryMap.ContainsKey(dateMillisSinceEpoch))
                 {
-                    ExposureCheckScoreModel blank = CreateBlankModel(date);
-                    //ExposureCheckScores.Add(blank);
+                    ExposureCheckScoreModel blank = CreateBlankModel(dateMillisSinceEpoch);
+                    ExposureCheckScores.Add(blank);
                     continue;
                 }
 
-                var dailySummary = dailySummaryMap[date.Ticks];
+                var dailySummary = dailySummaryMap[dateMillisSinceEpoch];
 
-                var ewList = exposureWindowList.Where(ew => ew.DateMillisSinceEpoch == date.Ticks).ToList();
+                var ewList = exposureWindowList.Where(ew => ew.DateMillisSinceEpoch == dateMillisSinceEpoch).ToList();
 
                 RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
                     dailySummary,
@@ -204,11 +224,14 @@ namespace Covid19Radar.ViewModels
             _loggerService.EndMethod();
         }
 
-        private ExposureCheckScoreModel CreateBlankModel(DateTime dateTime)
+        private ExposureCheckScoreModel CreateBlankModel(long dateMillisSinceEpoch)
         {
             return new ExposureCheckScoreModel()
             {
-                DateMillisSinceEpoch = dateTime.Ticks,
+                DateMillisSinceEpoch = dateMillisSinceEpoch,
+                IsDurationTimeVisible = false,
+                IsScoreVisible = false,
+                IsReceived = false,
                 Description = "受信した信号はありません"
             };
         }
@@ -218,17 +241,14 @@ namespace Covid19Radar.ViewModels
             var exposureCheckModel = new ExposureCheckScoreModel()
             {
                 DateMillisSinceEpoch = dailySummary.DateMillisSinceEpoch,
+                IsReceived = true,
             };
 
             var descriptionList = new List<string>();
 
-            var ratio = dailySummary.DaySummary.ScoreSum / _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value * 100;
+            var ratio = Math.Ceiling(dailySummary.DaySummary.ScoreSum / _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value * 100);
 
-            if (1.0 > ratio)
-            {
-                descriptionList.Add("1未満");
-            }
-            else if (100.0 >= ratio)
+            if (100 >= ratio)
             {
                 var description = string.Format(
                     AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied,
@@ -295,6 +315,8 @@ namespace Covid19Radar.ViewModels
         public bool IsScoreVisible { get; set; }
 
         public bool IsDurationTimeVisible { get; set; }
+
+        public bool IsReceived { get; set; }
 
         public string Description { get; set; }
     }

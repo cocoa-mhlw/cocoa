@@ -401,12 +401,12 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>Score: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>Score {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>Score: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>Score {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
     <value>{0:#} minutes of contact</value>
@@ -417,8 +417,8 @@
     <comment>{0:#}分間の接触のため通知の対象外</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>*The score is calculated based on the strength and time of the received signal. It is set to be {0:#} {1:#} with contact within 1 m for 15 minutes or more under regular conditions.</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>*The score is calculated based on the strength and time of the received signal. It is set to be 100 or more with contact within 1 m for 15 minutes or more under regular conditions.</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>

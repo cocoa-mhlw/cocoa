@@ -277,12 +277,12 @@
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>分数: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>分数 {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>分数: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>分数 {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
     <value>接触时间为{0:#}分钟</value>
@@ -309,8 +309,8 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为{0:#}{1:#}。</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为100以上。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>未收到来自阳性登记者所持智能手机的信号</value>
