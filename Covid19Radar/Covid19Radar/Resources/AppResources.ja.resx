@@ -246,10 +246,6 @@
     <value>接触の記録を削除してアプリを初期状態に戻すには</value>
     <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
-  <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
@@ -300,10 +296,6 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
-  </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
-    <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
     <value>陽性のご登録をいただきありがとうございました</value>

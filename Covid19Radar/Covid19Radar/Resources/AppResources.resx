@@ -376,10 +376,6 @@
     <value>Register by entering provided processing number into this app</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
-  <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>Share this app</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>The signal received from the smartphone of the person who has registered as positive for COVID-19 was below the standard value</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
@@ -427,10 +423,6 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>It appears there have been no persons who have registered positive for COVID-19 within your sphere of activities. Please continue to pay attention to preventing COVID-19 infections.</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
-  </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>Share this app</value>
-    <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
     <value>Thank you for registering your test results!</value>
