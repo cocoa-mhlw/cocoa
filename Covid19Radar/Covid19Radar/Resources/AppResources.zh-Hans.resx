@@ -99,8 +99,8 @@
     <value>正在删除</value>
   </data>
   <data name="Loading" xml:space="preserve">
-    <value>负载</value>
-    <comment>TODO:読み込み中</comment>
+    <value>处理中</value>
+    <comment>読み込み中</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>共享</value>
@@ -425,8 +425,8 @@
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>所有数据都会加密并保存在手机本地存储，所有数据14天后会自动删除。政府机构或第三方机构不会以任何方式跟踪监视您的手机</value>
-    <comment>TODO:接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
+    <value>所有数据都会保存在手机本地存储，所有数据14天后会自动删除。政府机构或第三方机构不会以任何方式跟踪监视您的手机</value>
+    <comment>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>您可以随时停止APP的记录，在设置内设为关闭，或者删掉APP</value>
@@ -1235,7 +1235,7 @@
     <comment>以下</comment>
   </data>
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
-    <value></value>
+    <value>等于</value>
     <comment>と同じ</comment>
   </data>
 
