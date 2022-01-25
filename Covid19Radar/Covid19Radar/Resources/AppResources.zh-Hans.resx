@@ -426,7 +426,7 @@
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
     <value>所有数据都会保存在手机本地存储，所有数据14天后会自动删除。政府机构或第三方机构不会以任何方式跟踪监视您的手机</value>
-    <comment>TODO:接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
+    <comment>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>您可以随时停止APP的记录，在设置内设为关闭，或者删掉APP</value>
