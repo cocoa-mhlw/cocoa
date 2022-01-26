@@ -1055,9 +1055,39 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ContactedNotifyPageDescription0 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription0", resourceCulture);
+            }
+        }
+        
         public static string ContactedNotifyPageDescription1 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageDescription1", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription2 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription2", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription3 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription3", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription4 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription4", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription5 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription5", resourceCulture);
             }
         }
         
