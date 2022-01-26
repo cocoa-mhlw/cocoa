@@ -87,9 +87,7 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                var summaries = await _exposureDataRepository
-                    .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-                _ = Setup(summaries);
+                _ = Setup();
             }
             catch (Exception exception)
             {
@@ -146,9 +144,12 @@ namespace Covid19Radar.ViewModels
             return daysOffset;
         }
 
-        private async Task Setup(List<DailySummary> dailySummaryList)
+        public async Task Setup()
         {
             _loggerService.StartMethod();
+
+            List<DailySummary> dailySummaryList = await _exposureDataRepository
+                .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
 
             if (dailySummaryList.Count() == 0)
             {

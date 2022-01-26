@@ -17,6 +17,7 @@ using Covid19Radar.Model;
 using Covid19Radar.Services;
 
 using Threshold = Covid19Radar.Model.V1ExposureRiskCalculationConfiguration.Threshold;
+using System;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
@@ -27,6 +28,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
+        private readonly Mock<IUserDataRepository> mockUserDataRepository;
+        private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
 
         public ExposureCheckPageViewModelTests()
         {
@@ -35,29 +38,32 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
             mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
+            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
+            mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
         }
 
 
         private ExposureCheckPageViewModel CreateViewModel()
         {
+
             return new ExposureCheckPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
                 mockExposureDataRepository.Object,
-                mockExposureRiskCalculationService.Object
+                mockExposureRiskCalculationService.Object,
+                mockUserDataRepository.Object,
+                mockDateTimeUtility.Object
                 );
         }
 
         [Fact]
         public void LowRiskPage_Initialize_Display()
         {
-            mockExposureDataRepository
-                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
-                .ReturnsAsync(new List<DailySummary>()
+            var dummyDailySummaries = new List<DailySummary>()
                 {
                     new DailySummary()
                     {
-                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24),
+                        DateMillisSinceEpoch = (new DateTime().AddDays(0).Date).ToUnixEpochMillis(),
                         DaySummary = new ExposureSummaryData()
                         {
                             ScoreSum = 1700
@@ -65,7 +71,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     },
                     new DailySummary()
                     {
-                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 2,
+                        DateMillisSinceEpoch = (new DateTime().AddDays(1).Date).ToUnixEpochMillis(),
                         DaySummary = new ExposureSummaryData()
                         {
                             ScoreSum = 1700
@@ -73,21 +79,40 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     },
                     new DailySummary()
                     {
-                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 3,
+                        DateMillisSinceEpoch = (new DateTime().AddDays(2).Date).ToUnixEpochMillis(),
                         DaySummary = new ExposureSummaryData()
                         {
                             ScoreSum = 1000
                         },
                     },
-                });
-
-            mockExposureDataRepository
-                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
-                .ReturnsAsync(new List<ExposureWindow>()
+                };
+            var dummyExposureWindows = new List<ExposureWindow>()
                 {
                     new ExposureWindow()
                     {
-                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24),
+                        DateMillisSinceEpoch = (new DateTime().AddDays(0).Date).ToUnixEpochMillis(),
+                        ScanInstances = new List<ScanInstance>()
+                        {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = 840,
+                            }
+                        },
+                    },
+                    new ExposureWindow()
+                    {
+                        DateMillisSinceEpoch = (new DateTime().AddDays(1).Date).ToUnixEpochMillis(),
+                        ScanInstances = new List<ScanInstance>()
+                        {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = 840,
+                            }
+                        },
+                    },
+                    new ExposureWindow()
+                    {
+                        DateMillisSinceEpoch = (new DateTime().AddDays(2).Date).ToUnixEpochMillis(),
                         ScanInstances = new List<ScanInstance>()
                         {
                             new ScanInstance()
@@ -96,29 +121,23 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                             }
                         },
                     },
-                    new ExposureWindow()
-                    {
-                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 2,
-                        ScanInstances = new List<ScanInstance>()
-                        {
-                            new ScanInstance()
-                            {
-                                SecondsSinceLastScan = 840,
-                            }
-                        },
-                    },
-                    new ExposureWindow()
-                    {
-                        DateMillisSinceEpoch = (1000 * 60 * 60 * 24) * 3,
-                        ScanInstances = new List<ScanInstance>()
-                        {
-                            new ScanInstance()
-                            {
-                                SecondsSinceLastScan = 840,
-                            }
-                        },
-                    },
-                });
+                };
+
+            mockUserDataRepository
+                .Setup(x => x.GetDaysOfUse())
+                .Returns(14);
+
+            mockDateTimeUtility
+                .Setup(x => x.UtcNow)
+                .Returns((new DateTime()).AddDays(14));
+
+            mockExposureDataRepository
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .ReturnsAsync(dummyDailySummaries);
+
+            mockExposureDataRepository
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .ReturnsAsync(dummyExposureWindows);
 
             var riskConfiguration = new V1ExposureRiskCalculationConfiguration()
             {
@@ -136,31 +155,41 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             var exposureCheckPageViewModel = CreateViewModel();
             var parameters = ExposureCheckPage.BuildNavigationParams(riskConfiguration);
-
             exposureCheckPageViewModel.Initialize(parameters);
 
-            Assert.True(exposureCheckPageViewModel.IsVisibleLowRiskContact);
-            Assert.False(exposureCheckPageViewModel.IsVisibleNoRiskContact);
+            Assert.True(exposureCheckPageViewModel.IsExposureDetected);
 
-            Assert.Equal(3, exposureCheckPageViewModel.ExposureCheckScores.Count());
+            Assert.Equal(14, exposureCheckPageViewModel.ExposureCheckScores.Count());
+
+            var dates = Enumerable.Range(0, 14)
+                .Select(offset => new DateTime().AddDays(offset).Date.ToUnixEpochMillis())
+                .ToList();
+            dates.Sort((a, b) => b.CompareTo(a));
 
             // Sort DESC
-            Assert.Equal((1000 * 60 * 60 * 24) * 3, exposureCheckPageViewModel.ExposureCheckScores[0].DateMillisSinceEpoch);
-            Assert.Equal((1000 * 60 * 60 * 24) * 2, exposureCheckPageViewModel.ExposureCheckScores[1].DateMillisSinceEpoch);
-            Assert.Equal(1000 * 60 * 60 * 24, exposureCheckPageViewModel.ExposureCheckScores[2].DateMillisSinceEpoch);
+            for (int i=0; i < 14; i++)
+            {
+                Assert.Equal(dates[i], exposureCheckPageViewModel.ExposureCheckScores[i].DateMillisSinceEpoch);
+            }
 
-            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[0].IsScoreVisible);
-            Assert.False(exposureCheckPageViewModel.ExposureCheckScores[0].IsDurationTimeVisible);
+            Assert.Equal(dummyDailySummaries[2].DateMillisSinceEpoch, exposureCheckPageViewModel.ExposureCheckScores[11].DateMillisSinceEpoch);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[11].IsScoreVisible);
+            Assert.False(exposureCheckPageViewModel.ExposureCheckScores[11].IsDurationTimeVisible);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[11].IsReceived);
 
-            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[1].IsScoreVisible);
-            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[1].IsDurationTimeVisible);
+            Assert.Equal(dummyDailySummaries[1].DateMillisSinceEpoch, exposureCheckPageViewModel.ExposureCheckScores[12].DateMillisSinceEpoch);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[12].IsScoreVisible);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[12].IsDurationTimeVisible);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[12].IsReceived);
 
-            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[2].IsScoreVisible);
-            Assert.False(exposureCheckPageViewModel.ExposureCheckScores[2].IsDurationTimeVisible);
+            Assert.Equal(dummyDailySummaries[0].DateMillisSinceEpoch, exposureCheckPageViewModel.ExposureCheckScores[13].DateMillisSinceEpoch);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[13].IsScoreVisible);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[13].IsDurationTimeVisible);
+            Assert.True(exposureCheckPageViewModel.ExposureCheckScores[13].IsReceived);
         }
 
         [Fact]
-        public void NoRiskPage_Initialize_Display()
+        public async void NoRiskPage_Initialize_Display()
         {
             mockExposureDataRepository
                 .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
@@ -169,8 +198,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var exposureCheckPageViewModel = CreateViewModel();
             var parameters = ExposureCheckPage.BuildNavigationParams(new V1ExposureRiskCalculationConfiguration());
             exposureCheckPageViewModel.Initialize(parameters);
-            Assert.False(exposureCheckPageViewModel.IsVisibleLowRiskContact);
-            Assert.True(exposureCheckPageViewModel.IsVisibleNoRiskContact);
+            await exposureCheckPageViewModel.Setup();
+
+            Assert.False(exposureCheckPageViewModel.IsExposureDetected);
         }
     }
 }
