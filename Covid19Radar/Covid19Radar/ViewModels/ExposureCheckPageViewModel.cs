@@ -230,13 +230,20 @@ namespace Covid19Radar.ViewModels
 
             var descriptionList = new List<string>();
 
-            var ratio = Math.Ceiling(dailySummary.DaySummary.ScoreSum / _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value * 100);
+            var scoreSumValue = _exposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value;
+            if (scoreSumValue <= 0)
+            {
+                scoreSumValue = ExposureRiskCalculationConfigurationRepository.CreateDefaultConfiguration().DailySummary_DaySummary_ScoreSum.Value;
+                _loggerService.Error($"ExposureRiskCalculationConfiguration.DailySummary_DaySummary_ScoreSum.Value is invalid 0. Use default value {scoreSumValue}.");
+            }
 
-            if (100 >= ratio)
+            var ratio = dailySummary.DaySummary.ScoreSum / scoreSumValue;
+
+            if (1 >= ratio)
             {
                 var description = string.Format(
                     AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied,
-                    ratio
+                    Math.Ceiling(ratio * 100)
                     );
                 descriptionList.Add(description);
             }
@@ -246,7 +253,7 @@ namespace Covid19Radar.ViewModels
 
                 var description = string.Format(
                     AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied,
-                    ratio
+                    Math.Ceiling(ratio * 100)
                     );
                 descriptionList.Add(description);
             }
