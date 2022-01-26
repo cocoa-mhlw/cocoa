@@ -279,11 +279,10 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="OutlineColor" Value="LightGray" />
                 <Setter Property="BorderColor" Value="LightGray" />
-                <Setter Property="HasShadow" Value="True" />
             </Style>
 
             <Style x:Key="FrameCardViewStyle_Diabled" TargetType="Frame" BasedOn="{StaticResource FrameCardViewStyle}">
-                <Setter Property="Opacity" Value="0.6" />
+                <Setter Property="Opacity" Value="0.5" />
             </Style>
 
             <Style x:Key="LinkLabelStyleLarge" TargetType="Label">
