@@ -485,12 +485,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string LowRiskContactPageHeaderTextSuffix {
-            get {
-                return ResourceManager.GetString("LowRiskContactPageHeaderTextSuffix", resourceCulture);
-            }
-        }
-        
         public static string LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied {
             get {
                 return ResourceManager.GetString("LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied", resourceCulture);

@@ -32,4 +32,4 @@ jobs:
   - group: android-signing-prod
   - template: templates/variables/android-build-environment-variables.yml
   steps:
-  - template: templates/build/android-build-release-template.yml
+  - template: templates/build/android-build-store-template.yml
