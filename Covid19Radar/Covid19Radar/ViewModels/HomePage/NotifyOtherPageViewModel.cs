@@ -287,9 +287,16 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                await SubmitDiagnosisKeys();
+                HttpStatusCode httpResult = await SubmitDiagnosisKeys();
 
                 UserDialogs.Instance.HideLoading();
+
+                ShowResult(httpResult);
+
+                if (httpResult != HttpStatusCode.OK)
+                {
+                    errorCount++;
+                }
             }
             catch (ENException exception)
             {
@@ -339,7 +346,7 @@ namespace Covid19Radar.ViewModels
             }
         }));
 
-        private async Task SubmitDiagnosisKeys()
+        private async Task<HttpStatusCode> SubmitDiagnosisKeys()
         {
             loggerService.Info($"Submit DiagnosisKeys.");
 
@@ -364,19 +371,12 @@ namespace Covid19Radar.ViewModels
                 tek.ReportType = DEFAULT_REPORT_TYPE;
             }
 
-            HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+            return await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                 _diagnosisDate,
                 filteredTemporaryExposureKeyList,
                 ProcessingNumber,
                 idempotencyKey
                 );
-
-            ShowResult(httpStatusCode);
-
-            if (httpStatusCode != HttpStatusCode.OK)
-            {
-                errorCount++;
-            }
         }
 
         private async void ShowResult(HttpStatusCode httpStatusCode)
