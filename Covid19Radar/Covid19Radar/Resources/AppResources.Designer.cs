@@ -521,18 +521,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string ThankYouNotifyOtherPageLabel1 {
-            get {
-                return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
-            }
-        }
-        
-        public static string ThankYouNotifyOtherPageDescription1 {
-            get {
-                return ResourceManager.GetString("ThankYouNotifyOtherPageDescription1", resourceCulture);
-            }
-        }
-        
         public static string TutorialPage3Title {
             get {
                 return ResourceManager.GetString("TutorialPage3Title", resourceCulture);

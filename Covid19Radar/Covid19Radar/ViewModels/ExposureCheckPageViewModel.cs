@@ -33,7 +33,7 @@ namespace Covid19Radar.ViewModels
 
         public ObservableCollection<ExposureCheckScoreModel> ExposureCheckScores { get; set; }
 
-        private bool _isExposureDetected;
+        private bool _isExposureDetected = false;
         public bool IsExposureDetected
         {
             get { return _isExposureDetected; }
@@ -89,8 +89,6 @@ namespace Covid19Radar.ViewModels
             {
                 var summaries = await _exposureDataRepository
                     .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-                IsExposureDetected = 0 < summaries.Count();
-
                 _ = Setup(summaries);
             }
             catch (Exception exception)
@@ -186,6 +184,8 @@ namespace Covid19Radar.ViewModels
                     ExposureCheckScores.Add(blank);
                     continue;
                 }
+
+                IsExposureDetected = true;
 
                 var dailySummary = dailySummaryMap[dateMillisSinceEpoch];
 

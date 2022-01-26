@@ -23,7 +23,6 @@
     <Compile Remove="Controls\**" />
     <EmbeddedResource Remove="Controls\**" />
     <None Remove="Controls\**" />
-    <None Remove="Views\ExposureCheck\" />
     <None Remove="ViewModels\ExposureCheckPage\" />
   </ItemGroup>
 
@@ -87,9 +86,6 @@
     <Compile Update="Views\HomePage\PrivacyPolicyPage2.xaml.cs">
       <DependentUpon>PrivacyPolicyPage2.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\ThankYouNotifyOtherPage.xaml.cs">
-      <DependentUpon>ThankYouNotifyOtherPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\Settings\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
@@ -149,8 +145,6 @@
     <Folder Include="Controls\" />
     <Folder Include="Services\Migration\" />
     <Folder Include="Repository\" />
-    <Folder Include="Views\ExposureCheck\" />
-    <Folder Include="ViewModels\ExposureCheck\" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)'=='Release'">
     <Compile Remove="ViewModels/Settings/DebugPageViewModel.cs" />
