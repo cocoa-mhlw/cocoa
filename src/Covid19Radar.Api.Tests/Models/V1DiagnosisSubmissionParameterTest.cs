@@ -14,8 +14,8 @@ namespace Covid19Radar.Api.Tests.Models
     [TestCategory("Models")]
     public class V1DiagnosisSubmissionParameterTest
     {
-        private const string EXPECTED_CLEAR_TEXT_V1 = "jp.go.mhlw.cocoa.unit_test|S2V5RGF0YTE=.10000.4,S2V5RGF0YTI=.20000.4,S2V5RGF0YTM=.30000.4,S2V5RGF0YTQ=.40000.4,S2V5RGF0YTU=.50000.4|440,441|VerificationPayload THIS STRING IS MEANINGLESS";
-        private const string EXPECTED_TRANSACTION_ID_SEED_V1 = "jp.go.mhlw.cocoa.unit_testS2V5RGF0YTE=.10000.4,S2V5RGF0YTI=.20000.4,S2V5RGF0YTM=.30000.4,S2V5RGF0YTQ=.40000.4,S2V5RGF0YTU=.50000.4440,441";
+        private const string EXPECTED_CLEAR_TEXT_V1 = "jp.go.mhlw.cocoa.unit_test|S2V5RGF0YTE=.10000.0,S2V5RGF0YTI=.20000.0,S2V5RGF0YTM=.30000.0,S2V5RGF0YTQ=.40000.0,S2V5RGF0YTU=.50000.0|440,441|VerificationPayload THIS STRING IS MEANINGLESS";
+        private const string EXPECTED_TRANSACTION_ID_SEED_V1 = "jp.go.mhlw.cocoa.unit_testS2V5RGF0YTE=.10000.0,S2V5RGF0YTI=.20000.0,S2V5RGF0YTM=.30000.0,S2V5RGF0YTQ=.40000.0,S2V5RGF0YTU=.50000.0440,441";
 
         private const string EXPECTED_CLEAR_TEXT_V1_NO_KEY = "jp.go.mhlw.cocoa.unit_test||440,441|VerificationPayload THIS STRING IS MEANINGLESS";
         private const string EXPECTED_TRANSACTION_ID_SEED_V1_NO_KEY = "jp.go.mhlw.cocoa.unit_test440,441";
@@ -69,7 +69,7 @@ namespace Covid19Radar.Api.Tests.Models
                 KeyData = keyDataBase64,
                 RollingStartNumber = (uint)rollingStartNumber,
                 RollingPeriod = (uint)rollingPeriod,
-                TransmissionRisk = 4,
+                TransmissionRisk = 0,
             };
         }
 
