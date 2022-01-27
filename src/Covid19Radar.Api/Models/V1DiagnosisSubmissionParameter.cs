@@ -9,92 +9,92 @@ using System.Linq;
 
 namespace Covid19Radar.Api.Models
 {
-	public class V1DiagnosisSubmissionParameter : V2DiagnosisSubmissionParameter, IUser
-	{
-		[JsonProperty("userUuid")]
-		public string UserUuid { get; set; }
+    public class V1DiagnosisSubmissionParameter : V2DiagnosisSubmissionParameter, IUser
+    {
+        [JsonProperty("userUuid")]
+        public string UserUuid { get; set; }
 
-		[JsonProperty("keys")]
-		public new Key[] Keys { get; set; }
+        [JsonProperty("keys")]
+        public new Key[] Keys { get; set; }
 
-		[JsonIgnore]
-		public override string KeysTextForDeviceVerification
+        [JsonIgnore]
+        public override string KeysTextForDeviceVerification
         {
-			get
-			{
-				if (Keys is null)
-				{
-					return string.Empty;
-				}
-				return string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
-			}
-		}
+            get
+            {
+                if (Keys is null)
+                {
+                    return string.Empty;
+                }
+                return string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+            }
+        }
 
-		#region Apple Device Check
+        #region Apple Device Check
 
-		[JsonIgnore]
-		public override string DeviceToken
-			=> DeviceVerificationPayload;
+        [JsonIgnore]
+        public override string DeviceToken
+            => DeviceVerificationPayload;
 
-		[JsonIgnore]
-		public override string TransactionIdSeed
-			=> AppPackageName
-				+ KeysTextForDeviceVerification
-				+ IAndroidDeviceVerification.GetRegionString(Regions);
+        [JsonIgnore]
+        public override string TransactionIdSeed
+            => AppPackageName
+                + KeysTextForDeviceVerification
+                + IAndroidDeviceVerification.GetRegionString(Regions);
 
-		#endregion
+        #endregion
 
-		public new class Key
-		{
-			[JsonProperty("keyData")]
-			public string KeyData { get; set; }
-			[JsonProperty("rollingStartNumber")]
-			public uint RollingStartNumber { get; set; }
-			[JsonProperty("rollingPeriod")]
-			public uint RollingPeriod { get; set; }
-			[JsonProperty("transmissionRisk")]
-			public int TransmissionRisk { get; set; }
-			public TemporaryExposureKeyModel ToModel(V1DiagnosisSubmissionParameter _, ulong timestamp)
-			{
-				return new TemporaryExposureKeyModel()
-				{
-					KeyData = Convert.FromBase64String(this.KeyData),
-					RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
-					RollingStartIntervalNumber = (int)this.RollingStartNumber,
-					TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
-					ReportType = Constants.ReportTypeMissingValue,
-					DaysSinceOnsetOfSymptoms = Constants.DaysSinceOnsetOfSymptomsMissingValue,
-					Timestamp = timestamp,
-					Exported = false
-				};
-			}
-			/// <summary>
-			/// Validation
-			/// </summary>
-			/// <returns>true if valid</returns>
-			public bool IsValid()
-			{
-				if (string.IsNullOrWhiteSpace(KeyData)) return false;
-				if (RollingPeriod != 0 && RollingPeriod > Constants.ActiveRollingPeriod) return false;
-				var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds() / 600;
-				var oldest = new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
-				if (RollingStartNumber != 0 && (RollingStartNumber < oldest || RollingStartNumber > now)) return false;
-				return true;
-			}
+        public new class Key
+        {
+            [JsonProperty("keyData")]
+            public string KeyData { get; set; }
+            [JsonProperty("rollingStartNumber")]
+            public uint RollingStartNumber { get; set; }
+            [JsonProperty("rollingPeriod")]
+            public uint RollingPeriod { get; set; }
+            [JsonProperty("transmissionRisk")]
+            public int TransmissionRisk { get; set; }
+            public TemporaryExposureKeyModel ToModel(V1DiagnosisSubmissionParameter _, ulong timestamp)
+            {
+                return new TemporaryExposureKeyModel()
+                {
+                    KeyData = Convert.FromBase64String(this.KeyData),
+                    RollingPeriod = ((int)this.RollingPeriod == 0 ? (int)Constants.ActiveRollingPeriod : (int)this.RollingPeriod),
+                    RollingStartIntervalNumber = (int)this.RollingStartNumber,
+                    TransmissionRiskLevel = TRANSMISSION_RISK_LEVEL,
+                    ReportType = Constants.ReportTypeMissingValue,
+                    DaysSinceOnsetOfSymptoms = Constants.DaysSinceOnsetOfSymptomsMissingValue,
+                    Timestamp = timestamp,
+                    Exported = false
+                };
+            }
+            /// <summary>
+            /// Validation
+            /// </summary>
+            /// <returns>true if valid</returns>
+            public bool IsValid()
+            {
+                if (string.IsNullOrWhiteSpace(KeyData)) return false;
+                if (RollingPeriod != 0 && RollingPeriod > Constants.ActiveRollingPeriod) return false;
+                var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds() / 600;
+                var oldest = new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
+                if (RollingStartNumber != 0 && (RollingStartNumber < oldest || RollingStartNumber > now)) return false;
+                return true;
+            }
 
-			internal string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, TransmissionRisk);
-		}
+            internal string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, TransmissionRisk);
+        }
 
-		public override bool IsValid()
-		{
-			if (string.IsNullOrWhiteSpace(VerificationPayload)) return false;
-			if ((Regions?.Length ?? 0) == 0) return false;
-			if (string.IsNullOrWhiteSpace(Platform)) return false;
-			if (string.IsNullOrWhiteSpace(DeviceVerificationPayload)) return false;
-			if (string.IsNullOrWhiteSpace(AppPackageName)) return false;
-			if (Keys.Any(_ => !_.IsValid())) return false;
-			return true;
-		}
+        public override bool IsValid()
+        {
+            if (string.IsNullOrWhiteSpace(VerificationPayload)) return false;
+            if ((Regions?.Length ?? 0) == 0) return false;
+            if (string.IsNullOrWhiteSpace(Platform)) return false;
+            if (string.IsNullOrWhiteSpace(DeviceVerificationPayload)) return false;
+            if (string.IsNullOrWhiteSpace(AppPackageName)) return false;
+            if (Keys.Any(_ => !_.IsValid())) return false;
+            return true;
+        }
 
-	}
+    }
 }
