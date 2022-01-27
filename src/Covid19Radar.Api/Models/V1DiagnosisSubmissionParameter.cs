@@ -17,6 +17,33 @@ namespace Covid19Radar.Api.Models
 		[JsonProperty("keys")]
 		public new Key[] Keys { get; set; }
 
+		[JsonIgnore]
+		public override string KeysTextForDeviceVerification
+        {
+			get
+			{
+				if (Keys is null)
+				{
+					return string.Empty;
+				}
+				return string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+			}
+		}
+
+		#region Apple Device Check
+
+		[JsonIgnore]
+		public override string DeviceToken
+			=> DeviceVerificationPayload;
+
+		[JsonIgnore]
+		public override string TransactionIdSeed
+			=> AppPackageName
+				+ KeysTextForDeviceVerification
+				+ IAndroidDeviceVerification.GetRegionString(Regions);
+
+		#endregion
+
 		public new class Key
 		{
 			[JsonProperty("keyData")]
@@ -55,7 +82,7 @@ namespace Covid19Radar.Api.Models
 				return true;
 			}
 
-			internal string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, TransmissionRisk);
+			internal string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, TransmissionRisk);
 		}
 
 		public override bool IsValid()

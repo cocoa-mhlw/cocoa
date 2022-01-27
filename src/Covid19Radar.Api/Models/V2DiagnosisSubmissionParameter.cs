@@ -32,17 +32,25 @@ namespace Covid19Radar.Api.Models
 		public string Padding { get; set; }
 
 		[JsonIgnore]
-		public string KeysTextForDeviceVerification
-			=> string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+		public virtual string KeysTextForDeviceVerification
+        {
+			get {
+				if (Keys is null)
+                {
+					return string.Empty;
+                }
+				return string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+			}
+		}
 
 		#region Apple Device Check
 
 		[JsonIgnore]
-		public string DeviceToken
+		public virtual string DeviceToken
 			=> DeviceVerificationPayload;
 
 		[JsonIgnore]
-		public string TransactionIdSeed
+		public virtual string TransactionIdSeed
 			=> AppPackageName
 				+ KeysTextForDeviceVerification
 				+ IAndroidDeviceVerification.GetRegionString(Regions);
@@ -52,11 +60,11 @@ namespace Covid19Radar.Api.Models
 		#region Android SafetyNet Attestation API
 
 		[JsonIgnore]
-		public string JwsPayload
+		public virtual string JwsPayload
 			=> DeviceVerificationPayload;
 
 		[JsonIgnore]
-		public string ClearText
+		public virtual string ClearText
 			=> string.Join("|", AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
 
 		#endregion
