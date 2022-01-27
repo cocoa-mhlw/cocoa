@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,8 +15,9 @@ namespace Covid19Radar.iOS.Services
 {
     public class ExposureNotificationApiService : AbsExposureNotificationApiService
     {
-        private ExposureNotificationClient _exposureNotificationClient = new ExposureNotificationClient();
+        private const int MILLISECONDS_TO_WAIT_DISMISSING_ANIMATION = 1000;
 
+        private ExposureNotificationClient _exposureNotificationClient = new ExposureNotificationClient();
         public string UserExplanation
         {
             set => _exposureNotificationClient.UserExplanation = value;
@@ -30,8 +32,22 @@ namespace Covid19Radar.iOS.Services
         public override Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
             => _exposureNotificationClient.GetStatusesAsync();
 
-        public override Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
-            => _exposureNotificationClient.GetTemporaryExposureKeyHistoryAsync();
+        public override async Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
+        {
+            try
+            {
+                return await _exposureNotificationClient.GetTemporaryExposureKeyHistoryAsync();
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                // [workaround] wait for dismissing en permission modal
+                await Task.Delay(MILLISECONDS_TO_WAIT_DISMISSING_ANIMATION);
+            }
+        }
 
         public override Task<long> GetVersionAsync()
             => _exposureNotificationClient.GetVersionAsync();
