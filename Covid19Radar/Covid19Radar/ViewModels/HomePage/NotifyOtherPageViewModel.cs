@@ -306,9 +306,6 @@ namespace Covid19Radar.ViewModels
                 {
                     loggerService.Info("GetTekHistory request is declined by user.");
 
-                    // Workarround for that HideLoading conflicts with AlertAsync on iOS.
-                    await Task.Delay(_delayForErrorMillis);
-
                     UserDialogs.Instance.HideLoading();
 
                     await UserDialogs.Instance.AlertAsync(
@@ -326,9 +323,6 @@ namespace Covid19Radar.ViewModels
             catch (Exception ex)
             {
                 errorCount++;
-
-                // Workarround for that HideLoading conflicts with AlertAsync on iOS.
-                await Task.Delay(_delayForErrorMillis);
 
                 UserDialogs.Instance.HideLoading();
 
