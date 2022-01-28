@@ -38,10 +38,6 @@ namespace Covid19Radar.iOS.Services
             {
                 return await _exposureNotificationClient.GetTemporaryExposureKeyHistoryAsync();
             }
-            catch(Exception)
-            {
-                throw;
-            }
             finally
             {
                 // [workaround] wait for dismissing en permission modal
