@@ -458,10 +458,16 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                // UserDialogs.Instance.Loading must be executde in MainThread.
                 using (UserDialogs.Instance.Loading(AppResources.LoadingTextRegistering))
                 {
-                    await SubmitDiagnosisKeys();
+                    HttpStatusCode httpResult = await SubmitDiagnosisKeys();
+
+                    ShowResult(httpResult);
+
+                    if (httpResult != HttpStatusCode.OK)
+                    {
+                        errorCount++;
+                    }
                 }
             }
             catch (ENException exception)
@@ -471,7 +477,8 @@ namespace Covid19Radar.ViewModels
             catch (Exception ex)
             {
                 errorCount++;
-                UserDialogs.Instance.Alert(
+
+                await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDialogExceptionText,
                     AppResources.NotifyOtherPageDialogExceptionTitle,
                     AppResources.ButtonOk
