@@ -303,8 +303,6 @@
     <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%402x.png" />
     <BundleResource Include="Resources\Base.lproj\arrow_icon%403x.png" />
     <BundleResource Include="Resources\Base.lproj\arrow_icon%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\Nocontact10%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\Nocontact10%403x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage20%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage20%403x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage21%402x.png" />
@@ -329,8 +327,6 @@
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage31%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage32%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage32%403x.png" />
-    <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%402x.png" />
-    <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%403x.png" />
     <BundleResource Include="Resources\license.html" />
     <BundleResource Include="Resources\Base.lproj\app_share_icon%402x.png" />
     <BundleResource Include="Resources\Base.lproj\app_share_icon%403x.png" />
@@ -362,6 +358,7 @@
     <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%403x.png" />
     <BundleResource Include="Resources\Base.lproj\icon_arrow%402x.png" />
     <BundleResource Include="Resources\Base.lproj\icon_arrow%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_check_page_head.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -513,12 +510,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage32%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\Nocontact10%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\Nocontact10%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage22%402x.png" />

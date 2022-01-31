@@ -185,7 +185,7 @@ namespace Covid19Radar.Repository
             }
         }
 
-        private static V1ExposureRiskCalculationConfiguration CreateDefaultConfiguration()
+        public static V1ExposureRiskCalculationConfiguration CreateDefaultConfiguration()
         {
             return new V1ExposureRiskCalculationConfiguration()
             {
