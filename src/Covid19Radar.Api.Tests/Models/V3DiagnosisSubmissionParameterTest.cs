@@ -17,6 +17,9 @@ namespace Covid19Radar.Api.Tests.Models
         private const string EXPECTED_CLEAR_TEXT_V3 = "2021-12-19T19:02:00.000+09:00|jp.go.mhlw.cocoa.unit_test|S2V5RGF0YTE=.10000.140.1,S2V5RGF0YTI=.20000.141.1,S2V5RGF0YTM=.30000.142.1,S2V5RGF0YTQ=.40000.143.1,S2V5RGF0YTU=.50000.70.1|440,441|VerificationPayload THIS STRING IS MEANINGLESS";
         private const string EXPECTED_TRANSACTION_ID_SEED_V3 = "2021-12-19T19:02:00.000+09:00jp.go.mhlw.cocoa.unit_testS2V5RGF0YTE=.10000.140.1,S2V5RGF0YTI=.20000.141.1,S2V5RGF0YTM=.30000.142.1,S2V5RGF0YTQ=.40000.143.1,S2V5RGF0YTU=.50000.70.1440,441";
 
+        private const string EXPECTED_CLEAR_TEXT_V3_NO_KEY = "2021-12-19T19:02:00.000+09:00|jp.go.mhlw.cocoa.unit_test||440,441|VerificationPayload THIS STRING IS MEANINGLESS";
+        private const string EXPECTED_TRANSACTION_ID_SEED_V3_NO_KEY = "2021-12-19T19:02:00.000+09:00jp.go.mhlw.cocoa.unit_test440,441";
+
         [TestMethod]
         public void CreateMethod()
         {
@@ -133,6 +136,99 @@ namespace Covid19Radar.Api.Tests.Models
             Assert.AreEqual(dummyDeviceVerificationPayload, model.DeviceToken);
             Assert.AreEqual(
                 EXPECTED_TRANSACTION_ID_SEED_V3,
+                model.TransactionIdSeed
+                );
+        }
+
+        [TestMethod]
+        public void DeviceVerificationTest_NoKey()
+        {
+            var platform = "Android";
+            V3DiagnosisSubmissionParameter.Key[] dummyDiagnosisKeyDataList = new V3DiagnosisSubmissionParameter.Key[]{
+            };
+
+            var dummyRegions = new string[]
+            {
+                "440",
+                "441",
+            };
+            var dummySymptomOnsetDate = "2021-12-19T19:02:00.000+09:00";
+
+            var dummyDeviceVerificationPayload = "DeviceVerificationPayload THIS STRING IS MEANINGLESS";
+            var dummyAppPackageName = "jp.go.mhlw.cocoa.unit_test";
+            var dummyVerificationPayload = "VerificationPayload THIS STRING IS MEANINGLESS";
+
+            // This value will not affect any result.
+            var dummyPadding = new Random().Next().ToString();
+
+            // preparation
+            var model = new V3DiagnosisSubmissionParameter()
+            {
+                Platform = platform,
+                Regions = dummyRegions,
+                SymptomOnsetDate = dummySymptomOnsetDate,
+                Keys = dummyDiagnosisKeyDataList,
+                DeviceVerificationPayload = dummyDeviceVerificationPayload,
+                AppPackageName = dummyAppPackageName,
+                VerificationPayload = dummyVerificationPayload,
+                Padding = dummyPadding,
+            };
+
+            Assert.AreEqual(dummyDeviceVerificationPayload, model.JwsPayload);
+            Assert.AreEqual(
+                EXPECTED_CLEAR_TEXT_V3_NO_KEY,
+                model.ClearText
+                );
+
+            Assert.AreEqual(dummyDeviceVerificationPayload, model.DeviceToken);
+            Assert.AreEqual(
+                EXPECTED_TRANSACTION_ID_SEED_V3_NO_KEY,
+                model.TransactionIdSeed
+                );
+        }
+
+        [TestMethod]
+        public void DeviceVerificationTestKeysNull()
+        {
+            var platform = "Android";
+            V3DiagnosisSubmissionParameter.Key[] dummyDiagnosisKeyDataList = null;
+
+            var dummyRegions = new string[]
+            {
+                "440",
+                "441",
+            };
+            var dummySymptomOnsetDate = "2021-12-19T19:02:00.000+09:00";
+
+            var dummyDeviceVerificationPayload = "DeviceVerificationPayload THIS STRING IS MEANINGLESS";
+            var dummyAppPackageName = "jp.go.mhlw.cocoa.unit_test";
+            var dummyVerificationPayload = "VerificationPayload THIS STRING IS MEANINGLESS";
+
+            // This value will not affect any result.
+            var dummyPadding = new Random().Next().ToString();
+
+            // preparation
+            var model = new V3DiagnosisSubmissionParameter()
+            {
+                Platform = platform,
+                Regions = dummyRegions,
+                SymptomOnsetDate = dummySymptomOnsetDate,
+                Keys = dummyDiagnosisKeyDataList,
+                DeviceVerificationPayload = dummyDeviceVerificationPayload,
+                AppPackageName = dummyAppPackageName,
+                VerificationPayload = dummyVerificationPayload,
+                Padding = dummyPadding,
+            };
+
+            Assert.AreEqual(dummyDeviceVerificationPayload, model.JwsPayload);
+            Assert.AreEqual(
+                EXPECTED_CLEAR_TEXT_V3_NO_KEY,
+                model.ClearText
+                );
+
+            Assert.AreEqual(dummyDeviceVerificationPayload, model.DeviceToken);
+            Assert.AreEqual(
+                EXPECTED_TRANSACTION_ID_SEED_V3_NO_KEY,
                 model.TransactionIdSeed
                 );
         }
