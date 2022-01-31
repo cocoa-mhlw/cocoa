@@ -36,37 +36,6 @@ namespace Covid19Radar.Api.Tests.Models
             Helper.ModelTestHelper.PropetiesTest(model);
         }
 
-        [DataTestMethod]
-        [DataRow("KEYDATA", 0, 0, 0, true)]
-        [DataRow("KEYDATA", 145, 0, 0, false)]
-        [DataRow("KEYDATA", 144, -15, 0, false)]
-        [DataRow("KEYDATA", 144, -14, 0, true)]
-        [DataRow("KEYDATA", 144, -6, 0, true)]
-        [DataRow("KEYDATA", 144, -5, 0, true)]
-        [DataRow("KEYDATA", 144, -4, 0, true)]
-        [DataRow("KEYDATA", 144, -3, 0, true)]
-        [DataRow("KEYDATA", 144, -2, 0, true)]
-        [DataRow("KEYDATA", 144, -1, 0, true)]
-        [DataRow("KEYDATA", 144, 0, 0, true)]
-        [DataRow("KEYDATA", 144, 0, -14, true)]
-        [DataRow("KEYDATA", 144, 0, 14, true)]
-        [DataRow("KEYDATA", 144, 0, -15, false)]
-        [DataRow("KEYDATA", 144, 0, 15, false)]
-        [DataRow("KEYDATA", 144, 1, 0, false)]
-        public void KeyValidationTest(string keyData, int rollingPeriod, int rollingStartNummberDayOffset, int daysSinceOnsetOfSymptoms, bool isValid)
-        {
-            var dateTime = DateTime.UtcNow.Date;
-
-            var key = CreateDiagnosisKey(
-                keyData,
-                (int)dateTime.AddDays(rollingStartNummberDayOffset).ToRollingStartNumber(),
-                rollingPeriod,
-                1,
-                daysSinceOnsetOfSymptoms
-            );
-            Assert.AreEqual(isValid, key.IsValid());
-        }
-
         private static V3DiagnosisSubmissionParameter.Key CreateDiagnosisKey(
             string keyData,
             int rollingStartNumber,

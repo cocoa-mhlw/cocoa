@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Api.Common;
 using Microsoft.Extensions.Configuration;
 
 namespace Covid19Radar.Api
@@ -38,6 +39,39 @@ namespace Covid19Radar.Api
         public static string VerificationPayloadApiSecret(this IConfiguration config) => config["VerificationPayloadApiSecret"];
         public static string VerificationPayloadPfx(this IConfiguration config) => config["VerificationPayloadPfx"];
         public static string VerificationPayloadUrl(this IConfiguration config) => config["VerificationPayloadUrl"];
+
+        public static int MinDaysSinceOnsetOfSymptoms(this IConfiguration config)
+        {
+            if (int.TryParse(config["MinDaysSinceOnsetOfSymptoms"], out int result))
+            {
+                return result;
+            }
+            return Constants.MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS;
+        }
+        public static int MaxDaysSinceOnsetOfSymptoms(this IConfiguration config)
+        {
+            if (int.TryParse(config["MaxDaysSinceOnsetOfSymptoms"], out int result))
+            {
+                return result;
+            }
+            return Constants.MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS;
+        }
+        public static int MinDaysSinceOnsetOfDiagnosis(this IConfiguration config)
+        {
+            if (int.TryParse(config["MinDaysSinceOnsetOfDiagnosis"], out int result))
+            {
+                return result;
+            }
+            return Constants.MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS;
+        }
+        public static int MaxDaysSinceOnsetOfDiagnosis(this IConfiguration config)
+        {
+            if (int.TryParse(config["MaxDaysSinceOnsetOfDiagnosis"], out int result))
+            {
+                return result;
+            }
+            return Constants.MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS;
+        }
     }
-    
+
 }

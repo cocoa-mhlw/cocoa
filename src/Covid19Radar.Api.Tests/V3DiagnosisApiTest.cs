@@ -39,12 +39,14 @@ namespace Covid19Radar.Api.Tests
             var validationServer = new Mock<IValidationServerService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
             var verification = new Mock<IVerificationService>();
+            var temporaryExposureKeyValidationService = new Mock<ITemporaryExposureKeyValidationService>();
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
+                                                temporaryExposureKeyValidationService.Object,
                                                 logger);
         }
 
@@ -85,12 +87,17 @@ namespace Covid19Radar.Api.Tests
             var deviceCheck = new Mock<IDeviceValidationService>();
             deviceCheck.Setup(_ => _.Validation(It.IsAny<string>(), It.IsAny<V3DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var verification = new Mock<IVerificationService>();
+
+            var temporaryExposureKeyValidationService = new Mock<ITemporaryExposureKeyValidationService>();
+            temporaryExposureKeyValidationService.Setup(x => x.Validate(It.IsAny<bool>(), It.IsAny<V3DiagnosisSubmissionParameter.Key>())).Returns(true);
+
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
+                                                temporaryExposureKeyValidationService.Object,
                                                 logger);
             var context = new Mock<HttpContext>();
             var keydata = new byte[KEY_LENGTH];
@@ -188,12 +195,17 @@ namespace Covid19Radar.Api.Tests
             var deviceCheck = new Mock<IDeviceValidationService>();
             deviceCheck.Setup(_ => _.Validation(It.IsAny<string>(), It.IsAny<V3DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var verification = new Mock<IVerificationService>();
+
+            var temporaryExposureKeyValidationService = new Mock<ITemporaryExposureKeyValidationService>();
+            temporaryExposureKeyValidationService.Setup(x => x.Validate(It.IsAny<bool>(), It.IsAny<V3DiagnosisSubmissionParameter.Key>())).Returns(true);
+
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
+                                                temporaryExposureKeyValidationService.Object,
                                                 logger);
             var context = new Mock<HttpContext>();
             var keydata = new byte[KEY_LENGTH];
