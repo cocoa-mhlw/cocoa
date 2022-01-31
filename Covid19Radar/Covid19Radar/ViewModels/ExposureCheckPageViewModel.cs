@@ -27,6 +27,7 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService _loggerService;
         private readonly IExposureDataRepository _exposureDataRepository;
+        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
         private readonly IUserDataRepository _userDataRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
@@ -62,6 +63,7 @@ namespace Covid19Radar.ViewModels
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
             IUserDataRepository userDataRepository,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IDateTimeUtility dateTimeUtility
             ) : base(navigationService)
         {
@@ -69,6 +71,7 @@ namespace Covid19Radar.ViewModels
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _userDataRepository = userDataRepository;
+            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _dateTimeUtility = dateTimeUtility;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
@@ -82,6 +85,12 @@ namespace Covid19Radar.ViewModels
 
             _exposureRiskCalculationConfiguration
                 = parameters.GetValue<V1ExposureRiskCalculationConfiguration>(ExposureCheckPage.ExposureRiskCalculationConfigurationKey);
+
+            if (_exposureRiskCalculationConfiguration is null)
+            {
+                _exposureRiskCalculationConfiguration
+                    = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+            }
 
             ShowExposureRiskCalculationConfiguration();
 
