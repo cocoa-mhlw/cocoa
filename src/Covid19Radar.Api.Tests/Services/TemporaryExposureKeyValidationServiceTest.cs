@@ -19,13 +19,14 @@ namespace Covid19Radar.Api.Tests.Services
         [DataTestMethod]
 
         // KeyData
-        [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 0, 144, 0, 1, 0, -3, +10, -3, +7, true)]
-        [DataRow(false, "                        ", 0, 144, 0, 1, 0, -3, +10, -3, +7, false)]
-        [DataRow(false, null, 0, 144, 0, 1, 0, -3, +10, -3, +7, false)]
-        [DataRow(false, "", 0, 144, 0, 1, 0, -3, +10, -3, +7, false)]
+        [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 0, 144, 0, 1, 0, -20, +20, -20, +20, true)]
+        [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ=", 0, 144, 0, 1, 0, -20, +20, -20, +20, false)]
+        [DataRow(false, "VE9PT09PT09PT09PTE9OR0tFWQ==", 0, 144, 0, 1, 0, -20, +20, -20, +20, false)]
+        [DataRow(false, "                        ", 0, 144, 0, 1, 0, -20, +20, -20, +20, false)]
+        [DataRow(false, null, 0, 144, 0, 1, 0, -20, +20, -20, +20, false)]
+        [DataRow(false, "", 0, 144, 0, 1, 0, -20, +20, -20, +20, false)]
 
         // rollingStartNumber
-        [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ=", 0, 144, 0, 1, 0, -20, +20, -20, +20, false)]
         [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 1, 144, 0, 1, 0, -20, +20, -20, +20, false)]
         [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", -1, 144, 0, 1, 0, -20, +20, -20, +20, true)]
         [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", -15, 144, 0, 1, 0, -20, +20, -20, +20, false)]
@@ -39,8 +40,8 @@ namespace Covid19Radar.Api.Tests.Services
         [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 0, 144, 8, 5, 0, -20, +20, -20, +20, false)]
 
         // ReportType
-        [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 0, 144, 7, 5, 0, -3, -20, +20, -20, +20, true)]
-        [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 0, 144, 7, 6, 0, -3, -20, +20, -20, +20, false)]
+        [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 0, 144, 7, 5, 0, -20, +20, -20, +20, true)]
+        [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 0, 144, 7, 6, 0, -20, +20, -20, +20, false)]
 
         // DaysSinceOnsetOfSymptoms
         [DataRow(false, "IVb9YMEnlTzsReDYUmZxQQ==", 0, 144, 7, 5, +14, -20, +20, -20, +20, true)]
