@@ -43,7 +43,7 @@ steps:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
     configuration: Debug
     signingIdentity: 'Apple Development'
-    signingProvisioningProfileID: '4144fdfd-eaa5-4adc-8468-a18c4641ef89'
+    signingProvisioningProfileID: '996dbea7-92cd-4b7d-98a1-3742767b6bfd'
   condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'true'))
 
 - task: CopyFiles@2
