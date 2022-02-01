@@ -13,7 +13,7 @@ steps:
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_development_20230117.mobileprovision'
+    provProfileSecureFile: 'cocoa_development_20230201.mobileprovision'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -34,7 +34,7 @@ steps:
     configuration: Debug
     args: '/p:DefineConstants=DEBUG=0'
     signingIdentity: 'Apple Development'
-    signingProvisioningProfileID: '4144fdfd-eaa5-4adc-8468-a18c4641ef89'
+    signingProvisioningProfileID: '996dbea7-92cd-4b7d-98a1-3742767b6bfd'
   condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'false'))
 
 - task: XamariniOS@2
