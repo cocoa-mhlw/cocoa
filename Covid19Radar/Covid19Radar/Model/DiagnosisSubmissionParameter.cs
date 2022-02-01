@@ -8,6 +8,9 @@ namespace Covid19Radar.Model
 {
     public class DiagnosisSubmissionParameter
     {
+        [JsonProperty("hasSymptom")]
+        public bool HasSymptom { get; set; }
+
         [JsonProperty("symptomOnsetDate")]
         public string SymptomOnsetDate { get; set; }
 

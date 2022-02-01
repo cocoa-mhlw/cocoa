@@ -33,6 +33,8 @@ namespace Covid19Radar.ViewModels
         private readonly IEssentialsService _essentialsService;
         private readonly int _delayForErrorMillis;
 
+        private bool _hasSymptom = false;
+
         private string _processingNumber;
         public string ProcessingNumber
         {
@@ -366,6 +368,7 @@ namespace Covid19Radar.ViewModels
             }
 
             return await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+                _hasSymptom,
                 _diagnosisDate,
                 filteredTemporaryExposureKeyList,
                 ProcessingNumber,
@@ -429,11 +432,13 @@ namespace Covid19Radar.ViewModels
 
             if (AppResources.NotifyOtherPageRadioButtonYes.Equals(text))
             {
+                _hasSymptom = true;
                 IsVisibleWithSymptomsLayout = true;
                 IsVisibleNoSymptomsLayout = false;
             }
             else if (AppResources.NotifyOtherPageRadioButtonNo.Equals(text))
             {
+                _hasSymptom = false;
                 IsVisibleWithSymptomsLayout = false;
                 IsVisibleNoSymptomsLayout = true;
             }
