@@ -121,7 +121,8 @@ namespace Covid19Radar.Api.Services
                     _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_infectiousFilterDaysSinceOnsetOfSymptomsFrom} to {_infectiousFilterDaysSinceOnsetOfSymptomsTo} but {key.DaysSinceOnsetOfSymptoms}");
                     return false;
                 }
-            } else
+            }
+            else
             {
                 _logger.LogDebug("diagnosis");
 
