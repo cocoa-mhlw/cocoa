@@ -271,24 +271,25 @@ namespace Covid19Radar.Api.Tests
 
                 V3DiagnosisSubmissionParameter resultParameter = JsonConvert.DeserializeObject<V3DiagnosisSubmissionParameter>(okObjectResult.Value.ToString());
 
-                // Expect 2 items filtered.
-                Assert.AreEqual(15, resultParameter.Keys.Count());
+                Assert.AreEqual(17, resultParameter.Keys.Count());
 
-                Assert.AreEqual(-7, resultParameter.Keys[0].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-6, resultParameter.Keys[1].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-5, resultParameter.Keys[2].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-4, resultParameter.Keys[3].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-3, resultParameter.Keys[4].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-2, resultParameter.Keys[5].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-1, resultParameter.Keys[6].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(0, resultParameter.Keys[7].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(1, resultParameter.Keys[8].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(2, resultParameter.Keys[9].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(3, resultParameter.Keys[10].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(4, resultParameter.Keys[11].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(5, resultParameter.Keys[12].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(6, resultParameter.Keys[13].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(7, resultParameter.Keys[14].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-8, resultParameter.Keys[0].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-7, resultParameter.Keys[1].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-6, resultParameter.Keys[2].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-5, resultParameter.Keys[3].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-4, resultParameter.Keys[4].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-3, resultParameter.Keys[5].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-2, resultParameter.Keys[6].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-1, resultParameter.Keys[7].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(0, resultParameter.Keys[8].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(1, resultParameter.Keys[9].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(2, resultParameter.Keys[10].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(3, resultParameter.Keys[11].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(4, resultParameter.Keys[12].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(5, resultParameter.Keys[13].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(6, resultParameter.Keys[14].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(7, resultParameter.Keys[15].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(8, resultParameter.Keys[16].DaysSinceOnsetOfSymptoms);
             }
             else
             {
