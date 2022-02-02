@@ -40,33 +40,33 @@ namespace Covid19Radar.Api
         public static string VerificationPayloadPfx(this IConfiguration config) => config["VerificationPayloadPfx"];
         public static string VerificationPayloadUrl(this IConfiguration config) => config["VerificationPayloadUrl"];
 
-        public static int MinDaysSinceOnsetOfSymptoms(this IConfiguration config)
+        public static int DaysSinceOnsetOfSymptomsMin(this IConfiguration config)
         {
-            if (int.TryParse(config["MinDaysSinceOnsetOfSymptoms"], out int result))
+            if (int.TryParse(config["DaysSinceOnsetOfSymptomsMin"], out int result))
             {
                 return result;
             }
             return Constants.MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS;
         }
-        public static int MaxDaysSinceOnsetOfSymptoms(this IConfiguration config)
+        public static int DaysSinceOnsetOfSymptomsMax(this IConfiguration config)
         {
-            if (int.TryParse(config["MaxDaysSinceOnsetOfSymptoms"], out int result))
+            if (int.TryParse(config["DaysSinceOnsetOfSymptomsMax"], out int result))
             {
                 return result;
             }
             return Constants.MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS;
         }
-        public static int MinDaysSinceOnsetOfDiagnosis(this IConfiguration config)
+        public static int DaysSinceOnsetOfDiagnosisMin(this IConfiguration config)
         {
-            if (int.TryParse(config["MinDaysSinceOnsetOfDiagnosis"], out int result))
+            if (int.TryParse(config["DaysSinceOnsetOfDiagnosisMin"], out int result))
             {
                 return result;
             }
             return Constants.MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS;
         }
-        public static int MaxDaysSinceOnsetOfDiagnosis(this IConfiguration config)
+        public static int DaysSinceOnsetOfDiagnosisMax(this IConfiguration config)
         {
-            if (int.TryParse(config["MaxDaysSinceOnsetOfDiagnosis"], out int result))
+            if (int.TryParse(config["DaysSinceOnsetOfDiagnosisMax"], out int result))
             {
                 return result;
             }

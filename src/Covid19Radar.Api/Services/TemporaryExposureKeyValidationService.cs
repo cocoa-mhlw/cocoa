@@ -14,11 +14,11 @@ namespace Covid19Radar.Api.Services
 
     public class TemporaryExposureKeyValidationService : ITemporaryExposureKeyValidationService
     {
-        private readonly int _minDaysSinceOnsetOfSymptoms;
-        private readonly int _maxDaysSinceOnsetOfSymptoms;
+        private readonly int _daysSinceOnsetOfSymptomsMin;
+        private readonly int _daysSinceOnsetOfSymptomsMax;
 
-        private readonly int _minDaysSinceOnsetOfDiagnosis;
-        private readonly int _maxDaysSinceOnsetOfDiagnosis;
+        private readonly int _daysSinceOnsetOfDiagnosisMin;
+        private readonly int _daysSinceOnsetOfDiagnosisMax;
 
         private readonly ILogger<TemporaryExposureKeyValidationService> _logger;
 
@@ -27,11 +27,11 @@ namespace Covid19Radar.Api.Services
             ILogger<TemporaryExposureKeyValidationService> logger
             )
         {
-            _minDaysSinceOnsetOfSymptoms = configuration.MinDaysSinceOnsetOfSymptoms();
-            _maxDaysSinceOnsetOfSymptoms = configuration.MaxDaysSinceOnsetOfSymptoms();
+            _daysSinceOnsetOfSymptomsMin = configuration.DaysSinceOnsetOfSymptomsMin();
+            _daysSinceOnsetOfSymptomsMax = configuration.DaysSinceOnsetOfSymptomsMax();
 
-            _minDaysSinceOnsetOfDiagnosis = configuration.MinDaysSinceOnsetOfDiagnosis();
-            _maxDaysSinceOnsetOfDiagnosis = configuration.MaxDaysSinceOnsetOfDiagnosis();
+            _daysSinceOnsetOfDiagnosisMin = configuration.DaysSinceOnsetOfDiagnosisMin();
+            _daysSinceOnsetOfDiagnosisMax = configuration.DaysSinceOnsetOfDiagnosisMax();
 
             _logger = logger;
         }
@@ -114,22 +114,22 @@ namespace Covid19Radar.Api.Services
             {
                 _logger.LogDebug("hasSymptom");
 
-                if (_minDaysSinceOnsetOfSymptoms > key.DaysSinceOnsetOfSymptoms
-                    || _maxDaysSinceOnsetOfSymptoms < key.DaysSinceOnsetOfSymptoms
+                if (_daysSinceOnsetOfSymptomsMin > key.DaysSinceOnsetOfSymptoms
+                    || _daysSinceOnsetOfSymptomsMax < key.DaysSinceOnsetOfSymptoms
                     )
                 {
-                    _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_minDaysSinceOnsetOfSymptoms} to {_maxDaysSinceOnsetOfSymptoms} but {key.DaysSinceOnsetOfSymptoms}");
+                    _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_daysSinceOnsetOfSymptomsMin} to {_daysSinceOnsetOfSymptomsMax} but {key.DaysSinceOnsetOfSymptoms}");
                     return false;
                 }
             } else
             {
                 _logger.LogDebug("diagnosis");
 
-                if (_minDaysSinceOnsetOfDiagnosis > key.DaysSinceOnsetOfSymptoms
-                    || _maxDaysSinceOnsetOfDiagnosis < key.DaysSinceOnsetOfSymptoms
+                if (_daysSinceOnsetOfDiagnosisMin > key.DaysSinceOnsetOfSymptoms
+                    || _daysSinceOnsetOfDiagnosisMax < key.DaysSinceOnsetOfSymptoms
                     )
                 {
-                    _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_minDaysSinceOnsetOfDiagnosis} to {_maxDaysSinceOnsetOfDiagnosis} but {key.DaysSinceOnsetOfSymptoms}");
+                    _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_daysSinceOnsetOfDiagnosisMin} to {_daysSinceOnsetOfDiagnosisMax} but {key.DaysSinceOnsetOfSymptoms}");
                     return false;
                 }
             }

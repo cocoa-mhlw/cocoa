@@ -68,19 +68,19 @@ namespace Covid19Radar.Api.Tests.Services
             int transmissionRisk,
             int reportType,
             int daysSinceOnsetOfSymptoms,
-            int minDaysSinceOnsetOfSymptom,
-            int maxDaysSinceOnsetOfSymptom,
-            int minDaysSinceOnsetOfDiagnosis,
-            int maxDaysSinceOnsetOfDiagnosis,
+            int daysSinceOnsetOfSymptomMin,
+            int daysSinceOnsetOfSymptomMax,
+            int daysSinceOnsetOfDiagnosisMin,
+            int daysSinceOnsetOfDiagnosisMax,
             bool expectedResult
             )
         {
             // arrange
             var config = new Mock<IConfiguration>();
-            config.Setup(x => x["MinDaysSinceOnsetOfSymptoms"]).Returns($"{minDaysSinceOnsetOfSymptom}");
-            config.Setup(x => x["MaxDaysSinceOnsetOfSymptoms"]).Returns($"{maxDaysSinceOnsetOfSymptom}");
-            config.Setup(x => x["MinDaysSinceOnsetOfDiagnosis"]).Returns($"{minDaysSinceOnsetOfDiagnosis}");
-            config.Setup(x => x["MaxDaysSinceOnsetOfDiagnosis"]).Returns($"{maxDaysSinceOnsetOfDiagnosis}");
+            config.Setup(x => x["DaysSinceOnsetOfSymptomsMin"]).Returns($"{daysSinceOnsetOfSymptomMin}");
+            config.Setup(x => x["DaysSinceOnsetOfSymptomsMax"]).Returns($"{daysSinceOnsetOfSymptomMax}");
+            config.Setup(x => x["DaysSinceOnsetOfDiagnosisMin"]).Returns($"{daysSinceOnsetOfDiagnosisMin}");
+            config.Setup(x => x["DaysSinceOnsetOfDiagnosisMax"]).Returns($"{daysSinceOnsetOfDiagnosisMax}");
 
             var logger = new Mock.LoggerMock<TemporaryExposureKeyValidationService>();
 
