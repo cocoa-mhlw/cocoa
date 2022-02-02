@@ -11,8 +11,8 @@ namespace Covid19Radar.Model
         [JsonProperty("hasSymptom")]
         public bool HasSymptom { get; set; }
 
-        [JsonProperty("symptomOnsetDate")]
-        public string SymptomOnsetDate { get; set; }
+        [JsonProperty("onSetOfSymptomOrTestDate")]
+        public string OnSetOfSymptomOrTestDate { get; set; }
 
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }

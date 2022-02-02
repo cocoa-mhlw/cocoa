@@ -16,8 +16,8 @@ namespace Covid19Radar.Api.Models
 
         // RFC3339
         // e.g. 2021-09-20T23:52:57.436+00:00
-        [JsonProperty("symptomOnsetDate")]
-        public string SymptomOnsetDate { get; set; }
+        [JsonProperty("onSetOfSymptomOrTestDate")]
+        public string OnSetOfSymptomOrTestDate { get; set; }
 
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
@@ -70,7 +70,7 @@ namespace Covid19Radar.Api.Models
             get
             {
                 var hasSymptom = HasSymptom ? "HasSymptom" : "NoSymptom";
-                return SymptomOnsetDate
+                return OnSetOfSymptomOrTestDate
                     + hasSymptom
                     + AppPackageName
                     + KeysTextForDeviceVerification
@@ -92,7 +92,7 @@ namespace Covid19Radar.Api.Models
             get
             {
                 var hasSymptom = HasSymptom ? "HasSymptom" : "NoSymptom";
-                return string.Join("|", SymptomOnsetDate, hasSymptom, AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
+                return string.Join("|", OnSetOfSymptomOrTestDate, hasSymptom, AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
             }
         }
 
@@ -156,10 +156,10 @@ namespace Covid19Radar.Api.Models
 
         public void SetDaysSinceOnsetOfSymptoms()
         {
-            var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, Constants.FORMAT_TIMESTAMP, null).ToUniversalTime().Date;
+            var onSetOfSymptomOrTestDate = DateTime.ParseExact(OnSetOfSymptomOrTestDate, Constants.FORMAT_TIMESTAMP, null).ToUniversalTime().Date;
             foreach (var key in Keys)
             {
-                var dateOffset = key.GetDate() - symptomOnsetDate;
+                var dateOffset = key.GetDate() - onSetOfSymptomOrTestDate;
                 key.DaysSinceOnsetOfSymptoms = dateOffset.Days;
             }
         }

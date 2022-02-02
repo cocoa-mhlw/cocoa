@@ -14,11 +14,11 @@ namespace Covid19Radar.Api.Services
 
     public class TemporaryExposureKeyValidationService : ITemporaryExposureKeyValidationService
     {
-        private readonly int _daysSinceOnsetOfSymptomsMin;
-        private readonly int _daysSinceOnsetOfSymptomsMax;
+        private readonly int _infectiousFilterDaysSinceOnsetOfSymptomsFrom;
+        private readonly int _infectiousFilterDaysSinceOnsetOfSymptomsTo;
 
-        private readonly int _daysSinceOnsetOfDiagnosisMin;
-        private readonly int _daysSinceOnsetOfDiagnosisMax;
+        private readonly int _infectiousFilterDaysSinceTestFrom;
+        private readonly int _infectiousFilterDaysSinceTestTo;
 
         private readonly ILogger<TemporaryExposureKeyValidationService> _logger;
 
@@ -27,11 +27,11 @@ namespace Covid19Radar.Api.Services
             ILogger<TemporaryExposureKeyValidationService> logger
             )
         {
-            _daysSinceOnsetOfSymptomsMin = configuration.DaysSinceOnsetOfSymptomsMin();
-            _daysSinceOnsetOfSymptomsMax = configuration.DaysSinceOnsetOfSymptomsMax();
+            _infectiousFilterDaysSinceOnsetOfSymptomsFrom = configuration.InfectiousFilterDaysSinceOnsetOfSymptomsFrom();
+            _infectiousFilterDaysSinceOnsetOfSymptomsTo = configuration.InfectiousFilterDaysSinceOnsetOfSymptomsTo();
 
-            _daysSinceOnsetOfDiagnosisMin = configuration.DaysSinceOnsetOfDiagnosisMin();
-            _daysSinceOnsetOfDiagnosisMax = configuration.DaysSinceOnsetOfDiagnosisMax();
+            _infectiousFilterDaysSinceTestFrom = configuration.InfectiousFilterDaysSinceTestFrom();
+            _infectiousFilterDaysSinceTestTo = configuration.InfectiousFilterDaysSinceTestTo();
 
             _logger = logger;
         }
@@ -114,22 +114,22 @@ namespace Covid19Radar.Api.Services
             {
                 _logger.LogDebug("hasSymptom");
 
-                if (_daysSinceOnsetOfSymptomsMin > key.DaysSinceOnsetOfSymptoms
-                    || _daysSinceOnsetOfSymptomsMax < key.DaysSinceOnsetOfSymptoms
+                if (_infectiousFilterDaysSinceOnsetOfSymptomsFrom > key.DaysSinceOnsetOfSymptoms
+                    || _infectiousFilterDaysSinceOnsetOfSymptomsTo < key.DaysSinceOnsetOfSymptoms
                     )
                 {
-                    _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_daysSinceOnsetOfSymptomsMin} to {_daysSinceOnsetOfSymptomsMax} but {key.DaysSinceOnsetOfSymptoms}");
+                    _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_infectiousFilterDaysSinceOnsetOfSymptomsFrom} to {_infectiousFilterDaysSinceOnsetOfSymptomsTo} but {key.DaysSinceOnsetOfSymptoms}");
                     return false;
                 }
             } else
             {
                 _logger.LogDebug("diagnosis");
 
-                if (_daysSinceOnsetOfDiagnosisMin > key.DaysSinceOnsetOfSymptoms
-                    || _daysSinceOnsetOfDiagnosisMax < key.DaysSinceOnsetOfSymptoms
+                if (_infectiousFilterDaysSinceTestFrom > key.DaysSinceOnsetOfSymptoms
+                    || _infectiousFilterDaysSinceTestTo < key.DaysSinceOnsetOfSymptoms
                     )
                 {
-                    _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_daysSinceOnsetOfDiagnosisMin} to {_daysSinceOnsetOfDiagnosisMax} but {key.DaysSinceOnsetOfSymptoms}");
+                    _logger.LogInformation($"key.DaysSinceOnsetOfSymptoms must be in {_infectiousFilterDaysSinceTestFrom} to {_infectiousFilterDaysSinceTestTo} but {key.DaysSinceOnsetOfSymptoms}");
                     return false;
                 }
             }
