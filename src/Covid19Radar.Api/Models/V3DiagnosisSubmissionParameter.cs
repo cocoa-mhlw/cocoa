@@ -70,9 +70,10 @@ namespace Covid19Radar.Api.Models
             get
             {
                 var hasSymptom = HasSymptom ? "HasSymptom" : "NoSymptom";
-                return OnSetOfSymptomOrTestDate
+                return
+                    AppPackageName
+                    + OnSetOfSymptomOrTestDate
                     + hasSymptom
-                    + AppPackageName
                     + KeysTextForDeviceVerification
                     + IAndroidDeviceVerification.GetRegionString(Regions);
             }
@@ -92,7 +93,7 @@ namespace Covid19Radar.Api.Models
             get
             {
                 var hasSymptom = HasSymptom ? "HasSymptom" : "NoSymptom";
-                return string.Join("|", OnSetOfSymptomOrTestDate, hasSymptom, AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
+                return string.Join("|", AppPackageName, OnSetOfSymptomOrTestDate, hasSymptom, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
             }
         }
 
