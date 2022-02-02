@@ -97,7 +97,7 @@ namespace Covid19Radar.Common
                 string.Join(",", keys.OrderBy(k => k.KeyData).Select(k => GetKeyStringCore(k)));
 
             static string GetKeyStringCore(DiagnosisSubmissionParameter.Key k) =>
-                string.Join(".", k.KeyData, k.RollingStartNumber, 0 /* TransmissionRisk was always 0. */);
+                string.Join(".", k.KeyData, k.RollingStartNumber, k.RollingPeriod, 0 /* TransmissionRisk was always 0. */);
 
             static string GetRegionString(IEnumerable<string> regions) =>
                 string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));
