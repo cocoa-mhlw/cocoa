@@ -11,6 +11,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -206,6 +207,27 @@ namespace Covid19Radar.ViewModels
         public Command OnClickShowExposureNotification => new Command(async () =>
         {
             await _localNotificationService.ShowExposureNotificationAsync();
+        });
+
+        public Command OnClickExportExposureWindow => new Command(async () =>
+        {
+            var exposureWindows = await _exposureDataRepository.GetExposureWindowsAsync();
+            var exposureWindowsCsvs = exposureWindows.Select(window =>
+            {
+                var connmaSeparatedWindow = $"{window.CalibrationConfidence},{window.DateMillisSinceEpoch},{window.Infectiousness},{window.ReportType}";
+                var flattenWindows = window.ScanInstances.Select(scanInstance =>
+                {
+                    var connmaSeparatedScanInstance = $"{scanInstance.MinAttenuationDb},{scanInstance.SecondsSinceLastScan},{scanInstance.TypicalAttenuationDb}";
+                    return $"{connmaSeparatedWindow},{connmaSeparatedScanInstance}";
+                });
+                return String.Join("\n", flattenWindows);
+            });
+            var headerCsv = $"CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb";
+            var exportCsv = headerCsv + "\n" + String.Join("\n", exposureWindowsCsvs);
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Text = exportCsv
+            });
         });
 
         public Command OnClickRemoveStartDate => new Command(async () =>
