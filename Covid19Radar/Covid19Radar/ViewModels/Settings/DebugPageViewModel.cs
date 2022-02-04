@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Common;
@@ -214,26 +215,28 @@ namespace Covid19Radar.ViewModels
         public Command OnClickExportExposureWindow => new Command(async () =>
         {
             var exposureWindows = await _exposureDataRepository.GetExposureWindowsAsync();
-            var exposureWindowsCsvs = exposureWindows.Select((window, index) =>
+            var flattenWindowLines = exposureWindows.Select((window, index) =>
             {
                 var humanReadableDateMillisSinceEpoch = DateTimeOffset.UnixEpoch
                     .AddMilliseconds(window.DateMillisSinceEpoch).UtcDateTime
                     .ToLocalTime()
                     .ToString("D", CultureInfo.CurrentCulture);
                 var connmaSeparatedWindow = $"{index},{window.CalibrationConfidence},{humanReadableDateMillisSinceEpoch},{window.Infectiousness},{window.ReportType}";
-                var flattenWindows = window.ScanInstances.Select(scanInstance =>
+                var flattenWindow = window.ScanInstances.Select(scanInstance =>
                 {
                     var connmaSeparatedScanInstance = $"{scanInstance.MinAttenuationDb},{scanInstance.SecondsSinceLastScan},{scanInstance.TypicalAttenuationDb}";
                     return $"{connmaSeparatedWindow},{connmaSeparatedScanInstance}";
                 });
-                return String.Join("\n", flattenWindows);
+                return String.Join("\n", flattenWindow);
             });
-            var headerCsv = $"ExposureWindowIndex,CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb";
-            var exportCsv = headerCsv + "\n" + String.Join("\n", exposureWindowsCsvs);
 
-            var fileName = $"export_exposure_window_{Guid.NewGuid().ToString()}.csv";
+            var csv = new StringBuilder();
+            csv.AppendLine("ExposureWindowIndex,CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb");
+            csv.AppendLine(String.Join("\n", flattenWindowLines));
+
+            var fileName = $"exposure_window_{Guid.NewGuid().ToString()}.csv";
             var file = Path.Combine(FileSystem.CacheDirectory, fileName);
-            File.WriteAllText(file, exportCsv);
+            File.WriteAllText(file, csv.ToString());
 
             var shareFile = new ShareFile(file);
             await Share.RequestAsync(new ShareFileRequest
