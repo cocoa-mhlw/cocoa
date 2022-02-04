@@ -4,6 +4,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
@@ -212,9 +214,13 @@ namespace Covid19Radar.ViewModels
         public Command OnClickExportExposureWindow => new Command(async () =>
         {
             var exposureWindows = await _exposureDataRepository.GetExposureWindowsAsync();
-            var exposureWindowsCsvs = exposureWindows.Select(window =>
+            var exposureWindowsCsvs = exposureWindows.Select((window, index) =>
             {
-                var connmaSeparatedWindow = $"{window.CalibrationConfidence},{window.DateMillisSinceEpoch},{window.Infectiousness},{window.ReportType}";
+                var humanReadableDateMillisSinceEpoch = DateTimeOffset.UnixEpoch
+                    .AddMilliseconds(window.DateMillisSinceEpoch).UtcDateTime
+                    .ToLocalTime()
+                    .ToString("D", CultureInfo.CurrentCulture);
+                var connmaSeparatedWindow = $"{index},{window.CalibrationConfidence},{humanReadableDateMillisSinceEpoch},{window.Infectiousness},{window.ReportType}";
                 var flattenWindows = window.ScanInstances.Select(scanInstance =>
                 {
                     var connmaSeparatedScanInstance = $"{scanInstance.MinAttenuationDb},{scanInstance.SecondsSinceLastScan},{scanInstance.TypicalAttenuationDb}";
@@ -222,11 +228,17 @@ namespace Covid19Radar.ViewModels
                 });
                 return String.Join("\n", flattenWindows);
             });
-            var headerCsv = $"CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb";
+            var headerCsv = $"ExposureWindowNumber,CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb";
             var exportCsv = headerCsv + "\n" + String.Join("\n", exposureWindowsCsvs);
-            await Share.RequestAsync(new ShareTextRequest
+
+            var fileName = $"export_exposure_window_{Guid.NewGuid().ToString()}.csv";
+            var file = Path.Combine(FileSystem.CacheDirectory, fileName);
+            File.WriteAllText(file, exportCsv);
+
+            var shareFile = new ShareFile(file);
+            await Share.RequestAsync(new ShareFileRequest
             {
-                Text = exportCsv
+                File = shareFile
             });
         });
 
