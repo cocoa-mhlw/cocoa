@@ -228,7 +228,7 @@ namespace Covid19Radar.ViewModels
                 });
                 return String.Join("\n", flattenWindows);
             });
-            var headerCsv = $"ExposureWindowNumber,CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb";
+            var headerCsv = $"ExposureWindowIndex,CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb";
             var exportCsv = headerCsv + "\n" + String.Join("\n", exposureWindowsCsvs);
 
             var fileName = $"export_exposure_window_{Guid.NewGuid().ToString()}.csv";
