@@ -19,19 +19,16 @@ namespace Covid19Radar.Repository
     {
         private const string EMPTY_LIST_JSON = "[]";
 
-        private readonly IPreferencesService _preferencesService;
         private readonly ISecureStorageService _secureStorageService;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
 
         public ExposureDataRepository(
-            IPreferencesService preferencesService,
             ISecureStorageService secureStorageService,
             IDateTimeUtility dateTimeUtility,
             ILoggerService loggerService
             )
         {
-            _preferencesService = preferencesService;
             _secureStorageService = secureStorageService;
             _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
@@ -184,8 +181,8 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.SetValue(PreferenceKey.DailySummaries, dailySummaryListJson);
-                _preferencesService.SetValue(PreferenceKey.ExposureWindows, exposureWindowListJson);
+                _secureStorageService.SetValue(PreferenceKey.DailySummaries, dailySummaryListJson);
+                _secureStorageService.SetValue(PreferenceKey.ExposureWindows, exposureWindowListJson);
                 return Task.CompletedTask;
             }
             finally
@@ -200,7 +197,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string dailySummariesJson = _preferencesService.GetValue(PreferenceKey.DailySummaries, EMPTY_LIST_JSON);
+                string dailySummariesJson = _secureStorageService.GetValue(PreferenceKey.DailySummaries, EMPTY_LIST_JSON);
                 return Task.FromResult(
                     JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson)
                 );
@@ -224,7 +221,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string exposureWindowListJson = _preferencesService.GetValue(PreferenceKey.ExposureWindows, EMPTY_LIST_JSON);
+                string exposureWindowListJson = _secureStorageService.GetValue(PreferenceKey.ExposureWindows, EMPTY_LIST_JSON);
                 return Task.FromResult(
                     JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson)
                 );
@@ -248,7 +245,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.RemoveValue(PreferenceKey.DailySummaries);
+                _secureStorageService.RemoveValue(PreferenceKey.DailySummaries);
                 return Task.CompletedTask;
             }
             finally
@@ -263,7 +260,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _preferencesService.RemoveValue(PreferenceKey.ExposureWindows);
+                _secureStorageService.RemoveValue(PreferenceKey.ExposureWindows);
                 return Task.CompletedTask;
             }
             finally
