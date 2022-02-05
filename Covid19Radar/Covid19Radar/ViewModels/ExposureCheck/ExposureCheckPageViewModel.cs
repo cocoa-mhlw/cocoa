@@ -75,42 +75,16 @@ namespace Covid19Radar.ViewModels
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
         }
 
-        public override async void Initialize(INavigationParameters parameters)
+        public override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
 
             _loggerService.StartMethod();
 
-            _exposureRiskCalculationConfiguration
-                = parameters.GetValue<V1ExposureRiskCalculationConfiguration>(ExposureCheckPage.ExposureRiskCalculationConfigurationKey);
+            IsVisibleLowRiskContact = false;
+            IsVisibleNoRiskContact = true;
 
-            ShowExposureRiskCalculationConfiguration();
-
-            try
-            {
-                var summaries = await _exposureDataRepository
-                    .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-                if (0 < summaries.Count())
-                {
-                    IsVisibleLowRiskContact = true;
-                    IsVisibleNoRiskContact = false;
-
-                    _ = SetupExposureCheckScoresAsync(summaries);
-                }
-                else
-                {
-                    IsVisibleLowRiskContact = false;
-                    IsVisibleNoRiskContact = true;
-                }
-            }
-            catch (Exception exception)
-            {
-                _loggerService.Exception("Exception occurred", exception);
-            }
-            finally
-            {
-                _loggerService.EndMethod();
-            }
+            _loggerService.EndMethod();
         }
 
         private void ShowExposureRiskCalculationConfiguration()
