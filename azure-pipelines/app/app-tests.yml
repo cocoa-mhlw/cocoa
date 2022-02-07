@@ -3,15 +3,20 @@ name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 trigger:
   branches:
     include:
-    - master
-    - release/app
-    - develop/app
+    - develop
+    - release/*
     - feature/*
   paths:
     include:
     - Covid19Radar
     - Covid19Radar.sln
     - azure-pipelines/app
+    - Nuget.config
+
+pr:
+  - develop
+  - release/*
+  - feature/*
 
 jobs:
 - job: unit_tests
