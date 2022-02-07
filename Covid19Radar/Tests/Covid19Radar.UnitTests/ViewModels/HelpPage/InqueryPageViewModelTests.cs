@@ -4,6 +4,7 @@
 
 using System;
 using System.Threading.Tasks;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Moq;
@@ -18,20 +19,23 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-
+        private readonly Mock<IEssentialsService> mockEssentialsService;
 
         public InqueryPageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
+            mockEssentialsService = mockRepository.Create<IEssentialsService>();
         }
 
         private InqueryPageViewModel CreateViewModel()
         {
             var vm = new InqueryPageViewModel(
                 mockNavigationService.Object,
-                mockLoggerService.Object);
+                mockLoggerService.Object,
+                mockEssentialsService.Object
+                );
             return vm;
         }
 
