@@ -80,10 +80,10 @@ namespace Covid19Radar.ViewModels
         private string CreateInquiryMailBody()
         {
             return AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n")
-                + "モデル名：（" + essentialsService.Model + "）\r\n"
-                + "OS：（" + essentialsService.Platform + "）\r\n"
-                + "OSバージョン：（" + essentialsService.PlatformVersion + "）\r\n"
-                + "アプリバージョン：（" + essentialsService.AppVersion + "）";
+                + "モデル名：" + essentialsService.Model + "\r\n"
+                + "OS：" + essentialsService.Platform + "\r\n"
+                + "OSバージョン：" + essentialsService.PlatformVersion + "\r\n"
+                + "アプリバージョン：" + essentialsService.AppVersion;
         }
     }
 }
