@@ -822,8 +822,8 @@
     <comment>送信エラー</comment>
   </data>
   <data name="InquiryMailBody" xml:space="preserve">
-    <value>意见反馈正文：\r\n\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n</value>
-    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
+    <value>意见反馈正文：\r\n\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n\r\n----请不要删除下面的部分----\r\n</value>
+    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n\r\n----以下は削除しないでください----\r\n</comment>
   </data>
   <data name="InquiryMailSubject" xml:space="preserve">
     <value>Cocoa的意见反馈​</value>

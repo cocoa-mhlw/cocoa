@@ -5,6 +5,7 @@
 using System;
 using System.Threading.Tasks;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -16,14 +17,16 @@ namespace Covid19Radar.ViewModels
     public class InqueryPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
+        private readonly IEssentialsService essentialsService;
 
         public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
 
-        public InqueryPageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
+        public InqueryPageViewModel(INavigationService navigationService, ILoggerService loggerService, IEssentialsService essentialsService) : base(navigationService)
         {
             Title = AppResources.InqueryPageTitle;
             this.loggerService = loggerService;
+            this.essentialsService = essentialsService;
         }
 
         public Command OnClickQuestionCommand => new Command(async () =>
@@ -52,7 +55,7 @@ namespace Covid19Radar.ViewModels
             {
                 await ComposeEmailAsync(
                     AppResources.InquiryMailSubject,
-                    AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n"),
+                    CreateInquiryMailBody(),
                     new string[] { AppSettings.Instance.SupportEmail });
 
                 loggerService.EndMethod();
@@ -73,5 +76,14 @@ namespace Covid19Radar.ViewModels
 
             loggerService.EndMethod();
         });
+
+        private string CreateInquiryMailBody()
+        {
+            return AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n")
+                + "モデル名：（" + essentialsService.Model + "）\r\n"
+                + "OS：（" + essentialsService.Platform + "）\r\n"
+                + "OSバージョン：（" + essentialsService.PlatformVersion + "）\r\n"
+                + "アプリバージョン：（" + essentialsService.AppVersion + "）";
+        }
     }
 }
