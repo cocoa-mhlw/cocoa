@@ -11,7 +11,7 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:views="clr-namespace:Covid19Radar.Views"
-    Title="{x:Static resources:AppResources.ExposureCheckTitle}"
+    Title="{x:Static resources:AppResources.NotContactPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
