@@ -13,11 +13,6 @@ trigger:
     - azure-pipelines/app
     - Nuget.config
 
-pr:
-  - develop
-  - release/*
-  - feature/*
-
 jobs:
 - job: unit_tests
   pool:

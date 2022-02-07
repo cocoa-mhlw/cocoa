@@ -14,7 +14,7 @@ trigger:
     - Nuget.config
 
 pr:
-  - develop
+  - develop-test
 
 variables:
 - group: app-settings-dev
