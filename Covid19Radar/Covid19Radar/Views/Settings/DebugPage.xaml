@@ -77,6 +77,10 @@
                         Style="{StaticResource DefaultButton}"
                         Text="ShowExposureNotification" />
                     <Button
+                        Command="{Binding Path=OnClickExportExposureWindow}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="ExportExposureWindow" />
+                    <Button
                         Command="{Binding Path=OnClickRemoveStartDate}"
                         Style="{StaticResource DefaultButton}"
                         Text="RemoveStartDate" />
