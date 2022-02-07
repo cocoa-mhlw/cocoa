@@ -94,7 +94,6 @@ namespace Covid19Radar.UnitTests.Services {
                 );
 
             var exposureDataRepository = new ExposureDataRepository(
-                preferencesService.Object,
                 secureStorageService.Object,
                 dateTimeUtility.Object,
                 loggerService.Object
@@ -224,10 +223,10 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
-            preferencesService
+            secureStorageService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
-            preferencesService
+            secureStorageService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
@@ -291,10 +290,10 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService.
                 Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
-            preferencesService
+            secureStorageService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
-            preferencesService
+            secureStorageService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
