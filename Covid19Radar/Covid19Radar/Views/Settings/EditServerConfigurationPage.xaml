@@ -99,6 +99,17 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
+                Text="ExposureRiskCalculationConfigurationUrl"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding ExposureRiskCalculationConfigurationUrl}"
+                Margin="8, 0, 8, 16"
+                Placeholder="ExposureRiskCalculationConfigurationUrl url"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
                 Text="ExposureDataCollectServerEndpoint"
                 Margin="8, 0, 0, 8"
                 />

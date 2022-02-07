@@ -13,7 +13,7 @@ trigger:
 variables:
 - group: app-settings-stg
 - name: AppVersion
-  value: '1.4.1'
+  value: '2.0.0'
 
 jobs:
 - job: build_ios
@@ -32,4 +32,4 @@ jobs:
   - group: android-signing-dev
   - template: templates/variables/android-build-environment-variables.yml
   steps:
-  - template: templates/build/android-build-debug-template.yml
+  - template: templates/build/android-build-adhoc-template.yml

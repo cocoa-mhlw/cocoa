@@ -8,9 +8,9 @@ using Xamarin.Forms.Xaml;
 namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LowRiskContactPage : ContentPage
+    public partial class NoRiskContactLayout : StackLayout
     {
-        public LowRiskContactPage()
+        public NoRiskContactLayout()
         {
             InitializeComponent();
         }

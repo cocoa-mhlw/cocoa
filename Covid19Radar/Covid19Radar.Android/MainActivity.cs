@@ -117,8 +117,7 @@ namespace Covid19Radar.Droid
                 {
                     _loggerService.Value.Info("ProcessingNumber is valid.");
 
-                    var navigationParameters = new NavigationParameters();
-                    navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber, navigationParameters);
+                    var navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber);
                     await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
                 }
                 else
@@ -161,7 +160,7 @@ namespace Covid19Radar.Droid
                 ExposureNotificationApiService.REQUEST_EN_START
                     => new Action<IExposureNotificationEventCallback>(callback =>
                     {
-                        if(isOk)
+                        if (isOk)
                         {
                             callback.OnEnabled();
                         }
@@ -171,7 +170,17 @@ namespace Covid19Radar.Droid
                         }
                     }),
                 ExposureNotificationApiService.REQUEST_GET_TEK_HISTORY
-                    => new Action<IExposureNotificationEventCallback>(callback => { callback.OnGetTekHistoryAllowed(); }),
+                    => new Action<IExposureNotificationEventCallback>(callback =>
+                    {
+                        if (isOk)
+                        {
+                            callback.OnGetTekHistoryAllowed();
+                        }
+                        else
+                        {
+                            callback.OnGetTekHistoryDecline();
+                        }
+                    }),
                 ExposureNotificationApiService.REQUEST_PREAUTHORIZE_KEYS
                     => new Action<IExposureNotificationEventCallback>(callback => { callback.OnPreauthorizeAllowed(); }),
                 _ => new Action<IExposureNotificationEventCallback>(callback => { /* do nothing */ }),

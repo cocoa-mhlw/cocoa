@@ -10,6 +10,8 @@ using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Moq;
 using Prism.Navigation;
@@ -21,20 +23,29 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
-        private readonly Mock<IUserDataRepository> mockUserDataRepository;
+        private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
+        private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
+        private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
+        private readonly Mock<ILoggerService> mockLoggerService;
 
         public ExposurePageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
-            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
+            mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
+            mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
+            mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
+            mockLoggerService = mockRepository.Create<ILoggerService>();
         }
 
         private ExposuresPageViewModel CreateViewModel()
         {
             return new ExposuresPageViewModel(
                 mockNavigationService.Object,
-                mockUserDataRepository.Object
+                mockExposureDataRepository.Object,
+                mockExposureRiskCalculationConfigurationRepository.Object,
+                mockExposureRiskCalculationService.Object,
+                mockLoggerService.Object
                 );
         }
 
@@ -48,10 +59,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, RiskLevel.High),
                 new UserExposureInfo(date, TimeSpan.FromMinutes(20), 98, 98, RiskLevel.Medium),
             };
+            List<DailySummary> dummyDailySummaryList = new List<DailySummary>();
             List<ExposureWindow> dummyExposureWindowList = new List<ExposureWindow>();
 
-            mockUserDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay)).Returns(dummyList);
-            mockUserDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyExposureWindowList));
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
+            mockExposureDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay)).Returns(dummyList);
+            mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyDailySummaryList));
+            mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyExposureWindowList));
 
             var vm = CreateViewModel();
             await vm.InitExposures();
@@ -70,10 +86,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 new UserExposureInfo(date1, TimeSpan.FromMinutes(15), 99, 99, RiskLevel.High),
                 new UserExposureInfo(date2, TimeSpan.FromMinutes(20), 98, 98, RiskLevel.Medium),
             };
+            List<DailySummary> dummyDailySummaryList = new List<DailySummary>();
             List<ExposureWindow> dummyExposureWindowList = new List<ExposureWindow>();
 
-            mockUserDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay)).Returns(testList);
-            mockUserDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyExposureWindowList));
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
+            mockExposureDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay)).Returns(testList);
+            mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyDailySummaryList));
+            mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyExposureWindowList));
 
             var vm = CreateViewModel();
             await vm.InitExposures();
@@ -89,17 +110,22 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             {
                 new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, RiskLevel.High),
             };
+            List<DailySummary> dummyDailySummaryList = new List<DailySummary>();
             List<ExposureWindow> dummyExposureWindowList = new List<ExposureWindow>();
 
-            mockUserDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay)).Returns(testList);
-            mockUserDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyExposureWindowList));
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
+            mockExposureDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay)).Returns(testList);
+            mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyDailySummaryList));
+            mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyExposureWindowList));
 
             var vm = CreateViewModel();
             await vm.InitExposures();
 
             Assert.Single(vm.Exposures);
 
-            Assert.Equal(AppResources.ExposuresPageExposureUnitPluralOnce, vm.Exposures[0].ExposurePluralizeCount);
+            Assert.Equal(AppResources.ExposuresPageExposureUnitPluralOnce, vm.Exposures[0].Description);
         }
 
         [Fact]
@@ -112,17 +138,22 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 new UserExposureInfo(date, TimeSpan.FromMinutes(15), 99, 99, RiskLevel.High),
                 new UserExposureInfo(date, TimeSpan.FromMinutes(20), 98, 98, RiskLevel.Medium)
             };
+            List<DailySummary> dummyDailySummaryList = new List<DailySummary>();
             List<ExposureWindow> dummyExposureWindowList = new List<ExposureWindow>();
 
-            mockUserDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay)).Returns(testList);
-            mockUserDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyExposureWindowList));
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
+            mockExposureDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay)).Returns(testList);
+            mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyDailySummaryList));
+            mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Returns(Task.FromResult(dummyExposureWindowList));
 
             var vm = CreateViewModel();
             await vm.InitExposures();
 
             Assert.Single(vm.Exposures);
 
-            Assert.Equal(string.Format(AppResources.ExposuresPageExposureUnitPlural, 2), vm.Exposures[0].ExposurePluralizeCount);
+            Assert.Equal(string.Format(AppResources.ExposuresPageExposureUnitPlural, 2), vm.Exposures[0].Description);
         }
     }
 }

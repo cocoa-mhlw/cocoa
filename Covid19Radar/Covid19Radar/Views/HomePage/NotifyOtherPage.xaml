@@ -16,7 +16,7 @@
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
-    Visual="Material">
+    >
     <!--
         Workaround for fixing ScrollView truncates items issue.
         https://github.com/xamarin/Xamarin.Forms/issues/13597
@@ -37,7 +37,11 @@
                 Margin="0, 0, 0, 10"
                 Style="{StaticResource DefaultLabelSmall}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageDescription2}" />
-            <StackLayout Orientation="Horizontal" Spacing="30">
+            <StackLayout
+                Orientation="Horizontal"
+                Spacing="30"
+                Visual="Material"
+                >
                 <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="3"
@@ -72,7 +76,7 @@
                         HorizontalOptions="FillAndExpand">
                         <Frame
                             Margin="3"
-                            Padding="0"
+                            Padding="5"
                             BackgroundColor="White"
                             CornerRadius="5"
                             HasShadow="False">
@@ -104,7 +108,7 @@
                         HorizontalOptions="FillAndExpand">
                         <Frame
                             Margin="3"
-                            Padding="0"
+                            Padding="5"
                             BackgroundColor="White"
                             CornerRadius="5"
                             HasShadow="False">
@@ -158,7 +162,11 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <StackLayout Spacing="0" Margin="0, 5, 0, 0">
+            <StackLayout
+                Spacing="0"
+                Margin="0, 5, 0, 0"
+                Visual="Material"
+                >
                 <Frame
                     Margin="3"
                     Padding="0"

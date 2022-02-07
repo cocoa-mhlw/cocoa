@@ -5,10 +5,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
@@ -17,7 +17,7 @@ namespace Covid19Radar.Repository
 {
     public interface IDiagnosisKeyRepository
     {
-        public Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken);
+        public Task<(HttpStatusCode, IList<DiagnosisKeyEntry>)> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken);
 
         public Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir, CancellationToken cancellationToken);
     }
@@ -39,39 +39,42 @@ namespace Covid19Radar.Repository
     {
         private const long BUFFER_LENGTH = 4 * 1024 * 1024;
 
-        private readonly HttpClient _client;
         private readonly ILoggerService _loggerService;
+
+        private readonly HttpClient _httpClient;
 
         public DiagnosisKeyRepository(
             IHttpClientService httpClientService,
             ILoggerService loggerService
             )
         {
-            _client = httpClientService.Create();
+            _httpClient = httpClientService.Create();
             _loggerService = loggerService;
         }
 
-        public async Task<IList<DiagnosisKeyEntry>> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken)
+        public async Task<(HttpStatusCode, IList<DiagnosisKeyEntry>)> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken)
         {
-            HttpResponseMessage response = await _client.GetAsync(url, cancellationToken);
+            HttpResponseMessage response = await _httpClient.GetAsync(url, cancellationToken);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
                 _loggerService.Debug(content);
-                return JsonConvert.DeserializeObject<List<DiagnosisKeyEntry>>(content);
+
+                return (response.StatusCode, JsonConvert.DeserializeObject<List<DiagnosisKeyEntry>>(content));
             }
             else
             {
                 _loggerService.Debug($"GetDiagnosisKeysListAsync {response.StatusCode}");
             }
 
-            return new List<DiagnosisKeyEntry>();
+            return (response.StatusCode, new List<DiagnosisKeyEntry>());
         }
 
         public async Task<string> DownloadDiagnosisKeysAsync(DiagnosisKeyEntry diagnosisKeyEntry, string outputDir, CancellationToken cancellationToken)
         {
             Uri uri = new Uri(diagnosisKeyEntry.Url);
-            HttpResponseMessage response = await _client.GetAsync(uri, cancellationToken);
+
+            HttpResponseMessage response = await _httpClient.GetAsync(uri, cancellationToken);
             if (response.IsSuccessStatusCode)
             {
                 string fileName = uri.Segments[uri.Segments.Length - 1];
@@ -96,7 +99,6 @@ namespace Covid19Radar.Repository
                 throw new HttpRequestException($"Request failed with status code {response.StatusCode}");
             }
         }
-
     }
 
 }

@@ -15,6 +15,7 @@ namespace Covid19Radar.Droid.Services.Migration
         private static readonly string[] OldWorkNames = {
             "exposurenotification",
             "cocoaexposurenotification",
+            "cocoaexposurenotification-202107",
         };
 
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;

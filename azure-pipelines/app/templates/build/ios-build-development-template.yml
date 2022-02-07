@@ -1,3 +1,8 @@
+parameters:
+- name: isDefineDebug
+  type: boolean
+  default: false
+
 steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
@@ -8,7 +13,7 @@ steps:
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_development_20221112.mobileprovision'
+    provProfileSecureFile: 'cocoa_development_20230201.mobileprovision'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -19,14 +24,27 @@ steps:
 - template: setup/ios-setup-xamarin-template.yml
 
 - template: setup/app-setup-xamarin-template.yml
+  parameters:
+    configuration: debug
 
 - task: XamariniOS@2
-  displayName: 'Build Covid19Radar.iOS.csproj'
+  displayName: 'Build Covid19Radar.iOS.csproj for not DEBUG'
+  inputs:
+    solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
+    configuration: Debug
+    args: '/p:DefineConstants=DEBUG=0'
+    signingIdentity: 'Apple Development'
+    signingProvisioningProfileID: '996dbea7-92cd-4b7d-98a1-3742767b6bfd'
+  condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'false'))
+
+- task: XamariniOS@2
+  displayName: 'Build Covid19Radar.iOS.csproj for DEBUG'
   inputs:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
     configuration: Debug
     signingIdentity: 'Apple Development'
-    signingProvisioningProfileID: 'ba91f92b-1039-4f50-9e39-bbaf6450bf4a'
+    signingProvisioningProfileID: '996dbea7-92cd-4b7d-98a1-3742767b6bfd'
+  condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'true'))
 
 - task: CopyFiles@2
   displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'
