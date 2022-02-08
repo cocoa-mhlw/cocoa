@@ -98,6 +98,10 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>正在删除</value>
   </data>
+  <data name="Loading" xml:space="preserve">
+    <value>处理中</value>
+    <comment>読み込み中</comment>
+  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>共享</value>
   </data>
@@ -116,12 +120,12 @@
     <value>正在等待注册</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>所有数据将被删除，终止使用本应用吗？</value>
-    <comment>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</comment>
+    <value>删除所有数据并将应用恢复到初始状态？</value>
+    <comment>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</comment>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>终止使用本应用</value>
-    <comment>アプリの使用を中止します</comment>
+    <value>应用初始化</value>
+    <comment>アプリの初期化を行います</comment>
   </data>
   <data name="SettingsPageDialogResetCompletedTitle" xml:space="preserve">
     <value>数据已删除</value>
@@ -165,8 +169,8 @@
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>停止记录/删除</value>
-    <comment>記録の停止／削除</comment>
+    <value>应用初始化</value>
+    <comment>アプリの初期化</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>使用此APP时，每个手机都会生成一个随机代码，不会收集个人信息和GPS位置信息。</value>
@@ -192,9 +196,13 @@
     <value>前往设置</value>
     <comment>アプリの設定へ</comment>
   </data>
-  <data name="HelpPage4Description" xml:space="preserve">
-    <value>您可以在应用设置中选择停止使用该应用并删除用户数据。</value>
-    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
+  <data name="HelpPage4Description1" xml:space="preserve">
+    <value>通过在菜单设置中选择“初始化应用”，您可以删除过去14天保存的接触履历并将应用恢复到初始状态。</value>
+    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+  </data>
+  <data name="HelpPage4Description2" xml:space="preserve">
+    <value>在您再次开始使用该应用程序之前，不会记录接触和接受通知。</value>
+    <comment>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</value>
@@ -257,22 +265,62 @@
     <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>如何停止记录/删除密切接触记录</value>
-    <comment>接触の記録を停止／情報を削除するには</comment>
-  </data>
-  <data name="NotContactPageTitle" xml:space="preserve">
-    <value>查询过去14天内里的接触情况</value>
-    <comment>過去14日間の接触</comment>
-  </data>
-  <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>您没有查出跟阳性患者的密切接触</value>
-    <comment>陽性者との接触は確認されませんでした</comment>
-  </data>
-  <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>为了进一步地防范疫情的扩散，请遵循日本政府提倡的“新生活模式”。</value>
-    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+    <value>删除接触记录并将应用恢复到初始状态</value>
+    <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>分享此APP</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="LowRiskContactPageLabel" xml:space="preserve">
+    <value>来自阳性登记者所持智能手机的信号低于基准值</value>
+    <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
+  </data>
+  <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
+    <value>分数: {0:#.##}</value>
+    <comment>スコア: {0:#.##}</comment>
+  </data>
+  <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
+    <value>分数: {0:#.##}</value>
+    <comment>スコア: {0:#.##}</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
+    <value>接触时间为{0:#}分钟</value>
+    <comment>{0:#}分間の接触</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
+    <value>接触时间为{0:#}分钟，因此不进行通知推送</value>
+    <comment>{0:#}分間の接触のため通知の対象外</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
+    <value>小时</value>
+    <comment>時間</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixMinutesText" xml:space="preserve">
+    <value>分钟</value>
+    <comment>分</comment>
+  </data>
+  <data name="LowRiskContactPageDescription" xml:space="preserve">
+    <value>收到了来自阳性登记者所持智能手机的信号，但是信号强度并未超出基准值。您的行动范围内有阳性登记者，请继续注意防止感染。</value>
+    <comment>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+  </data>
+  <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
+    <value>收到的信号</value>
+    <comment>受信した信号</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
+    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为{0:#}{1:#}。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+  </data>
+  <data name="NoRiskContactPageLabel" xml:space="preserve">
+    <value>未收到来自阳性登记者所持智能手机的信号</value>
+    <comment>リスクが低いものを含め陽性登録者との接触はありません</comment>
+  </data>
+  <data name="NoRiskContactPageDescription" xml:space="preserve">
+    <value>您的行动范围内似乎没有阳性登记者。请继续注意防止感染。</value>
+    <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
+  </data>
+  <data name="NoRiskContactPageButtonText" xml:space="preserve">
     <value>分享此APP</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
@@ -348,9 +396,21 @@
     <value>分享此APP</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+  <data name="ExposureCheckTitle" xml:space="preserve">
+    <value>不存在高于基准值的信号</value>
+    <comment>基準値を超える信号はありません</comment>
+  </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>主页</value>
     <comment>ホーム</comment>
+  </data>
+  <data name="HomePageDialogExceptionTitle" xml:space="preserve">
+    <value>问确认界面失败</value>
+    <comment>確認画面へのアクセスに失敗しました</comment>
+  </data>
+  <data name="HomePageDialogExceptionDescription" xml:space="preserve">
+    <value>给您造成不便我们深感抱歉。可能由于网络不稳定或服务器繁忙。请您稍后重试。</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>使用条款</value>
@@ -365,8 +425,8 @@
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>所有数据都会加密并保存在手机本地存储，所有数据14天后会自动删除。政府机构或第三方机构不会以任何方式跟踪监视您的手机</value>
-    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+    <value>所有数据都会保存在手机本地存储，所有数据14天后会自动删除。政府机构或第三方机构不会以任何方式跟踪监视您的手机</value>
+    <comment>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>您可以随时停止APP的记录，在设置内设为关闭，或者删掉APP</value>
@@ -549,6 +609,10 @@
     <value>无法连接到登记服务中心</value>
     <comment>センターに接続できません</comment>
   </data>
+  <data name="NotifyOther_Dialog_NoConnection" xml:space="preserve">
+    <value>给您造成不便我们深感抱歉。可能由于网络不稳定或服务器繁忙。请您稍后重试。</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+  </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
     <value>是否登记？</value>
     <comment>よろしいですか？</comment>
@@ -578,8 +642,8 @@
     <comment>処理番号は半角数字で入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>必须启用 COVID-19 接触日志才可进行阳性登记，请在应用或系统设置中启用设定。</value>
-    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+    <value>必须启用 接触通知，请在应用或系统设置中启用设定。</value>
+    <comment>陽性記録の登録を行う為に接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
     <value>请启用 COVID-19 接触日志</value>
@@ -596,14 +660,6 @@
   <data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
     <value>受理编号错误</value>
     <comment>処理番号が違います</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>不需要登记。</value>
-    <comment>登録する必要はありません。</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>没有接触记录</value>
-    <comment>接触記録がありません</comment>
   </data>
   <data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
@@ -1124,4 +1180,63 @@
     <value></value>
     <comment>日本語のみ：※2</comment>
   </data>
+  <data name="HomePageImageAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：「ホーム」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedPageImageAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：「陽性者との接触確認」画面のイメージ画像</comment>
+  </data>
+
+  <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
+    <value>{0}以前</value>
+    <comment>年月日以前</comment>
+  </data>
+  <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
+    <value>1 件</value>
+    <comment>1 件</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>{0} 件</value>
+    <comment>{0} 件</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationHeader" xml:space="preserve">
+    <value>{0}以降</value>
+    <comment>年月日以降</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
+    <value>1天内共有{1:#}分钟的接触</value>
+    <comment>1日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
+    <value>{0}天内共有{1:#}分钟的接触</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ExposurePageExposureDuration" xml:space="preserve">
+    <value>{0:#}分钟的接触</value>
+    <comment>{0:#}分間の接触</comment>
+  </data>
+
+  <data name="ThresholdTextOperatorGt" xml:space="preserve">
+    <value>超出</value>
+    <comment>を超える値</comment>
+  </data>
+  <data name="ThresholdTextOperatorLt" xml:space="preserve">
+    <value>少于</value>
+    <comment>未満</comment>
+  </data>
+  <data name="ThresholdTextOperatorGte" xml:space="preserve">
+    <value>以上</value>
+    <comment>以上</comment>
+  </data>
+  <data name="ThresholdTextOperatorLte" xml:space="preserve">
+    <value>以下</value>
+    <comment>以下</comment>
+  </data>
+  <data name="ThresholdTextOperatorEqual" xml:space="preserve">
+    <value>等于</value>
+    <comment>と同じ</comment>
+  </data>
+
 </root>

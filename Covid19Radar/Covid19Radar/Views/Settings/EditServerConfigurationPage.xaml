@@ -99,6 +99,17 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
+                Text="ExposureRiskCalculationConfigurationUrl"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding ExposureRiskCalculationConfigurationUrl}"
+                Margin="8, 0, 8, 16"
+                Placeholder="ExposureRiskCalculationConfigurationUrl url"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
                 Text="ExposureDataCollectServerEndpoint"
                 Margin="8, 0, 0, 8"
                 />
@@ -122,6 +133,17 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
+                Text="EventLogApiEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding EventLogApiEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="EventLog sending API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
                 Text="UserRegisterApiEndpoint"
                 Margin="8, 0, 0, 8"
                 />
@@ -133,14 +155,25 @@
 
             <Label
                 Style="{StaticResource DefaultLabel}"
-                Text="InquiryLogApiEndpoint"
+                Text="InquiryLogApiUrl"
                 Margin="8, 0, 0, 8"
                 />
             <Entry
                 Keyboard="Url"
-                Text="{Binding InquiryLogApiEndpoint}"
+                Text="{Binding InquiryLogApiUrl}"
                 Margin="8, 0, 8, 16"
                 Placeholder="Inquiry-log submission API endpoint"/>
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="LogStorageEndpoint"
+                Margin="8, 0, 0, 8"
+                />
+            <Entry
+                Keyboard="Url"
+                Text="{Binding LogStorageEndpoint}"
+                Margin="8, 0, 8, 16"
+                Placeholder="Inquiry-log storage endpoint"/>
 
             <Button
                 Command="{Binding OnSave}"

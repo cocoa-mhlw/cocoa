@@ -7,9 +7,14 @@ namespace Covid19Radar.Common
     public static class AppConstants
     {
         /// <summary>
+        /// Timestamp format - RFC 3339
+        /// </summary>
+        public const string FORMAT_TIMESTAMP = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
+
+        /// <summary>
         /// Number of days covered from the date of diagnosis or onset
         /// </summary>
-        public const int DaysToSendTek = -3;
+        public const int DaysToSendTek = -15;
 
         /// <summary>
         /// Max Error Count
@@ -37,6 +42,12 @@ namespace Covid19Radar.Common
         /// Key of processing-number in AppLinks(Universal Links) query parameters.
         /// </summary>
         public const string LinkQueryKeyProcessingNumber = "pn";
+
+        /// <summary>
+        /// DiagnosisApi version.
+        /// (e.g. v2, v3)
+        /// </summary>
+        public const string DiagnosisApiVersionCode = "v3";
 
         /// <summary>
         /// Number of day(s) that ExposureConfiguration file downloaded cache.

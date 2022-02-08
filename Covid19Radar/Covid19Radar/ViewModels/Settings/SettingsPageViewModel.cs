@@ -28,6 +28,7 @@ namespace Covid19Radar.ViewModels
         }
 
         private readonly IUserDataRepository userDataRepository;
+        private readonly IExposureDataRepository exposureDataRepository;
         private readonly IExposureConfigurationRepository exposureConfigurationRepository;
         private readonly ILogFileService logFileService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
@@ -37,6 +38,7 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository,
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILogFileService logFileService,
             AbsExposureNotificationApiService exposureNotificationApiService,
@@ -47,6 +49,7 @@ namespace Covid19Radar.ViewModels
             AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
+            this.exposureDataRepository = exposureDataRepository;
             this.exposureConfigurationRepository = exposureConfigurationRepository;
             this.logFileService = logFileService;
             this.exposureNotificationApiService = exposureNotificationApiService;
@@ -70,9 +73,9 @@ namespace Covid19Radar.ViewModels
                 await StopExposureNotificationAsync();
 
                 // Reset All Data and Optout
-                await userDataRepository.RemoveDailySummariesAsync();
-                await userDataRepository.RemoveExposureWindowsAsync();
-                userDataRepository.RemoveExposureInformation();
+                await exposureDataRepository.RemoveDailySummariesAsync();
+                await exposureDataRepository.RemoveExposureWindowsAsync();
+                exposureDataRepository.RemoveExposureInformation();
                 await userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
                 await exposureConfigurationRepository.RemoveExposureConfigurationAsync();
 

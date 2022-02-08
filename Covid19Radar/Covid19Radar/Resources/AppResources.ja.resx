@@ -88,6 +88,10 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>削除しています</value>
   </data>
+  <data name="Loading" xml:space="preserve">
+    <value>読み込み中</value>
+    <comment>読み込み中</comment>
+  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>共有する</value>
   </data>
@@ -106,12 +110,12 @@
     <value>登録中</value>
   </data>
   <data name="SettingsPageDialogResetText" xml:space="preserve">
-    <value>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</value>
-    <comment>すべてのデータを削除して、アプリの使用を中止します。よろしいですか？</comment>
+    <value>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</value>
+    <comment>すべてのデータを削除してアプリを初期状態に戻します。よろしいですか？</comment>
   </data>
   <data name="SettingsPageDialogResetTitle" xml:space="preserve">
-    <value>アプリの使用を中止します</value>
-    <comment>アプリの使用を中止します</comment>
+    <value>アプリの初期化を行います</value>
+    <comment>アプリの初期化を行います</comment>
   </data>
   <data name="SettingsPageDialogResetCompletedTitle" xml:space="preserve">
     <value>データを削除しました</value>
@@ -155,8 +159,8 @@
     <comment>感染していると判定されたら</comment>
   </data>
   <data name="HelpPage4Title" xml:space="preserve">
-    <value>記録の停止／削除</value>
-    <comment>記録の停止／削除</comment>
+    <value>アプリの初期化</value>
+    <comment>アプリの初期化</comment>
   </data>
   <data name="HelpPage1Description1Text" xml:space="preserve">
     <value>アプリを実行した際に、各スマートフォンで接触符号（※1）を生成して持ちます。氏名・電話番号などの個人情報やGPS（※2）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</value>
@@ -182,9 +186,13 @@
     <value>アプリの設定へ</value>
     <comment>アプリの設定へ</comment>
   </data>
-  <data name="HelpPage4Description" xml:space="preserve">
-    <value>アプリの設定から、アプリの使用中止と利用者情報の削除を行うことができます。</value>
-    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
+  <data name="HelpPage4Description1" xml:space="preserve">
+    <value>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</value>
+    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+  </data>
+  <data name="HelpPage4Description2" xml:space="preserve">
+    <value>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</value>
+    <comment>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンに通知が届きます。</value>
@@ -235,22 +243,62 @@
     <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
-    <value>接触の記録を停止／情報を削除するには</value>
-    <comment>接触の記録を停止／情報を削除するには</comment>
-  </data>
-  <data name="NotContactPageTitle" xml:space="preserve">
-    <value>過去14日間の接触</value>
-    <comment>過去14日間の接触</comment>
-  </data>
-  <data name="NotContactPageLabel1" xml:space="preserve">
-    <value>陽性者との接触は確認されませんでした</value>
-    <comment>陽性者との接触は確認されませんでした</comment>
-  </data>
-  <data name="NotContactPageDescription1" xml:space="preserve">
-    <value>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</value>
-    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+    <value>接触の記録を削除してアプリを初期状態に戻すには</value>
+    <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
   <data name="NotContactPageButtonText" xml:space="preserve">
+    <value>アプリを周りの人に知らせる</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+  <data name="LowRiskContactPageLabel" xml:space="preserve">
+    <value>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</value>
+    <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
+  </data>
+  <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
+    <value>スコア: {0:#.##}</value>
+    <comment>スコア: {0:#.##}</comment>
+  </data>
+  <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
+    <value>スコア: {0:#.##}</value>
+    <comment>スコア: {0:#.##}</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
+    <value>{0:#}分間の接触</value>
+    <comment>{0:#}分間の接触</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureDuration_Description_Unsatisfied" xml:space="preserve">
+    <value>{0:#}分間の接触のため通知の対象外</value>
+    <comment>{0:#}分間の接触のため通知の対象外</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
+    <value>時間</value>
+    <comment>時間</comment>
+  </data>
+  <data name="LowRiskContactPageCountSuffixMinutesText" xml:space="preserve">
+    <value>分</value>
+    <comment>分</comment>
+  </data>
+  <data name="LowRiskContactPageDescription" xml:space="preserve">
+    <value>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
+    <comment>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
+  </data>
+  <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
+    <value>受信した信号</value>
+    <comment>受信した信号</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
+    <value>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+  </data>
+  <data name="NoRiskContactPageLabel" xml:space="preserve">
+    <value>陽性登録者のスマートフォンからの信号を受信していません</value>
+    <comment>陽性登録者のスマートフォンからの信号を受信していません</comment>
+  </data>
+  <data name="NoRiskContactPageDescription" xml:space="preserve">
+    <value>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</value>
+    <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
+  </data>
+  <data name="NoRiskContactPageButtonText" xml:space="preserve">
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
@@ -290,10 +338,6 @@
     <value>陽性者との接触一覧</value>
     <comment>陽性者との接触一覧</comment>
   </data>
-  <data name="ContactedNotifyPageCountText" xml:space="preserve">
-    <value>件</value>
-    <comment>件</comment>
-  </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>陽性者との接触確認</value>
     <comment>陽性者との接触確認</comment>
@@ -326,9 +370,21 @@
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+  <data name="ExposureCheckTitle" xml:space="preserve">
+    <value>基準値を超える信号はありません</value>
+    <comment>基準値を超える信号はありません</comment>
+  </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>ホーム</value>
     <comment>ホーム</comment>
+  </data>
+  <data name="HomePageDialogExceptionTitle" xml:space="preserve">
+    <value>確認画面へのアクセスに失敗しました</value>
+    <comment>確認画面へのアクセスに失敗しました</comment>
+  </data>
+  <data name="HomePageDialogExceptionDescription" xml:space="preserve">
+    <value>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>利用規約</value>
@@ -343,8 +399,8 @@
     <comment>氏名・電話番号などの個人情報や、GPS（※）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</value>
-    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+    <value>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</value>
+    <comment>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</value>
@@ -547,6 +603,10 @@
     <value>センターに接続できません</value>
     <comment>センターに接続できません</comment>
   </data>
+  <data name="NotifyOther_Dialog_NoConnection" xml:space="preserve">
+    <value>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</value>
+    <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
+  </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
     <value>よろしいですか？</value>
     <comment>よろしいですか？</comment>
@@ -576,8 +636,8 @@
     <comment>処理番号は半角数字で入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</value>
-    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+    <value>陽性記録の登録を行うために接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</value>
+    <comment>陽性記録の登録を行うために接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
     <value>COVID-19接触のログ記録を有効にしてください</value>
@@ -594,14 +654,6 @@
   <data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
     <value>処理番号が違います</value>
     <comment>処理番号が違います</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>登録する必要はありません。</value>
-    <comment>登録する必要はありません。</comment>
-  </data>
-  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>接触記録がありません</value>
-    <comment>接触記録がありません</comment>
   </data>
   <data name="UrlVersion" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
@@ -934,14 +986,6 @@
     <value>https://www.mhlw.go.jp/cocoa/webaccessibility_japanese.html</value>
     <comment>ウェブアクセシビリティ方針URL</comment>
   </data>
-  <data name="SendLogCompletePageCopyId" xml:space="preserve">
-    <value>動作情報ID（タップしてコピー）</value>
-    <comment>動作情報ID（タップしてコピー）</comment>
-  </data>
-  <data name="SuccessMessageToCopyLogId" xml:space="preserve">
-    <value>コピーしました</value>
-    <comment>コピーしました</comment>
-  </data>
   <data name="HomePageENStatusActiveTitle" xml:space="preserve">
     <value>動作中</value>
     <comment>動作中</comment>
@@ -1128,4 +1172,62 @@
     <value>※2</value>
     <comment>※2</comment>
   </data>
+  <data name="HomePageImageAnnotationText" xml:space="preserve">
+    <value>「ホーム」画面のイメージ画像</value>
+    <comment>「ホーム」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedPageImageAnnotationText" xml:space="preserve">
+    <value>「陽性者との接触確認」画面のイメージ画像</value>
+    <comment>「陽性者との接触確認」画面のイメージ画像</comment>
+  </data>
+  <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
+    <value>{0}以前</value>
+    <comment>年月日以前</comment>
+  </data>
+  <data name="ContactedNotifyPageCountOneText" xml:space="preserve">
+    <value>1 件</value>
+    <comment>1 件</comment>
+  </data>
+  <data name="ContactedNotifyPageCountText" xml:space="preserve">
+    <value>{0} 件</value>
+    <comment>{0} 件</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationHeader" xml:space="preserve">
+    <value>{0}以降</value>
+    <comment>年月日以降</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDurationOne" xml:space="preserve">
+    <value>1日間に合計{1:#}分間の接触</value>
+    <comment>1日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ContactedNotifyPageExposureDuration" xml:space="preserve">
+    <value>{0}日間に合計{1:#}分間の接触</value>
+    <comment>{0}日間に合計{1:#}分間の接触</comment>
+  </data>
+  <data name="ExposurePageExposureDuration" xml:space="preserve">
+    <value>{0:#}分間の接触</value>
+    <comment>{0:#}分間の接触</comment>
+  </data>
+
+  <data name="ThresholdTextOperatorGt" xml:space="preserve">
+    <value>を超える値</value>
+    <comment>を超える値</comment>
+  </data>
+  <data name="ThresholdTextOperatorLt" xml:space="preserve">
+    <value>未満</value>
+    <comment>未満</comment>
+  </data>
+  <data name="ThresholdTextOperatorGte" xml:space="preserve">
+    <value>以上</value>
+    <comment>以上</comment>
+  </data>
+  <data name="ThresholdTextOperatorLte" xml:space="preserve">
+    <value>以下</value>
+    <comment>以下</comment>
+  </data>
+  <data name="ThresholdTextOperatorEqual" xml:space="preserve">
+    <value>と同じ</value>
+    <comment>と同じ</comment>
+  </data>
+
 </root>

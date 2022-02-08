@@ -105,17 +105,10 @@ namespace Covid19Radar.Droid.Services
 
         public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
             List<string> keyFiles,
-            ExposureConfiguration configuration,
+            string token,
             CancellationTokenSource cancellationTokenSource = null
             )
-            => await Client.ProvideDiagnosisKeysAsync(keyFiles, configuration, cancellationTokenSource);
-
-        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
-            List<string> keyFiles,
-            ExposureConfiguration configuration, string token,
-            CancellationTokenSource cancellationTokenSource = null
-            )
-            => await Client.ProvideDiagnosisKeysAsync(keyFiles, configuration, token, cancellationTokenSource);
+            => await Client.ProvideDiagnosisKeysAsync(keyFiles, token, cancellationTokenSource);
 
         public override async Task RequestPreAuthorizedTemporaryExposureKeyHistoryAsync()
         {

@@ -27,7 +27,7 @@ namespace Covid19Radar.Api
 {
     public class V3DiagnosisApi
     {
-        private const int TRANSMISSION_RISK_LEVEL_INVALID = 0;
+        private const int TRANSMISSION_RISK_LEVEL_LOWEST = 1;
         private const int TRANSMISSION_RISK_LEVEL_MEDIUM = 4;
 
         private const string CHAFF_HEADER = "X-Chaff";
@@ -79,7 +79,7 @@ namespace Covid19Radar.Api
             // Make compatible with Legacy-V1 mode.
             foreach (var key in submissionParameter.Keys)
             {
-                var transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_INVALID;
+                var transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_LOWEST;
                 if (key.DaysSinceOnsetOfSymptoms >= Constants.DaysHasInfectiousness)
                 {
                     transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_MEDIUM;
@@ -107,7 +107,7 @@ namespace Covid19Radar.Api
             }
 
             // validation device
-            if (!await _deviceValidationService.Validation(submissionParameter, reqTime))
+            if (!await _deviceValidationService.Validation(submissionParameter.Platform, submissionParameter, reqTime))
             {
                 _logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
@@ -135,7 +135,7 @@ namespace Covid19Radar.Api
                 foreach (var k in submissionParameter.Keys)
                 {
                     var idSeed = $"{submissionParameter.IdempotencyKey},{k.KeyData},{k.RollingStartNumber},{k.RollingPeriod}";
-                    var id = ByteArrayToString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
+                    var id = ByteArrayUtils.ToHexString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
 
                     foreach (var region in submissionParameter.Regions)
                     {
@@ -154,14 +154,6 @@ namespace Covid19Radar.Api
             }
 
             return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
-        }
-
-        public static string ByteArrayToString(byte[] byteArray)
-        {
-            StringBuilder hex = new StringBuilder(byteArray.Length * 2);
-            foreach (byte b in byteArray)
-                hex.AppendFormat("{0:x2}", b);
-            return hex.ToString();
         }
     }
 }

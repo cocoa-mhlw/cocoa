@@ -1,0 +1,3 @@
+variables:
+  XamarinSymlinkVersion: '6_12_10'
+  XcodeVersion: '13.0'

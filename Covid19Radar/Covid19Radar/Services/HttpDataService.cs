@@ -9,8 +9,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-using System.Threading;
 using System.Net;
 using Newtonsoft.Json;
 using Covid19Radar.Repository;
@@ -22,11 +20,11 @@ namespace Covid19Radar.Services
     public class HttpDataService : IHttpDataService
     {
         private readonly ILoggerService loggerService;
+        private readonly IHttpClientService httpClientService;
         private readonly IServerConfigurationRepository serverConfigurationRepository;
 
-        private readonly HttpClient apiClient; // API key based client.
+        private readonly HttpClient apiClient;
         private readonly HttpClient httpClient;
-        private readonly HttpClient downloadClient;
 
         public HttpDataService(
             ILoggerService loggerService,
@@ -35,21 +33,30 @@ namespace Covid19Radar.Services
             )
         {
             this.loggerService = loggerService;
+            this.httpClientService = httpClientService;
             this.serverConfigurationRepository = serverConfigurationRepository;
 
-            // Create API key based client.
-            apiClient = httpClientService.Create();
+            apiClient = CreateApiClient();
+            httpClient = CreateHttpClient();
+        }
+
+        private HttpClient CreateApiClient()
+        {
+            var apiClient = httpClientService.Create();
             apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             apiClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
             apiClient.DefaultRequestHeaders.Add("x-api-key", AppSettings.Instance.ApiKey);
 
-            // Create client.
-            httpClient = httpClientService.Create();
+            return apiClient;
+        }
+
+        private HttpClient CreateHttpClient()
+        {
+            var httpClient = httpClientService.Create();
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
 
-            // Create download client.
-            downloadClient = httpClientService.Create();
+            return httpClient;
         }
 
         // POST /api/Register - Register User
@@ -78,7 +85,7 @@ namespace Covid19Radar.Services
             return false;
         }
 
-        public async Task<IList<HttpStatusCode>> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+        public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             loggerService.StartMethod();
 
@@ -87,13 +94,20 @@ namespace Covid19Radar.Services
                 await serverConfigurationRepository.LoadAsync();
 
                 var diagnosisKeyRegisterApiUrls = serverConfigurationRepository.DiagnosisKeyRegisterApiUrls;
-                var tasks = diagnosisKeyRegisterApiUrls.Select(async url =>
+                if (diagnosisKeyRegisterApiUrls.Count() == 0)
                 {
-                    var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
-                    return await PutAsync(url, content);
-                });
+                    loggerService.Error("DiagnosisKeyRegisterApiUrls count 0");
+                    throw new InvalidOperationException("DiagnosisKeyRegisterApiUrls count 0");
+                }
+                else if (diagnosisKeyRegisterApiUrls.Count() > 1)
+                {
+                    loggerService.Warning("Multi DiagnosisKeyRegisterApiUrl are detected.");
+                }
 
-                return await Task.WhenAll(tasks);
+                var url = diagnosisKeyRegisterApiUrls.First();
+                var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+
+                return await PutAsync(url, content);
             }
             finally
             {
@@ -112,7 +126,8 @@ namespace Covid19Radar.Services
             {
                 await serverConfigurationRepository.LoadAsync();
 
-                var url = serverConfigurationRepository.InquiryLogApiEndpoint;
+                var url = serverConfigurationRepository.InquiryLogApiUrl;
+
                 var response = await apiClient.GetAsync(url);
 
                 statusCode = (int)response.StatusCode;
@@ -132,91 +147,6 @@ namespace Covid19Radar.Services
             }
             loggerService.EndMethod();
             return new ApiResponse<LogStorageSas>(statusCode, logStorageSas);
-        }
-
-        private async Task<string> GetAsync(string url)
-        {
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-
-        private async Task<string> GetAsync(string url, CancellationToken cancellationToken)
-        {
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url, cancellationToken);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-        private async Task<string> GetCdnAsync(string url)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-        private async Task<string> GetCdnAsync(string url, CancellationToken cancellationToken)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-
-        private async Task<Stream> GetCdnStreamAsync(string url)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStreamAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStreamAsync();
-            }
-            return null;
-        }
-
-        private async Task<Stream> GetCdnStreamAsync(string url, CancellationToken cancellationToken)
-        {
-            loggerService.StartMethod();
-
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStreamAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                loggerService.Info("Success to download");
-                loggerService.EndMethod();
-                return await result.Content.ReadAsStreamAsync();
-            }
-            else
-            {
-                loggerService.Error("Fail to download");
-                loggerService.EndMethod();
-                return null;
-            }
         }
 
         private async Task<string> PostAsync(string url, HttpContent body)

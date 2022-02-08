@@ -8,7 +8,7 @@ steps:
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_adhoc_20220610_9.mobileprovision'
+    provProfileSecureFile: 'cocoa_adhoc_20220610_13.mobileprovision'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -19,6 +19,8 @@ steps:
 - template: setup/ios-setup-xamarin-template.yml
 
 - template: setup/app-setup-xamarin-template.yml
+  parameters:
+    configuration: release
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj'
@@ -26,7 +28,7 @@ steps:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
     configuration: AppStore
     signingIdentity: 'Apple Distribution'
-    signingProvisioningProfileID: '7709385b-3077-4d4d-a5a5-84f86f4ee1ba'
+    signingProvisioningProfileID: '67f32730-a8fc-4b3e-a0ac-74ada0327db9'
 
 - task: CopyFiles@2
   displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'

@@ -68,7 +68,7 @@ namespace Covid19Radar.Api.Tests
 
 
             var deviceCheck = new Mock<IDeviceValidationService>();
-            deviceCheck.Setup(_ => _.Validation(It.IsAny<V1DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
+            deviceCheck.Setup(_ => _.Validation(It.IsAny<string>(), It.IsAny<V1DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<DiagnosisApi>();
             var diagnosisApi = new DiagnosisApi(config.Object,

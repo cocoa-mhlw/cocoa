@@ -19,7 +19,6 @@ namespace Covid19Radar.Api
             builder.Services.AddLogging();
             builder.Services.AddHttpClient();
             builder.Services.AddCosmosClient();
-            builder.Services.AddSingleton<ICryptionService, CryptionService>();
             builder.Services.AddSingleton<DataStore.ICosmos, DataStore.Cosmos>();
             builder.Services.AddSingleton<IValidationServerService, ValidationServerService>();
             builder.Services.AddSingleton<IValidationInquiryLogService, ValidationInquiryLogService>();
@@ -33,6 +32,7 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<ICustomVerificationStatusRepository, CustomVerificationStatusRepository>();
             builder.Services.AddSingleton<IInquiryLogBlobService, InquiryLogBlobService>();
             builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
+            builder.Services.AddSingleton<IEventLogRepository, CosmosEventLogRepository>();
         }
     }
 }

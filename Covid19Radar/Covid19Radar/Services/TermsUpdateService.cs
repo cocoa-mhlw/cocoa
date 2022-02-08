@@ -21,16 +21,24 @@ namespace Covid19Radar.Services
 
     public class TermsUpdateService : ITermsUpdateService
     {
+        private const double TimeoutSeconds = 5.0;
+
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository userDataRepository;
 
+        private readonly HttpClient _httpClient;
+
         public TermsUpdateService(
             ILoggerService loggerService,
+            IHttpClientService httpClientService,
             IUserDataRepository userDataRepository
             )
         {
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
+
+            _httpClient = httpClientService.Create();
+            _httpClient.Timeout = TimeSpan.FromSeconds(TimeoutSeconds);
         }
 
         public async Task<TermsUpdateInfoModel> GetTermsUpdateInfo()
@@ -38,27 +46,24 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
 
             var uri = AppResources.UrlTermsUpdate;
-            using (var client = new HttpClient())
+            try
             {
-                try
-                {
-                    var json = await client.GetStringAsync(uri);
-                    loggerService.Info($"uri: {uri}");
-                    loggerService.Info($"TermsUpdateInfo: {json}");
+                var json = await _httpClient.GetStringAsync(uri);
+                loggerService.Info($"uri: {uri}");
+                loggerService.Info($"TermsUpdateInfo: {json}");
 
-                    var deserializedJson = JsonConvert.DeserializeObject<TermsUpdateInfoModel>(json);
+                var deserializedJson = JsonConvert.DeserializeObject<TermsUpdateInfoModel>(json);
 
-                    loggerService.EndMethod();
+                loggerService.EndMethod();
 
-                    return deserializedJson;
-                }
-                catch (Exception ex)
-                {
-                    loggerService.Exception("Failed to get terms update info.", ex);
-                    loggerService.EndMethod();
+                return deserializedJson;
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed to get terms update info.", ex);
+                loggerService.EndMethod();
 
-                    return new TermsUpdateInfoModel();
-                }
+                return new TermsUpdateInfoModel();
             }
         }
 
