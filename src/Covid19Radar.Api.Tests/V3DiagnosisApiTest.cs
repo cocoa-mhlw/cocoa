@@ -109,7 +109,7 @@ namespace Covid19Radar.Api.Tests
             var bodyJson = new V3DiagnosisSubmissionParameter()
             {
                 HasSymptom = true,
-                OnSetOfSymptomOrTestDate = dateTime.ToString(Constants.FORMAT_TIMESTAMP),
+                OnsetOfSymptomOrTestDate = dateTime.ToString(Constants.FORMAT_TIMESTAMP),
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
                 Platform = platform,
@@ -218,7 +218,7 @@ namespace Covid19Radar.Api.Tests
             var bodyJson = new V3DiagnosisSubmissionParameter()
             {
                 HasSymptom = true,
-                OnSetOfSymptomOrTestDate = dateTime.ToString(Constants.FORMAT_TIMESTAMP),
+                OnsetOfSymptomOrTestDate = dateTime.ToString(Constants.FORMAT_TIMESTAMP),
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
                 Platform = platform,

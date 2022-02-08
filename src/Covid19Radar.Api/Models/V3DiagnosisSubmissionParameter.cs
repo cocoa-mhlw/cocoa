@@ -16,8 +16,8 @@ namespace Covid19Radar.Api.Models
 
         // RFC3339
         // e.g. 2021-09-20T23:52:57.436+00:00
-        [JsonProperty("onSetOfSymptomOrTestDate")]
-        public string OnSetOfSymptomOrTestDate { get; set; }
+        [JsonProperty("onsetOfSymptomOrTestDate")]
+        public string OnsetOfSymptomOrTestDate { get; set; }
 
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
@@ -72,7 +72,7 @@ namespace Covid19Radar.Api.Models
                 var hasSymptom = HasSymptom ? "HasSymptom" : "NoSymptom";
                 return
                     AppPackageName
-                    + OnSetOfSymptomOrTestDate
+                    + OnsetOfSymptomOrTestDate
                     + hasSymptom
                     + KeysTextForDeviceVerification
                     + IAndroidDeviceVerification.GetRegionString(Regions);
@@ -93,7 +93,7 @@ namespace Covid19Radar.Api.Models
             get
             {
                 var hasSymptom = HasSymptom ? "HasSymptom" : "NoSymptom";
-                return string.Join("|", AppPackageName, OnSetOfSymptomOrTestDate, hasSymptom, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
+                return string.Join("|", AppPackageName, OnsetOfSymptomOrTestDate, hasSymptom, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
             }
         }
 
@@ -157,10 +157,10 @@ namespace Covid19Radar.Api.Models
 
         public void SetDaysSinceOnsetOfSymptoms()
         {
-            var onSetOfSymptomOrTestDate = DateTime.ParseExact(OnSetOfSymptomOrTestDate, Constants.FORMAT_TIMESTAMP, null).ToUniversalTime().Date;
+            var onsetOfSymptomOrTestDate = DateTime.ParseExact(OnsetOfSymptomOrTestDate, Constants.FORMAT_TIMESTAMP, null).ToUniversalTime().Date;
             foreach (var key in Keys)
             {
-                var dateOffset = key.GetDate() - onSetOfSymptomOrTestDate;
+                var dateOffset = key.GetDate() - onsetOfSymptomOrTestDate;
                 key.DaysSinceOnsetOfSymptoms = dateOffset.Days;
             }
         }

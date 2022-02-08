@@ -102,7 +102,7 @@ namespace Covid19Radar.Services
             var submission = new DiagnosisSubmissionParameter()
             {
                 HasSymptom = hasSymptom,
-                OnSetOfSymptomOrTestDate = symptomOnsetDate.ToString(AppConstants.FORMAT_TIMESTAMP),
+                OnsetOfSymptomOrTestDate = symptomOnsetDate.ToString(AppConstants.FORMAT_TIMESTAMP),
                 Keys = keys.ToArray(),
                 Regions = AppSettings.Instance.SupportedRegions,
                 Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
