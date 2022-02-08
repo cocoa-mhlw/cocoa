@@ -1,16 +1,8 @@
 name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
-trigger:
-  branches:
-    include:
-    - release/app
-    - develop/app
-    - feature/*
-  paths:
-    include:
-    - Covid19Radar
-    - Covid19Radar.sln
-    - azure-pipelines/app
+trigger: none
+
+# PR triggers should be set in the Classic Editor
 
 variables:
 - group: app-settings-dev
