@@ -1230,4 +1230,13 @@
     <comment>と同じ</comment>
   </data>
 
+  <data name="UserProfileNotSupportDialogTitle" xml:space="preserve">
+      <value>複数ユーザーはサポートしていません</value>
+    <comment>複数ユーザーはサポートしていません</comment>
+  </data>
+  <data name="UserProfileNotSupportDialogDescription" xml:space="preserve">
+      <value>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</value>
+    <comment>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
+  </data>
+
 </root>

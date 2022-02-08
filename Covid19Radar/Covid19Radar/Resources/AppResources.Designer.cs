@@ -1888,5 +1888,17 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("ThresholdTextOperatorEqual", resourceCulture);
             }
         }
+        
+        public static string UserProfileNotSupportDialogTitle {
+            get {
+                return ResourceManager.GetString("UserProfileNotSupportDialogTitle", resourceCulture);
+            }
+        }
+        
+        public static string UserProfileNotSupportDialogDescription {
+            get {
+                return ResourceManager.GetString("UserProfileNotSupportDialogDescription", resourceCulture);
+            }
+        }
     }
 }

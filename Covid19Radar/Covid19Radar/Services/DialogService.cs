@@ -58,8 +58,8 @@ namespace Covid19Radar.Services
         public async Task ShowUserProfileNotSupportAsync()
         {
             await AlertAsync(
-                "User-profile is not suppoted",
-                "ユーザープロファイルはサポートしていません。",
+                AppResources.UserProfileNotSupportDialogDescription,
+                AppResources.UserProfileNotSupportDialogTitle,
                 AppResources.ButtonOk);
         }
 
