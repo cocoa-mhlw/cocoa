@@ -206,7 +206,7 @@
                 <Setter Property="BorderWidth" Value="4" />
                 <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
                 <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="Padding" Value="11" />
+                <Setter Property="Padding" Value="10" />
                 <Setter Property="Margin" Value="0,10,0,5" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="WidthRequest" Value="{x:OnPlatform Android=300, iOS=310}" />
