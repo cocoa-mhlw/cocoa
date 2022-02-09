@@ -20,10 +20,13 @@
         ItemsSource="{Binding Exposures}"
         >
         <CollectionView.Header>
-            <Label
+            <StackLayout
                 Padding="20, 20, 20, 10"
-                Style="{StaticResource DefaultLabel}"
-                Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
+                >
+                <Label
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
+            </StackLayout>
         </CollectionView.Header>
 
         <CollectionView.ItemsLayout>
@@ -39,7 +42,15 @@
                         <StackLayout Style="{StaticResource DetailsStackLayout}">
                             <Label
                                 Style="{StaticResource CardLabelSmall}"
-                                Text="{Binding ExposureDate}" />
+                                >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding ExposureDateStart}" />
+                                        <Span Text="{x:Static resources:AppResources.ExposuresPageTo}" />
+                                        <Span Text="{Binding ExposureDateEnd}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
                             <Label
                                 Style="{StaticResource CardLabelSmall}">
                                 <Label.FormattedText>
@@ -63,5 +74,22 @@
                     Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
             </StackLayout>
         </CollectionView.EmptyView>
+        <CollectionView.Footer>
+            <StackLayout
+                Padding="20, 20, 20, 10"
+                >
+                <Label
+                    Margin="0, 10, 0, 0"
+                    Style="{StaticResource AnnotationLabel}"
+                    TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.ExposuresPageToUtcDescription}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </CollectionView.Footer>
     </CollectionView>
 </ContentPage>

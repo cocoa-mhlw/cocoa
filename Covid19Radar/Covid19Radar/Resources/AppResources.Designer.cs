@@ -1900,5 +1900,35 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("ThresholdTextOperatorEqual", resourceCulture);
             }
         }
+        
+        public static string ExposuresPageToUtcDescription {
+            get {
+                return ResourceManager.GetString("ExposuresPageToUtcDescription", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageTo {
+            get {
+                return ResourceManager.GetString("ExposuresPageTo", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatDate {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatDate", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatMonth {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatMonth", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatYear {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatYear", resourceCulture);
+            }
+        }
     }
 }

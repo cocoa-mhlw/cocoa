@@ -519,8 +519,8 @@
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>次の日に陽性登録者との接触が確認されました。</value>
-    <comment>TODO:次の日に陽性登録者との接触が確認されました。</comment>
+    <value>次の期間に陽性登録者との接触が確認されました。</value>
+    <comment>TODO:次の期間に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -1237,6 +1237,27 @@
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
     <value>と同じ</value>
     <comment>と同じ</comment>
+  </data>
+
+  <data name="ExposuresPageToUtcDescription" xml:space="preserve">
+    <value>日時については、協定世界時（UTC）を日本標準時（JST）に変換して、期間として表示しています。</value>
+    <comment>TODO:日時については、協定世界時（UTC）を日本標準時（JST）に変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTo" xml:space="preserve">
+    <value> から </value>
+    <comment>TODO:から</comment>
+  </data>
+  <data name="ExposureDateFormatDate" xml:space="preserve">
+    <value>{2:#}日{3:#}時</value>
+    <comment>TODO:{2:#}日{3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatMonth" xml:space="preserve">
+    <value>{1:#}月 {2:#}日{3:#}時</value>
+    <comment>TODO:{1:#}月{2:#}日{3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatYear" xml:space="preserve">
+    <value>{0:#}年{1:#}月 {2:#}日{3:#}時</value>
+    <comment>TODO:{0:#}年{1:#}月{2:#}日{3:#}時</comment>
   </data>
 
 </root>

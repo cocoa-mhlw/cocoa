@@ -1227,4 +1227,25 @@
     <comment>と同じ</comment>
   </data>
 
+  <data name="ExposuresPageToUtcDescription" xml:space="preserve">
+    <value>日時については、協定世界時（UTC）を日本標準時（JST）に変換して、期間として表示しています。</value>
+    <comment>TODO:日時については、協定世界時（UTC）を日本標準時（JST）に変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTo" xml:space="preserve">
+    <value> to </value>
+    <comment>TODO:から</comment>
+  </data>
+  <data name="ExposureDateFormatDate" xml:space="preserve">
+    <value>{2:#} {3:#}:00</value>
+    <comment>TODO:{2:#}日 {3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatMonth" xml:space="preserve">
+    <value>{1:#}/{2:#}/ {3:#}:00</value>
+    <comment>TODO:{1:#}月{2:#}日 {3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatYear" xml:space="preserve">
+    <value>{0:#}/{1:#}/{2:#} {3:#}:00</value>
+    <comment>TODO:{0:#}年{1:#}月{2:#}日 {3:#}時</comment>
+  </data>
+
 </root>
