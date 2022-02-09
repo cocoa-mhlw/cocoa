@@ -1,18 +1,6 @@
 name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
-trigger:
-  branches:
-    include:
-    - develop
-    - release/*
-  paths:
-    include:
-    - Covid19Radar
-    - Covid19Radar.sln
-    - azure-pipelines/app
-    - Nuget.config
-
-# PR triggers should be set in the Classic Editor
+# NOTE: CI/PR triggers should be set in the Classic Editor
 
 jobs:
 - job: unit_tests
