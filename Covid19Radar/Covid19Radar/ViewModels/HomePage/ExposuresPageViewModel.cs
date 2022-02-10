@@ -89,13 +89,10 @@ namespace Covid19Radar.ViewModels
                         continue;
                     }
 
-                    var (start, end) = ConvertToTerm(dailySummary.GetDateTime());
-
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ew.Key,
-                        ExposureDateStart = start,
-                        ExposureDateEnd = end,
+                        ExposureDate = IExposureDataRepository.ConvertToTerm(dailySummary.GetDateTime()),
                     };
                     var exposureDurationInSec = ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
                     ens.SetExposureTime(exposureDurationInSec);
@@ -108,13 +105,10 @@ namespace Covid19Radar.ViewModels
             {
                 foreach (var ei in userExposureInformationList.GroupBy(userExposureInformation => userExposureInformation.Timestamp))
                 {
-                    var (start, end) = ConvertToTerm(ei.Key);
-
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ei.Key,
-                        ExposureDateStart = start,
-                        ExposureDateEnd = end,
+                        ExposureDate = IExposureDataRepository.ConvertToTerm(ei.Key),
                     };
                     ens.SetExposureCount(ei.Count());
                     exposures.Add(ens);
@@ -127,39 +121,13 @@ namespace Covid19Radar.ViewModels
                 Exposures.Add(exposure);
             }
         }
-
-        private static (string, string) ConvertToTerm(DateTime utcDatetime)
-        {
-            var from = utcDatetime.Date.ToLocalTime();
-            var to = from.AddDays(1).ToLocalTime();
-
-            bool changeMonth = from.Month != to.Month;
-            bool changeYear = from.Year != to.Year;
-
-            string format = AppResources.ExposureDateFormatDate;
-            if (changeMonth)
-            {
-                format = AppResources.ExposureDateFormatMonth;
-            }
-            if (changeYear)
-            {
-                format = AppResources.ExposureDateFormatYear;
-            }
-
-            string fromStr = string.Format(AppResources.ExposureDateFormatYear, from.Year, from.Month, from.Day, from.Hour);
-            string toStr = string.Format(format, to.Year, to.Month, to.Day, to.Hour);
-
-            return (fromStr, toStr);
-        }
-
     }
 
     public class ExposureSummary
     {
         public DateTime Timestamp { get; set; }
 
-        public string ExposureDateStart { get; set; }
-        public string ExposureDateEnd { get; set; }
+        public string ExposureDate { get; set; }
 
         private string _description;
 
