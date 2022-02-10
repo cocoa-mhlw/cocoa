@@ -1244,7 +1244,7 @@
     <comment>TODO:日時については、協定世界時（UTC）を日本標準時（JST）に変換して、期間として表示しています。</comment>
   </data>
   <data name="ExposuresPageTo" xml:space="preserve">
-    <value> to </value>
+    <value>to</value>
     <comment>TODO:から</comment>
   </data>
   <data name="ExposureDateFormatDate" xml:space="preserve">
