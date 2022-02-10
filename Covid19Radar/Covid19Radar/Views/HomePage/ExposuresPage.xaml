@@ -42,15 +42,8 @@
                         <StackLayout Style="{StaticResource DetailsStackLayout}">
                             <Label
                                 Style="{StaticResource CardLabelSmall}"
-                                >
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="{Binding ExposureDateStart}" />
-                                        <Span Text="{x:Static resources:AppResources.ExposuresPageTo}" />
-                                        <Span Text="{Binding ExposureDateEnd}" />
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
+                                Text="{Binding ExposureDate}"
+                                />
                             <Label
                                 Style="{StaticResource CardLabelSmall}">
                                 <Label.FormattedText>
