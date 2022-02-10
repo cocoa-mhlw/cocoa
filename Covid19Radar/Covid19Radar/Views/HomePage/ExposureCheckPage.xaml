@@ -130,6 +130,9 @@
                     <Label
                         Style="{StaticResource DefaultLabelCaptionStartAlignment}"
                         Text="{Binding LowRiskContactPageAnnotationDecription}" />
+                    <Label
+                        Style="{StaticResource DefaultLabelCaptionStartAlignment}"
+                        Text="{x:Static resources:AppResources.LowRiskContactPageAnnotationDecription2}" />
                 </StackLayout>
             </CollectionView.Footer>
         </CollectionView>
