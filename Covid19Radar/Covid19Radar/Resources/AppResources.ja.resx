@@ -290,6 +290,10 @@
     <value>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</value>
     <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
   </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>※日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
+    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンからの信号を受信していません</value>
     <comment>陽性登録者のスマートフォンからの信号を受信していません</comment>
@@ -1252,8 +1256,8 @@
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
-    <value>日時については、協定世界時（UTC）を日本標準時（JST）に変換して、期間として表示しています。</value>
-    <comment>TODO:日時については、協定世界時（UTC）を日本標準時（JST）に変換して、期間として表示しています。</comment>
+    <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
+    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="ExposuresPageTo" xml:space="preserve">
     <value>から</value>
