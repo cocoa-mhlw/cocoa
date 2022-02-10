@@ -19,7 +19,7 @@ namespace Covid19Radar.ViewModels
 {
     public class SettingsPageViewModel : ViewModelBase
     {
-        private const string VERSION_SUFFIX = "-beta02";
+        private const string VERSION_SUFFIX = "-beta03";
 
         private readonly ILoggerService loggerService;
         private string _AppVersion;
