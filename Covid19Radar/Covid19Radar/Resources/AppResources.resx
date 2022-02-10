@@ -777,31 +777,32 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription0" xml:space="preserve">
-    <value>この通知は、接触の可能性をお伝えするものです。濃厚接触を確定するものではありません。</value>
-    <comment>この通知は、接触の可能性をお伝えするものです。濃厚接触を確定するものではありません。</comment>
+    <value>Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination.</value>
+    <comment>TODO:受診の際に必要となる場合があるため、「陽性登録者との接触一覧」のスクリーンショットを保存してください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
-please follow the app. guidance and check the Consultation Centers List to receive a consultation.
-・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</value>
-    <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
+    <value>If you do not have any symptoms,
+or if you do not know anyone who has had contact with a person that has been tested positive for COVID-19,
+please go about your daily life as usual, paying attention to infection control measures.
+However, if you have any symptoms, please consider receiving a consultation..
+    </value>
+    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>次のいずれかに当てはまる方は、アプリの案内に従って相談先をご確認ください。</value>
+    <value>If any of the following applies to you, please follow the guidance and check the Consultation Centers List to receive a consultation.</value>
     <comment>次のいずれかに当てはまる方は、アプリの案内に従って相談先をご確認ください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription3" xml:space="preserve">
-    <value>・発熱等の症状や基礎疾患がある</value>
-    <comment>・発熱等の症状や基礎疾患がある</comment>
+    <value>・If you have any symptoms such as fever, pre-existing conditions.</value>
+    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
   </data>
   <data name="ContactedNotifyPageDescription4" xml:space="preserve">
-    <value>・陽性者と接触した心当たりがある</value>
-    <comment>・陽性者と接触した心当たりがある</comment>
+    <value>・If you have been in contact with a person that has been tested positive for COVID-19.</value>
+    <comment>TODO:・陽性者と接触した心当たりがある</comment>
   </data>
   <data name="ContactedNotifyPageDescription5" xml:space="preserve">
-    <value>・帰国者・接触者外来等への受診を希望する</value>
-    <comment>・発熱等の症状や基礎疾患がある</comment>
+    <value>・If you would like to receive a consultation.</value>
+    <comment>TODO:・その他、受診を希望する</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>Agree</value>
