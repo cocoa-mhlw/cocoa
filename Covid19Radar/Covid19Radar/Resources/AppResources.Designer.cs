@@ -515,6 +515,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskContactPageAnnotationDecription2 {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageAnnotationDecription2", resourceCulture);
+            }
+        }
+        
         public static string NoRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("NoRiskContactPageLabel", resourceCulture);
