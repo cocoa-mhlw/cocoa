@@ -1358,15 +1358,15 @@ Note: this app does not collect users’ location information.</value>
     <comment>TODO:送信は匿名で行われます。送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。</comment>
   </data>
   <data name="SendLogSetttingDescription3" xml:space="preserve">
-    <value>Data may be released to contribute to the improvement of public health. Please check the Privacy Policy for the specific information to be sent and how it will be used.</value>
-    <comment>TODO:情報は公衆衛生の改善に寄与するために公開する場合があります。送信する情報の具体的な内容、利用方法についてはプライバシーポリシーを確認してください。</comment>
+    <value>Anonymous data may be released to contribute to the improvement of public health. Please check the Privacy Policy for the specific information to be sent and how it will be used.</value>
+    <comment>TODO:匿名の情報は公衆衛生の改善に寄与するために公開する場合があります。送信する情報の具体的な内容、利用方法についてはプライバシーポリシーを確認してください。</comment>
   </data>
   <data name="SendLogSetttingDescription4" xml:space="preserve">
     <value>You can stop sending data at any time from the app settings.</value>
     <comment>TODO:改善への協力はCOCOAの設定画面からいつでも設定できます。</comment>
   </data>
   <data name="ButtonStartCooperate" xml:space="preserve">
-    <value>Send exposure data</value>
+    <value>Send data</value>
     <comment>TODO:COCOAの改善に協力する</comment>
   </data>
   <data name="ButtonFinishCooperate" xml:space="preserve">

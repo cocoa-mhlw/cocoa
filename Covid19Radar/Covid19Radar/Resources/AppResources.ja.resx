@@ -1243,11 +1243,11 @@
     <comment>送信は匿名で行われます。送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。</comment>
   </data>
   <data name="SendLogSetttingDescription3" xml:space="preserve">
-    <value>情報は公衆衛生の改善に寄与するために公開する場合があります。</value>
-    <comment>情報は公衆衛生の改善に寄与するために公開する場合があります。</comment>
+    <value>匿名の情報は公衆衛生の改善に寄与するために集計して公開する場合があります。</value>
+    <comment>匿名の情報は公衆衛生の改善に寄与するために集計して公開する場合があります。</comment>
   </data>
   <data name="SendLogSetttingDescription4" xml:space="preserve">
-    <value>You can stop sending data at any time from the app settings.</value>
+    <value>改善への協力はCOCOAの設定画面からいつでも設定できます。</value>
     <comment>改善への協力はCOCOAの設定画面からいつでも設定できます。</comment>
   </data>
   <data name="ButtonStartCooperate" xml:space="preserve">
