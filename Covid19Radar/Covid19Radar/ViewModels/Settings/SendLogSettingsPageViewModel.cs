@@ -39,7 +39,7 @@ namespace Covid19Radar.ViewModels
         {
             if (value == SendEventLogState.Enable)
             {
-                DisableButtonLabel = "協力を終了する";
+                DisableButtonLabel = AppResources.ButtonFinishCooperate;
             }
             else if(value == SendEventLogState.Disable)
             {
@@ -51,7 +51,7 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        private string _enableButtonLabel = "COCOAの改善に協力する";
+        private string _enableButtonLabel = AppResources.ButtonStartCooperate;
         public string EnableButtonLabel
         {
             get { return _enableButtonLabel; }
@@ -102,8 +102,8 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             await UserDialogs.Instance.AlertAsync(
-                "改善への協力はCOCOAの『設定』からいつでも終了できます。",
-                "ご協力ありがとうございます",
+                AppResources.SendLogEnableSendLogDialogMessage,
+                AppResources.SendLogEnableSendLogDialogTitle,
                 AppResources.ButtonOk
                 );
 
@@ -119,14 +119,14 @@ namespace Covid19Radar.ViewModels
         {
             _loggerService.StartMethod();
 
-            var title = "ご検討ありがとうございます";
+            var title = AppResources.SendLogDisableSendLogDialogTitle1;
             if(SendEventLogState == SendEventLogState.Enable)
             {
-                title = "ご協力ありがとうございました";
+                title = AppResources.SendLogDisableSendLogDialogTitle2;
             }
 
             await UserDialogs.Instance.AlertAsync(
-                "改善への協力はCOCOAの『設定』からいつでも開始できます。",
+                AppResources.SendLogDisableSendLogDialogMessage,
                 title,
                 AppResources.ButtonOk
                 );

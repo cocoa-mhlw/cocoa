@@ -36,7 +36,7 @@
                     TabIndex="1"
                     Margin="0,0,0,20"
                     Style="{StaticResource DefaultTitleLabel}"
-                    Text="COCOAの改善にご協力ください"
+                    Text="{x:Static resources:AppResources.SendLogSetttingTitle}"
                     />
 
                 <ffimageloading:CachedImage
@@ -51,21 +51,21 @@
                     TabIndex="2"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
-                    Text="接触データの自動送信を有効にしてCOCOAの改善にご協力ください。"
+                    Text="{x:Static resources:AppResources.SendLogSetttingDescription1}"
                     />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="3"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
-                    Text="送信は匿名で行われます。送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。"
+                    Text="{x:Static resources:AppResources.SendLogSetttingDescription2}"
                     />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="4"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
-                    Text="送信してくださった情報は、接触判定の精度向上などCOCOAの改善に用います。送信する情報の具体的な内容、利用方法についてはプライバシーポリシーを確認してください。"
+                    Text="{x:Static resources:AppResources.SendLogSetttingDescription3}"
                     />
 
                 <Label
@@ -73,9 +73,9 @@
                     TabIndex="5"
                     Style="{StaticResource LinkLabelStyleMedium}"
                     Margin="0,0,0,20"
-                    Text="プライバシーポリシー">
+                    Text="{x:Static resources:AppResources.PrivacyPolicyPageTitle}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Path=OpenPrivacyPolicy}" />
+                        <TapGestureRecognizer Command="{Binding OpenPrivacyPolicy}" />
                     </Label.GestureRecognizers>
                 </Label>
 
@@ -84,7 +84,7 @@
                     TabIndex="6"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
-                    Text="改善への協力はCOCOAの設定画面からいつでも設定できます。"
+                    Text="{x:Static resources:AppResources.SendLogSetttingDescription4}"
                     />
 
             </StackLayout>

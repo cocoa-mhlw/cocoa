@@ -1894,5 +1894,77 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("ThresholdTextOperatorEqual", resourceCulture);
             }
         }
+        
+        public static string SendLogSetttingTitle {
+            get {
+                return ResourceManager.GetString("SendLogSetttingTitle", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingDescription1 {
+            get {
+                return ResourceManager.GetString("SendLogSetttingDescription1", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingDescription2 {
+            get {
+                return ResourceManager.GetString("SendLogSetttingDescription2", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingDescription3 {
+            get {
+                return ResourceManager.GetString("SendLogSetttingDescription3", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingDescription4 {
+            get {
+                return ResourceManager.GetString("SendLogSetttingDescription4", resourceCulture);
+            }
+        }
+        
+        public static string ButtonStartCooperate {
+            get {
+                return ResourceManager.GetString("ButtonStartCooperate", resourceCulture);
+            }
+        }
+        
+        public static string ButtonFinishCooperate {
+            get {
+                return ResourceManager.GetString("ButtonFinishCooperate", resourceCulture);
+            }
+        }
+        
+        public static string SendLogEnableSendLogDialogTitle {
+            get {
+                return ResourceManager.GetString("SendLogEnableSendLogDialogTitle", resourceCulture);
+            }
+        }
+        
+        public static string SendLogEnableSendLogDialogMessage {
+            get {
+                return ResourceManager.GetString("SendLogEnableSendLogDialogMessage", resourceCulture);
+            }
+        }
+        
+        public static string SendLogDisableSendLogDialogTitle1 {
+            get {
+                return ResourceManager.GetString("SendLogDisableSendLogDialogTitle1", resourceCulture);
+            }
+        }
+        
+        public static string SendLogDisableSendLogDialogTitle2 {
+            get {
+                return ResourceManager.GetString("SendLogDisableSendLogDialogTitle2", resourceCulture);
+            }
+        }
+        
+        public static string SendLogDisableSendLogDialogMessage {
+            get {
+                return ResourceManager.GetString("SendLogDisableSendLogDialogMessage", resourceCulture);
+            }
+        }
     }
 }
