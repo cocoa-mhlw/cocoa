@@ -36,6 +36,8 @@ jobs:
         xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
         xamarin-android-version: 12 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
         xcode-version: 13 # set the latest available Xcode 13
+    - name: Prepare settings.json
+      run: cp ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json.sample ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
     - name: Deploy nuget packages - ${{ matrix.Configuration }}
       run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/ | true
     - name: Build iOS Project - ${{ matrix.Configuration }}
@@ -49,6 +51,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Prepare settings.json
+      run: cp ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json.sample ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
     - name: Deploy nuget packages - ${{ matrix.Configuration }}
       run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/| true
     - name: Add msbuild to PATH
@@ -62,6 +66,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Prepare settings.json
+      run: cp ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json.sample ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
     - name: Execute Unit Tests
       run: dotnet test ${{ github.workspace }}/Covid19Radar/Tests/Covid19Radar.UnitTests/
       env:
