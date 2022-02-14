@@ -4,6 +4,7 @@
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace Covid19Radar.Api.Services
 {
@@ -21,7 +22,7 @@ namespace Covid19Radar.Api.Services
             public static readonly ValidateResult InvalidAzureFrontDoorId = new ValidateResult()
             {
                 IsValid = false,
-                ErrorActionResult = new StatusCodeResult(418)
+                ErrorActionResult = new StatusCodeResult((int)HttpStatusCode.Forbidden)
             };
             public static readonly ValidateResult Error = new ValidateResult()
             {
