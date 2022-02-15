@@ -96,9 +96,6 @@
     <Compile Update="Views\HomePage\NotifyOtherPage.xaml.cs">
       <DependentUpon>NotifyOtherPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ExceptionPage.xaml.cs">
-      <DependentUpon>ExceptionPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\HomePage\SubmitConsentPage.xaml.cs">
       <DependentUpon>SubmitConsentPage.xaml</DependentUpon>
     </Compile>
