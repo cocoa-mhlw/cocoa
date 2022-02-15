@@ -153,10 +153,6 @@
                     Style="{StaticResource DefaultButton}"
                     Text="TutorialPage4" />
                 <Button
-                    Command="{prism:NavigateTo 'TutorialPage5'}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="TutorialPage5" />
-                <Button
                     Command="{prism:NavigateTo 'TutorialPage6'}"
                     Style="{StaticResource DefaultButton}"
                     Text="TutorialPage6" />

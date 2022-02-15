@@ -701,36 +701,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string TutorialPage5Description1 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description1", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description2 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description2", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description3 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description3", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description4 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description4", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Title {
-            get {
-                return ResourceManager.GetString("TutorialPage5Title", resourceCulture);
-            }
-        }
-        
         public static string MenuPageTitle {
             get {
                 return ResourceManager.GetString("MenuPageTitle", resourceCulture);

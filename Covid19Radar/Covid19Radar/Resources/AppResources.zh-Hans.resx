@@ -440,26 +440,6 @@
     <value>关于隐私保护</value>
     <comment>プライバシーについて</comment>
   </data>
-  <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>开启接收通知</value>
-    <comment>通知をご利用いただくために</comment>
-  </data>
-  <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>为了即时收到密切接触信息，请开启新消息通知</value>
-    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
-  </data>
-  <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>开启</value>
-    <comment>有効にする</comment>
-  </data>
-  <data name="TutorialPage5Description4" xml:space="preserve">
-    <value>稍后设置</value>
-    <comment>あとで設定する</comment>
-  </data>
-  <data name="TutorialPage5Title" xml:space="preserve">
-    <value>To use notifications</value>
-    <comment>通知をご利用いただくために</comment>
-  </data>
   <data name="MenuPageTitle" xml:space="preserve">
     <value>菜单</value>
     <comment>メニュー</comment>
