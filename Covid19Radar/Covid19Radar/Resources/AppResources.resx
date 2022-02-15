@@ -432,14 +432,6 @@
     <value>Share this app</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
-  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>Thank you for registering your test results!</value>
-    <comment>陽性のご登録をいただきありがとうございました</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</value>
-    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
-  </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>Terms of use</value>
     <comment>利用規約</comment>

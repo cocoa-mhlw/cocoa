@@ -197,10 +197,6 @@
                     Style="{StaticResource DefaultButton}"
                     Text="TermsofservicePage" />
                 <Button
-                    Command="{prism:NavigateTo 'ThankYouNotifyOtherPage'}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="ThankYouNotifyOtherPage" />
-                <Button
                     Command="{prism:NavigateTo 'NotifyOtherPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="NotifyOtherPage" />

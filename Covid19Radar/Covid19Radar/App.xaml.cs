@@ -161,7 +161,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
             containerRegistry.RegisterForNavigation<InqueryPage>();
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
-            containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<ExposureCheckPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
