@@ -793,6 +793,22 @@
     <value>接触確認アプリに関するお問い合わせ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="InquiryMailModelTitle" xml:space="preserve">
+    <value>モデル名：</value>
+    <comment>モデル名：</comment>
+  </data>
+  <data name="InquiryMailOSTitle" xml:space="preserve">
+    <value>OS：</value>
+    <comment>OS：</comment>
+  </data>
+  <data name="InquiryMailOSVersionTitle" xml:space="preserve">
+    <value>OSバージョン：</value>
+    <comment>OSバージョン：</comment>
+  </data>
+  <data name="InquiryMailAppVersionTitle" xml:space="preserve">
+    <value>アプリバージョン：</value>
+    <comment>アプリバージョン：</comment>
+  </data>
   <data name="SendIdMailBody1" xml:space="preserve">
     <value>動作情報ID：</value>
     <comment>動作情報ID：</comment>

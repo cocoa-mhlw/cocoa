@@ -899,6 +899,22 @@ please follow the app. guidance and check the Consultation Centers List to recei
     <value>Inquiries about contact information app</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
+  <data name="InquiryMailModelTitle" xml:space="preserve">
+    <value>モデル名：</value>
+    <comment>モデル名：</comment>
+  </data>
+  <data name="InquiryMailOSTitle" xml:space="preserve">
+    <value>OS：</value>
+    <comment>OS：</comment>
+  </data>
+  <data name="InquiryMailOSVersionTitle" xml:space="preserve">
+    <value>OSバージョン：</value>
+    <comment>OSバージョン：</comment>
+  </data>
+  <data name="InquiryMailAppVersionTitle" xml:space="preserve">
+    <value>アプリバージョン：</value>
+    <comment>アプリバージョン：</comment>
+  </data>
   <data name="Processing" xml:space="preserve">
     <value>Processing</value>
     <comment>処理中</comment>
