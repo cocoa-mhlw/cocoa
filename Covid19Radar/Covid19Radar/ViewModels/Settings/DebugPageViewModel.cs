@@ -4,13 +4,19 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -207,6 +213,54 @@ namespace Covid19Radar.ViewModels
         {
             await _localNotificationService.ShowExposureNotificationAsync();
         });
+
+        public Command OnClickExportExposureWindow => new Command(async () =>
+        {
+            var exposureWindows = await _exposureDataRepository.GetExposureWindowsAsync();
+            var csv = ConvertCsv(exposureWindows);
+            var hashString = ConvertSha256(csv);
+
+            var fileName = $"exposure_window-{DeviceInfo.Name}-{hashString}.csv";
+            var file = Path.Combine(FileSystem.CacheDirectory, fileName);
+            File.WriteAllText(file, csv);
+
+            var shareFile = new ShareFile(file);
+            await Share.RequestAsync(new ShareFileRequest
+            {
+                File = shareFile
+            });
+        });
+
+        private string ConvertCsv(List<ExposureWindow> exposureWindows)
+        {
+            var flattenWindowLines = exposureWindows.Select((window, index) =>
+            {
+                var humanReadableDateMillisSinceEpoch = DateTimeOffset.UnixEpoch
+                    .AddMilliseconds(window.DateMillisSinceEpoch).UtcDateTime
+                    .ToLocalTime()
+                    .ToString("D", CultureInfo.CurrentCulture);
+                var connmaSeparatedWindow = $"{index},{window.CalibrationConfidence},{humanReadableDateMillisSinceEpoch},{window.Infectiousness},{window.ReportType}";
+                var flattenWindow = window.ScanInstances.Select(scanInstance =>
+                {
+                    var connmaSeparatedScanInstance = $"{scanInstance.MinAttenuationDb},{scanInstance.SecondsSinceLastScan},{scanInstance.TypicalAttenuationDb}";
+                    return $"{connmaSeparatedWindow},{connmaSeparatedScanInstance}";
+                });
+                return String.Join("\n", flattenWindow);
+            });
+
+            var csv = new StringBuilder();
+            csv.AppendLine("ExposureWindowIndex,CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb");
+            csv.AppendLine(String.Join("\n", flattenWindowLines));
+            return csv.ToString();
+        }
+
+        private string ConvertSha256(string text)
+        {
+            using var sha = SHA256.Create();
+            var textBytes = Encoding.UTF8.GetBytes(text);
+            var hash = sha.ComputeHash(textBytes);
+            return BitConverter.ToString(hash).Replace("-", string.Empty); 
+        }
 
         public Command OnClickRemoveStartDate => new Command(async () =>
         {

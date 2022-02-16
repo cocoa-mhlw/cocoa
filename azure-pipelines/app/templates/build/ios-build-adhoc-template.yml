@@ -2,13 +2,13 @@ steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
-    certSecureFile: 'cocoa_distribution_20220610.p12'
+    certSecureFile: 'cocoa_distribution_20230215_4.p12'
     certPwd: '$(iOS_CertificatePassword)'
 
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_adhoc_20220610_13.mobileprovision'
+    provProfileSecureFile: 'cocoa_adhoc_20230214_04.mobileprovision'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -28,7 +28,7 @@ steps:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
     configuration: AppStore
     signingIdentity: 'Apple Distribution'
-    signingProvisioningProfileID: '67f32730-a8fc-4b3e-a0ac-74ada0327db9'
+    signingProvisioningProfileID: 'cdc74b34-c91f-4bc9-8c5a-3e904ae2635e'
 
 - task: CopyFiles@2
   displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'

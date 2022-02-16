@@ -47,7 +47,8 @@ namespace Covid19Radar.Common
                 try
                 {
                     var json = await client.GetStringAsync(uri);
-                    var versionString = JObject.Parse(json).Value<string>("version");
+                    var key = Device.RuntimePlatform == Device.iOS ? "ios" : "android";
+                    var versionString = JObject.Parse(json).Value<string>(key);
 
                     if (new Version(versionString).CompareTo(new Version(AppInfo.VersionString)) > 0)
                     {

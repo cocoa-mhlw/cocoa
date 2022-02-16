@@ -533,18 +533,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string ThankYouNotifyOtherPageLabel1 {
-            get {
-                return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
-            }
-        }
-        
-        public static string ThankYouNotifyOtherPageDescription1 {
-            get {
-                return ResourceManager.GetString("ThankYouNotifyOtherPageDescription1", resourceCulture);
-            }
-        }
-        
         public static string TutorialPage3Title {
             get {
                 return ResourceManager.GetString("TutorialPage3Title", resourceCulture);
@@ -698,36 +686,6 @@ namespace Covid19Radar.Resources {
         public static string TutorialPage2Title {
             get {
                 return ResourceManager.GetString("TutorialPage2Title", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description1 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description1", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description2 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description2", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description3 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description3", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description4 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description4", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Title {
-            get {
-                return ResourceManager.GetString("TutorialPage5Title", resourceCulture);
             }
         }
         

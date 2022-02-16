@@ -80,7 +80,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockDateTimeUtility.Object
                 );
             exposureDataRepository = new ExposureDataRepository(
-                    mockPreferenceService.Object,
                     mockSecureStorageService.Object,
                     mockDateTimeUtility.Object,
                     mockLoggerService.Object
@@ -430,10 +429,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Setup(x => x.UtcNow)
                 .Returns(utcNow);
 
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
@@ -490,10 +489,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Setup(x => x.UtcNow)
                 .Returns(utcNow);
 
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
@@ -540,10 +539,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Setup(x => x.UtcNow)
                 .Returns(utcNow);
 
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
             mockExposureRiskCalculationConfigurationRepository
