@@ -449,12 +449,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotContactPageButtonText {
-            get {
-                return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
-            }
-        }
-        
         public static string LowRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("LowRiskContactPageLabel", resourceCulture);
@@ -515,6 +509,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskContactPageAnnotationDecription2 {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageAnnotationDecription2", resourceCulture);
+            }
+        }
+        
         public static string NoRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("NoRiskContactPageLabel", resourceCulture);
@@ -524,24 +524,6 @@ namespace Covid19Radar.Resources {
         public static string NoRiskContactPageDescription {
             get {
                 return ResourceManager.GetString("NoRiskContactPageDescription", resourceCulture);
-            }
-        }
-        
-        public static string NoRiskContactPageButtonText {
-            get {
-                return ResourceManager.GetString("NoRiskContactPageButtonText", resourceCulture);
-            }
-        }
-        
-        public static string ThankYouNotifyOtherPageLabel1 {
-            get {
-                return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
-            }
-        }
-        
-        public static string ThankYouNotifyOtherPageDescription1 {
-            get {
-                return ResourceManager.GetString("ThankYouNotifyOtherPageDescription1", resourceCulture);
             }
         }
         
@@ -1079,9 +1061,39 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ContactedNotifyPageDescription0 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription0", resourceCulture);
+            }
+        }
+        
         public static string ContactedNotifyPageDescription1 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageDescription1", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription2 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription2", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription3 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription3", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription4 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription4", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription5 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription5", resourceCulture);
             }
         }
         
@@ -1886,6 +1898,180 @@ namespace Covid19Radar.Resources {
         public static string ThresholdTextOperatorEqual {
             get {
                 return ResourceManager.GetString("ThresholdTextOperatorEqual", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageToUtcDescription {
+            get {
+                return ResourceManager.GetString("ExposuresPageToUtcDescription", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageTo {
+            get {
+                return ResourceManager.GetString("ExposuresPageTo", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatDate {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatDate", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatMonth {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatMonth", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatYear {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatYear", resourceCulture);
+            }
+        }
+        
+        public static string OpenSourceLicense {
+            get {
+                return ResourceManager.GetString("OpenSourceLicense", resourceCulture);
+            }
+        }
+        
+        public static string OpenSourceLicense_Description1 {
+            get {
+                return ResourceManager.GetString("OpenSourceLicense_Description1", resourceCulture);
+            }
+        }
+        
+        public static string OpenSourceLicense_Description2 {
+            get {
+                return ResourceManager.GetString("OpenSourceLicense_Description2", resourceCulture);
+            }
+        }
+        
+        public static string UrlGitHubRepository {
+            get {
+                return ResourceManager.GetString("UrlGitHubRepository", resourceCulture);
+            }
+        }
+        
+        public static string OpenSourceLicense_GetSourceCode {
+            get {
+                return ResourceManager.GetString("OpenSourceLicense_GetSourceCode", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta {
+            get {
+                return ResourceManager.GetString("InqueryBeta", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Description1 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Description1", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Description2 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Description2", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_InstallStable {
+            get {
+                return ResourceManager.GetString("InqueryBeta_InstallStable", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_DeveloperCommunity {
+            get {
+                return ResourceManager.GetString("InqueryBeta_DeveloperCommunity", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Community_Description1 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Community_Description1", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Community_Description2 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Community_Description2", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBetaViaGitHub {
+            get {
+                return ResourceManager.GetString("InqueryBetaViaGitHub", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Community_Description3 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Community_Description3", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBeta_Community_Description4 {
+            get {
+                return ResourceManager.GetString("InqueryBeta_Community_Description4", resourceCulture);
+            }
+        }
+        
+        public static string InqueryBetaShareLog {
+            get {
+                return ResourceManager.GetString("InqueryBetaShareLog", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_WelcomeBeta {
+            get {
+                return ResourceManager.GetString("Beta_Splash_WelcomeBeta", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_Description1 {
+            get {
+                return ResourceManager.GetString("Beta_Splash_Description1", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_Description2 {
+            get {
+                return ResourceManager.GetString("Beta_Splash_Description2", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_Description3 {
+            get {
+                return ResourceManager.GetString("Beta_Splash_Description3", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_GitHub {
+            get {
+                return ResourceManager.GetString("Beta_Splash_GitHub", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_GitHubAccountRequired {
+            get {
+                return ResourceManager.GetString("Beta_Splash_GitHubAccountRequired", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_Acknowledge {
+            get {
+                return ResourceManager.GetString("Beta_Splash_Acknowledge", resourceCulture);
+            }
+        }
+        
+        public static string Beta_Splash_InstallStable {
+            get {
+                return ResourceManager.GetString("Beta_Splash_InstallStable", resourceCulture);
             }
         }
     }

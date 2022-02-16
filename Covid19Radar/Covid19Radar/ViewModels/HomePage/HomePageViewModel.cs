@@ -15,7 +15,6 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
-using Covid19Radar.Model;
 
 namespace Covid19Radar.ViewModels
 {
@@ -30,6 +29,7 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
+        private readonly ICheckVersionService checkVersionService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
 
@@ -82,6 +82,7 @@ namespace Covid19Radar.ViewModels
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
+            ICheckVersionService checkVersionService,
             IDialogService dialogService,
             IExternalNavigationService externalNavigationService
             ) : base(navigationService)
@@ -97,6 +98,7 @@ namespace Covid19Radar.ViewModels
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             this.exposureConfigurationRepository = exposureConfigurationRepository;
             this.exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
+            this.checkVersionService = checkVersionService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
         }
@@ -116,7 +118,7 @@ namespace Covid19Radar.ViewModels
             });
 
             // Check Version
-            AppUtils.CheckVersion(loggerService);
+            _ = checkVersionService.CheckVersionAsync();
 
             // Load necessary files asynchronous
             _ = exposureConfigurationRepository.GetExposureConfigurationAsync();

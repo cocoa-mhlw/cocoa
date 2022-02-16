@@ -376,10 +376,6 @@
     <value>Register by entering provided processing number into this app</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
-  <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>Share this app</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>The signal received from the smartphone of the person who has registered as positive for COVID-19 was below the standard value</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
@@ -401,12 +397,12 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>Score: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>Score {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>Score: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>Score {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
     <value>{0:#} minutes of contact</value>
@@ -417,8 +413,12 @@
     <comment>{0:#}分間の接触のため通知の対象外</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>*The score is calculated based on the strength and time of the received signal. It is set to be {0:#} {1:#} with contact within 1 m for 15 minutes or more under regular conditions.</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>*The score is calculated based on the strength and time of the received signal. It is set to be 100 or more with contact within 1 m for 15 minutes or more under regular conditions.</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で100以上になるように設定しています。</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
+    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>
@@ -427,18 +427,6 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>It appears there have been no persons who have registered positive for COVID-19 within your sphere of activities. Please continue to pay attention to preventing COVID-19 infections.</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
-  </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>Share this app</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>Thank you for registering your test results!</value>
-    <comment>陽性のご登録をいただきありがとうございました</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</value>
-    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>Terms of use</value>
@@ -501,8 +489,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>There is no signal exceeding the standard value</value>
-    <comment>基準値を超える信号はありません</comment>
+    <value>Close contacts for the past 14 days</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>Home</value>
@@ -792,12 +780,33 @@
     <value>Find COVID-19 Consultation Centers</value>
     <comment>検査等の相談先を探す</comment>
   </data>
+  <data name="ContactedNotifyPageDescription0" xml:space="preserve">
+    <value>Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination.</value>
+    <comment>TODO:受診の際に必要となる場合があるため、「陽性登録者との接触一覧」のスクリーンショットを保存してください。</comment>
+  </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>・If you have any symptoms such as fever, pre-existing conditions, or if you have been in contact with a person that has been tested positive for COVID-19, 
-please follow the app. guidance and check the Consultation Centers List to receive a consultation.
-・Please take a screenshot of the Close Contacts List below, as it may be necessary during the medical examination</value>
-    <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
+    <value>If you do not have any symptoms,
+or if you do not know anyone who has had contact with a person that has been tested positive for COVID-19,
+please go about your daily life as usual, paying attention to infection control measures.
+However, if you have any symptoms, please consider receiving a consultation..
+    </value>
+    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>If any of the following applies to you, please follow the guidance and check the Consultation Centers List to receive a consultation.</value>
+    <comment>次のいずれかに当てはまる方は、アプリの案内に従って相談先をご確認ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
+    <value>・If you have any symptoms such as fever, pre-existing conditions.</value>
+    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
+    <value>・If you have been in contact with a person that has been tested positive for COVID-19.</value>
+    <comment>TODO:・陽性者と接触した心当たりがある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
+    <value>・If you would like to receive a consultation.</value>
+    <comment>TODO:・その他、受診を希望する</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>Agree</value>
@@ -1339,6 +1348,131 @@ Note: this app does not collect users’ location information.</value>
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
     <value></value>
     <comment>と同じ</comment>
+  </data>
+
+  <data name="ExposuresPageToUtcDescription" xml:space="preserve">
+    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
+    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTo" xml:space="preserve">
+    <value>to</value>
+    <comment>TODO:から</comment>
+  </data>
+  <data name="ExposureDateFormatDate" xml:space="preserve">
+    <value>{2:#} {3:#}:00</value>
+    <comment>TODO:{2:#}日 {3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatMonth" xml:space="preserve">
+    <value>{1:#}/{2:#}/ {3:#}:00</value>
+    <comment>TODO:{1:#}月{2:#}日 {3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatYear" xml:space="preserve">
+    <value>{0:#}/{1:#}/{2:#} {3:#}:00</value>
+    <comment>TODO:{0:#}年{1:#}月{2:#}日 {3:#}時</comment>
+  </data>
+
+  <data name="OpenSourceLicense" xml:space="preserve">
+    <value>Open Source License</value>
+    <comment>オープンソースライセンス</comment>
+  </data>
+  <data name="OpenSourceLicense_Description1" xml:space="preserve">
+    <value>COCOA is open source software, made available to you under the Mozilla Public License 2.0 (MPL).</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</comment>
+  </data>
+  <data name="OpenSourceLicense_Description2" xml:space="preserve">
+    <value>The source code can download from the following URL.</value>
+    <comment>COCOAのソースコードは次のURLから入手できます。</comment>
+  </data>
+  <data name="UrlGitHubRepository" xml:space="preserve">
+    <value>https://github.com/cocoa-mhlw/cocoa/</value>
+    <comment>https://github.com/cocoa-mhlw/cocoa/</comment>
+  </data>
+  <data name="OpenSourceLicense_GetSourceCode" xml:space="preserve">
+    <value>Get source code</value>
+    <comment>ソースコードを入手</comment>
+  </data>
+
+  <data name="InqueryBeta" xml:space="preserve">
+    <value>COCOA(Beta)</value>
+    <comment>COCOA(Beta)</comment>
+  </data>
+  <data name="InqueryBeta_Description1" xml:space="preserve">
+    <value>COCOA(Beta) is the experimental version of COCOA, that is COCOA open source project uses to test out new features before it adds them to the stable release.</value>
+    <comment>COCOA(Beta)は新しい機能をテストするための実験的なバージョンです。</comment>
+  </data>
+  <data name="InqueryBeta_Description2" xml:space="preserve">
+    <value>We do not provide support by e-mail or phone at this time. If you would like regular support, please use the stable version.</value>
+    <comment>COCOA(Beta)は安定版ではないため、現時点ではメールや電話でのサポートは行っていません。通常サポートをご希望の方は安定版をお使いください。</comment>
+  </data>
+    <data name="InqueryBeta_InstallStable" xml:space="preserve">
+    <value>Install stable version</value>
+    <comment>安定版をインストール</comment>
+  </data>
+
+  <data name="InqueryBeta_DeveloperCommunity" xml:space="preserve">
+    <value>Community</value>
+    <comment>開発コミュニティ</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description1" xml:space="preserve">
+    <value>COCOA is open source software, made available to you under the Mozilla Public License 2.0 (MPL).</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description2" xml:space="preserve">
+    <value>If you have any problems, please let the community know (GitHub account is required).</value>
+    <comment>なにか問題があれば、開発コミュニティまでお知らせください（GitHubのアカウントが必要です）。</comment>
+  </data>
+  <data name="InqueryBetaViaGitHub" xml:space="preserve">
+    <value>Community</value>
+    <comment>開発コミュニティを開く</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description3" xml:space="preserve">
+    <value> * The community may ask you to share the operation log in order to investigate the cause of problems. If an error occurs, please get and save the logs.</value>
+    <comment>※ 不具合等の原因究明のために動作ログの共有を求める場合があります。下のボタンから動作ログを取得・保存してください。</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description4" xml:space="preserve">
+    <value>Thank you for your cooperation!</value>
+    <comment>ご協力ありがとうございます！</comment>
+  </data>
+  <data name="InqueryBetaViaGitHub" xml:space="preserve">
+    <value>Open GitHub</value>
+    <comment>GitHubを開く</comment>
+  </data>
+  <data name="InqueryBetaShareLog" xml:space="preserve">
+    <value>動作ログを取得</value>
+    <comment>動作ログを取得</comment>
+  </data>
+
+  <data name="Beta_Splash_WelcomeBeta" xml:space="preserve">
+    <value>Welcome COCOA(Beta)!!</value>
+    <comment>COCOA(Beta)へようこそ！</comment>
+  </data>
+  <data name="Beta_Splash_Description1" xml:space="preserve">
+    <value>COCOA(Beta) is the experimental version of COCOA, that is COCOA open source project uses to test out new features before it adds them to the stable release.</value>
+    <comment>COCOA(Beta)は、新しい機能をテストするための実験的なバージョンです。</comment>
+  </data>
+  <data name="Beta_Splash_Description2" xml:space="preserve">
+    <value>COCOA(Beta) is not a stable version. Please understand that there is a possibility that not only the experimental functions but also the basic functions of COCOA (Diagnosis submission and exposure detection) may not work properly.</value>
+    <comment>COCOA(Beta)は安定版ではありません。実験的な機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご理解ください。</comment>
+  </data>
+  <data name="Beta_Splash_Description3" xml:space="preserve">
+    <value>We do not provide support by e-mail or phone at this time. If you have any problems, please let the community know.</value>
+    <comment>COCOA(Beta)では通常のサポートは行っていません。何か問題等ありましたら開発コミュニティまでお知らせください。</comment>
+  </data>
+  <data name="Beta_Splash_GitHub" xml:space="preserve">
+    <value>Community</value>
+    <comment>開発コミュニティ</comment>
+  </data>
+  <data name="Beta_Splash_GitHubAccountRequired" xml:space="preserve">
+    <value>(GitHub account is required)</value>
+    <comment>（GitHubのアカウントが必要です）</comment>
+  </data>
+  <data name="Beta_Splash_Acknowledge" xml:space="preserve">
+    <value>Use COCOA(Beta)</value>
+    <comment>COCOA(Beta)を利用する</comment>
+  </data>
+  <data name="Beta_Splash_InstallStable" xml:space="preserve">
+    <value>Use Stable veriosn</value>
+    <comment>安定版をインストール</comment>
   </data>
 
 </root>

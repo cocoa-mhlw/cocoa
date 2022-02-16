@@ -46,17 +46,18 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var testZipFileName = "zip-file.zip";
             var testTmpPath = Path.Combine("log", "tmp", "path");
             var testSasToken = "test-sas-token";
+            var testZipFilePath = Path.Combine(testTmpPath, testZipFileName);
 
             mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(new ApiResponse<LogStorageSas>(200, new LogStorageSas { SasToken = testSasToken }));
 
             mockLogPathService.Setup(x => x.LogUploadingTmpPath).Returns(testTmpPath);
-            mockStorageService.Setup(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, Path.Combine(testTmpPath, testZipFileName))).ReturnsAsync(true);
+            mockStorageService.Setup(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, testZipFilePath)).ReturnsAsync(true);
 
-            var result = await unitUnderTest.UploadAsync(testZipFileName);
+            var result = await unitUnderTest.UploadAsync(testZipFilePath);
 
             Assert.True(result);
             mockHttpDataService.Verify(x => x.GetLogStorageSas(), Times.Once());
-            mockStorageService.Verify(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, Path.Combine(testTmpPath, testZipFileName)), Times.Once());
+            mockStorageService.Verify(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, testZipFilePath), Times.Once());
         }
 
         [Theory]
@@ -86,13 +87,14 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var testZipFileName = "zip-file.zip";
             var testTmpPath = Path.Combine("log", "tmp", "path");
             var testSasToken = "test-sas-token";
+            var testZipFilePath = Path.Combine(testTmpPath, testZipFileName);
 
             mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(new ApiResponse<LogStorageSas>(200, new LogStorageSas { SasToken = testSasToken }));
 
             mockLogPathService.Setup(x => x.LogUploadingTmpPath).Returns(testTmpPath);
             mockStorageService.Setup(x => x.UploadAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).ReturnsAsync(false);
 
-            var result = await unitUnderTest.UploadAsync(testZipFileName);
+            var result = await unitUnderTest.UploadAsync(testZipFilePath);
 
             Assert.False(result);
             mockHttpDataService.Verify(x => x.GetLogStorageSas(), Times.Once());
@@ -107,11 +109,12 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var testZipFileName = "zip-file.zip";
             var testTmpPath = Path.Combine("log", "tmp", "path");
             var testSasToken = "test-sas-token";
+            var testZipFilePath = Path.Combine(testTmpPath, testZipFileName);
 
             mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(new ApiResponse<LogStorageSas>(200, new LogStorageSas { SasToken = testSasToken }));
-            mockStorageService.Setup(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, Path.Combine(testTmpPath, testZipFileName))).ReturnsAsync(false);
+            mockStorageService.Setup(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, testZipFilePath)).ReturnsAsync(false);
 
-            var result = await unitUnderTest.UploadAsync(testZipFileName);
+            var result = await unitUnderTest.UploadAsync(testZipFilePath);
 
             Assert.False(result);
         }

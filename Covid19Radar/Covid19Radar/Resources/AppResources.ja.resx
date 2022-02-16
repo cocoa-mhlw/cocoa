@@ -246,21 +246,17 @@
     <value>接触の記録を削除してアプリを初期状態に戻すには</value>
     <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
-  <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>スコア: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>スコア {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>スコア: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>スコア {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
     <value>{0:#}分間の接触</value>
@@ -279,7 +275,10 @@
     <comment>分</comment>
   </data>
   <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</value>
+    <value>過去14日間の陽性登録者との接触状況をスコアとして表示しています。
+ご自身の行動とスコアを照らし合わせることにより、行動圏内における日々の感染状況の変化を把握するためにご活用ください。
+なお、基準値を下回っているため、陽性登録者との濃厚接触の可能性は低いですが、咳や発熱等の症状が現れた場合は、医療機関等にご相談ください。
+    </value>
     <comment>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
   </data>
   <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
@@ -287,8 +286,12 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>※日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
+    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンからの信号を受信していません</value>
@@ -297,18 +300,6 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
-  </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>陽性のご登録をいただきありがとうございました</value>
-    <comment>陽性のご登録をいただきありがとうございました</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
-    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>利用規約</value>
@@ -335,12 +326,12 @@
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>陽性者との接触一覧</value>
-    <comment>陽性者との接触一覧</comment>
+    <value>陽性登録者との接触一覧</value>
+    <comment>TODO:陽性登録者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>陽性者との接触確認</value>
-    <comment>陽性者との接触確認</comment>
+    <value>陽性登録者との接触確認</value>
+    <comment>TODO:陽性登録者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
     <value>過去14日間の接触</value>
@@ -355,7 +346,7 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>陽性者との接触結果を確認</value>
+    <value>陽性登録者との接触結果を確認</value>
     <comment>陽性者との接触結果を確認</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
@@ -371,8 +362,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>基準値を超える信号はありません</value>
-    <comment>基準値を超える信号はありません</comment>
+    <value>過去14日間の接触</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>ホーム</value>
@@ -547,8 +538,8 @@
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>以下の日に陽性者との接触が確認されました。</value>
-    <comment>以下の日に陽性者との接触が確認されました。</comment>
+    <value>次の期間に陽性登録者との接触が確認されました。</value>
+    <comment>TODO:次の期間に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -674,11 +665,32 @@
     <value>検査等の相談先を探す</value>
     <comment>検査等の相談先を探す</comment>
   </data>
+  <data name="ContactedNotifyPageDescription0" xml:space="preserve">
+    <value>受診の際に必要となる場合があるため、「陽性登録者との接触一覧」のスクリーンショットを保存してください。</value>
+    <comment>TODO:受診の際に必要となる場合があるため、「陽性登録者との接触一覧」のスクリーンショットを保存してください。</comment>
+  </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショット（※）を保存してください。</value>
-    <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショット（※）を保存してください。</comment>
+    <value>症状がない場合、
+陽性者と接触した心当たりがない場合は、
+感染対策に留意しつつ普段通りの生活をお送りください。
+ただし、体調に変化があった場合は、受診を検討ください。</value>
+    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</value>
+    <comment>TODO:次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
+    <value>・発熱等の症状や基礎疾患がある</value>
+    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
+    <value>・陽性者と接触した心当たりがある</value>
+    <comment>TODO:・陽性者と接触した心当たりがある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
+    <value>・その他、受診を希望する</value>
+    <comment>TODO:・その他、受診を希望する</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>確認しました</value>
@@ -1228,6 +1240,127 @@
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
     <value>と同じ</value>
     <comment>と同じ</comment>
+  </data>
+
+  <data name="ExposuresPageToUtcDescription" xml:space="preserve">
+    <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
+    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTo" xml:space="preserve">
+    <value>から</value>
+    <comment>TODO:から</comment>
+  </data>
+  <data name="ExposureDateFormatDate" xml:space="preserve">
+    <value>{2:#}日{3:#}時</value>
+    <comment>TODO:{2:#}日{3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatMonth" xml:space="preserve">
+    <value>{1:#}月 {2:#}日{3:#}時</value>
+    <comment>TODO:{1:#}月{2:#}日{3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatYear" xml:space="preserve">
+    <value>{0:#}年{1:#}月 {2:#}日{3:#}時</value>
+    <comment>TODO:{0:#}年{1:#}月{2:#}日{3:#}時</comment>
+  </data>
+
+  <data name="OpenSourceLicense" xml:space="preserve">
+    <value>オープンソースライセンス</value>
+    <comment>オープンソースライセンス</comment>
+  </data>
+  <data name="OpenSourceLicense_Description1" xml:space="preserve">
+    <value>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</comment>
+  </data>
+  <data name="OpenSourceLicense_Description2" xml:space="preserve">
+    <value>COCOAのソースコードは次のURLから入手できます。</value>
+    <comment>COCOAのソースコードは次のURLから入手できます。</comment>
+  </data>
+  <data name="UrlGitHubRepository" xml:space="preserve">
+    <value>https://github.com/cocoa-mhlw/cocoa/</value>
+    <comment>https://github.com/cocoa-mhlw/cocoa/</comment>
+  </data>
+  <data name="OpenSourceLicense_GetSourceCode" xml:space="preserve">
+    <value>ソースコードを入手</value>
+    <comment>ソースコードを入手</comment>
+  </data>
+
+  <data name="InqueryBeta" xml:space="preserve">
+    <value>COCOA(Beta)</value>
+    <comment>COCOA(Beta)</comment>
+  </data>
+  <data name="InqueryBeta_Description1" xml:space="preserve">
+    <value>COCOA(Beta)は新しい機能をテストするための実験的なバージョンです。</value>
+    <comment>COCOA(Beta)は新しい機能をテストするための実験的なバージョンです。</comment>
+  </data>
+  <data name="InqueryBeta_Description2" xml:space="preserve">
+    <value>COCOA(Beta)は安定版ではないため、現時点ではメールや電話でのサポートは行っていません。通常のサポートをご希望の方は安定版をお使いください。</value>
+    <comment>COCOA(Beta)は安定版ではないため、現時点ではメールや電話でのサポートは行っていません。通常のサポートをご希望の方は安定版をお使いください。</comment>
+  </data>
+    <data name="InqueryBeta_InstallStable" xml:space="preserve">
+    <value>安定版をインストール</value>
+    <comment>安定版をインストール</comment>
+  </data>
+
+  <data name="InqueryBeta" xml:space="preserve">
+    <value>COCOA(Beta)</value>
+    <comment>COCOA(Beta)</comment>
+  </data>
+  <data name="InqueryBeta_DeveloperCommunity" xml:space="preserve">
+    <value>開発コミュニティ</value>
+    <comment>開発コミュニティ</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description1" xml:space="preserve">
+    <value>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description2" xml:space="preserve">
+    <value>なにか問題がありましたら、開発コミュニティまでお知らせください（GitHubのアカウントが必要です）。</value>
+    <comment>なにか問題がありましたら、開発コミュニティまでお知らせください（GitHubのアカウントが必要です）。</comment>
+  </data>
+  <data name="InqueryBetaViaGitHub" xml:space="preserve">
+    <value>開発コミュニティを開く</value>
+    <comment>開発コミュニティを開く</comment>
+  </data>
+  <data name="InqueryBeta_Community_Description3" xml:space="preserve">
+    <value>※ 不具合等の原因究明のために動作ログの共有をお願いする場合があります。下のボタンから動作ログを取得・保存してください。</value>
+    <comment>※ 不具合等の原因究明のために動作ログの共有をお願いする場合があります。下のボタンから動作ログを取得・保存してください。</comment>
+  </data>
+    <data name="InqueryBeta_Community_Description4" xml:space="preserve">
+    <value>ご協力ありがとうございます！</value>
+    <comment>ご協力ありがとうございます！</comment>
+  </data>
+
+  <data name="Beta_Splash_WelcomeBeta" xml:space="preserve">
+    <value>COCOA(Beta)へようこそ！</value>
+    <comment>COCOA(Beta)へようこそ！</comment>
+  </data>
+  <data name="Beta_Splash_Description1" xml:space="preserve">
+    <value>COCOA(Beta)は、新しい機能をテストするための実験的なバージョンです。</value>
+    <comment>COCOA(Beta)は、新しい機能をテストするための実験的なバージョンです。</comment>
+  </data>
+  <data name="Beta_Splash_Description2" xml:space="preserve">
+    <value>COCOA(Beta)は安定版ではありません。Beta版の実験機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご了承ください。</value>
+    <comment>COCOA(Beta)は安定版ではありません。Beta版の実験機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご了承ください。</comment>
+  </data>
+  <data name="Beta_Splash_Description3" xml:space="preserve">
+    <value>COCOA(Beta)では、現時点では通常のサポートは行っていません。なにか問題がありましたら開発コミュニティまでお知らせください。</value>
+    <comment>COCOA(Beta)では、現時点では通常のサポートは行っていません。なにか問題がありましたら開発コミュニティまでお知らせください。</comment>
+  </data>
+  <data name="Beta_Splash_GitHub" xml:space="preserve">
+    <value>開発コミュニティ</value>
+    <comment>開発コミュニティ</comment>
+  </data>
+  <data name="Beta_Splash_GitHubAccountRequired" xml:space="preserve">
+    <value>（GitHubのアカウントが必要です）</value>
+    <comment>（GitHubのアカウントが必要です）</comment>
+  </data>
+  <data name="Beta_Splash_Acknowledge" xml:space="preserve">
+    <value>確認して利用する</value>
+    <comment>確認して利用する</comment>
+  </data>
+  <data name="Beta_Splash_InstallStable" xml:space="preserve">
+    <value>安定版をインストール</value>
+    <comment>安定版をインストール</comment>
   </data>
 
 </root>

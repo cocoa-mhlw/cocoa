@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using Chino;
 using System.Net;
 using System.Linq;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -81,6 +82,13 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref _isInqueryTelephoneNumberVisible, value);
         }
 
+        private bool _isInqueryVisible;
+        public bool IsInqueryVisible
+        {
+            get => _isInqueryVisible;
+            set => SetProperty(ref _isInqueryVisible, value);
+        }
+
         private bool _isNextButtonEnabled;
         public bool IsNextButtonEnabled
         {
@@ -123,6 +131,8 @@ namespace Covid19Radar.ViewModels
         // TODO: Save and use for revoke operation.
         private string idempotencyKey = Guid.NewGuid().ToString();
 
+        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -155,7 +165,8 @@ namespace Covid19Radar.ViewModels
                 IsHowToObtainProcessingNumberVisible = false;
                 IsProcessingNumberReadOnly = true;
                 IsConsentLinkVisible = true;
-                IsInqueryTelephoneNumberVisible = true;
+                IsInqueryTelephoneNumberVisible = false; // for Beta
+                IsInqueryVisible = true;
             }
         }
 
@@ -172,6 +183,16 @@ namespace Covid19Radar.ViewModels
             {
                 loggerService.Exception("Exception occurred: PhoneDialer", exception);
             }
+
+            loggerService.EndMethod();
+        });
+
+        public Command OnClickUseStable => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var url = _essentialsService.StoreUrl;
+            await BrowserOpenAsync(url, BrowserLaunchMode.External);
 
             loggerService.EndMethod();
         });

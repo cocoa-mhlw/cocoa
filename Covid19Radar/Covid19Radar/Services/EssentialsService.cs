@@ -25,5 +25,17 @@ namespace Covid19Radar.Services
 
         // PhoneDialer
         public void PhoneDialerOpen(string number) => PhoneDialer.Open(number);
+
+        // Store URL
+        public string StoreUrl
+        {
+            get {
+                if (IsAndroid)
+                {
+                    return AppSettings.Instance.GooglePlayUrl;
+                }
+                return AppSettings.Instance.AppStoreUrl;
+            }
+        }
     }
 }

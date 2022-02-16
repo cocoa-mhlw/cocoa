@@ -28,7 +28,7 @@ namespace Covid19Radar.Services.Logs
             this.storageService = storageService;
         }
 
-        public async Task<bool> UploadAsync(string zipFileName)
+        public async Task<bool> UploadAsync(string zipFilePath)
         {
             loggerService.StartMethod();
 
@@ -49,7 +49,6 @@ namespace Covid19Radar.Services.Logs
 
                 // Upload to storage.
                 var logTmpPath = logPathService.LogUploadingTmpPath;
-                var logZipPath = Path.Combine(logTmpPath, zipFileName);
 
                 var setting = AppSettings.Instance;
                 var endpoint = setting.LogStorageEndpoint;
@@ -57,7 +56,7 @@ namespace Covid19Radar.Services.Logs
                 var accountName = setting.LogStorageAccountName;
                 var sasToken = logStorageSasResponse.Result.SasToken;
 
-                var uploadResult = await storageService.UploadAsync(endpoint, uploadPath, accountName, sasToken, logZipPath);
+                var uploadResult = await storageService.UploadAsync(endpoint, uploadPath, accountName, sasToken, zipFilePath);
                 if (!uploadResult)
                 {
                     throw new Exception("Failed to upload to storage.");

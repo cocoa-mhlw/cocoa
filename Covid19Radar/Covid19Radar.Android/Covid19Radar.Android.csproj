@@ -281,14 +281,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-zh-xhdpi\Nocontact10.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable-zh-xxhdpi\Nocontact10.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\ic_notification.xml">
       <SubType></SubType>
       <Generator></Generator>
@@ -386,6 +378,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxhdpi\icon_arrow.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\exposure_check_page_head.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -554,13 +550,7 @@
     <AndroidResource Include="Resources\drawable-ja-xhdpi\HelpPage22.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-ja-xhdpi\Nocontact10.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-ja-xxhdpi\HelpPage22.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-ja-xxhdpi\Nocontact10.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\HeaderLogo.png" />
@@ -572,9 +562,6 @@
     <AndroidResource Include="Resources\drawable-xhdpi\InfoMark.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\Nocontact10.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\HeaderLogo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -582,9 +569,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\InfoMark.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\Nocontact10.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\SplashImg.png" />

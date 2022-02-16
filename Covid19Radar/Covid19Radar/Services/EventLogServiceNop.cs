@@ -10,6 +10,10 @@ namespace Covid19Radar.Services
 {
     public class EventLogServiceNop : IEventLogService
     {
+        public EventLogServiceNop()
+        {
+        }
+
         public Task SendExposureDataAsync(
             string idempotencyKey,
             ExposureConfiguration exposureConfiguration,

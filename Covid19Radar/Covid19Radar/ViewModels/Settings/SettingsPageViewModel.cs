@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Acr.UserDialogs;
@@ -18,6 +19,8 @@ namespace Covid19Radar.ViewModels
 {
     public class SettingsPageViewModel : ViewModelBase
     {
+        private const string VERSION_SUFFIX = "-beta03";
+
         private readonly ILoggerService loggerService;
         private string _AppVersion;
 
@@ -42,11 +45,11 @@ namespace Covid19Radar.ViewModels
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILogFileService logFileService,
             AbsExposureNotificationApiService exposureNotificationApiService,
-            ICloseApplicationService closeApplicationService
+            ICloseApplicationService closeApplicationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
-            AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
             this.exposureDataRepository = exposureDataRepository;
@@ -54,7 +57,17 @@ namespace Covid19Radar.ViewModels
             this.logFileService = logFileService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.closeApplicationService = closeApplicationService;
+
+            AppVer = essentialsService.AppVersion + VERSION_SUFFIX;
         }
+
+        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+
+        public ICommand OpenGitHub => new Command(async () =>
+        {
+            var url = AppResources.UrlGitHubRepository;
+            await BrowserOpenAsync(url, BrowserLaunchMode.External);
+        });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {

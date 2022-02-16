@@ -2,10 +2,13 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Model;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.Repository
 {
@@ -38,5 +41,34 @@ namespace Covid19Radar.Repository
 
         void RemoveExposureInformation();
         void RemoveOutOfDateExposureInformation(int offsetDays);
+
+        public static string ConvertToDate(DateTime utcDatetime)
+            => utcDatetime.Date
+                .ToLocalTime()
+                .ToString("D", CultureInfo.CurrentCulture);
+
+        public static string ConvertToTerm(DateTime utcDatetime)
+        {
+            var from = utcDatetime.Date.ToLocalTime();
+            var to = from.AddDays(1).ToLocalTime();
+
+            bool changeMonth = from.Month != to.Month;
+            bool changeYear = from.Year != to.Year;
+
+            string format = AppResources.ExposureDateFormatDate;
+            if (changeMonth)
+            {
+                format = AppResources.ExposureDateFormatMonth;
+            }
+            if (changeYear)
+            {
+                format = AppResources.ExposureDateFormatYear;
+            }
+
+            string fromStr = string.Format(AppResources.ExposureDateFormatYear, from.Year, from.Month, from.Day, from.Hour);
+            string toStr = string.Format(format, to.Year, to.Month, to.Day, to.Hour);
+
+            return string.Format("{0} {1} {2}", fromStr, AppResources.ExposuresPageTo, toStr);
+        }
     }
 }

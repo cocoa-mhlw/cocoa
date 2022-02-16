@@ -4,7 +4,9 @@
 
 using System;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -16,15 +18,54 @@ namespace Covid19Radar.ViewModels
     public class InqueryPageViewModel : ViewModelBase
     {
         private readonly ILoggerService loggerService;
+        private readonly ILogFileService logFileService;
+        private readonly ILogPathService logPathService;
+
+        private readonly IEssentialsService essentialService;
 
         public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
 
-        public InqueryPageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
+        public InqueryPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            ILogFileService logFileService,
+            ILogPathService logPathService,
+            IEssentialsService eseentialService
+            ) : base(navigationService)
         {
             Title = AppResources.InqueryPageTitle;
             this.loggerService = loggerService;
+            this.logFileService = logFileService;
+            this.logPathService = logPathService;
+            this.essentialService = eseentialService;
         }
+
+        public override void Destroy()
+        {
+            base.Destroy();
+            loggerService.StartMethod();
+
+            logFileService.DeleteAllLogUploadingFiles();
+
+            loggerService.EndMethod();
+        }
+
+        public Command OpenGitHub => new Command(async () =>
+        {
+            var url = AppResources.UrlGitHubRepository;
+            await BrowserOpenAsync(url, BrowserLaunchMode.External);
+        });
+
+        public Command OnClickUseStable => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var url = essentialService.StoreUrl;
+            await BrowserOpenAsync(url, BrowserLaunchMode.External);
+
+            loggerService.EndMethod();
+        });
 
         public Command OnClickQuestionCommand => new Command(async () =>
         {
@@ -40,9 +81,79 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            _ = await NavigationService.NavigateAsync(nameof(SendLogConfirmationPage));
+            try
+            {
+                UserDialogs.Instance.ShowLoading(AppResources.Processing);
 
-            loggerService.EndMethod();
+                var (logId, zipFilePath) = CreateZipFile();
+
+                UserDialogs.Instance.HideLoading();
+
+                if (zipFilePath is null)
+                {
+                    // Failed to create ZIP file
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.FailedMessageToGetOperatingInformation,
+                        AppResources.Error,
+                        AppResources.ButtonOk);
+                    return;
+                }
+
+                loggerService.Info($"zipFilePath: {zipFilePath}");
+
+                INavigationParameters navigationParameters
+                    = SendLogConfirmationPage.BuildNavigationParams(logId, zipFilePath);
+
+                _ = await NavigationService.NavigateAsync(nameof(SendLogConfirmationPage), navigationParameters);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+        });
+
+        public Command OnClickShareLogCommand => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            try
+            {
+                UserDialogs.Instance.ShowLoading(AppResources.Processing);
+
+                var (logId, zipFilePath) = CreateZipFile();
+
+                UserDialogs.Instance.HideLoading();
+
+                if (zipFilePath is null)
+                {
+                    // Failed to create ZIP file
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.FailedMessageToGetOperatingInformation,
+                        AppResources.Error,
+                        AppResources.ButtonOk);
+                    return;
+                }
+
+                loggerService.Info($"zipFilePath: {zipFilePath}");
+
+                string sharePath = logFileService.CopyLogUploadingFileToPublicPath(zipFilePath);
+
+                try
+                {
+                    await Share.RequestAsync(new ShareFileRequest
+                    {
+                        File = new ShareFile(sharePath)
+                    });
+                }
+                catch (NotImplementedInReferenceAssemblyException exception)
+                {
+                    loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+                }
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
         });
 
         public Command OnClickEmailCommand => new Command(async () =>
@@ -73,5 +184,17 @@ namespace Covid19Radar.ViewModels
 
             loggerService.EndMethod();
         });
+
+        private (string, string) CreateZipFile()
+        {
+            string logId = logFileService.CreateLogId();
+            string zipFileName = logFileService.CreateZipFileName(logId);
+
+            logFileService.Rotate();
+
+            var zipFilePath = logFileService.CreateZipFile(zipFileName);
+
+            return (logId, zipFilePath);
+        }
     }
 }

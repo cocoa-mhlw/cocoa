@@ -162,7 +162,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
             containerRegistry.RegisterForNavigation<InqueryPage>();
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
-            containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<ExposureCheckPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
@@ -183,7 +182,6 @@ namespace Covid19Radar
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
-            container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
             container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
             container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
             container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
@@ -217,11 +215,12 @@ namespace Covid19Radar
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
 
-#if EVENT_LOG_ENABLED
-            container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
-#else
+            // Privacy
             container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
-#endif
+
+            // Beta
+            container.Register<ILogUploadService, LogUploadServiceNop>(Reuse.Singleton);
+            container.Register<ICheckVersionService, CheckVersionServiceNop>(Reuse.Singleton);
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
