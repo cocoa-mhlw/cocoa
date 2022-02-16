@@ -417,6 +417,14 @@ namespace Covid19Radar.ViewModels
                     loggerService.Error($"There is a problem with the record data.");
                     break;
 
+                case HttpStatusCode.Forbidden:
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
+                        AppResources.DialogNetworkConnectionErrorTitle,
+                        AppResources.ButtonOk);
+                    loggerService.Error($"Access from overseas.");
+                    break;
+
                 default:
                     loggerService.Error($"Unexpected status");
                     break;

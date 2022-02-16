@@ -905,6 +905,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string DialogNetworkConnectionErrorFromOverseasMessage {
+            get {
+                return ResourceManager.GetString("DialogNetworkConnectionErrorFromOverseasMessage", resourceCulture);
+            }
+        }
+        
         public static string DialogExposureNotificationStartupErrorTitle {
             get {
                 return ResourceManager.GetString("DialogExposureNotificationStartupErrorTitle", resourceCulture);
