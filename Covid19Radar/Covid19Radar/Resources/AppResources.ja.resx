@@ -795,19 +795,19 @@
   </data>
   <data name="InquiryMailModelTitle" xml:space="preserve">
     <value>モデル名：</value>
-    <comment>モデル名：</comment>
+    <comment>モデル名：（サポートが見る文言なので常に日本語とする）</comment>
   </data>
   <data name="InquiryMailOSTitle" xml:space="preserve">
     <value>OS：</value>
-    <comment>OS：</comment>
+    <comment>OS：（サポートが見る文言なので常に日本語とする）</comment>
   </data>
   <data name="InquiryMailOSVersionTitle" xml:space="preserve">
     <value>OSバージョン：</value>
-    <comment>OSバージョン：</comment>
+    <comment>OSバージョン：（サポートが見る文言なので常に日本語とする）</comment>
   </data>
   <data name="InquiryMailAppVersionTitle" xml:space="preserve">
     <value>アプリバージョン：</value>
-    <comment>アプリバージョン：</comment>
+    <comment>アプリバージョン：（サポートが見る文言なので常に日本語とする）</comment>
   </data>
   <data name="SendIdMailBody1" xml:space="preserve">
     <value>動作情報ID：</value>
