@@ -24,7 +24,7 @@ namespace Covid19Radar.UnitTests.Services {
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> loggerService;
         private readonly Mock<ILocalNotificationService> localNotificationService;
-        private readonly Mock<IExposureDataCollectServer> exposureDataCollectServer;
+        private readonly Mock<IDebugExposureDataCollectServer> exposureDataCollectServer;
         private readonly Mock<IExposureRiskCalculationConfigurationRepository> exposureRiskCalculationConfigurationRepository;
         private readonly Mock<IExposureRiskCalculationService> exposureRiskCalculationService;
         private readonly Mock<IEventLogService> eventLogService;
@@ -46,7 +46,7 @@ namespace Covid19Radar.UnitTests.Services {
             mockRepository = new MockRepository(MockBehavior.Default);
             loggerService = mockRepository.Create<ILoggerService>();
             localNotificationService = mockRepository.Create<ILocalNotificationService>();
-            exposureDataCollectServer = mockRepository.Create<IExposureDataCollectServer>();
+            exposureDataCollectServer = mockRepository.Create<IDebugExposureDataCollectServer>();
             exposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             exposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
             eventLogService = mockRepository.Create<IEventLogService>();
@@ -94,7 +94,6 @@ namespace Covid19Radar.UnitTests.Services {
                 );
 
             var exposureDataRepository = new ExposureDataRepository(
-                preferencesService.Object,
                 secureStorageService.Object,
                 dateTimeUtility.Object,
                 loggerService.Object
@@ -126,7 +125,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Mock Setup
             dateTimeUtility.Setup(x => x.UtcNow).Returns(utcNow);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), true))
+                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), true))
                 .Returns(true);
 
 
@@ -147,7 +146,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), It.Is<bool>(x => x == false)),
+                    x => x.SetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.Is<bool>(x => x == false)),
                     Times.Once
                 );
         }
@@ -161,7 +160,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Mock Setup
             dateTimeUtility.Setup(x => x.UtcNow).Returns(utcNow);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
 
 
@@ -182,7 +181,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), It.IsAny<bool>()),
+                    x => x.SetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.IsAny<bool>()),
                      Times.Never
                 );
         }
@@ -222,12 +221,12 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Mock Setup
             preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
-            preferencesService
+            secureStorageService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
-            preferencesService
+            secureStorageService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
@@ -239,6 +238,9 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
+            exposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             exposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -286,12 +288,12 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Mock Setup
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
-            preferencesService
+            secureStorageService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
-            preferencesService
+            secureStorageService
                 .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
@@ -302,6 +304,10 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<List<DailySummary>>(),
                     It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
+
+            exposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
 
             exposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))

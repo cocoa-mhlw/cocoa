@@ -72,9 +72,9 @@ namespace Covid19Radar.UnitTests.Models
                 = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration.Threshold>(thresholdJson);
 
             Assert.NotNull(threshold);
-            Assert.False(threshold.Cond(0.0));
-            Assert.False(threshold.Cond(0.1));
-            Assert.False(threshold.Cond(-0.1));
+            Assert.True(threshold.Cond(0.0));
+            Assert.True(threshold.Cond(0.1));
+            Assert.True(threshold.Cond(-0.1));
         }
 
         [Fact]
@@ -127,6 +127,19 @@ namespace Covid19Radar.UnitTests.Models
             Assert.False(threshold.Cond(0.0));
             Assert.False(threshold.Cond(0.1));
             Assert.True(threshold.Cond(-0.1));
+        }
+
+        [Fact]
+        public void ThresholdInvalidTest()
+        {
+            var thresholdJson = "{\"op\":\"HELLO\",\"value\":0.0}";
+            V1ExposureRiskCalculationConfiguration.Threshold threshold
+                = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration.Threshold>(thresholdJson);
+
+            Assert.NotNull(threshold);
+            Assert.False(threshold.Cond(0.0));
+            Assert.False(threshold.Cond(0.1));
+            Assert.False(threshold.Cond(-0.1));
         }
     }
 }

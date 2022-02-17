@@ -18,13 +18,13 @@ namespace Covid19Radar.Common
         public static string CanConfirmExposure = "CanConfirmExposure";
         public static string LastConfirmedDateTimeEpoch = "LastConfirmedDateTimeEpoch";
 
-        public static string IsSendEventLogEnabled = "IsSendEventLogEnabled";
+        public static string SendEventLogState = "SendEventLogState";
 
         public const string DailySummaries = "DailySummaries";
         public const string ExposureWindows = "ExposureWindows";
 
         // for ExposureConfigurationRepository
-        public const string IsExposureConfigurationUpdated = "IsExposureConfigurationUpdated";
+        public const string IsDiagnosisKeysDataMappingConfigurationUpdated = "IsDiagnosisKeysDataMappingConfigurationUpdated";
         public const string ExposureConfigurationDownloadedEpoch = "ExposureConfigurationDownloadedEpoch";
         public const string ExposureConfigurationAppliedEpoch = "ExposureConfigurationAppliedEpoch";
 

@@ -22,10 +22,9 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ILogFileService> mockLogFileService;
         private readonly Mock<ILogPathService> mockLogPathService;
-        private readonly Mock<IEssentialsService> mockEssentialService;
+        private readonly Mock<IEssentialsService> mockEssentialsService;
 
         private readonly Mock<IUserDialogs> mockUserDialogs;
-
 
         public InqueryPageViewModelTests()
         {
@@ -34,10 +33,11 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockLogFileService = mockRepository.Create<ILogFileService>();
             mockLogPathService = mockRepository.Create<ILogPathService>();
-            mockEssentialService = mockRepository.Create<IEssentialsService>();
 
             mockUserDialogs = mockRepository.Create<IUserDialogs>();
             UserDialogs.Instance = mockUserDialogs.Object;
+
+            mockEssentialsService = mockRepository.Create<IEssentialsService>();
         }
 
         private InqueryPageViewModel CreateViewModel()
@@ -47,7 +47,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                 mockLoggerService.Object,
                 mockLogFileService.Object,
                 mockLogPathService.Object,
-                mockEssentialService.Object
+                mockEssentialsService.Object
                 );
             return vm;
         }

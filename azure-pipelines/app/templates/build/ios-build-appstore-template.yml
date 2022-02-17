@@ -2,13 +2,13 @@ steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
-    certSecureFile: 'cocoa_distribution_20220610.p12'
+    certSecureFile: 'cocoa_distribution_20230215_4.p12'
     certPwd: '$(iOS_CertificatePassword)'
 
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_appstore_20220610_2.mobileprovision'
+    provProfileSecureFile: 'cocoa_appstore_20230214_4.mobileprovision'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -19,6 +19,8 @@ steps:
 - template: setup/ios-setup-xamarin-template.yml
 
 - template: setup/app-setup-xamarin-template.yml
+  parameters:
+    configuration: release
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj'
@@ -26,7 +28,7 @@ steps:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
     configuration: AppStore
     signingIdentity: 'Apple Distribution'
-    signingProvisioningProfileID: 'ab0aab51-8716-4afc-bcaf-0d3b981c811e'
+    signingProvisioningProfileID: '5265b13d-3a36-4e43-b4b2-2b406d6de095'
 
 - task: CopyFiles@2
   displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'

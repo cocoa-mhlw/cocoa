@@ -5,8 +5,10 @@
 
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
@@ -22,7 +24,7 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.ViewModels.HomePage
 {
-    public class HomePageViewModelTests
+    public class HomePageViewModelTests: IDisposable
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
@@ -78,11 +80,18 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockDateTimeUtility.Object
                 );
             exposureDataRepository = new ExposureDataRepository(
-                    mockPreferenceService.Object,
                     mockSecureStorageService.Object,
                     mockDateTimeUtility.Object,
                     mockLoggerService.Object
                 );
+
+            var mockUserDialogs = mockRepository.Create<IUserDialogs>();
+            UserDialogs.Instance = mockUserDialogs.Object;
+        }
+
+        public void Dispose()
+        {
+            UserDialogs.Instance = null;
         }
 
         private HomePageViewModel CreateViewModel()
@@ -130,8 +139,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             mockLocalNotificationService
                 .Verify(x => x.PrepareAsync(), Times.Once);
-            mockExposureDetectionBackgroundService
-                .Verify(x => x.ExposureDetectionAsync(null), Times.Once);
             mockExposureNotificationApiService
                 .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
         }
@@ -422,13 +429,16 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Setup(x => x.UtcNow)
                 .Returns(utcNow);
 
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -479,13 +489,16 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Setup(x => x.UtcNow)
                 .Returns(utcNow);
 
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.Low);
@@ -494,7 +507,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnClickExposures.Execute(null);
 
             mockNavigationService
-                .Verify(x => x.NavigateAsync("ExposureCheckPage"), Times.Once);
+                .Verify(x => x.NavigateAsync("ExposureCheckPage", It.IsAny<INavigationParameters>()), Times.Once);
         }
 
         [Theory]
@@ -526,19 +539,43 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Setup(x => x.UtcNow)
                 .Returns(utcNow);
 
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
-            mockPreferenceService
+            mockSecureStorageService
                 .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
 
             var homePageViewModel = CreateViewModel();
             homePageViewModel.OnClickExposures.Execute(null);
 
             mockNavigationService
-                .Verify(x => x.NavigateAsync("ExposureCheckPage"), Times.Once);
+                .Verify(x => x.NavigateAsync("ExposureCheckPage", It.IsAny<INavigationParameters>()), Times.Once);
         }
 
+
+        [Fact]
+        public void OnClickExposuresTest_Exception()
+        {
+
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(true))
+                .Throws(new HttpRequestException());
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnClickExposures.Execute(null);
+
+
+            mockDialogService
+                .Verify(x => x.ShowHomePageUnknownErrorWaringAsync(), Times.Once);
+            mockNavigationService
+                .Verify(x => x.NavigateAsync(It.IsAny<String>()), Times.Never);
+        }
     }
 }

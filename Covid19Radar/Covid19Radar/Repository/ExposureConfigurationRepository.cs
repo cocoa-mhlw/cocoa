@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -109,6 +110,8 @@ namespace Covid19Radar.Repository
 
                     currentExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
 
+                    _loggerService.Info("Cached:" + exposureConfigurationAsJson);
+
                     if (!IsDownloadedExposureConfigurationOutdated(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays))
                     {
                         _loggerService.EndMethod();
@@ -131,9 +134,12 @@ namespace Covid19Radar.Repository
                 }
             }
 
+            // Cache not exist (first time. probably...)
             if (currentExposureConfiguration is null)
             {
                 currentExposureConfiguration = CreateDefaultConfiguration();
+                SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
+                SetIsDiagnosisKeysDataMappingConfigurationUpdated(true);
             }
 
             await _serverConfigurationRepository.LoadAsync();
@@ -145,11 +151,13 @@ namespace Covid19Radar.Repository
             if (response.IsSuccessStatusCode)
             {
                 string exposureConfigurationAsJson = await response.Content.ReadAsStringAsync();
-                _loggerService.Debug(exposureConfigurationAsJson);
 
                 try
                 {
                     newExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
+
+                    _loggerService.Info("Downloaded:" + exposureConfigurationAsJson);
+
                     SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
                 }
                 catch (JsonException exception)
@@ -215,14 +223,14 @@ namespace Covid19Radar.Repository
                 GoogleDailySummariesConfig = new DailySummariesConfig()
                 {
                     AttenuationBucketThresholdDb = new List<int>() {
-                        50,
-                        54,
+                        46,
+                        60,
                         65
                     },
                     AttenuationBucketWeights = new List<double>() {
+                        1.0,
                         2.5,
                         1.3,
-                        0.6,
                         0.01
                     },
                     DaysSinceExposureThreshold = 0,
@@ -282,13 +290,13 @@ namespace Covid19Radar.Repository
                     InfectiousnessWhenDaysSinceOnsetMissing = Infectiousness.High,
                     ReportTypeNoneMap = ReportType.ConfirmedTest,
                     AttenuationDurationThresholds = new int[] {
-                        50,
-                        54,
+                        46,
+                        60,
                         65
                     },
-                    ImmediateDurationWeight = 250.0,
-                    NearDurationWeight = 130.0,
-                    MediumDurationWeight = 60.0,
+                    ImmediateDurationWeight = 100.0,
+                    NearDurationWeight = 250.0,
+                    MediumDurationWeight = 130.0,
                     OtherDurationWeight = 1.0,
                     DaysSinceLastExposureThreshold = 0,
                     InfectiousnessForDaysSinceOnsetOfSymptoms = new Dictionary<long, Infectiousness>()
@@ -426,8 +434,8 @@ namespace Covid19Radar.Repository
                     },
                     TransmissionRiskLevelValues = new int[]
                     {
-                        7,
-                        7,
+                        0,
+                        0,
                         7,
                         7,
                         7,
@@ -477,13 +485,10 @@ namespace Covid19Radar.Repository
             ExposureConfiguration exposureConfiguration2
             )
         {
-            return
-                (exposureConfiguration1.GoogleDiagnosisKeysDataMappingConfig
-                    != exposureConfiguration2.GoogleDiagnosisKeysDataMappingConfig)
-                ||
-                (exposureConfiguration1.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms
-                    != exposureConfiguration2.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms);
-
+            var googleDiagnosisKeysDataMappingConfigUpdated = !exposureConfiguration1.GoogleDiagnosisKeysDataMappingConfig.Equals(exposureConfiguration2.GoogleDiagnosisKeysDataMappingConfig);
+            var appleInfectiousnessForDaysSinceOnsetOfSymptoms = !exposureConfiguration1.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms
+                .SequenceEqual(exposureConfiguration2.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms);
+            return googleDiagnosisKeysDataMappingConfigUpdated || appleInfectiousnessForDaysSinceOnsetOfSymptoms;
         }
 
         private bool IsExposureConfigurationOutdated(int retensionDays)
@@ -533,10 +538,10 @@ namespace Covid19Radar.Repository
         }
 
         public void SetIsDiagnosisKeysDataMappingConfigurationUpdated(bool isUpdated)
-            => _preferencesService.SetValue(PreferenceKey.IsExposureConfigurationUpdated, isUpdated);
+            => _preferencesService.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, isUpdated);
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated()
-            => _preferencesService.GetValue(PreferenceKey.IsExposureConfigurationUpdated, true);
+            => _preferencesService.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true);
 
         private void SetExposureConfigurationDownloadedDateTime(DateTime dateTime)
         {

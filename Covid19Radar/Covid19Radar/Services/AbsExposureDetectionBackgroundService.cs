@@ -11,6 +11,8 @@ using System.Threading;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Common;
+using Chino;
+using System.Net;
 
 namespace Covid19Radar.Services
 {
@@ -56,32 +58,70 @@ namespace Covid19Radar.Services
         {
             await _semaphore.WaitAsync();
 
+            _loggerService.StartMethod();
+
             try
             {
                 await InternalExposureDetectionAsync(cancellationTokenSource);
             }
             finally
             {
+                _loggerService.EndMethod();
+
                 _semaphore.Release();
             }
         }
 
         private async Task InternalExposureDetectionAsync(CancellationTokenSource cancellationTokenSource = null)
         {
+            bool isEnabled = await _exposureNotificationApiService.IsEnabledAsync();
+            if (!isEnabled)
+            {
+                _loggerService.Info($"EN API is not enabled.");
+                return;
+            }
+
+            IEnumerable<int> statuseCodes = await _exposureNotificationApiService.GetStatusCodesAsync();
+
+            bool isActivated = statuseCodes.Contains(ExposureNotificationStatus.Code_Android.ACTIVATED)
+                | statuseCodes.Contains(ExposureNotificationStatus.Code_iOS.Active);
+
+            if (!isActivated)
+            {
+                _loggerService.Info($"EN API is not ACTIVATED.");
+                return;
+            }
+
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
             await _serverConfigurationRepository.LoadAsync();
 
+            bool canConfirmExposure = true;
+
             foreach (var region in _serverConfigurationRepository.Regions)
             {
+                _loggerService.Info($"Region: {region}");
+
                 var diagnosisKeyListProvideServerUrl = _serverConfigurationRepository.GetDiagnosisKeyListProvideServerUrl(region);
+
+                _loggerService.Info($"diagnosisKeyListProvideServerUrl: {diagnosisKeyListProvideServerUrl}");
 
                 List<string> downloadedFileNameList = new List<string>();
                 try
                 {
                     var tmpDir = PrepareDir(region);
 
-                    var diagnosisKeyEntryList = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(diagnosisKeyListProvideServerUrl, cancellationToken);
+                    var (httpStatus, diagnosisKeyEntryList) = await _diagnosisKeyRepository.GetDiagnosisKeysListAsync(
+                        diagnosisKeyListProvideServerUrl,
+                        cancellationToken
+                        );
+
+                    if (httpStatus != HttpStatusCode.OK)
+                    {
+                        _loggerService.Info($"URL: {diagnosisKeyListProvideServerUrl}, Response StatusCode: {httpStatus}");
+                        canConfirmExposure = false;
+                        continue;
+                    }
 
                     var lastProcessTimestamp = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
                     _loggerService.Info($"Region: {region}, lastProcessTimestamp: {lastProcessTimestamp}");
@@ -94,11 +134,13 @@ namespace Covid19Radar.Services
                         continue;
                     }
 
+                    _loggerService.Info($"{targetDiagnosisKeyEntryList.Count()} new keys found.");
+
                     foreach (var diagnosisKeyEntry in targetDiagnosisKeyEntryList)
                     {
                         string filePath = await _diagnosisKeyRepository.DownloadDiagnosisKeysAsync(diagnosisKeyEntry, tmpDir, cancellationToken);
 
-                        _loggerService.Debug($"URL {diagnosisKeyEntry.Url} have been downloaded.");
+                        _loggerService.Info($"URL {diagnosisKeyEntry.Url} have been downloaded.");
 
                         downloadedFileNameList.Add(filePath);
                     }
@@ -122,13 +164,14 @@ namespace Covid19Radar.Services
                 }
                 catch (Exception exception)
                 {
-                    _userDataRepository.SetCanConfirmExposure(false);
+                    canConfirmExposure = false;
                     _loggerService.Exception($"Exception occurred: {region}", exception);
                     throw;
                 }
                 finally
                 {
                     RemoveFiles(downloadedFileNameList);
+                    _userDataRepository.SetCanConfirmExposure(canConfirmExposure);
                 }
             }
         }
@@ -171,6 +214,8 @@ namespace Covid19Radar.Services
 
         private void RemoveFiles(List<string> fileList)
         {
+            _loggerService.StartMethod();
+
             foreach (var file in fileList)
             {
                 try
@@ -182,6 +227,8 @@ namespace Covid19Radar.Services
                     _loggerService.Exception("Exception occurred", exception);
                 }
             }
+
+            _loggerService.EndMethod();
         }
     }
 }

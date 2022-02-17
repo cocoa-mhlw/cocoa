@@ -21,7 +21,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILogFileService logFileService;
         private readonly ILogPathService logPathService;
 
-        private readonly IEssentialsService essentialService;
+        private readonly IEssentialsService essentialsService;
 
         public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
@@ -31,14 +31,14 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             ILogFileService logFileService,
             ILogPathService logPathService,
-            IEssentialsService eseentialService
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.InqueryPageTitle;
             this.loggerService = loggerService;
             this.logFileService = logFileService;
             this.logPathService = logPathService;
-            this.essentialService = eseentialService;
+            this.essentialsService = essentialsService;
         }
 
         public Command OnClickQuestionCommand => new Command(async () =>
@@ -137,7 +137,7 @@ namespace Covid19Radar.ViewModels
             {
                 await ComposeEmailAsync(
                     AppResources.InquiryMailSubject,
-                    AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n"),
+                    CreateInquiryMailBody(),
                     new string[] { AppSettings.Instance.SupportEmail });
 
                 loggerService.EndMethod();
@@ -158,6 +158,15 @@ namespace Covid19Radar.ViewModels
 
             loggerService.EndMethod();
         });
+
+        private string CreateInquiryMailBody()
+        {
+            return AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n")
+                + AppResources.InquiryMailModelTitle + essentialsService.Model + "\r\n"
+                + AppResources.InquiryMailOSTitle + essentialsService.Platform + "\r\n"
+                + AppResources.InquiryMailOSVersionTitle + essentialsService.PlatformVersion + "\r\n"
+                + AppResources.InquiryMailAppVersionTitle + essentialsService.AppVersion;
+        }
 
         private (string, string) CreateZipFile()
         {

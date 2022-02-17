@@ -49,7 +49,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             var unitUnderTest = CreateRepository();
-            var result = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
+            var (_, result) = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
 
             Assert.Equal(2, result.Count);
 
@@ -74,7 +74,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockClientService.Setup(x => x.Create()).Returns(client);
 
             var unitUnderTest = CreateRepository();
-            var result = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
+            var (_, result) = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
 
             Assert.Equal(0, result.Count);
         }

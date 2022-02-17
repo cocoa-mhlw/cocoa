@@ -147,7 +147,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage3>();
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<TutorialPage4>();
-            containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
 
             // Help
@@ -162,7 +161,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
             containerRegistry.RegisterForNavigation<InqueryPage>();
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
-            containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<ExposureCheckPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
@@ -202,10 +200,10 @@ namespace Covid19Radar
 
 #if DEBUG
             container.Register<IServerConfigurationRepository, DebugServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
+            container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
 #else
             container.Register<IServerConfigurationRepository, ReleaseServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IExposureDataCollectServer, ReleaseExposureDataCollectServer>(Reuse.Singleton);
+            container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServerNop>(Reuse.Singleton);
 #endif
 
             container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
@@ -216,7 +214,12 @@ namespace Covid19Radar
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
+
+#if EVENT_LOG_ENABLED
             container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
+#else
+            container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
+#endif
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);

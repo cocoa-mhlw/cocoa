@@ -40,7 +40,7 @@ namespace Covid19Radar.Services
 
         private readonly IEventLogService _eventLogService;
 
-        private readonly IExposureDataCollectServer _exposureDataCollectServer;
+        private readonly IDebugExposureDataCollectServer _exposureDataCollectServer;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly IDeviceInfoUtility _deviceInfoUtility;
 
@@ -54,7 +54,7 @@ namespace Covid19Radar.Services
             IExposureRiskCalculationService exposureRiskCalculationService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IEventLogService eventLogService,
-            IExposureDataCollectServer exposureDataCollectServer,
+            IDebugExposureDataCollectServer exposureDataCollectServer,
             IDateTimeUtility dateTimeUtility,
             IDeviceInfoUtility deviceInfoUtility
             )
@@ -108,6 +108,7 @@ namespace Covid19Radar.Services
 
             var exposureRiskCalculationConfiguration = await _exposureRiskCalculationConfigurationRepository
                 .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+            _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
             bool isHighRiskExposureDetected = newDailySummaries
                 .Select(ds => _exposureRiskCalculationService.CalcRiskLevel(

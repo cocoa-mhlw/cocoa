@@ -26,52 +26,45 @@ namespace Covid19Radar.Repository
 
         private List<DailySummary> dummyDailySummaries = new List<DailySummary>()
         {
-            new DailySummary()
-            {
-                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
-                DaySummary = new ExposureSummaryData()
-                {
-                    ScoreSum = 2000.0
-                }
-            },
+            //new DailySummary()
+            //{
+            //    DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
+            //    DaySummary = new ExposureSummaryData()
+            //    {
+            //        ScoreSum = 1350
+            //    }
+            //},
             new DailySummary()
             {
                 DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 11), DateTimeKind.Utc).ToUnixEpoch() * 1000,
                 DaySummary = new ExposureSummaryData()
                 {
-                    ScoreSum = 1999.0
+                    ScoreSum = 1350
+                }
+            },
+            new DailySummary()
+            {
+                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 12), DateTimeKind.Utc).ToUnixEpoch() * 1000,
+                DaySummary = new ExposureSummaryData()
+                {
+                    ScoreSum = 1000
                 }
             },
         };
 
         private List<ExposureWindow> dummyExposureWindows = new List<ExposureWindow>()
         {
-            new ExposureWindow()
-            {
-                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
-                ScanInstances = new List<ScanInstance>()
-                {
-                    new ScanInstance()
-                    {
-                        SecondsSinceLastScan = 200,
-                    },
-                    new ScanInstance()
-                    {
-                        SecondsSinceLastScan = 1800,
-                    },
-                }
-            },
-            new ExposureWindow()
-            {
-                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
-                ScanInstances = new List<ScanInstance>()
-                {
-                    new ScanInstance()
-                    {
-                        SecondsSinceLastScan = 1800,
-                    },
-                }
-            },
+            //new ExposureWindow()
+            //{
+            //    DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 10), DateTimeKind.Utc).ToUnixEpoch() * 1000,
+            //    ScanInstances = new List<ScanInstance>()
+            //    {
+            //        new ScanInstance()
+            //        {
+            //            SecondsSinceLastScan = 1200,
+            //        },
+            //    }
+            //},
             new ExposureWindow()
             {
                 DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 11), DateTimeKind.Utc).ToUnixEpoch() * 1000,
@@ -79,15 +72,18 @@ namespace Covid19Radar.Repository
                 {
                     new ScanInstance()
                     {
-                        SecondsSinceLastScan = 1800,
+                        SecondsSinceLastScan = 840,
                     },
+                }
+            },
+            new ExposureWindow()
+            {
+                DateMillisSinceEpoch = DateTime.SpecifyKind(new DateTime(2022, 1, 12), DateTimeKind.Utc).ToUnixEpoch() * 1000,
+                ScanInstances = new List<ScanInstance>()
+                {
                     new ScanInstance()
                     {
-                        SecondsSinceLastScan = 1800,
-                    },
-                    new ScanInstance()
-                    {
-                        SecondsSinceLastScan = 1800,
+                        SecondsSinceLastScan = 1200,
                     },
                 }
             },
@@ -95,10 +91,10 @@ namespace Covid19Radar.Repository
 
         private List<UserExposureInfo> dummyUserExposureInfos = new List<UserExposureInfo>()
         {
-            new UserExposureInfo()
-            {
-                Timestamp = DateTime.SpecifyKind(new DateTime(2022, 1, 1), DateTimeKind.Utc)
-            }
+            //new UserExposureInfo()
+            //{
+            //    Timestamp = DateTime.SpecifyKind(new DateTime(2022, 1, 1), DateTimeKind.Utc)
+            //}
         };
 
         public Task<List<DailySummary>> GetDailySummariesAsync()

@@ -44,6 +44,7 @@ namespace Covid19Radar.Services
             );
     }
 
+#if EVENT_LOG_ENABLED
     public class EventLogService : IEventLogService
     {
         private readonly IUserDataRepository _userDataRepository;
@@ -142,11 +143,12 @@ namespace Covid19Radar.Services
         {
             _loggerService.StartMethod();
 
-            bool hasConsent = _userDataRepository.IsSendEventLogEnabled();
+            SendEventLogState sendEventLogState = _userDataRepository.GetSendEventLogState();
+            bool isEnabled = sendEventLogState == SendEventLogState.Enable;
 
-            if(!hasConsent)
+            if (!isEnabled)
             {
-                _loggerService.Debug($"No consent log.");
+                _loggerService.Debug($"Send event-log function is not enabled.");
                 _loggerService.EndMethod();
                 return;
             }
@@ -161,7 +163,7 @@ namespace Covid19Radar.Services
                 var contentJson = exposureData.ToJsonString();
 
                 var eventLog = new V1EventLogRequest.EventLog() {
-                    HasConsent = hasConsent,
+                    HasConsent = isEnabled,
                     Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
                     Type = "ExposureData",
                     Subtype = "Debug",
@@ -202,6 +204,7 @@ namespace Covid19Radar.Services
             }
         }
     }
+#endif
 
     public class ExposureData
     {

@@ -65,6 +65,8 @@ namespace Covid19Radar.Repository
 
         public async Task<V1ExposureRiskCalculationConfiguration> GetExposureRiskCalculationConfigurationAsync(bool preferCache)
         {
+            _loggerService.StartMethod();
+
             await _semaphore.WaitAsync();
 
             try
@@ -73,6 +75,7 @@ namespace Covid19Radar.Repository
             }
             finally
             {
+                _loggerService.EndMethod();
                 _semaphore.Release();
             }
         }
@@ -110,8 +113,9 @@ namespace Covid19Radar.Repository
             {
                 currentConfiguration = CreateDefaultConfiguration();
             }
-            else if(preferCache)
+            else if (preferCache)
             {
+                _loggerService.EndMethod();
                 return currentConfiguration;
             }
 
@@ -120,25 +124,28 @@ namespace Covid19Radar.Repository
 
             V1ExposureRiskCalculationConfiguration newExposureRiskCalculationConfiguration = null;
 
-            var response = await _httpClient.GetAsync(url);
-            if (response.IsSuccessStatusCode)
+            try
             {
-                string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
-                _loggerService.Debug(exposureRiskCalculationConfigurationAsJson);
-
-                try
+                var response = await _httpClient.GetAsync(url);
+                if (response.IsSuccessStatusCode)
                 {
-                    newExposureRiskCalculationConfiguration = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(exposureRiskCalculationConfigurationAsJson);
+                    string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
+                    _loggerService.Debug(exposureRiskCalculationConfigurationAsJson);
+                    newExposureRiskCalculationConfiguration
+                        = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(exposureRiskCalculationConfigurationAsJson);
                 }
-                catch (JsonException exception)
+                else
                 {
-                    _loggerService.Exception("JsonException.", exception);
+                    _loggerService.Warning($"Download ExposureRiskCalculationConfiguration failed from {url}");
                 }
-
             }
-            else
+            catch (JsonException exception)
             {
-                _loggerService.Warning($"Download ExposureRiskCalculationConfiguration failed from {url}");
+                _loggerService.Exception("JsonException.", exception);
+            }
+            catch (HttpRequestException exception)
+            {
+                _loggerService.Exception("HttpRequestException.", exception);
             }
 
             if (newExposureRiskCalculationConfiguration is null)
@@ -147,17 +154,27 @@ namespace Covid19Radar.Repository
                 return currentConfiguration;
             }
 
+            if (newExposureRiskCalculationConfiguration.Equals(currentConfiguration))
+            {
+                _loggerService.Info("ExposureRiskCalculationConfiguration have not been changed.");
+                _loggerService.EndMethod();
+
+                return currentConfiguration;
+            }
+
+            _loggerService.Info("ExposureRiskCalculationConfiguration have been changed.");
+
             string tmpFilePath = Path.Combine(_configDir, Guid.NewGuid().ToString());
 
             try
             {
                 await SaveAsync(
-                    JsonConvert.SerializeObject(currentConfiguration, Formatting.Indented),
+                    JsonConvert.SerializeObject(newExposureRiskCalculationConfiguration, Formatting.Indented),
                     tmpFilePath
                     );
                 Swap(tmpFilePath, _currentPath);
 
-                return currentConfiguration;
+                return newExposureRiskCalculationConfiguration;
             }
             finally
             {
@@ -175,8 +192,13 @@ namespace Covid19Radar.Repository
                 DailySummary_DaySummary_ScoreSum = new V1ExposureRiskCalculationConfiguration.Threshold()
                 {
                     Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
-                    Value = 1170.0,
-                }
+                    Value = 1350.0,
+                },
+                ExposureWindow_ScanInstance_SecondsSinceLastScanSum = new V1ExposureRiskCalculationConfiguration.Threshold()
+                {
+                    Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
+                    Value = 900.0,
+                },
             };
         }
 

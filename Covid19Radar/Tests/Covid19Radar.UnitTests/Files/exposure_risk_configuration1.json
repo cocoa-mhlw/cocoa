@@ -2,15 +2,15 @@
   "format_version": 1,
   "DailySummary_DaySummary_ScoreSum": {
     "op": ">=",
-    "value": 1350.0
+    "value": 1170.0
   },
   "DailySummary_DaySummary_WeightedDurationAverage": {
     "op": "NOP",
     "value": 0.0
   },
   "ExposureWindow_ScanInstance_SecondsSinceLastScanSum": {
-    "op": ">=",
-    "value": 900.0
+    "op": "NOP",
+    "value": 0.0
   },
   "ExposureWindow_ScanInstance_TypicalAttenuationDb_Max": {
     "op": "NOP",
