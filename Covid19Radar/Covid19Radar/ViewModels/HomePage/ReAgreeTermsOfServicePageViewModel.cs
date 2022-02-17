@@ -30,6 +30,8 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _updateText, value); }
         }
 
+        private INavigationParameters _navigationParameters;
+
         public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
 
         public ReAgreeTermsOfServicePageViewModel(
@@ -59,17 +61,21 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTimeUtc);
+
+            Destination destination = Destination.HomePage;
+            if (_navigationParameters.ContainsKey(ReAgreeTermsOfServicePage.DestinationKey))
+            {
+                destination = _navigationParameters.GetValue<Destination>(ReAgreeTermsOfServicePage.DestinationKey);
+            }
+
             if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
             {
-                var param = new NavigationParameters
-                {
-                    { "updatePrivacyPolicyInfo", UpdateInfo.PrivacyPolicy }
-                };
-                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), param);
+                var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(UpdateInfo.PrivacyPolicy, destination, _navigationParameters);
+                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), navigationParams);
             }
             else
             {
-                _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
             }
 
             _loggerService.EndMethod();
@@ -80,9 +86,11 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             base.Initialize(parameters);
-            UpdateInfo = (TermsUpdateInfoModel) parameters["updateInfo"];
+            UpdateInfo = (TermsUpdateInfoModel) parameters[ReAgreeTermsOfServicePage.UpdateInfoKey];
             UpdateDateTimeUtc = UpdateInfo.TermsOfService.UpdateDateTimeUtc;
             UpdateText = UpdateInfo.TermsOfService.Text;
+
+            _navigationParameters = parameters;
 
             _loggerService.EndMethod();
         }

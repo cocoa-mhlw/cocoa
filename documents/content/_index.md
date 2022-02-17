@@ -24,17 +24,20 @@ COCOAのリポジトリは次のURLです。
  * [Pull Requestが取り込まれるまで]({{<relref "handling_pullreqeust">}})
  * [Contributors]({{<relref "contributors">}})
 
+## レポート
+ * [COCOA アクセシビリティ改善プロジェクト - 2021/12/01](report/a11y_20211201.html)
+
 ## 素材（掲載されている情報等）
  * 同意事項
-    * [プライバシーポリシー]({{<relref "privacy_policy">}})
-    * [利用規約]({{<relref "terms_of_use">}})
+    * [プライバシーポリシー](agreements/privacy_policy/)
+    * [利用規約](agreements/terms_of_use/)
  * Google Play Store
-    * [日本語]({{<relref "docs/materials/goole_play/ja/">}})
-    * [English]({{<relref "docs/materials/goole_play/en/">}})
-    * [簡体中国語]({{<relref "docs/materials/goole_play/zh_cn/">}})
+    * [日本語](materials/googleplay/ja.html)
+    * [English](materials/googleplay/en.html)
+    * [簡体中国語](materials/googleplay/zh_CN.html)
  * App Store
-    * [日本語]({{<relref "docs/materials/app_store/ja/">}})
-    * [English]({{<relref "docs/materials/app_store/en/">}})
-    * [簡体中国語]({{<relref "docs/materials/app_store/zh_cn/">}})
+    * [日本語](materials/appstore/ja.html)
+    * [English](materials/appstore/en.html)
+    * [簡体中国語](materials/appstore/zh_CN.html)
 
 COCOAは[Project Covid19Radar[Archived]](https://github.com/Covid-19Radar)を元に開発されています。

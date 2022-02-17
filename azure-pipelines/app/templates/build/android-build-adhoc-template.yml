@@ -1,0 +1,43 @@
+steps:
+- template: setup/android-setup-variables-template.yml
+
+- template: setup/app-setup-variables-template.yml
+
+- template: setup/app-setup-xamarin-template.yml
+  parameters:
+    configuration: release
+
+- task: XamarinAndroid@1
+  displayName: 'Build Covid19Radar.Android.csproj'
+  inputs:
+    projectFile: Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj
+    outputDirectory: '$(Build.BinariesDirectory)/Release'
+    configuration: Release
+
+- task: AndroidSigning@3
+  displayName: 'Sign APK'
+  inputs:
+    apkFiles: '$(Build.BinariesDirectory)/Release/*.apk'
+    apksignerKeystoreFile: 'cocoa_development.keystore'
+    apksignerKeystorePassword: '$(Android_KeystorePassword)'
+    apksignerKeystoreAlias: '$(Android_KeyAlias)'
+    apksignerKeyPassword: '$(Android_KeyPassword)'
+
+- task: CopyFiles@2
+  displayName: 'Copy APK to: Build.ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: '$(Build.BinariesDirectory)/Release'
+    Contents: '*.apk'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    cd $(Build.ArtifactStagingDirectory)/
+    ARCHIVE_FILE=`find *.apk | head -1`
+    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion).apk
+    ls -la
+  displayName: 'Change archive name'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish APK'
+  inputs:
+    ArtifactName: 'archives_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion)'

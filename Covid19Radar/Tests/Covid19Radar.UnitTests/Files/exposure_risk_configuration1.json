@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "DailySummary_DaySummary_ScoreSum": {
+    "op": ">=",
+    "value": 1170.0
+  },
+  "DailySummary_DaySummary_WeightedDurationAverage": {
+    "op": "NOP",
+    "value": 0.0
+  },
+  "ExposureWindow_ScanInstance_SecondsSinceLastScanSum": {
+    "op": "NOP",
+    "value": 0.0
+  },
+  "ExposureWindow_ScanInstance_TypicalAttenuationDb_Max": {
+    "op": "NOP",
+    "value": 0.0
+  },
+  "ExposureWindow_ScanInstance_TypicalAttenuationDb_Min": {
+    "op": "NOP",
+    "value": 0.0
+  }
+}

@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.Models;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -13,11 +12,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Net.Http;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Services
 {
@@ -41,11 +38,11 @@ namespace Covid19Radar.Api.Services
         /// <summary>
         /// Validation Android
         /// </summary>
-        /// <param name="param">subumission parameter</param>
         /// <returns>True when successful.</returns>
-        public  bool Validation(DiagnosisSubmissionParameter param, byte[] expectedNonce, DateTimeOffset requestTime, AuthorizedAppInformation app)
+        public bool Validation(IAndroidDeviceVerification deviceVerification, DateTimeOffset requestTime, AuthorizedAppInformation app)
         {
-            var claims = ParsePayload(param.DeviceVerificationPayload);
+            byte[] expectedNonce = GetSha256(deviceVerification.ClearText);
+            var claims = ParsePayload(deviceVerification.JwsPayload);
 
             // Validate the nonce
             if (Convert.ToBase64String(claims.Nonce) != Convert.ToBase64String(expectedNonce))
@@ -217,6 +214,13 @@ namespace Covid19Radar.Api.Services
             public bool CtsProfileMatch { get; }
 
             public bool BasicIntegrity { get; }
+        }
+
+        private static byte[] GetSha256(string text)
+        {
+            using var sha = SHA256.Create();
+            var textBytes = Encoding.UTF8.GetBytes(text);
+            return sha.ComputeHash(textBytes);
         }
     }
 }

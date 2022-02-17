@@ -10,7 +10,7 @@ using UIKit;
 
 namespace Covid19Radar.iOS.Services
 {
-    public class ExternalNavigationService: IExternalNavigationService
+    public class ExternalNavigationService : IExternalNavigationService
     {
         private readonly ILoggerService _loggerService;
 
@@ -22,7 +22,8 @@ namespace Covid19Radar.iOS.Services
         public void NavigateAppSettings()
         {
             _loggerService.StartMethod();
-            try {
+            try
+            {
                 var url = new NSUrl(UIApplication.OpenSettingsUrlString);
                 if (!UIApplication.SharedApplication.CanOpenUrl(url))
                 {

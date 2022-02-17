@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
@@ -16,35 +15,15 @@ namespace Covid19Radar.Api.DataAccess
 {
     public class CosmosUserRepository : IUserRepository
     {
-        private readonly PartitionKeyRotation _keys;
         private readonly ICosmos _db;
-        private readonly ISequenceRepository _sequence;
         private readonly ILogger<CosmosUserRepository> _logger;
 
         public CosmosUserRepository(
             ICosmos db,
-            ISequenceRepository sequence,
             ILogger<CosmosUserRepository> logger)
         {
             _db = db;
-            _sequence = sequence;
             _logger = logger;
-            _keys = new PartitionKeyRotation(new string[] { "JumpConsistentSeed1",
-                                                            "JumpConsistentSeed2",
-                                                            "JumpConsistentSeed3",
-                                                            "JumpConsistentSeed4",
-                                                            "JumpConsistentSeed5",
-                                                            "JumpConsistentSeed6",
-                                                            "JumpConsistentSeed7",
-                                                            "JumpConsistentSeed8",
-                                                            "JumpConsistentSeed9",
-                                                            "JumpConsistentSeed10",
-                                                            "JumpConsistentSeed11",
-                                                            "JumpConsistentSeed12",
-                                                            "JumpConsistentSeed13",
-                                                            "JumpConsistentSeed14",
-                                                            "JumpConsistentSeed15",
-                                                            "JumpConsistentSeed16"});
         }
 
         public async Task<UserModel?> GetById(string id)
@@ -60,8 +39,8 @@ namespace Covid19Radar.Api.DataAccess
 
         public async Task Create(UserModel user)
         {
-            var key = _keys.Next();
-            user.JumpConsistentSeed = await _sequence.GetNextAsync(key, key.InitialValue, _keys.Increment);
+            user.JumpConsistentSeed = 0;
+
             var r = await _db.User.CreateItemAsync(user, new PartitionKey(user.PartitionKey));
             _logger.LogInformation($"{nameof(Create)} RequestCharge:{r.RequestCharge}");
         }

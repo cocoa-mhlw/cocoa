@@ -2,8 +2,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
@@ -28,10 +29,6 @@ namespace Covid19Radar.Repository
 
         void RemoveAllUpdateDate();
 
-        long GetLastProcessTekTimestamp(string region);
-        void SetLastProcessTekTimestamp(string region, long created);
-        void RemoveLastProcessTekTimestamp();
-
         void SetCanConfirmExposure(bool canConfirmExposure);
         bool IsCanConfirmExposure();
 
@@ -39,20 +36,37 @@ namespace Covid19Radar.Repository
         DateTime? GetLastConfirmedDate();
 
         void RemoveAllExposureNotificationStatus();
+
+        Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region);
+        Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp);
+        Task RemoveLastProcessDiagnosisKeyTimestampAsync();
+
+        void SetSendEventLogState(SendEventLogState sendEventLogState);
+        SendEventLogState GetSendEventLogState();
+    }
+
+    public enum SendEventLogState
+    {
+        NotSet = 0,
+        Disable = -1,
+        Enable = 1
     }
 
     public class UserDataRepository : IUserDataRepository
     {
         private readonly IPreferencesService _preferencesService;
+        private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
 
         public UserDataRepository(
             IPreferencesService preferencesService,
+            IDateTimeUtility dateTimeUtility,
             ILoggerService loggerService
             )
         {
-            _loggerService = loggerService;
             _preferencesService = preferencesService;
+            _dateTimeUtility = dateTimeUtility;
+            _loggerService = loggerService;
         }
 
         public void SetStartDate(DateTime dateTime)
@@ -79,6 +93,75 @@ namespace Covid19Radar.Repository
             _preferencesService.RemoveValue(PreferenceKey.StartDateTimeEpoch);
 
             _loggerService.EndMethod();
+        }
+
+        public Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region)
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                var result = 0L;
+
+                var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+                if (!string.IsNullOrEmpty(jsonString))
+                {
+                    var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
+                    if (dict.ContainsKey(region))
+                    {
+                        result = dict[region];
+                    }
+                }
+
+                return Task.FromResult(result);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        public Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp)
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+
+                Dictionary<string, long> newDict;
+                if (!string.IsNullOrEmpty(jsonString))
+                {
+                    newDict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
+                }
+                else
+                {
+                    newDict = new Dictionary<string, long>();
+                }
+                newDict[region] = timestamp;
+                _preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
+
+                return Task.CompletedTask;
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        public Task RemoveLastProcessDiagnosisKeyTimestampAsync()
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                _preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
+                return Task.CompletedTask;
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
 
         public DateTime GetLastUpdateDate(TermsType termsType)
@@ -116,48 +199,6 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
             _preferencesService.RemoveValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch);
             _preferencesService.RemoveValue(PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch);
-            _loggerService.EndMethod();
-        }
-
-        public long GetLastProcessTekTimestamp(string region)
-        {
-            _loggerService.StartMethod();
-            var result = 0L;
-            var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
-            if (!string.IsNullOrEmpty(jsonString))
-            {
-                var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
-                if (dict.ContainsKey(region))
-                {
-                    result = dict[region];
-                }
-            }
-            _loggerService.EndMethod();
-            return result;
-        }
-
-        public void SetLastProcessTekTimestamp(string region, long created)
-        {
-            _loggerService.StartMethod();
-            var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
-            Dictionary<string, long> newDict;
-            if (!string.IsNullOrEmpty(jsonString))
-            {
-                newDict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
-            }
-            else
-            {
-                newDict = new Dictionary<string, long>();
-            }
-            newDict[region] = created;
-            _preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
-            _loggerService.EndMethod();
-        }
-
-        public void RemoveLastProcessTekTimestamp()
-        {
-            _loggerService.StartMethod();
-            _preferencesService.RemoveValue(PreferenceKey.LastProcessTekTimestamp);
             _loggerService.EndMethod();
         }
 
@@ -210,6 +251,32 @@ namespace Covid19Radar.Repository
             _preferencesService.RemoveValue(PreferenceKey.CanConfirmExposure);
             _preferencesService.RemoveValue(PreferenceKey.LastConfirmedDateTimeEpoch);
             _loggerService.EndMethod();
+        }
+
+        public void SetSendEventLogState(SendEventLogState sendEventLogState)
+        {
+            _loggerService.StartMethod();
+
+            _preferencesService.SetValue(PreferenceKey.SendEventLogState, (int)sendEventLogState);
+
+            _loggerService.EndMethod();
+        }
+
+        public SendEventLogState GetSendEventLogState()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                int state = _preferencesService.GetValue(
+                    PreferenceKey.SendEventLogState,
+                    (int)SendEventLogState.NotSet
+                    );
+                return (SendEventLogState)state;
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
     }
 }

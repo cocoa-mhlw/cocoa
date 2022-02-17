@@ -34,6 +34,7 @@ namespace Covid19Radar
             ApiKey = j.Value<string>("apiKey");
             CdnUrlBase = j.Value<string>("cdnUrlBase");
             BlobStorageContainerName = j.Value<string>("blobStorageContainerName");
+            ExposureConfigurationUrlBase = j.Value<string>("exposureConfigurationUrlBase");
             SupportedRegions = j.Value<string>("supportedRegions").ToUpperInvariant().Split(';', ',', ':');
             AndroidSafetyNetApiKey = j.Value<string>("androidSafetyNetApiKey");
             SupportEmail = j.Value<string>("supportEmail");
@@ -54,6 +55,8 @@ namespace Covid19Radar
         public string[] SupportedRegions { get; }
 
         public string BlobStorageContainerName { get; }
+
+        public string ExposureConfigurationUrlBase { get; }
 
         public string AndroidSafetyNetApiKey { get; }
 

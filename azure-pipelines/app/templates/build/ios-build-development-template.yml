@@ -1,0 +1,78 @@
+parameters:
+- name: isDefineDebug
+  type: boolean
+  default: false
+
+steps:
+- task: InstallAppleCertificate@2
+  displayName: 'Install an Apple certificate'
+  inputs:
+    certSecureFile: 'cocoa_development_20230215.p12'
+    certPwd: '$(iOS_CertificatePassword)'
+
+- task: InstallAppleProvisioningProfile@1
+  displayName: 'Install an Apple provisioning profile'
+  inputs:
+    provProfileSecureFile: 'cocoa_development_20230214.mobileprovision'
+
+- template: setup/ios-setup-variables-template.yml
+  parameters:
+    configuration: debug
+
+- template: setup/app-setup-variables-template.yml
+
+- template: setup/ios-setup-xamarin-template.yml
+
+- template: setup/app-setup-xamarin-template.yml
+  parameters:
+    configuration: debug
+
+- task: XamariniOS@2
+  displayName: 'Build Covid19Radar.iOS.csproj for not DEBUG'
+  inputs:
+    solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
+    configuration: Debug
+    args: '/p:DefineConstants=DEBUG=0'
+    signingIdentity: 'Apple Development'
+    signingProvisioningProfileID: 'e673e188-1224-4218-9e18-c92103039c24'
+  condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'false'))
+
+- task: XamariniOS@2
+  displayName: 'Build Covid19Radar.iOS.csproj for DEBUG'
+  inputs:
+    solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
+    configuration: Debug
+    signingIdentity: 'Apple Development'
+    signingProvisioningProfileID: 'e673e188-1224-4218-9e18-c92103039c24'
+  condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'true'))
+
+- task: CopyFiles@2
+  displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/Debug
+    Contents: '*.ipa'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    mkdir -p symbols
+    find . -type d -name '*.dSYM' | xargs -J % cp -v -R % $(System.DefaultWorkingDirectory)/symbols
+  displayName: Copy symbol files to staging
+
+- task: CopyFiles@2
+  displayName: 'Copy symbols to: Build.ArtifactStagingDirectory'
+  inputs:
+    Contents: |
+      **/symbols/**/*
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    cd $(Build.ArtifactStagingDirectory)/
+    ARCHIVE_FILE=`find *.ipa | head -1`
+    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_development_$(Environment)_v$(AppVersion)_$(buildVersion).ipa
+    ls -la
+  displayName: 'Change archive name'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish IPA and symbols'
+  inputs:
+    ArtifactName: 'archives_development_$(Environment)_v$(AppVersion)_$(buildVersion)'

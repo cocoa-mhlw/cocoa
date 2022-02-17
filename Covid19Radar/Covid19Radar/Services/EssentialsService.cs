@@ -22,5 +22,8 @@ namespace Covid19Radar.Services
         public string AppVersion => AppInfo.VersionString;
         public string BuildNumber => AppInfo.BuildString;
         public string AppPackageName => AppInfo.PackageName;
+
+        // PhoneDialer
+        public void PhoneDialerOpen(string number) => PhoneDialer.Open(number);
     }
 }

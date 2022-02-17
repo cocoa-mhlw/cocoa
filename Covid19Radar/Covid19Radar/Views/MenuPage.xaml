@@ -9,90 +9,132 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    ios:Page.UseSafeArea="true"
-    prism:ViewModelLocator.AutowireViewModel="True"
-    Visual="Material">
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar">
+
+    <AutomationProperties.Name>
+        <OnPlatform x:TypeArguments="x:String">
+            <On Platform="iOS" Value="{x:Static resources:AppResources.MenuPageTitle}" />
+        </OnPlatform>
+    </AutomationProperties.Name>
+
     <MasterDetailPage.Master>
-
-        <NavigationPage
+        <ContentPage
             Title="{x:Static resources:AppResources.MenuPageTitle}"
-            AutomationId="MasterMenu"
-            BarBackgroundColor="#FFFFFF"
-            BarTextColor="Black">
-            <x:Arguments>
-                <ContentPage Title="{x:Static resources:AppResources.MenuPageTitle}" BackgroundColor="#FFFFFF">
-                    <ListView
-                        ItemsSource="{Binding MenuItems}"
-                        RowHeight="60"
-                        SelectedItem="{Binding SelectedMenuItem}"
-                        SeparatorColor="#E0E0E0"
-                        SeparatorVisibility="Default"
-                        Footer="">
+            ios:Page.UseSafeArea="True">
 
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <!--  Main design for our menu items  -->
-                                    <StackLayout
-                                        Padding="20,10,0,10"
-                                        Style="{StaticResource ImageLableStackLayout}"
-                                        VerticalOptions="FillAndExpand">
-                                        <Image
-                                            AutomationId="{Binding Title}"
-                                            HeightRequest="35"
-                                            WidthRequest="35">
-                                            <Image.Source>
-                                                <FontImageSource
-                                                    FontFamily="FA-S"
-                                                    Glyph="{Binding Icon}"
-                                                    Size="30"
-                                                    Color="#019AE8">
-                                                    <FontImageSource.Color>
-                                                        <OnPlatform x:TypeArguments="BindingBase">
-                                                            <OnPlatform.Platforms>
-                                                                <On Platform="Android" Value="{Binding IconColor}" />
-                                                                <On Platform="iOS" Value="{Binding Source=#019AE8}" />
-                                                            </OnPlatform.Platforms>
-                                                        </OnPlatform>
-                                                    </FontImageSource.Color>
-                                                </FontImageSource>
-                                            </Image.Source>
-                                        </Image>
-                                        <Label
-                                            VerticalOptions="Center"
-                                            AutomationId="{Binding Title}"
-                                            FontSize="Default"
-                                            Text="{Binding Title}">
-                                            <Label.TextColor>
-                                                <OnPlatform x:TypeArguments="BindingBase">
-                                                    <OnPlatform.Platforms>
-                                                        <On Platform="Android" Value="{Binding TextColor}" />
-                                                        <On Platform="iOS" Value="{Binding Source={StaticResource NavBarText}}" />
-                                                    </OnPlatform.Platforms>
-                                                </OnPlatform>
-                                            </Label.TextColor>                                                                                        
-                                        </Label>
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-
-                        <ListView.Behaviors>
-                            <b:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
-                        </ListView.Behaviors>
-
-                    </ListView>
-                </ContentPage>
-            </x:Arguments>
-            <NavigationPage.IconImageSource>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS">
-                        <FileImageSource File="IconHamburger.png" />
-                    </On>
+            <ContentPage.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <OnPlatform.Platforms>
+                        <On Platform="iOS" Value="icon_menu.png" />
+                    </OnPlatform.Platforms>
                 </OnPlatform>
-            </NavigationPage.IconImageSource>
-        </NavigationPage>
+            </ContentPage.IconImageSource>
+
+            <StackLayout>
+                <StackLayout
+                    Spacing="10"
+                    Orientation="Horizontal"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center">
+
+                    <StackLayout.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <OnPlatform.Platforms>
+                                <On Platform="iOS" Value="10,0" />
+                                <On Platform="Android" Value="10,10" />
+                            </OnPlatform.Platforms>
+                        </OnPlatform>
+                    </StackLayout.Padding>
+                    <ImageButton
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="{x:Static resources:AppResources.ButtonClose}"
+                        BackgroundColor="Transparent"
+                        Command="{Binding Path=OnCloseButton}"
+                        Source="icon_close.png"
+                        TabIndex="1" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelLarge}"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center"
+                        Text="{x:Static resources:AppResources.MenuPageTitle}"
+                        TabIndex="2" />
+                </StackLayout>
+
+                <ListView
+                    AutomationProperties.IsInAccessibleTree="True"
+                    ItemsSource="{Binding MenuItems}"
+                    RowHeight="60"
+                    SelectedItem="{Binding SelectedMenuItem}"
+                    SeparatorColor="#E0E0E0"
+                    SeparatorVisibility="Default"
+                    TabIndex="3">
+
+                    <AutomationProperties.Name>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Platforms>
+                                <On Platform="iOS" Value="{x:Static resources:AppResources.List}" />
+                            </OnPlatform.Platforms>
+                        </OnPlatform>
+                    </AutomationProperties.Name>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    AutomationProperties.IsInAccessibleTree="True"
+                                    AutomationProperties.Name="{Binding ReadText}"
+                                    Padding="20,10,0,10"
+                                    Style="{StaticResource ImageLableStackLayout}"
+                                    VerticalOptions="FillAndExpand">
+                                    <Image
+                                        AutomationProperties.IsInAccessibleTree="False"
+                                        HeightRequest="35"
+                                        WidthRequest="35">
+                                        <Image.Source>
+                                            <FontImageSource
+                                                FontFamily="FA-S"
+                                                Glyph="{Binding Icon}"
+                                                Size="30">
+                                                <FontImageSource.Color>
+                                                    <OnPlatform x:TypeArguments="BindingBase">
+                                                        <OnPlatform.Platforms>
+                                                            <On Platform="Android" Value="{Binding IconColor}" />
+                                                            <On Platform="iOS" Value="{Binding Source=#066AB9}" />
+                                                        </OnPlatform.Platforms>
+                                                    </OnPlatform>
+                                                </FontImageSource.Color>
+                                            </FontImageSource>
+                                        </Image.Source>
+                                    </Image>
+                                    <Label
+                                        AutomationProperties.IsInAccessibleTree="False"
+                                        VerticalOptions="Center"
+                                        FontSize="Default"
+                                        Text="{Binding Title}">
+                                        <Label.TextColor>
+                                            <OnPlatform x:TypeArguments="BindingBase">
+                                                <OnPlatform.Platforms>
+                                                    <On Platform="Android" Value="{Binding TextColor}" />
+                                                    <On Platform="iOS" Value="{Binding Source={StaticResource NavBarText}}" />
+                                                </OnPlatform.Platforms>
+                                            </OnPlatform>
+                                        </Label.TextColor>
+                                    </Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                    <ListView.Behaviors>
+                        <b:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
+                    </ListView.Behaviors>
+
+                    <ListView.Footer>
+                        <StackLayout AutomationProperties.IsInAccessibleTree="False" />
+                    </ListView.Footer>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
     </MasterDetailPage.Master>
 </MasterDetailPage>

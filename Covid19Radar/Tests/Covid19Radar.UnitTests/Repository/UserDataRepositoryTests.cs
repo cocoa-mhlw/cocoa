@@ -17,16 +17,22 @@ namespace Covid19Radar.UnitTests.Repository
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IPreferencesService> mockPreferencesService;
+        private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
 
         public UserDataRepositoryTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockPreferencesService = mockRepository.Create<IPreferencesService>();
+            mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
         }
 
         private IUserDataRepository CreateRepository()
-            => new UserDataRepository(mockPreferencesService.Object, mockLoggerService.Object);
+            => new UserDataRepository(
+                mockPreferencesService.Object,
+                mockDateTimeUtility.Object,
+                mockLoggerService.Object
+                );
 
         #region LastConfirmedUtcDateTime
 
@@ -74,6 +80,5 @@ namespace Covid19Radar.UnitTests.Repository
         }
 
         #endregion
-
     }
 }

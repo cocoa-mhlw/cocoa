@@ -24,7 +24,7 @@ namespace Covid19Radar.Api
     {
         private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
-        private readonly IV1DeviceValidationService DeviceCheck;
+        private readonly IDeviceValidationService DeviceCheck;
         private readonly IVerificationService VerificationService;
         private readonly ILogger<DiagnosisApi> Logger;
         private readonly string[] SupportRegions;
@@ -34,7 +34,7 @@ namespace Covid19Radar.Api
             IConfiguration config,
             IDiagnosisRepository diagnosisRepository,
             ITemporaryExposureKeyRepository tekRepository,
-            IV1DeviceValidationService deviceCheck,
+            IDeviceValidationService deviceCheck,
             IVerificationService verificationService,
             IValidationServerService validationServerService,
             ILogger<DiagnosisApi> logger)
@@ -82,8 +82,13 @@ namespace Covid19Radar.Api
 
             // TODO: Security Consider, additional validation for user uuid.
 
-            // validation device 
-            if (false == await DeviceCheck.Validation(diagnosis, reqTime)) 
+            // validation device
+            Logger.LogInformation("regions: " + (diagnosis?.Regions != null && diagnosis.Regions.Count() != 0 ? string.Join(", ", diagnosis.Regions) : "Empty") + ", " +
+                      $"platform: {diagnosis?.Platform}, " +
+                      $"deviceVerificationPayload: {diagnosis?.DeviceVerificationPayload}, " +
+                      $"appPackageName: {diagnosis?.AppPackageName}, " +
+                      $"padding: {diagnosis?.Padding}");
+            if (false == await DeviceCheck.Validation(diagnosis.Platform, diagnosis, reqTime))
             {
                 Logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
