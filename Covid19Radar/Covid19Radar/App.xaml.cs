@@ -62,15 +62,15 @@ namespace Covid19Radar
             LoggerService.EndMethod();
         }
 
-        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, NavigationParameters navigationParameters)
+        public async Task<INavigationResult> NavigateToSplashAsync(Destination destination, INavigationParameters navigationParameters)
         {
             LoggerService.Info($"Destination: {destination}");
 
-            navigationParameters = SplashPage.BuildNavigationParams(destination, navigationParameters);
-            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParameters);
+            var navigationParams = SplashPage.BuildNavigationParams(destination, navigationParameters);
+            return await NavigationService.NavigateAsync(Destination.SplashPage.ToPath(), navigationParams);
         }
 
-        public async Task<INavigationResult> NavigateToAsync(Destination destination, NavigationParameters navigationParameters)
+        public async Task<INavigationResult> NavigateToAsync(Destination destination, INavigationParameters navigationParameters)
         {
             LoggerService.StartMethod();
 
@@ -147,7 +147,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage3>();
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<TutorialPage4>();
-            containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
 
             // Help
@@ -162,11 +161,8 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
             containerRegistry.RegisterForNavigation<InqueryPage>();
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
-            containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
-            containerRegistry.RegisterForNavigation<NotContactPage>();
-            containerRegistry.RegisterForNavigation<NoRiskContactPage>();
-            containerRegistry.RegisterForNavigation<LowRiskContactPage>();
+            containerRegistry.RegisterForNavigation<ExposureCheckPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
             containerRegistry.RegisterForNavigation<SubmitConsentPage>();
             containerRegistry.RegisterForNavigation<ExposuresPage>();
@@ -193,30 +189,37 @@ namespace Covid19Radar
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
 
 #if USE_MOCK
+            container.Register<IExposureDataRepository, ExposureDataRepositoryMock>(Reuse.Singleton);
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
 #else
+            container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
             container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
 
 #if DEBUG
             container.Register<IServerConfigurationRepository, DebugServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IDiagnosisKeyRegisterServer, DebugDiagnosisKeyRegisterServer>(Reuse.Singleton);
-            container.Register<IExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
+            container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
 #else
             container.Register<IServerConfigurationRepository, ReleaseServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
-            container.Register<IExposureDataCollectServer, ReleaseExposureDataCollectServer>(Reuse.Singleton);
+            container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServerNop>(Reuse.Singleton);
 #endif
 
+            container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IDialogService, DialogService>(Reuse.Singleton);
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
             container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
+            container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
+
+#if EVENT_LOG_ENABLED
             container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
+#else
+            container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
+#endif
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);

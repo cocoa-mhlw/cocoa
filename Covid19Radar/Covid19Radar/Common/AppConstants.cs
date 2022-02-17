@@ -80,10 +80,5 @@ namespace Covid19Radar.Common
         /// Delay for error in TEK re-registration.
         /// </summary>
         public const int DelayForRegistrationErrorMillis = 5000;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public const bool DEFAULT_SEND_EVENT_LOG_ENABLED = true;
     }
 }

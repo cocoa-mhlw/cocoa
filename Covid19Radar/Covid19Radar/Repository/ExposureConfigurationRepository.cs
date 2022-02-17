@@ -3,7 +3,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -30,12 +32,15 @@ namespace Covid19Radar.Repository
 
     public class ExposureConfigurationRepository : IExposureConfigurationRepository
     {
-        private readonly HttpClient _client;
+        private const int TIMEOUT_SECONDS = 10;
+
         private readonly ILocalPathService _localPathService;
         private readonly IPreferencesService _preferencesService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
+
+        private readonly HttpClient _httpClient;
 
         private readonly string _configDir;
 
@@ -52,12 +57,14 @@ namespace Covid19Radar.Repository
             ILoggerService loggerService
             )
         {
-            _client = httpClientService.Create();
             _localPathService = localPathService;
             _preferencesService = preferencesService;
             _serverConfigurationRepository = serverConfigurationRepository;
             _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
+
+            _httpClient = httpClientService.Create();
+            _httpClient.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
 
             _configDir = PrepareConfigDir();
             _currentExposureConfigurationPath = localPathService.CurrentExposureConfigurationPath;
@@ -103,6 +110,8 @@ namespace Covid19Radar.Repository
 
                     currentExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
 
+                    _loggerService.Info("Cached:" + exposureConfigurationAsJson);
+
                     if (!IsDownloadedExposureConfigurationOutdated(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays))
                     {
                         _loggerService.EndMethod();
@@ -125,9 +134,12 @@ namespace Covid19Radar.Repository
                 }
             }
 
+            // Cache not exist (first time. probably...)
             if (currentExposureConfiguration is null)
             {
-                currentExposureConfiguration = new ExposureConfiguration();
+                currentExposureConfiguration = CreateDefaultConfiguration();
+                SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
+                SetIsDiagnosisKeysDataMappingConfigurationUpdated(true);
             }
 
             await _serverConfigurationRepository.LoadAsync();
@@ -135,15 +147,17 @@ namespace Covid19Radar.Repository
 
             ExposureConfiguration newExposureConfiguration = null;
 
-            var response = await _client.GetAsync(url);
+            var response = await _httpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
                 string exposureConfigurationAsJson = await response.Content.ReadAsStringAsync();
-                _loggerService.Debug(exposureConfigurationAsJson);
 
                 try
                 {
                     newExposureConfiguration = JsonConvert.DeserializeObject<ExposureConfiguration>(exposureConfigurationAsJson);
+
+                    _loggerService.Info("Downloaded:" + exposureConfigurationAsJson);
+
                     SetExposureConfigurationDownloadedDateTime(_dateTimeUtility.UtcNow);
                 }
                 catch (JsonException exception)
@@ -201,6 +215,241 @@ namespace Covid19Radar.Repository
             }
         }
 
+        private static ExposureConfiguration CreateDefaultConfiguration()
+        {
+            return new ExposureConfiguration()
+            {
+                #region Exposure Window mode(ENv2) Configuration
+                GoogleDailySummariesConfig = new DailySummariesConfig()
+                {
+                    AttenuationBucketThresholdDb = new List<int>() {
+                        46,
+                        60,
+                        65
+                    },
+                    AttenuationBucketWeights = new List<double>() {
+                        1.0,
+                        2.5,
+                        1.3,
+                        0.01
+                    },
+                    DaysSinceExposureThreshold = 0,
+                    InfectiousnessWeights = new Dictionary<Infectiousness, double>()
+                    {
+                        { Infectiousness.High, 1.0 },
+                        { Infectiousness.Standard, 1.0 },
+                    },
+                    MinimumWindowScore = 0.0,
+                    ReportTypeWeights = new Dictionary<ReportType, double>()
+                    {
+                        { ReportType.ConfirmedTest, 1.0 },
+                        { ReportType.ConfirmedClinicalDiagnosis, 1.0 },
+                        { ReportType.SelfReport, 1.0 },
+                        { ReportType.Recursive, 1.0 },
+                    }
+                },
+                GoogleDiagnosisKeysDataMappingConfig = new ExposureConfiguration.GoogleDiagnosisKeysDataMappingConfiguration()
+                {
+                    InfectiousnessWhenDaysSinceOnsetMissing = Infectiousness.High,
+                    ReportTypeWhenMissing = ReportType.ConfirmedTest,
+                    InfectiousnessForDaysSinceOnsetOfSymptoms = new Dictionary<int, Infectiousness>()
+                    {
+                        { -14, Infectiousness.None },
+                        { -13, Infectiousness.None },
+                        { -12, Infectiousness.None },
+                        { -11, Infectiousness.None },
+                        { -10, Infectiousness.None },
+                        { -9, Infectiousness.None },
+                        { -8, Infectiousness.None },
+                        { -7, Infectiousness.None },
+                        { -6, Infectiousness.None },
+                        { -5, Infectiousness.None },
+                        { -4, Infectiousness.None },
+                        { -3, Infectiousness.High },
+                        { -2, Infectiousness.High },
+                        { -1, Infectiousness.High },
+                        { 0, Infectiousness.High },
+                        { +1, Infectiousness.High },
+                        { +2, Infectiousness.High },
+                        { +3, Infectiousness.High },
+                        { +4, Infectiousness.High },
+                        { +5, Infectiousness.High },
+                        { +6, Infectiousness.High },
+                        { +7, Infectiousness.High },
+                        { +8, Infectiousness.High },
+                        { +9, Infectiousness.High },
+                        { +10, Infectiousness.High },
+                        { +11, Infectiousness.None },
+                        { +12, Infectiousness.None },
+                        { +13, Infectiousness.None },
+                        { +14, Infectiousness.None },
+                    },
+                },
+                AppleExposureConfigV2 = new ExposureConfiguration.AppleExposureConfigurationV2()
+                {
+                    InfectiousnessWhenDaysSinceOnsetMissing = Infectiousness.High,
+                    ReportTypeNoneMap = ReportType.ConfirmedTest,
+                    AttenuationDurationThresholds = new int[] {
+                        46,
+                        60,
+                        65
+                    },
+                    ImmediateDurationWeight = 100.0,
+                    NearDurationWeight = 250.0,
+                    MediumDurationWeight = 130.0,
+                    OtherDurationWeight = 1.0,
+                    DaysSinceLastExposureThreshold = 0,
+                    InfectiousnessForDaysSinceOnsetOfSymptoms = new Dictionary<long, Infectiousness>()
+                    {
+                        { -14, Infectiousness.None },
+                        { -13, Infectiousness.None },
+                        { -12, Infectiousness.None },
+                        { -11, Infectiousness.None },
+                        { -10, Infectiousness.None },
+                        { -9, Infectiousness.None },
+                        { -8, Infectiousness.None },
+                        { -7, Infectiousness.None },
+                        { -6, Infectiousness.None },
+                        { -5, Infectiousness.None },
+                        { -4, Infectiousness.None },
+                        { -3, Infectiousness.High },
+                        { -2, Infectiousness.High },
+                        { -1, Infectiousness.High },
+                        { 0, Infectiousness.High },
+                        { +1, Infectiousness.High },
+                        { +2, Infectiousness.High },
+                        { +3, Infectiousness.High },
+                        { +4, Infectiousness.High },
+                        { +5, Infectiousness.High },
+                        { +6, Infectiousness.High },
+                        { +7, Infectiousness.High },
+                        { +8, Infectiousness.High },
+                        { +9, Infectiousness.High },
+                        { +10, Infectiousness.High },
+                        { +11, Infectiousness.None },
+                        { +12, Infectiousness.None },
+                        { +13, Infectiousness.None },
+                        { +14, Infectiousness.None },
+                    },
+                    InfectiousnessHighWeight = 100.0,
+                    InfectiousnessStandardWeight = 100.0,
+                    ReportTypeConfirmedClinicalDiagnosisWeight = 100.0,
+                    ReportTypeConfirmedTestWeight = 100.0,
+                    ReportTypeRecursiveWeight = 100.0,
+                    ReportTypeSelfReportedWeight = 100.0,
+                },
+                #endregion
+                #region Legacy-V1 Configuration
+                GoogleExposureConfig = new ExposureConfiguration.GoogleExposureConfiguration()
+                {
+                    AttenuationScores = new int[]
+                    {
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                    },
+                    AttenuationWeight = 50,
+                    DaysSinceLastExposureScores = new int[]
+                    {
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                    },
+                    DaysSinceLastExposureWeight = 50,
+                    DurationAtAttenuationThresholds = new int[]
+                    {
+                        50,
+                        70,
+                    },
+                    DurationScores = new int[]
+                    {
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                    },
+                    DurationWeight = 50,
+                    MinimumRiskScore = 21,
+                    TransmissionRiskScores = new int[]
+                    {
+                        7,
+                        7,
+                        7,
+                        7,
+                        7,
+                        7,
+                        7,
+                        7,
+                    },
+                    TransmissionRiskWeight = 50,
+                },
+                AppleExposureConfigV1 = new ExposureConfiguration.AppleExposureConfigurationV1()
+                {
+                    AttenuationLevelValues = new int[]
+                    {
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                    },
+                    DaysSinceLastExposureLevelValues = new int[]
+                    {
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                    },
+                    DurationLevelValues = new int[]
+                    {
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                    },
+                    TransmissionRiskLevelValues = new int[]
+                    {
+                        0,
+                        0,
+                        7,
+                        7,
+                        7,
+                        7,
+                        7,
+                        7,
+                    },
+                    MinimumRiskScore = 21,
+                    MinimumRiskScoreFullRange = 0.0,
+                }
+                #endregion
+            };
+        }
+
         private void Swap(string sourcePath, string destPath)
         {
             string tmpFilePath = Path.Combine(_configDir, Guid.NewGuid().ToString());
@@ -215,7 +464,7 @@ namespace Covid19Radar.Repository
             {
                 File.Move(sourcePath, destPath);
             }
-            catch(IOException exception)
+            catch (IOException exception)
             {
                 _loggerService.Exception("IOException", exception);
 
@@ -236,13 +485,10 @@ namespace Covid19Radar.Repository
             ExposureConfiguration exposureConfiguration2
             )
         {
-            return
-                (exposureConfiguration1.GoogleDiagnosisKeysDataMappingConfig
-                    != exposureConfiguration2.GoogleDiagnosisKeysDataMappingConfig)
-                ||
-                (exposureConfiguration1.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms
-                    != exposureConfiguration2.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms);
-
+            var googleDiagnosisKeysDataMappingConfigUpdated = !exposureConfiguration1.GoogleDiagnosisKeysDataMappingConfig.Equals(exposureConfiguration2.GoogleDiagnosisKeysDataMappingConfig);
+            var appleInfectiousnessForDaysSinceOnsetOfSymptoms = !exposureConfiguration1.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms
+                .SequenceEqual(exposureConfiguration2.AppleExposureConfigV2.InfectiousnessForDaysSinceOnsetOfSymptoms);
+            return googleDiagnosisKeysDataMappingConfigUpdated || appleInfectiousnessForDaysSinceOnsetOfSymptoms;
         }
 
         private bool IsExposureConfigurationOutdated(int retensionDays)
@@ -292,10 +538,10 @@ namespace Covid19Radar.Repository
         }
 
         public void SetIsDiagnosisKeysDataMappingConfigurationUpdated(bool isUpdated)
-            => _preferencesService.SetValue(PreferenceKey.IsExposureConfigurationUpdated, isUpdated);
+            => _preferencesService.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, isUpdated);
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated()
-            => _preferencesService.GetValue(PreferenceKey.IsExposureConfigurationUpdated, true);
+            => _preferencesService.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true);
 
         private void SetExposureConfigurationDownloadedDateTime(DateTime dateTime)
         {

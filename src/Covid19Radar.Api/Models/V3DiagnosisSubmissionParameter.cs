@@ -7,7 +7,6 @@ using Covid19Radar.Api.Extensions;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
-using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
@@ -55,8 +54,17 @@ namespace Covid19Radar.Api.Models
         public string Padding { get; set; }
 
         [JsonIgnore]
-        public string KeysTextForDeviceVerification
-            => string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+        public virtual string KeysTextForDeviceVerification
+        {
+            get
+            {
+                if (Keys is null)
+                {
+                    return string.Empty;
+                }
+                return string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+            }
+        }
 
         #region Apple Device Check
 

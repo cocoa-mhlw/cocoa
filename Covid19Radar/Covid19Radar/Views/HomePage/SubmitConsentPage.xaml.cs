@@ -19,14 +19,18 @@ namespace Covid19Radar.Views
             InitializeComponent();
         }
 
-        public static NavigationParameters BuildNavigationParams(
+        public static INavigationParameters BuildNavigationParams(
             bool isFromAppLinks,
             string processingNumber,
-            NavigationParameters param
+            INavigationParameters? baseParam = null
             )
         {
+            var param = new NavigationParameters();
+            param.CopyFrom(baseParam);
+
             param.Add(IsFromAppLinksKey, isFromAppLinks);
             param.Add(ProcessingNumberKey, processingNumber);
+
             return param;
         }
 

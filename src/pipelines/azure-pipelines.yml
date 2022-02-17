@@ -1,4 +1,4 @@
-﻿# This Source Code Form is subject to the terms of the Mozilla Public
+# This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
@@ -13,14 +13,17 @@ parameters:
 - name: image
   displayName: Pool Image
   type: string
-  default: vs2017-win2016
+  default: windows-2019
   values:
   - windows-latest
-  - vs2017-win2016
+  - windows-2022
+  - windows-2019
   - ubuntu-latest
-  - ubuntu-16.04
+  - ubuntu-20.04
+  - ubuntu-18.04
   - macOS-latest
-  - macOS-10.14
+  - macOS-11
+  - macOS-10.15
 - name: configuration
   displayName: Build configuration
   type: string

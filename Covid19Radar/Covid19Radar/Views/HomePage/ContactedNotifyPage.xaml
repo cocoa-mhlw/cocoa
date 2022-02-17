@@ -51,8 +51,20 @@
                         Style="{StaticResource DefaultTitleLabel}">
                         <Label.FormattedText>
                             <FormattedString>
+                                <Span Text="{Binding ExposureDurationInMinutes}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="2"
+                        Margin="0,0,0,5"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Style="{StaticResource DefaultTitleLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
                                 <Span Text="{Binding ExposureCount}" />
-                                <Span Text="{x:Static resources:AppResources.ContactedNotifyPageCountText}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>

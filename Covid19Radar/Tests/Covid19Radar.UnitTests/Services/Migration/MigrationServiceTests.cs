@@ -37,6 +37,11 @@ namespace Covid19Radar.UnitTests.Services.Migration
         private DateTime JstToUtc(DateTime dateTimeJst)
             => TimeZoneInfo.ConvertTimeToUtc(DateTime.SpecifyKind(dateTimeJst, DateTimeKind.Unspecified), TIMEZONE_JST);
 
+        private const string FORMAT_DATETIME = "yyyy/MM/dd HH:mm:ss";
+
+        private static DateTime CreateDateTime(DateTime dateTime)
+            => DateTime.ParseExact(dateTime.ToString(FORMAT_DATETIME), FORMAT_DATETIME, null);
+
         private readonly MockRepository _mockRepository = new MockRepository(MockBehavior.Default);
 
         private readonly Mock<IMigrationProcessService> _migrationProcessService;
@@ -201,7 +206,9 @@ namespace Covid19Radar.UnitTests.Services.Migration
         {
             _mockEssentialService.SetupGet(x => x.AppVersion).Returns("1.0.0");
 
-            var startDateTime = DateTime.UtcNow;
+            var startDateTime = CreateDateTime(DateTime.UtcNow);
+            var termsOfServiceLastUpdateDateJst = CreateDateTime(JstNow.AddMinutes(1));
+            var privacyPolicyLastUpdateDateJst = CreateDateTime(JstNow.AddMinutes(2));
 
             var userExposureInfo1DateTime = DateTime.UtcNow;
             var userExposureInfo2DateTime = DateTime.UtcNow.AddDays(1);
@@ -902,7 +909,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // StartDateTime
             var startDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, 0L);
-            Assert.Equal(startDateTime.ToUnixEpoch(), startDateTimePref);
+            var startDateTimeUtc = DateTime.SpecifyKind(startDateTime, DateTimeKind.Utc);
+            Assert.Equal(startDateTimeUtc.ToUnixEpoch(), startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
@@ -1034,7 +1042,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // StartDateTime
             var startDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, 0L);
-            Assert.Equal(startDateTime.ToUnixEpoch(), startDateTimePref);
+            var startDateTimeUtc = DateTime.SpecifyKind(startDateTime, DateTimeKind.Utc);
+            Assert.Equal(startDateTimeUtc.ToUnixEpoch(), startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
@@ -1142,8 +1151,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // StartDateTime
             var startDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, 0L);
-            long expected = startDateTime.ToUnixEpoch();
-            Assert.Equal(expected, startDateTimePref);
+            var startDateTimeUtc = DateTime.SpecifyKind(startDateTime, DateTimeKind.Utc);
+            Assert.Equal(startDateTimeUtc.ToUnixEpoch(), startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);

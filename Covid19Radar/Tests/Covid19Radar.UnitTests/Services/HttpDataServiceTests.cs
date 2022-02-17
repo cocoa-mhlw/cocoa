@@ -192,14 +192,13 @@ namespace Covid19Radar.UnitTests.Services
                 Padding = "padding"
             };
 
-            var results = await unitUnderTest.PutSelfExposureKeysAsync(request);
+            var result = await unitUnderTest.PutSelfExposureKeysAsync(request);
 
             mockLoggerService.Verify(x => x.StartMethod("PutSelfExposureKeysAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.EndMethod("PutSelfExposureKeysAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
-            Assert.Equal(1, results.Count);
-            Assert.Equal(HttpStatusCode.NoContent, results[0]);
+            Assert.Equal(HttpStatusCode.NoContent, result);
             Assert.NotNull(requestContent);
 
             var stringContent = await requestContent.ReadAsStringAsync();

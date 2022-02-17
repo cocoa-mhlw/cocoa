@@ -3,13 +3,20 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -19,10 +26,12 @@ namespace Covid19Radar.ViewModels
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
         private readonly ICloseApplicationService _closeApplicationService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
+        private readonly ILocalNotificationService _localNotificationService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -70,23 +79,26 @@ namespace Covid19Radar.ViewModels
                 privacyPolicyUpdateDateTimeUtc = termsUpdateInfo.PrivacyPolicy.UpdateDateTimeUtc.ToString();
             }
 
-            var lastProcessTekTimestampList = AppSettings.Instance.SupportedRegions.Select(async region =>
+            var lastProcessTekTimestampList = new List<LastProcessTekTimestamp>();
+
+            foreach(var region in AppSettings.Instance.SupportedRegions)
             {
                 var ticks = await _userDataRepository.GetLastProcessDiagnosisKeyTimestampAsync(region);
-                new LastProcessTekTimestamp()
+                var lastProcessTekTimestamp = new LastProcessTekTimestamp()
                 {
                     Region = region,
                     Ticks = ticks
-                }.ToString();
-            });
+                };
+                lastProcessTekTimestampList.Add(lastProcessTekTimestamp);
+            };
 
             string regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
-            string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList);
+            string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList.Select(lptt => lptt.ToString()));
 
             var exposureNotificationStatus = await _exposureNotificationApiService.IsEnabledAsync();
 
-            var dailySummaryCount = (await _userDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
-            var exposureWindowCount = (await _userDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
+            var dailySummaryCount = (await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
+            var exposureWindowCount = (await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
 
             // ../../settings.json
             var settings = new[] {
@@ -99,7 +111,7 @@ namespace Covid19Radar.ViewModels
                 $"PrivacyPolicyUpdatedDateTimeUtc: {privacyPolicyUpdateDateTimeUtc}",
                 $"StartDate: {_userDataRepository.GetStartDate().ToLocalTime().ToString("F")}",
                 $"DaysOfUse: {_userDataRepository.GetDaysOfUse()}",
-                $"Legacy-V1 ExposureCount: {_userDataRepository.GetV1ExposureCount(AppConstants.DaysOfExposureInformationToDisplay)}",
+                $"Legacy-V1 ExposureCount: {_exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count()}",
                 $"DailySummaryCount: {dailySummaryCount}",
                 $"ExposureWindowCount: {exposureWindowCount}",
                 $"LastProcessTekTimestamp: {lastProcessTekTimestampsStr}",
@@ -120,6 +132,7 @@ namespace Covid19Radar.ViewModels
                 $"DiagnosisKeyRegisterApiEndpoint: {_serverConfigurationRepository.DiagnosisKeyRegisterApiEndpoint}",
                 $"DiagnosisKeyListProvideServerEndpoint: {_serverConfigurationRepository.DiagnosisKeyListProvideServerEndpoint}",
                 $"ExposureConfigurationUrl: {_serverConfigurationRepository.ExposureConfigurationUrl}",
+                $"ExposureRiskCalculationConfigurationUrl: {_serverConfigurationRepository.ExposureRiskCalculationConfigurationUrl}",
                 $"ExposureDataCollectServerEndpoint: {_serverConfigurationRepository.ExposureDataCollectServerEndpoint}",
                 $"EventLogApiEndpoint: {_serverConfigurationRepository.EventLogApiEndpoint}",
                 $"UserRegisterApiEndpoint: {_serverConfigurationRepository.UserRegisterApiEndpoint}",
@@ -134,20 +147,24 @@ namespace Covid19Radar.ViewModels
             ITermsUpdateService termsUpdateService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository,
             AbsExposureNotificationApiService exposureNotificationApiService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             ICloseApplicationService closeApplicationService,
-            IServerConfigurationRepository serverConfigurationRepository
+            IServerConfigurationRepository serverConfigurationRepository,
+            ILocalNotificationService localNotificationService
             ) : base(navigationService)
         {
             Title = "Title:Debug";
             _termsUpdateService = termsUpdateService;
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _userDataRepository = userDataRepository;
+            _exposureDataRepository = exposureDataRepository;
             _exposureNotificationApiService = exposureNotificationApiService;
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             _closeApplicationService = closeApplicationService;
             _serverConfigurationRepository = serverConfigurationRepository;
+            _localNotificationService = localNotificationService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -192,6 +209,59 @@ namespace Covid19Radar.ViewModels
             await UpdateInfo("StopExposureNotification");
         });
 
+        public Command OnClickShowExposureNotification => new Command(async () =>
+        {
+            await _localNotificationService.ShowExposureNotificationAsync();
+        });
+
+        public Command OnClickExportExposureWindow => new Command(async () =>
+        {
+            var exposureWindows = await _exposureDataRepository.GetExposureWindowsAsync();
+            var csv = ConvertCsv(exposureWindows);
+            var hashString = ConvertSha256(csv);
+
+            var fileName = $"exposure_window-{DeviceInfo.Name}-{hashString}.csv";
+            var file = Path.Combine(FileSystem.CacheDirectory, fileName);
+            File.WriteAllText(file, csv);
+
+            var shareFile = new ShareFile(file);
+            await Share.RequestAsync(new ShareFileRequest
+            {
+                File = shareFile
+            });
+        });
+
+        private string ConvertCsv(List<ExposureWindow> exposureWindows)
+        {
+            var flattenWindowLines = exposureWindows.Select((window, index) =>
+            {
+                var humanReadableDateMillisSinceEpoch = DateTimeOffset.UnixEpoch
+                    .AddMilliseconds(window.DateMillisSinceEpoch).UtcDateTime
+                    .ToLocalTime()
+                    .ToString("D", CultureInfo.CurrentCulture);
+                var connmaSeparatedWindow = $"{index},{window.CalibrationConfidence},{humanReadableDateMillisSinceEpoch},{window.Infectiousness},{window.ReportType}";
+                var flattenWindow = window.ScanInstances.Select(scanInstance =>
+                {
+                    var connmaSeparatedScanInstance = $"{scanInstance.MinAttenuationDb},{scanInstance.SecondsSinceLastScan},{scanInstance.TypicalAttenuationDb}";
+                    return $"{connmaSeparatedWindow},{connmaSeparatedScanInstance}";
+                });
+                return String.Join("\n", flattenWindow);
+            });
+
+            var csv = new StringBuilder();
+            csv.AppendLine("ExposureWindowIndex,CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb");
+            csv.AppendLine(String.Join("\n", flattenWindowLines));
+            return csv.ToString();
+        }
+
+        private string ConvertSha256(string text)
+        {
+            using var sha = SHA256.Create();
+            var textBytes = Encoding.UTF8.GetBytes(text);
+            var hash = sha.ComputeHash(textBytes);
+            return BitConverter.ToString(hash).Replace("-", string.Empty); 
+        }
+
         public Command OnClickRemoveStartDate => new Command(async () =>
         {
             _userDataRepository.RemoveStartDate();
@@ -200,7 +270,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickRemoveExposureInformation => new Command(async () =>
         {
-            _userDataRepository.RemoveExposureInformation();
+            _exposureDataRepository.RemoveExposureInformation();
             await UpdateInfo("RemoveExposureInformation");
         });
 
