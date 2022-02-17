@@ -40,6 +40,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly IUserDataRepository userDataRepository;
         private readonly IExposureDataRepository exposureDataRepository;
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
+        private readonly Mock<ICheckVersionService> mockCheckVersionService;
+        private readonly Mock<IEssentialsService> mockEssentialsService;
         private readonly Mock<AbsExposureDetectionBackgroundService> mockExposureDetectionBackgroundService;
         private readonly Mock<IDialogService> mockDialogService;
         private readonly Mock<IExternalNavigationService> mockExternalNavigationService;
@@ -62,6 +64,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockLocalPathService = mockRepository.Create<ILocalPathService>();
             mockDialogService = mockRepository.Create<IDialogService>();
             mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
+            mockCheckVersionService = mockRepository.Create<ICheckVersionService>();
+            mockEssentialsService = mockRepository.Create<IEssentialsService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();
 
             userDataRepository = new UserDataRepository(
@@ -108,6 +112,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockExposureDetectionBackgroundService.Object,
                 mockExposureConfigurationRepository.Object,
                 mockExposureRiskCalculationConfigurationRepository.Object,
+                mockCheckVersionService.Object,
+                mockEssentialsService.Object,
                 mockDialogService.Object,
                 mockExternalNavigationService.Object
                 );

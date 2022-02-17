@@ -22,6 +22,21 @@ namespace Covid19Radar.Services
         string BuildNumber { get; }
         string AppPackageName { get; }
 
+        string StoreUrl
+        {
+            get
+            {
+                if (IsIos)
+                {
+                    return AppSettings.Instance.AppStoreUrl;
+                }
+                else
+                {
+                    return AppSettings.Instance.GooglePlayUrl;
+                }
+            }
+        }
+
         // PhoneDialer
         void PhoneDialerOpen(string number);
     }

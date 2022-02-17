@@ -15,7 +15,7 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
-using Covid19Radar.Model;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -30,6 +30,8 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
+        private readonly ICheckVersionService checkVersionService;
+        private readonly IEssentialsService essentialsService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
 
@@ -82,6 +84,8 @@ namespace Covid19Radar.ViewModels
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
+            ICheckVersionService checkVersionService,
+            IEssentialsService essentialsService,
             IDialogService dialogService,
             IExternalNavigationService externalNavigationService
             ) : base(navigationService)
@@ -97,6 +101,8 @@ namespace Covid19Radar.ViewModels
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             this.exposureConfigurationRepository = exposureConfigurationRepository;
             this.exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
+            this.checkVersionService = checkVersionService;
+            this.essentialsService = essentialsService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
         }
@@ -116,7 +122,21 @@ namespace Covid19Radar.ViewModels
             });
 
             // Check Version
-            AppUtils.CheckVersion(loggerService);
+            _ = Task.Run(async () => {
+                bool isUpdated = await checkVersionService.IsUpdateVersionExistAsync();
+                if (isUpdated)
+                {
+                    MainThread.BeginInvokeOnMainThread(async () =>
+                    {
+                        await UserDialogs.Instance.AlertAsync(
+                            AppResources.AppUtilsGetNewVersionDescription,
+                            AppResources.AppUtilsGetNewVersionTitle,
+                            AppResources.ButtonOk
+                            );
+                        await Browser.OpenAsync(essentialsService.StoreUrl, BrowserLaunchMode.External);
+                    });
+                }
+            });
 
             // Load necessary files asynchronous
             _ = exposureConfigurationRepository.GetExposureConfigurationAsync();
