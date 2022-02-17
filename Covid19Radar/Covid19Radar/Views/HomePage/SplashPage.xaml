@@ -60,9 +60,18 @@
                     Margin="0,0,0,10"
                     Text="{x:Static resources:AppResources.Beta_Splash_Description2}"
                     />
+
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="4"
+                    Style="{StaticResource DefaultLabel}"
+                    Margin="0,5,0,15"
+                    Text="{x:Static resources:AppResources.NotMedicalExpenses}"
+                    />
+
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="5"
                     Style="{StaticResource DefaultLabel}"
                     Margin="0,0,0,10"
                     Text="{x:Static resources:AppResources.Beta_Splash_Description3}"
@@ -70,9 +79,9 @@
 
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="5"
+                    TabIndex="6"
                     Style="{StaticResource LinkLabelStyleMedium}"
-                    Margin="5,0,0,5"
+                    Margin="0,5,0,5"
                     Text="{x:Static resources:AppResources.Beta_Splash_GitHub}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding OpenGitHub}" />
@@ -80,7 +89,7 @@
                 </Label>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="9"
+                    TabIndex="7"
                     Margin="0,0,0,5"
                     Style="{StaticResource DefaultLabelSmall}"
                     Text="{x:Static resources:AppResources.Beta_Splash_GitHubAccountRequired}" />
@@ -92,7 +101,7 @@
                 >
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="7"
+                    TabIndex="8"
                     Command="{Binding OnClickContinue}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.Beta_Splash_Acknowledge}"
@@ -100,7 +109,7 @@
                     />
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="8"
+                    TabIndex="9"
                     Margin="0,10,0,0"
                     Command="{Binding Path=OnClickUseStable}"
                     Style="{StaticResource DefaultButton}"
