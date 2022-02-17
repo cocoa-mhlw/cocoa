@@ -113,7 +113,7 @@ namespace Covid19Radar.Repository
             {
                 currentConfiguration = CreateDefaultConfiguration();
             }
-            else if(preferCache)
+            else if (preferCache)
             {
                 _loggerService.EndMethod();
                 return currentConfiguration;
@@ -154,7 +154,7 @@ namespace Covid19Radar.Repository
                 return currentConfiguration;
             }
 
-            if (newExposureRiskCalculationConfiguration == currentConfiguration)
+            if (newExposureRiskCalculationConfiguration.Equals(currentConfiguration))
             {
                 _loggerService.Info("ExposureRiskCalculationConfiguration have not been changed.");
                 _loggerService.EndMethod();
@@ -192,8 +192,13 @@ namespace Covid19Radar.Repository
                 DailySummary_DaySummary_ScoreSum = new V1ExposureRiskCalculationConfiguration.Threshold()
                 {
                     Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
-                    Value = 1170.0,
-                }
+                    Value = 1350.0,
+                },
+                ExposureWindow_ScanInstance_SecondsSinceLastScanSum = new V1ExposureRiskCalculationConfiguration.Threshold()
+                {
+                    Op = V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL,
+                    Value = 900.0,
+                },
             };
         }
 

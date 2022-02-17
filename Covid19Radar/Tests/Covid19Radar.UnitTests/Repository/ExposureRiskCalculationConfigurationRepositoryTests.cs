@@ -155,5 +155,43 @@ namespace Covid19Radar.UnitTests.Repository
             Assert.Equal(result, newConfiguration);
         }
 
+        [Fact]
+        public async Task GetExposureRiskConfigurationTest_not_updated()
+        {
+            string currentConfigurationJson = GetTestJson(JSON_EXPOSURE_RISK_CONFIGURATION1);
+            File.WriteAllText(CURRENT_EXPOSURE_RISK_CONFIGURATION_FILE_PATH, currentConfigurationJson);
+            V1ExposureRiskCalculationConfiguration currentConfiguration
+                = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(currentConfigurationJson);
+
+            string newConfigurationJson = GetTestJson(JSON_EXPOSURE_RISK_CONFIGURATION2);
+            V1ExposureRiskCalculationConfiguration newConfiguration
+                = JsonConvert.DeserializeObject<V1ExposureRiskCalculationConfiguration>(newConfigurationJson);
+
+            var jsonContent = new StringContent(
+                newConfigurationJson,
+                Encoding.UTF8,
+                "application/json"
+            );
+            var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
+            mockClientService.Setup(x => x.Create()).Returns(client);
+
+            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
+            mockLocalPathService.Setup(x => x.CurrentExposureRiskCalculationConfigurationPath).Returns(CURRENT_EXPOSURE_RISK_CONFIGURATION_FILE_PATH);
+            mockServerConfigurationRepository.Setup(x => x.ExposureRiskCalculationConfigurationUrl).Returns("https://example.com/exposure_risk_configuration.json");
+
+            var unitUnderTest = CreateRepository();
+            var result = await unitUnderTest.GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+
+            result = await unitUnderTest.GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+
+            mockServerConfigurationRepository.Verify(s => s.LoadAsync(), Times.Exactly(2));
+            mockLoggerService.Verify(x => x.Info("ExposureRiskCalculationConfiguration have not been changed.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()),Times.Once);
+
+            Assert.NotNull(result);
+
+            Assert.NotEqual(result, currentConfiguration);
+            Assert.Equal(result, newConfiguration);
+        }
+
     }
 }

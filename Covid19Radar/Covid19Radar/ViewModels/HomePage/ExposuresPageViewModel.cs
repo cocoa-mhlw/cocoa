@@ -24,13 +24,7 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
         private readonly ILoggerService _loggerService;
 
-        public ObservableCollection<ExposureSummary> _exposures;
-
-        public ObservableCollection<ExposureSummary> Exposures
-        {
-            get { return _exposures; }
-            set { SetProperty(ref _exposures, value); }
-        }
+        public ObservableCollection<ExposureSummary> Exposures { get; set; }
 
         public ExposuresPageViewModel(
             INavigationService navigationService,
@@ -46,8 +40,7 @@ namespace Covid19Radar.ViewModels
             _loggerService = loggerService;
 
             Title = AppResources.MainExposures;
-            _exposures = new ObservableCollection<ExposureSummary>();
-
+            Exposures = new ObservableCollection<ExposureSummary>();
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -59,6 +52,8 @@ namespace Covid19Radar.ViewModels
 
         public async Task InitExposures()
         {
+            var exposures = new ObservableCollection<ExposureSummary>();
+
             var exposureRiskCalculationConfiguration
                 = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: false);
             _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
@@ -103,7 +98,7 @@ namespace Covid19Radar.ViewModels
                     var exposureDurationInSec = ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
                     ens.SetExposureTime(exposureDurationInSec);
 
-                    _exposures.Add(ens);
+                    exposures.Add(ens);
                 }
             }
 
@@ -117,13 +112,15 @@ namespace Covid19Radar.ViewModels
                         ExposureDate = ei.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
                     };
                     ens.SetExposureCount(ei.Count());
-                    _exposures.Add(ens);
+                    exposures.Add(ens);
                 }
             }
 
-            Exposures = new ObservableCollection<ExposureSummary>(
-                _exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp)
-                );
+            Exposures.Clear();
+            foreach (var exposure in exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp))
+            {
+                Exposures.Add(exposure);
+            }
         }
     }
 

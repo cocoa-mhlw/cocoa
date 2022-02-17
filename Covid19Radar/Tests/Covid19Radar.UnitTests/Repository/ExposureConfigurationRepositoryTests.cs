@@ -19,7 +19,7 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.Repository
 {
-    public class ExposureConfigurationRepositoryTests
+    public class ExposureConfigurationRepositoryTests : IDisposable
     {
 
         private const string JSON_EXPOSURE_CONFIGURATION1 = "exposure_configuration1.json";
@@ -57,6 +57,14 @@ namespace Covid19Radar.UnitTests.Repository
                 mockLoggerService.Object
                 );
 
+        public void Dispose()
+        {
+            if (File.Exists(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
+            {
+                File.Delete(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
+            }
+        }
+
         private static string GetTestJson(string fileName)
         {
             var path = TestDataUtils.GetLocalFilePath(fileName);
@@ -92,8 +100,8 @@ namespace Covid19Radar.UnitTests.Repository
             var result = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockServerConfigurationRepository.Verify(s => s.LoadAsync(), Times.Once());
-            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, date.ToUnixEpoch()), Times.Once());
-            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsExposureConfigurationUpdated, true), Times.Once());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, date.ToUnixEpoch()), Times.AtLeastOnce());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true), Times.AtLeastOnce());
 
             Assert.NotNull(result);
 
@@ -135,20 +143,20 @@ namespace Covid19Radar.UnitTests.Repository
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(date);
 
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
-            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsExposureConfigurationUpdated, false)).Returns(false);
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, false)).Returns(false);
 
             var unitUnderTest = CreateRepository();
             var result2 = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, date.ToUnixEpoch()), Times.Never());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, date.ToUnixEpoch()), Times.Never());
-            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsExposureConfigurationUpdated, true), Times.Never());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true), Times.Never());
 
             Assert.Equal(result1, result2);
         }
 
         [Fact]
-        public async Task GetExposureConfigurationTest_updated_and_cache_expired()
+        public async Task GetExposureConfigurationTest_updated_DataMappingNotUpdated_and_cache_expired()
         {
             var date = Date;
             var cacheExpireDate = date + TimeSpan.FromDays(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays) + TimeSpan.FromSeconds(1);
@@ -177,14 +185,57 @@ namespace Covid19Radar.UnitTests.Repository
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(cacheExpireDate);
 
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
-            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsExposureConfigurationUpdated, false)).Returns(false);
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, false)).Returns(false);
 
             var unitUnderTest = CreateRepository();
             var result2 = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Once());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Never());
-            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsExposureConfigurationUpdated, true), Times.Once());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true), Times.Never());
+
+            Assert.NotEqual(result1, result2);
+            Assert.Equal(expectedResult, result2);
+        }
+
+        [Fact]
+        public async Task GetExposureConfigurationTest_updated_DataMappingUpdated_and_cache_expired()
+        {
+            var date = Date;
+            var cacheExpireDate = date + TimeSpan.FromDays(AppConstants.ExposureConfigurationFileDownloadCacheRetentionDays) + TimeSpan.FromSeconds(1);
+
+            string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
+            using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
+            {
+                await writer.WriteAsync(testJson1);
+            }
+            ExposureConfiguration result1 = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson1);
+
+            string testJson2 = GetTestJson(JSON_EXPOSURE_CONFIGURATION_MAPPING_UPDATED);
+            ExposureConfiguration expectedResult = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson2);
+
+            var jsonContent = new StringContent(
+                testJson2,
+                Encoding.UTF8,
+                "application/json"
+            );
+            var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
+            mockClientService.Setup(x => x.Create()).Returns(client);
+
+            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
+            mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
+            mockServerConfigurationRepository.Setup(x => x.ExposureConfigurationUrl).Returns("https://example.com/exposure_configuration.json");
+            mockDateTimeUtility.Setup(x => x.UtcNow).Returns(cacheExpireDate);
+
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, false)).Returns(false);
+
+            var unitUnderTest = CreateRepository();
+            var result2 = await unitUnderTest.GetExposureConfigurationAsync();
+
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Once());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Never());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true), Times.Once());
 
             Assert.NotEqual(result1, result2);
             Assert.Equal(expectedResult, result2);
@@ -219,14 +270,14 @@ namespace Covid19Radar.UnitTests.Repository
 
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
-            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsExposureConfigurationUpdated, false)).Returns(false);
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, false)).Returns(false);
 
             var unitUnderTest = CreateRepository();
             var result2 = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Once());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, date.ToUnixEpoch()), Times.Never());
-            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsExposureConfigurationUpdated, true), Times.Never());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true), Times.Never());
 
             Assert.Equal(result1, result2);
         }
@@ -262,18 +313,61 @@ namespace Covid19Radar.UnitTests.Repository
 
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
             mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
-            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsExposureConfigurationUpdated, false)).Returns(false);
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, false)).Returns(false);
 
             var unitUnderTest = CreateRepository();
             var result2 = await unitUnderTest.GetExposureConfigurationAsync();
 
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Once());
             mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Never());
-            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsExposureConfigurationUpdated, true), Times.Once());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true), Times.Once());
 
             Assert.NotEqual(result1, result2);
             Assert.Equal(expectedResult, result2);
         }
 
+        [Fact]
+        public async Task GetExposureConfigurationTest_not_updated_mapping_and_cache_expired()
+        {
+            var date = Date;
+            var cacheExpireDate = date + TimeSpan.FromDays(AppConstants.MinimumDiagnosisKeysDataMappingApplyIntervalDays) + TimeSpan.FromSeconds(1);
+
+            string testJson1 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
+            using (var writer = File.CreateText(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH))
+            {
+                await writer.WriteAsync(testJson1);
+            }
+            ExposureConfiguration result1 = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson1);
+
+            string testJson3 = GetTestJson(JSON_EXPOSURE_CONFIGURATION1);
+            ExposureConfiguration expectedResult = JsonConvert.DeserializeObject<ExposureConfiguration>(testJson3);
+
+            var jsonContent = new StringContent(
+                testJson3,
+                Encoding.UTF8,
+                "application/json"
+            );
+            var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
+            mockClientService.Setup(x => x.Create()).Returns(client);
+
+            mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
+            mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
+            mockServerConfigurationRepository.Setup(x => x.ExposureConfigurationUrl).Returns("https://example.com/exposure_configuration.json");
+            mockDateTimeUtility.Setup(x => x.UtcNow).Returns(cacheExpireDate);
+
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, It.IsAny<long>())).Returns(date.ToUnixEpoch());
+            mockPreferencesService.Setup(x => x.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, false)).Returns(false);
+
+            var unitUnderTest = CreateRepository();
+            var result2 = await unitUnderTest.GetExposureConfigurationAsync();
+
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Once());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, cacheExpireDate.ToUnixEpoch()), Times.Never());
+            mockPreferencesService.Verify(s => s.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true), Times.Never());
+
+            Assert.Equal(result1, result2);
+            Assert.Equal(expectedResult, result2);
+        }
     }
 }

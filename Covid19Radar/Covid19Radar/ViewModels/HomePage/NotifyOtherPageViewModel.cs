@@ -245,7 +245,6 @@ namespace Covid19Radar.ViewModels
                     await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
 
                     loggerService.Error($"Exceeded the number of trials.");
-                    loggerService.EndMethod();
                     return;
                 }
 
@@ -275,6 +274,7 @@ namespace Covid19Radar.ViewModels
                     );
                     errorCount++;
                     loggerService.Error($"No diagnostic number entered.");
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -287,12 +287,37 @@ namespace Covid19Radar.ViewModels
                     );
                     errorCount++;
                     loggerService.Error($"Incorrect process number format.");
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
-                await SubmitDiagnosisKeys();
+                // EN Enabled Check
+                var enabled = await exposureNotificationApiService.IsEnabledAsync();
+
+                if (!enabled)
+                {
+                    await UserDialogs.Instance.AlertAsync(
+                       AppResources.NotifyOtherPageDiag6Message,
+                       AppResources.NotifyOtherPageDiag6Title,
+                       AppResources.ButtonOk
+                    );
+                    await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+
+                    loggerService.Warning($"Exposure notification is disable.");
+                    UserDialogs.Instance.HideLoading();
+                    return;
+                }
+
+                HttpStatusCode httpResult = await SubmitDiagnosisKeys();
 
                 UserDialogs.Instance.HideLoading();
+
+                ShowResult(httpResult);
+
+                if (httpResult != HttpStatusCode.OK)
+                {
+                    errorCount++;
+                }
             }
             catch (ENException exception)
             {
@@ -301,9 +326,6 @@ namespace Covid19Radar.ViewModels
                 if (exception.Code == ENException.Code_iOS.NotAuthorized)
                 {
                     loggerService.Info("GetTekHistory request is declined by user.");
-
-                    // Workarround for that HideLoading conflicts with AlertAsync on iOS.
-                    await Task.Delay(_delayForErrorMillis);
 
                     UserDialogs.Instance.HideLoading();
 
@@ -323,9 +345,6 @@ namespace Covid19Radar.ViewModels
             {
                 errorCount++;
 
-                // Workarround for that HideLoading conflicts with AlertAsync on iOS.
-                await Task.Delay(_delayForErrorMillis);
-
                 UserDialogs.Instance.HideLoading();
 
                 await UserDialogs.Instance.AlertAsync(
@@ -342,7 +361,7 @@ namespace Covid19Radar.ViewModels
             }
         }));
 
-        private async Task SubmitDiagnosisKeys()
+        private async Task<HttpStatusCode> SubmitDiagnosisKeys()
         {
             loggerService.Info($"Submit DiagnosisKeys.");
 
@@ -367,19 +386,12 @@ namespace Covid19Radar.ViewModels
                 tek.ReportType = DEFAULT_REPORT_TYPE;
             }
 
-            HttpStatusCode httpStatusCode = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+            return await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
                 _diagnosisDate,
                 filteredTemporaryExposureKeyList,
                 ProcessingNumber,
                 idempotencyKey
                 );
-
-            ShowResult(httpStatusCode);
-
-            if (httpStatusCode != HttpStatusCode.OK)
-            {
-                errorCount++;
-            }
         }
 
         private async void ShowResult(HttpStatusCode httpStatusCode)
@@ -467,10 +479,16 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                // UserDialogs.Instance.Loading must be executde in MainThread.
                 using (UserDialogs.Instance.Loading(AppResources.LoadingTextRegistering))
                 {
-                    await SubmitDiagnosisKeys();
+                    HttpStatusCode httpResult = await SubmitDiagnosisKeys();
+
+                    ShowResult(httpResult);
+
+                    if (httpResult != HttpStatusCode.OK)
+                    {
+                        errorCount++;
+                    }
                 }
             }
             catch (ENException exception)
@@ -480,7 +498,8 @@ namespace Covid19Radar.ViewModels
             catch (Exception ex)
             {
                 errorCount++;
-                UserDialogs.Instance.Alert(
+
+                await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDialogExceptionText,
                     AppResources.NotifyOtherPageDialogExceptionTitle,
                     AppResources.ButtonOk

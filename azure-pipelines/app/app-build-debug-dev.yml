@@ -16,3 +16,14 @@ jobs:
   - template: templates/variables/ios-build-environment-variables.yml
   steps:
   - template: templates/build/ios-build-development-template.yml
+    parameters:
+      isDefineDebug: true
+
+- job: build_android
+  pool:
+    vmImage: 'macOS-11'
+  variables:
+  - group: android-signing-dev
+  - template: templates/variables/android-build-environment-variables.yml
+  steps:
+  - template: templates/build/android-build-development-template.yml

@@ -88,6 +88,10 @@
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>削除しています</value>
   </data>
+  <data name="Loading" xml:space="preserve">
+    <value>読み込み中</value>
+    <comment>読み込み中</comment>
+  </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>共有する</value>
   </data>
@@ -133,10 +137,6 @@
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</value>
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
-  </data>
-  <data name="Loading" xml:space="preserve">
-    <value>読み込み中</value>
-    <comment>読み込み中</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>使い方</value>
@@ -286,10 +286,6 @@
     <value>受信した信号</value>
     <comment>受信した信号</comment>
   </data>
-  <data name="LowRiskContactPageHeaderTextSuffix" xml:space="preserve">
-    <value>（基準値は{0:#}。スコア{1:#}{2:#}かつ{3:#}分{4:#}の接触が接触の可能性の通知対象）</value>
-    <comment>（{0:#}{1:#}が接触の可能性の通知対象）</comment>
-  </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
     <value>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</value>
     <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
@@ -305,14 +301,6 @@
   <data name="NoRiskContactPageButtonText" xml:space="preserve">
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>陽性のご登録をいただきありがとうございました</value>
-    <comment>陽性のご登録をいただきありがとうございました</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
-    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>利用規約</value>
@@ -403,8 +391,8 @@
     <comment>氏名・電話番号などの個人情報や、GPS（※）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</value>
-    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+    <value>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</value>
+    <comment>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</value>
@@ -417,26 +405,6 @@
   <data name="TutorialPage2Title" xml:space="preserve">
     <value>プライバシーについて</value>
     <comment>プライバシーについて</comment>
-  </data>
-  <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
-    <comment>通知をご利用いただくために</comment>
-  </data>
-  <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</value>
-    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
-  </data>
-  <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>有効にする</value>
-    <comment>有効にする</comment>
-  </data>
-  <data name="TutorialPage5Description4" xml:space="preserve">
-    <value>あとで設定する</value>
-    <comment>あとで設定する</comment>
-  </data>
-  <data name="TutorialPage5Title" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
-    <comment>通知をご利用いただくために</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
     <value>登録する</value>
@@ -640,8 +608,8 @@
     <comment>処理番号は半角数字で入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</value>
-    <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
+    <value>陽性記録の登録を行うために接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</value>
+    <comment>陽性記録の登録を行うために接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
     <value>COVID-19接触のログ記録を有効にしてください</value>
@@ -818,12 +786,28 @@
     <comment>送信エラー</comment>
   </data>
   <data name="InquiryMailBody" xml:space="preserve">
-    <value>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</value>
-    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
+    <value>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n\r\n----以下は削除しないでください----\r\n</value>
+    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n\r\n----以下は削除しないでください----\r\n</comment>
   </data>
   <data name="InquiryMailSubject" xml:space="preserve">
     <value>接触確認アプリに関するお問い合わせ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="InquiryMailModelTitle" xml:space="preserve">
+    <value>モデル名：</value>
+    <comment>モデル名：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailOSTitle" xml:space="preserve">
+    <value>OS：</value>
+    <comment>OS：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailOSVersionTitle" xml:space="preserve">
+    <value>OSバージョン：</value>
+    <comment>OSバージョン：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailAppVersionTitle" xml:space="preserve">
+    <value>アプリバージョン：</value>
+    <comment>アプリバージョン：（サポートが見る文言なので常に日本語とする）</comment>
   </data>
   <data name="SendIdMailBody1" xml:space="preserve">
     <value>動作情報ID：</value>

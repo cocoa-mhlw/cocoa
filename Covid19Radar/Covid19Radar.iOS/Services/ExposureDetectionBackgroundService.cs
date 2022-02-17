@@ -3,12 +3,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using BackgroundTasks;
-using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
@@ -20,12 +17,16 @@ namespace Covid19Radar.iOS.Services
 {
     public class ExposureDetectionBackgroundService : AbsExposureDetectionBackgroundService
     {
-        private static string BGTASK_IDENTIFIER => AppInfo.PackageName + ".exposure-detection";
-
-        private const int TIMEOUT_IN_MILLIS = 60 * 60 * 1000;
+        /*
+         * [IMPORTANT]
+         * From README.md( https://developer.apple.com/documentation/exposurenotification/building_an_app_to_notify_users_of_covid-19_exposure )
+         *
+         * The Background Task framework automatically detects apps that contain the Exposure Notification entitlement and a background task that ends in `exposure-notification`.
+         * The operating system automatically launches these apps when they aren't running and guarantees them more background time to ensure that the app can test and report results promptly.
+         */
+        private static string BGTASK_IDENTIFIER => AppInfo.PackageName + ".exposure-notification";
 
         private readonly ILoggerService _loggerService;
-
 
         public ExposureDetectionBackgroundService(
             IDiagnosisKeyRepository diagnosisKeyRepository,

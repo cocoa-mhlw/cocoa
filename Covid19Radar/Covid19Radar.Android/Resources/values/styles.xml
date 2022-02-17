@@ -44,5 +44,7 @@
   </style>
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:colorAccent">@color/colorAccent</item>
+    <item name="android:colorControlActivated">@color/colorAccent</item>
   </style>
 </resources>
