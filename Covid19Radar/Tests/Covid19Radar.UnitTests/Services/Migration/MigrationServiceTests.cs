@@ -976,7 +976,8 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // StartDateTime
             var startDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, 0L);
-            Assert.Equal(startDateTime.ToUnixEpoch(), startDateTimePref);
+            var startDateTimeUtc = DateTime.SpecifyKind(startDateTime, DateTimeKind.Utc);
+            Assert.Equal(startDateTimeUtc.ToUnixEpoch(), startDateTimePref);
 
             // TermsOfServiceLastUpdateDateTime
             var termsOfServiceLastUpdateDateTimePref = _dummyPreferencesService.GetValue(PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch, 0L);
