@@ -18,7 +18,7 @@ namespace Covid19Radar.Common
         /// <summary>
         /// Japan Standard Time (JST), UTC +9
         /// </summary>
-        public static TimeZoneInfo TIMEZONE_JST = TZConvert.GetTimeZoneInfo("ASIA/Tokyo");
+        public static TimeZoneInfo TIMEZONE_JST = JstTimeZoneInfo();
 
         /// <summary>
         /// Timestamp format - RFC 3339
@@ -80,5 +80,22 @@ namespace Covid19Radar.Common
         /// Delay for error in TEK re-registration.
         /// </summary>
         public const int DelayForRegistrationErrorMillis = 5000;
+
+        #region Other Private Methods
+
+        private static TimeZoneInfo JstTimeZoneInfo()
+        {
+            if (TZConvert.TryGetTimeZoneInfo("Asia/Tokyo", out var timezoneInfo))
+            {
+                return timezoneInfo;
+            }
+            else
+            {
+                // Emergency fallback
+                return TimeZoneInfo.CreateCustomTimeZone("JST", new TimeSpan(9, 0, 0), "(GMT+09:00) JST", "JST");
+            }
+        }
+
+        #endregion
     }
 }
