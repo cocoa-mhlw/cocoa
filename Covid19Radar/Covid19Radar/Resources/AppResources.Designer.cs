@@ -2074,5 +2074,11 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("Beta_Splash_InstallStable", resourceCulture);
             }
         }
+        
+        public static string NotMedicalExpenses {
+            get {
+                return ResourceManager.GetString("NotMedicalExpenses", resourceCulture);
+            }
+        }
     }
 }

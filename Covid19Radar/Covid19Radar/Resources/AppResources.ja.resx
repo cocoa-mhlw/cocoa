@@ -1363,4 +1363,9 @@
     <comment>安定版をインストール</comment>
   </data>
 
+  <data name="NotMedicalExpenses" xml:space="preserve">
+    <value>COCOA(Beta)は安定版ではありません。このバージョンから接触通知を受け取ったことによる検査費用は無料（公費負担）にはなりません。</value>
+    <comment>COCOA(Beta)は安定版ではありません。このバージョンから接触通知を受け取ったことによる検査費用は無料（公費負担）にはなりません。</comment>
+  </data>
+
 </root>
