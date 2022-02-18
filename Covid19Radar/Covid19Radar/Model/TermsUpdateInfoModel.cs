@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using Covid19Radar.Common;
 using Newtonsoft.Json;
 
 namespace Covid19Radar.Model
@@ -17,8 +18,6 @@ namespace Covid19Radar.Model
 
         public class Detail
         {
-            private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
-
             [JsonProperty("text")]
             public string Text { get; set; }
 
@@ -29,7 +28,10 @@ namespace Covid19Radar.Model
             public DateTime UpdateDateTimeJst { get; set; }
 
             public DateTime UpdateDateTimeUtc
-                => DateTime.SpecifyKind(UpdateDateTimeJst - TIME_DIFFERENCIAL_JST_UTC, DateTimeKind.Utc);
+                => TimeZoneInfo.ConvertTimeToUtc(
+                        DateTime.SpecifyKind(UpdateDateTimeJst, DateTimeKind.Unspecified),
+                        AppConstants.TIMEZONE_JST
+                        );
         }
     }
 }
