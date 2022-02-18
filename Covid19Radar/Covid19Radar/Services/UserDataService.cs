@@ -5,13 +5,14 @@
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using System;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
 {
     public interface IUserDataService
     {
-        Task<bool> RegisterUserAsync();
+        Task<HttpStatusCode> RegisterUserAsync();
     }
 
     /// <summary>
@@ -34,23 +35,24 @@ namespace Covid19Radar.Services
             this.userDataRepository = userDataRepository;
         }
 
-        public async Task<bool> RegisterUserAsync()
+        public async Task<HttpStatusCode> RegisterUserAsync()
         {
             loggerService.StartMethod();
 
-            var registerResult = await httpDataService.PostRegisterUserAsync();
-            if (!registerResult)
+            var resultStatusCode = await httpDataService.PostRegisterUserAsync();
+
+            if (resultStatusCode == HttpStatusCode.OK)
+            {
+                loggerService.Info("Success register");
+                userDataRepository.SetStartDate(DateTime.UtcNow);
+            }
+            else
             {
                 loggerService.Info("Failed register");
-                loggerService.EndMethod();
-                return false;
             }
-            loggerService.Info("Success register");
-
-            userDataRepository.SetStartDate(DateTime.UtcNow);
 
             loggerService.EndMethod();
-            return true;
+            return resultStatusCode;
         }
     }
 }

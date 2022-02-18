@@ -94,15 +94,26 @@ namespace Covid19Radar.Services
             }
         }
 
-        async Task<bool> IHttpDataService.PostRegisterUserAsync()
+        async Task<HttpStatusCode> IHttpDataService.PostRegisterUserAsync()
         {
             Debug.WriteLine("HttpDataServiceMock::PostRegisterUserAsync called");
-            var result = mockCommonUtils.GetRegisterDataType() switch
+            var code = HttpStatusCode.OK;
+            var result = mockCommonUtils.GetRegisterDataType();
+            if (result >= 100)
             {
-                1 => false,
-                _ => true
-            };
-            return await Task.FromResult(result);
+                code = (HttpStatusCode)result;
+            }
+            else
+            {
+                switch (result)
+                {
+                    case 1:
+                        code = HttpStatusCode.NoContent;
+                        break;
+                }
+            }
+
+            return await Task.FromResult(code);
         }
 
         Task<HttpStatusCode> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)

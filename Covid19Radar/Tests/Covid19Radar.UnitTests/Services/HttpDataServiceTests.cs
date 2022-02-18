@@ -117,7 +117,7 @@ namespace Covid19Radar.UnitTests.Services
             mockLoggerService.Verify(x => x.EndMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
-            Assert.False(result);
+            Assert.Equal(HttpStatusCode.ServiceUnavailable, result);
         }
 
         [Fact]
@@ -145,7 +145,7 @@ namespace Covid19Radar.UnitTests.Services
             mockLoggerService.Verify(x => x.EndMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
 
-            Assert.False(result);
+            Assert.Equal(0, (int)result);
         }
 
         #endregion
