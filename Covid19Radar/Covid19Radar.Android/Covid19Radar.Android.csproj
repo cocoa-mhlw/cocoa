@@ -389,10 +389,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxhdpi\exposure_check_page_head.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

@@ -59,7 +59,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 );
         }
 
-        [Fact]
+        [Fact(Skip = "LowRiskPage will be disabled on v2.0.0-openbeta release")]
         public void LowRiskPage_Initialize_Display()
         {
             var dummyDailySummaries = new List<DailySummary>()
