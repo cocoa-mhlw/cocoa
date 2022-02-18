@@ -55,18 +55,20 @@ namespace Covid19Radar.Repository
             bool changeMonth = from.Month != to.Month;
             bool changeYear = from.Year != to.Year;
 
-            string format = AppResources.ExposureDateFormatDate;
+            string fromFormat = AppResources.ExposureDateFormatMonth;
+            string toFormat = AppResources.ExposureDateFormatDate;
             if (changeMonth)
             {
-                format = AppResources.ExposureDateFormatMonth;
+                toFormat = AppResources.ExposureDateFormatMonth;
             }
             if (changeYear)
             {
-                format = AppResources.ExposureDateFormatYear;
+                fromFormat = AppResources.ExposureDateFormatYear;
+                toFormat = AppResources.ExposureDateFormatYear;
             }
 
-            string fromStr = string.Format(AppResources.ExposureDateFormatYear, from.Year, from.Month, from.Day, from.Hour);
-            string toStr = string.Format(format, to.Year, to.Month, to.Day, to.Hour);
+            string fromStr = string.Format(fromFormat, from.Year, from.Month, from.Day, from.Hour);
+            string toStr = string.Format(toFormat, to.Year, to.Month, to.Day, to.Hour);
 
             return string.Format("{0} {1} {2}", fromStr, AppResources.ExposuresPageTo, toStr);
         }
