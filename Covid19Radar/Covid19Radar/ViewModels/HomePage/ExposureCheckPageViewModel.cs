@@ -91,6 +91,8 @@ namespace Covid19Radar.ViewModels
                     = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
             }
 
+            _loggerService.Info(_exposureRiskCalculationConfiguration.ToString());
+
             ShowExposureRiskCalculationConfiguration();
 
             try
@@ -138,12 +140,21 @@ namespace Covid19Radar.ViewModels
             };
         }
 
-        private int GetLastOffsetDay()
+        private int GetLastOffsetDay(List<DailySummary> dailySummaryList)
         {
             var dayOfUse = _userDataRepository.GetDaysOfUse();
 
-            var daysOffset = Math.Min(
+            var latestExposureDateMillisSinceEpoch = dailySummaryList.Max(x => x.DateMillisSinceEpoch);
+            var latestExposureDate = DateTimeOffset.UnixEpoch.AddMilliseconds(latestExposureDateMillisSinceEpoch).UtcDateTime;
+            var latestExposureDateOffset = (DateTime.UtcNow.Date - latestExposureDate).Days;
+
+            var daysOffset = Math.Max(
                 dayOfUse,
+                latestExposureDateOffset
+                );
+
+            daysOffset = Math.Min(
+                daysOffset,
                 14 // 2 weeks
                 );
 
@@ -165,8 +176,6 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
-            _loggerService.Info(_exposureRiskCalculationConfiguration.ToString());
-
             var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.DateMillisSinceEpoch);
 
             _loggerService.Debug($"dailySummaryMap {dailySummaryMap.Count}");
@@ -176,18 +185,33 @@ namespace Covid19Radar.ViewModels
 
             _loggerService.Debug($"exposureWindowList {exposureWindowList.Count}");
 
-            var daysOffset = GetLastOffsetDay();
+            var daysOffset = GetLastOffsetDay(dailySummaryList);
 
             var dates = Enumerable.Range(-daysOffset, daysOffset)
-                .Select(offset => _dateTimeUtility.UtcNow.AddDays(offset).Date.ToUnixEpochMillis())
+                .Select(offset => _dateTimeUtility.UtcNow.Date.AddDays(offset).ToUnixEpochMillis())
                 .ToList();
             dates.Sort((a, b) => b.CompareTo(a));
 
             foreach (var dateMillisSinceEpoch in dates)
             {
-                _loggerService.Debug($"Date {dateMillisSinceEpoch}");
+                _loggerService.Debug($"dateMillisSinceEpoch {dateMillisSinceEpoch}");
+
+                var ewList = exposureWindowList.Where(ew => ew.DateMillisSinceEpoch == dateMillisSinceEpoch).ToList();
+
+                bool IsBlank = false;
 
                 if (!dailySummaryMap.ContainsKey(dateMillisSinceEpoch))
+                {
+                    _loggerService.Warning($"DailySummary: {dateMillisSinceEpoch} not found.");
+                    IsBlank = true;
+                }
+                else if (ewList.Count == 0)
+                {
+                    _loggerService.Warning($"DailySummary: {dateMillisSinceEpoch} found, but that is not contained the list of ExposureWindow.");
+                    IsBlank = true;
+                }
+
+                if (IsBlank)
                 {
                     ExposureCheckScoreModel blank = CreateBlankModel(dateMillisSinceEpoch);
                     ExposureCheckScores.Add(blank);
@@ -197,8 +221,6 @@ namespace Covid19Radar.ViewModels
                 IsExposureDetected = true;
 
                 var dailySummary = dailySummaryMap[dateMillisSinceEpoch];
-
-                var ewList = exposureWindowList.Where(ew => ew.DateMillisSinceEpoch == dateMillisSinceEpoch).ToList();
 
                 RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
                     dailySummary,
@@ -248,7 +270,7 @@ namespace Covid19Radar.ViewModels
 
             var ratio = dailySummary.DaySummary.ScoreSum / scoreSumValue;
 
-            if (1 >= ratio)
+            if (1 > ratio)
             {
                 var description = string.Format(
                     AppResources.LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied,
@@ -269,11 +291,9 @@ namespace Covid19Radar.ViewModels
 
             var exposureDurationInSec = exposureWindowList.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
 
-            if (!exposureCheckModel.IsScoreVisible
+            if (exposureCheckModel.IsDurationTimeVisible
                 && !_exposureRiskCalculationConfiguration.ExposureWindow_ScanInstance_SecondsSinceLastScanSum.Cond(exposureDurationInSec))
             {
-                exposureCheckModel.IsDurationTimeVisible = true;
-
                 var exposureDurationTimeSpan = TimeSpan.FromSeconds(exposureDurationInSec);
                 var exposureDurationInMinute = Math.Ceiling(exposureDurationTimeSpan.TotalMinutes);
 
