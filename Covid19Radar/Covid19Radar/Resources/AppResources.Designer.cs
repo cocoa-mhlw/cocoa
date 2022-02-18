@@ -449,6 +449,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string NotContactPageButtonText {
+            get {
+                return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
+            }
+        }
+        
         public static string LowRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("LowRiskContactPageLabel", resourceCulture);
@@ -524,6 +530,18 @@ namespace Covid19Radar.Resources {
         public static string NoRiskContactPageDescription {
             get {
                 return ResourceManager.GetString("NoRiskContactPageDescription", resourceCulture);
+            }
+        }
+        
+        public static string ThankYouNotifyOtherPageLabel1 {
+            get {
+                return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
+            }
+        }
+        
+        public static string ThankYouNotifyOtherPageDescription1 {
+            get {
+                return ResourceManager.GetString("ThankYouNotifyOtherPageDescription1", resourceCulture);
             }
         }
         
