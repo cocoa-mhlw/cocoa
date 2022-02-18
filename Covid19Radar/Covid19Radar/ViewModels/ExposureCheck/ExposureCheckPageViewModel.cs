@@ -19,7 +19,6 @@ using Covid19Radar.Resources;
 using Threshold = Covid19Radar.Model.V1ExposureRiskCalculationConfiguration.Threshold;
 using Covid19Radar.Services;
 using System.Threading.Tasks;
-using System.Globalization;
 
 namespace Covid19Radar.ViewModels
 {
@@ -233,9 +232,9 @@ namespace Covid19Radar.ViewModels
     {
         public long DateMillisSinceEpoch { get; set; }
 
-        public string DateTimeString => DateTimeOffset.UnixEpoch
-                .AddMilliseconds(DateMillisSinceEpoch).UtcDateTime
-                .ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
+        public string DateTimeString => IExposureDataRepository.ConvertToTerm(
+            DateTimeOffset.UnixEpoch.AddMilliseconds(DateMillisSinceEpoch).UtcDateTime
+            );
 
         public bool IsScoreVisible { get; set; }
 
