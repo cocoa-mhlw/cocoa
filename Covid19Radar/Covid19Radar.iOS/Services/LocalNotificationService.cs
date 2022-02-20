@@ -107,16 +107,10 @@ namespace Covid19Radar.iOS.Services
             _loggerService.StartMethod();
 
             var settings = await UNUserNotificationCenter.Current.GetNotificationSettingsAsync();
-            if (settings.AuthorizationStatus == UNAuthorizationStatus.Denied)
-            {
-                _loggerService.EndMethod();
-                return true;
-            }
-            else
-            {
-                _loggerService.EndMethod();
-                return false;
-            }
+
+            _loggerService.EndMethod();
+
+            return settings.AuthorizationStatus == UNAuthorizationStatus.Denied;
         }
     }
 }
