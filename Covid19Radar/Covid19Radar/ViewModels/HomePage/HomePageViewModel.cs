@@ -22,7 +22,7 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
         public string SharingThisAppReadText => $"{AppResources.HomePageDescription5} {AppResources.Button}";
-        public string NotificationOffReadText => $"{AppResources.HomePageNotifcationOffWarningLabelText} {AppResources.Button}";
+        public string LocalNotificationOffReadText => $"{AppResources.HomePageLocalNotificationOffWarningLabelText} {AppResources.Button}";
 
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository _userDataRepository;
@@ -72,11 +72,11 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isVisibleENStatusStoppedLayout, value); }
         }
 
-        private bool _isVisibleNotificationOffLayout;
-        public bool IsVisibleNotificationOffLayout
+        private bool _isVisibleLocalNotificationOffLayout;
+        public bool IsVisibleLocalNotificationOffLayout
         {
-            get { return _isVisibleNotificationOffLayout; }
-            set { SetProperty(ref _isVisibleNotificationOffLayout, value); }
+            get { return _isVisibleLocalNotificationOffLayout; }
+            set { SetProperty(ref _isVisibleLocalNotificationOffLayout, value); }
         }
 
         public HomePageViewModel(
@@ -253,7 +253,7 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         });
 
-        public Command OnClickNotifcationOffWarning => new Command(async () =>
+        public Command OnClickLocalNotificationOffWarning => new Command(async () =>
         {
             loggerService.StartMethod();
 
@@ -404,11 +404,11 @@ namespace Covid19Radar.ViewModels
 
             if (await localNotificationService.IsWarnedLocalNotificationOffAsync())
             {
-                IsVisibleNotificationOffLayout = true;
+                IsVisibleLocalNotificationOffLayout = true;
             }
             else
             {
-                IsVisibleNotificationOffLayout = false;
+                IsVisibleLocalNotificationOffLayout = false;
             }
 
             loggerService.EndMethod();

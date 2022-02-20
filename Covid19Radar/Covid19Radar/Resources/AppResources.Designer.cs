@@ -1619,15 +1619,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string HomePageNotifcationOffWarningLabelText {
-            get {
-                return ResourceManager.GetString("HomePageNotifcationOffWarningLabelText", resourceCulture);
-            }
-        }
-        
         public static string LocationOffWarningDialogMessage {
             get {
                 return ResourceManager.GetString("LocationOffWarningDialogMessage", resourceCulture);
+            }
+        }
+        
+        public static string HomePageLocalNotificationOffWarningLabelText {
+            get {
+                return ResourceManager.GetString("HomePageLocalNotificationOffWarningLabelText", resourceCulture);
             }
         }
         
