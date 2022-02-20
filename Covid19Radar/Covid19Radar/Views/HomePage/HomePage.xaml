@@ -177,8 +177,9 @@
                     <TapGestureRecognizer Command="{Binding Path=OnClickNotifcationOffWarning}" />
                 </StackLayout.GestureRecognizers>
                 <Label
-                    AutomationProperties.IsInAccessibleTree="True"
-                    AutomationProperties.Name="{Binding SharingThisAppReadText}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNotificationOffLayout}"
+                    TabIndex="14"
+                    AutomationProperties.Name="{Binding NotificationOffReadText}"
                     Style="{StaticResource HomePageLabelColor}"
                     Text="{x:Static resources:AppResources.HomePageNotifcationOffWarningLabelText}" />
             </StackLayout>
@@ -189,7 +190,7 @@
                 <StackLayout Spacing="0">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="14"
+                        TabIndex="15"
                         Style="{StaticResource DefaultLabelSmall}"
                         HorizontalTextAlignment="Center">
                         <Label.FormattedText>
@@ -206,7 +207,7 @@
                     </Label>
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="15"
+                        TabIndex="16"
                         Command="{Binding Path=OnClickExposures}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription2}" />
@@ -219,21 +220,21 @@
                 <StackLayout Spacing="5">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="16"
+                        TabIndex="17"
                         Margin="0, 5, 0, 5"
                         Style="{StaticResource DefaultLabelBody}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageDescription3}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="17"
+                        TabIndex="18"
                         Margin="20, 0, 20, 0"
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.HomePageHeader2Description}"
                         HorizontalTextAlignment="Center" />
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="18"
+                        TabIndex="19"
                         Command="{prism:NavigateTo 'SubmitConsentPage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription4}" />
@@ -255,7 +256,7 @@
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     AutomationProperties.Name="{Binding SharingThisAppReadText}"
-                    TabIndex="19"
+                    TabIndex="20"
                     Style="{StaticResource HomePageLabelColor}"
                     Text="{x:Static resources:AppResources.HomePageDescription5}" />
             </StackLayout>

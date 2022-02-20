@@ -22,6 +22,7 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
         public string SharingThisAppReadText => $"{AppResources.HomePageDescription5} {AppResources.Button}";
+        public string NotificationOffReadText => $"{AppResources.HomePageNotifcationOffWarningLabelText} {AppResources.Button}";
 
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository _userDataRepository;
@@ -130,7 +131,7 @@ namespace Covid19Radar.ViewModels
             _ = exposureRiskCalculationConfigurationRepository
                 .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
 
-            await localNotificationService.PrepareAsync();
+            //await localNotificationService.PrepareAsync();
 
             await StartExposureNotificationAsync();
 
@@ -176,6 +177,7 @@ namespace Covid19Radar.ViewModels
         {
             try
             {
+                await localNotificationService.PrepareAsync();
                 UserDialogs.Instance.ShowLoading(AppResources.Loading);
                 loggerService.StartMethod();
 
