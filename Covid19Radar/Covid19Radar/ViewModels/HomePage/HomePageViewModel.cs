@@ -131,7 +131,7 @@ namespace Covid19Radar.ViewModels
             _ = exposureRiskCalculationConfigurationRepository
                 .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
 
-            //await localNotificationService.PrepareAsync();
+            await localNotificationService.PrepareAsync();
 
             await StartExposureNotificationAsync();
 
