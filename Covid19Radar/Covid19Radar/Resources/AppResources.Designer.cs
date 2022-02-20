@@ -1619,9 +1619,27 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string HomePageNotifcationOffWarningLabelText {
+            get {
+                return ResourceManager.GetString("HomePageNotifcationOffWarningLabelText", resourceCulture);
+            }
+        }
+        
         public static string LocationOffWarningDialogMessage {
             get {
                 return ResourceManager.GetString("LocationOffWarningDialogMessage", resourceCulture);
+            }
+        }
+        
+        public static string LocalNotificationOffWarningDialogTitle {
+            get {
+                return ResourceManager.GetString("LocalNotificationOffWarningDialogTitle", resourceCulture);
+            }
+        }
+        
+        public static string LocalNotificationOffWarningDialogMessage {
+            get {
+                return ResourceManager.GetString("LocalNotificationOffWarningDialogMessage", resourceCulture);
             }
         }
         

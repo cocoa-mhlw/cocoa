@@ -1156,11 +1156,23 @@ please follow the app. guidance and check the Consultation Centers List to recei
     <value>Turn on Bluetooth to record contact incidents.</value>
     <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>
   </data>
+  <data name="HomePageNotifcationOffWarningLabelText" xml:space="preserve">
+    <value>Confirm notifications settings</value>
+    <comment>通知設定を確認してください</comment>
+  </data>
   <data name="LocationOffWarningDialogMessage" xml:space="preserve">
     <value>Your OS needs location services to be on for contact notifications to function. Turn location services on or update your device to Android 11 or later.
 Note: this app does not collect users’ location information.</value>
     <comment>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
 なお、本アプリで利用者の位置情報を収集することはありません。</comment>
+  </data>
+  <data name="LocalNotificationOffWarningDialogTitle" xml:space="preserve">
+    <value>Notification settings are turned off</value>
+    <comment>通知設定がオフになっています</comment>
+  </data>
+  <data name="LocalNotificationOffWarningDialogMessage" xml:space="preserve">
+    <value>To receive notifications such as possible contact with positive individuals, "allow" access to COCOA notifications from the settings.</value>
+    <comment>陽性者との接触の可能性などの通知を受け取るには、設定からCOCOAの通知へのアクセスを「許可」してください。</comment>
   </data>
   <data name="TroubleshootingPageTitle" xml:space="preserve">
     <value>Troubleshooting</value>

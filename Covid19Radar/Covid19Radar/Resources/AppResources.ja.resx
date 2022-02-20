@@ -1050,11 +1050,23 @@
     <value>接触記録のため、Bluetooth設定をオンにしてください。</value>
     <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>
   </data>
+  <data name="HomePageNotifcationOffWarningLabelText" xml:space="preserve">
+    <value>通知設定を確認してください</value>
+    <comment>通知設定を確認してください</comment>
+  </data>
   <data name="LocationOffWarningDialogMessage" xml:space="preserve">
     <value>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
 なお、本アプリで利用者の位置情報を収集することはありません。</value>
     <comment>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
 なお、本アプリで利用者の位置情報を収集することはありません。</comment>
+  </data>
+  <data name="LocalNotificationOffWarningDialogTitle" xml:space="preserve">
+    <value>通知設定がオフになっています</value>
+    <comment>通知設定がオフになっています</comment>
+  </data>
+  <data name="LocalNotificationOffWarningDialogMessage" xml:space="preserve">
+    <value>陽性者との接触の可能性などの通知を受け取るには、設定からCOCOAの通知へのアクセスを「許可」してください。</value>
+    <comment>陽性者との接触の可能性などの通知を受け取るには、設定からCOCOAの通知へのアクセスを「許可」してください。</comment>
   </data>
   <data name="TroubleshootingPageTitle" xml:space="preserve">
     <value>対処方法</value>

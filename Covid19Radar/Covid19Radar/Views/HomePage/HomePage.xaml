@@ -170,6 +170,18 @@
                     Text="{x:Static resources:AppResources.HomePageTroubleshootingButtonText}"
                     Command="{Binding OnClickCheckStopReason}" />
             </StackLayout>
+            <StackLayout
+                HorizontalOptions="Center"
+                IsVisible="{Binding IsVisibleNotificationOffLayout}">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=OnClickNotifcationOffWarning}" />
+                </StackLayout.GestureRecognizers>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding SharingThisAppReadText}"
+                    Style="{StaticResource HomePageLabelColor}"
+                    Text="{x:Static resources:AppResources.HomePageNotifcationOffWarningLabelText}" />
+            </StackLayout>
             <Frame
                 Padding="10"
                 CornerRadius="10"

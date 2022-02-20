@@ -71,6 +71,13 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isVisibleENStatusStoppedLayout, value); }
         }
 
+        private bool _isVisibleNotificationOffLayout;
+        public bool IsVisibleNotificationOffLayout
+        {
+            get { return _isVisibleNotificationOffLayout; }
+            set { SetProperty(ref _isVisibleNotificationOffLayout, value); }
+        }
+
         public HomePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -245,6 +252,19 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         });
 
+        public Command OnClickNotifcationOffWarning => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var result = await dialogService.ShowLocalNotificationOffWarningAsync();
+            if (result)
+            {
+                externalNavigationService.NavigateAppSettings();
+            }
+
+            loggerService.EndMethod();
+        });
+
         public Command OnClickQuestionIcon => new Command(() =>
         {
             loggerService.StartMethod();
@@ -379,6 +399,15 @@ namespace Covid19Radar.ViewModels
                         loggerService.Exception("Failed to conversion utc date time", ex);
                     }
                 }
+            }
+
+            if (await localNotificationService.IsWarnedLocalNotificationOffAsync())
+            {
+                IsVisibleNotificationOffLayout = true;
+            }
+            else
+            {
+                IsVisibleNotificationOffLayout = false;
             }
 
             loggerService.EndMethod();
