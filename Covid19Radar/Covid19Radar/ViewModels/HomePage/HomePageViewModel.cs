@@ -72,11 +72,11 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isVisibleENStatusStoppedLayout, value); }
         }
 
-        private bool _isVisibleLocalNotificationOffLayout;
-        public bool IsVisibleLocalNotificationOffLayout
+        private bool _isVisibleLocalNotificationOffWarningLayout;
+        public bool IsVisibleLocalNotificationOffWarningLayout
         {
-            get { return _isVisibleLocalNotificationOffLayout; }
-            set { SetProperty(ref _isVisibleLocalNotificationOffLayout, value); }
+            get { return _isVisibleLocalNotificationOffWarningLayout; }
+            set { SetProperty(ref _isVisibleLocalNotificationOffWarningLayout, value); }
         }
 
         public HomePageViewModel(
@@ -404,11 +404,11 @@ namespace Covid19Radar.ViewModels
 
             if (await localNotificationService.IsWarnedLocalNotificationOffAsync())
             {
-                IsVisibleLocalNotificationOffLayout = true;
+                IsVisibleLocalNotificationOffWarningLayout = true;
             }
             else
             {
-                IsVisibleLocalNotificationOffLayout = false;
+                IsVisibleLocalNotificationOffWarningLayout = false;
             }
 
             loggerService.EndMethod();

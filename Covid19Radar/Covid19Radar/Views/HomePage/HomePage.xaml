@@ -172,12 +172,12 @@
             </StackLayout>
             <StackLayout
                 HorizontalOptions="Center"
-                IsVisible="{Binding IsVisibleLocalNotificationOffLayout}">
+                IsVisible="{Binding IsVisibleLocalNotificationOffWarningLayout}">
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding Path=OnClickLocalNotificationOffWarning}" />
                 </StackLayout.GestureRecognizers>
                 <Label
-                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleLocalNotificationOffLayout}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleLocalNotificationOffWarningLayout}"
                     TabIndex="14"
                     AutomationProperties.Name="{Binding LocalNotificationOffReadText}"
                     Style="{StaticResource HomePageLabelColor}"
