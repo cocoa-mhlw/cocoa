@@ -278,6 +278,40 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         }
 
         [Fact]
+        public void UpdateView_LocalNotificationOffWarning_Hidden()
+        {
+            var homePageViewModel = CreateViewModel();
+
+            mockExposureNotificationApiService
+                .Setup(x => x.GetStatusCodesAsync())
+                .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.INACTIVATED } as IList<int>));
+            mockLocalNotificationService
+                .Setup(x => x.IsWarnedLocalNotificationOffAsync())
+                .ReturnsAsync(false);
+
+            homePageViewModel.OnAppearing();
+
+            Assert.False(homePageViewModel.IsVisibleLocalNotificationOffWarningLayout);
+        }
+
+        [Fact]
+        public void UpdateView_LocalNotificationOffWarning_Shown()
+        {
+            var homePageViewModel = CreateViewModel();
+
+            mockExposureNotificationApiService
+                .Setup(x => x.GetStatusCodesAsync())
+                .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.INACTIVATED } as IList<int>));
+            mockLocalNotificationService
+                .Setup(x => x.IsWarnedLocalNotificationOffAsync())
+                .ReturnsAsync(true);
+
+            homePageViewModel.OnAppearing();
+
+            Assert.True(homePageViewModel.IsVisibleLocalNotificationOffWarningLayout);
+        }
+
+        [Fact]
         public void OnClickCheckStopReasonCommandTest_StoppedReason_ExposureNotificationOff_OK_iOS()
         {
             var homePageViewModel = CreateViewModel();
@@ -576,6 +610,36 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Verify(x => x.ShowHomePageUnknownErrorWaringAsync(), Times.Once);
             mockNavigationService
                 .Verify(x => x.NavigateAsync(It.IsAny<String>()), Times.Never);
+        }
+
+        [Fact]
+        public void OnClickLocalNotificationOffWarningTest_DialogOk()
+        {
+            mockDialogService.Setup(x => x.ShowLocalNotificationOffWarningAsync())
+                    .ReturnsAsync(true);
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnClickLocalNotificationOffWarning.Execute(null);
+
+            mockDialogService
+                .Verify(x => x.ShowLocalNotificationOffWarningAsync(), Times.Once);
+            mockExternalNavigationService
+                .Verify(x => x.NavigateAppSettings(), Times.Once);
+        }
+
+        [Fact]
+        public void OnClickLocalNotificationOffWarningTest_DialogCancel()
+        {
+            mockDialogService.Setup(x => x.ShowLocalNotificationOffWarningAsync())
+                    .ReturnsAsync(false);
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnClickLocalNotificationOffWarning.Execute(null);
+
+            mockDialogService
+                .Verify(x => x.ShowLocalNotificationOffWarningAsync(), Times.Once);
+            mockExternalNavigationService
+                .Verify(x => x.NavigateAppSettings(), Times.Never);
         }
     }
 }
