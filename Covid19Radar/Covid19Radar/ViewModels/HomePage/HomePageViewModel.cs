@@ -177,7 +177,6 @@ namespace Covid19Radar.ViewModels
         {
             try
             {
-                await localNotificationService.PrepareAsync();
                 UserDialogs.Instance.ShowLoading(AppResources.Loading);
                 loggerService.StartMethod();
 
