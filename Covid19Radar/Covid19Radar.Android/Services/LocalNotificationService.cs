@@ -109,6 +109,6 @@ namespace Covid19Radar.Droid.Services
             _loggerService.EndMethod();
             return false;
         }
-    }
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+    }
 }
