@@ -145,13 +145,13 @@ namespace Covid19Radar.ViewModels
         {
             var dayOfUse = _userDataRepository.GetDaysOfUse();
 
-            var latestExposureDateMillisSinceEpoch = dailySummaryList.Max(x => x.DateMillisSinceEpoch);
-            var latestExposureDate = DateTimeOffset.UnixEpoch.AddMilliseconds(latestExposureDateMillisSinceEpoch).UtcDateTime;
-            var latestExposureDateOffset = (DateTime.UtcNow.Date - latestExposureDate).Days;
+            var oldestExposureDateMillisSinceEpoch = dailySummaryList.Min(x => x.DateMillisSinceEpoch);
+            var oldestExposureDate = DateTimeOffset.UnixEpoch.AddMilliseconds(oldestExposureDateMillisSinceEpoch).UtcDateTime;
+            var oldestExposureDateOffset = (DateTime.UtcNow.Date - oldestExposureDate).Days;
 
             var daysOffset = Math.Max(
                 dayOfUse,
-                latestExposureDateOffset
+                oldestExposureDateOffset
                 );
 
             daysOffset = Math.Min(
