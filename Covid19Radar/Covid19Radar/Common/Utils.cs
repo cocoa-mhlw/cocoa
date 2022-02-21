@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.Linq;
 
 namespace Covid19Radar.Common
 {
@@ -12,9 +11,7 @@ namespace Covid19Radar.Common
         #region Other Public Methods
 
         public static DateTime JstNow()
-        {
-            return TimeZoneInfo.ConvertTime(DateTime.Now, JstTimeZoneInfo());
-        }
+            => TimeZoneInfo.ConvertTime(DateTime.Now, AppConstants.TIMEZONE_JST);
 
         public static DateTime[] JstDateTimes(int days)
         {
@@ -25,41 +22,12 @@ namespace Covid19Radar.Common
             DateTime[] dateTimes = new DateTime[days];
             for (int index = 0; index < days; index++)
             {
-                dateTimes[index] = TimeZoneInfo.ConvertTime(DateTime.Now.AddDays(-index), JstTimeZoneInfo());
+                dateTimes[index] = TimeZoneInfo.ConvertTime(DateTime.Now.AddDays(-index), AppConstants.TIMEZONE_JST);
             }
             return dateTimes;
         }
 
         #endregion
 
-        #region Other Private Methods
-
-        private static TimeZoneInfo JstTimeZoneInfo()
-        {
-            // iOS/Android/Unix
-            try
-            {
-                return TimeZoneInfo.FindSystemTimeZoneById("Asia/Tokyo");
-            }
-            catch (TimeZoneNotFoundException)
-            {
-                // Not iOS/Android/Unix
-            }
-
-            // Windows
-            try
-            {
-                return TimeZoneInfo.FindSystemTimeZoneById("Tokyo Standard Time");
-            }
-            catch (TimeZoneNotFoundException)
-            {
-                // Not Windows
-            }
-
-            // Emergency fallback
-            return TimeZoneInfo.CreateCustomTimeZone("JST", new TimeSpan(9, 0, 0), "(GMT+09:00) JST", "JST");
-        }
-
-        #endregion
     }
 }
