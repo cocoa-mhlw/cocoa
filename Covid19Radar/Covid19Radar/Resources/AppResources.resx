@@ -1480,4 +1480,21 @@ Note: this app does not collect users’ location information.</value>
     <comment>COCOA(Beta)は安定版ではありません。このバージョンから接触通知を受け取ったことによる検査費用は無料（公費負担）にはなりません。</comment>
   </data>
 
+	<data name="NotContactPageTitle" xml:space="preserve">
+    <value>Close contacts for the past 14 days</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+	<data name="NotContactPageLabel1" xml:space="preserve">
+    <value>No close contacts with COVID-19 positive users</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+	<data name="NotContactPageDescription1" xml:space="preserve">
+    <value>Please keep practicing 'New Lifestyle' recommended by the government.</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+	<data name="NotContactPageButtonText" xml:space="preserve">
+    <value>Share this app</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+
 </root>

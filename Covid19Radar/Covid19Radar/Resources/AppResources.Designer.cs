@@ -2080,5 +2080,29 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("NotMedicalExpenses", resourceCulture);
             }
         }
+        
+        public static string NotContactPageTitle {
+            get {
+                return ResourceManager.GetString("NotContactPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string NotContactPageLabel1 {
+            get {
+                return ResourceManager.GetString("NotContactPageLabel1", resourceCulture);
+            }
+        }
+        
+        public static string NotContactPageDescription1 {
+            get {
+                return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
+            }
+        }
+        
+        public static string NotContactPageButtonText {
+            get {
+                return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
+            }
+        }
     }
 }
