@@ -476,12 +476,6 @@
     <BundleResource Include="Resources\Base.lproj\TutorialPage40%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage50%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage50%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage60%402x.png" />
   </ItemGroup>
   <ItemGroup>

@@ -386,8 +386,8 @@
     <comment>氏名・電話番号などの個人情報や、GPS（※）などスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</value>
-    <comment>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</comment>
+    <value>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</value>
+    <comment>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
     <value>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</value>
@@ -400,26 +400,6 @@
   <data name="TutorialPage2Title" xml:space="preserve">
     <value>プライバシーについて</value>
     <comment>プライバシーについて</comment>
-  </data>
-  <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
-    <comment>通知をご利用いただくために</comment>
-  </data>
-  <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</value>
-    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
-  </data>
-  <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>有効にする</value>
-    <comment>有効にする</comment>
-  </data>
-  <data name="TutorialPage5Description4" xml:space="preserve">
-    <value>あとで設定する</value>
-    <comment>あとで設定する</comment>
-  </data>
-  <data name="TutorialPage5Title" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
-    <comment>通知をご利用いただくために</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
     <value>登録する</value>
@@ -801,12 +781,28 @@
     <comment>送信エラー</comment>
   </data>
   <data name="InquiryMailBody" xml:space="preserve">
-    <value>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</value>
-    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
+    <value>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n\r\n----以下は削除しないでください----\r\n</value>
+    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n\r\n----以下は削除しないでください----\r\n</comment>
   </data>
   <data name="InquiryMailSubject" xml:space="preserve">
     <value>接触確認アプリに関するお問い合わせ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="InquiryMailModelTitle" xml:space="preserve">
+    <value>モデル名：</value>
+    <comment>モデル名：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailOSTitle" xml:space="preserve">
+    <value>OS：</value>
+    <comment>OS：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailOSVersionTitle" xml:space="preserve">
+    <value>OSバージョン：</value>
+    <comment>OSバージョン：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailAppVersionTitle" xml:space="preserve">
+    <value>アプリバージョン：</value>
+    <comment>アプリバージョン：（サポートが見る文言なので常に日本語とする）</comment>
   </data>
   <data name="SendIdMailBody1" xml:space="preserve">
     <value>動作情報ID：</value>

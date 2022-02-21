@@ -69,6 +69,7 @@
     <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
     <PackageReference Include="Chino.Common" Version="1.0.0-rc11" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="8.0.62" />
+    <PackageReference Include="TimeZoneConverter" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CustomDatePicker.cs" />
@@ -94,9 +95,6 @@
     </Compile>
     <Compile Update="Views\HomePage\NotifyOtherPage.xaml.cs">
       <DependentUpon>NotifyOtherPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\ExceptionPage.xaml.cs">
-      <DependentUpon>ExceptionPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\SubmitConsentPage.xaml.cs">
       <DependentUpon>SubmitConsentPage.xaml</DependentUpon>

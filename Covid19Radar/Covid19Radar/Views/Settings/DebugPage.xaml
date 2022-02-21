@@ -77,6 +77,10 @@
                         Style="{StaticResource DefaultButton}"
                         Text="ShowExposureNotification" />
                     <Button
+                        Command="{Binding Path=OnClickExportExposureWindow}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="ExportExposureWindow" />
+                    <Button
                         Command="{Binding Path=OnClickRemoveStartDate}"
                         Style="{StaticResource DefaultButton}"
                         Text="RemoveStartDate" />
@@ -148,10 +152,6 @@
                     Command="{prism:NavigateTo 'TutorialPage4'}"
                     Style="{StaticResource DefaultButton}"
                     Text="TutorialPage4" />
-                <Button
-                    Command="{prism:NavigateTo 'TutorialPage5'}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="TutorialPage5" />
                 <Button
                     Command="{prism:NavigateTo 'TutorialPage6'}"
                     Style="{StaticResource DefaultButton}"

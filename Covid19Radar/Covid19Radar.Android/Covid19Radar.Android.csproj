@@ -482,9 +482,6 @@
     <AndroidResource Include="Resources\drawable-xhdpi\TutorialPage40.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\TutorialPage50.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\TutorialPage60.png" />
   </ItemGroup>
   <ItemGroup>
@@ -531,9 +528,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\TutorialPage40.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\TutorialPage50.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\TutorialPage60.png" />
