@@ -139,21 +139,6 @@
                         IsVisible="false"
                         />
 
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="12"
-                        Margin="0, 10, 0, 0"
-                        Style="{StaticResource AnnotationLabel}"
-                        TextColor="{StaticResource PrimaryText}"
-                        IsVisible="false" >
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                                <Span Text="{x:Static resources:AppResources.ContactedNotifyPageDescription0}"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-
                 </StackLayout>
             </Frame>
         </StackLayout>
