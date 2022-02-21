@@ -128,8 +128,27 @@
                     IsVisible="{Binding IsExposureDetected}"
                     >
                     <Label
-                        Style="{StaticResource DefaultLabelCaptionStartAlignment}"
-                        Text="{Binding LowRiskContactPageAnnotationDecription}" />
+                        Style="{StaticResource AnnotationLabel}"
+                        TextColor="{StaticResource PrimaryText}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{Binding LowRiskContactPageAnnotationDecription}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label
+                        Margin="0, 10, 0, 0"
+                        Style="{StaticResource AnnotationLabel}"
+                        TextColor="{StaticResource PrimaryText}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageAnnotationDecription2}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
                 </StackLayout>
             </CollectionView.Footer>
         </CollectionView>

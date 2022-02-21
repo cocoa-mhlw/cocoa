@@ -416,6 +416,10 @@
     <value>*The score is calculated based on the strength and time of the received signal. It is set to be 100 or more with contact within 1 m for 15 minutes or more under regular conditions.</value>
     <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
+    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>
     <comment>陽性登録者のスマートフォンからの信号を受信していません</comment>
