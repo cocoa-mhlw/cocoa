@@ -1045,20 +1045,21 @@ please follow the app. guidance and check the Consultation Centers List to recei
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>If you are contacted by a health center, please say that you would like to register positive test result using the Contact Confirmation Application.</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
+    <value>The processing number will be sent by SMS or email to the contact information declared at the time of inspection /diagnosis. 
+You do not have to declare it yourself.</value>
+    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で申告いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>After that, you will receive an 8-digit processing number via SMS or email.</value>
-    <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
+    <value>The COCOA app will be launched when you open the URL for positive information registration included in the SMS or email. The validity period of the processing number is displayed in the text.</value>
+    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>・ The processing number will be valid for one hour after it is issued. If It's expired, you will receive a new processing number.</value>
-    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+    <value>The processing number is automatically issued and sent, but the sending may be delayed due to inspections, system congestion, etc.</value>
+    <comment>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>・ If you have received a usage guide for My HER-SYS from the health center, please apply to use the Contact Confirmation Application from there.</value>
-    <comment>・保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+    <value>If you do not receive the processing number, please contact the health center in your area.</value>
+    <comment>処理番号が届かない場合などは、管轄の保健所にご連絡ください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>Exposure notification</value>
@@ -1249,10 +1250,6 @@ Note: this app does not collect users’ location information.</value>
   <data name="SmsAnnotationText" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
-  </data>
-  <data name="MyHerSysAnnotationText" xml:space="preserve">
-    <value></value>
-    <comment>日本語のみ：厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
   </data>
   <data name="RandomCodeAnnotationText" xml:space="preserve">
     <value></value>

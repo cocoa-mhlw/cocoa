@@ -939,20 +939,20 @@
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
+    <value>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で申告いただく必要はありません。</value>
+    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で申告いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>SMS（※）またはメールにて8桁の処理番号が送られてきます。</value>
-    <comment>SMS（※）またはメールにて8桁の処理番号が送られてきます。</comment>
+    <value>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。なお処理番号の有効期間は本文中に記載されています。</value>
+    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</value>
-    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+    <value>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</value>
+    <comment>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>・保健所からMy HER-SYS（マイハーシス）（※）の利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</value>
-    <comment>・保健所からMy HER-SYS（マイハーシス）（※）の利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+    <value>処理番号が届かない場合などは、管轄の保健所にご連絡ください。</value>
+    <comment>処理番号が届かない場合などは、管轄の保健所にご連絡ください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>接触を通知</value>
@@ -1139,10 +1139,6 @@
   <data name="SmsAnnotationText" xml:space="preserve">
     <value>スマートフォン用のテキストでの連絡手段。ショートメッセージ</value>
     <comment>スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
-  </data>
-  <data name="MyHerSysAnnotationText" xml:space="preserve">
-    <value>厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</value>
-    <comment>厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
   </data>
   <data name="RandomCodeAnnotationText" xml:space="preserve">
     <value>利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</value>
