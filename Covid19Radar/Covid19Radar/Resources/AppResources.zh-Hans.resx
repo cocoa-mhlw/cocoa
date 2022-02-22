@@ -309,8 +309,8 @@
     <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* 对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>未收到来自阳性登记者所持智能手机的信号</value>
@@ -345,16 +345,16 @@
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>和阳性患者的密切接触一览</value>
-    <comment>TODO:陽性登録者との接触一覧</comment>
+    <value>与阳性登记者的接触一览​</value>
+    <comment>陽性登録者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>times</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>查询跟阳性患者的密切接触情况</value>
-    <comment>TODO:陽性登録者との接触確認</comment>
+    <value>确认与阳性登记者的接触​</value>
+    <comment>陽性登録者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
     <value>查询过去14天内里的接触情况</value>
@@ -369,8 +369,8 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>确认与阳性者接触的结果</value>
-    <comment>TODO:陽性登録者との接触結果を確認</comment>
+    <value>确认与阳性登记者接触的结果</value>
+    <comment>陽性登録者との接触結果を確認</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>确诊新型冠状病毒呈阳性</value>
@@ -541,8 +541,8 @@
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>以下日期确认到您与阳性患者存在密切接触。</value>
-    <comment>TODO:次の日に陽性登録者との接触が確認されました。</comment>
+    <value>在下记时间段检测到与阳性登记者的接触。</value>
+    <comment>次の日に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -1246,24 +1246,28 @@ However, if you have any symptoms, please consider receiving a consultation..
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* 对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageFrom" xml:space="preserve">
+    <value></value>
+    <comment></comment>
   </data>
   <data name="ExposuresPageTo" xml:space="preserve">
-    <value>to</value>
-    <comment>TODO:から</comment>
+    <value>到</value>
+    <comment>から</comment>
   </data>
   <data name="ExposureDateFormatDate" xml:space="preserve">
-    <value>d h:mm tt</value>
-    <comment>TODO:d日 tth時mm分</comment>
+    <value>d日 tth点mm分</value>
+    <comment>d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatMonth" xml:space="preserve">
-    <value>d MMM h:mm tt</value>
-    <comment>TODO:M月d日 tth時mm分</comment>
+    <value>M月d日 tth点mm分</value>
+    <comment>M月d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatYear" xml:space="preserve">
-    <value>d MMM, yyyy h:mm tt</value>
-    <comment>TODO:yyyy年M月d日 tth時mm分</comment>
+    <value>yyyy年M月d日 tth点mm分</value>
+    <comment>yyyy年M月d日 tth時mm分</comment>
   </data>
 
 </root>
