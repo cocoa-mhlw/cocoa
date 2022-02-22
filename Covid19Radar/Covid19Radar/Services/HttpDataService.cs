@@ -76,10 +76,9 @@ namespace Covid19Radar.Services
             catch (Exception ex)
             {
                 loggerService.Exception("Failed to register user.", ex);
+                loggerService.EndMethod();
+                throw ex;
             }
-
-            loggerService.EndMethod();
-            return 0;
         }
 
         public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)

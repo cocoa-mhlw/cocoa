@@ -45,22 +45,36 @@ namespace Covid19Radar.ViewModels
 
             UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
 
-            var resultStatusCode = await _userDataService.RegisterUserAsync();
-            if (resultStatusCode != HttpStatusCode.OK)
+            try
             {
-                UserDialogs.Instance.HideLoading();
-                if (resultStatusCode == HttpStatusCode.Forbidden)
+                var resultStatusCode = await _userDataService.RegisterUserAsync();
+                if (resultStatusCode != HttpStatusCode.OK)
                 {
-                    _loggerService.Error("Failed register for requests from overseas");
-                    await UserDialogs.Instance.AlertAsync(
-                        Resources.AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
-                        Resources.AppResources.DialogNetworkConnectionErrorTitle,
-                        Resources.AppResources.ButtonOk);
+                    UserDialogs.Instance.HideLoading();
+                    if (resultStatusCode == HttpStatusCode.Forbidden)
+                    {
+                        _loggerService.Error("Failed register for requests from overseas");
+                        await UserDialogs.Instance.AlertAsync(
+                            Resources.AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
+                            Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                            Resources.AppResources.ButtonOk);
+                        _loggerService.EndMethod();
+                        return;
+                    }
+
+                    _loggerService.Error("Failed register");
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogNetworkConnectionErrorTitle, Resources.AppResources.ButtonOk);
+                    _loggerService.EndMethod();
                     return;
                 }
-
-                _loggerService.Error("Failed register");
-                await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogNetworkConnectionErrorTitle, Resources.AppResources.ButtonOk);
+            }
+            catch
+            {
+                UserDialogs.Instance.HideLoading();
+                await UserDialogs.Instance.AlertAsync(
+                    Resources.AppResources.DialogNetworkConnectionError,
+                    Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                    Resources.AppResources.ButtonOk);
                 _loggerService.EndMethod();
                 return;
             }

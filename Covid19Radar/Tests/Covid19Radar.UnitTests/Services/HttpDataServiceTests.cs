@@ -123,12 +123,13 @@ namespace Covid19Radar.UnitTests.Services
         [Fact]
         public async Task PostRegisterUserAsyncTestsAsync_Exception()
         {
+            var exception = new HttpRequestException("unit-test");
             var mockHttpClient = new HttpClient(new MockHttpHandler((r, c) =>
             {
                 var absoluteUri = r.RequestUri.AbsoluteUri;
                 if (absoluteUri.EndsWith("/api/register"))
                 {
-                    throw new HttpRequestException("unit-test");
+                    throw exception;
                 }
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
@@ -139,13 +140,19 @@ namespace Covid19Radar.UnitTests.Services
 
             var unitUnderTest = CreateService();
 
-            var result = await unitUnderTest.PostRegisterUserAsync();
+            try
+            {
+                var result = await unitUnderTest.PostRegisterUserAsync();
+
+            }
+            catch(Exception ex)
+            {
+                Assert.Equal(exception, ex);
+            }
 
             mockLoggerService.Verify(x => x.StartMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.EndMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-
-            Assert.Equal(0, (int)result);
         }
 
         #endregion

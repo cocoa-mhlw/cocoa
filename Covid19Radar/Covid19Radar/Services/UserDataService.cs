@@ -38,21 +38,30 @@ namespace Covid19Radar.Services
         public async Task<HttpStatusCode> RegisterUserAsync()
         {
             loggerService.StartMethod();
-
-            var resultStatusCode = await httpDataService.PostRegisterUserAsync();
-
-            if (resultStatusCode == HttpStatusCode.OK)
+            try
             {
-                loggerService.Info("Success register");
-                userDataRepository.SetStartDate(DateTime.UtcNow);
+                var resultStatusCode = await httpDataService.PostRegisterUserAsync();
+
+                if (resultStatusCode == HttpStatusCode.OK)
+                {
+                    loggerService.Info("Success register");
+                    userDataRepository.SetStartDate(DateTime.UtcNow);
+                }
+                else
+                {
+                    loggerService.Info("Failed register");
+                }
+
+                loggerService.EndMethod();
+                return resultStatusCode;
             }
-            else
+            catch(Exception ex)
             {
-                loggerService.Info("Failed register");
+                loggerService.Exception("Failed to register user.", ex);
+                loggerService.EndMethod();
+                throw ex;
             }
 
-            loggerService.EndMethod();
-            return resultStatusCode;
         }
     }
 }
