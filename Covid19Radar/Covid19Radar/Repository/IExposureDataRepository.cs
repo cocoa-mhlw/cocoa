@@ -67,8 +67,8 @@ namespace Covid19Radar.Repository
                 toFormat = AppResources.ExposureDateFormatYear;
             }
 
-            string fromStr = string.Format(fromFormat, from.Year, from.Month, from.Day, from.Hour);
-            string toStr = string.Format(toFormat, to.Year, to.Month, to.Day, to.Hour);
+            string fromStr = from.ToString(fromFormat, CultureInfo.CurrentCulture);
+            string toStr = to.ToString(toFormat, CultureInfo.CurrentCulture);
 
             return string.Format("{0} {1} {2}", fromStr, AppResources.ExposuresPageTo, toStr);
         }
