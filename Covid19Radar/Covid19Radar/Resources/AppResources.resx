@@ -417,8 +417,8 @@
     <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone of the device and displayed.​</value>
+    <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>
@@ -1351,24 +1351,28 @@ Note: this app does not collect users’ location information.</value>
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone of the device and displayed.​</value>
+    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageFrom" xml:space="preserve">
+    <value>From </value>
+    <comment> </comment>
   </data>
   <data name="ExposuresPageTo" xml:space="preserve">
     <value>to</value>
-    <comment>TODO:から</comment>
+    <comment>から</comment>
   </data>
   <data name="ExposureDateFormatDate" xml:space="preserve">
     <value>d h:mm tt</value>
-    <comment>TODO:d日 tth時mm分</comment>
+    <comment>d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatMonth" xml:space="preserve">
     <value>d MMM h:mm tt</value>
-    <comment>TODO:M月d日 tth時mm分</comment>
+    <comment>M月d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatYear" xml:space="preserve">
     <value>d MMM, yyyy h:mm tt</value>
-    <comment>TODO:yyyy年M月d日 tth時mm分</comment>
+    <comment>yyyy年M月d日 tth時mm分</comment>
   </data>
 
   <data name="OpenSourceLicense" xml:space="preserve">

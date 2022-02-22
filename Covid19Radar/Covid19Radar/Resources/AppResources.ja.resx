@@ -291,7 +291,7 @@
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
     <value>※日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
-    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンからの信号を受信していません</value>
@@ -327,11 +327,11 @@
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
     <value>陽性登録者との接触一覧</value>
-    <comment>TODO:陽性登録者との接触一覧</comment>
+    <comment>陽性登録者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>陽性登録者との接触確認</value>
-    <comment>TODO:陽性登録者との接触確認</comment>
+    <comment>陽性登録者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
     <value>過去14日間の接触</value>
@@ -539,7 +539,7 @@
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>次の期間に陽性登録者との接触が確認されました。</value>
-    <comment>TODO:次の期間に陽性登録者との接触が確認されました。</comment>
+    <comment>次の期間に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -674,23 +674,23 @@
 陽性者と接触した心当たりがない場合は、
 感染対策に留意しつつ普段通りの生活をお送りください。
 ただし、体調に変化があった場合は、受診を検討ください。</value>
-    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+    <comment>症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
     <value>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</value>
-    <comment>TODO:次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
+    <comment>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription3" xml:space="preserve">
     <value>・発熱等の症状や基礎疾患がある</value>
-    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
+    <comment>・発熱等の症状や基礎疾患がある</comment>
   </data>
   <data name="ContactedNotifyPageDescription4" xml:space="preserve">
     <value>・陽性者と接触した心当たりがある</value>
-    <comment>TODO:・陽性者と接触した心当たりがある</comment>
+    <comment>・陽性者と接触した心当たりがある</comment>
   </data>
   <data name="ContactedNotifyPageDescription5" xml:space="preserve">
     <value>・その他、受診を希望する</value>
-    <comment>TODO:・その他、受診を希望する</comment>
+    <comment>・その他、受診を希望する</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>確認しました</value>
@@ -1244,23 +1244,27 @@
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
     <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
-    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageFrom" xml:space="preserve">
+    <value></value>
+    <comment> </comment>
   </data>
   <data name="ExposuresPageTo" xml:space="preserve">
     <value>から</value>
-    <comment>TODO:から</comment>
+    <comment>から</comment>
   </data>
   <data name="ExposureDateFormatDate" xml:space="preserve">
     <value>d日 tth時mm分</value>
-    <comment>TODO:d日 tth時mm分</comment>
+    <comment>d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatMonth" xml:space="preserve">
     <value>M月d日 tth時mm分</value>
-    <comment>TODO:M月d日 tth時mm分</comment>
+    <comment>M月d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatYear" xml:space="preserve">
     <value>yyyy年M月d日 tth時mm分</value>
-    <comment>TODO:yyyy年M月d日 tth時mm分</comment>
+    <comment>yyyy年M月d日 tth時mm分</comment>
   </data>
 
   <data name="OpenSourceLicense" xml:space="preserve">
