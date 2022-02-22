@@ -70,7 +70,7 @@ namespace Covid19Radar.Repository
             string fromStr = from.ToString(fromFormat, CultureInfo.CurrentCulture);
             string toStr = to.ToString(toFormat, CultureInfo.CurrentCulture);
 
-            return string.Format("{0} {1} {2}", fromStr, AppResources.ExposuresPageTo, toStr);
+            return string.Format("{0}{1} {2} {3}", AppResources.ExposuresPageFrom, fromStr, AppResources.ExposuresPageTo, toStr);
         }
     }
 }

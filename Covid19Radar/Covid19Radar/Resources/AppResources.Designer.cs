@@ -1925,6 +1925,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ExposuresPageFrom {
+            get {
+                return ResourceManager.GetString("ExposuresPageFrom", resourceCulture);
+            }
+        }
+        
         public static string ExposuresPageTo {
             get {
                 return ResourceManager.GetString("ExposuresPageTo", resourceCulture);
