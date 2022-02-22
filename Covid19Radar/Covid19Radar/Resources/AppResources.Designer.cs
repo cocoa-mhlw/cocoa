@@ -515,6 +515,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskContactPageAnnotationDecription2 {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageAnnotationDecription2", resourceCulture);
+            }
+        }
+        
         public static string NoRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("NoRiskContactPageLabel", resourceCulture);
@@ -1040,6 +1046,30 @@ namespace Covid19Radar.Resources {
         public static string ContactedNotifyPageDescription1 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageDescription1", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription2 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription2", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription3 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription3", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription4 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription4", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription5 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription5", resourceCulture);
             }
         }
         
@@ -1868,6 +1898,36 @@ namespace Covid19Radar.Resources {
         public static string ThresholdTextOperatorEqual {
             get {
                 return ResourceManager.GetString("ThresholdTextOperatorEqual", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageToUtcDescription {
+            get {
+                return ResourceManager.GetString("ExposuresPageToUtcDescription", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageTo {
+            get {
+                return ResourceManager.GetString("ExposuresPageTo", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatDate {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatDate", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatMonth {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatMonth", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatYear {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatYear", resourceCulture);
             }
         }
     }
