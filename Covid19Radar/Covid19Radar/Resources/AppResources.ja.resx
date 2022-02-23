@@ -939,12 +939,14 @@
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で申告いただく必要はありません。</value>
-    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で申告いただく必要はありません。</comment>
+    <value>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</value>
+    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。なお処理番号の有効期間は本文中に記載されています。</value>
-    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。なお処理番号の有効期間は本文中に記載されています。</comment>
+    <value>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
+なお処理番号の有効期間は本文中に記載されています。</value>
+    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
+なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
     <value>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</value>

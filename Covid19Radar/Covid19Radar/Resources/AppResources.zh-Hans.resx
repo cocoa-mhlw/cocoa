@@ -947,15 +947,16 @@
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>受理编号将通过SMS或电子邮件发送至检查/诊断时申告的联系方式。 您不必自己申告。</value>
-    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で申告いただく必要はありません。</comment>
+    <value>受理编号将通过SMS或电子邮件发送至检查/诊断时申告的联系方式。 您不必自己申请。</value>
+    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
     <value>当您打开短信或电子邮件中包含的阳性信息注册 URL 时，COCOA将启动。受理编号的有效期在文中有注明。</value>
-    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。なお処理番号の有効期間は本文中に記載されています。</comment>
+    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
+なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>受理编号自动发行并发送，但可能会因检查、系统繁忙等原因延迟发送。 </value>
+    <value>受理编号自动发行并发送，但可能会因检查、系统繁忙等原因延迟发送。</value>
     <comment>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">

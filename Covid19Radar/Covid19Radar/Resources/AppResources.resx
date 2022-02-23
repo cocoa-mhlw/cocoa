@@ -1045,16 +1045,17 @@ please follow the app. guidance and check the Consultation Centers List to recei
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>The processing number will be sent by SMS or email to the contact information declared at the time of inspection /diagnosis. 
-You do not have to declare it yourself.</value>
-    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で申告いただく必要はありません。</comment>
+    <value>The processing number will be sent by SMS  or email to the contact information declared at the time of test /diagnosis. 
+You do not have to request it yourself.</value>
+    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
     <value>The COCOA app will be launched when you open the URL for positive information registration included in the SMS or email. The validity period of the processing number is displayed in the text.</value>
-    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。なお処理番号の有効期間は本文中に記載されています。</comment>
+    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
+なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>The processing number is automatically issued and sent, but the sending may be delayed due to inspections, system congestion, etc.</value>
+    <value>The processing number is automatically issued and sent, but the sending may be delayed due to tests, system congestion, etc.</value>
     <comment>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
