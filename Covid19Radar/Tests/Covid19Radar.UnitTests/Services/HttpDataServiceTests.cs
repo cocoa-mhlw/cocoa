@@ -121,7 +121,7 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public async Task PostRegisterUserAsyncTestsAsync_Exception()
+        public void PostRegisterUserAsyncTestsAsync_Exception()
         {
             var exception = new HttpRequestException("unit-test");
             var mockHttpClient = new HttpClient(new MockHttpHandler((r, c) =>
@@ -140,15 +140,11 @@ namespace Covid19Radar.UnitTests.Services
 
             var unitUnderTest = CreateService();
 
-            try
-            {
-                var result = await unitUnderTest.PostRegisterUserAsync();
 
-            }
-            catch(Exception ex)
+            Assert.ThrowsAsync<HttpRequestException>(async () =>
             {
-                Assert.Equal(exception, ex);
-            }
+                await unitUnderTest.PostRegisterUserAsync();
+            });
 
             mockLoggerService.Verify(x => x.StartMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.EndMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
