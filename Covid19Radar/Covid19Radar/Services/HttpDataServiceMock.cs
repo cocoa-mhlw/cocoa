@@ -105,11 +105,9 @@ namespace Covid19Radar.Services
             }
             else
             {
-                switch (result)
+                if (result.Equals(1))
                 {
-                    case 1:
-                        code = HttpStatusCode.NoContent;
-                        break;
+                    code = HttpStatusCode.NoContent;
                 }
             }
 

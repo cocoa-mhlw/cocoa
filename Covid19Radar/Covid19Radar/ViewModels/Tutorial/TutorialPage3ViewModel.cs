@@ -63,7 +63,10 @@ namespace Covid19Radar.ViewModels
                     }
 
                     _loggerService.Error("Failed register");
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogNetworkConnectionErrorTitle, Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(
+                        Resources.AppResources.DialogNetworkConnectionError,
+                        Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                        Resources.AppResources.ButtonOk);
                     _loggerService.EndMethod();
                     return;
                 }

@@ -77,7 +77,7 @@ namespace Covid19Radar.Services
             {
                 loggerService.Exception("Failed to register user.", ex);
                 loggerService.EndMethod();
-                throw ex;
+                throw;
             }
         }
 

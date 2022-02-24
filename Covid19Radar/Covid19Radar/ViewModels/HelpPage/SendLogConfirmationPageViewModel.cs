@@ -67,6 +67,17 @@ namespace Covid19Radar.ViewModels
 
                 var response = await httpDataService.GetLogStorageSas();
 
+                if (response.StatusCode == (int)HttpStatusCode.Forbidden)
+                {
+                    UserDialogs.Instance.HideLoading();
+                    // Access from overseas
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
+                        AppResources.DialogNetworkConnectionErrorTitle,
+                        AppResources.ButtonOk);
+                    return;
+                }
+
                 var uploadResult = false;
                 if (response.StatusCode == (int)HttpStatusCode.OK && !string.IsNullOrEmpty(response.Result.SasToken))
                 {
@@ -77,16 +88,6 @@ namespace Covid19Radar.ViewModels
 
                 if (!uploadResult)
                 {
-                    if (response.StatusCode == (int)HttpStatusCode.Forbidden)
-                    {
-                        // Access from overseas
-                        await UserDialogs.Instance.AlertAsync(
-                            AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
-                            AppResources.DialogNetworkConnectionErrorTitle,
-                            AppResources.ButtonOk);
-                        return;
-                    }
-
                     // Failed to create ZIP file
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.FailedMessageToSendOperatingInformation,
@@ -108,6 +109,14 @@ namespace Covid19Radar.ViewModels
                     { "logId", LogId }
                 };
                 _ = await NavigationService.NavigateAsync($"{nameof(SendLogCompletePage)}?useModalNavigation=true/", parameters);
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed tp send log.", ex);
+                await UserDialogs.Instance.AlertAsync(
+                        AppResources.FailedMessageToSendOperatingInformation,
+                        AppResources.SendingError,
+                        AppResources.ButtonOk);
             }
             finally
             {
