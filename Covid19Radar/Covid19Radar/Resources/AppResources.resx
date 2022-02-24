@@ -785,28 +785,25 @@
     <comment>TODO:受診の際に必要となる場合があるため、「陽性登録者との接触一覧」のスクリーンショットを保存してください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>If you do not have any symptoms,
-or if you do not know anyone who has had contact with a person that has been tested positive for COVID-19,
-please go about your daily life as usual, paying attention to infection control measures.
-However, if you have any symptoms, please consider receiving a consultation..
-    </value>
-    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+    <value>In case you have no symptoms, or you had no contact with a positive person, please lead a normal life while paying attention to infection prevention measures.​
+However, if your physical condition changes, please consider consulting a doctor.​</value>
+    <comment>症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>If any of the following applies to you, please follow the guidance and check the Consultation Centers List to receive a consultation.</value>
+    <value>If you fall under any of the below cases, please consider going to a clinic / examination medical institution, etc. according to the guidance of the app.</value>
     <comment>次のいずれかに当てはまる方は、アプリの案内に従って相談先をご確認ください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription3" xml:space="preserve">
-    <value>・If you have any symptoms such as fever, pre-existing conditions.</value>
-    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
+    <value>・Symptoms such as fever and underlying illness​</value>
+    <comment>・発熱等の症状や基礎疾患がある</comment>
   </data>
   <data name="ContactedNotifyPageDescription4" xml:space="preserve">
-    <value>・If you have been in contact with a person that has been tested positive for COVID-19.</value>
-    <comment>TODO:・陽性者と接触した心当たりがある</comment>
+    <value>・Chance of close contact with a positive person​</value>
+    <comment>・陽性者と接触した心当たりがある</comment>
   </data>
   <data name="ContactedNotifyPageDescription5" xml:space="preserve">
-    <value>・If you would like to receive a consultation.</value>
-    <comment>TODO:・その他、受診を希望する</comment>
+    <value>・Others such as necessity of consult a doctor​</value>
+    <comment>・その他、受診を希望する</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>Agree</value>
