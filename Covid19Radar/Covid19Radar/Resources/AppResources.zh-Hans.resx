@@ -969,20 +969,21 @@ However, if you have any symptoms, please consider receiving a consultation..
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>如果保健中心与您联系，请说明您想使用接触确认应用登记阳性检测结果。</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
+    <value>受理编号将通过SMS或电子邮件发送至检查/诊断时申告的联系方式。 您不必自己申请。</value>
+    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>您将通过短信或电子邮件收到一个8位数的受理编号。</value>
-    <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
+    <value>当您打开短信或电子邮件中包含的阳性信息注册 URL 时，COCOA将启动。受理编号的有效期在文中有注明。</value>
+    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
+なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>・受理编号在发出后一小时内有效。 如果它已过期，您将收到一个新的受理编号。</value>
-    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+    <value>受理编号自动发行并发送，但可能会因检查、系统繁忙等原因延迟发送。</value>
+    <comment>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>・如果您从保健中心收到了My HER-SYS的使用指南，请从那里申请使用接触确认应用。</value>
-    <comment>・保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+    <value>如果您没有收到受理编号，请联系您所在地区的保健中心。</value>
+    <comment>処理番号が届かない場合などは、管轄の保健所にご連絡ください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>接触通知</value>
@@ -1169,10 +1170,6 @@ However, if you have any symptoms, please consider receiving a consultation..
   <data name="SmsAnnotationText" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
-  </data>
-  <data name="MyHerSysAnnotationText" xml:space="preserve">
-    <value></value>
-    <comment>日本語のみ：厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
   </data>
   <data name="RandomCodeAnnotationText" xml:space="preserve">
     <value></value>

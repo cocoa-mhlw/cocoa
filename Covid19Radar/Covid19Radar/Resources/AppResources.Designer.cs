@@ -1787,12 +1787,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string MyHerSysAnnotationText {
-            get {
-                return ResourceManager.GetString("MyHerSysAnnotationText", resourceCulture);
-            }
-        }
-        
         public static string RandomCodeAnnotationText {
             get {
                 return ResourceManager.GetString("RandomCodeAnnotationText", resourceCulture);
