@@ -109,7 +109,7 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="9"
-                        Margin="0, 20, 0, 10"
+                        Margin="0, 25, 0, 10"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
@@ -117,7 +117,7 @@
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="10"
-                        Margin="0,20,0,20"
+                        Margin="0,15,0,20"
                         Command="{Binding Path=OnClickByForm}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
