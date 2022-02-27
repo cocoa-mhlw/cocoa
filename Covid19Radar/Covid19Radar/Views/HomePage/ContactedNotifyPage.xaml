@@ -109,7 +109,7 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="9"
-                        Margin="0, 20, 0, 10"
+                        Margin="0, 25, 0, 10"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
