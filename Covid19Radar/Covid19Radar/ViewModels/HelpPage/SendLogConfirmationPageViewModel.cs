@@ -4,9 +4,11 @@
 
 using System;
 using System.IO;
+using System.Net;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -23,6 +25,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILogFileService logFileService;
         private readonly ILogUploadService logUploadService;
         private readonly ILogPathService logPathService;
+        private readonly IHttpDataService httpDataService;
 
         public Action<Action> BeginInvokeOnMainThread { get; set; } = MainThread.BeginInvokeOnMainThread;
         public Func<Action, Task> TaskRun { get; set; } = Task.Run;
@@ -35,12 +38,14 @@ namespace Covid19Radar.ViewModels
             ILogFileService logFileService,
             ILoggerService loggerService,
             ILogUploadService logUploadService,
-            ILogPathService logPathService) : base(navigationService)
+            ILogPathService logPathService,
+            IHttpDataService httpDataService) : base(navigationService)
         {
             this.loggerService = loggerService;
             this.logFileService = logFileService;
             this.logUploadService = logUploadService;
             this.logPathService = logPathService;
+            this.httpDataService = httpDataService;
         }
 
         public Command OnClickConfirmLogCommand => new Command(() =>
@@ -58,9 +63,26 @@ namespace Covid19Radar.ViewModels
             try
             {
                 // Upload log file.
-                UserDialogs.Instance.ShowLoading(Resources.AppResources.Sending);
+                UserDialogs.Instance.ShowLoading(AppResources.Sending);
 
-                var uploadResult = await logUploadService.UploadAsync(ZipFileName);
+                var response = await httpDataService.GetLogStorageSas();
+
+                if (response.StatusCode == (int)HttpStatusCode.Forbidden)
+                {
+                    UserDialogs.Instance.HideLoading();
+                    // Access from overseas
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
+                        AppResources.DialogNetworkConnectionErrorTitle,
+                        AppResources.ButtonOk);
+                    return;
+                }
+
+                var uploadResult = false;
+                if (response.StatusCode == (int)HttpStatusCode.OK && !string.IsNullOrEmpty(response.Result.SasToken))
+                {
+                    uploadResult = await logUploadService.UploadAsync(ZipFileName, response.Result.SasToken);
+                }
 
                 UserDialogs.Instance.HideLoading();
 
@@ -68,9 +90,9 @@ namespace Covid19Radar.ViewModels
                 {
                     // Failed to create ZIP file
                     await UserDialogs.Instance.AlertAsync(
-                        Resources.AppResources.FailedMessageToSendOperatingInformation,
-                        Resources.AppResources.SendingError,
-                        Resources.AppResources.ButtonOk);
+                        AppResources.FailedMessageToSendOperatingInformation,
+                        AppResources.SendingError,
+                        AppResources.ButtonOk);
                     return;
                 }
 
@@ -87,6 +109,14 @@ namespace Covid19Radar.ViewModels
                     { "logId", LogId }
                 };
                 _ = await NavigationService.NavigateAsync($"{nameof(SendLogCompletePage)}?useModalNavigation=true/", parameters);
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed tp send log.", ex);
+                await UserDialogs.Instance.AlertAsync(
+                        AppResources.FailedMessageToSendOperatingInformation,
+                        AppResources.SendingError,
+                        AppResources.ButtonOk);
             }
             finally
             {

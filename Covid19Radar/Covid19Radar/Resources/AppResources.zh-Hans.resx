@@ -567,7 +567,11 @@
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>网络连接错误</value>
-    <comment>通信に失敗しました。</comment>
+    <comment>通信に失敗しました</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorFromOverseasMessage" xml:space="preserve">
+    <value>本应用只可在日本国内使用。</value>
+    <comment>本アプリは日本国内でのみご利用できます。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
     <value>暴露通知启动错误</value>

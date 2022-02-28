@@ -560,8 +560,12 @@
     <comment>接触通知機能が停止しています</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
-    <value>通信に失敗しました。</value>
-    <comment>通信に失敗しました。</comment>
+    <value>通信に失敗しました</value>
+    <comment>通信に失敗しました</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorFromOverseasMessage" xml:space="preserve">
+    <value>本アプリは日本国内でのみご利用できます。</value>
+    <comment>本アプリは日本国内でのみご利用できます。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
     <value>Exposure Notification起動エラー</value>

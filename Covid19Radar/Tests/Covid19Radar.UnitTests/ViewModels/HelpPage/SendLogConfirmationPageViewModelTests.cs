@@ -6,6 +6,8 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using Covid19Radar.Model;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Moq;
@@ -24,6 +26,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ILogUploadService> mockLogUploadService;
         private readonly Mock<ILogPathService> mockLogPathService;
+        private readonly Mock<IHttpDataService> mockHttpDataService;
 
         public SendLogConfirmationPageViewModelTests()
         {
@@ -37,6 +40,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockLogUploadService = mockRepository.Create<ILogUploadService>();
             mockLogPathService = mockRepository.Create<ILogPathService>();
+            mockHttpDataService = mockRepository.Create<IHttpDataService>();
         }
 
         private SendLogConfirmationPageViewModel CreateViewModel()
@@ -46,7 +50,8 @@ namespace Covid19Radar.UnitTests.ViewModels
                 mockLogFileService.Object,
                 mockLoggerService.Object,
                 mockLogUploadService.Object,
-                mockLogPathService.Object)
+                mockLogPathService.Object,
+                mockHttpDataService.Object)
             {
                 BeginInvokeOnMainThread = new Action<Action>((a) => { a.Invoke(); }),
                 TaskRun = new Func<Action, Task>((a) => { a.Invoke(); return Task.CompletedTask; })
@@ -165,14 +170,16 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockUserDialogs.Invocations.Clear();
             mockLogFileService.Invocations.Clear();
 
-            mockLogUploadService.Setup(x => x.UploadAsync(testZipFileName)).ReturnsAsync(true);
+            var testResponse = new ApiResponse<LogStorageSas>(200, new LogStorageSas() { SasToken = "test-sas-token" });
+            mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
+            mockLogUploadService.Setup(x => x.UploadAsync(testZipFileName, testResponse.Result.SasToken)).ReturnsAsync(true);
 
             unitUnderTest.OnClickSendLogCommand.Execute(null);
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
             mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
-            mockLogUploadService.Verify(x => x.UploadAsync(testZipFileName), Times.Once());
+            mockLogUploadService.Verify(x => x.UploadAsync(testZipFileName, testResponse.Result.SasToken), Times.Once());
             mockLogFileService.Verify(x => x.DeleteAllLogUploadingFiles(), Times.Once());
             var expectedParameters = new NavigationParameters { { "logId", testLogId } };
             mockNavigationService.Verify(x => x.NavigateAsync("SendLogCompletePage?useModalNavigation=true/", expectedParameters), Times.Once());
@@ -195,14 +202,16 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockUserDialogs.Invocations.Clear();
             mockLogFileService.Invocations.Clear();
 
-            mockLogUploadService.Setup(x => x.UploadAsync(testZipFileName)).ReturnsAsync(false);
+            var testResponse = new ApiResponse<LogStorageSas>(200, new LogStorageSas() { SasToken = "test-sas-token" });
+            mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
+            mockLogUploadService.Setup(x => x.UploadAsync(testZipFileName, testResponse.Result.SasToken)).ReturnsAsync(false);
 
             unitUnderTest.OnClickSendLogCommand.Execute(null);
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
             mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Once());
-            mockLogUploadService.Verify(x => x.UploadAsync(testZipFileName), Times.Once());
+            mockLogUploadService.Verify(x => x.UploadAsync(testZipFileName, testResponse.Result.SasToken), Times.Once());
             mockLogFileService.Verify(x => x.DeleteAllLogUploadingFiles(), Times.Never());
             mockNavigationService.Verify(x => x.NavigateAsync(It.IsAny<string>(), It.IsAny<NavigationParameters>()), Times.Never());
         }
@@ -225,14 +234,16 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockUserDialogs.Invocations.Clear();
             mockLogFileService.Invocations.Clear();
 
-            mockLogUploadService.Setup(x => x.UploadAsync(testZipFileName)).ReturnsAsync(true);
+            var testResponse = new ApiResponse<LogStorageSas>(200, new LogStorageSas() { SasToken = "test-sas-token" });
+            mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
+            mockLogUploadService.Setup(x => x.UploadAsync(testZipFileName, testResponse.Result.SasToken)).ReturnsAsync(true);
 
             unitUnderTest.OnClickSendLogCommand.Execute(null);
 
             mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
             mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
-            mockLogUploadService.Verify(x => x.UploadAsync(testZipFileName), Times.Once());
+            mockLogUploadService.Verify(x => x.UploadAsync(testZipFileName, testResponse.Result.SasToken), Times.Once());
             mockLogFileService.Verify(x => x.DeleteAllLogUploadingFiles(), Times.Once());
             var expectedParameters = new NavigationParameters { { "logId", testLogId } };
             mockNavigationService.Verify(x => x.NavigateAsync("SendLogCompletePage?useModalNavigation=true/", expectedParameters), Times.Once());
