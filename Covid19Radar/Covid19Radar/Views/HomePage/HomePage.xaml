@@ -180,7 +180,7 @@
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleLocalNotificationOffWarningLayout}"
                     TabIndex="14"
                     AutomationProperties.Name="{Binding LocalNotificationOffReadText}"
-                    Style="{StaticResource HomePageLabelColor}"
+                    Style="{StaticResource LinkLabelStyleSmall}"
                     Text="{x:Static resources:AppResources.HomePageLocalNotificationOffWarningLabelText}" />
             </StackLayout>
             <Frame
