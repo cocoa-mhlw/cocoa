@@ -15,48 +15,74 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <StackLayout BackgroundColor="#FFFFFF" Style="{StaticResource DefaultStackLayout}">
-        <Label
-            Style="{StaticResource DefaultLabel}"
-            Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
-        <BoxView Style="{StaticResource DefaultLineStyle}" />
-        <CollectionView
-            BackgroundColor="#FFFFFF"
-            ItemsSource="{Binding Exposures}">
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" />
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout HorizontalOptions="FillAndExpand">
-                        <Frame Style="{StaticResource FrameCardViewStyle}">
-                            <StackLayout Style="{StaticResource DetailsStackLayout}">
-                                <Label
-                                    Style="{StaticResource CardLabelSmall}"
-                                    Text="{Binding ExposureDate}" />
-                                <Label
-                                    Style="{StaticResource CardLabelSmall}">
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <Span Text="{Binding Description}" />
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
-                            </StackLayout>
-                        </Frame>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-            <CollectionView.EmptyView>
-                <StackLayout Orientation="Vertical">
-                    <Label
-                        Style="{DynamicResource DefaultSubSubTitleLabel}"
-                        Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
-                    <Label
-                        Style="{DynamicResource DefaultLabelLittle}"
-                        Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
+    <CollectionView
+        BackgroundColor="#FFFFFF"
+        ItemsSource="{Binding Exposures}"
+        >
+        <CollectionView.Header>
+            <StackLayout
+                Padding="20, 20, 20, 10"
+                >
+                <Label
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
+            </StackLayout>
+        </CollectionView.Header>
+
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Padding="20, 0, 20, 0"
+                    >
+                    <Frame Style="{StaticResource FrameCardViewStyle}">
+                        <StackLayout Style="{StaticResource DetailsStackLayout}">
+                            <Label
+                                Style="{StaticResource CardLabelSmall}"
+                                Text="{Binding ExposureDate}"
+                                />
+                            <Label
+                                Style="{StaticResource CardLabelSmall}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Description}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
                 </StackLayout>
-            </CollectionView.EmptyView>
-        </CollectionView>
-    </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        <CollectionView.EmptyView>
+            <StackLayout Orientation="Vertical">
+                <Label
+                    Style="{DynamicResource DefaultSubSubTitleLabel}"
+                    Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
+                <Label
+                    Style="{DynamicResource DefaultLabelLittle}"
+                    Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
+            </StackLayout>
+        </CollectionView.EmptyView>
+        <CollectionView.Footer>
+            <StackLayout
+                Padding="20, 20, 20, 10"
+                >
+                <Label
+                    Margin="0, 10, 0, 0"
+                    Style="{StaticResource AnnotationLabel}"
+                    TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.ExposuresPageToUtcDescription}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </CollectionView.Footer>
+    </CollectionView>
 </ContentPage>

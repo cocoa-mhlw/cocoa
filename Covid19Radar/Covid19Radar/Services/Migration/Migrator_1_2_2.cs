@@ -168,6 +168,11 @@ namespace Covid19Radar.Services.Migration
                 }
                 else
                 {
+                    /// **WARNING**
+                    /// `new DateTime()` means `DateTime.MinValue`, it equals `0001/01/01 00:00:00`.
+                    /// For converting timezone, please use `TimeZoneInfo.ContertTimeTo*`.
+                    /// Do not use direct calculation (e.g. subtract `TimeSpan.FromHours(9)` from `DateTime.MinValue`)
+                    /// because it cause an ArgumentOutOfRangeException.
                     _preferencesService.SetValue(preferenceKey, new DateTime().ToString());
                     _loggerService.Info($"Migrated {applicationPropertyKey}");
                 }

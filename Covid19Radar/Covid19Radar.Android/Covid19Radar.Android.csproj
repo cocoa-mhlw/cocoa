@@ -229,15 +229,7 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxhdpi\notify_img01.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable-xhdpi\notify_img02.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xhdpi\notify_img01.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
@@ -354,6 +346,18 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-ja-xxhdpi\alert_workaround_img.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_launcher_background.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v24\ic_launcher_foreground.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
