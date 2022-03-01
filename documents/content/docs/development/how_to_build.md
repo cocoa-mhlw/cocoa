@@ -45,7 +45,7 @@ COCOA内には2つのソリューションファイルがあります。
 
 |キー|解説|
 |---|---|
-|appVersion|アプリのバージョン。CIでの差し替えを想定しているため、手動でのビルドの際は、AndroidManifest.xmlやinfo.plistを書き換える必要があります|
+|appVersion|アプリのバージョン。CIでの差し替えを想定しているため、手動でのビルドの際は、AndroidManifest.xmlやInfo.plistを書き換える必要があります|
 |apiSecret|サーバーのAzure Front Door用のシークレット|
 |apiKey|サーバーのAzure Front Door用のキー|
 |apiUrlBase|APIのエンドポイント（URL）の基礎となる値|
