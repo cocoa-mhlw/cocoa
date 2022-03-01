@@ -2,10 +2,24 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
+using TimeZoneConverter;
+
 namespace Covid19Radar.Common
 {
     public static class AppConstants
     {
+        /// <summary>
+        /// COCOA's birthday.
+        /// </summary>
+        public static readonly DateTime COCOA_FIRST_RELEASE_DATE
+            = DateTime.SpecifyKind(new DateTime(2020, 06, 19, 9, 0, 0), DateTimeKind.Utc);
+
+        /// <summary>
+        /// Japan Standard Time (JST), UTC +9
+        /// </summary>
+        public static TimeZoneInfo TIMEZONE_JST = JstTimeZoneInfo();
+
         /// <summary>
         /// Timestamp format - RFC 3339
         /// </summary>
@@ -66,5 +80,22 @@ namespace Covid19Radar.Common
         /// Delay for error in TEK re-registration.
         /// </summary>
         public const int DelayForRegistrationErrorMillis = 5000;
+
+        #region Other Private Methods
+
+        private static TimeZoneInfo JstTimeZoneInfo()
+        {
+            if (TZConvert.TryGetTimeZoneInfo("Asia/Tokyo", out var timezoneInfo))
+            {
+                return timezoneInfo;
+            }
+            else
+            {
+                // Emergency fallback
+                return TimeZoneInfo.CreateCustomTimeZone("JST", new TimeSpan(9, 0, 0), "(GMT+09:00) JST", "JST");
+            }
+        }
+
+        #endregion
     }
 }

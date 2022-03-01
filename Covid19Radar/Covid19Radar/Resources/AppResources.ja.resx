@@ -290,6 +290,10 @@
     <value>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</value>
     <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
   </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>※日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
+    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンからの信号を受信していません</value>
     <comment>陽性登録者のスマートフォンからの信号を受信していません</comment>
@@ -301,14 +305,6 @@
   <data name="NoRiskContactPageButtonText" xml:space="preserve">
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>陽性のご登録をいただきありがとうございました</value>
-    <comment>陽性のご登録をいただきありがとうございました</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
-    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>利用規約</value>
@@ -335,12 +331,12 @@
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>陽性者との接触一覧</value>
-    <comment>陽性者との接触一覧</comment>
+    <value>陽性登録者との接触一覧</value>
+    <comment>TODO:陽性登録者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>陽性者との接触確認</value>
-    <comment>陽性者との接触確認</comment>
+    <value>陽性登録者との接触確認</value>
+    <comment>TODO:陽性登録者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
     <value>過去14日間の接触</value>
@@ -355,7 +351,7 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>陽性者との接触結果を確認</value>
+    <value>陽性登録者との接触結果を確認</value>
     <comment>陽性者との接触結果を確認</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
@@ -413,26 +409,6 @@
   <data name="TutorialPage2Title" xml:space="preserve">
     <value>プライバシーについて</value>
     <comment>プライバシーについて</comment>
-  </data>
-  <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
-    <comment>通知をご利用いただくために</comment>
-  </data>
-  <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</value>
-    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
-  </data>
-  <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>有効にする</value>
-    <comment>有効にする</comment>
-  </data>
-  <data name="TutorialPage5Description4" xml:space="preserve">
-    <value>あとで設定する</value>
-    <comment>あとで設定する</comment>
-  </data>
-  <data name="TutorialPage5Title" xml:space="preserve">
-    <value>通知をご利用いただくために</value>
-    <comment>通知をご利用いただくために</comment>
   </data>
   <data name="NotifyOtherPageButton" xml:space="preserve">
     <value>登録する</value>
@@ -547,8 +523,8 @@
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>以下の日に陽性者との接触が確認されました。</value>
-    <comment>以下の日に陽性者との接触が確認されました。</comment>
+    <value>次の期間に陽性登録者との接触が確認されました。</value>
+    <comment>TODO:次の期間に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -584,8 +560,12 @@
     <comment>接触通知機能が停止しています</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
-    <value>通信に失敗しました。</value>
-    <comment>通信に失敗しました。</comment>
+    <value>通信に失敗しました</value>
+    <comment>通信に失敗しました</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorFromOverseasMessage" xml:space="preserve">
+    <value>本アプリは日本国内でのみご利用できます。</value>
+    <comment>本アプリは日本国内でのみご利用できます。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
     <value>Exposure Notification起動エラー</value>
@@ -675,10 +655,27 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショット（※）を保存してください。</value>
-    <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショット（※）を保存してください。</comment>
+    <value>症状がない場合、
+陽性者と接触した心当たりがない場合は、
+感染対策に留意しつつ普段通りの生活をお送りください。
+ただし、体調に変化があった場合は、受診を検討ください。</value>
+    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</value>
+    <comment>TODO:次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
+    <value>・発熱等の症状や基礎疾患がある</value>
+    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
+    <value>・陽性者と接触した心当たりがある</value>
+    <comment>TODO:・陽性者と接触した心当たりがある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
+    <value>・その他、受診を希望する</value>
+    <comment>TODO:・その他、受診を希望する</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>確認しました</value>
@@ -814,12 +811,28 @@
     <comment>送信エラー</comment>
   </data>
   <data name="InquiryMailBody" xml:space="preserve">
-    <value>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</value>
-    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
+    <value>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n\r\n----以下は削除しないでください----\r\n</value>
+    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n\r\n----以下は削除しないでください----\r\n</comment>
   </data>
   <data name="InquiryMailSubject" xml:space="preserve">
     <value>接触確認アプリに関するお問い合わせ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="InquiryMailModelTitle" xml:space="preserve">
+    <value>モデル名：</value>
+    <comment>モデル名：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailOSTitle" xml:space="preserve">
+    <value>OS：</value>
+    <comment>OS：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailOSVersionTitle" xml:space="preserve">
+    <value>OSバージョン：</value>
+    <comment>OSバージョン：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailAppVersionTitle" xml:space="preserve">
+    <value>アプリバージョン：</value>
+    <comment>アプリバージョン：（サポートが見る文言なので常に日本語とする）</comment>
   </data>
   <data name="SendIdMailBody1" xml:space="preserve">
     <value>動作情報ID：</value>
@@ -951,20 +964,22 @@
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
+    <value>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</value>
+    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>SMS（※）またはメールにて8桁の処理番号が送られてきます。</value>
-    <comment>SMS（※）またはメールにて8桁の処理番号が送られてきます。</comment>
+    <value>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
+なお処理番号の有効期間は本文中に記載されています。</value>
+    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
+なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</value>
-    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+    <value>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</value>
+    <comment>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>・保健所からMy HER-SYS（マイハーシス）（※）の利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</value>
-    <comment>・保健所からMy HER-SYS（マイハーシス）（※）の利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+    <value>処理番号が届かない場合などは、管轄の保健所にご連絡ください。</value>
+    <comment>処理番号が届かない場合などは、管轄の保健所にご連絡ください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>接触を通知</value>
@@ -1152,10 +1167,6 @@
     <value>スマートフォン用のテキストでの連絡手段。ショートメッセージ</value>
     <comment>スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
   </data>
-  <data name="MyHerSysAnnotationText" xml:space="preserve">
-    <value>厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</value>
-    <comment>厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
-  </data>
   <data name="RandomCodeAnnotationText" xml:space="preserve">
     <value>利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</value>
     <comment>利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</comment>
@@ -1228,6 +1239,27 @@
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
     <value>と同じ</value>
     <comment>と同じ</comment>
+  </data>
+
+  <data name="ExposuresPageToUtcDescription" xml:space="preserve">
+    <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
+    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTo" xml:space="preserve">
+    <value>から</value>
+    <comment>TODO:から</comment>
+  </data>
+  <data name="ExposureDateFormatDate" xml:space="preserve">
+    <value>{2:#}日 午前{3:#}時</value>
+    <comment>TODO:{2:#}日 午前{3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatMonth" xml:space="preserve">
+    <value>{1:#}月 {2:#}日 午前{3:#}時</value>
+    <comment>TODO:{1:#}月{2:#}日 午前{3:#}時</comment>
+  </data>
+  <data name="ExposureDateFormatYear" xml:space="preserve">
+    <value>{0:#}年{1:#}月 {2:#}日 午前{3:#}時</value>
+    <comment>TODO:{0:#}年{1:#}月 午前{2:#}日{3:#}時</comment>
   </data>
 
 </root>

@@ -31,17 +31,14 @@
                 BackgroundColor="#FFF3DD"
                 CornerRadius="10">
                 <StackLayout>
-                    <ffimageloading:CachedImage
-                        AutomationProperties.IsInAccessibleTree="False"
-                        Margin="0,0,0,10"
-                        Aspect="AspectFit"
-                        Source="InfoMark.png" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="1"
-                        Margin="0,0,0,5"
+                        Margin="0,10,0,5"
                         Style="{StaticResource DefaultTitleLabel}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}"
+                        >
+                    </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="2"
@@ -57,7 +54,7 @@
                     </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
+                        TabIndex="3"
                         Margin="0,0,0,5"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
@@ -68,41 +65,65 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
-                        Margin="0,0,0,20"
-                        Command="{Binding Path=OnClickByForm}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="4"
-                        Margin="0"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
+                        Margin="0,0,0,20"
+                        Command="{prism:NavigateTo 'ExposuresPage'}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
+
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         TabIndex="5"
-                        Margin="0, 10, 0, 0"
-                        Style="{StaticResource AnnotationLabel}"
-                        TextColor="{StaticResource PrimaryText}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                                <Span Text="{x:Static resources:AppResources.ScreenshotAnnotationText}"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                        Margin="0, 15, 0, 5"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
+
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="6"
+                        Margin="5, 5, 0, 0"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription3}" />
+
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="7"
+                        Margin="5, 5, 0, 0"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription4}" />
+
+                     <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="8"
+                        Margin="5, 5, 0, 0"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription5}" />
+
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="9"
+                        Margin="0, 20, 0, 10"
+                        HorizontalTextAlignment="Start"
+                        Style="{StaticResource DefaultSubTitleLabel}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
+
+                    <Button
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="10"
+                        Margin="0,20,0,20"
+                        Command="{Binding Path=OnClickByForm}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
+
                 </StackLayout>
             </Frame>
-            <Button
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="6"
-                Command="{prism:NavigateTo 'ExposuresPage'}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
         </StackLayout>
     </ScrollView>
     </ContentView>
