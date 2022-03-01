@@ -19,25 +19,25 @@ COCOA内には2つのソリューションファイルがあります。
 
 ### settings.json
 
-`Covid19Radar`に`settings.json`を作成（`settings.json.sample`をコピー）します。
+`Covid19Radar`に`settings.json`を作成（`settings_template.json`をコピー）します。
 
 ```json
 {
   "appVersion": "APP_VERSION",
   "apiSecret": "API_SECRET",
   "apiKey": "API_KEY",
-  "apiUrlBase": "https://API_URL_BASE/api",
   "supportedRegions": "440",
-  "exposureConfigurationUrlBase": "https://CDN_URL_BASE/c19r",
-  "androidSafetyNetApiKey": "ANDROID_SAFETYNETKEY",
+  "apiUrlBase": "https://API_URL_BASE/api",
   "cdnUrlBase": "https://CDN_URL_BASE/",
+  "exposureConfigurationUrlBase": "https://CDN_URL_BASE/c19r",
   "blobStorageContainerName": "c19r",
-  "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
-  "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
-  "supportEmail": "SUPPORT_EMAIL",
   "logStorageEndpoint": "https://LOG_STORAGE_URL_BASE/",
   "logStorageContainerName": "LOG_STORAGE_CONTAINER_NAME",
-  "logStorageAccountName": "LOG_STORAGE_ACCOUNT_NAME"
+  "logStorageAccountName": "LOG_STORAGE_ACCOUNT_NAME",
+  "androidSafetyNetApiKey": "ANDROID_SAFETYNETKEY",
+  "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
+  "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
+  "supportEmail": "SUPPORT_EMAIL"
 }
 ```
 
@@ -49,15 +49,15 @@ COCOA内には2つのソリューションファイルがあります。
 |appVersion|アプリのバージョン。CIでの差し替えを想定しているため、手動でのビルドの際は、AndroidManifest.xmlやInfo.plistを書き換える必要があります|
 |apiSecret|サーバーのAzure Front Door用のシークレット|
 |apiKey|サーバーのAzure Front Door用のキー|
-|apiUrlBase|APIのエンドポイント（URL）の基礎となる値|
-|androidSafetyNetApiKey|SafetyNet Attestation APIのキー|
 |supportedRegions|接触通知APIが規定しているRegion。日本の場合は`440`|
-|exposureConfigurationUrlBase|設定ファイルのURLの基礎となる値|
+|apiUrlBase|APIのエンドポイント（URL）の基礎となる値|
 |cdnUrlBase|診断キーをダウンロードするCDNのURLの基礎となる値|
+|exposureConfigurationUrlBase|設定ファイルのURLの基礎となる値|
 |blobStorageContainerName|診断キーをダウンロードするBlobのコンテナ名|
 |logStorageEndpoint|動作ログを送信するAzure Storageのエンドポイント|
 |logStorageContainerName|動作ログを送信するAzure Storageのコンテナ名|
 |logStorageAccountName|動作ログを送信するAzure Storageのアカウント名|
+|androidSafetyNetApiKey|SafetyNet Attestation APIのキー|
 |appStoreUrl|App StoreのURL|
 |googlePlayUrl|Google Play StoreのURL|
 |supportEmail|サポート用に表示するメールアドレス|
