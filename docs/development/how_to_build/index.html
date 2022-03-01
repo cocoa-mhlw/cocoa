@@ -5,31 +5,25 @@
 <meta name=description content="ビルド方法 #  事前準備 #  COCOAはXamarinベースのアプリなので、Xamarin開発環境(Visual Studio)を自身のPCへインストールします。 詳細な手順等については、Xamarinのインストールを参照してください。
 Xamarinについては、Xamarinドキュメント を参照してください。
 COCOAの構成 #  COCOA内には2つのソリューションファイルがあります。
- COCOAアプリ・・・Covid19Radar.sln COCOAサーバ・・・Covid19Radar.Functions.sln  COCOAアプリのビルド #  ビルド構成 #  COCOAアプリのビルド構成は以下の通りです(Android/iOS共通)。
-接触確認APIの利用については、接触確認APIの利用についても参照してください。
-   ビルド構成 サーバ通信 接触確認API 利用可能なメンバー     Debug ON ON COCOA開発チーム   Debug_Mock OFF(*) OFF(*) COCOA開発チーム, コミュニティメンバー   Release ON ON COCOA開発チーム    (*) モックAPIを利用
-Debug #  デバッグ用の構成です。サーバー通信と接触確認APIを利用します。 デバッグレベルのログを出力したり、AndroidのAndroidManifestの一部をデバッグ用に切り替えます。 切替内容に関する詳細は、DEBUGマクロを参照してください。
-COCOA開発チームがデバッグする際に利用します。コミュニティメンバーが利用することはできません。
-Debug_Mock #  サーバーとの通信と接触確認APIについてはモック（Mock）が応答する構成です。">
+ COCOAアプリ・・・Covid19Radar.sln COCOAサーバ・・・Covid19Radar.Functions.sln  COCOAアプリのビルド #  settings.json #  Covid19Radarにsettings.jsonを作成（settings_template.jsonをコピー）します。
+{ &#34;appVersion&#34;: &#34;APP_VERSION&#34;, &#34;apiSecret&#34;: &#34;API_SECRET&#34;, &#34;apiKey&#34;: &#34;API_KEY&#34;, &#34;supportedRegions&#34;: &#34;440&#34;, &#34;apiUrlBase&#34;: &#34;https://API_URL_BASE/api&#34;, &#34;cdnUrlBase&#34;: &#34;https://CDN_URL_BASE/&#34;, &#34;exposureConfigurationUrlBase&#34;: &#34;https://CDN_URL_BASE/c19r&#34;, &#34;blobStorageContainerName&#34;: &#34;c19r&#34;, &#34;logStorageEndpoint&#34;: &#34;https://LOG_STORAGE_URL_BASE/&#34;, &#34;logStorageContainerName&#34;: &#34;LOG_STORAGE_CONTAINER_NAME&#34;, &#34;logStorageAccountName&#34;: &#34;LOG_STORAGE_ACCOUNT_NAME&#34;, &#34;androidSafetyNetApiKey&#34;: &#34;ANDROID_SAFETYNETKEY&#34;, &#34;appStoreUrl&#34;: &#34;https://itunes.apple.com/jp/app/id1516764458?mt=8&#34;, &#34;googlePlayUrl&#34;: &#34;https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar&#34;, &#34;supportEmail&#34;: &#34;SUPPORT_EMAIL&#34; } 必要に応じて値を書き換えます。すべての値を正しく設定しなくてもビルドは可能です。 大文字のスネークケースで記述されている箇所（APP_VERSION など）はアプリ配布時のパイプラインで実際の値に書き換えます。
+   キー 解説     appVersion アプリのバージョン。CIでの差し替えを想定しているため、手動でのビルドの際は、AndroidManifest.">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content="ビルド方法">
 <meta property="og:description" content="ビルド方法 #  事前準備 #  COCOAはXamarinベースのアプリなので、Xamarin開発環境(Visual Studio)を自身のPCへインストールします。 詳細な手順等については、Xamarinのインストールを参照してください。
 Xamarinについては、Xamarinドキュメント を参照してください。
 COCOAの構成 #  COCOA内には2つのソリューションファイルがあります。
- COCOAアプリ・・・Covid19Radar.sln COCOAサーバ・・・Covid19Radar.Functions.sln  COCOAアプリのビルド #  ビルド構成 #  COCOAアプリのビルド構成は以下の通りです(Android/iOS共通)。
-接触確認APIの利用については、接触確認APIの利用についても参照してください。
-   ビルド構成 サーバ通信 接触確認API 利用可能なメンバー     Debug ON ON COCOA開発チーム   Debug_Mock OFF(*) OFF(*) COCOA開発チーム, コミュニティメンバー   Release ON ON COCOA開発チーム    (*) モックAPIを利用
-Debug #  デバッグ用の構成です。サーバー通信と接触確認APIを利用します。 デバッグレベルのログを出力したり、AndroidのAndroidManifestの一部をデバッグ用に切り替えます。 切替内容に関する詳細は、DEBUGマクロを参照してください。
-COCOA開発チームがデバッグする際に利用します。コミュニティメンバーが利用することはできません。
-Debug_Mock #  サーバーとの通信と接触確認APIについてはモック（Mock）が応答する構成です。">
+ COCOAアプリ・・・Covid19Radar.sln COCOAサーバ・・・Covid19Radar.Functions.sln  COCOAアプリのビルド #  settings.json #  Covid19Radarにsettings.jsonを作成（settings_template.jsonをコピー）します。
+{ &#34;appVersion&#34;: &#34;APP_VERSION&#34;, &#34;apiSecret&#34;: &#34;API_SECRET&#34;, &#34;apiKey&#34;: &#34;API_KEY&#34;, &#34;supportedRegions&#34;: &#34;440&#34;, &#34;apiUrlBase&#34;: &#34;https://API_URL_BASE/api&#34;, &#34;cdnUrlBase&#34;: &#34;https://CDN_URL_BASE/&#34;, &#34;exposureConfigurationUrlBase&#34;: &#34;https://CDN_URL_BASE/c19r&#34;, &#34;blobStorageContainerName&#34;: &#34;c19r&#34;, &#34;logStorageEndpoint&#34;: &#34;https://LOG_STORAGE_URL_BASE/&#34;, &#34;logStorageContainerName&#34;: &#34;LOG_STORAGE_CONTAINER_NAME&#34;, &#34;logStorageAccountName&#34;: &#34;LOG_STORAGE_ACCOUNT_NAME&#34;, &#34;androidSafetyNetApiKey&#34;: &#34;ANDROID_SAFETYNETKEY&#34;, &#34;appStoreUrl&#34;: &#34;https://itunes.apple.com/jp/app/id1516764458?mt=8&#34;, &#34;googlePlayUrl&#34;: &#34;https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar&#34;, &#34;supportEmail&#34;: &#34;SUPPORT_EMAIL&#34; } 必要に応じて値を書き換えます。すべての値を正しく設定しなくてもビルドは可能です。 大文字のスネークケースで記述されている箇所（APP_VERSION など）はアプリ配布時のパイプラインで実際の値に書き換えます。
+   キー 解説     appVersion アプリのバージョン。CIでの差し替えを想定しているため、手動でのビルドの際は、AndroidManifest.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-02-08T17:09:19+09:00">
+<meta property="article:modified_time" content="2022-03-02T08:46:45+09:00">
 <title>ビルド方法 | COCOA Open Source Project</title>
 <link rel=manifest href=/cocoa/manifest.json>
 <link rel=icon href=/cocoa/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
 <script defer src=/cocoa/flexsearch.min.js></script>
-<script defer src=/cocoa/en.search.min.dc3fd663b2f27ed300cdee171f5abf9f830f7bf46eb8b5ae39291628805a4e1a.js integrity="sha256-3D/WY7LyftMAze4XH1q/n4MPe/RuuLWuOSkWKIBaTho=" crossorigin=anonymous></script>
+<script defer src=/cocoa/en.search.min.dff6efdbebc8af27e162967e223ba350eb55c2c02eda9e29b8b3122f88d1e9a2.js integrity="sha256-3/bv2+vIryfhYpZ+IjujUOtVwsAu2p4puLMSL4jR6aI=" crossorigin=anonymous></script>
 </head>
 <body dir=ltr>
 <input type=checkbox class="hidden toggle" id=menu-control>
@@ -126,6 +120,7 @@ GitHubリポジトリ
 <li><a href=#cocoaの構成>COCOAの構成</a></li>
 <li><a href=#cocoaアプリのビルド>COCOAアプリのビルド</a>
 <ul>
+<li><a href=#settingsjson>settings.json</a></li>
 <li><a href=#ビルド構成>ビルド構成</a></li>
 <li><a href=#ビルド実行手順>ビルド＆実行手順</a></li>
 <li><a href=#注意事項>注意事項</a></li>
@@ -167,6 +162,100 @@ COCOAの構成
 COCOAアプリのビルド
 <a class=anchor href=#cocoa%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%93%e3%83%ab%e3%83%89>#</a>
 </h2>
+<h3 id=settingsjson>
+settings.json
+<a class=anchor href=#settingsjson>#</a>
+</h3>
+<p><code>Covid19Radar</code>に<code>settings.json</code>を作成（<code>settings_template.json</code>をコピー）します。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+  <span style=color:#f92672>&#34;appVersion&#34;</span>: <span style=color:#e6db74>&#34;APP_VERSION&#34;</span>,
+  <span style=color:#f92672>&#34;apiSecret&#34;</span>: <span style=color:#e6db74>&#34;API_SECRET&#34;</span>,
+  <span style=color:#f92672>&#34;apiKey&#34;</span>: <span style=color:#e6db74>&#34;API_KEY&#34;</span>,
+  <span style=color:#f92672>&#34;supportedRegions&#34;</span>: <span style=color:#e6db74>&#34;440&#34;</span>,
+  <span style=color:#f92672>&#34;apiUrlBase&#34;</span>: <span style=color:#e6db74>&#34;https://API_URL_BASE/api&#34;</span>,
+  <span style=color:#f92672>&#34;cdnUrlBase&#34;</span>: <span style=color:#e6db74>&#34;https://CDN_URL_BASE/&#34;</span>,
+  <span style=color:#f92672>&#34;exposureConfigurationUrlBase&#34;</span>: <span style=color:#e6db74>&#34;https://CDN_URL_BASE/c19r&#34;</span>,
+  <span style=color:#f92672>&#34;blobStorageContainerName&#34;</span>: <span style=color:#e6db74>&#34;c19r&#34;</span>,
+  <span style=color:#f92672>&#34;logStorageEndpoint&#34;</span>: <span style=color:#e6db74>&#34;https://LOG_STORAGE_URL_BASE/&#34;</span>,
+  <span style=color:#f92672>&#34;logStorageContainerName&#34;</span>: <span style=color:#e6db74>&#34;LOG_STORAGE_CONTAINER_NAME&#34;</span>,
+  <span style=color:#f92672>&#34;logStorageAccountName&#34;</span>: <span style=color:#e6db74>&#34;LOG_STORAGE_ACCOUNT_NAME&#34;</span>,
+  <span style=color:#f92672>&#34;androidSafetyNetApiKey&#34;</span>: <span style=color:#e6db74>&#34;ANDROID_SAFETYNETKEY&#34;</span>,
+  <span style=color:#f92672>&#34;appStoreUrl&#34;</span>: <span style=color:#e6db74>&#34;https://itunes.apple.com/jp/app/id1516764458?mt=8&#34;</span>,
+  <span style=color:#f92672>&#34;googlePlayUrl&#34;</span>: <span style=color:#e6db74>&#34;https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar&#34;</span>,
+  <span style=color:#f92672>&#34;supportEmail&#34;</span>: <span style=color:#e6db74>&#34;SUPPORT_EMAIL&#34;</span>
+}
+</code></pre></div><p>必要に応じて値を書き換えます。すべての値を正しく設定しなくてもビルドは可能です。
+大文字のスネークケースで記述されている箇所（<code>APP_VERSION</code> など）はアプリ配布時のパイプラインで実際の値に書き換えます。</p>
+<table>
+<thead>
+<tr>
+<th>キー</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appVersion</td>
+<td>アプリのバージョン。CIでの差し替えを想定しているため、手動でのビルドの際は、AndroidManifest.xmlやInfo.plistを書き換える必要があります</td>
+</tr>
+<tr>
+<td>apiSecret</td>
+<td>サーバーのAzure Front Door用のシークレット</td>
+</tr>
+<tr>
+<td>apiKey</td>
+<td>サーバーのAzure Front Door用のキー</td>
+</tr>
+<tr>
+<td>supportedRegions</td>
+<td>接触通知APIが規定しているRegion。日本の場合は<code>440</code></td>
+</tr>
+<tr>
+<td>apiUrlBase</td>
+<td>APIのエンドポイント（URL）の基礎となる値</td>
+</tr>
+<tr>
+<td>cdnUrlBase</td>
+<td>診断キーをダウンロードするCDNのURLの基礎となる値</td>
+</tr>
+<tr>
+<td>exposureConfigurationUrlBase</td>
+<td>設定ファイルのURLの基礎となる値</td>
+</tr>
+<tr>
+<td>blobStorageContainerName</td>
+<td>診断キーをダウンロードするBlobのコンテナ名</td>
+</tr>
+<tr>
+<td>logStorageEndpoint</td>
+<td>動作ログを送信するAzure Storageのエンドポイント</td>
+</tr>
+<tr>
+<td>logStorageContainerName</td>
+<td>動作ログを送信するAzure Storageのコンテナ名</td>
+</tr>
+<tr>
+<td>logStorageAccountName</td>
+<td>動作ログを送信するAzure Storageのアカウント名</td>
+</tr>
+<tr>
+<td>androidSafetyNetApiKey</td>
+<td>SafetyNet Attestation APIのキー</td>
+</tr>
+<tr>
+<td>appStoreUrl</td>
+<td>App StoreのURL</td>
+</tr>
+<tr>
+<td>googlePlayUrl</td>
+<td>Google Play StoreのURL</td>
+</tr>
+<tr>
+<td>supportEmail</td>
+<td>サポート用に表示するメールアドレス</td>
+</tr>
+</tbody>
+</table>
 <h3 id=ビルド構成>
 ビルド構成
 <a class=anchor href=#%e3%83%93%e3%83%ab%e3%83%89%e6%a7%8b%e6%88%90>#</a>
@@ -345,6 +434,7 @@ iOSの場合
 <li><a href=#cocoaの構成>COCOAの構成</a></li>
 <li><a href=#cocoaアプリのビルド>COCOAアプリのビルド</a>
 <ul>
+<li><a href=#settingsjson>settings.json</a></li>
 <li><a href=#ビルド構成>ビルド構成</a></li>
 <li><a href=#ビルド実行手順>ビルド＆実行手順</a></li>
 <li><a href=#注意事項>注意事項</a></li>
