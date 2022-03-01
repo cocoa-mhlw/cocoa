@@ -13,5 +13,6 @@ type: docs
  * [Kuu](https://github.com/cocoa-mhlw/cocoa/commits?author=fumiya-kume)
  * [山本ユースケ](https://github.com/cocoa-mhlw/cocoa/commits?author=yusuke)
  * [Murayu](https://github.com/cocoa-mhlw/cocoa/commits?author=Murayu0225)
+ * [Kenji Suzuki](https://github.com/cocoa-mhlw/cocoa/commits?author=kvaluation)
 
 （アルファベット順）
