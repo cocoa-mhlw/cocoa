@@ -21,7 +21,7 @@ COCOA内には2つのソリューションファイルがあります。
 
 `Covid19Radar`に`settings.json`を作成（`settings.json.sample`をコピー）します。
 
-```
+```json
 {
   "appVersion": "APP_VERSION",
   "apiSecret": "API_SECRET",
