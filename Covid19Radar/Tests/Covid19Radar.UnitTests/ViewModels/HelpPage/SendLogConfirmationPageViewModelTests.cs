@@ -152,7 +152,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Setup(x => x.CopyLogUploadingFileToPublicPath(testZipFileName)).Returns(testPublicZipFilePath);
 
             var unitUnderTest = CreateViewModel();
-            unitUnderTest.Initialize(SendLogConfirmationPage.BuildNavigationParams(testLogId, testPublicZipFileName));
+            unitUnderTest.Initialize(SendLogConfirmationPage.BuildNavigationParams(testLogId, testPublicZipFilePath));
 
             mockUserDialogs.Invocations.Clear();
             mockLogFileService.Invocations.Clear();
