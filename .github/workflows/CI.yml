@@ -52,7 +52,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Prepare settings.json
-      run: mv -f ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings_template.json ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
+      run: mv -Force ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings_template.json ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
     - name: Deploy nuget packages - ${{ matrix.Configuration }}
       run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/| true
     - name: Add msbuild to PATH
