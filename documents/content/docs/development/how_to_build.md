@@ -57,7 +57,7 @@ COCOA内には2つのソリューションファイルがあります。
 |logStorageEndpoint|動作ログを送信するAzure Storageのエンドポイント|
 |logStorageContainerName|動作ログを送信するAzure Storageのコンテナ名|
 |logStorageAccountName|動作ログを送信するAzure Storageのアカウント名|
-|appStoreUrl|AppStoreのURL|
+|appStoreUrl|App StoreのURL|
 |googlePlayUrl|Google Play StoreのURL|
 |supportEmail|サポート用に表示するメールアドレス|
 
