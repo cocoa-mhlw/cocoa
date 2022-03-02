@@ -101,5 +101,16 @@ namespace Covid19Radar.iOS.Services
 
             _loggerService.EndMethod();
         }
+
+        public async Task<bool> IsWarnedLocalNotificationOffAsync()
+        {
+            _loggerService.StartMethod();
+
+            var settings = await UNUserNotificationCenter.Current.GetNotificationSettingsAsync();
+
+            _loggerService.EndMethod();
+
+            return settings.AuthorizationStatus == UNAuthorizationStatus.Denied;
+        }
     }
 }

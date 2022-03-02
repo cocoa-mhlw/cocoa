@@ -22,6 +22,7 @@ namespace Covid19Radar.ViewModels
     public class HomePageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
         public string SharingThisAppReadText => $"{AppResources.HomePageDescription5} {AppResources.Button}";
+        public string LocalNotificationOffReadText => $"{AppResources.HomePageLocalNotificationOffWarningLabelText} {AppResources.Button}";
 
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository _userDataRepository;
@@ -69,6 +70,13 @@ namespace Covid19Radar.ViewModels
         {
             get { return _isVisibleENStatusStoppedLayout; }
             set { SetProperty(ref _isVisibleENStatusStoppedLayout, value); }
+        }
+
+        private bool _isVisibleLocalNotificationOffWarningLayout;
+        public bool IsVisibleLocalNotificationOffWarningLayout
+        {
+            get { return _isVisibleLocalNotificationOffWarningLayout; }
+            set { SetProperty(ref _isVisibleLocalNotificationOffWarningLayout, value); }
         }
 
         public HomePageViewModel(
@@ -245,6 +253,19 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         });
 
+        public Command OnClickLocalNotificationOffWarning => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var result = await dialogService.ShowLocalNotificationOffWarningAsync();
+            if (result)
+            {
+                externalNavigationService.NavigateAppSettings();
+            }
+
+            loggerService.EndMethod();
+        });
+
         public Command OnClickQuestionIcon => new Command(() =>
         {
             loggerService.StartMethod();
@@ -380,6 +401,8 @@ namespace Covid19Radar.ViewModels
                     }
                 }
             }
+
+            IsVisibleLocalNotificationOffWarningLayout = await localNotificationService.IsWarnedLocalNotificationOffAsync();
 
             loggerService.EndMethod();
         }

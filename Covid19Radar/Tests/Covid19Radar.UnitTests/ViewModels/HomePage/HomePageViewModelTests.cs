@@ -138,9 +138,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.Initialize(parameters);
 
             mockLocalNotificationService
-                .Verify(x => x.PrepareAsync(), Times.Once);
+                .Verify(x => x.PrepareAsync(), Times.Once());
             mockExposureNotificationApiService
-                .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Once());
         }
 
         [Fact]
@@ -160,7 +160,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnResume();
 
             mockExposureNotificationApiService
-                .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Once());
         }
 
         [Fact]
@@ -180,7 +180,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnEnabled();
 
             mockExposureNotificationApiService
-                .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Once());
         }
 
         [Fact]
@@ -198,7 +198,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnDeclined();
 
             mockExposureNotificationApiService
-                .Verify(x => x.StartExposureNotificationAsync(), Times.Never);
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Never());
         }
 
         [Theory]
@@ -275,6 +275,40 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             var mockLatestConfirmationDate = mockLastConfirmedUtcDateTime.ToLocalTime().ToString(AppResources.DateTimeFormatToDisplayOnHomePage);
             Assert.Equal(mockLatestConfirmationDate, homePageViewModel.LatestConfirmationDate);
+        }
+
+        [Fact]
+        public void UpdateView_LocalNotificationOffWarning_Hidden()
+        {
+            var homePageViewModel = CreateViewModel();
+
+            mockExposureNotificationApiService
+                .Setup(x => x.GetStatusCodesAsync())
+                .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
+            mockLocalNotificationService
+                .Setup(x => x.IsWarnedLocalNotificationOffAsync())
+                .ReturnsAsync(false);
+
+            homePageViewModel.OnAppearing();
+
+            Assert.False(homePageViewModel.IsVisibleLocalNotificationOffWarningLayout);
+        }
+
+        [Fact]
+        public void UpdateView_LocalNotificationOffWarning_Shown()
+        {
+            var homePageViewModel = CreateViewModel();
+
+            mockExposureNotificationApiService
+                .Setup(x => x.GetStatusCodesAsync())
+                .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
+            mockLocalNotificationService
+                .Setup(x => x.IsWarnedLocalNotificationOffAsync())
+                .ReturnsAsync(true);
+
+            homePageViewModel.OnAppearing();
+
+            Assert.True(homePageViewModel.IsVisibleLocalNotificationOffWarningLayout);
         }
 
         [Fact]
@@ -447,7 +481,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnClickExposures.Execute(null);
 
             mockNavigationService
-                .Verify(x => x.NavigateAsync("ContactedNotifyPage"), Times.Once);
+                .Verify(x => x.NavigateAsync("ContactedNotifyPage"), Times.Once());
         }
 
         [Theory]
@@ -507,7 +541,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnClickExposures.Execute(null);
 
             mockNavigationService
-                .Verify(x => x.NavigateAsync("ExposureCheckPage", It.IsAny<INavigationParameters>()), Times.Once);
+                .Verify(x => x.NavigateAsync("ExposureCheckPage", It.IsAny<INavigationParameters>()), Times.Once());
         }
 
         [Theory]
@@ -553,7 +587,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnClickExposures.Execute(null);
 
             mockNavigationService
-                .Verify(x => x.NavigateAsync("ExposureCheckPage", It.IsAny<INavigationParameters>()), Times.Once);
+                .Verify(x => x.NavigateAsync("ExposureCheckPage", It.IsAny<INavigationParameters>()), Times.Once());
         }
 
 
@@ -573,9 +607,39 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
 
             mockDialogService
-                .Verify(x => x.ShowHomePageUnknownErrorWaringAsync(), Times.Once);
+                .Verify(x => x.ShowHomePageUnknownErrorWaringAsync(), Times.Once());
             mockNavigationService
-                .Verify(x => x.NavigateAsync(It.IsAny<String>()), Times.Never);
+                .Verify(x => x.NavigateAsync(It.IsAny<String>()), Times.Never());
+        }
+
+        [Fact]
+        public void OnClickLocalNotificationOffWarningTest_DialogOk()
+        {
+            mockDialogService.Setup(x => x.ShowLocalNotificationOffWarningAsync())
+                    .ReturnsAsync(true);
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnClickLocalNotificationOffWarning.Execute(null);
+
+            mockDialogService
+                .Verify(x => x.ShowLocalNotificationOffWarningAsync(), Times.Once());
+            mockExternalNavigationService
+                .Verify(x => x.NavigateAppSettings(), Times.Once());
+        }
+
+        [Fact]
+        public void OnClickLocalNotificationOffWarningTest_DialogCancel()
+        {
+            mockDialogService.Setup(x => x.ShowLocalNotificationOffWarningAsync())
+                    .ReturnsAsync(false);
+
+            var homePageViewModel = CreateViewModel();
+            homePageViewModel.OnClickLocalNotificationOffWarning.Execute(null);
+
+            mockDialogService
+                .Verify(x => x.ShowLocalNotificationOffWarningAsync(), Times.Once());
+            mockExternalNavigationService
+                .Verify(x => x.NavigateAppSettings(), Times.Never());
         }
     }
 }
