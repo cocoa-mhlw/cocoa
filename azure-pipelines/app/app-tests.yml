@@ -8,7 +8,10 @@ jobs:
     vmImage: 'windows-2019'
 
   steps:
-  - script: mv -Force $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings_template.json $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json
+  - script: mv --help
+    displayName: 'mv --help'
+
+  - script: mv -f $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings_template.json $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json
     displayName: 'Prepare settings.json'
 
   - task: DotNetCoreCLI@2
