@@ -622,9 +622,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnClickLocalNotificationOffWarning.Execute(null);
 
             mockDialogService
-                .Verify(x => x.ShowLocalNotificationOffWarningAsync(), Times.Once);
+                .Verify(x => x.ShowLocalNotificationOffWarningAsync(), Times.Once());
             mockExternalNavigationService
-                .Verify(x => x.NavigateAppSettings(), Times.Once);
+                .Verify(x => x.NavigateAppSettings(), Times.Once());
         }
 
         [Fact]
@@ -637,7 +637,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnClickLocalNotificationOffWarning.Execute(null);
 
             mockDialogService
-                .Verify(x => x.ShowLocalNotificationOffWarningAsync(), Times.Once);
+                .Verify(x => x.ShowLocalNotificationOffWarningAsync(), Times.Once());
             mockExternalNavigationService
                 .Verify(x => x.NavigateAppSettings(), Times.Never());
         }
