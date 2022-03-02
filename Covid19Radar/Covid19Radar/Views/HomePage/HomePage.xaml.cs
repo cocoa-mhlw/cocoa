@@ -5,6 +5,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using FFImageLoading.Forms;
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -45,7 +46,7 @@ namespace Covid19Radar.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
+            SemanticExtensions.SetSemanticFocus(Page);
             StartAnimation();
         }
 
