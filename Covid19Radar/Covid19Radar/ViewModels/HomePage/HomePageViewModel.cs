@@ -402,14 +402,7 @@ namespace Covid19Radar.ViewModels
                 }
             }
 
-            if (await localNotificationService.IsWarnedLocalNotificationOffAsync())
-            {
-                IsVisibleLocalNotificationOffWarningLayout = true;
-            }
-            else
-            {
-                IsVisibleLocalNotificationOffWarningLayout = false;
-            }
+            IsVisibleLocalNotificationOffWarningLayout = await localNotificationService.IsWarnedLocalNotificationOffAsync();
 
             loggerService.EndMethod();
         }
