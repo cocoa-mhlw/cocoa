@@ -138,9 +138,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.Initialize(parameters);
 
             mockLocalNotificationService
-                .Verify(x => x.PrepareAsync(), Times.Once);
+                .Verify(x => x.PrepareAsync(), Times.Once());
             mockExposureNotificationApiService
-                .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Once());
         }
 
         [Fact]
@@ -160,7 +160,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             homePageViewModel.OnResume();
 
             mockExposureNotificationApiService
-                .Verify(x => x.StartExposureNotificationAsync(), Times.Once);
+                .Verify(x => x.StartExposureNotificationAsync(), Times.Once());
         }
 
         [Fact]
