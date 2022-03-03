@@ -44,28 +44,6 @@
 [ ] Other... Please describe:
 ```
 
-## 検証方法 / How to test
-
-### コードの入手 / Get the code
-
-```
-git clone [repo-address]
-cd [repo-name]
-git checkout [branch-name]
-dotnet restore
-```
-
-### コードの検証 / Test the code
-
-<!--
-  テスト環境やマニュアルテストの実行手順をお書きください。
-  Add steps to run the tests suite and/or manually test
--->
-
-```
-
-```
-
 ## 確認事項 / What to check
 
 -
