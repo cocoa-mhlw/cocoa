@@ -25,7 +25,6 @@
     <PackageReference Include="Microsoft.CodeCoverage" Version="17.0.0" />
     <PackageReference Include="Xamarin.Forms.Mocks" Version="4.7.0.1" />
     <PackageReference Include="Chino.Common" Version="1.0.0-rc11" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,7 +54,6 @@
     <None Remove="Files\exposure_risk_calculation_configuration_v1_1.json" />
     <None Remove="Files\exposure_risk_configuration1.json" />
     <None Remove="Files\exposure_risk_configuration2.json" />
-    <None Remove="Xamarin.CommunityToolkit" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\exposure_configuration1.json">
