@@ -14,7 +14,7 @@
   Describe the intention of the changes being proposed. What problem does it solve or functionality does it add?
 -->
 
--
+- 
 
 ## 破壊的変更をもたらしますか / Does this introduce a breaking change?
 
@@ -46,7 +46,7 @@
 
 ## 確認事項 / What to check
 
--
+- [ ] 
 
 ## その他 / Other information
 
