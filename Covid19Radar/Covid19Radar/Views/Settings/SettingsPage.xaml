@@ -107,6 +107,7 @@
                 TabIndex="9"
                 Margin="15, 5"
                 Style="{StaticResource DefaultLabelSmall}"
+                TextColor="{StaticResource SecondaryText}"
                 Text="{x:Static resources:AppResources.UrlGitHubRepository}" />
 
             <Button
@@ -120,7 +121,7 @@
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
                 TabIndex="11"
-                Margin="20, 10"
+                Margin="20, 10, 20, 20"
                 Command="{prism:NavigateTo 'LicenseAgreementPage'}"
                 Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.SettingsPageLicenseButton}" />
