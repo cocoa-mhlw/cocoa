@@ -54,6 +54,7 @@
     <None Remove="Files\exposure_risk_calculation_configuration_v1_1.json" />
     <None Remove="Files\exposure_risk_configuration1.json" />
     <None Remove="Files\exposure_risk_configuration2.json" />
+    <None Remove="Files\check_version1.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\exposure_configuration1.json">
@@ -85,5 +86,10 @@
     <None Update="Files\exposure_risk_calculation_configuration_v1_1.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Files\check_version1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -23,6 +23,21 @@ namespace Covid19Radar.Services
         public string BuildNumber => AppInfo.BuildString;
         public string AppPackageName => AppInfo.PackageName;
 
+        public string StoreUrl
+        {
+            get
+            {
+                if (IsIos)
+                {
+                    return AppSettings.Instance.AppStoreUrl;
+                }
+                else
+                {
+                    return AppSettings.Instance.GooglePlayUrl;
+                }
+            }
+        }
+
         // PhoneDialer
         public void PhoneDialerOpen(string number) => PhoneDialer.Open(number);
     }
