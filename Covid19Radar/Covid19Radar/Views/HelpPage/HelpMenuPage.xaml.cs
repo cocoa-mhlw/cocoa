@@ -19,7 +19,7 @@ namespace Covid19Radar.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            SemanticExtensions.SetSemanticFocus(Page);
+            SemanticExtensions.SetSemanticFocus(this);
             list_view.SelectedItem = null;
         }
     }
