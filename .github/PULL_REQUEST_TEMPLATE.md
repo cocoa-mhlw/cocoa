@@ -16,6 +16,15 @@
 
 - 
 
+## 変更内容 / Changes
+
+<!--
+  この PR の変更内容をご説明ください。
+  Describe the changes to this Pull Request.
+-->
+
+- 
+
 ## 破壊的変更をもたらしますか / Does this introduce a breaking change?
 
 <!--
