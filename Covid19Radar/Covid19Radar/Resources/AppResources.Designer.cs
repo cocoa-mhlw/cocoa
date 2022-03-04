@@ -1948,5 +1948,17 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("ExposureDateFormatYear", resourceCulture);
             }
         }
+        
+        public static string GeneralErrorTitle {
+            get {
+                return ResourceManager.GetString("GeneralErrorTitle", resourceCulture);
+            }
+        }
+        
+        public static string GeneralErrorRegisterAgainMessage {
+            get {
+                return ResourceManager.GetString("GeneralErrorRegisterAgainMessage", resourceCulture);
+            }
+        }
     }
 }

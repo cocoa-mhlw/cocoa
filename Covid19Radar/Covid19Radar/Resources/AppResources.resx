@@ -1385,4 +1385,13 @@ Note: this app does not collect users’ location information.</value>
     <comment>TODO:{0:#}年{1:#}月{2:#}日 午前{3:#}時</comment>
   </data>
 
+  <data name="GeneralErrorTitle" xml:space="preserve">
+    <value>An error has occurred</value>
+    <comment>エラーが発生しました</comment>
+  </data>
+  <data name="GeneralErrorRegisterAgainMessage" xml:space="preserve">
+    <value>Please try to register again after a while.</value>
+    <comment>時間をおいてから再度登録を行ってください。</comment>
+  </data>
+
 </root>

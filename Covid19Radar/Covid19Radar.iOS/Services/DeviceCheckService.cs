@@ -22,5 +22,8 @@ namespace Covid19Radar.iOS.Services
 			var token = await DeviceCheck.DCDevice.CurrentDevice.GenerateTokenAsync();
 			return Convert.ToBase64String(token.ToArray());
 		}
-	}
+
+        public bool IsErrorPayload(string payload)
+			=> false;
+    }
 }
