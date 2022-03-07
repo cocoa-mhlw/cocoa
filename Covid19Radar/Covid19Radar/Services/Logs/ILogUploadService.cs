@@ -8,6 +8,6 @@ namespace Covid19Radar.Services.Logs
 {
     public interface ILogUploadService
     {
-        Task<bool> UploadAsync(string zipFileName, string sasToken);
+        Task<bool> UploadAsync(string zipFilePath, string sasToken);
     }
 }

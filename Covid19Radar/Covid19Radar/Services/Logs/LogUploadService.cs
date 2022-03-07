@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services.Logs
@@ -24,7 +23,7 @@ namespace Covid19Radar.Services.Logs
             this.storageService = storageService;
         }
 
-        public async Task<bool> UploadAsync(string zipFileName, string sasToken)
+        public async Task<bool> UploadAsync(string zipFilePath, string sasToken)
         {
             loggerService.StartMethod();
 
@@ -34,14 +33,13 @@ namespace Covid19Radar.Services.Logs
             {
                 // Upload to storage.
                 var logTmpPath = logPathService.LogUploadingTmpPath;
-                var logZipPath = Path.Combine(logTmpPath, zipFileName);
 
                 var setting = AppSettings.Instance;
                 var endpoint = setting.LogStorageEndpoint;
                 var uploadPath = setting.LogStorageContainerName;
                 var accountName = setting.LogStorageAccountName;
 
-                var uploadResult = await storageService.UploadAsync(endpoint, uploadPath, accountName, sasToken, logZipPath);
+                var uploadResult = await storageService.UploadAsync(endpoint, uploadPath, accountName, sasToken, zipFilePath);
                 if (!uploadResult)
                 {
                     throw new Exception("Failed to upload to storage.");
