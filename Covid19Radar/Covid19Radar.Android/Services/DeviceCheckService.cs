@@ -26,11 +26,11 @@ namespace Covid19Radar.Droid.Services
             return GetSafetyNetAttestationAsync(nonce);
         }
 
-        public bool IsErrorPayload(string jwsResult)
+        public bool IsErrorPayload(string token)
         {
             try
             {
-                var jwt = new JwtSecurityToken(jwsResult);
+                var jwt = new JwtSecurityToken(token);
                 var payloadJson = jwt.Payload.SerializeToJson();
 
                 var error = JObject.Parse(payloadJson).Value<string>("error");
