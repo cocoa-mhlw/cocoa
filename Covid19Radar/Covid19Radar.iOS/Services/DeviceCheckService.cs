@@ -23,7 +23,7 @@ namespace Covid19Radar.iOS.Services
 			return Convert.ToBase64String(token.ToArray());
 		}
 
-        public bool IsErrorPayload(string payload)
+        public bool IsErrorPayload(string jwsResult)
 			=> false;
     }
 }
