@@ -1283,4 +1283,13 @@ However, if you have any symptoms, please consider receiving a consultation..
     <comment>TODO:{0:#}年{1:#}月{2:#}日 午前{3:#}時</comment>
   </data>
 
+  <data name="GeneralErrorTitle" xml:space="preserve">
+    <value>发生错误</value>
+    <comment>エラーが発生しました</comment>
+  </data>
+  <data name="GeneralErrorRegisterAgainMessage" xml:space="preserve">
+    <value>请稍后再登记</value>
+    <comment>時間をおいてから再度登録を行ってください。</comment>
+  </data>
+
 </root>

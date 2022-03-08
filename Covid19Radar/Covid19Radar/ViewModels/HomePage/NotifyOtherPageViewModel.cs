@@ -320,6 +320,22 @@ namespace Covid19Radar.ViewModels
                 }
 
             }
+            catch (DiagnosisKeyRegisterException ex)
+            {
+                loggerService.Exception("Failed to register", ex);
+
+                errorCount++;
+                UserDialogs.Instance.HideLoading();
+
+                if (ex.Code == DiagnosisKeyRegisterException.Codes.FailedCreatePayload)
+                {
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.GeneralErrorRegisterAgainMessage,
+                        AppResources.GeneralErrorTitle,
+                        AppResources.ButtonOk
+                        );
+                }
+            }
             catch (Exception ex)
             {
                 errorCount++;

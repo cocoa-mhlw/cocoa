@@ -1274,4 +1274,13 @@
     <comment>TODO:{0:#}年{1:#}月 午前{2:#}日{3:#}時</comment>
   </data>
 
+  <data name="GeneralErrorTitle" xml:space="preserve">
+    <value>エラーが発生しました</value>
+    <comment>エラーが発生しました</comment>
+  </data>
+  <data name="GeneralErrorRegisterAgainMessage" xml:space="preserve">
+    <value>時間をおいてから再度登録を行ってください。</value>
+    <comment>時間をおいてから再度登録を行ってください。</comment>
+  </data>
+
 </root>

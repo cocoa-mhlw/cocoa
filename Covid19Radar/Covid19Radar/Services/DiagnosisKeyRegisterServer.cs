@@ -104,7 +104,30 @@ namespace Covid19Radar.Services
                 Padding = padding
             };
 
-            submission.DeviceVerificationPayload = await _deviceVerifier.VerifyAsync(submission);
+            // Create device verification payload
+            var tries = 0;
+            var delay = 4 * 1000;
+            while (true) {
+                var deviceVerificationPayload = await _deviceVerifier.VerifyAsync(submission);
+                if (!_deviceVerifier.IsErrorPayload(deviceVerificationPayload))
+                {
+                    _loggerService.Info("Payload creation successful.");
+                    submission.DeviceVerificationPayload = deviceVerificationPayload;
+                    break;
+                }
+                else if (tries >= 3)
+                {
+                    _loggerService.Error("Payload creation failed all.");
+                    throw new DiagnosisKeyRegisterException(DiagnosisKeyRegisterException.Codes.FailedCreatePayload);
+                }
+
+                _loggerService.Warning($"Payload creation failed. {tries + 1} time(s).");
+                _loggerService.Info($"delay {delay} msec");
+                await Task.Delay(delay);
+                delay *= 2;
+
+                tries++;
+            }
 
             _loggerService.Info($"DeviceVerificationPayload is {(string.IsNullOrEmpty(submission.DeviceVerificationPayload) ? "null or empty" : "set")}.");
             _loggerService.Info($"VerificationPayload is {(string.IsNullOrEmpty(submission.VerificationPayload) ? "null or empty" : "set")}.");
@@ -129,6 +152,22 @@ namespace Covid19Radar.Services
             var padding = new byte[size];
             random.NextBytes(padding);
             return Convert.ToBase64String(padding);
+        }
+    }
+
+    public class DiagnosisKeyRegisterException : Exception
+    {
+        private const string DataKeyCode = "code";
+
+        public enum Codes {
+            FailedCreatePayload,
+        }
+
+        public Codes Code => (Codes)Data[DataKeyCode];
+
+        public DiagnosisKeyRegisterException(Codes code) : base("Failed to register the diagnostic key.")
+        {
+            Data[DataKeyCode] = code;
         }
     }
 }

@@ -14,5 +14,8 @@ namespace Covid19Radar.Services
 
         public Task<string> VerifyAsync(V1EventLogRequest _)
             => Task.Run(() => "DUMMY RESPONSE");
+
+        public bool IsErrorPayload(string payload)
+            => false;
     }
 }
