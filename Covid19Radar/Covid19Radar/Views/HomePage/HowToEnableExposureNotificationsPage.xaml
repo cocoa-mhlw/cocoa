@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Covid19Radar.Views.HowToEnableExposureNotificationsPage"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Title="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageTitle}"
+    Visual="Material">
+    <ContentPage.Content>
+        <!--
+            Workaround for fixing ScrollView truncates items issue.
+            https://github.com/xamarin/Xamarin.Forms/issues/13597
+        -->
+        <ContentView>
+            <ScrollView>
+                <StackLayout
+                    Margin="20"
+                    Spacing="16">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="1"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageDescription1}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="2"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.CocoaAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <Button
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="3"
+                        Command="{Binding OnExposureNotificationSettingButton}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.ExposureNotificationSettingButtonTitle}" />
+
+                    <!-- Step.1 -->
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="3"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.Step1Text}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="4"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep1Description}" />
+                    <Image
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Aspect="AspectFit"
+                        Source="exposure_notification_1" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.AppSettingImageAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.AppSettingImageAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <!-- Step.2 -->
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="5"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.Step2Text}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="6"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep2Description}" />
+                    <Image
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Aspect="AspectFit"
+                        Source="exposure_notification_2" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.ExposureNotificationSettingImageAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.ExposureNotificationSettingImageAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <!-- Step.3 -->
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="7"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.Step3Text}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="8"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep3Description}" />
+                    <Image
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Aspect="AspectFit"
+                        Source="exposure_notification_3" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.ExposureNotificationSettingImageAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.ExposureNotificationSettingImageAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <!-- Step.4 -->
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="9"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.Step4Text}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="10"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep4Description}" />
+                    <Image
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Aspect="AspectFit"
+                        Source="exposure_notification_4" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Style="{StaticResource AnnotationLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.ExposureNotificationSettingImageAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.ExposureNotificationSettingImageAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <!-- Step.5 -->
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="11"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.Step5Text}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="12"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep5Description}" />
+
+                    <Button
+                        AutomationProperties.IsInAccessibleTree="True"
+                        TabIndex="13"
+                        Command="{Binding OnExposureNotificationSettingButton}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.ExposureNotificationSettingButtonTitle}" />
+                </StackLayout>
+            </ScrollView>
+        </ContentView>
+    </ContentPage.Content>
+</ContentPage>

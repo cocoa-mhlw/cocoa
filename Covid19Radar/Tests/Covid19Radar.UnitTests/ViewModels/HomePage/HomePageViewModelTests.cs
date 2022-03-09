@@ -22,7 +22,7 @@ using Newtonsoft.Json;
 using Prism.Navigation;
 using Xunit;
 
-namespace Covid19Radar.UnitTests.ViewModels.HomePage
+namespace Covid19Radar.UnitTests.ViewModels
 {
     public class HomePageViewModelTests: IDisposable
     {
@@ -330,8 +330,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             homePageViewModel.OnClickCheckStopReason.Execute(null);
 
-            mockDialogService.Verify(x => x.ShowExposureNotificationOffWarningAsync(), Times.Once());
-            mockExternalNavigationService.Verify(x => x.NavigateAppSettings(), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync("HowToEnableExposureNotificationsPage"), Times.Once());
+            mockDialogService.Verify(x => x.ShowExposureNotificationOffWarningAsync(), Times.Never());
+            mockExternalNavigationService.Verify(x => x.NavigateAppSettings(), Times.Never());
             mockExposureNotificationApiService.Verify(x => x.StartExposureNotificationAsync(), Times.Never());
             mockExposureDetectionBackgroundService.Verify(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>()), Times.Never());
         }

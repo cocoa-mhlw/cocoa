@@ -353,11 +353,7 @@ namespace Covid19Radar.ViewModels
             || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
             )
             {
-                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
-                if (isOK)
-                {
-                    externalNavigationService.NavigateAppSettings();
-                }
+                _ = await NavigationService.NavigateAsync(nameof(HowToEnableExposureNotificationsPage));
             }
 
             loggerService.EndMethod();
