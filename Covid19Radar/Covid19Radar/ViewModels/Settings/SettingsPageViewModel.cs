@@ -119,5 +119,15 @@ namespace Covid19Radar.ViewModels
                 loggerService.EndMethod();
             }
         }
+
+        public ICommand OnClickObtainSourceCode => new Command<string>(async (uri) =>
+        {
+            loggerService.StartMethod();
+
+            await Browser.OpenAsync(uri, BrowserLaunchMode.External);
+
+            loggerService.EndMethod();
+        });
+
     }
 }

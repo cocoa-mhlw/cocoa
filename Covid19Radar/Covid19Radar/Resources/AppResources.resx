@@ -136,7 +136,7 @@
     <comment>設定</comment>
   </data>
   <data name="SettingsPageLicenseButton" xml:space="preserve">
-    <value>Display License</value>
+    <value>License notation</value>
     <comment>ライセンス表記</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
@@ -1453,6 +1453,26 @@ Note: this app does not collect users’ location information.</value>
   <data name="GeneralErrorRegisterAgainMessage" xml:space="preserve">
     <value>Please try to register again after a while.</value>
     <comment>時間をおいてから再度登録を行ってください。</comment>
+  </data>
+
+  <data name="SettingsPageLicenseLabel" xml:space="preserve">
+    <value>Open-source license</value>
+    <comment>オープンソースライセンス</comment>
+  </data>
+  <data name="SettingsPageLicenseDescription" xml:space="preserve">
+    <value>COCOA is an open-source software. 
+It is provided under the terms of Mozilla Public License 2.0.
+The COCOA source code can be obtained from the following URL.</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。
+COCOAのソースコードは次のURLから入手できます。</comment>
+  </data>
+  <data name="SettingsPageGitHubUrl" xml:space="preserve">
+    <value>https://github.com/cocoa-mhlw/cocoa/</value>
+    <comment>https://github.com/cocoa-mhlw/cocoa/</comment>
+  </data>
+  <data name="SettingsPageSourceCodeButton" xml:space="preserve">
+    <value>Obtain source code</value>
+    <comment>ソースコードを入手</comment>
   </data>
 
 </root>

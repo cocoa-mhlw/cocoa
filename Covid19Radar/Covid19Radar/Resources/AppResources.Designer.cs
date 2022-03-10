@@ -2050,5 +2050,29 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("GeneralErrorRegisterAgainMessage", resourceCulture);
             }
         }
+        
+        public static string SettingsPageLicenseLabel {
+            get {
+                return ResourceManager.GetString("SettingsPageLicenseLabel", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageLicenseDescription {
+            get {
+                return ResourceManager.GetString("SettingsPageLicenseDescription", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageGitHubUrl {
+            get {
+                return ResourceManager.GetString("SettingsPageGitHubUrl", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageSourceCodeButton {
+            get {
+                return ResourceManager.GetString("SettingsPageSourceCodeButton", resourceCulture);
+            }
+        }
     }
 }
