@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,9 +15,11 @@ namespace Covid19Radar.Views
         {
             InitializeComponent();
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            SemanticExtensions.SetSemanticFocus(this);
             list_view.SelectedItem = null;
         }
     }
