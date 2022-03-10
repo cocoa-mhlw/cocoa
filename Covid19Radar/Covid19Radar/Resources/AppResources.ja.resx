@@ -959,6 +959,60 @@
     <value>https://www.mhlw.go.jp/cocoa/kiyaku_japanese.html</value>
     <comment>利用規約URL</comment>
   </data>
+  <data name="HowToEnableExposureNotificationsPageTitle" xml:space="preserve">
+    <value>接触通知を有効にするには</value>
+    <comment>接触通知を有効にするには</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageDescription1" xml:space="preserve">
+    <value>COCOA（※）を利用するには、スマートフォンの接触通知設定をオンにする必要があります。
+以下のボタンをタップして設定画面を開き、手順に従って接触通知を有効にしてください。</value>
+    <comment>COCOA（※）を利用するには、スマートフォンの接触通知設定をオンにする必要があります。
+以下のボタンをタップして設定画面を開き、手順に従って接触通知を有効にしてください。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep1Description" xml:space="preserve">
+    <value>「接触通知」をタップする。</value>
+    <comment>「接触通知」をタップする。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep2Description" xml:space="preserve">
+    <value>「接触情報を共有」の項目をオンにする。</value>
+    <comment>「接触情報を共有」の項目をオンにする。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep3Description" xml:space="preserve">
+    <value>「使用する国/地域として設定」の文字をタップする。</value>
+    <comment>「使用する国/地域として設定」の文字をタップする。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep4Description" xml:space="preserve">
+    <value>「使用する国/地域として設定」の文字がグレーに変わり、その下に「現在、接触通知を使用する国/地域/行政機関として厚生労働省が設定されています。」と表示されている。</value>
+    <comment>「使用する国/地域として設定」の文字がグレーに変わり、その下に「現在、接触通知を使用する国/地域/行政機関として厚生労働省が設定されています。」と表示されている。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep5Description" xml:space="preserve">
+    <value>再度COCOAを開いて、「動作中」と表示されれば設定は完了です。</value>
+    <comment>再度COCOAを開いて、「動作中」と表示されれば設定は完了です。</comment>
+  </data>
+  <data name="ExposureNotificationSettingButtonTitle" xml:space="preserve">
+    <value>接触通知の設定</value>
+    <comment>接触通知の設定</comment>
+  </data>
+  <data name="Step1Text" xml:space="preserve">
+    <value>手順①</value>
+    <comment>手順①</comment>
+  </data>
+  <data name="Step2Text" xml:space="preserve">
+    <value>手順②</value>
+    <comment>手順②</comment>
+  </data>
+  <data name="Step3Text" xml:space="preserve">
+    <value>手順③</value>
+    <comment>手順③</comment>
+  </data>
+  <data name="Step4Text" xml:space="preserve">
+    <value>手順④</value>
+    <comment>手順④</comment>
+  </data>
+  <data name="Step5Text" xml:space="preserve">
+    <value>手順⑤</value>
+    <comment>手順⑤</comment>
+  </data>
   <data name="HowToReceiveProcessingNumberPageTitle" xml:space="preserve">
     <value>処理番号の取得方法</value>
     <comment>処理番号の取得方法</comment>
@@ -1202,6 +1256,14 @@
   <data name="ContactedPageImageAnnotationText" xml:space="preserve">
     <value>「陽性者との接触確認」画面のイメージ画像</value>
     <comment>「陽性者との接触確認」画面のイメージ画像</comment>
+  </data>
+  <data name="AppSettingImageAnnotationText" xml:space="preserve">
+    <value>「設定」画面のイメージ画像</value>
+    <comment>「設定」画面のイメージ画像</comment>
+  </data>
+  <data name="ExposureNotificationSettingImageAnnotationText" xml:space="preserve">
+    <value>「接触通知」画面のイメージ画像</value>
+    <comment>「接触通知」画面のイメージ画像</comment>
   </data>
   <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
     <value>{0}以前</value>
