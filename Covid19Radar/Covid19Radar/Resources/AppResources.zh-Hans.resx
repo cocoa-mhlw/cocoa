@@ -241,7 +241,7 @@
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
   <data name="SettingsPageLicenseButton" xml:space="preserve">
-    <value>显示许可证</value>
+    <value>许可证表示</value>
     <comment>ライセンス表記</comment>
   </data>
   <data name="SettingsPageReinitializeLabel" xml:space="preserve">
@@ -1351,6 +1351,26 @@ However, if you have any symptoms, please consider receiving a consultation..
   <data name="GeneralErrorRegisterAgainMessage" xml:space="preserve">
     <value>请稍后再登记</value>
     <comment>時間をおいてから再度登録を行ってください。</comment>
+  </data>
+
+  <data name="SettingsPageLicenseLabel" xml:space="preserve">
+    <value>开源许可证</value>
+    <comment>オープンソースライセンス</comment>
+  </data>
+  <data name="SettingsPageLicenseDescription" xml:space="preserve">
+    <value>COCOA是一个开源软件。
+它根据Mozilla Public License 2.0条款来提供。
+COCOA的源代码可以从以下URL获得。</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。
+COCOAのソースコードは次のURLから入手できます。</comment>
+  </data>
+  <data name="SettingsPageGitHubUrl" xml:space="preserve">
+    <value>https://github.com/cocoa-mhlw/cocoa/</value>
+    <comment>https://github.com/cocoa-mhlw/cocoa/</comment>
+  </data>
+  <data name="SettingsPageSourceCodeButton" xml:space="preserve">
+    <value>获得源代码</value>
+    <comment>ソースコードを入手</comment>
   </data>
 
 </root>
