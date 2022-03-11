@@ -20,7 +20,11 @@ namespace Covid19Radar.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            SemanticExtensions.SetSemanticFocus(this);
+
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                SemanticExtensions.SetSemanticFocus(this);
+            });
         }
     }
 }
