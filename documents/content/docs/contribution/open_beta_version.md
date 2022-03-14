@@ -44,4 +44,5 @@ type: docs
   - Androidでは、OSの制約上Googleアカウント単位での参加になるため、オープンβ版参加用のGoogleアカウントをご用意いただき、そのアカウントをオープンβ版用端末に設定し、そのアカウントからCOCOAをインストールしてください
   - iOSでは、（iOS特有の留意点を書く、TestFlightの使用方法など）
 
-
+## 既知の不具合
+ - [［A11Y］［iOS］ 画面読み上げ（VoiceOver）を有効にするとスクロールができなくなる](https://github.com/cocoa-mhlw/cocoa/issues/913)
