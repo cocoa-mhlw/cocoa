@@ -189,7 +189,7 @@
     <value>Could not register positive test result's information</value>
     <comment>陽性情報を登録できませんでした</comment>
   </data>
-  <data name="NotifyOtherPageDialogSubmittedTitle" xml:space="preserve">
+  <data name="SubmitDiagnosisKeysPageTitle" xml:space="preserve">
     <value>Registration is complete</value>
     <comment>登録が完了しました</comment>
   </data>
@@ -1473,6 +1473,10 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   <data name="SettingsPageSourceCodeButton" xml:space="preserve">
     <value>Obtain source code</value>
     <comment>ソースコードを入手</comment>
+  </data>
+  <data name="ToHomeButton" xml:space="preserve">
+    <value>Return to Home screen</value>
+    <comment>ホーム画面へ</comment>
   </data>
 
 </root>
