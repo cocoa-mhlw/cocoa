@@ -14,7 +14,7 @@ type: docs
 現在実施中のオープンβ版は以下の通りです。
 
 - v2.0.0 オープンβ版（2022/02/xxから2週間程度）
-  - Android版 : (URL等を記入する)
+  - Android版 : https://play.google.com/apps/testing/jp.go.mhlw.covid19radar
   - iOS版 : (URL等を記入する)
   - 主要な変更点 : 接触確認に使うAPIの最新版への切り替え
 
