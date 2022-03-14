@@ -24,7 +24,7 @@ namespace Covid19Radar.Api.Services
             IAuthorizedAppRepository authApp,
             ILogger<DeviceValidationService> logger)
         {
-            Android = new DeviceValidationAndroidService();
+            Android = new DeviceValidationAndroidService(logger);
             Apple = new DeviceValidationAppleService(config, http, logger);
             AuthApp = authApp;
         }
