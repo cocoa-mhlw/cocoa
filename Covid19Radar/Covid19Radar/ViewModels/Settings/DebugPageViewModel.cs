@@ -302,14 +302,14 @@ namespace Covid19Radar.ViewModels
                 TermsOfService = new TermsUpdateInfoModel.Detail { Text = "DEBUG  利用規約の変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) },
                 PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) }
             };
-            var navigationParams = ReAgreeTermsOfServicePage.BuildNavigationParams(termsUpdateInfoModel, Destination.DebugPage);
+            var navigationParams = ReAgreeTermsOfServicePage.BuildNavigationParams(termsUpdateInfoModel, Destination.HomePage);
             _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreeTermsOfServicePage), navigationParams);
         });
 
         public Command OnClickReAgreePrivacyPolicyPage => new Command(async () =>
         {
             var privacyPolicyUpdated = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) };
-            var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyUpdated, Destination.DebugPage);
+            var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyUpdated, Destination.HomePage);
             _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), navigationParams);
         });
 

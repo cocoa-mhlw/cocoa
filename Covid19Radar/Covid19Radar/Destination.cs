@@ -13,7 +13,6 @@ namespace Covid19Radar
         HomePage,
         ContactedNotifyPage,
         NotifyOtherPage,
-        DebugPage,
     }
 
     public static class DestinationExtensions
@@ -22,7 +21,6 @@ namespace Covid19Radar
         private static string HomePagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage);
         private static string ContactedNotifyPagePath => HomePagePath + "/" + nameof(ContactedNotifyPage);
         private static string NotifyOtherPagePath => HomePagePath + "/" + nameof(NotifyOtherPage);
-        private static string DebugPagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(DebugPage);
 
         public static string ToPath(this Destination destination)
         {
@@ -32,7 +30,6 @@ namespace Covid19Radar
                 Destination.HomePage => HomePagePath,
                 Destination.ContactedNotifyPage => ContactedNotifyPagePath,
                 Destination.NotifyOtherPage => NotifyOtherPagePath,
-                Destination.DebugPage => DebugPagePath,
                 _ => throw new System.NotImplementedException()
             };
         }
