@@ -155,9 +155,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotifyOtherPageDialogSubmittedTitle {
+        public static string SubmitDiagnosisKeysPageTitle {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDialogSubmittedTitle", resourceCulture);
+                return ResourceManager.GetString("SubmitDiagnosisKeysPageTitle", resourceCulture);
             }
         }
         
@@ -2072,6 +2072,12 @@ namespace Covid19Radar.Resources {
         public static string SettingsPageSourceCodeButton {
             get {
                 return ResourceManager.GetString("SettingsPageSourceCodeButton", resourceCulture);
+            }
+        }
+        
+        public static string ToHomeButton {
+            get {
+                return ResourceManager.GetString("ToHomeButton", resourceCulture);
             }
         }
     }

@@ -400,12 +400,7 @@ namespace Covid19Radar.ViewModels
                     // Success
                     loggerService.Info($"Successfully submit DiagnosisKeys.");
 
-                    await UserDialogs.Instance.AlertAsync(
-                        null,
-                        AppResources.NotifyOtherPageDialogSubmittedTitle,
-                        AppResources.ButtonOk
-                    );
-                    await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                    _ = await NavigationService.NavigateAsync($"/{nameof(SubmitDiagnosisKeysCompletePage)}");
                     break;
 
                 case HttpStatusCode.NotAcceptable:
