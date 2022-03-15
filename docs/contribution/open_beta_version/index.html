@@ -1,0 +1,226 @@
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="接触確認アプリ（COCOA) オープンβ版について #  新型コロナウイルス接触確認アプリ（COCOA) のオープンβ版についての説明です。 オープンβ版をインストールいただく前に、ご確認ください。
+現在実施中のオープンβ版 #  現在実施中のオープンβ版は以下の通りです。
+ v2.0.0 オープンβ版（2022/03/15開始、2週間前後実施予定）  Android版 : https://play.google.com/apps/testing/jp.go.mhlw.covid19radar iOS版 : https://testflight.apple.com/join/2tBJvty4 いずれのOS版も、動作検証のために使う端末から上記のURLにアクセスし、それぞれの指示に従うことで参加することができます 主要な変更点 : 接触確認に使うAPIの最新版への切り替え    オープンβ版を公開する目的 #   リリース予定とほぼ同等のアプリを、開発者に事前にご利用いただくことで、深刻な不具合をリリース前に検知して修正する 新機能等を実験的に実装したアプリを、開発者や利用者に事前にご利用いただくことで、ご意見をいただき、よりよいアプリへ改善する  オープンβ版を公開するのは、COCOA初の試みとなります。 多くの開発者に参加いただき、新機能に改善の余地がある場合には改善案をいただいたり、新機能が適切に実装されていた場合には賛同のご意見をいただけることが、今後のよりよい開発につながります。
+不具合を発見したり、新機能にご意見がある場合には #   オープンβ版の不具合や改善提案がありましたら、開発コミュニティまでお知らせください。  投稿にはGitHubのアカウントが必要になります   オープンβ版の内容以外のご要望、ご意見などは Q&Aページに記載がありますお問い合わせメールアドレスにご連絡いただきますようお願い致します。  参加に当たっての留意点 #   オープンβ版では、実験的に実装した機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご了承ください  オープンβ版についても適切に動作検証を行っていますが、品質保証が行われる前の状態であるため   オープンβ版では、現時点では通常のサポートはおこなっていません  接触通知が出たときに受けられる行政からのサポートも対象外となっています 不具合などがある場合の対応は開発コミュニティで行っています   オープンβ版を導入する端末は、普段使いとは別の動作検証のために使える端末をご使用ください  普段使いの端末にオープンβ版を導入して、接触通知が出たときに、通常版であれば受けられる行政からのサポートが対象外となってしまうためです Androidでは、OSの制約上Googleアカウント単位での参加になるため、オープンβ版参加用のGoogleアカウントをご用意いただき、そのアカウントをオープンβ版用端末に設定し、そのアカウントからCOCOAをインストールしてください iOSでは、（iOS特有の留意点を書く、TestFlightの使用方法など）    既知の不具合 #   ［A11Y］［iOS］ 画面読み上げ（VoiceOver）を有効にするとスクロールができなくなる  ">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="接触確認アプリ（COCOA) オープンβ版について">
+<meta property="og:description" content="接触確認アプリ（COCOA) オープンβ版について #  新型コロナウイルス接触確認アプリ（COCOA) のオープンβ版についての説明です。 オープンβ版をインストールいただく前に、ご確認ください。
+現在実施中のオープンβ版 #  現在実施中のオープンβ版は以下の通りです。
+ v2.0.0 オープンβ版（2022/03/15開始、2週間前後実施予定）  Android版 : https://play.google.com/apps/testing/jp.go.mhlw.covid19radar iOS版 : https://testflight.apple.com/join/2tBJvty4 いずれのOS版も、動作検証のために使う端末から上記のURLにアクセスし、それぞれの指示に従うことで参加することができます 主要な変更点 : 接触確認に使うAPIの最新版への切り替え    オープンβ版を公開する目的 #   リリース予定とほぼ同等のアプリを、開発者に事前にご利用いただくことで、深刻な不具合をリリース前に検知して修正する 新機能等を実験的に実装したアプリを、開発者や利用者に事前にご利用いただくことで、ご意見をいただき、よりよいアプリへ改善する  オープンβ版を公開するのは、COCOA初の試みとなります。 多くの開発者に参加いただき、新機能に改善の余地がある場合には改善案をいただいたり、新機能が適切に実装されていた場合には賛同のご意見をいただけることが、今後のよりよい開発につながります。
+不具合を発見したり、新機能にご意見がある場合には #   オープンβ版の不具合や改善提案がありましたら、開発コミュニティまでお知らせください。  投稿にはGitHubのアカウントが必要になります   オープンβ版の内容以外のご要望、ご意見などは Q&Aページに記載がありますお問い合わせメールアドレスにご連絡いただきますようお願い致します。  参加に当たっての留意点 #   オープンβ版では、実験的に実装した機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご了承ください  オープンβ版についても適切に動作検証を行っていますが、品質保証が行われる前の状態であるため   オープンβ版では、現時点では通常のサポートはおこなっていません  接触通知が出たときに受けられる行政からのサポートも対象外となっています 不具合などがある場合の対応は開発コミュニティで行っています   オープンβ版を導入する端末は、普段使いとは別の動作検証のために使える端末をご使用ください  普段使いの端末にオープンβ版を導入して、接触通知が出たときに、通常版であれば受けられる行政からのサポートが対象外となってしまうためです Androidでは、OSの制約上Googleアカウント単位での参加になるため、オープンβ版参加用のGoogleアカウントをご用意いただき、そのアカウントをオープンβ版用端末に設定し、そのアカウントからCOCOAをインストールしてください iOSでは、（iOS特有の留意点を書く、TestFlightの使用方法など）    既知の不具合 #   ［A11Y］［iOS］ 画面読み上げ（VoiceOver）を有効にするとスクロールができなくなる  ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/docs/contribution/open_beta_version/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2022-03-15T21:14:22+09:00">
+<title>接触確認アプリ（COCOA) オープンβ版について | COCOA Open Source Project</title>
+<link rel=manifest href=/cocoa/manifest.json>
+<link rel=icon href=/cocoa/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
+<script defer src=/cocoa/flexsearch.min.js></script>
+<script defer src=/cocoa/en.search.min.7e90a5906c615b9e08d1c98983b0d8cbb470058095c4b6bd9e5caf4dca67bf3b.js integrity="sha256-fpClkGxhW54I0cmJg7DYy7RwBYCVxLa9nlyvTcpnvzs=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/cocoa/><span>COCOA Open Source Project</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/>デジタル庁 GitHub運用方針</a>
+</li>
+<li>
+<span>Developments</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/branches/>ブランチ構成</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/>ビルド方法</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/maintainance_oss_licenses/>ライセンスの取り扱い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/multi_language/>多言語対応</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Contributions</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/open_beta_version/ class=active>接触確認アプリ（COCOA) オープンβ版について</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/guidelines/>貢献についてのガイドライン</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/handling_pullreqeust/>Pull Requestが取り込まれるまで</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors/>Contoributors</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors_covid19radars/>COVID-19Radar Contoributors</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Appendix</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/ios_local_notification/>iOS版の通知許可に関するお願い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/preference_specification/>設定ファイルの仕様</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<a href=https://github.com/cocoa-mhlw/cocoa target=_blank rel=noopener>
+GitHubリポジトリ
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/cocoa/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>接触確認アプリ（COCOA) オープンβ版について</strong>
+<label for=toc-control>
+<img src=/cocoa/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#現在実施中のオープンβ版>現在実施中のオープンβ版</a></li>
+<li><a href=#オープンβ版を公開する目的>オープンβ版を公開する目的</a></li>
+<li><a href=#不具合を発見したり新機能にご意見がある場合には>不具合を発見したり、新機能にご意見がある場合には</a></li>
+<li><a href=#参加に当たっての留意点>参加に当たっての留意点</a></li>
+<li><a href=#既知の不具合>既知の不具合</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h1 id=接触確認アプリcocoa-オープンβ版について>
+接触確認アプリ（COCOA) オープンβ版について
+<a class=anchor href=#%e6%8e%a5%e8%a7%a6%e7%a2%ba%e8%aa%8d%e3%82%a2%e3%83%97%e3%83%aacocoa-%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%ce%b2%e7%89%88%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a>
+</h1>
+<p>新型コロナウイルス接触確認アプリ（COCOA) のオープンβ版についての説明です。
+オープンβ版をインストールいただく前に、ご確認ください。</p>
+<h2 id=現在実施中のオープンβ版>
+現在実施中のオープンβ版
+<a class=anchor href=#%e7%8f%be%e5%9c%a8%e5%ae%9f%e6%96%bd%e4%b8%ad%e3%81%ae%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%ce%b2%e7%89%88>#</a>
+</h2>
+<p>現在実施中のオープンβ版は以下の通りです。</p>
+<ul>
+<li>v2.0.0 オープンβ版（2022/03/15開始、2週間前後実施予定）
+<ul>
+<li>Android版 : <a href=https://play.google.com/apps/testing/jp.go.mhlw.covid19radar>https://play.google.com/apps/testing/jp.go.mhlw.covid19radar</a></li>
+<li>iOS版 : <a href=https://testflight.apple.com/join/2tBJvty4>https://testflight.apple.com/join/2tBJvty4</a></li>
+<li>いずれのOS版も、動作検証のために使う端末から上記のURLにアクセスし、それぞれの指示に従うことで参加することができます</li>
+<li>主要な変更点 : 接触確認に使うAPIの最新版への切り替え</li>
+</ul>
+</li>
+</ul>
+<h2 id=オープンβ版を公開する目的>
+オープンβ版を公開する目的
+<a class=anchor href=#%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3%ce%b2%e7%89%88%e3%82%92%e5%85%ac%e9%96%8b%e3%81%99%e3%82%8b%e7%9b%ae%e7%9a%84>#</a>
+</h2>
+<ol>
+<li>リリース予定とほぼ同等のアプリを、開発者に事前にご利用いただくことで、深刻な不具合をリリース前に検知して修正する</li>
+<li>新機能等を実験的に実装したアプリを、開発者や利用者に事前にご利用いただくことで、ご意見をいただき、よりよいアプリへ改善する</li>
+</ol>
+<p>オープンβ版を公開するのは、COCOA初の試みとなります。
+多くの開発者に参加いただき、新機能に改善の余地がある場合には改善案をいただいたり、新機能が適切に実装されていた場合には賛同のご意見をいただけることが、今後のよりよい開発につながります。</p>
+<h2 id=不具合を発見したり新機能にご意見がある場合には>
+不具合を発見したり、新機能にご意見がある場合には
+<a class=anchor href=#%e4%b8%8d%e5%85%b7%e5%90%88%e3%82%92%e7%99%ba%e8%a6%8b%e3%81%97%e3%81%9f%e3%82%8a%e6%96%b0%e6%a9%9f%e8%83%bd%e3%81%ab%e3%81%94%e6%84%8f%e8%a6%8b%e3%81%8c%e3%81%82%e3%82%8b%e5%a0%b4%e5%90%88%e3%81%ab%e3%81%af>#</a>
+</h2>
+<ul>
+<li>オープンβ版の不具合や改善提案がありましたら、<a href=https://github.com/cocoa-mhlw/>開発コミュニティ</a>までお知らせください。
+<ul>
+<li>投稿にはGitHubのアカウントが必要になります</li>
+</ul>
+</li>
+<li>オープンβ版の内容以外のご要望、ご意見などは <a href=https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html#Q8-1>Q&Aページ</a>に記載がありますお問い合わせメールアドレスにご連絡いただきますようお願い致します。</li>
+</ul>
+<h2 id=参加に当たっての留意点>
+参加に当たっての留意点
+<a class=anchor href=#%e5%8f%82%e5%8a%a0%e3%81%ab%e5%bd%93%e3%81%9f%e3%81%a3%e3%81%a6%e3%81%ae%e7%95%99%e6%84%8f%e7%82%b9>#</a>
+</h2>
+<ul>
+<li>オープンβ版では、実験的に実装した機能をはじめ、COCOAの基本機能（陽性情報登録、接触確認機能）についても、正しく動作しない可能性があることをご了承ください
+<ul>
+<li>オープンβ版についても適切に動作検証を行っていますが、品質保証が行われる前の状態であるため</li>
+</ul>
+</li>
+<li>オープンβ版では、現時点では通常のサポートはおこなっていません
+<ul>
+<li>接触通知が出たときに受けられる行政からのサポートも対象外となっています</li>
+<li>不具合などがある場合の対応は開発コミュニティで行っています</li>
+</ul>
+</li>
+<li>オープンβ版を導入する端末は、普段使いとは別の動作検証のために使える端末をご使用ください
+<ul>
+<li>普段使いの端末にオープンβ版を導入して、接触通知が出たときに、通常版であれば受けられる行政からのサポートが対象外となってしまうためです</li>
+<li>Androidでは、OSの制約上Googleアカウント単位での参加になるため、オープンβ版参加用のGoogleアカウントをご用意いただき、そのアカウントをオープンβ版用端末に設定し、そのアカウントからCOCOAをインストールしてください</li>
+<li>iOSでは、（iOS特有の留意点を書く、TestFlightの使用方法など）</li>
+</ul>
+</li>
+</ul>
+<h2 id=既知の不具合>
+既知の不具合
+<a class=anchor href=#%e6%97%a2%e7%9f%a5%e3%81%ae%e4%b8%8d%e5%85%b7%e5%90%88>#</a>
+</h2>
+<ul>
+<li><a href=https://github.com/cocoa-mhlw/cocoa/issues/913>［A11Y］［iOS］ 画面読み上げ（VoiceOver）を有効にするとスクロールができなくなる</a></li>
+</ul>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#現在実施中のオープンβ版>現在実施中のオープンβ版</a></li>
+<li><a href=#オープンβ版を公開する目的>オープンβ版を公開する目的</a></li>
+<li><a href=#不具合を発見したり新機能にご意見がある場合には>不具合を発見したり、新機能にご意見がある場合には</a></li>
+<li><a href=#参加に当たっての留意点>参加に当たっての留意点</a></li>
+<li><a href=#既知の不具合>既知の不具合</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>
