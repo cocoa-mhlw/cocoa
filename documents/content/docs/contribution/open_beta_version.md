@@ -18,6 +18,7 @@ type: docs
   - iOS版 : https://testflight.apple.com/join/2tBJvty4
   - いずれのOS版も、動作検証のために使う端末から上記のURLにアクセスし、それぞれの指示に従うことで参加することができます
   - 主要な変更点 : 接触確認に使うAPIの最新版への切り替え
+  - 不具合・ご意見等の連絡先のGithub discussions : https://github.com/cocoa-mhlw/cocoa/discussions/921
 
 ## オープンβ版を公開する目的
 
