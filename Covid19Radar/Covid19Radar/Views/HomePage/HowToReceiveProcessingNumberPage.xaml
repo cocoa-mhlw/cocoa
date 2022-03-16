@@ -37,12 +37,10 @@
                         VerticalOptions="Center">
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="1"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription1}" />
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="2"
                             Style="{StaticResource AnnotationLabel}">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -63,12 +61,10 @@
                 </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="3"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription2}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="4"
                     Style="{StaticResource AnnotationLabel}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -87,12 +83,10 @@
                 </Label>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="5"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="6"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
             </StackLayout>

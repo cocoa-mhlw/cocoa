@@ -33,7 +33,6 @@
                 <StackLayout>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="1"
                         Margin="0,10,0,5"
                         Style="{StaticResource DefaultTitleLabel}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}"
@@ -41,7 +40,6 @@
                     </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
                         Margin="0,0,0,5"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
@@ -54,7 +52,6 @@
                     </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
                         Margin="0,0,0,5"
                         FontSize="Large"
                         HorizontalTextAlignment="Center"
@@ -68,7 +65,6 @@
 
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="4"
                         Margin="0,0,0,20"
                         Command="{prism:NavigateTo 'ExposuresPage'}"
                         Style="{StaticResource DefaultButton}"
@@ -76,7 +72,6 @@
 
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="5"
                         Margin="0, 15, 0, 5"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultLabelSmall}"
@@ -84,7 +79,6 @@
 
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="6"
                         Margin="5, 5, 0, 0"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultLabelSmall}"
@@ -92,7 +86,6 @@
 
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="7"
                         Margin="5, 5, 0, 0"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultLabelSmall}"
@@ -100,7 +93,6 @@
 
                      <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="8"
                         Margin="5, 5, 0, 0"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultLabelSmall}"
@@ -108,7 +100,6 @@
 
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="9"
                         Margin="0, 20, 0, 10"
                         HorizontalTextAlignment="Start"
                         Style="{StaticResource DefaultSubTitleLabel}"
@@ -116,7 +107,6 @@
 
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="10"
                         Margin="0,20,0,20"
                         Command="{Binding Path=OnClickByForm}"
                         Style="{StaticResource DefaultButton}"
