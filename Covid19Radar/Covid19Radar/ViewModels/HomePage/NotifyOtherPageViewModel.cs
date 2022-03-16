@@ -194,15 +194,15 @@ namespace Covid19Radar.ViewModels
 
 
             var result = await UserDialogs.Instance.ConfirmAsync(
-                AppResources.NotifyOtherPageDiag1Message,
-                AppResources.NotifyOtherPageDiag1Title,
+                AppResources.NotifyOtherPageDialog1Message,
+                AppResources.NotifyOtherPageDialog1Title,
                 AppResources.ButtonRegister,
                 AppResources.ButtonCancel);
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
                     null,
-                    AppResources.NotifyOtherPageDiag2Title,
+                    AppResources.NotifyOtherPageDialog2Title,
                     AppResources.ButtonOk
                     );
 
@@ -217,8 +217,8 @@ namespace Covid19Radar.ViewModels
                 if (errorCount >= AppConstants.MaxErrorCount)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiagReturnHome,
-                        AppResources.NotifyOtherPageDiagReturnHomeTitle,
+                        AppResources.NotifyOtherPageDialogReturnHome,
+                        AppResources.NotifyOtherPageDialogReturnHomeTitle,
                         AppResources.ButtonOk
                     );
                     await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
@@ -234,8 +234,8 @@ namespace Covid19Radar.ViewModels
 
                 if (errorCount > 0)
                 {
-                    await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
-                        AppResources.NotifyOtherPageDiag3Title,
+                    await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDialog3Message,
+                        AppResources.NotifyOtherPageDialog3Title,
                         AppResources.ButtonOk
                         );
                     await Task.Delay(errorCount * _delayForErrorMillis);
@@ -247,8 +247,8 @@ namespace Covid19Radar.ViewModels
                 if (string.IsNullOrEmpty(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiag4Message,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.NotifyOtherPageDialog4Message,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk
                     );
                     errorCount++;
@@ -260,8 +260,8 @@ namespace Covid19Radar.ViewModels
                 if (!Validator.IsValidProcessingNumber(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiag5Message,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.NotifyOtherPageDialog5Message,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk
                     );
                     errorCount++;
@@ -276,8 +276,8 @@ namespace Covid19Radar.ViewModels
                 if (!enabled)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                       AppResources.NotifyOtherPageDiag6Message,
-                       AppResources.NotifyOtherPageDiag6Title,
+                       AppResources.NotifyOtherPageDialog6Message,
+                       AppResources.NotifyOtherPageDialog6Title,
                        AppResources.ButtonOk
                     );
                     await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
@@ -310,7 +310,7 @@ namespace Covid19Radar.ViewModels
 
                     await UserDialogs.Instance.AlertAsync(
                         null,
-                        AppResources.NotifyOtherPageDiag2Title,
+                        AppResources.NotifyOtherPageDialog2Title,
                         AppResources.ButtonOk
                         );
                 }
@@ -406,7 +406,7 @@ namespace Covid19Radar.ViewModels
                 case HttpStatusCode.NotAcceptable:
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.ExposureNotificationHandler1ErrorMessage,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk);
                     loggerService.Error($"The process number is incorrect.");
                     break;
@@ -517,7 +517,7 @@ namespace Covid19Radar.ViewModels
             loggerService.Info("GetTekHistory request is declined by user.");
             await UserDialogs.Instance.AlertAsync(
                 null,
-                AppResources.NotifyOtherPageDiag2Title,
+                AppResources.NotifyOtherPageDialog2Title,
                 AppResources.ButtonOk
                 );
 
