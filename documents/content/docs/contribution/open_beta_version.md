@@ -13,11 +13,12 @@ type: docs
 
 現在実施中のオープンβ版は以下の通りです。
 
-- v2.0.0 オープンβ版（2022/03/15開始、2週間前後実施予定）
+- v2.0.0 オープンβ版（2022/03/16公開、2週間前後実施予定）
   - Android版 : https://play.google.com/apps/testing/jp.go.mhlw.covid19radar
   - iOS版 : https://testflight.apple.com/join/2tBJvty4
   - いずれのOS版も、動作検証のために使う端末から上記のURLにアクセスし、それぞれの指示に従うことで参加することができます
   - 主要な変更点 : 接触確認に使うAPIの最新版への切り替え
+  - 不具合・ご意見等の連絡先のGithub discussions : https://github.com/cocoa-mhlw/cocoa/discussions/921
 
 ## オープンβ版を公開する目的
 
@@ -43,7 +44,7 @@ type: docs
 - オープンβ版を導入する端末は、普段使いとは別の動作検証のために使える端末をご使用ください
   - 普段使いの端末にオープンβ版を導入して、接触通知が出たときに、通常版であれば受けられる行政からのサポートが対象外となってしまうためです
   - Androidでは、OSの制約上Googleアカウント単位での参加になるため、オープンβ版参加用のGoogleアカウントをご用意いただき、そのアカウントをオープンβ版用端末に設定し、そのアカウントからCOCOAをインストールしてください
-  - iOSでは、（iOS特有の留意点を書く、TestFlightの使用方法など）
+  - iOSでは、OSの制約上TestFlightを使用するため、クローズドなアプリを利用している端末での利用はお避け下さい(どうしても利用する際には、事前に端末の管理者にお問い合わせください)。また、事前に[TestFlightアプリ](https://apps.apple.com/jp/app/testflight/id899247664)をインストールしておくとスムーズです。
 
 ## 既知の不具合
  - [［A11Y］［iOS］ 画面読み上げ（VoiceOver）を有効にするとスクロールができなくなる](https://github.com/cocoa-mhlw/cocoa/issues/913)
