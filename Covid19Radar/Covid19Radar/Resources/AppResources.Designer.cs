@@ -947,75 +947,75 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotifyOtherPageDiag1Message {
+        public static string NotifyOtherPageDialog1Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag1Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog1Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag1Title {
+        public static string NotifyOtherPageDialog1Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag1Title", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog1Title", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag2Title {
+        public static string NotifyOtherPageDialog2Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag2Title", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog2Title", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag3Message {
+        public static string NotifyOtherPageDialog3Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag3Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog3Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag3Title {
+        public static string NotifyOtherPageDialog3Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag3Title", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog3Title", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag4Message {
+        public static string NotifyOtherPageDialog4Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag4Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog4Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag5Message {
+        public static string NotifyOtherPageDialog5Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag5Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog5Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag6Message {
+        public static string NotifyOtherPageDialog6Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag6Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog6Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag6Title {
+        public static string NotifyOtherPageDialog6Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag6Title", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog6Title", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiagReturnHomeTitle {
+        public static string NotifyOtherPageDialogReturnHomeTitle {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiagReturnHomeTitle", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialogReturnHomeTitle", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiagReturnHome {
+        public static string NotifyOtherPageDialogReturnHome {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiagReturnHome", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialogReturnHome", resourceCulture);
             }
         }
         
-        public static string ProcessingNumberErrorDiagTitle {
+        public static string ProcessingNumberErrorDialogTitle {
             get {
-                return ResourceManager.GetString("ProcessingNumberErrorDiagTitle", resourceCulture);
+                return ResourceManager.GetString("ProcessingNumberErrorDialogTitle", resourceCulture);
             }
         }
         
