@@ -27,12 +27,10 @@
                     Spacing="16">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="1"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageDescription1}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
                         Style="{StaticResource AnnotationLabel}">
                         <Label.FormattedText>
                             <FormattedString>
@@ -52,7 +50,6 @@
 
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
                         Command="{Binding OnExposureNotificationSettingButton}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.ExposureNotificationSettingButtonTitle}" />
@@ -60,12 +57,10 @@
                     <!-- Step.1 -->
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
                         Style="{StaticResource DefaultLabelBold}"
                         Text="{x:Static resources:AppResources.Step1Text}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="4"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep1Description}" />
                     <Image
@@ -94,12 +89,10 @@
                     <!-- Step.2 -->
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="5"
                         Style="{StaticResource DefaultLabelBold}"
                         Text="{x:Static resources:AppResources.Step2Text}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="6"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep2Description}" />
                     <Image
@@ -128,12 +121,10 @@
                     <!-- Step.3 -->
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="7"
                         Style="{StaticResource DefaultLabelBold}"
                         Text="{x:Static resources:AppResources.Step3Text}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="8"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep3Description}" />
                     <Image
@@ -162,12 +153,10 @@
                     <!-- Step.4 -->
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="9"
                         Style="{StaticResource DefaultLabelBold}"
                         Text="{x:Static resources:AppResources.Step4Text}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="10"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep4Description}" />
                     <Image
@@ -196,18 +185,15 @@
                     <!-- Step.5 -->
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="11"
                         Style="{StaticResource DefaultLabelBold}"
                         Text="{x:Static resources:AppResources.Step5Text}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="12"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.HowToEnableExposureNotificationsPageStep5Description}" />
 
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="13"
                         Command="{Binding OnExposureNotificationSettingButton}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.ExposureNotificationSettingButtonTitle}" />

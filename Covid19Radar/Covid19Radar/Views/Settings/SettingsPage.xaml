@@ -39,14 +39,12 @@
                         Grid.Row="0"
                         Grid.Column="0"
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="1"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.VersionText}" />
                     <Label
                         Grid.Row="0"
                         Grid.Column="1"
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
                         HorizontalOptions="End"
                         Style="{StaticResource DefaultLabelSmall}"
                         TextColor="{StaticResource SecondaryText}"
@@ -56,20 +54,17 @@
             <BoxView Style="{StaticResource DefaultLineStyle}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="3"
                 Margin="15, 20, 15, 15"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.SettingsPageReinitializeLabel}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="4"
                 Margin="15, 0"
                 Style="{StaticResource DefaultLabelSmall}"
                 TextColor="{StaticResource SecondaryText}"
                 Text="{x:Static resources:AppResources.SettingsPageReinitializeDescription}" />
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="5"
                 Margin="20"
                 Command="{Binding OnChangeResetData}"
                 Style="{StaticResource DefaultButton}"
@@ -77,13 +72,11 @@
             <BoxView Style="{StaticResource DefaultLineStyle}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="6"
                 Margin="15, 20, 15, 15"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.SettingsPageLicenseLabel}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="7"
                 Margin="15, 0"
                 Style="{StaticResource DefaultLabelSmall}"
                 TextColor="{StaticResource SecondaryText}">
@@ -97,7 +90,6 @@
             </Label>
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="8"
                 Margin="20"
                 Command="{Binding OnClickObtainSourceCode}"
                 CommandParameter="{x:Static resources:AppResources.SettingsPageGitHubUrl}"
@@ -105,7 +97,6 @@
                 Text="{x:Static resources:AppResources.SettingsPageSourceCodeButton}" />
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="9"
                 Margin="0, 0, 0, 20"
                 Command="{prism:NavigateTo 'LicenseAgreementPage'}"
                 Style="{StaticResource DefaultButton}"

@@ -32,7 +32,6 @@
                     Source="alert_workaround_img.png" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="1"
                     HorizontalOptions="Center"
                     Style="{StaticResource AnnotationLabel}">
                     <Label.FormattedText>
@@ -45,7 +44,6 @@
             </StackLayout>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="2"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.TroubleshootingPageDescription1}" />
             <Frame
@@ -55,26 +53,22 @@
                 <StackLayout Spacing="10">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
                         Style="{StaticResource DefaultLabel}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.TroubleshootingPageDescription2}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="4"
                         Style="{StaticResource DefaultLabel}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.TroubleshootingPageDescription3}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="5"
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.TroubleshootingPageDescription4}" />
                 </StackLayout>
             </Frame>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="6"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.TroubleshootingPageDescription5}" />
         </StackLayout>
