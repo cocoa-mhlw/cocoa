@@ -86,16 +86,16 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Frame HasShadow="False" Padding="0">
-                    <Frame.GestureRecognizers>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding ConfirmingLogReadText}"
+                    Style="{StaticResource LinkLabelStyleMedium}"
+                    HorizontalOptions="Start"
+                    Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}">
+                    <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding Path=OnClickConfirmLogCommand}"/>
-                    </Frame.GestureRecognizers>
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        AutomationProperties.Name="{Binding ConfirmingLogReadText}"
-                        Style="{StaticResource LinkLabelStyleMedium}"
-                        Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}" />
-                </Frame>
+                    </Label.GestureRecognizers>
+                </Label>
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
                     Command="{Binding Path=OnClickSendLogCommand}"

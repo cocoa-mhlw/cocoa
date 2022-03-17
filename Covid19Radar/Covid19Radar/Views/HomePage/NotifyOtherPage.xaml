@@ -132,6 +132,7 @@
                 AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessingNumberVisible}"
                 AutomationProperties.Name="{Binding HowToReceiveProcessingNumberReadText}"
                 Margin="0, 0, 0, 0"
+                HorizontalOptions="Start"
                 Style="{StaticResource LinkLabelStyleMedium}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageLabel}"
                 IsVisible="{Binding IsHowToObtainProcessingNumberVisible}">
