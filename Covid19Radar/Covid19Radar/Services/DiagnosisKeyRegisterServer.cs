@@ -33,6 +33,7 @@ namespace Covid19Radar.Services
         }
 
         public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+            bool hasSymptom,
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,
@@ -60,7 +61,13 @@ namespace Covid19Radar.Services
                         );
                 }
 
-                var diagnosisInfo = await CreateSubmissionAsync(symptomOnsetDate, temporaryExposureKeys, processNumber, idempotencyKey);
+                var diagnosisInfo = await CreateSubmissionAsync(
+                    hasSymptom,
+                    symptomOnsetDate,
+                    temporaryExposureKeys,
+                    processNumber,
+                    idempotencyKey
+                    );
                 return await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
             }
             finally
@@ -70,6 +77,7 @@ namespace Covid19Radar.Services
         }
 
         private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(
+            bool hasSymptom,
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,
@@ -93,7 +101,8 @@ namespace Covid19Radar.Services
             // Create the submission
             var submission = new DiagnosisSubmissionParameter()
             {
-                SymptomOnsetDate = symptomOnsetDate.ToString(AppConstants.FORMAT_TIMESTAMP),
+                HasSymptom = hasSymptom,
+                OnsetOfSymptomOrTestDate = symptomOnsetDate.ToString(AppConstants.FORMAT_TIMESTAMP),
                 Keys = keys.ToArray(),
                 Regions = AppSettings.Instance.SupportedRegions,
                 Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
