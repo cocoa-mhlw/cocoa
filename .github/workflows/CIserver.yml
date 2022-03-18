@@ -21,8 +21,8 @@ on:
       - 'Covid19Radar.Functions.runsettings'
       - 'Nuget.config'
 jobs:
-  build_serverapi:
-    name: Build-ServerApi
+  build:
+    name: build
     runs-on: windows-latest
     strategy:
       matrix:
@@ -30,44 +30,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: install report generator
+      run: dotnet tool update dotnet-reportgenerator-globaltool -g
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
-    - name: Build
-      run: msbuild ${{ github.workspace }}/src/Covid19Radar.Api/Covid19Radar.Api.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
-  build_serverapi_common:
-    name: Build-ServerApi-Common
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        Configuration: [Debug, Release]
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1
-    - name: Build
-      run: msbuild ${{ github.workspace }}/src/Covid19Radar.Api.Common/Covid19Radar.Api.Common.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
-  build_serverapi_background:
-    name: Build-ServerApi-Background
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        Configuration: [Debug, Release]
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1
-    - name: Build
-      run: msbuild ${{ github.workspace }}/src/Covid19Radar.Background/Covid19Radar.Background.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
-  test:
-    name: Test-ServerApi
-    runs-on: ubuntu-latest
-    needs: [build_serverapi, build_serverapi_common, build_serverapi_background]
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - name: msbuild
+      run: msbuild ${{ github.workspace }}/Covid19Radar.Functions.sln /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
     - name: Execute Unit Tests
-      run: dotnet test ${{ github.workspace }}/src/Covid19Radar.Api.Tests/
+      run: dotnet test ${{ github.workspace }}/Covid19Radar.Functions.sln /p:CollectCoverage=true --no-build --logger trx --settings ${{ github.workspace }}/Covid19Radar.Functions.runsettings --collect:"XPlat Code Coverage"     
       env:
-        DOTNET_CLI_TELEMETRY_OPTOUT: true
+        DOTNET_CLI_TELEMETRY_OPTOUT: true 
+    - name: Generate Coverage Report
+      run: reportgenerator "-reports:${{ github.workspace }}/TestResults/*/coverage.cobertura.xml" "-targetdir:sonarqubecoverage" "-reporttypes:SonarQube"
