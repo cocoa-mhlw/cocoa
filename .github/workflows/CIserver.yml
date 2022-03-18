@@ -28,10 +28,21 @@ jobs:
       matrix:
         Configuration: [Debug, Release]
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
     - name: install report generator
       run: dotnet tool update dotnet-reportgenerator-globaltool -g
+    - name: install SonarScanner
+      if: ${{ matrix.Configuration == 'Release' }}
+      run: dotnet tool install --global dotnet-sonarscanner
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Begin SonarScanner
+      if: ${{ matrix.Configuration == 'Release' }}
+      run: dotnet sonarscanner begin  /k:"cocoa-mhlw_cocoa" /o:"cocoa-mhlw" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
     - name: msbuild
@@ -42,3 +53,9 @@ jobs:
         DOTNET_CLI_TELEMETRY_OPTOUT: true 
     - name: Generate Coverage Report
       run: reportgenerator "-reports:${{ github.workspace }}/TestResults/*/coverage.cobertura.xml" "-targetdir:sonarqubecoverage" "-reporttypes:SonarQube"
+    - name: End SonarScanner
+      if: ${{ matrix.Configuration == 'Release' }}
+      run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
