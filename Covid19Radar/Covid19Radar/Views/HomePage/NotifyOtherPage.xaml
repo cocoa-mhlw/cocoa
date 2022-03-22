@@ -42,6 +42,7 @@
                 >
                 <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding RadioButtonYesReadText}"
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
@@ -49,6 +50,7 @@
                     GroupName="CheckSymptoms" />
                 <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding RadioButtonNoReadText}"
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
