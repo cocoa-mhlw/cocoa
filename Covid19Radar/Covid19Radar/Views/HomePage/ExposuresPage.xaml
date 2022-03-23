@@ -69,10 +69,16 @@
         </CollectionView.EmptyView>
         <CollectionView.Footer>
             <StackLayout
-                Padding="20, 20, 20, 10"
+                Padding="20, 10, 20, 10"
                 >
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Command="{Binding Path=OnClickExportExposureData}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.ExportExposureData}" />
+
                 <Label
-                    Margin="0, 10, 0, 0"
+                    Margin="0, 30, 0, 0"
                     Style="{StaticResource AnnotationLabel}"
                     TextColor="{StaticResource PrimaryText}">
                     <Label.FormattedText>

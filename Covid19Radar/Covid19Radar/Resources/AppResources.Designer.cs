@@ -533,9 +533,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NoRiskContactPageButtonText {
+        public static string ExportExposureData {
             get {
-                return ResourceManager.GetString("NoRiskContactPageButtonText", resourceCulture);
+                return ResourceManager.GetString("ExportExposureData", resourceCulture);
             }
         }
         

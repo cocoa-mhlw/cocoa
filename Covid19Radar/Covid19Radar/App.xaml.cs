@@ -189,6 +189,7 @@ namespace Covid19Radar
             container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
             container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
+            container.Register<IExposureDataExportService, ExposureDataExportService>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IExposureDataRepository, ExposureDataRepositoryMock>(Reuse.Singleton);

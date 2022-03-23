@@ -432,9 +432,9 @@
     <value>It appears there have been no persons who have registered positive for COVID-19 within your sphere of activities. Please continue to pay attention to preventing COVID-19 infections.</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
   </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>Share this app</value>
-    <comment>アプリを周りの人に知らせる</comment>
+  <data name="ExportExposureData" xml:space="preserve">
+    <value>Export Exposure Data</value>
+    <comment>TODO:接触情報を確認</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>Terms of use</value>

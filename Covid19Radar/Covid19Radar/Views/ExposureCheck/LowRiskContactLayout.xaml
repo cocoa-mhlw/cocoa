@@ -101,7 +101,15 @@
         <CollectionView.Footer>
             <StackLayout
                 Padding="20">
+                <Button
+                    Margin="0, 10, 0, 0"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Command="{Binding Path=OnClickExportExposureData}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.ExportExposureData}" />
+
                 <Label
+                    Margin="0, 30, 0, 0"
                     Style="{StaticResource DefaultLabelCaptionStartAlignment}"
                     Text="{Binding LowRiskContactPageAnnotationDecription}" />
             </StackLayout>

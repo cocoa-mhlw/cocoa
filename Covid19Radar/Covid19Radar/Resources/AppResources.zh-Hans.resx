@@ -324,9 +324,9 @@
     <value>您的行动范围内似乎没有阳性登记者。请继续注意防止感染。</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
   </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>分享此APP</value>
-    <comment>アプリを周りの人に知らせる</comment>
+  <data name="ExportExposureData" xml:space="preserve">
+    <value>Export Exposure Data</value>
+    <comment>TODO:接触情報を確認</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>使用条款</value>

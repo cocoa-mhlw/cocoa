@@ -19,6 +19,7 @@ using Covid19Radar.Resources;
 using Threshold = Covid19Radar.Model.V1ExposureRiskCalculationConfiguration.Threshold;
 using Covid19Radar.Services;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -27,6 +28,9 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService _loggerService;
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+
+        private readonly ILocalPathService _localPathService;
+        private readonly IExposureDataExportService _exposureDataExportService;
 
         public ObservableCollection<ExposureCheckScoreModel> ExposureCheckScores { get; set; }
 
@@ -64,12 +68,16 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
-            IExposureRiskCalculationService exposureRiskCalculationService
+            IExposureRiskCalculationService exposureRiskCalculationService,
+            ILocalPathService localPathService,
+            IExposureDataExportService exposureDataExportService
             ) : base(navigationService)
         {
             _loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _localPathService = localPathService;
+            _exposureDataExportService = exposureDataExportService;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
         }
@@ -244,13 +252,28 @@ namespace Covid19Radar.ViewModels
             return exposureCheckModel;
         }
 
-        public Command OnClickShareApp => new Command(() =>
+        public Command OnClickExportExposureData => new Command(async () =>
         {
             _loggerService.StartMethod();
 
-            AppUtils.PopUpShare();
+            try
+            {
+                string exposureDataFilePath = _localPathService.ExposureDataPath;
+                await _exposureDataExportService.exportAsync(exposureDataFilePath);
 
-            _loggerService.EndMethod();
+                await Share.RequestAsync(new ShareFileRequest
+                {
+                    File = new ShareFile(exposureDataFilePath)
+                });
+            }
+            catch (NotImplementedInReferenceAssemblyException exception)
+            {
+                _loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         });
     }
 
