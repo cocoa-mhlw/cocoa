@@ -217,11 +217,11 @@
                     Style="{StaticResource DefaultButton}"
                     Text="ExposuresPage" />
                 <Button
-                    Command="{prism:NavigateTo 'ReAgreePrivacyPolicyPage'}"
+                    Command="{Binding OnClickReAgreePrivacyPolicyPage}"
                     Style="{StaticResource DefaultButton}"
                     Text="ReAgreePrivacyPolicyPage" />
                 <Button
-                    Command="{prism:NavigateTo 'ReAgreeTermsOfServicePage'}"
+                    Command="{Binding OnClickReAgreeTermsOfServicePage}"
                     Style="{StaticResource DefaultButton}"
                     Text="ReAgreeTermsOfServicePage" />
                 <Button
