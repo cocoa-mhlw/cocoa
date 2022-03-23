@@ -1159,20 +1159,36 @@
     <comment>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</comment>
   </data>
   <data name="TroubleshootingPageDescription2" xml:space="preserve">
+    <value>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</value>
+    <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem1" xml:space="preserve">
+    <value>・電波環境などインターネットの接続状況に問題がないか確認してください。</value>
+    <comment>・電波環境などインターネットの接続状況に問題がないか確認してください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem2" xml:space="preserve">
+    <value>・インターネット接続に、意図的に「VPN接続」や「プロキシ接続」を利用している場合はお切りください。</value>
+    <comment>・インターネット接続に、意図的に「VPN接続」や「プロキシ接続」を利用している場合はお切りください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem3" xml:space="preserve">
     <value>・アプリの再起動を行ってください。</value>
     <comment>・アプリの再起動を行ってください。</comment>
   </data>
-  <data name="TroubleshootingPageDescription3" xml:space="preserve">
-    <value>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</value>
-    <comment>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</comment>
+  <data name="TroubleshootingPageConfirmationItem4" xml:space="preserve">
+    <value>・スマートフォンの再起動を行ってください。</value>
+    <comment>・スマートフォンの再起動を行ってください。</comment>
   </data>
-  <data name="TroubleshootingPageDescription4" xml:space="preserve">
-    <value>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</value>
-    <comment>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</comment>
+  <data name="TroubleshootingPageConfirmationItem5" xml:space="preserve">
+    <value>・iPhoneをお使いの方は、 OS(※)を最新バージョンにアップデートしてください。</value>
+    <comment>・iPhoneをお使いの方は、 OS(※)を最新バージョンにアップデートしてください。</comment>
   </data>
-  <data name="TroubleshootingPageDescription5" xml:space="preserve">
-    <value>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</value>
-    <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  <data name="TroubleshootingPageConfirmationItem6" xml:space="preserve">
+    <value>・Androidをお使いの方は、設定内にある省電力機能（※1）の対象からCOCOA（※2）を外す、または電池残量が少なくなった場合のみに省電力モードに切り替わるように設定してください。</value>
+    <comment>・Androidをお使いの方は、設定内にある省電力機能（※1）の対象からCOCOA（※2）を外す、または電池残量が少なくなった場合のみに省電力モードに切り替わるように設定してください。</comment>
+  </data>
+  <data name="TroubleshootingPageAnnotationPowerSaving" xml:space="preserve">
+    <value>※1 省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称が異なります</value>
+    <comment>※1 省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称が異なります</comment>
   </data>
   <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
     <value>陽性登録に必要な処理番号</value>
@@ -1243,12 +1259,12 @@
     <comment>※</comment>
   </data>
   <data name="AnnotationSymbol1" xml:space="preserve">
-    <value>※1</value>
-    <comment>※1</comment>
+    <value>※1 </value>
+    <comment>※1 </comment>
   </data>
   <data name="AnnotationSymbol2" xml:space="preserve">
-    <value>※2</value>
-    <comment>※2</comment>
+    <value>※2 </value>
+    <comment>※2 </comment>
   </data>
   <data name="HomePageImageAnnotationText" xml:space="preserve">
     <value>「ホーム」画面のイメージ画像</value>

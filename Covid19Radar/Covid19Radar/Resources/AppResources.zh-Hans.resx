@@ -1166,20 +1166,36 @@ However, if you have any symptoms, please consider receiving a consultation..
     <comment>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</comment>
   </data>
   <data name="TroubleshootingPageDescription2" xml:space="preserve">
-    <value>・请重新启动APP。</value>
-    <comment>・アプリの再起動を行ってください。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription3" xml:space="preserve">
-    <value>・安卓系统用户，请在设定界面的省电功能（※）列表中删除COCOA，或设置为仅在电池余量极少时切换至省电模式等。</value>
-    <comment>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription4" xml:space="preserve">
-    <value>※其具体名称可能是节能模式、长效模式、电池优化等，因您所使用的手机机型而异。</value>
-    <comment>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription5" xml:space="preserve">
     <value>如您尝试上述措施后仍显示“无法确认有无接触”，请咨询客服。</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem1" xml:space="preserve">
+    <value>・请检查手机信号来确认互联网连接状态是否有问题。</value>
+    <comment>・電波環境などインターネットの接続状況に問題がないか確認してください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem2" xml:space="preserve">
+    <value>・如果您有意使用“VPN 连接”或“代理连接”进行 上网，请将其关闭。</value>
+    <comment>・インターネット接続に、意図的に「VPN接続」や「プロキシ接続」を利用している場合はお切りください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem3" xml:space="preserve">
+    <value>・请重启应用。</value>
+    <comment>・アプリの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem4" xml:space="preserve">
+    <value>・请重启您的智能手机。</value>
+    <comment>・スマートフォンの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem5" xml:space="preserve">
+    <value>・如果您使用的是 iPhone，请将操作系统更新到最新版本。</value>
+    <comment>・iPhoneをお使いの方は、 OS(※)を最新バージョンにアップデートしてください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem6" xml:space="preserve">
+    <value>・如果您使用的是安卓手机，请在设置中将COCOA 排除在省电功能（※）的目标之外或仅在电池电量低时切换到省电模式。</value>
+    <comment>・Androidをお使いの方は、設定内にある省電力機能（※1）の対象からCOCOA（※2）を外す、または電池残量が少なくなった場合のみに省電力モードに切り替わるように設定してください。</comment>
+  </data>
+  <data name="TroubleshootingPageAnnotationPowerSaving" xml:space="preserve">
+    <value>※其具体名称可能是节能模式、长效模式、电池优化等，因您所使用的手机机型而异。</value>
+    <comment>※1 省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称が異なります</comment>
   </data>
   <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
     <value>阳性注册需要的受理编号</value>
