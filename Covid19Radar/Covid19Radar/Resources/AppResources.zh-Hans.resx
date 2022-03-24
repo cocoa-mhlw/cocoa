@@ -1174,7 +1174,7 @@ However, if you have any symptoms, please consider receiving a consultation..
     <comment>・電波環境などインターネットの接続状況に問題がないか確認してください。</comment>
   </data>
   <data name="TroubleshootingPageConfirmationItem2" xml:space="preserve">
-    <value>・如果您有意使用“VPN 连接”或“代理连接”进行 上网，请将其关闭。</value>
+    <value>・如果您有意使用“VPN连接”或“代理连接”进行上网，请将其关闭。</value>
     <comment>・インターネット接続に、意図的に「VPN接続」や「プロキシ接続」を利用している場合はお切りください。</comment>
   </data>
   <data name="TroubleshootingPageConfirmationItem3" xml:space="preserve">
@@ -1186,11 +1186,11 @@ However, if you have any symptoms, please consider receiving a consultation..
     <comment>・スマートフォンの再起動を行ってください。</comment>
   </data>
   <data name="TroubleshootingPageConfirmationItem5" xml:space="preserve">
-    <value>・如果您使用的是 iPhone，请将操作系统更新到最新版本。</value>
+    <value>・如果您使用的是iPhone，请将操作系统更新到最新版本。</value>
     <comment>・iPhoneをお使いの方は、 OS(※)を最新バージョンにアップデートしてください。</comment>
   </data>
   <data name="TroubleshootingPageConfirmationItem6" xml:space="preserve">
-    <value>・如果您使用的是安卓手机，请在设置中将COCOA 排除在省电功能（※）的目标之外或仅在电池电量低时切换到省电模式。</value>
+    <value>・如果您使用的是安卓手机，请在设置中将COCOA排除在省电功能（※）的目标之外或仅在电池电量低时切换到省电模式。</value>
     <comment>・Androidをお使いの方は、設定内にある省電力機能（※1）の対象からCOCOA（※2）を外す、または電池残量が少なくなった場合のみに省電力モードに切り替わるように設定してください。</comment>
   </data>
   <data name="TroubleshootingPageAnnotationPowerSaving" xml:space="preserve">
