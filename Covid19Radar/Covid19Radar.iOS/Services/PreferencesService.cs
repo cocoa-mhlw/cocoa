@@ -24,143 +24,6 @@ namespace Covid19Radar.iOS.Services
             return userDefaults[key] != null;
         }
 
-        public DateTime? GetDateTime(string key)
-        {
-            lock (this)
-            {
-                loggerService.StartMethod();
-                loggerService.Info($"key={key}, type={typeof(DateTime)}");
-
-                if (!ContainsKey(key))
-                {
-                    loggerService.Info($"{key} is not contained.");
-                    loggerService.EndMethod();
-                    return null;
-                }
-
-                var userDefaults = NSUserDefaults.StandardUserDefaults;
-                try
-                {
-                    var valueString = userDefaults.StringForKey(key);
-                    var value = DateTime.Parse(valueString);
-                    loggerService.EndMethod();
-                    return value;
-                }
-                catch (Exception)
-                {
-                    loggerService.Error($"Failed to get value of {key}.");
-                    loggerService.EndMethod();
-                    return null;
-                }
-            }
-        }
-
-        public T GetValue<T>(string key, T defaultValue)
-        {
-            lock (this)
-            {
-                loggerService.StartMethod();
-                loggerService.Info($"key={key}, type={typeof(T)}");
-
-                if (!ContainsKey(key))
-                {
-                    loggerService.Info($"{key} is not contained.");
-                    loggerService.EndMethod();
-                    return defaultValue;
-                }
-
-                var userDefaults = NSUserDefaults.StandardUserDefaults;
-                try
-                {
-                    object value = null;
-                    if (defaultValue == null)
-                    {
-                        value = userDefaults.StringForKey(key);
-                        return (T)value;
-                    }
-
-                    switch (defaultValue)
-                    {
-                        case int i:
-                            value = (int)userDefaults.IntForKey(key);
-                            break;
-                        case long l:
-                            value = (long)userDefaults.IntForKey(key);
-                            break;
-                        case bool b:
-                            value = userDefaults.BoolForKey(key);
-                            break;
-                        case float f:
-                            value = userDefaults.FloatForKey(key);
-                            break;
-                        case string s:
-                            value = userDefaults.StringForKey(key);
-                            break;
-                        default:
-                            loggerService.Info("Type is not supported.");
-                            value = defaultValue;
-                            break;
-                    }
-                    loggerService.EndMethod();
-                    return (T)value;
-                }
-                catch (Exception)
-                {
-                    loggerService.Error($"Failed to get value of {key}.");
-                    loggerService.EndMethod();
-                    return defaultValue;
-                }
-            }
-        }
-
-        public void SetValue<T>(string key, T value)
-        {
-            lock (this)
-            {
-                loggerService.StartMethod();
-                loggerService.Info($"key={key}, type={typeof(T)}");
-
-                var userDefaults = NSUserDefaults.StandardUserDefaults;
-                bool result;
-
-                if (ContainsKey(key) && value == null)
-                {
-                    userDefaults.RemoveObject(key);
-                    result = userDefaults.Synchronize();
-                }
-                else
-                {
-                    switch (value)
-                    {
-                        case int i:
-                            userDefaults.SetInt(i, key);
-                            break;
-                        case long l:
-                            userDefaults.SetInt((nint)l, key);
-                            break;
-                        case bool b:
-                            userDefaults.SetBool(b, key);
-                            break;
-                        case float f:
-                            userDefaults.SetFloat(f, key);
-                            break;
-                        case string s:
-                            userDefaults.SetString(s, key);
-                            break;
-                    }
-
-                    result = userDefaults.Synchronize();
-                }
-
-                if (!result)
-                {
-                    loggerService.Error($"Failed to save value of {key}.");
-                }
-
-                loggerService.EndMethod();
-            }
-        }
-
         public void RemoveValue(string key)
         {
             lock (this)
@@ -173,6 +36,261 @@ namespace Covid19Radar.iOS.Services
 
                     var userDefaults = NSUserDefaults.StandardUserDefaults;
                     userDefaults.RemoveObject(key);
+                }
+
+                loggerService.EndMethod();
+            }
+        }
+
+        public int GetIntValue(string key, int defaultValue)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                if (!ContainsKey(key))
+                {
+                    loggerService.Info($"{key} is not contained.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                try
+                {
+                    loggerService.EndMethod();
+                    return (int)userDefaults.IntForKey(key);
+                }
+                catch (Exception)
+                {
+                    loggerService.Error($"Failed to get value of {key}.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+            }
+        }
+
+        public long GetLongValue(string key, long defaultValue)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                if (!ContainsKey(key))
+                {
+                    loggerService.Info($"{key} is not contained.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                try
+                {
+                    loggerService.EndMethod();
+                    return userDefaults.IntForKey(key);
+                }
+                catch (Exception)
+                {
+                    loggerService.Error($"Failed to get value of {key}.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+            }
+        }
+
+        public float GetFloatValue(string key, float defaultValue)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                if (!ContainsKey(key))
+                {
+                    loggerService.Info($"{key} is not contained.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                try
+                {
+                    loggerService.EndMethod();
+                    return userDefaults.FloatForKey(key);
+                }
+                catch (Exception)
+                {
+                    loggerService.Error($"Failed to get value of {key}.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+            }
+        }
+
+        public string GetStringValue(string key, string defaultValue)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                if (!ContainsKey(key))
+                {
+                    loggerService.Info($"{key} is not contained.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                try
+                {
+                    loggerService.EndMethod();
+                    return userDefaults.StringForKey(key);
+                }
+                catch (Exception)
+                {
+                    loggerService.Error($"Failed to get value of {key}.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+            }
+        }
+
+        public bool GetBoolValue(string key, bool defaultValue)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                if (!ContainsKey(key))
+                {
+                    loggerService.Info($"{key} is not contained.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                try
+                {
+                    loggerService.EndMethod();
+                    return userDefaults.BoolForKey(key);
+                }
+                catch (Exception)
+                {
+                    loggerService.Error($"Failed to get value of {key}.");
+                    loggerService.EndMethod();
+                    return defaultValue;
+                }
+            }
+        }
+
+        public void SetIntValue(string key, int value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                userDefaults.SetInt(value, key);
+                bool result = userDefaults.Synchronize();
+
+                if (!result)
+                {
+                    loggerService.Error($"Failed to save value of {key}.");
+                }
+
+                loggerService.EndMethod();
+            }
+        }
+
+        public void SetLongValue(string key, long value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                userDefaults.SetInt((nint)value, key);
+                bool result = userDefaults.Synchronize();
+
+                if (!result)
+                {
+                    loggerService.Error($"Failed to save value of {key}.");
+                }
+
+                loggerService.EndMethod();
+            }
+        }
+
+        public void SetFloatValue(string key, float value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                userDefaults.SetFloat(value, key);
+                bool result = userDefaults.Synchronize();
+
+                if (!result)
+                {
+                    loggerService.Error($"Failed to save value of {key}.");
+                }
+
+                loggerService.EndMethod();
+            }
+        }
+
+        public void SetStringValue(string key, string value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                bool result;
+
+                if (ContainsKey(key) && value == null)
+                {
+                    userDefaults.RemoveObject(key);
+                    result = userDefaults.Synchronize();
+                }
+                else
+                {
+                    userDefaults.SetString(value, key);
+                    result = userDefaults.Synchronize();
+                }
+
+                if (!result)
+                {
+                    loggerService.Error($"Failed to save value of {key}.");
+                }
+
+                loggerService.EndMethod();
+            }
+        }
+
+        public void SetBoolValue(string key, bool value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                var userDefaults = NSUserDefaults.StandardUserDefaults;
+                userDefaults.SetBool(value, key);
+                bool result = userDefaults.Synchronize();
+
+                if (!result)
+                {
+                    loggerService.Error($"Failed to save value of {key}.");
                 }
 
                 loggerService.EndMethod();

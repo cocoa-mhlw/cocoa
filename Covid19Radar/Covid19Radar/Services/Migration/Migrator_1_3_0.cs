@@ -62,7 +62,7 @@ namespace Covid19Radar.Services.Migration
 
         private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeZoneInfo? timeZoneInfo, DateTime fallbackDateTime)
         {
-            string dateTimeStr = _preferencesService.GetValue(dateTimeKey, fallbackDateTime.ToString());
+            string dateTimeStr = _preferencesService.GetStringValue(dateTimeKey, fallbackDateTime.ToString());
 
             /// **Note**
             /// `dateTime` still can be `0001/01/01 00:00:00` (= UNIX Epoch:`-62135596800`).
@@ -90,7 +90,7 @@ namespace Covid19Radar.Services.Migration
                 dateTime = fallbackDateTime;
             }
 
-            _preferencesService.SetValue(epochKey, dateTime.ToUnixEpoch());
+            _preferencesService.SetLongValue(epochKey, dateTime.ToUnixEpoch());
             _preferencesService.RemoveValue(dateTimeKey);
         }
     }

@@ -53,7 +53,7 @@ namespace Covid19Radar.Services.Migration
         public static readonly string PREFERENCE_KEY_START_DATETIME = "StartDateTime";
 
         private void SetPreferenceVersion(Version version)
-            => _preferencesService.SetValue(PreferenceKey.AppVersion, version.ToString());
+            => _preferencesService.SetStringValue(PreferenceKey.AppVersion, version.ToString());
 
         private Version? GetPreferenceVersion()
         {
@@ -65,7 +65,7 @@ namespace Covid19Radar.Services.Migration
                 _loggerService.EndMethod();
                 return null;
             }
-            var appVersion = _preferencesService.GetValue(PreferenceKey.AppVersion, FIRST_VERSION);
+            var appVersion = _preferencesService.GetStringValue(PreferenceKey.AppVersion, FIRST_VERSION);
             _loggerService.Info($"Current Preference Version: {appVersion}");
 
             _loggerService.EndMethod();

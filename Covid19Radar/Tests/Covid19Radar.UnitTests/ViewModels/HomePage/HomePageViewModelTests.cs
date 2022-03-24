@@ -157,7 +157,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -177,7 +177,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -197,7 +197,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -225,7 +225,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Returns(Task.FromResult(new List<int>() { status } as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(isCanConfirmExposure);
 
             homePageViewModel.OnAppearing();
@@ -244,7 +244,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Setup(x => x.GetStatusCodesAsync())
                 .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             homePageViewModel.OnAppearing();
@@ -267,10 +267,10 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Setup(x => x.ContainsKey("LastConfirmedDateTimeEpoch"))
                 .Returns(true);
             mockPreferenceService
-                .Setup(x => x.GetValue("LastConfirmedDateTimeEpoch", 0L))
+                .Setup(x => x.GetLongValue("LastConfirmedDateTimeEpoch", 0L))
                 .Returns(mockLastConfirmedUtcDateTime.ToUnixEpoch());
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             homePageViewModel.OnAppearing();
