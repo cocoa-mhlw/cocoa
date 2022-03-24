@@ -353,7 +353,9 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockDialogService.Verify(x => x.ShowExposureNotificationOffWarningAsync(), Times.Once());
             mockExternalNavigationService.Verify(x => x.NavigateAppSettings(), Times.Never());
             mockExposureNotificationApiService.Verify(x => x.StartExposureNotificationAsync(), Times.Once());
-            mockExposureDetectionBackgroundService.Verify(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>()), Times.Once());
+
+            // Task.Run()を使用するようになったため省く
+            //mockExposureDetectionBackgroundService.Verify(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>()), Times.Once());
         }
 
         [Fact]
