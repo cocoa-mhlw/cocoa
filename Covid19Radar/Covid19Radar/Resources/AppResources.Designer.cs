@@ -1115,6 +1115,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ContactedNotifyPageBehaviorAtHighRiskOfInfection {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageBehaviorAtHighRiskOfInfection", resourceCulture);
+            }
+        }
+        
         public static string ReAgreeCheckButton {
             get {
                 return ResourceManager.GetString("ReAgreeCheckButton", resourceCulture);
