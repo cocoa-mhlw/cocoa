@@ -9,9 +9,21 @@ namespace Covid19Radar.Services
 {
     public interface ISecureStorageService
     {
+        int GetIntValue(string key, int defaultValue);
+        long GetLongValue(string key, long defaultValue);
+        float GetFloatValue(string key, float defaultValue);
+        string GetStringValue(string key, string defaultValue);
+        bool GetBoolValue(string key, bool defaultValue);
+        double GetDoubleValue(string key, double defaultValue);
+
+        void SetIntValue(string key, int value);
+        void SetLongValue(string key, long value);
+        void SetFloatValue(string key, float value);
+        void SetStringValue(string key, string value);
+        void SetBoolValue(string key, bool value);
+        void SetDoubleValue(string key, double value);
+
         bool ContainsKey(string key);
-        T GetValue<T>(string key, T defaultValue = default);
-        void SetValue<T>(string key, T value);
         void RemoveValue(string key);
     }
 
@@ -58,9 +70,29 @@ namespace Covid19Radar.Services
             return contains;
         }
 
-        public T GetValue<T>(string key, T defaultValue = default)
+        public void RemoveValue(string key)
         {
-            object result = defaultValue;
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+                try
+                {
+                    secureStorageDependencyService.Remove(key);
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to remove from secure-storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+        }
+
+        public int GetIntValue(string key, int defaultValue = default)
+        {
             lock (this)
             {
                 loggerService.StartMethod();
@@ -70,34 +102,7 @@ namespace Covid19Radar.Services
                     if (secureStorageDependencyService.ContainsKey(key))
                     {
                         var bytes = secureStorageDependencyService.GetBytes(key);
-                        if (typeof(T) == typeof(int) && bytes.Length == sizeof(int))
-                        {
-                            result = BitConverter.ToInt32(bytes);
-                        }
-                        else if (typeof(T) == typeof(long) && bytes.Length == sizeof(long))
-                        {
-                            result = BitConverter.ToInt64(bytes);
-                        }
-                        else if (typeof(T) == typeof(bool) && bytes.Length == sizeof(bool))
-                        {
-                            result = BitConverter.ToBoolean(bytes);
-                        }
-                        else if (typeof(T) == typeof(float) && bytes.Length == sizeof(float))
-                        {
-                            result = BitConverter.ToSingle(bytes);
-                        }
-                        else if (typeof(T) == typeof(double) && bytes.Length == sizeof(double))
-                        {
-                            result = BitConverter.ToDouble(bytes);
-                        }
-                        else if (typeof(T) == typeof(string))
-                        {
-                            result = System.Text.Encoding.UTF8.GetString(bytes);
-                        }
-                        else
-                        {
-                            throw new InvalidOperationException("Type is not supported.");
-                        }
+                        return BitConverter.ToInt32(bytes);
                     }
                     else
                     {
@@ -114,10 +119,165 @@ namespace Covid19Radar.Services
                 }
             }
 
-            return (T)result;
+            return defaultValue;
         }
 
-        public void SetValue<T>(string key, T value)
+        public long GetLongValue(string key, long defaultValue = default)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+                try
+                {
+                    if (secureStorageDependencyService.ContainsKey(key))
+                    {
+                        var bytes = secureStorageDependencyService.GetBytes(key);
+                        return BitConverter.ToInt64(bytes);
+                    }
+                    else
+                    {
+                        loggerService.Info("Value not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to get from secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+
+            return defaultValue;
+        }
+
+        public float GetFloatValue(string key, float defaultValue = default)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+                try
+                {
+                    if (secureStorageDependencyService.ContainsKey(key))
+                    {
+                        var bytes = secureStorageDependencyService.GetBytes(key);
+                        return BitConverter.ToSingle(bytes);
+                    }
+                    else
+                    {
+                        loggerService.Info("Value not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to get from secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+
+            return defaultValue;
+        }
+
+        public string GetStringValue(string key, string defaultValue = default)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+                try
+                {
+                    if (secureStorageDependencyService.ContainsKey(key))
+                    {
+                        var bytes = secureStorageDependencyService.GetBytes(key);
+                        return System.Text.Encoding.UTF8.GetString(bytes);
+                    }
+                    else
+                    {
+                        loggerService.Info("Value not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to get from secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+
+            return defaultValue;
+        }
+
+        public bool GetBoolValue(string key, bool defaultValue = default)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+                try
+                {
+                    if (secureStorageDependencyService.ContainsKey(key))
+                    {
+                        var bytes = secureStorageDependencyService.GetBytes(key);
+                        return BitConverter.ToBoolean(bytes);
+                    }
+                    else
+                    {
+                        loggerService.Info("Value not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to get from secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+
+            return defaultValue;
+        }
+
+        public double GetDoubleValue(string key, double defaultValue = default)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+                try
+                {
+                    if (secureStorageDependencyService.ContainsKey(key))
+                    {
+                        var bytes = secureStorageDependencyService.GetBytes(key);
+                        return BitConverter.ToDouble(bytes);
+                    }
+                    else
+                    {
+                        loggerService.Info("Value not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to get from secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+
+            return defaultValue;
+        }
+
+        public void SetIntValue(string key, int value)
         {
             lock (this)
             {
@@ -126,36 +286,7 @@ namespace Covid19Radar.Services
 
                 try
                 {
-                    byte[] bytes;
-                    if (typeof(T) == typeof(int))
-                    {
-                        bytes = BitConverter.GetBytes((int)(object)value);
-                    }
-                    else if (typeof(T) == typeof(long))
-                    {
-                        bytes = BitConverter.GetBytes((long)(object)value);
-                    }
-                    else if (typeof(T) == typeof(bool))
-                    {
-                        bytes = BitConverter.GetBytes((bool)(object)value);
-                    }
-                    else if (typeof(T) == typeof(float))
-                    {
-                        bytes = BitConverter.GetBytes((float)(object)value);
-                    }
-                    else if (typeof(T) == typeof(double))
-                    {
-                        bytes = BitConverter.GetBytes((double)(object)value);
-                    }
-                    else if (typeof(T) == typeof(string))
-                    {
-                        bytes = System.Text.Encoding.UTF8.GetBytes((string)(object)value);
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException("Type is not supported.");
-                    }
-
+                    byte[] bytes = BitConverter.GetBytes(value);
                     secureStorageDependencyService.SetBytes(key, bytes);
                 }
                 catch (Exception ex)
@@ -169,19 +300,113 @@ namespace Covid19Radar.Services
             }
         }
 
-        public void RemoveValue(string key)
+        public void SetLongValue(string key, long value)
         {
             lock (this)
             {
                 loggerService.StartMethod();
                 loggerService.Info($"key={key}");
+
                 try
                 {
-                    secureStorageDependencyService.Remove(key);
+                    byte[] bytes = BitConverter.GetBytes(value);
+                    secureStorageDependencyService.SetBytes(key, bytes);
                 }
                 catch (Exception ex)
                 {
-                    loggerService.Exception("Failed to remove from secure-storage.", ex);
+                    loggerService.Exception("Failed to set to secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+        }
+
+        public void SetFloatValue(string key, float value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                try
+                {
+                    byte[] bytes = BitConverter.GetBytes(value);
+                    secureStorageDependencyService.SetBytes(key, bytes);
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to set to secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+        }
+
+        public void SetStringValue(string key, string value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                try
+                {
+                    byte[] bytes = System.Text.Encoding.UTF8.GetBytes(value);
+                    secureStorageDependencyService.SetBytes(key, bytes);
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to set to secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+        }
+
+        public void SetBoolValue(string key, bool value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                try
+                {
+                    byte[] bytes = BitConverter.GetBytes(value);
+                    secureStorageDependencyService.SetBytes(key, bytes);
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to set to secure storage.", ex);
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+        }
+
+        public void SetDoubleValue(string key, double value)
+        {
+            lock (this)
+            {
+                loggerService.StartMethod();
+                loggerService.Info($"key={key}");
+
+                try
+                {
+                    byte[] bytes = BitConverter.GetBytes(value);
+                    secureStorageDependencyService.SetBytes(key, bytes);
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to set to secure storage.", ex);
                 }
                 finally
                 {

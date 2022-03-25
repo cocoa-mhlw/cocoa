@@ -181,8 +181,8 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _secureStorageService.SetValue(PreferenceKey.DailySummaries, dailySummaryListJson);
-                _secureStorageService.SetValue(PreferenceKey.ExposureWindows, exposureWindowListJson);
+                _secureStorageService.SetStringValue(PreferenceKey.DailySummaries, dailySummaryListJson);
+                _secureStorageService.SetStringValue(PreferenceKey.ExposureWindows, exposureWindowListJson);
                 return Task.CompletedTask;
             }
             finally
@@ -197,7 +197,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string dailySummariesJson = _secureStorageService.GetValue(PreferenceKey.DailySummaries, EMPTY_LIST_JSON);
+                string dailySummariesJson = _secureStorageService.GetStringValue(PreferenceKey.DailySummaries, EMPTY_LIST_JSON);
                 return Task.FromResult(
                     JsonConvert.DeserializeObject<List<DailySummary>>(dailySummariesJson)
                 );
@@ -221,7 +221,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                string exposureWindowListJson = _secureStorageService.GetValue(PreferenceKey.ExposureWindows, EMPTY_LIST_JSON);
+                string exposureWindowListJson = _secureStorageService.GetStringValue(PreferenceKey.ExposureWindows, EMPTY_LIST_JSON);
                 return Task.FromResult(
                     JsonConvert.DeserializeObject<List<ExposureWindow>>(exposureWindowListJson)
                 );
@@ -275,7 +275,7 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
             List<UserExposureInfo> result = null;
-            var exposureInformationJson = _secureStorageService.GetValue<string>(PreferenceKey.ExposureInformation, null);
+            var exposureInformationJson = _secureStorageService.GetStringValue(PreferenceKey.ExposureInformation, null);
             if (!string.IsNullOrEmpty(exposureInformationJson))
             {
                 result = JsonConvert.DeserializeObject<List<UserExposureInfo>>(exposureInformationJson);
@@ -303,7 +303,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                _secureStorageService.SetValue(PreferenceKey.ExposureInformation, exposureInformationListJson);
+                _secureStorageService.SetStringValue(PreferenceKey.ExposureInformation, exposureInformationListJson);
             }
             finally
             {

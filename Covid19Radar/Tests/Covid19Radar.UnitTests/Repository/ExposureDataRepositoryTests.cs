@@ -81,10 +81,10 @@ namespace Covid19Radar.UnitTests.Repository
 
             // Mock Setup
             mockSecureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(existDailySummaries));
             mockSecureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(existExposureWindows));
 
             var unitUnderTest = CreateRepository();
@@ -100,8 +100,8 @@ namespace Covid19Radar.UnitTests.Repository
             // Assert
             Assert.Equal(addDailySummaries, newDailySummaryList);
             Assert.Equal(addExposureWindows, newExposureWindowList);
-            mockSecureStorageService.Verify(x => x.SetValue("DailySummaries", expectedDailySummariesJson), Times.Once);
-            mockSecureStorageService.Verify(x => x.SetValue("ExposureWindows", expectedExposureWindowsJson), Times.Once);
+            mockSecureStorageService.Verify(x => x.SetStringValue("DailySummaries", expectedDailySummariesJson), Times.Once);
+            mockSecureStorageService.Verify(x => x.SetStringValue("ExposureWindows", expectedExposureWindowsJson), Times.Once);
 
         }
 
@@ -182,10 +182,10 @@ namespace Covid19Radar.UnitTests.Repository
 
             // Mock Setup
             mockSecureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(existDailySummaries));
             mockSecureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(existExposureWindows));
 
             var unitUnderTest = CreateRepository();
@@ -201,8 +201,8 @@ namespace Covid19Radar.UnitTests.Repository
             // Assert
             Assert.Equal(expectedNewDailySummaries, newDailySummaryList);
             Assert.Equal(expectedNewExposureWindows, newExposureWindowList);
-            mockSecureStorageService.Verify(x => x.SetValue("DailySummaries", expectedDailySummariesJson), Times.Once);
-            mockSecureStorageService.Verify(x => x.SetValue("ExposureWindows", expectedExposureWindowsJson), Times.Once);
+            mockSecureStorageService.Verify(x => x.SetStringValue("DailySummaries", expectedDailySummariesJson), Times.Once);
+            mockSecureStorageService.Verify(x => x.SetStringValue("ExposureWindows", expectedExposureWindowsJson), Times.Once);
 
         }
 
@@ -301,10 +301,10 @@ namespace Covid19Radar.UnitTests.Repository
 
             // Mock Setup
             mockSecureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(existDailySummaries));
             mockSecureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns(JsonConvert.SerializeObject(existExposureWindows));
 
             var unitUnderTest = CreateRepository();
@@ -318,7 +318,7 @@ namespace Covid19Radar.UnitTests.Repository
 
             // Assert
             Assert.Equal(expectedNewDailySummaries, newDailySummaryList);
-            mockSecureStorageService.Verify(x => x.SetValue("DailySummaries", expectedDailySummariesJson), Times.Once);
+            mockSecureStorageService.Verify(x => x.SetStringValue("DailySummaries", expectedDailySummariesJson), Times.Once);
 
         }
 
@@ -327,7 +327,7 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2020-12-21T10:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":2,\"TotalRiskScore\":19,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2020-12-21T11:00:00\",\"Duration\":\"00:15:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":20,\"TransmissionRiskLevel\":5}]");
+            mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2020-12-21T10:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":2,\"TotalRiskScore\":19,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2020-12-21T11:00:00\",\"Duration\":\"00:15:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":20,\"TransmissionRiskLevel\":5}]");
 
             var result = unitUnderTest.GetExposureInformationList();
 
@@ -349,7 +349,7 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns((string)(object)null);
+            mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns((string)(object)null);
 
             var result = unitUnderTest.GetExposureInformationList();
 
@@ -363,7 +363,7 @@ namespace Covid19Radar.UnitTests.Repository
             var unitUnderTest = CreateRepository();
 
             var actualExposureInformaionJson = "";
-            mockSecureStorageService.Setup(x => x.SetValue("ExposureInformation", It.IsAny<string>())).Callback<string, string>((k, v) =>
+            mockSecureStorageService.Setup(x => x.SetStringValue("ExposureInformation", It.IsAny<string>())).Callback<string, string>((k, v) =>
             {
                 actualExposureInformaionJson = v;
             });
@@ -375,7 +375,7 @@ namespace Covid19Radar.UnitTests.Repository
 
             unitUnderTest.SetExposureInformation(testExposureInformation);
 
-            mockSecureStorageService.Verify(x => x.SetValue("ExposureInformation", It.IsAny<string>()), Times.Once());
+            mockSecureStorageService.Verify(x => x.SetStringValue("ExposureInformation", It.IsAny<string>()), Times.Once());
 
             Assert.NotEmpty(actualExposureInformaionJson);
 
@@ -426,7 +426,7 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
+            mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, day, 0, 0, 0));
 
             var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
@@ -443,7 +443,7 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns((string)(object)null);
+            mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns((string)(object)null);
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, 1, 0, 0, 0));
 
             var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
@@ -459,7 +459,7 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
+            mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, day, hour, minute, 0).AddHours(-9));
 
             var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
@@ -482,7 +482,7 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
+            mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, day, 0, 0, 0));
 
             var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count();
@@ -495,7 +495,7 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns((string)(object)null);
+            mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns((string)(object)null);
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, 1, 0, 0, 0));
 
             var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count();
@@ -515,17 +515,17 @@ namespace Covid19Radar.UnitTests.Repository
         {
             var unitUnderTest = CreateRepository();
 
-            mockSecureStorageService.Setup(x => x.SetValue("ExposureInformation", It.IsAny<string>())).Callback<string, string>((k, v) =>
+            mockSecureStorageService.Setup(x => x.SetStringValue("ExposureInformation", It.IsAny<string>())).Callback<string, string>((k, v) =>
             {
-                mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns(v);
+                mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns(v);
             });
 
-            mockSecureStorageService.Setup(x => x.GetValue<string>("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
+            mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, day, 0, 0, 0));
 
             unitUnderTest.RemoveOutOfDateExposureInformation(offsetDays);
 
-            mockSecureStorageService.Verify(x => x.SetValue("ExposureInformation", It.IsAny<string>()), Times.Once());
+            mockSecureStorageService.Verify(x => x.SetStringValue("ExposureInformation", It.IsAny<string>()), Times.Once());
 
             var result = unitUnderTest.GetExposureInformationList();
 

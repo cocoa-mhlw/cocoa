@@ -220,14 +220,14 @@ namespace Covid19Radar.Services.Migration
 
             if (userData.ExposureInformation != null)
             {
-                _secureStorageService.SetValue(PreferenceKey.ExposureInformation, JsonConvert.SerializeObject(userData.ExposureInformation));
+                _secureStorageService.SetStringValue(PreferenceKey.ExposureInformation, JsonConvert.SerializeObject(userData.ExposureInformation));
                 userData.ExposureInformation = null;
                 _loggerService.Info("Migrated ExposureInformation");
             }
 
             if (userData.ExposureSummary != null)
             {
-                _secureStorageService.SetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, JsonConvert.SerializeObject(userData.ExposureSummary));
+                _secureStorageService.SetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, JsonConvert.SerializeObject(userData.ExposureSummary));
                 userData.ExposureSummary = null;
                 _loggerService.Info("Migrated ExposureSummary");
             }

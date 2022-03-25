@@ -69,26 +69,7 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void GetValueTest_Default()
-        {
-            var unitUnderTest = CreateService();
-
-            var testKey = "key";
-            var testDefault = 100;
-            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(false);
-            ;
-            var result = unitUnderTest.GetValue(testKey, testDefault);
-
-            Assert.Equal(testDefault, result);
-            mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Never());
-
-            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
-        }
-
-        [Fact]
-        public void GetValueTest_Int32()
+        public void GetIntValueTest_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -97,7 +78,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Returns(testBytes);
 
-            var result = unitUnderTest.GetValue<int>(testKey);
+            var result = unitUnderTest.GetIntValue(testKey);
 
             var expectedResult = 16909060;
             Assert.Equal(expectedResult, result);
@@ -109,7 +90,26 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void GetValueTest_Int64()
+        public void GetIntValueTest_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Throws(new InvalidOperationException("test"));
+
+            var result = unitUnderTest.GetIntValue(testKey);
+
+            Assert.Equal(default, result);
+            mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void GetLongValueTest_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -118,7 +118,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Returns(testBytes);
 
-            var result = unitUnderTest.GetValue<long>(testKey);
+            var result = unitUnderTest.GetLongValue(testKey);
 
             var expectedResult = 72623859790382856L;
             Assert.Equal(expectedResult, result);
@@ -130,7 +130,26 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void GetValueTest_Boolean()
+        public void GetLongValueTest_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Throws(new InvalidOperationException("test"));
+
+            var result = unitUnderTest.GetLongValue(testKey);
+
+            Assert.Equal(default, result);
+            mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void GetBoolValueTest_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -139,7 +158,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Returns(testBytes);
 
-            var result = unitUnderTest.GetValue<bool>(testKey);
+            var result = unitUnderTest.GetBoolValue(testKey);
 
             Assert.True(result);
             mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Once());
@@ -150,7 +169,26 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void GetValueTest_Float()
+        public void GetBoolValueTest_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Throws(new InvalidOperationException("test"));
+
+            var result = unitUnderTest.GetBoolValue(testKey);
+
+            Assert.Equal(default, result);
+            mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void GetFloatValueTest_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -159,7 +197,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Returns(testBytes);
 
-            var result = unitUnderTest.GetValue<float>(testKey);
+            var result = unitUnderTest.GetFloatValue(testKey);
 
             var expectedResult = 10.5f;
             Assert.Equal(expectedResult, result);
@@ -171,7 +209,26 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void GetValueTest_Double()
+        public void GetFloatValueTest_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Throws(new InvalidOperationException("test"));
+
+            var result = unitUnderTest.GetFloatValue(testKey);
+
+            Assert.Equal(default, result);
+            mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void GetDoubleValueTest_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -180,7 +237,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Returns(testBytes);
 
-            var result = unitUnderTest.GetValue<double>(testKey);
+            var result = unitUnderTest.GetDoubleValue(testKey);
 
             var expectedResult = 10.55d;
             Assert.Equal(expectedResult, result);
@@ -192,7 +249,26 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void GetValueTest_String()
+        public void GetDoubleValueTest_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Throws(new InvalidOperationException("test"));
+
+            var result = unitUnderTest.GetDoubleValue(testKey);
+
+            Assert.Equal(default, result);
+            mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void GetStringValueTest_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -201,7 +277,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Returns(testBytes);
 
-            var result = unitUnderTest.GetValue<string>(testKey);
+            var result = unitUnderTest.GetStringValue(testKey);
 
             var expectedResult = "テスト";
             Assert.Equal(expectedResult, result);
@@ -213,26 +289,7 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void GetValueTest_UnknownType()
-        {
-            var unitUnderTest = CreateService();
-
-            var testKey = "key";
-            byte[] testBytes = null;
-            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
-            mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Returns(testBytes);
-            ;
-            var result = unitUnderTest.GetValue<ulong>(testKey);
-
-            mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Once());
-
-            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-        }
-
-        [Fact]
-        public void GetValueTest_Exception()
+        public void GetStringValueTest_Failure()
         {
             var unitUnderTest = CreateService();
 
@@ -240,7 +297,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.GetBytes(testKey)).Throws(new InvalidOperationException("test"));
 
-            var result = unitUnderTest.GetValue<int>(testKey);
+            var result = unitUnderTest.GetStringValue(testKey);
 
             Assert.Equal(default, result);
             mockSecureStorageDependencyService.Verify(x => x.GetBytes(testKey), Times.Once());
@@ -251,7 +308,7 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void SetValueTests_Int32()
+        public void SetIntValueTests_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -262,7 +319,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, testBytes));
 
-            unitUnderTest.SetValue(testKey, testValue);
+            unitUnderTest.SetIntValue(testKey, testValue);
 
             mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, testBytes), Times.Once());
 
@@ -272,7 +329,27 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void SetValueTests_Int64()
+        public void SetIntValueTests_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            var testValue = 1;
+
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, It.IsAny<byte[]>())).Throws(new InvalidOperationException("test"));
+
+            unitUnderTest.SetIntValue(testKey, testValue);
+
+            mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, It.IsAny<byte[]>()), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void SetLongValueTests_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -283,7 +360,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, testBytes));
 
-            unitUnderTest.SetValue(testKey, testValue);
+            unitUnderTest.SetLongValue(testKey, testValue);
 
             mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, testBytes), Times.Once());
 
@@ -293,7 +370,27 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void SetValueTests_Boolean()
+        public void SetLongValueTests_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            var testValue = 72623859790382856L;
+
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, It.IsAny<byte[]>())).Throws(new InvalidOperationException("test"));
+
+            unitUnderTest.SetLongValue(testKey, testValue);
+
+            mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, It.IsAny<byte[]>()), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void SetBoolValueTests_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -304,7 +401,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, testBytes));
 
-            unitUnderTest.SetValue(testKey, testValue);
+            unitUnderTest.SetBoolValue(testKey, testValue);
 
             mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, testBytes), Times.Once());
 
@@ -314,7 +411,27 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void SetValueTests_Float()
+        public void SetBoolValueTests_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            var testValue = true;
+
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, It.IsAny<byte[]>())).Throws(new InvalidOperationException("test"));
+
+            unitUnderTest.SetBoolValue(testKey, testValue);
+
+            mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, It.IsAny<byte[]>()), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void SetFloatValueTests_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -325,7 +442,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, testBytes));
 
-            unitUnderTest.SetValue(testKey, testValue);
+            unitUnderTest.SetFloatValue(testKey, testValue);
 
             mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, testBytes), Times.Once());
 
@@ -335,7 +452,27 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void SetValueTests_Double()
+        public void SetFloatValueTests_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            var testValue = 10.5f;
+
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, It.IsAny<byte[]>())).Throws(new InvalidOperationException("test"));
+
+            unitUnderTest.SetFloatValue(testKey, testValue);
+
+            mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, It.IsAny<byte[]>()), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void SetDoubleValueTests_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -346,7 +483,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, testBytes));
 
-            unitUnderTest.SetValue(testKey, testValue);
+            unitUnderTest.SetDoubleValue(testKey, testValue);
 
             mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, testBytes), Times.Once());
 
@@ -356,7 +493,27 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void SetValueTests_String()
+        public void SetDoubleValueTests_Failure()
+        {
+            var unitUnderTest = CreateService();
+
+            var testKey = "key";
+            var testValue = 10.55d;
+
+            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
+            mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, It.IsAny<byte[]>())).Throws(new InvalidOperationException("test"));
+
+            unitUnderTest.SetDoubleValue(testKey, testValue);
+
+            mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, It.IsAny<byte[]>()), Times.Once());
+
+            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
+        public void SetStringValueTests_Success()
         {
             var unitUnderTest = CreateService();
 
@@ -367,7 +524,7 @@ namespace Covid19Radar.UnitTests.Services
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, testBytes));
 
-            unitUnderTest.SetValue(testKey, testValue);
+            unitUnderTest.SetStringValue(testKey, testValue);
 
             mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, testBytes), Times.Once());
 
@@ -377,36 +534,17 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void SetValueTests_UnknownType()
+        public void SetStringValueTests_Failure()
         {
             var unitUnderTest = CreateService();
 
             var testKey = "key";
-            var testValue = 100ul;
-
-            mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
-
-            unitUnderTest.SetValue(testKey, testValue);
-
-            mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, It.IsAny<byte[]>()), Times.Never());
-
-            mockLoggerService.Verify(x => x.StartMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            mockLoggerService.Verify(x => x.EndMethod(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-        }
-
-        [Fact]
-        public void SetValueTests_Exception()
-        {
-            var unitUnderTest = CreateService();
-
-            var testKey = "key";
-            var testValue = 1;
+            var testValue = "テスト";
 
             mockSecureStorageDependencyService.Setup(x => x.ContainsKey(testKey)).Returns(true);
             mockSecureStorageDependencyService.Setup(x => x.SetBytes(testKey, It.IsAny<byte[]>())).Throws(new InvalidOperationException("test"));
 
-            unitUnderTest.SetValue(testKey, testValue);
+            unitUnderTest.SetStringValue(testKey, testValue);
 
             mockSecureStorageDependencyService.Verify(x => x.SetBytes(testKey, It.IsAny<byte[]>()), Times.Once());
 

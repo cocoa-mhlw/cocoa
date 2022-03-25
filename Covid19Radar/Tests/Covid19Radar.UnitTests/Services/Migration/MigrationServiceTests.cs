@@ -309,7 +309,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -317,7 +317,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -374,7 +374,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -382,7 +382,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -439,7 +439,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -447,7 +447,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -501,7 +501,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -509,7 +509,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -580,7 +580,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -588,7 +588,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -736,7 +736,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -744,7 +744,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -804,7 +804,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -812,7 +812,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -863,7 +863,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -871,7 +871,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -933,7 +933,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -941,7 +941,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -1000,7 +1000,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -1008,7 +1008,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -1067,7 +1067,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -1075,7 +1075,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -1176,7 +1176,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureInformation
             Assert.True(_dummySecureStorageService.ContainsKey(PreferenceKey.ExposureInformation));
-            var userExposureInfosPrefString = _dummySecureStorageService.GetValue(PreferenceKey.ExposureInformation, "{}");
+            var userExposureInfosPrefString = _dummySecureStorageService.GetStringValue(PreferenceKey.ExposureInformation, "{}");
             var userExposureInfosPref = JsonConvert.DeserializeObject<ObservableCollection<UserExposureInfo>>(userExposureInfosPrefString);
             Assert.Equal(2, userExposureInfosPref.Count);
             AssertUserExposureInfo(userExposureInfo1, userExposureInfosPref[0]);
@@ -1184,7 +1184,7 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
             // ExposureSummary
             Assert.True(_dummySecureStorageService.ContainsKey(PREFERENCE_KEY_EXPOSURE_SUMMARY));
-            var userExposureSummaryPrefString = _dummySecureStorageService.GetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
+            var userExposureSummaryPrefString = _dummySecureStorageService.GetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, "{}");
             var userExposureSummaryPref = JsonConvert.DeserializeObject<UserExposureSummary>(userExposureSummaryPrefString);
             AssertUserExposureInfo(userExposureSummaryPref, userExposureSummary);
         }
@@ -1261,10 +1261,30 @@ namespace Covid19Radar.UnitTests.Services.Migration
 
         public bool ContainsKey(string key) => _dict.ContainsKey(key);
 
-        public T GetValue<T>(string key, T defaultValue = default) => (T)_dict.GetValueOrDefault(key, defaultValue);
+        public bool GetBoolValue(string key, bool defaultValue) => (bool)_dict.GetValueOrDefault(key, defaultValue);
+
+        public double GetDoubleValue(string key, double defaultValue) => (double)_dict.GetValueOrDefault(key, defaultValue);
+
+        public float GetFloatValue(string key, float defaultValue) => (float)_dict.GetValueOrDefault(key, defaultValue);
+
+        public int GetIntValue(string key, int defaultValue) => (int)_dict.GetValueOrDefault(key, defaultValue);
+
+        public long GetLongValue(string key, long defaultValue) => (long)_dict.GetValueOrDefault(key, defaultValue);
+
+        public string GetStringValue(string key, string defaultValue) => (string)_dict.GetValueOrDefault(key, defaultValue);
 
         public void RemoveValue(string key) => _dict.Remove(key);
 
-        public void SetValue<T>(string key, T value) => _dict[key] = value;
+        public void SetBoolValue(string key, bool value) => _dict[key] = value;
+
+        public void SetDoubleValue(string key, double value) => _dict[key] = value;
+
+        public void SetFloatValue(string key, float value) => _dict[key] = value;
+
+        public void SetIntValue(string key, int value) => _dict[key] = value;
+
+        public void SetLongValue(string key, long value) => _dict[key] = value;
+
+        public void SetStringValue(string key, string value) => _dict[key] = value;
     }
 }

@@ -224,10 +224,10 @@ namespace Covid19Radar.UnitTests.Services {
                 .Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
             secureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
             secureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
                 .Setup(x => x.UploadExposureDataAsync(
@@ -291,10 +291,10 @@ namespace Covid19Radar.UnitTests.Services {
                 Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
             secureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
             secureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
                 .Setup(x => x.UploadExposureDataAsync(
@@ -381,7 +381,7 @@ namespace Covid19Radar.UnitTests.Services {
 
             var expectedSerializedData = JsonConvert.SerializeObject(exposureInformationList.Select(x => new UserExposureInfo(x)));
             secureStorageService
-                .Verify(x => x.SetValue<string>("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
+                .Verify(x => x.SetStringValue("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
         }
 
         [Fact]
@@ -434,7 +434,7 @@ namespace Covid19Radar.UnitTests.Services {
             localNotificationService
                 .Verify(x => x.ShowExposureNotificationAsync(), Times.Never);
             secureStorageService
-                .Verify(x => x.SetValue<string>("ExposureInformation", It.IsAny<string>()), Times.Never);
+                .Verify(x => x.SetStringValue("ExposureInformation", It.IsAny<string>()), Times.Never);
         }
 
         #endregion

@@ -471,10 +471,10 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Returns(utcNow);
 
             mockSecureStorageService
-                .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
             mockSecureStorageService
-                .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
             mockExposureRiskCalculationConfigurationRepository
@@ -531,10 +531,10 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Returns(utcNow);
 
             mockSecureStorageService
-                .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
             mockSecureStorageService
-                .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
             mockExposureRiskCalculationConfigurationRepository
@@ -581,10 +581,10 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Returns(utcNow);
 
             mockSecureStorageService
-                .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
             mockSecureStorageService
-                .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
             mockExposureRiskCalculationConfigurationRepository
                 .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
