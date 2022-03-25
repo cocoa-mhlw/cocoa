@@ -1264,20 +1264,36 @@ Note: this app does not collect users’ location information.</value>
     <comment>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</comment>
   </data>
   <data name="TroubleshootingPageDescription2" xml:space="preserve">
-    <value>・ Restart the app.</value>
-    <comment>・アプリの再起動を行ってください。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription3" xml:space="preserve">
-    <value>・ Android users: in Settings, remove COCOA from any power saving functions*, or set your phone to enter power-saving mode only when battery power is low.</value>
-    <comment>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription4" xml:space="preserve">
-    <value>*Names of power saving functions differ depending on the device, i.e., “Power-Saving Mode,” “Stamina Mode,” “Battery Optimization,” etc.</value>
-    <comment>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription5" xml:space="preserve">
     <value>If you have tried all of the above and the warning still appears, please contact Customer Support.</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem1" xml:space="preserve">
+    <value>・Check if there is a problem with the Internet connection status such as the radio wave environment.</value>
+    <comment>・電波環境などインターネットの接続状況に問題がないか確認してください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem2" xml:space="preserve">
+    <value>・In case you are using  a VPN or a proxy connection as Internet connection, please turn it off.</value>
+    <comment>・インターネット接続に、意図的に「VPN接続」や「プロキシ接続」を利用している場合はお切りください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem3" xml:space="preserve">
+    <value>・Restart the app.</value>
+    <comment>・アプリの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem4" xml:space="preserve">
+    <value>・Restart your smartphone.</value>
+    <comment>・スマートフォンの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem5" xml:space="preserve">
+    <value>・If you are using an iPhone, please update the OS to the latest version.</value>
+    <comment>・iPhoneをお使いの方は、 OS(※)を最新バージョンにアップデートしてください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem6" xml:space="preserve">
+    <value>・Android users: in Settings, remove COCOA from any power saving functions*, or set your phone to enter power-saving mode only when battery power is low.</value>
+    <comment>・Androidをお使いの方は、設定内にある省電力機能（※1）の対象からCOCOA（※2）を外す、または電池残量が少なくなった場合のみに省電力モードに切り替わるように設定してください。</comment>
+  </data>
+  <data name="TroubleshootingPageAnnotationPowerSaving" xml:space="preserve">
+    <value>*Names of power saving functions differ depending on the device, i.e., “Power-Saving Mode,” “Stamina Mode,” “Battery Optimization,” etc.</value>
+    <comment>※1 省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称が異なります</comment>
   </data>
   <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
     <value>Processing number for positive registration</value>

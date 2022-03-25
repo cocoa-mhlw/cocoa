@@ -125,7 +125,7 @@
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
                     Style="{StaticResource HomePageBlueButton}"
                     Text="{x:Static resources:AppResources.HomePageTroubleshootingButtonText}"
-                    Command="{prism:NavigateTo 'TroubleshootingPage'}" />
+                    Command="{Binding Path=OnTroubleshootingButtonWhenUnconfirmed}" />
             </StackLayout>
             <StackLayout IsVisible="{Binding IsVisibleENStatusStoppedLayout}">
                 <StackLayout
