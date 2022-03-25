@@ -812,7 +812,7 @@ However, if your physical condition changes, please consider consulting a doctor
   </data>
   <data name="ContactedNotifyPageDescription4" xml:space="preserve">
     <value>・Chance of close contact with a positive person​</value>
-    <comment>・陽性者と接触した心当たりがある</comment>
+    <comment>TODO:・感染リスクの高い行動（※）をとった</comment>
   </data>
   <data name="ContactedNotifyPageDescription5" xml:space="preserve">
     <value>・Others such as necessity of consult a doctor​</value>

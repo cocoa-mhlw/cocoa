@@ -700,7 +700,7 @@
   </data>
   <data name="ContactedNotifyPageDescription4" xml:space="preserve">
     <value>・有与阳性者接触的印象</value>
-    <comment>・陽性者と接触した心当たりがある</comment>
+    <comment>TODO:・感染リスクの高い行動（※）をとった</comment>
   </data>
   <data name="ContactedNotifyPageDescription5" xml:space="preserve">
     <value>・其他想接受诊疗的情况</value>
