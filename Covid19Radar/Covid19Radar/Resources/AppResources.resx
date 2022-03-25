@@ -799,7 +799,7 @@
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
     <value>In case you have no symptoms, or you had no contact with a positive person, please lead a normal life while paying attention to infection prevention measures.​
 However, if your physical condition changes, please consider consulting a doctor.​</value>
-    <comment>TODO:受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動（※）を控えていただくなど、感染対策に留意ながらお過ごしください。
+    <comment>TODO:受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動（※）を控えていただくなど、感染対策に留意しながらお過ごしください。
 ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
