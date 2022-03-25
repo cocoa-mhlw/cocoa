@@ -154,54 +154,24 @@ namespace Covid19Radar.Droid.Services
             }
         }
 
-        public int GetIntValue(string key, int defaultValue)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public int GetIntValue(string key, int defaultValue) => GetValue(key, defaultValue);
 
-        public long GetLongValue(string key, long defaultValue)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public long GetLongValue(string key, long defaultValue) => GetValue(key, defaultValue);
 
-        public float GetFloatValue(string key, float defaultValue)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public float GetFloatValue(string key, float defaultValue) => GetValue(key, defaultValue);
 
-        public string GetStringValue(string key, string defaultValue)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public string GetStringValue(string key, string defaultValue) => GetValue(key, defaultValue);
 
-        public bool GetBoolValue(string key, bool defaultValue)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public bool GetBoolValue(string key, bool defaultValue) => GetValue(key, defaultValue);
 
-        public void SetIntValue(string key, int value)
-        {
-            SetValue(key, value);
-        }
+        public void SetIntValue(string key, int value) => SetValue(key, value);
 
-        public void SetLongValue(string key, long value)
-        {
-            SetValue(key, value);
-        }
+        public void SetLongValue(string key, long value) => SetValue(key, value);
 
-        public void SetFloatValue(string key, float value)
-        {
-            SetValue(key, value);
-        }
+        public void SetFloatValue(string key, float value) => SetValue(key, value);
 
-        public void SetStringValue(string key, string value)
-        {
-            SetValue(key, value);
-        }
+        public void SetStringValue(string key, string value) => SetValue(key, value);
 
-        public void SetBoolValue(string key, bool value)
-        {
-            SetValue(key, value);
-        }
+        public void SetBoolValue(string key, bool value) => SetValue(key, value);
     }
 }

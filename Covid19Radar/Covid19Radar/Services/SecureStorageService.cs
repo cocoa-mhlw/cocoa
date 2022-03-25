@@ -202,64 +202,28 @@ namespace Covid19Radar.Services
             }
         }
 
-        public int GetIntValue(string key, int defaultValue = default)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public int GetIntValue(string key, int defaultValue = default) => GetValue(key, defaultValue);
 
-        public long GetLongValue(string key, long defaultValue = default)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public long GetLongValue(string key, long defaultValue = default) => GetValue(key, defaultValue);
 
-        public float GetFloatValue(string key, float defaultValue = default)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public float GetFloatValue(string key, float defaultValue = default) => GetValue(key, defaultValue);
 
-        public string GetStringValue(string key, string defaultValue = default)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public string GetStringValue(string key, string defaultValue = default) => GetValue(key, defaultValue);
 
-        public bool GetBoolValue(string key, bool defaultValue = default)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public bool GetBoolValue(string key, bool defaultValue = default) => GetValue(key, defaultValue);
 
-        public double GetDoubleValue(string key, double defaultValue = default)
-        {
-            return GetValue(key, defaultValue);
-        }
+        public double GetDoubleValue(string key, double defaultValue = default) => GetValue(key, defaultValue);
 
-        public void SetIntValue(string key, int value)
-        {
-            SetValue(key, value);
-        }
+        public void SetIntValue(string key, int value) => SetValue(key, value);
 
-        public void SetLongValue(string key, long value)
-        {
-            SetValue(key, value);
-        }
+        public void SetLongValue(string key, long value) => SetValue(key, value);
 
-        public void SetFloatValue(string key, float value)
-        {
-            SetValue(key, value);
-        }
+        public void SetFloatValue(string key, float value) => SetValue(key, value);
 
-        public void SetStringValue(string key, string value)
-        {
-            SetValue(key, value);
-        }
+        public void SetStringValue(string key, string value) => SetValue(key, value);
 
-        public void SetBoolValue(string key, bool value)
-        {
-            SetValue(key, value);
-        }
+        public void SetBoolValue(string key, bool value) => SetValue(key, value);
 
-        public void SetDoubleValue(string key, double value)
-        {
-            SetValue(key, value);
-        }
+        public void SetDoubleValue(string key, double value) => SetValue(key, value);
     }
 }
