@@ -581,7 +581,7 @@
     <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription5" xml:space="preserve">
-    <value>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will be notified.</value>
+    <value>Those who had close contact with you tracing back to 2 days before the day the symptoms started or the day you were tested, will be notified.</value>
     <comment>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
@@ -661,7 +661,7 @@
     <comment>同意内容</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth is turned off.Please turn in Bluetooth.</value>
+    <value>Bluetooth is turned off. Please turn on Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
@@ -714,7 +714,7 @@
     <comment>Exposure Notification起動エラー</comment>
   </data>
   <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</value>
+    <value>Failed to start Exposure Notification. Please open device settings and turn on both Exposure Notification and Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
@@ -1007,7 +1007,7 @@ However, if your physical condition changes, please consider consulting a doctor
     <comment>症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</comment>
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
-    <value>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will receive a notification.</value>
+    <value>Those who had close contact with you tracing back to 2 days before the day the symptoms started or the day you were tested, will receive a notification.</value>
     <comment>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
@@ -1019,7 +1019,7 @@ However, if your physical condition changes, please consider consulting a doctor
     <comment>陽性登録の前にお読みください</comment>
   </data>
   <data name="SubmitConsentPageDescription1_2" xml:space="preserve">
-    <value>・If you register your positivity on the application, a code will be daily generated on your smartphone and uploaded to the notification server</value>
+    <value>・By registering your positive result, codes generated every day on your smartphone will be uploaded to the notification server</value>
     <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
   </data>
   <data name="SubmitConsentPageDescription1_3" xml:space="preserve">
@@ -1055,7 +1055,7 @@ However, if your physical condition changes, please consider consulting a doctor
     <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
   </data>
   <data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>If the processing number is correct, people who have come in close contact (within 1 meter for 15 minutes or more) with you 2 or more days before the day the symptoms started or the day you were tested, will be notified. None of your personal information will be known to the person who has received the notification</value>
+    <value>If the processing number is valid, those who had close contact (within 1 meter for 15 minutes or more) with you tracing back to 2 days before the day the symptoms started or the day you were tested, will be notified. No information that can identify you will be known to the people who receive the notification</value>
     <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
