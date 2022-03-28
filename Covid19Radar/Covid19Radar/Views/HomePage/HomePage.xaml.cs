@@ -5,6 +5,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using FFImageLoading.Forms;
+using Prism.Navigation;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +13,7 @@ using Xamarin.Forms.Xaml;
 namespace Covid19Radar.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class HomePage : ContentPage, INavigationAware
     {
         #region Static Fields
 
@@ -46,13 +47,26 @@ namespace Covid19Radar.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                SemanticExtensions.SetSemanticFocus(this);
-            });
-
             StartAnimation();
+        }
+
+        #endregion
+
+        #region INavigationAware
+
+        public void OnNavigatedFrom(INavigationParameters parameters)
+        {
+        }
+
+        public void OnNavigatedTo(INavigationParameters parameters)
+        {
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    SemanticExtensions.SetSemanticFocus(this);
+                });
+            }
         }
 
         #endregion
