@@ -151,6 +151,10 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
+            <Style x:Key="DefaultLabelBold" TargetType="Label" BasedOn="{StaticResource DefaultLabel}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
             <Style x:Key="DefaultLabelSmall" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
@@ -206,7 +210,7 @@
                 <Setter Property="BorderWidth" Value="4" />
                 <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
                 <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="Padding" Value="0,0,0,0" />
+                <Setter Property="Padding" Value="10" />
                 <Setter Property="Margin" Value="0,10,0,5" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="WidthRequest" Value="{x:OnPlatform Android=300, iOS=310}" />
@@ -314,6 +318,9 @@
 
             <Style x:Key="AnnotationLabel" TargetType="Label" BasedOn="{StaticResource DefaultLabelSmall}">
                 <Setter Property="TextColor" Value="{StaticResource SecondaryText}" />
+            </Style>
+            <Style x:Key="AnnotationLabelDark" TargetType="Label" BasedOn="{StaticResource DefaultLabelSmall}">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
             </Style>
 
         </ResourceDictionary>

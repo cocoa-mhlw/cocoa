@@ -44,12 +44,10 @@
     <None Remove="Resources\Fonts\fa-solid-900.otf" />
     <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
-    <None Remove="Services\ExposureNotificationHandler.cs.txt" />
     <None Remove="settings.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="settings.json">
-    </EmbeddedResource>
+    <EmbeddedResource Include="settings.json" />
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-solid-900.otf" />
@@ -60,6 +58,7 @@
     <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
     <PackageReference Include="Prism.Forms" Version="8.1.97" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />

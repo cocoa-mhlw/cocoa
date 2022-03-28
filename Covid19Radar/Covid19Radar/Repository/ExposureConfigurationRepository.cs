@@ -538,15 +538,15 @@ namespace Covid19Radar.Repository
         }
 
         public void SetIsDiagnosisKeysDataMappingConfigurationUpdated(bool isUpdated)
-            => _preferencesService.SetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, isUpdated);
+            => _preferencesService.SetBoolValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, isUpdated);
 
         public bool IsDiagnosisKeysDataMappingConfigurationUpdated()
-            => _preferencesService.GetValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true);
+            => _preferencesService.GetBoolValue(PreferenceKey.IsDiagnosisKeysDataMappingConfigurationUpdated, true);
 
         private void SetExposureConfigurationDownloadedDateTime(DateTime dateTime)
         {
             _loggerService.StartMethod();
-            _preferencesService.SetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, dateTime.ToUnixEpoch());
+            _preferencesService.SetLongValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, dateTime.ToUnixEpoch());
             _loggerService.EndMethod();
         }
 
@@ -555,7 +555,7 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
             try
             {
-                long epoch = _preferencesService.GetValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, 0L);
+                long epoch = _preferencesService.GetLongValue(PreferenceKey.ExposureConfigurationDownloadedEpoch, 0L);
                 return DateTime.UnixEpoch.AddSeconds(epoch);
             }
             finally
@@ -567,7 +567,7 @@ namespace Covid19Radar.Repository
         public void SetDiagnosisKeysDataMappingAppliedDateTime(DateTime dateTime)
         {
             _loggerService.StartMethod();
-            _preferencesService.SetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, dateTime.ToUnixEpoch());
+            _preferencesService.SetLongValue(PreferenceKey.ExposureConfigurationAppliedEpoch, dateTime.ToUnixEpoch());
             _loggerService.EndMethod();
         }
 
@@ -576,7 +576,7 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
             try
             {
-                long epoch = _preferencesService.GetValue(PreferenceKey.ExposureConfigurationAppliedEpoch, 0L);
+                long epoch = _preferencesService.GetLongValue(PreferenceKey.ExposureConfigurationAppliedEpoch, 0L);
                 return DateTime.UnixEpoch.AddSeconds(epoch);
             }
             finally

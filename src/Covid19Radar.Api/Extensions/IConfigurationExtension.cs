@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Api.Common;
 using Microsoft.Extensions.Configuration;
 
 namespace Covid19Radar.Api
@@ -38,6 +39,39 @@ namespace Covid19Radar.Api
         public static string VerificationPayloadApiSecret(this IConfiguration config) => config["VerificationPayloadApiSecret"];
         public static string VerificationPayloadPfx(this IConfiguration config) => config["VerificationPayloadPfx"];
         public static string VerificationPayloadUrl(this IConfiguration config) => config["VerificationPayloadUrl"];
+
+        public static int InfectiousFilterDaysSinceOnsetOfSymptomsFrom(this IConfiguration config)
+        {
+            if (int.TryParse(config["InfectiousFilterDaysSinceOnsetOfSymptomsFrom"], out int result))
+            {
+                return result;
+            }
+            return Constants.MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS;
+        }
+        public static int InfectiousFilterDaysSinceOnsetOfSymptomsTo(this IConfiguration config)
+        {
+            if (int.TryParse(config["InfectiousFilterDaysSinceOnsetOfSymptomsTo"], out int result))
+            {
+                return result;
+            }
+            return Constants.MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS;
+        }
+        public static int InfectiousFilterDaysSinceTestFrom(this IConfiguration config)
+        {
+            if (int.TryParse(config["InfectiousFilterDaysSinceTestFrom"], out int result))
+            {
+                return result;
+            }
+            return Constants.MIN_DAYS_SINCE_ONSET_OF_SYMPTOMS;
+        }
+        public static int InfectiousFilterDaysSinceTestTo(this IConfiguration config)
+        {
+            if (int.TryParse(config["InfectiousFilterDaysSinceTestTo"], out int result))
+            {
+                return result;
+            }
+            return Constants.MAX_DAYS_SINCE_ONSET_OF_SYMPTOMS;
+        }
     }
-    
+
 }

@@ -1,4 +1,7 @@
 steps:
+- script: mv -f $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings_template.json $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json
+  displayName: 'Prepare settings.json'
+
 - script: |
     SETTINGS_JSON_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json"
     sed -i '' "s/APP_VERSION/$(AppVersion)/g" $SETTINGS_JSON_PATH

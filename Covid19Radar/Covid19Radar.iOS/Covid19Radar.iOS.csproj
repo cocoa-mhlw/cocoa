@@ -313,8 +313,6 @@
     <BundleResource Include="Resources\Base.lproj\HelpPage31%403x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage32%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage32%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\notify_img01%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\notify_img01%403x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%402x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\HelpPage20%402x.png" />
@@ -358,6 +356,30 @@
     <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%403x.png" />
     <BundleResource Include="Resources\Base.lproj\icon_arrow%402x.png" />
     <BundleResource Include="Resources\Base.lproj\icon_arrow%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_4%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_1%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_1%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_2%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_2%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_3%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_3%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_4%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_4%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_1%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_1%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_2%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_2%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_3%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_3%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_4%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_1%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_1%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_2%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_2%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_3%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_3%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_4%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_4%403x.png" />
     <BundleResource Include="Resources\Base.lproj\exposure_check_page_head.png" />
   </ItemGroup>
   <ItemGroup>

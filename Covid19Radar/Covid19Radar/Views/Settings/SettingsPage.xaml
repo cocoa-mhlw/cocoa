@@ -7,7 +7,6 @@
     x:Class="Covid19Radar.Views.SettingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:System="clr-namespace:System;assembly=netstandard"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
@@ -40,14 +39,12 @@
                         Grid.Row="0"
                         Grid.Column="0"
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="1"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.VersionText}" />
                     <Label
                         Grid.Row="0"
                         Grid.Column="1"
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
                         HorizontalOptions="End"
                         Style="{StaticResource DefaultLabelSmall}"
                         TextColor="{StaticResource SecondaryText}"
@@ -55,34 +52,55 @@
                 </Grid>
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Button
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="3"
-                Margin="20"
-                Command="{prism:NavigateTo 'LicenseAgreementPage'}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.SettingsPageLicenseButton}" />
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="4"
                 Margin="15, 20, 15, 15"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.SettingsPageReinitializeLabel}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="5"
                 Margin="15, 0"
                 Style="{StaticResource DefaultLabelSmall}"
                 TextColor="{StaticResource SecondaryText}"
                 Text="{x:Static resources:AppResources.SettingsPageReinitializeDescription}" />
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="6"
                 Margin="20"
                 Command="{Binding OnChangeResetData}"
                 Style="{StaticResource DefaultButton}"
                 Text="{x:Static resources:AppResources.ButtonReset}" />
+            <BoxView Style="{StaticResource DefaultLineStyle}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="15, 20, 15, 15"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.SettingsPageLicenseLabel}" />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="15, 0"
+                Style="{StaticResource DefaultLabelSmall}"
+                TextColor="{StaticResource SecondaryText}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{x:Static resources:AppResources.SettingsPageLicenseDescription}" />
+                        <Span Text="{x:Static x:Environment.NewLine}" />
+                        <Span Text="{x:Static resources:AppResources.SettingsPageGitHubUrl}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="20"
+                Command="{Binding OnClickObtainSourceCode}"
+                CommandParameter="{x:Static resources:AppResources.SettingsPageGitHubUrl}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.SettingsPageSourceCodeButton}" />
+            <Button
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="0, 0, 0, 20"
+                Command="{prism:NavigateTo 'LicenseAgreementPage'}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.SettingsPageLicenseButton}" />
             <BoxView Style="{StaticResource DefaultLineStyle}" />
         </StackLayout>
     </ScrollView>

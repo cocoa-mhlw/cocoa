@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Net;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
@@ -44,12 +45,39 @@ namespace Covid19Radar.ViewModels
 
             UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
 
-            var registerResult = await _userDataService.RegisterUserAsync();
-            if (!registerResult)
+            try
             {
-                _loggerService.Error("Failed register");
+                var resultStatusCode = await _userDataService.RegisterUserAsync();
+                if (resultStatusCode != HttpStatusCode.OK)
+                {
+                    UserDialogs.Instance.HideLoading();
+                    if (resultStatusCode == HttpStatusCode.Forbidden)
+                    {
+                        _loggerService.Error("Failed register for requests from overseas");
+                        await UserDialogs.Instance.AlertAsync(
+                            Resources.AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
+                            Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                            Resources.AppResources.ButtonOk);
+                        _loggerService.EndMethod();
+                        return;
+                    }
+
+                    _loggerService.Error("Failed register");
+                    await UserDialogs.Instance.AlertAsync(
+                        Resources.AppResources.DialogNetworkConnectionError,
+                        Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                        Resources.AppResources.ButtonOk);
+                    _loggerService.EndMethod();
+                    return;
+                }
+            }
+            catch
+            {
                 UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogNetworkConnectionErrorTitle, Resources.AppResources.ButtonOk);
+                await UserDialogs.Instance.AlertAsync(
+                    Resources.AppResources.DialogNetworkConnectionError,
+                    Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                    Resources.AppResources.ButtonOk);
                 _loggerService.EndMethod();
                 return;
             }

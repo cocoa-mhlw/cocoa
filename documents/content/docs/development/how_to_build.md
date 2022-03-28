@@ -14,7 +14,55 @@ COCOA内には2つのソリューションファイルがあります。
 
 - COCOAアプリ・・・Covid19Radar.sln
 - COCOAサーバ・・・Covid19Radar.Functions.sln
+
 ## COCOAアプリのビルド
+
+### settings.json
+
+`Covid19Radar`に`settings.json`を作成（`settings_template.json`をコピー）します。
+
+```json
+{
+  "appVersion": "APP_VERSION",
+  "apiSecret": "API_SECRET",
+  "apiKey": "API_KEY",
+  "supportedRegions": "440",
+  "apiUrlBase": "https://API_URL_BASE/api",
+  "cdnUrlBase": "https://CDN_URL_BASE/",
+  "exposureConfigurationUrlBase": "https://CDN_URL_BASE/c19r",
+  "blobStorageContainerName": "c19r",
+  "logStorageEndpoint": "https://LOG_STORAGE_URL_BASE/",
+  "logStorageContainerName": "LOG_STORAGE_CONTAINER_NAME",
+  "logStorageAccountName": "LOG_STORAGE_ACCOUNT_NAME",
+  "androidSafetyNetApiKey": "ANDROID_SAFETYNETKEY",
+  "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
+  "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
+  "supportEmail": "SUPPORT_EMAIL"
+}
+```
+
+必要に応じて値を書き換えます。すべての値を正しく設定しなくてもビルドは可能です。
+大文字のスネークケースで記述されている箇所（`APP_VERSION` など）はアプリ配布時のパイプラインで実際の値に書き換えます。
+
+|キー|解説|
+|---|---|
+|appVersion|アプリのバージョン。CIでの差し替えを想定しているため、手動でのビルドの際は、AndroidManifest.xmlやInfo.plistを書き換える必要があります|
+|apiSecret|サーバーのAzure Front Door用のシークレット|
+|apiKey|サーバーのAzure Front Door用のキー|
+|supportedRegions|接触通知APIが規定しているRegion。日本の場合は`440`|
+|apiUrlBase|APIのエンドポイント（URL）の基礎となる値|
+|cdnUrlBase|診断キーをダウンロードするCDNのURLの基礎となる値|
+|exposureConfigurationUrlBase|設定ファイルのURLの基礎となる値|
+|blobStorageContainerName|診断キーをダウンロードするBlobのコンテナ名|
+|logStorageEndpoint|動作ログを送信するAzure Storageのエンドポイント|
+|logStorageContainerName|動作ログを送信するAzure Storageのコンテナ名|
+|logStorageAccountName|動作ログを送信するAzure Storageのアカウント名|
+|androidSafetyNetApiKey|SafetyNet Attestation APIのキー|
+|appStoreUrl|App StoreのURL|
+|googlePlayUrl|Google Play StoreのURL|
+|supportEmail|サポート用に表示するメールアドレス|
+
+
 ### ビルド構成
 COCOAアプリのビルド構成は以下の通りです(Android/iOS共通)。  
 接触確認APIの利用については、[接触確認APIの利用について](#接触確認apiの利用について)も参照してください。
