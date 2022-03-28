@@ -125,7 +125,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Mock Setup
             dateTimeUtility.Setup(x => x.UtcNow).Returns(utcNow);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), true))
+                Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), true))
                 .Returns(true);
 
 
@@ -138,7 +138,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(
+                    x => x.SetLongValue(
                         It.Is<string>(x => x == "ExposureConfigurationAppliedEpoch"),
                         It.Is<long>(x => x.Equals(utcNow.ToUnixEpoch()))),
                     Times.Once
@@ -146,7 +146,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.Is<bool>(x => x == false)),
+                    x => x.SetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.Is<bool>(x => x == false)),
                     Times.Once
                 );
         }
@@ -160,7 +160,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Mock Setup
             dateTimeUtility.Setup(x => x.UtcNow).Returns(utcNow);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
+                Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
 
 
@@ -173,7 +173,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(
+                    x => x.SetLongValue(
                         It.Is<string>(x => x == "ExposureConfigurationAppliedEpoch"),
                         It.IsAny<long>()),
                     Times.Never
@@ -181,7 +181,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.IsAny<bool>()),
+                    x => x.SetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.IsAny<bool>()),
                      Times.Never
                 );
         }
@@ -221,13 +221,13 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Mock Setup
             preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
+                .Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
             secureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
             secureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
                 .Setup(x => x.UploadExposureDataAsync(
@@ -288,13 +288,13 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Mock Setup
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
+                Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
             secureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
             secureStorageService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
                 .Setup(x => x.UploadExposureDataAsync(
@@ -381,7 +381,7 @@ namespace Covid19Radar.UnitTests.Services {
 
             var expectedSerializedData = JsonConvert.SerializeObject(exposureInformationList.Select(x => new UserExposureInfo(x)));
             secureStorageService
-                .Verify(x => x.SetValue<string>("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
+                .Verify(x => x.SetStringValue("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
         }
 
         [Fact]
@@ -434,7 +434,7 @@ namespace Covid19Radar.UnitTests.Services {
             localNotificationService
                 .Verify(x => x.ShowExposureNotificationAsync(), Times.Never);
             secureStorageService
-                .Verify(x => x.SetValue<string>("ExposureInformation", It.IsAny<string>()), Times.Never);
+                .Verify(x => x.SetStringValue("ExposureInformation", It.IsAny<string>()), Times.Never);
         }
 
         #endregion
