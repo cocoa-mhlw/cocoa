@@ -292,11 +292,7 @@
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
     <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
-    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
-  </data>
-  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>※日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
-    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンからの信号を受信していません</value>
