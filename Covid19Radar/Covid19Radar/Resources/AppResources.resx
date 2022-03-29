@@ -797,25 +797,29 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>In case you have no symptoms, or you had no contact with a positive person, please lead a normal life while paying attention to infection prevention measures.​
-However, if your physical condition changes, please consider consulting a doctor.​</value>
-    <comment>症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+    <value>If you fall under any of the following, please consider going to an examination center/ medical institution, etc. according to the guidance of the app</value>
+    <comment>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
   </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>If you fall under any of the below cases, please consider going to a clinic / examination medical institution, etc. according to the guidance of the app.</value>
-    <comment>次のいずれかに当てはまる方は、アプリの案内に従って相談先をご確認ください。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
-    <value>・Symptoms such as fever and underlying illness​</value>
+  <data name="ContactedNotifyPageDescription1_1" xml:space="preserve">
+    <value>・ Symptoms such as fever and underlying illness</value>
     <comment>・発熱等の症状や基礎疾患がある</comment>
   </data>
-  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
-    <value>・Chance of close contact with a positive person​</value>
-    <comment>・陽性者と接触した心当たりがある</comment>
+  <data name="ContactedNotifyPageDescription1_2" xml:space="preserve">
+    <value>・ Taking actions (*) with a high risk of infection</value>
+    <comment>・感染リスクの高い行動（※）をとった</comment>
   </data>
-  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
-    <value>・Others such as necessity of consult a doctor​</value>
+  <data name="ContactedNotifyPageDescription1_3" xml:space="preserve">
+    <value>・ Others, such as getting a medical examination</value>
     <comment>・その他、受診を希望する</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>Even if you do not get a medical examination,　we recommend to spend 7 days, from the date of contact, paying attention to infection control measures, such as refraining from contact with individuals with high risk of aggravation like elderly people and avoiding actions (*) with a high risk of infection</value>
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動（※）を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
+    <value>(*) Eating and drinking for a long time and with a large numbers of people etc.</value>
+    <comment>（※）大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>Agree</value>

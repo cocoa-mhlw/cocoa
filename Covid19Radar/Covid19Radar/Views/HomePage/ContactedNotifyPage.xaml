@@ -75,28 +75,33 @@
                                 AutomationProperties.IsInAccessibleTree="True"
                                 HorizontalTextAlignment="Start"
                                 Style="{StaticResource DefaultLabelSmall}"
-                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
+                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
                                 HorizontalTextAlignment="Start"
                                 Style="{StaticResource DefaultLabelSmall}"
-                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription3}" />
+                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1_1}" />
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
                                 HorizontalTextAlignment="Start"
                                 Style="{StaticResource DefaultLabelSmall}"
-                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription4}" />
+                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1_2}" />
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
                                 HorizontalTextAlignment="Start"
                                 Style="{StaticResource DefaultLabelSmall}"
-                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription5}" />
+                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1_3}" />
                         </StackLayout>
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
                             HorizontalTextAlignment="Start"
                             Style="{StaticResource DefaultSubTitleLabel}"
-                            Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
+                            Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            HorizontalTextAlignment="Start"
+                            Style="{StaticResource AnnotationLabelDark}"
+                            Text="{x:Static resources:AppResources.ContactedNotifyPageHighRiskActionAnnotationText}" />
                         <Button
                             AutomationProperties.IsInAccessibleTree="True"
                             Command="{Binding Path=OnClickByForm}"
