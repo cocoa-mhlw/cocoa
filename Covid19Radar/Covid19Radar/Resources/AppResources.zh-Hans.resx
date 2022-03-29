@@ -693,7 +693,7 @@
     <comment>・発熱等の症状や基礎疾患がある</comment>
   </data>
   <data name="ContactedNotifyPageDescription1_2" xml:space="preserve">
-    <value>・有感染风险高的行为（*）</value>
+    <value>・有高感染风险的行为（*）</value>
     <comment>・感染リスクの高い行動（※）をとった</comment>
   </data>
   <data name="ContactedNotifyPageDescription1_3" xml:space="preserve">
@@ -701,14 +701,14 @@
     <comment>・その他、受診を希望する</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>即使您不去接受诊断，请从接触之日起7天内，注意感染控制措施，例如避免与高危人群（如老年人和容易病情加重的人）接触，避免感染风险高的行为(*)。
+    <value>即使您不去接受诊断，请从接触之日起7天内，注意感染控制措施，例如避免与高危人群（如老年人和容易病情加重的人）接触，避免高感染风险的行为。
 但是，如果您感觉身体有任何变化，请考虑去接受诊断。</value>
-    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動（※）を控えていただくなど、感染対策に留意しながらお過ごしください。
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
 ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
   <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
-    <value>(*) 长时间多人聚餐等行为</value>
-    <comment>（※）大人数や長時間に及ぶ飲食など</comment>
+    <value>*长时间多人聚餐等行为</value>
+    <comment>※大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>同意</value>

@@ -695,14 +695,14 @@
     <comment>・その他、受診を希望する</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動（※）を控えていただくなど、感染対策に留意しながらお過ごしください。
+    <value>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
 ただし、体調に変化があった場合は、受診を検討ください。</value>
-    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動（※）を控えていただくなど、感染対策に留意しながらお過ごしください。
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
 ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
   <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
-    <value>（※）大人数や長時間に及ぶ飲食など</value>
-    <comment>（※）大人数や長時間に及ぶ飲食など</comment>
+    <value>※大人数や長時間に及ぶ飲食など</value>
+    <comment>※大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>確認しました</value>
