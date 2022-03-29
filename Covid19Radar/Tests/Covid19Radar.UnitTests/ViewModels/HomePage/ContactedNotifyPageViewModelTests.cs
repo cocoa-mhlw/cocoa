@@ -157,7 +157,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var contactedNotifyViewModel = CreateViewModel();
             contactedNotifyViewModel.Initialize(new NavigationParameters());
 
-            Assert.Null(contactedNotifyViewModel.ExposureCount);
+            Assert.Empty(contactedNotifyViewModel.ExposureCount);
             Assert.Equal("1日間に合計1分間の接触", contactedNotifyViewModel.ExposureDurationInMinutes);
         }
 
@@ -202,7 +202,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var contactedNotifyViewModel = CreateViewModel();
             contactedNotifyViewModel.Initialize(new NavigationParameters());
 
-            Assert.Null(contactedNotifyViewModel.ExposureDurationInMinutes);
+            Assert.Empty(contactedNotifyViewModel.ExposureDurationInMinutes);
             Assert.Equal("2 件", contactedNotifyViewModel.ExposureCount);
         }
 

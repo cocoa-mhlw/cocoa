@@ -679,27 +679,30 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>症状がない場合、
-陽性者と接触した心当たりがない場合は、
-感染対策に留意しつつ普段通りの生活をお送りください。
-ただし、体調に変化があった場合は、受診を検討ください。</value>
-    <comment>症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
     <value>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</value>
     <comment>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
   </data>
-  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
+  <data name="ContactedNotifyPageDescription1_1" xml:space="preserve">
     <value>・発熱等の症状や基礎疾患がある</value>
     <comment>・発熱等の症状や基礎疾患がある</comment>
   </data>
-  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
-    <value>・陽性者と接触した心当たりがある</value>
-    <comment>・陽性者と接触した心当たりがある</comment>
+  <data name="ContactedNotifyPageDescription1_2" xml:space="preserve">
+    <value>・感染リスクの高い行動（※）をとった</value>
+    <comment>・感染リスクの高い行動（※）をとった</comment>
   </data>
-  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
+  <data name="ContactedNotifyPageDescription1_3" xml:space="preserve">
     <value>・その他、受診を希望する</value>
     <comment>・その他、受診を希望する</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</value>
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
+    <value>※大人数や長時間に及ぶ飲食など</value>
+    <comment>※大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>確認しました</value>

@@ -685,27 +685,30 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>如果没有症状，​
-如果您没有与阳性者接触的印象，请在注意感染控制的同时可以正常的生活。​
-但是，如果您感觉有任何身体变化，请考虑去接受诊疗。
-    </value>
-    <comment>症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+    <value>如果您属于以下任何一种情况，请考虑根据应用的指导去医疗诊断机构。</value>
+    <comment>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
   </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>如果您属于以下任何一种情况，请考虑根据应用的指导去诊疗机构。</value>
-    <comment>次のいずれかに当てはまる方は、アプリの案内に従って相談先をご確認ください。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
-    <value>・发烧或者有基础疾病</value>
+  <data name="ContactedNotifyPageDescription1_1" xml:space="preserve">
+    <value>・发烧或者有潜在疾病</value>
     <comment>・発熱等の症状や基礎疾患がある</comment>
   </data>
-  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
-    <value>・有与阳性者接触的印象</value>
-    <comment>・陽性者と接触した心当たりがある</comment>
+  <data name="ContactedNotifyPageDescription1_2" xml:space="preserve">
+    <value>・有高感染风险的行为（*）</value>
+    <comment>・感染リスクの高い行動（※）をとった</comment>
   </data>
-  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
-    <value>・其他想接受诊疗的情况</value>
+  <data name="ContactedNotifyPageDescription1_3" xml:space="preserve">
+    <value>・其他想接受诊断的情况</value>
     <comment>・その他、受診を希望する</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>即使您不去接受诊断，请从接触之日起7天内，注意感染控制措施，例如避免与高危人群（如老年人和容易病情加重的人）接触，避免高感染风险的行为。
+但是，如果您感觉身体有任何变化，请考虑去接受诊断。</value>
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
+    <value>*长时间多人聚餐等行为</value>
+    <comment>※大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>同意</value>

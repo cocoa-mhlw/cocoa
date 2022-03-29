@@ -312,6 +312,9 @@
             <Style x:Key="AnnotationLabel" TargetType="Label" BasedOn="{StaticResource DefaultLabelSmall}">
                 <Setter Property="TextColor" Value="{StaticResource SecondaryText}" />
             </Style>
+            <Style x:Key="AnnotationLabelDark" TargetType="Label" BasedOn="{StaticResource DefaultLabelSmall}">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+            </Style>
 
         </ResourceDictionary>
     </Application.Resources>
