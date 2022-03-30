@@ -34,6 +34,10 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ICloseApplicationService closeApplicationService;
 
+        public string TermsOfUseReadText => $"{AppResources.TermsofservicePageTitle} {AppResources.Button}";
+        public string PrivacyPolicyReadText => $"{AppResources.PrivacyPolicyPageTitle} {AppResources.Button}";
+        public string WebAccessibilityPolicyReadText => $"{AppResources.WebAccessibilityPolicyPageTitle} {AppResources.Button}";
+
         public SettingsPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,

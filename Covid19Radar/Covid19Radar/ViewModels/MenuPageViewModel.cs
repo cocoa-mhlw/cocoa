@@ -67,30 +67,6 @@ namespace Covid19Radar.ViewModels
                 IconColor = MenuIconColorDefault,
                 TextColor = MenuTextColorDefault
             });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf70e",
-                PageName = nameof(TermsofservicePage),
-                Title = Resources.AppResources.TermsofservicePageTitle,
-                IconColor = MenuIconColorDefault,
-                TextColor = MenuTextColorDefault
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf70e",
-                PageName = nameof(PrivacyPolicyPage2),
-                Title = Resources.AppResources.PrivacyPolicyPageTitle,
-                IconColor = MenuIconColorDefault,
-                TextColor = MenuTextColorDefault
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf70e",
-                PageName = nameof(WebAccessibilityPolicyPage),
-                Title = Resources.AppResources.WebAccessibilityPolicyPageTitle,
-                IconColor = MenuIconColorDefault,
-                TextColor = MenuTextColorDefault
-            });
 #if DEBUG
             MenuItems.Add(new MainMenuModel()
             {

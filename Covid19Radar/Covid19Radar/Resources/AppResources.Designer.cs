@@ -2099,6 +2099,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string SettingsPageOthers {
+            get {
+                return ResourceManager.GetString("SettingsPageOthers", resourceCulture);
+            }
+        }
+        
         public static string ToHomeButton {
             get {
                 return ResourceManager.GetString("ToHomeButton", resourceCulture);

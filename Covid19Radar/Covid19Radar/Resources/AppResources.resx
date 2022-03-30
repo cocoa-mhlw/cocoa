@@ -1490,6 +1490,10 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>Obtain source code</value>
     <comment>ソースコードを入手</comment>
   </data>
+  <data name="SettingsPageOthers" xml:space="preserve">
+    <value>Others</value>
+    <comment>その他</comment>
+  </data>
   <data name="ToHomeButton" xml:space="preserve">
     <value>Return to Home screen</value>
     <comment>ホーム画面へ</comment>
