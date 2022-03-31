@@ -84,7 +84,6 @@ namespace Covid19Radar.ViewModels
 
                 if (response.StatusCode == (int)HttpStatusCode.Forbidden)
                 {
-                    UserDialogs.Instance.HideLoading();
                     // Access from overseas
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
@@ -98,8 +97,6 @@ namespace Covid19Radar.ViewModels
                 {
                     uploadResultStatusCode = await logUploadService.UploadAsync(ZipFilePath, response.Result.SasToken);
                 }
-
-                UserDialogs.Instance.HideLoading();
 
                 if (uploadResultStatusCode != HttpStatusCode.Created)
                 {
@@ -135,6 +132,8 @@ namespace Covid19Radar.ViewModels
             }
             finally
             {
+                UserDialogs.Instance.HideLoading();
+
                 loggerService.EndMethod();
             }
         });
