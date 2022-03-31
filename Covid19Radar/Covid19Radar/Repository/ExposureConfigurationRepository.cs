@@ -40,7 +40,7 @@ namespace Covid19Radar.Repository
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
 
-        private readonly HttpClient _httpClient;
+        private readonly IHttpClientService _httpClientService;
 
         private readonly string _configDir;
 
@@ -63,8 +63,7 @@ namespace Covid19Radar.Repository
             _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
 
-            _httpClient = httpClientService.Create();
-            _httpClient.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
+            _httpClientService = httpClientService;
 
             _configDir = PrepareConfigDir();
             _currentExposureConfigurationPath = localPathService.CurrentExposureConfigurationPath;
@@ -147,7 +146,7 @@ namespace Covid19Radar.Repository
 
             ExposureConfiguration newExposureConfiguration = null;
 
-            var response = await _httpClient.GetAsync(url);
+            var response = await _httpClientService.HttpClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
                 string exposureConfigurationAsJson = await response.Content.ReadAsStringAsync();

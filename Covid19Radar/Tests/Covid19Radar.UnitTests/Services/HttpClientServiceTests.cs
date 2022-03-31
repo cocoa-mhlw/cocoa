@@ -20,10 +20,26 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public void CreateTest()
+        public void CreateApiClientTest()
         {
             var unitUnderTest = CreateService();
-            var httpClient = unitUnderTest.Create();
+            var httpClient = unitUnderTest.ApiClient;
+            Assert.IsType<HttpClient>(httpClient);
+        }
+
+        [Fact]
+        public void CreateHttpClientTest()
+        {
+            var unitUnderTest = CreateService();
+            var httpClient = unitUnderTest.HttpClient;
+            Assert.IsType<HttpClient>(httpClient);
+        }
+
+        [Fact]
+        public void CreateCdnClientTest()
+        {
+            var unitUnderTest = CreateService();
+            var httpClient = unitUnderTest.CdnClient;
             Assert.IsType<HttpClient>(httpClient);
         }
     }

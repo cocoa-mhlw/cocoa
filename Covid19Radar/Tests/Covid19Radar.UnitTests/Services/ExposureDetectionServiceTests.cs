@@ -75,7 +75,7 @@ namespace Covid19Radar.UnitTests.Services {
 
         private ExposureDetectionService CreateService()
         {
-            clientService.Setup(x => x.Create())
+            clientService.Setup(x => x.HttpClient)
                 .Returns(new HttpClient());
 
             var exposureConfigurationRepository = new ExposureConfigurationRepository(

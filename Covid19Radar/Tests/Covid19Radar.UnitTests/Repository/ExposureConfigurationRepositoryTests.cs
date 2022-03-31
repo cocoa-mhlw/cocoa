@@ -89,7 +89,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.HttpClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
@@ -135,7 +135,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.HttpClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
@@ -177,7 +177,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.HttpClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
@@ -220,7 +220,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.HttpClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
@@ -261,7 +261,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.HttpClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
@@ -304,7 +304,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.HttpClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);
@@ -348,7 +348,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.HttpClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureConfigurationPath).Returns(CURRENT_EXPOSURE_CONFIGURATION_FILE_PATH);

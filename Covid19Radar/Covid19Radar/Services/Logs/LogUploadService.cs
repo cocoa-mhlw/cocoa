@@ -15,21 +15,21 @@ namespace Covid19Radar.Services.Logs
         private readonly ILoggerService loggerService;
         private readonly ILogPathService logPathService;
         private readonly IStorageService storageService;
-        private readonly IHttpDataService httpDataService;
+        private readonly IHttpClientService httpClientService;
         private readonly IServerConfigurationRepository serverConfigurationRepository;
 
         public LogUploadService(
             ILoggerService loggerService,
             ILogPathService logPathService,
             IStorageService storageService,
-            IHttpDataService httpDataService,
+            IHttpClientService httpClientService,
             IServerConfigurationRepository serverConfigurationRepository
             )
         {
             this.loggerService = loggerService;
             this.logPathService = logPathService;
             this.storageService = storageService;
-            this.httpDataService = httpDataService;
+            this.httpClientService = httpClientService;
             this.serverConfigurationRepository = serverConfigurationRepository;
         }
 
@@ -46,7 +46,7 @@ namespace Covid19Radar.Services.Logs
 
                 var url = serverConfigurationRepository.InquiryLogApiUrl;
 
-                var response = await httpDataService.ApiClient.GetAsync(url);
+                var response = await httpClientService.ApiClient.GetAsync(url);
 
                 statusCode = (int)response.StatusCode;
                 loggerService.Info($"Response status: {statusCode}");

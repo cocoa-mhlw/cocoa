@@ -21,13 +21,11 @@ namespace Covid19Radar.Repository
 
     public class ExposureRiskCalculationConfigurationRepository : IExposureRiskCalculationConfigurationRepository
     {
-        private const double TIMEOUT_SECONDS = 10.0;
-
         private readonly ILocalPathService _localPathService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILoggerService _loggerService;
 
-        private readonly HttpClient _httpClient;
+        private readonly IHttpClientService _httpClientService;
 
         private readonly string _configDir;
 
@@ -46,8 +44,7 @@ namespace Covid19Radar.Repository
             _serverConfigurationRepository = serverConfigurationRepository;
             _loggerService = loggerService;
 
-            _httpClient = httpClientService.Create();
-            _httpClient.Timeout = TimeSpan.FromSeconds(TIMEOUT_SECONDS);
+            _httpClientService = httpClientService;
 
             _configDir = PrepareConfigDir();
             _currentPath = localPathService.CurrentExposureRiskCalculationConfigurationPath;
@@ -126,7 +123,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                var response = await _httpClient.GetAsync(url);
+                var response = await _httpClientService.HttpClient.GetAsync(url);
                 if (response.IsSuccessStatusCode)
                 {
                     string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
@@ -227,7 +224,7 @@ namespace Covid19Radar.Repository
             {
                 File.Move(sourcePath, destPath);
             }
-            catch(IOException exception)
+            catch (IOException exception)
             {
                 _loggerService.Exception("IOException", exception);
 

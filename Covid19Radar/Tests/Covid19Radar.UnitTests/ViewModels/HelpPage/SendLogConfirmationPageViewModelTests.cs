@@ -7,7 +7,6 @@ using System.Net;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
@@ -26,7 +25,6 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly Mock<ILogFileService> mockLogFileService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ILogUploadService> mockLogUploadService;
-        private readonly Mock<IHttpDataService> mockHttpDataService;
 
         public SendLogConfirmationPageViewModelTests()
         {
@@ -39,7 +37,6 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService = mockRepository.Create<ILogFileService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockLogUploadService = mockRepository.Create<ILogUploadService>();
-            mockHttpDataService = mockRepository.Create<IHttpDataService>();
         }
 
         private SendLogConfirmationPageViewModel CreateViewModel()

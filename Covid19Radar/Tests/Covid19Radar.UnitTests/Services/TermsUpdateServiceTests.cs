@@ -32,7 +32,7 @@ namespace Covid19Radar.UnitTests.Services
 
         private TermsUpdateService CreateService()
         {
-            mockHttpClientService.Setup(x => x.Create())
+            mockHttpClientService.Setup(x => x.HttpClient)
                 .Returns(new HttpClient());
 
             return new TermsUpdateService(

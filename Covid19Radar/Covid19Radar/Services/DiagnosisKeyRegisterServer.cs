@@ -22,19 +22,19 @@ namespace Covid19Radar.Services
     public class DiagnosisKeyRegisterServer : IDiagnosisKeyRegisterServer
     {
         private readonly ILoggerService _loggerService;
-        private readonly IHttpDataService _httpDataService;
+        private readonly IHttpClientService _httpClientService;
         private readonly IDeviceVerifier _deviceVerifier;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
 
         public DiagnosisKeyRegisterServer(
             ILoggerService loggerService,
-            IHttpDataService httpDataService,
+            IHttpClientService httpClientService,
             IDeviceVerifier deviceVerifier,
             IServerConfigurationRepository serverConfigurationRepository
             )
         {
             _loggerService = loggerService;
-            _httpDataService = httpDataService;
+            _httpClientService = httpClientService;
             _deviceVerifier = deviceVerifier;
             _serverConfigurationRepository = serverConfigurationRepository;
         }
@@ -115,7 +115,7 @@ namespace Covid19Radar.Services
 
         private async Task<HttpStatusCode> PutAsync(string url, HttpContent body)
         {
-            var result = await _httpDataService.HttpClient.PutAsync(url, body);
+            var result = await _httpClientService.HttpClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
             return result.StatusCode;
         }

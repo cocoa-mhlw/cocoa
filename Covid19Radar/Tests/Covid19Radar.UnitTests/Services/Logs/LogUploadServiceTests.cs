@@ -18,7 +18,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ILogPathService> mockLogPathService;
         private readonly Mock<IStorageService> mockStorageService;
-        private readonly Mock<IHttpDataService> mockHttpDataService;
+        private readonly Mock<IHttpClientService> mockHttpClientService;
         private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
 
         public LogUploadServiceTests()
@@ -27,7 +27,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockLogPathService = mockRepository.Create<ILogPathService>();
             mockStorageService = mockRepository.Create<IStorageService>();
-            mockHttpDataService = mockRepository.Create<IHttpDataService>();
+            mockHttpClientService = mockRepository.Create<IHttpClientService>();
             mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
         }
 
@@ -37,7 +37,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
                 mockLoggerService.Object,
                 mockLogPathService.Object,
                 mockStorageService.Object,
-                mockHttpDataService.Object,
+                mockHttpClientService.Object,
                 mockServerConfigurationRepository.Object
                 );
             return s;

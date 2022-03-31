@@ -75,7 +75,7 @@ namespace Covid19Radar.Services
     {
         private readonly ILoggerService _loggerService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
-        private readonly HttpClient _httpClient;
+        private readonly IHttpClientService _httpClientService;
 
         public DebugExposureDataCollectServer(
             ILoggerService loggerService,
@@ -85,7 +85,7 @@ namespace Covid19Radar.Services
         {
             _loggerService = loggerService;
             _serverConfigurationRepository = serverConfigurationRepository;
-            _httpClient = httpClientService.Create();
+            _httpClientService = httpClientService;
         }
 
         public async Task UploadExposureDataAsync(
@@ -173,7 +173,7 @@ namespace Covid19Radar.Services
 
                 Uri uri = new Uri(exposureDataCollectServerEndpoint);
 
-                HttpResponseMessage response = await _httpClient.PutAsync(uri, httpContent);
+                HttpResponseMessage response = await _httpClientService.HttpClient.PutAsync(uri, httpContent);
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsStringAsync();

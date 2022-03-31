@@ -23,18 +23,18 @@ namespace Covid19Radar.Services
     public class UserDataService : IUserDataService
     {
         private readonly ILoggerService loggerService;
-        private readonly IHttpDataService httpDataService;
+        private readonly IHttpClientService httpClientService;
         private readonly IUserDataRepository userDataRepository;
         private readonly IServerConfigurationRepository serverConfigurationRepository;
 
         public UserDataService(
-            IHttpDataService httpDataService,
+            IHttpClientService httpClientService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository
             )
         {
-            this.httpDataService = httpDataService;
+            this.httpClientService = httpClientService;
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
             this.serverConfigurationRepository = serverConfigurationRepository;
@@ -50,7 +50,7 @@ namespace Covid19Radar.Services
                 string url = serverConfigurationRepository.UserRegisterApiEndpoint;
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
 
-                HttpResponseMessage result = await httpDataService.HttpClient.PostAsync(url, content);
+                HttpResponseMessage result = await httpClientService.HttpClient.PostAsync(url, content);
                 HttpStatusCode resultStatusCode = result.StatusCode;
 
                 if (resultStatusCode == HttpStatusCode.OK)

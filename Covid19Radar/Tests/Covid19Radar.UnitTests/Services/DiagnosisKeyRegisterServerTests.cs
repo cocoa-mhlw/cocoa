@@ -23,7 +23,7 @@ namespace Covid19Radar.UnitTests.Services
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IHttpDataService> mockHttpDataService;
+        private readonly Mock<IHttpClientService> mockHttpClientService;
         private readonly Mock<IDeviceVerifier> mockDeviceVerifier;
         private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
 
@@ -31,7 +31,7 @@ namespace Covid19Radar.UnitTests.Services
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockHttpDataService = mockRepository.Create<IHttpDataService>();
+            mockHttpClientService = mockRepository.Create<IHttpClientService>();
             mockDeviceVerifier = mockRepository.Create<IDeviceVerifier>();
             mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
         }
@@ -40,7 +40,7 @@ namespace Covid19Radar.UnitTests.Services
         {
             return new DiagnosisKeyRegisterServer(
                 mockLoggerService.Object,
-                mockHttpDataService.Object,
+                mockHttpClientService.Object,
                 mockDeviceVerifier.Object,
                 mockServerConfigurationRepository.Object
                 );
@@ -65,7 +65,7 @@ namespace Covid19Radar.UnitTests.Services
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
 
-            mockHttpDataService.Setup(x => x.HttpClient).Returns(mockHttpClient);
+            mockHttpClientService.Setup(x => x.HttpClient).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.DiagnosisKeyRegisterApiUrls)
                 .Returns(new List<string>() { IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/v3/diagnosis") });
 
