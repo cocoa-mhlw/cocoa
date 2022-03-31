@@ -173,7 +173,7 @@ namespace Covid19Radar.Services
 
                 Uri uri = new Uri(exposureDataCollectServerEndpoint);
 
-                HttpResponseMessage response = await _httpClientService.HttpClient.PutAsync(uri, httpContent);
+                HttpResponseMessage response = await _httpClientService.ApiClient.PutAsync(uri, httpContent);
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsStringAsync();

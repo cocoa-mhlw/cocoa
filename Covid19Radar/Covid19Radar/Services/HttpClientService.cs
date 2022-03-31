@@ -15,7 +15,7 @@ namespace Covid19Radar.Services
             get;
         }
 
-        public HttpClient HttpClient
+        public HttpClient StaticJsonContentClient
         {
             get;
         }
@@ -31,17 +31,17 @@ namespace Covid19Radar.Services
         private const double TimeoutSeconds = 10.0;
 
         private readonly HttpClient _apiClient;
-        private readonly HttpClient _httpClient;
+        private readonly HttpClient _staticJsonContentClient;
         private readonly HttpClient _cdnClient;
 
         public HttpClient ApiClient => _apiClient;
-        public HttpClient HttpClient => _httpClient;
+        public HttpClient StaticJsonContentClient => _staticJsonContentClient;
         public HttpClient CdnClient => _cdnClient;
 
         public HttpClientService()
         {
             _apiClient = CreateApiClient();
-            _httpClient = CreateHttpClient();
+            _staticJsonContentClient = CreateStaticJsonContentClient();
             _cdnClient = CreateCdnClient();
         }
 
@@ -55,11 +55,10 @@ namespace Covid19Radar.Services
             return apiClient;
         }
 
-        private HttpClient CreateHttpClient()
+        private HttpClient CreateStaticJsonContentClient()
         {
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
             httpClient.Timeout = TimeSpan.FromSeconds(TimeoutSeconds);
 
             return httpClient;

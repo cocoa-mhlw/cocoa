@@ -115,7 +115,7 @@ namespace Covid19Radar.Services
 
         private async Task<HttpStatusCode> PutAsync(string url, HttpContent body)
         {
-            var result = await _httpClientService.HttpClient.PutAsync(url, body);
+            var result = await _httpClientService.ApiClient.PutAsync(url, body);
             await result.Content.ReadAsStringAsync();
             return result.StatusCode;
         }

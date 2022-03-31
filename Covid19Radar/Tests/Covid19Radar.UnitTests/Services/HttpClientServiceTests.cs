@@ -31,7 +31,7 @@ namespace Covid19Radar.UnitTests.Services
         public void CreateHttpClientTest()
         {
             var unitUnderTest = CreateService();
-            var httpClient = unitUnderTest.HttpClient;
+            var httpClient = unitUnderTest.StaticJsonContentClient;
             Assert.IsType<HttpClient>(httpClient);
         }
 

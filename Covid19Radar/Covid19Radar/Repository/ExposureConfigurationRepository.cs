@@ -146,7 +146,7 @@ namespace Covid19Radar.Repository
 
             ExposureConfiguration newExposureConfiguration = null;
 
-            var response = await _httpClientService.HttpClient.GetAsync(url);
+            var response = await _httpClientService.StaticJsonContentClient.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
                 string exposureConfigurationAsJson = await response.Content.ReadAsStringAsync();

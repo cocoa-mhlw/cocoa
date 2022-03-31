@@ -60,7 +60,7 @@ namespace Covid19Radar.UnitTests.Services
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
 
-            mockHttpClientService.Setup(x => x.HttpClient).Returns(mockHttpClient);
+            mockHttpClientService.Setup(x => x.ApiClient).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
                 .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
@@ -89,7 +89,7 @@ namespace Covid19Radar.UnitTests.Services
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
 
-            mockHttpClientService.Setup(x => x.HttpClient).Returns(mockHttpClient);
+            mockHttpClientService.Setup(x => x.ApiClient).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
                 .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
@@ -118,7 +118,7 @@ namespace Covid19Radar.UnitTests.Services
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
 
-            mockHttpClientService.Setup(x => x.HttpClient).Returns(mockHttpClient);
+            mockHttpClientService.Setup(x => x.ApiClient).Returns(mockHttpClient);
             mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
                 .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 

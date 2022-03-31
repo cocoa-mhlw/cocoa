@@ -44,7 +44,7 @@ namespace Covid19Radar.Services
             var uri = AppResources.UrlTermsUpdate;
             try
             {
-                var json = await _httpClientService.HttpClient.GetStringAsync(uri);
+                var json = await _httpClientService.StaticJsonContentClient.GetStringAsync(uri);
                 loggerService.Info($"uri: {uri}");
                 loggerService.Info($"TermsUpdateInfo: {json}");
 

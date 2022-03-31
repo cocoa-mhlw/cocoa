@@ -50,7 +50,7 @@ namespace Covid19Radar.Services
                 string url = serverConfigurationRepository.UserRegisterApiEndpoint;
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
 
-                HttpResponseMessage result = await httpClientService.HttpClient.PostAsync(url, content);
+                HttpResponseMessage result = await httpClientService.ApiClient.PostAsync(url, content);
                 HttpStatusCode resultStatusCode = result.StatusCode;
 
                 if (resultStatusCode == HttpStatusCode.OK)

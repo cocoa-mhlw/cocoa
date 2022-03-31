@@ -45,7 +45,7 @@ namespace Covid19Radar.Services
             var uri = AppResources.UrlVersion;
             try
             {
-                var json = await _httpClientService.HttpClient.GetStringAsync(uri);
+                var json = await _httpClientService.StaticJsonContentClient.GetStringAsync(uri);
                 var key = _essentialsService.IsIos ? "ios" : "android";
                 var versionString = JObject.Parse(json).Value<string>(key);
 

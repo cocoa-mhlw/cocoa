@@ -123,7 +123,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                var response = await _httpClientService.HttpClient.GetAsync(url);
+                var response = await _httpClientService.StaticJsonContentClient.GetAsync(url);
                 if (response.IsSuccessStatusCode)
                 {
                     string exposureRiskCalculationConfigurationAsJson = await response.Content.ReadAsStringAsync();
