@@ -93,15 +93,15 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                var uploadResult = false;
+                HttpStatusCode uploadResultStatusCode = HttpStatusCode.Forbidden;
                 if (response.StatusCode == (int)HttpStatusCode.OK && !string.IsNullOrEmpty(response.Result.SasToken))
                 {
-                    uploadResult = await logUploadService.UploadAsync(ZipFilePath, response.Result.SasToken);
+                    uploadResultStatusCode = await logUploadService.UploadAsync(ZipFilePath, response.Result.SasToken);
                 }
 
                 UserDialogs.Instance.HideLoading();
 
-                if (!uploadResult)
+                if (uploadResultStatusCode != HttpStatusCode.Created)
                 {
                     // Failed to create ZIP file
                     await UserDialogs.Instance.AlertAsync(

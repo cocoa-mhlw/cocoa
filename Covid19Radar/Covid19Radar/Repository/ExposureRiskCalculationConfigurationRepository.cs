@@ -252,4 +252,10 @@ namespace Covid19Radar.Repository
         private async Task SaveAsync(string exposureConfigurationAsJson, string outPath)
             => await File.WriteAllTextAsync(outPath, exposureConfigurationAsJson);
     }
+
+    public class ExposureRiskCalculationConfigurationRepositoryMock : IExposureRiskCalculationConfigurationRepository
+    {
+        public Task<V1ExposureRiskCalculationConfiguration> GetExposureRiskCalculationConfigurationAsync(bool preferCache)
+            => Task.FromResult(new V1ExposureRiskCalculationConfiguration());
+    }
 }

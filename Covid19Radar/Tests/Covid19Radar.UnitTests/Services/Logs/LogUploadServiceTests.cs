@@ -3,6 +3,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.IO;
+using System.Net;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Moq;
@@ -16,6 +18,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<ILogPathService> mockLogPathService;
         private readonly Mock<IStorageService> mockStorageService;
+        private readonly Mock<IHttpDataService> mockHttpDataService;
+        private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
 
         public LogUploadServiceTests()
         {
@@ -23,6 +27,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockLogPathService = mockRepository.Create<ILogPathService>();
             mockStorageService = mockRepository.Create<IStorageService>();
+            mockHttpDataService = mockRepository.Create<IHttpDataService>();
+            mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
         }
 
         private LogUploadService CreateService()
@@ -30,7 +36,10 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var s = new LogUploadService(
                 mockLoggerService.Object,
                 mockLogPathService.Object,
-                mockStorageService.Object);
+                mockStorageService.Object,
+                mockHttpDataService.Object,
+                mockServerConfigurationRepository.Object
+                );
             return s;
         }
 
@@ -45,12 +54,13 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var testZipFilePath = Path.Combine(testTmpPath, testZipFileName);
 
             mockLogPathService.Setup(x => x.LogUploadingTmpPath).Returns(testTmpPath);
-            mockStorageService.Setup(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, testZipFilePath)).ReturnsAsync(true);
+            mockStorageService.Setup(x => x.UploadAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), testSasToken, testZipFilePath))
+                .ReturnsAsync(HttpStatusCode.Created);
 
             var result = await unitUnderTest.UploadAsync(testZipFilePath, testSasToken);
 
-            Assert.True(result);
-            mockStorageService.Verify(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, testZipFilePath), Times.Once());
+            Assert.Equal(HttpStatusCode.Created, result);
+            mockStorageService.Verify(x => x.UploadAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), testSasToken, testZipFilePath), Times.Once());
         }
 
         [Fact]
@@ -64,11 +74,12 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var testZipFilePath = Path.Combine(testTmpPath, testZipFileName);
 
             mockLogPathService.Setup(x => x.LogUploadingTmpPath).Returns(testTmpPath);
-            mockStorageService.Setup(x => x.UploadAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).ReturnsAsync(false);
+            mockStorageService.Setup(x => x.UploadAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+                .ReturnsAsync(HttpStatusCode.Forbidden);
 
             var result = await unitUnderTest.UploadAsync(testZipFilePath, testSasToken);
 
-            Assert.False(result);
+            Assert.NotEqual(HttpStatusCode.Created, result);
             mockStorageService.Verify(x => x.UploadAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Once());
         }
 
@@ -82,11 +93,12 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var testSasToken = "test-sas-token";
             var testZipFilePath = Path.Combine(testTmpPath, testZipFileName);
 
-            mockStorageService.Setup(x => x.UploadAsync("https://LOG_STORAGE_URL_BASE/", "LOG_STORAGE_CONTAINER_NAME", "LOG_STORAGE_ACCOUNT_NAME", testSasToken, testZipFilePath)).ReturnsAsync(false);
+            mockStorageService.Setup(x => x.UploadAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), testSasToken, testZipFilePath))
+                .ReturnsAsync(HttpStatusCode.Forbidden);
 
             var result = await unitUnderTest.UploadAsync(testZipFilePath, testSasToken);
 
-            Assert.False(result);
+            Assert.NotEqual(HttpStatusCode.Created, result);
         }
     }
 }

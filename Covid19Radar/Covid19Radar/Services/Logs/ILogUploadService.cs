@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Net;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
 
@@ -11,6 +12,6 @@ namespace Covid19Radar.Services.Logs
     {
         Task<ApiResponse<LogStorageSas>> GetLogStorageSas();
 
-        Task<bool> UploadAsync(string zipFilePath, string sasToken);
+        Task<HttpStatusCode> UploadAsync(string zipFilePath, string sasToken);
     }
 }

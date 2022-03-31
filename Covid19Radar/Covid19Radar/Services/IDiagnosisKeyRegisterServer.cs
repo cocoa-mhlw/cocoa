@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Model;
 
 namespace Covid19Radar.Services
 {
@@ -19,5 +20,7 @@ namespace Covid19Radar.Services
             string processNumber,
             string idempotencyKey
             );
+
+        public Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request);
     }
 }

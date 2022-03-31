@@ -13,7 +13,7 @@ namespace Covid19Radar.Services
 {
     public interface IStorageService
     {
-        Task<bool> UploadAsync(string endpoint, string uploadPath, string accountName, string sasToken, string sourceFilePath);
+        Task<HttpStatusCode> UploadAsync(string endpoint, string uploadPath, string accountName, string sasToken, string sourceFilePath);
     }
 
     public class StorageService : IStorageService
@@ -25,11 +25,10 @@ namespace Covid19Radar.Services
             this.loggerService = loggerService;
         }
 
-        public async Task<bool> UploadAsync(string endpoint, string uploadPath, string accountName, string sasToken, string sourceFilePath)
+        public async Task<HttpStatusCode> UploadAsync(string endpoint, string uploadPath, string accountName, string sasToken, string sourceFilePath)
         {
             loggerService.StartMethod();
 
-            var result = false;
             try
             {
                 var fileName = Path.GetFileName(sourceFilePath);
@@ -44,20 +43,13 @@ namespace Covid19Radar.Services
                 {
                     var response = await client.UploadAsync(fileStream);
                     var rawResponse = response.GetRawResponse();
-                    if (rawResponse.Status == (int)HttpStatusCode.Created)
-                    {
-                        result = true;
-                    }
+                    return (HttpStatusCode)rawResponse.Status;
                 }
             }
-            catch (Exception ex)
+            finally
             {
-                loggerService.Error("Failed upload to storage");
-                System.Diagnostics.Debug.WriteLine($"Exception: {ex}");
+                loggerService.EndMethod();
             }
-
-            loggerService.EndMethod();
-            return result;
         }
     }
 }

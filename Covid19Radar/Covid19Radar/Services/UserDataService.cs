@@ -45,7 +45,13 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
             try
             {
-                var resultStatusCode = await PostRegisterUserAsync();
+                await serverConfigurationRepository.LoadAsync();
+
+                string url = serverConfigurationRepository.UserRegisterApiEndpoint;
+                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage result = await httpDataService.HttpClient.PostAsync(url, content);
+                HttpStatusCode resultStatusCode = result.StatusCode;
 
                 if (resultStatusCode == HttpStatusCode.OK)
                 {
@@ -57,39 +63,24 @@ namespace Covid19Radar.Services
                     loggerService.Info("Failed register");
                 }
 
-                loggerService.EndMethod();
                 return resultStatusCode;
             }
             catch(Exception ex)
             {
                 loggerService.Exception("Failed to register user.", ex);
-                loggerService.EndMethod();
                 throw;
+            }
+            finally
+            {
+                loggerService.EndMethod();
             }
 
         }
+    }
 
-        // POST /api/Register - Register User
-        private async Task<HttpStatusCode> PostRegisterUserAsync()
-        {
-            loggerService.StartMethod();
-            try
-            {
-                await serverConfigurationRepository.LoadAsync();
-
-                string url = serverConfigurationRepository.UserRegisterApiEndpoint;
-                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
-
-                HttpResponseMessage result = await httpDataService.HttpClient.PostAsync(url, content);
-                loggerService.EndMethod();
-                return result.StatusCode;
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Failed to register user.", ex);
-                loggerService.EndMethod();
-                throw;
-            }
-        }
+    public class UserDataServiceMock : IUserDataService
+    {
+        public Task<HttpStatusCode> RegisterUserAsync()
+            => Task.FromResult(HttpStatusCode.OK);
     }
 }

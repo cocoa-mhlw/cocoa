@@ -83,7 +83,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+        public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             _loggerService.StartMethod();
 
@@ -206,6 +206,21 @@ namespace Covid19Radar.Services
             random.NextBytes(padding);
             return Convert.ToBase64String(padding);
         }
+    }
+
+    public class DiagnosisKeyRegisterServerMock : IDiagnosisKeyRegisterServer
+    {
+        public Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+            bool hasSymptom,
+            DateTime symptomOnsetDate,
+            IList<TemporaryExposureKey> temporaryExposureKeys,
+            string processNumber,
+            string idempotencyKey
+            )
+            => Task.FromResult(HttpStatusCode.NoContent);
+
+        public Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+            => Task.FromResult(HttpStatusCode.NoContent);
     }
 
     public class DiagnosisKeyRegisterException : Exception

@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Net;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
@@ -47,8 +48,8 @@ namespace Covid19Radar.UnitTests.ViewModels
                 mockNavigationService.Object,
                 mockLoggerService.Object,
                 mockLogFileService.Object,
-                mockLogUploadService.Object,
-                mockHttpDataService.Object)
+                mockLogUploadService.Object
+                )
             {
                 BeginInvokeOnMainThread = new Action<Action>((a) => { a.Invoke(); }),
                 TaskRun = new Func<Action, Task>((a) => { a.Invoke(); return Task.CompletedTask; })
@@ -124,8 +125,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Invocations.Clear();
 
             var testResponse = new ApiResponse<LogStorageSas>(200, new LogStorageSas() { SasToken = "test-sas-token" });
-            mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
-            mockLogUploadService.Setup(x => x.UploadAsync(testPublicZipFilePath, testResponse.Result.SasToken)).ReturnsAsync(true);
+            mockLogUploadService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
+            mockLogUploadService.Setup(x => x.UploadAsync(testPublicZipFilePath, testResponse.Result.SasToken)).ReturnsAsync(HttpStatusCode.Created);
 
             unitUnderTest.OnClickSendLogCommand.Execute(null);
 
@@ -158,8 +159,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Invocations.Clear();
 
             var testResponse = new ApiResponse<LogStorageSas>(200, new LogStorageSas() { SasToken = "test-sas-token" });
-            mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
-            mockLogUploadService.Setup(x => x.UploadAsync(testPublicZipFilePath, testResponse.Result.SasToken)).ReturnsAsync(false);
+            mockLogUploadService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
+            mockLogUploadService.Setup(x => x.UploadAsync(testPublicZipFilePath, testResponse.Result.SasToken)).ReturnsAsync(HttpStatusCode.Forbidden);
 
             unitUnderTest.OnClickSendLogCommand.Execute(null);
 
@@ -194,8 +195,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockLogFileService.Invocations.Clear();
 
             var testResponse = new ApiResponse<LogStorageSas>(200, new LogStorageSas() { SasToken = "test-sas-token" });
-            mockHttpDataService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
-            mockLogUploadService.Setup(x => x.UploadAsync(testPublicZipFilePath, testResponse.Result.SasToken)).ReturnsAsync(true);
+            mockLogUploadService.Setup(x => x.GetLogStorageSas()).ReturnsAsync(testResponse);
+            mockLogUploadService.Setup(x => x.UploadAsync(testPublicZipFilePath, testResponse.Result.SasToken)).ReturnsAsync(HttpStatusCode.Created);
 
             unitUnderTest.OnClickSendLogCommand.Execute(null);
 
