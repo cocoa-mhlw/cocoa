@@ -2,18 +2,25 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Model;
-using System.Net;
-using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace Covid19Radar.Services
 {
     public interface IHttpDataService
     {
-        Task<HttpStatusCode> PostRegisterUserAsync();
+        public HttpClient ApiClient
+        {
+            get;
+        }
 
-        Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request);
+        public HttpClient HttpClient
+        {
+            get;
+        }
 
-        Task<ApiResponse<LogStorageSas>> GetLogStorageSas();
+        public HttpClient CdnClient
+        {
+            get;
+        }
     }
 }

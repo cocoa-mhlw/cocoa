@@ -3,7 +3,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Net;
 using System.Threading.Tasks;
+using Covid19Radar.Model;
+using Covid19Radar.Repository;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Services.Logs
 {
@@ -12,15 +16,54 @@ namespace Covid19Radar.Services.Logs
         private readonly ILoggerService loggerService;
         private readonly ILogPathService logPathService;
         private readonly IStorageService storageService;
+        private readonly IHttpDataService httpDataService;
+        private readonly IServerConfigurationRepository serverConfigurationRepository;
 
         public LogUploadService(
             ILoggerService loggerService,
             ILogPathService logPathService,
-            IStorageService storageService)
+            IStorageService storageService,
+            IHttpDataService httpDataService,
+            IServerConfigurationRepository serverConfigurationRepository
+            )
         {
             this.loggerService = loggerService;
             this.logPathService = logPathService;
             this.storageService = storageService;
+            this.httpDataService = httpDataService;
+            this.serverConfigurationRepository = serverConfigurationRepository;
+        }
+
+        public async Task<ApiResponse<LogStorageSas>> GetLogStorageSas()
+        {
+            loggerService.StartMethod();
+
+            int statusCode;
+            LogStorageSas logStorageSas = default;
+
+            try
+            {
+                await serverConfigurationRepository.LoadAsync();
+
+                var url = serverConfigurationRepository.InquiryLogApiUrl;
+
+                var response = await httpDataService.ApiClient.GetAsync(url);
+
+                statusCode = (int)response.StatusCode;
+                loggerService.Info($"Response status: {statusCode}");
+
+                if (statusCode == (int)HttpStatusCode.OK)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    logStorageSas = JsonConvert.DeserializeObject<LogStorageSas>(content);
+                }
+
+                return new ApiResponse<LogStorageSas>(statusCode, logStorageSas);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
         }
 
         public async Task<bool> UploadAsync(string zipFilePath, string sasToken)

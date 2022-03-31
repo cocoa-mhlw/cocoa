@@ -6,6 +6,8 @@ using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using System;
 using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
@@ -23,16 +25,19 @@ namespace Covid19Radar.Services
         private readonly ILoggerService loggerService;
         private readonly IHttpDataService httpDataService;
         private readonly IUserDataRepository userDataRepository;
+        private readonly IServerConfigurationRepository serverConfigurationRepository;
 
         public UserDataService(
             IHttpDataService httpDataService,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            IServerConfigurationRepository serverConfigurationRepository
             )
         {
             this.httpDataService = httpDataService;
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
+            this.serverConfigurationRepository = serverConfigurationRepository;
         }
 
         public async Task<HttpStatusCode> RegisterUserAsync()
@@ -40,7 +45,7 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
             try
             {
-                var resultStatusCode = await httpDataService.PostRegisterUserAsync();
+                var resultStatusCode = await PostRegisterUserAsync();
 
                 if (resultStatusCode == HttpStatusCode.OK)
                 {
@@ -62,6 +67,29 @@ namespace Covid19Radar.Services
                 throw;
             }
 
+        }
+
+        // POST /api/Register - Register User
+        private async Task<HttpStatusCode> PostRegisterUserAsync()
+        {
+            loggerService.StartMethod();
+            try
+            {
+                await serverConfigurationRepository.LoadAsync();
+
+                string url = serverConfigurationRepository.UserRegisterApiEndpoint;
+                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage result = await httpDataService.HttpClient.PostAsync(url, content);
+                loggerService.EndMethod();
+                return result.StatusCode;
+            }
+            catch (Exception ex)
+            {
+                loggerService.Exception("Failed to register user.", ex);
+                loggerService.EndMethod();
+                throw;
+            }
         }
     }
 }

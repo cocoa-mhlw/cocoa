@@ -7,7 +7,6 @@ using System.Net;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Resources;
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -24,7 +23,6 @@ namespace Covid19Radar.ViewModels
         private readonly ILogFileService logFileService;
         private readonly ILogUploadService logUploadService;
         private readonly ILogPathService logPathService;
-        private readonly IHttpDataService httpDataService;
 
         public Action<Action> BeginInvokeOnMainThread { get; set; } = MainThread.BeginInvokeOnMainThread;
         public Func<Action, Task> TaskRun { get; set; } = Task.Run;
@@ -36,13 +34,12 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             ILogFileService logFileService,
-            ILogUploadService logUploadService,
-            IHttpDataService httpDataService) : base(navigationService)
+            ILogUploadService logUploadService
+        ) : base(navigationService)
         {
             this.loggerService = loggerService;
             this.logFileService = logFileService;
             this.logUploadService = logUploadService;
-            this.httpDataService = httpDataService;
         }
 
         public Command OnClickConfirmLogCommand => new Command(async () =>
@@ -83,7 +80,7 @@ namespace Covid19Radar.ViewModels
                 // Upload log file.
                 UserDialogs.Instance.ShowLoading(AppResources.Sending);
 
-                var response = await httpDataService.GetLogStorageSas();
+                var response = await logUploadService.GetLogStorageSas();
 
                 if (response.StatusCode == (int)HttpStatusCode.Forbidden)
                 {
