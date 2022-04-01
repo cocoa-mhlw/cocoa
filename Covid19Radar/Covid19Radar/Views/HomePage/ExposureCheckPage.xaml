@@ -102,13 +102,8 @@
                                     />
                                 <Label
                                     Style="{StaticResource CardLabelSmall}"
-                                    >
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <Span Text="{Binding Description}" />
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
+                                    Text="{Binding Description}"
+                                    />
                             </StackLayout>
                             <Frame.Triggers>
                                 <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="False">
