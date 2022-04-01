@@ -19,15 +19,52 @@ on:
       - 'Covid19Radar.sln'
       - 'Nuget.config'
 jobs:
-  build:
-    name: build
+  build_ios:
+    name: Build-iOS
     runs-on: macos-latest
     strategy:
       matrix:
         Configuration: [Debug, Debug_Mock, Release]
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Xamarin
+      uses: maxim-lobanov/setup-xamarin@v1
+      with:
+        mono-version: 6.12 # specify version in '<major>.<minor>' format
+        xamarin-ios-version: 15 # specify version in '<major>' format
+        xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
+        xamarin-android-version: 12 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
+        xcode-version: 13 # set the latest available Xcode 13
+    - name: Prepare settings.json
+      run: mv -f ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings_template.json ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
+    - name: Deploy nuget packages - ${{ matrix.Configuration }}
+      run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/ | true
+    - name: Build iOS Project - ${{ matrix.Configuration }}
+      run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator
+  build_android:
+    name: Build-Android
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        Configuration: [Debug, Debug_Mock, Release]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Prepare settings.json
+      run: mv -Force ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings_template.json ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
+    - name: Deploy nuget packages - ${{ matrix.Configuration }}
+      run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/| true
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1
+    - name: Build Android Project - ${{ matrix.Configuration }}
+      run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
+  test:
+    name: Test
+    runs-on: macos-latest # Tests must be executed on macOs. If don't, tests will fail.
+    needs: [build_ios, build_android]
+    steps:
     - name: Set up JDK 11
-      if: ${{ matrix.Configuration == 'Debug' }}
       uses: actions/setup-java@v1
       with:
         java-version: 1.11
@@ -38,14 +75,12 @@ jobs:
     - name: Package Add coverlet.msbuild
       run: dotnet add ${{ github.workspace }}/Covid19Radar/Tests/Covid19Radar.UnitTests/Covid19Radar.UnitTests.csproj package coverlet.msbuild
     - name: Cache SonarCloud packages
-      if: ${{ matrix.Configuration == 'Debug' }}
       uses: actions/cache@v1
       with:
         path: ~/sonar/cache
         key: ${{ runner.os }}-sonar
         restore-keys: ${{ runner.os }}-sonar
     - name: Cache SonarCloud scanner
-      if: ${{ matrix.Configuration == 'Debug' }}
       id: cache-sonar-scanner
       uses: actions/cache@v1
       with:
@@ -59,7 +94,6 @@ jobs:
         New-Item -Path ./.sonar/scanner -ItemType Directory
         dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner
     - name: Begin SonarScanner
-      if: ${{ matrix.Configuration == 'Debug' }}
       run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"cocoa-mhlw_cocoa-app" /o:"cocoa-mhlw" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -77,14 +111,12 @@ jobs:
     - name: Deploy nuget packages - ${{ matrix.Configuration }}
       run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/ | true
     - name: Build Project - ${{ matrix.Configuration }}
-      run: msbuild ${{ github.workspace }}/Covid19Radar.sln /restore /t:Build /p:Configuration=${{ matrix.Configuration }} /p:Platform=iPhoneSimulator
+      run: msbuild ${{ github.workspace }}/Covid19Radar.sln /restore /t:Build /p:Platform=iPhoneSimulator
     - name: Execute Unit Tests
-      if: ${{ matrix.Configuration == 'Debug' }}
-      run: dotnet test ${{ github.workspace }}/Covid19Radar/Tests/Covid19Radar.UnitTests/ /p:Configuration=${{ matrix.Configuration }} --no-build --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --collect:"XPlat Code Coverage"
+      run: dotnet test ${{ github.workspace }}/Covid19Radar/Tests/Covid19Radar.UnitTests/ --no-build --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --collect:"XPlat Code Coverage"
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: true
     - name: End SonarScanner
-      if: ${{ matrix.Configuration == 'Debug' }}
       run: ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
