@@ -268,21 +268,21 @@
     <value>删除接触记录并将应用恢复到初始状态</value>
     <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
-  <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>分享此APP</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>来自阳性登记者所持智能手机的信号低于基准值</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
+  <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
+    <value>No signal received</value>
+    <comment>TODO:受信した信号はありません</comment>
+  </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>分数: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>分数 {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>分数: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>分数 {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
     <value>接触时间为{0:#}分钟</value>
@@ -309,12 +309,12 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为{0:#}{1:#}。</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为100以上。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>未收到来自阳性登记者所持智能手机的信号</value>
@@ -323,10 +323,6 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>您的行动范围内似乎没有阳性登记者。请继续注意防止感染。</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
-  </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>分享此APP</value>
-    <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>使用条款</value>
@@ -393,8 +389,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>不存在高于基准值的信号</value>
-    <comment>基準値を超える信号はありません</comment>
+    <value>查询过去14天内里的接触情况</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>主页</value>
