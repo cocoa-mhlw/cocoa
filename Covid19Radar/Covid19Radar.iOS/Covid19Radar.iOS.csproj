@@ -380,7 +380,7 @@
     <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_3%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_4%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_4%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\exposure_check_page_head.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_check_page_head%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
