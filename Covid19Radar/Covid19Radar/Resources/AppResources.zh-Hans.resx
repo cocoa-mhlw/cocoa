@@ -272,6 +272,10 @@
     <value>来自阳性登记者所持智能手机的信号低于基准值</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
+  <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
+    <value>No signal received</value>
+    <comment>TODO:受信した信号はありません</comment>
+  </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
     <value>分数 {0:#}</value>
     <comment>スコア {0:#}</comment>

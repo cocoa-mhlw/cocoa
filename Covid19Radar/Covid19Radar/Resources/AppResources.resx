@@ -380,6 +380,10 @@
     <value>The signal received from the smartphone of the person who has registered as positive for COVID-19 was below the standard value</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
+  <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
+    <value>No signal received</value>
+    <comment>TODO:受信した信号はありません</comment>
+  </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>h</value>
     <comment>時間</comment>

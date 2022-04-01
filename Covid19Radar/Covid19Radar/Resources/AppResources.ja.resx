@@ -251,6 +251,10 @@
     <value>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
+  <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
+    <value>受信した信号はありません</value>
+    <comment>受信した信号はありません</comment>
+  </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
     <value>スコア {0:#}</value>
     <comment>スコア {0:#}</comment>

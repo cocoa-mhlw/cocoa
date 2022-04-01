@@ -247,7 +247,7 @@ namespace Covid19Radar.ViewModels
                 IsDurationTimeVisible = false,
                 IsScoreVisible = false,
                 IsReceived = false,
-                Description = "受信した信号はありません"
+                Description = AppResources.LowRiskContactPage_ExposureCheckScore_NoSignalReceived
             };
         }
 

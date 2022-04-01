@@ -455,6 +455,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskContactPage_ExposureCheckScore_NoSignalReceived {
+            get {
+                return ResourceManager.GetString("LowRiskContactPage_ExposureCheckScore_NoSignalReceived", resourceCulture);
+            }
+        }
+        
         public static string LowRiskContactPageCountSuffixHoursText {
             get {
                 return ResourceManager.GetString("LowRiskContactPageCountSuffixHoursText", resourceCulture);
