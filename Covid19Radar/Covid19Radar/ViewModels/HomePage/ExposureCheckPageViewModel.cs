@@ -97,7 +97,8 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                _ = Setup();
+                // 一時的に閾値未満の内容は表示しないようにするためコメントアウト
+                //_ = Setup();
             }
             catch (Exception exception)
             {
