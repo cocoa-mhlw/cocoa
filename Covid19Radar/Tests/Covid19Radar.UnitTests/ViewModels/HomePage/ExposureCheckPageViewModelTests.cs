@@ -59,7 +59,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 );
         }
 
-        [Fact]
+        [Fact(Skip = "Temporarily do not display contacts below the threshold")]
         public void LowRiskPage_Initialize_Display()
         {
             var dummyDailySummaries = new List<DailySummary>()
