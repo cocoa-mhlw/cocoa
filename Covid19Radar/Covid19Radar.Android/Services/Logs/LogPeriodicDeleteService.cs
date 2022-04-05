@@ -37,7 +37,7 @@ namespace Covid19Radar.Droid.Services.Logs
 
             var context = Platform.AppContext;
             var intent = new Intent(context, typeof(LogPeriodicDeleteReceiver));
-            var pendingIntent = PendingIntent.GetBroadcast(context, requestCode, intent, PendingIntentFlags.CancelCurrent);
+            var pendingIntent = PendingIntent.GetBroadcast(context, requestCode, intent, PendingIntentFlags.CancelCurrent | PendingIntentFlags.Immutable);
 
             var alermService = context.GetSystemService(Context.AlarmService) as AlarmManager;
             if (alermService != null)
@@ -49,7 +49,9 @@ namespace Covid19Radar.Droid.Services.Logs
         }
     }
 
-    [BroadcastReceiver]
+    [BroadcastReceiver(
+        Exported = true
+        )]
     [IntentFilter(new[] { Intent.ActionBootCompleted })]
     public class LogPeriodicDeleteReceiver : BroadcastReceiver
     {

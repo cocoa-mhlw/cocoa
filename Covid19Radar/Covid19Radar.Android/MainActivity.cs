@@ -24,6 +24,7 @@ namespace Covid19Radar.Droid
 {
     [Activity(
         Label = "@string/app_name",
+        Exported = true,
         Icon = "@mipmap/ic_launcher",
         Theme = "@style/MainTheme.Splash",
         MainLauncher = true,
