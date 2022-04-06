@@ -107,20 +107,19 @@ stages:
         inputs:
           PathtoPublish: '$(Build.ArtifactStagingDirectory)'
           ArtifactName: 'drop'
-  - stage: deploy_to_dev_env
+  - stage: deploy
     dependsOn:
     - build_and_unit_test
     condition: succeeded()
     jobs: 
     - deployment: Covid19Radar_function
-      displayName: deploy to development env
+      displayName: deploy
       pool:
         name: Azure Pipelines
         vmImage: ${{ parameters.image }}
         demands:
         - msbuild
         - Cmd
-      environment: Covid19Radar_function_devlopment
       strategy:
         runOnce:
           deploy:
