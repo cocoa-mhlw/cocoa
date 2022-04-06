@@ -120,6 +120,7 @@ stages:
         demands:
         - msbuild
         - Cmd
+      environment: Covid19Radar_function_devlopment
       strategy:
         runOnce:
           deploy:
