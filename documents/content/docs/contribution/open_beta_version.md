@@ -15,7 +15,7 @@ type: docs
 
 過去に実施されたオープンβ版は以下の通りです。
 
-- v2.0.0 オープンβ版（2022/03/16公開、2022/04/08正式版の公開にともないオープンβは終了）
+- v2.0.0 オープンβ版（2022/03/16公開、2022/04/07正式版の公開開始にともないオープンβは終了）
   - Android版 : https://play.google.com/apps/testing/jp.go.mhlw.covid19radar
   - iOS版 : https://testflight.apple.com/join/2tBJvty4
   - いずれのOS版も、動作検証のために使う端末から上記のURLにアクセスし、それぞれの指示に従うことで参加することができます
