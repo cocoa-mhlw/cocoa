@@ -64,60 +64,11 @@ jobs:
     runs-on: macos-latest # Tests must be executed on macOs. If don't, tests will fail.
     needs: [build_ios, build_android]
     steps:
-    - name: Set up JDK 11
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.11
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Package Add coverlet.msbuild
-      run: dotnet add ${{ github.workspace }}/Covid19Radar/Tests/Covid19Radar.UnitTests/Covid19Radar.UnitTests.csproj package coverlet.msbuild
-    - name: Cache SonarCloud packages
-      uses: actions/cache@v1
-      with:
-        path: ~/sonar/cache
-        key: ${{ runner.os }}-sonar
-        restore-keys: ${{ runner.os }}-sonar
-    - name: Cache SonarCloud scanner
-      id: cache-sonar-scanner
-      uses: actions/cache@v1
-      with:
-        path: ./.sonar/scanner
-        key: ${{ runner.os }}-sonar-scanner
-        restore-keys: ${{ runner.os }}-sonar-scanner
-    - name: Install SonarCloud scanner
-      if: ${{ steps.cache-sonar-scanner.outputs.cache-hit != 'true' }}
-      shell: powershell
-      run: |
-        New-Item -Path ./.sonar/scanner -ItemType Directory
-        dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner
-    - name: Begin SonarScanner
-      run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"cocoa-mhlw_cocoa-app" /o:"cocoa-mhlw" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    - name: Setup Xamarin
-      uses: maxim-lobanov/setup-xamarin@v1
-      with:
-        mono-version: 6.12 # specify version in '<major>.<minor>' format
-        xamarin-ios-version: 15 # specify version in '<major>' format
-        xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
-        xamarin-android-version: 12 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
-        xcode-version: 13 # set the latest available Xcode 13
     - name: Prepare settings.json
       run: mv -f ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings_template.json ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
-    - name: Deploy nuget packages - ${{ matrix.Configuration }}
-      run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/ | true
-    - name: Build Project - ${{ matrix.Configuration }}
-      run: msbuild ${{ github.workspace }}/Covid19Radar.sln /restore /t:Build /p:Platform=iPhoneSimulator
     - name: Execute Unit Tests
-      run: dotnet test ${{ github.workspace }}/Covid19Radar/Tests/Covid19Radar.UnitTests/ --no-build --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --collect:"XPlat Code Coverage"
+      run: dotnet test ${{ github.workspace }}/Covid19Radar/Tests/Covid19Radar.UnitTests/
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: true
-    - name: End SonarScanner
-      run: ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
