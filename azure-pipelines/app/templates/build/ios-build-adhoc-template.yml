@@ -26,14 +26,14 @@ steps:
   displayName: 'Build Covid19Radar.iOS.csproj'
   inputs:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
-    configuration: AppStore
+    configuration: Release
     signingIdentity: 'Apple Distribution'
     signingProvisioningProfileID: 'cdc74b34-c91f-4bc9-8c5a-3e904ae2635e'
 
 - task: CopyFiles@2
   displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'
   inputs:
-    SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/AppStore
+    SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/Release
     Contents: '*.ipa'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
