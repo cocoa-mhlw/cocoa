@@ -33,11 +33,11 @@ steps:
 - script: |
     cd $(Build.ArtifactStagingDirectory)/
     ARCHIVE_FILE=`find *.apk | head -1`
-    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_development_$(Environment)_v$(AppVersion)_$(buildVersion).apk
+    mv $ARCHIVE_FILE covid19radar_development_$(Environment)_v$(AppVersion)_$(buildVersion).apk
     ls -la
   displayName: 'Change archive name'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish APK'
   inputs:
-    ArtifactName: 'archives_development_$(Environment)_v$(AppVersion)_$(buildVersion)'
+    ArtifactName: 'android_development_$(Environment)_v$(AppVersion)_$(buildVersion)'
