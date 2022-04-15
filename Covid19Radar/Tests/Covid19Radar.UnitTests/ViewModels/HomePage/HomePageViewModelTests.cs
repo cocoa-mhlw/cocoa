@@ -157,7 +157,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -177,7 +177,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -197,7 +197,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                .Returns(Task.FromResult(new List<int>() as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             var homePageViewModel = CreateViewModel();
@@ -225,7 +225,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Returns(Task.FromResult(new List<int>() { status } as IList<int>));
 
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(isCanConfirmExposure);
 
             homePageViewModel.OnAppearing();
@@ -244,7 +244,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Setup(x => x.GetStatusCodesAsync())
                 .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             homePageViewModel.OnAppearing();
@@ -267,10 +267,10 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Setup(x => x.ContainsKey("LastConfirmedDateTimeEpoch"))
                 .Returns(true);
             mockPreferenceService
-                .Setup(x => x.GetValue("LastConfirmedDateTimeEpoch", 0L))
+                .Setup(x => x.GetLongValue("LastConfirmedDateTimeEpoch", 0L))
                 .Returns(mockLastConfirmedUtcDateTime.ToUnixEpoch());
             mockPreferenceService
-                .Setup(x => x.GetValue("CanConfirmExposure", true))
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(true);
 
             homePageViewModel.OnAppearing();
@@ -353,7 +353,9 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockDialogService.Verify(x => x.ShowExposureNotificationOffWarningAsync(), Times.Once());
             mockExternalNavigationService.Verify(x => x.NavigateAppSettings(), Times.Never());
             mockExposureNotificationApiService.Verify(x => x.StartExposureNotificationAsync(), Times.Once());
-            mockExposureDetectionBackgroundService.Verify(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>()), Times.Once());
+
+            // Task.Run()を使用するようになったため省く
+            //mockExposureDetectionBackgroundService.Verify(x => x.ExposureDetectionAsync(It.IsAny<CancellationTokenSource>()), Times.Once());
         }
 
         [Fact]
@@ -471,10 +473,10 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Returns(utcNow);
 
             mockSecureStorageService
-                .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
             mockSecureStorageService
-                .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
             mockExposureRiskCalculationConfigurationRepository
@@ -531,10 +533,10 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Returns(utcNow);
 
             mockSecureStorageService
-                .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
             mockSecureStorageService
-                .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
 
             mockExposureRiskCalculationConfigurationRepository
@@ -581,10 +583,10 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Returns(utcNow);
 
             mockSecureStorageService
-                .Setup(x => x.GetValue("DailySummaries", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("DailySummaries", It.IsAny<string>()))
                 .Returns(serializeDailySummaries);
             mockSecureStorageService
-                .Setup(x => x.GetValue("ExposureWindows", It.IsAny<string>()))
+                .Setup(x => x.GetStringValue("ExposureWindows", It.IsAny<string>()))
                 .Returns(serializeExposureWindows);
             mockExposureRiskCalculationConfigurationRepository
                 .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))

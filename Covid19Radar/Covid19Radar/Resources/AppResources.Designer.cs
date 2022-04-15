@@ -449,15 +449,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotContactPageButtonText {
-            get {
-                return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
-            }
-        }
-        
         public static string LowRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("LowRiskContactPageLabel", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPage_ExposureCheckScore_NoSignalReceived {
+            get {
+                return ResourceManager.GetString("LowRiskContactPage_ExposureCheckScore_NoSignalReceived", resourceCulture);
             }
         }
         
@@ -1775,21 +1775,45 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string TroubleshootingPageDescription3 {
+        public static string TroubleshootingPageConfirmationItem1 {
             get {
-                return ResourceManager.GetString("TroubleshootingPageDescription3", resourceCulture);
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem1", resourceCulture);
             }
         }
         
-        public static string TroubleshootingPageDescription4 {
+        public static string TroubleshootingPageConfirmationItem2 {
             get {
-                return ResourceManager.GetString("TroubleshootingPageDescription4", resourceCulture);
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem2", resourceCulture);
             }
         }
         
-        public static string TroubleshootingPageDescription5 {
+        public static string TroubleshootingPageConfirmationItem3 {
             get {
-                return ResourceManager.GetString("TroubleshootingPageDescription5", resourceCulture);
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem3", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageConfirmationItem4 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem4", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageConfirmationItem5 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem5", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageConfirmationItem6 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem6", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageAnnotationPowerSaving {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageAnnotationPowerSaving", resourceCulture);
             }
         }
         
@@ -2072,6 +2096,12 @@ namespace Covid19Radar.Resources {
         public static string SettingsPageSourceCodeButton {
             get {
                 return ResourceManager.GetString("SettingsPageSourceCodeButton", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageOthers {
+            get {
+                return ResourceManager.GetString("SettingsPageOthers", resourceCulture);
             }
         }
         

@@ -376,13 +376,13 @@
     <value>Register by entering provided processing number into this app</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
-  <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>Share this app</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>The signal received from the smartphone of the person who has registered as positive for COVID-19 was below the standard value</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
+  </data>
+  <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
+    <value>No signal received</value>
+    <comment>TODO:受信した信号はありません</comment>
   </data>
   <data name="LowRiskContactPageCountSuffixHoursText" xml:space="preserve">
     <value>h</value>
@@ -401,12 +401,12 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>Score: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>Score {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>Score: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>Score {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
     <value>{0:#} minutes of contact</value>
@@ -417,12 +417,12 @@
     <comment>{0:#}分間の接触のため通知の対象外</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>*The score is calculated based on the strength and time of the received signal. It is set to be {0:#} {1:#} with contact within 1 m for 15 minutes or more under regular conditions.</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>*The score is calculated based on the strength and time of the received signal. It is set to be 100 or more with contact within 1 m for 15 minutes or more under regular conditions.</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone of the device and displayed.​</value>
+    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>
@@ -497,8 +497,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>There is no signal exceeding the standard value</value>
-    <comment>基準値を超える信号はありません</comment>
+    <value>Close contacts for the past 14 days</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>Home</value>
@@ -1264,20 +1264,36 @@ Note: this app does not collect users’ location information.</value>
     <comment>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</comment>
   </data>
   <data name="TroubleshootingPageDescription2" xml:space="preserve">
-    <value>・ Restart the app.</value>
-    <comment>・アプリの再起動を行ってください。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription3" xml:space="preserve">
-    <value>・ Android users: in Settings, remove COCOA from any power saving functions*, or set your phone to enter power-saving mode only when battery power is low.</value>
-    <comment>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription4" xml:space="preserve">
-    <value>*Names of power saving functions differ depending on the device, i.e., “Power-Saving Mode,” “Stamina Mode,” “Battery Optimization,” etc.</value>
-    <comment>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription5" xml:space="preserve">
     <value>If you have tried all of the above and the warning still appears, please contact Customer Support.</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem1" xml:space="preserve">
+    <value>・Check if there is a problem with the Internet connection status such as the radio wave environment.</value>
+    <comment>・電波環境などインターネットの接続状況に問題がないか確認してください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem2" xml:space="preserve">
+    <value>・In case you are using  a VPN or a proxy connection as Internet connection, please turn it off.</value>
+    <comment>・インターネット接続に、意図的に「VPN接続」や「プロキシ接続」を利用している場合はお切りください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem3" xml:space="preserve">
+    <value>・Restart the app.</value>
+    <comment>・アプリの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem4" xml:space="preserve">
+    <value>・Restart your smartphone.</value>
+    <comment>・スマートフォンの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem5" xml:space="preserve">
+    <value>・If you are using an iPhone, please update the OS to the latest version.</value>
+    <comment>・iPhoneをお使いの方は、 OS(※)を最新バージョンにアップデートしてください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem6" xml:space="preserve">
+    <value>・Android users: in Settings, remove COCOA from any power saving functions*, or set your phone to enter power-saving mode only when battery power is low.</value>
+    <comment>・Androidをお使いの方は、設定内にある省電力機能（※1）の対象からCOCOA（※2）を外す、または電池残量が少なくなった場合のみに省電力モードに切り替わるように設定してください。</comment>
+  </data>
+  <data name="TroubleshootingPageAnnotationPowerSaving" xml:space="preserve">
+    <value>*Names of power saving functions differ depending on the device, i.e., “Power-Saving Mode,” “Stamina Mode,” “Battery Optimization,” etc.</value>
+    <comment>※1 省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称が異なります</comment>
   </data>
   <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
     <value>Processing number for positive registration</value>
@@ -1473,6 +1489,10 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   <data name="SettingsPageSourceCodeButton" xml:space="preserve">
     <value>Obtain source code</value>
     <comment>ソースコードを入手</comment>
+  </data>
+  <data name="SettingsPageOthers" xml:space="preserve">
+    <value>Others</value>
+    <comment>その他</comment>
   </data>
   <data name="ToHomeButton" xml:space="preserve">
     <value>Return to Home screen</value>
