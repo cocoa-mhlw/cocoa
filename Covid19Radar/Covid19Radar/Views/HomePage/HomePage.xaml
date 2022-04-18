@@ -120,7 +120,7 @@
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
                     Style="{StaticResource DefaultLabelCaption}"
-                    Text="{Binding EnStatzusUnconfirmedDescription2}" />
+                    Text="{Binding EnStatusUnconfirmedDescription2}" />
                 <Button
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleUnconfirmedTroubleshootingButton}"
                     IsVisible="{Binding IsVisibleUnconfirmedTroubleshootingButton}"
