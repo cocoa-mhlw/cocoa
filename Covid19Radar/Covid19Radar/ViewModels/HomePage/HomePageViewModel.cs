@@ -224,6 +224,12 @@ namespace Covid19Radar.ViewModels
                 {
                     await exposureDetectionBackgroundService.ExposureDetectionAsync();
                 }
+                catch (ENException ex)
+                {
+                    loggerService.Exception($"ENExcepiton occurred, Code:{ex.Code}, Message:{ex.Message}", ex);
+                    loggerService.Exception("Failed to exposure detection.", ex);
+                    CheckMaxPerDayExposureDetectionAPILimitReached(ex);
+                }
                 catch (Exception ex)
                 {
                     loggerService.Exception("Failed to exposure detection.", ex);

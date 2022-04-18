@@ -162,6 +162,12 @@ namespace Covid19Radar.Services
                     _userDataRepository.SetLastConfirmedDate(_dateTimeUtility.UtcNow);
                     _userDataRepository.SetCanConfirmExposure(true);
                 }
+                catch (ENException exception)
+                {
+                    canConfirmExposure = false;
+                    _loggerService.Exception($"ENExcepiton occurred, Code:{exception.Code}, Message:{exception.Message}", exception);
+                    throw;
+                }
                 catch (Exception exception)
                 {
                     canConfirmExposure = false;
