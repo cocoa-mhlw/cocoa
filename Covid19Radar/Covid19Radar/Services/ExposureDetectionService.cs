@@ -112,7 +112,7 @@ namespace Covid19Radar.Services
 
             long expectOldestDateMillisSinceEpoch
                 = _dateTimeUtility.UtcNow
-                .AddDays(AppConstants.DaysOfExposureInformationToDisplay)
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays)
                 .ToUnixEpochMillis();
 
             bool isHighRiskExposureDetected = newDailySummaries

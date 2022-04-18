@@ -45,7 +45,7 @@ namespace Covid19Radar.Common
         /// <summary>
         /// Number of days of exposure information to display
         /// </summary>
-        public const int DaysOfExposureInformationToDisplay = -15;
+        public const int TermOfExposureRecordValidityInDays = -15;
 
         /// <summary>
         /// Message when `AppDelagate.OnActivated()` occurs on iOS.

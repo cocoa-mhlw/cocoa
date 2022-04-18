@@ -194,7 +194,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Test Data
             var now = new DateTime(2022, 04, 17, 12, 00, 00, DateTimeKind.Utc);
             var exposureDateTime = now
-                .AddDays(AppConstants.DaysOfExposureInformationToDisplay);
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays);
             var exposureConfiguration = new ExposureConfiguration();
             var enVersion = 2;
 
@@ -266,7 +266,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Test Data
             var now = new DateTime(2022, 04, 17, 12, 00, 00, DateTimeKind.Utc);
             var exposureDateTime = now
-                .AddDays(AppConstants.DaysOfExposureInformationToDisplay);
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays);
             var exposureConfiguration = new ExposureConfiguration();
             var enVersion = 2;
 
@@ -338,7 +338,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Test Data
             var now = new DateTime(2022, 04, 17, 12, 00, 00, DateTimeKind.Utc);
             var exposureDateTime = now
-                .AddDays(AppConstants.DaysOfExposureInformationToDisplay)
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays)
                 .AddDays(-1);
             var exposureConfiguration = new ExposureConfiguration();
             var enVersion = 2;

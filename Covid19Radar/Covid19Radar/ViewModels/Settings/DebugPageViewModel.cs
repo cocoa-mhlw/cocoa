@@ -99,8 +99,8 @@ namespace Covid19Radar.ViewModels
 
             var exposureNotificationStatus = await _exposureNotificationApiService.IsEnabledAsync();
 
-            var dailySummaryCount = (await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
-            var exposureWindowCount = (await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
+            var dailySummaryCount = (await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays)).Count();
+            var exposureWindowCount = (await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays)).Count();
 
             // ../../settings.json
             var settings = new[] {
@@ -113,7 +113,7 @@ namespace Covid19Radar.ViewModels
                 $"PrivacyPolicyUpdatedDateTimeUtc: {privacyPolicyUpdateDateTimeUtc}",
                 $"StartDate: {_userDataRepository.GetStartDate().ToLocalTime().ToString("F")}",
                 $"DaysOfUse: {_userDataRepository.GetDaysOfUse()}",
-                $"Legacy-V1 ExposureCount: {_exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count()}",
+                $"Legacy-V1 ExposureCount: {_exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays).Count()}",
                 $"DailySummaryCount: {dailySummaryCount}",
                 $"ExposureWindowCount: {exposureWindowCount}",
                 $"LastProcessTekTimestamp: {lastProcessTekTimestampsStr}",
