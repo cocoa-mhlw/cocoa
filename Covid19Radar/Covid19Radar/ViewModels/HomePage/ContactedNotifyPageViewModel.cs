@@ -65,7 +65,7 @@ namespace Covid19Radar.ViewModels
                     = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
                 loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
-                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
                 string contactedNotifyPageCountFormat = AppResources.ContactedNotifyPageCountOneText;
                 if (userExposureInformationList.Count() > 1)
@@ -73,9 +73,9 @@ namespace Covid19Radar.ViewModels
                     contactedNotifyPageCountFormat = AppResources.ContactedNotifyPageCountText;
                 }
 
-                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
                 var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
-                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
                 int dayCount = 0;
                 long exposureDurationInSec = 0;
