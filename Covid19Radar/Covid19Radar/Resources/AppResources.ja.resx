@@ -1079,6 +1079,14 @@
     <value>対処方法を確認</value>
     <comment>対処方法を確認</comment>
   </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription1" xml:space="preserve">
+    <value>接触有無の確認回数が上限を超えました。</value>
+    <comment>接触有無の確認回数が上限を超えました。</comment>
+  </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription2" xml:space="preserve">
+    <value>解決のため、最大1日程度お待ちください。</value>
+    <comment>解決のため、最大1日程度お待ちください。</comment>
+  </data>
   <data name="HomePageENStatusStoppedTitle" xml:space="preserve">
     <value>停止中</value>
     <comment>停止中</comment>

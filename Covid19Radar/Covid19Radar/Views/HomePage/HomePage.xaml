@@ -116,13 +116,14 @@
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
                     Style="{StaticResource DefaultLabelCaption}"
-                    Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedDescription1}" />
+                    Text="{Binding EnStatusUnconfirmedDescription1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
                     Style="{StaticResource DefaultLabelCaption}"
-                    Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedDescription2}" />
+                    Text="{Binding EnStatzusUnconfirmedDescription2}" />
                 <Button
-                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleUnconfirmedTroubleshootingButton}"
+                    IsVisible="{Binding IsVisibleUnconfirmedTroubleshootingButton}"
                     Style="{StaticResource HomePageBlueButton}"
                     Text="{x:Static resources:AppResources.HomePageTroubleshootingButtonText}"
                     Command="{Binding Path=OnTroubleshootingButtonWhenUnconfirmed}" />

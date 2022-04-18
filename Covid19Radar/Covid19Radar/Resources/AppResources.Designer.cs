@@ -1649,6 +1649,18 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string HomePageExposureDetectionAPILimitReachedDescription1 {
+            get {
+                return ResourceManager.GetString("HomePageExposureDetectionAPILimitReachedDescription1", resourceCulture);
+            }
+        }
+        
+        public static string HomePageExposureDetectionAPILimitReachedDescription2 {
+            get {
+                return ResourceManager.GetString("HomePageExposureDetectionAPILimitReachedDescription2", resourceCulture);
+            }
+        }
+        
         public static string HomePageENStatusStoppedTitle {
             get {
                 return ResourceManager.GetString("HomePageENStatusStoppedTitle", resourceCulture);

@@ -83,6 +83,36 @@ namespace Covid19Radar.ViewModels
 
         private bool _isShowTroubleshootingPage = false;
 
+        private bool _isMaxPerDayExposureDetectionAPILimitReached;
+        public bool IsMaxPerDayExposureDetectionAPILimitReached
+        {
+            get { return _isMaxPerDayExposureDetectionAPILimitReached; }
+            set { SetProperty(ref _isMaxPerDayExposureDetectionAPILimitReached, value); }
+        }
+
+        private const string ERROR_MESSAGE_EXPOSURE_DETECTION_API_LIMIT_REACHED = "Max per-day API limit reached: 6";
+
+        private string _enStatusUnconfirmedDescription1;
+        public string EnStatusUnconfirmedDescription1
+        {
+            get { return _enStatusUnconfirmedDescription1; }
+            set { SetProperty(ref _enStatusUnconfirmedDescription1, value); }
+        }
+
+        private string _enStatusUnconfirmedDescription2;
+        public string EnStatusUnconfirmedDescription2
+        {
+            get { return _enStatusUnconfirmedDescription2; }
+            set { SetProperty(ref _enStatusUnconfirmedDescription2, value); }
+        }
+
+        private bool _isVisibleUnconfirmedTroubleshootingButton;
+        public bool IsVisibleUnconfirmedTroubleshootingButton
+        {
+            get { return _isVisibleUnconfirmedTroubleshootingButton; }
+            set { SetProperty(ref _isVisibleUnconfirmedTroubleshootingButton, value); }
+        }
+
         public HomePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -197,6 +227,7 @@ namespace Covid19Radar.ViewModels
                 catch (Exception ex)
                 {
                     loggerService.Exception("Failed to exposure detection.", ex);
+                    CheckMaxPerDayExposureDetectionAPILimitReached(ex);
                 }
                 finally
                 {
@@ -204,6 +235,11 @@ namespace Covid19Radar.ViewModels
                 }
             });
             loggerService.EndMethod();
+        }
+
+        private void CheckMaxPerDayExposureDetectionAPILimitReached(Exception ex)
+        {
+            IsMaxPerDayExposureDetectionAPILimitReached = ex.ToString().Contains(ERROR_MESSAGE_EXPOSURE_DETECTION_API_LIMIT_REACHED);
         }
 
         public Command OnClickExposures => new Command(async () =>
@@ -401,6 +437,12 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
+
+                EnStatusUnconfirmedDescription1 = IsMaxPerDayExposureDetectionAPILimitReached
+                    ? AppResources.HomePageExposureDetectionAPILimitReachedDescription1 : AppResources.HomePageENStatusUnconfirmedDescription1;
+                EnStatusUnconfirmedDescription2 = IsMaxPerDayExposureDetectionAPILimitReached
+                    ? AppResources.HomePageExposureDetectionAPILimitReachedDescription2 : AppResources.HomePageENStatusUnconfirmedDescription2;
+                IsVisibleUnconfirmedTroubleshootingButton = !IsMaxPerDayExposureDetectionAPILimitReached;
             }
             else
             {
