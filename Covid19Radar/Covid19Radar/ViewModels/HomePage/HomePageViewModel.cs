@@ -83,12 +83,7 @@ namespace Covid19Radar.ViewModels
 
         private bool _isShowTroubleshootingPage = false;
 
-        private bool _isMaxPerDayExposureDetectionAPILimitReached;
-        public bool IsMaxPerDayExposureDetectionAPILimitReached
-        {
-            get { return _isMaxPerDayExposureDetectionAPILimitReached; }
-            set { SetProperty(ref _isMaxPerDayExposureDetectionAPILimitReached, value); }
-        }
+        private bool _isMaxPerDayExposureDetectionAPILimitReached = false;
 
         private string _enStatusUnconfirmedDescription1;
         public string EnStatusUnconfirmedDescription1
@@ -225,7 +220,8 @@ namespace Covid19Radar.ViewModels
                 catch (ENException ex)
                 {
                     loggerService.Exception("Failed to exposure detection.", ex);
-                    CheckMaxPerDayExposureDetectionAPILimitReached(ex);
+                    // Check if the exposure detection API limit has been reached
+                    _isMaxPerDayExposureDetectionAPILimitReached = ex.Code == ENException.Code_iOS.RateLimited || ex.Code == ENException.Code_Android.FAILED_RATE_LIMITED;
                 }
                 catch (Exception ex)
                 {
@@ -237,12 +233,6 @@ namespace Covid19Radar.ViewModels
                 }
             });
             loggerService.EndMethod();
-        }
-
-        private void CheckMaxPerDayExposureDetectionAPILimitReached(ENException ex)
-        {
-            IsMaxPerDayExposureDetectionAPILimitReached = Device.RuntimePlatform == Device.iOS
-                ? ex.Code == ENException.Code_iOS.RateLimited : ex.Code == ENException.Code_Android.FAILED_RATE_LIMITED;
         }
 
         public Command OnClickExposures => new Command(async () =>
@@ -441,11 +431,11 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
 
-                EnStatusUnconfirmedDescription1 = IsMaxPerDayExposureDetectionAPILimitReached
+                EnStatusUnconfirmedDescription1 = _isMaxPerDayExposureDetectionAPILimitReached
                     ? AppResources.HomePageExposureDetectionAPILimitReachedDescription1 : AppResources.HomePageENStatusUnconfirmedDescription1;
-                EnStatusUnconfirmedDescription2 = IsMaxPerDayExposureDetectionAPILimitReached
+                EnStatusUnconfirmedDescription2 = _isMaxPerDayExposureDetectionAPILimitReached
                     ? AppResources.HomePageExposureDetectionAPILimitReachedDescription2 : AppResources.HomePageENStatusUnconfirmedDescription2;
-                IsVisibleUnconfirmedTroubleshootingButton = !IsMaxPerDayExposureDetectionAPILimitReached;
+                IsVisibleUnconfirmedTroubleshootingButton = !_isMaxPerDayExposureDetectionAPILimitReached;
             }
             else
             {
