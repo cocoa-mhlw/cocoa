@@ -90,8 +90,6 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isMaxPerDayExposureDetectionAPILimitReached, value); }
         }
 
-        private const string ERROR_MESSAGE_EXPOSURE_DETECTION_API_LIMIT_REACHED = "Max per-day API limit reached: 6";
-
         private string _enStatusUnconfirmedDescription1;
         public string EnStatusUnconfirmedDescription1
         {
@@ -226,14 +224,12 @@ namespace Covid19Radar.ViewModels
                 }
                 catch (ENException ex)
                 {
-                    loggerService.Exception($"ENExcepiton occurred, Code:{ex.Code}, Message:{ex.Message}", ex);
                     loggerService.Exception("Failed to exposure detection.", ex);
                     CheckMaxPerDayExposureDetectionAPILimitReached(ex);
                 }
                 catch (Exception ex)
                 {
                     loggerService.Exception("Failed to exposure detection.", ex);
-                    CheckMaxPerDayExposureDetectionAPILimitReached(ex);
                 }
                 finally
                 {
@@ -243,9 +239,10 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         }
 
-        private void CheckMaxPerDayExposureDetectionAPILimitReached(Exception ex)
+        private void CheckMaxPerDayExposureDetectionAPILimitReached(ENException ex)
         {
-            IsMaxPerDayExposureDetectionAPILimitReached = ex.ToString().Contains(ERROR_MESSAGE_EXPOSURE_DETECTION_API_LIMIT_REACHED);
+            IsMaxPerDayExposureDetectionAPILimitReached = Device.RuntimePlatform == Device.iOS
+                ? ex.Code == ENException.Code_iOS.RateLimited : ex.Code == ENException.Code_Android.FAILED_RATE_LIMITED;
         }
 
         public Command OnClickExposures => new Command(async () =>
