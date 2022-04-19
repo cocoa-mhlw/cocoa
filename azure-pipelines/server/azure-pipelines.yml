@@ -43,11 +43,6 @@ stages:
     jobs:
     - job:
       steps:
-      - task: VisualStudioTestPlatformInstaller@1
-        displayName: 'Visual Studio Test Platform Installer'
-        inputs:
-          versionSelector: specificVersion
-          testPlatformVersion: 17.1.0
       - task: DotNetCoreCLI@2 
         displayName: 'dotnet restore'
         inputs:
@@ -65,30 +60,18 @@ stages:
         inputs:
           command: test
           projects: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Api.Tests/*.Tests.csproj'
-          arguments: '--configuration ${{ parameters.configuration }} --logger trx --no-build --settings $(System.DefaultWorkingDirectory)/Covid19Radar.Functions.runsettings --collect:"XPlat Code Coverage"'
+          arguments: '--configuration ${{ parameters.configuration }} --logger trx --no-build --settings $(System.DefaultWorkingDirectory)/Covid19Radar.Functions.runsettings --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=json,cobertura,lcov,teamcity,opencover'
       - task: PublishTestResults@2
         inputs:
           testResultsFormat: 'VSTest'
           testResultsFiles: '**/*.trx'
           mergeTestResults: true
-      - task: DotNetCoreCLI@2
-        displayName: 'dotnet Install ReportGenerator tool'
-        inputs:
-          command: custom
-          custom: tool
-          arguments: 'install --tool-path . dotnet-reportgenerator-globaltool'
-      - task: BatchScript@1
-        displayName: 'Create reports'
-        inputs:
-          filename: ./reportgenerator
-          arguments: '-reports:$(Agent.TempDirectory)/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"Cobertura"'
       - task: PublishCodeCoverageResults@1
-        displayName: 'Publish code coverage from $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml'
+        displayName: 'Publish code coverage from $(Agent.TempDirectory)\*\coverage.cobertura.xml'
         inputs:
           codeCoverageTool: Cobertura
-          summaryFileLocation: '$(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml'
-          pathToSources: '$(System.DefaultWorkingDirectory)'
-          reportDirectory: '$(Build.SourcesDirectory)/coverlet/reports/'
+          summaryFileLocation: '$(Agent.TempDirectory)\*\coverage.cobertura.xml'
+          reportDirectory: '$(Build.SourcesDirectory)\TestResults\Coverage\Reports'
       - task: DotNetCoreCLI@2
         displayName: 'publish Api'
         inputs:
