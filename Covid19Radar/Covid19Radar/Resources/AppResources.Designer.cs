@@ -2102,6 +2102,7 @@ namespace Covid19Radar.Resources {
         public static string SendLogDisableSendLogDialogMessage {
             get {
                 return ResourceManager.GetString("SendLogDisableSendLogDialogMessage", resourceCulture);
+            }
         }
 
         public static string ExposuresPageToUtcDescription {
