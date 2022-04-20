@@ -83,6 +83,29 @@ namespace Covid19Radar.ViewModels
 
         private bool _isShowTroubleshootingPage = false;
 
+        private bool _isMaxPerDayExposureDetectionAPILimitReached = false;
+
+        private string _enStatusUnconfirmedDescription1;
+        public string EnStatusUnconfirmedDescription1
+        {
+            get { return _enStatusUnconfirmedDescription1; }
+            set { SetProperty(ref _enStatusUnconfirmedDescription1, value); }
+        }
+
+        private string _enStatusUnconfirmedDescription2;
+        public string EnStatusUnconfirmedDescription2
+        {
+            get { return _enStatusUnconfirmedDescription2; }
+            set { SetProperty(ref _enStatusUnconfirmedDescription2, value); }
+        }
+
+        private bool _isVisibleUnconfirmedTroubleshootingButton;
+        public bool IsVisibleUnconfirmedTroubleshootingButton
+        {
+            get { return _isVisibleUnconfirmedTroubleshootingButton; }
+            set { SetProperty(ref _isVisibleUnconfirmedTroubleshootingButton, value); }
+        }
+
         public HomePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -193,6 +216,12 @@ namespace Covid19Radar.ViewModels
                 try
                 {
                     await exposureDetectionBackgroundService.ExposureDetectionAsync();
+                }
+                catch (ENException ex)
+                {
+                    loggerService.Exception("Failed to exposure detection.", ex);
+                    // Check if the exposure detection API limit has been reached
+                    _isMaxPerDayExposureDetectionAPILimitReached = ex.Code == ENException.Code_iOS.RateLimited || ex.Code == ENException.Code_Android.FAILED_RATE_LIMITED;
                 }
                 catch (Exception ex)
                 {
@@ -401,6 +430,12 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
+
+                EnStatusUnconfirmedDescription1 = _isMaxPerDayExposureDetectionAPILimitReached
+                    ? AppResources.HomePageExposureDetectionAPILimitReachedDescription1 : AppResources.HomePageENStatusUnconfirmedDescription1;
+                EnStatusUnconfirmedDescription2 = _isMaxPerDayExposureDetectionAPILimitReached
+                    ? AppResources.HomePageExposureDetectionAPILimitReachedDescription2 : AppResources.HomePageENStatusUnconfirmedDescription2;
+                IsVisibleUnconfirmedTroubleshootingButton = !_isMaxPerDayExposureDetectionAPILimitReached;
             }
             else
             {

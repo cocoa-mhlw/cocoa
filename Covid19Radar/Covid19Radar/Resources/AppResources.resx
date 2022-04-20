@@ -1181,6 +1181,14 @@ You do not have to request it yourself.</value>
     <value>Troubleshooting</value>
     <comment>対処方法を確認</comment>
   </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription1" xml:space="preserve">
+    <value>The number of close contact`s confirmation has exceeded the maximum amount.</value>
+    <comment>接触有無の確認回数が上限を超えました。</comment>
+  </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription2" xml:space="preserve">
+    <value>Please wait up to 1 day for confirmation.</value>
+    <comment>解決のため、最大1日程度お待ちください。</comment>
+  </data>
   <data name="HomePageENStatusStoppedTitle" xml:space="preserve">
     <value>Paused</value>
     <comment>停止中</comment>
