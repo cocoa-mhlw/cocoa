@@ -12,12 +12,16 @@ namespace Covid19Radar.Services
     /// </summary>
     /// <returns>Device Verification Payload</returns>
     /// <remarks>
-    /// see deviceVerificationPayload 
+    /// see deviceVerificationPayload
     /// https://github.com/google/exposure-notifications-server/blob/master/docs/server_functional_requirements.md
     /// </remarks>
 
     public interface IDeviceVerifier
     {
         Task<string> VerifyAsync(DiagnosisSubmissionParameter submission);
+
+        Task<string> VerifyAsync(V1EventLogRequest eventLogRequest);
+
+        bool IsErrorPayload(string token);
     }
 }

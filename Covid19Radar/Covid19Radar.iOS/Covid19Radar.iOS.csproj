@@ -46,6 +46,7 @@
     <CodesignKey>Apple Development: Kazumi Hirose (WG99EL99X6)</CodesignKey>
     <CodesignProvision>VS: net.kzmx.Covid19Radar Development</CodesignProvision>
     <LangVersion>latest</LangVersion>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,7 +60,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>EntitlementsDebug.plist</CodesignEntitlements>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
@@ -80,61 +81,9 @@
     </MtouchInterpreter>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
-    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
     <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>True</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <MtouchArch>ARM64</MtouchArch>
-    <MtouchArch>ARM64</MtouchArch>
-    <ConsolePause>false</ConsolePause>
-    <CodesignKey>Apple Development: Hirose Kazumi (B5NUWQDLW4)</CodesignKey>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>Covid19radar</CodesignProvision>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchI18n>cjk</MtouchI18n>
-    <LangVersion>latest</LangVersion>
-    <MtouchFastDev>
-    </MtouchFastDev>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <MtouchFloat32>true</MtouchFloat32>
-    <BuildIpa>false</BuildIpa>
-    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
-    <OptimizePNGs>true</OptimizePNGs>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
-    <DebugType>none</DebugType>
-    <Optimize>True</Optimize>
-    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>False</ConsolePause>
-    <MtouchArch>ARM64</MtouchArch>
-    <BuildIpa>True</BuildIpa>
-    <CodesignProvision>Covid19radar(adhoc)</CodesignProvision>
-    <CodesignKey>Apple Distribution: Ministry of Health, Labour and Welfare - Japan (55EKK667LP)</CodesignKey>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchI18n>cjk</MtouchI18n>
-    <LangVersion>latest</LangVersion>
-    <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
-    <MtouchUseLlvm>true</MtouchUseLlvm>
-    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
-    <MtouchNoSymbolStrip>
-    </MtouchNoSymbolStrip>
-    <CrashReportingEnabled>false</CrashReportingEnabled>
-    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
-    <MtouchFloat32>true</MtouchFloat32>
-    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
-    <DebugType>none</DebugType>
-    <Optimize>True</Optimize>
-    <OutputPath>bin\iPhone\AppStore</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
@@ -163,6 +112,7 @@
     <MtouchFloat32>true</MtouchFloat32>
     <MtouchI18n>cjk</MtouchI18n>
     <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
@@ -198,11 +148,12 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <MtouchArch>ARM64</MtouchArch>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Services\CloseApplication.cs" />
+    <Compile Include="Services\CloseApplicationService.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
     <None Include="appcenter-pre-build.sh" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\1024.png">
@@ -273,13 +224,20 @@
     <Compile Include="Extensions\AlignmentExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\FormattedStringExtensions.cs" />
-    <Compile Include="Services\Logs\LogFileServiceIos.cs" />
-    <Compile Include="Services\Logs\LogPathServiceIos.cs" />
-    <Compile Include="Services\Logs\LogPeriodicDeleteServiceIos.cs" />
+    <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
-    <Compile Include="Services\SecureStorageServiceIos.cs" />
+    <Compile Include="Services\SecureStorageService.cs" />
     <Compile Include="Services\ApplicationPropertyService.cs" />
+    <Compile Include="Services\LocalContentService.cs" />
+    <Compile Include="Services\LocalNotificationService.cs" />
+    <Compile Include="Services\Migration\MigrationProcessService.cs" />
+    <Compile Include="Services\ExposureNotificationApiService.cs" />
+    <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
+    <Compile Include="Services\BackupAttributeService.cs" />
+    <Compile Include="Services\ExternalNavigationService.cs" />
+    <None Include="EntitlementsDebug.plist" />
+    <Compile Include="Services\LocalPathService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -290,41 +248,88 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%403x.png" />
     <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\privacypolicy_img01.png" />
     <BundleResource Include="Resources\Base.lproj\arrow_icon%403x.png" />
     <BundleResource Include="Resources\Base.lproj\arrow_icon%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\arrow_icon.png" />
-    <BundleResource Include="Resources\Base.lproj\HelpPage50%401x.png" />
-    <BundleResource Include="Resources\Base.lproj\HelpPage50%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\HelpPage50%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\Nocontact10%401x.png" />
-    <BundleResource Include="Resources\Base.lproj\Nocontact10%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\Nocontact10%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\HelpPage20%401x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage20%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage20%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\HelpPage21%401x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage21%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage21%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\HelpPage22%401x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage22%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage22%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\HelpPage31%401x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage31%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage31%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\HelpPage32%401x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage32%402x.png" />
     <BundleResource Include="Resources\Base.lproj\HelpPage32%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\IconHamburger%401x.png" />
-    <BundleResource Include="Resources\Base.lproj\IconHamburger%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\IconHamburger%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\InfoPlist.strings" />
-    <BundleResource Include="Resources\Base.lproj\Logo.png" />
-    <BundleResource Include="Resources\Base.lproj\notify_img01%402x.png" />
-    <BundleResource Include="Resources\Base.lproj\notify_img01%403x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%402x.png" />
     <BundleResource Include="Resources\Base.lproj\notify_img02%403x.png" />
-    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage20%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage20%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage21%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage21%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage22%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage22%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage31%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage31%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage32%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\HelpPage32%403x.png" />
+    <BundleResource Include="Resources\license.html" />
+    <BundleResource Include="Resources\Base.lproj\app_share_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\app_share_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_alert_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_alert_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_stop_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_stop_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\question_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\question_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_active_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\home_active_icon%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\alert_workaround_img%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\alert_workaround_img%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\alert_workaround_img%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\alert_workaround_img%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_close%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_close%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_close%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_close%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\icon_close%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\icon_close%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_menu%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_menu%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_menu%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\icon_menu%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\icon_menu%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_arrow%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\icon_arrow%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_4%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_1%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_1%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_2%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_2%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_3%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_3%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_notification_4%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_4%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_1%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_1%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_2%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_2%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_3%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_3%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\exposure_notification_4%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_1%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_1%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_2%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_2%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_3%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_3%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_4%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_4%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\exposure_check_page_head%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\splash_logo%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\splash_logo%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -334,26 +339,20 @@
     <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs">
-      <Version>7.1.0.442</Version>
-    </PackageReference>
-    <PackageReference Include="Google.Protobuf">
-      <Version>3.12.3</Version>
-    </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
       <Version>7.1.0.431</Version>
     </PackageReference>
     <PackageReference Include="Prism.Core">
-      <Version>7.2.0.1422</Version>
+      <Version>8.1.97</Version>
     </PackageReference>
     <PackageReference Include="Prism.DryIoc.Forms">
-      <Version>7.2.0.1422</Version>
+      <Version>8.1.97</Version>
     </PackageReference>
     <PackageReference Include="Prism.Forms">
-      <Version>7.2.0.1422</Version>
+      <Version>8.1.97</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>1.5.3.2</Version>
+      <Version>1.7.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
@@ -361,18 +360,18 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.967" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.967</Version>
+      <Version>5.0.0.2291</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
-      <Version>1.1.0-beta1</Version>
+      <Version>1.2.3-alpha01</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.MaterialComponents">
       <Version>92.0.0</Version>
     </PackageReference>
-    <PackageReference Include="CommonServiceLocator">
-      <Version>2.0.6</Version>
+    <PackageReference Include="Chino.iOS">
+      <Version>1.0.0-rc11</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -380,22 +379,6 @@
       <Project>{554EE1AB-B447-480C-90E5-C4F040891DE6}</Project>
       <Name>Covid19Radar</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj">
-      <Project>{83af4c2e-22f8-4dab-b993-be6abb3e56a1}</Project>
-      <Name>Xamarin.ExposureNotification</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\Logo%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\Logo%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\Logo%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HelpPage30%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage30%402x.png" />
@@ -404,16 +387,10 @@
     <BundleResource Include="Resources\Base.lproj\HelpPage30%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HelpPage40%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage40%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage40%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HelpPage41%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage41%402x.png" />
@@ -422,16 +399,10 @@
     <BundleResource Include="Resources\Base.lproj\HelpPage41%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HelpPage42%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage42%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage42%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HelpPage44%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage44%402x.png" />
@@ -440,16 +411,10 @@
     <BundleResource Include="Resources\Base.lproj\HelpPage44%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HelpPage45%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage45%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HelpPage45%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage10%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage10%402x.png" />
@@ -458,16 +423,10 @@
     <BundleResource Include="Resources\Base.lproj\TutorialPage10%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage11%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage11%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage11%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage12%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage12%402x.png" />
@@ -476,16 +435,10 @@
     <BundleResource Include="Resources\Base.lproj\TutorialPage12%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage20%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage20%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage20%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage40%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage40%402x.png" />
@@ -494,25 +447,10 @@
     <BundleResource Include="Resources\Base.lproj\TutorialPage40%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage50%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage50%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage50%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\TutorialPage60%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage60%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\TutorialPage60%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage20%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage20%402x.png" />
@@ -521,16 +459,10 @@
     <BundleResource Include="Resources\ja.lproj\HelpPage20%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage21%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage21%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage21%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage31%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage31%402x.png" />
@@ -539,34 +471,10 @@
     <BundleResource Include="Resources\ja.lproj\HelpPage31%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage32%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage32%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage32%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage50%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage50%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage50%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\Nocontact10%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\Nocontact10%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\Nocontact10%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ja.lproj\HelpPage22%401x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ja.lproj\HelpPage22%402x.png" />
@@ -575,49 +483,16 @@
     <BundleResource Include="Resources\ja.lproj\HelpPage22%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage10%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage10%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage10%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage11%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage11%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HOMEPage11%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\InfoMark%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\InfoMark%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\InfoMark%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\HeaderLogo%401x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HeaderLogo%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HeaderLogo%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\SplashImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\SplashImg%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\SplashImg%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="fa-brands-400.otf" />
@@ -628,6 +503,8 @@
   <ItemGroup>
     <Folder Include="Services\Logs\" />
     <Folder Include="Renderers\" />
+    <Folder Include="Resources\zh-Hans.lproj\" />
+    <Folder Include="Services\Migration\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>

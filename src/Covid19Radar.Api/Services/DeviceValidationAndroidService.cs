@@ -3,7 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.Models;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -13,17 +13,18 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Net.Http;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Services
 {
     public class DeviceValidationAndroidService
     {
 
+        private readonly ILogger Logger;
+
+        public DeviceValidationAndroidService(ILogger logger) => Logger = logger;
         /// <summary>
         /// for Android
         /// </summary>
@@ -41,11 +42,22 @@ namespace Covid19Radar.Api.Services
         /// <summary>
         /// Validation Android
         /// </summary>
-        /// <param name="param">subumission parameter</param>
         /// <returns>True when successful.</returns>
-        public  bool Validation(DiagnosisSubmissionParameter param, byte[] expectedNonce, DateTimeOffset requestTime, AuthorizedAppInformation app)
+        public bool Validation(IAndroidDeviceVerification deviceVerification, DateTimeOffset requestTime, AuthorizedAppInformation app)
         {
-            var claims = ParsePayload(param.DeviceVerificationPayload);
+            byte[] expectedNonce = GetSha256(deviceVerification.ClearText);
+            AndroidAttestationStatement claims;
+            try
+            {
+                claims = ParsePayload(deviceVerification.JwsPayload);
+
+            }
+            catch
+            {
+                Logger.LogError("invalid token");
+                return false;
+            }
+
 
             // Validate the nonce
             if (Convert.ToBase64String(claims.Nonce) != Convert.ToBase64String(expectedNonce))
@@ -123,15 +135,24 @@ namespace Covid19Radar.Api.Services
             catch (ArgumentException)
             {
                 // Signature validation failed.
-                return null;
+                Logger.LogError("The token is not in a valid JWS format");
+                throw;
             }
 
             // Verify the hostname
             if (!(validatedToken.SigningKey is X509SecurityKey))
-                return null;
+            {
+                Logger.LogError("The token is not X509SecurityKey");
+                throw new ArgumentException("The token is not X509SecurityKey");
+            }
+
 
             if (GetHostName(validatedToken.SigningKey as X509SecurityKey) != "attest.android.com")
-                return null;
+            {
+                Logger.LogError("The host name in the token is invalid");
+                throw new ArgumentException("The host name in the token is invalid");
+            }
+
 
             // Parse and use the data JSON.
             var claimsDictionary = token.Claims.ToDictionary(x => x.Type, x => x.Value);
@@ -217,6 +238,13 @@ namespace Covid19Radar.Api.Services
             public bool CtsProfileMatch { get; }
 
             public bool BasicIntegrity { get; }
+        }
+
+        private static byte[] GetSha256(string text)
+        {
+            using var sha = SHA256.Create();
+            var textBytes = Encoding.UTF8.GetBytes(text);
+            return sha.ComputeHash(textBytes);
         }
     }
 }

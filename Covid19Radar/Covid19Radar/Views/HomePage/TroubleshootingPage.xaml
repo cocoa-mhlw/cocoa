@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Covid19Radar.Views.TroubleshootingPage"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources"
+    Title="{x:Static resources:AppResources.TroubleshootingPageTitle}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
+    <ScrollView>
+        <StackLayout
+            Padding="20"
+            Spacing="20">
+            <StackLayout>
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="alert_workaround_img.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.HomePageImageAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.TroubleshootingPageDescription1}" />
+            <Frame
+                Padding="15"
+                BackgroundColor="#FFF3DD"
+                CornerRadius="10">
+                <StackLayout Spacing="10">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem1}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem2}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem3}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem4}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem5}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabelDark}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.OsAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.OsAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem6}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabelDark}"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageAnnotationPowerSaving}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabelDark}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol2}"/>
+                                <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.CocoaAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Style="{StaticResource DefaultLabel}"
+                Text="{x:Static resources:AppResources.TroubleshootingPageDescription2}" />
+        </StackLayout>
+    </ScrollView>
+    </ContentView>
+</ContentPage>

@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23" image="SplashImg.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23" image="splash_logo.png">
                                 <rect key="frame" x="270" y="270" width="60" height="60"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SplashImg.png" width="360" height="363"/>
+        <image name="splash_logo.png" width="360" height="363"/>
     </resources>
 </document>

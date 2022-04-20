@@ -1,0 +1,80 @@
+steps:
+- template: setup/android-setup-variables-template.yml
+
+- template: setup/app-setup-variables-template.yml
+
+- template: setup/app-setup-xamarin-template.yml
+  parameters:
+    configuration: debug
+
+- task: DownloadSecureFile@1
+  name: androidKeystore
+  displayName: 'Download keystore file'
+  inputs:
+    secureFile: 'cocoa_development.keystore'
+
+- task: XamarinAndroid@1
+  displayName: 'Build Covid19Radar.Android.csproj'
+  inputs:
+    projectFile: Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj
+    outputDirectory: '$(Build.BinariesDirectory)/Debug'
+    configuration: Debug
+    msbuildArguments: /p:AndroidPackageFormat=aab /t:PackageForAndroid /t:SignAndroidPackage /p:AndroidKeyStore=True /p:AndroidSigningKeyStore=$(androidKeystore.secureFilePath) /p:AndroidSigningStorePass=$(Android_KeystorePassword) /p:AndroidSigningKeyAlias=$(Android_KeyAlias) /p:AndroidSigningKeyPass=$(Android_KeyPassword)
+
+- bash: |
+    AAB_PATH=`find $(Build.BinariesDirectory)/Debug -name "*-Signed.aab" | head -1`
+    echo "$AAB_PATH"
+    echo "##vso[task.setvariable variable=aabPath;]$AAB_PATH"
+  displayName: Set Archive Path
+
+- script: |
+    brew install bundletool
+  displayName: Install bundletool
+
+- script: |
+    APKS_OUTOUT="$(Build.BinariesDirectory)/Debug/covid19radar-signed.apks"
+    bundletool build-apks --bundle=$(aabPath) --output=$APKS_OUTOUT --ks=$(androidKeystore.secureFilePath) --ks-pass=pass:$(Android_KeystorePassword) --ks-key-alias=$(Android_KeyAlias) --key-pass=pass:$(Android_KeyPassword)
+  displayName: Build apks
+
+- script: |
+    APKS_OUTOUT="$(Build.BinariesDirectory)/Debug/covid19radar-universal.apks"
+    bundletool build-apks --mode=universal --bundle=$(aabPath) --output=$APKS_OUTOUT --ks=$(androidKeystore.secureFilePath) --ks-pass=pass:$(Android_KeystorePassword) --ks-key-alias=$(Android_KeyAlias) --key-pass=pass:$(Android_KeyPassword)
+    unzip "$APKS_OUTOUT" "*.apk" -d "$(Build.BinariesDirectory)/Debug"
+  displayName: Build universal apks
+
+- task: CopyFiles@2
+  displayName: 'Copy AAB to: Build.ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: '$(Build.BinariesDirectory)/Debug'
+    Contents: '*-Signed.aab'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: CopyFiles@2
+  displayName: 'Copy APKS to: Build.ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: '$(Build.BinariesDirectory)/Debug'
+    Contents: '*-signed.apks'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: CopyFiles@2
+  displayName: 'Copy APK to: Build.ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: '$(Build.BinariesDirectory)/Debug'
+    Contents: '*.apk'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    cd $(Build.ArtifactStagingDirectory)/
+    AAB_FILE=`find *.aab | head -1`
+    mv $AAB_FILE covid19radar_development_$(Environment)_v$(AppVersion)_$(buildVersion).aab
+    APKS_FILE=`find *.apks | head -1`
+    mv $APKS_FILE covid19radar_development_$(Environment)_v$(AppVersion)_$(buildVersion).apks
+    APK_FILE=`find *.apk | head -1`
+    mv $APK_FILE covid19radar_development_$(Environment)_v$(AppVersion)_$(buildVersion).apk
+    ls -la
+  displayName: 'Change archive name'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifacts'
+  inputs:
+    ArtifactName: 'android_development_$(Environment)_v$(AppVersion)_$(buildVersion)'

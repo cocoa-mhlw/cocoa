@@ -2,133 +2,480 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
-using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Acr.UserDialogs;
+using Chino;
 using Covid19Radar.Common;
+using System;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HomePageViewModel : ViewModelBase
+    public class HomePageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
+        public string SharingThisAppReadText => $"{AppResources.HomePageDescription5} {AppResources.Button}";
+        public string LocalNotificationOffReadText => $"{AppResources.HomePageLocalNotificationOffWarningLabelText} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
-        private readonly IExposureNotificationService exposureNotificationService;
+        private readonly IUserDataRepository _userDataRepository;
+        private readonly IExposureDataRepository _exposureDataRepository;
+        private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly AbsExposureNotificationApiService exposureNotificationApiService;
+        private readonly ILocalNotificationService localNotificationService;
+        private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
+        private readonly ICheckVersionService checkVersionService;
+        private readonly IEssentialsService essentialsService;
+        private readonly IDialogService dialogService;
+        private readonly IExternalNavigationService externalNavigationService;
 
-        private string _startDate;
+        private readonly IExposureConfigurationRepository exposureConfigurationRepository;
+        private readonly IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository;
+
         private string _pastDate;
-
-        public string StartDate
-        {
-            get { return _startDate; }
-            set { SetProperty(ref _startDate, value); }
-        }
         public string PastDate
         {
             get { return _pastDate; }
             set { SetProperty(ref _pastDate, value); }
         }
 
-        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IExposureNotificationService exposureNotificationService) : base(navigationService)
+        private string _latestConfirmationDate;
+        public string LatestConfirmationDate
+        {
+            get { return _latestConfirmationDate; }
+            set { SetProperty(ref _latestConfirmationDate, value); }
+        }
+
+        private bool _isVisibleENStatusActiveLayout;
+        public bool IsVisibleENStatusActiveLayout
+        {
+            get { return _isVisibleENStatusActiveLayout; }
+            set { SetProperty(ref _isVisibleENStatusActiveLayout, value); }
+        }
+
+        private bool _isVisibleENStatusUnconfirmedLayout;
+        public bool IsVisibleENStatusUnconfirmedLayout
+        {
+            get { return _isVisibleENStatusUnconfirmedLayout; }
+            set { SetProperty(ref _isVisibleENStatusUnconfirmedLayout, value); }
+        }
+
+        private bool _isVisibleENStatusStoppedLayout;
+        public bool IsVisibleENStatusStoppedLayout
+        {
+            get { return _isVisibleENStatusStoppedLayout; }
+            set { SetProperty(ref _isVisibleENStatusStoppedLayout, value); }
+        }
+
+        private bool _isVisibleLocalNotificationOffWarningLayout;
+        public bool IsVisibleLocalNotificationOffWarningLayout
+        {
+            get { return _isVisibleLocalNotificationOffWarningLayout; }
+            set { SetProperty(ref _isVisibleLocalNotificationOffWarningLayout, value); }
+        }
+
+        private bool _isShowTroubleshootingPage = false;
+
+        public HomePageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository,
+            IExposureRiskCalculationService exposureRiskCalculationService,
+            AbsExposureNotificationApiService exposureNotificationApiService,
+            ILocalNotificationService localNotificationService,
+            AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
+            IExposureConfigurationRepository exposureConfigurationRepository,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
+            ICheckVersionService checkVersionService,
+            IEssentialsService essentialsService,
+            IDialogService dialogService,
+            IExternalNavigationService externalNavigationService
+            ) : base(navigationService)
         {
             Title = AppResources.HomePageTitle;
+
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            this.exposureNotificationService = exposureNotificationService;
+            this._userDataRepository = userDataRepository;
+            this._exposureDataRepository = exposureDataRepository;
+            this._exposureRiskCalculationService = exposureRiskCalculationService;
+            this.exposureNotificationApiService = exposureNotificationApiService;
+            this.localNotificationService = localNotificationService;
+            this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
+            this.exposureConfigurationRepository = exposureConfigurationRepository;
+            this.exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
+            this.checkVersionService = checkVersionService;
+            this.essentialsService = essentialsService;
+            this.dialogService = dialogService;
+            this.externalNavigationService = externalNavigationService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
         {
+            base.Initialize(parameters);
+
             loggerService.StartMethod();
 
             // It seems the life cycle methods are not called after background fetch in iOS.
             // The days of use will be updated at this time.
             MessagingCenter.Unsubscribe<object>(this, AppConstants.IosOnActivatedMessage);
-            MessagingCenter.Subscribe<object>(this, AppConstants.IosOnActivatedMessage, (sender) =>
+            MessagingCenter.Subscribe<object>(this, AppConstants.IosOnActivatedMessage, async (sender) =>
             {
-                SettingDaysOfUse();
+                await UpdateView();
             });
 
-            var startDate = userDataService.GetStartDate();
-            StartDate = startDate.ToLocalTime().ToString("D");
-
-            SettingDaysOfUse();
-
             // Check Version
-            AppUtils.CheckVersion(loggerService);
+            _ = Task.Run(async () => {
+                bool isUpdated = await checkVersionService.IsUpdateVersionExistAsync();
+                if (isUpdated)
+                {
+                    MainThread.BeginInvokeOnMainThread(async () =>
+                    {
+                        await UserDialogs.Instance.AlertAsync(
+                            AppResources.AppUtilsGetNewVersionDescription,
+                            AppResources.AppUtilsGetNewVersionTitle,
+                            AppResources.ButtonOk
+                            );
+                        await Browser.OpenAsync(essentialsService.StoreUrl, BrowserLaunchMode.External);
+                    });
+                }
+            });
+
+            // Load necessary files asynchronous
+            _ = exposureConfigurationRepository.GetExposureConfigurationAsync();
+            _ = exposureRiskCalculationConfigurationRepository
+                .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+
+            await localNotificationService.PrepareAsync();
+
+            await StartExposureNotificationAsync();
+            ExposureDetectionAsync();
+
+            loggerService.EndMethod();
+        }
+
+        private async Task StartExposureNotificationAsync()
+        {
+            loggerService.StartMethod();
+
             try
             {
-                await exposureNotificationService.StartExposureNotification();
-                await exposureNotificationService.FetchExposureKeyAsync();
+                var isSuccess = await exposureNotificationApiService.StartExposureNotificationAsync();
+                if (isSuccess)
+                {
+                    await UpdateView();
+                }
 
-                var statusMessage = await exposureNotificationService.UpdateStatusMessageAsync();
-                loggerService.Info($"Exposure notification status: {statusMessage}");
-
-                base.Initialize(parameters);
-
-                loggerService.EndMethod();
             }
-            catch (Exception ex)
+            catch (ENException exception)
             {
-                Debug.WriteLine(ex.ToString());
-
-                loggerService.Exception("Failed to exposure notification status.", ex);
+                loggerService.Exception("Failed to exposure notification start.", exception);
+                await UpdateView();
+            }
+            finally
+            {
                 loggerService.EndMethod();
             }
+        }
+
+        private void ExposureDetectionAsync()
+        {
+            loggerService.StartMethod();
+            _ = Task.Run(async () =>
+            {
+                try
+                {
+                    await exposureDetectionBackgroundService.ExposureDetectionAsync();
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to exposure detection.", ex);
+                }
+                finally
+                {
+                    await UpdateView();
+                }
+            });
+            loggerService.EndMethod();
         }
 
         public Command OnClickExposures => new Command(async () =>
         {
-            loggerService.StartMethod();
+            try
+            {
+                UserDialogs.Instance.ShowLoading(AppResources.Loading);
+                loggerService.StartMethod();
 
-            var count = exposureNotificationService.GetExposureCountToDisplay();
-            loggerService.Info($"Exposure count: {count}");
-            if (count > 0)
-            {
-                await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
-                loggerService.EndMethod();
-                return;
+                var exposureRiskCalculationConfiguration = await exposureRiskCalculationConfigurationRepository
+                    .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+                loggerService.Info(exposureRiskCalculationConfiguration.ToString());
+
+                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
+                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+
+                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+
+                var hasExposure = dailySummaryList.Count() > 0 || userExposureInformationList.Count() > 0;
+                var hasHighRiskExposure = userExposureInformationList.Count() > 0;
+
+                foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
+                {
+                    if (!dailySummaryMap.ContainsKey(ew.Key))
+                    {
+                        loggerService.Warning($"ExposureWindow: {ew.Key} found, but that is not contained the list of dailySummary.");
+                        continue;
+                    }
+
+                    var dailySummary = dailySummaryMap[ew.Key];
+                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
+                        dailySummary,
+                        ew.ToList(),
+                        exposureRiskCalculationConfiguration
+                        );
+                    if (riskLevel >= RiskLevel.High)
+                    {
+                        hasHighRiskExposure = true;
+                        break;
+                    }
+                }
+
+                await localNotificationService.DismissExposureNotificationAsync();
+
+                UserDialogs.Instance.HideLoading();
+
+                if (hasHighRiskExposure)
+                {
+                    await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
+                    return;
+                }
+                else
+                {
+                    INavigationParameters navigaitonParameters
+                        = ExposureCheckPage.BuildNavigationParams(exposureRiskCalculationConfiguration);
+                    await NavigationService.NavigateAsync(nameof(ExposureCheckPage), navigaitonParameters);
+                    return;
+                }
             }
-            else
+            catch (Exception exception)
             {
-                await NavigationService.NavigateAsync(nameof(NotContactPage));
-                loggerService.EndMethod();
-                return;
+                UserDialogs.Instance.HideLoading();
+                loggerService.Exception("Failed to Initialize", exception);
+                await dialogService.ShowHomePageUnknownErrorWaringAsync();
             }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+
         });
 
         public Command OnClickShareApp => new Command(() =>
-       {
-           loggerService.StartMethod();
-
-           AppUtils.PopUpShare();
-
-           loggerService.EndMethod();
-       });
-
-        private void SettingDaysOfUse()
         {
             loggerService.StartMethod();
-            var daysOfUse = userDataService.GetDaysOfUse();
+
+            AppUtils.PopUpShare();
+
+            loggerService.EndMethod();
+        });
+
+        public Command OnClickLocalNotificationOffWarning => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var result = await dialogService.ShowLocalNotificationOffWarningAsync();
+            if (result)
+            {
+                externalNavigationService.NavigateAppSettings();
+            }
+
+            loggerService.EndMethod();
+        });
+
+        public Command OnClickQuestionIcon => new Command(() =>
+        {
+            loggerService.StartMethod();
+
+            UserDialogs.Instance.Alert(
+                AppResources.LatestConfirmationDateExplanationDialogText,
+                null,
+                AppResources.ButtonClose);
+
+            loggerService.EndMethod();
+        });
+
+        public Command OnClickCheckStopReason => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
+
+            if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
+            )
+            {
+                bool isOK = await dialogService.ShowBluetoothOffWarningAsync();
+                if (isOK)
+                {
+                    externalNavigationService.NavigateBluetoothSettings();
+                }
+            }
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED)
+            )
+            {
+                bool isOK = await dialogService.ShowLocationOffWarningAsync();
+                if (isOK)
+                {
+                    externalNavigationService.NavigateLocationSettings();
+                }
+            }
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
+            )
+            {
+                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
+                if (isOK)
+                {
+                    await StartExposureNotificationAsync();
+                    ExposureDetectionAsync();
+                }
+            }
+            else if (
+            statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
+            )
+            {
+                _ = await NavigationService.NavigateAsync(nameof(HowToEnableExposureNotificationsPage));
+            }
+
+            loggerService.EndMethod();
+        });
+
+        public Command OnTroubleshootingButtonWhenUnconfirmed => new Command(async () => {
+            loggerService.StartMethod();
+            _isShowTroubleshootingPage = true;
+            _ = await NavigationService.NavigateAsync(nameof(TroubleshootingPage));
+            loggerService.EndMethod();
+        });
+
+        private async Task UpdateView()
+        {
+            loggerService.StartMethod();
+
+            var daysOfUse = _userDataRepository.GetDaysOfUse();
+
             PastDate = daysOfUse.ToString();
+
+            var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
+
+            var isStopped =
+                statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED);
+            var canConfirmExposure = _userDataRepository.IsCanConfirmExposure();
+
+            if (isStopped)
+            {
+                loggerService.Info("isStopped");
+                IsVisibleENStatusActiveLayout = false;
+                IsVisibleENStatusUnconfirmedLayout = false;
+                IsVisibleENStatusStoppedLayout = true;
+            }
+            else if (!canConfirmExposure)
+            {
+                loggerService.Info("canConfirmExposure is false");
+                IsVisibleENStatusActiveLayout = false;
+                IsVisibleENStatusUnconfirmedLayout = true;
+                IsVisibleENStatusStoppedLayout = false;
+            }
+            else
+            {
+                IsVisibleENStatusActiveLayout = true;
+                IsVisibleENStatusUnconfirmedLayout = false;
+                IsVisibleENStatusStoppedLayout = false;
+
+                var latestUtcDate = _userDataRepository.GetLastConfirmedDate();
+                if (latestUtcDate == null)
+                {
+                    LatestConfirmationDate = AppResources.InProgressText;
+                }
+                else
+                {
+                    try
+                    {
+                        var latestLocalDate = latestUtcDate.Value.ToLocalTime();
+                        LatestConfirmationDate = latestLocalDate.ToString(AppResources.DateTimeFormatToDisplayOnHomePage);
+                    }
+                    catch (FormatException ex)
+                    {
+                        loggerService.Exception("Failed to conversion utc date time", ex);
+                    }
+                }
+            }
+
+            IsVisibleLocalNotificationOffWarningLayout = await localNotificationService.IsWarnedLocalNotificationOffAsync();
+
             loggerService.EndMethod();
         }
 
-        public override void OnAppearing()
+        public override async void OnAppearing()
         {
             base.OnAppearing();
-            SettingDaysOfUse();
+            await UpdateView();
         }
 
-        public override void OnResume()
+        public override async void OnResume()
         {
             base.OnResume();
-            SettingDaysOfUse();
+
+            await StartExposureNotificationAsync();
+
+            await UpdateView();
+        }
+
+        public async void OnEnabled()
+        {
+            loggerService.StartMethod();
+
+            await StartExposureNotificationAsync();
+            ExposureDetectionAsync();
+
+            loggerService.EndMethod();
+        }
+
+        public async void OnDeclined()
+        {
+            loggerService.StartMethod();
+
+            await UpdateView();
+
+            loggerService.EndMethod();
+        }
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+            loggerService.StartMethod();
+            if (_isShowTroubleshootingPage)
+            {
+                _isShowTroubleshootingPage = false;
+                ExposureDetectionAsync();
+            }
+            loggerService.EndMethod();
         }
     }
 }
