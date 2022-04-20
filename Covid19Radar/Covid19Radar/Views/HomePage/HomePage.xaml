@@ -63,35 +63,35 @@
                         Style="{StaticResource DefaultLabelCaption}"
                         VerticalOptions="Center"
                         Text="{x:Static resources:AppResources.HomePageENStatusActiveDescription}" />
-                    <ffimageloading:CachedImage
-                        AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
-                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextAndroid}"
-                        Aspect="AspectFit"
-                        Source="question_icon.png">
-                        <ffimageloading:CachedImage.IsVisible>
-                            <OnPlatform
-                                x:TypeArguments="x:Boolean"
-                                Android="True"
-                                iOS="False" />
-                        </ffimageloading:CachedImage.IsVisible>
-                        <ffimageloading:CachedImage.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Path=OnClickQuestionIcon}" />
-                        </ffimageloading:CachedImage.GestureRecognizers>
-                    </ffimageloading:CachedImage>
-                    <ImageButton
-                        AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
-                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextiOS}"
-                        Aspect="AspectFit"
-                        Source="question_icon.png"
-                        Command="{Binding Path=OnClickQuestionIcon}">
-                        <ImageButton.IsVisible>
-                            <OnPlatform
-                                x:TypeArguments="x:Boolean"
-                                Android="False"
-                                iOS="True" />
-                        </ImageButton.IsVisible>
-                    </ImageButton>
-                </StackLayout>
+                        <ImageButton
+                            AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
+                                AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextAndroid}"
+                                Source="question_icon.png"
+                                Padding="10"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Path=OnClickQuestionIcon}">
+                            <ImageButton.IsVisible>
+                                <OnPlatform
+                                    x:TypeArguments="x:Boolean"
+                                    Android="True"
+                                    iOS="False" />
+                                </ImageButton.IsVisible>
+                        </ImageButton>
+
+                        <ImageButton
+                            AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
+                            AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextiOS}"
+                            Aspect="AspectFit"
+                            Source="question_icon.png"
+                            Command="{Binding Path=OnClickQuestionIcon}">
+                                <ImageButton.IsVisible>
+                                    <OnPlatform
+                                    x:TypeArguments="x:Boolean"
+                                    Android="False"
+                                    iOS="True" />
+                                </ImageButton.IsVisible>
+                            </ImageButton>
+                    </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
                     Style="{StaticResource DefaultLabelCaption}"
