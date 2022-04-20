@@ -1382,6 +1382,7 @@ However, if you have any symptoms, please consider receiving a consultation..
   <data name="SendLogDisableSendLogDialogMessage" xml:space="preserve">
     <value>You can start sending data at any time from the app settings.</value>
     <comment>TODO:改善への協力はCOCOAの『設定』からいつでも開始できます。</comment>
+  </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
     <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
