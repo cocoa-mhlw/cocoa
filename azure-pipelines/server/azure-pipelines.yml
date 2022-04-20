@@ -67,11 +67,11 @@ stages:
           testResultsFiles: '**/*.trx'
           mergeTestResults: true
       - task: PublishCodeCoverageResults@1
-        displayName: 'Publish code coverage from $(Agent.TempDirectory)\*\coverage.cobertura.xml'
+        displayName: 'Publish code coverage from $(Agent.TempDirectory)/*/coverage.cobertura.xml'
         inputs:
           codeCoverageTool: Cobertura
-          summaryFileLocation: '$(Agent.TempDirectory)\*\coverage.cobertura.xml'
-          reportDirectory: '$(Build.SourcesDirectory)\TestResults\Coverage\Reports'
+          summaryFileLocation: '$(Agent.TempDirectory)/*/coverage.cobertura.xml'
+          reportDirectory: '$(Build.SourcesDirectory)/TestResults/Coverage/Reports'
       - task: DotNetCoreCLI@2
         displayName: 'publish Api'
         inputs:
