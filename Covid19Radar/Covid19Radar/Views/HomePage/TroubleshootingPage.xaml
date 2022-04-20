@@ -32,7 +32,6 @@
                     Source="alert_workaround_img.png" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="1"
                     HorizontalOptions="Center"
                     Style="{StaticResource AnnotationLabel}">
                     <Label.FormattedText>
@@ -45,7 +44,6 @@
             </StackLayout>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="2"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.TroubleshootingPageDescription1}" />
             <Frame
@@ -55,28 +53,80 @@
                 <StackLayout Spacing="10">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
                         Style="{StaticResource DefaultLabel}"
                         FontAttributes="Bold"
-                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription2}" />
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem1}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="4"
                         Style="{StaticResource DefaultLabel}"
                         FontAttributes="Bold"
-                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription3}" />
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem2}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="5"
-                        Style="{StaticResource DefaultLabelSmall}"
-                        Text="{x:Static resources:AppResources.TroubleshootingPageDescription4}" />
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem3}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem4}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem5}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabelDark}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                <Span Text="{x:Static resources:AppResources.OsAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.OsAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        FontAttributes="Bold"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageConfirmationItem6}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabelDark}"
+                        Text="{x:Static resources:AppResources.TroubleshootingPageAnnotationPowerSaving}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabelDark}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol2}"/>
+                                <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.Triggers>
+                            <DataTrigger
+                                TargetType="Label"
+                                Binding="{Binding Source={x:Static resources:AppResources.CocoaAnnotationText}}"
+                                Value="">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
                 </StackLayout>
             </Frame>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="6"
                 Style="{StaticResource DefaultLabel}"
-                Text="{x:Static resources:AppResources.TroubleshootingPageDescription5}" />
+                Text="{x:Static resources:AppResources.TroubleshootingPageDescription2}" />
         </StackLayout>
     </ScrollView>
     </ContentView>

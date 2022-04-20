@@ -161,9 +161,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotifyOtherPageDialogSubmittedTitle {
+        public static string SubmitDiagnosisKeysPageTitle {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDialogSubmittedTitle", resourceCulture);
+                return ResourceManager.GetString("SubmitDiagnosisKeysPageTitle", resourceCulture);
             }
         }
         
@@ -455,15 +455,15 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotContactPageButtonText {
-            get {
-                return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
-            }
-        }
-        
         public static string LowRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("LowRiskContactPageLabel", resourceCulture);
+            }
+        }
+        
+        public static string LowRiskContactPage_ExposureCheckScore_NoSignalReceived {
+            get {
+                return ResourceManager.GetString("LowRiskContactPage_ExposureCheckScore_NoSignalReceived", resourceCulture);
             }
         }
         
@@ -521,6 +521,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string LowRiskContactPageAnnotationDecription2 {
+            get {
+                return ResourceManager.GetString("LowRiskContactPageAnnotationDecription2", resourceCulture);
+            }
+        }
+        
         public static string NoRiskContactPageLabel {
             get {
                 return ResourceManager.GetString("NoRiskContactPageLabel", resourceCulture);
@@ -530,24 +536,6 @@ namespace Covid19Radar.Resources {
         public static string NoRiskContactPageDescription {
             get {
                 return ResourceManager.GetString("NoRiskContactPageDescription", resourceCulture);
-            }
-        }
-        
-        public static string NoRiskContactPageButtonText {
-            get {
-                return ResourceManager.GetString("NoRiskContactPageButtonText", resourceCulture);
-            }
-        }
-        
-        public static string ThankYouNotifyOtherPageLabel1 {
-            get {
-                return ResourceManager.GetString("ThankYouNotifyOtherPageLabel1", resourceCulture);
-            }
-        }
-        
-        public static string ThankYouNotifyOtherPageDescription1 {
-            get {
-                return ResourceManager.GetString("ThankYouNotifyOtherPageDescription1", resourceCulture);
             }
         }
         
@@ -704,36 +692,6 @@ namespace Covid19Radar.Resources {
         public static string TutorialPage2Title {
             get {
                 return ResourceManager.GetString("TutorialPage2Title", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description1 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description1", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description2 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description2", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description3 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description3", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Description4 {
-            get {
-                return ResourceManager.GetString("TutorialPage5Description4", resourceCulture);
-            }
-        }
-        
-        public static string TutorialPage5Title {
-            get {
-                return ResourceManager.GetString("TutorialPage5Title", resourceCulture);
             }
         }
         
@@ -953,6 +911,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string DialogNetworkConnectionErrorFromOverseasMessage {
+            get {
+                return ResourceManager.GetString("DialogNetworkConnectionErrorFromOverseasMessage", resourceCulture);
+            }
+        }
+        
         public static string DialogExposureNotificationStartupErrorTitle {
             get {
                 return ResourceManager.GetString("DialogExposureNotificationStartupErrorTitle", resourceCulture);
@@ -983,75 +947,75 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotifyOtherPageDiag1Message {
+        public static string NotifyOtherPageDialog1Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag1Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog1Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag1Title {
+        public static string NotifyOtherPageDialog1Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag1Title", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog1Title", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag2Title {
+        public static string NotifyOtherPageDialog2Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag2Title", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog2Title", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag3Message {
+        public static string NotifyOtherPageDialog3Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag3Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog3Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag3Title {
+        public static string NotifyOtherPageDialog3Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag3Title", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog3Title", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag4Message {
+        public static string NotifyOtherPageDialog4Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag4Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog4Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag5Message {
+        public static string NotifyOtherPageDialog5Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag5Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog5Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag6Message {
+        public static string NotifyOtherPageDialog6Message {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag6Message", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog6Message", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiag6Title {
+        public static string NotifyOtherPageDialog6Title {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiag6Title", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialog6Title", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiagReturnHomeTitle {
+        public static string NotifyOtherPageDialogReturnHomeTitle {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiagReturnHomeTitle", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialogReturnHomeTitle", resourceCulture);
             }
         }
         
-        public static string NotifyOtherPageDiagReturnHome {
+        public static string NotifyOtherPageDialogReturnHome {
             get {
-                return ResourceManager.GetString("NotifyOtherPageDiagReturnHome", resourceCulture);
+                return ResourceManager.GetString("NotifyOtherPageDialogReturnHome", resourceCulture);
             }
         }
         
-        public static string ProcessingNumberErrorDiagTitle {
+        public static string ProcessingNumberErrorDialogTitle {
             get {
-                return ResourceManager.GetString("ProcessingNumberErrorDiagTitle", resourceCulture);
+                return ResourceManager.GetString("ProcessingNumberErrorDialogTitle", resourceCulture);
             }
         }
         
@@ -1088,6 +1052,30 @@ namespace Covid19Radar.Resources {
         public static string ContactedNotifyPageDescription1 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageDescription1", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription2 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription2", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription3 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription3", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription4 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription4", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription5 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription5", resourceCulture);
             }
         }
         
@@ -1283,6 +1271,30 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string InquiryMailModelTitle {
+            get {
+                return ResourceManager.GetString("InquiryMailModelTitle", resourceCulture);
+            }
+        }
+        
+        public static string InquiryMailOSTitle {
+            get {
+                return ResourceManager.GetString("InquiryMailOSTitle", resourceCulture);
+            }
+        }
+        
+        public static string InquiryMailOSVersionTitle {
+            get {
+                return ResourceManager.GetString("InquiryMailOSVersionTitle", resourceCulture);
+            }
+        }
+        
+        public static string InquiryMailAppVersionTitle {
+            get {
+                return ResourceManager.GetString("InquiryMailAppVersionTitle", resourceCulture);
+            }
+        }
+        
         public static string Processing {
             get {
                 return ResourceManager.GetString("Processing", resourceCulture);
@@ -1469,6 +1481,84 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string HowToEnableExposureNotificationsPageTitle {
+            get {
+                return ResourceManager.GetString("HowToEnableExposureNotificationsPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string HowToEnableExposureNotificationsPageDescription1 {
+            get {
+                return ResourceManager.GetString("HowToEnableExposureNotificationsPageDescription1", resourceCulture);
+            }
+        }
+        
+        public static string HowToEnableExposureNotificationsPageStep1Description {
+            get {
+                return ResourceManager.GetString("HowToEnableExposureNotificationsPageStep1Description", resourceCulture);
+            }
+        }
+        
+        public static string HowToEnableExposureNotificationsPageStep2Description {
+            get {
+                return ResourceManager.GetString("HowToEnableExposureNotificationsPageStep2Description", resourceCulture);
+            }
+        }
+        
+        public static string HowToEnableExposureNotificationsPageStep3Description {
+            get {
+                return ResourceManager.GetString("HowToEnableExposureNotificationsPageStep3Description", resourceCulture);
+            }
+        }
+        
+        public static string HowToEnableExposureNotificationsPageStep4Description {
+            get {
+                return ResourceManager.GetString("HowToEnableExposureNotificationsPageStep4Description", resourceCulture);
+            }
+        }
+        
+        public static string HowToEnableExposureNotificationsPageStep5Description {
+            get {
+                return ResourceManager.GetString("HowToEnableExposureNotificationsPageStep5Description", resourceCulture);
+            }
+        }
+        
+        public static string ExposureNotificationSettingButtonTitle {
+            get {
+                return ResourceManager.GetString("ExposureNotificationSettingButtonTitle", resourceCulture);
+            }
+        }
+        
+        public static string Step1Text {
+            get {
+                return ResourceManager.GetString("Step1Text", resourceCulture);
+            }
+        }
+        
+        public static string Step2Text {
+            get {
+                return ResourceManager.GetString("Step2Text", resourceCulture);
+            }
+        }
+        
+        public static string Step3Text {
+            get {
+                return ResourceManager.GetString("Step3Text", resourceCulture);
+            }
+        }
+        
+        public static string Step4Text {
+            get {
+                return ResourceManager.GetString("Step4Text", resourceCulture);
+            }
+        }
+        
+        public static string Step5Text {
+            get {
+                return ResourceManager.GetString("Step5Text", resourceCulture);
+            }
+        }
+        
         public static string HowToReceiveProcessingNumberPageTitle {
             get {
                 return ResourceManager.GetString("HowToReceiveProcessingNumberPageTitle", resourceCulture);
@@ -1649,6 +1739,24 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string HomePageLocalNotificationOffWarningLabelText {
+            get {
+                return ResourceManager.GetString("HomePageLocalNotificationOffWarningLabelText", resourceCulture);
+            }
+        }
+        
+        public static string LocalNotificationOffWarningDialogTitle {
+            get {
+                return ResourceManager.GetString("LocalNotificationOffWarningDialogTitle", resourceCulture);
+            }
+        }
+        
+        public static string LocalNotificationOffWarningDialogMessage {
+            get {
+                return ResourceManager.GetString("LocalNotificationOffWarningDialogMessage", resourceCulture);
+            }
+        }
+        
         public static string TroubleshootingPageTitle {
             get {
                 return ResourceManager.GetString("TroubleshootingPageTitle", resourceCulture);
@@ -1667,21 +1775,45 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string TroubleshootingPageDescription3 {
+        public static string TroubleshootingPageConfirmationItem1 {
             get {
-                return ResourceManager.GetString("TroubleshootingPageDescription3", resourceCulture);
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem1", resourceCulture);
             }
         }
         
-        public static string TroubleshootingPageDescription4 {
+        public static string TroubleshootingPageConfirmationItem2 {
             get {
-                return ResourceManager.GetString("TroubleshootingPageDescription4", resourceCulture);
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem2", resourceCulture);
             }
         }
         
-        public static string TroubleshootingPageDescription5 {
+        public static string TroubleshootingPageConfirmationItem3 {
             get {
-                return ResourceManager.GetString("TroubleshootingPageDescription5", resourceCulture);
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem3", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageConfirmationItem4 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem4", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageConfirmationItem5 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem5", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageConfirmationItem6 {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageConfirmationItem6", resourceCulture);
+            }
+        }
+        
+        public static string TroubleshootingPageAnnotationPowerSaving {
+            get {
+                return ResourceManager.GetString("TroubleshootingPageAnnotationPowerSaving", resourceCulture);
             }
         }
         
@@ -1781,12 +1913,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string MyHerSysAnnotationText {
-            get {
-                return ResourceManager.GetString("MyHerSysAnnotationText", resourceCulture);
-            }
-        }
-        
         public static string RandomCodeAnnotationText {
             get {
                 return ResourceManager.GetString("RandomCodeAnnotationText", resourceCulture);
@@ -1820,6 +1946,18 @@ namespace Covid19Radar.Resources {
         public static string ContactedPageImageAnnotationText {
             get {
                 return ResourceManager.GetString("ContactedPageImageAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string AppSettingImageAnnotationText {
+            get {
+                return ResourceManager.GetString("AppSettingImageAnnotationText", resourceCulture);
+            }
+        }
+        
+        public static string ExposureNotificationSettingImageAnnotationText {
+            get {
+                return ResourceManager.GetString("ExposureNotificationSettingImageAnnotationText", resourceCulture);
             }
         }
         
@@ -1964,6 +2102,83 @@ namespace Covid19Radar.Resources {
         public static string SendLogDisableSendLogDialogMessage {
             get {
                 return ResourceManager.GetString("SendLogDisableSendLogDialogMessage", resourceCulture);
+        }
+
+        public static string ExposuresPageToUtcDescription {
+            get {
+                return ResourceManager.GetString("ExposuresPageToUtcDescription", resourceCulture);
+            }
+        }
+        
+        public static string ExposuresPageTo {
+            get {
+                return ResourceManager.GetString("ExposuresPageTo", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatDate {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatDate", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatMonth {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatMonth", resourceCulture);
+            }
+        }
+        
+        public static string ExposureDateFormatYear {
+            get {
+                return ResourceManager.GetString("ExposureDateFormatYear", resourceCulture);
+            }
+        }
+        
+        public static string GeneralErrorTitle {
+            get {
+                return ResourceManager.GetString("GeneralErrorTitle", resourceCulture);
+            }
+        }
+        
+        public static string GeneralErrorRegisterAgainMessage {
+            get {
+                return ResourceManager.GetString("GeneralErrorRegisterAgainMessage", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageLicenseLabel {
+            get {
+                return ResourceManager.GetString("SettingsPageLicenseLabel", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageLicenseDescription {
+            get {
+                return ResourceManager.GetString("SettingsPageLicenseDescription", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageGitHubUrl {
+            get {
+                return ResourceManager.GetString("SettingsPageGitHubUrl", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageSourceCodeButton {
+            get {
+                return ResourceManager.GetString("SettingsPageSourceCodeButton", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageOthers {
+            get {
+                return ResourceManager.GetString("SettingsPageOthers", resourceCulture);
+            }
+        }
+        
+        public static string ToHomeButton {
+            get {
+                return ResourceManager.GetString("ToHomeButton", resourceCulture);
             }
         }
     }

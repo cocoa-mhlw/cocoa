@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.Models;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -21,6 +22,9 @@ namespace Covid19Radar.Api.Services
     public class DeviceValidationAndroidService
     {
 
+        private readonly ILogger Logger;
+
+        public DeviceValidationAndroidService(ILogger logger) => Logger = logger;
         /// <summary>
         /// for Android
         /// </summary>
@@ -42,7 +46,18 @@ namespace Covid19Radar.Api.Services
         public bool Validation(IAndroidDeviceVerification deviceVerification, DateTimeOffset requestTime, AuthorizedAppInformation app)
         {
             byte[] expectedNonce = GetSha256(deviceVerification.ClearText);
-            var claims = ParsePayload(deviceVerification.JwsPayload);
+            AndroidAttestationStatement claims;
+            try
+            {
+                claims = ParsePayload(deviceVerification.JwsPayload);
+
+            }
+            catch
+            {
+                Logger.LogError("invalid token");
+                return false;
+            }
+
 
             // Validate the nonce
             if (Convert.ToBase64String(claims.Nonce) != Convert.ToBase64String(expectedNonce))
@@ -120,15 +135,24 @@ namespace Covid19Radar.Api.Services
             catch (ArgumentException)
             {
                 // Signature validation failed.
-                return null;
+                Logger.LogError("The token is not in a valid JWS format");
+                throw;
             }
 
             // Verify the hostname
             if (!(validatedToken.SigningKey is X509SecurityKey))
-                return null;
+            {
+                Logger.LogError("The token is not X509SecurityKey");
+                throw new ArgumentException("The token is not X509SecurityKey");
+            }
+
 
             if (GetHostName(validatedToken.SigningKey as X509SecurityKey) != "attest.android.com")
-                return null;
+            {
+                Logger.LogError("The host name in the token is invalid");
+                throw new ArgumentException("The host name in the token is invalid");
+            }
+
 
             // Parse and use the data JSON.
             var claimsDictionary = token.Claims.ToDictionary(x => x.Type, x => x.Value);

@@ -14,7 +14,16 @@
   Describe the intention of the changes being proposed. What problem does it solve or functionality does it add?
 -->
 
--
+- 
+
+## 変更内容 / Changes
+
+<!--
+  この PR の変更内容をご説明ください。
+  Describe the changes to this Pull Request.
+-->
+
+- 
 
 ## 破壊的変更をもたらしますか / Does this introduce a breaking change?
 
@@ -44,31 +53,9 @@
 [ ] Other... Please describe:
 ```
 
-## 検証方法 / How to test
-
-### コードの入手 / Get the code
-
-```
-git clone [repo-address]
-cd [repo-name]
-git checkout [branch-name]
-dotnet restore
-```
-
-### コードの検証 / Test the code
-
-<!--
-  テスト環境やマニュアルテストの実行手順をお書きください。
-  Add steps to run the tests suite and/or manually test
--->
-
-```
-
-```
-
 ## 確認事項 / What to check
 
--
+- [ ] 
 
 ## その他 / Other information
 
@@ -76,3 +63,16 @@ dotnet restore
   そのほかに、必要かもしれない有用な情報がありましたらご記入ください。
   Add any other helpful information that may be needed here.
 -->
+
+- 
+
+---
+
+Internal IDs:
+
+<!--
+  関係者のみ: 内部向けの ID があれば紐付けてください。
+  For parties only: Please link to internal IDs, if any.
+-->
+
+- 

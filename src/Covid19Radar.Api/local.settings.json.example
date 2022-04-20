@@ -31,6 +31,10 @@
     "iOSDeviceCheckPrivateKey": null,
     "iOSDeviceCheckTeamId": null,
     "iOSDeviceValidationEnabled": false,
-    "InquiryLogApiKey": "EXAMPLE"
+    "InquiryLogApiKey": "EXAMPLE",
+    "InfectiousFilterDaysSinceOnsetOfSymptomsFrom": -3,
+    "InfectiousFilterDaysSinceOnsetOfSymptomsTo": 10,
+    "InfectiousFilterDaysSinceTestFrom": -3,
+    "InfectiousFilterDaysSinceTestTo": 7
   }
 }

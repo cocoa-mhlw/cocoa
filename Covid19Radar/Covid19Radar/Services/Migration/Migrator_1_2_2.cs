@@ -164,11 +164,16 @@ namespace Covid19Radar.Services.Migration
                 if (_applicationPropertyService.ContainsKey(applicationPropertyKey))
                 {
                     var lastUpdateDate = _applicationPropertyService.GetProperties(applicationPropertyKey).ToString();
-                    _preferencesService.SetValue(preferenceKey, lastUpdateDate);
+                    _preferencesService.SetStringValue(preferenceKey, lastUpdateDate);
                 }
                 else
                 {
-                    _preferencesService.SetValue(preferenceKey, new DateTime().ToString());
+                    /// **WARNING**
+                    /// `new DateTime()` means `DateTime.MinValue`, it equals `0001/01/01 00:00:00`.
+                    /// For converting timezone, please use `TimeZoneInfo.ContertTimeTo*`.
+                    /// Do not use direct calculation (e.g. subtract `TimeSpan.FromHours(9)` from `DateTime.MinValue`)
+                    /// because it cause an ArgumentOutOfRangeException.
+                    _preferencesService.SetStringValue(preferenceKey, new DateTime().ToString());
                     _loggerService.Info($"Migrated {applicationPropertyKey}");
                 }
             }
@@ -187,7 +192,7 @@ namespace Covid19Radar.Services.Migration
 
             if (userData.StartDateTime != null && !userData.StartDateTime.Equals(new DateTime()))
             {
-                _preferencesService.SetValue(PREFERENCE_KEY_START_DATETIME, userData.StartDateTime.ToString());
+                _preferencesService.SetStringValue(PREFERENCE_KEY_START_DATETIME, userData.StartDateTime.ToString());
                 userData.StartDateTime = new DateTime();
                 _loggerService.Info("Migrated StartDateTime");
             }
@@ -195,7 +200,7 @@ namespace Covid19Radar.Services.Migration
             if (userData.LastProcessTekTimestamp != null && userData.LastProcessTekTimestamp.Count > 0)
             {
                 var stringValue = JsonConvert.SerializeObject(userData.LastProcessTekTimestamp);
-                _preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, stringValue);
+                _preferencesService.SetStringValue(PreferenceKey.LastProcessTekTimestamp, stringValue);
                 userData.LastProcessTekTimestamp.Clear();
                 _loggerService.Info("Migrated LastProcessTekTimestamp");
             }
@@ -207,7 +212,7 @@ namespace Covid19Radar.Services.Migration
                 var configuration = _applicationPropertyService.GetProperties(ConfigurationPropertyKey).ToString();
                 if (!string.IsNullOrEmpty(configuration))
                 {
-                    _preferencesService.SetValue(PreferenceKey.ExposureNotificationConfiguration, configuration);
+                    _preferencesService.SetStringValue(PreferenceKey.ExposureNotificationConfiguration, configuration);
                 }
                 await _applicationPropertyService.Remove(ConfigurationPropertyKey);
                 _loggerService.Info("Migrated ExposureNotificationConfiguration");
@@ -215,14 +220,14 @@ namespace Covid19Radar.Services.Migration
 
             if (userData.ExposureInformation != null)
             {
-                _secureStorageService.SetValue(PreferenceKey.ExposureInformation, JsonConvert.SerializeObject(userData.ExposureInformation));
+                _secureStorageService.SetStringValue(PreferenceKey.ExposureInformation, JsonConvert.SerializeObject(userData.ExposureInformation));
                 userData.ExposureInformation = null;
                 _loggerService.Info("Migrated ExposureInformation");
             }
 
             if (userData.ExposureSummary != null)
             {
-                _secureStorageService.SetValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, JsonConvert.SerializeObject(userData.ExposureSummary));
+                _secureStorageService.SetStringValue(PREFERENCE_KEY_EXPOSURE_SUMMARY, JsonConvert.SerializeObject(userData.ExposureSummary));
                 userData.ExposureSummary = null;
                 _loggerService.Info("Migrated ExposureSummary");
             }

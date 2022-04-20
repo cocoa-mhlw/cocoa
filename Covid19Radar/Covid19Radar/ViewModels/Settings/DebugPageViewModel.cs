@@ -13,8 +13,10 @@ using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Chino;
 using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
+using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -291,6 +293,24 @@ namespace Covid19Radar.ViewModels
         {
             _userDataRepository.RemoveAllUpdateDate();
             await UpdateInfo("RemoveAllUpdateDate");
+        });
+
+        public Command OnClickReAgreeTermsOfServicePage => new Command(async () =>
+        {
+            var termsUpdateInfoModel = new TermsUpdateInfoModel
+            {
+                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "DEBUG  利用規約の変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) }
+            };
+            var navigationParams = ReAgreeTermsOfServicePage.BuildNavigationParams(termsUpdateInfoModel, Destination.HomePage);
+            _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreeTermsOfServicePage), navigationParams);
+        });
+
+        public Command OnClickReAgreePrivacyPolicyPage => new Command(async () =>
+        {
+            var privacyPolicyUpdated = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) };
+            var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyUpdated, Destination.HomePage);
+            _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), navigationParams);
         });
 
         public Command OnClickQuit => new Command(() =>

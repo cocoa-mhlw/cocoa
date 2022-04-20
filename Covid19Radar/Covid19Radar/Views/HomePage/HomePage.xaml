@@ -50,7 +50,6 @@
                     </Grid>
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
-                        TabIndex="1"
                         Style="{StaticResource DefaultLabelLarge}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageENStatusActiveTitle}" />
@@ -61,14 +60,12 @@
                     Spacing="5">
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
-                        TabIndex="2"
                         Style="{StaticResource DefaultLabelCaption}"
                         VerticalOptions="Center"
                         Text="{x:Static resources:AppResources.HomePageENStatusActiveDescription}" />
                     <ffimageloading:CachedImage
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
                         AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextAndroid}"
-                        TabIndex="3"
                         Aspect="AspectFit"
                         Source="question_icon.png">
                         <ffimageloading:CachedImage.IsVisible>
@@ -84,7 +81,6 @@
                     <ImageButton
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
                         AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextiOS}"
-                        TabIndex="4"
                         Aspect="AspectFit"
                         Source="question_icon.png"
                         Command="{Binding Path=OnClickQuestionIcon}">
@@ -98,7 +94,6 @@
                 </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
-                    TabIndex="5"
                     Style="{StaticResource DefaultLabelCaption}"
                     Text="{Binding LatestConfirmationDate}" />
             </StackLayout>
@@ -114,27 +109,23 @@
                         Source="home_alert_icon.png" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
-                        TabIndex="6"
                         Style="{StaticResource DefaultLabelLarge}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedTitle}" />
                 </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
-                    TabIndex="7"
                     Style="{StaticResource DefaultLabelCaption}"
                     Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedDescription1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
-                    TabIndex="8"
                     Style="{StaticResource DefaultLabelCaption}"
                     Text="{x:Static resources:AppResources.HomePageENStatusUnconfirmedDescription2}" />
                 <Button
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusUnconfirmedLayout}"
-                    TabIndex="9"
                     Style="{StaticResource HomePageBlueButton}"
                     Text="{x:Static resources:AppResources.HomePageTroubleshootingButtonText}"
-                    Command="{prism:NavigateTo 'TroubleshootingPage'}" />
+                    Command="{Binding Path=OnTroubleshootingButtonWhenUnconfirmed}" />
             </StackLayout>
             <StackLayout IsVisible="{Binding IsVisibleENStatusStoppedLayout}">
                 <StackLayout
@@ -148,27 +139,35 @@
                         Source="home_stop_icon.png" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}"
-                        TabIndex="10"
                         Style="{StaticResource DefaultLabelLarge}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageENStatusStoppedTitle}" />
                 </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}"
-                    TabIndex="11"
                     Style="{StaticResource DefaultLabelCaption}"
                     Text="{x:Static resources:AppResources.HomePageENStatusStoppedDescription1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}"
-                    TabIndex="12"
                     Style="{StaticResource DefaultLabelCaption}"
                     Text="{x:Static resources:AppResources.HomePageENStatusStoppedDescription2}" />
                 <Button
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusStoppedLayout}"
-                    TabIndex="13"
                     Style="{StaticResource HomePageBlueButton}"
                     Text="{x:Static resources:AppResources.HomePageTroubleshootingButtonText}"
                     Command="{Binding OnClickCheckStopReason}" />
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="Center"
+                IsVisible="{Binding IsVisibleLocalNotificationOffWarningLayout}">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=OnClickLocalNotificationOffWarning}" />
+                </StackLayout.GestureRecognizers>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="{Binding IsVisibleLocalNotificationOffWarningLayout}"
+                    AutomationProperties.Name="{Binding LocalNotificationOffReadText}"
+                    Style="{StaticResource LinkLabelStyleSmall}"
+                    Text="{x:Static resources:AppResources.HomePageLocalNotificationOffWarningLabelText}" />
             </StackLayout>
             <Frame
                 Padding="10"
@@ -177,7 +176,6 @@
                 <StackLayout Spacing="0">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="14"
                         Style="{StaticResource DefaultLabelSmall}"
                         HorizontalTextAlignment="Center">
                         <Label.FormattedText>
@@ -194,7 +192,6 @@
                     </Label>
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="15"
                         Command="{Binding Path=OnClickExposures}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription2}" />
@@ -207,21 +204,18 @@
                 <StackLayout Spacing="5">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="16"
                         Margin="0, 5, 0, 5"
                         Style="{StaticResource DefaultLabelBody}"
                         FontAttributes="Bold"
                         Text="{x:Static resources:AppResources.HomePageDescription3}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="17"
                         Margin="20, 0, 20, 0"
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.HomePageHeader2Description}"
                         HorizontalTextAlignment="Center" />
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="18"
                         Command="{prism:NavigateTo 'SubmitConsentPage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription4}" />
@@ -243,7 +237,6 @@
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     AutomationProperties.Name="{Binding SharingThisAppReadText}"
-                    TabIndex="19"
                     Style="{StaticResource HomePageLabelColor}"
                     Text="{x:Static resources:AppResources.HomePageDescription5}" />
             </StackLayout>

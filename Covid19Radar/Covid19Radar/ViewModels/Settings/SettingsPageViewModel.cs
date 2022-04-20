@@ -36,6 +36,10 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ICloseApplicationService closeApplicationService;
 
+        public string TermsOfUseReadText => $"{AppResources.TermsofservicePageTitle} {AppResources.Button}";
+        public string PrivacyPolicyReadText => $"{AppResources.PrivacyPolicyPageTitle} {AppResources.Button}";
+        public string WebAccessibilityPolicyReadText => $"{AppResources.WebAccessibilityPolicyPageTitle} {AppResources.Button}";
+
         public SettingsPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -139,5 +143,15 @@ namespace Covid19Radar.ViewModels
                 loggerService.EndMethod();
             }
         }
+
+        public ICommand OnClickObtainSourceCode => new Command<string>(async (uri) =>
+        {
+            loggerService.StartMethod();
+
+            await Browser.OpenAsync(uri, BrowserLaunchMode.External);
+
+            loggerService.EndMethod();
+        });
+
     }
 }

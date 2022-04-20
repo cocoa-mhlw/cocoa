@@ -11,7 +11,6 @@ using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using System;
 using System.Collections.ObjectModel;
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -93,7 +92,7 @@ namespace Covid19Radar.ViewModels
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ew.Key,
-                        ExposureDate = dailySummary.GetDateTime().ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureDate = IExposureDataRepository.ConvertToTerm(dailySummary.GetDateTime()),
                     };
                     var exposureDurationInSec = ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
                     ens.SetExposureTime(exposureDurationInSec);
@@ -109,7 +108,7 @@ namespace Covid19Radar.ViewModels
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ei.Key,
-                        ExposureDate = ei.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureDate = IExposureDataRepository.ConvertToTerm(ei.Key),
                     };
                     ens.SetExposureCount(ei.Count());
                     exposures.Add(ens);

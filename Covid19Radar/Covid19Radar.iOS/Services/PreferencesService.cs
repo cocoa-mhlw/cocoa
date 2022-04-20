@@ -24,38 +24,7 @@ namespace Covid19Radar.iOS.Services
             return userDefaults[key] != null;
         }
 
-        public DateTime? GetDateTime(string key)
-        {
-            lock (this)
-            {
-                loggerService.StartMethod();
-                loggerService.Info($"key={key}, type={typeof(DateTime)}");
-
-                if (!ContainsKey(key))
-                {
-                    loggerService.Info($"{key} is not contained.");
-                    loggerService.EndMethod();
-                    return null;
-                }
-
-                var userDefaults = NSUserDefaults.StandardUserDefaults;
-                try
-                {
-                    var valueString = userDefaults.StringForKey(key);
-                    var value = DateTime.Parse(valueString);
-                    loggerService.EndMethod();
-                    return value;
-                }
-                catch (Exception)
-                {
-                    loggerService.Error($"Failed to get value of {key}.");
-                    loggerService.EndMethod();
-                    return null;
-                }
-            }
-        }
-
-        public T GetValue<T>(string key, T defaultValue)
+        private T GetValue<T>(string key, T defaultValue)
         {
             lock (this)
             {
@@ -113,7 +82,7 @@ namespace Covid19Radar.iOS.Services
             }
         }
 
-        public void SetValue<T>(string key, T value)
+        private void SetValue<T>(string key, T value)
         {
             lock (this)
             {
@@ -178,5 +147,25 @@ namespace Covid19Radar.iOS.Services
                 loggerService.EndMethod();
             }
         }
+
+        public int GetIntValue(string key, int defaultValue) => GetValue(key, defaultValue);
+
+        public long GetLongValue(string key, long defaultValue) => GetValue(key, defaultValue);
+
+        public float GetFloatValue(string key, float defaultValue) => GetValue(key, defaultValue);
+
+        public string GetStringValue(string key, string defaultValue) => GetValue(key, defaultValue);
+
+        public bool GetBoolValue(string key, bool defaultValue) => GetValue(key, defaultValue);
+
+        public void SetIntValue(string key, int value) => SetValue(key, value);
+
+        public void SetLongValue(string key, long value) => SetValue(key, value);
+
+        public void SetFloatValue(string key, float value) => SetValue(key, value);
+
+        public void SetStringValue(string key, string value) => SetValue(key, value);
+
+        public void SetBoolValue(string key, bool value) => SetValue(key, value);
     }
 }
