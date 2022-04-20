@@ -107,6 +107,31 @@
                     Margin="15,20,15,15"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SettingsPageOthers}" />
+
+                <BoxView Style="{StaticResource DefaultLineStyle}" />
+
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="3"
+                    Margin="15, 20, 15, 15"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="COCOAの改善に協力する" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="4"
+                    Margin="15, 0"
+                    Style="{StaticResource DefaultLabelSmall}"
+                    TextColor="{StaticResource SecondaryText}"
+                    Text="COCOA改善のための匿名での情報送信を設定します。" />
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="5"
+                    Margin="20"
+                    Command="{Binding OpenSendLogSettingPage}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="情報送信を設定" />
+
+                <BoxView Style="{StaticResource DefaultLineStyle}" />
                 <StackLayout
                     Padding="15,0"
                     Spacing="10">
@@ -122,108 +147,6 @@
                     </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
-                        HorizontalOptions="End"
-                        Style="{StaticResource DefaultLabelSmall}"
-                        TextColor="{StaticResource SecondaryText}"
-                        Text="{Binding AppVer}" />
-                </Grid>
-            </Frame>
-
-
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="6"
-                Margin="15, 20, 15, 15"
-                Style="{StaticResource DefaultLabel}"
-                Text="{x:Static resources:AppResources.SettingsPageReinitializeLabel}" />
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="7"
-                Margin="15, 0"
-                Style="{StaticResource DefaultLabelSmall}"
-                TextColor="{StaticResource SecondaryText}"
-                Text="{x:Static resources:AppResources.SettingsPageReinitializeDescription}" />
-            <Button
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="8"
-                Margin="20"
-                Command="{Binding OnChangeResetData}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.ButtonReset}" />
-
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="9"
-                Margin="15, 20, 15, 15"
-                Style="{StaticResource DefaultLabel}"
-                Text="オープンソースライセンス" />
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="10"
-                Margin="15, 0"
-                Style="{StaticResource DefaultLabelSmall}"
-                TextColor="{StaticResource SecondaryText}"
-                Text="接触確認アプリ『COCOA』は無料のオープンソースソフトウェアです。COCOAは Mozilla Public License 2.0 の条項下で提供されます。" />
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="11"
-                Margin="15, 0"
-                Style="{StaticResource DefaultLabelSmall}"
-                TextColor="{StaticResource SecondaryText}"
-                Text="COCOAのソースコードは次のURLから入手できます。" />
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="12"
-                Margin="15, 5"
-                Style="{StaticResource DefaultLabelSmall}"
-                Text="https://github.com/cocoa-mhlw/cocoa" />
-
-            <Button
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="13"
-                Margin="20, 20, 20, 10"
-                Command="{Binding OpenGitHub}"
-                Style="{StaticResource DefaultButton}"
-                Text="ソースコードを入手" />
-
-            <Button
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="14"
-                Margin="20, 10"
-                Command="{prism:NavigateTo 'LicenseAgreementPage'}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.SettingsPageLicenseButton}" />
-
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="3"
-                Margin="15, 20, 15, 15"
-                Style="{StaticResource DefaultLabel}"
-                Text="COCOAの改善に協力する" />
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="4"
-                Margin="15, 0"
-                Style="{StaticResource DefaultLabelSmall}"
-                TextColor="{StaticResource SecondaryText}"
-                Text="COCOA改善のための匿名での情報送信を設定します。" />
-            <Button
-                AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="5"
-                Margin="20"
-                Command="{Binding OpenSendLogSettingPage}"
-                Style="{StaticResource DefaultButton}"
-                Text="情報送信を設定" />
-
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-
-        </StackLayout>
-    </ScrollView>
                         AutomationProperties.Name="{Binding PrivacyPolicyReadText}"
                         HorizontalOptions="Start"
                         Style="{StaticResource LinkLabelStyleMedium}"
