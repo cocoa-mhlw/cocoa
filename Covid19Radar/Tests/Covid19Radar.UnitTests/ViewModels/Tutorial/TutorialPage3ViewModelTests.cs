@@ -2,8 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System.Threading.Tasks;
+using System;
+using System.Net;
 using Acr.UserDialogs;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
@@ -13,14 +15,14 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.ViewModels
 {
-    public class TutorialPage3ViewModelTests
+    public class TutorialPage3ViewModelTests : IDisposable
     {
         private readonly MockRepository mockRepository;
         private readonly Mock<IUserDialogs> mockUserDialogs;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IUserDataService> mockUserDataService;
-        private readonly Mock<ITermsUpdateService> mockTermsUpdateService;
+        private readonly Mock<IUserDataRepository> mockUserDataRepository;
 
 
         public TutorialPage3ViewModelTests()
@@ -33,18 +35,18 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockUserDataService = mockRepository.Create<IUserDataService>();
-            mockTermsUpdateService = mockRepository.Create<ITermsUpdateService>();
+            mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
         }
 
-        [Fact]
         public void Dispose()
         {
             mockUserDialogs.Reset();
             mockNavigationService.Reset();
             mockLoggerService.Reset();
             mockUserDataService.Reset();
-            mockTermsUpdateService.Reset();
+            mockUserDataRepository.Reset();
 
+            UserDialogs.Instance = null;
         }
 
         private TutorialPage3ViewModel CreateViewModel()
@@ -53,7 +55,7 @@ namespace Covid19Radar.UnitTests.ViewModels
                 mockNavigationService.Object,
                 mockLoggerService.Object,
                 mockUserDataService.Object,
-                mockTermsUpdateService.Object
+                mockUserDataRepository.Object
             );
             return vm;
         }
@@ -66,7 +68,7 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             mockUserDataService
                 .Setup(product => product.RegisterUserAsync())
-                .Returns(Task.Run(() => { return true; }));
+                .ReturnsAsync(HttpStatusCode.OK);
 
             unitUnderTest.OnClickAgree.Execute(null);
 
@@ -74,7 +76,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
             mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Never());
 
-            mockNavigationService.Verify(x => x.NavigateAsync("PrivacyPolicyPage"), Times.Once);
+            mockNavigationService.Verify(x => x.NavigateAsync("PrivacyPolicyPage"), Times.Once());
         }
 
         [Fact]
@@ -85,7 +87,7 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             mockUserDataService
                 .Setup(product => product.RegisterUserAsync())
-                .Returns(Task.Run(() =>　{　return false; }));
+                .ReturnsAsync(HttpStatusCode.Forbidden);
 
             unitUnderTest.OnClickAgree.Execute(null);
 
@@ -93,7 +95,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
             mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), "OK", null), Times.Once());
 
-            mockNavigationService.Verify(x => x.NavigateAsync("PrivacyPolicyPage"), Times.Never);
+            mockNavigationService.Verify(x => x.NavigateAsync("PrivacyPolicyPage"), Times.Never());
         }
 
     }
