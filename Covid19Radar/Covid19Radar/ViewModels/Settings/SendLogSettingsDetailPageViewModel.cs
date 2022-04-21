@@ -10,23 +10,37 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class SendLogSettingsPageViewModel : ViewModelBase
+    public class SendLogSettingsDetailPageViewModel : ViewModelBase
     {
         private readonly ILoggerService _loggerService;
 
-        private Destination _destination = Destination.HomePage;
-
         private readonly IUserDataRepository _userDataRepository;
+
+        private Destination _destination = Destination.SettingsPage;
         private INavigationParameters _navigationParameters;
 
-        public SendLogSettingsPageViewModel(
+        private bool _enableShowNotify = true;
+        public bool EnableShowNotify
+        {
+            get { return _enableShowNotify; }
+            set { SetProperty(ref _enableShowNotify, value); }
+        }
+
+        private bool _enableExposureData = true;
+        public bool EnableExposureData
+        {
+            get { return _enableExposureData; }
+            set { SetProperty(ref _enableExposureData, value); }
+        }
+
+        public SendLogSettingsDetailPageViewModel(
             INavigationService navigationService,
             IUserDataRepository userDataRepository,
             ILoggerService loggerService
             ) : base(navigationService)
         {
-            _loggerService = loggerService;
             _userDataRepository = userDataRepository;
+            _loggerService = loggerService;
         }
 
         public override void Initialize(INavigationParameters parameters)
@@ -35,9 +49,9 @@ namespace Covid19Radar.ViewModels
 
             _navigationParameters = parameters;
 
-            if (parameters.ContainsKey(SendLogSettingsPage.DestinationKey))
+            if (parameters.ContainsKey(SendLogSettingsDetailPage.DestinationKey))
             {
-                _destination = parameters.GetValue<Destination>(SendLogSettingsPage.DestinationKey);
+                _destination = parameters.GetValue<Destination>(SendLogSettingsDetailPage.DestinationKey);
             }
 
         }
@@ -46,8 +60,7 @@ namespace Covid19Radar.ViewModels
         {
             _loggerService.StartMethod();
 
-            var navigationParams = SendLogSettingsDetailPage.BuildNavigationParams(_destination);
-            _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsDetailPage.ToPath(), navigationParams);
+            _ = await NavigationService.NavigateAsync(_destination.ToPath(), _navigationParameters);
 
             _loggerService.EndMethod();
 

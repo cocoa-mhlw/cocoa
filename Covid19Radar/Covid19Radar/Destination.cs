@@ -15,6 +15,7 @@ namespace Covid19Radar
         ContactedNotifyPage,
         NotifyOtherPage,
         SendLogSettingsPage,
+        SendLogSettingsDetailPage,
         TutorialPage4_EnableExposureNotification,
     }
 
@@ -26,6 +27,7 @@ namespace Covid19Radar
         private static string ContactedNotifyPagePath => HomePagePath + "/" + nameof(ContactedNotifyPage);
         private static string NotifyOtherPagePath => HomePagePath + "/" + nameof(NotifyOtherPage);
         private static string SendLogSettingsPage = nameof(SendLogSettingsPage);
+        private static string SendLogSettingsDetailPage = nameof(SendLogSettingsDetailPage);
 
         private static string TutorialPage4_EnableExposureNotification = nameof(TutorialPage4);
 
@@ -39,6 +41,7 @@ namespace Covid19Radar
                 Destination.ContactedNotifyPage => ContactedNotifyPagePath,
                 Destination.NotifyOtherPage => NotifyOtherPagePath,
                 Destination.SendLogSettingsPage => SendLogSettingsPage,
+                Destination.SendLogSettingsDetailPage => SendLogSettingsDetailPage,
                 Destination.TutorialPage4_EnableExposureNotification => TutorialPage4_EnableExposureNotification,
                 _ => throw new System.NotImplementedException()
             };

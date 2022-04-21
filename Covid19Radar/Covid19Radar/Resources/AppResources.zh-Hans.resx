@@ -1367,29 +1367,9 @@ However, if you have any symptoms, please consider receiving a consultation..
     <value>Send data</value>
     <comment>TODO:COCOAの改善に協力する</comment>
   </data>
-  <data name="ButtonFinishCooperate" xml:space="preserve">
-    <value>Stop sending data</value>
-    <comment>TODO:協力を終了する</comment>
-  </data>
-  <data name="SendLogEnableSendLogDialogTitle" xml:space="preserve">
-    <value>Thank you for your cooperation.</value>
-    <comment>TODO:ご協力ありがとうございます</comment>
-  </data>
-  <data name="SendLogEnableSendLogDialogMessage" xml:space="preserve">
-    <value>You can stop sending data at any time from the app settings.</value>
-    <comment>TODO:改善への協力はCOCOAの『設定』からいつでも終了できます。</comment>
-  </data>
-  <data name="SendLogDisableSendLogDialogTitle1" xml:space="preserve">
-    <value>Thank you for your consideration.</value>
-    <comment>TODO:ご検討ありがとうございます</comment>
-  </data>
-  <data name="SendLogDisableSendLogDialogTitle2" xml:space="preserve">
-    <value>Thank you for your cooperation.</value>
-    <comment>TODO:ご協力ありがとうございました</comment>
-  </data>
-  <data name="SendLogDisableSendLogDialogMessage" xml:space="preserve">
-    <value>You can start sending data at any time from the app settings.</value>
-    <comment>TODO:改善への協力はCOCOAの『設定』からいつでも開始できます。</comment>
+  <data name="TelemetryDesignTitle" xml:space="preserve">
+    <value>Telemetry Design</value>
+    <comment>TODO:送信する情報について</comment>
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">

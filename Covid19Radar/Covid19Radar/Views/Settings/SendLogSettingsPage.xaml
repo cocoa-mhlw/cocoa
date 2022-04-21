@@ -43,7 +43,7 @@
                     Margin="0,0,0,20"
                     Aspect="AspectFit"
                     Scale="0.9"
-                    Source="TutorialPage50.png"
+                    Source="TutorialPage12.png"
                     />
 
                 <Label
@@ -53,6 +53,7 @@
                     Margin="0,0,0,10"
                     Text="{x:Static resources:AppResources.SendLogSetttingDescription1}"
                     />
+
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="3"
@@ -60,44 +61,34 @@
                     Margin="0,0,0,10"
                     Text="{x:Static resources:AppResources.SendLogSetttingDescription2}"
                     />
+
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="4"
                     Style="{StaticResource DefaultLabel}"
-                    Margin="0,0,0,10"
+                    Margin="0,0,0,0"
                     Text="{x:Static resources:AppResources.SendLogSetttingDescription3}"
-                    />
-
-                <Label
-                    AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="5"
-                    Style="{StaticResource LinkLabelStyleMedium}"
-                    Margin="0,0,0,20"
-                    Text="{x:Static resources:AppResources.PrivacyPolicyPageTitle}">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding OpenPrivacyPolicy}" />
-                    </Label.GestureRecognizers>
-                </Label>
-
-                <Label
-                    AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="6"
-                    Style="{StaticResource DefaultLabel}"
-                    Margin="0,0,0,10"
-                    Text="{x:Static resources:AppResources.SendLogSetttingDescription4}"
                     />
 
             </StackLayout>
             <StackLayout
                 Grid.Row="1"
-                Margin="0,0,0,20"
+                Margin="0,0,0,10"
                 >
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    TabIndex="6"
+                    Style="{StaticResource DefaultLabel}"
+                    Margin="0,0,0,20"
+                    Text="{x:Static resources:AppResources.SendLogSetttingDescription4}"
+                    />
+
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="7"
-                    Command="{Binding Path=OnClickEnableSendLog}"
+                    Command="{Binding Path=OnClickAcceptSendLog}"
                     Style="{StaticResource DefaultButton}"
-                    Text="{Binding EnableButtonLabel}"
+                    Text="{x:Static resources:AppResources.ButtonStartCooperate}"
                     />
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
@@ -105,7 +96,7 @@
                     Margin="0,10,0,0"
                     Command="{Binding Path=OnClickDisableSendLog}"
                     Style="{StaticResource DefaultButton}"
-                    Text="{Binding DisableButtonLabel}"
+                    Text="{x:Static resources:AppResources.ButtonNotNow}"
                     />
             </StackLayout>
         </Grid>

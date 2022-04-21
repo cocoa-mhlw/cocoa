@@ -2081,42 +2081,18 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string ButtonFinishCooperate {
-            get {
-                return ResourceManager.GetString("ButtonFinishCooperate", resourceCulture);
-            }
-        }
-        
-        public static string SendLogEnableSendLogDialogTitle {
-            get {
-                return ResourceManager.GetString("SendLogEnableSendLogDialogTitle", resourceCulture);
-            }
-        }
-        
-        public static string SendLogEnableSendLogDialogMessage {
-            get {
-                return ResourceManager.GetString("SendLogEnableSendLogDialogMessage", resourceCulture);
-            }
-        }
-        
-        public static string SendLogDisableSendLogDialogTitle1 {
-            get {
-                return ResourceManager.GetString("SendLogDisableSendLogDialogTitle1", resourceCulture);
-            }
-        }
-        
-        public static string SendLogDisableSendLogDialogTitle2 {
-            get {
-                return ResourceManager.GetString("SendLogDisableSendLogDialogTitle2", resourceCulture);
-            }
-        }
-        
         public static string SendLogDisableSendLogDialogMessage {
             get {
                 return ResourceManager.GetString("SendLogDisableSendLogDialogMessage", resourceCulture);
             }
         }
-
+        
+        public static string TelemetryDesignTitle {
+            get {
+                return ResourceManager.GetString("TelemetryDesignTitle", resourceCulture);
+            }
+        }
+        
         public static string ExposuresPageToUtcDescription {
             get {
                 return ResourceManager.GetString("ExposuresPageToUtcDescription", resourceCulture);

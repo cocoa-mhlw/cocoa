@@ -1363,30 +1363,15 @@
     <value>COCOAの改善に協力する</value>
     <comment>COCOAの改善に協力する</comment>
   </data>
-  <data name="ButtonFinishCooperate" xml:space="preserve">
-    <value>協力を終了する</value>
-    <comment>協力を終了する</comment>
-  </data>
-  <data name="SendLogEnableSendLogDialogTitle" xml:space="preserve">
-    <value>ご協力ありがとうございます</value>
-    <comment>ご協力ありがとうございます</comment>
-  </data>
-  <data name="SendLogEnableSendLogDialogMessage" xml:space="preserve">
-    <value>改善への協力はCOCOAの『設定』からいつでも終了できます。</value>
-    <comment>改善への協力はCOCOAの『設定』からいつでも終了できます。</comment>
-  </data>
-  <data name="SendLogDisableSendLogDialogTitle1" xml:space="preserve">
-    <value>ご検討ありがとうございます</value>
-    <comment>ご検討ありがとうございます</comment>
-  </data>
-  <data name="SendLogDisableSendLogDialogTitle2" xml:space="preserve">
-    <value>ご協力ありがとうございました</value>
-    <comment>ご協力ありがとうございました</comment>
-  </data>
   <data name="SendLogDisableSendLogDialogMessage" xml:space="preserve">
     <value>改善への協力はCOCOAの『設定』からいつでも開始できます。</value>
     <comment>改善への協力はCOCOAの『設定』からいつでも開始できます。</comment>
   </data>
+  <data name="TelemetryDesignTitle" xml:space="preserve">
+    <value>送信する情報について</value>
+    <comment>送信する情報について</comment>
+  </data>
+  
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
     <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
