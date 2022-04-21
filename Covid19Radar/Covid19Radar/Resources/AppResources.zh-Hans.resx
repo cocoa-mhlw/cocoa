@@ -1083,6 +1083,14 @@ However, if you have any symptoms, please consider receiving a consultation..
     <value>确认处理方式</value>
     <comment>対処方法を確認</comment>
   </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription1" xml:space="preserve">
+    <value>有无接触的确认次数已超过上限。</value>
+    <comment>接触有無の確認回数が上限を超えました。</comment>
+  </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription2" xml:space="preserve">
+    <value>请等待最长1天来确认。</value>
+    <comment>解決のため、最大1日程度お待ちください。</comment>
+  </data>
   <data name="HomePageENStatusStoppedTitle" xml:space="preserve">
     <value>停止中</value>
     <comment>停止中</comment>

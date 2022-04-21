@@ -207,32 +207,47 @@ namespace Covid19Radar.UnitTests.ViewModels
                 .Verify(x => x.StartExposureNotificationAsync(), Times.Never());
         }
 
-        [Theory]
-        [InlineData(ExposureNotificationStatus.Code_Android.ACTIVATED, false, false, true, false)]
-        [InlineData(ExposureNotificationStatus.Code_Android.INACTIVATED, true, false, false, true)]
-        public void UpdateView_ENStatus_Unconfirmed_Stopped(
-            int status,
-            bool isCanConfirmExposure,
-            bool isVisibleActiveLayoutResult,
-            bool isVisibleUnconfirmedLayoutResult,
-            bool isVisibleStoppedLayoutResult
-            )
+        [Fact]
+        public void UpdateView_ENStatus_Unconfirmed()
         {
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync())
-                .Returns(Task.FromResult(new List<int>() { status } as IList<int>));
+                .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
 
             mockPreferenceService
                 .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
-                .Returns(isCanConfirmExposure);
+                .Returns(false);
 
             homePageViewModel.OnAppearing();
 
-            Assert.Equal(isVisibleActiveLayoutResult, homePageViewModel.IsVisibleENStatusActiveLayout);
-            Assert.Equal(isVisibleUnconfirmedLayoutResult, homePageViewModel.IsVisibleENStatusUnconfirmedLayout);
-            Assert.Equal(isVisibleStoppedLayoutResult, homePageViewModel.IsVisibleENStatusStoppedLayout);
+            Assert.False(homePageViewModel.IsVisibleENStatusActiveLayout);
+            Assert.True(homePageViewModel.IsVisibleENStatusUnconfirmedLayout);
+            Assert.False(homePageViewModel.IsVisibleENStatusStoppedLayout);
+            Assert.Equal(AppResources.HomePageENStatusUnconfirmedDescription1, homePageViewModel.EnStatusUnconfirmedDescription1);
+            Assert.Equal(AppResources.HomePageENStatusUnconfirmedDescription2, homePageViewModel.EnStatusUnconfirmedDescription2);
+            Assert.True(homePageViewModel.IsVisibleUnconfirmedTroubleshootingButton);
+        }
+
+        [Fact]
+        public void UpdateView_ENStatus_Stopped()
+        {
+            var homePageViewModel = CreateViewModel();
+
+            mockExposureNotificationApiService
+                .Setup(x => x.GetStatusCodesAsync())
+                .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.INACTIVATED } as IList<int>));
+
+            mockPreferenceService
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
+                .Returns(true);
+
+            homePageViewModel.OnAppearing();
+
+            Assert.False(homePageViewModel.IsVisibleENStatusActiveLayout);
+            Assert.False(homePageViewModel.IsVisibleENStatusUnconfirmedLayout);
+            Assert.True(homePageViewModel.IsVisibleENStatusStoppedLayout);
         }
 
         [Fact]
