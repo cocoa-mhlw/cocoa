@@ -20,6 +20,7 @@ namespace Covid19Radar.UnitTests
             Assert.Single(settings.SupportedRegions);
             Assert.Equal("440", settings.SupportedRegions[0]);
             Assert.Equal("c19r", settings.BlobStorageContainerName);
+            Assert.Equal("https://CDN_URL_BASE/c19r", settings.ExposureConfigurationUrlBase);
             Assert.Equal("ANDROID_SAFETYNETKEY", settings.AndroidSafetyNetApiKey);
             Assert.Equal("https://CDN_URL_BASE/", settings.CdnUrlBase);
             Assert.Equal("https://itunes.apple.com/jp/app/id1516764458?mt=8", settings.AppStoreUrl);

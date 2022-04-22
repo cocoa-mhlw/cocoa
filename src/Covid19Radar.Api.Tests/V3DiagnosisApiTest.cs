@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Models;
@@ -38,12 +39,14 @@ namespace Covid19Radar.Api.Tests
             var validationServer = new Mock<IValidationServerService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
             var verification = new Mock<IVerificationService>();
+            var temporaryExposureKeyValidationService = new Mock<ITemporaryExposureKeyValidationService>();
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
+                                                temporaryExposureKeyValidationService.Object,
                                                 logger);
         }
 
@@ -84,12 +87,17 @@ namespace Covid19Radar.Api.Tests
             var deviceCheck = new Mock<IDeviceValidationService>();
             deviceCheck.Setup(_ => _.Validation(It.IsAny<string>(), It.IsAny<V3DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var verification = new Mock<IVerificationService>();
+
+            var temporaryExposureKeyValidationService = new Mock<ITemporaryExposureKeyValidationService>();
+            temporaryExposureKeyValidationService.Setup(x => x.Validate(It.IsAny<bool>(), It.IsAny<V3DiagnosisSubmissionParameter.Key>())).Returns(true);
+
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
+                                                temporaryExposureKeyValidationService.Object,
                                                 logger);
             var context = new Mock<HttpContext>();
             var keydata = new byte[KEY_LENGTH];
@@ -100,7 +108,8 @@ namespace Covid19Radar.Api.Tests
 
             var bodyJson = new V3DiagnosisSubmissionParameter()
             {
-                SymptomOnsetDate = dateTime.ToString(V3DiagnosisSubmissionParameter.FORMAT_SYMPTOM_ONSET_DATE),
+                HasSymptom = true,
+                OnsetOfSymptomOrTestDate = dateTime.ToString(Constants.FORMAT_TIMESTAMP),
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
                 Platform = platform,
@@ -187,12 +196,17 @@ namespace Covid19Radar.Api.Tests
             var deviceCheck = new Mock<IDeviceValidationService>();
             deviceCheck.Setup(_ => _.Validation(It.IsAny<string>(), It.IsAny<V3DiagnosisSubmissionParameter>(), It.IsAny<DateTimeOffset>())).ReturnsAsync(isValidDevice);
             var verification = new Mock<IVerificationService>();
+
+            var temporaryExposureKeyValidationService = new Mock<ITemporaryExposureKeyValidationService>();
+            temporaryExposureKeyValidationService.Setup(x => x.Validate(It.IsAny<bool>(), It.IsAny<V3DiagnosisSubmissionParameter.Key>())).Returns(true);
+
             var logger = new Mock.LoggerMock<V3DiagnosisApi>();
             var diagnosisApi = new V3DiagnosisApi(config.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
                                                 validationServer.Object,
+                                                temporaryExposureKeyValidationService.Object,
                                                 logger);
             var context = new Mock<HttpContext>();
             var keydata = new byte[KEY_LENGTH];
@@ -203,7 +217,8 @@ namespace Covid19Radar.Api.Tests
 
             var bodyJson = new V3DiagnosisSubmissionParameter()
             {
-                SymptomOnsetDate = dateTime.ToString(V3DiagnosisSubmissionParameter.FORMAT_SYMPTOM_ONSET_DATE),
+                HasSymptom = true,
+                OnsetOfSymptomOrTestDate = dateTime.ToString(Constants.FORMAT_TIMESTAMP),
                 VerificationPayload = verificationPayload,
                 Regions = new[] { region },
                 Platform = platform,
@@ -258,24 +273,25 @@ namespace Covid19Radar.Api.Tests
 
                 V3DiagnosisSubmissionParameter resultParameter = JsonConvert.DeserializeObject<V3DiagnosisSubmissionParameter>(okObjectResult.Value.ToString());
 
-                // Expect 2 items filtered.
-                Assert.AreEqual(15, resultParameter.Keys.Count());
+                Assert.AreEqual(17, resultParameter.Keys.Count());
 
-                Assert.AreEqual(-7, resultParameter.Keys[0].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-6, resultParameter.Keys[1].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-5, resultParameter.Keys[2].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-4, resultParameter.Keys[3].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-3, resultParameter.Keys[4].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-2, resultParameter.Keys[5].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(-1, resultParameter.Keys[6].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(0, resultParameter.Keys[7].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(1, resultParameter.Keys[8].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(2, resultParameter.Keys[9].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(3, resultParameter.Keys[10].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(4, resultParameter.Keys[11].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(5, resultParameter.Keys[12].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(6, resultParameter.Keys[13].DaysSinceOnsetOfSymptoms);
-                Assert.AreEqual(7, resultParameter.Keys[14].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-8, resultParameter.Keys[0].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-7, resultParameter.Keys[1].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-6, resultParameter.Keys[2].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-5, resultParameter.Keys[3].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-4, resultParameter.Keys[4].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-3, resultParameter.Keys[5].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-2, resultParameter.Keys[6].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(-1, resultParameter.Keys[7].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(0, resultParameter.Keys[8].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(1, resultParameter.Keys[9].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(2, resultParameter.Keys[10].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(3, resultParameter.Keys[11].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(4, resultParameter.Keys[12].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(5, resultParameter.Keys[13].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(6, resultParameter.Keys[14].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(7, resultParameter.Keys[15].DaysSinceOnsetOfSymptoms);
+                Assert.AreEqual(8, resultParameter.Keys[16].DaysSinceOnsetOfSymptoms);
             }
             else
             {

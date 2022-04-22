@@ -3,22 +3,21 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.Common;
-using Covid19Radar.Api.Extensions;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
-using System.Text;
 
 namespace Covid19Radar.Api.Models
 {
     public class V3DiagnosisSubmissionParameter : IPayload, IDeviceVerification
     {
-        public const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
+        [JsonProperty("hasSymptom")]
+        public bool HasSymptom { get; set; }
 
         // RFC3339
         // e.g. 2021-09-20T23:52:57.436+00:00
-        [JsonProperty("symptomOnsetDate")]
-        public string SymptomOnsetDate { get; set; }
+        [JsonProperty("onsetOfSymptomOrTestDate")]
+        public string OnsetOfSymptomOrTestDate { get; set; }
 
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
@@ -47,8 +46,17 @@ namespace Covid19Radar.Api.Models
         public string Padding { get; set; }
 
         [JsonIgnore]
-        public string KeysTextForDeviceVerification
-            => string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+        public virtual string KeysTextForDeviceVerification
+        {
+            get
+            {
+                if (Keys is null)
+                {
+                    return string.Empty;
+                }
+                return string.Join(",", Keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
+            }
+        }
 
         #region Apple Device Check
 
@@ -58,10 +66,18 @@ namespace Covid19Radar.Api.Models
 
         [JsonIgnore]
         public string TransactionIdSeed
-            => SymptomOnsetDate
-                +AppPackageName
-                + KeysTextForDeviceVerification
-                + IAndroidDeviceVerification.GetRegionString(Regions);
+        {
+            get
+            {
+                var hasSymptom = HasSymptom ? "HasSymptom" : "NoSymptom";
+                return
+                    AppPackageName
+                    + OnsetOfSymptomOrTestDate
+                    + hasSymptom
+                    + KeysTextForDeviceVerification
+                    + IAndroidDeviceVerification.GetRegionString(Regions);
+            }
+        }
 
         #endregion
 
@@ -73,7 +89,13 @@ namespace Covid19Radar.Api.Models
 
         [JsonIgnore]
         public string ClearText
-            => string.Join("|", SymptomOnsetDate, AppPackageName, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
+        {
+            get
+            {
+                var hasSymptom = HasSymptom ? "HasSymptom" : "NoSymptom";
+                return string.Join("|", AppPackageName, OnsetOfSymptomOrTestDate, hasSymptom, KeysTextForDeviceVerification, IAndroidDeviceVerification.GetRegionString(Regions), VerificationPayload);
+            }
+        }
 
         #endregion
 
@@ -115,22 +137,6 @@ namespace Covid19Radar.Api.Models
                     Exported = false
                 };
             }
-            /// <summary>
-            /// Validation
-            /// </summary>
-            /// <returns>true if valid</returns>
-            public bool IsValid()
-            {
-                if (string.IsNullOrWhiteSpace(KeyData)) return false;
-                if (RollingPeriod > Constants.ActiveRollingPeriod) return false;
-
-                var dateTime = DateTime.UtcNow.Date;
-                var todayRollingStartNumber = dateTime.ToRollingStartNumber();
-
-                var oldestRollingStartNumber = dateTime.AddDays(Constants.OutOfDateDays).ToRollingStartNumber();
-                if (RollingStartNumber < oldestRollingStartNumber || RollingStartNumber > todayRollingStartNumber) return false;
-                return true;
-            }
 
             public string GetKeyString() => string.Join(".", KeyData, RollingStartNumber, RollingPeriod, ReportType);
         }
@@ -151,10 +157,10 @@ namespace Covid19Radar.Api.Models
 
         public void SetDaysSinceOnsetOfSymptoms()
         {
-            var symptomOnsetDate = DateTime.ParseExact(SymptomOnsetDate, FORMAT_SYMPTOM_ONSET_DATE, null).ToUniversalTime().Date;
+            var onsetOfSymptomOrTestDate = DateTime.ParseExact(OnsetOfSymptomOrTestDate, Constants.FORMAT_TIMESTAMP, null).ToUniversalTime().Date;
             foreach (var key in Keys)
             {
-                var dateOffset = key.GetDate() - symptomOnsetDate;
+                var dateOffset = key.GetDate() - onsetOfSymptomOrTestDate;
                 key.DaysSinceOnsetOfSymptoms = dateOffset.Days;
             }
         }

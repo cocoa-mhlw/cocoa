@@ -28,8 +28,8 @@ namespace Covid19Radar.Model
             DaysSinceLastExposure = exposureSummary.DaysSinceLastExposure;
             MatchedKeyCount = exposureSummary.MatchedKeyCount;
             HighestRiskScore = exposureSummary.MaximumRiskScore;
-            AttenuationDurations = exposureSummary.AttenuationDurationsInMinutes
-                .Select(attenuationDuration => TimeSpan.FromSeconds(attenuationDuration))
+            AttenuationDurations = exposureSummary.AttenuationDurationsInMillis
+                .Select(attenuationDuration => TimeSpan.FromMilliseconds(attenuationDuration))
                 .ToArray();
             SummationRiskScore = exposureSummary.SummationRiskScore;
         }

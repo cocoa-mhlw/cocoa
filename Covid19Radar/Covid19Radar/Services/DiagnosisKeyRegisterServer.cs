@@ -4,11 +4,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
@@ -17,8 +17,6 @@ namespace Covid19Radar.Services
 {
     public class DiagnosisKeyRegisterServer : IDiagnosisKeyRegisterServer
     {
-        private const string FORMAT_SYMPTOM_ONSET_DATE = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
-
         private readonly ILoggerService _loggerService;
         private readonly IHttpDataService _httpDataService;
         private readonly IDeviceVerifier _deviceVerifier;
@@ -34,7 +32,8 @@ namespace Covid19Radar.Services
             _deviceVerifier = deviceVerifier;
         }
 
-        public async Task<IList<HttpStatusCode>> SubmitDiagnosisKeysAsync(
+        public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+            bool hasSymptom,
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,
@@ -62,10 +61,14 @@ namespace Covid19Radar.Services
                         );
                 }
 
-                var diagnosisInfo = await CreateSubmissionAsync(symptomOnsetDate, temporaryExposureKeys, processNumber, idempotencyKey);
-                IList<HttpStatusCode> httpStatusCode = await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
-
-                return httpStatusCode;
+                var diagnosisInfo = await CreateSubmissionAsync(
+                    hasSymptom,
+                    symptomOnsetDate,
+                    temporaryExposureKeys,
+                    processNumber,
+                    idempotencyKey
+                    );
+                return await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
             }
             finally
             {
@@ -74,6 +77,7 @@ namespace Covid19Radar.Services
         }
 
         private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(
+            bool hasSymptom,
             DateTime symptomOnsetDate,
             IList<TemporaryExposureKey> temporaryExposureKeys,
             string processNumber,
@@ -82,19 +86,13 @@ namespace Covid19Radar.Services
         {
             _loggerService.StartMethod();
 
-            if (temporaryExposureKeys.Count() == 0)
-            {
-                _loggerService.Error($"Temporary exposure keys is empty.");
-                _loggerService.EndMethod();
-                throw new InvalidDataException();
-            }
-
             // Create the network keys
             var keys = temporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key
             {
                 KeyData = Convert.ToBase64String(k.KeyData),
                 RollingStartNumber = (uint)k.RollingStartIntervalNumber,
                 RollingPeriod = (uint)k.RollingPeriod,
+                ReportType = (uint)k.ReportType,
             });
 
             // Generate Padding
@@ -103,7 +101,8 @@ namespace Covid19Radar.Services
             // Create the submission
             var submission = new DiagnosisSubmissionParameter()
             {
-                SymptomOnsetDate = symptomOnsetDate.ToString(FORMAT_SYMPTOM_ONSET_DATE),
+                HasSymptom = hasSymptom,
+                OnsetOfSymptomOrTestDate = symptomOnsetDate.ToString(AppConstants.FORMAT_TIMESTAMP),
                 Keys = keys.ToArray(),
                 Regions = AppSettings.Instance.SupportedRegions,
                 Platform = DeviceInfo.Platform.ToString().ToLowerInvariant(),
@@ -114,7 +113,30 @@ namespace Covid19Radar.Services
                 Padding = padding
             };
 
-            submission.DeviceVerificationPayload = await _deviceVerifier.VerifyAsync(submission);
+            // Create device verification payload
+            var tries = 0;
+            var delay = 4 * 1000;
+            while (true) {
+                var deviceVerificationPayload = await _deviceVerifier.VerifyAsync(submission);
+                if (!_deviceVerifier.IsErrorPayload(deviceVerificationPayload))
+                {
+                    _loggerService.Info("Payload creation successful.");
+                    submission.DeviceVerificationPayload = deviceVerificationPayload;
+                    break;
+                }
+                else if (tries >= 3)
+                {
+                    _loggerService.Error("Payload creation failed all.");
+                    throw new DiagnosisKeyRegisterException(DiagnosisKeyRegisterException.Codes.FailedCreatePayload);
+                }
+
+                _loggerService.Warning($"Payload creation failed. {tries + 1} time(s).");
+                _loggerService.Info($"delay {delay} msec");
+                await Task.Delay(delay);
+                delay *= 2;
+
+                tries++;
+            }
 
             _loggerService.Info($"DeviceVerificationPayload is {(string.IsNullOrEmpty(submission.DeviceVerificationPayload) ? "null or empty" : "set")}.");
             _loggerService.Info($"VerificationPayload is {(string.IsNullOrEmpty(submission.VerificationPayload) ? "null or empty" : "set")}.");
@@ -139,6 +161,22 @@ namespace Covid19Radar.Services
             var padding = new byte[size];
             random.NextBytes(padding);
             return Convert.ToBase64String(padding);
+        }
+    }
+
+    public class DiagnosisKeyRegisterException : Exception
+    {
+        private const string DataKeyCode = "code";
+
+        public enum Codes {
+            FailedCreatePayload,
+        }
+
+        public Codes Code => (Codes)Data[DataKeyCode];
+
+        public DiagnosisKeyRegisterException(Codes code) : base("Failed to register the diagnostic key.")
+        {
+            Data[DataKeyCode] = code;
         }
     }
 }

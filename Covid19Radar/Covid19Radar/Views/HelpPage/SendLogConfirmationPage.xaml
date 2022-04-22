@@ -23,12 +23,10 @@
                 Spacing="20">
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="1"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.SendLogConfirmationPageDescription1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="2"
                     Style="{StaticResource AnnotationLabel}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -39,7 +37,6 @@
                 </Label>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="3"
                     Style="{StaticResource DefaultLabel}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -53,7 +50,6 @@
                 </Label>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="4"
                     Style="{StaticResource AnnotationLabel}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -64,7 +60,6 @@
                 </Label>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="5"
                     Style="{StaticResource DefaultLabel}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -78,7 +73,6 @@
                 </Label>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="6"
                     Style="{StaticResource DefaultLabelSmall}">
                     <Label.FormattedText>
                         <FormattedString>
@@ -92,20 +86,18 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Frame HasShadow="False" Padding="0">
-                    <Frame.GestureRecognizers>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding ConfirmingLogReadText}"
+                    Style="{StaticResource LinkLabelStyleMedium}"
+                    HorizontalOptions="Start"
+                    Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}">
+                    <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding Path=OnClickConfirmLogCommand}"/>
-                    </Frame.GestureRecognizers>
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        AutomationProperties.Name="{Binding ConfirmingLogReadText}"
-                        TabIndex="7"
-                        Style="{StaticResource LinkLabelStyleMedium}"
-                        Text="{x:Static resources:AppResources.SendLogConfirmationPageTextLink1}" />
-                </Frame>
+                    </Label.GestureRecognizers>
+                </Label>
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="4"
                     Command="{Binding Path=OnClickSendLogCommand}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.SendLogConfirmationPageButton1}" />

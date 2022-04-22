@@ -4,8 +4,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Repository;
@@ -14,9 +14,9 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
-    public interface IExposureDataCollectServer
+    public interface IDebugExposureDataCollectServer
     {
-        public Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion,
@@ -24,7 +24,7 @@ namespace Covid19Radar.Services
             IList<ExposureInformation> exposureInformation
             );
 
-        public Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion,
@@ -32,43 +32,46 @@ namespace Covid19Radar.Services
             IList<ExposureWindow> exposureWindows
             );
 
-        public Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion
             );
     }
 
-    public class ReleaseExposureDataCollectServer : IExposureDataCollectServer
+    public class DebugExposureDataCollectServerNop : IDebugExposureDataCollectServer
     {
-        public Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion,
             ExposureSummary exposureSummary,
             IList<ExposureInformation> exposureInformation
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
 
-        public Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion,
             IList<DailySummary> dailySummaries,
             IList<ExposureWindow> exposureWindows
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
 
-        public Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
     }
 
+/// For user-privacy, this class is used for DEBUG only.
+/// Below #if is intented safe-guard for prevent contamination.
+/// DO NOT REMOVE.
 #if DEBUG
-    public class DebugExposureDataCollectServer : IExposureDataCollectServer
+    public class DebugExposureDataCollectServer : IDebugExposureDataCollectServer
     {
         private readonly ILoggerService _loggerService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
@@ -85,7 +88,7 @@ namespace Covid19Radar.Services
             _httpClient = httpClientService.Create();
         }
 
-        public async Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public async Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion,
@@ -101,10 +104,10 @@ namespace Covid19Radar.Services
                 EnVersion = enVersion,
             };
 
-            return await UploadExposureDataAsync(exposureResult);
+            await UploadExposureDataAsync(exposureResult);
         }
 
-        public async Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public async Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion,
@@ -120,10 +123,10 @@ namespace Covid19Radar.Services
                 EnVersion = enVersion,
             };
 
-            return await UploadExposureDataAsync(exposureResult);
+            await UploadExposureDataAsync(exposureResult);
         }
 
-        public async Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public async Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion
@@ -137,22 +140,19 @@ namespace Covid19Radar.Services
                 EnVersion = enVersion,
             };
 
-            return await UploadExposureDataAsync(exposureResult);
+            await UploadExposureDataAsync(exposureResult);
         }
 
-        public async Task<List<ExposureDataResponse>> UploadExposureDataAsync(
+        public async Task UploadExposureDataAsync(
             ExposureRequest exposureRequest
             )
         {
             await _serverConfigurationRepository.LoadAsync();
 
-            var tasks = _serverConfigurationRepository.ExposureDataCollectServerUrls.Select(async url => {
-                return await UploadExposureDataAsync(exposureRequest, url);
-            });
-
-            ExposureDataResponse[] responses = await Task.WhenAll(tasks);
-            var filteredResponse = responses.Where(response => response != null);
-            return filteredResponse.ToList();
+            foreach (var url in _serverConfigurationRepository.ExposureDataCollectServerUrls)
+            {
+                await UploadExposureDataAsync(exposureRequest, url);
+            }
         }
 
         private async Task<ExposureDataResponse?> UploadExposureDataAsync(
@@ -166,7 +166,10 @@ namespace Covid19Radar.Services
             try
             {
                 var requestJson = exposureRequest.ToJsonString();
-                var httpContent = new StringContent(requestJson);
+
+                _loggerService.Info(requestJson);
+
+                var httpContent = new StringContent(requestJson, Encoding.UTF8, "application/json");
 
                 Uri uri = new Uri(exposureDataCollectServerEndpoint);
 
@@ -174,7 +177,7 @@ namespace Covid19Radar.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsStringAsync();
-                    _loggerService.Debug($"{responseJson}");
+                    _loggerService.Debug($"response {responseJson}");
 
                     return JsonConvert.DeserializeObject<ExposureDataResponse>(responseJson);
                 }
@@ -190,7 +193,6 @@ namespace Covid19Radar.Services
             }
         }
     }
-#endif
 
     public class ExposureRequest
     {
@@ -286,4 +288,5 @@ namespace Covid19Radar.Services
         public readonly string? Uri;
 
     }
+#endif
 }

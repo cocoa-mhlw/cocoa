@@ -25,7 +25,6 @@
         <Label
             Grid.Row="0"
             AutomationProperties.IsInAccessibleTree="True"
-            TabIndex="1"
             Margin="0,0,0,20"
             Style="{StaticResource DefaultTitleLabel}"
             Text="{x:Static resources:AppResources.TutorialPage3Title}" />
@@ -37,7 +36,6 @@
                 Progress="0.0" />
             <views:NavigatePopoverWebView
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="2"
                 HorizontalOptions="FillAndExpand"
                 Navigated="OnNavigated"
                 Navigating="OnNavigating"
@@ -48,7 +46,6 @@
         <Button
             Grid.Row="2"
             AutomationProperties.IsInAccessibleTree="True"
-            TabIndex="3"
             Command="{Binding Path=OnClickAgree}"
             Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.TutorialPage3ButtonText}" />

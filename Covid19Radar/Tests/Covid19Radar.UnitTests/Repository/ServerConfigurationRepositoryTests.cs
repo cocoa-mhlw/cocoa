@@ -15,9 +15,6 @@ namespace Covid19Radar.UnitTests.Repository
         {
             string[] paths = new[] { "foo", "bar" };
 
-            string combinedPath = Path.Combine(paths);
-            Assert.Equal("foo/bar", combinedPath);
-
             string result = IServerConfigurationRepository.CombineAsUrl(paths);
             Assert.Equal("foo/bar", result);
         }
@@ -26,9 +23,6 @@ namespace Covid19Radar.UnitTests.Repository
         public void CombineAsUrlTest_removeHeadSlash()
         {
             string[] paths = new[] { "/foo", "bar" };
-
-            string combinedPath = Path.Combine(paths);
-            Assert.Equal("/foo/bar", combinedPath);
 
             string result = IServerConfigurationRepository.CombineAsUrl(paths);
             Assert.Equal("foo/bar", result);
@@ -39,9 +33,6 @@ namespace Covid19Radar.UnitTests.Repository
         {
             string[] paths = new[] { "/foo", "/bar" };
 
-            string combinedPath = Path.Combine(paths);
-            Assert.Equal("/bar", combinedPath);
-
             string result = IServerConfigurationRepository.CombineAsUrl(paths);
             Assert.Equal("foo/bar", result);
         }
@@ -50,9 +41,6 @@ namespace Covid19Radar.UnitTests.Repository
         public void CombineAsUrlTest_manySlashes()
         {
             string[] paths = new[] { "/foo", "//bar" };
-
-            string combinedPath = Path.Combine(paths);
-            Assert.Equal("//bar", combinedPath);
 
             string result = IServerConfigurationRepository.CombineAsUrl(paths);
             Assert.Equal("foo/bar", result);
@@ -63,9 +51,6 @@ namespace Covid19Radar.UnitTests.Repository
         {
             string[] paths = new[] { "/foo", "/bar/" };
 
-            string combinedPath = Path.Combine(paths);
-            Assert.Equal("/bar/", combinedPath);
-
             string result = IServerConfigurationRepository.CombineAsUrl(paths);
             Assert.Equal("foo/bar/", result);
         }
@@ -74,9 +59,6 @@ namespace Covid19Radar.UnitTests.Repository
         public void CombineAsUrlTest_keepLastOneSlash()
         {
             string[] paths = new[] { "/foo", "/bar//" };
-
-            string combinedPath = Path.Combine(paths);
-            Assert.Equal("/bar//", combinedPath);
 
             string result = IServerConfigurationRepository.CombineAsUrl(paths);
             Assert.Equal("foo/bar/", result);

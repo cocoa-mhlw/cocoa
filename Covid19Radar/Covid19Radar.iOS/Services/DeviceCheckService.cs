@@ -11,11 +11,19 @@ namespace Covid19Radar.iOS.Services
 {
     public class DeviceCheckService : IDeviceVerifier
     {
-		public async Task<string> VerifyAsync(DiagnosisSubmissionParameter submission)
+		public async Task<string> VerifyAsync(DiagnosisSubmissionParameter _)
 		{
 			var token = await DeviceCheck.DCDevice.CurrentDevice.GenerateTokenAsync();
 			return Convert.ToBase64String(token.ToArray());
 		}
 
-	}
+        public async Task<string> VerifyAsync(V1EventLogRequest _)
+        {
+			var token = await DeviceCheck.DCDevice.CurrentDevice.GenerateTokenAsync();
+			return Convert.ToBase64String(token.ToArray());
+		}
+
+        public bool IsErrorPayload(string token)
+			=> false;
+    }
 }

@@ -55,6 +55,24 @@ namespace Covid19Radar.Services
                 AppResources.ButtonCancel);
         }
 
+        public async Task ShowHomePageUnknownErrorWaringAsync()
+        {
+            await AlertAsync(
+                AppResources.HomePageDialogExceptionDescription,
+                AppResources.HomePageDialogExceptionTitle,
+                AppResources.ButtonOk);
+        }
+
+        public async Task<bool> ShowLocalNotificationOffWarningAsync()
+        {
+            return await ConfirmAsync(
+                AppResources.LocalNotificationOffWarningDialogMessage,
+                AppResources.LocalNotificationOffWarningDialogTitle,
+                AppResources.ToSettingsButton,
+                AppResources.ButtonCancel);
+        }
+
+
         public async Task<bool> ConfirmAsync(string message, string title = null, string okText = null, string cancelText = null) =>
             await UserDialogs.Instance.ConfirmAsync(message, title, okText, cancelText);
 

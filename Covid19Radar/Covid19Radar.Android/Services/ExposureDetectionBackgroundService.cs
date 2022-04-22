@@ -3,11 +3,14 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Android.Content;
 using Android.Runtime;
 using AndroidX.Work;
 using Chino;
+using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -22,7 +25,7 @@ namespace Covid19Radar.Droid.Services
         internal const int INTERVAL_IN_MINUTES = 4 * 60;
         internal const int BACKOFF_DELAY_IN_MINUTES = 1 * 60;
 
-        internal const string CURRENT_WORK_NAME = "cappuccino_worker";
+        internal const string CURRENT_WORK_NAME = "cocoa-202201";
 
         private readonly ILoggerService _loggerService;
 
@@ -33,7 +36,8 @@ namespace Covid19Radar.Droid.Services
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository,
-            ILocalPathService localPathService
+            ILocalPathService localPathService,
+            IDateTimeUtility dateTimeUtility
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
@@ -41,7 +45,8 @@ namespace Covid19Radar.Droid.Services
                 loggerService,
                 userDataRepository,
                 serverConfigurationRepository,
-                localPathService
+                localPathService,
+                dateTimeUtility
                 )
         {
             _loggerService = loggerService;
@@ -80,9 +85,6 @@ namespace Covid19Radar.Droid.Services
     [Preserve]
     public class BackgroundWorker : Worker
     {
-        private readonly Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
-            = new Lazy<AbsExposureNotificationApiService>(() => ContainerLocator.Current.Resolve<AbsExposureNotificationApiService>());
-
         private readonly Lazy<ILoggerService> _loggerService
             = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
@@ -96,18 +98,10 @@ namespace Covid19Radar.Droid.Services
 
         public override Result DoWork()
         {
-            var exposureNotificationApiService = _exposureNotificationApiService.Value;
             var loggerService = _loggerService.Value;
             var backgroundService = _backgroundService.Value;
 
             loggerService.StartMethod();
-
-            if (!exposureNotificationApiService.IsEnabledAsync().GetAwaiter().GetResult())
-            {
-                loggerService.Debug($"EN API is not enabled." +
-                    $" worker will start after {ExposureDetectionBackgroundService.INTERVAL_IN_MINUTES} minutes later.");
-                return Result.InvokeSuccess();
-            }
 
             try
             {

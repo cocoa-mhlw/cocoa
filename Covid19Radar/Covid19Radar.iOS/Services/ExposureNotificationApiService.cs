@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,16 +15,12 @@ namespace Covid19Radar.iOS.Services
 {
     public class ExposureNotificationApiService : AbsExposureNotificationApiService
     {
-        private ExposureNotificationClient _exposureNotificationClient = new ExposureNotificationClient();
+        private const int MILLISECONDS_TO_WAIT_DISMISSING_ANIMATION = 1000;
 
+        private ExposureNotificationClient _exposureNotificationClient = new ExposureNotificationClient();
         public string UserExplanation
         {
             set => _exposureNotificationClient.UserExplanation = value;
-        }
-
-        public bool IsTest
-        {
-            set => _exposureNotificationClient.IsTest = value;
         }
 
         public ExposureNotificationApiService(
@@ -35,8 +32,18 @@ namespace Covid19Radar.iOS.Services
         public override Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
             => _exposureNotificationClient.GetStatusesAsync();
 
-        public override Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
-            => _exposureNotificationClient.GetTemporaryExposureKeyHistoryAsync();
+        public override async Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
+        {
+            try
+            {
+                return await _exposureNotificationClient.GetTemporaryExposureKeyHistoryAsync();
+            }
+            finally
+            {
+                // [workaround] wait for dismissing en permission modal
+                await Task.Delay(MILLISECONDS_TO_WAIT_DISMISSING_ANIMATION);
+            }
+        }
 
         public override Task<long> GetVersionAsync()
             => _exposureNotificationClient.GetVersionAsync();
@@ -49,18 +56,10 @@ namespace Covid19Radar.iOS.Services
 
         public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
             List<string> keyFiles,
-            ExposureConfiguration configuration,
-            CancellationTokenSource cancellationTokenSource = null
-            )
-            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, configuration, cancellationTokenSource);
-
-        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
-            List<string> keyFiles,
-            ExposureConfiguration configuration,
             string token,
             CancellationTokenSource cancellationTokenSource = null
             )
-            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, configuration, token, cancellationTokenSource);
+            => await _exposureNotificationClient.ProvideDiagnosisKeysAsync(keyFiles, token, cancellationTokenSource);
 
         public override Task<bool> IsEnabledAsync()
             => _exposureNotificationClient.IsEnabledAsync();

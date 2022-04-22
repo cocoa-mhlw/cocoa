@@ -2,8 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
     <IsPackable>false</IsPackable>
+    <!-- TODO: Workaround -->
+    <!-- ref: https://github.com/xamarin/XamarinCommunityToolkit/issues/985#issuecomment-783764832 -->
+    <GenerateErrorForMissingTargetingPacks>false</GenerateErrorForMissingTargetingPacks>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -12,6 +14,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <LangVersion>default</LangVersion>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
@@ -24,8 +27,8 @@
     <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="Microsoft.CodeCoverage" Version="17.0.0" />
     <PackageReference Include="Xamarin.Forms.Mocks" Version="4.7.0.1" />
+    <PackageReference Include="Chino.Common" Version="1.0.0-rc11" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\Covid19Radar\Covid19Radar.csproj" />
   </ItemGroup>
@@ -37,6 +40,7 @@
     <Folder Include="ViewModels\HomePage\" />
     <Folder Include="Models\" />
     <Folder Include="Mocks\" />
+    <Folder Include="ViewModels\Tutorial\" />
     <Folder Include="Services\Migration\" />
     <Folder Include="Common\" />
     <Folder Include="Repository\" />
@@ -48,6 +52,12 @@
     <None Remove="Files\exposure_configuration1.json" />
     <None Remove="Files\exposure_configuration2.json" />
     <None Remove="Files\exposure_configuration_update_infectiousness_for_days_since_onset_of_symptoms.json" />
+    <None Remove="Files\eventlog_submission_parameter1.json" />
+    <None Remove="Files\eventlog_submission_parameter1-cleartext.txt" />
+    <None Remove="Files\exposure_risk_calculation_configuration_v1_1.json" />
+    <None Remove="Files\exposure_risk_configuration1.json" />
+    <None Remove="Files\exposure_risk_configuration2.json" />
+    <None Remove="Files\check_version1.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\exposure_configuration1.json">
@@ -59,5 +69,30 @@
     <Content Include="Files\exposure_configuration_update_infectiousness_for_days_since_onset_of_symptoms.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Files\eventlog_submission_parameter1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\eventlog_submission_parameter1-cleartext.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\exposure_risk_calculation_configuration_v1_1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\exposure_risk_configuration1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\exposure_risk_configuration2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Files\exposure_risk_calculation_configuration_v1_1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Files\check_version1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -21,7 +21,6 @@
         x:Name="list_view"
         AutomationProperties.IsInAccessibleTree="True"
         AutomationProperties.Name="{x:Static resources:AppResources.List}"
-        TabIndex="1"
         ItemsSource="{Binding MenuItems}"
         HasUnevenRows="True"
         SelectedItem="{Binding SelectedMenuItem}"

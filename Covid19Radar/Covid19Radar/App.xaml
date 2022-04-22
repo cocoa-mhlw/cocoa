@@ -151,6 +151,10 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
             </Style>
 
+            <Style x:Key="DefaultLabelBold" TargetType="Label" BasedOn="{StaticResource DefaultLabel}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
             <Style x:Key="DefaultLabelSmall" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
@@ -167,6 +171,13 @@
 
             <Style x:Key="DefaultLabelCaption" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+                <Setter Property="FontSize" Value="Caption" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+
+            <Style x:Key="DefaultLabelCaptionStartAlignment" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="FontSize" Value="Caption" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
@@ -199,7 +210,7 @@
                 <Setter Property="BorderWidth" Value="4" />
                 <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
                 <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="Padding" Value="0,0,0,0" />
+                <Setter Property="Padding" Value="10" />
                 <Setter Property="Margin" Value="0,10,0,5" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="WidthRequest" Value="{x:OnPlatform Android=300, iOS=310}" />
@@ -243,6 +254,12 @@
 
             <!--  Collection List  -->
 
+            <Style x:Key="CardLabel" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+
             <Style x:Key="CardLabelSmall" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Start" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
@@ -260,13 +277,16 @@
             </Style>
 
             <Style x:Key="FrameCardViewStyle" TargetType="Frame">
-                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="CornerRadius" Value="6" />
                 <Setter Property="Margin" Value="5" />
                 <Setter Property="Padding" Value="10" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
                 <Setter Property="OutlineColor" Value="LightGray" />
                 <Setter Property="BorderColor" Value="LightGray" />
-                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="FrameCardViewStyle_Diabled" TargetType="Frame" BasedOn="{StaticResource FrameCardViewStyle}">
+                <Setter Property="Opacity" Value="0.5" />
             </Style>
 
             <Style x:Key="LinkLabelStyleLarge" TargetType="Label">
@@ -298,6 +318,9 @@
 
             <Style x:Key="AnnotationLabel" TargetType="Label" BasedOn="{StaticResource DefaultLabelSmall}">
                 <Setter Property="TextColor" Value="{StaticResource SecondaryText}" />
+            </Style>
+            <Style x:Key="AnnotationLabelDark" TargetType="Label" BasedOn="{StaticResource DefaultLabelSmall}">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
             </Style>
 
         </ResourceDictionary>

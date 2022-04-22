@@ -28,15 +28,21 @@ namespace Covid19Radar.ViewModels
         }
 
         private readonly IUserDataRepository userDataRepository;
+        private readonly IExposureDataRepository exposureDataRepository;
         private readonly IExposureConfigurationRepository exposureConfigurationRepository;
         private readonly ILogFileService logFileService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ICloseApplicationService closeApplicationService;
 
+        public string TermsOfUseReadText => $"{AppResources.TermsofservicePageTitle} {AppResources.Button}";
+        public string PrivacyPolicyReadText => $"{AppResources.PrivacyPolicyPageTitle} {AppResources.Button}";
+        public string WebAccessibilityPolicyReadText => $"{AppResources.WebAccessibilityPolicyPageTitle} {AppResources.Button}";
+
         public SettingsPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository,
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILogFileService logFileService,
             AbsExposureNotificationApiService exposureNotificationApiService,
@@ -47,6 +53,7 @@ namespace Covid19Radar.ViewModels
             AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
+            this.exposureDataRepository = exposureDataRepository;
             this.exposureConfigurationRepository = exposureConfigurationRepository;
             this.logFileService = logFileService;
             this.exposureNotificationApiService = exposureNotificationApiService;
@@ -70,9 +77,9 @@ namespace Covid19Radar.ViewModels
                 await StopExposureNotificationAsync();
 
                 // Reset All Data and Optout
-                await userDataRepository.RemoveDailySummariesAsync();
-                await userDataRepository.RemoveExposureWindowsAsync();
-                userDataRepository.RemoveExposureInformation();
+                await exposureDataRepository.RemoveDailySummariesAsync();
+                await exposureDataRepository.RemoveExposureWindowsAsync();
+                exposureDataRepository.RemoveExposureInformation();
                 await userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
                 await exposureConfigurationRepository.RemoveExposureConfigurationAsync();
 
@@ -116,5 +123,15 @@ namespace Covid19Radar.ViewModels
                 loggerService.EndMethod();
             }
         }
+
+        public ICommand OnClickObtainSourceCode => new Command<string>(async (uri) =>
+        {
+            loggerService.StartMethod();
+
+            await Browser.OpenAsync(uri, BrowserLaunchMode.External);
+
+            loggerService.EndMethod();
+        });
+
     }
 }

@@ -103,8 +103,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             vm.OnClickRegister.Execute(null);
 
             mockUserDialogs.Verify(x => x.AlertAsync(
-                AppResources.NotifyOtherPageDiag5Message,
-                AppResources.ProcessingNumberErrorDiagTitle,
+                AppResources.NotifyOtherPageDialog5Message,
+                AppResources.ProcessingNumberErrorDialogTitle,
                 AppResources.ButtonOk,
                 null
             ), Times.Exactly(3));
@@ -112,8 +112,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             vm.OnClickRegister.Execute(null);
 
             mockUserDialogs.Verify(x => x.AlertAsync(
-                AppResources.NotifyOtherPageDiagReturnHome,
-                AppResources.NotifyOtherPageDiagReturnHomeTitle,
+                AppResources.NotifyOtherPageDialogReturnHome,
+                AppResources.NotifyOtherPageDialogReturnHomeTitle,
                 AppResources.ButtonOk,
                 null
             ), Times.Once());
@@ -152,14 +152,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
         public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
             List<string> keyFiles,
-            ExposureConfiguration configuration,
-            CancellationTokenSource cancellationTokenSource = null
-            )
-            => ProvideDiagnosisKeysResult.Completed;
-
-        public override async Task<ProvideDiagnosisKeysResult> ProvideDiagnosisKeysAsync(
-            List<string> keyFiles,
-            ExposureConfiguration configuration,
             string token,
             CancellationTokenSource cancellationTokenSource = null
             )

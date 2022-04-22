@@ -94,18 +94,27 @@ namespace Covid19Radar.Services
             }
         }
 
-        async Task<bool> IHttpDataService.PostRegisterUserAsync()
+        async Task<HttpStatusCode> IHttpDataService.PostRegisterUserAsync()
         {
             Debug.WriteLine("HttpDataServiceMock::PostRegisterUserAsync called");
-            var result = mockCommonUtils.GetRegisterDataType() switch
+            var code = HttpStatusCode.OK;
+            var result = mockCommonUtils.GetRegisterDataType();
+            if (result >= 100)
             {
-                1 => false,
-                _ => true
-            };
-            return await Task.FromResult(result);
+                code = (HttpStatusCode)result;
+            }
+            else
+            {
+                if (result.Equals(1))
+                {
+                    code = HttpStatusCode.NoContent;
+                }
+            }
+
+            return await Task.FromResult(code);
         }
 
-        Task<IList<HttpStatusCode>> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+        Task<HttpStatusCode> IHttpDataService.PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             var code = HttpStatusCode.OK; // default. for PutSelfExposureKeys NG
             var dataType = mockCommonUtils.GetDiagnosisDataType();
@@ -122,11 +131,9 @@ namespace Covid19Radar.Services
                         break;
                 }
             }
-            return Task.Factory.StartNew<IList<HttpStatusCode>>(() =>
-            {
-                Debug.WriteLine("HttpDataServiceMock::PutSelfExposureKeysAsync called");
-                return new List<HttpStatusCode>() { code };
-            });
+
+            Debug.WriteLine("HttpDataServiceMock::PutSelfExposureKeysAsync called");
+            return Task.FromResult(code);
         }
 
         public Task<ApiResponse<LogStorageSas>> GetLogStorageSas()

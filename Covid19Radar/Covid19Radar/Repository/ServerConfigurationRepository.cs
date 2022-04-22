@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Covid19Radar.Common;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 
@@ -36,9 +37,13 @@ namespace Covid19Radar.Repository
                     .Distinct()
                     .ToList();
 
-        public string InquiryLogApiEndpoint { get; set; }
+        public string? InquiryLogApiUrl { get; set; }
+
+        public string LogStorageEndpoint { get; set; }
 
         public string ExposureConfigurationUrl { get; set; }
+
+        public string ExposureRiskCalculationConfigurationUrl { get; set; }
 
         public string? ExposureDataCollectServerEndpoint { get; set; }
 
@@ -47,6 +52,8 @@ namespace Covid19Radar.Repository
                     .Where(url => url != null)
                     .Distinct()
                     .ToList();
+
+        public string? EventLogApiEndpoint { get; set; }
 
         public Task SaveAsync();
 
@@ -110,10 +117,16 @@ namespace Covid19Radar.Repository
             set => _serverConfiguration.UserRegisterApiEndpoint = value;
         }
 
-        public string InquiryLogApiEndpoint
+        public string LogStorageEndpoint
         {
-            get => _serverConfiguration.InquiryLogApiEndpoint;
-            set => _serverConfiguration.InquiryLogApiEndpoint = value;
+            get => _serverConfiguration.LogStorageEndpoint;
+            set => _serverConfiguration.LogStorageEndpoint = value;
+        }
+
+        public string InquiryLogApiUrl
+        {
+            get => _serverConfiguration.InquiryLogApiUrl;
+            set => _serverConfiguration.InquiryLogApiUrl = value;
         }
 
         public string[] Regions
@@ -140,10 +153,22 @@ namespace Covid19Radar.Repository
             set => _serverConfiguration.ExposureConfigurationUrl = value;
         }
 
+        public string ExposureRiskCalculationConfigurationUrl
+        {
+            get => _serverConfiguration.ExposureRiskCalculationConfigurationUrl;
+            set => _serverConfiguration.ExposureRiskCalculationConfigurationUrl = value;
+        }
+
         public string DiagnosisKeyListProvideServerEndpoint
         {
             get => _serverConfiguration.DiagnosisKeyListProvideServerEndpoint;
             set => _serverConfiguration.DiagnosisKeyListProvideServerEndpoint = value;
+        }
+
+        public string? EventLogApiEndpoint
+        {
+            get => _serverConfiguration.EventLogApiEndpoint;
+            set => _serverConfiguration.EventLogApiEndpoint = value;
         }
 
         public async Task LoadAsync()
@@ -169,6 +194,8 @@ namespace Covid19Radar.Repository
 
     public class ReleaseServerConfigurationRepository : IServerConfigurationRepository
     {
+        public const string PLACEHOLDER_REGION = "{region}";
+
         public string UserRegisterApiEndpoint
         {
             get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
@@ -178,9 +205,18 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public string InquiryLogApiEndpoint
+        public string InquiryLogApiUrl
         {
             get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+            set
+            {
+                // Do nothing
+            }
+        }
+
+        public string LogStorageEndpoint
+        {
+            get => AppSettings.Instance.LogStorageEndpoint;
             set
             {
                 // Do nothing
@@ -198,7 +234,7 @@ namespace Covid19Radar.Repository
 
         public string DiagnosisKeyRegisterApiEndpoint
         {
-            get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
+            get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppConstants.DiagnosisApiVersionCode, "diagnosis");
             set
             {
                 // Do nothing
@@ -207,7 +243,12 @@ namespace Covid19Radar.Repository
 
         public string DiagnosisKeyListProvideServerEndpoint
         {
-            get => null;
+            get => IServerConfigurationRepository.CombineAsUrl(
+                AppSettings.Instance.CdnUrlBase,
+                AppSettings.Instance.BlobStorageContainerName,
+                PLACEHOLDER_REGION,
+                "list.json"
+                );
             set
             {
                 // Do nothing
@@ -219,8 +260,22 @@ namespace Covid19Radar.Repository
             // TODO: Replace url for RELEASE.
             get => IServerConfigurationRepository.CombineAsUrl(
                 AppSettings.Instance.ExposureConfigurationUrlBase,
-                "exposure_configuration/Cappuccino",
+                "exposure_configuration",
                 "configuration.json"
+                );
+            set
+            {
+                // Do nothing
+            }
+        }
+
+        public string ExposureRiskCalculationConfigurationUrl
+        {
+            // TODO: Replace url for RELEASE.
+            get => IServerConfigurationRepository.CombineAsUrl(
+                AppSettings.Instance.ExposureConfigurationUrlBase,
+                "exposure_configuration",
+                "risk_calculation_configuration.json"
                 );
             set
             {
@@ -231,6 +286,15 @@ namespace Covid19Radar.Repository
         public string? ExposureDataCollectServerEndpoint
         {
             get => null;
+            set
+            {
+                // Do nothing
+            }
+        }
+
+        public string? EventLogApiEndpoint
+        {
+            get => IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "v1", "event_log");
             set
             {
                 // Do nothing
@@ -267,15 +331,18 @@ namespace Covid19Radar.Repository
         [JsonProperty("user_register_api_endpoint")]
         public string UserRegisterApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "register");
 
-        [JsonProperty("inquiry_log_api_endpoint")]
-        public string? InquiryLogApiEndpoint = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+        [JsonProperty("inquiry_log_api")]
+        public string? InquiryLogApiUrl = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "inquirylog");
+
+        [JsonProperty("log_storage_endpoint")]
+        public string? LogStorageEndpoint = AppSettings.Instance.LogStorageEndpoint;
 
         [JsonProperty("regions")]
         public string Regions = string.Join(",", AppSettings.Instance.SupportedRegions);
 
         [JsonProperty("diagnosis_key_register_api_endpoint")]
         public string DiagnosisKeyRegisterApiEndpoint
-            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppSettings.Instance.DiagnosisApiVersion, "diagnosis");
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, AppConstants.DiagnosisApiVersionCode, "diagnosis");
 
         [JsonProperty("diagnosis_key_list_provide_server_endpoint")]
         public string DiagnosisKeyListProvideServerEndpoint
@@ -286,9 +353,17 @@ namespace Covid19Radar.Repository
                 "list.json"
                 );
 
+        [JsonProperty("event_log_api_endpoint")]
+        public string? EventLogApiEndpoint
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "v1", "event_log");
+
         [JsonProperty("exposure_configuration_url")]
         public string? ExposureConfigurationUrl
-            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration/Cappuccino", "configuration.json");
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration", "configuration.json");
+
+        [JsonProperty("exposure_risk_calculation_configuration_url")]
+        public string? ExposureRiskCalculationConfigurationUrl
+            = IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ExposureConfigurationUrlBase, "exposure_configuration", "risk_calculation_configuration.json");
 
         [JsonProperty("exposure_data_collect_server_endpoint")]
         public string? ExposureDataCollectServerEndpoint = null;

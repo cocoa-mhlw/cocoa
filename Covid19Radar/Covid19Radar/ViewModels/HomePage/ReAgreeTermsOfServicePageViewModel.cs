@@ -61,18 +61,20 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTimeUtc);
+
+            Destination destination = Destination.HomePage;
+            if (_navigationParameters.ContainsKey(ReAgreeTermsOfServicePage.DestinationKey))
+            {
+                destination = _navigationParameters.GetValue<Destination>(ReAgreeTermsOfServicePage.DestinationKey);
+            }
+
             if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
             {
-                _navigationParameters.Add("updatePrivacyPolicyInfo", UpdateInfo.PrivacyPolicy);
-                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), _navigationParameters);
+                var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(UpdateInfo.PrivacyPolicy, destination, _navigationParameters);
+                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), navigationParams);
             }
             else
             {
-                Destination destination = Destination.HomePage;
-                if (_navigationParameters.ContainsKey(SplashPage.DestinationKey))
-                {
-                    destination = _navigationParameters.GetValue<Destination>(SplashPage.DestinationKey);
-                }
                 _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
             }
 
@@ -84,7 +86,7 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             base.Initialize(parameters);
-            UpdateInfo = (TermsUpdateInfoModel) parameters["updateInfo"];
+            UpdateInfo = (TermsUpdateInfoModel) parameters[ReAgreeTermsOfServicePage.UpdateInfoKey];
             UpdateDateTimeUtc = UpdateInfo.TermsOfService.UpdateDateTimeUtc;
             UpdateText = UpdateInfo.TermsOfService.Text;
 

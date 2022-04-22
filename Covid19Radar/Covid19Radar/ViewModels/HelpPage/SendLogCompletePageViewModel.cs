@@ -4,7 +4,6 @@
 
 using System;
 using System.Threading.Tasks;
-using Acr.UserDialogs;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -17,17 +16,9 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService loggerService;
 
-        private string _LogId;
-
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
 
-        public Func<string, Task> CopyIdAsync { get; set; } = Clipboard.SetTextAsync;
-
-        public string LogId
-        {
-            get { return _LogId; }
-            set { SetProperty(ref _LogId, value); }
-        }
+        private string LogId { get; set; }
 
         public SendLogCompletePageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
         {
@@ -51,22 +42,6 @@ namespace Covid19Radar.ViewModels
             {
                 loggerService.Exception("Exception", ex);
                 loggerService.EndMethod();
-            }
-        });
-
-        public Command OnCopyCommand => new Command(async () =>
-        {
-            try
-            {
-                await CopyIdAsync(LogId);
-                await UserDialogs.Instance.AlertAsync(
-                    null,
-                    title: Resources.AppResources.SuccessMessageToCopyLogId,
-                    okText: Resources.AppResources.ButtonOk);
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Failed to copy operationing information ID.", ex);
             }
         });
 

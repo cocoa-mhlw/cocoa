@@ -8,8 +8,11 @@ namespace Covid19Radar.Model
 {
     public class DiagnosisSubmissionParameter
     {
-        [JsonProperty("symptomOnsetDate")]
-        public string SymptomOnsetDate { get; set; }
+        [JsonProperty("hasSymptom")]
+        public bool HasSymptom { get; set; }
+
+        [JsonProperty("onsetOfSymptomOrTestDate")]
+        public string OnsetOfSymptomOrTestDate { get; set; }
 
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
@@ -40,6 +43,8 @@ namespace Covid19Radar.Model
             public uint RollingStartNumber { get; set; }
             [JsonProperty("rollingPeriod")]
             public uint RollingPeriod { get; set; }
+            [JsonProperty("reportType")]
+            public uint ReportType { get; set; }
         }
     }
 }

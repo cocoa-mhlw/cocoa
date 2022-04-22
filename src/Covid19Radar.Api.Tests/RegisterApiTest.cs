@@ -2,12 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Api;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Primitives;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Threading.Tasks;
@@ -23,10 +21,9 @@ namespace Covid19Radar.Api.Tests
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
-            var cryption = new Mock<ICryptionService>();
             var validationServer = new Mock<IValidationServerService>();
             var logger = new Mock.LoggerMock<RegisterApi>();
-            var registerApi = new RegisterApi(userRepo.Object, cryption.Object, validationServer.Object, logger);
+            var registerApi = new RegisterApi(userRepo.Object, validationServer.Object, logger);
         }
 
         [TestMethod]
@@ -34,13 +31,12 @@ namespace Covid19Radar.Api.Tests
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
-            var cryption = new Mock<ICryptionService>();
             var validationServer = new Mock<IValidationServerService>();
             validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
 
             var logger = new Mock.LoggerMock<RegisterApi>();
 
-            var registerApi = new RegisterApi(userRepo.Object, cryption.Object, validationServer.Object, logger);
+            var registerApi = new RegisterApi(userRepo.Object, validationServer.Object, logger);
             var context = new Mock<HttpContext>();
             context.Setup(_ => _.Request.Headers["X-Azure-FDID"]).Returns("3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5");
             context.Setup(_ => _.Request.Headers.ContainsKey("X-Azure-FDID")).Returns(true);
@@ -59,13 +55,12 @@ namespace Covid19Radar.Api.Tests
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
-            var cryption = new Mock<ICryptionService>();
             var validationServer = new Mock<IValidationServerService>();
             validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Error);
 
             var logger = new Mock.LoggerMock<RegisterApi>();
 
-            var registerApi = new RegisterApi(userRepo.Object, cryption.Object, validationServer.Object, logger);
+            var registerApi = new RegisterApi(userRepo.Object, validationServer.Object, logger);
             var context = new Mock<HttpContext>();
 
             // action

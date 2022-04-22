@@ -21,53 +21,62 @@ on:
       - 'Covid19Radar.Functions.runsettings'
       - 'Nuget.config'
 jobs:
-  build_serverapi:
-    name: Build-ServerApi
+  build:
+    name: build
     runs-on: windows-latest
     strategy:
       matrix:
         Configuration: [Debug, Release]
     steps:
+    - name: Set up JDK 11
+      if: ${{ matrix.Configuration == 'Release' }}
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.11
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Package Add coverlet.msbuild
+      run: dotnet add ${{ github.workspace }}/src/Covid19Radar.Api.Tests/Covid19Radar.Api.Tests.csproj package coverlet.msbuild
+    - name: Cache SonarCloud packages
+      if: ${{ matrix.Configuration == 'Release' }}
+      uses: actions/cache@v1
+      with:
+        path: ~\sonar\cache
+        key: ${{ runner.os }}-sonar
+        restore-keys: ${{ runner.os }}-sonar
+    - name: Cache SonarCloud scanner
+      if: ${{ matrix.Configuration == 'Release' }}
+      id: cache-sonar-scanner
+      uses: actions/cache@v1
+      with:
+        path: .\.sonar\scanner
+        key: ${{ runner.os }}-sonar-scanner
+        restore-keys: ${{ runner.os }}-sonar-scanner
+    - name: Install SonarCloud scanner
+      if: ${{ steps.cache-sonar-scanner.outputs.cache-hit != 'true' && matrix.Configuration == 'Release' }}
+      shell: powershell
+      run: |
+        New-Item -Path .\.sonar\scanner -ItemType Directory
+        dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+    - name: Begin SonarScanner
+      if: ${{ matrix.Configuration == 'Release' }}
+      run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"cocoa-mhlw_cocoa" /o:"cocoa-mhlw" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
-    - name: Build
-      run: msbuild ${{ github.workspace }}/src/Covid19Radar.Api/Covid19Radar.Api.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
-  build_serverapi_common:
-    name: Build-ServerApi-Common
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        Configuration: [Debug, Release]
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1
-    - name: Build
-      run: msbuild ${{ github.workspace }}/src/Covid19Radar.Api.Common/Covid19Radar.Api.Common.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
-  build_serverapi_background:
-    name: Build-ServerApi-Background
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        Configuration: [Debug, Release]
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1
-    - name: Build
-      run: msbuild ${{ github.workspace }}/src/Covid19Radar.Background/Covid19Radar.Background.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
-  test:
-    name: Test-ServerApi
-    runs-on: ubuntu-latest
-    needs: [build_serverapi, build_serverapi_common, build_serverapi_background]
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - name: msbuild
+      run: msbuild ${{ github.workspace }}/Covid19Radar.Functions.sln /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
     - name: Execute Unit Tests
-      run: dotnet test ${{ github.workspace }}/src/Covid19Radar.Api.Tests/
+      run: dotnet test ${{ github.workspace }}/Covid19Radar.Functions.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --no-build --logger trx --settings ${{ github.workspace }}/Covid19Radar.Functions.runsettings --configuration ${{ matrix.Configuration }} --collect:"XPlat Code Coverage"    
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: true
+    - name: End SonarScanner
+      if: ${{ matrix.Configuration == 'Release' }}
+      run: ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
