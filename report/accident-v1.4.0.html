@@ -1,0 +1,518 @@
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="v1.4.0リリースで発生した障害について #  障害の内容 #  v1.1.5以前にインストールをして利用規約に合意した状態からv1.4.0にアップデートするとアプリが起動できなくなる。
+発生日時 #  2021年11月25日午後3時
+復旧日時 #  iOS: 2021年11月26日午前10時47分
+Android: 2021年11月27日午前11時40分
+発生した事象 #  v1.4.0にアップデート後、COCOAが起動不能になる。
+影響範囲 #  プラットフォーム・OSバージョン #  Android, iOSのすべてのOSバージョン
+台数 #  2,100万台（推定される最大値）
+算出根拠 #  v1.2.0がリリースされる前（v1.0.0 - v1.1.5）にダウンロードされたすべてに影響したと考える。アンインストール数については全数を把握できないため考慮しない。
+【接触確認アプリ】ダウンロード数・陽性登録件数 推移を元に &ldquo;R2.11.30（2,084）&ldquo;から&#34;R2.12.28（2,245）&ldquo;に線形に推移したと仮定して、v1.2.0リリースのあった&#34;R2.12.03&#34;時点のダウンロード数を推計した。
+影響を受けた機能 #   UIを伴うすべての操作（陽性情報登録を含む） バックグラウンドでの診断キーのダウンロードと接触確認  影響を受けなかった機能 #   Bluetooth受発信による接触記録（接触確認APIの機能）  発生から復旧までのタイムライン #   11/25  15:00 - v1.4.0リリース（Google Play, AppStore）  開発チーム iOS端末3台、Android端末2台で公開されたアプリv1.4.0が起動できることを確認   16:17 - GitHub Issue #517 「COCOA v1.">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="v1.4.0リリースで発生した障害について">
+<meta property="og:description" content="v1.4.0リリースで発生した障害について #  障害の内容 #  v1.1.5以前にインストールをして利用規約に合意した状態からv1.4.0にアップデートするとアプリが起動できなくなる。
+発生日時 #  2021年11月25日午後3時
+復旧日時 #  iOS: 2021年11月26日午前10時47分
+Android: 2021年11月27日午前11時40分
+発生した事象 #  v1.4.0にアップデート後、COCOAが起動不能になる。
+影響範囲 #  プラットフォーム・OSバージョン #  Android, iOSのすべてのOSバージョン
+台数 #  2,100万台（推定される最大値）
+算出根拠 #  v1.2.0がリリースされる前（v1.0.0 - v1.1.5）にダウンロードされたすべてに影響したと考える。アンインストール数については全数を把握できないため考慮しない。
+【接触確認アプリ】ダウンロード数・陽性登録件数 推移を元に &ldquo;R2.11.30（2,084）&ldquo;から&#34;R2.12.28（2,245）&ldquo;に線形に推移したと仮定して、v1.2.0リリースのあった&#34;R2.12.03&#34;時点のダウンロード数を推計した。
+影響を受けた機能 #   UIを伴うすべての操作（陽性情報登録を含む） バックグラウンドでの診断キーのダウンロードと接触確認  影響を受けなかった機能 #   Bluetooth受発信による接触記録（接触確認APIの機能）  発生から復旧までのタイムライン #   11/25  15:00 - v1.4.0リリース（Google Play, AppStore）  開発チーム iOS端末3台、Android端末2台で公開されたアプリv1.4.0が起動できることを確認   16:17 - GitHub Issue #517 「COCOA v1.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/report/accident-v1.4.0.html"><meta property="article:section" content="report">
+<meta property="article:modified_time" content="2022-04-23T00:46:30+09:00">
+<title>v1.4.0リリースで発生した障害について | COCOA Open Source Project</title>
+<link rel=manifest href=/cocoa/manifest.json>
+<link rel=icon href=/cocoa/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
+<script defer src=/cocoa/flexsearch.min.js></script>
+<script defer src=/cocoa/en.search.min.de6f7dc4379b1c5626276f901942488e0b4f86a805588fb513e8fd0d469e7df3.js integrity="sha256-3m99xDebHFYmJ2+QGUJIjgtPhqgFWI+1E+j9DUaeffM=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/cocoa/><span>COCOA Open Source Project</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/>デジタル庁 GitHub運用方針</a>
+</li>
+<li>
+<span>Developments</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/branches/>ブランチ構成</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/>ビルド方法</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/maintainance_oss_licenses/>ライセンスの取り扱い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/multi_language/>多言語対応</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Contributions</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/open_beta_version/>接触確認アプリ（COCOA) オープンβ版について</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/guidelines/>貢献についてのガイドライン</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/handling_pullreqeust/>Pull Requestが取り込まれるまで</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors/>Contoributors</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors_covid19radars/>COVID-19Radar Contoributors</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Appendix</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/ios_local_notification/>iOS版の通知許可に関するお願い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/preference_specification/>設定ファイルの仕様</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<a href=https://github.com/cocoa-mhlw/cocoa target=_blank rel=noopener>
+GitHubリポジトリ
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/cocoa/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>v1.4.0リリースで発生した障害について</strong>
+<label for=toc-control>
+<img src=/cocoa/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#障害の内容>障害の内容</a>
+<ul>
+<li><a href=#発生日時>発生日時</a></li>
+<li><a href=#復旧日時>復旧日時</a></li>
+<li><a href=#発生した事象>発生した事象</a></li>
+<li><a href=#影響範囲>影響範囲</a></li>
+</ul>
+</li>
+<li><a href=#発生から復旧までのタイムライン>発生から復旧までのタイムライン</a></li>
+<li><a href=#原因>原因</a>
+<ul>
+<li><a href=#タイムゾーン変換jstからutcへ方法の不適切な選択>タイムゾーン変換（JSTからUTCへ）方法の不適切な選択</a></li>
+<li><a href=#言語仕様への理解が不十分なまま実装をしたこと>言語仕様への理解が不十分なまま実装をしたこと</a></li>
+<li><a href=#過去バージョンの仕様の調査が不足していたこと>過去バージョンの仕様の調査が不足していたこと</a></li>
+</ul>
+</li>
+<li><a href=#復旧方法>復旧方法</a></li>
+<li><a href=#復旧後の状況>復旧後の状況</a></li>
+<li><a href=#当時の対応について>当時の対応について</a>
+<ul>
+<li><a href=#正しく対応できたこと>正しく対応できたこと</a></li>
+<li><a href=#課題>課題</a></li>
+</ul>
+</li>
+<li><a href=#今後の対応>今後の対応</a>
+<ul>
+<li><a href=#再発防止策案>再発防止策（案）</a></li>
+</ul>
+</li>
+<li><a href=#参考>参考</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h1 id=v140リリースで発生した障害について>
+v1.4.0リリースで発生した障害について
+<a class=anchor href=#v140%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9%e3%81%a7%e7%99%ba%e7%94%9f%e3%81%97%e3%81%9f%e9%9a%9c%e5%ae%b3%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a>
+</h1>
+<h2 id=障害の内容>
+障害の内容
+<a class=anchor href=#%e9%9a%9c%e5%ae%b3%e3%81%ae%e5%86%85%e5%ae%b9>#</a>
+</h2>
+<p>v1.1.5以前にインストールをして利用規約に合意した状態からv1.4.0にアップデートするとアプリが起動できなくなる。</p>
+<h3 id=発生日時>
+発生日時
+<a class=anchor href=#%e7%99%ba%e7%94%9f%e6%97%a5%e6%99%82>#</a>
+</h3>
+<p>2021年11月25日午後3時</p>
+<h3 id=復旧日時>
+復旧日時
+<a class=anchor href=#%e5%be%a9%e6%97%a7%e6%97%a5%e6%99%82>#</a>
+</h3>
+<p>iOS: 2021年11月26日午前10時47分</p>
+<p>Android: 2021年11月27日午前11時40分</p>
+<h3 id=発生した事象>
+発生した事象
+<a class=anchor href=#%e7%99%ba%e7%94%9f%e3%81%97%e3%81%9f%e4%ba%8b%e8%b1%a1>#</a>
+</h3>
+<p>v1.4.0にアップデート後、COCOAが起動不能になる。</p>
+<h3 id=影響範囲>
+影響範囲
+<a class=anchor href=#%e5%bd%b1%e9%9f%bf%e7%af%84%e5%9b%b2>#</a>
+</h3>
+<h4 id=プラットフォームosバージョン>
+プラットフォーム・OSバージョン
+<a class=anchor href=#%e3%83%97%e3%83%a9%e3%83%83%e3%83%88%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0os%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3>#</a>
+</h4>
+<p>Android, iOSのすべてのOSバージョン</p>
+<h4 id=台数>
+台数
+<a class=anchor href=#%e5%8f%b0%e6%95%b0>#</a>
+</h4>
+<p>2,100万台（推定される最大値）</p>
+<h5 id=算出根拠>
+算出根拠
+<a class=anchor href=#%e7%ae%97%e5%87%ba%e6%a0%b9%e6%8b%a0>#</a>
+</h5>
+<p>v1.2.0がリリースされる前（v1.0.0 - v1.1.5）にダウンロードされたすべてに影響したと考える。アンインストール数については全数を把握できないため考慮しない。</p>
+<p><a href=https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html>【接触確認アプリ】ダウンロード数・陽性登録件数 推移</a>を元に
+&ldquo;R2.11.30（2,084）&ldquo;から"R2.12.28（2,245）&ldquo;に線形に推移したと仮定して、v1.2.0リリースのあった"R2.12.03"時点のダウンロード数を推計した。</p>
+<h4 id=影響を受けた機能>
+影響を受けた機能
+<a class=anchor href=#%e5%bd%b1%e9%9f%bf%e3%82%92%e5%8f%97%e3%81%91%e3%81%9f%e6%a9%9f%e8%83%bd>#</a>
+</h4>
+<ul>
+<li>UIを伴うすべての操作（陽性情報登録を含む）</li>
+<li>バックグラウンドでの診断キーのダウンロードと接触確認</li>
+</ul>
+<h4 id=影響を受けなかった機能>
+影響を受けなかった機能
+<a class=anchor href=#%e5%bd%b1%e9%9f%bf%e3%82%92%e5%8f%97%e3%81%91%e3%81%aa%e3%81%8b%e3%81%a3%e3%81%9f%e6%a9%9f%e8%83%bd>#</a>
+</h4>
+<ul>
+<li>Bluetooth受発信による接触記録（接触確認APIの機能）</li>
+</ul>
+<h2 id=発生から復旧までのタイムライン>
+発生から復旧までのタイムライン
+<a class=anchor href=#%e7%99%ba%e7%94%9f%e3%81%8b%e3%82%89%e5%be%a9%e6%97%a7%e3%81%be%e3%81%a7%e3%81%ae%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%a9%e3%82%a4%e3%83%b3>#</a>
+</h2>
+<ul>
+<li>11/25
+<ul>
+<li>15:00 - v1.4.0リリース（Google Play, AppStore）
+<ul>
+<li>開発チーム iOS端末3台、Android端末2台で公開されたアプリv1.4.0が起動できることを確認</li>
+</ul>
+</li>
+<li>16:17 - GitHub <a href=https://github.com/cocoa-mhlw/cocoa/issues/517>Issue #517 「COCOA v1.4.0 が起動しない」</a>投稿</li>
+<li>16:20 - 開発チーム 対応を開始</li>
+<li>16:49 - GitHub クラッシュレポート（iOS）共有</li>
+<li>17:11 - GitHub クラッシュレポート（Android）共有</li>
+<li>17:30 - GitHub 推測される原因が「MinValue/MaxValue に加算減算が定義されていない」との指摘がGitHubに投稿される
+<ul>
+<li>開発チーム GitHubの投稿内容で調査を進める</li>
+</ul>
+</li>
+<li>17:46 - 開発チーム 障害をデバッグモードで再現することに成功</li>
+<li>18:35 - 開発チーム Hotfixリリース準備開始</li>
+<li>18:35 - GitHub <a href=https://github.com/cocoa-mhlw/cocoa/pull/518>修正（Hotfix）コード</a>提出</li>
+<li>18:55 - 開発チーム 修正（Hotfix）コードで障害が解決することを確認</li>
+<li>19:19 - 開発チーム 修正（Hotfix）コード取り込み</li>
+<li>20:12 - 開発チーム 利用者からの問い合わせ状況を共有</li>
+<li>20:13 - 開発チーム v1.1.5以前にアプリの利用を開始すると利用規約の同意日付がDateTime最小値のままとなることが原因と判明
+<ul>
+<li>開発チーム 障害の再現方法を確定</li>
+</ul>
+</li>
+<li>20:39 - 開発チーム リリーステストの作成開始</li>
+<li>22:40 - 開発チーム リリーステストの作成完了</li>
+<li>23:16 - 開発チーム リリーステストの実施完了
+<ul>
+<li>開発チーム 準備したv1.4.0がクラッシュする端末のアプリを製品版アプリv1.4.1へアップデート、正常起動し問題が解消していることを確認</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>11/26
+<ul>
+<li>00:28 - 開発チーム v1.4.1 審査提出完了（Google Play, AppStore）</li>
+<li>10:10 - 開発チーム v1.4.1 AppStoreでリリース
+<ul>
+<li>開発チーム iOS端末7台で公開されたアプリv1.4.1が起動できることを確認</li>
+</ul>
+</li>
+<li>10:47 - GitHub iOS版の復旧報告</li>
+</ul>
+</li>
+<li>11/27
+<ul>
+<li>11:28 - 開発チーム v1.4.1 Google Playでリリース開始</li>
+<li>11:40 - GitHub Android版の復旧報告
+<ul>
+<li>開発チーム Android端末1台で公開されたアプリv1.4.1が起動できることを確認</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id=原因>
+原因
+<a class=anchor href=#%e5%8e%9f%e5%9b%a0>#</a>
+</h2>
+<p>　本障害に至った原因として、次の3点が挙げられる。</p>
+<ul>
+<li>タイムゾーン変換（JSTからUTCへ）方法の不適切な選択</li>
+<li>言語仕様への理解が不十分なまま実装をしたこと</li>
+<li>過去バージョンの仕様の調査が不足していたこと</li>
+</ul>
+<h3 id=タイムゾーン変換jstからutcへ方法の不適切な選択>
+タイムゾーン変換（JSTからUTCへ）方法の不適切な選択
+<a class=anchor href=#%e3%82%bf%e3%82%a4%e3%83%a0%e3%82%be%e3%83%bc%e3%83%b3%e5%a4%89%e6%8f%9bjst%e3%81%8b%e3%82%89utc%e3%81%b8%e6%96%b9%e6%b3%95%e3%81%ae%e4%b8%8d%e9%81%a9%e5%88%87%e3%81%aa%e9%81%b8%e6%8a%9e>#</a>
+</h3>
+<p>　タイムゾーンを日本標準時（JST）から協定世界時（UTC）に変換する際に、時差の9時間を直接減算するという方法は不適切であった（<a href=https://github.com/cocoa-mhlw/cocoa/blob/release_1_4_0/Covid19Radar/Covid19Radar/Services/Migration/Migrator_1_3_0.cs>該当コード</a>）。</p>
+<pre><code>namespace Covid19Radar.Services.Migration
+{
+    internal class Migrator_1_3_0
+    {
+        private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
+
+        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeSpan differential)
+        {
+            string dateTimeStr = _preferencesService.GetValue(dateTimeKey, DateTime.UtcNow.ToString());
+
+            DateTime dateTime;
+            try
+            {
+                dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr) + differential, DateTimeKind.Utc);
+            }
+            catch (FormatException exception)
+            {
+                _loggerService.Exception($&quot;Parse dateTime FormatException occurred. {dateTimeStr}&quot;, exception);
+                dateTime = DateTime.UtcNow;
+            }
+            _preferencesService.SetValue(epochKey, dateTime.ToUnixEpoch());
+            _preferencesService.RemoveValue(dateTimeKey);
+        }
+    }
+}
+</code></pre><p>　タイムゾーンの補正はシステムやプラットフォームが用意している標準関数<code>TimeZoneInfo.ConvertTimeToUtc</code>を使用するのが適切であり、後述する<code>FindSystemTimeZoneById</code>の問題については、懸念があることを開発チーム・テストチームに共有することで十分な動作テストをしてカバーすべき問題であった。</p>
+<h4 id=参考実装に当たっての検討の課程>
+[参考]実装に当たっての検討の課程
+<a class=anchor href=#%e5%8f%82%e8%80%83%e5%ae%9f%e8%a3%85%e3%81%ab%e5%bd%93%e3%81%9f%e3%81%a3%e3%81%a6%e3%81%ae%e6%a4%9c%e8%a8%8e%e3%81%ae%e8%aa%b2%e7%a8%8b>#</a>
+</h4>
+<p>　参考として、時差を直接減算するという判断に至るまでの検討の過程を記す。</p>
+<p>　前提として、次の仕様のデータを取り扱う必要があった。</p>
+<ul>
+<li>使用開始日や規約への合意日時が文字列型で保存されている</li>
+<li>日時を表す文字列にタイムゾーンが指定されていない</li>
+<li>使用開始日はUTCとして保存されているが、規約合意日時はJST</li>
+</ul>
+<h5 id=datetimetouniversaltimeの利用>
+DateTime.ToUniversalTime()の利用
+<a class=anchor href=#datetimetouniversaltime%e3%81%ae%e5%88%a9%e7%94%a8>#</a>
+</h5>
+<p>　当該部分を実装する過程で、まずはじめに<code>DateTime.ToUniversalTime()</code>の利用を検討した。</p>
+<p>　しかし、この場合、採用される時差はDateTimeに含まれる日時情報の種別（<code>DateTime.Kind</code>）に基づく。また、<code>DateTime.Kind</code>に指定可能なのは<code>Unspecified</code>, <code>Utc</code>そして<code>Local</code>の3種類で、明示的にタイムゾーンを指定できるものではない。</p>
+<p>　<code>Kind</code>を<code>Local</code>とした場合、端末に設定されているタイムゾーンに基づく変換となる。端末に必ずしも日本のタイムゾーンが設定されているという保証はないため、この方法ではJSTからUTCの明示的な変換はできないと判断した。</p>
+<h5 id=timezoneinfoconverttimetoutcの利用>
+TimeZoneInfo.ConvertTimeToUtcの利用
+<a class=anchor href=#timezoneinfoconverttimetoutc%e3%81%ae%e5%88%a9%e7%94%a8>#</a>
+</h5>
+<p>　また、タイムゾーンを明示して補正する<code>TimeZoneInfo.ConvertTimeToUtc</code>についても利用を検討した。</p>
+<p>　これは明示的にJSTのタイムゾーンを取得した上で、<code>DateTime</code>をUTCに変換できることが確認できた。
+一方で、タイムゾーンを取得する際に指定する名前（文字列）がプラットフォーム依存であるが採用を忌避する要因となった。</p>
+<p>[C#] UTCからJST、JSTからUTCへ変換する
+<a href=https://www.ipentec.com/document/csharp-convert-utc-jst>https://www.ipentec.com/document/csharp-convert-utc-jst</a></p>
+<p>　前述の記事では<code>TimeZoneInfo jstZoneInfo = System.TimeZoneInfo.FindSystemTimeZoneById("Tokyo Standard Time");</code>でタイムゾーンを取得している。また、Microsoftが公開している公式ドキュメントでも同様に、タイムゾーンの名前に<code>Tokyo Standard Time</code>を指定している。</p>
+<p>TimeZoneInfo.FindSystemTimeZoneById(String) メソッド
+<a href="https://docs.microsoft.com/ja-jp/dotnet/api/system.timezoneinfo.findsystemtimezonebyid?view=net-6.0">https://docs.microsoft.com/ja-jp/dotnet/api/system.timezoneinfo.findsystemtimezonebyid?view=net-6.0</a></p>
+<p>　しかしながら、Xamarinでは名前では日本標準時のタイムゾーンは取得できず、<code>TimeZoneNotFoundException</code>が発生した。
+調査の結果、.NETでは、ソフトウェアが動作するプラットフォームWindowsとLinuxで取り扱いが異なり、Xamarinの場合、Linuxに準拠した<code>Asia/Tokyo</code>を指定する必要があることがわかった。</p>
+<p>.NET CoreでWindowsとLinuxでタイムゾーンを識別するID表記が異なるという話
+<a href=https://tech.tanaka733.net/entry/2020/02/timezone-id>https://tech.tanaka733.net/entry/2020/02/timezone-id</a></p>
+<p>　調査の結果から、現在、端末のロケールの違いでさまざまな不具合を抱えているCOCOAが、解決のためにプラットフォームごとに挙動が違う（違うかもしれない）方法を使うのはリスクがあると判断した。日本国において時差が変わると言うことは滅多にあることではないので、COCOAの想定される稼働期間に発生する可能性は極めて低く、日時情報から9時間を減算するもっともシンプルな実装を採用した。</p>
+<h3 id=言語仕様への理解が不十分なまま実装をしたこと>
+言語仕様への理解が不十分なまま実装をしたこと
+<a class=anchor href=#%e8%a8%80%e8%aa%9e%e4%bb%95%e6%a7%98%e3%81%b8%e3%81%ae%e7%90%86%e8%a7%a3%e3%81%8c%e4%b8%8d%e5%8d%81%e5%88%86%e3%81%aa%e3%81%be%e3%81%be%e5%ae%9f%e8%a3%85%e3%82%92%e3%81%97%e3%81%9f%e3%81%93%e3%81%a8>#</a>
+</h3>
+<p>　実装時に、C#で<code>new DateTime()</code>が<code>DateTime.MinValue</code>となることを認識できていなかった。
+また、<code>DateTime.MinValue</code>（<code>0001/01/01 00:00:00</code>）から減算をすると<code>ArgumentOutOfRangeException</code>が発生することを認識できていなかった。</p>
+<p>　これら言語仕様への理解が不十分なまま実装していた。</p>
+<h3 id=過去バージョンの仕様の調査が不足していたこと>
+過去バージョンの仕様の調査が不足していたこと
+<a class=anchor href=#%e9%81%8e%e5%8e%bb%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%81%ae%e4%bb%95%e6%a7%98%e3%81%ae%e8%aa%bf%e6%9f%bb%e3%81%8c%e4%b8%8d%e8%b6%b3%e3%81%97%e3%81%a6%e3%81%84%e3%81%9f%e3%81%93%e3%81%a8>#</a>
+</h3>
+<p>　実装に際して、当該コードを実装する時点で、設定ファイルの形式に変更が加わったのはv1.2.2, v1.2.6 そしてv1.3.0（v1.4.0として配信）の「3つのタイミング」と考えていた。</p>
+<p>　しかし、障害発生後に調査した結果、設定ファイルの形式に変更が加わったのは <strong>v1.2.0</strong>, v1.2.2, v1.2.6 そしてv1.3.0（v1.4.0として配信）の 「4つのタイミング」 だったことがわかった。</p>
+<p>　マイグレーションは、すべての過去バージョンを取り扱う（または取り扱わないバージョンを定義する）必要から、仕様の調査については細心の注意を払うべきである。また、開発に関与するメンバーが入れ替わっていく中で、過去仕様に対する理解が共通化できるよう取り組む必要がある。</p>
+<h2 id=復旧方法>
+復旧方法
+<a class=anchor href=#%e5%be%a9%e6%97%a7%e6%96%b9%e6%b3%95>#</a>
+</h2>
+<p>　原因を回避するコードを追加してHotfix版（v1.4.1）をリリース。</p>
+<h2 id=復旧後の状況>
+復旧後の状況
+<a class=anchor href=#%e5%be%a9%e6%97%a7%e5%be%8c%e3%81%ae%e7%8a%b6%e6%b3%81>#</a>
+</h2>
+<p>　任意のバージョンからv1.4.1へアップデートすることで障害が発生していないこと。また、v1.4.0にアップデートすることで障害が発生した端末についてもv1.4.1にアップデートすることで障害が解決することを確認している。</p>
+<h2 id=当時の対応について>
+当時の対応について
+<a class=anchor href=#%e5%bd%93%e6%99%82%e3%81%ae%e5%af%be%e5%bf%9c%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a>
+</h2>
+<h3 id=正しく対応できたこと>
+正しく対応できたこと
+<a class=anchor href=#%e6%ad%a3%e3%81%97%e3%81%8f%e5%af%be%e5%bf%9c%e3%81%a7%e3%81%8d%e3%81%9f%e3%81%93%e3%81%a8>#</a>
+</h3>
+<ul>
+<li>GitHubに投稿されたIssueを把握して、迅速に対応を開始できた</li>
+<li>GitHubコミュニティと連携して、迅速に障害の原因を特定できた</li>
+<li>Hotfixを作成と障害の再現方法を調査・確定を並列で行うなど、効率的に作業することができた</li>
+<li>Hotfixの影響する範囲の確認とリリースに必要なテストケースの作成、実施までを円滑に進めることができた</li>
+</ul>
+<h3 id=課題>
+課題
+<a class=anchor href=#%e8%aa%b2%e9%a1%8c>#</a>
+</h3>
+<ul>
+<li>リリース日のTwitterなどSNSへの観測がリリース後オペレーションとして組み込まれていなかった</li>
+<li>障害対応フロー自体は定まっていたが、GitHubコミュニティとも連携したHotfix対応について、障害対応時の開発チーム・連携チーム横断で役割分担が定まっていなかった</li>
+<li>Android/iOSともに端末を対象としたリリース（100%リリース）を行ったため、広範囲の利用者に影響を与えた</li>
+</ul>
+<h2 id=今後の対応>
+今後の対応
+<a class=anchor href=#%e4%bb%8a%e5%be%8c%e3%81%ae%e5%af%be%e5%bf%9c>#</a>
+</h2>
+<h3 id=再発防止策案>
+再発防止策（案）
+<a class=anchor href=#%e5%86%8d%e7%99%ba%e9%98%b2%e6%ad%a2%e7%ad%96%e6%a1%88>#</a>
+</h3>
+<p>　再発防止策として、次の項目を検討している。</p>
+<ul>
+<li>ローリングアップデートを実施することで、仮に障害が発生した場合に影響範囲を小さく抑えられるようにする</li>
+<li>リリース予定日・リリース状況（ローリングアップデート状況）をGitHubおよびSNSで公表して、必要に応じて関係各所と連携した情報発信をできるようにする</li>
+<li>GitHubコミュニティへBeta版を配布することで、より多くの端末でテストできるようにする
+<ul>
+<li>COCOA2では接触確認APIのバージョンアップが含まれ、多くの課題の発見が想定される</li>
+</ul>
+</li>
+<li>ユニットテストを整備する
+<ul>
+<li>コードカバレッジを計測して数値としてテストの行き届いていないところを可視化する</li>
+</ul>
+</li>
+<li>リリース時期（ローリングアップデート時含む）には、SNSの観測をオペレーションとして行う</li>
+<li>今後もGitHubコミュニティと連携したPRベースでの開発は行っていくため、本件を踏まえて障害対応手順をアップグレードする</li>
+</ul>
+<h4 id=再発防止策として取り上げないこと>
+再発防止策として取り上げないこと
+<a class=anchor href=#%e5%86%8d%e7%99%ba%e9%98%b2%e6%ad%a2%e7%ad%96%e3%81%a8%e3%81%97%e3%81%a6%e5%8f%96%e3%82%8a%e4%b8%8a%e3%81%92%e3%81%aa%e3%81%84%e3%81%93%e3%81%a8>#</a>
+</h4>
+<p>　ダブルチェック、トリプルチェックなど、現行のコードレビューに加えて介在する人間の数を増やす方法は再発防止策に含めない。ヒューマンエラーが必ず発生するという前提で、仕組みで解決するのが適切と考える。</p>
+<h2 id=参考>
+参考
+<a class=anchor href=#%e5%8f%82%e8%80%83>#</a>
+</h2>
+<ul>
+<li>GitHubのIssueにまとめた障害と実装に関する情報
+<ul>
+<li><a href=https://github.com/cocoa-mhlw/cocoa/issues/517#issuecomment-979325741>https://github.com/cocoa-mhlw/cocoa/issues/517#issuecomment-979325741</a></li>
+<li><a href=https://github.com/cocoa-mhlw/cocoa/issues/517#issuecomment-979676626>https://github.com/cocoa-mhlw/cocoa/issues/517#issuecomment-979676626</a></li>
+</ul>
+</li>
+<li>[C#] UTCからJST、JSTからUTCへ変換する
+<ul>
+<li><a href=https://www.ipentec.com/document/csharp-convert-utc-jst>https://www.ipentec.com/document/csharp-convert-utc-jst</a></li>
+</ul>
+</li>
+<li>TimeZoneInfo.FindSystemTimeZoneById(String) メソッド
+<ul>
+<li><a href="https://docs.microsoft.com/ja-jp/dotnet/api/system.timezoneinfo.findsystemtimezonebyid?view=net-6.0">https://docs.microsoft.com/ja-jp/dotnet/api/system.timezoneinfo.findsystemtimezonebyid?view=net-6.0</a></li>
+</ul>
+</li>
+<li>.NET CoreでWindowsとLinuxでタイムゾーンを識別するID表記が異なるという話
+<ul>
+<li><a href=https://tech.tanaka733.net/entry/2020/02/timezone-id>https://tech.tanaka733.net/entry/2020/02/timezone-id</a></li>
+</ul>
+</li>
+</ul>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#障害の内容>障害の内容</a>
+<ul>
+<li><a href=#発生日時>発生日時</a></li>
+<li><a href=#復旧日時>復旧日時</a></li>
+<li><a href=#発生した事象>発生した事象</a></li>
+<li><a href=#影響範囲>影響範囲</a></li>
+</ul>
+</li>
+<li><a href=#発生から復旧までのタイムライン>発生から復旧までのタイムライン</a></li>
+<li><a href=#原因>原因</a>
+<ul>
+<li><a href=#タイムゾーン変換jstからutcへ方法の不適切な選択>タイムゾーン変換（JSTからUTCへ）方法の不適切な選択</a></li>
+<li><a href=#言語仕様への理解が不十分なまま実装をしたこと>言語仕様への理解が不十分なまま実装をしたこと</a></li>
+<li><a href=#過去バージョンの仕様の調査が不足していたこと>過去バージョンの仕様の調査が不足していたこと</a></li>
+</ul>
+</li>
+<li><a href=#復旧方法>復旧方法</a></li>
+<li><a href=#復旧後の状況>復旧後の状況</a></li>
+<li><a href=#当時の対応について>当時の対応について</a>
+<ul>
+<li><a href=#正しく対応できたこと>正しく対応できたこと</a></li>
+<li><a href=#課題>課題</a></li>
+</ul>
+</li>
+<li><a href=#今後の対応>今後の対応</a>
+<ul>
+<li><a href=#再発防止策案>再発防止策（案）</a></li>
+</ul>
+</li>
+<li><a href=#参考>参考</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>

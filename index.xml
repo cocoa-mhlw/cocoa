@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>COCOA Open Source Project</title><link>https://cocoa-mhlw.github.io/cocoa/</link><description>Recent content on COCOA Open Source Project</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><atom:link href="https://cocoa-mhlw.github.io/cocoa/index.xml" rel="self" type="application/rss+xml"/><item><title>デジタル庁 GitHub運用方針</title><link>https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/</guid><description>デジタル庁 GitHub運用方針 # デジタル庁が運用するGitHubリポジトリ（以下「当リポジトリ」という。）を通じた情報発信にあたり、運用方針を以下のとおり定めます。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>COCOA Open Source Project</title><link>https://cocoa-mhlw.github.io/cocoa/</link><description>Recent content on COCOA Open Source Project</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><atom:link href="https://cocoa-mhlw.github.io/cocoa/index.xml" rel="self" type="application/rss+xml"/><item><title>v1.4.0リリースで発生した障害について</title><link>https://cocoa-mhlw.github.io/cocoa/report/accident-v1.4.0.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cocoa-mhlw.github.io/cocoa/report/accident-v1.4.0.html</guid><description>v1.4.0リリースで発生した障害について # 障害の内容 # v1.1.5以前にインストールをして利用規約に合意した状態からv1.4.0にアップデートするとアプリが起動できなくなる。
+発生日時 # 2021年11月25日午後3時
+復旧日時 # iOS: 2021年11月26日午前10時47分
+Android: 2021年11月27日午前11時40分
+発生した事象 # v1.4.0にアップデート後、COCOAが起動不能になる。
+影響範囲 # プラットフォーム・OSバージョン # Android, iOSのすべてのOSバージョン
+台数 # 2,100万台（推定される最大値）
+算出根拠 # v1.2.0がリリースされる前（v1.0.0 - v1.1.5）にダウンロードされたすべてに影響したと考える。アンインストール数については全数を把握できないため考慮しない。
+【接触確認アプリ】ダウンロード数・陽性登録件数 推移を元に &amp;ldquo;R2.11.30（2,084）&amp;ldquo;から&amp;quot;R2.12.28（2,245）&amp;ldquo;に線形に推移したと仮定して、v1.2.0リリースのあった&amp;quot;R2.12.03&amp;quot;時点のダウンロード数を推計した。
+影響を受けた機能 # UIを伴うすべての操作（陽性情報登録を含む） バックグラウンドでの診断キーのダウンロードと接触確認 影響を受けなかった機能 # Bluetooth受発信による接触記録（接触確認APIの機能） 発生から復旧までのタイムライン # 11/25 15:00 - v1.4.0リリース（Google Play, AppStore） 開発チーム iOS端末3台、Android端末2台で公開されたアプリv1.4.0が起動できることを確認 16:17 - GitHub Issue #517 「COCOA v1.</description></item><item><title>デジタル庁 GitHub運用方針</title><link>https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/</guid><description>デジタル庁 GitHub運用方針 # デジタル庁が運用するGitHubリポジトリ（以下「当リポジトリ」という。）を通じた情報発信にあたり、運用方針を以下のとおり定めます。
 １ 投稿内容 # 日本国政府のITシステムに関する仕様や技術ドキュメントに関わる情報
 デジタル庁の施策等について関わる情報
 日本国政府のITシステムに関する問い合わせへの回答
