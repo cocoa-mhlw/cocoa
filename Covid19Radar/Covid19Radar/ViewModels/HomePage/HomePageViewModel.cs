@@ -202,6 +202,11 @@ namespace Covid19Radar.ViewModels
                 loggerService.Exception("Failed to exposure notification start.", exception);
                 await UpdateView();
             }
+            catch (AndroidGooglePlayServicesApiException exception)
+            {
+                loggerService.Exception("Failed to exposure notification start.", exception);
+                await UpdateView();
+            }
             finally
             {
                 loggerService.EndMethod();
@@ -402,19 +407,27 @@ namespace Covid19Radar.ViewModels
             loggerService.StartMethod();
 
             var daysOfUse = _userDataRepository.GetDaysOfUse();
-
             PastDate = daysOfUse.ToString();
 
-            var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
+            bool isStopped;
+            try
+            {
+                var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
 
-            var isStopped =
-                statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
-                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
-                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
-                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
-                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
-                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
-                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED);
+                isStopped = statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
+                    || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
+                    || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+                    || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
+                    || statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
+                    || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
+                    || statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED);
+            }
+            catch (AndroidGooglePlayServicesApiException exception)
+            {
+                loggerService.Exception("Failed to exposure notification GetStatusCodesAsync.", exception);
+                isStopped = true;
+            }
+
             var canConfirmExposure = _userDataRepository.IsCanConfirmExposure();
 
             if (isStopped)

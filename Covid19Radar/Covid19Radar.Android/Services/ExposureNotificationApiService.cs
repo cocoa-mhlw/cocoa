@@ -49,7 +49,10 @@ namespace Covid19Radar.Droid.Services
                 }
                 else
                 {
-                    throw apiException;
+                    throw new AndroidGooglePlayServicesApiException(
+                        apiException.StatusCode,
+                        apiException.Message
+                        );
                 }
             }
         }
@@ -58,7 +61,18 @@ namespace Covid19Radar.Droid.Services
 
         public override async Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
         {
-            return await Client.GetStatusesAsync();
+            try
+            {
+                return await Client.GetStatusesAsync();
+            }
+            catch(ApiException apiException)
+            {
+                throw new AndroidGooglePlayServicesApiException(
+                    apiException.StatusCode,
+                    apiException.Message
+                    );
+            }
+
         }
 
         public override async Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
@@ -77,7 +91,10 @@ namespace Covid19Radar.Droid.Services
                 }
                 else
                 {
-                    throw apiException;
+                    throw new AndroidGooglePlayServicesApiException(
+                        apiException.StatusCode,
+                        apiException.Message
+                        );
                 }
             }
         }
@@ -121,7 +138,10 @@ namespace Covid19Radar.Droid.Services
                 }
                 else
                 {
-                    throw apiException;
+                    throw new AndroidGooglePlayServicesApiException(
+                        apiException.StatusCode,
+                        apiException.Message
+                        );
                 }
             }
         }
@@ -142,7 +162,10 @@ namespace Covid19Radar.Droid.Services
                 }
                 else
                 {
-                    throw apiException;
+                    throw new AndroidGooglePlayServicesApiException(
+                        apiException.StatusCode,
+                        apiException.Message
+                        );
                 }
             }
         }
