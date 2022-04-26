@@ -97,6 +97,7 @@ namespace Covid19Radar.Services
             await _serverConfigurationRepository.LoadAsync();
 
             bool canConfirmExposure = true;
+            bool isMaxPerDayExposureDetectionAPILimitReached = false;
 
             foreach (var region in _serverConfigurationRepository.Regions)
             {
@@ -161,10 +162,12 @@ namespace Covid19Radar.Services
 
                     _userDataRepository.SetLastConfirmedDate(_dateTimeUtility.UtcNow);
                     _userDataRepository.SetCanConfirmExposure(true);
+                    _userDataRepository.SetIsMaxPerDayExposureDetectionAPILimitReached(isMaxPerDayExposureDetectionAPILimitReached);
                 }
                 catch (ENException exception)
                 {
                     canConfirmExposure = false;
+                    isMaxPerDayExposureDetectionAPILimitReached = CheckMaxPerDayExposureDetectionAPILimitReached(exception);
                     _loggerService.Exception($"ENExcepiton occurred, Code:{exception.Code}, Message:{exception.Message}", exception);
                     throw;
                 }
@@ -178,6 +181,7 @@ namespace Covid19Radar.Services
                 {
                     RemoveFiles(downloadedFileNameList);
                     _userDataRepository.SetCanConfirmExposure(canConfirmExposure);
+                    _userDataRepository.SetIsMaxPerDayExposureDetectionAPILimitReached(isMaxPerDayExposureDetectionAPILimitReached);
                 }
             }
         }
@@ -235,6 +239,11 @@ namespace Covid19Radar.Services
             }
 
             _loggerService.EndMethod();
+        }
+
+        private bool CheckMaxPerDayExposureDetectionAPILimitReached(ENException ex)
+        {
+            return ex.Code == ENException.Code_iOS.RateLimited || ex.Code == ENException.Code_Android.FAILED_RATE_LIMITED;
         }
     }
 }
