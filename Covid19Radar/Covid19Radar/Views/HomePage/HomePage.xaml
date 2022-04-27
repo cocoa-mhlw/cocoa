@@ -28,8 +28,9 @@
                 BackgroundColor="#EEEEEE"
                 Spacing="15">
                 <xct:SemanticOrderView
-                    x:Name="activeLayoutOrderView">
-                    <StackLayout IsVisible="{Binding IsVisibleENStatusActiveLayout}">
+                    x:Name="activeLayoutOrderView"
+                    IsVisible="{Binding IsVisibleENStatusActiveLayout}">
+                    <StackLayout>
                         <StackLayout
                             Orientation="Horizontal"
                             HorizontalOptions="Center"

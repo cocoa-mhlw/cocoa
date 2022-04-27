@@ -83,8 +83,6 @@ namespace Covid19Radar.ViewModels
 
         private bool _isShowTroubleshootingPage = false;
 
-        private bool _isMaxPerDayExposureDetectionAPILimitReached = false;
-
         private string _enStatusUnconfirmedDescription1;
         public string EnStatusUnconfirmedDescription1
         {
@@ -220,8 +218,6 @@ namespace Covid19Radar.ViewModels
                 catch (ENException ex)
                 {
                     loggerService.Exception("Failed to exposure detection.", ex);
-                    // Check if the exposure detection API limit has been reached
-                    _isMaxPerDayExposureDetectionAPILimitReached = ex.Code == ENException.Code_iOS.RateLimited || ex.Code == ENException.Code_Android.FAILED_RATE_LIMITED;
                 }
                 catch (Exception ex)
                 {
@@ -431,11 +427,12 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
 
-                EnStatusUnconfirmedDescription1 = _isMaxPerDayExposureDetectionAPILimitReached
+                var isMaxPerDayExposureDetectionAPILimitReached = _userDataRepository.IsMaxPerDayExposureDetectionAPILimitReached();
+                EnStatusUnconfirmedDescription1 = isMaxPerDayExposureDetectionAPILimitReached
                     ? AppResources.HomePageExposureDetectionAPILimitReachedDescription1 : AppResources.HomePageENStatusUnconfirmedDescription1;
-                EnStatusUnconfirmedDescription2 = _isMaxPerDayExposureDetectionAPILimitReached
+                EnStatusUnconfirmedDescription2 = isMaxPerDayExposureDetectionAPILimitReached
                     ? AppResources.HomePageExposureDetectionAPILimitReachedDescription2 : AppResources.HomePageENStatusUnconfirmedDescription2;
-                IsVisibleUnconfirmedTroubleshootingButton = !_isMaxPerDayExposureDetectionAPILimitReached;
+                IsVisibleUnconfirmedTroubleshootingButton = !isMaxPerDayExposureDetectionAPILimitReached;
             }
             else
             {

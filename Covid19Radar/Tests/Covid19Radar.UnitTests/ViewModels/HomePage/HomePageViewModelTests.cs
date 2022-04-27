@@ -219,6 +219,9 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockPreferenceService
                 .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
                 .Returns(false);
+            mockPreferenceService
+                .Setup(x => x.GetBoolValue("IsMaxPerDayExposureDetectionAPILimitReached", false))
+                .Returns(false);
 
             homePageViewModel.OnAppearing();
 
@@ -228,6 +231,32 @@ namespace Covid19Radar.UnitTests.ViewModels
             Assert.Equal(AppResources.HomePageENStatusUnconfirmedDescription1, homePageViewModel.EnStatusUnconfirmedDescription1);
             Assert.Equal(AppResources.HomePageENStatusUnconfirmedDescription2, homePageViewModel.EnStatusUnconfirmedDescription2);
             Assert.True(homePageViewModel.IsVisibleUnconfirmedTroubleshootingButton);
+        }
+
+        [Fact]
+        public void UpdateView_ENStatus_Unconfirmed_Exposure_Detection_API_Limit_Reached()
+        {
+            var homePageViewModel = CreateViewModel();
+
+            mockExposureNotificationApiService
+                .Setup(x => x.GetStatusCodesAsync())
+                .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
+
+            mockPreferenceService
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
+                .Returns(false);
+            mockPreferenceService
+                .Setup(x => x.GetBoolValue("IsMaxPerDayExposureDetectionAPILimitReached", false))
+                .Returns(true);
+
+            homePageViewModel.OnAppearing();
+
+            Assert.False(homePageViewModel.IsVisibleENStatusActiveLayout);
+            Assert.True(homePageViewModel.IsVisibleENStatusUnconfirmedLayout);
+            Assert.False(homePageViewModel.IsVisibleENStatusStoppedLayout);
+            Assert.Equal(AppResources.HomePageExposureDetectionAPILimitReachedDescription1, homePageViewModel.EnStatusUnconfirmedDescription1);
+            Assert.Equal(AppResources.HomePageExposureDetectionAPILimitReachedDescription2, homePageViewModel.EnStatusUnconfirmedDescription2);
+            Assert.False(homePageViewModel.IsVisibleUnconfirmedTroubleshootingButton);
         }
 
         [Fact]

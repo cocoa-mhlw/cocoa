@@ -32,6 +32,9 @@ namespace Covid19Radar.Repository
         void SetCanConfirmExposure(bool canConfirmExposure);
         bool IsCanConfirmExposure();
 
+        void SetIsMaxPerDayExposureDetectionAPILimitReached(bool isMaxPerDayExposureDetectionAPILimitReached);
+        bool IsMaxPerDayExposureDetectionAPILimitReached();
+
         void SetLastConfirmedDate(DateTime utcNow);
         DateTime? GetLastConfirmedDate();
 
@@ -216,6 +219,22 @@ namespace Covid19Radar.Repository
             _loggerService.EndMethod();
 
             return canConfirmExposure;
+        }
+
+        public void SetIsMaxPerDayExposureDetectionAPILimitReached(bool isMaxPerDayExposureDetectionAPILimitReached)
+        {
+            _loggerService.StartMethod();
+            _preferencesService.SetBoolValue(PreferenceKey.IsMaxPerDayExposureDetectionAPILimitReached, isMaxPerDayExposureDetectionAPILimitReached);
+            _loggerService.EndMethod();
+        }
+
+        public bool IsMaxPerDayExposureDetectionAPILimitReached()
+        {
+            _loggerService.StartMethod();
+            var isMaxPerDayExposureDetectionAPILimitReached = _preferencesService.GetBoolValue(PreferenceKey.IsMaxPerDayExposureDetectionAPILimitReached, false);
+            _loggerService.EndMethod();
+
+            return isMaxPerDayExposureDetectionAPILimitReached;
         }
 
         public void SetLastConfirmedDate(DateTime dateTime)
