@@ -1049,27 +1049,33 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ContactedNotifyPageDescription1_1 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription1_1", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription1_2 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription1_2", resourceCulture);
+            }
+        }
+        
+        public static string ContactedNotifyPageDescription1_3 {
+            get {
+                return ResourceManager.GetString("ContactedNotifyPageDescription1_3", resourceCulture);
+            }
+        }
+        
         public static string ContactedNotifyPageDescription2 {
             get {
                 return ResourceManager.GetString("ContactedNotifyPageDescription2", resourceCulture);
             }
         }
         
-        public static string ContactedNotifyPageDescription3 {
+        public static string ContactedNotifyPageHighRiskActionAnnotationText {
             get {
-                return ResourceManager.GetString("ContactedNotifyPageDescription3", resourceCulture);
-            }
-        }
-        
-        public static string ContactedNotifyPageDescription4 {
-            get {
-                return ResourceManager.GetString("ContactedNotifyPageDescription4", resourceCulture);
-            }
-        }
-        
-        public static string ContactedNotifyPageDescription5 {
-            get {
-                return ResourceManager.GetString("ContactedNotifyPageDescription5", resourceCulture);
+                return ResourceManager.GetString("ContactedNotifyPageHighRiskActionAnnotationText", resourceCulture);
             }
         }
         
@@ -2045,6 +2051,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ExposuresPageFrom {
+            get {
+                return ResourceManager.GetString("ExposuresPageFrom", resourceCulture);
+            }
+        }
+        
         public static string ExposuresPageTo {
             get {
                 return ResourceManager.GetString("ExposuresPageTo", resourceCulture);
@@ -2069,6 +2081,23 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string NotContactPageTitle {
+            get {
+                return ResourceManager.GetString("NotContactPageTitle", resourceCulture);
+            }
+        }
+        
+        public static string NotContactPageLabel1 {
+            get {
+                return ResourceManager.GetString("NotContactPageLabel1", resourceCulture);
+            }
+        }
+        
+        public static string NotContactPageDescription1 {
+            get {
+                return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
+            }
+        }
         public static string GeneralErrorTitle {
             get {
                 return ResourceManager.GetString("GeneralErrorTitle", resourceCulture);

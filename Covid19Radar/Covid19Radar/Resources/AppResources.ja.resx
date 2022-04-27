@@ -298,6 +298,10 @@
     <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
     <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。。</comment>
   </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>※日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
+    <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンからの信号を受信していません</value>
     <comment>陽性登録者のスマートフォンからの信号を受信していません</comment>
@@ -332,11 +336,11 @@
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
     <value>陽性登録者との接触一覧</value>
-    <comment>TODO:陽性登録者との接触一覧</comment>
+    <comment>陽性登録者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>陽性登録者との接触確認</value>
-    <comment>TODO:陽性登録者との接触確認</comment>
+    <comment>陽性登録者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
     <value>過去14日間の接触</value>
@@ -524,7 +528,7 @@
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>次の期間に陽性登録者との接触が確認されました。</value>
-    <comment>TODO:次の期間に陽性登録者との接触が確認されました。</comment>
+    <comment>次の期間に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -655,27 +659,30 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>症状がない場合、
-陽性者と接触した心当たりがない場合は、
-感染対策に留意しつつ普段通りの生活をお送りください。
-ただし、体調に変化があった場合は、受診を検討ください。</value>
-    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+    <value>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</value>
+    <comment>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_1" xml:space="preserve">
+    <value>・発熱等の症状や基礎疾患がある</value>
+    <comment>・発熱等の症状や基礎疾患がある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_2" xml:space="preserve">
+    <value>・感染リスクの高い行動（※）をとった</value>
+    <comment>・感染リスクの高い行動（※）をとった</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_3" xml:space="preserve">
+    <value>・その他、受診を希望する</value>
+    <comment>・その他、受診を希望する</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</value>
-    <comment>TODO:次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
+    <value>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</value>
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
-  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
-    <value>・発熱等の症状や基礎疾患がある</value>
-    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
-    <value>・陽性者と接触した心当たりがある</value>
-    <comment>TODO:・陽性者と接触した心当たりがある</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
-    <value>・その他、受診を希望する</value>
-    <comment>TODO:・その他、受診を希望する</comment>
+  <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
+    <value>※大人数や長時間に及ぶ飲食など</value>
+    <comment>※大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>確認しました</value>
@@ -1341,23 +1348,44 @@
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
     <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
-    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageFrom" xml:space="preserve">
+    <value></value>
+    <comment> </comment>
   </data>
   <data name="ExposuresPageTo" xml:space="preserve">
     <value>から</value>
-    <comment>TODO:から</comment>
+    <comment>から</comment>
   </data>
   <data name="ExposureDateFormatDate" xml:space="preserve">
-    <value>{2:#}日 午前{3:#}時</value>
-    <comment>TODO:{2:#}日 午前{3:#}時</comment>
+    <value>d日 tth時mm分</value>
+    <comment>d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatMonth" xml:space="preserve">
-    <value>{1:#}月 {2:#}日 午前{3:#}時</value>
-    <comment>TODO:{1:#}月{2:#}日 午前{3:#}時</comment>
+    <value>M月d日 tth時mm分</value>
+    <comment>M月d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatYear" xml:space="preserve">
-    <value>{0:#}年{1:#}月 {2:#}日 午前{3:#}時</value>
-    <comment>TODO:{0:#}年{1:#}月 午前{2:#}日{3:#}時</comment>
+    <value>yyyy年M月d日 tth時mm分</value>
+    <comment>yyyy年M月d日 tth時mm分</comment>
+  </data>
+
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>過去14日間の接触</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+	<data name="NotContactPageLabel1" xml:space="preserve">
+    <value>陽性者との接触は確認されませんでした</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+	<data name="NotContactPageDescription1" xml:space="preserve">
+    <value>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+	<data name="NotContactPageButtonText" xml:space="preserve">
+    <value>アプリを周りの人に知らせる</value>
+    <comment>アプリを周りの人に知らせる</comment>
   </data>
 
   <data name="GeneralErrorTitle" xml:space="preserve">
