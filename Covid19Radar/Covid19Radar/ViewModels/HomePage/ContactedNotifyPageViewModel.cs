@@ -24,14 +24,14 @@ namespace Covid19Radar.ViewModels
 
         private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
 
-        private string _exposureDurationInMinutes;
+        private string _exposureDurationInMinutes = "";
         public string ExposureDurationInMinutes
         {
             get { return _exposureDurationInMinutes; }
             set { SetProperty(ref _exposureDurationInMinutes, value); }
         }
 
-        private string _exposureCount;
+        private string _exposureCount = "";
         public string ExposureCount
         {
             get { return _exposureCount; }
