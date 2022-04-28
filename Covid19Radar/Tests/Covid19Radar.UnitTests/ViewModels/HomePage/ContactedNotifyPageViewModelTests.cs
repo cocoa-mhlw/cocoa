@@ -73,14 +73,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void OnClickExposuresTest_Initialize()
         {
             mockExposureDataRepository
-                .Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(new List<UserExposureInfo>()
                 {
                     new UserExposureInfo(),
                     new UserExposureInfo()
                 });
             mockExposureDataRepository
-                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(Task.FromResult(new List<DailySummary>()
                 {
                     new DailySummary()
@@ -89,7 +89,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     }
                 }));
             mockExposureDataRepository
-                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(Task.FromResult(new List<ExposureWindow>()
                 {
                     new ExposureWindow()
@@ -121,10 +121,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void OnClickExposuresTest_Initialize_NoExposureInformation_HighRisk()
         {
             mockExposureDataRepository
-                .Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(new List<UserExposureInfo>());
             mockExposureDataRepository
-                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(Task.FromResult(new List<DailySummary>()
                 {
                     new DailySummary()
@@ -133,7 +133,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     }
                 }));
             mockExposureDataRepository
-                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(Task.FromResult(new List<ExposureWindow>()
                 {
                     new ExposureWindow()
@@ -165,14 +165,14 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void OnClickExposuresTest_Initialize_NoExposureInformation_NoHighRisk()
         {
             mockExposureDataRepository
-                .Setup(x => x.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(new List<UserExposureInfo>()
                 {
                     new UserExposureInfo(),
                     new UserExposureInfo()
                 });
             mockExposureDataRepository
-                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(Task.FromResult(new List<DailySummary>()
                 {
                     new DailySummary()
@@ -181,7 +181,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     }
                 }));
             mockExposureDataRepository
-                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(Task.FromResult(new List<ExposureWindow>()
                 {
                     new ExposureWindow()

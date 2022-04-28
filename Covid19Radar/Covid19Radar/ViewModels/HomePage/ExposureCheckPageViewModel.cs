@@ -169,7 +169,7 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             List<DailySummary> dailySummaryList = await _exposureDataRepository
-                .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                .GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
             if (dailySummaryList.Count() == 0)
             {
@@ -182,7 +182,7 @@ namespace Covid19Radar.ViewModels
             _loggerService.Debug($"dailySummaryMap {dailySummaryMap.Count}");
 
             var exposureWindowList
-                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
             _loggerService.Debug($"exposureWindowList {exposureWindowList.Count}");
 

@@ -242,11 +242,11 @@ namespace Covid19Radar.ViewModels
                     .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
                 loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
-                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
                 var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
-                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
-                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
                 var hasExposure = dailySummaryList.Count() > 0 || userExposureInformationList.Count() > 0;
                 var hasHighRiskExposure = userExposureInformationList.Count() > 0;
