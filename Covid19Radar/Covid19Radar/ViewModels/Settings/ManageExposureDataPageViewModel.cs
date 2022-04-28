@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Chino;
 using Covid19Radar.Model;
@@ -38,9 +39,15 @@ namespace Covid19Radar.ViewModels
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
         }
 
+        private async Task ClearExposureDataAsync()
+        {
+            await _exposureDataRepository.RemoveDailySummariesAsync();
+            await _exposureDataRepository.RemoveExposureWindowsAsync();
+        }
+
         public ICommand OnClickClearButton => new Command(async () =>
         {
-            await _exposureDataRepository.ClearAsync();
+            await ClearExposureDataAsync();
 
             State = "接触データを消去しました。";
         });
@@ -51,7 +58,7 @@ namespace Covid19Radar.ViewModels
 
             var (dailySummaries, exposureWindows) = GenerateDummyLowRiskData(_config);
 
-            await _exposureDataRepository.ClearAsync();
+            await ClearExposureDataAsync();
             await _exposureDataRepository.SetExposureDataAsync(dailySummaries, exposureWindows);
 
             State = "基準値未満の接触データを登録しました。";
@@ -62,7 +69,7 @@ namespace Covid19Radar.ViewModels
             _config = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(true);
             var (dailySummaries, exposureWindows) = GenerateDummyHighRiskData(_config);
 
-            await _exposureDataRepository.ClearAsync();
+            await ClearExposureDataAsync();
             await _exposureDataRepository.SetExposureDataAsync(dailySummaries, exposureWindows);
 
             State = "接触データを登録しました。";

@@ -72,7 +72,5 @@ namespace Covid19Radar.Repository
 
             return string.Format("{0} {1} {2}", fromStr, AppResources.ExposuresPageTo, toStr);
         }
-
-        Task ClearAsync();
     }
 }

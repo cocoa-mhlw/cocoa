@@ -364,11 +364,6 @@ namespace Covid19Radar.Repository
 
             _loggerService.EndMethod();
         }
-
-        public async Task ClearAsync() => await SaveExposureDataAsync(
-                new List<DailySummary>(),
-                new List<ExposureWindow>()
-                );
     }
 }
 #endregion
