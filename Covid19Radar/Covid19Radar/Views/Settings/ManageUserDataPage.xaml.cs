@@ -3,14 +3,12 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Covid19Radar.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LowRiskContactLayout : StackLayout
+    public partial class ManageUserDataPage : ContentPage
     {
-        public LowRiskContactLayout()
+        public ManageUserDataPage()
         {
             InitializeComponent();
         }

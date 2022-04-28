@@ -81,6 +81,10 @@
                         Style="{StaticResource DefaultButton}"
                         Text="Manage ExposureData" />
                     <Button
+                        Command="{prism:NavigateTo 'ManageUserDataPage'}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Manage UserData" />
+                    <Button
                         Command="{Binding Path=OnClickExportExposureWindow}"
                         Style="{StaticResource DefaultButton}"
                         Text="ExportExposureWindow" />

@@ -14,8 +14,28 @@ using Xunit.Sdk;
 
 namespace Covid19Radar.UnitTests.Services.Logs
 {
-    public class LoggerServiceTests
+    public class LoggerServiceTests : IDisposable
     {
+        private readonly string _cocoaTempPath = Path.Combine(Path.GetTempPath(), ".cocoa");
+
+        public LoggerServiceTests()
+        {
+            DeleteTempDirectory();
+        }
+
+        public void Dispose()
+        {
+            DeleteTempDirectory();
+        }
+
+        private void DeleteTempDirectory()
+        {
+            if (Directory.Exists(_cocoaTempPath))
+            {
+                Directory.Delete(_cocoaTempPath, true);
+            }
+        }
+
         #region Test Methods
 
         #region StartMethod()
@@ -37,11 +57,10 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.StartMethod(method, filePath, lineNumber);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -75,15 +94,14 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
-            Assert.False(Directory.Exists("~/.cocoa/logs"));
-            Assert.False(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
+            Assert.False(Directory.Exists(Path.Combine(_cocoaTempPath, "logs")));
+            Assert.False(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
 
             loggerService.StartMethod();
 
-            Assert.True(Directory.Exists("~/.cocoa/logs"));
-            Assert.True(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
+            Assert.True(Directory.Exists(Path.Combine(_cocoaTempPath, "logs")));
+            Assert.True(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
 
             Mock.Get(mockILogPathService).Verify(s => s.LogsDirPath, Times.Exactly(2));
             Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.Once());
@@ -95,15 +113,16 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            RecreateLogsDir();
 
-            Assert.True(Directory.Exists("~/.cocoa/logs"));
-            Assert.False(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
+            Directory.CreateDirectory(Path.Combine(_cocoaTempPath, "logs"));
+
+            Assert.True(Directory.Exists(Path.Combine(_cocoaTempPath, "logs")));
+            Assert.False(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
 
             loggerService.StartMethod();
 
-            Assert.True(Directory.Exists("~/.cocoa/logs"));
-            Assert.True(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
+            Assert.True(Directory.Exists(Path.Combine(_cocoaTempPath, "logs")));
+            Assert.True(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
             Mock.Get(mockILogPathService).Verify(s => s.LogsDirPath, Times.Once());
             Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.Once());
         }
@@ -114,15 +133,17 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            RecreateLogsFile();
 
-            Assert.True(Directory.Exists("~/.cocoa/logs"));
-            Assert.True(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
+            Directory.CreateDirectory(Path.Combine(_cocoaTempPath, "logs"));
+            File.Create(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")).Close();
+
+            Assert.True(Directory.Exists(Path.Combine(_cocoaTempPath, "logs")));
+            Assert.True(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
 
             loggerService.StartMethod();
 
-            Assert.True(Directory.Exists("~/.cocoa/logs"));
-            Assert.True(File.Exists("~/.cocoa/logs/cocoa_log_20201101.csv"));
+            Assert.True(Directory.Exists(Path.Combine(_cocoaTempPath, "logs")));
+            Assert.True(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
             Mock.Get(mockILogPathService).Verify(s => s.LogsDirPath, Times.Once());
             Mock.Get(mockILogPathService).Verify(s => s.LogFilePath(It.IsAny<DateTime>()), Times.Once());
         }
@@ -137,11 +158,10 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.EndMethod("Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -171,7 +191,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
         #endregion
 
-        #region Verbose()
+#region Verbose()
 
         [Fact]
         public void Verbose_Success()
@@ -179,11 +199,13 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.Verbose("Message", "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+#if DEBUG
+            Assert.True(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
+
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -209,6 +231,9 @@ namespace Covid19Radar.UnitTests.Services.Logs
             Mock.Get(mockIEssentialsService).Verify(s => s.DeviceType, Times.Once());
             Mock.Get(mockIEssentialsService).Verify(s => s.AppVersion, Times.Once());
             Mock.Get(mockIEssentialsService).Verify(s => s.BuildNumber, Times.Once());
+#else
+            Assert.False(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
+#endif
         }
 
         #endregion
@@ -221,11 +246,13 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.Debug("Message", "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+#if DEBUG
+            Assert.True(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
+
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -251,6 +278,9 @@ namespace Covid19Radar.UnitTests.Services.Logs
             Mock.Get(mockIEssentialsService).Verify(s => s.DeviceType, Times.Once());
             Mock.Get(mockIEssentialsService).Verify(s => s.AppVersion, Times.Once());
             Mock.Get(mockIEssentialsService).Verify(s => s.BuildNumber, Times.Once());
+#else
+            Assert.False(File.Exists(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")));
+#endif
         }
 
         #endregion
@@ -273,11 +303,10 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.Info(message, "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -311,7 +340,6 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.Info("Message1", "Foo1", "~/Documents/Foo1.cs", 1);
             loggerService.Info("Message2", "Foo2", "~/Documents/Foo2.cs", 2);
@@ -326,7 +354,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             var lineNumber = 0;
             string logRow;
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 while ((logRow = sr.ReadLine()) != null)
                 {
@@ -433,7 +461,6 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             await Task.WhenAll(
                 Task.Run(() => loggerService.Info("Message1", "Foo1", "~/Documents/Foo1.cs", 1)),
@@ -450,7 +477,7 @@ namespace Covid19Radar.UnitTests.Services.Logs
 
             var lineNumber = 0;
             string logRow;
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 while ((logRow = sr.ReadLine()) != null)
                 {
@@ -556,9 +583,9 @@ namespace Covid19Radar.UnitTests.Services.Logs
             Mock.Get(mockIEssentialsService).Verify(s => s.BuildNumber, Times.Exactly(10));
         }
 
-        #endregion
+#endregion
 
-        #region Warning()
+#region Warning()
 
         [Fact]
         public void Warning_Success()
@@ -566,11 +593,10 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.Warning("Message", "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -598,9 +624,9 @@ namespace Covid19Radar.UnitTests.Services.Logs
             Mock.Get(mockIEssentialsService).Verify(s => s.BuildNumber, Times.Once());
         }
 
-        #endregion
+#endregion
 
-        #region Error()
+#region Error()
 
         [Fact]
         public void Error_Success()
@@ -608,11 +634,10 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.Error("Message", "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -640,9 +665,9 @@ namespace Covid19Radar.UnitTests.Services.Logs
             Mock.Get(mockIEssentialsService).Verify(s => s.BuildNumber, Times.Once());
         }
 
-        #endregion
+#endregion
 
-        #region Exception()
+#region Exception()
 
         [Fact]
         public void Exception_Success()
@@ -650,11 +675,10 @@ namespace Covid19Radar.UnitTests.Services.Logs
             var mockILogPathService = CreateDefaultMockILogPathService();
             var mockIEssentialsService = CreateDefaultMockIEssentialsService();
             var loggerService = CreateDefaultLoggerService(mockILogPathService, mockIEssentialsService);
-            DeleteLogsDirIfExists();
 
             loggerService.Exception("Message", new NullReferenceException(), "Foo", "~/Documents/Foo.cs", 1);
 
-            using (var sr = new StreamReader("~/.cocoa/logs/cocoa_log_20201101.csv"))
+            using (var sr = new StreamReader(Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv")))
             {
                 for (var i = 0; i < 2; i++)
                 {
@@ -682,11 +706,11 @@ namespace Covid19Radar.UnitTests.Services.Logs
             Mock.Get(mockIEssentialsService).Verify(s => s.BuildNumber, Times.Once());
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
 
-        #region Other Private Methods
+#region Other Private Methods
 
         private LoggerService CreateDefaultLoggerService(ILogPathService logPathService, IEssentialsService essentialsService)
         {
@@ -696,11 +720,11 @@ namespace Covid19Radar.UnitTests.Services.Logs
         private ILogPathService CreateDefaultMockILogPathService()
         {
             var mock = Mock.Of<ILogPathService>(s =>
-            s.LogsDirPath == "~/.cocoa/logs" &&
+            s.LogsDirPath == Path.Combine(_cocoaTempPath, "logs") &&
             s.LogFileWildcardName == "cocoa_log_*.csv" &&
-            s.LogFilePath(It.IsAny<DateTime>()) == "~/.cocoa/logs/cocoa_log_20201101.csv" &&
-            s.LogUploadingTmpPath == "~/.cocoa/tmp" &&
-            s.LogUploadingPublicPath == "~/.cocoa/public" &&
+            s.LogFilePath(It.IsAny<DateTime>()) == Path.Combine(_cocoaTempPath, "logs/cocoa_log_20201101.csv") &&
+            s.LogUploadingTmpPath == Path.Combine(_cocoaTempPath, "tmp") &&
+            s.LogUploadingPublicPath == Path.Combine(_cocoaTempPath, "public") &&
             s.LogUploadingFileWildcardName == "cocoa_log_*.zip"
             );
 
@@ -721,37 +745,12 @@ namespace Covid19Radar.UnitTests.Services.Logs
             return mock;
         }
 
-        private void RecreateLogsDir()
-        {
-            DeleteLogsDirIfExists();
-            Directory.CreateDirectory("~/.cocoa/logs");
-        }
-
-        private void DeleteLogsDirIfExists()
-        {
-            var logsDirPath = "~/.cocoa/logs";
-            if (Directory.Exists(logsDirPath))
-            {
-                Directory.Delete(logsDirPath, true);
-            }
-        }
-
-        private void RecreateLogsFile()
-        {
-            var logFilePath = "~/.cocoa/logs/cocoa_log_20201101.csv";
-            if (File.Exists(logFilePath))
-            {
-                File.Delete(logFilePath);
-            }
-            File.Create(logFilePath).Close();
-        }
-
         private string[] ParseLogRow(string logRow)
         {
             var pattern = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
             return pattern.Split(logRow);
         }
 
-        #endregion
+#endregion
     }
 }

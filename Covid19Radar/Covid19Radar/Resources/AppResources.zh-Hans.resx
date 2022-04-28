@@ -268,21 +268,21 @@
     <value>删除接触记录并将应用恢复到初始状态</value>
     <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
-  <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>分享此APP</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>来自阳性登记者所持智能手机的信号低于基准值</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
+  <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
+    <value>No signal received</value>
+    <comment>TODO:受信した信号はありません</comment>
+  </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>分数: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>分数 {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>分数: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>分数 {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
     <value>接触时间为{0:#}分钟</value>
@@ -309,12 +309,16 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为{0:#}{1:#}。</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为100以上。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>* 对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>未收到来自阳性登记者所持智能手机的信号</value>
@@ -323,10 +327,6 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>您的行动范围内似乎没有阳性登记者。请继续注意防止感染。</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
-  </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>分享此APP</value>
-    <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>使用条款</value>
@@ -353,16 +353,16 @@
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>和阳性患者的密切接触一览</value>
-    <comment>TODO:陽性登録者との接触一覧</comment>
+    <value>与阳性登记者的接触一览​</value>
+    <comment>陽性登録者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>times</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>查询跟阳性患者的密切接触情况</value>
-    <comment>TODO:陽性登録者との接触確認</comment>
+    <value>确认与阳性登记者的接触​</value>
+    <comment>陽性登録者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
     <value>查询过去14天内里的接触情况</value>
@@ -377,8 +377,8 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>确认与阳性者接触的结果</value>
-    <comment>TODO:陽性登録者との接触結果を確認</comment>
+    <value>确认与阳性登记者接触的结果</value>
+    <comment>陽性登録者との接触結果を確認</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>确诊新型冠状病毒呈阳性</value>
@@ -393,8 +393,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>不存在高于基准值的信号</value>
-    <comment>基準値を超える信号はありません</comment>
+    <value>查询过去14天内里的接触情况</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>主页</value>
@@ -529,8 +529,8 @@
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>以下日期确认到您与阳性患者存在密切接触。</value>
-    <comment>TODO:次の日に陽性登録者との接触が確認されました。</comment>
+    <value>在下记时间段检测到与阳性登记者的接触。</value>
+    <comment>次の日に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -661,28 +661,30 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>If you do not have any symptoms,
-or if you do not know anyone who has had contact with a person that has been tested positive for COVID-19,
-please go about your daily life as usual, paying attention to infection control measures.
-However, if you have any symptoms, please consider receiving a consultation..
-    </value>
-    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+    <value>如果您属于以下任何一种情况，请考虑根据应用的指导去医疗诊断机构。</value>
+    <comment>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_1" xml:space="preserve">
+    <value>・发烧或者有潜在疾病</value>
+    <comment>・発熱等の症状や基礎疾患がある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_2" xml:space="preserve">
+    <value>・有高感染风险的行为（*）</value>
+    <comment>・感染リスクの高い行動（※）をとった</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_3" xml:space="preserve">
+    <value>・其他想接受诊断的情况</value>
+    <comment>・その他、受診を希望する</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>If any of the following applies to you, please follow the guidance and check the Consultation Centers List to receive a consultation.</value>
-    <comment>次のいずれかに当てはまる方は、アプリの案内に従って相談先をご確認ください。</comment>
+    <value>即使您不去接受诊断，请从接触之日起7天内，注意感染控制措施，例如避免与高危人群（如老年人和容易病情加重的人）接触，避免高感染风险的行为。
+但是，如果您感觉身体有任何变化，请考虑去接受诊断。</value>
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
-  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
-    <value>・If you have any symptoms such as fever, pre-existing conditions.</value>
-    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
-    <value>・If you have been in contact with a person that has been tested positive for COVID-19.</value>
-    <comment>TODO:・陽性者と接触した心当たりがある</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
-    <value>・If you would like to receive a consultation.</value>
-    <comment>TODO:・その他、受診を希望する</comment>
+  <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
+    <value>*长时间多人聚餐等行为</value>
+    <comment>※大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>同意</value>
@@ -1087,6 +1089,14 @@ However, if you have any symptoms, please consider receiving a consultation..
     <value>确认处理方式</value>
     <comment>対処方法を確認</comment>
   </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription1" xml:space="preserve">
+    <value>有无接触的确认次数已超过上限。</value>
+    <comment>接触有無の確認回数が上限を超えました。</comment>
+  </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription2" xml:space="preserve">
+    <value>请等待最长1天来确认。</value>
+    <comment>解決のため、最大1日程度お待ちください。</comment>
+  </data>
   <data name="HomePageENStatusStoppedTitle" xml:space="preserve">
     <value>停止中</value>
     <comment>停止中</comment>
@@ -1340,24 +1350,45 @@ However, if you have any symptoms, please consider receiving a consultation..
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* 对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageFrom" xml:space="preserve">
+    <value></value>
+    <comment></comment>
   </data>
   <data name="ExposuresPageTo" xml:space="preserve">
-    <value>to</value>
-    <comment>TODO:から</comment>
+    <value>到</value>
+    <comment>から</comment>
   </data>
   <data name="ExposureDateFormatDate" xml:space="preserve">
-    <value>{2:#} {3:#}:00 AM</value>
-    <comment>TODO:{2:#}日 午前{3:#}時</comment>
+    <value>d日 tth点mm分</value>
+    <comment>d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatMonth" xml:space="preserve">
-    <value>{1:#}/{2:#}/ {3:#}:00 AM</value>
-    <comment>TODO:{1:#}月{2:#}日 午前{3:#}時</comment>
+    <value>M月d日 tth点mm分</value>
+    <comment>M月d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatYear" xml:space="preserve">
-    <value>{0:#}/{1:#}/{2:#} {3:#}:00 AM</value>
-    <comment>TODO:{0:#}年{1:#}月{2:#}日 午前{3:#}時</comment>
+    <value>yyyy年M月d日 tth点mm分</value>
+    <comment>yyyy年M月d日 tth時mm分</comment>
+  </data>
+
+	<data name="NotContactPageTitle" xml:space="preserve">
+    <value>查询过去14天内里的接触情况</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+	<data name="NotContactPageLabel1" xml:space="preserve">
+    <value>您没有查出跟阳性患者的密切接触</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+	<data name="NotContactPageDescription1" xml:space="preserve">
+    <value>为了进一步地防范疫情的扩散，请遵循日本政府提倡的“新生活模式”。</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+	<data name="NotContactPageButtonText" xml:space="preserve">
+    <value>分享此APP</value>
+    <comment>アプリを周りの人に知らせる</comment>
   </data>
 
   <data name="GeneralErrorTitle" xml:space="preserve">

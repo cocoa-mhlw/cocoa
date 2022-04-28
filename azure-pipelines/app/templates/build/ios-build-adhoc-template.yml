@@ -26,37 +26,50 @@ steps:
   displayName: 'Build Covid19Radar.iOS.csproj'
   inputs:
     solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
-    configuration: AppStore
+    configuration: Release
+    packageApp: false
     signingIdentity: 'Apple Distribution'
     signingProvisioningProfileID: 'cdc74b34-c91f-4bc9-8c5a-3e904ae2635e'
+    args: '/p:ArchiveOnBuild=true'
+
+- bash: |
+    XCARCHIVE_PATH=`find ~/Library/Developer/Xcode/Archives -name "*.xcarchive" | head -1`
+    echo "$XCARCHIVE_PATH"
+    echo "##vso[task.setvariable variable=xcarchivePath;]$XCARCHIVE_PATH"
+  displayName: Set Archive Path
+
+- script: |
+    EXPORT_OPTIONS=./Covid19Radar/Covid19Radar.iOS/ExportOptions/AdHoc.plist
+    plutil -insert 'provisioningProfiles' -json '{"$(APP_PACKAGE_NAME)":"$(iOS_ProfileName_AdHoc)"}' $EXPORT_OPTIONS
+    plutil -insert 'teamID' -string '$(iOS_TeamId)' $EXPORT_OPTIONS
+  displayName: Edit ExportOptions
+
+- script: |
+    EXPORT_OPTIONS=./Covid19Radar/Covid19Radar.iOS/ExportOptions/AdHoc.plist
+    xcodebuild -exportArchive -archivePath "$(xcarchivePath)" -exportPath ./Covid19Radar/Covid19Radar.iOS/ipa/ -exportOptionsPlist $EXPORT_OPTIONS
+  displayName: Export from xcarchive to ipa
 
 - task: CopyFiles@2
   displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'
   inputs:
-    SourceFolder: Covid19Radar/Covid19Radar.iOS/bin/iPhone/AppStore
+    SourceFolder: ./Covid19Radar/Covid19Radar.iOS/ipa
     Contents: '*.ipa'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - script: |
-    mkdir -p symbols
-    find . -type d -name '*.dSYM' | xargs -J % cp -v -R % $(System.DefaultWorkingDirectory)/symbols
-  displayName: Copy symbol files to staging
-
-- task: CopyFiles@2
-  displayName: 'Copy symbols to: Build.ArtifactStagingDirectory'
-  inputs:
-    Contents: |
-      **/symbols/**/*
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    cp -r "$(xcarchivePath)" "$(Build.ArtifactStagingDirectory)"
+  displayName: "Copy archve to: Build.ArtifactStagingDirectory"
 
 - script: |
-    cd $(Build.ArtifactStagingDirectory)/
-    ARCHIVE_FILE=`find *.ipa | head -1`
-    mv $ARCHIVE_FILE jp.go.mhlw.covid19radar_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion).ipa
+    cd $(Build.ArtifactStagingDirectory)
+    IPA_FILE=`find *.ipa | head -1`
+    mv "$IPA_FILE" covid19radar_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion).ipa
+    ARCHIVE_FILE=`find *.xcarchive | head -1`
+    mv "$ARCHIVE_FILE" covid19radar_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion).xcarchive
     ls -la
   displayName: 'Change archive name'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish IPA and symbols'
   inputs:
-    ArtifactName: 'archives_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion)'
+    ArtifactName: 'ios_adhoc_$(Environment)_v$(AppVersion)_$(buildVersion)'

@@ -83,6 +83,27 @@ namespace Covid19Radar.ViewModels
 
         private bool _isShowTroubleshootingPage = false;
 
+        private string _enStatusUnconfirmedDescription1;
+        public string EnStatusUnconfirmedDescription1
+        {
+            get { return _enStatusUnconfirmedDescription1; }
+            set { SetProperty(ref _enStatusUnconfirmedDescription1, value); }
+        }
+
+        private string _enStatusUnconfirmedDescription2;
+        public string EnStatusUnconfirmedDescription2
+        {
+            get { return _enStatusUnconfirmedDescription2; }
+            set { SetProperty(ref _enStatusUnconfirmedDescription2, value); }
+        }
+
+        private bool _isVisibleUnconfirmedTroubleshootingButton;
+        public bool IsVisibleUnconfirmedTroubleshootingButton
+        {
+            get { return _isVisibleUnconfirmedTroubleshootingButton; }
+            set { SetProperty(ref _isVisibleUnconfirmedTroubleshootingButton, value); }
+        }
+
         public HomePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -194,6 +215,10 @@ namespace Covid19Radar.ViewModels
                 {
                     await exposureDetectionBackgroundService.ExposureDetectionAsync();
                 }
+                catch (ENException ex)
+                {
+                    loggerService.Exception("Failed to exposure detection.", ex);
+                }
                 catch (Exception ex)
                 {
                     loggerService.Exception("Failed to exposure detection.", ex);
@@ -217,11 +242,11 @@ namespace Covid19Radar.ViewModels
                     .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
                 loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
-                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
                 var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
-                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
-                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
                 var hasExposure = dailySummaryList.Count() > 0 || userExposureInformationList.Count() > 0;
                 var hasHighRiskExposure = userExposureInformationList.Count() > 0;
@@ -401,6 +426,13 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
+
+                var isMaxPerDayExposureDetectionAPILimitReached = _userDataRepository.IsMaxPerDayExposureDetectionAPILimitReached();
+                EnStatusUnconfirmedDescription1 = isMaxPerDayExposureDetectionAPILimitReached
+                    ? AppResources.HomePageExposureDetectionAPILimitReachedDescription1 : AppResources.HomePageENStatusUnconfirmedDescription1;
+                EnStatusUnconfirmedDescription2 = isMaxPerDayExposureDetectionAPILimitReached
+                    ? AppResources.HomePageExposureDetectionAPILimitReachedDescription2 : AppResources.HomePageENStatusUnconfirmedDescription2;
+                IsVisibleUnconfirmedTroubleshootingButton = !isMaxPerDayExposureDetectionAPILimitReached;
             }
             else
             {

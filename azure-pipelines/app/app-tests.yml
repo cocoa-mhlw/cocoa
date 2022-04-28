@@ -16,7 +16,7 @@ jobs:
     inputs:
       command: test
       projects: '$(System.DefaultWorkingDirectory)/Covid19Radar/Tests/Covid19Radar.UnitTests/Covid19Radar.UnitTests.csproj'
-      arguments: '--collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=json,cobertura,lcov,teamcity,opencover'
+      arguments: '--configuration Debug --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=json,cobertura,lcov,teamcity,opencover'
 
   - task: PublishTestResults@2
     displayName: 'Publish test results'
@@ -31,5 +31,4 @@ jobs:
     inputs:
       codeCoverageTool: 'Cobertura'
       summaryFileLocation: '$(Agent.TempDirectory)\*\coverage.cobertura.xml'
-      reportDirectory: '$(Build.SourcesDirectory)\TestResults\Coverage\Reports'
       failIfCoverageEmpty: true

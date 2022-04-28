@@ -29,6 +29,8 @@ steps:
 - script: |
     if [ $(Environment) = "dv" ]; then
       FONT_COLOR=yellow
+    elif [ $(Environment) = "qa" ]; then
+      FONT_COLOR=orange
     elif [ $(Environment) = "stg" ]; then
       FONT_COLOR=green1
     fi

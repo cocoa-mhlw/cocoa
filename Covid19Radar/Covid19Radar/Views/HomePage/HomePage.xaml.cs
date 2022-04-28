@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using FFImageLoading.Forms;
@@ -36,7 +37,13 @@ namespace Covid19Radar.Views
         public HomePage()
         {
             InitializeComponent();
-
+            activeLayoutOrderView.ViewOrder = new List<View> {
+                activeStateLabel,
+                activeDescriptionLabel,
+                activeQuestionImage,
+                activeQuestionButton,
+                activeConfirmationDateLabel
+            };
             _homeActiveIconImage = NameScopeExtensions.FindByName<CachedImage>(this, "home_active_icon");
         }
 
