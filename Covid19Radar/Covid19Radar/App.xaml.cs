@@ -135,6 +135,7 @@ namespace Covid19Radar
 #if DEBUG
             containerRegistry.RegisterForNavigation<DebugPage>();
             containerRegistry.RegisterForNavigation<EditServerConfigurationPage>();
+            containerRegistry.RegisterForNavigation<ManageUserDataPage>();
 #endif
 
             // Settings
