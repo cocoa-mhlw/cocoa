@@ -9,7 +9,13 @@ namespace Covid19Radar.Services
 {
     public class DeviceVerifierMock : IDeviceVerifier
     {
-        public Task<string> VerifyAsync(DiagnosisSubmissionParameter submission)
+        public Task<string> VerifyAsync(DiagnosisSubmissionParameter _)
             => Task.Run(() =>　"DUMMY RESPONSE");
+
+        public Task<string> VerifyAsync(V1EventLogRequest _)
+            => Task.Run(() => "DUMMY RESPONSE");
+
+        public bool IsErrorPayload(string payload)
+            => false;
     }
 }

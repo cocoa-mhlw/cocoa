@@ -1,0 +1,30 @@
+steps:
+- script: mv -f $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings_template.json $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json
+  displayName: 'Prepare settings.json'
+
+- script: |
+    SETTINGS_JSON_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json"
+    sed -i '' "s/APP_VERSION/$(AppVersion)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/API_SECRET/$(API_SECRET)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/API_KEY/$(API_KEY)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/API_URL_BASE/$(API_URL_BASE)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/ANDROID_SAFETYNETKEY/$(ANDROID_SAFETYNETKEY)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/CDN_URL_BASE/$(CDN_URL_BASE)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/SUPPORT_EMAIL/$(SUPPORT_EMAIL)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/LOG_STORAGE_URL_BASE/$(LOG_STORAGE_URL_BASE)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/LOG_STORAGE_CONTAINER_NAME/$(LOG_STORAGE_CONTAINER_NAME)/g" $SETTINGS_JSON_PATH
+    sed -i '' "s/LOG_STORAGE_ACCOUNT_NAME/$(LOG_STORAGE_ACCOUNT_NAME)/g" $SETTINGS_JSON_PATH
+  displayName: 'Inject app settings into settings.json'
+
+- script: |
+    RESOURCES_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/Resources"
+    for FILE in `\find $RESOURCES_PATH/*.resx`; do
+      perl -pi -e "s/covid19radarjpnprod\.z11\.web\.core\.windows\.net/covid19radarjpn$(Environment)\.z11\.web\.core\.windows\.net/g" $FILE
+    done
+
+    # For past versions
+    SETTINGS_JSON_PATH="$(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json"
+    perl -pi -e "s/covid19radarjpnprod\.z11\.web\.core\.windows\.net/covid19radarjpn$(Environment)\.z11\.web\.core\.windows\.net/g" $SETTINGS_JSON_PATH
+
+  displayName: 'Change URL from prod to $(Environment)'
+  condition: and(succeeded(), not(eq(variables['Environment'], 'prod')))

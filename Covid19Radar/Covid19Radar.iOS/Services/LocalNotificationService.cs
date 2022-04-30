@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -81,6 +82,35 @@ namespace Covid19Radar.iOS.Services
             }
 
             _loggerService.EndMethod();
+        }
+
+        public async Task DismissExposureNotificationAsync()
+        {
+            _loggerService.StartMethod();
+
+            var notifications = await UNUserNotificationCenter.Current.GetDeliveredNotificationsAsync();
+            var targetNotifications = notifications
+                .Select(notification => notification.Request.Identifier)
+                .Where(identifier => identifier == NOTIFICATION_ID)
+                .ToArray();
+
+            if (targetNotifications.Count() != 0)
+            {
+                UNUserNotificationCenter.Current.RemoveDeliveredNotifications(targetNotifications);
+            }
+
+            _loggerService.EndMethod();
+        }
+
+        public async Task<bool> IsWarnedLocalNotificationOffAsync()
+        {
+            _loggerService.StartMethod();
+
+            var settings = await UNUserNotificationCenter.Current.GetNotificationSettingsAsync();
+
+            _loggerService.EndMethod();
+
+            return settings.AuthorizationStatus == UNAuthorizationStatus.Denied;
         }
     }
 }

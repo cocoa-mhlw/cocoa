@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using Covid19Radar.Common;
 using Newtonsoft.Json;
 
 namespace Covid19Radar.Model
@@ -20,8 +21,17 @@ namespace Covid19Radar.Model
             [JsonProperty("text")]
             public string Text { get; set; }
 
+            /// <summary>
+            /// Updated terms of service(or privacy policy) dateTime, that based on Japan Standard Time (UTC+9)
+            /// </summary>
             [JsonProperty("update_date")]
-            public DateTime UpdateDateTime { get; set; }
+            public DateTime UpdateDateTimeJst { get; set; }
+
+            public DateTime UpdateDateTimeUtc
+                => TimeZoneInfo.ConvertTimeToUtc(
+                        DateTime.SpecifyKind(UpdateDateTimeJst, DateTimeKind.Unspecified),
+                        AppConstants.TIMEZONE_JST
+                        );
         }
     }
 }

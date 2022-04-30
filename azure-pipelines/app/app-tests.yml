@@ -1,0 +1,34 @@
+name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+# NOTE: CI/PR triggers should be set in the Classic Editor
+
+jobs:
+- job: unit_tests
+  pool:
+    vmImage: 'windows-2019'
+
+  steps:
+  - script: mv -f $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings_template.json $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json
+    displayName: 'Prepare settings.json'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Dotnet test'
+    inputs:
+      command: test
+      projects: '$(System.DefaultWorkingDirectory)/Covid19Radar/Tests/Covid19Radar.UnitTests/Covid19Radar.UnitTests.csproj'
+      arguments: '--configuration Debug --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=json,cobertura,lcov,teamcity,opencover'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish test results'
+    inputs:
+      testResultsFormat: XUnit
+      testResultsFiles: '*.trx'
+      searchFolder: '$(Agent.TempDirectory)'
+      mergeTestResults: true
+
+  - task: PublishCodeCoverageResults@1
+    displayName: 'Publish code coverage report'
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: '$(Agent.TempDirectory)\*\coverage.cobertura.xml'
+      failIfCoverageEmpty: true

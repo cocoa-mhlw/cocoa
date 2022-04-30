@@ -23,6 +23,7 @@
         </Grid.RowDefinitions>
         <Label
             Grid.Row="0"
+            AutomationProperties.IsInAccessibleTree="True"
             Margin="0,0,0,20"
             Style="{StaticResource DefaultTitleLabel}"
             Text="{x:Static resources:AppResources.TutorialPage1Title2}" />
@@ -44,11 +45,13 @@
                         <ffimageloading:CachedImage
                             Grid.Row="0"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Aspect="AspectFit"
                             Source="TutorialPage10.png" />
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="True"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.TutorialPage1Description1}"
                             VerticalTextAlignment="Center" />
@@ -64,11 +67,13 @@
                         <ffimageloading:CachedImage
                             Grid.Row="0"
                             Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Aspect="AspectFit"
                             Source="TutorialPage11.png" />
                         <Label
                             Grid.Row="0"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="True"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.TutorialPage1Description2}"
                             VerticalTextAlignment="Center" />
@@ -84,11 +89,13 @@
                         <ffimageloading:CachedImage
                             Grid.Row="0"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Aspect="AspectFit"
                             Source="TutorialPage12.png" />
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="True"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.TutorialPage1Description3}"
                             VerticalTextAlignment="Center" />
@@ -96,7 +103,7 @@
                 </StackLayout>
                 <Button
                     Grid.Row="1"
-                    AutomationId="NextButton"
+                    AutomationProperties.IsInAccessibleTree="True"
                     Command="{prism:NavigateTo 'TutorialPage2'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.TutorialPage1Button}" />

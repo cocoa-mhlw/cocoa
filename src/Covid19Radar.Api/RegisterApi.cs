@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -19,18 +19,19 @@ namespace Covid19Radar.Api
 {
     public class RegisterApi
     {
-        private readonly ICryptionService Cryption;
+        private const string DUMMY_PROTECT_SECRET = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+        private const string DUMMY_UUID = "000000000000000000000000000000000";
+        private const string DUMMY_SECRET = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+
         private readonly ILogger<RegisterApi> Logger;
         private readonly IUserRepository UserRepository;
         private readonly IValidationServerService ValidationServerService;
 
         public RegisterApi(
             IUserRepository userRepository,
-            ICryptionService cryption,
             IValidationServerService validationServerService,
             ILogger<RegisterApi> logger)
         {
-            Cryption = cryption;
             Logger = logger;
             UserRepository = userRepository;
             ValidationServerService = validationServerService;
@@ -59,15 +60,21 @@ namespace Covid19Radar.Api
 
         private async Task<IActionResult> Register(string userUuid)
         {
-            var newItem = new UserModel();
-            var secret = Cryption.CreateSecret(userUuid);
-            newItem.UserUuid = userUuid;
-            newItem.ProtectSecret = Cryption.Protect(secret);
+            var newItem = new UserModel()
+            {
+                UserUuid = userUuid,
+                ProtectSecret = DUMMY_PROTECT_SECRET
+            };
             await UserRepository.Create(newItem);
-            var result = new RegisterResultModel();
-            result.UserUuid = userUuid;
-            result.Secret = secret;
-            result.JumpConsistentSeed = newItem.JumpConsistentSeed;
+
+            var result = new RegisterResultModel()
+            {
+                // set dummy infos
+                UserUuid = DUMMY_UUID,
+                Secret = DUMMY_SECRET,
+                JumpConsistentSeed = newItem.JumpConsistentSeed,
+            };
+
             return new OkObjectResult(result);
         }
     }

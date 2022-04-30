@@ -4,6 +4,7 @@
 
 using System.Threading.Tasks;
 using AndroidX.Work;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Droid.Services.Migration
@@ -14,14 +15,18 @@ namespace Covid19Radar.Droid.Services.Migration
         private static readonly string[] OldWorkNames = {
             "exposurenotification",
             "cocoaexposurenotification",
+            "cocoaexposurenotification-202107",
         };
 
+        private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
         private readonly ILoggerService _loggerService;
 
         public WorkManagerMigrator(
+            AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             ILoggerService loggerService
             )
         {
+            _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             _loggerService = loggerService;
         }
 
@@ -32,7 +37,7 @@ namespace Covid19Radar.Droid.Services.Migration
             var workManager = WorkManager.GetInstance(Xamarin.Essentials.Platform.AppContext);
             CancelOldWorks(workManager, OldWorkNames, _loggerService);
 
-            Xamarin.ExposureNotifications.ExposureNotification.Init();
+            _exposureDetectionBackgroundService.Schedule();
 
             _loggerService.EndMethod();
 

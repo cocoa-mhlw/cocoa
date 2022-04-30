@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using Chino;
 using Covid19Radar.Model;
 using Newtonsoft.Json;
 using Xunit;
@@ -22,7 +23,7 @@ namespace Covid19Radar.UnitTests.Models
             var testDuration = new TimeSpan(1, 2, 3, 4, 5);
             var testAttenuationValue = 1;
             var testTotalRiskScore = 20;
-            var testRiskLevel = UserRiskLevel.Medium;
+            var testRiskLevel = RiskLevel.Medium;
 
             var testExposureInfo = new UserExposureInfo(testTimestamp, testDuration, testAttenuationValue, testTotalRiskScore, testRiskLevel);
             var serializedJson = JsonConvert.SerializeObject(testExposureInfo);
@@ -45,7 +46,7 @@ namespace Covid19Radar.UnitTests.Models
             Assert.Equal(new TimeSpan(1, 2, 3, 4, 5), deserializedExposureInfo.Duration);
             Assert.Equal(2, deserializedExposureInfo.AttenuationValue);
             Assert.Equal(19, deserializedExposureInfo.TotalRiskScore);
-            Assert.Equal(UserRiskLevel.Medium, deserializedExposureInfo.TransmissionRiskLevel);
+            Assert.Equal(RiskLevel.Medium, deserializedExposureInfo.TransmissionRiskLevel);
         }
     }
 }

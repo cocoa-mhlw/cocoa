@@ -3,7 +3,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Net;
 using Acr.UserDialogs;
+using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
@@ -14,9 +17,9 @@ namespace Covid19Radar.ViewModels
 {
     public class TutorialPage3ViewModel : ViewModelBase
     {
-        private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
-        private readonly ITermsUpdateService termsUpdateService;
+        private readonly ILoggerService _loggerService;
+        private readonly IUserDataService _userDataService;
+        private readonly IUserDataRepository _userDataRepository;
 
         private string _url;
         public string Url
@@ -25,32 +28,64 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _url, value); }
         }
 
-        public TutorialPage3ViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public TutorialPage3ViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataService userDataService,
+            IUserDataRepository userDataRepository
+            ) : base(navigationService)
         {
-            this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            this.termsUpdateService = termsUpdateService;
+            _loggerService = loggerService;
+            _userDataService = userDataService;
+            _userDataRepository = userDataRepository;
         }
         public Command OnClickAgree => new Command(async () =>
         {
-            loggerService.StartMethod();
+            _loggerService.StartMethod();
 
             UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
 
-            var registerResult = await userDataService.RegisterUserAsync();
-            if (!registerResult)
+            try
             {
-                loggerService.Error("Failed register");
+                var resultStatusCode = await _userDataService.RegisterUserAsync();
+                if (resultStatusCode != HttpStatusCode.OK)
+                {
+                    UserDialogs.Instance.HideLoading();
+                    if (resultStatusCode == HttpStatusCode.Forbidden)
+                    {
+                        _loggerService.Error("Failed register for requests from overseas");
+                        await UserDialogs.Instance.AlertAsync(
+                            Resources.AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
+                            Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                            Resources.AppResources.ButtonOk);
+                        _loggerService.EndMethod();
+                        return;
+                    }
+
+                    _loggerService.Error("Failed register");
+                    await UserDialogs.Instance.AlertAsync(
+                        Resources.AppResources.DialogNetworkConnectionError,
+                        Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                        Resources.AppResources.ButtonOk);
+                    _loggerService.EndMethod();
+                    return;
+                }
+            }
+            catch
+            {
                 UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogNetworkConnectionErrorTitle, Resources.AppResources.ButtonOk);
-                loggerService.EndMethod();
+                await UserDialogs.Instance.AlertAsync(
+                    Resources.AppResources.DialogNetworkConnectionError,
+                    Resources.AppResources.DialogNetworkConnectionErrorTitle,
+                    Resources.AppResources.ButtonOk);
+                _loggerService.EndMethod();
                 return;
             }
 
-            termsUpdateService.SaveLastUpdateDate(TermsType.TermsOfService, DateTime.Now);
+            _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, DateTime.Now);
             UserDialogs.Instance.HideLoading();
             await NavigationService.NavigateAsync(nameof(PrivacyPolicyPage));
-            loggerService.EndMethod();
+            _loggerService.EndMethod();
         });
     }
 }

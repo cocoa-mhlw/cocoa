@@ -9,9 +9,21 @@ namespace Covid19Radar.Services
 {
     public interface ISecureStorageService
     {
+        int GetIntValue(string key, int defaultValue);
+        long GetLongValue(string key, long defaultValue);
+        float GetFloatValue(string key, float defaultValue);
+        string GetStringValue(string key, string defaultValue);
+        bool GetBoolValue(string key, bool defaultValue);
+        double GetDoubleValue(string key, double defaultValue);
+
+        void SetIntValue(string key, int value);
+        void SetLongValue(string key, long value);
+        void SetFloatValue(string key, float value);
+        void SetStringValue(string key, string value);
+        void SetBoolValue(string key, bool value);
+        void SetDoubleValue(string key, double value);
+
         bool ContainsKey(string key);
-        T GetValue<T>(string key, T defaultValue = default);
-        void SetValue<T>(string key, T value);
         void RemoveValue(string key);
     }
 
@@ -58,7 +70,7 @@ namespace Covid19Radar.Services
             return contains;
         }
 
-        public T GetValue<T>(string key, T defaultValue = default)
+        private T GetValue<T>(string key, T defaultValue = default)
         {
             object result = defaultValue;
             lock (this)
@@ -117,7 +129,7 @@ namespace Covid19Radar.Services
             return (T)result;
         }
 
-        public void SetValue<T>(string key, T value)
+        private void SetValue<T>(string key, T value)
         {
             lock (this)
             {
@@ -189,5 +201,29 @@ namespace Covid19Radar.Services
                 }
             }
         }
+
+        public int GetIntValue(string key, int defaultValue = default) => GetValue(key, defaultValue);
+
+        public long GetLongValue(string key, long defaultValue = default) => GetValue(key, defaultValue);
+
+        public float GetFloatValue(string key, float defaultValue = default) => GetValue(key, defaultValue);
+
+        public string GetStringValue(string key, string defaultValue = default) => GetValue(key, defaultValue);
+
+        public bool GetBoolValue(string key, bool defaultValue = default) => GetValue(key, defaultValue);
+
+        public double GetDoubleValue(string key, double defaultValue = default) => GetValue(key, defaultValue);
+
+        public void SetIntValue(string key, int value) => SetValue(key, value);
+
+        public void SetLongValue(string key, long value) => SetValue(key, value);
+
+        public void SetFloatValue(string key, float value) => SetValue(key, value);
+
+        public void SetStringValue(string key, string value) => SetValue(key, value);
+
+        public void SetBoolValue(string key, bool value) => SetValue(key, value);
+
+        public void SetDoubleValue(string key, double value) => SetValue(key, value);
     }
 }

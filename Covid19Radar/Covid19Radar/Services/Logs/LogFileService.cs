@@ -6,7 +6,6 @@ using System;
 using System.IO;
 using System.IO.Compression;
 using Covid19Radar.Common;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services.Logs
 {
@@ -14,8 +13,8 @@ namespace Covid19Radar.Services.Logs
     {
         #region Static Fields
 
-        private static readonly string logUploadFilePrefix = "cocoa_log_";
-        private static readonly string logUploadFileExtension = "zip";
+        private static readonly string logFilePrefix = "cocoa_log_";
+        private static readonly string logFileExtension = "zip";
 
         #endregion
 
@@ -23,15 +22,21 @@ namespace Covid19Radar.Services.Logs
 
         private readonly ILoggerService loggerService;
         private readonly ILogPathService logPathService;
+        private readonly IBackupAttributeService backupAttributeService;
 
         #endregion
 
         #region Constructors
 
-        public LogFileService(ILoggerService loggerService, ILogPathService logPathService)
+        public LogFileService(
+            ILoggerService loggerService,
+            ILogPathService logPathService,
+            IBackupAttributeService backupAttributeService
+            )
         {
             this.loggerService = loggerService;
             this.logPathService = logPathService;
+            this.backupAttributeService = backupAttributeService;
         }
 
         #endregion
@@ -40,12 +45,12 @@ namespace Covid19Radar.Services.Logs
 
         public string CreateLogId() => Guid.NewGuid().ToString();
 
-        public string LogUploadingFileName(string logId)
+        public string CreateZipFileName(string logId)
         {
-            return logUploadFilePrefix + logId + "." + logUploadFileExtension;
+            return logFilePrefix + logId + "." + logFileExtension;
         }
 
-        public bool CreateLogUploadingFileToTmpPath(string logUploadingFileName)
+        public string CreateZipFile(string fileName)
         {
             loggerService.StartMethod();
             try
@@ -54,42 +59,50 @@ namespace Covid19Radar.Services.Logs
                 var logFiles = Directory.GetFiles(logsDirPath, logPathService.LogFileWildcardName);
                 if (logFiles.Length == 0)
                 {
-                    loggerService.EndMethod();
-                    return false;
+                    return null;
                 }
-                ZipFile.CreateFromDirectory(logsDirPath, Path.Combine(logPathService.LogUploadingTmpPath, logUploadingFileName));
-                loggerService.EndMethod();
-                return true;
+
+                var zipFilePath = Path.Combine(logPathService.LogUploadingTmpPath, fileName);
+                ZipFile.CreateFromDirectory(logsDirPath, zipFilePath);
+
+                return zipFilePath;
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                loggerService.Error("Failed to create uploading file");
+                loggerService.Exception("Failed to create uploading file", exception);
+                return null;
+            }
+            finally
+            {
                 loggerService.EndMethod();
-                return false;
             }
         }
 
-        public bool CopyLogUploadingFileToPublicPath(string logUploadingFileName)
+        public string CopyLogUploadingFileToPublicPath(string logPath)
         {
             loggerService.StartMethod();
             try
             {
+                var logFileName = Path.GetFileName(logPath);
                 var tmpPath = logPathService.LogUploadingTmpPath;
                 var publicPath = logPathService.LogUploadingPublicPath;
                 if (string.IsNullOrEmpty(tmpPath) || string.IsNullOrEmpty(publicPath))
                 {
-                    loggerService.EndMethod();
-                    return false;
+                    return null;
                 }
-                File.Copy(Path.Combine(tmpPath, logUploadingFileName), Path.Combine(publicPath, logUploadingFileName), true);
-                loggerService.EndMethod();
-                return true;
+                var destPath = Path.Combine(publicPath, logFileName);
+                File.Copy(logPath, destPath, true);
+
+                return destPath;
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                loggerService.Error("Failed to copy log file");
+                loggerService.Exception("Failed to copy log file", exception);
+                return null;
+            }
+            finally
+            {
                 loggerService.EndMethod();
-                return false;
             }
         }
 
@@ -125,7 +138,7 @@ namespace Covid19Radar.Services.Logs
 
         }
 
-        public void AddSkipBackupAttribute() => DependencyService.Get<ILogFileDependencyService>().AddSkipBackupAttribute();
+        public void SetSkipBackupAttributeToLogDir() => backupAttributeService.SetSkipBackupAttributeToLogDir();
 
         public void Rotate()
         {

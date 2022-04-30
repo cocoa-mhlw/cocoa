@@ -2,15 +2,16 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Acr.UserDialogs;
-using Covid19Radar.Model;
+using Chino;
+using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using Xamarin.Essentials;
-using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -26,22 +27,37 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _AppVersion, value); }
         }
 
-        private readonly IExposureNotificationService exposureNotificationService;
-        private readonly IUserDataService userDataService;
-        private readonly IHttpDataService httpDataService;
+        private readonly IUserDataRepository userDataRepository;
+        private readonly IExposureDataRepository exposureDataRepository;
+        private readonly IExposureConfigurationRepository exposureConfigurationRepository;
         private readonly ILogFileService logFileService;
-        private readonly ITermsUpdateService termsUpdateService;
+        private readonly AbsExposureNotificationApiService exposureNotificationApiService;
+        private readonly ICloseApplicationService closeApplicationService;
 
-        public SettingsPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, IHttpDataService httpDataService, IExposureNotificationService exposureNotificationService, ILogFileService logFileService, ITermsUpdateService termsUpdateService) : base(navigationService)
+        public string TermsOfUseReadText => $"{AppResources.TermsofservicePageTitle} {AppResources.Button}";
+        public string PrivacyPolicyReadText => $"{AppResources.PrivacyPolicyPageTitle} {AppResources.Button}";
+        public string WebAccessibilityPolicyReadText => $"{AppResources.WebAccessibilityPolicyPageTitle} {AppResources.Button}";
+
+        public SettingsPageViewModel(
+            INavigationService navigationService,
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository,
+            IExposureDataRepository exposureDataRepository,
+            IExposureConfigurationRepository exposureConfigurationRepository,
+            ILogFileService logFileService,
+            AbsExposureNotificationApiService exposureNotificationApiService,
+            ICloseApplicationService closeApplicationService
+            ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppInfo.VersionString;
             this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            this.httpDataService = httpDataService;
-            this.exposureNotificationService = exposureNotificationService;
+            this.userDataRepository = userDataRepository;
+            this.exposureDataRepository = exposureDataRepository;
+            this.exposureConfigurationRepository = exposureConfigurationRepository;
             this.logFileService = logFileService;
-            this.termsUpdateService = termsUpdateService;
+            this.exposureNotificationApiService = exposureNotificationApiService;
+            this.closeApplicationService = closeApplicationService;
         }
 
         public ICommand OnChangeResetData => new Command(async () =>
@@ -58,17 +74,18 @@ namespace Covid19Radar.ViewModels
             {
                 UserDialogs.Instance.ShowLoading(AppResources.LoadingTextDeleting);
 
-                if (await ExposureNotification.IsEnabledAsync())
-                {
-                    await ExposureNotification.StopAsync();
-                }
+                await StopExposureNotificationAsync();
 
                 // Reset All Data and Optout
-                userDataService.RemoveStartDate();
-                exposureNotificationService.RemoveExposureInformation();
-                exposureNotificationService.RemoveConfiguration();
-                exposureNotificationService.RemoveLastProcessTekTimestamp();
-                termsUpdateService.RemoveAllUpdateDate();
+                await exposureDataRepository.RemoveDailySummariesAsync();
+                await exposureDataRepository.RemoveExposureWindowsAsync();
+                exposureDataRepository.RemoveExposureInformation();
+                await userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
+                await exposureConfigurationRepository.RemoveExposureConfigurationAsync();
+
+                userDataRepository.RemoveStartDate();
+                userDataRepository.RemoveAllUpdateDate();
+                userDataRepository.RemoveAllExposureNotificationStatus();
 
                 _ = logFileService.DeleteLogsDir();
 
@@ -80,7 +97,7 @@ namespace Covid19Radar.ViewModels
                     );
                 Application.Current.Quit();
                 // Application close
-                DependencyService.Get<ICloseApplication>().closeApplication();
+                closeApplicationService.CloseApplication();
 
                 loggerService.EndMethod();
                 return;
@@ -88,5 +105,33 @@ namespace Covid19Radar.ViewModels
 
             loggerService.EndMethod();
         });
+
+        private async Task StopExposureNotificationAsync()
+        {
+            loggerService.StartMethod();
+
+            try
+            {
+                _ = await exposureNotificationApiService.StopExposureNotificationAsync();
+            }
+            catch (ENException exception)
+            {
+                loggerService.Exception("ENException", exception);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+        }
+
+        public ICommand OnClickObtainSourceCode => new Command<string>(async (uri) =>
+        {
+            loggerService.StartMethod();
+
+            await Browser.OpenAsync(uri, BrowserLaunchMode.External);
+
+            loggerService.EndMethod();
+        });
+
     }
 }

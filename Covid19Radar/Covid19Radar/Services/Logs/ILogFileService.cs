@@ -8,13 +8,13 @@ namespace Covid19Radar.Services.Logs
     {
         // Log upload
         string CreateLogId();
-        string LogUploadingFileName(string logId);
-        bool CreateLogUploadingFileToTmpPath(string logUploadingFileName);
-        bool CopyLogUploadingFileToPublicPath(string logUploadingFileName);
+        string CreateZipFileName(string logId);
+        string CreateZipFile(string fileName);
+        string CopyLogUploadingFileToPublicPath(string logPath);
         bool DeleteAllLogUploadingFiles();
 
         // Log rotate
-        void AddSkipBackupAttribute();
+        void SetSkipBackupAttributeToLogDir();
         void Rotate();
         bool DeleteLogsDir();
     }

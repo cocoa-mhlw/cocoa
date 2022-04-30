@@ -16,78 +16,80 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ScrollView>
-        <StackLayout
-            Spacing="16"
-            Margin="20,20,20,10">
-            <Grid
-                ColumnSpacing="10"
-                RowSpacing="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.7*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.5*" />
-                    <RowDefinition Height="0.5*" />
-                </Grid.RowDefinitions>
-                <ffimageloading:CachedImage
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    AutomationProperties.IsInAccessibleTree="False"
-                    Aspect="AspectFit"
-                    Source="notify_img01.png" />
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
+        <ScrollView>
+            <StackLayout
+                Margin="20"
+                Spacing="16">
+                <StackLayout
+                    Spacing="10"
+                    Orientation="Horizontal">
+                    <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
+                        Aspect="AspectFit"
+                        Source="notify_img02.png" />
+                    <StackLayout
+                        Spacing="16"
+                        VerticalOptions="Center">
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription1}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource AnnotationLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                    <Span Text="{x:Static resources:AppResources.SmsAnnotationText}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                            <Label.Triggers>
+                                <DataTrigger
+                                    TargetType="Label"
+                                    Binding="{Binding Source={x:Static resources:AppResources.SmsAnnotationText}}"
+                                    Value="">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
                 <Label
-                    Grid.Row="0"
-                    Grid.Column="1"
                     AutomationProperties.IsInAccessibleTree="True"
                     Style="{StaticResource DefaultLabel}"
-                    VerticalTextAlignment="Center"
-                    Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription1}" />
-                <ffimageloading:CachedImage
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    AutomationProperties.IsInAccessibleTree="False"
-                    Aspect="AspectFit"
-                    Source="notify_img02.png" />
-                <Label
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource DefaultLabel}"
-                    VerticalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription2}" />
-            </Grid>
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                Style="{StaticResource DefaultLabel}">
-                <AutomationProperties.Name>
-                    <OnPlatform x:TypeArguments="x:String">
-                        <On Platform="iOS" Value="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
-                    </OnPlatform>
-                </AutomationProperties.Name>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="{x:Static resources:AppResources.NoteSymbol}" />
-                        <Span Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label
-                AutomationProperties.IsInAccessibleTree="True"
-                Style="{StaticResource DefaultLabel}">
-                <AutomationProperties.Name>
-                    <OnPlatform x:TypeArguments="x:String">
-                        <On Platform="iOS" Value="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
-                    </OnPlatform>
-                </AutomationProperties.Name>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="{x:Static resources:AppResources.NoteSymbol}" />
-                        <Span Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-        </StackLayout>
-    </ScrollView>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.Triggers>
+                        <DataTrigger
+                            TargetType="Label"
+                            Binding="{Binding Source={x:Static resources:AppResources.CocoaAnnotationText}}"
+                            Value="">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription3}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageDescription4}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
 </ContentPage>

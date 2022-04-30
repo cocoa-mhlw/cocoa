@@ -17,6 +17,11 @@
     NavigationPage.HasNavigationBar="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
     <ScrollView>
         <Grid Style="{StaticResource HelpPageGridLayout}">
             <Grid.RowDefinitions>
@@ -25,20 +30,68 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <StackLayout Spacing="15" Grid.Row="0">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1MainTitle}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage20.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1MainTitle}" />
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="HelpPage20.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol1}"/>
+                            <Span Text="{x:Static resources:AppResources.RandomCodeAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource AnnotationLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol2}"/>
+                            <Span Text="{x:Static resources:AppResources.GpsAnnotationText}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
             <StackLayout Spacing="15" Grid.Row="1">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Title}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage22.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Text}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description2Title}" />
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="HelpPage22.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description2Text}" />
             </StackLayout>
             <StackLayout Spacing="15" Grid.Row="2">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description3Title}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage21.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description3Text}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description3Title}" />
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Aspect="AspectFit"
+                    Source="HelpPage21.png" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.HelpPage1Description3Text}" />
             </StackLayout>
         </Grid>
     </ScrollView>
+    </ContentView>
 </ContentPage>

@@ -7,7 +7,6 @@
     x:Class="Covid19Radar.Views.ContactedNotifyPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
@@ -16,54 +15,101 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ScrollView>
-        <StackLayout
-            Padding="10"
-            BackgroundColor="#FFFFFF"
-            Spacing="10">
-            <Frame
-                Padding="16"
-                BackgroundColor="#FFF3DD"
-                CornerRadius="10">
-                <StackLayout>
-                    <ffimageloading:CachedImage
-                        Margin="0,0,0,10"
-                        Aspect="AspectFit"
-                        Source="InfoMark.png" />
-                    <Label
-                        Margin="0,0,0,5"
-                        Style="{StaticResource DefaultTitleLabel}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
-                    <Label
-                        Margin="0,0,0,5"
-                        FontSize="Large"
-                        HorizontalTextAlignment="Center"
-                        Style="{StaticResource DefaultTitleLabel}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{Binding ExposureCount}" />
-                                <Span Text="{x:Static resources:AppResources.ContactedNotifyPageCountText}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button
-                        Margin="0,0,0,20"
-                        AutomationId="ButtonShareApp"
-                        Command="{Binding Path=OnClickByForm}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
-                    <Label
-                        Margin="0"
-                        HorizontalTextAlignment="Start"
-                        Style="{StaticResource DefaultSubTitleLabel}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
-                </StackLayout>
-            </Frame>
-            <Button
-                AutomationId="OnClickExposures"
-                Command="{prism:NavigateTo 'ExposuresPage'}"
-                Style="{StaticResource DefaultButton}"
-                Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
-        </StackLayout>
-    </ScrollView>
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
+        <ScrollView>
+            <StackLayout
+                Spacing="10">
+                <Frame
+                    Margin="10"
+                    Padding="16"
+                    BackgroundColor="#FFF3DD"
+                    CornerRadius="10">
+                    <StackLayout
+                        Spacing="20">
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultTitleLabel}"
+                            Text="{x:Static resources:AppResources.ContactedNotifyPageMainText}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource DefaultTitleLabel}"
+                            Text="{Binding ExposureDurationInMinutes}">
+                            <Label.Triggers>
+                                <DataTrigger
+                                    TargetType="Label"
+                                    Binding="{Binding ExposureDurationInMinutes}"
+                                    Value="">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource DefaultTitleLabel}"
+                            Text="{Binding ExposureCount}">
+                            <Label.Triggers>
+                                <DataTrigger
+                                    TargetType="Label"
+                                    Binding="{Binding ExposureCount}"
+                                    Value="">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Button
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Command="{prism:NavigateTo 'ExposuresPage'}"
+                            Style="{StaticResource DefaultButton}"
+                            Text="{x:Static resources:AppResources.ContactedNotifyPageButton1}" />
+                        <StackLayout
+                            Spacing="10">
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1_1}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1_2}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                HorizontalTextAlignment="Start"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.ContactedNotifyPageDescription1_3}" />
+                        </StackLayout>
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            HorizontalTextAlignment="Start"
+                            Style="{StaticResource AnnotationLabelDark}"
+                            Text="{x:Static resources:AppResources.ContactedNotifyPageHighRiskActionAnnotationText}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            HorizontalTextAlignment="Start"
+                            Style="{StaticResource DefaultLabel}"
+                            Text="{x:Static resources:AppResources.ContactedNotifyPageDescription2}" />
+                        <Button
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Command="{Binding Path=OnClickByForm}"
+                            Style="{StaticResource DefaultButton}"
+                            Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
 </ContentPage>

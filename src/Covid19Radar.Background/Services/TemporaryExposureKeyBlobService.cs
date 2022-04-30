@@ -86,34 +86,37 @@ namespace Covid19Radar.Background.Services
             await blockBlob.DeleteIfExistsAsync();
         }
 
-        public async Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models)
+        public async Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models, string[] supportRegions)
         {
             Logger.LogInformation($"start {nameof(WriteFilesJsonAsync)}");
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
             var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
             await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
 
-            foreach (var grp in models.GroupBy(_ => _.Region))
+            var postedGroupedRegions = models.GroupBy(_ => _.Region);
+            foreach (var region in supportRegions)
             {
-                // per region
-                var region = grp.Key;
                 var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{region}".ToLower());
-                // Filename is inferable as batch number
                 var exportFileName = "list.json";
-                //var blockBlob = cloudBlobContainer.GetBlockBlobReference(exportFileName);
                 var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
 
-                var files = grp.Select(_ => new TemporaryExposureKeyExportFileModel()
-                {
-                    Region = region,
-                    Created = _.TimestampSecondsSinceEpoch,
-                    Url = $"{TekExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{region}/{_.BatchNum}.zip"
+                var grp = postedGroupedRegions?.FirstOrDefault(_ => _.Key == region);
 
-                }).ToArray();
+                var filesJson = "[]";
+                if (grp != null)
+                {
+                    var files = grp.Select(_ => new TemporaryExposureKeyExportFileModel()
+                    {
+                        Region = region,
+                        Created = _.TimestampSecondsSinceEpoch,
+                        Url = $"{TekExportKeyUrl}/{TekExportBlobStorageContainerPrefix}/{region}/{_.BatchNum}.zip"
+                    }).ToArray();
+
+                    filesJson = JsonConvert.SerializeObject(files);
+                }
                 using (var stream = new MemoryStream())
                 using (var writer = new StreamWriter(stream))
                 {
-                    var filesJson = JsonConvert.SerializeObject(files);
                     await writer.WriteAsync(filesJson);
                     await writer.FlushAsync();
                     await stream.FlushAsync();

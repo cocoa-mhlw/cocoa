@@ -12,9 +12,12 @@ using Covid19Radar.Services;
 using Covid19Radar.Droid.Services;
 using Covid19Radar.Services.Migration;
 using Covid19Radar.Droid.Services.Migration;
-using AndroidX.Work;
-using Xamarin.ExposureNotifications;
-using Java.Util.Concurrent;
+using Chino;
+using Chino.Android.Google;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Prism.Ioc;
+using Covid19Radar.Repository;
 
 namespace Covid19Radar.Droid
 {
@@ -23,13 +26,45 @@ namespace Covid19Radar.Droid
 #else
     [Application(Debuggable = false)]
 #endif
-    public class MainApplication : Application
+    public class MainApplication : Application, IExposureNotificationHandler
     {
-        private const int WORKER_REPEATED_INTERVAL_HOURS = 6;
-        private const int WORKER_BACKOFF_DELAY_HOURS = 1;
+        private const long INITIAL_BACKOFF_MILLIS = 60 * 60 * 1000;
+
+        private readonly JobSetting _exposureDetectedV1JobSetting
+            = new JobSetting(INITIAL_BACKOFF_MILLIS, Android.App.Job.BackoffPolicy.Linear, true);
+        private readonly JobSetting _exposureDetectedV2JobSetting
+            = new JobSetting(INITIAL_BACKOFF_MILLIS, Android.App.Job.BackoffPolicy.Linear, true);
+        private readonly JobSetting _exposureNotDetectedJobSetting = null;
+
+        private Lazy<AbsExposureNotificationApiService> _exposureNotificationApiService
+            = new Lazy<AbsExposureNotificationApiService>(() => ContainerLocator.Current.Resolve<AbsExposureNotificationApiService>());
+
+        private Lazy<IExposureDetectionService> _exposureDetectionService
+            = new Lazy<IExposureDetectionService>(() => ContainerLocator.Current.Resolve<IExposureDetectionService>());
+
+        private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
+            = new Lazy<AbsExposureDetectionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsExposureDetectionBackgroundService>());
+
+        private Lazy<ILoggerService> _loggerService
+            = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
+
+        private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
+            = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
+        }
+
+        public AbsExposureNotificationClient GetEnClient()
+        {
+            if (_exposureNotificationApiService.Value is ExposureNotificationApiService exposureNotificationApiService)
+            {
+                return exposureNotificationApiService.Client;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public override void OnCreate()
@@ -38,39 +73,96 @@ namespace Covid19Radar.Droid
 
             App.InitializeServiceLocator(RegisterPlatformTypes);
 
-            // Override WorkRequest configuration
-            // Must be run before being scheduled with `ExposureNotification.Init()` in `App.OnInitialized()`
-            var repeatInterval = TimeSpan.FromHours(WORKER_REPEATED_INTERVAL_HOURS);
-            static void requestBuilder(PeriodicWorkRequest.Builder b) =>
-               b.SetConstraints(new Constraints.Builder()
-                   .SetRequiresBatteryNotLow(true)
-                   .SetRequiredNetworkType(NetworkType.Connected)
-                   .Build())
-               .SetBackoffCriteria(
-                   BackoffPolicy.Linear,
-                   WORKER_BACKOFF_DELAY_HOURS,
-                   TimeUnit.Hours
-                   );
-            ExposureNotification.ConfigureBackgroundWorkRequest(repeatInterval, requestBuilder);
+            AbsExposureNotificationClient.Handler = this;
+            if (_exposureNotificationApiService.Value is ExposureNotificationApiService exposureNotificationApiService)
+            {
+                SetupENClient(exposureNotificationApiService.Client);
+            }
 
-            App.InitExposureNotification();
+            try
+            {
+                _exposureDetectionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("failed to Scheduling", exception);
+            }
+        }
+
+        private void SetupENClient(ExposureNotificationClient client)
+        {
+            client.Init(this);
+            client.ExposureDetectedV1JobSetting = _exposureDetectedV1JobSetting;
+            client.ExposureDetectedV2JobSetting = _exposureDetectedV2JobSetting;
+            client.ExposureNotDetectedJobSetting = _exposureNotDetectedJobSetting;
         }
 
         private void RegisterPlatformTypes(IContainer container)
         {
             // Services
-            container.Register<ILogPathDependencyService, LogPathServiceAndroid>(Reuse.Singleton);
-            container.Register<ISecureStorageDependencyService, SecureStorageServiceAndroid>(Reuse.Singleton);
+            container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
+            container.Register<ILocalPathService, LocalPathService>(Reuse.Singleton);
+            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
+            container.Register<ISecureStorageDependencyService, Services.SecureStorageService>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
             container.Register<ILocalContentService, LocalContentService>(Reuse.Singleton);
             container.Register<ILocalNotificationService, LocalNotificationService>(Reuse.Singleton);
             container.Register<IMigrationProcessService, MigrationProccessService>(Reuse.Singleton);
+            container.Register<AbsExposureDetectionBackgroundService, ExposureDetectionBackgroundService>(Reuse.Singleton);
+            container.Register<ICloseApplicationService, CloseApplicationService>(Reuse.Singleton);
 #if USE_MOCK
             container.Register<IDeviceVerifier, DeviceVerifierMock>(Reuse.Singleton);
+            container.Register<AbsExposureNotificationApiService, MockExposureNotificationApiService>(Reuse.Singleton);
 #else
             container.Register<IDeviceVerifier, DeviceCheckService>(Reuse.Singleton);
+            container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
+
+            container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
+            container.Register<IPlatformService, PlatformService>(Reuse.Singleton);
         }
+
+        public Task<ExposureConfiguration> GetExposureConfigurationAsync()
+        {
+            return _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
+        }
+
+        public async Task PreExposureDetectedAsync(ExposureConfiguration exposureConfiguration)
+        {
+            long enVersion = await GetEnClient().GetVersionAsync();
+            _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
+        }
+
+        public async Task ExposureDetectedAsync(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows, ExposureConfiguration exposureConfiguration)
+        {
+            long enVersion = await GetEnClient().GetVersionAsync();
+            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+        }
+
+        public async Task ExposureDetectedAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
+        {
+            long enVersion = await GetEnClient().GetVersionAsync();
+            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
+        }
+
+        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration)
+        {
+            long enVersion = await GetEnClient().GetVersionAsync();
+            await _exposureDetectionService.Value.ExposureNotDetectedAsync(exposureConfiguration, enVersion);
+        }
+
+        public Task ExceptionOccurredAsync(ENException exception)
+        {
+            _loggerService.Value.Exception($"ENExcepiton occurred, Code:{exception.Code}, Message:{exception.Message}", exception);
+            return Task.CompletedTask;
+        }
+
+        public Task ExceptionOccurredAsync(Exception exception)
+        {
+            _loggerService.Value.Exception("ENExcepiton occurred", exception);
+            return Task.CompletedTask;
+        }
+
     }
 }

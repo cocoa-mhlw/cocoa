@@ -8,6 +8,12 @@ namespace Covid19Radar.Model
 {
     public class DiagnosisSubmissionParameter
     {
+        [JsonProperty("hasSymptom")]
+        public bool HasSymptom { get; set; }
+
+        [JsonProperty("onsetOfSymptomOrTestDate")]
+        public string OnsetOfSymptomOrTestDate { get; set; }
+
         [JsonProperty("keys")]
         public Key[] Keys { get; set; }
         [JsonProperty("regions")]
@@ -21,6 +27,11 @@ namespace Covid19Radar.Model
         // Some signature / code confirming authorization by the verification authority.
         [JsonProperty("verificationPayload")]
         public string VerificationPayload { get; set; }
+
+        //[JsonProperty("idempotency_key")]
+        [JsonIgnore]
+        public string IdempotencyKey { get; set; }
+
         // Random data to obscure the size of the request network packet sniffers.
         [JsonProperty("padding")]
         public string Padding { get; set; }
@@ -33,6 +44,10 @@ namespace Covid19Radar.Model
             public uint RollingStartNumber { get; set; }
             [JsonProperty("rollingPeriod")]
             public uint RollingPeriod { get; set; }
+
+            //[JsonProperty("reportType")]
+            [JsonIgnore]
+            public uint ReportType { get; set; }
         }
     }
 }
