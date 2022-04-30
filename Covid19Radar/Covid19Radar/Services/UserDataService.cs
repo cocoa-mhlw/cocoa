@@ -6,6 +6,8 @@ using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
 using System;
 using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Services
@@ -21,18 +23,21 @@ namespace Covid19Radar.Services
     public class UserDataService : IUserDataService
     {
         private readonly ILoggerService loggerService;
-        private readonly IHttpDataService httpDataService;
+        private readonly IHttpClientService httpClientService;
         private readonly IUserDataRepository userDataRepository;
+        private readonly IServerConfigurationRepository serverConfigurationRepository;
 
         public UserDataService(
-            IHttpDataService httpDataService,
+            IHttpClientService httpClientService,
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            IServerConfigurationRepository serverConfigurationRepository
             )
         {
-            this.httpDataService = httpDataService;
+            this.httpClientService = httpClientService;
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
+            this.serverConfigurationRepository = serverConfigurationRepository;
         }
 
         public async Task<HttpStatusCode> RegisterUserAsync()
@@ -40,7 +45,13 @@ namespace Covid19Radar.Services
             loggerService.StartMethod();
             try
             {
-                var resultStatusCode = await httpDataService.PostRegisterUserAsync();
+                await serverConfigurationRepository.LoadAsync();
+
+                string url = serverConfigurationRepository.UserRegisterApiEndpoint;
+                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage result = await httpClientService.ApiClient.PostAsync(url, content);
+                HttpStatusCode resultStatusCode = result.StatusCode;
 
                 if (resultStatusCode == HttpStatusCode.OK)
                 {
@@ -52,16 +63,24 @@ namespace Covid19Radar.Services
                     loggerService.Info("Failed register");
                 }
 
-                loggerService.EndMethod();
                 return resultStatusCode;
             }
             catch(Exception ex)
             {
                 loggerService.Exception("Failed to register user.", ex);
-                loggerService.EndMethod();
                 throw;
+            }
+            finally
+            {
+                loggerService.EndMethod();
             }
 
         }
+    }
+
+    public class UserDataServiceMock : IUserDataService
+    {
+        public Task<HttpStatusCode> RegisterUserAsync()
+            => Task.FromResult(HttpStatusCode.OK);
     }
 }

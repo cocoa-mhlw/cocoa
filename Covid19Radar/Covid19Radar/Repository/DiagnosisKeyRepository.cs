@@ -41,20 +41,20 @@ namespace Covid19Radar.Repository
 
         private readonly ILoggerService _loggerService;
 
-        private readonly HttpClient _httpClient;
+        private readonly IHttpClientService _httpClientService;
 
         public DiagnosisKeyRepository(
             IHttpClientService httpClientService,
             ILoggerService loggerService
             )
         {
-            _httpClient = httpClientService.Create();
+            _httpClientService = httpClientService;
             _loggerService = loggerService;
         }
 
         public async Task<(HttpStatusCode, IList<DiagnosisKeyEntry>)> GetDiagnosisKeysListAsync(string url, CancellationToken cancellationToken)
         {
-            HttpResponseMessage response = await _httpClient.GetAsync(url, cancellationToken);
+            HttpResponseMessage response = await _httpClientService.CdnClient.GetAsync(url, cancellationToken);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
@@ -74,7 +74,7 @@ namespace Covid19Radar.Repository
         {
             Uri uri = new Uri(diagnosisKeyEntry.Url);
 
-            HttpResponseMessage response = await _httpClient.GetAsync(uri, cancellationToken);
+            HttpResponseMessage response = await _httpClientService.CdnClient.GetAsync(uri, cancellationToken);
             if (response.IsSuccessStatusCode)
             {
                 string fileName = uri.Segments[uri.Segments.Length - 1];

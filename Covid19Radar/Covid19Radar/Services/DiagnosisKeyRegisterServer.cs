@@ -6,11 +6,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 using Xamarin.Essentials;
 
 namespace Covid19Radar.Services
@@ -18,18 +22,21 @@ namespace Covid19Radar.Services
     public class DiagnosisKeyRegisterServer : IDiagnosisKeyRegisterServer
     {
         private readonly ILoggerService _loggerService;
-        private readonly IHttpDataService _httpDataService;
+        private readonly IHttpClientService _httpClientService;
         private readonly IDeviceVerifier _deviceVerifier;
+        private readonly IServerConfigurationRepository _serverConfigurationRepository;
 
         public DiagnosisKeyRegisterServer(
             ILoggerService loggerService,
-            IHttpDataService httpDataService,
-            IDeviceVerifier deviceVerifier
+            IHttpClientService httpClientService,
+            IDeviceVerifier deviceVerifier,
+            IServerConfigurationRepository serverConfigurationRepository
             )
         {
             _loggerService = loggerService;
-            _httpDataService = httpDataService;
+            _httpClientService = httpClientService;
             _deviceVerifier = deviceVerifier;
+            _serverConfigurationRepository = serverConfigurationRepository;
         }
 
         public async Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
@@ -68,12 +75,49 @@ namespace Covid19Radar.Services
                     processNumber,
                     idempotencyKey
                     );
-                return await _httpDataService.PutSelfExposureKeysAsync(diagnosisInfo);
+                return await PutSelfExposureKeysAsync(diagnosisInfo);
             }
             finally
             {
                 _loggerService.EndMethod();
             }
+        }
+
+        public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                await _serverConfigurationRepository.LoadAsync();
+
+                var diagnosisKeyRegisterApiUrls = _serverConfigurationRepository.DiagnosisKeyRegisterApiUrls;
+                if (diagnosisKeyRegisterApiUrls.Count() == 0)
+                {
+                    _loggerService.Error("DiagnosisKeyRegisterApiUrls count 0");
+                    throw new InvalidOperationException("DiagnosisKeyRegisterApiUrls count 0");
+                }
+                else if (diagnosisKeyRegisterApiUrls.Count() > 1)
+                {
+                    _loggerService.Warning("Multi DiagnosisKeyRegisterApiUrl are detected.");
+                }
+
+                var url = diagnosisKeyRegisterApiUrls.First();
+                var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+
+                return await PutAsync(url, content);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task<HttpStatusCode> PutAsync(string url, HttpContent body)
+        {
+            var result = await _httpClientService.ApiClient.PutAsync(url, body);
+            await result.Content.ReadAsStringAsync();
+            return result.StatusCode;
         }
 
         private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(
@@ -162,6 +206,21 @@ namespace Covid19Radar.Services
             random.NextBytes(padding);
             return Convert.ToBase64String(padding);
         }
+    }
+
+    public class DiagnosisKeyRegisterServerMock : IDiagnosisKeyRegisterServer
+    {
+        public Task<HttpStatusCode> SubmitDiagnosisKeysAsync(
+            bool hasSymptom,
+            DateTime symptomOnsetDate,
+            IList<TemporaryExposureKey> temporaryExposureKeys,
+            string processNumber,
+            string idempotencyKey
+            )
+            => Task.FromResult(HttpStatusCode.NoContent);
+
+        public Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+            => Task.FromResult(HttpStatusCode.NoContent);
     }
 
     public class DiagnosisKeyRegisterException : Exception

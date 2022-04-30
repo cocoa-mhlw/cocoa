@@ -3,7 +3,6 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
@@ -24,7 +23,7 @@ namespace Covid19Radar.Services
 
     public class CheckVersionService : ICheckVersionService
     {
-        private readonly HttpClient _httpClient;
+        private readonly IHttpClientService _httpClientService;
         private readonly IEssentialsService _essentialsService;
         private readonly ILoggerService _loggerService;
 
@@ -34,7 +33,7 @@ namespace Covid19Radar.Services
             ILoggerService loggerService
             )
         {
-            _httpClient = httpClientService.Create();
+            _httpClientService = httpClientService;
             _essentialsService = essentialsService;
             _loggerService = loggerService;
         }
@@ -46,7 +45,7 @@ namespace Covid19Radar.Services
             var uri = AppResources.UrlVersion;
             try
             {
-                var json = await _httpClient.GetStringAsync(uri);
+                var json = await _httpClientService.StaticJsonContentClient.GetStringAsync(uri);
                 var key = _essentialsService.IsIos ? "ios" : "android";
                 var versionString = JObject.Parse(json).Value<string>(key);
 

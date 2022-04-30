@@ -3,7 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
@@ -21,12 +20,10 @@ namespace Covid19Radar.Services
 
     public class TermsUpdateService : ITermsUpdateService
     {
-        private const double TimeoutSeconds = 5.0;
-
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository userDataRepository;
 
-        private readonly HttpClient _httpClient;
+        private readonly IHttpClientService _httpClientService;
 
         public TermsUpdateService(
             ILoggerService loggerService,
@@ -37,8 +34,7 @@ namespace Covid19Radar.Services
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
 
-            _httpClient = httpClientService.Create();
-            _httpClient.Timeout = TimeSpan.FromSeconds(TimeoutSeconds);
+            _httpClientService = httpClientService;
         }
 
         public async Task<TermsUpdateInfoModel> GetTermsUpdateInfo()
@@ -48,7 +44,7 @@ namespace Covid19Radar.Services
             var uri = AppResources.UrlTermsUpdate;
             try
             {
-                var json = await _httpClient.GetStringAsync(uri);
+                var json = await _httpClientService.StaticJsonContentClient.GetStringAsync(uri);
                 loggerService.Info($"uri: {uri}");
                 loggerService.Info($"TermsUpdateInfo: {json}");
 

@@ -2,8 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
+using System.Net;
 using System.Threading.Tasks;
+using Covid19Radar.Model;
+using Covid19Radar.Repository;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Services.Logs
 {
@@ -12,22 +15,59 @@ namespace Covid19Radar.Services.Logs
         private readonly ILoggerService loggerService;
         private readonly ILogPathService logPathService;
         private readonly IStorageService storageService;
+        private readonly IHttpClientService httpClientService;
+        private readonly IServerConfigurationRepository serverConfigurationRepository;
 
         public LogUploadService(
             ILoggerService loggerService,
             ILogPathService logPathService,
-            IStorageService storageService)
+            IStorageService storageService,
+            IHttpClientService httpClientService,
+            IServerConfigurationRepository serverConfigurationRepository
+            )
         {
             this.loggerService = loggerService;
             this.logPathService = logPathService;
             this.storageService = storageService;
+            this.httpClientService = httpClientService;
+            this.serverConfigurationRepository = serverConfigurationRepository;
         }
 
-        public async Task<bool> UploadAsync(string zipFilePath, string sasToken)
+        public async Task<ApiResponse<LogStorageSas>> GetLogStorageSas()
         {
             loggerService.StartMethod();
 
-            var result = false;
+            int statusCode;
+            LogStorageSas logStorageSas = default;
+
+            try
+            {
+                await serverConfigurationRepository.LoadAsync();
+
+                var url = serverConfigurationRepository.InquiryLogApiUrl;
+
+                var response = await httpClientService.ApiClient.GetAsync(url);
+
+                statusCode = (int)response.StatusCode;
+                loggerService.Info($"Response status: {statusCode}");
+
+                if (statusCode == (int)HttpStatusCode.OK)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    logStorageSas = JsonConvert.DeserializeObject<LogStorageSas>(content);
+                }
+
+                return new ApiResponse<LogStorageSas>(statusCode, logStorageSas);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+        }
+
+        public async Task<HttpStatusCode> UploadAsync(string zipFilePath, string sasToken)
+        {
+            loggerService.StartMethod();
 
             try
             {
@@ -39,21 +79,12 @@ namespace Covid19Radar.Services.Logs
                 var uploadPath = setting.LogStorageContainerName;
                 var accountName = setting.LogStorageAccountName;
 
-                var uploadResult = await storageService.UploadAsync(endpoint, uploadPath, accountName, sasToken, zipFilePath);
-                if (!uploadResult)
-                {
-                    throw new Exception("Failed to upload to storage.");
-                }
-
-                result = true;
+                return await storageService.UploadAsync(endpoint, uploadPath, accountName, sasToken, zipFilePath);
             }
-            catch (Exception ex)
+            finally
             {
-                loggerService.Exception("Failed upload.", ex);
+                loggerService.EndMethod();
             }
-
-            loggerService.EndMethod();
-            return result;
         }
     }
 }

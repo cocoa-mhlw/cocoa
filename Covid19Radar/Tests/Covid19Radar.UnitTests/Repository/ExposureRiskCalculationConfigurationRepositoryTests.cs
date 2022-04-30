@@ -71,7 +71,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.StaticJsonContentClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureRiskCalculationConfigurationPath).Returns(CURRENT_EXPOSURE_RISK_CONFIGURATION_FILE_PATH);
@@ -104,7 +104,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.StaticJsonContentClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureRiskCalculationConfigurationPath).Returns(CURRENT_EXPOSURE_RISK_CONFIGURATION_FILE_PATH);
@@ -138,7 +138,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.StaticJsonContentClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureRiskCalculationConfigurationPath).Returns(CURRENT_EXPOSURE_RISK_CONFIGURATION_FILE_PATH);
@@ -173,7 +173,7 @@ namespace Covid19Radar.UnitTests.Repository
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            mockClientService.Setup(x => x.Create()).Returns(client);
+            mockClientService.Setup(x => x.StaticJsonContentClient).Returns(client);
 
             mockLocalPathService.Setup(x => x.ExposureConfigurationDirPath).Returns("./");
             mockLocalPathService.Setup(x => x.CurrentExposureRiskCalculationConfigurationPath).Returns(CURRENT_EXPOSURE_RISK_CONFIGURATION_FILE_PATH);

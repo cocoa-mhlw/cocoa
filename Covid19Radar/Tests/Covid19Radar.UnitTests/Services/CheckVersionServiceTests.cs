@@ -76,7 +76,7 @@ namespace Covid19Radar.UnitTests.Services
                 "application/json"
             );
             var client = HttpClientUtils.CreateHttpClient(HttpStatusCode.OK, jsonContent);
-            _mockClientService.Setup(x => x.Create()).Returns(client);
+            _mockClientService.Setup(x => x.StaticJsonContentClient).Returns(client);
 
             _mockEssentialsService.Setup(x => x.IsIos).Returns(isIos);
             _mockEssentialsService.Setup(x => x.AppVersion).Returns(version);
