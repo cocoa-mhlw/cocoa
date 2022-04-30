@@ -29,7 +29,8 @@ namespace Covid19Radar.Common
 
         public static string GetNonceClearTextV3(DiagnosisSubmissionParameter submission)
         {
-            return string.Join("|", submission.SymptomOnsetDate, submission.AppPackageName, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
+            string hasSymptom = submission.HasSymptom ? "HasSymptom" : "NoSymptom";
+            return string.Join("|", submission.AppPackageName, submission.OnsetOfSymptomOrTestDate, hasSymptom, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
 
             static string GetKeyString(IEnumerable<DiagnosisSubmissionParameter.Key> keys) =>
                 string.Join(",", keys.OrderBy(k => k.KeyData).Select(k => GetKeyStringCore(k)));

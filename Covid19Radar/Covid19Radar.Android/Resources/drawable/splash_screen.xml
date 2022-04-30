@@ -9,7 +9,7 @@
   </item>
   <item>
     <bitmap
-      android:src="@drawable/splashimg"
+      android:src="@drawable/splash_logo"
       android:tileMode="disabled"
       android:gravity="center"/>
   </item>

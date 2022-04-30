@@ -76,7 +76,7 @@
     <value>无法登记阳性信息</value>
     <comment>陽性情報を登録できませんでした</comment>
   </data>
-  <data name="NotifyOtherPageDialogSubmittedTitle" xml:space="preserve">
+  <data name="SubmitDiagnosisKeysPageTitle" xml:space="preserve">
     <value>登记完成</value>
     <comment>登録が完了しました</comment>
   </data>
@@ -241,7 +241,7 @@
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
   <data name="SettingsPageLicenseButton" xml:space="preserve">
-    <value>显示许可证</value>
+    <value>许可证表示</value>
     <comment>ライセンス表記</comment>
   </data>
   <data name="SettingsPageReinitializeLabel" xml:space="preserve">
@@ -268,21 +268,21 @@
     <value>删除接触记录并将应用恢复到初始状态</value>
     <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
-  <data name="NotContactPageButtonText" xml:space="preserve">
-    <value>分享此APP</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
   <data name="LowRiskContactPageLabel" xml:space="preserve">
     <value>来自阳性登记者所持智能手机的信号低于基准值</value>
     <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
   </data>
+  <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
+    <value>No signal received</value>
+    <comment>TODO:受信した信号はありません</comment>
+  </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
-    <value>分数: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>分数 {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Unsatisfied" xml:space="preserve">
-    <value>分数: {0:#.##}</value>
-    <comment>スコア: {0:#.##}</comment>
+    <value>分数 {0:#}</value>
+    <comment>スコア {0:#}</comment>
   </data>
   <data name="LowRiskContactPage_ExposureDuration_Description_Satisfied" xml:space="preserve">
     <value>接触时间为{0:#}分钟</value>
@@ -309,8 +309,16 @@
     <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
-    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为{0:#}{1:#}。</value>
-    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で {0:#} {1:#}になるように設定しています。</comment>
+    <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为100以上。</value>
+    <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
+    <value>* 对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>未收到来自阳性登记者所持智能手机的信号</value>
@@ -319,18 +327,6 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>您的行动范围内似乎没有阳性登记者。请继续注意防止感染。</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
-  </data>
-  <data name="NoRiskContactPageButtonText" xml:space="preserve">
-    <value>分享此APP</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageLabel1" xml:space="preserve">
-    <value>感谢提供检查结果</value>
-    <comment>陽性のご登録をいただきありがとうございました</comment>
-  </data>
-  <data name="ThankYouNotifyOtherPageDescription1" xml:space="preserve">
-    <value>本次注册为匿名注册，您不必输入姓名或任何其他个人信息。另外，该应用不会记录并通知密切接触的地点信息。</value>
-    <comment>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>使用条款</value>
@@ -357,16 +353,16 @@
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>和阳性患者的密切接触一览</value>
-    <comment>陽性者との接触一覧</comment>
+    <value>与阳性登记者的接触一览​</value>
+    <comment>陽性登録者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>times</value>
     <comment>件</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
-    <value>查询跟阳性患者的密切接触情况</value>
-    <comment>陽性者との接触確認</comment>
+    <value>确认与阳性登记者的接触​</value>
+    <comment>陽性登録者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
     <value>查询过去14天内里的接触情况</value>
@@ -381,8 +377,8 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>确认与阳性者接触的结果</value>
-    <comment>陽性者との接触結果を確認</comment>
+    <value>确认与阳性登记者接触的结果</value>
+    <comment>陽性登録者との接触結果を確認</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
     <value>确诊新型冠状病毒呈阳性</value>
@@ -397,8 +393,8 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>不存在高于基准值的信号</value>
-    <comment>基準値を超える信号はありません</comment>
+    <value>查询过去14天内里的接触情况</value>
+    <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>主页</value>
@@ -439,26 +435,6 @@
   <data name="TutorialPage2Title" xml:space="preserve">
     <value>关于隐私保护</value>
     <comment>プライバシーについて</comment>
-  </data>
-  <data name="TutorialPage5Description1" xml:space="preserve">
-    <value>开启接收通知</value>
-    <comment>通知をご利用いただくために</comment>
-  </data>
-  <data name="TutorialPage5Description2" xml:space="preserve">
-    <value>为了即时收到密切接触信息，请开启新消息通知</value>
-    <comment>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</comment>
-  </data>
-  <data name="TutorialPage5Description3" xml:space="preserve">
-    <value>开启</value>
-    <comment>有効にする</comment>
-  </data>
-  <data name="TutorialPage5Description4" xml:space="preserve">
-    <value>稍后设置</value>
-    <comment>あとで設定する</comment>
-  </data>
-  <data name="TutorialPage5Title" xml:space="preserve">
-    <value>To use notifications</value>
-    <comment>通知をご利用いただくために</comment>
   </data>
   <data name="MenuPageTitle" xml:space="preserve">
     <value>菜单</value>
@@ -553,8 +529,8 @@
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>以下日期确认到您与阳性患者存在密切接触。</value>
-    <comment>以下の日に陽性者との接触が確認されました。</comment>
+    <value>在下记时间段检测到与阳性登记者的接触。</value>
+    <comment>次の日に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -591,7 +567,11 @@
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>网络连接错误</value>
-    <comment>通信に失敗しました。</comment>
+    <comment>通信に失敗しました</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorFromOverseasMessage" xml:space="preserve">
+    <value>本应用只可在日本国内使用。</value>
+    <comment>本アプリは日本国内でのみご利用できます。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
     <value>暴露通知启动错误</value>
@@ -613,51 +593,51 @@
     <value>给您造成不便我们深感抱歉。可能由于网络不稳定或服务器繁忙。请您稍后重试。</value>
     <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
-  <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
+  <data name="NotifyOtherPageDialog1Message" xml:space="preserve">
     <value>是否登记？</value>
     <comment>よろしいですか？</comment>
   </data>
-  <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
+  <data name="NotifyOtherPageDialog1Title" xml:space="preserve">
     <value>阳性信息登记</value>
     <comment>陽性情報の登録をします</comment>
   </data>
-  <data name="NotifyOtherPageDiag2Title" xml:space="preserve">
+  <data name="NotifyOtherPageDialog2Title" xml:space="preserve">
     <value>登记已取消</value>
     <comment>登録をキャンセルしました</comment>
   </data>
-  <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
+  <data name="NotifyOtherPageDialog3Message" xml:space="preserve">
     <value>请稍等。</value>
     <comment>しばらくそのままでお待ちください。</comment>
   </data>
-  <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
+  <data name="NotifyOtherPageDialog3Title" xml:space="preserve">
     <value>登记开始</value>
     <comment>登録を開始します</comment>
   </data>
-  <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
+  <data name="NotifyOtherPageDialog4Message" xml:space="preserve">
     <value>未输入受理编号</value>
     <comment>処理番号が入力されていません</comment>
   </data>
-  <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
+  <data name="NotifyOtherPageDialog5Message" xml:space="preserve">
     <value>请输入半角数字的受理编号。</value>
     <comment>処理番号は半角数字で入力してください。</comment>
   </data>
-  <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
+  <data name="NotifyOtherPageDialog6Message" xml:space="preserve">
     <value>必须启用 接触通知，请在应用或系统设置中启用设定。</value>
     <comment>陽性記録の登録を行う為に接触通知を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
-  <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
+  <data name="NotifyOtherPageDialog6Title" xml:space="preserve">
     <value>请启用 COVID-19 接触日志</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
-  <data name="NotifyOtherPageDiagReturnHomeTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogReturnHomeTitle" xml:space="preserve">
     <value>登记次数达到上限</value>
     <comment>登録回数の上限に達しました</comment>
   </data>
-	<data name="NotifyOtherPageDiagReturnHome" xml:space="preserve">
+	<data name="NotifyOtherPageDialogReturnHome" xml:space="preserve">
     <value>返回首页。</value>
     <comment>ホームに戻ります。</comment>
   </data>
-  <data name="ProcessingNumberErrorDiagTitle" xml:space="preserve">
+  <data name="ProcessingNumberErrorDialogTitle" xml:space="preserve">
     <value>受理编号错误</value>
     <comment>処理番号が違います</comment>
   </data>
@@ -681,10 +661,30 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>・如果您有发烧，既往病状等症状，或者与经检测COVID-19呈阳性的人接触过，如果你想进行检查方面咨询，请按照本应用的指导，查看咨询中心列表以进行咨询。
-・请保存以下“感染者的接触一览”的屏幕截图，身体检查时可能需要</value>
-    <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
-・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
+    <value>如果您属于以下任何一种情况，请考虑根据应用的指导去医疗诊断机构。</value>
+    <comment>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_1" xml:space="preserve">
+    <value>・发烧或者有潜在疾病</value>
+    <comment>・発熱等の症状や基礎疾患がある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_2" xml:space="preserve">
+    <value>・有高感染风险的行为（*）</value>
+    <comment>・感染リスクの高い行動（※）をとった</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_3" xml:space="preserve">
+    <value>・其他想接受诊断的情况</value>
+    <comment>・その他、受診を希望する</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
+    <value>即使您不去接受诊断，请从接触之日起7天内，注意感染控制措施，例如避免与高危人群（如老年人和容易病情加重的人）接触，避免高感染风险的行为。
+但是，如果您感觉身体有任何变化，请考虑去接受诊断。</value>
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
+    <value>*长时间多人聚餐等行为</value>
+    <comment>※大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>同意</value>
@@ -822,12 +822,28 @@
     <comment>送信エラー</comment>
   </data>
   <data name="InquiryMailBody" xml:space="preserve">
-    <value>意见反馈正文：\r\n\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n</value>
-    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</comment>
+    <value>意见反馈正文：\r\n\r\n\r\n\r\n※您无需输入个人信息，例如姓名和电话号码。\r\n\r\n----请不要删除下面的部分----\r\n</value>
+    <comment>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n\r\n----以下は削除しないでください----\r\n</comment>
   </data>
   <data name="InquiryMailSubject" xml:space="preserve">
     <value>Cocoa的意见反馈​</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="InquiryMailModelTitle" xml:space="preserve">
+    <value>モデル名：</value>
+    <comment>モデル名：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailOSTitle" xml:space="preserve">
+    <value>OS：</value>
+    <comment>OS：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailOSVersionTitle" xml:space="preserve">
+    <value>OSバージョン：</value>
+    <comment>OSバージョン：（サポートが見る文言なので常に日本語とする）</comment>
+  </data>
+  <data name="InquiryMailAppVersionTitle" xml:space="preserve">
+    <value>アプリバージョン：</value>
+    <comment>アプリバージョン：（サポートが見る文言なので常に日本語とする）</comment>
   </data>
   <data name="SendIdMailBody1" xml:space="preserve">
     <value>操作信息ID：</value>
@@ -954,25 +970,80 @@
     <value>https://www.mhlw.go.jp/cocoa/kiyaku_chinese.html</value>
     <comment>利用規約URL</comment>
   </data>
+  <data name="HowToEnableExposureNotificationsPageTitle" xml:space="preserve">
+    <value>如何启用暴露通知</value>
+    <comment>接触通知を有効にするには</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageDescription1" xml:space="preserve">
+    <value>如要使用COCOA，您需要在手机上打开暴露通知设置。
+点击下面的按钮打开设置并按照步骤启用暴露通知。 </value>
+    <comment>COCOA（※）を利用するには、スマートフォンの接触通知設定をオンにする必要があります。
+以下のボタンをタップして設定画面を開き、手順に従って接触通知を有効にしてください。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep1Description" xml:space="preserve">
+    <value>点击“暴露通知” </value>
+    <comment>「接触通知」をタップする。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep2Description" xml:space="preserve">
+    <value>打开“共享暴露信息”项。</value>
+    <comment>「接触情報を共有」の項目をオンにする。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep3Description" xml:space="preserve">
+    <value>点击“设为活跃地区”</value>
+    <comment>「使用する国/地域として設定」の文字をタップする。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep4Description" xml:space="preserve">
+    <value>“设为活跃地区”文本变为灰色，在其下方，“暴露通知”当前已将COCOA设为您的活跃地区。 </value>
+    <comment>「使用する国/地域として設定」の文字がグレーに変わり、その下に「現在、接触通知を使用する国/地域/行政機関として厚生労働省が設定されています。」と表示されている。</comment>
+  </data>
+  <data name="HowToEnableExposureNotificationsPageStep5Description" xml:space="preserve">
+    <value>再次打开COCOA，如果显示“运行中”，则设置完成。 </value>
+    <comment>再度COCOAを開いて、「動作中」と表示されれば設定は完了です。</comment>
+  </data>
+  <data name="ExposureNotificationSettingButtonTitle" xml:space="preserve">
+    <value>暴露通知设置</value>
+    <comment>接触通知の設定</comment>
+  </data>
+  <data name="Step1Text" xml:space="preserve">
+    <value>步骤①</value>
+    <comment>手順①</comment>
+  </data>
+  <data name="Step2Text" xml:space="preserve">
+    <value>步骤②</value>
+    <comment>手順②</comment>
+  </data>
+  <data name="Step3Text" xml:space="preserve">
+    <value>步骤③</value>
+    <comment>手順③</comment>
+  </data>
+  <data name="Step4Text" xml:space="preserve">
+    <value>步骤④</value>
+    <comment>手順④</comment>
+  </data>
+  <data name="Step5Text" xml:space="preserve">
+    <value>步骤⑤</value>
+    <comment>手順⑤</comment>
+  </data>
   <data name="HowToReceiveProcessingNumberPageTitle" xml:space="preserve">
     <value>如何获得受理编号</value>
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>如果保健中心与您联系，请说明您想使用接触确认应用登记阳性检测结果。</value>
-    <comment>保健所から連絡がありましたら「接触確認アプリでの陽性登録を希望」とお伝えください。</comment>
+    <value>受理编号将通过SMS或电子邮件发送至检查/诊断时申告的联系方式。 您不必自己申请。</value>
+    <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>您将通过短信或电子邮件收到一个8位数的受理编号。</value>
-    <comment>SMSまたはメールにて8桁の処理番号が送られてきます。</comment>
+    <value>当您打开短信或电子邮件中包含的阳性信息注册 URL 时，COCOA将启动。受理编号的有效期在文中有注明。</value>
+    <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
+なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription3" xml:space="preserve">
-    <value>・受理编号在发出后一小时内有效。 如果它已过期，您将收到一个新的受理编号。</value>
-    <comment>・処理番号の有効期限は、発行から1時間です。有効期限を過ぎた場合は、新しい処理番号が再度送られてきます。</comment>
+    <value>受理编号自动发行并发送，但可能会因检查、系统繁忙等原因延迟发送。</value>
+    <comment>処理番号は自動的に発行・送信されますが、検査、システムの混雑状況などによって送信が遅れる場合があります。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription4" xml:space="preserve">
-    <value>・如果您从保健中心收到了My HER-SYS的使用指南，请从那里申请使用接触确认应用。</value>
-    <comment>・保健所からMy HER-SYSの利用案内を受けている場合は、そちらから接触確認アプリの利用を申し出てください。</comment>
+    <value>如果您没有收到受理编号，请联系您所在地区的保健中心。</value>
+    <comment>処理番号が届かない場合などは、管轄の保健所にご連絡ください。</comment>
   </data>
   <data name="AndroidNotificationChannelName" xml:space="preserve">
     <value>接触通知</value>
@@ -1017,6 +1088,14 @@
   <data name="HomePageTroubleshootingButtonText" xml:space="preserve">
     <value>确认处理方式</value>
     <comment>対処方法を確認</comment>
+  </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription1" xml:space="preserve">
+    <value>有无接触的确认次数已超过上限。</value>
+    <comment>接触有無の確認回数が上限を超えました。</comment>
+  </data>
+  <data name="HomePageExposureDetectionAPILimitReachedDescription2" xml:space="preserve">
+    <value>请等待最长1天来确认。</value>
+    <comment>解決のため、最大1日程度お待ちください。</comment>
   </data>
   <data name="HomePageENStatusStoppedTitle" xml:space="preserve">
     <value>停止中</value>
@@ -1076,6 +1155,18 @@
     <comment>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
 なお、本アプリで利用者の位置情報を収集することはありません。</comment>
   </data>
+  <data name="HomePageLocalNotificationOffWarningLabelText" xml:space="preserve">
+    <value>请检查通知设置</value>
+    <comment>通知設定を確認してください</comment>
+  </data>
+  <data name="LocalNotificationOffWarningDialogTitle" xml:space="preserve">
+    <value>通知设置已关闭</value>
+    <comment>通知設定がオフになっています</comment>
+  </data>
+  <data name="LocalNotificationOffWarningDialogMessage" xml:space="preserve">
+    <value>如要接收阳性个体接触等通知，请从设置“允许”COCOA使用通知。</value>
+    <comment>陽性者との接触の可能性などの通知を受け取るには、設定からCOCOAの通知へのアクセスを「許可」してください。</comment>
+  </data>
   <data name="TroubleshootingPageTitle" xml:space="preserve">
     <value>处理方式</value>
     <comment>対処方法</comment>
@@ -1085,20 +1176,36 @@
     <comment>ホーム画面に「接触有無を確認できません」と表示された場合は、以下をお試しください。</comment>
   </data>
   <data name="TroubleshootingPageDescription2" xml:space="preserve">
-    <value>・请重新启动APP。</value>
-    <comment>・アプリの再起動を行ってください。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription3" xml:space="preserve">
-    <value>・安卓系统用户，请在设定界面的省电功能（※）列表中删除COCOA，或设置为仅在电池余量极少时切换至省电模式等。</value>
-    <comment>・Androidをお使いの方は、設定内にある省電力機能(※)の対象からCOCOAを外す、または電池残量が少なくなった場合のみに省電力モード等に切り替わるように設定してください。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription4" xml:space="preserve">
-    <value>※其具体名称可能是节能模式、长效模式、电池优化等，因您所使用的手机机型而异。</value>
-    <comment>※省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称がことなります。</comment>
-  </data>
-  <data name="TroubleshootingPageDescription5" xml:space="preserve">
     <value>如您尝试上述措施后仍显示“无法确认有无接触”，请咨询客服。</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem1" xml:space="preserve">
+    <value>・请检查手机信号来确认互联网连接状态是否有问题。</value>
+    <comment>・電波環境などインターネットの接続状況に問題がないか確認してください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem2" xml:space="preserve">
+    <value>・如果您有意使用“VPN连接”或“代理连接”进行上网，请将其关闭。</value>
+    <comment>・インターネット接続に、意図的に「VPN接続」や「プロキシ接続」を利用している場合はお切りください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem3" xml:space="preserve">
+    <value>・请重启应用。</value>
+    <comment>・アプリの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem4" xml:space="preserve">
+    <value>・请重启您的智能手机。</value>
+    <comment>・スマートフォンの再起動を行ってください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem5" xml:space="preserve">
+    <value>・如果您使用的是iPhone，请将操作系统更新到最新版本。</value>
+    <comment>・iPhoneをお使いの方は、 OS(※)を最新バージョンにアップデートしてください。</comment>
+  </data>
+  <data name="TroubleshootingPageConfirmationItem6" xml:space="preserve">
+    <value>・如果您使用的是安卓手机，请在设置中将COCOA排除在省电功能（※）的目标之外或仅在电池电量低时切换到省电模式。</value>
+    <comment>・Androidをお使いの方は、設定内にある省電力機能（※1）の対象からCOCOA（※2）を外す、または電池残量が少なくなった場合のみに省電力モードに切り替わるように設定してください。</comment>
+  </data>
+  <data name="TroubleshootingPageAnnotationPowerSaving" xml:space="preserve">
+    <value>※其具体名称可能是节能模式、长效模式、电池优化等，因您所使用的手机机型而异。</value>
+    <comment>※1 省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称が異なります</comment>
   </data>
   <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
     <value>阳性注册需要的受理编号</value>
@@ -1160,10 +1267,6 @@
     <value></value>
     <comment>日本語のみ：スマートフォン用のテキストでの連絡手段。ショートメッセージ</comment>
   </data>
-  <data name="MyHerSysAnnotationText" xml:space="preserve">
-    <value></value>
-    <comment>日本語のみ：厚労省による新型コロナウイルス患者情報等患者把握・管理支援システム</comment>
-  </data>
   <data name="RandomCodeAnnotationText" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：利用者の端末内で作られ、端末同士の接触を記録するために使用する符号</comment>
@@ -1188,7 +1291,14 @@
     <value></value>
     <comment>日本語のみ：「陽性者との接触確認」画面のイメージ画像</comment>
   </data>
-
+  <data name="AppSettingImageAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：「設定」画面のイメージ画像</comment>
+  </data>
+  <data name="ExposureNotificationSettingImageAnnotationText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：「接触通知」画面のイメージ画像</comment>
+  </data>
   <data name="ContactedNotifyPageCountHeader" xml:space="preserve">
     <value>{0}以前</value>
     <comment>年月日以前</comment>
@@ -1237,6 +1347,85 @@
   <data name="ThresholdTextOperatorEqual" xml:space="preserve">
     <value>等于</value>
     <comment>と同じ</comment>
+  </data>
+
+  <data name="ExposuresPageToUtcDescription" xml:space="preserve">
+    <value>* 对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
+    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageFrom" xml:space="preserve">
+    <value></value>
+    <comment></comment>
+  </data>
+  <data name="ExposuresPageTo" xml:space="preserve">
+    <value>到</value>
+    <comment>から</comment>
+  </data>
+  <data name="ExposureDateFormatDate" xml:space="preserve">
+    <value>d日 tth点mm分</value>
+    <comment>d日 tth時mm分</comment>
+  </data>
+  <data name="ExposureDateFormatMonth" xml:space="preserve">
+    <value>M月d日 tth点mm分</value>
+    <comment>M月d日 tth時mm分</comment>
+  </data>
+  <data name="ExposureDateFormatYear" xml:space="preserve">
+    <value>yyyy年M月d日 tth点mm分</value>
+    <comment>yyyy年M月d日 tth時mm分</comment>
+  </data>
+
+	<data name="NotContactPageTitle" xml:space="preserve">
+    <value>查询过去14天内里的接触情况</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+	<data name="NotContactPageLabel1" xml:space="preserve">
+    <value>您没有查出跟阳性患者的密切接触</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+	<data name="NotContactPageDescription1" xml:space="preserve">
+    <value>为了进一步地防范疫情的扩散，请遵循日本政府提倡的“新生活模式”。</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
+  </data>
+	<data name="NotContactPageButtonText" xml:space="preserve">
+    <value>分享此APP</value>
+    <comment>アプリを周りの人に知らせる</comment>
+  </data>
+
+  <data name="GeneralErrorTitle" xml:space="preserve">
+    <value>发生错误</value>
+    <comment>エラーが発生しました</comment>
+  </data>
+  <data name="GeneralErrorRegisterAgainMessage" xml:space="preserve">
+    <value>请稍后再登记</value>
+    <comment>時間をおいてから再度登録を行ってください。</comment>
+  </data>
+
+  <data name="SettingsPageLicenseLabel" xml:space="preserve">
+    <value>开源许可证</value>
+    <comment>オープンソースライセンス</comment>
+  </data>
+  <data name="SettingsPageLicenseDescription" xml:space="preserve">
+    <value>COCOA是一个开源软件。
+它根据Mozilla Public License 2.0条款来提供。
+COCOA的源代码可以从以下URL获得。</value>
+    <comment>COCOAはオープンソースソフトウェアです。Mozilla Public License 2.0 の条項下で提供されています。
+COCOAのソースコードは次のURLから入手できます。</comment>
+  </data>
+  <data name="SettingsPageGitHubUrl" xml:space="preserve">
+    <value>https://github.com/cocoa-mhlw/cocoa/</value>
+    <comment>https://github.com/cocoa-mhlw/cocoa/</comment>
+  </data>
+  <data name="SettingsPageSourceCodeButton" xml:space="preserve">
+    <value>获得源代码</value>
+    <comment>ソースコードを入手</comment>
+  </data>
+  <data name="SettingsPageOthers" xml:space="preserve">
+    <value>其他</value>
+    <comment>その他</comment>
+  </data>
+  <data name="ToHomeButton" xml:space="preserve">
+    <value>返回首页</value>
+    <comment>ホーム画面へ</comment>
   </data>
 
   <data name="UserProfileNotSupportDialogTitle" xml:space="preserve">

@@ -1,17 +1,6 @@
 name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
-trigger:
-  branches:
-    include:
-    - master
-    - release/app
-    - develop/app
-    - feature/*
-  paths:
-    include:
-    - Covid19Radar
-    - Covid19Radar.sln
-    - azure-pipelines/app
+# NOTE: CI/PR triggers should be set in the Classic Editor
 
 jobs:
 - job: unit_tests
@@ -19,12 +8,15 @@ jobs:
     vmImage: 'windows-2019'
 
   steps:
+  - script: mv -f $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings_template.json $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar/settings.json
+    displayName: 'Prepare settings.json'
+
   - task: DotNetCoreCLI@2
     displayName: 'Dotnet test'
     inputs:
       command: test
       projects: '$(System.DefaultWorkingDirectory)/Covid19Radar/Tests/Covid19Radar.UnitTests/Covid19Radar.UnitTests.csproj'
-      arguments: '--collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=json,cobertura,lcov,teamcity,opencover'
+      arguments: '--configuration Debug --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=json,cobertura,lcov,teamcity,opencover'
 
   - task: PublishTestResults@2
     displayName: 'Publish test results'
@@ -39,5 +31,4 @@ jobs:
     inputs:
       codeCoverageTool: 'Cobertura'
       summaryFileLocation: '$(Agent.TempDirectory)\*\coverage.cobertura.xml'
-      reportDirectory: '$(Build.SourcesDirectory)\TestResults\Coverage\Reports'
       failIfCoverageEmpty: true

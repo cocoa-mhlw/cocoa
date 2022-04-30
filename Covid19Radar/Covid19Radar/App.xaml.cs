@@ -135,6 +135,7 @@ namespace Covid19Radar
 #if DEBUG
             containerRegistry.RegisterForNavigation<DebugPage>();
             containerRegistry.RegisterForNavigation<EditServerConfigurationPage>();
+            containerRegistry.RegisterForNavigation<ManageUserDataPage>();
 #endif
 
             // Settings
@@ -147,7 +148,6 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<TutorialPage3>();
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<TutorialPage4>();
-            containerRegistry.RegisterForNavigation<TutorialPage5>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
 
             // Help
@@ -162,15 +162,16 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
             containerRegistry.RegisterForNavigation<InqueryPage>();
             containerRegistry.RegisterForNavigation<TermsofservicePage>();
-            containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<ExposureCheckPage>();
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
             containerRegistry.RegisterForNavigation<SubmitConsentPage>();
+            containerRegistry.RegisterForNavigation<SubmitDiagnosisKeysCompletePage>();
             containerRegistry.RegisterForNavigation<ExposuresPage>();
             containerRegistry.RegisterForNavigation<ReAgreePrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
             containerRegistry.RegisterForNavigation<SplashPage>();
+            containerRegistry.RegisterForNavigation<HowToEnableExposureNotificationsPage>();
             containerRegistry.RegisterForNavigation<HowToReceiveProcessingNumberPage>();
             containerRegistry.RegisterForNavigation<WebAccessibilityPolicyPage>();
             containerRegistry.RegisterForNavigation<TroubleshootingPage>();
@@ -216,6 +217,7 @@ namespace Covid19Radar
             container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
+            container.Register<ICheckVersionService, CheckVersionService>(Reuse.Singleton);
 
 #if EVENT_LOG_ENABLED
             container.Register<IEventLogService, EventLogService>(Reuse.Singleton);

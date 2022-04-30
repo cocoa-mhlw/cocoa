@@ -27,13 +27,11 @@
             Padding="15,15,15,20">
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="1"
                 Margin="0, 0, 0, 10"
                 Style="{StaticResource DefaultLabel}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageDescription1}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="2"
                 Margin="0, 0, 0, 10"
                 Style="{StaticResource DefaultLabelSmall}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageDescription2}" />
@@ -44,7 +42,7 @@
                 >
                 <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="3"
+                    AutomationProperties.Name="{Binding RadioButtonYesReadText}"
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
@@ -52,7 +50,7 @@
                     GroupName="CheckSymptoms" />
                 <RadioButton
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="4"
+                    AutomationProperties.Name="{Binding RadioButtonNoReadText}"
                     TextColor="Black"
                     FontSize="Medium"
                     CheckedChanged="OnRadioButtonCheckedChanged"
@@ -64,7 +62,6 @@
                 IsVisible="{Binding IsVisibleWithSymptomsLayout}">
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
-                    TabIndex="5"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.NotifyOtherPageWithSymptomsDescription1}" />
                 <StackLayout Spacing="0" Margin="0, 5, 0, 10">
@@ -82,7 +79,6 @@
                             HasShadow="False">
                             <controls:CustomDatePicker
                                 AutomationProperties.IsInAccessibleTree="{Binding IsVisibleWithSymptomsLayout}"
-                                TabIndex="6"
                                 MaximumDate="{x:Static x:DateTime.Now}"
                                 BackgroundColor="White"
                                 Format="d"
@@ -96,7 +92,6 @@
                 IsVisible="{Binding IsVisibleNoSymptomsLayout}">
                 <Label
                     AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
-                    TabIndex="7"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.NotifyOtherPageNoSymptomsDescription1}" />
                 <StackLayout Spacing="0" Margin="0, 5, 0, 10">
@@ -114,7 +109,6 @@
                             HasShadow="False">
                             <controls:CustomDatePicker
                                 AutomationProperties.IsInAccessibleTree="{Binding IsVisibleNoSymptomsLayout}"
-                                TabIndex="8"
                                 MaximumDate="{x:Static x:DateTime.Now}"
                                 BackgroundColor="White"
                                 Format="d"
@@ -125,7 +119,6 @@
             </StackLayout>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="9"
                 Margin="0, 15, 0, 0"
                 Style="{StaticResource DefaultLabel}">
                 <Label.Triggers>
@@ -140,8 +133,8 @@
             <Label
                 AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessingNumberVisible}"
                 AutomationProperties.Name="{Binding HowToReceiveProcessingNumberReadText}"
-                TabIndex="10"
                 Margin="0, 0, 0, 0"
+                HorizontalOptions="Start"
                 Style="{StaticResource LinkLabelStyleMedium}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageLabel}"
                 IsVisible="{Binding IsHowToObtainProcessingNumberVisible}">
@@ -151,7 +144,6 @@
             </Label>
             <Label
                 AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessingNumberVisible}"
-                TabIndex="11"
                 IsVisible="{Binding IsHowToObtainProcessingNumberVisible}"
                 Margin="0, 10, 0, 0"
                 Style="{StaticResource AnnotationLabel}">
@@ -183,7 +175,6 @@
                         HasShadow="False">
                         <Entry
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="12"
                             CharacterSpacing="5"
                             Keyboard="Numeric"
                             IsReadOnly="{Binding IsProcessingNumberReadOnly}"
@@ -209,19 +200,16 @@
                     <StackLayout Spacing="10">
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="13"
                             FontSize="Medium"
                             FontAttributes="Bold"
                             TextColor="Black"
                             Text="{x:Static resources:AppResources.NotifyOtherPageDescription4}"/>
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="14"
                             Style="{StaticResource DefaultLabel}"
                             Text="{x:Static resources:AppResources.NotifyOtherPageDescription5}" />
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="15"
                             Style="{StaticResource DefaultLabelSmall}"
                             Text="{x:Static resources:AppResources.NotifyOtherPageDescription6}" />
                     </StackLayout>
@@ -232,7 +220,6 @@
                     IsVisible="{Binding IsConsentLinkVisible}">
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsConsentLinkVisible}"
-                        TabIndex="16"
                         Margin="0, 0, 0, 5"
                         Style="{StaticResource LinkLabelStyleMedium}"
                         Text="{x:Static resources:AppResources.ConfirmAgreement}">
@@ -246,7 +233,6 @@
 
             <Button
                 AutomationProperties.IsInAccessibleTree="True"
-                TabIndex="17"
                 Command="{Binding Path=OnClickRegister}"
                 IsEnabled="{Binding IsNextButtonEnabled}"
                 Style="{StaticResource DefaultButton}">
@@ -270,14 +256,12 @@
                 <StackLayout Spacing="10">
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
-                        TabIndex="18"
                         FontSize="Medium"
                         FontAttributes="Bold"
                         TextColor="Black"
                         Text="{x:Static resources:AppResources.InquiryAboutRegistrationTitle}"/>
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
-                        TabIndex="19"
                         Style="{StaticResource LinkLabelStyleLarge}"
                         Text="{Binding InqueryTelephoneNumber}">
                         <Label.GestureRecognizers>
@@ -286,7 +270,6 @@
                     </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
-                        TabIndex="20"
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.InquiryAboutRegistrationReceptionTime}" />
                 </StackLayout>

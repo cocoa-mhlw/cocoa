@@ -23,7 +23,6 @@
     <Compile Remove="Controls\**" />
     <EmbeddedResource Remove="Controls\**" />
     <None Remove="Controls\**" />
-    <None Remove="Views\ExposureCheck\" />
     <None Remove="ViewModels\ExposureCheckPage\" />
   </ItemGroup>
 
@@ -45,12 +44,10 @@
     <None Remove="Resources\Fonts\fa-solid-900.otf" />
     <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
-    <None Remove="Services\ExposureNotificationHandler.cs.txt" />
     <None Remove="settings.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="settings.json">
-    </EmbeddedResource>
+    <EmbeddedResource Include="settings.json" />
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-solid-900.otf" />
@@ -61,6 +58,7 @@
     <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
     <PackageReference Include="Prism.Forms" Version="8.1.97" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.0" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
@@ -70,6 +68,7 @@
     <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
     <PackageReference Include="Chino.Common" Version="1.0.0-rc11" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="8.0.62" />
+    <PackageReference Include="TimeZoneConverter" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CustomDatePicker.cs" />
@@ -84,12 +83,6 @@
     <Compile Update="Views\HomePage\ContactedNotifyPage.xaml.cs">
       <DependentUpon>ContactedNotifyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\HomePage\PrivacyPolicyPage2.xaml.cs">
-      <DependentUpon>PrivacyPolicyPage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\HomePage\ThankYouNotifyOtherPage.xaml.cs">
-      <DependentUpon>ThankYouNotifyOtherPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\Settings\LicenseAgreementPage.xaml.cs">
       <DependentUpon>LicenseAgreementPage.xaml</DependentUpon>
     </Compile>
@@ -98,9 +91,6 @@
     </Compile>
     <Compile Update="Views\HomePage\NotifyOtherPage.xaml.cs">
       <DependentUpon>NotifyOtherPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\ExceptionPage.xaml.cs">
-      <DependentUpon>ExceptionPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomePage\SubmitConsentPage.xaml.cs">
       <DependentUpon>SubmitConsentPage.xaml</DependentUpon>
@@ -132,9 +122,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Update="Views\HomePage\WebAccessibilityPolicyPage.xaml.cs">
-      <DependentUpon>WebAccessibilityPolicyPage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Templates\HelpMenuTemplate.xaml">
@@ -149,8 +136,6 @@
     <Folder Include="Controls\" />
     <Folder Include="Services\Migration\" />
     <Folder Include="Repository\" />
-    <Folder Include="Views\ExposureCheck\" />
-    <Folder Include="ViewModels\ExposureCheck\" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)'=='Release'">
     <Compile Remove="ViewModels/Settings/DebugPageViewModel.cs" />

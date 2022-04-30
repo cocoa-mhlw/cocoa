@@ -13,5 +13,6 @@ namespace Covid19Radar.Services
         Task<bool> ShowLocationOffWarningAsync();
         Task ShowUserProfileNotSupportAsync();
         Task ShowHomePageUnknownErrorWaringAsync();
+        Task<bool> ShowLocalNotificationOffWarningAsync();
     }
 }

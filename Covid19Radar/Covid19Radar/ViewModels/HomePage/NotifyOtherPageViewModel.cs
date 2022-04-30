@@ -24,6 +24,8 @@ namespace Covid19Radar.ViewModels
     {
         private const ReportType DEFAULT_REPORT_TYPE = ReportType.ConfirmedTest;
 
+        public string RadioButtonYesReadText => Device.RuntimePlatform == Device.iOS ? $"{AppResources.NotifyOtherPageRadioButtonYes} {AppResources.Button}" : "";
+        public string RadioButtonNoReadText => Device.RuntimePlatform == Device.iOS ? $"{AppResources.NotifyOtherPageRadioButtonNo} {AppResources.Button}" : "";
         public string HowToReceiveProcessingNumberReadText => $"{AppResources.NotifyOtherPageLabel} {AppResources.Button}";
 
         private readonly ILoggerService loggerService;
@@ -32,6 +34,8 @@ namespace Covid19Radar.ViewModels
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
         private readonly IEssentialsService _essentialsService;
         private readonly int _delayForErrorMillis;
+
+        private bool _hasSymptom = false;
 
         private string _processingNumber;
         public string ProcessingNumber
@@ -194,15 +198,15 @@ namespace Covid19Radar.ViewModels
 
 
             var result = await UserDialogs.Instance.ConfirmAsync(
-                AppResources.NotifyOtherPageDiag1Message,
-                AppResources.NotifyOtherPageDiag1Title,
+                AppResources.NotifyOtherPageDialog1Message,
+                AppResources.NotifyOtherPageDialog1Title,
                 AppResources.ButtonRegister,
                 AppResources.ButtonCancel);
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
                     null,
-                    AppResources.NotifyOtherPageDiag2Title,
+                    AppResources.NotifyOtherPageDialog2Title,
                     AppResources.ButtonOk
                     );
 
@@ -217,8 +221,8 @@ namespace Covid19Radar.ViewModels
                 if (errorCount >= AppConstants.MaxErrorCount)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiagReturnHome,
-                        AppResources.NotifyOtherPageDiagReturnHomeTitle,
+                        AppResources.NotifyOtherPageDialogReturnHome,
+                        AppResources.NotifyOtherPageDialogReturnHomeTitle,
                         AppResources.ButtonOk
                     );
                     await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
@@ -234,8 +238,8 @@ namespace Covid19Radar.ViewModels
 
                 if (errorCount > 0)
                 {
-                    await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
-                        AppResources.NotifyOtherPageDiag3Title,
+                    await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDialog3Message,
+                        AppResources.NotifyOtherPageDialog3Title,
                         AppResources.ButtonOk
                         );
                     await Task.Delay(errorCount * _delayForErrorMillis);
@@ -247,8 +251,8 @@ namespace Covid19Radar.ViewModels
                 if (string.IsNullOrEmpty(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiag4Message,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.NotifyOtherPageDialog4Message,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk
                     );
                     errorCount++;
@@ -260,8 +264,8 @@ namespace Covid19Radar.ViewModels
                 if (!Validator.IsValidProcessingNumber(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiag5Message,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.NotifyOtherPageDialog5Message,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk
                     );
                     errorCount++;
@@ -276,8 +280,8 @@ namespace Covid19Radar.ViewModels
                 if (!enabled)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                       AppResources.NotifyOtherPageDiag6Message,
-                       AppResources.NotifyOtherPageDiag6Title,
+                       AppResources.NotifyOtherPageDialog6Message,
+                       AppResources.NotifyOtherPageDialog6Title,
                        AppResources.ButtonOk
                     );
                     await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
@@ -310,7 +314,7 @@ namespace Covid19Radar.ViewModels
 
                     await UserDialogs.Instance.AlertAsync(
                         null,
-                        AppResources.NotifyOtherPageDiag2Title,
+                        AppResources.NotifyOtherPageDialog2Title,
                         AppResources.ButtonOk
                         );
                 }
@@ -319,6 +323,22 @@ namespace Covid19Radar.ViewModels
                     UserDialogs.Instance.HideLoading();
                 }
 
+            }
+            catch (DiagnosisKeyRegisterException ex)
+            {
+                loggerService.Exception("Failed to register", ex);
+
+                errorCount++;
+                UserDialogs.Instance.HideLoading();
+
+                if (ex.Code == DiagnosisKeyRegisterException.Codes.FailedCreatePayload)
+                {
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.GeneralErrorRegisterAgainMessage,
+                        AppResources.GeneralErrorTitle,
+                        AppResources.ButtonOk
+                        );
+                }
             }
             catch (Exception ex)
             {
@@ -366,6 +386,7 @@ namespace Covid19Radar.ViewModels
             }
 
             return await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+                _hasSymptom,
                 _diagnosisDate,
                 filteredTemporaryExposureKeyList,
                 ProcessingNumber,
@@ -384,18 +405,13 @@ namespace Covid19Radar.ViewModels
                     // Success
                     loggerService.Info($"Successfully submit DiagnosisKeys.");
 
-                    await UserDialogs.Instance.AlertAsync(
-                        null,
-                        AppResources.NotifyOtherPageDialogSubmittedTitle,
-                        AppResources.ButtonOk
-                    );
-                    await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                    _ = await NavigationService.NavigateAsync($"/{nameof(SubmitDiagnosisKeysCompletePage)}");
                     break;
 
                 case HttpStatusCode.NotAcceptable:
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.ExposureNotificationHandler1ErrorMessage,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk);
                     loggerService.Error($"The process number is incorrect.");
                     break;
@@ -417,6 +433,14 @@ namespace Covid19Radar.ViewModels
                     loggerService.Error($"There is a problem with the record data.");
                     break;
 
+                case HttpStatusCode.Forbidden:
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
+                        AppResources.DialogNetworkConnectionErrorTitle,
+                        AppResources.ButtonOk);
+                    loggerService.Error($"Access from overseas.");
+                    break;
+
                 default:
                     loggerService.Error($"Unexpected status");
                     break;
@@ -429,11 +453,13 @@ namespace Covid19Radar.ViewModels
 
             if (AppResources.NotifyOtherPageRadioButtonYes.Equals(text))
             {
+                _hasSymptom = true;
                 IsVisibleWithSymptomsLayout = true;
                 IsVisibleNoSymptomsLayout = false;
             }
             else if (AppResources.NotifyOtherPageRadioButtonNo.Equals(text))
             {
+                _hasSymptom = false;
                 IsVisibleWithSymptomsLayout = false;
                 IsVisibleNoSymptomsLayout = true;
             }
@@ -498,7 +524,7 @@ namespace Covid19Radar.ViewModels
             loggerService.Info("GetTekHistory request is declined by user.");
             await UserDialogs.Instance.AlertAsync(
                 null,
-                AppResources.NotifyOtherPageDiag2Title,
+                AppResources.NotifyOtherPageDialog2Title,
                 AppResources.ButtonOk
                 );
 

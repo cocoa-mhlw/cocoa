@@ -51,14 +51,14 @@
                         BackgroundColor="Transparent"
                         Command="{Binding Path=OnCloseButton}"
                         Source="icon_close.png"
-                        TabIndex="1" />
+                        />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabelLarge}"
                         HorizontalTextAlignment="Start"
                         VerticalOptions="Center"
                         Text="{x:Static resources:AppResources.MenuPageTitle}"
-                        TabIndex="2" />
+                        />
                 </StackLayout>
 
                 <ListView
@@ -68,7 +68,7 @@
                     SelectedItem="{Binding SelectedMenuItem}"
                     SeparatorColor="#E0E0E0"
                     SeparatorVisibility="Default"
-                    TabIndex="3">
+                    >
 
                     <AutomationProperties.Name>
                         <OnPlatform x:TypeArguments="x:String">
