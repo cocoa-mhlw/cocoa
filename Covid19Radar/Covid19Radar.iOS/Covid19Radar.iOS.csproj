@@ -495,12 +495,6 @@
     <BundleResource Include="Resources\Base.lproj\HeaderLogo%403x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\SplashImg%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Base.lproj\SplashImg%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Services\Logs\" />
     <Folder Include="Renderers\" />
     <Folder Include="Resources\zh-Hans.lproj\" />
