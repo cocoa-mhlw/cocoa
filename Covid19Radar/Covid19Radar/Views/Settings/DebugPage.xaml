@@ -77,6 +77,10 @@
                         Style="{StaticResource DefaultButton}"
                         Text="ShowExposureNotification" />
                     <Button
+                        Command="{prism:NavigateTo 'ManageExposureDataPage'}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Manage ExposureData" />
+                    <Button
                         Command="{prism:NavigateTo 'ManageUserDataPage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="Manage UserData" />
