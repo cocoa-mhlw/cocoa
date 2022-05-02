@@ -78,7 +78,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                            <Span Text="{x:Static resources:AppResources.ExposuresPageToUtcDescription}"/>
+                            <Span Text="{Binding UtcDescription}"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>

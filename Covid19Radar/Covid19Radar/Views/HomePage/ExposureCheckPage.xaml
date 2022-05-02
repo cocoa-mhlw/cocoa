@@ -140,7 +140,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageAnnotationDecription2}"/>
+                                <Span Text="{Binding UtcDescription}"/>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
