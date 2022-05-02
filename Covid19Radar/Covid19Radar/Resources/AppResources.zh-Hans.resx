@@ -314,7 +314,7 @@
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
     <value>对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
-    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーン({0})に変換して、期間として表示しています。</comment>
+    <comment>TODO:日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>未收到来自阳性登记者所持智能手机的信号</value>
@@ -1347,7 +1347,11 @@
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
     <value>* 对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
-    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーン({0})に変換して、期間として表示しています。</comment>
+    <comment>TODO:日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTimeDescription" xml:space="preserve">
+    <value>接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</value>
+    <comment>TODO:接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</comment>
   </data>
   <data name="ExposuresPageFrom" xml:space="preserve">
     <value></value>

@@ -82,6 +82,18 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <Label
+                    Margin="0, 10, 0, 0"
+                    Style="{StaticResource AnnotationLabel}"
+                    TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{x:Static resources:AppResources.ExposuresPageTimeDescription}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
             </StackLayout>
         </CollectionView.Footer>
     </CollectionView>
