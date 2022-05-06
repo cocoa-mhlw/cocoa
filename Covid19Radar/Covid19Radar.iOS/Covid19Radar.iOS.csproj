@@ -327,9 +327,14 @@
     <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_3%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_4%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\exposure_notification_4%403x.png" />
-    <BundleResource Include="Resources\Base.lproj\exposure_check_page_head%403x.png" />
     <BundleResource Include="Resources\Base.lproj\splash_logo%402x.png" />
     <BundleResource Include="Resources\Base.lproj\splash_logo%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\Nocontact10%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\Nocontact10%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\Nocontact10%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\Nocontact10%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -376,10 +376,6 @@
     <value>Register by entering provided processing number into this app</value>
     <comment>本アプリを用いて処理番号の登録を行います。</comment>
   </data>
-  <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>The signal received from the smartphone of the person who has registered as positive for COVID-19 was below the standard value</value>
-    <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
-  </data>
   <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
     <value>No signal received</value>
     <comment>TODO:受信した信号はありません</comment>
@@ -391,14 +387,6 @@
   <data name="LowRiskContactPageCountSuffixMinutesText" xml:space="preserve">
     <value>min</value>
     <comment>分</comment>
-  </data>
-  <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>A signal from the smartphone of a person who has registered as positive for COVID-19 was received. However, the signal did not exceed the standard value. There was a person who has registered positive for COVID-19 within your sphere of activities. Therefore, please continue to pay attention to preventing COVID-19 infections.</value>
-    <comment>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
-  </data>
-  <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
-    <value>Received signal</value>
-    <comment>受信した信号</comment>
   </data>
   <data name="LowRiskContactPage_DailySummary_ScoreSum_Descritpion_Satisfied" xml:space="preserve">
     <value>Score {0:#}</value>
@@ -427,14 +415,6 @@
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
     <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone of the device and displayed.​</value>
     <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
-  </data>
-  <data name="NoRiskContactPageLabel" xml:space="preserve">
-    <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>
-    <comment>陽性登録者のスマートフォンからの信号を受信していません</comment>
-  </data>
-  <data name="NoRiskContactPageDescription" xml:space="preserve">
-    <value>It appears there have been no persons who have registered positive for COVID-19 within your sphere of activities. Please continue to pay attention to preventing COVID-19 infections.</value>
-    <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>Terms of use</value>
@@ -1486,10 +1466,6 @@ Note: this app does not collect users’ location information.</value>
 	<data name="NotContactPageDescription1" xml:space="preserve">
     <value>Please keep practicing 'New Lifestyle' recommended by the government.</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
-  </data>
-	<data name="NotContactPageButtonText" xml:space="preserve">
-    <value>Share this app</value>
-    <comment>アプリを周りの人に知らせる</comment>
   </data>
 
   <data name="GeneralErrorTitle" xml:space="preserve">

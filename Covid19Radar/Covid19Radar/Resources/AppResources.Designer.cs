@@ -449,12 +449,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string LowRiskContactPageLabel {
-            get {
-                return ResourceManager.GetString("LowRiskContactPageLabel", resourceCulture);
-            }
-        }
-        
         public static string LowRiskContactPage_ExposureCheckScore_NoSignalReceived {
             get {
                 return ResourceManager.GetString("LowRiskContactPage_ExposureCheckScore_NoSignalReceived", resourceCulture);
@@ -470,18 +464,6 @@ namespace Covid19Radar.Resources {
         public static string LowRiskContactPageCountSuffixMinutesText {
             get {
                 return ResourceManager.GetString("LowRiskContactPageCountSuffixMinutesText", resourceCulture);
-            }
-        }
-        
-        public static string LowRiskContactPageDescription {
-            get {
-                return ResourceManager.GetString("LowRiskContactPageDescription", resourceCulture);
-            }
-        }
-        
-        public static string LowRiskContactPageHeaderTextPrefix {
-            get {
-                return ResourceManager.GetString("LowRiskContactPageHeaderTextPrefix", resourceCulture);
             }
         }
         
@@ -518,18 +500,6 @@ namespace Covid19Radar.Resources {
         public static string LowRiskContactPageAnnotationDecription2 {
             get {
                 return ResourceManager.GetString("LowRiskContactPageAnnotationDecription2", resourceCulture);
-            }
-        }
-        
-        public static string NoRiskContactPageLabel {
-            get {
-                return ResourceManager.GetString("NoRiskContactPageLabel", resourceCulture);
-            }
-        }
-        
-        public static string NoRiskContactPageDescription {
-            get {
-                return ResourceManager.GetString("NoRiskContactPageDescription", resourceCulture);
             }
         }
         
@@ -2098,6 +2068,7 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
             }
         }
+        
         public static string GeneralErrorTitle {
             get {
                 return ResourceManager.GetString("GeneralErrorTitle", resourceCulture);

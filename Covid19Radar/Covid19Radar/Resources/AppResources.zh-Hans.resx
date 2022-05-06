@@ -268,10 +268,6 @@
     <value>删除接触记录并将应用恢复到初始状态</value>
     <comment>接触の記録を削除してアプリを初期状態に戻すには</comment>
   </data>
-  <data name="LowRiskContactPageLabel" xml:space="preserve">
-    <value>来自阳性登记者所持智能手机的信号低于基准值</value>
-    <comment>陽性登録者のスマートフォンから受信した信号は基準値を下回っていました</comment>
-  </data>
   <data name="LowRiskContactPage_ExposureCheckScore_NoSignalReceived" xml:space="preserve">
     <value>No signal received</value>
     <comment>TODO:受信した信号はありません</comment>
@@ -300,14 +296,6 @@
     <value>分钟</value>
     <comment>分</comment>
   </data>
-  <data name="LowRiskContactPageDescription" xml:space="preserve">
-    <value>收到了来自阳性登记者所持智能手机的信号，但是信号强度并未超出基准值。您的行动范围内有阳性登记者，请继续注意防止感染。</value>
-    <comment>陽性登録者のスマートフォンの信号を受信しましたが、基準値を超える信号はありません。行動圏内には陽性登録者がいましたので、引き続き感染予防に留意しながらお過ごし下さい。</comment>
-  </data>
-  <data name="LowRiskContactPageHeaderTextPrefix" xml:space="preserve">
-    <value>收到的信号</value>
-    <comment>受信した信号</comment>
-  </data>
   <data name="LowRiskContactPageAnnotationDecription" xml:space="preserve">
     <value>※总和是根据所收到的信号的强度和时间计算的。一般条件下，1米以内、15分钟以上的接触设定为100以上。</value>
     <comment>※スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</comment>
@@ -319,14 +307,6 @@
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
     <value>* 对于日期和时间，以协调世界时 (UTC) 转换成设置的时区来显示时间段。​</value>
     <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
-  </data>
-  <data name="NoRiskContactPageLabel" xml:space="preserve">
-    <value>未收到来自阳性登记者所持智能手机的信号</value>
-    <comment>リスクが低いものを含め陽性登録者との接触はありません</comment>
-  </data>
-  <data name="NoRiskContactPageDescription" xml:space="preserve">
-    <value>您的行动范围内似乎没有阳性登记者。请继续注意防止感染。</value>
-    <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>使用条款</value>
@@ -1385,10 +1365,6 @@
 	<data name="NotContactPageDescription1" xml:space="preserve">
     <value>为了进一步地防范疫情的扩散，请遵循日本政府提倡的“新生活模式”。</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
-  </data>
-	<data name="NotContactPageButtonText" xml:space="preserve">
-    <value>分享此APP</value>
-    <comment>アプリを周りの人に知らせる</comment>
   </data>
 
   <data name="GeneralErrorTitle" xml:space="preserve">
