@@ -48,6 +48,8 @@ namespace Covid19Radar.Api.Tests
                                                 validationServer.Object,
                                                 temporaryExposureKeyValidationService.Object,
                                                 logger);
+            // assert
+            Assert.IsNotNull(diagnosisApi);
         }
 
         [DataTestMethod]

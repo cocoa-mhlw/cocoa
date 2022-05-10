@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Api;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
@@ -10,9 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Tests
@@ -30,6 +27,8 @@ namespace Covid19Radar.Api.Tests
             var validationServer = new Mock<IValidationServerService>();
             var logger = new Mock.LoggerMock<TemporaryExposureKeysApi>();
             var temporaryExposureKeysApi = new TemporaryExposureKeysApi(config.Object, tekExportRepo.Object, validationServer.Object, logger);
+            // assert
+            Assert.IsNotNull(temporaryExposureKeysApi);
         }
 
         [DataTestMethod]

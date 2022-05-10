@@ -41,6 +41,8 @@ namespace Covid19Radar.Api.Tests
                                                 verification.Object,
                                                 validationServer.Object,
                                                 logger);
+            // assert
+            Assert.IsNotNull(diagnosisApi);
         }
 
         [DataTestMethod]
