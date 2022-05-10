@@ -23,8 +23,6 @@ namespace Covid19Radar.Api
     public class V2DiagnosisApi
     {
         private const string CHAFF_HEADER = "X-Chaff";
-
-        private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
         private readonly IDeviceValidationService DeviceCheck;
         private readonly IVerificationService VerificationService;
@@ -41,7 +39,6 @@ namespace Covid19Radar.Api
             IValidationServerService validationServerService,
             ILogger<V2DiagnosisApi> logger)
         {
-            DiagnosisRepository = diagnosisRepository;
             TekRepository = tekRepository;
             DeviceCheck = deviceCheck;
             Logger = logger;

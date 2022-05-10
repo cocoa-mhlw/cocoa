@@ -3,8 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Covid19Radar.Api.DataAccess;
-using Covid19Radar.Api.DataStore;
-using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -18,7 +16,6 @@ namespace Covid19Radar.Api.Services
 {
     public class CustomVerificationService : IVerificationService
     {
-        private readonly IConfiguration Config;
         private readonly ICustomVerificationStatusRepository CustomVerification;
         private readonly ILogger<CustomVerificationService> Logger;
         private readonly X509Certificate2 Cert;
@@ -29,10 +26,9 @@ namespace Covid19Radar.Api.Services
         private readonly string VerificationPayloadParameterName;
 
         public CustomVerificationService(IConfiguration config,
-                                         ICustomVerificationStatusRepository customVerification,   
+                                         ICustomVerificationStatusRepository customVerification,
                                          ILogger<CustomVerificationService> logger)
         {
-            Config = config;
             CustomVerification = customVerification;
             Logger = logger;
             var cert = config.VerificationPayloadPfx();
@@ -50,18 +46,19 @@ namespace Covid19Radar.Api.Services
             VerificationPayloadParameterName = config.VerificationPayloadParameterName();
             // option api secret for api management
             ApiSecret = config.VerificationPayloadApiSecret();
-            if (!string.IsNullOrWhiteSpace(ApiSecret)) {
+            if (!string.IsNullOrWhiteSpace(ApiSecret))
+            {
                 Client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", ApiSecret);
             }
         }
 
-        public async Task<int> VerificationAsync(string verificationPayload)
+        public async Task<int> VerificationAsync(string payload)
         {
             Logger.LogInformation($"start {nameof(VerificationAsync)}");
-            var payload = $@"{{
-""{VerificationPayloadParameterName}"": ""{verificationPayload}""
-}}";
-            var content = new StringContent(payload);
+
+            var content = new StringContent($@"{{
+""{VerificationPayloadParameterName}"": ""{payload}""
+}}");
             var response = await Client.PostAsync(Url, content);
             if (!response.IsSuccessStatusCode) return 503;
 

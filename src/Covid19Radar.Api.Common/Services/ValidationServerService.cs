@@ -31,6 +31,7 @@ namespace Covid19Radar.Api.Services
 
         public IValidationServerService.ValidateResult Validate(HttpRequest req)
         {
+            Logger.LogInformation($"{nameof(ValidationServerService)}#{nameof(Validate)}");
             if (AzureFrontDoorRestrictionEnabled)
             {
                 if (!req.Headers.ContainsKey("X-Azure-FDID"))

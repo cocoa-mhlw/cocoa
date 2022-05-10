@@ -22,7 +22,6 @@ namespace Covid19Radar.Api
 {
     public class DiagnosisApi
     {
-        private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
         private readonly IDeviceValidationService DeviceCheck;
         private readonly IVerificationService VerificationService;
@@ -39,7 +38,6 @@ namespace Covid19Radar.Api
             IValidationServerService validationServerService,
             ILogger<DiagnosisApi> logger)
         {
-            DiagnosisRepository = diagnosisRepository;
             TekRepository = tekRepository;
             DeviceCheck = deviceCheck;
             Logger = logger;
