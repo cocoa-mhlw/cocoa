@@ -1487,10 +1487,6 @@ Note: this app does not collect users’ location information.</value>
     <value>Please keep practicing 'New Lifestyle' recommended by the government.</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
-	<data name="NotContactPageButtonText" xml:space="preserve">
-    <value>Share this app</value>
-    <comment>アプリを周りの人に知らせる</comment>
-  </data>
 
   <data name="GeneralErrorTitle" xml:space="preserve">
     <value>An error has occurred</value>

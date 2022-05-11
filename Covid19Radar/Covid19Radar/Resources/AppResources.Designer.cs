@@ -2098,6 +2098,7 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
             }
         }
+        
         public static string GeneralErrorTitle {
             get {
                 return ResourceManager.GetString("GeneralErrorTitle", resourceCulture);
