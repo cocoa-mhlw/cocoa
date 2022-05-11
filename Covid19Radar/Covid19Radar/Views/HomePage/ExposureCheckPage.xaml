@@ -16,108 +16,72 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <StackLayout Style="{StaticResource DefaultStackLayout}">
-        <CollectionView
+    <ContentView>
+        <ListView
             VerticalOptions="FillAndExpand"
-            BackgroundColor="#EEEEEE"
             ItemsSource="{Binding ExposureCheckScores}">
-            <CollectionView.Header>
-                <StackLayout>
+            <ListView.Header>
+                <StackLayout Padding="20">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource DefaultTitleLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.NotContactPageLabel1}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Margin="0,0,0,0"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource DefaultLabel}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resources:AppResources.NotContactPageDescription1}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
                     <ffimageloading:CachedImage
                         AutomationProperties.IsInAccessibleTree="False"
-                        Margin="0,0,0,15"
-                        Aspect="AspectFill"
-                        Source="exposure_check_page_head.png" />
-                    <StackLayout
-                        Margin="20,20,20,10">
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="1"
-                            Margin="0,0,0,20"
-                            HorizontalOptions="Center"
-                            Style="{StaticResource DefaultSubTitleLabel}"
-                            FontAttributes="Bold"
-                            >
-                            <Label.Triggers>
-                                <DataTrigger TargetType="Label" Binding="{Binding IsExposureDetected}" Value="False">
-                                    <Setter Property="Text" Value="{x:Static resources:AppResources.NoRiskContactPageLabel}" />
-                                </DataTrigger>
-                                <DataTrigger TargetType="Label" Binding="{Binding IsExposureDetected}" Value="True">
-                                    <Setter Property="Text" Value="{x:Static resources:AppResources.LowRiskContactPageLabel}" />
-                                </DataTrigger>
-                            </Label.Triggers>
-                        </Label>
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            TabIndex="2"
-                            HorizontalOptions="Center"
-                            Style="{StaticResource PrimaryText}">
-                            <Label.Triggers>
-                                <DataTrigger TargetType="Label" Binding="{Binding IsExposureDetected}" Value="False">
-                                    <Setter Property="Text" Value="{x:Static resources:AppResources.NoRiskContactPageDescription}" />
-                                </DataTrigger>
-                                <DataTrigger TargetType="Label" Binding="{Binding IsExposureDetected}" Value="True">
-                                    <Setter Property="Text" Value="{x:Static resources:AppResources.LowRiskContactPageDescription}" />
-                                </DataTrigger>
-                            </Label.Triggers>
-                        </Label>
-                    </StackLayout>
-                    <StackLayout
-                        Orientation="Horizontal"
-                        HorizontalOptions="StartAndExpand"
-                        Padding="20, 10, 0, 10"
-                        IsVisible="{Binding IsExposureDetected}"
-                        >
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            VerticalOptions="Center"
-                            Style="{StaticResource DefaultLabel}"
-                            FontAttributes="Bold"
-                            Text="{x:Static resources:AppResources.LowRiskContactPageHeaderTextPrefix}">
-                        </Label>
-                        <Label
-                            AutomationProperties.IsInAccessibleTree="True"
-                            VerticalOptions="Center"
-                            Style="{StaticResource DefaultLabelCaption}"
-                            Text="{Binding LowRiskContactPageHeaderTextSuffix}"
-                            >
-                        </Label>
-                    </StackLayout>
+                        Margin="0,20,0,0"
+                        Aspect="AspectFit"
+                        Source="Nocontact10.png" />
                 </StackLayout>
-            </CollectionView.Header>
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" />
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate>
+            </ListView.Header>
+            <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout
-                        Padding="20, 0, 20, 0"
-                        HorizontalOptions="FillAndExpand">
-                        <Frame Style="{StaticResource FrameCardViewStyle}">
-                            <StackLayout Style="{StaticResource DetailsStackLayout}">
-                                <Label
-                                    Style="{StaticResource CardLabel}"
-                                    Text="{Binding DateTimeString}"
-                                    Margin="0, 0, 0, 10"
-                                    />
-                                <Label
-                                    Style="{StaticResource CardLabelSmall}"
-                                    Text="{Binding Description}"
-                                    />
-                            </StackLayout>
-                            <Frame.Triggers>
-                                <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="False">
-                                    <Setter Property="Style" Value="{StaticResource FrameCardViewStyle_Diabled}" />
-                                </DataTrigger>
-                                <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="True">
-                                    <Setter Property="Style" Value="{StaticResource FrameCardViewStyle}" />
-                                </DataTrigger>
-                            </Frame.Triggers>
-                        </Frame>
-                    </StackLayout>
+                    <ViewCell>
+                        <StackLayout
+                            Padding="20, 0, 20, 0"
+                            HorizontalOptions="FillAndExpand">
+                            <Frame Style="{StaticResource FrameCardViewStyle}">
+                                <StackLayout Style="{StaticResource DetailsStackLayout}">
+                                    <Label
+                                        Style="{StaticResource CardLabel}"
+                                        Text="{Binding DateTimeString}"
+                                        Margin="0, 0, 0, 10"
+                                        />
+                                    <Label
+                                        Style="{StaticResource CardLabelSmall}"
+                                        Text="{Binding Description}"
+                                        />
+                                </StackLayout>
+                                <Frame.Triggers>
+                                    <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="False">
+                                        <Setter Property="Style" Value="{StaticResource FrameCardViewStyle_Diabled}" />
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="True">
+                                        <Setter Property="Style" Value="{StaticResource FrameCardViewStyle}" />
+                                    </DataTrigger>
+                                </Frame.Triggers>
+                            </Frame>
+                        </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-            <CollectionView.Footer>
+            </ListView.ItemTemplate>
+            <ListView.Footer>
                 <StackLayout
                     Padding="20"
                     IsVisible="{Binding IsExposureDetected}"
@@ -145,7 +109,7 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-            </CollectionView.Footer>
-        </CollectionView>
-    </StackLayout>
+            </ListView.Footer>
+        </ListView>
+    </ContentView>
 </ContentPage>
