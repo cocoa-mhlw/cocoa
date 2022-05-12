@@ -15,7 +15,7 @@ namespace Covid19Radar.Services
 {
     public interface IExposureDataExportService
     {
-        public Task exportAsync(string path);
+        Task ExportAsync(string path);
     }
 
     public class ExposureDataExportService : IExposureDataExportService
@@ -44,7 +44,7 @@ namespace Covid19Radar.Services
             _essentialsService = essentialsService;
         }
 
-        public async Task exportAsync(string filePath)
+        public async Task ExportAsync(string filePath)
         {
             _loggerService.StartMethod();
 

@@ -329,7 +329,7 @@ namespace Covid19Radar.ViewModels
             try
             {
                 string exposureDataFilePath = _localPathService.ExposureDataPath;
-                await _exposureDataExportService.exportAsync(exposureDataFilePath);
+                await _exposureDataExportService.ExportAsync(exposureDataFilePath);
 
                 await Share.RequestAsync(new ShareFileRequest
                 {
