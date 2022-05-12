@@ -2105,12 +2105,6 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string NotContactPageButtonText {
-            get {
-                return ResourceManager.GetString("NotContactPageButtonText", resourceCulture);
-            }
-        }
-        
         public static string GeneralErrorTitle {
             get {
                 return ResourceManager.GetString("GeneralErrorTitle", resourceCulture);
