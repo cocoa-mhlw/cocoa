@@ -67,14 +67,14 @@ namespace Covid19Radar.ViewModels
             _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
             var dailySummaryList
-                = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
             var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
 
             var exposureWindowList
-                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
             var userExposureInformationList
-                = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
             if (dailySummaryList.Count() > 0)
             {

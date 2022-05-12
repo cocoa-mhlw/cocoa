@@ -3,7 +3,7 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<MasterDetailPage
+<FlyoutPage
     x:Class="Covid19Radar.Views.MenuPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -17,7 +17,7 @@
         </OnPlatform>
     </AutomationProperties.Name>
 
-    <MasterDetailPage.Master>
+    <FlyoutPage.Flyout>
         <ContentPage
             Title="{x:Static resources:AppResources.MenuPageTitle}"
             ios:Page.UseSafeArea="True">
@@ -136,5 +136,5 @@
                 </ListView>
             </StackLayout>
         </ContentPage>
-    </MasterDetailPage.Master>
-</MasterDetailPage>
+    </FlyoutPage.Flyout>
+</FlyoutPage>

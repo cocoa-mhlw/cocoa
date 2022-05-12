@@ -141,11 +141,11 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 .Returns((new DateTime()).AddDays(14));
 
             mockExposureDataRepository
-                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .ReturnsAsync(dummyDailySummaries);
 
             mockExposureDataRepository
-                .Setup(x => x.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .ReturnsAsync(dummyExposureWindows);
 
             var riskConfiguration = new V1ExposureRiskCalculationConfiguration()
@@ -201,7 +201,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public async void NoRiskPage_Initialize_Display()
         {
             mockExposureDataRepository
-                .Setup(x => x.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay))
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays))
                 .Returns(Task.FromResult(new List<DailySummary>()));
 
             var exposureCheckPageViewModel = CreateViewModel();
