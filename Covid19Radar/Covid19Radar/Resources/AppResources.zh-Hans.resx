@@ -329,8 +329,8 @@
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
   </data>
   <data name="ExportExposureData" xml:space="preserve">
-    <value>Export Exposure Data</value>
-    <comment>TODO:接触情報を確認</comment>
+    <value>Save</value>
+    <comment>TODO:情報を保存</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>使用条款</value>

@@ -311,8 +311,8 @@
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
   </data>
   <data name="ExportExposureData" xml:space="preserve">
-    <value>接触情報を確認</value>
-    <comment>接触情報を確認</comment>
+    <value>情報を保存</value>
+    <comment>情報を保存</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>利用規約</value>
