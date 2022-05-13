@@ -13,6 +13,8 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
@@ -23,6 +25,9 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
         private readonly ILoggerService _loggerService;
 
+        private readonly ILocalPathService _localPathService;
+        private readonly IExposureDataExportService _exposureDataExportService;
+
         public ObservableCollection<ExposureSummary> Exposures { get; set; }
 
         public ExposuresPageViewModel(
@@ -30,12 +35,16 @@ namespace Covid19Radar.ViewModels
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
+            ILocalPathService localPathService,
+            IExposureDataExportService exposureDataExportService,
             ILoggerService loggerService
             ) : base(navigationService)
         {
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _localPathService = localPathService;
+            _exposureDataExportService = exposureDataExportService;
             _loggerService = loggerService;
 
             Title = AppResources.MainExposures;
@@ -121,6 +130,31 @@ namespace Covid19Radar.ViewModels
                 Exposures.Add(exposure);
             }
         }
+
+        public Command OnClickExportExposureData => new Command(async () =>
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                string exposureDataFilePath = _localPathService.ExposureDataPath;
+                await _exposureDataExportService.ExportAsync(exposureDataFilePath);
+
+                await Share.RequestAsync(new ShareFileRequest
+                {
+                    File = new ShareFile(exposureDataFilePath)
+                });
+            }
+            catch (NotImplementedInReferenceAssemblyException exception)
+            {
+                _loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+
+        });
     }
 
     public class ExposureSummary

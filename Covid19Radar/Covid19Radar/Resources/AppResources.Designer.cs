@@ -533,6 +533,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string ExportExposureData {
+            get {
+                return ResourceManager.GetString("ExportExposureData", resourceCulture);
+            }
+        }
+        
         public static string TutorialPage3Title {
             get {
                 return ResourceManager.GetString("TutorialPage3Title", resourceCulture);

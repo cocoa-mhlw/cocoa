@@ -82,7 +82,13 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
             <ListView.Footer>
-                <StackLayout AutomationProperties.IsInAccessibleTree="{Binding IsExposureDetected}">
+                <StackLayout>
+                    <Button
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Command="{Binding Path=OnClickExportExposureData}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.ExportExposureData}" />
+
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsExposureDetected}"
                         IsVisible="{Binding IsExposureDetected}"
