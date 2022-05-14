@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<ContentPage
+    x:Class="Covid19Radar.Views.ManageUserDataPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
+    <ScrollView>
+        <StackLayout
+            Padding="0"
+            BackgroundColor="{StaticResource Background}"
+            Spacing="0"
+            Margin="10, 10, 0, 10">
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="DayOfUse"
+                Margin="0, 0, 0, 10"
+                />
+
+            <Button
+                Command="{Binding OnClickResetDayOfUse}"
+                HorizontalOptions="Center"
+                Style="{StaticResource DefaultButton}"
+                Text="Reset"
+                VerticalOptions="Start" />
+
+            <Button
+                Command="{Binding OnClickSetDayOfUse1}"
+                HorizontalOptions="Center"
+                Style="{StaticResource DefaultButton}"
+                Text="1 day"
+                VerticalOptions="Start" />
+
+            <Button
+                Command="{Binding OnClickSetDayOfUse14}"
+                HorizontalOptions="Center"
+                Style="{StaticResource DefaultButton}"
+                Text="14 days"
+                VerticalOptions="Start" />
+
+            <Button
+                Command="{Binding OnClickSetDayOfUse15}"
+                HorizontalOptions="Center"
+                Style="{StaticResource DefaultButton}"
+                Text="15 days"
+                VerticalOptions="Start" />
+
+            <Label
+                Style="{StaticResource DefaultLabel}"
+                Text="{Binding State}"
+                Margin="10, 20, 0, 10"
+                />
+
+        </StackLayout>
+    </ScrollView>
+    </ContentView>
+</ContentPage>

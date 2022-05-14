@@ -19,6 +19,7 @@ using Covid19Radar.Resources;
 using Threshold = Covid19Radar.Model.V1ExposureRiskCalculationConfiguration.Threshold;
 using Covid19Radar.Services;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -28,6 +29,8 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly ILocalPathService _localPathService;
+        private readonly IExposureDataExportService _exposureDataExportService;
         private readonly IUserDataRepository _userDataRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
 
@@ -61,6 +64,8 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
+            ILocalPathService localPathService,
+            IExposureDataExportService exposureDataExportService,
             IUserDataRepository userDataRepository,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IDateTimeUtility dateTimeUtility
@@ -69,6 +74,8 @@ namespace Covid19Radar.ViewModels
             _loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _localPathService = localPathService;
+            _exposureDataExportService = exposureDataExportService;
             _userDataRepository = userDataRepository;
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _dateTimeUtility = dateTimeUtility;
@@ -169,7 +176,7 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             List<DailySummary> dailySummaryList = await _exposureDataRepository
-                .GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                .GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
             if (dailySummaryList.Count() == 0)
             {
@@ -182,7 +189,7 @@ namespace Covid19Radar.ViewModels
             _loggerService.Debug($"dailySummaryMap {dailySummaryMap.Count}");
 
             var exposureWindowList
-                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
             _loggerService.Debug($"exposureWindowList {exposureWindowList.Count}");
 
@@ -315,13 +322,28 @@ namespace Covid19Radar.ViewModels
             return exposureCheckModel;
         }
 
-        public Command OnClickShareApp => new Command(() =>
+        public Command OnClickExportExposureData => new Command(async () =>
         {
             _loggerService.StartMethod();
 
-            AppUtils.PopUpShare();
+            try
+            {
+                string exposureDataFilePath = _localPathService.ExposureDataPath;
+                await _exposureDataExportService.ExportAsync(exposureDataFilePath);
 
-            _loggerService.EndMethod();
+                await Share.RequestAsync(new ShareFileRequest
+                {
+                    File = new ShareFile(exposureDataFilePath)
+                });
+            }
+            catch (NotImplementedInReferenceAssemblyException exception)
+            {
+                _loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         });
     }
 

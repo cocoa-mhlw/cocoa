@@ -415,7 +415,8 @@ namespace Covid19Radar.UnitTests.Services
             // Assert
             mockDiagnosisKeyRepository.Verify(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Once);
             mockDiagnosisKeyRepository.Verify(x => x.DownloadDiagnosisKeysAsync(It.IsAny<DiagnosisKeyEntry>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
-            mockUserDataRepository.Verify(x => x.SetCanConfirmExposure(false), Times.Once);
+            mockUserDataRepository.Verify(x => x.SetCanConfirmExposure(false), Times.Once());
+            mockUserDataRepository.Verify(x => x.SetIsMaxPerDayExposureDetectionAPILimitReached(false), Times.Once());
         }
 
         [Fact(Skip = "[Occurs on Windows] System.IO.IOException : The process cannot access the file '1.zip' because it is being used by another process.")]
