@@ -4,13 +4,21 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using Chino;
 using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
+using Covid19Radar.Views;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
@@ -91,8 +99,8 @@ namespace Covid19Radar.ViewModels
 
             var exposureNotificationStatus = await _exposureNotificationApiService.IsEnabledAsync();
 
-            var dailySummaryCount = (await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
-            var exposureWindowCount = (await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay)).Count();
+            var dailySummaryCount = (await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays)).Count();
+            var exposureWindowCount = (await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays)).Count();
 
             // ../../settings.json
             var settings = new[] {
@@ -105,7 +113,7 @@ namespace Covid19Radar.ViewModels
                 $"PrivacyPolicyUpdatedDateTimeUtc: {privacyPolicyUpdateDateTimeUtc}",
                 $"StartDate: {_userDataRepository.GetStartDate().ToLocalTime().ToString("F")}",
                 $"DaysOfUse: {_userDataRepository.GetDaysOfUse()}",
-                $"Legacy-V1 ExposureCount: {_exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count()}",
+                $"Legacy-V1 ExposureCount: {_exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays).Count()}",
                 $"DailySummaryCount: {dailySummaryCount}",
                 $"ExposureWindowCount: {exposureWindowCount}",
                 $"LastProcessTekTimestamp: {lastProcessTekTimestampsStr}",
@@ -208,6 +216,54 @@ namespace Covid19Radar.ViewModels
             await _localNotificationService.ShowExposureNotificationAsync();
         });
 
+        public Command OnClickExportExposureWindow => new Command(async () =>
+        {
+            var exposureWindows = await _exposureDataRepository.GetExposureWindowsAsync();
+            var csv = ConvertCsv(exposureWindows);
+            var hashString = ConvertSha256(csv);
+
+            var fileName = $"exposure_window-{DeviceInfo.Name}-{hashString}.csv";
+            var file = Path.Combine(FileSystem.CacheDirectory, fileName);
+            File.WriteAllText(file, csv);
+
+            var shareFile = new ShareFile(file);
+            await Share.RequestAsync(new ShareFileRequest
+            {
+                File = shareFile
+            });
+        });
+
+        private string ConvertCsv(List<ExposureWindow> exposureWindows)
+        {
+            var flattenWindowLines = exposureWindows.Select((window, index) =>
+            {
+                var humanReadableDateMillisSinceEpoch = DateTimeOffset.UnixEpoch
+                    .AddMilliseconds(window.DateMillisSinceEpoch).UtcDateTime
+                    .ToLocalTime()
+                    .ToString("D", CultureInfo.CurrentCulture);
+                var connmaSeparatedWindow = $"{index},{window.CalibrationConfidence},{humanReadableDateMillisSinceEpoch},{window.Infectiousness},{window.ReportType}";
+                var flattenWindow = window.ScanInstances.Select(scanInstance =>
+                {
+                    var connmaSeparatedScanInstance = $"{scanInstance.MinAttenuationDb},{scanInstance.SecondsSinceLastScan},{scanInstance.TypicalAttenuationDb}";
+                    return $"{connmaSeparatedWindow},{connmaSeparatedScanInstance}";
+                });
+                return String.Join("\n", flattenWindow);
+            });
+
+            var csv = new StringBuilder();
+            csv.AppendLine("ExposureWindowIndex,CalibrationConfidence,DateMillisSinceEpoch,Infectiousness,ReportType,MinAttenuationDb,SecondsSinceLastScan,TypicalAttenuationDb");
+            csv.AppendLine(String.Join("\n", flattenWindowLines));
+            return csv.ToString();
+        }
+
+        private string ConvertSha256(string text)
+        {
+            using var sha = SHA256.Create();
+            var textBytes = Encoding.UTF8.GetBytes(text);
+            var hash = sha.ComputeHash(textBytes);
+            return BitConverter.ToString(hash).Replace("-", string.Empty); 
+        }
+
         public Command OnClickRemoveStartDate => new Command(async () =>
         {
             _userDataRepository.RemoveStartDate();
@@ -237,6 +293,24 @@ namespace Covid19Radar.ViewModels
         {
             _userDataRepository.RemoveAllUpdateDate();
             await UpdateInfo("RemoveAllUpdateDate");
+        });
+
+        public Command OnClickReAgreeTermsOfServicePage => new Command(async () =>
+        {
+            var termsUpdateInfoModel = new TermsUpdateInfoModel
+            {
+                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "DEBUG  利用規約の変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) },
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) }
+            };
+            var navigationParams = ReAgreeTermsOfServicePage.BuildNavigationParams(termsUpdateInfoModel, Destination.HomePage);
+            _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreeTermsOfServicePage), navigationParams);
+        });
+
+        public Command OnClickReAgreePrivacyPolicyPage => new Command(async () =>
+        {
+            var privacyPolicyUpdated = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) };
+            var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyUpdated, Destination.HomePage);
+            _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), navigationParams);
         });
 
         public Command OnClickQuit => new Command(() =>

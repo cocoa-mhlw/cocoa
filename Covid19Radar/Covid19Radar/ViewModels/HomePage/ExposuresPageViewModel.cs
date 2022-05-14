@@ -7,12 +7,14 @@ using Covid19Radar.Common;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 using System;
 using System.Collections.ObjectModel;
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
@@ -21,29 +23,32 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly ILoggerService _loggerService;
 
-        public ObservableCollection<ExposureSummary> _exposures;
+        private readonly ILocalPathService _localPathService;
+        private readonly IExposureDataExportService _exposureDataExportService;
 
-        public ObservableCollection<ExposureSummary> Exposures
-        {
-            get { return _exposures; }
-            set { SetProperty(ref _exposures, value); }
-        }
+        public ObservableCollection<ExposureSummary> Exposures { get; set; }
 
         public ExposuresPageViewModel(
             INavigationService navigationService,
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
-            IExposureRiskCalculationService exposureRiskCalculationService
+            IExposureRiskCalculationService exposureRiskCalculationService,
+            ILocalPathService localPathService,
+            IExposureDataExportService exposureDataExportService,
+            ILoggerService loggerService
             ) : base(navigationService)
         {
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _localPathService = localPathService;
+            _exposureDataExportService = exposureDataExportService;
+            _loggerService = loggerService;
 
             Title = AppResources.MainExposures;
-            _exposures = new ObservableCollection<ExposureSummary>();
-
+            Exposures = new ObservableCollection<ExposureSummary>();
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -55,23 +60,32 @@ namespace Covid19Radar.ViewModels
 
         public async Task InitExposures()
         {
+            var exposures = new ObservableCollection<ExposureSummary>();
+
             var exposureRiskCalculationConfiguration
                 = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+            _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
             var dailySummaryList
-                = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
             var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
 
             var exposureWindowList
-                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
             var userExposureInformationList
-                = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
             if (dailySummaryList.Count() > 0)
             {
                 foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
+                    if (!dailySummaryMap.ContainsKey(ew.Key))
+                    {
+                        _loggerService.Warning($"ExposureWindow: {ew.Key} found, but that is not contained the list of dailySummary.");
+                        continue;
+                    }
+
                     var dailySummary = dailySummaryMap[ew.Key];
 
                     RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
@@ -87,12 +101,12 @@ namespace Covid19Radar.ViewModels
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ew.Key,
-                        ExposureDate = dailySummary.GetDateTime().ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureDate = IExposureDataRepository.ConvertToTerm(dailySummary.GetDateTime()),
                     };
                     var exposureDurationInSec = ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
                     ens.SetExposureTime(exposureDurationInSec);
 
-                    _exposures.Add(ens);
+                    exposures.Add(ens);
                 }
             }
 
@@ -103,17 +117,44 @@ namespace Covid19Radar.ViewModels
                     var ens = new ExposureSummary()
                     {
                         Timestamp = ei.Key,
-                        ExposureDate = ei.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+                        ExposureDate = IExposureDataRepository.ConvertToTerm(ei.Key),
                     };
                     ens.SetExposureCount(ei.Count());
-                    _exposures.Add(ens);
+                    exposures.Add(ens);
                 }
             }
 
-            Exposures = new ObservableCollection<ExposureSummary>(
-                _exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp)
-                );
+            Exposures.Clear();
+            foreach (var exposure in exposures.OrderByDescending(exposureSummary => exposureSummary.Timestamp))
+            {
+                Exposures.Add(exposure);
+            }
         }
+
+        public Command OnClickExportExposureData => new Command(async () =>
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                string exposureDataFilePath = _localPathService.ExposureDataPath;
+                await _exposureDataExportService.ExportAsync(exposureDataFilePath);
+
+                await Share.RequestAsync(new ShareFileRequest
+                {
+                    File = new ShareFile(exposureDataFilePath)
+                });
+            }
+            catch (NotImplementedInReferenceAssemblyException exception)
+            {
+                _loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+
+        });
     }
 
     public class ExposureSummary

@@ -17,7 +17,6 @@
     Visual="Material">
         <views:NavigatePopoverWebView
             AutomationProperties.IsInAccessibleTree="True"
-            TabIndex="1"
             Source="{Binding Url}"
             Style="{StaticResource DefaultWebView}" />
 </ContentPage>

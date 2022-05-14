@@ -86,8 +86,6 @@ namespace Covid19Radar.iOS
 
             InitializeExposureNotificationClient();
 
-            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
-
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
 

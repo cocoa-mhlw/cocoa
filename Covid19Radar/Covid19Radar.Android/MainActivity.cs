@@ -86,7 +86,6 @@ namespace Covid19Radar.Droid
 
             AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
 
-            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
@@ -160,7 +159,7 @@ namespace Covid19Radar.Droid
                 ExposureNotificationApiService.REQUEST_EN_START
                     => new Action<IExposureNotificationEventCallback>(callback =>
                     {
-                        if(isOk)
+                        if (isOk)
                         {
                             callback.OnEnabled();
                         }
@@ -170,7 +169,17 @@ namespace Covid19Radar.Droid
                         }
                     }),
                 ExposureNotificationApiService.REQUEST_GET_TEK_HISTORY
-                    => new Action<IExposureNotificationEventCallback>(callback => { callback.OnGetTekHistoryAllowed(); }),
+                    => new Action<IExposureNotificationEventCallback>(callback =>
+                    {
+                        if (isOk)
+                        {
+                            callback.OnGetTekHistoryAllowed();
+                        }
+                        else
+                        {
+                            callback.OnGetTekHistoryDecline();
+                        }
+                    }),
                 ExposureNotificationApiService.REQUEST_PREAUTHORIZE_KEYS
                     => new Action<IExposureNotificationEventCallback>(callback => { callback.OnPreauthorizeAllowed(); }),
                 _ => new Action<IExposureNotificationEventCallback>(callback => { /* do nothing */ }),

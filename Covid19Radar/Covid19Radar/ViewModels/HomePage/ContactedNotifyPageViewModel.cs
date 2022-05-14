@@ -24,14 +24,14 @@ namespace Covid19Radar.ViewModels
 
         private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
 
-        private string _exposureDurationInMinutes;
+        private string _exposureDurationInMinutes = "";
         public string ExposureDurationInMinutes
         {
             get { return _exposureDurationInMinutes; }
             set { SetProperty(ref _exposureDurationInMinutes, value); }
         }
 
-        private string _exposureCount;
+        private string _exposureCount = "";
         public string ExposureCount
         {
             get { return _exposureCount; }
@@ -63,8 +63,9 @@ namespace Covid19Radar.ViewModels
 
                 var exposureRiskCalculationConfiguration
                     = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+                loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
-                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
                 string contactedNotifyPageCountFormat = AppResources.ContactedNotifyPageCountOneText;
                 if (userExposureInformationList.Count() > 1)
@@ -72,14 +73,20 @@ namespace Covid19Radar.ViewModels
                     contactedNotifyPageCountFormat = AppResources.ContactedNotifyPageCountText;
                 }
 
-                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
                 var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
-                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
                 int dayCount = 0;
                 long exposureDurationInSec = 0;
                 foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
                 {
+                    if (!dailySummaryMap.ContainsKey(ew.Key))
+                    {
+                        loggerService.Warning($"ExposureWindow: {ew.Key} found, but that is not contained the list of dailySummary.");
+                        continue;
+                    }
+
                     var dailySummary = dailySummaryMap[ew.Key];
 
                     RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList(), exposureRiskCalculationConfiguration);

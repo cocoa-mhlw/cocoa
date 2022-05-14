@@ -3,7 +3,7 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<MasterDetailPage
+<FlyoutPage
     x:Class="Covid19Radar.Views.MenuPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -17,7 +17,7 @@
         </OnPlatform>
     </AutomationProperties.Name>
 
-    <MasterDetailPage.Master>
+    <FlyoutPage.Flyout>
         <ContentPage
             Title="{x:Static resources:AppResources.MenuPageTitle}"
             ios:Page.UseSafeArea="True">
@@ -51,14 +51,14 @@
                         BackgroundColor="Transparent"
                         Command="{Binding Path=OnCloseButton}"
                         Source="icon_close.png"
-                        TabIndex="1" />
+                        />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabelLarge}"
                         HorizontalTextAlignment="Start"
                         VerticalOptions="Center"
                         Text="{x:Static resources:AppResources.MenuPageTitle}"
-                        TabIndex="2" />
+                        />
                 </StackLayout>
 
                 <ListView
@@ -68,7 +68,7 @@
                     SelectedItem="{Binding SelectedMenuItem}"
                     SeparatorColor="#E0E0E0"
                     SeparatorVisibility="Default"
-                    TabIndex="3">
+                    >
 
                     <AutomationProperties.Name>
                         <OnPlatform x:TypeArguments="x:String">
@@ -136,5 +136,5 @@
                 </ListView>
             </StackLayout>
         </ContentPage>
-    </MasterDetailPage.Master>
-</MasterDetailPage>
+    </FlyoutPage.Flyout>
+</FlyoutPage>

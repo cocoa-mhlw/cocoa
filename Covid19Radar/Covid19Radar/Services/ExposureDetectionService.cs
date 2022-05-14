@@ -108,8 +108,15 @@ namespace Covid19Radar.Services
 
             var exposureRiskCalculationConfiguration = await _exposureRiskCalculationConfigurationRepository
                 .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+            _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
+
+            long expectOldestDateMillisSinceEpoch
+                = _dateTimeUtility.UtcNow
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays)
+                .ToUnixEpochMillis();
 
             bool isHighRiskExposureDetected = newDailySummaries
+                .Where(ds => ds.DateMillisSinceEpoch >= expectOldestDateMillisSinceEpoch)
                 .Select(ds => _exposureRiskCalculationService.CalcRiskLevel(
                         ds,
                         newExposureWindows.Where(ew => ew.DateMillisSinceEpoch == ds.DateMillisSinceEpoch).ToList(),

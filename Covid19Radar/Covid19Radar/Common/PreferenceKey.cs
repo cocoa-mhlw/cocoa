@@ -16,6 +16,7 @@ namespace Covid19Radar.Common
         public static string PrivacyPolicyLastUpdateDateTimeEpoch = "PrivacyPolicyLastUpdateDateTimeEpoch";
 
         public static string CanConfirmExposure = "CanConfirmExposure";
+        public static string IsMaxPerDayExposureDetectionAPILimitReached = "IsMaxPerDayExposureDetectionAPILimitReached";
         public static string LastConfirmedDateTimeEpoch = "LastConfirmedDateTimeEpoch";
 
         public static string SendEventLogState = "SendEventLogState";
@@ -24,7 +25,7 @@ namespace Covid19Radar.Common
         public const string ExposureWindows = "ExposureWindows";
 
         // for ExposureConfigurationRepository
-        public const string IsExposureConfigurationUpdated = "IsExposureConfigurationUpdated";
+        public const string IsDiagnosisKeysDataMappingConfigurationUpdated = "IsDiagnosisKeysDataMappingConfigurationUpdated";
         public const string ExposureConfigurationDownloadedEpoch = "ExposureConfigurationDownloadedEpoch";
         public const string ExposureConfigurationAppliedEpoch = "ExposureConfigurationAppliedEpoch";
 

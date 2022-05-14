@@ -87,14 +87,14 @@
   },
   "google_daily_summaries_config": {
     "attenuation_bucket_threshold_db": [
-      50,
-      54,
+      46,
+      60,
       65
     ],
     "attenuation_bucket_weights": [
+      1.0,
       2.5,
       1.3,
-      0.6,
       0.01
     ],
     "days_since_exposure_threshold": 0,
@@ -142,8 +142,8 @@
       1
     ],
     "transmission_risk_level_values": [
-      7,
-      7,
+      0,
+      0,
       7,
       7,
       7,
@@ -157,13 +157,13 @@
   "apple_exposure_config_v2": {
     "infectiousness_when_days_since_onset_missing": 2,
     "attenuation_duration_thresholds": [
-      50,
-      54,
+      46,
+      60,
       65
     ],
-    "immediate_duration_weight": 250.0,
-    "near_duration_weight": 130.0,
-    "medium_duration_weight": 60.0,
+    "immediate_duration_weight": 100.0,
+    "near_duration_weight": 250.0,
+    "medium_duration_weight": 130.0,
     "other_duration_weight": 1.0,
     "DaysSinceLastExposureThreshold": 0,
     "infectiousness_for_days_since_onset_of_symptoms": {

@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
 using Covid19Radar.Repository;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Covid19Radar.Services
@@ -38,7 +37,7 @@ namespace Covid19Radar.Services
         }
 
         // POST /api/Register - Register User
-        public async Task<bool> PostRegisterUserAsync()
+        public async Task<HttpStatusCode> PostRegisterUserAsync()
         {
             loggerService.StartMethod();
             try
@@ -47,23 +46,20 @@ namespace Covid19Radar.Services
 
                 string url = serverConfigurationRepository.UserRegisterApiEndpoint;
                 var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
-                var result = await PostAsync(url, content);
-                if (result != null)
-                {
-                    loggerService.EndMethod();
-                    return true;
-                }
+
+                HttpResponseMessage result = await httpClient.PostAsync(url, content);
+                loggerService.EndMethod();
+                return result.StatusCode;
             }
             catch (Exception ex)
             {
                 loggerService.Exception("Failed to register user.", ex);
+                loggerService.EndMethod();
+                throw;
             }
-
-            loggerService.EndMethod();
-            return false;
         }
 
-        public async Task<IList<HttpStatusCode>> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+        public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             loggerService.StartMethod();
 
@@ -72,13 +68,20 @@ namespace Covid19Radar.Services
                 await serverConfigurationRepository.LoadAsync();
 
                 var diagnosisKeyRegisterApiUrls = serverConfigurationRepository.DiagnosisKeyRegisterApiUrls;
-                var tasks = diagnosisKeyRegisterApiUrls.Select(async url =>
+                if (diagnosisKeyRegisterApiUrls.Count() == 0)
                 {
-                    var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
-                    return await PutAsync(url, content);
-                });
+                    loggerService.Error("DiagnosisKeyRegisterApiUrls count 0");
+                    throw new InvalidOperationException("DiagnosisKeyRegisterApiUrls count 0");
+                }
+                else if (diagnosisKeyRegisterApiUrls.Count() > 1)
+                {
+                    loggerService.Warning("Multi DiagnosisKeyRegisterApiUrl are detected.");
+                }
 
-                return await Task.WhenAll(tasks);
+                var url = diagnosisKeyRegisterApiUrls.First();
+                var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+
+                return await PutAsync(url, content);
             }
             finally
             {
@@ -118,16 +121,6 @@ namespace Covid19Radar.Services
             }
             loggerService.EndMethod();
             return new ApiResponse<LogStorageSas>(statusCode, logStorageSas);
-        }
-
-        private async Task<string> PostAsync(string url, HttpContent body)
-        {
-            HttpResponseMessage result = await httpClient.PostAsync(url, body);
-            if (result.StatusCode == HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
         }
 
         private async Task<HttpStatusCode> PutAsync(string url, HttpContent body)

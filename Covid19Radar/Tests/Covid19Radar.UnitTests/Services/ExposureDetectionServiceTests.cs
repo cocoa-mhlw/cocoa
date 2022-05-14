@@ -94,7 +94,6 @@ namespace Covid19Radar.UnitTests.Services {
                 );
 
             var exposureDataRepository = new ExposureDataRepository(
-                preferencesService.Object,
                 secureStorageService.Object,
                 dateTimeUtility.Object,
                 loggerService.Object
@@ -126,7 +125,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Mock Setup
             dateTimeUtility.Setup(x => x.UtcNow).Returns(utcNow);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), true))
+                Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), true))
                 .Returns(true);
 
 
@@ -139,7 +138,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(
+                    x => x.SetLongValue(
                         It.Is<string>(x => x == "ExposureConfigurationAppliedEpoch"),
                         It.Is<long>(x => x.Equals(utcNow.ToUnixEpoch()))),
                     Times.Once
@@ -147,7 +146,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), It.Is<bool>(x => x == false)),
+                    x => x.SetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.Is<bool>(x => x == false)),
                     Times.Once
                 );
         }
@@ -161,7 +160,7 @@ namespace Covid19Radar.UnitTests.Services {
             // Mock Setup
             dateTimeUtility.Setup(x => x.UtcNow).Returns(utcNow);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
 
 
@@ -174,7 +173,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(
+                    x => x.SetLongValue(
                         It.Is<string>(x => x == "ExposureConfigurationAppliedEpoch"),
                         It.IsAny<long>()),
                     Times.Never
@@ -182,7 +181,7 @@ namespace Covid19Radar.UnitTests.Services {
             preferencesService
                 .Verify
                 (
-                    x => x.SetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), It.IsAny<bool>()),
+                    x => x.SetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), It.IsAny<bool>()),
                      Times.Never
                 );
         }
@@ -193,13 +192,16 @@ namespace Covid19Radar.UnitTests.Services {
         public async void ExposureDetected_HighRiskExposureDetected()
         {
             // Test Data
+            var now = new DateTime(2022, 04, 17, 12, 00, 00, DateTimeKind.Utc);
+            var exposureDateTime = now
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays);
             var exposureConfiguration = new ExposureConfiguration();
             var enVersion = 2;
 
             var dailySummaries = new List<DailySummary>() {
                 new DailySummary()
                 {
-                    DateMillisSinceEpoch = 0,
+                    DateMillisSinceEpoch = exposureDateTime.ToUnixEpochMillis(),
                     DaySummary = new ExposureSummaryData(),
                     ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
                     ConfirmedTestSummary = new ExposureSummaryData(),
@@ -213,7 +215,7 @@ namespace Covid19Radar.UnitTests.Services {
                 new ExposureWindow()
                 {
                     CalibrationConfidence = CalibrationConfidence.High,
-                    DateMillisSinceEpoch = 0,
+                    DateMillisSinceEpoch = exposureDateTime.ToUnixEpochMillis(),
                     Infectiousness = Infectiousness.High,
                     ReportType = ReportType.Unknown,
                     ScanInstances = new List<ScanInstance>()
@@ -221,14 +223,16 @@ namespace Covid19Radar.UnitTests.Services {
             };
 
             // Mock Setup
+            dateTimeUtility.Setup(x => x.UtcNow)
+                .Returns(now);
             preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                .Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
-            preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+            secureStorageService
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
-            preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+            secureStorageService
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
                 .Setup(x => x.UploadExposureDataAsync(
@@ -239,6 +243,9 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
+            exposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             exposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -257,13 +264,16 @@ namespace Covid19Radar.UnitTests.Services {
         public async void ExposureDetected_HighRiskExposureNotDetected()
         {
             // Test Data
+            var now = new DateTime(2022, 04, 17, 12, 00, 00, DateTimeKind.Utc);
+            var exposureDateTime = now
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays);
             var exposureConfiguration = new ExposureConfiguration();
             var enVersion = 2;
 
             var dailySummaries = new List<DailySummary>() {
                 new DailySummary()
                 {
-                    DateMillisSinceEpoch = 0,
+                    DateMillisSinceEpoch = exposureDateTime.ToUnixEpochMillis(),
                     DaySummary = new ExposureSummaryData(),
                     ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
                     ConfirmedTestSummary = new ExposureSummaryData(),
@@ -277,7 +287,7 @@ namespace Covid19Radar.UnitTests.Services {
                 new ExposureWindow()
                 {
                     CalibrationConfidence = CalibrationConfidence.High,
-                    DateMillisSinceEpoch = 0,
+                    DateMillisSinceEpoch = exposureDateTime.ToUnixEpochMillis(),
                     Infectiousness = Infectiousness.High,
                     ReportType = ReportType.Unknown,
                     ScanInstances = new List<ScanInstance>()
@@ -285,14 +295,16 @@ namespace Covid19Radar.UnitTests.Services {
             };
 
             // Mock Setup
+            dateTimeUtility.Setup(x => x.UtcNow)
+                .Returns(now);
             preferencesService.
-                Setup(x => x.GetValue(It.Is<string>(x => x == "IsExposureConfigurationUpdated"), false))
+                Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
                 .Returns(true);
-            preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+            secureStorageService
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
                 .Returns("[]");
-            preferencesService
-                .Setup(x => x.GetValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+            secureStorageService
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
             exposureDataCollectServer
                 .Setup(x => x.UploadExposureDataAsync(
@@ -302,6 +314,83 @@ namespace Covid19Radar.UnitTests.Services {
                     It.IsAny<List<DailySummary>>(),
                     It.IsAny<List<ExposureWindow>>()));
             deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
+
+            exposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
+
+            exposureRiskCalculationService
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
+                .Returns(RiskLevel.Low);
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+
+
+            // Assert
+            localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Never);
+        }
+
+        [Fact]
+        public async void ExposureDetected_HighRiskExposureNotDetected_ExpiredDate()
+        {
+            // Test Data
+            var now = new DateTime(2022, 04, 17, 12, 00, 00, DateTimeKind.Utc);
+            var exposureDateTime = now
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays)
+                .AddDays(-1);
+            var exposureConfiguration = new ExposureConfiguration();
+            var enVersion = 2;
+
+            var dailySummaries = new List<DailySummary>() {
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = exposureDateTime.ToUnixEpochMillis(),
+                    DaySummary = new ExposureSummaryData(),
+                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                    ConfirmedTestSummary = new ExposureSummaryData(),
+                    RecursiveSummary = new ExposureSummaryData(),
+                    SelfReportedSummary = new ExposureSummaryData()
+                }
+            };
+
+            var exposureWindows = new List<ExposureWindow>()
+            {
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.High,
+                    DateMillisSinceEpoch = exposureDateTime.ToUnixEpochMillis(),
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.Unknown,
+                    ScanInstances = new List<ScanInstance>()
+                }
+            };
+
+            // Mock Setup
+            dateTimeUtility.Setup(x => x.UtcNow)
+                .Returns(now);
+            preferencesService.
+                Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
+                .Returns(true);
+            secureStorageService
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Returns("[]");
+            secureStorageService
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Returns("[]");
+            exposureDataCollectServer
+                .Setup(x => x.UploadExposureDataAsync(
+                    It.IsAny<ExposureConfiguration>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<List<DailySummary>>(),
+                    It.IsAny<List<ExposureWindow>>()));
+            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
+
+            exposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
 
             exposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
@@ -375,7 +464,7 @@ namespace Covid19Radar.UnitTests.Services {
 
             var expectedSerializedData = JsonConvert.SerializeObject(exposureInformationList.Select(x => new UserExposureInfo(x)));
             secureStorageService
-                .Verify(x => x.SetValue<string>("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
+                .Verify(x => x.SetStringValue("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
         }
 
         [Fact]
@@ -428,7 +517,7 @@ namespace Covid19Radar.UnitTests.Services {
             localNotificationService
                 .Verify(x => x.ShowExposureNotificationAsync(), Times.Never);
             secureStorageService
-                .Verify(x => x.SetValue<string>("ExposureInformation", It.IsAny<string>()), Times.Never);
+                .Verify(x => x.SetStringValue("ExposureInformation", It.IsAny<string>()), Times.Never);
         }
 
         #endregion

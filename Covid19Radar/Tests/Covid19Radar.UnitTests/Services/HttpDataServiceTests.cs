@@ -117,18 +117,19 @@ namespace Covid19Radar.UnitTests.Services
             mockLoggerService.Verify(x => x.EndMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
-            Assert.False(result);
+            Assert.Equal(HttpStatusCode.ServiceUnavailable, result);
         }
 
         [Fact]
-        public async Task PostRegisterUserAsyncTestsAsync_Exception()
+        public void PostRegisterUserAsyncTestsAsync_Exception()
         {
+            var exception = new HttpRequestException("unit-test");
             var mockHttpClient = new HttpClient(new MockHttpHandler((r, c) =>
             {
                 var absoluteUri = r.RequestUri.AbsoluteUri;
                 if (absoluteUri.EndsWith("/api/register"))
                 {
-                    throw new HttpRequestException("unit-test");
+                    throw exception;
                 }
                 return new HttpResponseMessage(HttpStatusCode.NotFound);
             }));
@@ -139,13 +140,15 @@ namespace Covid19Radar.UnitTests.Services
 
             var unitUnderTest = CreateService();
 
-            var result = await unitUnderTest.PostRegisterUserAsync();
+
+            Assert.ThrowsAsync<HttpRequestException>(async () =>
+            {
+                await unitUnderTest.PostRegisterUserAsync();
+            });
 
             mockLoggerService.Verify(x => x.StartMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.EndMethod("PostRegisterUserAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-
-            Assert.False(result);
         }
 
         #endregion
@@ -192,14 +195,13 @@ namespace Covid19Radar.UnitTests.Services
                 Padding = "padding"
             };
 
-            var results = await unitUnderTest.PutSelfExposureKeysAsync(request);
+            var result = await unitUnderTest.PutSelfExposureKeysAsync(request);
 
             mockLoggerService.Verify(x => x.StartMethod("PutSelfExposureKeysAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.EndMethod("PutSelfExposureKeysAsync", It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             mockLoggerService.Verify(x => x.Exception(It.IsAny<string>(), It.IsAny<Exception>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
-            Assert.Equal(1, results.Count);
-            Assert.Equal(HttpStatusCode.NoContent, results[0]);
+            Assert.Equal(HttpStatusCode.NoContent, result);
             Assert.NotNull(requestContent);
 
             var stringContent = await requestContent.ReadAsStringAsync();

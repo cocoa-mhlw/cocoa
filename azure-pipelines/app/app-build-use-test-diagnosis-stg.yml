@@ -1,19 +1,10 @@
 name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
-trigger:
-  branches:
-    include:
-    - release/app
-  paths:
-    include:
-    - Covid19Radar
-    - Covid19Radar.sln
-    - azure-pipelines/app
+# NOTE: CI/PR triggers should be set in the Classic Editor
 
 variables:
 - group: app-settings-stg
-- name: AppVersion
-  value: '2.0.0'
+- template: templates/variables/app-variables.yml
 
 jobs:
 - job: build_ios

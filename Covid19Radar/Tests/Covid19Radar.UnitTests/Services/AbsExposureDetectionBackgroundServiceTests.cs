@@ -15,6 +15,7 @@ using System.Threading;
 using System.Linq;
 using System.IO;
 using Covid19Radar.Common;
+using System.Net;
 
 namespace Covid19Radar.UnitTests.Services
 {
@@ -56,7 +57,11 @@ namespace Covid19Radar.UnitTests.Services
 
         public void Dispose()
         {
-            Directory.Delete($"{Path.GetTempPath()}/diagnosis_keys/", true);
+            var dir = $"{Path.GetTempPath()}/diagnosis_keys/";
+            if (Directory.Exists(dir))
+            {
+                Directory.Delete(dir, true);
+            }
         }
 
         #endregion
@@ -129,7 +134,7 @@ namespace Covid19Radar.UnitTests.Services
                 .Returns(Task.FromResult(new ExposureConfiguration()));
             mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.FromResult(diagnosisKeyEntryList));
+                .ReturnsAsync((HttpStatusCode.OK, diagnosisKeyEntryList));
             mockUserDataRepository
                 .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
                 .Returns(Task.FromResult(0L));
@@ -163,7 +168,7 @@ namespace Covid19Radar.UnitTests.Services
 
             mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.FromResult(diagnosisKeyEntryList));
+                .ReturnsAsync((HttpStatusCode.OK, diagnosisKeyEntryList));
             mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/1.zip"),
@@ -231,10 +236,10 @@ namespace Covid19Radar.UnitTests.Services
 
             mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.FromResult(diagnosisKeyEntryList440));
+                .ReturnsAsync((HttpStatusCode.OK, diagnosisKeyEntryList440));
             mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.FromResult(diagnosisKeyEntryList540));
+                .ReturnsAsync((HttpStatusCode.OK, diagnosisKeyEntryList540));
             mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.IsAny<DiagnosisKeyEntry>(),
@@ -300,7 +305,7 @@ namespace Covid19Radar.UnitTests.Services
 
             mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.FromResult(diagnosisKeyEntryList));
+                .ReturnsAsync((HttpStatusCode.OK, diagnosisKeyEntryList));
             mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/1.zip"),
@@ -363,6 +368,57 @@ namespace Covid19Radar.UnitTests.Services
             Assert.True(Directory.Exists($"{tempPath}/diagnosis_keys/440/"));
         }
 
+        [Fact]
+        public async Task ExposureDetectionAsync_ListFileNotFound()
+        {
+            ExposureConfiguration exposureConfiguration = new ExposureConfiguration();
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
+            // Mock Setup
+            mockLocalPathService
+                .Setup(x => x.CacheDirectory)
+                .Returns(Path.GetTempPath());
+
+            // Setup ExposureNotification API
+            mockExposureNotificationApiService.Setup(x => x.IsEnabledAsync())
+                .ReturnsAsync(true);
+            mockExposureNotificationApiService.Setup(x => x.GetStatusCodesAsync())
+                .ReturnsAsync(new List<int>() {
+                    ExposureNotificationStatus.Code_Android.ACTIVATED,
+                });
+
+            mockDiagnosisKeyRepository
+                .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync((HttpStatusCode.NotFound, new List<DiagnosisKeyEntry>()));
+
+            mockServerConfigurationRepository
+                .Setup(x => x.Regions)
+                .Returns(new string[] { "440" });
+            mockServerConfigurationRepository
+                .Setup(x => x.GetDiagnosisKeyListProvideServerUrl(It.IsAny<string>()))
+                .Returns("https://example.com");
+
+            mockExposureConfigurationRepository
+                .Setup(x => x.GetExposureConfigurationAsync())
+                .ReturnsAsync(exposureConfiguration);
+
+            mockUserDataRepository
+                .Setup(x => x.GetLastProcessDiagnosisKeyTimestampAsync(It.IsAny<string>()))
+                .ReturnsAsync(0L);
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectionAsync(cancellationTokenSource);
+
+
+            // Assert
+            mockDiagnosisKeyRepository.Verify(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Once);
+            mockDiagnosisKeyRepository.Verify(x => x.DownloadDiagnosisKeysAsync(It.IsAny<DiagnosisKeyEntry>(), It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Never);
+            mockUserDataRepository.Verify(x => x.SetCanConfirmExposure(false), Times.Once());
+            mockUserDataRepository.Verify(x => x.SetIsMaxPerDayExposureDetectionAPILimitReached(false), Times.Once());
+        }
+
         [Fact(Skip = "[Occurs on Windows] System.IO.IOException : The process cannot access the file '1.zip' because it is being used by another process.")]
         public async Task ExposureDetectionAsync_DirectoryExistsAndFileRemoved()
         {
@@ -383,7 +439,7 @@ namespace Covid19Radar.UnitTests.Services
 
             mockDiagnosisKeyRepository
                 .Setup(x => x.GetDiagnosisKeysListAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-                .Returns(Task.FromResult(diagnosisKeyEntryList));
+                .ReturnsAsync((HttpStatusCode.OK, diagnosisKeyEntryList));
             mockDiagnosisKeyRepository
                 .Setup(x => x.DownloadDiagnosisKeysAsync(
                     It.Is<DiagnosisKeyEntry>(s => s.Url == "https://example.com/1.zip"),

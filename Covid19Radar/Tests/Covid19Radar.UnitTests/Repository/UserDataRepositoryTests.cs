@@ -52,7 +52,7 @@ namespace Covid19Radar.UnitTests.Repository
         public void LastConfirmedUtcDateTimeTest_Exists()
         {
             mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.LastConfirmedDateTimeEpoch)).Returns(true);
-            mockPreferencesService.Setup(s => s.GetValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L)).Returns(800);
+            mockPreferencesService.Setup(s => s.GetLongValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L)).Returns(800);
 
             var userDataRepository = CreateRepository();
 
