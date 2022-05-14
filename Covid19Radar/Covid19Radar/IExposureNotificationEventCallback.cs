@@ -8,7 +8,10 @@ namespace Covid19Radar
     {
         public void OnEnabled() { }
         public void OnDeclined() { }
+
         public void OnGetTekHistoryAllowed() { }
+        public void OnGetTekHistoryDecline() { }
+
         public void OnPreauthorizeAllowed() { }
     }
 }

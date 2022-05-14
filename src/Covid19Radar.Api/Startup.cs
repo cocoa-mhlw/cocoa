@@ -33,6 +33,7 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<IInquiryLogBlobService, InquiryLogBlobService>();
             builder.Services.AddSingleton<IDeviceValidationService, DeviceValidationService>();
             builder.Services.AddSingleton<IEventLogRepository, CosmosEventLogRepository>();
+            builder.Services.AddSingleton<ITemporaryExposureKeyValidationService, TemporaryExposureKeyValidationService>();
         }
     }
 }

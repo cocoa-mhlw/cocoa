@@ -28,7 +28,6 @@
             <Frame Padding="10" HasShadow="False">
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
-                    TabIndex="1"
                     Command="{Binding Path=OnClickQuestionCommand}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.InqueryPageButton1}" />
@@ -38,7 +37,6 @@
                 <StackLayout Spacing="10">
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="2"
                         Command="{Binding Path=OnClickEmailCommand}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.InqueryPageButton2}" />
@@ -49,7 +47,6 @@
                 <StackLayout Spacing="10">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="3"
                         Style="{StaticResource DefaultLabelSmall}">
                         <Label.FormattedText>
                             <FormattedString>
@@ -64,7 +61,6 @@
                     </Label>
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="4"
                         Style="{StaticResource AnnotationLabel}">
                         <Label.FormattedText>
                             <FormattedString>
@@ -75,7 +71,6 @@
                     </Label>
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="5"
                         Command="{Binding Path=OnClickSendLogCommand}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.InqueryPageButton3}" />
@@ -89,12 +84,10 @@
                 <StackLayout Spacing="0">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="6"
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        TabIndex="7"
                         Style="{StaticResource LinkLabelStyleSmall}"
                         Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html" />
                 </StackLayout>

@@ -12,7 +12,7 @@ namespace Covid19Radar.Common
 {
     public static class DeviceVerifierUtils
     {
-        #region V3DiagnosisApi
+        #region V3DiagnosisApi v2.0.0 -
         public static byte[] CreateAndroidNonceV3(DiagnosisSubmissionParameter submission)
         {
             var cleartext = GetNonceClearTextV3(submission);
@@ -29,7 +29,8 @@ namespace Covid19Radar.Common
 
         public static string GetNonceClearTextV3(DiagnosisSubmissionParameter submission)
         {
-            return string.Join("|", submission.SymptomOnsetDate, submission.AppPackageName, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
+            string hasSymptom = submission.HasSymptom ? "HasSymptom" : "NoSymptom";
+            return string.Join("|", submission.AppPackageName, submission.OnsetOfSymptomOrTestDate, hasSymptom, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
 
             static string GetKeyString(IEnumerable<DiagnosisSubmissionParameter.Key> keys) =>
                 string.Join(",", keys.OrderBy(k => k.KeyData).Select(k => GetKeyStringCore(k)));
@@ -54,7 +55,7 @@ namespace Covid19Radar.Common
 
         #endregion
 
-        #region V1/V2DiagnosisApi
+        #region V2DiagnosisApi v1.2.2 - v1.4.1
 
         // For checking compatibility with server API, do not remove this method.
         public static byte[] CreateAndroidNonceV2(DiagnosisSubmissionParameter submission)
@@ -73,6 +74,31 @@ namespace Covid19Radar.Common
 
             static string GetKeyStringCore(DiagnosisSubmissionParameter.Key k) =>
                 string.Join(".", k.KeyData, k.RollingStartNumber, k.RollingPeriod);
+
+            static string GetRegionString(IEnumerable<string> regions) =>
+                string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));
+        }
+        #endregion
+
+        #region V1DiagnosisApi version v1.0.0 - v1.2.1
+
+        // For checking compatibility with server API, do not remove this method.
+        public static byte[] CreateAndroidNonceV1(DiagnosisSubmissionParameter submission)
+        {
+            var cleartext = GetNonceClearTextV1(submission);
+            var nonce = GetSha256(cleartext);
+            return nonce;
+        }
+
+        public static string GetNonceClearTextV1(DiagnosisSubmissionParameter submission)
+        {
+            return string.Join("|", submission.AppPackageName, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
+
+            static string GetKeyString(IEnumerable<DiagnosisSubmissionParameter.Key> keys) =>
+                string.Join(",", keys.OrderBy(k => k.KeyData).Select(k => GetKeyStringCore(k)));
+
+            static string GetKeyStringCore(DiagnosisSubmissionParameter.Key k) =>
+                string.Join(".", k.KeyData, k.RollingStartNumber, k.RollingPeriod, 0 /* TransmissionRisk was always 0. */);
 
             static string GetRegionString(IEnumerable<string> regions) =>
                 string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));

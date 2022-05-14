@@ -1,3 +1,7 @@
+parameters:
+- name: configuration
+  type: string
+
 steps:
 - script: |
     sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(XamarinSymlinkVersion)
@@ -8,7 +12,15 @@ steps:
     msbuild -version
   displayName: 'Select Xamarin SDK $(XamarinSymlinkVersion)'
 
+- script: |
+    cp -f $(System.DefaultWorkingDirectory)/TempNugetFeed/Release/*.nupkg $(System.DefaultWorkingDirectory)/TempNugetFeed/
+    ls -l $(System.DefaultWorkingDirectory)/TempNugetFeed/
+  displayName: 'Copy NuGet packages for release'
+  condition: and(succeeded(), eq('${{ parameters.configuration }}', 'release'))
+
 - task: NuGetCommand@2
   displayName: 'NuGet restore'
   inputs:
     restoreSolution: Covid19Radar.sln
+    feedsToUse: config
+    nugetConfigPath: DevOpsNuget.config

@@ -15,12 +15,14 @@ using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
     public class HomePageViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
         public string SharingThisAppReadText => $"{AppResources.HomePageDescription5} {AppResources.Button}";
+        public string LocalNotificationOffReadText => $"{AppResources.HomePageLocalNotificationOffWarningLabelText} {AppResources.Button}";
 
         private readonly ILoggerService loggerService;
         private readonly IUserDataRepository _userDataRepository;
@@ -29,8 +31,13 @@ namespace Covid19Radar.ViewModels
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ILocalNotificationService localNotificationService;
         private readonly AbsExposureDetectionBackgroundService exposureDetectionBackgroundService;
+        private readonly ICheckVersionService checkVersionService;
+        private readonly IEssentialsService essentialsService;
         private readonly IDialogService dialogService;
         private readonly IExternalNavigationService externalNavigationService;
+
+        private readonly IExposureConfigurationRepository exposureConfigurationRepository;
+        private readonly IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository;
 
         private string _pastDate;
         public string PastDate
@@ -67,6 +74,36 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _isVisibleENStatusStoppedLayout, value); }
         }
 
+        private bool _isVisibleLocalNotificationOffWarningLayout;
+        public bool IsVisibleLocalNotificationOffWarningLayout
+        {
+            get { return _isVisibleLocalNotificationOffWarningLayout; }
+            set { SetProperty(ref _isVisibleLocalNotificationOffWarningLayout, value); }
+        }
+
+        private bool _isShowTroubleshootingPage = false;
+
+        private string _enStatusUnconfirmedDescription1;
+        public string EnStatusUnconfirmedDescription1
+        {
+            get { return _enStatusUnconfirmedDescription1; }
+            set { SetProperty(ref _enStatusUnconfirmedDescription1, value); }
+        }
+
+        private string _enStatusUnconfirmedDescription2;
+        public string EnStatusUnconfirmedDescription2
+        {
+            get { return _enStatusUnconfirmedDescription2; }
+            set { SetProperty(ref _enStatusUnconfirmedDescription2, value); }
+        }
+
+        private bool _isVisibleUnconfirmedTroubleshootingButton;
+        public bool IsVisibleUnconfirmedTroubleshootingButton
+        {
+            get { return _isVisibleUnconfirmedTroubleshootingButton; }
+            set { SetProperty(ref _isVisibleUnconfirmedTroubleshootingButton, value); }
+        }
+
         public HomePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -76,6 +113,10 @@ namespace Covid19Radar.ViewModels
             AbsExposureNotificationApiService exposureNotificationApiService,
             ILocalNotificationService localNotificationService,
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
+            IExposureConfigurationRepository exposureConfigurationRepository,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
+            ICheckVersionService checkVersionService,
+            IEssentialsService essentialsService,
             IDialogService dialogService,
             IExternalNavigationService externalNavigationService
             ) : base(navigationService)
@@ -89,6 +130,10 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.localNotificationService = localNotificationService;
             this.exposureDetectionBackgroundService = exposureDetectionBackgroundService;
+            this.exposureConfigurationRepository = exposureConfigurationRepository;
+            this.exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
+            this.checkVersionService = checkVersionService;
+            this.essentialsService = essentialsService;
             this.dialogService = dialogService;
             this.externalNavigationService = externalNavigationService;
         }
@@ -108,13 +153,31 @@ namespace Covid19Radar.ViewModels
             });
 
             // Check Version
-            AppUtils.CheckVersion(loggerService);
+            _ = Task.Run(async () => {
+                bool isUpdated = await checkVersionService.IsUpdateVersionExistAsync();
+                if (isUpdated)
+                {
+                    MainThread.BeginInvokeOnMainThread(async () =>
+                    {
+                        await UserDialogs.Instance.AlertAsync(
+                            AppResources.AppUtilsGetNewVersionDescription,
+                            AppResources.AppUtilsGetNewVersionTitle,
+                            AppResources.ButtonOk
+                            );
+                        await Browser.OpenAsync(essentialsService.StoreUrl, BrowserLaunchMode.External);
+                    });
+                }
+            });
+
+            // Load necessary files asynchronous
+            _ = exposureConfigurationRepository.GetExposureConfigurationAsync();
+            _ = exposureRiskCalculationConfigurationRepository
+                .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
 
             await localNotificationService.PrepareAsync();
 
             await StartExposureNotificationAsync();
-
-            _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
+            ExposureDetectionAsync();
 
             loggerService.EndMethod();
         }
@@ -143,44 +206,100 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        public Command OnClickExposures => new Command(async () =>
+        private void ExposureDetectionAsync()
         {
             loggerService.StartMethod();
-
-            var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
-            var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
-            var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
-
-            var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
-
-            var hasExposure = dailySummaryList.Count() > 0 || userExposureInformationList.Count() > 0;
-            var hasHighRiskExposure = userExposureInformationList.Count() > 0;
-
-            foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
+            _ = Task.Run(async () =>
             {
-                var dailySummary = dailySummaryMap[ew.Key];
-                RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList());
-                if (riskLevel >= RiskLevel.High)
+                try
                 {
-                    hasHighRiskExposure = true;
-                    break;
+                    await exposureDetectionBackgroundService.ExposureDetectionAsync();
+                }
+                catch (ENException ex)
+                {
+                    loggerService.Exception("Failed to exposure detection.", ex);
+                }
+                catch (Exception ex)
+                {
+                    loggerService.Exception("Failed to exposure detection.", ex);
+                }
+                finally
+                {
+                    await UpdateView();
+                }
+            });
+            loggerService.EndMethod();
+        }
+
+        public Command OnClickExposures => new Command(async () =>
+        {
+            try
+            {
+                UserDialogs.Instance.ShowLoading(AppResources.Loading);
+                loggerService.StartMethod();
+
+                var exposureRiskCalculationConfiguration = await exposureRiskCalculationConfigurationRepository
+                    .GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+                loggerService.Info(exposureRiskCalculationConfiguration.ToString());
+
+                var dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
+                var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
+                var exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
+
+                var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
+
+                var hasExposure = dailySummaryList.Count() > 0 || userExposureInformationList.Count() > 0;
+                var hasHighRiskExposure = userExposureInformationList.Count() > 0;
+
+                foreach (var ew in exposureWindowList.GroupBy(exposureWindow => exposureWindow.GetDateTime()))
+                {
+                    if (!dailySummaryMap.ContainsKey(ew.Key))
+                    {
+                        loggerService.Warning($"ExposureWindow: {ew.Key} found, but that is not contained the list of dailySummary.");
+                        continue;
+                    }
+
+                    var dailySummary = dailySummaryMap[ew.Key];
+                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
+                        dailySummary,
+                        ew.ToList(),
+                        exposureRiskCalculationConfiguration
+                        );
+                    if (riskLevel >= RiskLevel.High)
+                    {
+                        hasHighRiskExposure = true;
+                        break;
+                    }
+                }
+
+                await localNotificationService.DismissExposureNotificationAsync();
+
+                UserDialogs.Instance.HideLoading();
+
+                if (hasHighRiskExposure)
+                {
+                    await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
+                    return;
+                }
+                else
+                {
+                    INavigationParameters navigaitonParameters
+                        = ExposureCheckPage.BuildNavigationParams(exposureRiskCalculationConfiguration);
+                    await NavigationService.NavigateAsync(nameof(ExposureCheckPage), navigaitonParameters);
+                    return;
                 }
             }
-
-            await localNotificationService.DismissExposureNotificationAsync();
-
-            if (hasHighRiskExposure)
+            catch (Exception exception)
             {
-                await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
-                loggerService.EndMethod();
-                return;
+                UserDialogs.Instance.HideLoading();
+                loggerService.Exception("Failed to Initialize", exception);
+                await dialogService.ShowHomePageUnknownErrorWaringAsync();
             }
-            else
+            finally
             {
-                await NavigationService.NavigateAsync(nameof(ExposureCheckPage));
                 loggerService.EndMethod();
-                return;
             }
+
         });
 
         public Command OnClickShareApp => new Command(() =>
@@ -188,6 +307,19 @@ namespace Covid19Radar.ViewModels
             loggerService.StartMethod();
 
             AppUtils.PopUpShare();
+
+            loggerService.EndMethod();
+        });
+
+        public Command OnClickLocalNotificationOffWarning => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            var result = await dialogService.ShowLocalNotificationOffWarningAsync();
+            if (result)
+            {
+                externalNavigationService.NavigateAppSettings();
+            }
 
             loggerService.EndMethod();
         });
@@ -239,19 +371,8 @@ namespace Covid19Radar.ViewModels
                 bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
                 if (isOK)
                 {
-                    try
-                    {
-                        await exposureNotificationApiService.StartExposureNotificationAsync();
-                        _ = exposureDetectionBackgroundService.ExposureDetectionAsync();
-                    }
-                    catch (Exception ex)
-                    {
-                        loggerService.Exception("Failed to fetch exposure key.", ex);
-                    }
-                    finally
-                    {
-                        await UpdateView();
-                    }
+                    await StartExposureNotificationAsync();
+                    ExposureDetectionAsync();
                 }
             }
             else if (
@@ -259,13 +380,16 @@ namespace Covid19Radar.ViewModels
             || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
             )
             {
-                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
-                if (isOK)
-                {
-                    externalNavigationService.NavigateAppSettings();
-                }
+                _ = await NavigationService.NavigateAsync(nameof(HowToEnableExposureNotificationsPage));
             }
 
+            loggerService.EndMethod();
+        });
+
+        public Command OnTroubleshootingButtonWhenUnconfirmed => new Command(async () => {
+            loggerService.StartMethod();
+            _isShowTroubleshootingPage = true;
+            _ = await NavigationService.NavigateAsync(nameof(TroubleshootingPage));
             loggerService.EndMethod();
         });
 
@@ -291,15 +415,24 @@ namespace Covid19Radar.ViewModels
 
             if (isStopped)
             {
+                loggerService.Info("isStopped");
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = false;
                 IsVisibleENStatusStoppedLayout = true;
             }
             else if (!canConfirmExposure)
             {
+                loggerService.Info("canConfirmExposure is false");
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
+
+                var isMaxPerDayExposureDetectionAPILimitReached = _userDataRepository.IsMaxPerDayExposureDetectionAPILimitReached();
+                EnStatusUnconfirmedDescription1 = isMaxPerDayExposureDetectionAPILimitReached
+                    ? AppResources.HomePageExposureDetectionAPILimitReachedDescription1 : AppResources.HomePageENStatusUnconfirmedDescription1;
+                EnStatusUnconfirmedDescription2 = isMaxPerDayExposureDetectionAPILimitReached
+                    ? AppResources.HomePageExposureDetectionAPILimitReachedDescription2 : AppResources.HomePageENStatusUnconfirmedDescription2;
+                IsVisibleUnconfirmedTroubleshootingButton = !isMaxPerDayExposureDetectionAPILimitReached;
             }
             else
             {
@@ -326,6 +459,8 @@ namespace Covid19Radar.ViewModels
                 }
             }
 
+            IsVisibleLocalNotificationOffWarningLayout = await localNotificationService.IsWarnedLocalNotificationOffAsync();
+
             loggerService.EndMethod();
         }
 
@@ -349,6 +484,7 @@ namespace Covid19Radar.ViewModels
             loggerService.StartMethod();
 
             await StartExposureNotificationAsync();
+            ExposureDetectionAsync();
 
             loggerService.EndMethod();
         }
@@ -359,6 +495,18 @@ namespace Covid19Radar.ViewModels
 
             await UpdateView();
 
+            loggerService.EndMethod();
+        }
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+            loggerService.StartMethod();
+            if (_isShowTroubleshootingPage)
+            {
+                _isShowTroubleshootingPage = false;
+                ExposureDetectionAsync();
+            }
             loggerService.EndMethod();
         }
     }

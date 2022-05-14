@@ -190,7 +190,7 @@ namespace Covid19Radar.Repository
             long maxSize
             )
         {
-            var exposureData = new ExposureData(
+            var exposureData = new ExposureDataLog(
                 exposureConfiguration,
                 dailySummaries,
                 exposureWindows
@@ -202,7 +202,7 @@ namespace Covid19Radar.Repository
 
             var eventLog = new EventLog()
             {
-                HasConsent = _userDataRepository.IsSendEventLogEnabled(),
+                HasConsent = _userDataRepository.GetSendEventLogState() == SendEventLogState.Enable,
                 Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
                 Type = "ExposureData",
                 Subtype = "ExposureWindow",
@@ -220,7 +220,7 @@ namespace Covid19Radar.Repository
             long maxSize
             )
         {
-            var exposureData = new ExposureData(
+            var exposureData = new ExposureDataLog(
                 exposureConfiguration,
                 exposureSummary,
                 exposureInformations
@@ -232,7 +232,7 @@ namespace Covid19Radar.Repository
 
             var eventLog = new EventLog()
             {
-                HasConsent = _userDataRepository.IsSendEventLogEnabled(),
+                HasConsent = _userDataRepository.GetSendEventLogState() == SendEventLogState.Enable,
                 Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
                 Type = "ExposureData",
                 Subtype = "Legacy-v1",
@@ -242,7 +242,7 @@ namespace Covid19Radar.Repository
         }
     }
 
-    public class ExposureData
+    public class ExposureDataLog
     {
         private string _device = "unknown_device";
 
@@ -278,18 +278,18 @@ namespace Covid19Radar.Repository
         [JsonProperty("exposure_configuration")]
         public readonly ExposureConfiguration exposureConfiguration;
 
-        public ExposureData(ExposureConfiguration exposureConfiguration)
+        public ExposureDataLog(ExposureConfiguration exposureConfiguration)
             : this(exposureConfiguration, null, null, null, null) { }
 
-        public ExposureData(ExposureConfiguration exposureConfiguration,
+        public ExposureDataLog(ExposureConfiguration exposureConfiguration,
             ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
             : this(exposureConfiguration, exposureSummary, exposureInformations, null, null) { }
 
-        public ExposureData(ExposureConfiguration exposureConfiguration,
+        public ExposureDataLog(ExposureConfiguration exposureConfiguration,
             IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
             : this(exposureConfiguration, null, null, dailySummaries, exposureWindows) { }
 
-        public ExposureData(ExposureConfiguration exposureConfiguration,
+        public ExposureDataLog(ExposureConfiguration exposureConfiguration,
             ExposureSummary? exposureSummary, IList<ExposureInformation>? exposureInformations,
             IList<DailySummary>? dailySummaries, IList<ExposureWindow>? exposureWindows)
         {

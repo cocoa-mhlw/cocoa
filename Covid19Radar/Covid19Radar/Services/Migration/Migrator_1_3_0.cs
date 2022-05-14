@@ -15,9 +15,6 @@ namespace Covid19Radar.Services.Migration
         private const string TERMS_OF_SERVICE_LAST_UPDATE_DATETIME = "TermsOfServiceLastUpdateDateTime";
         private const string PRIVACY_POLICY_LAST_UPDATE_DATETIME = "PrivacyPolicyLastUpdateDateTime";
 
-        private readonly DateTime FALLBACK_DATETIME = new DateTime(2020, 6, 19);
-        private readonly TimeSpan TIME_DIFFERENCIAL_JST_UTC = TimeSpan.FromHours(+9);
-
         private readonly IPreferencesService _preferencesService;
         private readonly ILoggerService _loggerService;
 
@@ -34,7 +31,10 @@ namespace Covid19Radar.Services.Migration
         {
             if (_preferencesService.ContainsKey(START_DATETIME))
             {
-                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch, TimeSpan.Zero, DateTime.UtcNow);
+                MigrateDateTimeToEpoch(START_DATETIME, PreferenceKey.StartDateTimeEpoch,
+                    timeZoneInfo: null,
+                    fallbackDateTime: DateTime.UtcNow
+                    );
             }
 
             if (_preferencesService.ContainsKey(TERMS_OF_SERVICE_LAST_UPDATE_DATETIME))
@@ -42,8 +42,8 @@ namespace Covid19Radar.Services.Migration
                 MigrateDateTimeToEpoch(
                     TERMS_OF_SERVICE_LAST_UPDATE_DATETIME,
                     PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch,
-                    -TIME_DIFFERENCIAL_JST_UTC,
-                    FALLBACK_DATETIME
+                    timeZoneInfo: AppConstants.TIMEZONE_JST,
+                    fallbackDateTime: AppConstants.COCOA_FIRST_RELEASE_DATE
                     );
             }
 
@@ -52,22 +52,37 @@ namespace Covid19Radar.Services.Migration
                 MigrateDateTimeToEpoch(
                     PRIVACY_POLICY_LAST_UPDATE_DATETIME,
                     PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch,
-                    -TIME_DIFFERENCIAL_JST_UTC,
-                    FALLBACK_DATETIME
+                    timeZoneInfo: AppConstants.TIMEZONE_JST,
+                    fallbackDateTime: AppConstants.COCOA_FIRST_RELEASE_DATE
                     );
             }
 
             return Task.CompletedTask;
         }
 
-        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeSpan differential, DateTime fallbackDateTime)
+        private void MigrateDateTimeToEpoch(string dateTimeKey, string epochKey, TimeZoneInfo? timeZoneInfo, DateTime fallbackDateTime)
         {
-            string dateTimeStr = _preferencesService.GetValue(dateTimeKey, fallbackDateTime.ToString());
+            string dateTimeStr = _preferencesService.GetStringValue(dateTimeKey, fallbackDateTime.ToString());
 
+            /// **Note**
+            /// `dateTime` still can be `0001/01/01 00:00:00` (= UNIX Epoch:`-62135596800`).
+            /// For compatibility reasons, do not change this behavior.
             DateTime dateTime;
             try
             {
-                dateTime = DateTime.SpecifyKind(DateTime.Parse(dateTimeStr), DateTimeKind.Utc);
+                dateTime = DateTime.Parse(dateTimeStr);
+
+                if (timeZoneInfo is null)
+                {
+                    dateTime = DateTime.SpecifyKind(dateTime, DateTimeKind.Utc);
+                }
+                else
+                {
+                    dateTime = TimeZoneInfo.ConvertTimeToUtc(
+                        DateTime.SpecifyKind(dateTime, DateTimeKind.Unspecified),
+                        timeZoneInfo
+                        );
+                }
             }
             catch (FormatException exception)
             {
@@ -75,16 +90,7 @@ namespace Covid19Radar.Services.Migration
                 dateTime = fallbackDateTime;
             }
 
-            try
-            {
-                dateTime += differential;
-            }
-            catch (ArgumentOutOfRangeException exception)
-            {
-                _loggerService.Exception($"{dateTimeStr} {differential} The added or subtracted value results in an un-representable DateTime.", exception);
-            }
-
-            _preferencesService.SetValue(epochKey, dateTime.ToUnixEpoch());
+            _preferencesService.SetLongValue(epochKey, dateTime.ToUnixEpoch());
             _preferencesService.RemoveValue(dateTimeKey);
         }
     }

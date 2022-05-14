@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
-    public interface IExposureDataCollectServer
+    public interface IDebugExposureDataCollectServer
     {
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
@@ -39,7 +39,7 @@ namespace Covid19Radar.Services
             );
     }
 
-    public class ReleaseExposureDataCollectServer : IExposureDataCollectServer
+    public class DebugExposureDataCollectServerNop : IDebugExposureDataCollectServer
     {
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
@@ -48,7 +48,7 @@ namespace Covid19Radar.Services
             ExposureSummary exposureSummary,
             IList<ExposureInformation> exposureInformation
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
 
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
@@ -57,18 +57,21 @@ namespace Covid19Radar.Services
             IList<DailySummary> dailySummaries,
             IList<ExposureWindow> exposureWindows
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
 
         public Task UploadExposureDataAsync(
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion
             )
-            => Task.FromResult(new List<ExposureDataResponse>());
+            => Task.CompletedTask;
     }
 
+/// For user-privacy, this class is used for DEBUG only.
+/// Below #if is intented safe-guard for prevent contamination.
+/// DO NOT REMOVE.
 #if DEBUG
-    public class DebugExposureDataCollectServer : IExposureDataCollectServer
+    public class DebugExposureDataCollectServer : IDebugExposureDataCollectServer
     {
         private readonly ILoggerService _loggerService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
@@ -190,7 +193,6 @@ namespace Covid19Radar.Services
             }
         }
     }
-#endif
 
     public class ExposureRequest
     {
@@ -286,4 +288,5 @@ namespace Covid19Radar.Services
         public readonly string? Uri;
 
     }
+#endif
 }

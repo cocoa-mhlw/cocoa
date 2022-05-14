@@ -73,6 +73,22 @@
                         Style="{StaticResource DefaultButton}"
                         Text="StopExposureNotification" />
                     <Button
+                        Command="{Binding Path=OnClickShowExposureNotification}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="ShowExposureNotification" />
+                    <Button
+                        Command="{prism:NavigateTo 'ManageExposureDataPage'}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Manage ExposureData" />
+                    <Button
+                        Command="{prism:NavigateTo 'ManageUserDataPage'}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Manage UserData" />
+                    <Button
+                        Command="{Binding Path=OnClickExportExposureWindow}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="ExportExposureWindow" />
+                    <Button
                         Command="{Binding Path=OnClickRemoveStartDate}"
                         Style="{StaticResource DefaultButton}"
                         Text="RemoveStartDate" />
@@ -145,10 +161,6 @@
                     Style="{StaticResource DefaultButton}"
                     Text="TutorialPage4" />
                 <Button
-                    Command="{prism:NavigateTo 'TutorialPage5'}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="TutorialPage5" />
-                <Button
                     Command="{prism:NavigateTo 'TutorialPage6'}"
                     Style="{StaticResource DefaultButton}"
                     Text="TutorialPage6" />
@@ -193,10 +205,6 @@
                     Style="{StaticResource DefaultButton}"
                     Text="TermsofservicePage" />
                 <Button
-                    Command="{prism:NavigateTo 'ThankYouNotifyOtherPage'}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="ThankYouNotifyOtherPage" />
-                <Button
                     Command="{prism:NavigateTo 'NotifyOtherPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="NotifyOtherPage" />
@@ -217,11 +225,11 @@
                     Style="{StaticResource DefaultButton}"
                     Text="ExposuresPage" />
                 <Button
-                    Command="{prism:NavigateTo 'ReAgreePrivacyPolicyPage'}"
+                    Command="{Binding OnClickReAgreePrivacyPolicyPage}"
                     Style="{StaticResource DefaultButton}"
                     Text="ReAgreePrivacyPolicyPage" />
                 <Button
-                    Command="{prism:NavigateTo 'ReAgreeTermsOfServicePage'}"
+                    Command="{Binding OnClickReAgreeTermsOfServicePage}"
                     Style="{StaticResource DefaultButton}"
                     Text="ReAgreeTermsOfServicePage" />
                 <Button

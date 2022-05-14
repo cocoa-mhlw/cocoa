@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <Image
             AutomationProperties.IsInAccessibleTree="False"
-            Source="SplashImg.png"
+            Source="splash_logo.png"
             VerticalOptions="CenterAndExpand" />
     </ContentPage.Content>
 </ContentPage>

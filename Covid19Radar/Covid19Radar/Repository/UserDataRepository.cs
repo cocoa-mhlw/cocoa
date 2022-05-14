@@ -32,6 +32,9 @@ namespace Covid19Radar.Repository
         void SetCanConfirmExposure(bool canConfirmExposure);
         bool IsCanConfirmExposure();
 
+        void SetIsMaxPerDayExposureDetectionAPILimitReached(bool isMaxPerDayExposureDetectionAPILimitReached);
+        bool IsMaxPerDayExposureDetectionAPILimitReached();
+
         void SetLastConfirmedDate(DateTime utcNow);
         DateTime? GetLastConfirmedDate();
 
@@ -41,8 +44,15 @@ namespace Covid19Radar.Repository
         Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp);
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
 
-        void SetIsSendEventLogEnabled(bool isSendLogEnabled);
-        bool IsSendEventLogEnabled();
+        void SetSendEventLogState(SendEventLogState sendEventLogState);
+        SendEventLogState GetSendEventLogState();
+    }
+
+    public enum SendEventLogState
+    {
+        NotSet = 0,
+        Disable = -1,
+        Enable = 1
     }
 
     public class UserDataRepository : IUserDataRepository
@@ -64,12 +74,12 @@ namespace Covid19Radar.Repository
 
         public void SetStartDate(DateTime dateTime)
         {
-            _preferencesService.SetValue(PreferenceKey.StartDateTimeEpoch, dateTime.ToUnixEpoch());
+            _preferencesService.SetLongValue(PreferenceKey.StartDateTimeEpoch, dateTime.ToUnixEpoch());
         }
 
         public DateTime GetStartDate()
         {
-            long epoch = _preferencesService.GetValue(PreferenceKey.StartDateTimeEpoch, DateTime.UtcNow.ToUnixEpoch());
+            long epoch = _preferencesService.GetLongValue(PreferenceKey.StartDateTimeEpoch, DateTime.UtcNow.ToUnixEpoch());
             return DateTime.UnixEpoch.AddSeconds(epoch);
         }
 
@@ -96,7 +106,7 @@ namespace Covid19Radar.Repository
             {
                 var result = 0L;
 
-                var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+                var jsonString = _preferencesService.GetStringValue(PreferenceKey.LastProcessTekTimestamp, null);
                 if (!string.IsNullOrEmpty(jsonString))
                 {
                     var dict = JsonConvert.DeserializeObject<Dictionary<string, long>>(jsonString);
@@ -120,7 +130,7 @@ namespace Covid19Radar.Repository
 
             try
             {
-                var jsonString = _preferencesService.GetValue<string>(PreferenceKey.LastProcessTekTimestamp, null);
+                var jsonString = _preferencesService.GetStringValue(PreferenceKey.LastProcessTekTimestamp, null);
 
                 Dictionary<string, long> newDict;
                 if (!string.IsNullOrEmpty(jsonString))
@@ -132,7 +142,7 @@ namespace Covid19Radar.Repository
                     newDict = new Dictionary<string, long>();
                 }
                 newDict[region] = timestamp;
-                _preferencesService.SetValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
+                _preferencesService.SetStringValue(PreferenceKey.LastProcessTekTimestamp, JsonConvert.SerializeObject(newDict));
 
                 return Task.CompletedTask;
             }
@@ -166,7 +176,7 @@ namespace Covid19Radar.Repository
                 _ => throw new NotSupportedException()
             };
 
-            long epoch = _preferencesService.GetValue(key, 0L);
+            long epoch = _preferencesService.GetLongValue(key, 0L);
 
             return DateTime.UnixEpoch.AddSeconds(epoch);
         }
@@ -176,7 +186,7 @@ namespace Covid19Radar.Repository
             _loggerService.StartMethod();
 
             var key = termsType == TermsType.TermsOfService ? PreferenceKey.TermsOfServiceLastUpdateDateTimeEpoch : PreferenceKey.PrivacyPolicyLastUpdateDateTimeEpoch;
-            _preferencesService.SetValue(key, updateDate.ToUnixEpoch());
+            _preferencesService.SetLongValue(key, updateDate.ToUnixEpoch());
 
             _loggerService.EndMethod();
         }
@@ -198,23 +208,39 @@ namespace Covid19Radar.Repository
         public void SetCanConfirmExposure(bool canConfirmExposure)
         {
             _loggerService.StartMethod();
-            _preferencesService.SetValue(PreferenceKey.CanConfirmExposure, canConfirmExposure);
+            _preferencesService.SetBoolValue(PreferenceKey.CanConfirmExposure, canConfirmExposure);
             _loggerService.EndMethod();
         }
 
         public bool IsCanConfirmExposure()
         {
             _loggerService.StartMethod();
-            var canConfirmExposure = _preferencesService.GetValue(PreferenceKey.CanConfirmExposure, true);
+            var canConfirmExposure = _preferencesService.GetBoolValue(PreferenceKey.CanConfirmExposure, true);
             _loggerService.EndMethod();
 
             return canConfirmExposure;
         }
 
+        public void SetIsMaxPerDayExposureDetectionAPILimitReached(bool isMaxPerDayExposureDetectionAPILimitReached)
+        {
+            _loggerService.StartMethod();
+            _preferencesService.SetBoolValue(PreferenceKey.IsMaxPerDayExposureDetectionAPILimitReached, isMaxPerDayExposureDetectionAPILimitReached);
+            _loggerService.EndMethod();
+        }
+
+        public bool IsMaxPerDayExposureDetectionAPILimitReached()
+        {
+            _loggerService.StartMethod();
+            var isMaxPerDayExposureDetectionAPILimitReached = _preferencesService.GetBoolValue(PreferenceKey.IsMaxPerDayExposureDetectionAPILimitReached, false);
+            _loggerService.EndMethod();
+
+            return isMaxPerDayExposureDetectionAPILimitReached;
+        }
+
         public void SetLastConfirmedDate(DateTime dateTime)
         {
             _loggerService.StartMethod();
-            _preferencesService.SetValue(PreferenceKey.LastConfirmedDateTimeEpoch, dateTime.ToUnixEpoch());
+            _preferencesService.SetLongValue(PreferenceKey.LastConfirmedDateTimeEpoch, dateTime.ToUnixEpoch());
             _loggerService.EndMethod();
         }
 
@@ -229,7 +255,7 @@ namespace Covid19Radar.Repository
                     return null;
                 }
 
-                long epoch = _preferencesService.GetValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L);
+                long epoch = _preferencesService.GetLongValue(PreferenceKey.LastConfirmedDateTimeEpoch, 0L);
                 return DateTime.UnixEpoch.AddSeconds(epoch);
             }
             finally
@@ -246,24 +272,25 @@ namespace Covid19Radar.Repository
             _loggerService.EndMethod();
         }
 
-        public void SetIsSendEventLogEnabled(bool isSendEventLogEnabled)
+        public void SetSendEventLogState(SendEventLogState sendEventLogState)
         {
             _loggerService.StartMethod();
 
-            _preferencesService.SetValue(PreferenceKey.IsSendEventLogEnabled, isSendEventLogEnabled);
+            _preferencesService.SetIntValue(PreferenceKey.SendEventLogState, (int)sendEventLogState);
 
             _loggerService.EndMethod();
         }
 
-        public bool IsSendEventLogEnabled()
+        public SendEventLogState GetSendEventLogState()
         {
             _loggerService.StartMethod();
             try
             {
-                return _preferencesService.GetValue(
-                    PreferenceKey.IsSendEventLogEnabled,
-                    AppConstants.DEFAULT_SEND_EVENT_LOG_ENABLED
+                int state = _preferencesService.GetIntValue(
+                    PreferenceKey.SendEventLogState,
+                    (int)SendEventLogState.NotSet
                     );
+                return (SendEventLogState)state;
             }
             finally
             {

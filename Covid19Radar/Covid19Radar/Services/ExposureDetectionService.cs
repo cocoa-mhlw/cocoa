@@ -34,12 +34,13 @@ namespace Covid19Radar.Services
 
         private readonly ILocalNotificationService _localNotificationService;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
 
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
 
         private readonly IEventLogRepository _eventLogRepository;
 
-        private readonly IExposureDataCollectServer _exposureDataCollectServer;
+        private readonly IDebugExposureDataCollectServer _exposureDataCollectServer;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly IDeviceInfoUtility _deviceInfoUtility;
 
@@ -49,10 +50,11 @@ namespace Covid19Radar.Services
             IUserDataRepository userDataRepository,
             IExposureDataRepository exposureDataRepository,
             ILocalNotificationService localNotificationService,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IEventLogRepository eventLogRepository,
-            IExposureDataCollectServer exposureDataCollectServer,
+            IDebugExposureDataCollectServer exposureDataCollectServer,
             IDateTimeUtility dateTimeUtility,
             IDeviceInfoUtility deviceInfoUtility
             )
@@ -61,6 +63,7 @@ namespace Covid19Radar.Services
             _userDataRepository = userDataRepository;
             _exposureDataRepository = exposureDataRepository;
             _localNotificationService = localNotificationService;
+            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _eventLogRepository = eventLogRepository;
@@ -103,10 +106,22 @@ namespace Covid19Radar.Services
                 exposureWindows.ToList()
                 );
 
+            var exposureRiskCalculationConfiguration = await _exposureRiskCalculationConfigurationRepository
+                .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
+            _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
+
+            long expectOldestDateMillisSinceEpoch
+                = _dateTimeUtility.UtcNow
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays)
+                .ToUnixEpochMillis();
+
             bool isHighRiskExposureDetected = newDailySummaries
+                .Where(ds => ds.DateMillisSinceEpoch >= expectOldestDateMillisSinceEpoch)
                 .Select(ds => _exposureRiskCalculationService.CalcRiskLevel(
-                    ds,
-                    newExposureWindows.Where(ew => ew.DateMillisSinceEpoch == ds.DateMillisSinceEpoch).ToList())
+                        ds,
+                        newExposureWindows.Where(ew => ew.DateMillisSinceEpoch == ds.DateMillisSinceEpoch).ToList(),
+                        exposureRiskCalculationConfiguration
+                    )
                 )
                 .Any(riskLevel => riskLevel >= RiskLevel.High);
 

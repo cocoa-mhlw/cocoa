@@ -13,7 +13,6 @@ using System.Text.RegularExpressions;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
-using System.IO;
 using System.Collections.Generic;
 using Chino;
 using System.Net;
@@ -25,6 +24,8 @@ namespace Covid19Radar.ViewModels
     {
         private const ReportType DEFAULT_REPORT_TYPE = ReportType.ConfirmedTest;
 
+        public string RadioButtonYesReadText => Device.RuntimePlatform == Device.iOS ? $"{AppResources.NotifyOtherPageRadioButtonYes} {AppResources.Button}" : "";
+        public string RadioButtonNoReadText => Device.RuntimePlatform == Device.iOS ? $"{AppResources.NotifyOtherPageRadioButtonNo} {AppResources.Button}" : "";
         public string HowToReceiveProcessingNumberReadText => $"{AppResources.NotifyOtherPageLabel} {AppResources.Button}";
 
         private readonly ILoggerService loggerService;
@@ -33,6 +34,8 @@ namespace Covid19Radar.ViewModels
         private readonly IDiagnosisKeyRegisterServer diagnosisKeyRegisterServer;
         private readonly IEssentialsService _essentialsService;
         private readonly int _delayForErrorMillis;
+
+        private bool _hasSymptom = false;
 
         private string _processingNumber;
         public string ProcessingNumber
@@ -121,6 +124,9 @@ namespace Covid19Radar.ViewModels
 
         private int errorCount { get; set; }
 
+        // TODO: Save and use for revoke operation.
+        private string idempotencyKey = Guid.NewGuid().ToString();
+
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -192,15 +198,15 @@ namespace Covid19Radar.ViewModels
 
 
             var result = await UserDialogs.Instance.ConfirmAsync(
-                AppResources.NotifyOtherPageDiag1Message,
-                AppResources.NotifyOtherPageDiag1Title,
+                AppResources.NotifyOtherPageDialog1Message,
+                AppResources.NotifyOtherPageDialog1Title,
                 AppResources.ButtonRegister,
                 AppResources.ButtonCancel);
             if (!result)
             {
                 await UserDialogs.Instance.AlertAsync(
                     null,
-                    AppResources.NotifyOtherPageDiag2Title,
+                    AppResources.NotifyOtherPageDialog2Title,
                     AppResources.ButtonOk
                     );
 
@@ -215,24 +221,25 @@ namespace Covid19Radar.ViewModels
                 if (errorCount >= AppConstants.MaxErrorCount)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiagReturnHome,
-                        AppResources.NotifyOtherPageDiagReturnHomeTitle,
+                        AppResources.NotifyOtherPageDialogReturnHome,
+                        AppResources.NotifyOtherPageDialogReturnHomeTitle,
                         AppResources.ButtonOk
                     );
-                    UserDialogs.Instance.HideLoading();
                     await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
 
                     loggerService.Error($"Exceeded the number of trials.");
-                    loggerService.EndMethod();
                     return;
                 }
 
                 loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
 
+                // UserDialogs.Instance.Loading must be executed in MainThread.
+                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
+
                 if (errorCount > 0)
                 {
-                    await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
-                        AppResources.NotifyOtherPageDiag3Title,
+                    await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDialog3Message,
+                        AppResources.NotifyOtherPageDialog3Title,
                         AppResources.ButtonOk
                         );
                     await Task.Delay(errorCount * _delayForErrorMillis);
@@ -240,31 +247,30 @@ namespace Covid19Radar.ViewModels
 
                 loggerService.Info($"Number of attempts to submit diagnostic number. ({errorCount + 1} of {AppConstants.MaxErrorCount})");
 
-                if (errorCount > 0)
-
-
                 // Init Dialog
                 if (string.IsNullOrEmpty(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiag4Message,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.NotifyOtherPageDialog4Message,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk
                     );
                     errorCount++;
                     loggerService.Error($"No diagnostic number entered.");
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
                 if (!Validator.IsValidProcessingNumber(ProcessingNumber))
                 {
                     await UserDialogs.Instance.AlertAsync(
-                        AppResources.NotifyOtherPageDiag5Message,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.NotifyOtherPageDialog5Message,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk
                     );
                     errorCount++;
                     loggerService.Error($"Incorrect process number format.");
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
@@ -274,33 +280,78 @@ namespace Covid19Radar.ViewModels
                 if (!enabled)
                 {
                     await UserDialogs.Instance.AlertAsync(
-                       AppResources.NotifyOtherPageDiag6Message,
-                       AppResources.NotifyOtherPageDiag6Title,
+                       AppResources.NotifyOtherPageDialog6Message,
+                       AppResources.NotifyOtherPageDialog6Title,
                        AppResources.ButtonOk
                     );
-                    UserDialogs.Instance.HideLoading();
                     await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 
                     loggerService.Warning($"Exposure notification is disable.");
+                    UserDialogs.Instance.HideLoading();
                     return;
                 }
 
-                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
-
-                await SubmitDiagnosisKeys();
+                HttpStatusCode httpResult = await SubmitDiagnosisKeys();
 
                 UserDialogs.Instance.HideLoading();
+
+                ShowResult(httpResult);
+
+                if (httpResult != HttpStatusCode.OK)
+                {
+                    errorCount++;
+                }
+            }
+            catch (ENException exception)
+            {
+                loggerService.Exception("GetTemporaryExposureKeyHistoryAsync", exception);
+
+                if (exception.Code == ENException.Code_iOS.NotAuthorized)
+                {
+                    loggerService.Info("GetTekHistory request is declined by user.");
+
+                    UserDialogs.Instance.HideLoading();
+
+                    await UserDialogs.Instance.AlertAsync(
+                        null,
+                        AppResources.NotifyOtherPageDialog2Title,
+                        AppResources.ButtonOk
+                        );
+                }
+                else
+                {
+                    UserDialogs.Instance.HideLoading();
+                }
+
+            }
+            catch (DiagnosisKeyRegisterException ex)
+            {
+                loggerService.Exception("Failed to register", ex);
+
+                errorCount++;
+                UserDialogs.Instance.HideLoading();
+
+                if (ex.Code == DiagnosisKeyRegisterException.Codes.FailedCreatePayload)
+                {
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.GeneralErrorRegisterAgainMessage,
+                        AppResources.GeneralErrorTitle,
+                        AppResources.ButtonOk
+                        );
+                }
             }
             catch (Exception ex)
             {
+                errorCount++;
+
                 UserDialogs.Instance.HideLoading();
 
-                errorCount++;
-                UserDialogs.Instance.Alert(
-                    AppResources.NotifyOtherPageDialogExceptionText,
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOther_Dialog_NoConnection,
                     AppResources.NotifyOtherPageDialogExceptionTitle,
                     AppResources.ButtonOk
-                );
+                    );
+
                 loggerService.Exception("Failed to submit DiagnosisKeys.", ex);
             }
             finally
@@ -309,86 +360,58 @@ namespace Covid19Radar.ViewModels
             }
         }));
 
-        private async Task SubmitDiagnosisKeys()
+        private async Task<HttpStatusCode> SubmitDiagnosisKeys()
         {
             loggerService.Info($"Submit DiagnosisKeys.");
 
-            try
-            {
-                List<TemporaryExposureKey> temporaryExposureKeyList
-                    = await exposureNotificationApiService.GetTemporaryExposureKeyHistoryAsync();
+            List<TemporaryExposureKey> temporaryExposureKeyList
+                = await exposureNotificationApiService.GetTemporaryExposureKeyHistoryAsync();
 
-                loggerService.Info($"TemporaryExposureKeys-count: {temporaryExposureKeyList.Count()}");
+            loggerService.Info($"TemporaryExposureKeys-count: {temporaryExposureKeyList.Count()}");
 
-                IList<TemporaryExposureKey> filteredTemporaryExposureKeyList
-                    = TemporaryExposureKeyUtils.FiilterTemporaryExposureKeys(
-                        temporaryExposureKeyList,
-                        _diagnosisDate,
-                        AppConstants.DaysToSendTek,
-                        loggerService
-                        );
-
-                loggerService.Info($"FilteredTemporaryExposureKeys-count: {filteredTemporaryExposureKeyList.Count()}");
-
-                // Set reportType
-                foreach (var tek in filteredTemporaryExposureKeyList)
-                {
-                    tek.ReportType = DEFAULT_REPORT_TYPE;
-                }
-
-                // TODO: Save and use revoke operation.
-                string idempotencyKey = Guid.NewGuid().ToString();
-
-                IList<HttpStatusCode> httpStatusCodes = await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+            IList<TemporaryExposureKey> filteredTemporaryExposureKeyList
+                = TemporaryExposureKeyUtils.FiilterTemporaryExposureKeys(
+                    temporaryExposureKeyList,
                     _diagnosisDate,
-                    filteredTemporaryExposureKeyList,
-                    ProcessingNumber,
-                    idempotencyKey
+                    AppConstants.DaysToSendTek,
+                    loggerService
                     );
 
-                foreach(var statusCode in httpStatusCodes)
-                {
-                    loggerService.Info($"HTTP status is {httpStatusCodes}({(int)statusCode}).");
+            loggerService.Info($"FilteredTemporaryExposureKeys-count: {filteredTemporaryExposureKeyList.Count()}");
 
-                    // Mainly, we expect that SubmitDiagnosisKeysAsync returns one result.
-                    // Multiple-results is for debug use only.
-                    ShowResult(statusCode);
-                }
-            }
-            catch (ENException exception)
+            // Set reportType
+            foreach (var tek in filteredTemporaryExposureKeyList)
             {
-                loggerService.Exception("GetTemporaryExposureKeyHistoryAsync", exception);
+                tek.ReportType = DEFAULT_REPORT_TYPE;
             }
-            catch (Exception exception)
-            {
-                loggerService.Exception("SubmitDiagnosisKeys", exception);
-            }
-            finally
-            {
-                UserDialogs.Instance.HideLoading();
-            }
+
+            return await diagnosisKeyRegisterServer.SubmitDiagnosisKeysAsync(
+                _hasSymptom,
+                _diagnosisDate,
+                filteredTemporaryExposureKeyList,
+                ProcessingNumber,
+                idempotencyKey
+                );
         }
 
         private async void ShowResult(HttpStatusCode httpStatusCode)
         {
+            loggerService.Info($"HTTP status is {httpStatusCode}({(int)httpStatusCode}).");
+
             switch (httpStatusCode)
             {
                 case HttpStatusCode.OK:
+                case HttpStatusCode.NoContent:
                     // Success
                     loggerService.Info($"Successfully submit DiagnosisKeys.");
 
-                    await UserDialogs.Instance.AlertAsync(
-                        null,
-                        AppResources.NotifyOtherPageDialogSubmittedTitle,
-                        AppResources.ButtonOk
-                    );
-                    await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                    _ = await NavigationService.NavigateAsync($"/{nameof(SubmitDiagnosisKeysCompletePage)}");
                     break;
 
                 case HttpStatusCode.NotAcceptable:
                     await UserDialogs.Instance.AlertAsync(
                         AppResources.ExposureNotificationHandler1ErrorMessage,
-                        AppResources.ProcessingNumberErrorDiagTitle,
+                        AppResources.ProcessingNumberErrorDialogTitle,
                         AppResources.ButtonOk);
                     loggerService.Error($"The process number is incorrect.");
                     break;
@@ -410,6 +433,14 @@ namespace Covid19Radar.ViewModels
                     loggerService.Error($"There is a problem with the record data.");
                     break;
 
+                case HttpStatusCode.Forbidden:
+                    await UserDialogs.Instance.AlertAsync(
+                        AppResources.DialogNetworkConnectionErrorFromOverseasMessage,
+                        AppResources.DialogNetworkConnectionErrorTitle,
+                        AppResources.ButtonOk);
+                    loggerService.Error($"Access from overseas.");
+                    break;
+
                 default:
                     loggerService.Error($"Unexpected status");
                     break;
@@ -422,11 +453,13 @@ namespace Covid19Radar.ViewModels
 
             if (AppResources.NotifyOtherPageRadioButtonYes.Equals(text))
             {
+                _hasSymptom = true;
                 IsVisibleWithSymptomsLayout = true;
                 IsVisibleNoSymptomsLayout = false;
             }
             else if (AppResources.NotifyOtherPageRadioButtonNo.Equals(text))
             {
+                _hasSymptom = false;
                 IsVisibleWithSymptomsLayout = false;
                 IsVisibleNoSymptomsLayout = true;
             }
@@ -449,9 +482,54 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            await SubmitDiagnosisKeys();
+            try
+            {
+                using (UserDialogs.Instance.Loading(AppResources.LoadingTextRegistering))
+                {
+                    HttpStatusCode httpResult = await SubmitDiagnosisKeys();
+
+                    ShowResult(httpResult);
+
+                    if (httpResult != HttpStatusCode.OK)
+                    {
+                        errorCount++;
+                    }
+                }
+            }
+            catch (ENException exception)
+            {
+                loggerService.Exception("GetTemporaryExposureKeyHistoryAsync", exception);
+            }
+            catch (Exception ex)
+            {
+                errorCount++;
+
+                await UserDialogs.Instance.AlertAsync(
+                    AppResources.NotifyOtherPageDialogExceptionText,
+                    AppResources.NotifyOtherPageDialogExceptionTitle,
+                    AppResources.ButtonOk
+                );
+                loggerService.Exception("Failed to submit DiagnosisKeys.", ex);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+        }
+
+        public async void OnGetTekHistoryDecline()
+        {
+            loggerService.StartMethod();
+
+            loggerService.Info("GetTekHistory request is declined by user.");
+            await UserDialogs.Instance.AlertAsync(
+                null,
+                AppResources.NotifyOtherPageDialog2Title,
+                AppResources.ButtonOk
+                );
 
             loggerService.EndMethod();
         }
+
     }
 }

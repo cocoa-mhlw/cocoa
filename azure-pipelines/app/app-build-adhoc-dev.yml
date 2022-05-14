@@ -1,21 +1,10 @@
 name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
-trigger:
-  branches:
-    include:
-    - release/app
-    - develop/app
-    - feature/*
-  paths:
-    include:
-    - Covid19Radar
-    - Covid19Radar.sln
-    - azure-pipelines/app
+# NOTE: CI/PR triggers should be set in the Classic Editor
 
 variables:
 - group: app-settings-dev
-- name: AppVersion
-  value: '1.4.1'
+- template: templates/variables/app-variables.yml
 
 jobs:
 - job: build_ios
@@ -34,4 +23,4 @@ jobs:
   - group: android-signing-dev
   - template: templates/variables/android-build-environment-variables.yml
   steps:
-  - template: templates/build/android-build-debug-template.yml
+  - template: templates/build/android-build-adhoc-template.yml

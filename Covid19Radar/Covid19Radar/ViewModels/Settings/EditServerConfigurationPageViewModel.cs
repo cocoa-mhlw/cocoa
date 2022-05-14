@@ -77,6 +77,13 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _exposureConfigurationUrl, value); }
         }
 
+        private string _exposureRiskCalculationConfigurationUrl;
+        public string ExposureRiskCalculationConfigurationUrl
+        {
+            get { return _exposureRiskCalculationConfigurationUrl; }
+            set { SetProperty(ref _exposureRiskCalculationConfigurationUrl, value); }
+        }
+
         private string _exposureDataCollectServerEndpoint;
         public string ExposureDataCollectServerEndpoint
         {
@@ -119,6 +126,7 @@ namespace Covid19Radar.ViewModels
                 InquiryLogApiUrl = _serverConfigurationRepository.InquiryLogApiUrl;
                 LogStorageEndpoint = _serverConfigurationRepository.LogStorageEndpoint;
                 ExposureConfigurationUrl = _serverConfigurationRepository.ExposureConfigurationUrl;
+                ExposureRiskCalculationConfigurationUrl = _serverConfigurationRepository.ExposureRiskCalculationConfigurationUrl;
                 ExposureDataCollectServerEndpoint = _serverConfigurationRepository.ExposureDataCollectServerEndpoint;
                 EventLogApiEndpoint = _serverConfigurationRepository.EventLogApiEndpoint;
 
@@ -157,6 +165,7 @@ namespace Covid19Radar.ViewModels
             _serverConfigurationRepository.InquiryLogApiUrl = InquiryLogApiUrl;
             _serverConfigurationRepository.LogStorageEndpoint = LogStorageEndpoint;
             _serverConfigurationRepository.ExposureConfigurationUrl = ExposureConfigurationUrl;
+            _serverConfigurationRepository.ExposureRiskCalculationConfigurationUrl = ExposureRiskCalculationConfigurationUrl;
             _serverConfigurationRepository.ExposureDataCollectServerEndpoint = ExposureDataCollectServerEndpoint;
             _serverConfigurationRepository.EventLogApiEndpoint = EventLogApiEndpoint;
 

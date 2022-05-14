@@ -27,7 +27,7 @@ namespace Covid19Radar.Api
 {
     public class V3DiagnosisApi
     {
-        private const int TRANSMISSION_RISK_LEVEL_INVALID = 0;
+        private const int TRANSMISSION_RISK_LEVEL_LOWEST = 1;
         private const int TRANSMISSION_RISK_LEVEL_MEDIUM = 4;
 
         private const string CHAFF_HEADER = "X-Chaff";
@@ -38,6 +38,7 @@ namespace Covid19Radar.Api
         private readonly IDeviceValidationService _deviceValidationService;
         private readonly IVerificationService _verificationService;
         private readonly IValidationServerService _validationServerService;
+        private readonly ITemporaryExposureKeyValidationService _temporaryExposureKeyValidationService;
 
         private readonly ILogger<V3DiagnosisApi> _logger;
 
@@ -47,6 +48,7 @@ namespace Covid19Radar.Api
             IDeviceValidationService deviceValidationService,
             IVerificationService verificationService,
             IValidationServerService validationServerService,
+            ITemporaryExposureKeyValidationService temporaryExposureKeyValidationService,
             ILogger<V3DiagnosisApi> logger
             )
         {
@@ -56,6 +58,7 @@ namespace Covid19Radar.Api
             _deviceValidationService = deviceValidationService;
             _verificationService = verificationService;
             _validationServerService = validationServerService;
+            _temporaryExposureKeyValidationService = temporaryExposureKeyValidationService;
             _logger = logger;
         }
 
@@ -79,7 +82,7 @@ namespace Covid19Radar.Api
             // Make compatible with Legacy-V1 mode.
             foreach (var key in submissionParameter.Keys)
             {
-                var transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_INVALID;
+                var transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_LOWEST;
                 if (key.DaysSinceOnsetOfSymptoms >= Constants.DaysHasInfectiousness)
                 {
                     transmissionRiskLevel = TRANSMISSION_RISK_LEVEL_MEDIUM;
@@ -88,7 +91,9 @@ namespace Covid19Radar.Api
             }
 
             // Filter valid keys
-            submissionParameter.Keys = submissionParameter.Keys.Where(key => key.IsValid()).ToArray();
+            submissionParameter.Keys = submissionParameter.Keys
+                .Where(key => _temporaryExposureKeyValidationService.Validate(submissionParameter.HasSymptom, key))
+                .ToArray();
 
             var reqTime = DateTimeOffset.UtcNow;
 
@@ -152,6 +157,10 @@ namespace Covid19Radar.Api
             {
                 await _tekRepository.UpsertAsync(key);
             }
+
+            // Clear Payloads
+            submissionParameter.VerificationPayload = null;
+            submissionParameter.DeviceVerificationPayload = null;
 
             return new OkObjectResult(JsonConvert.SerializeObject(submissionParameter));
         }
