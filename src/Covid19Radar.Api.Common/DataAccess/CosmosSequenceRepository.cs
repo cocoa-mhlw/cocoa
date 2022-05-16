@@ -45,7 +45,7 @@ namespace Covid19Radar.Api.DataAccess
                 }
             }
             _logger.LogWarning("GetNextAsync is over retry count.");
-            throw new ApplicationException("GetNextAsync is over retry count.");
+            throw new Exception("GetNextAsync is over retry count.");
         }
 
         public async Task<ulong> GetNextAsync(PartitionKeyRotation.KeyInformation key, ulong startNo, int increment = 1)
@@ -71,7 +71,7 @@ namespace Covid19Radar.Api.DataAccess
                 }
             }
             _logger.LogWarning("GetNextAsync is over retry count.");
-            throw new ApplicationException("GetNextAsync is over retry count.");
+            throw new Exception("GetNextAsync is over retry count.");
         }
     }
 }

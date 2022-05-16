@@ -56,7 +56,6 @@ namespace Covid19Radar.Background.Services
 
             // Filename is inferable as batch number
             var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
-            //var blockBlob = cloudBlobContainer.GetBlockBlobReference(exportFileName);
             var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
 
             // Set the batch number and region as metadata

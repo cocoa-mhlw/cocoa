@@ -88,18 +88,6 @@ namespace Covid19Radar.Api.Services
                     Logger.LogWarning($"iOS device check failed.\r\n{nameof(HttpRequestMessage)} : {request}\r\n{nameof(HttpResponseMessage)} : {response}");
                 }
 
-                //switch (response.StatusCode)
-                //{
-                //    // 200 OK:                  The transaction was successful
-                //    // 200 Bit State Not Found: The bit state wasn't found
-                //    case System.Net.HttpStatusCode.OK:
-                //        if (response.ReasonPhrase == "OK") return true;
-
-                //        break;
-                //    // 
-                //    default:
-                //        break;
-                //}
                 if (response.StatusCode != System.Net.HttpStatusCode.OK)
                 {
                     // FIXME: When call iOS Device check, return error sometimes, Until the cause is known, ignored device check
