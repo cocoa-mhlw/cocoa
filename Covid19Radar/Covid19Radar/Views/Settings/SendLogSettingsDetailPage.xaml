@@ -51,7 +51,7 @@
                     Grid.Row="0"
                     Grid.Column="0"
                     AutomationProperties.IsInAccessibleTree="True"
-                    IsChecked="{Binding EnableShowNotify}"
+                    IsChecked="{Binding EnableExposureNotificationNotified}"
                     />
                 <Label
                     Grid.Row="0"

@@ -21,9 +21,11 @@ namespace Covid19Radar.Repository
     public interface ISendEventLogStateRepository
     {
         public const string EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED = "exposure_notification_notified";
+        public const string EVENT_TYPE_EXPOSURE_DATA = "exposure_data";
 
         public static string[] EVENT_TYPE_ALL = new string[] {
             EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED,
+            EVENT_TYPE_EXPOSURE_DATA,
         };
 
         void SetSendEventLogState(string eventType, SendEventLogState state);

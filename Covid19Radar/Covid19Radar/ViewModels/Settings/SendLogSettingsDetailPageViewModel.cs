@@ -14,16 +14,16 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService _loggerService;
 
-        private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
 
         private Destination _destination = Destination.SettingsPage;
         private INavigationParameters _navigationParameters;
 
-        private bool _enableShowNotify = true;
-        public bool EnableShowNotify
+        private bool _enableExposureNotificationNotified = true;
+        public bool EnableExposureNotificationNotified
         {
-            get { return _enableShowNotify; }
-            set { SetProperty(ref _enableShowNotify, value); }
+            get { return _enableExposureNotificationNotified; }
+            set { SetProperty(ref _enableExposureNotificationNotified, value); }
         }
 
         private bool _enableExposureData = true;
@@ -35,11 +35,11 @@ namespace Covid19Radar.ViewModels
 
         public SendLogSettingsDetailPageViewModel(
             INavigationService navigationService,
-            IUserDataRepository userDataRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository,
             ILoggerService loggerService
             ) : base(navigationService)
         {
-            _userDataRepository = userDataRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
             _loggerService = loggerService;
         }
 
@@ -56,23 +56,30 @@ namespace Covid19Radar.ViewModels
 
         }
 
-        public Command OnClickAcceptSendLog => new Command(async () =>
+        public Command OnClickSave => new Command(async () =>
         {
             _loggerService.StartMethod();
+
+            SendEventLogState exposureNotificationNotifiedState
+                = EnableExposureNotificationNotified ? SendEventLogState.Enable : SendEventLogState.Disable;
+
+            SendEventLogState exposureNotificationDataState
+                = EnableExposureData ? SendEventLogState.Enable : SendEventLogState.Disable;
+
+            _sendEventLogStateRepository.SetSendEventLogState(
+                ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED,
+                exposureNotificationNotifiedState
+                );
+
+            _sendEventLogStateRepository.SetSendEventLogState(
+                ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_DATA,
+                exposureNotificationDataState
+                );
 
             _ = await NavigationService.NavigateAsync(_destination.ToPath(), _navigationParameters);
 
             _loggerService.EndMethod();
 
-        });
-
-        public Command OnClickDisableSendLog => new Command(async () =>
-        {
-            _loggerService.StartMethod();
-
-            _ = await NavigationService.NavigateAsync(_destination.ToPath(), _navigationParameters);
-
-            _loggerService.EndMethod();
         });
     }
 }

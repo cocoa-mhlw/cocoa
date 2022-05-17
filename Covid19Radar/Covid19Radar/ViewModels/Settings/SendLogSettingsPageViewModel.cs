@@ -16,17 +16,17 @@ namespace Covid19Radar.ViewModels
 
         private Destination _destination = Destination.HomePage;
 
-        private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private INavigationParameters _navigationParameters;
 
         public SendLogSettingsPageViewModel(
             INavigationService navigationService,
-            IUserDataRepository userDataRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository,
             ILoggerService loggerService
             ) : base(navigationService)
         {
             _loggerService = loggerService;
-            _userDataRepository = userDataRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
         }
 
         public override void Initialize(INavigationParameters parameters)
@@ -57,6 +57,16 @@ namespace Covid19Radar.ViewModels
         {
             _loggerService.StartMethod();
 
+            foreach (string eventType in ISendEventLogStateRepository.EVENT_TYPE_ALL)
+            {
+                bool isStateSet = _sendEventLogStateRepository.GetSendEventLogState(eventType) != SendEventLogState.NotSet;
+                if (isStateSet)
+                {
+                    continue;
+                }
+
+                _sendEventLogStateRepository.SetSendEventLogState(eventType, SendEventLogState.Disable);
+            }
             _ = await NavigationService.NavigateAsync(_destination.ToPath(), _navigationParameters);
 
             _loggerService.EndMethod();
