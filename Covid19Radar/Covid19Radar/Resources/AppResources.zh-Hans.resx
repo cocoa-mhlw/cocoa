@@ -149,12 +149,12 @@
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>使用方法</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpMenuPageMenu" xml:space="preserve">
-    <value>指南</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>接触的记录方法</value>
@@ -345,8 +345,8 @@
     <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>使用方法引导（如何使用本APP）</value>
-    <comment>使い方を学ぶ</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;Aへ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
     <value>设备识别</value>

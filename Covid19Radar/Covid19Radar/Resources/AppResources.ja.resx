@@ -140,12 +140,12 @@
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>使い方</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpMenuPageMenu" xml:space="preserve">
-    <value>使い方</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>接触の記録方法</value>
@@ -327,8 +327,8 @@
     <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>使い方を学ぶ</value>
-    <comment>使い方を学ぶ</comment>
+    <value>Q&amp;Aへ</value>
+    <comment>Q&amp;Aへ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
     <value>端末の識別</value>

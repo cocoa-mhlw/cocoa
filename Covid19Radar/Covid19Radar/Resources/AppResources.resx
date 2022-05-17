@@ -269,12 +269,12 @@
     <value>Would you like to register positively later?</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>How to use this app</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpMenuPageMenu" xml:space="preserve">
-    <value>How to use</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
     <value>What is a 'close contact'?</value>
@@ -453,8 +453,8 @@
     <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>How to use this app</value>
-    <comment>使い方を学ぶ</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;Aへ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
     <value>Device identification</value>
