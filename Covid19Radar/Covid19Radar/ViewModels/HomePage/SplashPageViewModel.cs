@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Linq;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
@@ -18,19 +19,22 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService _loggerService;
         private readonly IMigrationService _migrationService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
 
         public SplashPageViewModel(
             INavigationService navigationService,
             ITermsUpdateService termsUpdateService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IMigrationService migrationService
+            IMigrationService migrationService,
+            ISendEventLogStateRepository sendEventLogStateRepository
             ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
             _migrationService = migrationService;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
         }
 
         public override async void OnNavigatedTo(INavigationParameters parameters)
@@ -79,7 +83,11 @@ namespace Covid19Radar.ViewModels
                     return;
                 }
 
-                if (_userDataRepository.GetSendEventLogState() == SendEventLogState.NotSet)
+                bool isExistNotSetEventType = ISendEventLogStateRepository.EVENT_TYPE_ALL
+                    .Select(eventType => _sendEventLogStateRepository.GetSendEventLogState(eventType))
+                    .Any(state => state == SendEventLogState.NotSet);
+
+                if (isExistNotSetEventType)
                 {
                     _loggerService.Info($"Transition to SendLogSettingsPage");
 

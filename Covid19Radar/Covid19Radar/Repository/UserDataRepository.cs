@@ -15,6 +15,8 @@ namespace Covid19Radar.Repository
 {
     public interface IUserDataRepository
     {
+        private const string EVENT_EXPOSURE_NOTIFICATION_NOTIFIED = "exposure_notification_notified";
+
         void SetStartDate(DateTime dateTime);
 
         DateTime GetStartDate();
@@ -43,16 +45,6 @@ namespace Covid19Radar.Repository
         Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region);
         Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp);
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
-
-        void SetSendEventLogState(SendEventLogState sendEventLogState);
-        SendEventLogState GetSendEventLogState();
-    }
-
-    public enum SendEventLogState
-    {
-        NotSet = 0,
-        Disable = -1,
-        Enable = 1
     }
 
     public class UserDataRepository : IUserDataRepository
@@ -270,32 +262,6 @@ namespace Covid19Radar.Repository
             _preferencesService.RemoveValue(PreferenceKey.CanConfirmExposure);
             _preferencesService.RemoveValue(PreferenceKey.LastConfirmedDateTimeEpoch);
             _loggerService.EndMethod();
-        }
-
-        public void SetSendEventLogState(SendEventLogState sendEventLogState)
-        {
-            _loggerService.StartMethod();
-
-            _preferencesService.SetIntValue(PreferenceKey.SendEventLogState, (int)sendEventLogState);
-
-            _loggerService.EndMethod();
-        }
-
-        public SendEventLogState GetSendEventLogState()
-        {
-            _loggerService.StartMethod();
-            try
-            {
-                int state = _preferencesService.GetIntValue(
-                    PreferenceKey.SendEventLogState,
-                    (int)SendEventLogState.NotSet
-                    );
-                return (SendEventLogState)state;
-            }
-            finally
-            {
-                _loggerService.EndMethod();
-            }
         }
     }
 }
