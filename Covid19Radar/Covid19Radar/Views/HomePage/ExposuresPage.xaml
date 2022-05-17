@@ -80,25 +80,13 @@
                 <Label
                     Margin="0, 30, 0, 0"
                     Style="{StaticResource AnnotationLabel}"
-                    TextColor="{StaticResource PrimaryText}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                            <Span Text="{Binding UtcDescription}"/>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                    TextColor="{StaticResource PrimaryText}"
+                    Text="{Binding UtcDescription}" />
                 <Label
                     Margin="0, 10, 0, 0"
                     Style="{StaticResource AnnotationLabel}"
-                    TextColor="{StaticResource PrimaryText}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                            <Span Text="{x:Static resources:AppResources.ExposuresPageTimeDescription}"/>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                    TextColor="{StaticResource PrimaryText}"
+                    Text="{x:Static resources:AppResources.ExposuresPageTimeDescription}" />
 
             </StackLayout>
         </CollectionView.Footer>
