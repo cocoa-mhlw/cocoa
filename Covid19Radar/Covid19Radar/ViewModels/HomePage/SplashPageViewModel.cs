@@ -26,15 +26,15 @@ namespace Covid19Radar.ViewModels
             ITermsUpdateService termsUpdateService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IMigrationService migrationService,
-            ISendEventLogStateRepository sendEventLogStateRepository
+            ISendEventLogStateRepository sendEventLogStateRepository,
+            IMigrationService migrationService
             ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
-            _migrationService = migrationService;
             _sendEventLogStateRepository = sendEventLogStateRepository;
+            _migrationService = migrationService;
         }
 
         public override async void OnNavigatedTo(INavigationParameters parameters)
