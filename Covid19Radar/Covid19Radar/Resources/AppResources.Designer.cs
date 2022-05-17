@@ -779,9 +779,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string TutorialPage4Button2 {
+        public static string TutorialPage4Link {
             get {
-                return ResourceManager.GetString("TutorialPage4Button2", resourceCulture);
+                return ResourceManager.GetString("TutorialPage4Link", resourceCulture);
             }
         }
         
@@ -791,9 +791,9 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string TutorialPage4Label {
+        public static string TutorialPage4Description2 {
             get {
-                return ResourceManager.GetString("TutorialPage4Label", resourceCulture);
+                return ResourceManager.GetString("TutorialPage4Description2", resourceCulture);
             }
         }
         

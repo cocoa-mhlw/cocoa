@@ -484,7 +484,7 @@
     <value>开启</value>
     <comment>有効にする</comment>
   </data>
-  <data name="TutorialPage4Button2" xml:space="preserve">
+  <data name="TutorialPage4Link" xml:space="preserve">
     <value>稍后设置</value>
     <comment>あとで設定する</comment>
   </data>
@@ -492,9 +492,9 @@
     <value>为了即时收到密切接触信息，请开启手机的蓝牙模式</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
-  <data name="TutorialPage4Label" xml:space="preserve">
-    <value>更多相关技术的详细信息</value>
-    <comment>技術的な詳細について</comment>
+  <data name="TutorialPage4Description2" xml:space="preserve">
+    <value>iPhone用户请从设置里打开蓝牙。</value>
+    <comment>iPhoneをお使いの方は設定よりBluetoothをONに設定してください。</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
     <value>开启蓝牙</value>

@@ -596,7 +596,7 @@
     <value>Turn on</value>
     <comment>有効にする</comment>
   </data>
-  <data name="TutorialPage4Button2" xml:space="preserve">
+  <data name="TutorialPage4Link" xml:space="preserve">
     <value>Set up later</value>
     <comment>あとで設定する</comment>
   </data>
@@ -604,9 +604,9 @@
     <value>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
-  <data name="TutorialPage4Label" xml:space="preserve">
-    <value>Find out more</value>
-    <comment>技術的な詳細について</comment>
+  <data name="TutorialPage4Description2" xml:space="preserve">
+    <value>If you are using an iPhone, please set Bluetooth to ON from the settings.</value>
+    <comment>iPhoneをお使いの方は設定よりBluetoothをONに設定してください。</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
     <value>To use Exposure Notifications</value>

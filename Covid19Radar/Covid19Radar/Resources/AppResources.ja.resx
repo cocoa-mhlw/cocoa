@@ -458,7 +458,7 @@
     <value>有効にする</value>
     <comment>有効にする</comment>
   </data>
-  <data name="TutorialPage4Button2" xml:space="preserve">
+  <data name="TutorialPage4Link" xml:space="preserve">
     <value>あとで設定する</value>
     <comment>あとで設定する</comment>
   </data>
@@ -466,9 +466,9 @@
     <value>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth（ブルートゥース）（※）通信を有効にしてください。</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth（ブルートゥース）（※）通信を有効にしてください。</comment>
   </data>
-  <data name="TutorialPage4Label" xml:space="preserve">
-    <value>技術的な詳細について</value>
-    <comment>技術的な詳細について</comment>
+  <data name="TutorialPage4Description2" xml:space="preserve">
+    <value>iPhoneをお使いの方は設定よりBluetoothをONに設定してください。</value>
+    <comment>iPhoneをお使いの方は設定よりBluetoothをONに設定してください。</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
     <value>接触検知をご利用いただくために</value>
