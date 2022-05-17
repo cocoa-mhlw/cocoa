@@ -755,15 +755,21 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string TutorialPage1Title1 {
+        public static string TutorialPage1Description4 {
             get {
-                return ResourceManager.GetString("TutorialPage1Title1", resourceCulture);
+                return ResourceManager.GetString("TutorialPage1Description4", resourceCulture);
             }
         }
         
-        public static string TutorialPage1Title2 {
+        public static string TutorialPage1Description5 {
             get {
-                return ResourceManager.GetString("TutorialPage1Title2", resourceCulture);
+                return ResourceManager.GetString("TutorialPage1Description5", resourceCulture);
+            }
+        }
+        
+        public static string TutorialPage1Title {
+            get {
+                return ResourceManager.GetString("TutorialPage1Title", resourceCulture);
             }
         }
         

@@ -431,24 +431,28 @@
     <comment>次へ</comment>
   </data>
   <data name="TutorialPage1Description1" xml:space="preserve">
-    <value>本アプリをスマートフォンに設定した人どうしの接触を記録します。</value>
-    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+    <value>本アプリを匿名で利用する陽性登録者の行動データを元に、あなたの接触結果を表示します。</value>
+    <comment>本アプリを匿名で利用する陽性登録者の行動データを元に、あなたの接触結果を表示します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</value>
-    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <value>このアプリ内でできること</value>
+    <comment>このアプリ内でできること</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</value>
-    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+    <value>陽性登録者との接触結果を確認</value>
+    <comment>陽性登録者との接触結果を確認</comment>
   </data>
-  <data name="TutorialPage1Title1" xml:space="preserve">
-    <value>このアプリでできること</value>
-    <comment>このアプリでできること</comment>
+  <data name="TutorialPage1Description4" xml:space="preserve">
+    <value>接触の通知と適切な行動の確認</value>
+    <comment>接触の通知と適切な行動の確認</comment>
   </data>
-  <data name="TutorialPage1Title2" xml:space="preserve">
-    <value>このアプリでできること</value>
-    <comment>このアプリでできること</comment>
+  <data name="TutorialPage1Description5" xml:space="preserve">
+    <value>匿名で陽性登録</value>
+    <comment>匿名で陽性登録</comment>
+  </data>
+  <data name="TutorialPage1Title" xml:space="preserve">
+    <value>COCOAの機能</value>
+    <comment>COCOAの機能</comment>
   </data>
   <data name="TutorialPage4Button1" xml:space="preserve">
     <value>有効にする</value>
