@@ -40,7 +40,7 @@ namespace Covid19Radar.UnitTests.Repository
             var exposureNotificationNotified = sendEventLogStateRepository
                 .GetSendEventLogState("DummyEventType");
 
-            Assert.Equal(LogState.NotSet, exposureNotificationNotified);
+            Assert.Equal(SendEventLogState.NotSet, exposureNotificationNotified);
         }
 
         [Fact]
@@ -55,7 +55,7 @@ namespace Covid19Radar.UnitTests.Repository
             var exposureNotificationNotified = sendEventLogStateRepository
                 .GetSendEventLogState("DummyEventType");
 
-            Assert.Equal(LogState.NotSet, exposureNotificationNotified);
+            Assert.Equal(SendEventLogState.NotSet, exposureNotificationNotified);
         }
 
         [Fact]
@@ -70,7 +70,7 @@ namespace Covid19Radar.UnitTests.Repository
             var exposureNotificationNotified = sendEventLogStateRepository
                 .GetSendEventLogState("DummyEventType");
 
-            Assert.Equal(LogState.NotSet, exposureNotificationNotified);
+            Assert.Equal(SendEventLogState.NotSet, exposureNotificationNotified);
         }
 
         [Fact]
@@ -85,7 +85,7 @@ namespace Covid19Radar.UnitTests.Repository
             var exposureNotificationNotified = sendEventLogStateRepository
                 .GetSendEventLogState("DummyEventType");
 
-            Assert.Equal(LogState.NotSet, exposureNotificationNotified);
+            Assert.Equal(SendEventLogState.NotSet, exposureNotificationNotified);
         }
 
         [Fact]
@@ -100,7 +100,7 @@ namespace Covid19Radar.UnitTests.Repository
             var exposureNotificationNotified = sendEventLogStateRepository
                 .GetSendEventLogState("DummyEventType");
 
-            Assert.Equal(LogState.Disable, exposureNotificationNotified);
+            Assert.Equal(SendEventLogState.Disable, exposureNotificationNotified);
         }
 
         [Fact]
@@ -115,7 +115,7 @@ namespace Covid19Radar.UnitTests.Repository
             var exposureNotificationNotified = sendEventLogStateRepository
                 .GetSendEventLogState("DummyEventType1");
 
-            Assert.Equal(LogState.Enable, exposureNotificationNotified);
+            Assert.Equal(SendEventLogState.Enable, exposureNotificationNotified);
         }
 
         [Fact]
@@ -128,7 +128,7 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             sendEventLogStateRepository
-                .SetSendEventLogState("DummyEventType1", LogState.Enable);
+                .SetSendEventLogState("DummyEventType1", SendEventLogState.Enable);
 
             mockPreferencesService.Verify(s => s.SetStringValue(
                 PreferenceKey.SendEventLogState,
@@ -146,7 +146,7 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             sendEventLogStateRepository
-                .SetSendEventLogState("DummyEventType1", LogState.Enable);
+                .SetSendEventLogState("DummyEventType1", SendEventLogState.Enable);
 
             mockPreferencesService.Verify(s => s.SetStringValue(
                 PreferenceKey.SendEventLogState,
@@ -164,7 +164,7 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             sendEventLogStateRepository
-                .SetSendEventLogState("DummyEventType", LogState.Enable);
+                .SetSendEventLogState("DummyEventType", SendEventLogState.Enable);
 
             mockPreferencesService.Verify(s => s.SetStringValue(
                 PreferenceKey.SendEventLogState,
@@ -182,7 +182,7 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             sendEventLogStateRepository
-                .SetSendEventLogState("DummyEventType1", LogState.Enable);
+                .SetSendEventLogState("DummyEventType1", SendEventLogState.Enable);
 
             mockPreferencesService.Verify(s => s.SetStringValue(
                 PreferenceKey.SendEventLogState,

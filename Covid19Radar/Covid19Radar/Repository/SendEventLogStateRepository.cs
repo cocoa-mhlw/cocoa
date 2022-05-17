@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Repository
 {
-    public enum LogState
+    public enum SendEventLogState
     {
         NotSet = 0,
         Disable = -1,
@@ -26,9 +26,9 @@ namespace Covid19Radar.Repository
             EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED,
         };
 
-        void SetSendEventLogState(string eventType, LogState state);
+        void SetSendEventLogState(string eventType, SendEventLogState state);
 
-        LogState GetSendEventLogState(string eventType);
+        SendEventLogState GetSendEventLogState(string eventType);
     }
 
     public class SendEventLogStateRepository : ISendEventLogStateRepository
@@ -47,7 +47,7 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
-        public LogState GetSendEventLogState(string eventType)
+        public SendEventLogState GetSendEventLogState(string eventType)
         {
             string stateString = EMPTY_DICT;
 
@@ -57,7 +57,7 @@ namespace Covid19Radar.Repository
 
                 if (!_preferencesService.ContainsKey(PreferenceKey.SendEventLogState))
                 {
-                    return LogState.NotSet;
+                    return SendEventLogState.NotSet;
                 }
 
                 stateString = _preferencesService.GetStringValue(
@@ -70,11 +70,11 @@ namespace Covid19Radar.Repository
 
                 if (!stateDict.ContainsKey(eventType))
                 {
-                    return LogState.NotSet;
+                    return SendEventLogState.NotSet;
                 }
 
                 int value = stateDict[eventType];
-                return (LogState)Enum.ToObject(typeof(LogState), value);
+                return (SendEventLogState)Enum.ToObject(typeof(SendEventLogState), value);
             }
             catch (JsonReaderException exception)
             {
@@ -88,10 +88,10 @@ namespace Covid19Radar.Repository
                 _loggerService.EndMethod();
             }
 
-            return LogState.NotSet;
+            return SendEventLogState.NotSet;
         }
 
-        public void SetSendEventLogState(string eventType, LogState state)
+        public void SetSendEventLogState(string eventType, SendEventLogState state)
         {
             try
             {
