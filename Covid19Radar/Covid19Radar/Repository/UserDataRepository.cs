@@ -15,8 +15,6 @@ namespace Covid19Radar.Repository
 {
     public interface IUserDataRepository
     {
-        private const string EVENT_EXPOSURE_NOTIFICATION_NOTIFIED = "exposure_notification_notified";
-
         void SetStartDate(DateTime dateTime);
 
         DateTime GetStartDate();
