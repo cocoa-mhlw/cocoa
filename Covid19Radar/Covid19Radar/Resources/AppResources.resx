@@ -421,12 +421,8 @@
     <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone of the device and displayed.​</value>
-    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</comment>
-  </data>
-  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone of the device and displayed.​</value>
-    <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone ({0}) of the device and displayed.​</value>
+    <comment>TODO:日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>
@@ -1455,8 +1451,12 @@ Note: this app does not collect users’ location information.</value>
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
-    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone of the device and displayed.​</value>
-    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone ({0}) of the device and displayed.​</value>
+    <comment>TODO:日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTimeDescription" xml:space="preserve">
+    <value>接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</value>
+    <comment>TODO:接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</comment>
   </data>
   <data name="ExposuresPageFrom" xml:space="preserve">
     <value>From </value>

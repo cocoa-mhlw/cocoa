@@ -57,6 +57,13 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _lowRiskContactPageAnnotationDecription, value); }
         }
 
+        private string _utcDescription;
+        public string UtcDescription
+        {
+            get { return _utcDescription; }
+            set { SetProperty(ref _utcDescription, value); }
+        }
+
         private V1ExposureRiskCalculationConfiguration _exposureRiskCalculationConfiguration;
 
         public ExposureCheckPageViewModel(
@@ -81,6 +88,10 @@ namespace Covid19Radar.ViewModels
             _dateTimeUtility = dateTimeUtility;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
+            UtcDescription = string.Format(
+                AppResources.LowRiskContactPageAnnotationDecription2,
+                TimeZoneInfo.Local.StandardName
+                );
         }
 
         public override async void Initialize(INavigationParameters parameters)

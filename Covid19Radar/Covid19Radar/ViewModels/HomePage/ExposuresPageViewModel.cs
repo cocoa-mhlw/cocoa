@@ -30,6 +30,13 @@ namespace Covid19Radar.ViewModels
 
         public ObservableCollection<ExposureSummary> Exposures { get; set; }
 
+        private string _utcDescription;
+        public string UtcDescription
+        {
+            get { return _utcDescription; }
+            set { SetProperty(ref _utcDescription, value); }
+        }
+
         public ExposuresPageViewModel(
             INavigationService navigationService,
             IExposureDataRepository exposureDataRepository,
@@ -49,6 +56,10 @@ namespace Covid19Radar.ViewModels
 
             Title = AppResources.MainExposures;
             Exposures = new ObservableCollection<ExposureSummary>();
+            UtcDescription = string.Format(
+                AppResources.ExposuresPageToUtcDescription,
+                TimeZoneInfo.Local.StandardName
+                );
         }
 
         public override async void Initialize(INavigationParameters parameters)
