@@ -421,8 +421,8 @@
     <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone ({0}) of the device and displayed.​</value>
-    <comment>TODO:日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
+    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone ({0}) of the device and displayed.</value>
+    <comment>日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>
@@ -637,12 +637,12 @@
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>A list of close contacts</value>
+    <value>Close contacts list for the past 14 days</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>Dates when you were in close contact with COVID-19 positive users.</value>
-    <comment>以下の日に陽性者との接触が確認されました。</comment>
+    <value>Contact with positive registrants was confirmed during the period below.</value>
+    <comment>次の期間に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -1451,12 +1451,13 @@ Note: this app does not collect users’ location information.</value>
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
-    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone ({0}) of the device and displayed.​</value>
-    <comment>TODO:日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
+    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone ({0}) of the device and displayed.</value>
+    <comment>※日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
   </data>
   <data name="ExposuresPageTimeDescription" xml:space="preserve">
-    <value>接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</value>
-    <comment>TODO:接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</comment>
+    <value>* The contact time displayed is a total sum.
+In case you have been close to a large number of positive registrants a big contact time may be displayed.</value>
+    <comment>※接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</comment>
   </data>
   <data name="ExposuresPageFrom" xml:space="preserve">
     <value>From </value>
