@@ -1409,69 +1409,33 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        public static string SubmitConsentPageDescription1_1 {
+        public static string SubmitConsentPageDescription1 {
             get {
-                return ResourceManager.GetString("SubmitConsentPageDescription1_1", resourceCulture);
+                return ResourceManager.GetString("SubmitConsentPageDescription1", resourceCulture);
             }
         }
         
-        public static string SubmitConsentPageDescription1_2 {
+        public static string SubmitConsentPageDescription2 {
             get {
-                return ResourceManager.GetString("SubmitConsentPageDescription1_2", resourceCulture);
+                return ResourceManager.GetString("SubmitConsentPageDescription2", resourceCulture);
             }
         }
         
-        public static string SubmitConsentPageDescription1_3 {
+        public static string SubmitConsentPageDescription3 {
             get {
-                return ResourceManager.GetString("SubmitConsentPageDescription1_3", resourceCulture);
+                return ResourceManager.GetString("SubmitConsentPageDescription3", resourceCulture);
             }
         }
         
-        public static string SubmitConsentPageDescription1_4 {
+        public static string SubmitConsentPageDescription4 {
             get {
-                return ResourceManager.GetString("SubmitConsentPageDescription1_4", resourceCulture);
+                return ResourceManager.GetString("SubmitConsentPageDescription4", resourceCulture);
             }
         }
         
-        public static string SubmitConsentPageDescription1_5 {
+        public static string SubmitConsentPageDescription5 {
             get {
-                return ResourceManager.GetString("SubmitConsentPageDescription1_5", resourceCulture);
-            }
-        }
-        
-        public static string SubmitConsentPageDescription1_6 {
-            get {
-                return ResourceManager.GetString("SubmitConsentPageDescription1_6", resourceCulture);
-            }
-        }
-        
-        public static string SubmitConsentPageDescription6 {
-            get {
-                return ResourceManager.GetString("SubmitConsentPageDescription6", resourceCulture);
-            }
-        }
-        
-        public static string SubmitConsentPageDescription7 {
-            get {
-                return ResourceManager.GetString("SubmitConsentPageDescription7", resourceCulture);
-            }
-        }
-        
-        public static string SubmitConsentPageDescription8 {
-            get {
-                return ResourceManager.GetString("SubmitConsentPageDescription8", resourceCulture);
-            }
-        }
-        
-        public static string SubmitConsentPageDescription9 {
-            get {
-                return ResourceManager.GetString("SubmitConsentPageDescription9", resourceCulture);
-            }
-        }
-        
-        public static string SubmitConsentPageDescription10 {
-            get {
-                return ResourceManager.GetString("SubmitConsentPageDescription10", resourceCulture);
+                return ResourceManager.GetString("SubmitConsentPageDescription5", resourceCulture);
             }
         }
         
@@ -2174,6 +2138,24 @@ namespace Covid19Radar.Resources {
         public static string ToHomeButton {
             get {
                 return ResourceManager.GetString("ToHomeButton", resourceCulture);
+            }
+        }
+        
+        public static string CircledDigitOneImageText {
+            get {
+                return ResourceManager.GetString("CircledDigitOneImageText", resourceCulture);
+            }
+        }
+        
+        public static string CircledDigitTwoImageText {
+            get {
+                return ResourceManager.GetString("CircledDigitTwoImageText", resourceCulture);
+            }
+        }
+        
+        public static string CircledDigitThreeImageText {
+            get {
+                return ResourceManager.GetString("CircledDigitThreeImageText", resourceCulture);
             }
         }
     }

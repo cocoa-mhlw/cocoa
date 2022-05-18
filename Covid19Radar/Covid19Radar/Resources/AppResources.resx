@@ -1014,49 +1014,25 @@
     <value>The only information included in the notification will be a randomly generated code. No personal information will be disclosed.</value>
     <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_1" xml:space="preserve">
-    <value>Please read before continuing to register positive test result</value>
-    <comment>陽性登録の前にお読みください</comment>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>Is not possible to identify somebody based on the positive test registration.</value>
+    <comment>陽性登録により、個人が特定されることはありません。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_2" xml:space="preserve">
-    <value>・By registering your positive result, codes generated every day on your smartphone will be uploaded to the notification server</value>
-    <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>In case of close contact, a contact detection notification will be sent.</value>
+    <comment>接触があった方に接触検知の通知を送信します。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_3" xml:space="preserve">
-    <value>・Notifications will be sent to the people who had close contact with you by judging from codes on the notification server</value>
-    <comment>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</comment>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>If diagnosed positive, a processing number will be sent to the email address and mobile phone number registered at the medical institution or health center.</value>
+    <comment>陽性診断された場合、医療機関や保健所に登録されているメールアドレスや携帯電話番号に「処理番号」が通知されます。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_4" xml:space="preserve">
-    <value>・No information that can identify you will be known to the people who receive the notification</value>
-    <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>Once you register the processing number on COCOA, it will be sent to the server. It will inquire if it is the correct number, and if it is correct, the registration will be completed.</value>
+    <comment>処理番号をCOCOAに登録するとサーバーに送信されます。 正しい番号であるか照会し、正しければ登録が完了します。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_5" xml:space="preserve">
-    <value>・To avoid the spread of the infection, please cooperate with the registration process</value>
-    <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
-  </data>
-  <data name="SubmitConsentPageDescription1_6" xml:space="preserve">
-    <value>For more details please read below</value>
-    <comment>詳しくは以下をお読みください</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>The mobile phone number or email address you provided to health center or medical institution (※) is registered in the New Coronavirus Infectious Disease Information and Management System (hereinafter “management system”)</value>
-    <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
-  </data>
-  <data name="SubmitConsentPageDescription7" xml:space="preserve">
-    <value>※ It is the contact information that you provided during the visit in case you tested positive for COVID-19</value>
-    <comment>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
-  </data>
-  <data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>When your positive test result is reported to the management system, it will send the “processing number“ required for COCOA's positive test result registration to registered phone number or email address</value>
-    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</comment>
-  </data>
-  <data name="SubmitConsentPageDescription9" xml:space="preserve">
-    <value>When registering processing number into COCOA, your mobile phone queries the management system whether it is valid or not</value>
-    <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
-  </data>
-  <data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>If the processing number is valid, those who had close contact (within 1 meter for 15 minutes or more) with you tracing back to 2 days before the day the symptoms started or the day you were tested, will be notified. No information that can identify you will be known to the people who receive the notification</value>
-    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>The code generated daily on your smartphone is uploaded to the server. Based on the result of the judgment,  a close contact person will be notified, but no personally identifiable information will be known.</value>
+    <comment>スマートフォン内で日毎に生成された符号が、サーバーにアップロードされます。 判定の結果、接触した人に通知が届きますが、個人が特定される情報が知られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
     <value>Register positive result</value>
@@ -1541,5 +1517,16 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>Return to Home screen</value>
     <comment>ホーム画面へ</comment>
   </data>
-
+  <data name="CircledDigitOneImageText" xml:space="preserve">
+    <value>1</value>
+    <comment>1</comment>
+  </data>
+  <data name="CircledDigitTwoImageText" xml:space="preserve">
+    <value>2</value>
+    <comment>2</comment>
+  </data>
+  <data name="CircledDigitThreeImageText" xml:space="preserve">
+    <value>3</value>
+    <comment>3</comment>
+  </data>
 </root>
