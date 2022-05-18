@@ -16,7 +16,6 @@ namespace Covid19Radar.Api.Services
     public class ValidationServerService : IValidationServerService
     {
         private readonly ILogger<ValidationServerService> Logger;
-        private readonly IConfiguration Config;
         private readonly bool AzureFrontDoorRestrictionEnabled;
         private readonly string AzureFrontDoorId;
 
@@ -24,9 +23,8 @@ namespace Covid19Radar.Api.Services
         public ValidationServerService(IConfiguration config, ILogger<ValidationServerService> logger)
         {
             Logger = logger;
-            Config = config;
-            AzureFrontDoorRestrictionEnabled = Config.AzureFrontDoorRestrictionEnabled();
-            AzureFrontDoorId = Config.AzureFrontDoorId();
+            AzureFrontDoorRestrictionEnabled = config.AzureFrontDoorRestrictionEnabled();
+            AzureFrontDoorId = config.AzureFrontDoorId();
         }
 
         public IValidationServerService.ValidateResult Validate(HttpRequest req)

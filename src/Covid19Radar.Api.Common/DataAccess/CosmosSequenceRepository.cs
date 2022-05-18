@@ -41,7 +41,6 @@ namespace Covid19Radar.Api.DataAccess
                     int ms = (int)(ex.RetryAfter.HasValue ? ex.RetryAfter.Value.TotalMilliseconds : 5);
                     _logger.LogInformation(ex, $"GetNextAsync Retry {i} RequestCharge:{ex.RequestCharge} RetryAfter:{ms}");
                     await Task.Delay(ms);
-                    continue;
                 }
             }
             _logger.LogWarning("GetNextAsync is over retry count.");
@@ -67,8 +66,7 @@ namespace Covid19Radar.Api.DataAccess
                     int ms = (int)(ex.RetryAfter.HasValue ? ex.RetryAfter.Value.TotalMilliseconds : 5);
                     _logger.LogInformation(ex, $"GetNextAsync Retry {i} RequestCharge:{ex.RequestCharge} RetryAfter:{ms}");
                     await Task.Delay(ms);
-                    continue;
-                }
+                 }
             }
             _logger.LogWarning("GetNextAsync is over retry count.");
             throw new Exception("GetNextAsync is over retry count.");

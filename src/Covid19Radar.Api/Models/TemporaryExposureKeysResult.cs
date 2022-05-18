@@ -17,7 +17,7 @@ namespace Covid19Radar.Api.Models
 
         public class Key
         {
-            public string Url;
+            public string Url { get; set; }
         }
     }
 }
