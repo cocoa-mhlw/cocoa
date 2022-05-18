@@ -100,12 +100,8 @@ namespace Covid19Radar.Api.Services
                 //    default:
                 //        break;
                 //}
-                if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                {
-                    return false;
-                }
 
-                return true;
+                return (response.StatusCode == System.Net.HttpStatusCode.OK);
             }
             catch (Exception ex)
             {
