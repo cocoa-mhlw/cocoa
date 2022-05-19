@@ -345,50 +345,60 @@ namespace Covid19Radar.ViewModels
         {
             loggerService.StartMethod();
 
-            var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
+            try
+            {
+                var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
 
-            if (
-            statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
-            )
-            {
-                bool isOK = await dialogService.ShowBluetoothOffWarningAsync();
-                if (isOK)
+                if (
+                statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
+                )
                 {
-                    externalNavigationService.NavigateBluetoothSettings();
+                    bool isOK = await dialogService.ShowBluetoothOffWarningAsync();
+                    if (isOK)
+                    {
+                        externalNavigationService.NavigateBluetoothSettings();
+                    }
+                }
+                else if (
+                statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED)
+                )
+                {
+                    bool isOK = await dialogService.ShowLocationOffWarningAsync();
+                    if (isOK)
+                    {
+                        externalNavigationService.NavigateLocationSettings();
+                    }
+                }
+                else if (
+                statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
+                )
+                {
+                    bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
+                    if (isOK)
+                    {
+                        await StartExposureNotificationAsync();
+                        ExposureDetectionAsync();
+                    }
+                }
+                else if (
+                statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
+                || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
+                )
+                {
+                    _ = await NavigationService.NavigateAsync(nameof(HowToEnableExposureNotificationsPage));
                 }
             }
-            else if (
-            statusCodes.Contains(ExposureNotificationStatus.Code_Android.LOCATION_DISABLED)
-            )
+            catch (AndroidGooglePlayServicesApiException ex)
             {
-                bool isOK = await dialogService.ShowLocationOffWarningAsync();
-                if (isOK)
-                {
-                    externalNavigationService.NavigateLocationSettings();
-                }
+                loggerService.Exception("Failed on OnClickCheckStopReason", ex);
+                await dialogService.ShowTemporarilyUnavailableWarningAsync();
             }
-            else if (
-            statusCodes.Contains(ExposureNotificationStatus.Code_Android.INACTIVATED)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_Android.FOCUS_LOST)
-            )
+            finally
             {
-                bool isOK = await dialogService.ShowExposureNotificationOffWarningAsync();
-                if (isOK)
-                {
-                    await StartExposureNotificationAsync();
-                    ExposureDetectionAsync();
-                }
+                loggerService.EndMethod();
             }
-            else if (
-            statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Disabled)
-            || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.Unauthorized)
-            )
-            {
-                _ = await NavigationService.NavigateAsync(nameof(HowToEnableExposureNotificationsPage));
-            }
-
-            loggerService.EndMethod();
         });
 
         public Command OnTroubleshootingButtonWhenUnconfirmed => new Command(async () => {

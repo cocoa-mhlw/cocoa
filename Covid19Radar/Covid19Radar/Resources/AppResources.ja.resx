@@ -1164,6 +1164,14 @@
     <value>陽性者との接触の可能性などの通知を受け取るには、設定からCOCOAの通知へのアクセスを「許可」してください。</value>
     <comment>陽性者との接触の可能性などの通知を受け取るには、設定からCOCOAの通知へのアクセスを「許可」してください。</comment>
   </data>
+  <data name="TemporarilyUnavailableWarningMessage" xml:space="preserve">
+    <value>アプリを再起動するか、しばらく経ってから再度ご確認ください。</value>
+    <comment>アプリを再起動するか、しばらく経ってから再度ご確認ください。</comment>
+  </data>
+  <data name="TemporarilyUnavailableWarningTitle" xml:space="preserve">
+    <value>一時的に利用できません</value>
+    <comment>一時的に利用できません</comment>
+  </data>
   <data name="TroubleshootingPageTitle" xml:space="preserve">
     <value>対処方法</value>
     <comment>対処方法</comment>
