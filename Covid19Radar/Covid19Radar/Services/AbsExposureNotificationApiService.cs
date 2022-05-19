@@ -11,6 +11,19 @@ using Covid19Radar.Services.Logs;
 
 namespace Covid19Radar.Services
 {
+    public class AndroidGooglePlayServicesApiException : Exception
+    {
+        public readonly int StatusCode;
+
+        public AndroidGooglePlayServicesApiException(
+            int statusCode,
+            string message
+            ) : base(message)
+        {
+            StatusCode = statusCode;
+        }
+    }
+
     public abstract class AbsExposureNotificationApiService : AbsExposureNotificationClient
     {
         private readonly ILoggerService _loggerService;
