@@ -55,6 +55,12 @@ namespace Covid19Radar.Services
                 AppResources.ButtonCancel);
         }
 
+        public async Task ShowTemporarilyUnavailableWarningAsync() =>
+            await AlertAsync(
+                AppResources.TemporarilyUnavailableWarningMessage,
+                AppResources.TemporarilyUnavailableWarningTitle,
+                AppResources.ButtonOk);
+
         public async Task ShowHomePageUnknownErrorWaringAsync()
         {
             await AlertAsync(

@@ -1242,6 +1242,14 @@ You do not have to request it yourself.</value>
     <value>Turn on Exposure Notification on your smartphone's settings to use this app.</value>
     <comment>アプリを利用するため、スマートフォンの接触通知設定をオンにしてください。</comment>
   </data>
+  <data name="TemporarilyUnavailableWarningMessage" xml:space="preserve">
+    <value>Please restart the app or check again after a while.</value>
+    <comment>アプリを再起動するか、しばらく経ってから再度ご確認ください。</comment>
+  </data>
+  <data name="TemporarilyUnavailableWarningTitle" xml:space="preserve">
+    <value>Temporarily unavailable</value>
+    <comment>一時的に利用できません</comment>
+  </data>
   <data name="BluetoothOffWarningDialogMessage" xml:space="preserve">
     <value>Turn on Bluetooth to record contacts with other users.</value>
     <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>

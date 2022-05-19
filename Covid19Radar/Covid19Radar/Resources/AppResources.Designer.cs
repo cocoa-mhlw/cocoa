@@ -1745,6 +1745,18 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string TemporarilyUnavailableWarningMessage {
+            get {
+                return ResourceManager.GetString("TemporarilyUnavailableWarningMessage", resourceCulture);
+            }
+        }
+        
+        public static string TemporarilyUnavailableWarningTitle {
+            get {
+                return ResourceManager.GetString("TemporarilyUnavailableWarningTitle", resourceCulture);
+            }
+        }
+        
         public static string BluetoothOffWarningDialogMessage {
             get {
                 return ResourceManager.GetString("BluetoothOffWarningDialogMessage", resourceCulture);
