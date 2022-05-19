@@ -276,16 +276,15 @@
                 <Setter Property="VerticalOptions" Value="Start" />
             </Style>
 
-            <Style x:Key="FrameCardViewStyle" TargetType="Frame">
+            <Style x:Key="ViewCellFrameStyle" TargetType="Frame">
                 <Setter Property="CornerRadius" Value="6" />
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="Padding" Value="10" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="OutlineColor" Value="LightGray" />
+                <Setter Property="Margin" Value="20,5" />
+                <Setter Property="Padding" Value="10" />
                 <Setter Property="BorderColor" Value="LightGray" />
             </Style>
 
-            <Style x:Key="FrameCardViewStyle_Diabled" TargetType="Frame" BasedOn="{StaticResource FrameCardViewStyle}">
+            <Style x:Key="ViewCellFrameStyle_Diabled" TargetType="Frame" BasedOn="{StaticResource ViewCellFrameStyle}">
                 <Setter Property="Opacity" Value="0.5" />
             </Style>
 
