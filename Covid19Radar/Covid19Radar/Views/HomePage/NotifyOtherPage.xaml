@@ -42,11 +42,18 @@
                 </Grid.ColumnDefinitions>
                 <Frame
                     Grid.Column="0"
-                    BackgroundColor="{Binding RadioButtonYesBackgroundColor}"
                     HasShadow="False"
                     Margin="0, 10, 10, 10"
                     Padding="10"
                     CornerRadius="10">
+                    <Frame.Triggers>
+                        <DataTrigger TargetType="Frame" Binding="{Binding IsVisibleWithSymptomsLayout}" Value="True">
+                            <Setter Property="BackgroundColor" Value="{StaticResource CheckedRadioButtonBackground}" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Frame" Binding="{Binding IsVisibleWithSymptomsLayout}" Value="False">
+                            <Setter Property="BackgroundColor" Value="{StaticResource DisabledRadioButtonBackground}" />
+                        </DataTrigger>
+                    </Frame.Triggers>
                     <RadioButton
                         AutomationProperties.IsInAccessibleTree="True"
                         AutomationProperties.Name="{Binding RadioButtonYesReadText}"
@@ -59,11 +66,18 @@
                 </Frame>
                 <Frame
                     Grid.Column="1"
-                    BackgroundColor="{Binding RadioButtonNoBackgroundColor}"
                     HasShadow="False"
                     Margin="10, 10, 0, 10"
                     Padding="10"
                     CornerRadius="10">
+                    <Frame.Triggers>
+                        <DataTrigger TargetType="Frame" Binding="{Binding IsVisibleNoSymptomsLayout}" Value="True">
+                            <Setter Property="BackgroundColor" Value="{StaticResource CheckedRadioButtonBackground}" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Frame" Binding="{Binding IsVisibleNoSymptomsLayout}" Value="False">
+                            <Setter Property="BackgroundColor" Value="{StaticResource DisabledRadioButtonBackground}" />
+                        </DataTrigger>
+                    </Frame.Triggers>
                     <RadioButton
                         AutomationProperties.IsInAccessibleTree="True"
                         AutomationProperties.Name="{Binding RadioButtonNoReadText}"

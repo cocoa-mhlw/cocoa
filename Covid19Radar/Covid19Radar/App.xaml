@@ -30,6 +30,8 @@
             <Color x:Key="HomePageLink">#066AB9</Color>
             <Color x:Key="MenuIconColor">#066AB9</Color>
             <Color x:Key="LinkColor">#066AB9</Color>
+            <Color x:Key="CheckedRadioButtonBackground">#E8F7FF</Color>
+            <Color x:Key="DisabledRadioButtonBackground">#EEEEEE</Color>
 
             <!--  Icons  -->
             <x:String x:Key="IconProfile">&#xf2bd;</x:String>
