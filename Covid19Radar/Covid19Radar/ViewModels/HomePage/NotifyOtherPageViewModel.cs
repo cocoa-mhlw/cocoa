@@ -141,8 +141,8 @@ namespace Covid19Radar.ViewModels
         // TODO: Save and use for revoke operation.
         private string idempotencyKey = Guid.NewGuid().ToString();
 
-        private Color checkedRadioButtonBackgroundColor = Color.FromRgb(232, 247, 255);
-        private Color disableRadioButtonBackgroundColor = Color.FromRgb(238, 238, 238);
+        private Color checkedRadioButtonBackgroundColor = Color.FromHex("#E8F7FF");
+        private Color disableRadioButtonBackgroundColor = Color.FromHex("#EEEEEE");
 
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
