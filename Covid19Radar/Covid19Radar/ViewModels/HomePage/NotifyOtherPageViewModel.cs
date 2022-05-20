@@ -114,6 +114,20 @@ namespace Covid19Radar.ViewModels
             }
         }
 
+        private Color _radioButtonYesBackgroundColor;
+        public Color RadioButtonYesBackgroundColor
+        {
+            get => _radioButtonYesBackgroundColor;
+            set => SetProperty(ref _radioButtonYesBackgroundColor, value);
+        }
+
+        private Color _radioButtonNoBackgroundColor;
+        public Color RadioButtonNoBackgroundColor
+        {
+            get => _radioButtonNoBackgroundColor;
+            set => SetProperty(ref _radioButtonNoBackgroundColor, value);
+        }
+
         private DateTime _diagnosisDate;
 
         public DateTime DiagnosisDate
@@ -126,6 +140,9 @@ namespace Covid19Radar.ViewModels
 
         // TODO: Save and use for revoke operation.
         private string idempotencyKey = Guid.NewGuid().ToString();
+
+        private Color checkedRadioButtonBackgroundColor = Color.FromRgb(232, 247, 255);
+        private Color disableRadioButtonBackgroundColor = Color.FromRgb(238, 238, 238);
 
         public NotifyOtherPageViewModel(
             INavigationService navigationService,
@@ -146,6 +163,8 @@ namespace Covid19Radar.ViewModels
             errorCount = 0;
             ProcessingNumber = "";
             DiagnosisDate = DateTime.Today;
+            RadioButtonYesBackgroundColor = disableRadioButtonBackgroundColor;
+            RadioButtonNoBackgroundColor = disableRadioButtonBackgroundColor;
         }
 
         public override void Initialize(INavigationParameters parameters)
@@ -456,17 +475,23 @@ namespace Covid19Radar.ViewModels
                 _hasSymptom = true;
                 IsVisibleWithSymptomsLayout = true;
                 IsVisibleNoSymptomsLayout = false;
+                RadioButtonYesBackgroundColor = checkedRadioButtonBackgroundColor;
+                RadioButtonNoBackgroundColor = disableRadioButtonBackgroundColor;
             }
             else if (AppResources.NotifyOtherPageRadioButtonNo.Equals(text))
             {
                 _hasSymptom = false;
                 IsVisibleWithSymptomsLayout = false;
                 IsVisibleNoSymptomsLayout = true;
+                RadioButtonYesBackgroundColor = disableRadioButtonBackgroundColor;
+                RadioButtonNoBackgroundColor = checkedRadioButtonBackgroundColor;
             }
             else
             {
                 IsVisibleWithSymptomsLayout = false;
                 IsVisibleNoSymptomsLayout = false;
+                RadioButtonYesBackgroundColor = disableRadioButtonBackgroundColor;
+                RadioButtonNoBackgroundColor = disableRadioButtonBackgroundColor;
             }
 
             loggerService.Info($"Is visible with symptoms layout: {IsVisibleWithSymptomsLayout}, Is visible no symptoms layout: {IsVisibleNoSymptomsLayout}");
