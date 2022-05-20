@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using Chino;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
@@ -13,6 +14,8 @@ namespace Covid19Radar.ViewModels
 {
     public class TutorialPage4ViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
+        public string TutorialPage4LinkReadText => $"{AppResources.TutorialPage4Link} {AppResources.Button}";
+
         private readonly ILoggerService loggerService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
 

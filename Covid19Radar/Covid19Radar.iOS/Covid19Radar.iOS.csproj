@@ -336,6 +336,14 @@
     <BundleResource Include="Resources\ja.lproj\Nocontact10%403x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%402x.png" />
     <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\tutorial_img_1%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\tutorial_img_1%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_1%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_1%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_2%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_2%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_3%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_3%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
