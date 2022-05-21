@@ -59,10 +59,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    - name: Check SonarScanner Error
-      if: ${{ steps.begin_sonarscanner.outcome == 'failure' }}
-      run: |
-        exit 0
     - name: Setup Xamarin
       uses: maxim-lobanov/setup-xamarin@v1
       with:
