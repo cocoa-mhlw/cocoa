@@ -53,10 +53,15 @@ jobs:
         New-Item -Path ./.sonar/scanner -ItemType Directory
         dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner
     - name: Begin SonarScanner
+      id: begin_sonarscanner
+      continue-on-error: true
       run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"cocoa-mhlw_cocoa-app" /o:"cocoa-mhlw" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - name: Check SonarScanner Error
+      if: ${{ steps.begin_sonarscanner.outcome == 'failure' }}
+      run: exit 1
     - name: Setup Xamarin
       uses: maxim-lobanov/setup-xamarin@v1
       with:
