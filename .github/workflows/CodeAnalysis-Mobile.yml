@@ -61,7 +61,8 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - name: Check SonarScanner Error
       if: ${{ steps.begin_sonarscanner.outcome == 'failure' }}
-      run: exit 1
+      run: |
+        exit 0
     - name: Setup Xamarin
       uses: maxim-lobanov/setup-xamarin@v1
       with:
@@ -81,6 +82,7 @@ jobs:
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: true
     - name: End SonarScanner
+      if: ${{ steps.begin_sonarscanner.outcome == 'success' }}
       run: ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
