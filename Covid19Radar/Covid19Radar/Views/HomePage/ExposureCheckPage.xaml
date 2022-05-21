@@ -16,102 +16,109 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <ContentView>
-        <ListView
-            VerticalOptions="FillAndExpand"
-            ItemsSource="{Binding ExposureCheckScores}">
-            <ListView.Header>
-                <StackLayout Padding="20">
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource DefaultTitleLabel}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.NotContactPageLabel1}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        Margin="0,0,0,0"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource DefaultLabel}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.NotContactPageDescription1}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <ffimageloading:CachedImage
-                        AutomationProperties.IsInAccessibleTree="False"
-                        Margin="0,20,0,0"
-                        Aspect="AspectFit"
-                        Source="Nocontact10.png" />
-                </StackLayout>
-            </ListView.Header>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout
-                            Padding="20, 0, 20, 0"
-                            HorizontalOptions="FillAndExpand">
-                            <Frame Style="{StaticResource FrameCardViewStyle}">
-                                <StackLayout Style="{StaticResource DetailsStackLayout}">
-                                    <Label
-                                        Style="{StaticResource CardLabel}"
-                                        Text="{Binding DateTimeString}"
-                                        Margin="0, 0, 0, 10"
-                                        />
-                                    <Label
-                                        Style="{StaticResource CardLabelSmall}"
-                                        Text="{Binding Description}"
-                                        />
-                                </StackLayout>
-                                <Frame.Triggers>
-                                    <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="False">
-                                        <Setter Property="Style" Value="{StaticResource FrameCardViewStyle_Diabled}" />
-                                    </DataTrigger>
-                                    <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="True">
-                                        <Setter Property="Style" Value="{StaticResource FrameCardViewStyle}" />
-                                    </DataTrigger>
-                                </Frame.Triggers>
-                            </Frame>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-            <ListView.Footer>
-                <StackLayout AutomationProperties.IsInAccessibleTree="{Binding IsExposureDetected}">
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="{Binding IsExposureDetected}"
-                        IsVisible="{Binding IsExposureDetected}"
-                        Margin="20, 20, 20, 0"
-                        Style="{StaticResource AnnotationLabel}"
-                        TextColor="{StaticResource PrimaryText}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                                <Span Text="{Binding LowRiskContactPageAnnotationDecription}"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+    <ListView
+        BackgroundColor="White"
+        ItemsSource="{Binding ExposureCheckScores}"
+        HasUnevenRows="True"
+        SeparatorVisibility="None"
+        >
+        <ListView.Header>
+            <StackLayout Padding="20">
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultTitleLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.NotContactPageLabel1}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Margin="0,0,0,0"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource DefaultLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.NotContactPageDescription1}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ffimageloading:CachedImage
+                    AutomationProperties.IsInAccessibleTree="False"
+                    Margin="0,20,0,0"
+                    Aspect="AspectFit"
+                    Source="Nocontact10.png" />
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="White">
+                        <Frame Style="{StaticResource ViewCellFrameStyle}">
+                            <StackLayout Style="{StaticResource DetailsStackLayout}">
+                                <Label
+                                    AutomationProperties.IsInAccessibleTree="True"
+                                    Style="{StaticResource CardLabel}"
+                                    Text="{Binding DateTimeString}"
+                                    Margin="0, 0, 0, 10"
+                                    />
+                                <Label
+                                    AutomationProperties.IsInAccessibleTree="True"
+                                    Style="{StaticResource CardLabelSmall}"
+                                    Text="{Binding Description}"
+                                    />
+                            </StackLayout>
+                            <Frame.Triggers>
+                                <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="False">
+                                    <Setter Property="Style" Value="{StaticResource ViewCellFrameStyle_Diabled}" />
+                                </DataTrigger>
+                                <DataTrigger TargetType="Frame" Binding="{Binding IsReceived}" Value="True">
+                                    <Setter Property="Style" Value="{StaticResource ViewCellFrameStyle}" />
+                                </DataTrigger>
+                            </Frame.Triggers>
+                        </Frame>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Footer>
+            <StackLayout>
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Command="{Binding Path=OnClickExportExposureData}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.ExportExposureData}" />
 
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="{Binding IsExposureDetected}"
-                        IsVisible="{Binding IsExposureDetected}"
-                        Margin="20, 10, 20, 20"
-                        Style="{StaticResource AnnotationLabel}"
-                        TextColor="{StaticResource PrimaryText}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                                <Span Text="{x:Static resources:AppResources.LowRiskContactPageAnnotationDecription2}"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-            </ListView.Footer>
-        </ListView>
-    </ContentView>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="{Binding IsExposureDetected}"
+                    IsVisible="{Binding IsExposureDetected}"
+                    Margin="20, 20, 20, 0"
+                    Style="{StaticResource AnnotationLabel}"
+                    TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{Binding LowRiskContactPageAnnotationDecription}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    AutomationProperties.IsInAccessibleTree="{Binding IsExposureDetected}"
+                    IsVisible="{Binding IsExposureDetected}"
+                    Margin="20, 10, 20, 20"
+                    Style="{StaticResource AnnotationLabel}"
+                    TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                            <Span Text="{Binding UtcDescription}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </ListView.Footer>
+    </ListView>
 </ContentPage>

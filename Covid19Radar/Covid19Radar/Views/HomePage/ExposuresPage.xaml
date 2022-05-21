@@ -15,74 +15,69 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
-    <CollectionView
-        BackgroundColor="#FFFFFF"
+    <ListView
+        BackgroundColor="White"
         ItemsSource="{Binding Exposures}"
+        HasUnevenRows="True"
+        SeparatorVisibility="None"
         >
-        <CollectionView.Header>
+        <ListView.Header>
             <StackLayout
                 Padding="20, 20, 20, 10"
                 >
                 <Label
+                    AutomationProperties.IsInAccessibleTree="True"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.ExposuresPageLabel1}" />
             </StackLayout>
-        </CollectionView.Header>
+        </ListView.Header>
 
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical" />
-        </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate>
+        <ListView.ItemTemplate>
             <DataTemplate>
-                <StackLayout
-                    HorizontalOptions="FillAndExpand"
-                    Padding="20, 0, 20, 0"
-                    >
-                    <Frame Style="{StaticResource FrameCardViewStyle}">
-                        <StackLayout Style="{StaticResource DetailsStackLayout}">
-                            <Label
-                                Style="{StaticResource CardLabelSmall}"
-                                Text="{Binding ExposureDate}"
-                                />
-                            <Label
-                                Style="{StaticResource CardLabelSmall}">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="{Binding Description}" />
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
+                <ViewCell>
+                    <StackLayout BackgroundColor="White">
+                        <Frame Style="{StaticResource ViewCellFrameStyle}">
+                            <StackLayout Style="{StaticResource DetailsStackLayout}">
+                                <Label
+                                    AutomationProperties.IsInAccessibleTree="True"
+                                    Style="{StaticResource CardLabelSmall}"
+                                    Text="{Binding ExposureDate}"
+                                    />
+                                <Label
+                                    AutomationProperties.IsInAccessibleTree="True"
+                                    Style="{StaticResource CardLabelSmall}"
+                                    Text="{Binding Description}" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ViewCell>
             </DataTemplate>
-        </CollectionView.ItemTemplate>
-        <CollectionView.EmptyView>
-            <StackLayout Orientation="Vertical">
-                <Label
-                    Style="{DynamicResource DefaultSubSubTitleLabel}"
-                    Text="{x:Static resources:AppResources.ExposuresPageNoExposures}" />
-                <Label
-                    Style="{DynamicResource DefaultLabelLittle}"
-                    Text="{x:Static resources:AppResources.ExposuresPageNoExposuresInfo}" />
-            </StackLayout>
-        </CollectionView.EmptyView>
-        <CollectionView.Footer>
+        </ListView.ItemTemplate>
+
+        <ListView.Footer>
             <StackLayout
-                Padding="20, 20, 20, 10"
+                Padding="20, 10, 20, 10"
                 >
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Command="{Binding Path=OnClickExportExposureData}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.ExportExposureData}" />
+
                 <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Margin="0, 30, 0, 0"
+                    Style="{StaticResource AnnotationLabel}"
+                    TextColor="{StaticResource PrimaryText}"
+                    Text="{Binding UtcDescription}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
                     Margin="0, 10, 0, 0"
                     Style="{StaticResource AnnotationLabel}"
-                    TextColor="{StaticResource PrimaryText}">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
-                            <Span Text="{x:Static resources:AppResources.ExposuresPageToUtcDescription}"/>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                    TextColor="{StaticResource PrimaryText}"
+                    Text="{x:Static resources:AppResources.ExposuresPageTimeDescription}" />
+
             </StackLayout>
-        </CollectionView.Footer>
-    </CollectionView>
+        </ListView.Footer>
+    </ListView>
 </ContentPage>

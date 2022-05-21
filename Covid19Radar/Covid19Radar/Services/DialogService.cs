@@ -55,13 +55,11 @@ namespace Covid19Radar.Services
                 AppResources.ButtonCancel);
         }
 
-        public async Task ShowUserProfileNotSupportAsync()
-        {
+        public async Task ShowTemporarilyUnavailableWarningAsync() =>
             await AlertAsync(
-                AppResources.UserProfileNotSupportDialogDescription,
-                AppResources.UserProfileNotSupportDialogTitle,
+                AppResources.TemporarilyUnavailableWarningMessage,
+                AppResources.TemporarilyUnavailableWarningTitle,
                 AppResources.ButtonOk);
-        }
 
         public async Task ShowHomePageUnknownErrorWaringAsync()
         {
@@ -78,6 +76,14 @@ namespace Covid19Radar.Services
                 AppResources.LocalNotificationOffWarningDialogTitle,
                 AppResources.ToSettingsButton,
                 AppResources.ButtonCancel);
+        }
+
+        public async Task ShowUserProfileNotSupportAsync()
+        {
+            await AlertAsync(
+                AppResources.UserProfileNotSupportDialogDescription,
+                AppResources.UserProfileNotSupportDialogTitle,
+                AppResources.ButtonOk);
         }
 
         public async Task<bool> ConfirmAsync(string message, string title = null, string okText = null, string cancelText = null) =>
