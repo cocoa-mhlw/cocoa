@@ -4,6 +4,7 @@ name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
 variables:
 - group: app-settings-stg
+- group: ios-signing-development
 - template: templates/variables/app-variables.yml
 
 jobs:
@@ -11,7 +12,6 @@ jobs:
   pool:
     vmImage: 'macOS-11'
   variables:
-  - group: ios-signing-development
   - template: templates/variables/ios-build-environment-variables.yml
   steps:
   - template: templates/build/ios-build-development-template.yml

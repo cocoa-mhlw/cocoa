@@ -4,6 +4,8 @@ name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
 variables:
 - group: app-settings-prod
+- group: ios-signing-distribution
+- group: android-signing-prod
 - template: templates/variables/app-variables.yml
 
 jobs:
@@ -11,7 +13,6 @@ jobs:
   pool:
     vmImage: 'macOS-11'
   variables:
-  - group: ios-signing-distribution
   - template: templates/variables/ios-build-environment-variables.yml
   steps:
   - template: templates/build/ios-build-appstore-template.yml
@@ -20,7 +21,6 @@ jobs:
   pool:
     vmImage: 'macOS-11'
   variables:
-  - group: android-signing-prod
   - template: templates/variables/android-build-environment-variables.yml
   steps:
   - template: templates/build/android-build-store-template.yml
