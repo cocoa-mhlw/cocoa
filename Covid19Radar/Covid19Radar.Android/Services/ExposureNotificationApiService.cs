@@ -47,6 +47,11 @@ namespace Covid19Radar.Droid.Services
                     apiException.Status.StartResolutionForResult(Platform.CurrentActivity, REQUEST_EN_START);
                     return false;
                 }
+                else if(apiException.StatusCode == CommonStatusCodes.ApiNotConnected)
+                {
+                    throw new ENException(ENException.Code_Android.FAILED_NOT_SUPPORTED,
+                        "StartExposureNotificationAsync ApiNotConnected");
+                }
                 else
                 {
                     throw new AndroidGooglePlayServicesApiException(

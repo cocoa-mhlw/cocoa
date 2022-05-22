@@ -1410,6 +1410,7 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>ホーム画面へ</value>
     <comment>ホーム画面へ</comment>
   </data>
+
   <data name="CircledDigitOneImageText" xml:space="preserve">
     <value>1</value>
     <comment>1</comment>
@@ -1422,4 +1423,14 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>3</value>
     <comment>3</comment>
   </data>
+
+  <data name="UserProfileNotSupportDialogTitle" xml:space="preserve">
+      <value>複数ユーザーはサポートしていません</value>
+    <comment>複数ユーザーはサポートしていません</comment>
+  </data>
+  <data name="UserProfileNotSupportDialogDescription" xml:space="preserve">
+      <value>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</value>
+    <comment>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
+  </data>
+
 </root>

@@ -1517,6 +1517,7 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>Return to Home screen</value>
     <comment>ホーム画面へ</comment>
   </data>
+
   <data name="CircledDigitOneImageText" xml:space="preserve">
     <value>1</value>
     <comment>1</comment>
@@ -1528,5 +1529,14 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   <data name="CircledDigitThreeImageText" xml:space="preserve">
     <value>3</value>
     <comment>3</comment>
+  </data>
+
+  <data name="UserProfileNotSupportDialogTitle" xml:space="preserve">
+      <value>Multi user profile is not supported</value>
+    <comment>TODO:複数ユーザーはサポートしていません</comment>
+  </data>
+  <data name="UserProfileNotSupportDialogDescription" xml:space="preserve">
+      <value>COCOA is not supported multi user profile. Please run as device owner.</value>
+    <comment>TODO:COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
   </data>
 </root>
