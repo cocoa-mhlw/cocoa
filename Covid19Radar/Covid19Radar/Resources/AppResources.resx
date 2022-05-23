@@ -1536,9 +1536,9 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>複数ユーザーはサポートしていません</comment>
   </data>
   <data name="UserProfileNotSupportDialogDescription" xml:space="preserve">
-    <value>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</value>
-    <comment>COCOA does not support multi-user usage.
-Please execute the app as an administrator (owner).</comment>
+    <value>COCOA does not support multi-user usage.
+Please execute the app as an administrator (owner).</value>
+    <comment>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
   </data>
 
 </root>
