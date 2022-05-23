@@ -4,6 +4,9 @@
 
 [![Server develop](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CIserver.yml/badge.svg?branch=develop)](https://github.com/cocoa-mhlw/cocoa/actions/workflows/CIserver.yml)
 
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cocoa-mhlw_cocoa&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cocoa-mhlw_cocoa)
+
 This is the official repository for the COCOA - COVID-19 Contact-Confirming Application.
 COCOA has been developed from [Project Covid19Radar](https://github.com/Covid-19Radar).
 
