@@ -135,6 +135,8 @@ namespace Covid19Radar
 #if DEBUG
             containerRegistry.RegisterForNavigation<DebugPage>();
             containerRegistry.RegisterForNavigation<EditServerConfigurationPage>();
+            containerRegistry.RegisterForNavigation<ManageExposureDataPage>();
+            containerRegistry.RegisterForNavigation<ManageUserDataPage>();
 #endif
 
             // Settings
@@ -189,13 +191,12 @@ namespace Covid19Radar
             container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
             container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
+            container.Register<IExposureDataExportService, ExposureDataExportService>(Reuse.Singleton);
 
 #if USE_MOCK
-            container.Register<IExposureDataRepository, ExposureDataRepositoryMock>(Reuse.Singleton);
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
 #else
-            container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
             container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
 #endif
@@ -208,6 +209,7 @@ namespace Covid19Radar
             container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServerNop>(Reuse.Singleton);
 #endif
 
+            container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
             container.Register<IDiagnosisKeyRegisterServer, DiagnosisKeyRegisterServer>(Reuse.Singleton);
             container.Register<IDialogService, DialogService>(Reuse.Singleton);
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);

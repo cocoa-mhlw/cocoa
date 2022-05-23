@@ -16,6 +16,7 @@ namespace Covid19Radar.Common
         public static string PrivacyPolicyLastUpdateDateTimeEpoch = "PrivacyPolicyLastUpdateDateTimeEpoch";
 
         public static string CanConfirmExposure = "CanConfirmExposure";
+        public static string IsMaxPerDayExposureDetectionAPILimitReached = "IsMaxPerDayExposureDetectionAPILimitReached";
         public static string LastConfirmedDateTimeEpoch = "LastConfirmedDateTimeEpoch";
 
         public static string SendEventLogState = "SendEventLogState";

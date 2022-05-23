@@ -100,13 +100,8 @@ namespace Covid19Radar.Api.Services
                 //    default:
                 //        break;
                 //}
-                if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                {
-                    // FIXME: When call iOS Device check, return error sometimes, Until the cause is known, ignored device check
-                    return true;
-                }
 
-                return true;
+                return (response.StatusCode == System.Net.HttpStatusCode.OK);
             }
             catch (Exception ex)
             {

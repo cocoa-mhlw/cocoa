@@ -7,13 +7,13 @@ steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
-    certSecureFile: 'cocoa_development_20230215.p12'
+    certSecureFile: '$(iOS_CertificateFileName)'
     certPwd: '$(iOS_CertificatePassword)'
 
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_development_20230214.mobileprovision'
+    provProfileSecureFile: '$(iOS_ProvisioningProfileFileName_Development)'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -34,7 +34,7 @@ steps:
     configuration: Debug
     packageApp: false
     signingIdentity: 'Apple Development'
-    signingProvisioningProfileID: 'e673e188-1224-4218-9e18-c92103039c24'
+    signingProvisioningProfileID: '$(iOS_ProvisioningProfileID_Development)'
     args: '/p:ArchiveOnBuild=true /p:DefineConstants=DEBUG=0'
   condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'false'))
 
@@ -45,7 +45,7 @@ steps:
     configuration: Debug
     packageApp: false
     signingIdentity: 'Apple Development'
-    signingProvisioningProfileID: 'e673e188-1224-4218-9e18-c92103039c24'
+    signingProvisioningProfileID: '$(iOS_ProvisioningProfileID_Development)'
     args: '/p:ArchiveOnBuild=true'
   condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'true'))
 

@@ -429,7 +429,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, day, 0, 0, 0));
 
-            var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+            var result = unitUnderTest.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
             Assert.Equal(expectedCount, result.Count);
             for (int idx = 0; idx < expectedCount; idx++)
@@ -446,7 +446,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns((string)(object)null);
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, 1, 0, 0, 0));
 
-            var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+            var result = unitUnderTest.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
             Assert.NotNull(result);
             Assert.Empty(result);
@@ -462,7 +462,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, day, hour, minute, 0).AddHours(-9));
 
-            var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+            var result = unitUnderTest.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
             Assert.Equal(expectedCount, result.Count);
             for (int idx = 0; idx < expectedCount; idx++)
@@ -485,7 +485,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns("[{\"Timestamp\":\"2021-01-01T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-02T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-03T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4},{\"Timestamp\":\"2021-01-04T00:00:00\",\"Duration\":\"00:05:00.000\",\"AttenuationValue\":3,\"TotalRiskScore\":21,\"TransmissionRiskLevel\":4}]");
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, day, 0, 0, 0));
 
-            var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count();
+            var result = unitUnderTest.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays).Count();
 
             Assert.Equal(expectedCount, result);
         }
@@ -498,7 +498,7 @@ namespace Covid19Radar.UnitTests.Repository
             mockSecureStorageService.Setup(x => x.GetStringValue("ExposureInformation", default)).Returns((string)(object)null);
             mockDateTimeUtility.Setup(x => x.UtcNow).Returns(new DateTime(2021, 1, 1, 0, 0, 0));
 
-            var result = unitUnderTest.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay).Count();
+            var result = unitUnderTest.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays).Count();
 
             Assert.Equal(0, result);
         }

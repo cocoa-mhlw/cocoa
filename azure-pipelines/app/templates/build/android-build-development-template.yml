@@ -19,7 +19,7 @@ steps:
     projectFile: Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj
     outputDirectory: '$(Build.BinariesDirectory)/Debug'
     configuration: Debug
-    msbuildArguments: /p:AndroidPackageFormat=aab /t:PackageForAndroid /t:SignAndroidPackage /p:AndroidKeyStore=True /p:AndroidSigningKeyStore=$(androidKeystore.secureFilePath) /p:AndroidSigningStorePass=$(Android_KeystorePassword) /p:AndroidSigningKeyAlias=$(Android_KeyAlias) /p:AndroidSigningKeyPass=$(Android_KeyPassword)
+    msbuildArguments: /p:EmbedAssembliesIntoApk=True /p:AndroidPackageFormat=aab /t:PackageForAndroid /t:SignAndroidPackage /p:AndroidKeyStore=True /p:AndroidSigningKeyStore=$(androidKeystore.secureFilePath) /p:AndroidSigningStorePass=$(Android_KeystorePassword) /p:AndroidSigningKeyAlias=$(Android_KeyAlias) /p:AndroidSigningKeyPass=$(Android_KeyPassword)
 
 - bash: |
     AAB_PATH=`find $(Build.BinariesDirectory)/Debug -name "*-Signed.aab" | head -1`

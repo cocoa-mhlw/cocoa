@@ -54,7 +54,12 @@
                                 <Span Text="{x:Static resources:AppResources.BluetoothAnnotationText}"/>
                             </FormattedString>
                         </Label.FormattedText>
-                </Label>
+                    </Label>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Margin="0, 20, 0, 10"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.TutorialPage4Description2}" />
                 </StackLayout>
                 <Grid Grid.Row="1">
                     <StackLayout>
@@ -63,12 +68,17 @@
                             Command="{Binding Path=OnClickEnable}"
                             Style="{StaticResource DefaultButton}"
                             Text="{x:Static resources:AppResources.TutorialPage4Button1}" />
-                        <Button
+                        <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            Margin="0,10,0,0"
-                            Command="{Binding Path=OnClickDisable}"
-                            Style="{StaticResource DefaultButtonGrayedOut}"
-                            Text="{x:Static resources:AppResources.TutorialPage4Button2}" />
+                            AutomationProperties.Name="{Binding TutorialPage4LinkReadText}"
+                            HorizontalTextAlignment="Center"
+                            Margin="0, 20, 0, 10"
+                            Style="{StaticResource LinkLabelStyleMedium}"
+                            Text="{x:Static resources:AppResources.TutorialPage4Link}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=OnClickDisable}" />
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
                 </Grid>
             </Grid>
