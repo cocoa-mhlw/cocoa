@@ -67,7 +67,7 @@
                             AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
                                 AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextAndroid}"
                                 Source="question_icon.png"
-                                Padding="10"
+                                Padding="5"
                                 BackgroundColor="Transparent"
                                 Command="{Binding Path=OnClickQuestionIcon}">
                             <ImageButton.IsVisible>
