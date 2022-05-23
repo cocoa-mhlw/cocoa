@@ -88,13 +88,7 @@ namespace Covid19Radar.Api.Services
                     Logger.LogWarning($"iOS device check failed.\r\n{nameof(HttpRequestMessage)} : {request}\r\n{nameof(HttpResponseMessage)} : {response}");
                 }
 
-                if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                {
-                    // FIXME: When call iOS Device check, return error sometimes, Until the cause is known, ignored device check
-                    return true;
-                }
-
-                return true;
+                return (response.StatusCode == System.Net.HttpStatusCode.OK);
             }
             catch (Exception ex)
             {

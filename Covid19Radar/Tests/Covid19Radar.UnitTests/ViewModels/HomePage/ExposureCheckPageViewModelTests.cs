@@ -28,6 +28,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
+        private readonly Mock<ILocalPathService> mockLocalPathService;
+        private readonly Mock<IExposureDataExportService> mockExposureDataExportService;
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
         private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
         private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
@@ -39,6 +41,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
             mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
+            mockLocalPathService = mockRepository.Create<ILocalPathService>();
+            mockExposureDataExportService = mockRepository.Create<IExposureDataExportService>();
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
             mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
@@ -53,6 +57,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockLoggerService.Object,
                 mockExposureDataRepository.Object,
                 mockExposureRiskCalculationService.Object,
+                mockLocalPathService.Object,
+                mockExposureDataExportService.Object,
                 mockUserDataRepository.Object,
                 mockExposureRiskCalculationConfigurationRepository.Object,
                 mockDateTimeUtility.Object

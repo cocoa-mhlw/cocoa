@@ -2,13 +2,13 @@ steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
-    certSecureFile: 'cocoa_distribution_20230215_4.p12'
+    certSecureFile: '$(iOS_CertificateFileName)'
     certPwd: '$(iOS_CertificatePassword)'
 
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: 'cocoa_appstore_20230214_4.mobileprovision'
+    provProfileSecureFile: '$(iOS_ProvisioningProfileFileName_Store)'
 
 - template: setup/ios-setup-variables-template.yml
   parameters:
@@ -29,7 +29,7 @@ steps:
     configuration: Release
     packageApp: false
     signingIdentity: 'Apple Distribution'
-    signingProvisioningProfileID: '5265b13d-3a36-4e43-b4b2-2b406d6de095'
+    signingProvisioningProfileID: '$(iOS_ProvisioningProfileID_Store)'
     args: '/p:ArchiveOnBuild=true'
 
 - bash: |
