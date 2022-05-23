@@ -2158,7 +2158,7 @@ namespace Covid19Radar.Resources {
                 return ResourceManager.GetString("CircledDigitThreeImageText", resourceCulture);
             }
         }
-
+        
         public static string UserProfileNotSupportDialogTitle {
             get {
                 return ResourceManager.GetString("UserProfileNotSupportDialogTitle", resourceCulture);

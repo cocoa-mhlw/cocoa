@@ -1430,12 +1430,12 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
 
   <data name="UserProfileNotSupportDialogTitle" xml:space="preserve">
-      <value>Multi user profile is not supported</value>
-    <comment>TODO:複数ユーザーはサポートしていません</comment>
+    <value>不支持多用户</value>
+    <comment>複数ユーザーはサポートしていません</comment>
   </data>
   <data name="UserProfileNotSupportDialogDescription" xml:space="preserve">
-      <value>COCOA is not supported multi user profile. Please run as device owner.</value>
-    <comment>TODO:COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
+    <value>COCOA不支持多用户使用。请以管理员（所有者）身份启动。</value>
+    <comment>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
   </data>
 
 </root>
