@@ -5,14 +5,14 @@ name: CI-Mobile
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ main, develop, 'feature/**' ]
+    branches: [ main, develop, 'feature/**', 'release/**' ]
     paths:
       - '.github/workflows/CI.yml'
       - 'Covid19Radar/**'
       - 'Covid19Radar.sln'
       - 'Nuget.config'
   pull_request:
-    branches: [ main, develop, 'feature/**' ]
+    branches: [ main, develop, 'feature/**', 'release/**' ]
     paths:
       - '.github/workflows/CI.yml'
       - 'Covid19Radar/**'

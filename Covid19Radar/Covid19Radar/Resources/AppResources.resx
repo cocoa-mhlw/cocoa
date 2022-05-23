@@ -256,7 +256,7 @@
     <comment>アプリを初期化する</comment>
   </data>
   <data name="SettingsPageReinitializeDescription" xml:space="preserve">
-    <value>This process will delete the saved contact history of the last 14 days and restores the app to its initial state. Contact notification will not be sent until the app will be used again.</value>
+    <value>This process will delete saved contact history of the last 14 days and restore the app to its initial state. Contact notification will not work until you start using this app again.</value>
     <comment>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</comment>
   </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
@@ -269,12 +269,12 @@
     <value>Would you like to register positively later?</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>How to use this app</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpMenuPageMenu" xml:space="preserve">
-    <value>How to use</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
     <value>What is a 'close contact'?</value>
@@ -317,7 +317,7 @@
     <comment>記録される接触の条件</comment>
   </data>
   <data name="HelpPage1Description2Text" xml:space="preserve">
-    <value>If smartphones running this app are in close contact (within 1 meter for 15 minutes or more), this is recorded as a close contact.</value>
+    <value>If smartphones running this app are within 1 meter for 15 minutes or more, it will be recorded as a close contact.</value>
     <comment>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</comment>
   </data>
   <data name="HelpPage1Description3Title" xml:space="preserve">
@@ -357,11 +357,11 @@
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description1" xml:space="preserve">
-    <value>By selecting from the app setting [Reinitialize the app] you can delete the saved contact history of the last 14 days and restores the app to its initial state.</value>
+    <value>By selecting from the app setting [Reinitialize the app] you can delete the saved contact history of the last 14 days and restore the app to its initial state.</value>
     <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
   </data>
   <data name="HelpPage4Description2" xml:space="preserve">
-    <value>Contact notification will not be sent until the app will be used again.​</value>
+    <value>Contact recording and contact notification will not work until you start using this app again.</value>
     <comment>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
@@ -421,8 +421,8 @@
     <comment>※スコアは、受信した信号の強さと時間から算出しています。1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone of the device and displayed.​</value>
-    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone ({0}) of the device and displayed.</value>
+    <comment>日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>No signal has being received from the smartphone of a person who has registered positive for COVID-19 </value>
@@ -431,6 +431,10 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>It appears there have been no persons who have registered positive for COVID-19 within your sphere of activities. Please continue to pay attention to preventing COVID-19 infections.</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
+  </data>
+  <data name="ExportExposureData" xml:space="preserve">
+    <value>Save information</value>
+    <comment>情報を保存</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>Terms of use</value>
@@ -449,8 +453,8 @@
     <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>How to use this app</value>
-    <comment>使い方を学ぶ</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;Aへ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
     <value>Device identification</value>
@@ -477,7 +481,7 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>Check contact with positive testers</value>
+    <value>Check contacts with COVID-19 positive users</value>
     <comment>陽性者との接触結果を確認</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
@@ -509,7 +513,7 @@
     <comment>ご不便おかけして申し訳ありません。ネットワークが不安定か、サーバーが混み合っている可能性があります。時間をおいて再度お試しください。</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>Term of use</value>
+    <value>Terms of Use</value>
     <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
@@ -521,7 +525,7 @@
     <comment>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</comment>
   </data>
   <data name="TutorialPage2Description3" xml:space="preserve">
-    <value>All data is saved locally on your smartphone. All data is automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</value>
+    <value>All data are saved locally on your smartphone and are automatically deleted after 14 days. Your movements are not tracked in any way by government agencies or third parties.</value>
     <comment>接触の記録は、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が情報を利用して接触歴を把握することはありません。</comment>
   </data>
   <data name="TutorialPage2Description4" xml:space="preserve">
@@ -529,7 +533,7 @@
     <comment>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</comment>
   </data>
   <data name="TutorialPage2Description5" xml:space="preserve">
-    <value>Terms of use</value>
+    <value>Terms of Use</value>
     <comment>利用規約へ</comment>
   </data>
   <data name="TutorialPage2Title" xml:space="preserve">
@@ -545,11 +549,11 @@
     <comment>登録する</comment>
   </data>
   <data name="NotifyOtherPageDescription3" xml:space="preserve">
-    <value>Please enter below the processing number that you have received by SMS or email</value>
+    <value>Please enter below the processing number that you have received via SMS or email</value>
     <comment>SMSまたはメールで届いた処理番号を入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription5" xml:space="preserve">
-    <value>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will be notified.</value>
+    <value>Those who had close contact with you tracing back to 2 days before the day the symptoms started or the day you were tested, will be notified.</value>
     <comment>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
@@ -565,30 +569,34 @@
     <comment>次へ</comment>
   </data>
   <data name="TutorialPage1Description1" xml:space="preserve">
-    <value>The app recognizes close contacts between smartphones running this app.</value>
-    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+    <value>The app will display the close contact results based on the behavior data of positive registrants who use this app anonymously.</value>
+    <comment>本アプリを匿名で利用する陽性登録者の行動データを元に、あなたの接触結果を表示します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>When tested positive for COVID-19, you can anonymously register the test result in this app.</value>
-    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <value>What you can do within this app</value>
+    <comment>このアプリ内でできること</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>If you have been in close contact with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</value>
-    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+    <value>Confirm the contact result with the positive registrant</value>
+    <comment>陽性登録者との接触結果を確認</comment>
   </data>
-  <data name="TutorialPage1Title1" xml:space="preserve">
-    <value>Protect yourself with the app</value>
-    <comment>このアプリでできること</comment>
+  <data name="TutorialPage1Description4" xml:space="preserve">
+    <value>Notification of close contact and guidance for the appropriate behavior to follow</value>
+    <comment>接触の通知と適切な行動の確認</comment>
   </data>
-  <data name="TutorialPage1Title2" xml:space="preserve">
-    <value>Protect yourself with the app</value>
-    <comment>このアプリでできること</comment>
+  <data name="TutorialPage1Description5" xml:space="preserve">
+    <value>Anonymously positive test result registration</value>
+    <comment>匿名で陽性登録</comment>
+  </data>
+  <data name="TutorialPage1Title" xml:space="preserve">
+    <value>COCOA‘s functions</value>
+    <comment>COCOAの機能</comment>
   </data>
   <data name="TutorialPage4Button1" xml:space="preserve">
     <value>Turn on</value>
     <comment>有効にする</comment>
   </data>
-  <data name="TutorialPage4Button2" xml:space="preserve">
+  <data name="TutorialPage4Link" xml:space="preserve">
     <value>Set up later</value>
     <comment>あとで設定する</comment>
   </data>
@@ -596,9 +604,9 @@
     <value>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</comment>
   </data>
-  <data name="TutorialPage4Label" xml:space="preserve">
-    <value>Find out more</value>
-    <comment>技術的な詳細について</comment>
+  <data name="TutorialPage4Description2" xml:space="preserve">
+    <value>If you are using an iPhone, please set Bluetooth to ON from the settings.</value>
+    <comment>iPhoneをお使いの方は設定よりBluetoothをONに設定してください。</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
     <value>To use Exposure Notifications</value>
@@ -621,7 +629,7 @@
     <comment>同意して陽性登録する</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
-    <value>Consent to positive registration</value>
+    <value>Consent to register as positive</value>
     <comment>陽性登録への同意</comment>
   </data>
   <data name="SubmitConsentPageTitleDeepLink" xml:space="preserve">
@@ -629,16 +637,16 @@
     <comment>同意内容</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth is turned off.Please turn in Bluetooth.</value>
+    <value>Bluetooth is turned off. Please turn on Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
-    <value>A list of close contacts</value>
+    <value>Close contacts list for the past 14 days</value>
     <comment>過去14日間の接触一覧</comment>
   </data>
   <data name="ExposuresPageLabel1" xml:space="preserve">
-    <value>Dates when you were in close contact with COVID-19 positive users.</value>
-    <comment>以下の日に陽性者との接触が確認されました。</comment>
+    <value>Contact with positive registrants was confirmed during the period below.</value>
+    <comment>次の期間に陽性登録者との接触が確認されました。</comment>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
@@ -658,7 +666,7 @@
     <value>Notifications enabled</value>
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>Information about the this app</value>
+    <value>Information about this app</value>
     <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
@@ -686,7 +694,7 @@
     <comment>Exposure Notification起動エラー</comment>
   </data>
   <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</value>
+    <value>Failed to start Exposure Notification. Please open device settings and turn on both Exposure Notification and Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
@@ -769,28 +777,29 @@
     <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
-    <value>If you do not have any symptoms,
-or if you do not know anyone who has had contact with a person that has been tested positive for COVID-19,
-please go about your daily life as usual, paying attention to infection control measures.
-However, if you have any symptoms, please consider receiving a consultation..
-    </value>
-    <comment>TODO:症状がない場合、陽性者と接触した心当たりがない場合は、感染対策に留意しつつ普段通りの生活をお送りください。ただし、体調に変化があった場合は、受診を検討ください。</comment>
+    <value>If you fall under any of the following, please consider going to an examination center/medical institution, etc. according to the guidance of the app.</value>
+    <comment>次のいずれかに当てはまる方は、アプリの案内に従い、診療・検査医療機関等への受診を検討ください。</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_1" xml:space="preserve">
+    <value>・Symptoms such as fever and underlying illness</value>
+    <comment>・発熱等の症状や基礎疾患がある</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_2" xml:space="preserve">
+    <value>・Taking actions with a high risk of infection (*)</value>
+    <comment>・感染リスクの高い行動（※）をとった</comment>
+  </data>
+  <data name="ContactedNotifyPageDescription1_3" xml:space="preserve">
+    <value>・Others, such as getting a medical examination</value>
+    <comment>・その他、受診を希望する</comment>
   </data>
   <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>If any of the following applies to you, please follow the guidance and check the Consultation Centers List to receive a consultation.</value>
-    <comment>次のいずれかに当てはまる方は、アプリの案内に従って相談先をご確認ください。</comment>
+    <value>Even if you do not get a medical examination, we recommend to spend 7 days, from the date of contact, paying attention to infection control measures, such as refraining from contact with individuals with high risk of aggravation like elderly people and avoiding actions with a high risk of infection.</value>
+    <comment>受診しない場合でも、目安として接触日から７日間は高齢者など重症化リスクの高い方との接触・感染リスクの高い行動を控えていただくなど、感染対策に留意しながらお過ごしください。
+ただし、体調に変化があった場合は、受診を検討ください。</comment>
   </data>
-  <data name="ContactedNotifyPageDescription3" xml:space="preserve">
-    <value>・If you have any symptoms such as fever, pre-existing conditions.</value>
-    <comment>TODO:・発熱等の症状や基礎疾患がある</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription4" xml:space="preserve">
-    <value>・If you have been in contact with a person that has been tested positive for COVID-19.</value>
-    <comment>TODO:・陽性者と接触した心当たりがある</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription5" xml:space="preserve">
-    <value>・If you would like to receive a consultation.</value>
-    <comment>TODO:・その他、受診を希望する</comment>
+  <data name="ContactedNotifyPageHighRiskActionAnnotationText" xml:space="preserve">
+    <value>*Eating and drinking for a long time and with a large numbers of people etc.</value>
+    <comment>※大人数や長時間に及ぶ飲食など</comment>
   </data>
   <data name="ReAgreeCheckButton" xml:space="preserve">
     <value>Agree</value>
@@ -998,56 +1007,32 @@ However, if you have any symptoms, please consider receiving a consultation..
     <comment>症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</comment>
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
-    <value>People who have come in contact with you 2 or more days before the day the symptoms started or the day you were tested, will receive a notification.</value>
+    <value>Those who had close contact with you tracing back to 2 days before the day the symptoms started or the day you were tested, will receive a notification.</value>
     <comment>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
     <value>The only information included in the notification will be a randomly generated code. No personal information will be disclosed.</value>
     <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_1" xml:space="preserve">
-    <value>Please read before continue the positive registration</value>
-    <comment>陽性登録の前にお読みください</comment>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>Is not possible to identify somebody based on the positive test registration.</value>
+    <comment>陽性登録により、個人が特定されることはありません。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_2" xml:space="preserve">
-    <value>・If you register your positivity on the application, a code will be daily generated on your smartphone and uploaded to the notification server</value>
-    <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>In case of close contact, a contact detection notification will be sent.</value>
+    <comment>接触があった方に接触検知の通知を送信します。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_3" xml:space="preserve">
-    <value>・Depending on the result of the judgment from the code information of the notification server,  a notification will be sent to the people who have come in contact with you</value>
-    <comment>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</comment>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>If diagnosed positive, a processing number will be sent to the email address and mobile phone number registered at the medical institution or health center.</value>
+    <comment>陽性診断された場合、医療機関や保健所に登録されているメールアドレスや携帯電話番号に「処理番号」が通知されます。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_4" xml:space="preserve">
-    <value>・ None of your personal information will be known to the person who has received the notification</value>
-    <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>Once you register the processing number on COCOA, it will be sent to the server. It will inquire if it is the correct number, and if it is correct, the registration will be completed.</value>
+    <comment>処理番号をCOCOAに登録するとサーバーに送信されます。 正しい番号であるか照会し、正しければ登録が完了します。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_5" xml:space="preserve">
-    <value>・ To avoid the spread of the infection, please cooperate with the registration process</value>
-    <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
-  </data>
-  <data name="SubmitConsentPageDescription1_6" xml:space="preserve">
-    <value>For more details please read below</value>
-    <comment>詳しくは以下をお読みください</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>The mobile phone number or email address you gave to health center or medical institution (※) will be registered in the New Coronavirus Infectious Disease Information and Management System (hereinafter “management system”)</value>
-    <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
-  </data>
-  <data name="SubmitConsentPageDescription7" xml:space="preserve">
-    <value>※ It is the contact information that you gave during the visit if tested positive to COVID-19</value>
-    <comment>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
-  </data>
-  <data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>When your positivity information has been reported to the management system, on the registered phone number or email address you will receive the processing number required for COCOA positive registration</value>
-    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOAの陽性登録に必要な「処理番号」が通知されます</comment>
-  </data>
-  <data name="SubmitConsentPageDescription9" xml:space="preserve">
-    <value>After the processing number has been registered into COCOA, the mobile phone will query the management system to confirm the validity of that number</value>
-    <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
-  </data>
-  <data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>If the processing number is correct, people who have come in close contact (within 1 meter for 15 minutes or more) with you 2 or more days before the day the symptoms started or the day you were tested, will be notified. None of your personal information will be known to the person who has received the notification</value>
-    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>The code generated daily on your smartphone is uploaded to the server. Based on the result of the judgment,  a close contact person will be notified, but no personally identifiable information will be known.</value>
+    <comment>スマートフォン内で日毎に生成された符号が、サーバーにアップロードされます。 判定の結果、接触した人に通知が届きますが、個人が特定される情報が知られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
     <value>Register positive result</value>
@@ -1166,15 +1151,15 @@ You do not have to request it yourself.</value>
     <comment>接触有無の最新確認日時</comment>
   </data>
   <data name="HomePageENStatusUnconfirmedTitle" xml:space="preserve">
-    <value>Cannot confirm contact</value>
+    <value>Cannot check close contact</value>
     <comment>接触有無を確認できません</comment>
   </data>
   <data name="HomePageENStatusUnconfirmedDescription1" xml:space="preserve">
-    <value>No incidents of contact could be confirmed.</value>
+    <value>We were unable to check close contacts with COVID-19 positive users</value>
     <comment>接触有無が確認できませんでした。</comment>
   </data>
   <data name="HomePageENStatusUnconfirmedDescription2" xml:space="preserve">
-    <value>Check “troubleshooting” for solutions.</value>
+    <value>See “troubleshooting” for solutions.</value>
     <comment>解決のため、対処方法を確認してください。</comment>
   </data>
   <data name="HomePageTroubleshootingButtonText" xml:space="preserve">
@@ -1202,7 +1187,7 @@ You do not have to request it yourself.</value>
     <comment>接触通知を有効にするため、必要な対処方法を確認してください。</comment>
   </data>
   <data name="LatestConfirmationDateExplanationDialogText" xml:space="preserve">
-    <value>This app checks for contact with positive testers once per day. The date/time of the last check is shown here.</value>
+    <value>This app checks for contact with COVID-19 positive users once per day. The date/time of the last check is shown here.</value>
     <comment>陽性者との接触の有無を1日に1回程度確認しており、最新の確認日時を表示しています。</comment>
   </data>
   <data name="ButtonClose" xml:space="preserve">
@@ -1234,11 +1219,19 @@ You do not have to request it yourself.</value>
     <comment>設定をご確認ください</comment>
   </data>
   <data name="ExposureNotificationOffWarningDialogMessage" xml:space="preserve">
-    <value>Turn on contact notification settings in your smartphone to use the app.</value>
+    <value>Turn on Exposure Notification on your smartphone's settings to use this app.</value>
     <comment>アプリを利用するため、スマートフォンの接触通知設定をオンにしてください。</comment>
   </data>
+  <data name="TemporarilyUnavailableWarningMessage" xml:space="preserve">
+    <value>Please restart the app or check again after a while.</value>
+    <comment>アプリを再起動するか、しばらく経ってから再度ご確認ください。</comment>
+  </data>
+  <data name="TemporarilyUnavailableWarningTitle" xml:space="preserve">
+    <value>Temporarily unavailable</value>
+    <comment>一時的に利用できません</comment>
+  </data>
   <data name="BluetoothOffWarningDialogMessage" xml:space="preserve">
-    <value>Turn on Bluetooth to record contact incidents.</value>
+    <value>Turn on Bluetooth to record contacts with other users.</value>
     <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>
   </data>
   <data name="LocationOffWarningDialogMessage" xml:space="preserve">
@@ -1300,7 +1293,7 @@ Note: this app does not collect users’ location information.</value>
     <comment>※1 省エネモード、スタミナモード、電池の最適化などお使いの端末によって名称が異なります</comment>
   </data>
   <data name="ProcessingNumberDescriptionDeepLink" xml:space="preserve">
-    <value>Processing number for positive registration</value>
+    <value>Processing number for positive test result registration</value>
     <comment>陽性登録に必要な処理番号</comment>
   </data>
   <data name="ProcessingNumberPlaceholderDeepLink" xml:space="preserve">
@@ -1316,7 +1309,7 @@ Note: this app does not collect users’ location information.</value>
     <comment>同意して登録する</comment>
   </data>
   <data name="InquiryAboutRegistrationTitle" xml:space="preserve">
-    <value>Inquery about the registration​</value>
+    <value>Inquiry about the registration</value>
     <comment>登録に関するお問い合わせ</comment>
   </data>
   <data name="InquiryAboutRegistrationPhoneNumber" xml:space="preserve">
@@ -1446,24 +1439,46 @@ Note: this app does not collect users’ location information.</value>
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
-    <value>For the date and time, Coordinated Universal Time (UTC) is converted to the time zone you set and displayed as a term.</value>
-    <comment>TODO:日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>* For the date and time, the Coordinated Universal Time (UTC) is converted to the set time zone ({0}) of the device and displayed.</value>
+    <comment>※日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTimeDescription" xml:space="preserve">
+    <value>* The contact time displayed is a total sum.
+In case you have been close to a large number of positive registrants a big contact time may be displayed.</value>
+    <comment>※接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</comment>
+  </data>
+  <data name="ExposuresPageFrom" xml:space="preserve">
+    <value>From </value>
+    <comment> </comment>
   </data>
   <data name="ExposuresPageTo" xml:space="preserve">
     <value>to</value>
-    <comment>TODO:から</comment>
+    <comment>から</comment>
   </data>
   <data name="ExposureDateFormatDate" xml:space="preserve">
-    <value>{2:#} {3:#}:00 AM</value>
-    <comment>TODO:{2:#}日 午前{3:#}時</comment>
+    <value>d h:mm tt</value>
+    <comment>d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatMonth" xml:space="preserve">
-    <value>{1:#}/{2:#}/ {3:#}:00 AM</value>
-    <comment>TODO:{1:#}月{2:#}日 午前{3:#}時</comment>
+    <value>d MMM h:mm tt</value>
+    <comment>M月d日 tth時mm分</comment>
   </data>
   <data name="ExposureDateFormatYear" xml:space="preserve">
-    <value>{0:#}/{1:#}/{2:#} {3:#}:00 AM</value>
-    <comment>TODO:{0:#}年{1:#}月{2:#}日 午前{3:#}時</comment>
+    <value>d MMM, yyyy h:mm tt</value>
+    <comment>yyyy年M月d日 tth時mm分</comment>
+  </data>
+
+  <data name="NotContactPageTitle" xml:space="preserve">
+    <value>Close contacts for the past 14 days</value>
+    <comment>過去14日間の接触</comment>
+  </data>
+	<data name="NotContactPageLabel1" xml:space="preserve">
+    <value>No close contacts with COVID-19 positive users</value>
+    <comment>陽性者との接触は確認されませんでした</comment>
+  </data>
+	<data name="NotContactPageDescription1" xml:space="preserve">
+    <value>Please keep practicing 'New Lifestyle' recommended by the government.</value>
+    <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
 
   <data name="GeneralErrorTitle" xml:space="preserve">
@@ -1501,6 +1516,29 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   <data name="ToHomeButton" xml:space="preserve">
     <value>Return to Home screen</value>
     <comment>ホーム画面へ</comment>
+  </data>
+
+  <data name="CircledDigitOneImageText" xml:space="preserve">
+    <value>1</value>
+    <comment>1</comment>
+  </data>
+  <data name="CircledDigitTwoImageText" xml:space="preserve">
+    <value>2</value>
+    <comment>2</comment>
+  </data>
+  <data name="CircledDigitThreeImageText" xml:space="preserve">
+    <value>3</value>
+    <comment>3</comment>
+  </data>
+
+  <data name="UserProfileNotSupportDialogTitle" xml:space="preserve">
+    <value>Do not support multiple users</value>
+    <comment>複数ユーザーはサポートしていません</comment>
+  </data>
+  <data name="UserProfileNotSupportDialogDescription" xml:space="preserve">
+    <value>COCOA does not support multi-user usage.
+Please execute the app as an administrator (owner).</value>
+    <comment>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
   </data>
 
 </root>

@@ -13,6 +13,8 @@ namespace Covid19Radar.Services
         private const string CURRENT_EXPOSURE_CONFIGURATION_FILENAME = "exposure_configuration_current.json";
         private const string CURRENT_EXPOSURE_RISK_CALCULATION_CONFIGURATION_FILENAME = "exposure_risk_calculation_configuration_current.json";
 
+        private const string EXPOSURE_DATA_FILENAME = "exposure_data.json";
+
         string ExposureConfigurationDirPath =>
             Path.Combine(FileSystem.AppDataDirectory, EXPOSURE_CONFIGURATION_DIR);
 
@@ -24,6 +26,8 @@ namespace Covid19Radar.Services
 
         string CacheDirectory =>
             FileSystem.CacheDirectory;
+
+        string ExposureDataPath => Path.Combine(CacheDirectory, EXPOSURE_DATA_FILENAME);
 
         string LogsDirPath { get; }
         string LogUploadingTmpPath { get; }

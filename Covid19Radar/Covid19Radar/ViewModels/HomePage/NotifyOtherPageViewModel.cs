@@ -24,6 +24,8 @@ namespace Covid19Radar.ViewModels
     {
         private const ReportType DEFAULT_REPORT_TYPE = ReportType.ConfirmedTest;
 
+        public string RadioButtonYesReadText => Device.RuntimePlatform == Device.iOS ? $"{AppResources.NotifyOtherPageRadioButtonYes} {AppResources.Button}" : "";
+        public string RadioButtonNoReadText => Device.RuntimePlatform == Device.iOS ? $"{AppResources.NotifyOtherPageRadioButtonNo} {AppResources.Button}" : "";
         public string HowToReceiveProcessingNumberReadText => $"{AppResources.NotifyOtherPageLabel} {AppResources.Button}";
 
         private readonly ILoggerService loggerService;
