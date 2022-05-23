@@ -350,6 +350,12 @@ namespace Covid19Radar.ViewModels
                 var statusCodes = await exposureNotificationApiService.GetStatusCodesAsync();
 
                 if (
+                statusCodes.Contains(ExposureNotificationStatus.Code_Android.USER_PROFILE_NOT_SUPPORT)
+                )
+                {
+                    await dialogService.ShowUserProfileNotSupportAsync();
+                }
+                else if (
                 statusCodes.Contains(ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED)
                 || statusCodes.Contains(ExposureNotificationStatus.Code_iOS.BluetoothOff)
                 )
@@ -388,12 +394,6 @@ namespace Covid19Radar.ViewModels
                 )
                 {
                     _ = await NavigationService.NavigateAsync(nameof(HowToEnableExposureNotificationsPage));
-                }
-                else if (
-                statusCodes.Contains(ExposureNotificationStatus.Code_Android.USER_PROFILE_NOT_SUPPORT)
-                )
-                {
-                    await dialogService.ShowUserProfileNotSupportAsync();
                 }
             }
             catch (AndroidGooglePlayServicesApiException ex)
