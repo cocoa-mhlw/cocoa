@@ -12,7 +12,7 @@ namespace Covid19Radar.Api.DataAccess
     {
 
         Task<DiagnosisModel[]> GetNotApprovedAsync();
-        Task<DiagnosisModel> GetAsync(string submissionNumber, string sserUuid);
+        Task<DiagnosisModel> GetAsync(string submissionNumber, string userUuid);
 
         Task<DiagnosisModel> SubmitDiagnosisAsync(string submissionNumber, DateTimeOffset timestamp, string userUuid, TemporaryExposureKeyModel[] Keys);
 
