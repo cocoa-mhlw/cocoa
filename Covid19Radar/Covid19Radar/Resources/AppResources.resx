@@ -276,6 +276,10 @@
     <value>Q&amp;A</value>
     <comment>Q&amp;A</comment>
   </data>
+  <data name="HelpMenuPageMenuReadText" xml:space="preserve">
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
+  </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
     <value>What is a 'close contact'?</value>
     <comment>どのようにして接触を記録していますか？</comment>

@@ -147,6 +147,10 @@
     <value>Q&amp;A</value>
     <comment>Q&amp;A</comment>
   </data>
+  <data name="HelpMenuPageMenuReadText" xml:space="preserve">
+    <value>きゅーあんどえー</value>
+    <comment>Q&amp;A</comment>
+  </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>接触の記録方法</value>
     <comment>接触の記録方法</comment>

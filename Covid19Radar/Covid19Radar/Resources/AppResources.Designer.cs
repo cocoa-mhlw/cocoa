@@ -299,6 +299,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string HelpMenuPageMenuReadText {
+            get {
+                return ResourceManager.GetString("HelpMenuPageMenuReadText", resourceCulture);
+            }
+        }
+        
         public static string HelpMenuPageLabel1 {
             get {
                 return ResourceManager.GetString("HelpMenuPageLabel1", resourceCulture);
