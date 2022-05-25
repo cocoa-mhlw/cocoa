@@ -256,6 +256,7 @@
     <Compile Include="Extensions\AlignmentExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\FormattedStringExtensions.cs" />
+    <Compile Include="Services\LocalizeService.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
@@ -549,12 +550,7 @@
     <EmbeddedResource Include="fa-solid-900.otf" />
     <EmbeddedResource Include="Roboto-Regular.ttf" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\Logs\" />
-    <Folder Include="Renderers\" />
-    <Folder Include="Resources\zh-Hans.lproj\" />
-    <Folder Include="Services\Migration\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
