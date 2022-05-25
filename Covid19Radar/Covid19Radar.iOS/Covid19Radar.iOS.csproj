@@ -150,6 +150,38 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_UITest|iPhoneSimulator'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\iPhoneSimulator\Debug_UITest\</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;ENABLE_TEST_CLOUD;USE_MOCK;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification --weak-framework=ExposureNotification</MtouchExtraArgs>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchArch>x86_64</MtouchArch>
+    <OptimizePNGs>false</OptimizePNGs>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_UITest|iPhone'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\iPhone\Debug_UITest\</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;USE_MOCK;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -386,6 +418,9 @@
     </PackageReference>
     <PackageReference Include="Chino.iOS">
       <Version>1.0.0-rc11</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.TestCloud.Agent">
+      <Version>0.23.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
