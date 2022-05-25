@@ -4,8 +4,9 @@ name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 
 variables:
 - group: app-settings-qa
-- name: AppVersion
-  value: '2.1.0'
+- group: ios-signing-development
+- group: android-signing-dev
+- template: templates/variables/app-variables.yml
 
 jobs:
 - job: build_ios
