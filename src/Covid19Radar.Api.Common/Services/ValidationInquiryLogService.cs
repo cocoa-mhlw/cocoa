@@ -26,9 +26,9 @@ namespace Covid19Radar.Api.Services
         public IValidationInquiryLogService.ValidateResult Validate(HttpRequest req)
         {
             Logger.LogInformation($"{nameof(ValidationInquiryLogService)} {nameof(Validate)}");
-            var test = Config.InquiryLogApiKey();
-            var test2 = req.Headers["x-api-key"].ToString();
-            var test3 = req.Headers.ContainsKey("x-api-key");
+            Config.InquiryLogApiKey();
+            req.Headers["x-api-key"].ToString();
+            req.Headers.ContainsKey("x-api-key");
             if (!req.Headers.ContainsKey("x-api-key") || Config.InquiryLogApiKey() != req.Headers["x-api-key"].ToString())
             {
                 return IValidationInquiryLogService.ValidateResult.Error;

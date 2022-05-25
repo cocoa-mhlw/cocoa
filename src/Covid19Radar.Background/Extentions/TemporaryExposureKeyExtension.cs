@@ -34,16 +34,6 @@ namespace Covid19Radar.Background.Extentions
             return key;
         }
 
-        /*
-         * enum ReportType {
-         *      UNKNOWN = 0;  // Never returned by the client API.
-         *      CONFIRMED_TEST = 1;
-         *      CONFIRMED_CLINICAL_DIAGNOSIS = 2;
-         *      SELF_REPORT = 3;
-         *      RECURSIVE = 4;  // Reserved for future use.
-         *      REVOKED = 5;  // Used to revoke a key, never returned by client API.
-         * }
-         */
         private static TemporaryExposureKey.Types.ReportType ConvertToReportType(int reportType)
         {
             return reportType switch

@@ -2,23 +2,15 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Api;
-using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.Cosmos;
-using Microsoft.Azure.Cosmos.Linq;
-using Microsoft.Azure.Documents.SystemFunctions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Reflection.Emit;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -36,6 +28,9 @@ namespace Covid19Radar.Api.Tests.Common.DataAccess
             var logger = new Mock.LoggerMock<CosmosDiagnosisRepository>();
             // action
             var instance = new CosmosDiagnosisRepository(cosmos.Object, logger);
+            // assert
+            Assert.IsNotNull(instance);
+
         }
 
         [DataTestMethod]

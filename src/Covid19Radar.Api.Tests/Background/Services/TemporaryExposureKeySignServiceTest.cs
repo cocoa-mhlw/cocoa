@@ -6,11 +6,7 @@ using Covid19Radar.Background.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Tests.Background.Services
@@ -35,6 +31,8 @@ namespace Covid19Radar.Api.Tests.Background.Services
             var logger = new Mock.LoggerMock<TemporaryExposureKeySignService>();
             // action
             var service = new TemporaryExposureKeySignService(config.Object, logger);
+            // assert
+            Assert.IsNotNull(service);
         }
 
         [TestMethod]

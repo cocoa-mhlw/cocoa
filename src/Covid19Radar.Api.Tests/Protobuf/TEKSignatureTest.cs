@@ -21,6 +21,8 @@ namespace Covid19Radar.Api.Tests.Protobuf
         {
             // preparation
             var instance = new TEKSignature();
+            // assert
+            Assert.IsNotNull(instance);
         }
 
         [TestMethod]

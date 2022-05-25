@@ -14,7 +14,7 @@ namespace Covid19Radar.Api.Common
     /// <typeparam name="T">Return type</typeparam>
     public class QueryCache<T>
     {
-        private readonly int CacheTimeout = Constants.CacheTimeout;
+        private readonly int CacheTimeout;
         private readonly EventWaitHandle Event = new EventWaitHandle(true, EventResetMode.AutoReset);
         private T Cache;
         private long Timestamp = 0;

@@ -22,7 +22,6 @@ namespace Covid19Radar.Api
 {
     public class DiagnosisApi
     {
-        private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
         private readonly IDeviceValidationService DeviceCheck;
         private readonly IVerificationService VerificationService;
@@ -39,7 +38,6 @@ namespace Covid19Radar.Api
             IValidationServerService validationServerService,
             ILogger<DiagnosisApi> logger)
         {
-            DiagnosisRepository = diagnosisRepository;
             TekRepository = tekRepository;
             DeviceCheck = deviceCheck;
             Logger = logger;
@@ -80,15 +78,13 @@ namespace Covid19Radar.Api
             }
 
 
-            // TODO: Security Consider, additional validation for user uuid.
-
             // validation device
-            Logger.LogInformation("regions: " + (diagnosis?.Regions != null && diagnosis.Regions.Count() != 0 ? string.Join(", ", diagnosis.Regions) : "Empty") + ", " +
+            Logger.LogInformation($"regions: {((diagnosis?.Regions != null) && (diagnosis.Regions.Any()) ? string.Join(", ", diagnosis.Regions) : "Empty")}, " +
                       $"platform: {diagnosis?.Platform}, " +
                       $"deviceVerificationPayload: {diagnosis?.DeviceVerificationPayload}, " +
                       $"appPackageName: {diagnosis?.AppPackageName}, " +
                       $"padding: {diagnosis?.Padding}");
-            if (false == await DeviceCheck.Validation(diagnosis.Platform, diagnosis, reqTime))
+            if (!await DeviceCheck.Validation(diagnosis.Platform, diagnosis, reqTime))
             {
                 Logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");
