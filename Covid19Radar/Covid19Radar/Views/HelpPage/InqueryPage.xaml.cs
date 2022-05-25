@@ -16,6 +16,10 @@ namespace Covid19Radar.Views
         public InqueryPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            InqueryPageTitle.AutomationId = "InqueryPageTitle";
+#endif
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters)

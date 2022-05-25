@@ -10,6 +10,13 @@ namespace Covid19Radar.Views
         public ManageExposureDataPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            ManageExposureDataPageTitle.AutomationId = "ManageExposureDataPageTitle";
+            ManageExposureDataPageClear.AutomationId = "ManageExposureDataPageClear";
+            ManageExposureDataPageLow.AutomationId = "ManageExposureDataPageLow";
+            ManageExposureDataPageHigh.AutomationId = "ManageExposureDataPageHigh";
+#endif
         }
     }
 }

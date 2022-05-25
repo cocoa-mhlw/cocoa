@@ -16,6 +16,16 @@ namespace Covid19Radar.Views
         public DebugPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            DebugPageTitle.AutomationId = "DebugPageTitle";
+            DebugPageScrollView.AutomationId = "DebugPageScrollView";
+            ManageExposureDataPage.AutomationId = "ManageExposureDataPage";
+            ManageUserDataPage.AutomationId = "ManageUserDataPage";
+            ContactedNotifyPage.AutomationId = "ContactedNotifyPage";
+            ReAgreePrivacyPolicyPage.AutomationId = "ReAgreePrivacyPolicyPage";
+            ReAgreeTermsOfServicePage.AutomationId = "ReAgreeTermsOfServicePage";
+#endif
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters)

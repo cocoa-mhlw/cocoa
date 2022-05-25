@@ -19,6 +19,10 @@ namespace Covid19Radar.Views
         public ExposuresPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            ExposuresPageTitle.AutomationId = "ExposuresPageTitle";
+#endif
         }
     }
 }

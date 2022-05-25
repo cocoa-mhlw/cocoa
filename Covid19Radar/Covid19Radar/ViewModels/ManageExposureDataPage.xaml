@@ -4,6 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <ContentPage
+    x:Name="ManageExposureDataPageTitle"
     x:Class="Covid19Radar.Views.ManageExposureDataPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -26,6 +27,7 @@
             Spacing="0">
 
             <Button
+                x:Name="ManageExposureDataPageClear"
                 Command="{Binding OnClickClearButton}"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultButton}"
@@ -33,6 +35,7 @@
                 VerticalOptions="Start" />
 
             <Button
+                x:Name="ManageExposureDataPageLow"
                 Command="{Binding OnClickGenerateLowRiskExposure}"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultButton}"
@@ -40,6 +43,7 @@
                 VerticalOptions="Start" />
 
             <Button
+                x:Name="ManageExposureDataPageHigh"
                 Command="{Binding OnClickGenerateHighRiskExposure}"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultButton}"

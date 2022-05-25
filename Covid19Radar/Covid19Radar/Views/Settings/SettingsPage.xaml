@@ -4,6 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <ContentPage
+    x:Name="SettingsPageTitle"
     x:Class="Covid19Radar.Views.SettingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -20,7 +21,8 @@
         https://github.com/xamarin/Xamarin.Forms/issues/13597
     -->
     <ContentView>
-        <ScrollView>
+        <ScrollView
+            x:Name="SettingsPageTitleScrollView">
             <StackLayout
                 Padding="0,0,0,15"
                 BackgroundColor="{StaticResource Background}"
@@ -96,6 +98,7 @@
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.SettingsPageSourceCodeButton}" />
                 <Button
+                    x:Name="OpenLicenseAgreementPageTitle"
                     AutomationProperties.IsInAccessibleTree="True"
                     Margin="0, 0, 0, 20"
                     Command="{prism:NavigateTo 'LicenseAgreementPage'}"
@@ -111,6 +114,7 @@
                     Padding="15,0"
                     Spacing="10">
                     <Label
+                        x:Name="OpenTermsofservicePageTitle"
                         AutomationProperties.IsInAccessibleTree="True"
                         AutomationProperties.Name="{Binding TermsOfUseReadText}"
                         HorizontalOptions="Start"
@@ -121,6 +125,7 @@
                         </Label.GestureRecognizers>
                     </Label>
                     <Label
+                        x:Name="OpenPrivacyPolicyPageTitle"
                         AutomationProperties.IsInAccessibleTree="True"
                         AutomationProperties.Name="{Binding PrivacyPolicyReadText}"
                         HorizontalOptions="Start"
@@ -131,6 +136,7 @@
                         </Label.GestureRecognizers>
                     </Label>
                     <Label
+                        x:Name="OpenWebAccessibilityPolicyPageTitle"
                         AutomationProperties.IsInAccessibleTree="True"
                         AutomationProperties.Name="{Binding WebAccessibilityPolicyReadText}"
                         HorizontalOptions="Start"

@@ -23,6 +23,16 @@ namespace CovidRadar.UITestV2
         private static readonly string TutorialPage1Title = "TutorialPage1Title";
 
         /// <summary>
+        /// TutorialPage1のScrollView.
+        /// </summary>
+        private static readonly string TutorialPage1ScrollView = "TutorialPage1ScrollView";
+
+        /// <summary>
+        /// TutorialPage2へ遷移するボタン.
+        /// </summary>
+        private static readonly string TutorialPage2Btn = "TutorialPage2Btn";
+
+        /// <summary>
         /// Androidボタン.
         /// </summary>
         private static readonly string ButtonRenderer = "ButtonRenderer";
@@ -39,15 +49,6 @@ namespace CovidRadar.UITestV2
         /// </summary>
         public TutorialPage1()
         {
-            if (OnAndroid)
-            {
-                openTutorialPage2 = x => x.Marked(TutorialPage1Title).Class(ButtonRenderer).Index(0);
-            }
-
-            if (OniOS)
-            {
-                openTutorialPage2 = x => x.Marked(TutorialPage1Title).Class(UIButton).Index(0);
-            }
         }
 
         /// <summary>
@@ -75,7 +76,8 @@ namespace CovidRadar.UITestV2
         /// <returns>TutorialPage2.</returns>
         public TutorialPage2 OpenTutorialPage2()
         {
-            app.Tap(openTutorialPage2);
+            app.ScrollDownTo(TutorialPage2Btn, TutorialPage1ScrollView);
+            app.Tap(TutorialPage2Btn);
             return new TutorialPage2();
         }
     }

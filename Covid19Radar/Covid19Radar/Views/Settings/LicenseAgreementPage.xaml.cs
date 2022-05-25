@@ -19,6 +19,10 @@ namespace Covid19Radar.Views
         public LicenseAgreementPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            LicenseAgreementPageTitle.AutomationId = "LicenseAgreementPageTitle";
+#endif
         }
     }
 }

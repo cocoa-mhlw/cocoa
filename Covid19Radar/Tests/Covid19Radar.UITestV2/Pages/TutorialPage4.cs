@@ -42,6 +42,11 @@ namespace CovidRadar.UITestV2
         /// </summary>
         private static readonly string TutorialPage4ScrollView = "TutorialPage4ScrollView";
 
+        /// <summary>
+        /// 有効にするボタン.
+        /// </summary>
+        private static readonly string TutorialPage6Button = "TutorialPage6Button";
+
         private readonly Query openTutorialPage6;
 
         /// <summary>
@@ -85,7 +90,8 @@ namespace CovidRadar.UITestV2
         /// <returns>TutorialPage6.</returns>
         public TutorialPage6 OpenTutorialPage6()
         {
-            app.Tap(openTutorialPage6);
+            app.ScrollDownTo(TutorialPage6Button, TutorialPage4ScrollView);
+            app.Tap(TutorialPage6Button);
             return new TutorialPage6();
         }
 

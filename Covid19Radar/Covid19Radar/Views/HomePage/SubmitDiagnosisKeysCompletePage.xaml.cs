@@ -13,6 +13,10 @@ namespace Covid19Radar.Views
         public SubmitDiagnosisKeysCompletePage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            SubmitDiagnosisKeysCompletePageTitle.AutomationId = "SubmitDiagnosisKeysCompletePageTitle";
+#endif
         }
     }
 }

@@ -70,11 +70,10 @@ namespace CovidRadar.UITestV2
         /// <returns>アプリのパス.</returns>
         public static string GetPath()
         {
-            //string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase);
-            //path = path.Substring(6);
-            //path = path.Replace("Covid19Radar\\Tests\\Covid19Radar.UITestV2\\bin\\Debug_UITest", "precompiledApps");
-            //path = path + "/APP_PACKAGE_NAME.APP_PACKAGE_NAME.apk";
-            string path = "C:/Users/hiroshi.saito.73/source/repos/ReleaseV2.0.1/precompiledApps/APP_PACKAGE_NAME.APP_PACKAGE_NAME.apk";
+            string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase);
+            path = path.Substring(6);
+            path = path.Replace("Covid19Radar\\Tests\\Covid19Radar.UITestV2\\bin\\Debug_UITest", "precompiledApps");
+            path = path + "/APP_PACKAGE_NAME.APP_PACKAGE_NAME.apk";
             return path;
         }
 

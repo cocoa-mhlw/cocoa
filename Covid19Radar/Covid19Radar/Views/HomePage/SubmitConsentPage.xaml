@@ -4,6 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <ContentPage
+    x:Name="SubmitConsentPageTitle"
     x:Class="Covid19Radar.Views.SubmitConsentPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -30,7 +31,8 @@
         https://github.com/xamarin/Xamarin.Forms/issues/13597
     -->
     <ContentView>
-    <ScrollView>
+    <ScrollView
+        x:Name="SubmitConsentPageScrollView">
         <StackLayout
             Margin="20"
             Spacing="10">
@@ -100,6 +102,7 @@
                     Text="{x:Static resources:AppResources.SubmitConsentPageDescription5}" />
             </StackLayout>
             <Button
+                    x:Name="SubmitConsentPageScrollBtn"
                     AutomationProperties.IsInAccessibleTree="{Binding IsNextButtonVisible}"
                     Command="{prism:NavigateTo 'NotifyOtherPage'}"
                     IsVisible="{Binding IsNextButtonVisible}"

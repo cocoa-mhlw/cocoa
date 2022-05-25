@@ -19,6 +19,7 @@
 
     <FlyoutPage.Flyout>
         <ContentPage
+            x:Name="MasterDetailPageTitle"
             Title="{x:Static resources:AppResources.MenuPageTitle}"
             ios:Page.UseSafeArea="True">
 
