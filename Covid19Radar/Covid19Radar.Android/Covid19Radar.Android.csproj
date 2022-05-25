@@ -95,7 +95,7 @@
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug_UITest'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_UITest|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug_UITest\</OutputPath>
     <DefineConstants>DEBUG;USE_MOCK;ENABLE_TEST_CLOUD;</DefineConstants>
