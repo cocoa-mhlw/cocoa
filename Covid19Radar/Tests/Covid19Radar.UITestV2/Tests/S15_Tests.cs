@@ -29,6 +29,7 @@ namespace CovidRadar.UITestV2
         /// ホーム画面からメールアプリ立ち上げまでの遷移確認.
         /// </summary>
         [Test]
+        [Ignore("Ignore a test")]
         public void Case01_Test()
         {
             HomePage homePage = new HomePage();

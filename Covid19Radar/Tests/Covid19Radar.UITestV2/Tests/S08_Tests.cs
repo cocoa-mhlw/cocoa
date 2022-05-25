@@ -30,6 +30,7 @@ namespace CovidRadar.UITestV2
         /// </summary>
         // TODO:課題No.71に依存するため、解決次第要修正
         [Test]
+        [Ignore("Ignore a test")]
         public void Case02_Test()
         {
             // タスクキルしていない状態をここで作る

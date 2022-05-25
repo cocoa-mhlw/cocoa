@@ -29,6 +29,7 @@ namespace CovidRadar.UITestV2
         /// お問い合わせ-動作情報の送信(機内モードOFF).
         /// </summary>
         [Test]
+        [Ignore("Ignore a test")]
         public void Case01_Test()
         {
             HomePage homePage = new HomePage();
