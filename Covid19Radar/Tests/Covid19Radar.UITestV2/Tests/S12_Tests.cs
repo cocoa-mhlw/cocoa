@@ -102,6 +102,7 @@ namespace CovidRadar.UITestV2
         [Test]
         [Category("en-US")]
         [Category("zh-CN")]
+        [Ignore("Ignore a test")]
         public void Case02_Test()
         {
             HomePage home = new HomePage();
