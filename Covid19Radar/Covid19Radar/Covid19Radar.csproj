@@ -6,7 +6,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <Copyright />
     <PackageProjectUrl></PackageProjectUrl>
-    <Configurations>Release;Debug;Debug_Mock</Configurations>
+    <Configurations>Release;Debug;Debug_Mock;Debug_UITest</Configurations>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>none</DebugType>
@@ -17,6 +17,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Mock|AnyCPU'">
     <DefineConstants>TRACE;DEBUG;USE_MOCK</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug_UITest'">
+    <DefineConstants>TRACE;DEBUG;USE_MOCK;ENABLE_TEST_CLOUD</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
