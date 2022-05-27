@@ -52,6 +52,8 @@ namespace CovidRadar.UITestV2
         private readonly Query openFAQBtn;
         private readonly Query appImfoLink;
         private readonly Query openMail;
+        private readonly Query appImfoLink2;
+        private readonly Query appImfoLink4;
 
         /// <summary>
         /// コンストラクタ.
@@ -74,6 +76,8 @@ namespace CovidRadar.UITestV2
                 openFAQBtn = x => x.Marked(InqueryPageTitle).Class(UIButton).Index(0); // よくある質問ボタン
                 appImfoLink = x => x.Marked(InqueryPageTitle).Class(UILabel).Index(3); // 接触確認アプリに関する情報リンク
                 openMail = x => x.Marked(InqueryPageTitle).Class(UIButton).Index(1); // よくある質問ボタン
+                appImfoLink2 = x => x.Marked(InqueryPageTitle).Class(UILabel).Index(2); // 接触確認アプリに関する情報リンク
+                appImfoLink4 = x => x.Marked(InqueryPageTitle).Class(UILabel).Index(4); // 接触確認アプリに関する情報リンク
             }
         }
 
@@ -138,6 +142,22 @@ namespace CovidRadar.UITestV2
         {
             app.Tap(openMenuPage);
             return new MenuPage();
+        }
+
+        /// <summary>
+        /// 「接触確認アプリに関する情報」リンクを押下する.
+        /// </summary>
+        public void TapAppImfoLink2()
+        {
+            app.Tap(appImfoLink2);
+        }
+
+        /// <summary>
+        /// 「接触確認アプリに関する情報」リンクを押下する.
+        /// </summary>
+        public void TapAppImfoLink4()
+        {
+            app.Tap(appImfoLink4);
         }
     }
 }
