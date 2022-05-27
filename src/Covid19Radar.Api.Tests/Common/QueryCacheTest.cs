@@ -17,20 +17,6 @@ namespace Covid19Radar.Api.Tests.Common
     [TestCategory("Common")]
     public class QueryCacheTest
     {
-        [DataTestMethod]
-        [DataRow(-1)]
-        [DataRow(0)]
-        [DataRow(1)]
-        [DataRow(10)]
-        [DataRow(100)]
-        [DataRow(int.MaxValue)]
-        [DataRow(int.MinValue)]
-        public void CreateMethod(int cacheTimeout)
-        {
-            // preparation
-            // action
-            var instance = new QueryCache<string>(cacheTimeout);
-        }
 
         [DataTestMethod]
         [DataRow(60, "", "", 1)]

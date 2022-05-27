@@ -31,7 +31,6 @@ namespace Covid19Radar.Api
 
         public DiagnosisApi(
             IConfiguration config,
-            IDiagnosisRepository diagnosisRepository,
             ITemporaryExposureKeyRepository tekRepository,
             IDeviceValidationService deviceCheck,
             IVerificationService verificationService,
