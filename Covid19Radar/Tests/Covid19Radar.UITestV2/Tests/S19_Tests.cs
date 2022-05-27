@@ -50,6 +50,54 @@ namespace CovidRadar.UITestV2
         }
 
         /// <summary>
+        /// ホーム画面から接触確認アプリに関する情報画面までの遷移確認.
+        /// </summary>
+        [Test]
+        public void Case01_2_Test()
+        {
+            HomePage homePage = new HomePage();
+            homePage.AssertHomePage();
+
+            // S1 ホーム画面で、ハンバーガーメニューを押下
+            MenuPage menuPage = homePage.OpenMenuPage();
+            menuPage.AssertMenuPage();
+
+            // S2 ハンバーガーメニューで、「お問い合わせ」ボタンを押下
+            InqueryPage inqueryPage = menuPage.OpenInqueryPage();
+            inqueryPage.AssertInqueryPage();
+
+            // S3 「アプリに関するお問い合わせ」画面で、「接触確認アプリに関する情報」のリンクを押下
+            inqueryPage.TapAppImfoLink2();
+
+            // Browserが立ち上がるまで待機
+            Thread.Sleep(5000);
+        }
+
+        /// <summary>
+        /// ホーム画面から接触確認アプリに関する情報画面までの遷移確認.
+        /// </summary>
+        [Test]
+        public void Case01_3_Test()
+        {
+            HomePage homePage = new HomePage();
+            homePage.AssertHomePage();
+
+            // S1 ホーム画面で、ハンバーガーメニューを押下
+            MenuPage menuPage = homePage.OpenMenuPage();
+            menuPage.AssertMenuPage();
+
+            // S2 ハンバーガーメニューで、「お問い合わせ」ボタンを押下
+            InqueryPage inqueryPage = menuPage.OpenInqueryPage();
+            inqueryPage.AssertInqueryPage();
+
+            // S3 「アプリに関するお問い合わせ」画面で、「接触確認アプリに関する情報」のリンクを押下
+            inqueryPage.TapAppImfoLink4();
+
+            // Browserが立ち上がるまで待機
+            Thread.Sleep(5000);
+        }
+
+        /// <summary>
         /// 遷移を確認するためのスクリーンショット取得と、アプリを確実に終了するための処理.
         /// </summary>
         [TearDown]

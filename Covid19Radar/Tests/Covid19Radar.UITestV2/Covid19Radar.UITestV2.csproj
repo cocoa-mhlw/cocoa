@@ -108,22 +108,7 @@
     <Compile Include="Pages\WebAccessibilityPolicyPage.cs" />
     <Compile Include="PlatformQuery.cs" />
     <Compile Include="Tests\S01_Tests.cs" />
-    <Compile Include="Tests\S04_Tests.cs" />
-    <Compile Include="Tests\S05_Tests.cs" />
-    <Compile Include="Tests\S06_Tests.cs" />
-    <Compile Include="Tests\S08_Tests.cs" />
-    <Compile Include="Tests\S10_Tests.cs" />
-    <Compile Include="Tests\S11_Tests.cs" />
-    <Compile Include="Tests\S12_Tests.cs" />
-    <Compile Include="Tests\S13_Tests.cs" />
-    <Compile Include="Tests\S14_Tests.cs" />
-    <Compile Include="Tests\S15_Tests.cs" />
-    <Compile Include="Tests\S16_Tests.cs" />
     <Compile Include="Tests\S19_Tests.cs" />
-    <Compile Include="Tests\S20_Tests.cs" />
-    <Compile Include="Tests\S21_Tests.cs" />
-    <Compile Include="Tests\S24_Tests.cs" />
-    <Compile Include="Tests\S27_Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="UITestv2.editorconfig" />

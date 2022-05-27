@@ -34,12 +34,9 @@ namespace CovidRadar.UITestV2
             HomePage homePage = new HomePage();
             homePage.AssertHomePage();
 
-            var cultureText = AppManager.GetCurrentCultureBackDoor();
-            Console.WriteLine(cultureText);
-
             // S1 ホーム画面で、「陽性者との接触を確認する」ボタンを押下
-            //ExposureCheckPage exposureCheckPage = homePage.OpenExposureCheckPage();
-            //exposureCheckPage.AssertExposureCheckPage();
+            ExposureCheckPage exposureCheckPage = homePage.OpenExposureCheckPage();
+            exposureCheckPage.AssertExposureCheckPage();
         }
 
         /// <summary>
