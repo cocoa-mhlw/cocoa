@@ -19,6 +19,7 @@ namespace Covid19Radar.Views
 
 #if ENABLE_TEST_CLOUD
             InqueryPageTitle.AutomationId = "InqueryPageTitle";
+            InqueryPageTitleOpenLink.AutomationId = "InqueryPageTitleOpenLink";
 #endif
         }
 

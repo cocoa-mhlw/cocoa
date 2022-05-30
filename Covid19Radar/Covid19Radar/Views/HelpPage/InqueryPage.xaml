@@ -88,6 +88,7 @@
                         Style="{StaticResource DefaultLabelSmall}"
                         Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
                     <Label
+                        x:Name="InqueryPageTitleOpenLink"
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource LinkLabelStyleSmall}"
                         Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html" />

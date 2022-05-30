@@ -28,11 +28,6 @@ namespace CovidRadar.UITestV2
         private static readonly string ButtonRenderer = "ButtonRenderer";
 
         /// <summary>
-        /// Android Label.
-        /// </summary>
-        private static readonly string LabelRenderer = "LabelRenderer";
-
-        /// <summary>
         /// AndroidImageボタン.
         /// </summary>
         private static readonly string AppCompatImageButton = "AppCompatImageButton";
@@ -43,17 +38,14 @@ namespace CovidRadar.UITestV2
         private static readonly string UIButton = "UIButton";
 
         /// <summary>
-        /// iOS Label.
+        /// 接触確認アプリに関する情報リンクのAutomationID.
         /// </summary>
-        private static readonly string UILabel = "UILabel";
+        private static readonly string AppImfoLink = "InqueryPageTitleOpenLink";
 
         private readonly Query opensendLogConfirmationPage;
         private readonly Query openMenuPage;
         private readonly Query openFAQBtn;
-        private readonly Query appImfoLink;
         private readonly Query openMail;
-        private readonly Query appImfoLink2;
-        private readonly Query appImfoLink4;
 
         /// <summary>
         /// コンストラクタ.
@@ -65,7 +57,6 @@ namespace CovidRadar.UITestV2
                 opensendLogConfirmationPage = x => x.Marked(InqueryPageTitle).Class(ButtonRenderer).Index(2); // 動作状況を送信ボタン
                 openMenuPage = x => x.Class(AppCompatImageButton).Index(0); // ハンバーガーメニュー
                 openFAQBtn = x => x.Marked(InqueryPageTitle).Class(ButtonRenderer).Index(0); // よくある質問ボタン
-                appImfoLink = x => x.Marked(InqueryPageTitle).Class(LabelRenderer).Index(3); // 接触確認アプリに関する情報リンク
                 openMail = x => x.Marked(InqueryPageTitle).Class(ButtonRenderer).Index(1); // よくある質問ボタン
             }
 
@@ -74,10 +65,7 @@ namespace CovidRadar.UITestV2
                 opensendLogConfirmationPage = x => x.Marked(InqueryPageTitle).Class(UIButton).Index(2); // 動作状況を送信ボタン
                 openMenuPage = x => x.Class(UIButton).Index(3); // ハンバーガーメニュー
                 openFAQBtn = x => x.Marked(InqueryPageTitle).Class(UIButton).Index(0); // よくある質問ボタン
-                appImfoLink = x => x.Marked(InqueryPageTitle).Class(UILabel).Index(3); // 接触確認アプリに関する情報リンク
                 openMail = x => x.Marked(InqueryPageTitle).Class(UIButton).Index(1); // よくある質問ボタン
-                appImfoLink2 = x => x.Marked(InqueryPageTitle).Class(UILabel).Index(2); // 接触確認アプリに関する情報リンク
-                appImfoLink4 = x => x.Marked(InqueryPageTitle).Class(UILabel).Index(4); // 接触確認アプリに関する情報リンク
             }
         }
 
@@ -123,7 +111,7 @@ namespace CovidRadar.UITestV2
         /// </summary>
         public void TapAppImfoLink()
         {
-            app.Tap(appImfoLink);
+            app.Tap(AppImfoLink);
         }
 
         /// <summary>
@@ -142,22 +130,6 @@ namespace CovidRadar.UITestV2
         {
             app.Tap(openMenuPage);
             return new MenuPage();
-        }
-
-        /// <summary>
-        /// 「接触確認アプリに関する情報」リンクを押下する.
-        /// </summary>
-        public void TapAppImfoLink2()
-        {
-            app.Tap(appImfoLink2);
-        }
-
-        /// <summary>
-        /// 「接触確認アプリに関する情報」リンクを押下する.
-        /// </summary>
-        public void TapAppImfoLink4()
-        {
-            app.Tap(appImfoLink4);
         }
     }
 }
