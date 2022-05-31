@@ -28,14 +28,12 @@ namespace Covid19Radar.Api.Tests
             // preparation
             var config = new Mock<IConfiguration>();
             config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
-            var diagnosisRepo = new Mock<IDiagnosisRepository>();
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validationServer = new Mock<IValidationServerService>();
             var deviceCheck = new Mock<IDeviceValidationService>();
             var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.V2DiagnosisApi>();
             var diagnosisApi = new V2DiagnosisApi(config.Object,
-                                                diagnosisRepo.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
@@ -68,12 +66,7 @@ namespace Covid19Radar.Api.Tests
             // preparation
             var config = new Mock<IConfiguration>();
             config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
-            var diagnosisRepo = new Mock<IDiagnosisRepository>();
-            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(),
-                                                            It.IsAny<DateTimeOffset>(),
-                                                            It.IsAny<string>(),
-                                                            It.IsAny<TemporaryExposureKeyModel[]>()))
-                .ReturnsAsync(new DiagnosisModel());
+
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validationServer = new Mock<IValidationServerService>();
             validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
@@ -84,7 +77,6 @@ namespace Covid19Radar.Api.Tests
             var verification = new Mock<IVerificationService>();
             var logger = new Mock.LoggerMock<Covid19Radar.Api.V2DiagnosisApi>();
             var diagnosisApi = new V2DiagnosisApi(config.Object,
-                                                diagnosisRepo.Object,
                                                 tekRepo.Object,
                                                 deviceCheck.Object,
                                                 verification.Object,
