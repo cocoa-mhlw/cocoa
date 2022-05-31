@@ -78,16 +78,15 @@ namespace Covid19Radar.Services
 
             try
             {
-                List<EventLog> eventLogList = await _eventLogRepository.GetLogsAsync(maxSize);
-
                 IDictionary<string, SendEventLogState> eventStateDict = new Dictionary<string, SendEventLogState>();
                 foreach (var eventType in ISendEventLogStateRepository.EVENT_TYPE_ALL)
                 {
                     eventStateDict[eventType.ToString()] = _sendEventLogStateRepository.GetSendEventLogState(eventType);
                 }
 
+                List<EventLog> eventLogList = await _eventLogRepository.GetLogsAsync(maxSize);
 
-                // Remove consent withdrawn eventlogs.
+                // Remove eventlogs that consent withdrawn.
                 IEnumerable<EventLog> consentWithdrawnEventLogList = eventLogList
                     .Where(eventLog => eventStateDict[eventLog.GetEventType()] != SendEventLogState.Enable);
                 foreach (var eventLog in consentWithdrawnEventLogList)
@@ -95,17 +94,17 @@ namespace Covid19Radar.Services
                     await _eventLogRepository.RemoveAsync(eventLog);
                 }
 
-                List<EventLog> filteredEventLogList = eventLogList
-                    .Where(eventLog => eventStateDict[eventLog.GetEventType()] == SendEventLogState.Enable)
+                List<EventLog> enableTypeEventLogList = eventLogList
+                    .Except(consentWithdrawnEventLogList)
                     .ToList();
 
-                if (filteredEventLogList.Count == 0)
+                if (enableTypeEventLogList.Count == 0)
                 {
                     _loggerService.Info($"No Event-logs found.");
                     return;
                 }
 
-                _loggerService.Info($"{filteredEventLogList.Count} found Event-logs.");
+                _loggerService.Info($"{enableTypeEventLogList.Count} found Event-logs.");
 
                 string idempotencyKey = Guid.NewGuid().ToString();
 
@@ -113,11 +112,11 @@ namespace Covid19Radar.Services
                 {
                     try
                     {
-                        await SendAsync(idempotencyKey, filteredEventLogList);
+                        await SendAsync(idempotencyKey, enableTypeEventLogList);
                         _loggerService.Info($"Send complete.");
 
                         _loggerService.Info($"Clean up...");
-                        foreach (var eventLog in filteredEventLogList)
+                        foreach (var eventLog in enableTypeEventLogList)
                         {
                             await _eventLogRepository.RemoveAsync(eventLog);
                         }
