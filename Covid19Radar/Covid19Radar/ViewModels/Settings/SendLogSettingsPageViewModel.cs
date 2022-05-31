@@ -57,7 +57,7 @@ namespace Covid19Radar.ViewModels
         {
             _loggerService.StartMethod();
 
-            foreach (string eventType in ISendEventLogStateRepository.EVENT_TYPE_ALL)
+            foreach (EventType eventType in ISendEventLogStateRepository.EVENT_TYPE_ALL)
             {
                 bool isStateSet = _sendEventLogStateRepository.GetSendEventLogState(eventType) != SendEventLogState.NotSet;
                 if (isStateSet)

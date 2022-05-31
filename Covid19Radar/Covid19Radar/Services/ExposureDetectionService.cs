@@ -134,7 +134,7 @@ namespace Covid19Radar.Services
                 _ = _localNotificationService.ShowExposureNotificationAsync();
 
                 bool enableSendEventExposureNotificationNotified = _sendEventLogStateRepository
-                    .GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED) == SendEventLogState.Enable;
+                    .GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED) == SendEventLogState.Enable;
 
                 if (enableSendEventExposureNotificationNotified)
                 {

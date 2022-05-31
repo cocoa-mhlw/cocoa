@@ -18,19 +18,36 @@ namespace Covid19Radar.Repository
         Enable = 1
     }
 
+    public class EventType
+    {
+        public string Type { get; }
+        public string SubType { get; }
+
+        public EventType(string type, string subType)
+        {
+            Type = type;
+            SubType = subType;
+        }
+
+        public override string ToString()
+        {
+            return $"{Type}-{SubType}";
+        }
+    }
+
     public interface ISendEventLogStateRepository
     {
-        public const string EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED = "exposure_notification_notified";
-        public const string EVENT_TYPE_EXPOSURE_DATA = "exposure_data";
+        public static EventType EVENT_TYPE_EXPOSURE_NOTIFIED = new EventType("ExposureNotification", "ExposureNotified");
+        public static EventType EVENT_TYPE_EXPOSURE_DATA = new EventType("ExposureNotification", "ExposureData");
 
-        public static string[] EVENT_TYPE_ALL = new string[] {
-            EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED,
+        public static EventType[] EVENT_TYPE_ALL = new EventType[] {
+            EVENT_TYPE_EXPOSURE_NOTIFIED,
             EVENT_TYPE_EXPOSURE_DATA,
         };
 
-        void SetSendEventLogState(string eventType, SendEventLogState state);
+        void SetSendEventLogState(EventType eventType, SendEventLogState state);
 
-        SendEventLogState GetSendEventLogState(string eventType);
+        SendEventLogState GetSendEventLogState(EventType eventType);
     }
 
     public class SendEventLogStateRepository : ISendEventLogStateRepository
@@ -49,7 +66,7 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
-        public SendEventLogState GetSendEventLogState(string eventType)
+        public SendEventLogState GetSendEventLogState(EventType eventType)
         {
             string stateString = EMPTY_DICT;
 
@@ -70,12 +87,12 @@ namespace Covid19Radar.Repository
                 IDictionary<string, int> stateDict
                     = JsonConvert.DeserializeObject<IDictionary<string, int>>(stateString);
 
-                if (!stateDict.ContainsKey(eventType))
+                if (!stateDict.ContainsKey(eventType.ToString()))
                 {
                     return SendEventLogState.NotSet;
                 }
 
-                int value = stateDict[eventType];
+                int value = stateDict[eventType.ToString()];
                 return (SendEventLogState)Enum.ToObject(typeof(SendEventLogState), value);
             }
             catch (JsonReaderException exception)
@@ -93,7 +110,7 @@ namespace Covid19Radar.Repository
             return SendEventLogState.NotSet;
         }
 
-        public void SetSendEventLogState(string eventType, SendEventLogState state)
+        public void SetSendEventLogState(EventType eventType, SendEventLogState state)
         {
             try
             {
@@ -119,7 +136,7 @@ namespace Covid19Radar.Repository
                     _loggerService.Exception($"JsonSerializationException {stateString}", exception);
                 }
 
-                stateDict[eventType] = (int)state;
+                stateDict[eventType.ToString()] = (int)state;
 
                 string newStateString = JsonConvert.SerializeObject(stateDict);
                 _preferencesService.SetStringValue(PreferenceKey.SendEventLogState, newStateString);

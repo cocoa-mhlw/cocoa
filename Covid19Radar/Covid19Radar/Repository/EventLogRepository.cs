@@ -30,6 +30,8 @@ namespace Covid19Radar.Repository
 
     public class EventLogRepository : IEventLogRepository
     {
+        private const string LOG_EXTENSION = ".log";
+
         private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
@@ -57,9 +59,9 @@ namespace Covid19Radar.Repository
 
             using var sha = SHA256.Create();
             var textBytes = Encoding.UTF8.GetBytes(clearText);
-            string fileName = Convert.ToBase64String(sha.ComputeHash(textBytes));
+            string hash = Convert.ToBase64String(sha.ComputeHash(textBytes));
 
-            return fileName;
+            return $"{hash}{LOG_EXTENSION}";
         }
 
         public async Task<bool> AddAsync(EventLog eventLog, long maxSize)
@@ -142,7 +144,9 @@ namespace Covid19Radar.Repository
                 long currentSize = 0;
                 var resultList = new List<EventLog>();
 
-                string[] files = Directory.GetFiles(_basePath);
+                string[] files = Directory.GetFiles(_basePath)
+                    .Where(file => file.EndsWith(LOG_EXTENSION))
+                    .ToArray();
                 if (files.Length == 0)
                 {
                     _loggerService.Info("No log found.");
@@ -250,7 +254,7 @@ namespace Covid19Radar.Repository
         private async Task AddEventNotifiedAsyncInternal(long maxSize)
         {
             bool hasConsent = _sendEventLogStateRepository.GetSendEventLogState(
-                ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED
+                ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED
                 ) == SendEventLogState.Enable;
 
             var content = new EventContentExposureNotified()
@@ -262,8 +266,8 @@ namespace Covid19Radar.Repository
             {
                 HasConsent = hasConsent,
                 Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
-                Type = "ExposureNotification",
-                Subtype = "ExposureNotified",
+                Type = ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED.Type,
+                Subtype = ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED.SubType,
                 Content = content.ToJsonString(),
             };
             await AddAsync(eventLog, maxSize);

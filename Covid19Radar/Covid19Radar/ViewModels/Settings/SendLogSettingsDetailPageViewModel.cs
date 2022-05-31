@@ -67,7 +67,7 @@ namespace Covid19Radar.ViewModels
                 = EnableExposureData ? SendEventLogState.Enable : SendEventLogState.Disable;
 
             _sendEventLogStateRepository.SetSendEventLogState(
-                ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED,
+                ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED,
                 exposureNotificationNotifiedState
                 );
 
