@@ -127,7 +127,8 @@ namespace Covid19Radar.Api
                         continue;
                     }
 
-                    string id = ByteArrayUtils.ToHexString(sha256.ComputeHash(Encoding.ASCII.GetBytes(eventLog.ClearText)));
+                    var idSeed = $"{submissionParameter.IdempotencyKey},{eventLog.ClearText}";
+                    var id = ByteArrayUtils.ToHexString(sha256.ComputeHash(Encoding.ASCII.GetBytes(idSeed)));
 
                     var eventLogModel = new EventLogModel(
                         eventLog.HasConsent,
