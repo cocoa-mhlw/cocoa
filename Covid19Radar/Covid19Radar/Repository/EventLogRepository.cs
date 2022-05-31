@@ -55,7 +55,7 @@ namespace Covid19Radar.Repository
 
         private string GetFileName(EventLog eventLog)
         {
-            var clearText = string.Join(".", eventLog.HasConsent, eventLog.Epoch, eventLog.Type, eventLog.Subtype, eventLog.Content);
+            var clearText = string.Join(".", eventLog.Epoch, eventLog.Type, eventLog.Subtype, eventLog.Content);
 
             using var sha = SHA256.Create();
             var textBytes = Encoding.UTF8.GetBytes(clearText);
