@@ -39,7 +39,7 @@ namespace Covid19Radar.Api.DataAccess
             _logger.LogInformation($"start {nameof(GetNextAsync)}");
             var oldest = (int)new DateTimeOffset(DateTime.UtcNow.AddDays(Constants.OutOfDateDays).Date.Ticks, TimeSpan.Zero).ToUnixTimeSeconds() / 600;
             var query = _db.TemporaryExposureKey.GetItemLinqQueryable<TemporaryExposureKeyModel>(true)
-                .Where(tek => tek.RollingStartIntervalNumber > oldest)
+                .Where(tek => tek.RollingStartIntervalNumber >= oldest)
                 .Where(tek => !tek.Exported)
                 .ToFeedIterator();
             var e = Enumerable.Empty<TemporaryExposureKeyModel>();
