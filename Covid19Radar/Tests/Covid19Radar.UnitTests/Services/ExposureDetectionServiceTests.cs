@@ -26,12 +26,13 @@ namespace Covid19Radar.UnitTests.Services {
         private readonly Mock<ISendEventLogStateRepository> sendEventLogStateRepository;
         private readonly Mock<ILocalNotificationService> localNotificationService;
         private readonly Mock<IDebugExposureDataCollectServer> exposureDataCollectServer;
+        private readonly Mock<IEventLogRepository> eventLogRepository;
+
         private readonly Mock<IExposureRiskCalculationConfigurationRepository> exposureRiskCalculationConfigurationRepository;
+
         private readonly Mock<IExposureRiskCalculationService> exposureRiskCalculationService;
-        private readonly Mock<IEventLogService> eventLogService;
         private readonly Mock<IDateTimeUtility> dateTimeUtility;
         private readonly Mock<IDeviceInfoUtility> deviceInfoUtility;
-
 
         private readonly Mock<IHttpClientService> clientService;
         private readonly Mock<ILocalPathService> localPathService;
@@ -49,9 +50,9 @@ namespace Covid19Radar.UnitTests.Services {
             sendEventLogStateRepository = mockRepository.Create<ISendEventLogStateRepository>();
             localNotificationService = mockRepository.Create<ILocalNotificationService>();
             exposureDataCollectServer = mockRepository.Create<IDebugExposureDataCollectServer>();
+            eventLogRepository = mockRepository.Create<IEventLogRepository>();
             exposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             exposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
-            eventLogService = mockRepository.Create<IEventLogService>();
 
             clientService = mockRepository.Create<IHttpClientService>();
             localPathService = mockRepository.Create<ILocalPathService>();
@@ -60,7 +61,6 @@ namespace Covid19Radar.UnitTests.Services {
             serverConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
             dateTimeUtility = mockRepository.Create<IDateTimeUtility>();
             deviceInfoUtility = mockRepository.Create<IDeviceInfoUtility>();
-
 
             localPathService.Setup(x => x.ExposureConfigurationDirPath).Returns($"{Path.GetTempPath()}/cocoa/");
         }
@@ -110,7 +110,7 @@ namespace Covid19Radar.UnitTests.Services {
                 exposureRiskCalculationConfigurationRepository.Object,
                 exposureRiskCalculationService.Object,
                 exposureConfigurationRepository,
-                eventLogService.Object,
+                eventLogRepository.Object,
                 exposureDataCollectServer.Object,
                 dateTimeUtility.Object,
                 deviceInfoUtility.Object

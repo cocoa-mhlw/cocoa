@@ -191,6 +191,7 @@
     <Compile Include="Services\PlatformService.cs" />
     <Compile Include="Services\IPlatformService.cs" />
     <Compile Include="Services\LocalPathService.cs" />
+    <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />

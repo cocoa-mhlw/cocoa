@@ -6,41 +6,21 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Chino;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
-using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
     public interface IEventLogService
     {
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation
-            );
+        public Task SendAllAsync(long maxSize, int maxRetry);
 
-        public Task SendExposureDataAsync(
+        public Task SendAsync(
             string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows
-            );
-
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion
+            List<EventLog> eventLogList
             );
     }
 
@@ -48,97 +28,102 @@ namespace Covid19Radar.Services
     public class EventLogService : IEventLogService
     {
         private readonly IUserDataRepository _userDataRepository;
+        private readonly IEventLogRepository _eventLogRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly IEssentialsService _essentialsService;
         private readonly IDeviceVerifier _deviceVerifier;
-        private readonly IDateTimeUtility _dateTimeUtility;
 
         private readonly ILoggerService _loggerService;
-
+        private readonly IDateTimeUtility _dateTimeUtility;
         private readonly HttpClient _httpClient;
+
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
         public EventLogService(
             IUserDataRepository userDataRepository,
+            IEventLogRepository eventLogRepository,
             IServerConfigurationRepository serverConfigurationRepository,
             IEssentialsService essentialsService,
             IDeviceVerifier deviceVerifier,
-            IDateTimeUtility dateTimeUtility,
             IHttpClientService httpClientService,
-            ILoggerService loggerService
+            ILoggerService loggerService,
+            IDateTimeUtility dateTimeUtility
             )
         {
             _userDataRepository = userDataRepository;
+            _eventLogRepository = eventLogRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
             _essentialsService = essentialsService;
             _deviceVerifier = deviceVerifier;
-            _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
+            _dateTimeUtility = dateTimeUtility;
 
             _httpClient = httpClientService.Create();
         }
 
-        public async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation
-            )
+        public async Task SendAllAsync(long maxSize, int maxRetry)
         {
-            var data = new ExposureData(exposureConfiguration,
-                exposureSummary, exposureInformation
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
+            await _semaphore.WaitAsync();
 
-            await SendExposureDataAsync(idempotencyKey, data);
+            try
+            {
+                await SendAllInternalAsync(maxSize, maxRetry);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
         }
 
-        public async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows
-            )
+        private async Task SendAllInternalAsync(long maxSize, int maxRetry)
         {
-            var data = new ExposureData(exposureConfiguration,
-                dailySummaries, exposureWindows
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
+            _loggerService.StartMethod();
 
-            await SendExposureDataAsync(idempotencyKey, data);
+            try
+            {
+                List<EventLog> eventLogList
+                    = await _eventLogRepository.GetLogsAsync(maxSize);
+
+                if (eventLogList.Count == 0)
+                {
+                    _loggerService.Info($"No Event-logs found.");
+                    return;
+                }
+
+                _loggerService.Info($"{eventLogList.Count} found Event-logs.");
+
+                string idempotencyKey = Guid.NewGuid().ToString();
+
+                for (var retryCount = 0; retryCount < maxRetry; retryCount++)
+                {
+                    try
+                    {
+                        await SendAsync(idempotencyKey, eventLogList);
+                        _loggerService.Info($"Send complete.");
+
+                        _loggerService.Info($"Clean up...");
+                        foreach (var eventLog in eventLogList)
+                        {
+                            await _eventLogRepository.RemoveAsync(eventLog);
+                        }
+                        _loggerService.Info($"Done.");
+                        break;
+                    }
+                    catch (Exception exception)
+                    {
+                        _loggerService.Exception("Exception occurred, SendAsync", exception);
+                    }
+                }
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
 
-        public async Task SendExposureDataAsync(
+        public async Task SendAsync(
             string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion
-            )
-        {
-            var data = new ExposureData(
-                exposureConfiguration
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
-
-            await SendExposureDataAsync(idempotencyKey, data);
-        }
-
-
-        private async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureData exposureData
+            List<EventLog> eventLogList
             )
         {
             _loggerService.StartMethod();
@@ -176,7 +161,7 @@ namespace Covid19Radar.Services
                     IdempotencyKey = idempotencyKey,
                     Platform = _essentialsService.Platform,
                     AppPackageName = _essentialsService.AppPackageName,
-                    EventLogs = eventLogs,
+                    EventLogs = eventLogList,
                 };
 
                 request.DeviceVerificationPayload = await _deviceVerifier.VerifyAsync(request);

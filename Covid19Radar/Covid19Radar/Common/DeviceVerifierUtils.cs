@@ -46,10 +46,10 @@ namespace Covid19Radar.Common
         {
             return string.Join("|", eventLogRequest.AppPackageName, GetListClearText(eventLogRequest.EventLogs));
 
-            static string GetListClearText(V1EventLogRequest.EventLog[] eventLogs)
+            static string GetListClearText(IList<EventLog> eventLogs)
                 => string.Join(",", eventLogs.Select(log => GetClearText(log)));
 
-            static string GetClearText(V1EventLogRequest.EventLog log)
+            static string GetClearText(EventLog log)
                 => string.Join(".", log.HasConsent, log.Epoch, log.Type, log.Subtype, log.Content);
         }
 

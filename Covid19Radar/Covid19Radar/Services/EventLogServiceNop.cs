@@ -5,6 +5,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Chino;
+using Covid19Radar.Model;
 
 namespace Covid19Radar.Services
 {
@@ -38,6 +39,24 @@ namespace Covid19Radar.Services
             ExposureConfiguration exposureConfiguration,
             string deviceModel,
             string enVersion
+            )
+        {
+            // do nothing
+            return Task.CompletedTask;
+        }
+
+        public Task SendAllAsync(
+            long maxSize,
+            int maxRetry
+            )
+        {
+            // do nothing
+            return Task.CompletedTask;
+        }
+
+        public Task SendAsync(
+            string idempotencyKey,
+            List<EventLog> eventLogList
             )
         {
             // do nothing
