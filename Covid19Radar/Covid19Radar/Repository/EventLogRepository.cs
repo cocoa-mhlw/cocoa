@@ -8,7 +8,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using Chino;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
@@ -25,41 +24,25 @@ namespace Covid19Radar.Repository
 
         public Task<bool> RemoveAsync(EventLog eventLog);
 
-        public Task AddAsync(
-            ExposureConfiguration exposureConfiguration,
-            string model,
-            string enVersionStr,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows,
-            long maxSize
-            );
-
-        public Task AddAsync(
-            ExposureConfiguration exposureConfiguration,
-            string model,
-            string enVersionStr,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation,
-            long maxSize
-            );
+        public Task AddEventNotifiedAsync(long maxSize);
     }
 
     public class EventLogRepository : IEventLogRepository
     {
-        private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
 
         private readonly string _basePath;
 
         public EventLogRepository(
-            IUserDataRepository userDataRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository,
             IDateTimeUtility dateTimeUtility,
             ILocalPathService localPathService,
             ILoggerService loggerService
             )
         {
-            _userDataRepository = userDataRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
             _dateTimeUtility = dateTimeUtility;
             _basePath = localPathService.EventLogDirPath;
             _loggerService = loggerService;
@@ -181,126 +164,34 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public async Task AddAsync(
-            ExposureConfiguration exposureConfiguration,
-            string model,
-            string enVersionStr,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows,
-            long maxSize
-            )
+        public async Task AddEventNotifiedAsync(long maxSize)
         {
-            var exposureData = new ExposureDataLog(
-                exposureConfiguration,
-                dailySummaries,
-                exposureWindows
-                )
+            bool hasConsent = _sendEventLogStateRepository.GetSendEventLogState(
+                ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED
+                ) == SendEventLogState.Enable;
+
+            var content = new EventContentExposureNotified()
             {
-                Device = model,
-                EnVersion = enVersionStr
+                NotifiedTimeInMillis = _dateTimeUtility.UtcNow.Ticks
             };
 
             var eventLog = new EventLog()
             {
-                HasConsent = _userDataRepository.GetSendEventLogState() == SendEventLogState.Enable,
+                HasConsent = hasConsent,
                 Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
-                Type = "ExposureData",
-                Subtype = "ExposureWindow",
-                Content = exposureData.ToJsonString(),
-            };
-            await AddAsync(eventLog, maxSize);
-        }
-
-        public async Task AddAsync(
-            ExposureConfiguration exposureConfiguration,
-            string model,
-            string enVersionStr,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformations,
-            long maxSize
-            )
-        {
-            var exposureData = new ExposureDataLog(
-                exposureConfiguration,
-                exposureSummary,
-                exposureInformations
-                )
-            {
-                Device = model,
-                EnVersion = enVersionStr
-            };
-
-            var eventLog = new EventLog()
-            {
-                HasConsent = _userDataRepository.GetSendEventLogState() == SendEventLogState.Enable,
-                Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
-                Type = "ExposureData",
-                Subtype = "Legacy-v1",
-                Content = exposureData.ToJsonString(),
+                Type = "ExposureNotification",
+                Subtype = "ExposureNotified",
+                Content = content.ToJsonString(),
             };
             await AddAsync(eventLog, maxSize);
         }
     }
 
-    public class ExposureDataLog
+    public class EventContentExposureNotified
     {
-        private string _device = "unknown_device";
-
-        [JsonProperty("device")]
-        public string Device
-        {
-            get
-            {
-                return _device;
-            }
-            set
-            {
-                string device = value.Replace(" ", "_");
-                _device = device;
-            }
-        }
-
-        [JsonProperty("en_version")]
-        public string? EnVersion;
-
-        [JsonProperty("exposure_summary")]
-        public readonly ExposureSummary? exposureSummary;
-
-        [JsonProperty("exposure_informations")]
-        public readonly IList<ExposureInformation>? exposureInformations;
-
-        [JsonProperty("daily_summaries")]
-        public readonly IList<DailySummary>? dailySummaries;
-
-        [JsonProperty("exposure_windows")]
-        public readonly IList<ExposureWindow>? exposureWindows;
-
-        [JsonProperty("exposure_configuration")]
-        public readonly ExposureConfiguration exposureConfiguration;
-
-        public ExposureDataLog(ExposureConfiguration exposureConfiguration)
-            : this(exposureConfiguration, null, null, null, null) { }
-
-        public ExposureDataLog(ExposureConfiguration exposureConfiguration,
-            ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
-            : this(exposureConfiguration, exposureSummary, exposureInformations, null, null) { }
-
-        public ExposureDataLog(ExposureConfiguration exposureConfiguration,
-            IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows)
-            : this(exposureConfiguration, null, null, dailySummaries, exposureWindows) { }
-
-        public ExposureDataLog(ExposureConfiguration exposureConfiguration,
-            ExposureSummary? exposureSummary, IList<ExposureInformation>? exposureInformations,
-            IList<DailySummary>? dailySummaries, IList<ExposureWindow>? exposureWindows)
-        {
-            this.exposureConfiguration = exposureConfiguration;
-            this.exposureSummary = exposureSummary;
-            this.exposureInformations = exposureInformations;
-            this.dailySummaries = dailySummaries;
-            this.exposureWindows = exposureWindows;
-        }
+        [JsonProperty("notified_time_in_millis")]
+        public long NotifiedTimeInMillis;
 
         public string ToJsonString() => JsonConvert.SerializeObject(this, Formatting.Indented);
     }
-
 }

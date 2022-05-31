@@ -159,22 +159,6 @@ namespace Covid19Radar.Services
             {
                 _loggerService.Exception("UploadExposureDataAsync", e);
             }
-
-            string idempotencyKey = Guid.NewGuid().ToString();
-            try
-            {
-                await _eventLogRepository.AddAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr,
-                    newDailySummaries, newExposureWindows,
-                    AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("SendExposureDataAsync", e);
-            }
         }
 
         public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
@@ -212,22 +196,6 @@ namespace Covid19Radar.Services
             catch (Exception e)
             {
                 _loggerService.Exception("UploadExposureDataAsync", e);
-            }
-
-            string idempotencyKey = Guid.NewGuid().ToString();
-            try
-            {
-                await _eventLogRepository.AddAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr,
-                    exposureSummary, exposureInformations,
-                    AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("SendExposureDataAsync", e);
             }
         }
 
