@@ -42,7 +42,6 @@ namespace Covid19Radar.Services
 
         private readonly IEventLogRepository _eventLogRepository;
 
-        private readonly IDebugExposureDataCollectServer _exposureDataCollectServer;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly IDeviceInfoUtility _deviceInfoUtility;
 
@@ -57,7 +56,6 @@ namespace Covid19Radar.Services
             IExposureRiskCalculationService exposureRiskCalculationService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IEventLogRepository eventLogRepository,
-            IDebugExposureDataCollectServer exposureDataCollectServer,
             IDateTimeUtility dateTimeUtility,
             IDeviceInfoUtility deviceInfoUtility
             )
@@ -71,7 +69,6 @@ namespace Covid19Radar.Services
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _eventLogRepository = eventLogRepository;
-            _exposureDataCollectServer = exposureDataCollectServer;
             _dateTimeUtility = dateTimeUtility;
             _deviceInfoUtility = deviceInfoUtility;
         }
@@ -145,20 +142,6 @@ namespace Covid19Radar.Services
             {
                 _loggerService.Info($"DailySummary: {dailySummaries.Count}, but no high-risk exposure detected");
             }
-
-            try
-            {
-                await _exposureDataCollectServer.UploadExposureDataAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr,
-                    newDailySummaries, newExposureWindows
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("UploadExposureDataAsync", e);
-            }
         }
 
         public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
@@ -182,20 +165,6 @@ namespace Covid19Radar.Services
             else
             {
                 _loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
-            }
-
-            try
-            {
-                await _exposureDataCollectServer.UploadExposureDataAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr,
-                    exposureSummary, exposureInformations
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("UploadExposureDataAsync", e);
             }
         }
 
