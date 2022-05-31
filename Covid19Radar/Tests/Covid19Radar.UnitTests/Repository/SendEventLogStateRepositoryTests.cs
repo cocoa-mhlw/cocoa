@@ -13,6 +13,9 @@ namespace Covid19Radar.UnitTests.Repository
 {
     public class SendEventLogStateRepositoryTests
     {
+        private static EventType DUMMY_EVENT1 = new EventType("DummyEventType1", "DummyEventSubtype1");
+        private static EventType DUMMY_EVENT2 = new EventType("DummyEventType2", "DummyEventSubtype2");
+
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IPreferencesService> mockPreferencesService;
@@ -38,7 +41,7 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             var exposureNotificationNotified = sendEventLogStateRepository
-                .GetSendEventLogState("DummyEventType");
+                .GetSendEventLogState(DUMMY_EVENT1);
 
             Assert.Equal(SendEventLogState.NotSet, exposureNotificationNotified);
         }
@@ -53,7 +56,7 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             var exposureNotificationNotified = sendEventLogStateRepository
-                .GetSendEventLogState("DummyEventType");
+                .GetSendEventLogState(DUMMY_EVENT1);
 
             Assert.Equal(SendEventLogState.NotSet, exposureNotificationNotified);
         }
@@ -68,7 +71,7 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             var exposureNotificationNotified = sendEventLogStateRepository
-                .GetSendEventLogState("DummyEventType");
+                .GetSendEventLogState(DUMMY_EVENT1);
 
             Assert.Equal(SendEventLogState.NotSet, exposureNotificationNotified);
         }
@@ -83,7 +86,7 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             var exposureNotificationNotified = sendEventLogStateRepository
-                .GetSendEventLogState("DummyEventType");
+                .GetSendEventLogState(DUMMY_EVENT1);
 
             Assert.Equal(SendEventLogState.NotSet, exposureNotificationNotified);
         }
@@ -93,12 +96,12 @@ namespace Covid19Radar.UnitTests.Repository
         {
             mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.SendEventLogState)).Returns(true);
             mockPreferencesService.Setup(s => s.GetStringValue(PreferenceKey.SendEventLogState, It.IsAny<string>()))
-                .Returns("{ \"DummyEventType\": -1 }");
+                .Returns("{ \"DummyEventType1-DummyEventSubtype1\": -1 }");
 
             var sendEventLogStateRepository = CreateRepository();
 
             var exposureNotificationNotified = sendEventLogStateRepository
-                .GetSendEventLogState("DummyEventType");
+                .GetSendEventLogState(DUMMY_EVENT1);
 
             Assert.Equal(SendEventLogState.Disable, exposureNotificationNotified);
         }
@@ -108,12 +111,12 @@ namespace Covid19Radar.UnitTests.Repository
         {
             mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.SendEventLogState)).Returns(true);
             mockPreferencesService.Setup(s => s.GetStringValue(PreferenceKey.SendEventLogState, It.IsAny<string>()))
-                .Returns("{ \"DummyEventType1\": 1, \"DummyEventType2\": -11 }");
+                .Returns("{ \"DummyEventType1-DummyEventSubtype1\": 1, \"DummyEventType2-DummyEventSubtype2\": -11 }");
 
             var sendEventLogStateRepository = CreateRepository();
 
             var exposureNotificationNotified = sendEventLogStateRepository
-                .GetSendEventLogState("DummyEventType1");
+                .GetSendEventLogState(DUMMY_EVENT1);
 
             Assert.Equal(SendEventLogState.Enable, exposureNotificationNotified);
         }
@@ -128,11 +131,11 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             sendEventLogStateRepository
-                .SetSendEventLogState("DummyEventType1", SendEventLogState.Enable);
+                .SetSendEventLogState(DUMMY_EVENT1, SendEventLogState.Enable);
 
             mockPreferencesService.Verify(s => s.SetStringValue(
                 PreferenceKey.SendEventLogState,
-                "{\"DummyEventType1\":1}"
+                "{\"DummyEventType1-DummyEventSubtype1\":1}"
                 ), Times.Once());
         }
 
@@ -146,11 +149,11 @@ namespace Covid19Radar.UnitTests.Repository
             var sendEventLogStateRepository = CreateRepository();
 
             sendEventLogStateRepository
-                .SetSendEventLogState("DummyEventType1", SendEventLogState.Enable);
+                .SetSendEventLogState(DUMMY_EVENT1, SendEventLogState.Enable);
 
             mockPreferencesService.Verify(s => s.SetStringValue(
                 PreferenceKey.SendEventLogState,
-                "{\"DummyEventType1\":1}"
+                "{\"DummyEventType1-DummyEventSubtype1\":1}"
                 ), Times.Once());
         }
 
@@ -159,16 +162,16 @@ namespace Covid19Radar.UnitTests.Repository
         {
             mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.SendEventLogState)).Returns(true);
             mockPreferencesService.Setup(s => s.GetStringValue(PreferenceKey.SendEventLogState, It.IsAny<string>()))
-                .Returns("{\"DummyEventType\": -1}");
+                .Returns("{\"DummyEventType1-DummyEventSubtype1\": -1}");
 
             var sendEventLogStateRepository = CreateRepository();
 
             sendEventLogStateRepository
-                .SetSendEventLogState("DummyEventType", SendEventLogState.Enable);
+                .SetSendEventLogState(DUMMY_EVENT1, SendEventLogState.Enable);
 
             mockPreferencesService.Verify(s => s.SetStringValue(
                 PreferenceKey.SendEventLogState,
-                "{\"DummyEventType\":1}"
+                "{\"DummyEventType1-DummyEventSubtype1\":1}"
                 ), Times.Once());
         }
 
@@ -177,16 +180,16 @@ namespace Covid19Radar.UnitTests.Repository
         {
             mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.SendEventLogState)).Returns(true);
             mockPreferencesService.Setup(s => s.GetStringValue(PreferenceKey.SendEventLogState, It.IsAny<string>()))
-                .Returns("{ \"DummyEventType0\": -1 }");
+                .Returns("{ \"DummyEventType0-DummyEventSubtype0\": -1 }");
 
             var sendEventLogStateRepository = CreateRepository();
 
             sendEventLogStateRepository
-                .SetSendEventLogState("DummyEventType1", SendEventLogState.Enable);
+                .SetSendEventLogState(DUMMY_EVENT1, SendEventLogState.Enable);
 
             mockPreferencesService.Verify(s => s.SetStringValue(
                 PreferenceKey.SendEventLogState,
-                "{\"DummyEventType0\":-1,\"DummyEventType1\":1}"
+                "{\"DummyEventType0-DummyEventSubtype0\":-1,\"DummyEventType1-DummyEventSubtype1\":1}"
                 ), Times.Once());
         }
     }
