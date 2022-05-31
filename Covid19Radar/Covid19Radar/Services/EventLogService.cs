@@ -24,39 +24,32 @@ namespace Covid19Radar.Services
             );
     }
 
-#if EVENT_LOG_ENABLED
     public class EventLogService : IEventLogService
     {
-        private readonly IUserDataRepository _userDataRepository;
         private readonly IEventLogRepository _eventLogRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly IEssentialsService _essentialsService;
         private readonly IDeviceVerifier _deviceVerifier;
 
         private readonly ILoggerService _loggerService;
-        private readonly IDateTimeUtility _dateTimeUtility;
         private readonly HttpClient _httpClient;
 
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
         public EventLogService(
-            IUserDataRepository userDataRepository,
             IEventLogRepository eventLogRepository,
             IServerConfigurationRepository serverConfigurationRepository,
             IEssentialsService essentialsService,
             IDeviceVerifier deviceVerifier,
             IHttpClientService httpClientService,
-            ILoggerService loggerService,
-            IDateTimeUtility dateTimeUtility
+            ILoggerService loggerService
             )
         {
-            _userDataRepository = userDataRepository;
             _eventLogRepository = eventLogRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
             _essentialsService = essentialsService;
             _deviceVerifier = deviceVerifier;
             _loggerService = loggerService;
-            _dateTimeUtility = dateTimeUtility;
 
             _httpClient = httpClientService.CreateApiClient();
         }
@@ -128,34 +121,13 @@ namespace Covid19Radar.Services
         {
             _loggerService.StartMethod();
 
-            SendEventLogState sendEventLogState = _userDataRepository.GetSendEventLogState();
-            bool isEnabled = sendEventLogState == SendEventLogState.Enable;
-
-            if (!isEnabled)
-            {
-                _loggerService.Debug($"Send event-log function is not enabled.");
-                _loggerService.EndMethod();
-                return;
-            }
-
             await _serverConfigurationRepository.LoadAsync();
 
-            string exposureDataCollectServerEndpoint = _serverConfigurationRepository.EventLogApiEndpoint;
-            _loggerService.Debug($"exposureDataCollectServerEndpoint: {exposureDataCollectServerEndpoint}");
+            string eventLogApiEndpoint = _serverConfigurationRepository.EventLogApiEndpoint;
+            _loggerService.Debug($"eventLogApiEndpoint: {eventLogApiEndpoint}");
 
             try
             {
-                var contentJson = exposureData.ToJsonString();
-
-                var eventLog = new V1EventLogRequest.EventLog() {
-                    HasConsent = isEnabled,
-                    Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
-                    Type = "ExposureData",
-                    Subtype = "Debug",
-                    Content = contentJson,
-                };
-                var eventLogs = new[] { eventLog };
-
                 var request = new V1EventLogRequest()
                 {
                     IdempotencyKey = idempotencyKey,
@@ -170,7 +142,7 @@ namespace Covid19Radar.Services
 
                 var httpContent = new StringContent(requestJson, Encoding.UTF8, "application/json");
 
-                Uri uri = new Uri(exposureDataCollectServerEndpoint);
+                Uri uri = new Uri(eventLogApiEndpoint);
 
                 HttpResponseMessage response = await _httpClient.PutAsync(uri, httpContent);
                 if (response.IsSuccessStatusCode)
@@ -189,5 +161,4 @@ namespace Covid19Radar.Services
             }
         }
     }
-#endif
 }

@@ -212,9 +212,11 @@ namespace Covid19Radar
 #if DEBUG
             container.Register<IServerConfigurationRepository, DebugServerConfigurationRepository>(Reuse.Singleton);
             container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
+            container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
 #else
             container.Register<IServerConfigurationRepository, ReleaseServerConfigurationRepository>(Reuse.Singleton);
             container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServerNop>(Reuse.Singleton);
+            container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
 #endif
 
             container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
@@ -228,12 +230,6 @@ namespace Covid19Radar
             container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
             container.Register<ICheckVersionService, CheckVersionService>(Reuse.Singleton);
-
-#if EVENT_LOG_ENABLED
-            container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
-#else
-            container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
-#endif
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
