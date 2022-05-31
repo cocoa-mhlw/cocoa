@@ -19,13 +19,20 @@ namespace Covid19Radar.Repository
 {
     public interface IEventLogRepository
     {
-        public Task<bool> AddAsync(EventLog eventLog, long maxSize);
+        public Task<bool> AddAsync(
+            EventLog eventLog,
+            long maxSize = AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES
+            );
 
-        public Task<List<EventLog>> GetLogsAsync(long maxSize);
+        public Task<List<EventLog>> GetLogsAsync(
+            long maxSize = AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES
+            );
 
         public Task<bool> RemoveAsync(EventLog eventLog);
 
-        public Task AddEventNotifiedAsync(long maxSize);
+        public Task AddEventNotifiedAsync(
+            long maxSize = AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES
+            );
     }
 
     public class EventLogRepository : IEventLogRepository

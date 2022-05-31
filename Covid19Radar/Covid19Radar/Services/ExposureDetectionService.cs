@@ -128,7 +128,7 @@ namespace Covid19Radar.Services
 
                 if (enableSendEventExposureNotificationNotified)
                 {
-                    // TODO: send event log.
+                    await _eventLogRepository.AddEventNotifiedAsync();
                 }
             }
             else
@@ -154,6 +154,14 @@ namespace Covid19Radar.Services
             if (isNewExposureDetected)
             {
                 _ = _localNotificationService.ShowExposureNotificationAsync();
+
+                bool enableSendEventExposureNotificationNotified = _sendEventLogStateRepository
+                    .GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED) == SendEventLogState.Enable;
+
+                if (enableSendEventExposureNotificationNotified)
+                {
+                    await _eventLogRepository.AddEventNotifiedAsync();
+                }
             }
             else
             {

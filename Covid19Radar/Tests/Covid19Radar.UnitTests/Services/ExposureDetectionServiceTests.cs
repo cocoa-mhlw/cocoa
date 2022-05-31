@@ -179,7 +179,7 @@ namespace Covid19Radar.UnitTests.Services {
 
         #region ExposureWindowsDetected
         [Fact]
-        public async void ExposureDetected_HighRiskExposureDetected()
+        public async void ExposureDetected_HighRiskExposureDetected_NoConsent()
         {
             // Test Data
             var now = new DateTime(2022, 04, 17, 12, 00, 00, DateTimeKind.Utc);
@@ -225,6 +225,9 @@ namespace Covid19Radar.UnitTests.Services {
                 .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
 
+            sendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED))
+                .Returns(SendEventLogState.Disable);
             exposureRiskCalculationConfigurationRepository
                 .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
                 .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
@@ -240,6 +243,75 @@ namespace Covid19Radar.UnitTests.Services {
 
             // Assert
             localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+            eventLogRepository.Verify(x => x.AddEventNotifiedAsync(It.IsAny<long>()), Times.Never);
+        }
+
+        [Fact]
+        public async void ExposureDetected_HighRiskExposureDetected_HasConsent()
+        {
+            // Test Data
+            var now = new DateTime(2022, 04, 17, 12, 00, 00, DateTimeKind.Utc);
+            var exposureDateTime = now
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays);
+            var exposureConfiguration = new ExposureConfiguration();
+            var enVersion = 2;
+
+            var dailySummaries = new List<DailySummary>() {
+                new DailySummary()
+                {
+                    DateMillisSinceEpoch = exposureDateTime.ToUnixEpochMillis(),
+                    DaySummary = new ExposureSummaryData(),
+                    ConfirmedClinicalDiagnosisSummary = new ExposureSummaryData(),
+                    ConfirmedTestSummary = new ExposureSummaryData(),
+                    RecursiveSummary = new ExposureSummaryData(),
+                    SelfReportedSummary = new ExposureSummaryData()
+                }
+            };
+
+            var exposureWindows = new List<ExposureWindow>()
+            {
+                new ExposureWindow()
+                {
+                    CalibrationConfidence = CalibrationConfidence.High,
+                    DateMillisSinceEpoch = exposureDateTime.ToUnixEpochMillis(),
+                    Infectiousness = Infectiousness.High,
+                    ReportType = ReportType.Unknown,
+                    ScanInstances = new List<ScanInstance>()
+                }
+            };
+
+            // Mock Setup
+            dateTimeUtility.Setup(x => x.UtcNow)
+                .Returns(now);
+            preferencesService
+                .Setup(x => x.GetBoolValue(It.Is<string>(x => x == "IsDiagnosisKeysDataMappingConfigurationUpdated"), false))
+                .Returns(true);
+            secureStorageService
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "DailySummaries"), It.IsAny<string>()))
+                .Returns("[]");
+            secureStorageService
+                .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
+                .Returns("[]");
+
+            sendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED))
+                .Returns(SendEventLogState.Enable);
+            exposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
+            exposureRiskCalculationService
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
+                .Returns(RiskLevel.High);
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
+
+
+            // Assert
+            localNotificationService.Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+            eventLogRepository.Verify(x => x.AddEventNotifiedAsync(It.IsAny<long>()), Times.Once);
         }
 
         [Fact]
@@ -375,7 +447,7 @@ namespace Covid19Radar.UnitTests.Services {
 
         #region ExposureInformationDetected
         [Fact]
-        public async void ExposureDetected_ExposureInformationHighRiskExposureDetected()
+        public async void ExposureDetected_ExposureInformationHighRiskExposureDetected_NoConsent()
         {
             // Test Data
             var exposureConfiguration = new ExposureConfiguration()
@@ -405,6 +477,9 @@ namespace Covid19Radar.UnitTests.Services {
             var enVersion = 2;
 
             // Mock Setup
+            sendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED))
+                .Returns(SendEventLogState.Disable);
             exposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -418,6 +493,63 @@ namespace Covid19Radar.UnitTests.Services {
             // Assert
             localNotificationService
                 .Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+            eventLogRepository
+                .Verify(x => x.AddEventNotifiedAsync(It.IsAny<long>()), Times.Never);
+
+            var expectedSerializedData = JsonConvert.SerializeObject(exposureInformationList.Select(x => new UserExposureInfo(x)));
+            secureStorageService
+                .Verify(x => x.SetStringValue("ExposureInformation", It.Is<string>(x => x == expectedSerializedData)), Times.Once);
+        }
+
+        [Fact]
+        public async void ExposureDetected_ExposureInformationHighRiskExposureDetected_HasConsent()
+        {
+            // Test Data
+            var exposureConfiguration = new ExposureConfiguration()
+            {
+                GoogleExposureConfig = new ExposureConfiguration.GoogleExposureConfiguration()
+                {
+                    MinimumRiskScore = 0
+                }
+            };
+            var exposureSummary = new ExposureSummary()
+            {
+                MaximumRiskScore = 1
+            };
+            var exposureInformantion = new ExposureInformation()
+            {
+                AttenuationDurationsInMillis = new int[] { 0 },
+                AttenuationValue = 0,
+                DateMillisSinceEpoch = 0,
+                DurationInMillis = 0,
+                TotalRiskScore = 2,
+                TransmissionRiskLevel = RiskLevel.High
+            };
+            var exposureInformationList = new List<ExposureInformation>()
+            {
+                exposureInformantion
+            };
+            var enVersion = 2;
+
+            // Mock Setup
+            sendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED))
+                .Returns(SendEventLogState.Enable);
+            exposureRiskCalculationService
+                .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
+                .Returns(RiskLevel.High);
+
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformationList);
+
+
+            // Assert
+            localNotificationService
+                .Verify(x => x.ShowExposureNotificationAsync(), Times.Once);
+            eventLogRepository
+                .Verify(x => x.AddEventNotifiedAsync(It.IsAny<long>()), Times.Once);
 
             var expectedSerializedData = JsonConvert.SerializeObject(exposureInformationList.Select(x => new UserExposureInfo(x)));
             secureStorageService
