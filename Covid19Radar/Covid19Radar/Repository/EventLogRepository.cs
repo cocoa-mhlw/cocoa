@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
@@ -48,6 +49,8 @@ namespace Covid19Radar.Repository
             _loggerService = loggerService;
         }
 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         private string GetFileName(EventLog eventLog)
         {
             var clearText = string.Join(".", eventLog.HasConsent, eventLog.Epoch, eventLog.Type, eventLog.Subtype, eventLog.Content);
@@ -60,6 +63,24 @@ namespace Covid19Radar.Repository
         }
 
         public async Task<bool> AddAsync(EventLog eventLog, long maxSize)
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                return await AddAsyncInternal(eventLog, maxSize);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task<bool> AddAsyncInternal(EventLog eventLog, long maxSize)
         {
             _loggerService.StartMethod();
 
@@ -98,6 +119,24 @@ namespace Covid19Radar.Repository
         {
             _loggerService.StartMethod();
 
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                return await GetLogsAsyncInternal(maxSize);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task<List<EventLog>> GetLogsAsyncInternal(long maxSize)
+        {
+            _loggerService.StartMethod();
+
             try
             {
                 long currentSize = 0;
@@ -120,12 +159,20 @@ namespace Covid19Radar.Repository
                     long expectSize = currentSize + size;
                     if (expectSize > maxSize)
                     {
-                        _loggerService.Info($"Result log size will exceed maxSize( {maxSize} bytes.");
+                        _loggerService.Info($"Log {path} size will exceed maxSize( {maxSize} bytes.");
                         continue;
                     }
 
-                    EventLog eventLog = JsonConvert.DeserializeObject<EventLog>(content);
-                    resultList.Add(eventLog);
+                    try
+                    {
+                        EventLog eventLog = JsonConvert.DeserializeObject<EventLog>(content);
+                        resultList.Add(eventLog);
+                    }
+                    catch(JsonReaderException exception)
+                    {
+                        _loggerService.Exception($"Serialize failed {path} will be removed.", exception);
+                        File.Delete(path);
+                    }
                 }
 
                 return resultList;
@@ -137,7 +184,25 @@ namespace Covid19Radar.Repository
 
         }
 
-        public Task<bool> RemoveAsync(EventLog eventLog)
+        public async Task<bool> RemoveAsync(EventLog eventLog)
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                return RemoveAsyncInternal(eventLog);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private bool RemoveAsyncInternal(EventLog eventLog)
         {
             _loggerService.StartMethod();
 
@@ -149,14 +214,14 @@ namespace Covid19Radar.Repository
                 if (!File.Exists(filePath))
                 {
                     _loggerService.Info($"{filePath} not found.");
-                    return Task.FromResult(false);
+                    return false;
                 }
 
                 File.Delete(filePath);
 
                 _loggerService.Info($"{filePath} is deleted.");
 
-                return Task.FromResult(true);
+                return true;
             }
             finally
             {
@@ -165,6 +230,24 @@ namespace Covid19Radar.Repository
         }
 
         public async Task AddEventNotifiedAsync(long maxSize)
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                await AddEventNotifiedAsyncInternal(maxSize);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task AddEventNotifiedAsyncInternal(long maxSize)
         {
             bool hasConsent = _sendEventLogStateRepository.GetSendEventLogState(
                 ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED
