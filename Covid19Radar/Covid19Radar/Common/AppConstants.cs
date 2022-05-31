@@ -88,7 +88,7 @@ namespace Covid19Radar.Common
 
         public const long MAX_LOG_REQUEST_SIZE_IN_BYTES = 8 * 1024 * 1024; // 8 MiB
 
-        public static int MAX_RETRY = 4;
+        public const int MAX_RETRY = 4;
 
         #region Other Private Methods
 

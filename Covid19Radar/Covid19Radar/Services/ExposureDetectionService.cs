@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -29,7 +28,6 @@ namespace Covid19Radar.Services
     public class ExposureDetectionService : IExposureDetectionService
     {
         private readonly ILoggerService _loggerService;
-        private readonly IUserDataRepository _userDataRepository;
         private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
 
         private readonly IExposureDataRepository _exposureDataRepository;
@@ -43,12 +41,10 @@ namespace Covid19Radar.Services
         private readonly IEventLogRepository _eventLogRepository;
 
         private readonly IDateTimeUtility _dateTimeUtility;
-        private readonly IDeviceInfoUtility _deviceInfoUtility;
 
         public ExposureDetectionService
         (
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository,
             ISendEventLogStateRepository sendEventLogStateRepository,
             IExposureDataRepository exposureDataRepository,
             ILocalNotificationService localNotificationService,
@@ -56,12 +52,10 @@ namespace Covid19Radar.Services
             IExposureRiskCalculationService exposureRiskCalculationService,
             IExposureConfigurationRepository exposureConfigurationRepository,
             IEventLogRepository eventLogRepository,
-            IDateTimeUtility dateTimeUtility,
-            IDeviceInfoUtility deviceInfoUtility
+            IDateTimeUtility dateTimeUtility
             )
         {
             _loggerService = loggerService;
-            _userDataRepository = userDataRepository;
             _sendEventLogStateRepository = sendEventLogStateRepository;
             _exposureDataRepository = exposureDataRepository;
             _localNotificationService = localNotificationService;
@@ -70,7 +64,6 @@ namespace Covid19Radar.Services
             _exposureConfigurationRepository = exposureConfigurationRepository;
             _eventLogRepository = eventLogRepository;
             _dateTimeUtility = dateTimeUtility;
-            _deviceInfoUtility = deviceInfoUtility;
         }
 
         public void DiagnosisKeysDataMappingApplied()

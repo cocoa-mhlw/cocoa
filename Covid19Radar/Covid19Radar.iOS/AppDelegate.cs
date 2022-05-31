@@ -44,7 +44,7 @@ namespace Covid19Radar.iOS
         private Lazy<IExposureDetectionService> _exposureDetectionService
             = new Lazy<IExposureDetectionService>(() => ContainerLocator.Current.Resolve<IExposureDetectionService>());
 
-        private Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
+        private readonly Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
             = new Lazy<AbsEventLogSubmissionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsEventLogSubmissionBackgroundService>());
 
         private Lazy<ILoggerService> _loggerService
@@ -303,7 +303,7 @@ namespace Covid19Radar.iOS
         public async Task ExposureDetectedAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
         {
             long enVersion = await GetEnClient().GetVersionAsync();
-            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
+            await _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
         }
 
         public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration)

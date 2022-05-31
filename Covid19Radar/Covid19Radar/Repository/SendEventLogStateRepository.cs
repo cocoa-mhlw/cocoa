@@ -37,10 +37,10 @@ namespace Covid19Radar.Repository
 
     public interface ISendEventLogStateRepository
     {
-        public static EventType EVENT_TYPE_EXPOSURE_NOTIFIED = new EventType("ExposureNotification", "ExposureNotified");
-        public static EventType EVENT_TYPE_EXPOSURE_DATA = new EventType("ExposureNotification", "ExposureData");
+        public static readonly EventType EVENT_TYPE_EXPOSURE_NOTIFIED = new EventType("ExposureNotification", "ExposureNotified");
+        public static readonly EventType EVENT_TYPE_EXPOSURE_DATA = new EventType("ExposureNotification", "ExposureData");
 
-        public static EventType[] EVENT_TYPE_ALL = new EventType[] {
+        public static readonly EventType[] EVENT_TYPE_ALL = new EventType[] {
             EVENT_TYPE_EXPOSURE_NOTIFIED,
             EVENT_TYPE_EXPOSURE_DATA,
         };

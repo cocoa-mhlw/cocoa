@@ -31,7 +31,6 @@ namespace Covid19Radar.UnitTests.Services {
 
         private readonly Mock<IExposureRiskCalculationService> exposureRiskCalculationService;
         private readonly Mock<IDateTimeUtility> dateTimeUtility;
-        private readonly Mock<IDeviceInfoUtility> deviceInfoUtility;
 
         private readonly Mock<IHttpClientService> clientService;
         private readonly Mock<ILocalPathService> localPathService;
@@ -58,7 +57,6 @@ namespace Covid19Radar.UnitTests.Services {
             secureStorageService = mockRepository.Create<ISecureStorageService>();
             serverConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
             dateTimeUtility = mockRepository.Create<IDateTimeUtility>();
-            deviceInfoUtility = mockRepository.Create<IDeviceInfoUtility>();
 
             localPathService.Setup(x => x.ExposureConfigurationDirPath).Returns($"{Path.GetTempPath()}/cocoa/");
         }
@@ -87,12 +85,6 @@ namespace Covid19Radar.UnitTests.Services {
                 loggerService.Object
                 );
 
-            var userDataRepository = new UserDataRepository(
-                preferencesService.Object,
-                dateTimeUtility.Object,
-                loggerService.Object
-                );
-
             var exposureDataRepository = new ExposureDataRepository(
                 secureStorageService.Object,
                 dateTimeUtility.Object,
@@ -101,7 +93,6 @@ namespace Covid19Radar.UnitTests.Services {
 
             return new ExposureDetectionService(
                 loggerService.Object,
-                userDataRepository,
                 sendEventLogStateRepository.Object,
                 exposureDataRepository,
                 localNotificationService.Object,
@@ -109,8 +100,7 @@ namespace Covid19Radar.UnitTests.Services {
                 exposureRiskCalculationService.Object,
                 exposureConfigurationRepository,
                 eventLogRepository.Object,
-                dateTimeUtility.Object,
-                deviceInfoUtility.Object
+                dateTimeUtility.Object
                 );
         }
         #endregion
@@ -234,7 +224,6 @@ namespace Covid19Radar.UnitTests.Services {
             secureStorageService
                 .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
-            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
             exposureRiskCalculationConfigurationRepository
                 .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
@@ -299,7 +288,6 @@ namespace Covid19Radar.UnitTests.Services {
             secureStorageService
                 .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
-            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
             exposureRiskCalculationConfigurationRepository
                 .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
@@ -365,7 +353,6 @@ namespace Covid19Radar.UnitTests.Services {
             secureStorageService
                 .Setup(x => x.GetStringValue(It.Is<string>(x => x == "ExposureWindows"), It.IsAny<string>()))
                 .Returns("[]");
-            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
 
             exposureRiskCalculationConfigurationRepository
                 .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
@@ -418,8 +405,6 @@ namespace Covid19Radar.UnitTests.Services {
             var enVersion = 2;
 
             // Mock Setup
-            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
-
             exposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -468,10 +453,6 @@ namespace Covid19Radar.UnitTests.Services {
                 exposureInformantion
             };
             var enVersion = 2;
-
-            // Mock Setup
-            deviceInfoUtility.Setup(x => x.Model).Returns("UnitTest");
-
 
             // Test Case
             var unitUnderTest = CreateService();

@@ -45,7 +45,7 @@ namespace Covid19Radar.Droid
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsExposureDetectionBackgroundService>());
 
-        private Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
+        private readonly Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
             = new Lazy<AbsEventLogSubmissionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsEventLogSubmissionBackgroundService>());
 
         private Lazy<ILoggerService> _loggerService
@@ -161,7 +161,7 @@ namespace Covid19Radar.Droid
         public async Task ExposureDetectedAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
         {
             long enVersion = await GetEnClient().GetVersionAsync();
-            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
+            await _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
         }
 
         public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration)

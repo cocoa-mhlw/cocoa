@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.Views
 {
+#nullable enable
     public partial class SendLogSettingsDetailPage : ContentPage
     {
         public const string DestinationKey = "destination_send_log_settings_detail";
@@ -29,4 +30,5 @@ namespace Covid19Radar.Views
             InitializeComponent();
         }
     }
+#nullable disable
 }
