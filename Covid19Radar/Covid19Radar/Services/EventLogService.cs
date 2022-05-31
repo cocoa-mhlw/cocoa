@@ -58,7 +58,7 @@ namespace Covid19Radar.Services
             _loggerService = loggerService;
             _dateTimeUtility = dateTimeUtility;
 
-            _httpClient = httpClientService.Create();
+            _httpClient = httpClientService.CreateApiClient();
         }
 
         public async Task SendAllAsync(long maxSize, int maxRetry)
