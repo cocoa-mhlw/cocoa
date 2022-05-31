@@ -65,9 +65,9 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.1" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2401" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2337" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.12.0" />
     <PackageReference Include="Chino.Common" Version="1.0.0-rc11" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="8.0.62" />

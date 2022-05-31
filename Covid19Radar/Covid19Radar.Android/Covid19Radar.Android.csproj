@@ -145,9 +145,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>5.0.0.2401</Version>
+      <Version>5.0.0.2337</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Nearby.ExposureNotification">
       <Version>19.7.2-eap-alpha04</Version>
