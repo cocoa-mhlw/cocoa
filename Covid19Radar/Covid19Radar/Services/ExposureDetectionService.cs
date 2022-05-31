@@ -30,6 +30,8 @@ namespace Covid19Radar.Services
     {
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
+
         private readonly IExposureDataRepository _exposureDataRepository;
 
         private readonly ILocalNotificationService _localNotificationService;
@@ -48,6 +50,7 @@ namespace Covid19Radar.Services
         (
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository,
             IExposureDataRepository exposureDataRepository,
             ILocalNotificationService localNotificationService,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
@@ -61,6 +64,7 @@ namespace Covid19Radar.Services
         {
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
             _exposureDataRepository = exposureDataRepository;
             _localNotificationService = localNotificationService;
             _exposureRiskCalculationService = exposureRiskCalculationService;
@@ -128,6 +132,14 @@ namespace Covid19Radar.Services
             if (isHighRiskExposureDetected)
             {
                 _ = _localNotificationService.ShowExposureNotificationAsync();
+
+                bool enableSendEventExposureNotificationNotified = _sendEventLogStateRepository
+                    .GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFICATION_NOTIFIED) == SendEventLogState.Enable;
+
+                if (enableSendEventExposureNotificationNotified)
+                {
+                    // TODO: send event log.
+                }
             }
             else
             {

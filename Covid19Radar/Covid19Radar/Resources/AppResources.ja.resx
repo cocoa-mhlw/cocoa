@@ -1338,6 +1338,40 @@
     <comment>と同じ</comment>
   </data>
 
+  <data name="SendLogSetttingTitle" xml:space="preserve">
+    <value>COCOAの改善にご協力ください</value>
+    <comment>COCOAの改善にご協力ください</comment>
+  </data>
+  <data name="SendLogSetttingDescription1" xml:space="preserve">
+    <value>COCOAの改善のため、厚生労働省に接触情報を送信することを許可してください。</value>
+    <comment>COCOAの改善のため、厚生労働省に接触情報を送信することを許可してください。</comment>
+  </data>
+  <data name="SendLogSetttingDescription2" xml:space="preserve">
+    <value>送信は匿名で行われます。送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。</value>
+    <comment>送信は匿名で行われます。送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。</comment>
+  </data>
+  <data name="SendLogSetttingDescription3" xml:space="preserve">
+    <value>匿名の情報は公衆衛生の改善に寄与するために集計して公開する場合があります。</value>
+    <comment>匿名の情報は公衆衛生の改善に寄与するために集計して公開する場合があります。</comment>
+  </data>
+  <data name="SendLogSetttingDescription4" xml:space="preserve">
+    <value>改善への協力はCOCOAの設定画面からいつでも設定できます。</value>
+    <comment>改善への協力はCOCOAの設定画面からいつでも設定できます。</comment>
+  </data>
+  <data name="ButtonStartCooperate" xml:space="preserve">
+    <value>COCOAの改善に協力する</value>
+    <comment>COCOAの改善に協力する</comment>
+  </data>
+  <data name="SendLogDisableSendLogDialogMessage" xml:space="preserve">
+    <value>改善への協力はCOCOAの『設定』からいつでも開始できます。</value>
+    <comment>改善への協力はCOCOAの『設定』からいつでも開始できます。</comment>
+  </data>
+  <data name="TelemetryDesignTitle" xml:space="preserve">
+    <value>送信する情報について</value>
+    <comment>送信する情報について</comment>
+  </data>
+  
+
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
     <value>※日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</value>
     <comment>※日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>

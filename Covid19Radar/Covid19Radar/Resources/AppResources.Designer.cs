@@ -47,6 +47,12 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string UrlGitHubRepository {
+            get {
+                return ResourceManager.GetString("UrlGitHubRepository", resourceCulture);
+            }
+        }
+        
         public static string ButtonAgree {
             get {
                 return ResourceManager.GetString("ButtonAgree", resourceCulture);
@@ -2036,6 +2042,54 @@ namespace Covid19Radar.Resources {
         public static string ThresholdTextOperatorEqual {
             get {
                 return ResourceManager.GetString("ThresholdTextOperatorEqual", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingTitle {
+            get {
+                return ResourceManager.GetString("SendLogSetttingTitle", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingDescription1 {
+            get {
+                return ResourceManager.GetString("SendLogSetttingDescription1", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingDescription2 {
+            get {
+                return ResourceManager.GetString("SendLogSetttingDescription2", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingDescription3 {
+            get {
+                return ResourceManager.GetString("SendLogSetttingDescription3", resourceCulture);
+            }
+        }
+        
+        public static string SendLogSetttingDescription4 {
+            get {
+                return ResourceManager.GetString("SendLogSetttingDescription4", resourceCulture);
+            }
+        }
+        
+        public static string ButtonStartCooperate {
+            get {
+                return ResourceManager.GetString("ButtonStartCooperate", resourceCulture);
+            }
+        }
+        
+        public static string SendLogDisableSendLogDialogMessage {
+            get {
+                return ResourceManager.GetString("SendLogDisableSendLogDialogMessage", resourceCulture);
+            }
+        }
+        
+        public static string TelemetryDesignTitle {
+            get {
+                return ResourceManager.GetString("TelemetryDesignTitle", resourceCulture);
             }
         }
         

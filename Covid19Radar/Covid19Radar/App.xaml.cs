@@ -142,6 +142,8 @@ namespace Covid19Radar
             // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
+            containerRegistry.RegisterForNavigation<SendLogSettingsPage>();
+            containerRegistry.RegisterForNavigation<SendLogSettingsDetailPage>();
 
             // tutorial
             containerRegistry.RegisterForNavigation<TutorialPage1>();
@@ -192,6 +194,7 @@ namespace Covid19Radar
             container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
             container.Register<IExposureDataExportService, ExposureDataExportService>(Reuse.Singleton);
+            container.Register<ISendEventLogStateRepository, SendEventLogStateRepository>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);

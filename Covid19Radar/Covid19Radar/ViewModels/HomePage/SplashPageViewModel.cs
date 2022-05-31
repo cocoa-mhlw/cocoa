@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Linq;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
@@ -16,44 +17,52 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly ILoggerService _loggerService;
-        private readonly IUserDataService _userDataService;
         private readonly IMigrationService _migrationService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
 
         public SplashPageViewModel(
             INavigationService navigationService,
             ITermsUpdateService termsUpdateService,
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
-            IUserDataService userDataService,
+            ISendEventLogStateRepository sendEventLogStateRepository,
             IMigrationService migrationService
             ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
-            _userDataService = userDataService;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
             _migrationService = migrationService;
         }
 
         public override async void OnNavigatedTo(INavigationParameters parameters)
         {
-            _loggerService.StartMethod();
-
             base.OnNavigatedTo(parameters);
 
-            await _migrationService.MigrateAsync();
+            _loggerService.StartMethod();
 
-            var destination = Destination.HomePage;
-            if (parameters.ContainsKey(SplashPage.DestinationKey))
+            try
             {
-                _loggerService.Info($"Destination is set {destination}");
-                destination = parameters.GetValue<Destination>(SplashPage.DestinationKey);
-            }
+                await _migrationService.MigrateAsync();
 
-            if (_userDataRepository.IsAllAgreed())
-            {
+                if (!_userDataRepository.IsAllAgreed())
+                {
+                    _loggerService.Info("No user data exists");
+                    _loggerService.Info($"Transition to TutorialPage1");
+                    _ = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
+                    return;
+                }
+
                 _loggerService.Info("User data exists");
+
+                var destination = Destination.HomePage;
+                if (parameters.ContainsKey(SplashPage.DestinationKey))
+                {
+                    _loggerService.Info($"Destination is set {destination}");
+                    destination = parameters.GetValue<Destination>(SplashPage.DestinationKey);
+                }
 
                 var termsUpdateInfo = await _termsUpdateService.GetTermsUpdateInfo();
 
@@ -63,6 +72,7 @@ namespace Covid19Radar.ViewModels
 
                     var navigationParams = ReAgreeTermsOfServicePage.BuildNavigationParams(termsUpdateInfo, destination, parameters);
                     _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreeTermsOfServicePage), navigationParams);
+                    return;
                 }
                 else if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, termsUpdateInfo))
                 {
@@ -70,21 +80,29 @@ namespace Covid19Radar.ViewModels
 
                     var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(termsUpdateInfo.PrivacyPolicy, destination, parameters);
                     _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), navigationParams);
+                    return;
                 }
-                else
-                {
-                    _loggerService.Info($"Transition to {destination}");
-                    _ = await NavigationService.NavigateAsync(destination.ToPath(), parameters);
-                }
-            }
-            else
-            {
-                _loggerService.Info("No user data exists");
-                _loggerService.Info($"Transition to TutorialPage1");
-                _ = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
-            }
 
-            _loggerService.EndMethod();
+                bool isExistNotSetEventType = ISendEventLogStateRepository.EVENT_TYPE_ALL
+                    .Select(eventType => _sendEventLogStateRepository.GetSendEventLogState(eventType))
+                    .Any(state => state == SendEventLogState.NotSet);
+
+                if (isExistNotSetEventType)
+                {
+                    _loggerService.Info($"Transition to SendLogSettingsPage");
+
+                    var navigationParams = SendLogSettingsPage.BuildNavigationParams(destination, parameters);
+                    _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), navigationParams);
+                    return;
+                }
+
+                _loggerService.Info($"Transition to {destination}");
+                _ = await NavigationService.NavigateAsync(destination.ToPath(), parameters);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
     }
 }

@@ -11,16 +11,25 @@ namespace Covid19Radar
     {
         SplashPage,
         HomePage,
+        SettingsPage,
         ContactedNotifyPage,
         NotifyOtherPage,
+        SendLogSettingsPage,
+        SendLogSettingsDetailPage,
+        TutorialPage4_EnableExposureNotification,
     }
 
     public static class DestinationExtensions
     {
         private static string SplashPagePath = "/" + nameof(SplashPage);
         private static string HomePagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage);
+        private static string SettingPagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(SettingsPage);
         private static string ContactedNotifyPagePath => HomePagePath + "/" + nameof(ContactedNotifyPage);
         private static string NotifyOtherPagePath => HomePagePath + "/" + nameof(NotifyOtherPage);
+        private static string SendLogSettingsPage = nameof(SendLogSettingsPage);
+        private static string SendLogSettingsDetailPage = nameof(SendLogSettingsDetailPage);
+
+        private static string TutorialPage4_EnableExposureNotification = nameof(TutorialPage4);
 
         public static string ToPath(this Destination destination)
         {
@@ -28,8 +37,12 @@ namespace Covid19Radar
             {
                 Destination.SplashPage => SplashPagePath,
                 Destination.HomePage => HomePagePath,
+                Destination.SettingsPage => SettingPagePath,
                 Destination.ContactedNotifyPage => ContactedNotifyPagePath,
                 Destination.NotifyOtherPage => NotifyOtherPagePath,
+                Destination.SendLogSettingsPage => SendLogSettingsPage,
+                Destination.SendLogSettingsDetailPage => SendLogSettingsDetailPage,
+                Destination.TutorialPage4_EnableExposureNotification => TutorialPage4_EnableExposureNotification,
                 _ => throw new System.NotImplementedException()
             };
         }
