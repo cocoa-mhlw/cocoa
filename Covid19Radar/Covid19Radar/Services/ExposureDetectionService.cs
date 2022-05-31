@@ -93,8 +93,6 @@ namespace Covid19Radar.Services
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
 
-            var enVersionStr = enVersion.ToString();
-
             var (newDailySummaries, newExposureWindows) = await _exposureDataRepository.SetExposureDataAsync(
                 dailySummaries.ToList(),
                 exposureWindows.ToList()
@@ -141,8 +139,6 @@ namespace Covid19Radar.Services
         {
             _loggerService.Info("ExposureDetected: Legacy-V1");
 
-            var enVersionStr = enVersion.ToString();
-
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
             bool isNewExposureDetected = _exposureDataRepository.AppendExposureData(
@@ -169,9 +165,11 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion)
+        public Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion)
         {
             _loggerService.Info("ExposureNotDetected");
+
+            return Task.CompletedTask;
         }
     }
 }

@@ -71,7 +71,7 @@ namespace Covid19Radar.Repository
             return $"{hash}{LOG_EXTENSION}";
         }
 
-        public async Task<bool> AddAsync(EventLog eventLog, long maxSize)
+        public async Task<bool> AddAsync(EventLog eventLog, long maxSize = AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES)
         {
             _loggerService.StartMethod();
 
@@ -124,7 +124,7 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public async Task<List<EventLog>> GetLogsAsync(long maxSize)
+        public async Task<List<EventLog>> GetLogsAsync(long maxSize = AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES)
         {
             _loggerService.StartMethod();
 
@@ -240,7 +240,7 @@ namespace Covid19Radar.Repository
             }
         }
 
-        public async Task AddEventNotifiedAsync(long maxSize)
+        public async Task AddEventNotifiedAsync(long maxSize = AppConstants.MAX_LOG_REQUEST_SIZE_IN_BYTES)
         {
             _loggerService.StartMethod();
 
