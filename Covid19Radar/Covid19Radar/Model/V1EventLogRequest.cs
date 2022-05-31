@@ -50,5 +50,7 @@ namespace Covid19Radar.Model
         {
             get => DateTime.UnixEpoch.AddSeconds(Epoch).ToString(AppConstants.FORMAT_TIMESTAMP);
         }
+
+        internal string GetEventType() => $"{Type}-{Subtype}";
     }
 }

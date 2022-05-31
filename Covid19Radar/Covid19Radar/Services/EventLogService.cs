@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -26,6 +27,7 @@ namespace Covid19Radar.Services
 
     public class EventLogService : IEventLogService
     {
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private readonly IEventLogRepository _eventLogRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly IEssentialsService _essentialsService;
@@ -37,6 +39,7 @@ namespace Covid19Radar.Services
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
         public EventLogService(
+            ISendEventLogStateRepository sendEventLogStateRepository,
             IEventLogRepository eventLogRepository,
             IServerConfigurationRepository serverConfigurationRepository,
             IEssentialsService essentialsService,
@@ -45,6 +48,7 @@ namespace Covid19Radar.Services
             ILoggerService loggerService
             )
         {
+            _sendEventLogStateRepository = sendEventLogStateRepository;
             _eventLogRepository = eventLogRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
             _essentialsService = essentialsService;
@@ -74,16 +78,34 @@ namespace Covid19Radar.Services
 
             try
             {
-                List<EventLog> eventLogList
-                    = await _eventLogRepository.GetLogsAsync(maxSize);
+                List<EventLog> eventLogList = await _eventLogRepository.GetLogsAsync(maxSize);
 
-                if (eventLogList.Count == 0)
+                IDictionary<string, SendEventLogState> eventStateDict = new Dictionary<string, SendEventLogState>();
+                foreach (var eventType in ISendEventLogStateRepository.EVENT_TYPE_ALL)
+                {
+                    eventStateDict[eventType.ToString()] = _sendEventLogStateRepository.GetSendEventLogState(eventType);
+                }
+
+
+                // Remove consent withdrawn eventlogs.
+                IEnumerable<EventLog> consentWithdrawnEventLogList = eventLogList
+                    .Where(eventLog => eventStateDict[eventLog.GetEventType()] != SendEventLogState.Enable);
+                foreach (var eventLog in consentWithdrawnEventLogList)
+                {
+                    await _eventLogRepository.RemoveAsync(eventLog);
+                }
+
+                List<EventLog> filteredEventLogList = eventLogList
+                    .Where(eventLog => eventStateDict[eventLog.GetEventType()] == SendEventLogState.Enable)
+                    .ToList();
+
+                if (filteredEventLogList.Count == 0)
                 {
                     _loggerService.Info($"No Event-logs found.");
                     return;
                 }
 
-                _loggerService.Info($"{eventLogList.Count} found Event-logs.");
+                _loggerService.Info($"{filteredEventLogList.Count} found Event-logs.");
 
                 string idempotencyKey = Guid.NewGuid().ToString();
 
@@ -91,11 +113,11 @@ namespace Covid19Radar.Services
                 {
                     try
                     {
-                        await SendAsync(idempotencyKey, eventLogList);
+                        await SendAsync(idempotencyKey, filteredEventLogList);
                         _loggerService.Info($"Send complete.");
 
                         _loggerService.Info($"Clean up...");
-                        foreach (var eventLog in eventLogList)
+                        foreach (var eventLog in filteredEventLogList)
                         {
                             await _eventLogRepository.RemoveAsync(eventLog);
                         }
