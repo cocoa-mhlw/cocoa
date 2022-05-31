@@ -93,6 +93,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
+                <!--
                 <CheckBox
                     Grid.Row="0"
                     Grid.Column="0"
@@ -107,7 +108,7 @@
                     VerticalOptions="Center"
                     Text="受信した信号の情報"
                     />
-               <StackLayout
+                <StackLayout
                     Grid.Row="1"
                     Grid.Column="1"
                     AutomationProperties.IsInAccessibleTree="True"
@@ -130,6 +131,7 @@
                         Text="信号の情報を統計的に処理することで、日本国内でどのような接触が発生しているかを把握したり、より精度の高い通知ができるように条件を調整する目的で利用します。"
                         />
                    </StackLayout>
+                -->
 
             </Grid>
 
