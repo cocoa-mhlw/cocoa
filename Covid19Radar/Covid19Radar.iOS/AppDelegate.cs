@@ -303,7 +303,7 @@ namespace Covid19Radar.iOS
         public async Task ExposureDetectedAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
         {
             long enVersion = await GetEnClient().GetVersionAsync();
-            await _exposureDetectionService.Value.ExposureDetected(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
+            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
         }
 
         public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration)
