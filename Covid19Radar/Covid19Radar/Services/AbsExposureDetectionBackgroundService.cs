@@ -81,17 +81,6 @@ namespace Covid19Radar.Services
                 return;
             }
 
-            IEnumerable<int> statuseCodes = await _exposureNotificationApiService.GetStatusCodesAsync();
-
-            bool isActivated = statuseCodes.Contains(ExposureNotificationStatus.Code_Android.ACTIVATED)
-                | statuseCodes.Contains(ExposureNotificationStatus.Code_iOS.Active);
-
-            if (!isActivated)
-            {
-                _loggerService.Info($"EN API is not ACTIVATED.");
-                return;
-            }
-
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
             await _serverConfigurationRepository.LoadAsync();
