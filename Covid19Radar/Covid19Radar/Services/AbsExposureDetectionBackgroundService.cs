@@ -81,6 +81,9 @@ namespace Covid19Radar.Services
                 return;
             }
 
+            IEnumerable<int> statusCodes = await _exposureNotificationApiService.GetStatusCodesAsync();
+            _loggerService.Info($"EN API status code. [{string.Join(",", statusCodes)}]");
+
             var cancellationToken = cancellationTokenSource?.Token ?? default(CancellationToken);
 
             await _serverConfigurationRepository.LoadAsync();
