@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
@@ -14,17 +15,14 @@ namespace Covid19Radar.Services
         HttpClient CreateApiClient();
 
         HttpClient CreateHttpClient();
+
+        HttpClient CreateCdnClient();
     }
 
     public class HttpClientService : IHttpClientService
     {
         public HttpClientService()
         {
-        }
-
-        public HttpClient Create()
-        {
-            return new HttpClient();
         }
 
         public HttpClient CreateApiClient()
@@ -44,6 +42,19 @@ namespace Covid19Radar.Services
             httpClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
 
             return httpClient;
+        }
+
+        public HttpClient CreateCdnClient()
+        {
+            return new HttpClient(new HttpClientHandler
+            {
+                AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
+            });
+        }
+
+        public HttpClient Create()
+        {
+            return new HttpClient();
         }
     }
 }

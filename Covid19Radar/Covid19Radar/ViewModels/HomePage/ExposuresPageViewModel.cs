@@ -166,6 +166,20 @@ namespace Covid19Radar.ViewModels
             }
 
         });
+
+        public override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await InitExposures();
+        }
+
+        public override async void OnResume()
+        {
+            base.OnResume();
+
+            await InitExposures();
+        }
     }
 
     public class ExposureSummary

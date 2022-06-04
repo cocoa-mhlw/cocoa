@@ -28,8 +28,7 @@ namespace Covid19Radar.Model
         [JsonProperty("verificationPayload")]
         public string VerificationPayload { get; set; }
 
-        //[JsonProperty("idempotency_key")]
-        [JsonIgnore]
+        [JsonProperty("idempotency_key")]
         public string IdempotencyKey { get; set; }
 
         // Random data to obscure the size of the request network packet sniffers.
@@ -45,8 +44,7 @@ namespace Covid19Radar.Model
             [JsonProperty("rollingPeriod")]
             public uint RollingPeriod { get; set; }
 
-            //[JsonProperty("reportType")]
-            [JsonIgnore]
+            [JsonProperty("reportType")]
             public uint ReportType { get; set; }
         }
     }
