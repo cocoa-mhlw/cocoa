@@ -2,7 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System.Linq;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
@@ -82,12 +81,7 @@ namespace Covid19Radar.ViewModels
                     _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), navigationParams);
                     return;
                 }
-
-                bool isExistNotSetEventType = ISendEventLogStateRepository.EVENT_TYPE_ALL
-                    .Select(eventType => _sendEventLogStateRepository.GetSendEventLogState(eventType))
-                    .Any(state => state == SendEventLogState.NotSet);
-
-                if (isExistNotSetEventType)
+                else if (ISendEventLogStateRepository.IsExistNotSetEventType(_sendEventLogStateRepository))
                 {
                     _loggerService.Info($"Transition to SendLogSettingsPage");
 

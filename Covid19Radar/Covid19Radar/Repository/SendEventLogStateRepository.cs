@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Covid19Radar.Common;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -48,6 +49,11 @@ namespace Covid19Radar.Repository
         void SetSendEventLogState(EventType eventType, SendEventLogState state);
 
         SendEventLogState GetSendEventLogState(EventType eventType);
+
+        public static bool IsExistNotSetEventType(ISendEventLogStateRepository sendEventLogStateRepository)
+            => EVENT_TYPE_ALL
+                .Select(eventType => sendEventLogStateRepository.GetSendEventLogState(eventType))
+                .Any(state => state == SendEventLogState.NotSet);
     }
 
     public class SendEventLogStateRepository : ISendEventLogStateRepository
