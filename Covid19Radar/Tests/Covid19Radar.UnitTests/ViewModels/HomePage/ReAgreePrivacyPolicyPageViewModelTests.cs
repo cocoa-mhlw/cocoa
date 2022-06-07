@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
@@ -23,16 +22,16 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<ITermsUpdateService> mockTermsUpdateService;
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
+        private readonly Mock<ISendEventLogStateRepository> mockSendEventLogStateRepository;
 
         public ReAgreePrivacyPolicyPageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockTermsUpdateService = mockRepository.Create<ITermsUpdateService>();
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
+            mockSendEventLogStateRepository = mockRepository.Create<ISendEventLogStateRepository>();
         }
 
         private ReAgreePrivacyPolicyPageViewModel CreateViewModel()
@@ -40,8 +39,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var vm = new ReAgreePrivacyPolicyPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockTermsUpdateService.Object,
-                mockUserDataRepository.Object
+                mockUserDataRepository.Object,
+                mockSendEventLogStateRepository.Object
                 );
             return vm;
         }
@@ -106,6 +105,10 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.PrivacyPolicy.UpdateDateTimeUtc));
+            mockSendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(It.IsAny<EventType>()))
+                .Returns(SendEventLogState.Disable);
+
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
             mockNavigationService.Verify(x => x.NavigateAsync(Destination.HomePage.ToPath(), param), Times.Once());
@@ -125,9 +128,58 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.PrivacyPolicy.UpdateDateTimeUtc));
+            mockSendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(It.IsAny<EventType>()))
+                .Returns(SendEventLogState.Disable);
+
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
             mockNavigationService.Verify(x => x.NavigateAsync(Destination.ContactedNotifyPage.ToPath(), param), Times.Once());
+        }
+
+        [Fact]
+        public void OnClickReAgreeCommandTests_NeedSendLogSetting()
+        {
+            var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
+            var updateInfo = new TermsUpdateInfoModel
+            {
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = DateTime.Now }
+            };
+
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.HomePage);
+            reAgreePrivacyPolicyPageViewModel.Initialize(param);
+
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.PrivacyPolicy.UpdateDateTimeUtc));
+            mockSendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(It.IsAny<EventType>()))
+                .Returns(SendEventLogState.NotSet);
+
+            reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
+
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), param), Times.Once());
+        }
+
+        [Fact]
+        public void OnClickReAgreeCommandWithDestinationTest_NeedSendLogSetting()
+        {
+            var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
+
+            var updateInfo = new TermsUpdateInfoModel
+            {
+                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now }
+            };
+
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.ContactedNotifyPage);
+            reAgreePrivacyPolicyPageViewModel.Initialize(param);
+
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.PrivacyPolicy.UpdateDateTimeUtc));
+            mockSendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(It.IsAny<EventType>()))
+                .Returns(SendEventLogState.NotSet);
+
+            reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
+
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), param), Times.Once());
         }
     }
 }
