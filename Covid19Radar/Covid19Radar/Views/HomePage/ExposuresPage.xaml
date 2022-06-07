@@ -20,6 +20,7 @@
         ItemsSource="{Binding Exposures}"
         HasUnevenRows="True"
         SeparatorVisibility="None"
+        ios:ListView.RowAnimationsEnabled="False"
         >
         <ListView.Header>
             <StackLayout
