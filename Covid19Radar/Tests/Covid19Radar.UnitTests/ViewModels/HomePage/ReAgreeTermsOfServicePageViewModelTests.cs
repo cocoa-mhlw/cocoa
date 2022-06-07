@@ -215,7 +215,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), param), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), It.IsAny<NavigationParameters>()), Times.Once());
         }
 
         [Fact]
@@ -239,7 +239,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), param), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), It.IsAny<NavigationParameters>()), Times.Once());
         }
     }
 }
