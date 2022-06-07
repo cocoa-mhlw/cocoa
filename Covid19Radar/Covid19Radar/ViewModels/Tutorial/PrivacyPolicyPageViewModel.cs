@@ -44,12 +44,7 @@ namespace Covid19Radar.ViewModels
 
             _userDataRepository.SaveLastUpdateDate(TermsType.PrivacyPolicy, DateTime.Now);
 
-            INavigationParameters navigationParameters
-                = SendLogSettingsPage.BuildNavigationParams(Destination.TutorialPage4_EnableExposureNotification);
-            await NavigationService.NavigateAsync(
-                Destination.SendLogSettingsPage.ToPath(),
-                navigationParameters
-                );
+            await NavigationService.NavigateAsync(nameof(TutorialPage4));
 
             _loggerService.EndMethod();
         });
