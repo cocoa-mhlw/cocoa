@@ -144,6 +144,14 @@ namespace Covid19Radar.Services
                 return new ApiResponse<LogStorageSas>((int)HttpStatusCode.OK, new LogStorageSas { SasToken = "sv=2012-02-12&se=2015-07-08T00%3A12%3A08Z&sr=c&sp=wl&sig=t%2BbzU9%2B7ry4okULN9S0wst%2F8MCUhTjrHyV9rDNLSe8g%3Dsss" });
             });
         }
+
+        public Task<ApiResponse<string>> PutEventLog(V1EventLogRequest request)
+        {
+            return Task.Factory.StartNew(() =>
+            {
+                return new ApiResponse<string>((int)HttpStatusCode.Created, "");
+            });
+        }
     }
 
     public class MockCommonUtils
