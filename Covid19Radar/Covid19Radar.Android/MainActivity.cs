@@ -19,9 +19,12 @@ using Covid19Radar.Common;
 using Covid19Radar.Services.Logs;
 using Prism.Ioc;
 using AndroidX.AppCompat.App;
+#if ENABLE_TEST_CLOUD
 using Xamarin.Forms;
 using Covid19Radar.Services;
 using System.Globalization;
+#endif
+
 
 namespace Covid19Radar.Droid
 {

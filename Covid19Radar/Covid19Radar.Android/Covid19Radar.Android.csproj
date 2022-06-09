@@ -175,7 +175,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CloseApplicationService.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
-    <Compile Include="Services\LocalizeService.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
@@ -192,6 +191,7 @@
     <Compile Include="Services\PlatformService.cs" />
     <Compile Include="Services\IPlatformService.cs" />
     <Compile Include="Services\LocalPathService.cs" />
+    <Compile Include="Services\LocalizeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
@@ -199,6 +199,9 @@
     <None Include="Assets\AboutAssets.txt" />
     <AndroidAsset Include="Assets\Roboto-Regular.ttf" />
     <AndroidAsset Include="Assets\license.html" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'!='Debug_UITest'">
+    <Compile Remove="Services\LocalizeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />

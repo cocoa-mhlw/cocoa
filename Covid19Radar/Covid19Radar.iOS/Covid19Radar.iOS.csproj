@@ -256,7 +256,6 @@
     <Compile Include="Extensions\AlignmentExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\FormattedStringExtensions.cs" />
-    <Compile Include="Services\LocalizeService.cs" />
     <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
@@ -269,8 +268,12 @@
     <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
     <Compile Include="Services\BackupAttributeService.cs" />
     <Compile Include="Services\ExternalNavigationService.cs" />
+    <Compile Include="Services\LocalizeService.cs" />
     <None Include="EntitlementsDebug.plist" />
     <Compile Include="Services\LocalPathService.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'!='Debug_UITest'">
+    <Compile Remove="Services\LocalizeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
