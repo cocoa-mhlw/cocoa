@@ -28,6 +28,7 @@ namespace Covid19Radar.Droid
         Theme = "@style/MainTheme.Splash",
         MainLauncher = true,
         LaunchMode = LaunchMode.SingleTop,
+        Exported = true,
         ScreenOrientation = ScreenOrientation.Portrait,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
         )]

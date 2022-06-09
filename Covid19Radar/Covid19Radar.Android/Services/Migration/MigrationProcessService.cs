@@ -15,7 +15,9 @@ using Xamarin.Forms.Internals;
 namespace Covid19Radar.Droid.Services.Migration
 {
     [Preserve]
-    [BroadcastReceiver]
+    [BroadcastReceiver(
+        Exported = true
+    )]
     [IntentFilter(new[] { Intent.ActionMyPackageReplaced })]
     public class AppVersionUpgradeReceiver : BroadcastReceiver
     {
