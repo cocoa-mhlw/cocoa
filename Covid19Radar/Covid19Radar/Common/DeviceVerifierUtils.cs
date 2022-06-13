@@ -44,7 +44,7 @@ namespace Covid19Radar.Common
 
         public static string GetNonceClearTextV3(V1EventLogRequest eventLogRequest)
         {
-            return string.Join("|", eventLogRequest.AppPackageName, GetListClearText(eventLogRequest.EventLogs));
+            return string.Join("|", eventLogRequest.IdempotencyKey, eventLogRequest.AppPackageName, GetListClearText(eventLogRequest.EventLogs));
 
             static string GetListClearText(IList<EventLog> eventLogs)
                 => string.Join(",", eventLogs.Select(log => GetClearText(log)));
