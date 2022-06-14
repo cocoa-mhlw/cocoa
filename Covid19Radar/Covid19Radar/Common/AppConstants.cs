@@ -91,6 +91,11 @@ namespace Covid19Radar.Common
         /// </summary>
         public const int EventLogMaxRetry = 4;
 
+        /// <summary>
+        /// Retry interval for sending event logs.
+        /// </summary>
+        public const int EventLogRetryInternval = 1000;
+
         #region Other Private Methods
 
         private static TimeZoneInfo JstTimeZoneInfo()

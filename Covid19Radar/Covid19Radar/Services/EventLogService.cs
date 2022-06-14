@@ -6,8 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
@@ -18,14 +16,13 @@ namespace Covid19Radar.Services
 {
     public interface IEventLogService
     {
-        public Task<List<EventLog>> SendAllAsync(long maxSize, int maxRetry);
+        public Task SendAllAsync(long maxSize, int maxRetry, int retryInterval);
     }
 
     public class EventLogService : IEventLogService
     {
         private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private readonly IEventLogRepository _eventLogRepository;
-        private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly IEssentialsService _essentialsService;
         private readonly IDeviceVerifier _deviceVerifier;
         private readonly IHttpDataService _httpDataService;
@@ -36,7 +33,6 @@ namespace Covid19Radar.Services
         public EventLogService(
             ISendEventLogStateRepository sendEventLogStateRepository,
             IEventLogRepository eventLogRepository,
-            IServerConfigurationRepository serverConfigurationRepository,
             IEssentialsService essentialsService,
             IDeviceVerifier deviceVerifier,
             IHttpDataService httpDataService,
@@ -45,20 +41,19 @@ namespace Covid19Radar.Services
         {
             _sendEventLogStateRepository = sendEventLogStateRepository;
             _eventLogRepository = eventLogRepository;
-            _serverConfigurationRepository = serverConfigurationRepository;
             _essentialsService = essentialsService;
             _deviceVerifier = deviceVerifier;
             _httpDataService = httpDataService;
             _loggerService = loggerService;
         }
 
-        public async Task<List<EventLog>> SendAllAsync(long maxSize, int maxRetry)
+        public async Task SendAllAsync(long maxSize, int maxRetry, int retryInterval)
         {
             await _semaphore.WaitAsync();
 
             try
             {
-                return await SendAllInternalAsync(maxSize, maxRetry);
+                await SendAllInternalAsync(maxSize, maxRetry, retryInterval);
             }
             finally
             {
@@ -66,7 +61,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task<List<EventLog>> SendAllInternalAsync(long maxSize, int maxRetry)
+        private async Task SendAllInternalAsync(long maxSize, int maxRetry, int retryInterval)
         {
             _loggerService.StartMethod();
 
@@ -75,8 +70,8 @@ namespace Covid19Radar.Services
                 List<EventLog> eventLogList = await _eventLogRepository.GetLogsAsync(maxSize);
                 if (eventLogList.Count == 0)
                 {
-                    _loggerService.Info($"No Event-logs found.");
-                    return new List<EventLog>();
+                    _loggerService.Info($"Event-logs not found.");
+                    return;
                 }
 
                 IDictionary<string, SendEventLogState> eventStateDict = new Dictionary<string, SendEventLogState>();
@@ -87,41 +82,52 @@ namespace Covid19Radar.Services
 
                 foreach (var eventLog in eventLogList)
                 {
-                    eventLog.HasConsent = eventStateDict[eventLog.GetEventType()] == SendEventLogState.Enable;
+                    if (eventStateDict[eventLog.GetEventType()] != SendEventLogState.Enable)
+                    {
+                        eventLog.HasConsent = false;
+                    }
                 }
 
                 string idempotencyKey = Guid.NewGuid().ToString();
+                List<EventLog> agreedEventLogList
+                    = eventLogList.Where(eventLog => eventLog.HasConsent).ToList();
 
-                for (var retryCount = 0; retryCount < maxRetry; retryCount++)
+                if (agreedEventLogList.Count == 0)
                 {
-                    try
-                    {
-                        List<EventLog> sentEventLogList = await SendAsync(
-                            idempotencyKey,
-                            eventLogList
-                                .Where(eventLog => eventLog.HasConsent)
-                                .ToList()
-                        );
-                        _loggerService.Info($"Send complete.");
+                    _loggerService.Info($"Agreed event-logs not found.");
+                    return;
+                }
 
-                        // TODO Error handling??
+                int tries = 0;
+                while (true)
+                {
+                    bool isSuccess = await SendAsync(idempotencyKey, agreedEventLogList);
+
+                    if (isSuccess)
+                    {
+                        _loggerService.Info($"Event log send successful.");
 
                         _loggerService.Info($"Clean up...");
                         foreach (var eventLog in eventLogList)
                         {
                             await _eventLogRepository.RemoveAsync(eventLog);
                         }
-                        _loggerService.Info($"Done.");
 
-                        return sentEventLogList;
+                        break;
                     }
-                    catch (Exception exception)
+                    else if (tries >= maxRetry)
                     {
-                        _loggerService.Exception("Exception occurred, SendAsync", exception);
+                        _loggerService.Error("Event log send failed all.");
+                        break;
                     }
+
+                    _loggerService.Warning($"Event log send failed. tries:{tries + 1}");
+                    await Task.Delay(retryInterval);
+
+                    tries++;
                 }
 
-                return new List<EventLog>();
+                _loggerService.Info($"Done.");
             }
             finally
             {
@@ -129,7 +135,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task<List<EventLog>> SendAsync(string idempotencyKey, List<EventLog> eventLogList)
+        private async Task<bool> SendAsync(string idempotencyKey, List<EventLog> eventLogList)
         {
             _loggerService.StartMethod();
 
@@ -151,18 +157,20 @@ namespace Covid19Radar.Services
                 if (response.StatusCode == (int)HttpStatusCode.Created)
                 {
                     _loggerService.Info("Send event log succeeded");
-                    _loggerService.Debug($"response: {response.Result}");
-                    return eventLogList;
+                    return true;
                 }
-
-                // TODO Error Handling??
-
-                return new List<EventLog>();
+            }
+            catch (Exception ex)
+            {
+                _loggerService.Exception("Exception occurred, SendAsync", ex);
             }
             finally
             {
                 _loggerService.EndMethod();
             }
+
+            _loggerService.Error("Send event log failure");
+            return false;
         }
     }
 }

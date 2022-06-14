@@ -55,9 +55,13 @@ namespace Covid19Radar.iOS.Services
 
             _ = Task.Run(async () =>
             {
+                _loggerService.Info("HandleSendLogAsync() Task.Run() start");
                 try
                 {
-                    await _eventLogService.SendAllAsync(AppConstants.EventLogMaxRequestSizeInBytes, AppConstants.EventLogMaxRetry);
+                    await _eventLogService.SendAllAsync(
+                        AppConstants.EventLogMaxRequestSizeInBytes,
+                        AppConstants.EventLogMaxRetry,
+                        AppConstants.EventLogRetryInternval);
                     task.SetTaskCompleted(true);
                 }
                 catch (OperationCanceledException exception)
@@ -73,9 +77,11 @@ namespace Covid19Radar.iOS.Services
                 finally
                 {
                     cancellationTokenSource.Dispose();
-                    _loggerService.EndMethod();
+                    _loggerService.Info("HandleSendLogAsync() Task.Run() end");
                 }
             });
+
+            _loggerService.EndMethod();
         }
 
         private void ScheduleSendEventLog()

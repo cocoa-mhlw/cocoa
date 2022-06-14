@@ -20,11 +20,6 @@ namespace Covid19Radar.Repository
 {
     public interface IEventLogRepository
     {
-        public Task<bool> AddAsync(
-            EventLog eventLog,
-            long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
-            );
-
         public Task<List<EventLog>> GetLogsAsync(
             long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
             );
@@ -72,24 +67,6 @@ namespace Covid19Radar.Repository
             return $"{hash}{LOG_EXTENSION}";
         }
 
-        public async Task<bool> AddAsync(EventLog eventLog, long maxSize = AppConstants.EventLogMaxRequestSizeInBytes)
-        {
-            _loggerService.StartMethod();
-
-            await _semaphore.WaitAsync();
-
-            try
-            {
-                return await AddAsyncInternal(eventLog, maxSize);
-            }
-            finally
-            {
-                _semaphore.Release();
-
-                _loggerService.EndMethod();
-            }
-        }
-
         private async Task<bool> AddAsyncInternal(EventLog eventLog, long maxSize)
         {
             _loggerService.StartMethod();
@@ -111,18 +88,30 @@ namespace Covid19Radar.Repository
                 long size = Encoding.UTF8.GetByteCount(serializedJson);
                 if (size > maxSize)
                 {
-                    _loggerService.Info($"Log size {size} exceed maxSize( {maxSize} bytes.");
+                    _loggerService.Info($"Log size {size} exceed maxSize {maxSize} bytes.");
                     return false;
+                }
+
+                string directoryName = Path.GetDirectoryName(filePath);
+                if (!Directory.Exists(directoryName))
+                {
+                    Directory.CreateDirectory(directoryName);
+                    _loggerService.Info($"Directory created. directoryName:{directoryName}");
                 }
 
                 await File.WriteAllTextAsync(filePath, serializedJson);
 
                 return true;
             }
+            catch (Exception ex)
+            {
+                _loggerService.Exception("Write event log failure.", ex);
+            }
             finally
             {
                 _loggerService.EndMethod();
             }
+            return false;
         }
 
         public async Task<List<EventLog>> GetLogsAsync(long maxSize = AppConstants.EventLogMaxRequestSizeInBytes)
@@ -278,7 +267,7 @@ namespace Covid19Radar.Repository
                 Subtype = EventType.ExposureNotified.SubType,
                 Content = content.ToJsonString(),
             };
-            await AddAsync(eventLog, maxSize);
+            await AddAsyncInternal(eventLog, maxSize);
         }
     }
 

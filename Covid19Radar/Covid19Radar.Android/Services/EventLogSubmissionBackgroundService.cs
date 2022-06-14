@@ -81,7 +81,10 @@ namespace Covid19Radar.Droid.Services
 
                 try
                 {
-                    eventLogService.SendAllAsync(AppConstants.EventLogMaxRequestSizeInBytes, AppConstants.EventLogMaxRetry);
+                    eventLogService.SendAllAsync(
+                        AppConstants.EventLogMaxRequestSizeInBytes,
+                        AppConstants.EventLogMaxRetry,
+                        AppConstants.EventLogRetryInternval);
                     return Result.InvokeSuccess();
                 }
                 catch (Exception exception)
