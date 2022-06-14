@@ -22,6 +22,8 @@ namespace Covid19Radar.Background.Services
         const string batchNumberMetadataKey = "batch_number";
         const string batchRegionMetadataKey = "batch_region";
         const string fileNameSuffix = ".zip";
+        private readonly static string _contentTypeJson = @"application/json";
+        private readonly static string _contentTypeZip = @"application/zip";
 
         public readonly string TekExportKeyUrl;
         public readonly string TekExportBlobStorageConnectionString;
@@ -62,6 +64,10 @@ namespace Covid19Radar.Background.Services
             blockBlob.Metadata[batchNumberMetadataKey] = model.BatchNum.ToString();
             blockBlob.Metadata[batchRegionMetadataKey] = model.Region;
 
+            if(blockBlob.Properties.ContentType != _contentTypeZip)
+            {
+                blockBlob.Properties.ContentType = _contentTypeZip;
+            }
             await blockBlob.UploadFromStreamAsync(s);
             Logger.LogInformation($" {nameof(WriteToBlobAsync)} upload {exportFileName}");
             await blockBlob.SetMetadataAsync();
@@ -120,6 +126,10 @@ namespace Covid19Radar.Background.Services
                     await writer.FlushAsync();
                     await stream.FlushAsync();
                     stream.Position = 0;
+                    if (blockBlob.Properties.ContentType != _contentTypeJson)
+                    {
+                        blockBlob.Properties.ContentType = _contentTypeJson;
+                    }
                     await blockBlob.UploadFromStreamAsync(stream);
                 }
             }
