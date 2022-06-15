@@ -93,8 +93,6 @@ namespace Covid19Radar.Services
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
 
-            var enVersionStr = enVersion.ToString();
-
             var (newDailySummaries, newExposureWindows) = await _exposureDataRepository.SetExposureDataAsync(
                 dailySummaries.ToList(),
                 exposureWindows.ToList()
@@ -140,8 +138,6 @@ namespace Covid19Radar.Services
         public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
             _loggerService.Info("ExposureDetected: Legacy-V1");
-
-            var enVersionStr = enVersion.ToString();
 
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
