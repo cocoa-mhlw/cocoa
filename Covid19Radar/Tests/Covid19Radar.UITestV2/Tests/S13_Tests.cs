@@ -25,6 +25,15 @@ namespace CovidRadar.UITestV2
         }
 
         /// <summary>
+        /// 後処理.
+        /// </summary>
+        [TearDown]
+        public override void TearDown()
+        {
+            //何もしない
+        }
+
+        /// <summary>
         /// 設定→アプリ初期化(日本語).
         /// </summary>
         [Test]

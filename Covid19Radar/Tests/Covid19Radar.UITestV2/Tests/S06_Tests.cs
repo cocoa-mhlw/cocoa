@@ -25,12 +25,14 @@ namespace CovidRadar.UITestV2
         }
 
         /// <summary>
-        /// 本S-6シナリオでは初回ナビゲーションの確認を行うため、共通処理の初回ナビゲーションをスキップするためのSetUp処理.
+        /// tutorial実行.
         /// </summary>
-        [SetUp]
-        public override void BeforeEachTest()
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
         {
             AppManager.StartApp();
+            TutorialPageFlow TutorialPageFlow = new TutorialPageFlow();
+            TutorialPageFlow.Tutorial();
         }
 
         /* ENをONにするモーダルをタップする動作を実装できないため、CASE1~5は手動実行

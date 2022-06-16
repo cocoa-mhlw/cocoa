@@ -26,6 +26,17 @@ namespace CovidRadar.UITestV2
         }
 
         /// <summary>
+        /// tutorial実行.
+        /// </summary>
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
+        {
+            AppManager.StartApp();
+            TutorialPageFlow TutorialPageFlow = new TutorialPageFlow();
+            TutorialPageFlow.Tutorial();
+        }
+
+        /// <summary>
         /// 濃厚接触0回(日本語).
         /// </summary>
         [Test]

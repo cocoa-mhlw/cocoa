@@ -21,9 +21,7 @@ namespace CovidRadar.UITestV2
         [SetUp]
         public virtual void BeforeEachTest()
         {
-            AppManager.StartApp();
-            TutorialPageFlow TutorialPageFlow = new TutorialPageFlow();
-            TutorialPageFlow.Tutorial();
+            Console.WriteLine("BeforeEachTest");
         }
 
 
@@ -37,8 +35,7 @@ namespace CovidRadar.UITestV2
         [TearDown]
         public virtual void TearDown()
         {
-            Console.WriteLine("TearDown");
-       
+            AppManager.ReStartApp();
         }
 
     }
