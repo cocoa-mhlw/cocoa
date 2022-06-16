@@ -100,13 +100,11 @@ namespace Covid19Radar.UnitTests.Services
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
 
+            _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
+
             // Test Case
             var unitUnderTest = CreateService();
-            await unitUnderTest.SendAllAsync(
-                long.MaxValue,
-                1,
-                100
-                );
+            await unitUnderTest.SendAllAsync(long.MaxValue, 1);
 
             _loggerService.Verify(x => x.Warning(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
             _loggerService.Verify(x => x.Info("Event log send successful.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
@@ -145,13 +143,11 @@ namespace Covid19Radar.UnitTests.Services
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
 
+            _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
+
             // Test Case
             var unitUnderTest = CreateService();
-            await unitUnderTest.SendAllAsync(
-                long.MaxValue,
-                1,
-                100
-                );
+            await unitUnderTest.SendAllAsync(long.MaxValue, 1);
 
             _loggerService.Verify(x => x.Warning(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
             _loggerService.Verify(x => x.Info("Event log send successful.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
@@ -191,17 +187,15 @@ namespace Covid19Radar.UnitTests.Services
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
 
+            _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
+
             // Test Case
             var unitUnderTest = CreateService();
-            await unitUnderTest.SendAllAsync(
-                long.MaxValue,
-                3,
-                100
-                );
+            await unitUnderTest.SendAllAsync(long.MaxValue, 3);
 
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:1", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:2", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:3", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:1 delay:1sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:2 delay:2sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:3 delay:4sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
             _loggerService.Verify(x => x.Info("Event log send successful.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             _loggerService.Verify(x => x.Error("Event log send failed all.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
@@ -230,18 +224,16 @@ namespace Covid19Radar.UnitTests.Services
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
 
+            _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
+
             // Test Case
             var unitUnderTest = CreateService();
-            await unitUnderTest.SendAllAsync(
-                long.MaxValue,
-                3,
-                100
-                );
+            await unitUnderTest.SendAllAsync(long.MaxValue, 3);
 
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:1", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:2", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:3", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:4", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:1 delay:1sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:2 delay:2sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:3 delay:4sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:4 delay:8sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
             _loggerService.Verify(x => x.Info("Event log send successful.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
             _loggerService.Verify(x => x.Error("Event log send failed all.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
 
@@ -270,18 +262,16 @@ namespace Covid19Radar.UnitTests.Services
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
 
+            _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
+
             // Test Case
             var unitUnderTest = CreateService();
-            await unitUnderTest.SendAllAsync(
-                long.MaxValue,
-                3,
-                100
-                );
+            await unitUnderTest.SendAllAsync(long.MaxValue, 3);
 
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:1", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:2", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:3", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
-            _loggerService.Verify(x => x.Warning("Event log send failed. tries:4", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:1 delay:1sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:2 delay:2sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:3 delay:4sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:4 delay:8sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
             _loggerService.Verify(x => x.Info("Event log send successful.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
             _loggerService.Verify(x => x.Error("Event log send failed all.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
 
@@ -310,16 +300,54 @@ namespace Covid19Radar.UnitTests.Services
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
 
+            _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
+
             // Test Case
             var unitUnderTest = CreateService();
-            await unitUnderTest.SendAllAsync(
-                long.MaxValue,
-                1,
-                100
-                );
+            await unitUnderTest.SendAllAsync(long.MaxValue, 1);
 
             _httpDataService.Verify(x => x.PutEventLog(It.IsAny<V1EventLogRequest>()), Times.Never());
         }
 
+        [Fact]
+        public async Task SendAllAsyncTest_DeviceVerifierFailure()
+        {
+            // Dummy data
+            List<EventLog> dummyEventLogList = CreateDummyEventLogList();
+
+            // Mock Setup
+            _httpDataService.Setup(x => x.PutEventLog(It.IsAny<V1EventLogRequest>()))
+                .ReturnsAsync(new ApiResponse<string>((int)HttpStatusCode.Created, ""));
+
+            _sendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(EventType.ExposureNotified))
+                .Returns(SendEventLogState.Enable);
+            _sendEventLogStateRepository
+                .Setup(x => x.GetSendEventLogState(EventType.ExposureData))
+                .Returns(SendEventLogState.Disable);
+
+            _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
+                .ReturnsAsync(dummyEventLogList);
+
+            _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(true);
+
+            // Test Case
+            var unitUnderTest = CreateService();
+            await unitUnderTest.SendAllAsync(long.MaxValue, 0);
+
+            _loggerService.Verify(x => x.Warning("Payload creation failed. retryAttempt:1 delay:4sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Payload creation failed. retryAttempt:2 delay:8sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Payload creation failed. retryAttempt:3 delay:16sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+            _loggerService.Verify(x => x.Warning("Payload creation failed. retryAttempt:4 delay:32sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
+
+            _loggerService.Verify(x => x.Warning("Event log send failed. retryAttempt:1 delay:1sec", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
+
+            _loggerService.Verify(x => x.Info("Event log send successful.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
+            _loggerService.Verify(x => x.Error("Event log send failed all.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+
+            _httpDataService.Verify(x => x.PutEventLog(It.IsAny<V1EventLogRequest>()), Times.Never());
+            _deviceVerifier.Verify(x => x.VerifyAsync(It.IsAny<V1EventLogRequest>()), Times.Exactly(4));
+            _eventLogRepository.Verify(x => x.RemoveAsync(It.IsAny<EventLog>()), Times.Never());
+        }
     }
 }

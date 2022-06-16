@@ -11,12 +11,13 @@ using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
+using Polly;
 
 namespace Covid19Radar.Services
 {
     public interface IEventLogService
     {
-        public Task SendAllAsync(long maxSize, int maxRetry, int retryInterval);
+        public Task SendAllAsync(long maxSize, int maxRetry);
     }
 
     public class EventLogService : IEventLogService
@@ -47,13 +48,13 @@ namespace Covid19Radar.Services
             _loggerService = loggerService;
         }
 
-        public async Task SendAllAsync(long maxSize, int maxRetry, int retryInterval)
+        public async Task SendAllAsync(long maxSize, int maxRetry)
         {
             await _semaphore.WaitAsync();
 
             try
             {
-                await SendAllInternalAsync(maxSize, maxRetry, retryInterval);
+                await SendAllInternalAsync(maxSize, maxRetry);
             }
             finally
             {
@@ -61,7 +62,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        private async Task SendAllInternalAsync(long maxSize, int maxRetry, int retryInterval)
+        private async Task SendAllInternalAsync(long maxSize, int maxRetry)
         {
             _loggerService.StartMethod();
 
@@ -98,33 +99,27 @@ namespace Covid19Radar.Services
                     return;
                 }
 
-                int tries = 0;
-                while (true)
+                PolicyResult<bool> policyResult = await Policy
+                    .HandleResult<bool>(result => !result)
+                    .WaitAndRetryAsync(maxRetry, retryAttempt => {
+                        double delay = Math.Pow(2, retryAttempt - 1);
+                        _loggerService.Warning($"Event log send failed. retryAttempt:{retryAttempt} delay:{delay}sec");
+                        return TimeSpan.FromSeconds(delay);
+                    })
+                    .ExecuteAndCaptureAsync(() => SendAsync(idempotencyKey, agreedEventLogList));
+
+                if (policyResult.Outcome == OutcomeType.Failure)
                 {
-                    bool isSuccess = await SendAsync(idempotencyKey, agreedEventLogList);
+                    _loggerService.Error("Event log send failed all.");
+                    return;
+                }
 
-                    if (isSuccess)
-                    {
-                        _loggerService.Info($"Event log send successful.");
+                _loggerService.Info($"Event log send successful.");
 
-                        _loggerService.Info($"Clean up...");
-                        foreach (var eventLog in eventLogList)
-                        {
-                            await _eventLogRepository.RemoveAsync(eventLog);
-                        }
-
-                        break;
-                    }
-                    else if (tries >= maxRetry)
-                    {
-                        _loggerService.Error("Event log send failed all.");
-                        break;
-                    }
-
-                    _loggerService.Warning($"Event log send failed. tries:{tries + 1}");
-                    await Task.Delay(retryInterval);
-
-                    tries++;
+                _loggerService.Info($"Clean up...");
+                foreach (var eventLog in eventLogList)
+                {
+                    await _eventLogRepository.RemoveAsync(eventLog);
                 }
 
                 _loggerService.Info($"Done.");
@@ -149,7 +144,24 @@ namespace Covid19Radar.Services
                     EventLogs = eventLogList,
                 };
 
-                request.DeviceVerificationPayload = await _deviceVerifier.VerifyAsync(request);
+                // Create device verification payload
+                PolicyResult<string> policyResult = await Policy
+                    .HandleResult<string>(result => _deviceVerifier.IsErrorPayload(result))
+                    .WaitAndRetryAsync(3, retryAttempt => {
+                        double delay = Math.Pow(2, retryAttempt + 1);
+                        _loggerService.Warning($"Payload creation failed. retryAttempt:{retryAttempt} delay:{delay}sec");
+                        return TimeSpan.FromSeconds(delay);
+                    })
+                    .ExecuteAndCaptureAsync(() => _deviceVerifier.VerifyAsync(request));
+
+                if (policyResult.Outcome == OutcomeType.Failure)
+                {
+                    _loggerService.Error("Payload creation failed all.");
+                    return false;
+                }
+
+                _loggerService.Info("Payload creation successful.");
+                request.DeviceVerificationPayload = policyResult.Result;
 
                 ApiResponse<string> response = await _httpDataService.PutEventLog(request);
                 _loggerService.Info($"PutEventLog() StatusCode:{response.StatusCode}");

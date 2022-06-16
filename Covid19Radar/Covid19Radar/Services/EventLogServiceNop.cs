@@ -10,7 +10,7 @@ namespace Covid19Radar.Services
 {
     public class EventLogServiceNop : IEventLogService
     {
-        public Task SendAllAsync(long maxSize, int maxRetry, int retryInterval)
+        public Task SendAllAsync(long maxSize, int maxRetry)
         {
             // do nothing
             return Task.FromResult(new List<EventLog>());

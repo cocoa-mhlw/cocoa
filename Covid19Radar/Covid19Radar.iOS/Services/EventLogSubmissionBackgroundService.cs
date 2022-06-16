@@ -60,8 +60,7 @@ namespace Covid19Radar.iOS.Services
                 {
                     await _eventLogService.SendAllAsync(
                         AppConstants.EventLogMaxRequestSizeInBytes,
-                        AppConstants.EventLogMaxRetry,
-                        AppConstants.EventLogRetryInternval);
+                        AppConstants.EventLogMaxRetry);
                     task.SetTaskCompleted(true);
                 }
                 catch (OperationCanceledException exception)

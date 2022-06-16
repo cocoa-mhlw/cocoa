@@ -89,12 +89,7 @@ namespace Covid19Radar.Common
         /// <summary>
         /// Number of retries to send event log.
         /// </summary>
-        public const int EventLogMaxRetry = 4;
-
-        /// <summary>
-        /// Retry interval for sending event logs.
-        /// </summary>
-        public const int EventLogRetryInternval = 1000;
+        public const int EventLogMaxRetry = 3;
 
         #region Other Private Methods
 
