@@ -93,7 +93,7 @@ namespace Covid19Radar.Droid
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("failed to Scheduling ExposureDetectionBackgroundService", exception);
+                _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
             }
             try
             {
@@ -101,7 +101,7 @@ namespace Covid19Radar.Droid
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("failed to Scheduling EventLogSubmissionBackgroundService", exception);
+                _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
             }
         }
 

@@ -34,6 +34,8 @@ namespace Covid19Radar.iOS.Services
 
         public override void Schedule()
         {
+            _loggerService.StartMethod();
+
             _ = BGTaskScheduler.Shared.Register(IDENTIFIER, null, task =>
             {
                 HandleSendLogAsync((BGAppRefreshTask)task);

@@ -125,7 +125,7 @@ namespace Covid19Radar.iOS
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("failed to Scheduling", exception);
+                _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
             }
             try
             {
@@ -133,7 +133,7 @@ namespace Covid19Radar.iOS
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("failed to Scheduling EventLogSubmissionBackgroundService", exception);
+                _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
             }
         }
 
