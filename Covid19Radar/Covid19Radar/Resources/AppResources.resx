@@ -465,7 +465,7 @@
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>A list of close contacts with COVID-19 positive users</value>
+    <value>List of contacts with positive users</value>
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
@@ -473,7 +473,7 @@
     <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
-    <value>Close contacts for the past 14 days</value>
+    <value>Past 14 days' contacts</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -485,7 +485,7 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>Check contacts with COVID-19 positive users</value>
+    <value>Check contacts with positive users</value>
     <comment>陽性者との接触結果を確認</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
