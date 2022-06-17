@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Acr.UserDialogs;
@@ -10,6 +11,7 @@ using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -59,6 +61,24 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.closeApplicationService = closeApplicationService;
         }
+
+        public ICommand OpenSendLogSettingPage => new Command(async () =>
+        {
+            loggerService.StartMethod();
+
+            INavigationParameters navigationParams = SendLogSettingsPage.BuildNavigationParams(Destination.SettingsPage);
+            _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), navigationParams);
+
+            loggerService.EndMethod();
+        });
+
+        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+
+        public ICommand OpenGitHub => new Command(async () =>
+        {
+            var url = AppResources.UrlGitHubRepository;
+            await BrowserOpenAsync(url, BrowserLaunchMode.External);
+        });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {

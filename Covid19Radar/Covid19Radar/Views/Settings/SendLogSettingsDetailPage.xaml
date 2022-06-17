@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="Covid19Radar.Views.SendLogSettingsDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{x:Static resources:AppResources.AppName}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <!--
+        Workaround for fixing ScrollView truncates items issue.
+        https://github.com/xamarin/Xamarin.Forms/issues/13597
+    -->
+    <ContentView>
+    <ScrollView>
+        <StackLayout
+            Margin="20"
+            >
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="0,0,0,20"
+                Style="{StaticResource DefaultTitleLabel}"
+                Text="送信する情報の設定"
+                />
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="0"
+                Style="{StaticResource DefaultLabel}"
+                Text="COCOAは次の情報を送信します。送信を希望しない情報のチェックを外してください。"
+                />
+
+           <Grid
+               ColumnSpacing="0"
+               RowSpacing="0"
+               Margin="0, 10, 0, 0"
+               >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <CheckBox
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    IsChecked="{Binding EnableExposureNotificationNotified}"
+                    />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    VerticalOptions="Center"
+                    Text="接触通知の表示"
+                    />
+               <StackLayout
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    >
+                    <Label
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。"
+                        />
+                    <Label
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Margin="0, 10, 0, 0"
+                        Text="通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。"
+                        />
+                </StackLayout>
+
+            </Grid>
+
+           <Grid
+               ColumnSpacing="0"
+               RowSpacing="0"
+               Margin="0, 10, 0, 0"
+               >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--
+                <CheckBox
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    IsChecked="{Binding EnableExposureData}"
+                    />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    VerticalOptions="Center"
+                    Text="受信した信号の情報"
+                    />
+                <StackLayout
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    >
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="接触確認の結果、他の陽性登録者の端末の信号を受信していることが確認されたときに送信します。"
+                        />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Margin="0, 10, 0, 0"
+                        Text="送信する情報には「信号を受信した日」「信号を発信した端末の電波の信頼度」「陽性登録者の感染性」「信号を受信していた時間」「受信した信号の強さ」が含まれます。あなたや陽性登録者を個人として特定可能な情報は送信しません。"
+                        />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Margin="0, 10, 0, 0"
+                        Text="信号の情報を統計的に処理することで、日本国内でどのような接触が発生しているかを把握したり、より精度の高い通知ができるように条件を調整する目的で利用します。"
+                        />
+                   </StackLayout>
+                -->
+
+            </Grid>
+
+            <Button
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="0, 30, 0, 20"
+                Command="{Binding Path=OnClickSave}"
+                Style="{StaticResource DefaultButton}"
+                Text="設定を保存"
+                />
+        </StackLayout>
+    </ScrollView>
+    </ContentView>
+</ContentPage>

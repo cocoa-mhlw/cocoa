@@ -22,7 +22,6 @@ namespace Covid19Radar.Services
 
         private readonly IDiagnosisKeyRepository _diagnosisKeyRepository;
         private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
-        private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
         private readonly ILoggerService _loggerService;
         private readonly IUserDataRepository _userDataRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
@@ -44,7 +43,6 @@ namespace Covid19Radar.Services
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
             _exposureNotificationApiService = exposureNotificationApiService;
-            _exposureConfigurationRepository = exposureConfigurationRepository;
             _loggerService = loggerService;
             _userDataRepository = userDataRepository;
             _serverConfigurationRepository = serverConfigurationRepository;

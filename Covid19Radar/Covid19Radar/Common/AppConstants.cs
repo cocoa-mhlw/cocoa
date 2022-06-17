@@ -81,6 +81,15 @@ namespace Covid19Radar.Common
         /// </summary>
         public const int DelayForRegistrationErrorMillis = 5000;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public const bool DEFAULT_SEND_EVENT_LOG_ENABLED = true;
+
+        public const long MAX_LOG_REQUEST_SIZE_IN_BYTES = 8 * 1024 * 1024; // 8 MiB
+
+        public const int MAX_RETRY = 4;
+
         #region Other Private Methods
 
         private static TimeZoneInfo JstTimeZoneInfo()

@@ -82,7 +82,13 @@ namespace Covid19Radar.ViewModels
             loggerService.StartMethod();
 
             await exposureNotificationApiService.StartExposureNotificationAsync();
-            await NavigationService.NavigateAsync(nameof(TutorialPage6));
+
+            INavigationParameters navigationParameters
+                = SendLogSettingsPage.BuildNavigationParams(Destination.TutorialPage6_CompletePage);
+            await NavigationService.NavigateAsync(
+                Destination.SendLogSettingsPage.ToPath(),
+                navigationParameters
+                );
 
             loggerService.EndMethod();
         }

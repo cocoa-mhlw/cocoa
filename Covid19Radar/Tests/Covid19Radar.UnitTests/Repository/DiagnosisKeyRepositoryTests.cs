@@ -46,7 +46,7 @@ namespace Covid19Radar.UnitTests.Repository
                         "application/json"
                     )
             );
-            mockClientService.Setup(x => x.Create(It.IsAny<HttpClientHandler>())).Returns(client);
+            mockClientService.Setup(x => x.CreateCdnClient()).Returns(client);
 
             var unitUnderTest = CreateRepository();
             var (_, result) = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
@@ -71,7 +71,7 @@ namespace Covid19Radar.UnitTests.Repository
                 statusCode,
                 new StringContent("", Encoding.UTF8, "application/json")
             );
-            mockClientService.Setup(x => x.Create(It.IsAny<HttpClientHandler>())).Returns(client);
+            mockClientService.Setup(x => x.CreateCdnClient()).Returns(client);
 
             var unitUnderTest = CreateRepository();
             var (_, result) = await unitUnderTest.GetDiagnosisKeysListAsync("https://example.com", default);
@@ -89,7 +89,7 @@ namespace Covid19Radar.UnitTests.Repository
                 HttpStatusCode.OK,
                 content
             );
-            mockClientService.Setup(x => x.Create(It.IsAny<HttpClientHandler>())).Returns(client);
+            mockClientService.Setup(x => x.CreateCdnClient()).Returns(client);
 
             var entry = new DiagnosisKeyEntry()
             {
@@ -122,7 +122,7 @@ namespace Covid19Radar.UnitTests.Repository
                 statusCode,
                 content
             );
-            mockClientService.Setup(x => x.Create(It.IsAny<HttpClientHandler>())).Returns(client);
+            mockClientService.Setup(x => x.CreateCdnClient()).Returns(client);
 
             var entry = new DiagnosisKeyEntry()
             {

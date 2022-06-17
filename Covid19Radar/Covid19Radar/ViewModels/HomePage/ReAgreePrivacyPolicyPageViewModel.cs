@@ -6,7 +6,6 @@ using System;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
-using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -18,8 +17,8 @@ namespace Covid19Radar.ViewModels
     public class ReAgreePrivacyPolicyPageViewModel : ViewModelBase
     {
         private readonly ILoggerService _loggerService;
-        private readonly ITermsUpdateService _termsUpdateService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
 
         private DateTime UpdateDateTimeUtc { get; set; }
         private string _updateText;
@@ -36,13 +35,13 @@ namespace Covid19Radar.ViewModels
         public ReAgreePrivacyPolicyPageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            ITermsUpdateService termsUpdateService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository
             ) : base(navigationService)
         {
             _loggerService = loggerService;
-            _termsUpdateService = termsUpdateService;
             _userDataRepository = userDataRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
         }
 
         public Command OpenWebView => new Command(async () =>
@@ -66,7 +65,18 @@ namespace Covid19Radar.ViewModels
             {
                 destination = _navigationParameters.GetValue<Destination>(ReAgreePrivacyPolicyPage.DestinationKey);
             }
-            _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
+
+            if (ISendEventLogStateRepository.IsExistNotSetEventType(_sendEventLogStateRepository))
+            {
+                _loggerService.Info($"Transition to SendLogSettingsPage");
+
+                var navigationParams = SendLogSettingsPage.BuildNavigationParams(destination, _navigationParameters);
+                _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), navigationParams);
+            }
+            else
+            {
+                _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
+            }
 
             _loggerService.EndMethod();
         });

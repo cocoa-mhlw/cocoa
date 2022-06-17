@@ -6,7 +6,6 @@ using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
@@ -19,7 +18,6 @@ namespace Covid19Radar.Services
     public class HttpDataService : IHttpDataService
     {
         private readonly ILoggerService loggerService;
-        private readonly IHttpClientService httpClientService;
         private readonly IServerConfigurationRepository serverConfigurationRepository;
 
         private readonly HttpClient apiClient;
@@ -32,30 +30,10 @@ namespace Covid19Radar.Services
             )
         {
             this.loggerService = loggerService;
-            this.httpClientService = httpClientService;
             this.serverConfigurationRepository = serverConfigurationRepository;
 
-            apiClient = CreateApiClient();
-            httpClient = CreateHttpClient();
-        }
-
-        private HttpClient CreateApiClient()
-        {
-            var apiClient = httpClientService.Create();
-            apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            apiClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
-            apiClient.DefaultRequestHeaders.Add("x-api-key", AppSettings.Instance.ApiKey);
-
-            return apiClient;
-        }
-
-        private HttpClient CreateHttpClient()
-        {
-            var httpClient = httpClientService.Create();
-            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
-
-            return httpClient;
+            apiClient = httpClientService.CreateApiClient();
+            httpClient = httpClientService.CreateHttpClient();
         }
 
         // POST /api/Register - Register User

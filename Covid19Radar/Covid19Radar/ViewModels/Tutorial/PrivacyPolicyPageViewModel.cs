@@ -43,6 +43,7 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             _userDataRepository.SaveLastUpdateDate(TermsType.PrivacyPolicy, DateTime.Now);
+
             await NavigationService.NavigateAsync(nameof(TutorialPage4));
 
             _loggerService.EndMethod();

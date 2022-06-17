@@ -48,10 +48,7 @@ namespace Covid19Radar.Repository
             ILoggerService loggerService
             )
         {
-            _httpClient = httpClientService.Create(new HttpClientHandler
-            {
-                AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
-            });
+            _httpClient = httpClientService.CreateCdnClient();
             _loggerService = loggerService;
         }
 

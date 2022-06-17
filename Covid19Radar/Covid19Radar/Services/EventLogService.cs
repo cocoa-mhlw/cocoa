@@ -4,179 +4,150 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Chino;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services.Logs;
-using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
     public interface IEventLogService
     {
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation
-            );
-
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows
-            );
-
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion
-            );
+        public Task<List<EventLog>> SendAllAsync(long maxSize, int maxRetry);
     }
 
-#if EVENT_LOG_ENABLED
     public class EventLogService : IEventLogService
     {
-        private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
+        private readonly IEventLogRepository _eventLogRepository;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly IEssentialsService _essentialsService;
         private readonly IDeviceVerifier _deviceVerifier;
-        private readonly IDateTimeUtility _dateTimeUtility;
 
         private readonly ILoggerService _loggerService;
-
         private readonly HttpClient _httpClient;
 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
         public EventLogService(
-            IUserDataRepository userDataRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository,
+            IEventLogRepository eventLogRepository,
             IServerConfigurationRepository serverConfigurationRepository,
             IEssentialsService essentialsService,
             IDeviceVerifier deviceVerifier,
-            IDateTimeUtility dateTimeUtility,
             IHttpClientService httpClientService,
             ILoggerService loggerService
             )
         {
-            _userDataRepository = userDataRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
+            _eventLogRepository = eventLogRepository;
             _serverConfigurationRepository = serverConfigurationRepository;
             _essentialsService = essentialsService;
             _deviceVerifier = deviceVerifier;
-            _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
 
-            _httpClient = httpClientService.Create();
+            _httpClient = httpClientService.CreateApiClient();
         }
 
-        public async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation
-            )
+        public async Task<List<EventLog>> SendAllAsync(long maxSize, int maxRetry)
         {
-            var data = new ExposureData(exposureConfiguration,
-                exposureSummary, exposureInformation
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
+            await _semaphore.WaitAsync();
 
-            await SendExposureDataAsync(idempotencyKey, data);
+            try
+            {
+                return await SendAllInternalAsync(maxSize, maxRetry);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
         }
 
-        public async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion,
-            IList<DailySummary> dailySummaries,
-            IList<ExposureWindow> exposureWindows
-            )
+        private async Task<List<EventLog>> SendAllInternalAsync(long maxSize, int maxRetry)
         {
-            var data = new ExposureData(exposureConfiguration,
-                dailySummaries, exposureWindows
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
+            _loggerService.StartMethod();
 
-            await SendExposureDataAsync(idempotencyKey, data);
+            try
+            {
+                List<EventLog> eventLogList = await _eventLogRepository.GetLogsAsync(maxSize);
+                if (eventLogList.Count == 0)
+                {
+                    _loggerService.Info($"No Event-logs found.");
+                    return new List<EventLog>();
+                }
+
+                IDictionary<string, SendEventLogState> eventStateDict = new Dictionary<string, SendEventLogState>();
+                foreach (var eventType in ISendEventLogStateRepository.EVENT_TYPE_ALL)
+                {
+                    eventStateDict[eventType.ToString()] = _sendEventLogStateRepository.GetSendEventLogState(eventType);
+                }
+
+                foreach (var eventLog in eventLogList)
+                {
+                    eventLog.HasConsent = eventStateDict[eventLog.GetEventType()] == SendEventLogState.Enable;
+                }
+
+                string idempotencyKey = Guid.NewGuid().ToString();
+
+                for (var retryCount = 0; retryCount < maxRetry; retryCount++)
+                {
+                    try
+                    {
+                        List<EventLog> sentEventLogList = await SendAsync(
+                            idempotencyKey,
+                            eventLogList
+                                .Where(eventLog => eventLog.HasConsent)
+                                .ToList()
+                        );
+                        _loggerService.Info($"Send complete.");
+
+                        _loggerService.Info($"Clean up...");
+                        foreach (var eventLog in eventLogList)
+                        {
+                            await _eventLogRepository.RemoveAsync(eventLog);
+                        }
+                        _loggerService.Info($"Done.");
+
+                        return sentEventLogList;
+                    }
+                    catch (Exception exception)
+                    {
+                        _loggerService.Exception("Exception occurred, SendAsync", exception);
+                    }
+                }
+
+                return new List<EventLog>();
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
 
-        public async Task SendExposureDataAsync(
+        private async Task<List<EventLog>> SendAsync(
             string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion
-            )
-        {
-            var data = new ExposureData(
-                exposureConfiguration
-                )
-            {
-                Device = deviceModel,
-                EnVersion = enVersion,
-            };
-
-            await SendExposureDataAsync(idempotencyKey, data);
-        }
-
-
-        private async Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureData exposureData
+            List<EventLog> eventLogList
             )
         {
             _loggerService.StartMethod();
 
-            SendEventLogState sendEventLogState = _userDataRepository.GetSendEventLogState();
-            bool isEnabled = sendEventLogState == SendEventLogState.Enable;
-
-            if (!isEnabled)
-            {
-                _loggerService.Debug($"Send event-log function is not enabled.");
-                _loggerService.EndMethod();
-                return;
-            }
-
             await _serverConfigurationRepository.LoadAsync();
 
-            string exposureDataCollectServerEndpoint = _serverConfigurationRepository.EventLogApiEndpoint;
-            _loggerService.Debug($"exposureDataCollectServerEndpoint: {exposureDataCollectServerEndpoint}");
+            string eventLogApiEndpoint = _serverConfigurationRepository.EventLogApiEndpoint;
+            _loggerService.Debug($"eventLogApiEndpoint: {eventLogApiEndpoint}");
 
             try
             {
-                var contentJson = exposureData.ToJsonString();
-
-                var eventLog = new V1EventLogRequest.EventLog() {
-                    HasConsent = isEnabled,
-                    Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
-                    Type = "ExposureData",
-                    Subtype = "Debug",
-                    Content = contentJson,
-                };
-                var eventLogs = new[] { eventLog };
-
                 var request = new V1EventLogRequest()
                 {
                     IdempotencyKey = idempotencyKey,
                     Platform = _essentialsService.Platform,
                     AppPackageName = _essentialsService.AppPackageName,
-                    EventLogs = eventLogs,
+                    EventLogs = eventLogList,
                 };
 
                 request.DeviceVerificationPayload = await _deviceVerifier.VerifyAsync(request);
@@ -185,18 +156,22 @@ namespace Covid19Radar.Services
 
                 var httpContent = new StringContent(requestJson, Encoding.UTF8, "application/json");
 
-                Uri uri = new Uri(exposureDataCollectServerEndpoint);
+                Uri uri = new Uri(eventLogApiEndpoint);
 
                 HttpResponseMessage response = await _httpClient.PutAsync(uri, httpContent);
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = await response.Content.ReadAsStringAsync();
                     _loggerService.Debug($"{responseJson}");
+
+                    return eventLogList;
                 }
                 else
                 {
                     _loggerService.Info($"UploadExposureDataAsync {response.StatusCode}");
                 }
+
+                return new List<EventLog>();
             }
             finally
             {
@@ -204,5 +179,4 @@ namespace Covid19Radar.Services
             }
         }
     }
-#endif
 }

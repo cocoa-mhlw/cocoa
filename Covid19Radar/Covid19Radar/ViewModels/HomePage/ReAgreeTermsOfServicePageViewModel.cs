@@ -20,6 +20,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService _loggerService;
         private readonly ITermsUpdateService _termsUpdateService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
 
         private TermsUpdateInfoModel UpdateInfo;
         private DateTime UpdateDateTimeUtc { get; set; }
@@ -38,12 +39,14 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             ITermsUpdateService termsUpdateService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository
             ) : base(navigationService)
         {
             _loggerService = loggerService;
             _termsUpdateService = termsUpdateService;
             _userDataRepository = userDataRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
         }
 
         public Command OpenWebView => new Command(async () =>
@@ -72,6 +75,13 @@ namespace Covid19Radar.ViewModels
             {
                 var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(UpdateInfo.PrivacyPolicy, destination, _navigationParameters);
                 _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), navigationParams);
+            }
+            else if (ISendEventLogStateRepository.IsExistNotSetEventType(_sendEventLogStateRepository))
+            {
+                _loggerService.Info($"Transition to SendLogSettingsPage");
+
+                var navigationParams = SendLogSettingsPage.BuildNavigationParams(destination, _navigationParameters);
+                _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), navigationParams);
             }
             else
             {

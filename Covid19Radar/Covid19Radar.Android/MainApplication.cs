@@ -45,6 +45,9 @@ namespace Covid19Radar.Droid
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsExposureDetectionBackgroundService>());
 
+        private readonly Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
+            = new Lazy<AbsEventLogSubmissionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsEventLogSubmissionBackgroundService>());
+
         private Lazy<ILoggerService> _loggerService
             = new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
@@ -79,13 +82,27 @@ namespace Covid19Radar.Droid
                 SetupENClient(exposureNotificationApiService.Client);
             }
 
+            ScheduleBackgroundTasks();
+        }
+
+        private void ScheduleBackgroundTasks()
+        {
             try
             {
                 _exposureDetectionBackgroundService.Value.Schedule();
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("failed to Scheduling", exception);
+                _loggerService.Value.Exception("failed to Scheduling ExposureDetectionBackgroundService", exception);
+            }
+
+            try
+            {
+                _eventLogSubmissionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("failed to Scheduling EventLogSubmissionBackgroundService", exception);
             }
         }
 
@@ -121,6 +138,7 @@ namespace Covid19Radar.Droid
 
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
             container.Register<IPlatformService, PlatformService>(Reuse.Singleton);
+            container.Register<AbsEventLogSubmissionBackgroundService, EventLogSubmissionBackgroundService>(Reuse.Singleton);
         }
 
         public Task<ExposureConfiguration> GetExposureConfigurationAsync()

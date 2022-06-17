@@ -142,6 +142,8 @@ namespace Covid19Radar
             // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
+            containerRegistry.RegisterForNavigation<SendLogSettingsPage>();
+            containerRegistry.RegisterForNavigation<SendLogSettingsDetailPage>();
 
             // tutorial
             containerRegistry.RegisterForNavigation<TutorialPage1>();
@@ -180,8 +182,14 @@ namespace Covid19Radar
 
         private static void RegisterCommonTypes(IContainer container)
         {
-            // Services
+            // Repositories
             container.Register<IUserDataRepository, UserDataRepository>(Reuse.Singleton);
+            container.Register<IEventLogRepository, EventLogRepository>(Reuse.Singleton);
+            container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
+            container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
+            container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
+
+            // Services
             container.Register<ILoggerService, LoggerService>(Reuse.Singleton);
             container.Register<ILogFileService, LogFileService>(Reuse.Singleton);
             container.Register<ILogPathService, LogPathService>(Reuse.Singleton);
@@ -192,6 +200,7 @@ namespace Covid19Radar
             container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
             container.Register<IExposureDataExportService, ExposureDataExportService>(Reuse.Singleton);
+            container.Register<ISendEventLogStateRepository, SendEventLogStateRepository>(Reuse.Singleton);
 
 #if USE_MOCK
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
@@ -203,10 +212,10 @@ namespace Covid19Radar
 
 #if DEBUG
             container.Register<IServerConfigurationRepository, DebugServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServer>(Reuse.Singleton);
+            container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
 #else
             container.Register<IServerConfigurationRepository, ReleaseServerConfigurationRepository>(Reuse.Singleton);
-            container.Register<IDebugExposureDataCollectServer, DebugExposureDataCollectServerNop>(Reuse.Singleton);
+            container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
 #endif
 
             container.Register<IExposureDataRepository, ExposureDataRepository>(Reuse.Singleton);
@@ -215,16 +224,8 @@ namespace Covid19Radar
             container.Register<ISecureStorageService, SecureStorageService>(Reuse.Singleton);
             container.Register<IExposureDetectionService, ExposureDetectionService>(Reuse.Singleton);
             container.Register<IExposureRiskCalculationService, ExposureRiskCalculationService>(Reuse.Singleton);
-            container.Register<IDiagnosisKeyRepository, DiagnosisKeyRepository>(Reuse.Singleton);
-            container.Register<IExposureConfigurationRepository, ExposureConfigurationRepository>(Reuse.Singleton);
-            container.Register<IExposureRiskCalculationConfigurationRepository, ExposureRiskCalculationConfigurationRepository>(Reuse.Singleton);
-            container.Register<ICheckVersionService, CheckVersionService>(Reuse.Singleton);
 
-#if EVENT_LOG_ENABLED
-            container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
-#else
-            container.Register<IEventLogService, EventLogServiceNop>(Reuse.Singleton);
-#endif
+            container.Register<ICheckVersionService, CheckVersionService>(Reuse.Singleton);
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);
