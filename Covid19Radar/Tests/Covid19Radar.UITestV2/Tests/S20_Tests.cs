@@ -28,6 +28,20 @@ namespace CovidRadar.UITestV2
         }
 
         /// <summary>
+        /// tutorial実行.
+        /// </summary>
+        [Category("en-US")]
+        [Category("zh-CN")]
+        [Category("ko-KR")]
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
+        {
+            AppManager.StartApp();
+            TutorialPageFlow tutorialPageFlow = new TutorialPageFlow();
+            tutorialPageFlow.Tutorial();
+        }
+
+        /// <summary>
         /// 利用規約の確認
         /// 本テストは端末の設定言語に応じて、対応ケースが変わる
         /// 日本語:Case1に相当

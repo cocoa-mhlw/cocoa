@@ -28,14 +28,13 @@ namespace CovidRadar.UITestV2
         [OneTimeSetUp]
         public virtual void OneTimeSetUp()
         {
-            
-            Console.WriteLine("OneTimeSetUp");
+            AppManager.ReStartApp();
         }
 
         [TearDown]
         public virtual void TearDown()
         {
-            AppManager.ReStartApp();
+            Console.WriteLine("OneTimeSetUp");
         }
 
     }

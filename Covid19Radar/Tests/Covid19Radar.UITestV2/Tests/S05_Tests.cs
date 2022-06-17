@@ -25,15 +25,6 @@ namespace CovidRadar.UITestV2
         }
 
         /// <summary>
-        /// 後処理.
-        /// </summary>
-        [TearDown]
-        public override void TearDown()
-        {
-            //何もしない
-        }
-
-        /// <summary>
         /// 使い方→陽性登録.
         /// </summary>
         [Test]

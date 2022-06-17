@@ -32,8 +32,8 @@ namespace CovidRadar.UITestV2
         public override void OneTimeSetUp()
         {
             AppManager.StartApp();
-            TutorialPageFlow TutorialPageFlow = new TutorialPageFlow();
-            TutorialPageFlow.Tutorial();
+            TutorialPageFlow tutorialPageFlow = new TutorialPageFlow();
+            tutorialPageFlow.Tutorial();
         }
 
         /// <summary>
