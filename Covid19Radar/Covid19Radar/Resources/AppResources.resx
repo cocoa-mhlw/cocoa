@@ -981,7 +981,7 @@
     <comment>次のような症状がありますか？</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>Fever, cough, difficulty breathing, sense of fatigue, sore throat, runny nose, nasal congestion, headache, joint・muscle pain, diarrhea, nausea・vomiting</value>
+    <value>Fever, cough, difficulty breathing, sense of fatigue, sore throat, runny nose, nasal congestion, headache, joint/muscle pain, diarrhea, nausea/vomiting</value>
     <comment>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</comment>
   </data>
   <data name="NotifyOtherPageDescription4" xml:space="preserve">
