@@ -38,6 +38,8 @@ jobs:
         xcode-version: 13 # set the latest available Xcode 13
     - name: Prepare settings.json
       run: mv -f ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings_template.json ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
+    - name: Setup NuGet.Config
+      run: echo '<configuration><packageSources><add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" /></packageSources></configuration>' > ~/.config/NuGet/NuGet.Config
     - name: Deploy nuget packages - ${{ matrix.Configuration }}
       run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/ | true
     - name: Build iOS Project - ${{ matrix.Configuration }}
