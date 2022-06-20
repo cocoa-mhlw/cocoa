@@ -273,7 +273,7 @@ namespace Covid19Radar.Repository
 
     public class EventContentExposureNotified
     {
-        [JsonProperty("notified_time_in_millis")]
+        [JsonProperty("notifiedTimeInMillis")]
         public long NotifiedTimeInMillis { get; set; }
 
         public string ToJsonString() => JsonConvert.SerializeObject(this, Formatting.Indented);
