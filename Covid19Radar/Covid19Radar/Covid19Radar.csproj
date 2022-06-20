@@ -27,6 +27,7 @@
     <EmbeddedResource Remove="Controls\**" />
     <None Remove="Controls\**" />
     <None Remove="ViewModels\ExposureCheckPage\" />
+    <None Remove="Polly" />
   </ItemGroup>
 
   <ItemGroup>
@@ -72,6 +73,7 @@
     <PackageReference Include="Chino.Common" Version="1.0.0-rc11" />
     <PackageReference Include="Prism.DryIoc.Extensions" Version="8.0.62" />
     <PackageReference Include="TimeZoneConverter" Version="5.0.0" />
+    <PackageReference Include="Polly" Version="7.2.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CustomDatePicker.cs" />

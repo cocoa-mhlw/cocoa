@@ -271,6 +271,7 @@
     <Compile Include="Services\LocalizeService.cs" />
     <None Include="EntitlementsDebug.plist" />
     <Compile Include="Services\LocalPathService.cs" />
+    <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)'!='Debug_UITest'">
     <Compile Remove="Services\LocalizeService.cs" />
