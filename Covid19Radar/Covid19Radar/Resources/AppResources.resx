@@ -465,7 +465,7 @@
     <comment>端末の識別</comment>
   </data>
   <data name="ContactedNotifyPageButton1" xml:space="preserve">
-    <value>A list of close contacts with COVID-19 positive users</value>
+    <value>List of contacts with positive users</value>
     <comment>陽性者との接触一覧</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
@@ -473,7 +473,7 @@
     <comment>陽性者との接触確認</comment>
   </data>
   <data name="ContactedNotifyPageTitle" xml:space="preserve">
-    <value>Close contacts for the past 14 days</value>
+    <value>Past 14 days' contacts</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -485,7 +485,7 @@
     <comment>お問い合わせ（メニュー）</comment>
   </data>
   <data name="HomePageDescription2" xml:space="preserve">
-    <value>Check contacts with COVID-19 positive users</value>
+    <value>Check contacts with positive users</value>
     <comment>陽性者との接触結果を確認</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
@@ -1061,7 +1061,7 @@ Tap the button below to open the settings screen and follow the steps to enable 
 以下のボタンをタップして設定画面を開き、手順に従って接触通知を有効にしてください。</comment>
   </data>
   <data name="HowToEnableExposureNotificationsPageStep1Description" xml:space="preserve">
-    <value>Tap on ”Exposure Notifications”.</value>
+    <value>Tap ”Exposure Notifications”.</value>
     <comment>「接触通知」をタップする。</comment>
   </data>
   <data name="HowToEnableExposureNotificationsPageStep2Description" xml:space="preserve">
@@ -1069,7 +1069,7 @@ Tap the button below to open the settings screen and follow the steps to enable 
     <comment>「接触情報を共有」の項目をオンにする。</comment>
   </data>
   <data name="HowToEnableExposureNotificationsPageStep3Description" xml:space="preserve">
-    <value>Tap on “Set As Active Region”.</value>
+    <value>Tap “Set As Active Region”.</value>
     <comment>「使用する国/地域として設定」の文字をタップする。</comment>
   </data>
   <data name="HowToEnableExposureNotificationsPageStep4Description" xml:space="preserve">
@@ -1109,12 +1109,12 @@ Tap the button below to open the settings screen and follow the steps to enable 
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
-    <value>The processing number will be sent by SMS  or email to the contact information declared at the time of test /diagnosis. 
+    <value>The processing number will be sent via SMS or email to the contact information you provided at the time of test / diagnosis.
 You do not have to request it yourself.</value>
     <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</comment>
   </data>
   <data name="HowToReceiveProcessingNumberPageDescription2" xml:space="preserve">
-    <value>The COCOA app will be launched when you open the URL for positive information registration included in the SMS or email. The validity period of the processing number is displayed in the text.</value>
+    <value>COCOA will start when you open the URL for positive test result registration included in the SMS or email. The validity period of the processing number is shown in the text.</value>
     <comment>SMSまたはメールに記載されている陽性情報登録用のURLを開くと、COCOA（※）が起動します。
 なお処理番号の有効期間は本文中に記載されています。</comment>
   </data>
@@ -1269,11 +1269,11 @@ Note: this app does not collect users’ location information.</value>
     <comment>上記を試しても表示される場合は、カスタマーサポートまでお問い合わせください。</comment>
   </data>
   <data name="TroubleshootingPageConfirmationItem1" xml:space="preserve">
-    <value>・Check if there is a problem with the Internet connection status such as the radio wave environment.</value>
+    <value>・Make sure that there are no problems with the Internet connection such as poor signal strength</value>
     <comment>・電波環境などインターネットの接続状況に問題がないか確認してください。</comment>
   </data>
   <data name="TroubleshootingPageConfirmationItem2" xml:space="preserve">
-    <value>・In case you are using  a VPN or a proxy connection as Internet connection, please turn it off.</value>
+    <value>・In case you are using a VPN or a proxy connection for connecting to the Internet, please turn it off.</value>
     <comment>・インターネット接続に、意図的に「VPN接続」や「プロキシ接続」を利用している場合はお切りください。</comment>
   </data>
   <data name="TroubleshootingPageConfirmationItem3" xml:space="preserve">
@@ -1289,7 +1289,7 @@ Note: this app does not collect users’ location information.</value>
     <comment>・iPhoneをお使いの方は、 OS(※)を最新バージョンにアップデートしてください。</comment>
   </data>
   <data name="TroubleshootingPageConfirmationItem6" xml:space="preserve">
-    <value>・Android users: in Settings, remove COCOA from any power saving functions*, or set your phone to enter power-saving mode only when battery power is low.</value>
+    <value>・Android users: In Settings, exclude COCOA from any power saving functions*, or set your phone to enter power-saving mode only when battery power is low.</value>
     <comment>・Androidをお使いの方は、設定内にある省電力機能（※1）の対象からCOCOA（※2）を外す、または電池残量が少なくなった場合のみに省電力モードに切り替わるように設定してください。</comment>
   </data>
   <data name="TroubleshootingPageAnnotationPowerSaving" xml:space="preserve">

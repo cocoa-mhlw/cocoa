@@ -2,11 +2,11 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using Covid19Radar.Api.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
 using System.Text;
-using Covid19Radar.Api.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Covid19Radar.Api.Tests.Models
 {
@@ -25,6 +25,8 @@ namespace Covid19Radar.Api.Tests.Models
         {
             // action
             var model = new V1DiagnosisSubmissionParameter();
+            // assert
+            Assert.IsNotNull(model);
         }
 
         [TestMethod]

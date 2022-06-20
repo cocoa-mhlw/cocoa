@@ -48,6 +48,8 @@ namespace Covid19Radar.Api.Tests
                                                 validationServer.Object,
                                                 temporaryExposureKeyValidationService.Object,
                                                 logger);
+            // assert
+            Assert.IsNotNull(diagnosisApi);
         }
 
         [DataTestMethod]
@@ -73,12 +75,7 @@ namespace Covid19Radar.Api.Tests
             // preparation
             var config = new Mock<IConfiguration>();
             config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
-            var diagnosisRepo = new Mock<IDiagnosisRepository>();
-            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(),
-                                                            It.IsAny<DateTimeOffset>(),
-                                                            It.IsAny<string>(),
-                                                            It.IsAny<TemporaryExposureKeyModel[]>()))
-                .ReturnsAsync(new DiagnosisModel());
+
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validationServer = new Mock<IValidationServerService>();
             validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);
@@ -182,12 +179,7 @@ namespace Covid19Radar.Api.Tests
             // preparation
             var config = new Mock<IConfiguration>();
             config.Setup(_ => _["SupportRegions"]).Returns("Region1,Region2");
-            var diagnosisRepo = new Mock<IDiagnosisRepository>();
-            diagnosisRepo.Setup(_ => _.SubmitDiagnosisAsync(It.IsAny<string>(),
-                                                            It.IsAny<DateTimeOffset>(),
-                                                            It.IsAny<string>(),
-                                                            It.IsAny<TemporaryExposureKeyModel[]>()))
-                .ReturnsAsync(new DiagnosisModel());
+
             var tekRepo = new Mock<ITemporaryExposureKeyRepository>();
             var validationServer = new Mock<IValidationServerService>();
             validationServer.Setup(_ => _.Validate(It.IsAny<HttpRequest>())).Returns(IValidationServerService.ValidateResult.Success);

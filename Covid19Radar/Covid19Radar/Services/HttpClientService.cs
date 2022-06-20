@@ -10,6 +10,7 @@ namespace Covid19Radar.Services
     public interface IHttpClientService
     {
         HttpClient Create();
+        HttpClient Create(HttpClientHandler handler);
     }
     public class HttpClientService : IHttpClientService
     {
@@ -19,6 +20,10 @@ namespace Covid19Radar.Services
         public HttpClient Create()
         {
             return new HttpClient();
+        }
+        public HttpClient Create(HttpClientHandler handler)
+        {
+            return new HttpClient(handler);
         }
     }
 }

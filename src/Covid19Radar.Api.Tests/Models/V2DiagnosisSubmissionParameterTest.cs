@@ -25,6 +25,8 @@ namespace Covid19Radar.Api.Tests.Models
         {
             // action
             var model = new V2DiagnosisSubmissionParameter();
+            // assert
+            Assert.IsNotNull(model);
         }
 
         [TestMethod]
