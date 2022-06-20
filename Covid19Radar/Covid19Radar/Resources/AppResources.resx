@@ -501,7 +501,7 @@
     <comment>アプリを周りの人に知らせる</comment>
   </data>
   <data name="ExposureCheckTitle" xml:space="preserve">
-    <value>Close contacts for the past 14 days</value>
+    <value>Past 14 days' contacts</value>
     <comment>過去14日間の接触</comment>
   </data>
   <data name="HomePageTitle1" xml:space="preserve">
@@ -1472,10 +1472,6 @@ In case you have been close to a large number of positive registrants a big cont
     <comment>yyyy年M月d日 tth時mm分</comment>
   </data>
 
-  <data name="NotContactPageTitle" xml:space="preserve">
-    <value>Close contacts for the past 14 days</value>
-    <comment>過去14日間の接触</comment>
-  </data>
 	<data name="NotContactPageLabel1" xml:space="preserve">
     <value>No close contacts with COVID-19 positive users</value>
     <comment>陽性者との接触は確認されませんでした</comment>
