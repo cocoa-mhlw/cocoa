@@ -11,7 +11,7 @@ namespace Covid19Radar.Model
 {
     public class V1EventLogRequest
     {
-        [JsonProperty("idempotency_key")]
+        [JsonProperty("idempotencyKey")]
         public string IdempotencyKey { get; set; }
 
         [JsonProperty("platform")]
@@ -23,13 +23,13 @@ namespace Covid19Radar.Model
         [JsonProperty("deviceVerificationPayload")]
         public string DeviceVerificationPayload { get; set; }
 
-        [JsonProperty("event_logs")]
+        [JsonProperty("eventLogs")]
         public List<EventLog> EventLogs { get; set; }
     }
 
     public class EventLog
     {
-        [JsonProperty("has_consent")]
+        [JsonProperty("hasConsent")]
         public bool HasConsent { get; set; }
 
         [JsonProperty("epoch")]
