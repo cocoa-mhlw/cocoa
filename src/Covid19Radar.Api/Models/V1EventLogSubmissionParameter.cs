@@ -11,7 +11,7 @@ namespace Covid19Radar.Api.Models
 {
     public class V1EventLogSubmissionParameter : IDeviceVerification
     {
-        [JsonProperty("idempotency_key")]
+        [JsonProperty("idempotencyKey")]
         public string IdempotencyKey { get; set; }
 
         [JsonProperty("platform")]
@@ -23,7 +23,7 @@ namespace Covid19Radar.Api.Models
         [JsonProperty("deviceVerificationPayload")]
         public string DeviceVerificationPayload { get; set; }
 
-        [JsonProperty("event_logs")]
+        [JsonProperty("eventLogs")]
         public EventLog[] EventLogs { get; set; }
 
         #region Apple Device Check
@@ -70,7 +70,7 @@ namespace Covid19Radar.Api.Models
 
     public class EventLog
     {
-        [JsonProperty("has_consent")]
+        [JsonProperty("hasConsent")]
         public bool HasConsent { get; set; }
 
         [JsonProperty("epoch")]
