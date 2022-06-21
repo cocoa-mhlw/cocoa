@@ -18,6 +18,7 @@ COCOAのリポジトリは次のURLです。
  * [ビルド方法]({{<relref "how_to_build">}})
  * [ライセンスの取り扱い]({{<relref "maintainance_oss_licenses">}})
  * [多言語対応]({{<relref "multi_language">}})
+ * [静的コード解析（SonarCloud）](https://sonarcloud.io/project/issues?id=cocoa-mhlw_cocoa-app)
 
 ## 貢献について
  * [貢献についてのガイドライン]({{<relref "guidelines">}})
