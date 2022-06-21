@@ -425,11 +425,6 @@
       <Version>1.0.0-rc11</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)'=='Debug_UITest'">
-    <PackageReference Include="Xamarin.TestCloud.Agent">
-      <Version>0.23.1</Version>
-    </PackageReference>
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
       <Project>{554EE1AB-B447-480C-90E5-C4F040891DE6}</Project>
