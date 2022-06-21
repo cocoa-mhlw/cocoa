@@ -277,15 +277,15 @@ namespace Covid19Radar.UnitTests.Services
             var jsonContent = JsonConvert.DeserializeObject(stringContent) as JObject;
             Assert.NotNull(jsonContent);
 
-            Assert.Equal("05A6A158-E216-4599-B99E-3708D360FF2F", jsonContent["idempotency_key"].Value<string>());
+            Assert.Equal("05A6A158-E216-4599-B99E-3708D360FF2F", jsonContent["idempotencyKey"].Value<string>());
             Assert.Equal("platform", jsonContent["platform"].Value<string>());
             Assert.Equal("app-package-name", jsonContent["appPackageName"].Value<string>());
             Assert.Equal("device-verification-payload", jsonContent["deviceVerificationPayload"].Value<string>());
 
-            var eventLogs = jsonContent["event_logs"] as JArray;
+            var eventLogs = jsonContent["eventLogs"] as JArray;
             Assert.Single(eventLogs);
 
-            Assert.True(eventLogs[0]["has_consent"].Value<bool>());
+            Assert.True(eventLogs[0]["hasConsent"].Value<bool>());
             Assert.Equal(1000, eventLogs[0]["epoch"].Value<long>());
             Assert.Equal("type", eventLogs[0]["type"].Value<string>());
             Assert.Equal("subtype", eventLogs[0]["subtype"].Value<string>());
