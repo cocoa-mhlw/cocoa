@@ -76,8 +76,8 @@
     <value>診断を提出します。</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>設定</value>
-    <comment>設定</comment>
+    <value>このアプリについて</value>
+    <comment>このアプリについて</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>キャンセル</value>
@@ -188,12 +188,12 @@
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>アプリの設定へ</value>
-    <comment>アプリの設定へ</comment>
+    <value>このアプリについてへ</value>
+    <comment>このアプリについてへ</comment>
   </data>
   <data name="HelpPage4Description1" xml:space="preserve">
-    <value>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</value>
-    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+    <value>メニューのこのアプリについてから「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</value>
+    <comment>メニューのこのアプリについてから「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
   </data>
   <data name="HelpPage4Description2" xml:space="preserve">
     <value>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</value>
