@@ -423,6 +423,8 @@
     <PackageReference Include="Chino.iOS">
       <Version>1.0.0-rc11</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Debug_UITest'">
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.23.1</Version>
     </PackageReference>
@@ -552,6 +554,12 @@
     <EmbeddedResource Include="fa-regular-400.otf" />
     <EmbeddedResource Include="fa-solid-900.otf" />
     <EmbeddedResource Include="Roboto-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Logs\" />
+    <Folder Include="Renderers\" />
+    <Folder Include="Resources\zh-Hans.lproj\" />
+    <Folder Include="Services\Migration\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

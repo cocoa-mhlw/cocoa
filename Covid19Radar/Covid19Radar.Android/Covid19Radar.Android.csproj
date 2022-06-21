@@ -678,6 +678,14 @@
     <AndroidResource Include="Resources\drawable-xhdpi\TutorialPage60.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Renderers\" />
+    <Folder Include="Resources\xml\" />
+    <Folder Include="Services\Logs\" />
+    <Folder Include="Resources\drawable-zh-xxhdpi\" />
+    <Folder Include="Resources\drawable-zh-xhdpi\" />
+    <Folder Include="Services\Migration\" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\HelpPage20.png" />
   </ItemGroup>
   <ItemGroup>
