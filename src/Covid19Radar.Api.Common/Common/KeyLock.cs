@@ -43,12 +43,12 @@ namespace Covid19Radar.Api.Common
         /// <summary>
         /// Lock wait handle
         /// </summary>
-        System.Threading.EventWaitHandle ev;
+        readonly System.Threading.EventWaitHandle ev;
 
         /// <summary>
         /// Identification key to lock
         /// </summary>
-        string key;
+        readonly string key;
 
         /// <summary>
         /// Constructor for initialization and acquireing locks

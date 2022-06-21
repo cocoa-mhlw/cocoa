@@ -3,8 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 
-using System;
-using Covid19Radar.Api.Common;
 using Covid19Radar.Api.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -19,6 +17,8 @@ namespace Covid19Radar.Api.Tests.Common.Models
         {
             // action
             var model = new SequenceModel();
+            // assert
+            Assert.IsNotNull(model);
         }
 
         [TestMethod]

@@ -62,13 +62,6 @@ namespace Covid19Radar.ViewModels
                 );
         }
 
-        public override async void Initialize(INavigationParameters parameters)
-        {
-            base.Initialize(parameters);
-
-            await InitExposures();
-        }
-
         public async Task InitExposures()
         {
             var exposures = new ObservableCollection<ExposureSummary>();
@@ -166,6 +159,20 @@ namespace Covid19Radar.ViewModels
             }
 
         });
+
+        public override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await InitExposures();
+        }
+
+        public override async void OnResume()
+        {
+            base.OnResume();
+
+            await InitExposures();
+        }
     }
 
     public class ExposureSummary

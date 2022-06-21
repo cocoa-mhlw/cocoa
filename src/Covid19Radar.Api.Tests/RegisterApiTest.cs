@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -24,6 +24,8 @@ namespace Covid19Radar.Api.Tests
             var validationServer = new Mock<IValidationServerService>();
             var logger = new Mock.LoggerMock<RegisterApi>();
             var registerApi = new RegisterApi(userRepo.Object, validationServer.Object, logger);
+            // assert
+            Assert.IsNotNull(registerApi);
         }
 
         [TestMethod]

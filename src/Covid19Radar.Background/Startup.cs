@@ -8,11 +8,13 @@ using Covid19Radar.Api.Extensions;
 using Covid19Radar.Background.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Background.Startup))]
 
 namespace Covid19Radar.Background
 {
+    [ExcludeFromCodeCoverage]
     public class Startup : FunctionsStartup
     {
         public override void Configure(IFunctionsHostBuilder builder)

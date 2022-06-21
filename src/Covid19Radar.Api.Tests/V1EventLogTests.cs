@@ -2,11 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using System;
-using System.IO;
-using System.Net;
-using System.Threading.Tasks;
-using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataAccess;
 using Covid19Radar.Api.Models;
 using Covid19Radar.Api.Services;
@@ -15,6 +10,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System;
+using System.IO;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.Api.Tests
 {
@@ -49,6 +48,8 @@ namespace Covid19Radar.Api.Tests
                 deviceValidationService.Object,
                 logger
                 );
+            // assert
+            Assert.IsNotNull(eventLogApi);
         }
 
         [DataTestMethod]

@@ -28,8 +28,8 @@ namespace Covid19Radar.Api.Services
                 IsValid = false,
                 ErrorActionResult = new BadRequestResult()
             };
-            public bool IsValid;
-            public IActionResult ErrorActionResult;
+            public bool IsValid { get; set; }
+            public IActionResult ErrorActionResult { get; set; }
         }
 
     }

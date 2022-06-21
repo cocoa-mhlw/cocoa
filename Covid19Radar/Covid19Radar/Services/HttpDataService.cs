@@ -145,6 +145,29 @@ namespace Covid19Radar.Services
             return new ApiResponse<LogStorageSas>(statusCode, logStorageSas);
         }
 
+        // PUT /api/v*/event_log
+        public async Task<ApiResponse<string>> PutEventLog(V1EventLogRequest request)
+        {
+            loggerService.StartMethod();
+
+            try
+            {
+                await serverConfigurationRepository.LoadAsync();
+
+                string url = serverConfigurationRepository.EventLogApiEndpoint;
+                var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await apiClient.PutAsync(url, content);
+                string responseContent = await response.Content.ReadAsStringAsync();
+
+                return new ApiResponse<string>((int)response.StatusCode, responseContent);
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+        }
+
         private async Task<HttpStatusCode> PutAsync(string url, HttpContent body)
         {
             var result = await httpClient.PutAsync(url, body);

@@ -4,7 +4,7 @@
 
 namespace Covid19Radar.Api.Common
 {
-    public class ErrorStrings
+    public static class ErrorStrings
     {
 
         //1000: User error strings

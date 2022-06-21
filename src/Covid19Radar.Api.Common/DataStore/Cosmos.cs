@@ -80,7 +80,7 @@ namespace Covid19Radar.Api.DataStore
                 && dbResult.StatusCode != System.Net.HttpStatusCode.Created)
             {
                 Logger.LogError(dbResult.ToString());
-                throw new ApplicationException(dbResult.ToString());
+                throw new Exception(dbResult.ToString());
             }
 
             // Container User
