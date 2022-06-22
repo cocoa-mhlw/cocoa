@@ -100,6 +100,10 @@ namespace CovidRadar.UITestV2
         /// <param name="timeout">タイムアウト値.</param>
         public void AssertHomePage(TimeSpan? timeout = default(TimeSpan?))
         {
+            if (OniOS)
+            {
+                (app as Xamarin.UITest.iOS.iOSApp).DismissSpringboardAlerts();
+            }
             app.Screenshot(this.GetType().Name.ToString());
             AssertOnPage(timeout);
         }
