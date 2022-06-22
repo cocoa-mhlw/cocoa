@@ -48,6 +48,7 @@ namespace CovidRadar.UITestV2
              * 「編集」ボタンを押下し、「使用する言語の優先順序」内の項目を[前提]の言語以外を削除する
              */
 
+            AppManager.DismissSpringboardAlerts();
             HomePage homePage = new HomePage();
             homePage.AssertHomePage();
 

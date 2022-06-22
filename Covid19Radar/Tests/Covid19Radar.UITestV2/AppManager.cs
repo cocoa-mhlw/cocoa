@@ -148,6 +148,17 @@ namespace CovidRadar.UITestV2
 
         }
 
+        /// <summary>
+        /// 通知アラートを回避.
+        /// </summary>
+        public static void DismissSpringboardAlerts()
+        {
+            if (Platform == Platform.iOS)
+            {
+                (app as Xamarin.UITest.iOS.iOSApp).DismissSpringboardAlerts();
+            }
+
+        }
 
         /// <summary>
         /// アプリを再起動する(スプラッシュ画面無し).
