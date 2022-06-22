@@ -84,8 +84,8 @@
     <value>正在提交诊断结果...</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>设置</value>
-    <comment>設定</comment>
+    <value>关于本应用</value>
+    <comment>このアプリについて</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>取消</value>
@@ -197,12 +197,12 @@
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>前往设置</value>
-    <comment>アプリの設定へ</comment>
+    <value>前往关于本应用</value>
+    <comment>このアプリについてへ</comment>
   </data>
   <data name="HelpPage4Description1" xml:space="preserve">
-    <value>通过在菜单设置中选择“初始化应用”，您可以删除过去14天保存的接触履历并将应用恢复到初始状态。</value>
-    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+    <value>在菜单的关于本应用中选择“初始化应用”，您可以删除过去14天内保存的接触记录并将应用恢复到初始状态。</value>
+    <comment>メニューのこのアプリについてから「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
   </data>
   <data name="HelpPage4Description2" xml:space="preserve">
     <value>在您再次开始使用该应用程序之前，不会记录接触和接受通知。</value>
