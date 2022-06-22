@@ -80,11 +80,11 @@ namespace CovidRadar.UITestV2
         /// HomePageに遷移する.
         /// </summary>
         /// <returns>HomePage.</returns>
-        public HomePage OpenHomePage()
+        public void OpenHomePage()
         {
             app.Tap(openHomePage);
             AppManager.DismissSpringboardAlerts();
-            return new HomePage();
+            //return new HomePage();
         }
 
         /// <summary>

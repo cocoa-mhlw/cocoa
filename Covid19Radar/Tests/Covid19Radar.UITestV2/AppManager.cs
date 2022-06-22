@@ -155,7 +155,7 @@ namespace CovidRadar.UITestV2
         {
             if (Platform == Platform.iOS)
             {
-                (app as Xamarin.UITest.iOS.iOSApp).DismissSpringboardAlerts();
+                (App as Xamarin.UITest.iOS.iOSApp).DismissSpringboardAlerts();
             }
 
         }
