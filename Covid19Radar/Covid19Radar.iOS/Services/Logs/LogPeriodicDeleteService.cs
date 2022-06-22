@@ -26,7 +26,7 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Instance Fields
 
-        private readonly ILogFileService logFileService;
+        private readonly ILogFileService _logFileService;
 
         #endregion
 
@@ -37,7 +37,7 @@ namespace Covid19Radar.iOS.Services.Logs
             ILogFileService logFileService
             ) : base(loggerService)
         {
-            this.logFileService = logFileService;
+            _logFileService = logFileService;
         }
 
         #endregion
@@ -79,7 +79,7 @@ namespace Covid19Radar.iOS.Services.Logs
                     queue.CancelAllOperations();
                 };
 
-                var operation = new DeleteOldLogsOperation(loggerService, logFileService);
+                var operation = new DeleteOldLogsOperation(loggerService, _logFileService);
                 operation.CompletionBlock = () =>
                 {
                     loggerService.Info($"Operation completed. operation.IsCancelled: {operation.IsCancelled}");

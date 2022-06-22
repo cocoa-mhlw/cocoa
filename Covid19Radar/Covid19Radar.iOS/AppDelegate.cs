@@ -53,6 +53,9 @@ namespace Covid19Radar.iOS
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
+        private Lazy<AbsLogPeriodicDeleteService> _logPeriodicDeleteService
+            = new Lazy<AbsLogPeriodicDeleteService>(() => ContainerLocator.Current.Resolve<AbsLogPeriodicDeleteService>());
+
         private App? AppInstance
         {
             get
@@ -127,6 +130,7 @@ namespace Covid19Radar.iOS
             {
                 _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
             }
+
             try
             {
                 _eventLogSubmissionBackgroundService.Value.Schedule();
@@ -134,6 +138,15 @@ namespace Covid19Radar.iOS
             catch (Exception exception)
             {
                 _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
+            }
+
+            try
+            {
+                _logPeriodicDeleteService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("Failed to schedule LogPeriodicDeleteService", exception);
             }
         }
 

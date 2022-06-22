@@ -232,10 +232,6 @@ namespace Covid19Radar
         protected override void OnStart()
         {
             LogFileService.Rotate();
-
-            // Initialize periodic log delete service
-            var logPeriodicDeleteService = Container.Resolve<AbsLogPeriodicDeleteService>();
-            logPeriodicDeleteService.Schedule();
         }
 
         protected override void OnResume()

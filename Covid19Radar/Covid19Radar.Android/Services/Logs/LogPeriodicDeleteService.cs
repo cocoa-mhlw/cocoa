@@ -17,7 +17,7 @@ namespace Covid19Radar.Droid.Services.Logs
 {
     public class LogPeriodicDeleteService : AbsLogPeriodicDeleteService
     {
-        private const string CURRENT_WORK_NAME = "log_periodic_delete_worker_20211227";
+        private const string CURRENT_WORK_NAME = "log_periodic_delete_worker_20220622";
 
         private static readonly long INTERVAL_IN_HOURS = 24;
         private static readonly long BACKOFF_DELAY_IN_MINUTES = 60;
