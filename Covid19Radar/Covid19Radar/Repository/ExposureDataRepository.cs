@@ -364,7 +364,6 @@ namespace Covid19Radar.Repository
 
             _loggerService.EndMethod();
         }
-
     }
 }
 #endregion

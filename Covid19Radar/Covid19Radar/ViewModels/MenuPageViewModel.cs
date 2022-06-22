@@ -39,7 +39,8 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(HomePage),
                 Title = Resources.AppResources.HomePageTitle,
                 IconColor = MenuIconColorDefault,
-                TextColor = MenuTextColorDefault
+                TextColor = MenuTextColorDefault,
+                ReadText = $"{Resources.AppResources.HomePageTitle} {Resources.AppResources.Button}"
             });
 
             MenuItems.Add(new MainMenuModel()
@@ -48,7 +49,8 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(SettingsPage),
                 Title = Resources.AppResources.SettingsPageTitle,
                 IconColor = MenuIconColorDefault,
-                TextColor = MenuTextColorDefault
+                TextColor = MenuTextColorDefault,
+                ReadText = $"{Resources.AppResources.SettingsPageTitle} {Resources.AppResources.Button}"
             });
 
             MenuItems.Add(new MainMenuModel()
@@ -57,7 +59,8 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(InqueryPage),
                 Title = Resources.AppResources.InqueryPageTitle_Menu,
                 IconColor = MenuIconColorDefault,
-                TextColor = MenuTextColorDefault
+                TextColor = MenuTextColorDefault,
+                ReadText = $"{Resources.AppResources.InqueryPageTitle_Menu} {Resources.AppResources.Button}"
             });
             MenuItems.Add(new MainMenuModel()
             {
@@ -65,7 +68,8 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(HelpMenuPage),
                 Title = Resources.AppResources.HelpMenuPageMenu,
                 IconColor = MenuIconColorDefault,
-                TextColor = MenuTextColorDefault
+                TextColor = MenuTextColorDefault,
+                ReadText = $"{Resources.AppResources.HelpMenuPageMenuReadText} {Resources.AppResources.Button}"
             });
 #if DEBUG
             MenuItems.Add(new MainMenuModel()

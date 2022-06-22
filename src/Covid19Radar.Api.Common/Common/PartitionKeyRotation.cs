@@ -12,7 +12,7 @@ namespace Covid19Radar.Api.Common
     {
         private readonly KeyInformation[] Keys;
         private readonly int Max;
-        private int Current = -1;
+        private int Current;
         public PartitionKeyRotation(string[] keys)
         {
             Keys = keys.Select((_, i) => new KeyInformation(_, i + 1)).ToArray();

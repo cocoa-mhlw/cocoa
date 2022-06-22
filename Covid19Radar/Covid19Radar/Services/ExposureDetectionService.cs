@@ -29,7 +29,8 @@ namespace Covid19Radar.Services
     public class ExposureDetectionService : IExposureDetectionService
     {
         private readonly ILoggerService _loggerService;
-        private readonly IUserDataRepository _userDataRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
+
         private readonly IExposureDataRepository _exposureDataRepository;
 
         private readonly ILocalNotificationService _localNotificationService;
@@ -38,38 +39,31 @@ namespace Covid19Radar.Services
 
         private readonly IExposureConfigurationRepository _exposureConfigurationRepository;
 
-        private readonly IEventLogService _eventLogService;
-
-        private readonly IDebugExposureDataCollectServer _exposureDataCollectServer;
+        private readonly IEventLogRepository _eventLogRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
-        private readonly IDeviceInfoUtility _deviceInfoUtility;
 
         public ExposureDetectionService
         (
             ILoggerService loggerService,
-            IUserDataRepository userDataRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository,
             IExposureDataRepository exposureDataRepository,
             ILocalNotificationService localNotificationService,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
             IExposureConfigurationRepository exposureConfigurationRepository,
-            IEventLogService eventLogService,
-            IDebugExposureDataCollectServer exposureDataCollectServer,
-            IDateTimeUtility dateTimeUtility,
-            IDeviceInfoUtility deviceInfoUtility
+            IEventLogRepository eventLogRepository,
+            IDateTimeUtility dateTimeUtility
             )
         {
             _loggerService = loggerService;
-            _userDataRepository = userDataRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
             _exposureDataRepository = exposureDataRepository;
             _localNotificationService = localNotificationService;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureConfigurationRepository = exposureConfigurationRepository;
-            _eventLogService = eventLogService;
-            _exposureDataCollectServer = exposureDataCollectServer;
+            _eventLogRepository = eventLogRepository;
             _dateTimeUtility = dateTimeUtility;
-            _deviceInfoUtility = deviceInfoUtility;
         }
 
         public void DiagnosisKeysDataMappingApplied()
@@ -99,8 +93,6 @@ namespace Covid19Radar.Services
         {
             _loggerService.Debug("ExposureDetected: ExposureWindows");
 
-            var enVersionStr = enVersion.ToString();
-
             var (newDailySummaries, newExposureWindows) = await _exposureDataRepository.SetExposureDataAsync(
                 dailySummaries.ToList(),
                 exposureWindows.ToList()
@@ -110,7 +102,13 @@ namespace Covid19Radar.Services
                 .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
             _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
+            long expectOldestDateMillisSinceEpoch
+                = _dateTimeUtility.UtcNow
+                .AddDays(AppConstants.TermOfExposureRecordValidityInDays)
+                .ToUnixEpochMillis();
+
             bool isHighRiskExposureDetected = newDailySummaries
+                .Where(ds => ds.DateMillisSinceEpoch >= expectOldestDateMillisSinceEpoch)
                 .Select(ds => _exposureRiskCalculationService.CalcRiskLevel(
                         ds,
                         newExposureWindows.Where(ew => ew.DateMillisSinceEpoch == ds.DateMillisSinceEpoch).ToList(),
@@ -122,48 +120,24 @@ namespace Covid19Radar.Services
             if (isHighRiskExposureDetected)
             {
                 _ = _localNotificationService.ShowExposureNotificationAsync();
+
+                bool enableSendEventExposureNotificationNotified = _sendEventLogStateRepository
+                    .GetSendEventLogState(EventType.ExposureNotified) == SendEventLogState.Enable;
+
+                if (enableSendEventExposureNotificationNotified)
+                {
+                    await _eventLogRepository.AddEventNotifiedAsync();
+                }
             }
             else
             {
                 _loggerService.Info($"DailySummary: {dailySummaries.Count}, but no high-risk exposure detected");
-            }
-
-            try
-            {
-                await _exposureDataCollectServer.UploadExposureDataAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr,
-                    newDailySummaries, newExposureWindows
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("UploadExposureDataAsync", e);
-            }
-
-            string idempotencyKey = Guid.NewGuid().ToString();
-            try
-            {
-                await _eventLogService.SendExposureDataAsync(
-                    idempotencyKey,
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr,
-                    newDailySummaries, newExposureWindows
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("SendExposureDataAsync", e);
             }
         }
 
         public async Task ExposureDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion, ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations)
         {
             _loggerService.Info("ExposureDetected: Legacy-V1");
-
-            var enVersionStr = enVersion.ToString();
 
             ExposureConfiguration.GoogleExposureConfiguration configurationV1 = exposureConfiguration.GoogleExposureConfig;
 
@@ -176,76 +150,25 @@ namespace Covid19Radar.Services
             if (isNewExposureDetected)
             {
                 _ = _localNotificationService.ShowExposureNotificationAsync();
+
+                bool enableSendEventExposureNotificationNotified = _sendEventLogStateRepository
+                    .GetSendEventLogState(EventType.ExposureNotified) == SendEventLogState.Enable;
+
+                if (enableSendEventExposureNotificationNotified)
+                {
+                    await _eventLogRepository.AddEventNotifiedAsync();
+                }
             }
             else
             {
                 _loggerService.Info($"MatchedKeyCount: {exposureSummary.MatchedKeyCount}, but no new exposure detected");
             }
-
-            try
-            {
-                await _exposureDataCollectServer.UploadExposureDataAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr,
-                    exposureSummary, exposureInformations
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("UploadExposureDataAsync", e);
-            }
-
-            string idempotencyKey = Guid.NewGuid().ToString();
-            try
-            {
-                await _eventLogService.SendExposureDataAsync(
-                    idempotencyKey,
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr,
-                    exposureSummary, exposureInformations
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("SendExposureDataAsync", e);
-            }
         }
 
-        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion)
+        public Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration, long enVersion)
         {
             _loggerService.Info("ExposureNotDetected");
-
-            var enVersionStr = enVersion.ToString();
-
-            try
-            {
-                await _exposureDataCollectServer.UploadExposureDataAsync(
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("UploadExposureDataAsync", e);
-            }
-
-            string idempotencyKey = Guid.NewGuid().ToString();
-            try
-            {
-                await _eventLogService.SendExposureDataAsync(
-                    idempotencyKey,
-                    exposureConfiguration,
-                    _deviceInfoUtility.Model,
-                    enVersionStr
-                    );
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("SendExposureDataAsync", e);
-            }
+            return Task.CompletedTask;
         }
     }
 }

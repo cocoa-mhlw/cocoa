@@ -12,29 +12,34 @@ namespace Covid19Radar.Api.Models
     public class V1EventLogSubmissionParameter : IDeviceVerification
     {
         [JsonProperty("idempotency_key")]
-        public string IdempotencyKey;
+        public string IdempotencyKey { get; set; }
 
         [JsonProperty("platform")]
-        public string Platform;
+        public string Platform { get; set; }
 
         [JsonProperty("appPackageName")]
-        public string AppPackageName;
+        public string AppPackageName { get; set; }
 
         [JsonProperty("deviceVerificationPayload")]
-        public string DeviceVerificationPayload;
+        public string DeviceVerificationPayload { get; set; }
 
         [JsonProperty("event_logs")]
-        public EventLog[] EventLogs;
+        public EventLog[] EventLogs { get; set; }
 
         #region Apple Device Check
 
         [JsonIgnore]
         public string DeviceToken
-            => DeviceVerificationPayload;
+        {
+            get => DeviceVerificationPayload;
+        }
+        
 
         [JsonIgnore]
         public string TransactionIdSeed
-            => string.Join("|", AppPackageName, KeysTextForDeviceVerification);
+        {
+            get => string.Join("|", AppPackageName, KeysTextForDeviceVerification);
+        }
 
         #endregion
 
@@ -42,14 +47,23 @@ namespace Covid19Radar.Api.Models
 
         [JsonIgnore]
         public string JwsPayload
-            => DeviceVerificationPayload;
+        {
+            get => DeviceVerificationPayload;
+        }
+           
 
         [JsonIgnore]
         public string ClearText
-            => string.Join("|", AppPackageName, KeysTextForDeviceVerification);
+        {
+            get => string.Join("|", AppPackageName, KeysTextForDeviceVerification);
+        }
+            
 
         private string KeysTextForDeviceVerification
-            => string.Join(",", EventLogs.Select(el => el.ClearText));
+        {
+            get => string.Join(",", EventLogs.Select(el => el.ClearText));
+        }
+            
 
         #endregion
     }
@@ -57,19 +71,19 @@ namespace Covid19Radar.Api.Models
     public class EventLog
     {
         [JsonProperty("has_consent")]
-        public bool HasConsent;
+        public bool HasConsent { get; set; }
 
         [JsonProperty("epoch")]
-        public long Epoch;
+        public long Epoch { get; set; }
 
         [JsonProperty("type")]
-        public string Type;
+        public string Type { get; set; }
 
         [JsonProperty("subtype")]
-        public string Subtype;
+        public string Subtype { get; set; }
 
         [JsonProperty("content")]
-        public string Content;
+        public string Content { get; set; }
 
         [JsonIgnore]
         public string Timestamp
@@ -77,6 +91,10 @@ namespace Covid19Radar.Api.Models
             get => DateTime.UnixEpoch.AddSeconds(Epoch).ToString(Constants.FORMAT_TIMESTAMP);
         }
 
-        public string ClearText => string.Join(".", HasConsent, Epoch, Type, Subtype, Content);
+        public string ClearText
+        {
+            get => string.Join(".", HasConsent, Epoch, Type, Subtype, Content);
+        }
+        
     }
 }

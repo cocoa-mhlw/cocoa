@@ -2,22 +2,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Castle.Core.Logging;
-using Covid19Radar.Api;
-using Covid19Radar.Api.Common;
 using Covid19Radar.Api.DataStore;
 using Covid19Radar.Api.Tests.Mock;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Scripts;
-using Microsoft.Azure.Documents.Client;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Reflection;
 using System.Threading;
 
 namespace Covid19Radar.Api.Tests.Common.DataStore
@@ -50,10 +42,12 @@ namespace Covid19Radar.Api.Tests.Common.DataStore
             client.Setup(_ => _.CreateDatabaseIfNotExistsAsync
                 (It.IsAny<string>(), It.IsAny<int?>(), It.IsAny<Microsoft.Azure.Cosmos.RequestOptions>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(databaseResponse.Object);
-                
+
             var logger = new LoggerMock<ICosmos>();
             // action
             var instance = new Cosmos(config.Object, client.Object, logger);
+            // assert
+            Assert.IsNotNull(instance);
         }
 
         [TestMethod]
@@ -84,7 +78,8 @@ namespace Covid19Radar.Api.Tests.Common.DataStore
             var logger = new LoggerMock<ICosmos>();
             // action
 #if DEBUG
-            Assert.ThrowsException<AggregateException>(() => {
+            Assert.ThrowsException<AggregateException>(() =>
+            {
                 var instance = new Cosmos(config.Object, client.Object, logger);
             });
 #else 

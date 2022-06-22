@@ -41,7 +41,7 @@ namespace Covid19Radar.Model
             get => textColor;
         }
 
-        public string ReadText => $"{Title} {AppResources.Button}";
+        public string ReadText { get; set; }
 
         protected virtual void OnPropertyChanged(string propertyName)
         {

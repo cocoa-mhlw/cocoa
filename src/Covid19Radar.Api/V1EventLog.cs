@@ -100,7 +100,7 @@ namespace Covid19Radar.Api
             {
                 submissionParameter = JsonConvert.DeserializeObject<V1EventLogSubmissionParameter>(requestBody);
             }
-            catch(JsonSerializationException e)
+            catch(JsonSerializationException)
             {
                 _logger.LogError("JsonSerializationException occurred.");
                 return new StatusCodeResult((int)HttpStatusCode.BadRequest);

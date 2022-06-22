@@ -45,7 +45,7 @@ namespace Covid19Radar.Common
         /// <summary>
         /// Number of days of exposure information to display
         /// </summary>
-        public const int DaysOfExposureInformationToDisplay = -15;
+        public const int TermOfExposureRecordValidityInDays = -15;
 
         /// <summary>
         /// Message when `AppDelagate.OnActivated()` occurs on iOS.
@@ -80,6 +80,16 @@ namespace Covid19Radar.Common
         /// Delay for error in TEK re-registration.
         /// </summary>
         public const int DelayForRegistrationErrorMillis = 5000;
+
+        /// <summary>
+        /// Maximum size of event log content to be sent.
+        /// </summary>
+        public const long EventLogMaxRequestSizeInBytes = 8 * 1024 * 1024; // 8 MiB
+
+        /// <summary>
+        /// Number of retries to send event log.
+        /// </summary>
+        public const int EventLogMaxRetry = 3;
 
         #region Other Private Methods
 

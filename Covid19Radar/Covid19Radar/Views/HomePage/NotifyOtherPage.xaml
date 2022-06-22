@@ -35,26 +35,60 @@
                 Margin="0, 0, 0, 10"
                 Style="{StaticResource DefaultLabelSmall}"
                 Text="{x:Static resources:AppResources.NotifyOtherPageDescription2}" />
-            <StackLayout
-                Orientation="Horizontal"
-                Spacing="30"
-                Visual="Material"
-                >
-                <RadioButton
-                    AutomationProperties.IsInAccessibleTree="True"
-                    TextColor="Black"
-                    FontSize="Medium"
-                    CheckedChanged="OnRadioButtonCheckedChanged"
-                    Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
-                    GroupName="CheckSymptoms" />
-                <RadioButton
-                    AutomationProperties.IsInAccessibleTree="True"
-                    TextColor="Black"
-                    FontSize="Medium"
-                    CheckedChanged="OnRadioButtonCheckedChanged"
-                    Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
-                    GroupName="CheckSymptoms" />
-            </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Frame
+                    Grid.Column="0"
+                    HasShadow="False"
+                    Margin="0, 10, 10, 10"
+                    Padding="10"
+                    CornerRadius="10">
+                    <Frame.Triggers>
+                        <DataTrigger TargetType="Frame" Binding="{Binding IsVisibleWithSymptomsLayout}" Value="True">
+                            <Setter Property="BackgroundColor" Value="{StaticResource CheckedRadioButtonBackground}" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Frame" Binding="{Binding IsVisibleWithSymptomsLayout}" Value="False">
+                            <Setter Property="BackgroundColor" Value="{StaticResource DisabledRadioButtonBackground}" />
+                        </DataTrigger>
+                    </Frame.Triggers>
+                    <RadioButton
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="{Binding RadioButtonYesReadText}"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontSize="Medium"
+                        CheckedChanged="OnRadioButtonCheckedChanged"
+                        Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonYes}"
+                        GroupName="CheckSymptoms" />
+                </Frame>
+                <Frame
+                    Grid.Column="1"
+                    HasShadow="False"
+                    Margin="10, 10, 0, 10"
+                    Padding="10"
+                    CornerRadius="10">
+                    <Frame.Triggers>
+                        <DataTrigger TargetType="Frame" Binding="{Binding IsVisibleNoSymptomsLayout}" Value="True">
+                            <Setter Property="BackgroundColor" Value="{StaticResource CheckedRadioButtonBackground}" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Frame" Binding="{Binding IsVisibleNoSymptomsLayout}" Value="False">
+                            <Setter Property="BackgroundColor" Value="{StaticResource DisabledRadioButtonBackground}" />
+                        </DataTrigger>
+                    </Frame.Triggers>
+                    <RadioButton
+                        AutomationProperties.IsInAccessibleTree="True"
+                        AutomationProperties.Name="{Binding RadioButtonNoReadText}"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontSize="Medium"
+                        CheckedChanged="OnRadioButtonCheckedChanged"
+                        Content="{x:Static resources:AppResources.NotifyOtherPageRadioButtonNo}"
+                        GroupName="CheckSymptoms" />
+                </Frame>
+            </Grid>
             <StackLayout
                 Margin="0, 15, 0, 0"
                 IsVisible="{Binding IsVisibleWithSymptomsLayout}">

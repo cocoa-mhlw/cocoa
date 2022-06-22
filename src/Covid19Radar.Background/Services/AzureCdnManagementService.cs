@@ -6,7 +6,6 @@ using Microsoft.Azure.Management.Cdn.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Authentication;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
-using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
@@ -32,7 +31,6 @@ namespace Covid19Radar.Background.Services
             CdnResourceGroupName = config.CdnResourceGroupName();
             CdnProfileName = config.CdnProfileName();
             CdnEndpointName = config.CdnEndpointName();
-            AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
             var mslogin = new MSILoginInformation(MSIResourceType.AppService);
             var credential = new AzureCredentials(mslogin, AzureEnvironment.AzureGlobalCloud);
             var client = RestClient.Configure()

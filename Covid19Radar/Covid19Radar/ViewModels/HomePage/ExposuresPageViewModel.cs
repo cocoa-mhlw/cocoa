@@ -13,6 +13,8 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
@@ -23,30 +25,41 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
         private readonly ILoggerService _loggerService;
 
+        private readonly ILocalPathService _localPathService;
+        private readonly IExposureDataExportService _exposureDataExportService;
+
         public ObservableCollection<ExposureSummary> Exposures { get; set; }
+
+        private string _utcDescription;
+        public string UtcDescription
+        {
+            get { return _utcDescription; }
+            set { SetProperty(ref _utcDescription, value); }
+        }
 
         public ExposuresPageViewModel(
             INavigationService navigationService,
             IExposureDataRepository exposureDataRepository,
             IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
+            ILocalPathService localPathService,
+            IExposureDataExportService exposureDataExportService,
             ILoggerService loggerService
             ) : base(navigationService)
         {
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _localPathService = localPathService;
+            _exposureDataExportService = exposureDataExportService;
             _loggerService = loggerService;
 
             Title = AppResources.MainExposures;
             Exposures = new ObservableCollection<ExposureSummary>();
-        }
-
-        public override async void Initialize(INavigationParameters parameters)
-        {
-            base.Initialize(parameters);
-
-            await InitExposures();
+            UtcDescription = string.Format(
+                AppResources.ExposuresPageToUtcDescription,
+                TimeZoneInfo.Local.StandardName
+                );
         }
 
         public async Task InitExposures()
@@ -58,14 +71,14 @@ namespace Covid19Radar.ViewModels
             _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
             var dailySummaryList
-                = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
             var dailySummaryMap = dailySummaryList.ToDictionary(ds => ds.GetDateTime());
 
             var exposureWindowList
-                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.DaysOfExposureInformationToDisplay);
+                = await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays);
 
             var userExposureInformationList
-                = _exposureDataRepository.GetExposureInformationList(AppConstants.DaysOfExposureInformationToDisplay);
+                = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
             if (dailySummaryList.Count() > 0)
             {
@@ -120,6 +133,45 @@ namespace Covid19Radar.ViewModels
             {
                 Exposures.Add(exposure);
             }
+        }
+
+        public Command OnClickExportExposureData => new Command(async () =>
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                string exposureDataFilePath = _localPathService.ExposureDataPath;
+                await _exposureDataExportService.ExportAsync(exposureDataFilePath);
+
+                await Share.RequestAsync(new ShareFileRequest
+                {
+                    File = new ShareFile(exposureDataFilePath)
+                });
+            }
+            catch (NotImplementedInReferenceAssemblyException exception)
+            {
+                _loggerService.Exception("NotImplementedInReferenceAssemblyException", exception);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+
+        });
+
+        public override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await InitExposures();
+        }
+
+        public override async void OnResume()
+        {
+            base.OnResume();
+
+            await InitExposures();
         }
     }
 

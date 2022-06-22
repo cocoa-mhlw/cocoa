@@ -43,6 +43,7 @@ namespace Covid19Radar.Model
             public uint RollingStartNumber { get; set; }
             [JsonProperty("rollingPeriod")]
             public uint RollingPeriod { get; set; }
+
             [JsonProperty("reportType")]
             public uint ReportType { get; set; }
         }

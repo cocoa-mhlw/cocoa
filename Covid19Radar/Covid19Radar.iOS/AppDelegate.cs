@@ -41,6 +41,9 @@ namespace Covid19Radar.iOS
         private Lazy<AbsExposureDetectionBackgroundService> _exposureDetectionBackgroundService
             = new Lazy<AbsExposureDetectionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsExposureDetectionBackgroundService>());
 
+        private readonly Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
+            = new Lazy<AbsEventLogSubmissionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsEventLogSubmissionBackgroundService>());
+
         private Lazy<IExposureDetectionService> _exposureDetectionService
             = new Lazy<IExposureDetectionService>(() => ContainerLocator.Current.Resolve<IExposureDetectionService>());
 
@@ -86,8 +89,6 @@ namespace Covid19Radar.iOS
 
             InitializeExposureNotificationClient();
 
-            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
-
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
 
@@ -111,16 +112,29 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
+            ScheduleBackgroundTask();
+
+            return base.FinishedLaunching(app, launchOptions);
+        }
+
+        private void ScheduleBackgroundTask()
+        {
             try
             {
                 _exposureDetectionBackgroundService.Value.Schedule();
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("failed to Scheduling", exception);
+                _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
             }
-
-            return base.FinishedLaunching(app, launchOptions);
+            try
+            {
+                _eventLogSubmissionBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
+            }
         }
 
         private bool IsUniversalLinks(NSDictionary launchOptions)
@@ -259,6 +273,7 @@ namespace Covid19Radar.iOS
             container.Register<AbsExposureNotificationApiService, ExposureNotificationApiService>(Reuse.Singleton);
 #endif
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
+            container.Register<AbsEventLogSubmissionBackgroundService, EventLogSubmissionBackgroundService>(Reuse.Singleton);
         }
 
         public Task<ExposureConfiguration> GetExposureConfigurationAsync()

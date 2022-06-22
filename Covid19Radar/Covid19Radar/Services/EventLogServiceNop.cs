@@ -4,44 +4,16 @@
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Chino;
+using Covid19Radar.Model;
 
 namespace Covid19Radar.Services
 {
     public class EventLogServiceNop : IEventLogService
     {
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel, string enVersion,
-            ExposureSummary exposureSummary,
-            IList<ExposureInformation> exposureInformation
-            )
+        public Task SendAllAsync(long maxSize, int maxRetry)
         {
             // do nothing
-            return Task.CompletedTask;
-        }
-
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel, string enVersion,
-            IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows
-            )
-        {
-            // do nothing
-            return Task.CompletedTask;
-        }
-
-        public Task SendExposureDataAsync(
-            string idempotencyKey,
-            ExposureConfiguration exposureConfiguration,
-            string deviceModel,
-            string enVersion
-            )
-        {
-            // do nothing
-            return Task.CompletedTask;
+            return Task.FromResult(new List<EventLog>());
         }
     }
 }
