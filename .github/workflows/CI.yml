@@ -53,8 +53,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Prepare settings.json
       run: mv -Force ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings_template.json ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
-    - name: Show NuGet.Config
-      run: echo ~/.config/NuGet/NuGet.Config
     - name: Deploy nuget packages - ${{ matrix.Configuration }}
       run: cp -Force ${{ github.workspace }}/TempNugetFeed/${{ matrix.Configuration }}/*.nupkg ${{ github.workspace }}/TempNugetFeed/| true
     - name: Add msbuild to PATH
