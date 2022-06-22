@@ -424,6 +424,9 @@
     <PackageReference Include="Chino.iOS">
       <Version>1.0.0-rc11</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.TestCloud.Agent">
+      <Version>0.23.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
