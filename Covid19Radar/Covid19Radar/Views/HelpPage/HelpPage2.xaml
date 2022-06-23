@@ -33,29 +33,20 @@
                     AutomationProperties.IsInAccessibleTree="True"
                     Style="{StaticResource DefaultTitleLabel}"
                     Text="{x:Static resources:AppResources.HelpPage2Label1}" />
-                <Grid Margin="0,0,0,0">
-                    <Grid ColumnSpacing="10" RowSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.4*" />
-                            <ColumnDefinition Width="0.6*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <ffimageloading:CachedImage
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            Aspect="AspectFit"
-                            Source="HelpPage30.png" />
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            AutomationProperties.IsInAccessibleTree="True"
-                            Style="{StaticResource DefaultLabel}"
-                            Text="{x:Static resources:AppResources.HelpPage2Description1}" />
-                    </Grid>
-                </Grid>
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="20">
+                    <ffimageloading:CachedImage
+                        AutomationProperties.IsInAccessibleTree="False"
+                        WidthRequest="100"
+                        Aspect="AspectFit"
+                        Source="HelpPage30.png" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HelpPage2Description1}"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
             </StackLayout>
             <StackLayout Grid.Row="1" Spacing="20">
                 <Label
