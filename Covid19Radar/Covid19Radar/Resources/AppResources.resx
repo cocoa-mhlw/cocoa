@@ -1480,7 +1480,7 @@ In case you have been close to a large number of positive registrants a big cont
     <value>Please keep practicing 'New Lifestyle' recommended by the government.</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
-	<data name="NotContactPagePictogramHelpText" xml:space="preserve">
+  <data name="NotContactPagePictogramHelpText" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：換気、咳エチケット、手洗い、密集回避、密接回避、密閉回避、のイラスト</comment>
   </data>
