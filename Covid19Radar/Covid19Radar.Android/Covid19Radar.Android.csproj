@@ -191,7 +191,6 @@
     <Compile Include="Services\PlatformService.cs" />
     <Compile Include="Services\IPlatformService.cs" />
     <Compile Include="Services\LocalPathService.cs" />
-    <Compile Include="Services\LocalizeService.cs" />
     <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,8 +200,8 @@
     <AndroidAsset Include="Assets\Roboto-Regular.ttf" />
     <AndroidAsset Include="Assets\license.html" />
   </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)'!='Debug_UITest'">
-    <Compile Remove="Services\LocalizeService.cs" />
+  <ItemGroup Condition="'$(Configuration)'=='Debug_UITest'">
+    <Compile Include="Services\LocalizeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />

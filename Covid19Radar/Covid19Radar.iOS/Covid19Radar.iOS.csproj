@@ -268,13 +268,12 @@
     <Compile Include="Services\ExposureDetectionBackgroundService.cs" />
     <Compile Include="Services\BackupAttributeService.cs" />
     <Compile Include="Services\ExternalNavigationService.cs" />
-    <Compile Include="Services\LocalizeService.cs" />
     <None Include="EntitlementsDebug.plist" />
     <Compile Include="Services\LocalPathService.cs" />
     <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
   </ItemGroup>
-  <ItemGroup Condition="'$(Configuration)'!='Debug_UITest'">
-    <Compile Remove="Services\LocalizeService.cs" />
+  <ItemGroup Condition="'$(Configuration)'=='Debug_UITest'">
+    <Compile Include="Services\LocalizeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -423,9 +422,6 @@
     </PackageReference>
     <PackageReference Include="Chino.iOS">
       <Version>1.0.0-rc11</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.TestCloud.Agent">
-      <Version>0.23.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
