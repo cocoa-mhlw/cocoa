@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
@@ -46,10 +46,20 @@
                     </Label.FormattedText>
                 </Label>
                 <ffimageloading:CachedImage
-                    AutomationProperties.IsInAccessibleTree="False"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.HelpText="{x:Static resources:AppResources.NotContactPagePictogramHelpText}"
                     Margin="0,20,0,0"
                     Aspect="AspectFit"
-                    Source="Nocontact10.png" />
+                    Source="Nocontact10.png">
+                    <ffimageloading:CachedImage.Triggers>
+                        <DataTrigger
+                            TargetType="ffimageloading:CachedImage"
+                            Binding="{Binding Source={x:Static resources:AppResources.NotContactPagePictogramHelpText}}"
+                            Value="">
+                            <Setter Property="AutomationProperties.IsInAccessibleTree" Value="False" />
+                        </DataTrigger>
+                    </ffimageloading:CachedImage.Triggers>
+                </ffimageloading:CachedImage>
             </StackLayout>
         </ListView.Header>
         <ListView.ItemTemplate>
