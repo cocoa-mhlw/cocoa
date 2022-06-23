@@ -64,8 +64,8 @@
                 <ListView
                     AutomationProperties.IsInAccessibleTree="True"
                     ItemsSource="{Binding MenuItems}"
-                    RowHeight="60"
                     SelectedItem="{Binding SelectedMenuItem}"
+                    HasUnevenRows="True"
                     SeparatorColor="#E0E0E0"
                     SeparatorVisibility="Default"
                     >
