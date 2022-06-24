@@ -85,7 +85,7 @@ namespace Covid19Radar.iOS.Services
                 BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
                     RequiresNetworkConnectivity = true,
-                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(HALF_DAY_IN_SECONDS)
+                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS)
                 };
 
                 BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
