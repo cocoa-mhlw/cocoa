@@ -69,7 +69,7 @@ jobs:
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1
     - name: msbuild
-      run: msbuild ${{ github.workspace }}/Covid19Radar.Functions.sln /restore /t:Build /p:RestoreConfigFile=${{ github.workspace }}/Nuget.config /p:Configuration=${{ matrix.Configuration }}
+      run: msbuild ${{ github.workspace }}/Covid19Radar.Functions.sln /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
     - name: Execute Unit Tests
       run: dotnet test ${{ github.workspace }}/Covid19Radar.Functions.sln /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --no-build --logger trx --settings ${{ github.workspace }}/Covid19Radar.Functions.runsettings --configuration ${{ matrix.Configuration }} --collect:"XPlat Code Coverage"    
       env:
