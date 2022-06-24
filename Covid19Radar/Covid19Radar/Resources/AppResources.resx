@@ -132,8 +132,8 @@
     <comment>App Name</comment>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>Settings</value>
-    <comment>設定</comment>
+    <value>About this app</value>
+    <comment>このアプリについて</comment>
   </data>
   <data name="SettingsPageLicenseButton" xml:space="preserve">
     <value>License notation</value>
@@ -357,12 +357,12 @@
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>Go to app settings</value>
-    <comment>アプリの設定へ</comment>
+    <value>Go to About this app</value>
+    <comment>このアプリについてへ</comment>
   </data>
   <data name="HelpPage4Description1" xml:space="preserve">
-    <value>By selecting from the app setting [Reinitialize the app] you can delete the saved contact history of the last 14 days and restore the app to its initial state.</value>
-    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+    <value>By selecting [Reinitialize the app] from [About this app] on the menu, you can delete the saved contact history of the last 14 days and restore the app to its initial state.</value>
+    <comment>メニューのこのアプリについてから「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
   </data>
   <data name="HelpPage4Description2" xml:space="preserve">
     <value>Contact recording and contact notification will not work until you start using this app again.</value>

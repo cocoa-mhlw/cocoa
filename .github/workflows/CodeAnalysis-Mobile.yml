@@ -53,6 +53,8 @@ jobs:
         New-Item -Path ./.sonar/scanner -ItemType Directory
         dotnet tool update dotnet-sonarscanner --tool-path ./.sonar/scanner
     - name: Begin SonarScanner
+      id: begin_sonarscanner
+      continue-on-error: true
       run: ./.sonar/scanner/dotnet-sonarscanner begin /k:"cocoa-mhlw_cocoa-app" /o:"cocoa-mhlw" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -76,6 +78,7 @@ jobs:
       env:
         DOTNET_CLI_TELEMETRY_OPTOUT: true
     - name: End SonarScanner
+      if: ${{ steps.begin_sonarscanner.outcome == 'success' }}
       run: ./.sonar/scanner/dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
