@@ -1447,36 +1447,53 @@ Note: this app does not collect users’ location information.</value>
   </data>
 
   <data name="SendLogSetttingTitle" xml:space="preserve">
-    <value>Data sharing</value>
+    <value>Telemetry data setting</value>
     <comment>TODO:COCOAの改善にご協力ください</comment>
   </data>
   <data name="SendLogSetttingDescription1" xml:space="preserve">
-    <value>Please allow MHLW to collect data, such as exposure data that you had close contact a person who has registered positive for COVID-19. This data helps improve COCOA and is collected in accordance with Privacy Policy.</value>
-    <comment>COCOAの改善のため、厚生労働省に情報を送信することを許可してください。</comment>
+    <value>Help improve your COCOA experience by automatically sending telemetry data to MHLW.</value>
+    <comment>TODO:COCOAの改善のため、厚生労働省に情報を送信することを許可してください。</comment>
   </data>
   <data name="SendLogSetttingDescription2" xml:space="preserve">
-    <value>The sending of data is performed anonymously. Data do not contain any information that can personally identify you or a person who has registered positive for COVID-19.</value>
+    <value>Data sending is performed anonymously. Data will not contain any personal information that can identify you or a person who has registered positive for COVID-19.</value>
     <comment>TODO:送信は匿名で行われます。送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。</comment>
   </data>
   <data name="SendLogSetttingDescription3" xml:space="preserve">
-    <value>Anonymous data may be released to contribute to the improvement of public health. Please check the Privacy Policy for the specific information to be sent and how it will be used.</value>
-    <comment>TODO:匿名の情報は公衆衛生の改善に寄与するために公開する場合があります。送信する情報の具体的な内容、利用方法についてはプライバシーポリシーを確認してください。</comment>
+    <value>Statistical data may be released to contribute to the improvement of public health.</value>
+    <comment>TODO:匿名の情報は公衆衛生の改善に寄与するために集計して公開する場合があります。</comment>
   </data>
   <data name="SendLogSetttingDescription4" xml:space="preserve">
     <value>You can stop sending data at any time from the app settings.</value>
     <comment>TODO:改善への協力はCOCOAの設定画面からいつでも設定できます。</comment>
   </data>
   <data name="ButtonStartCooperate" xml:space="preserve">
-    <value>Send data</value>
+    <value>Setting</value>
     <comment>TODO:COCOAの改善に協力する</comment>
   </data>
-  <data name="SendLogDisableSendLogDialogMessage" xml:space="preserve">
-    <value>You can start sending data at any time from the app settings.</value>
-    <comment>TODO:改善への協力はCOCOAの『設定』からいつでも開始できます。</comment>
+
+  <data name="SendLogDetailTitle" xml:space="preserve">
+    <value>Setting telemetry data</value>
+    <comment>TODO:送信する情報の設定</comment>
   </data>
-  <data name="TelemetryDesignTitle" xml:space="preserve">
-    <value>Telemetry Design</value>
-    <comment>TODO:送信する情報について</comment>
+  <data name="SendLogDetailDescription" xml:space="preserve">
+    <value>COCOA will send the following data. Please uncheck any information you do not allow to send.</value>
+    <comment>TODO:COCOAは次の情報を送信します。送信を希望しない情報のチェックを外してください。</comment>
+  </data>
+  <data name="SendLogDetailEventExposureNotifiedTitle" xml:space="preserve">
+    <value>Exposure Notification Event</value>
+    <comment>TODO:接触通知の表示</comment>
+  </data>
+  <data name="SendLogDetailEventExposureNotifiedDescription1" xml:space="preserve">
+    <value>接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。</value>
+    <comment>TODO:接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。</comment>
+  </data>
+  <data name="SendLogDetailEventExposureNotifiedDescription2" xml:space="preserve">
+    <value>通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</value>
+    <comment>TODO:通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</comment>
+  </data>
+  <data name="SendLogDetailSaveSetting" xml:space="preserve">
+    <value>Save</value>
+    <comment>TODO:設定を保存</comment>
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">

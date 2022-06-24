@@ -1343,8 +1343,8 @@
     <comment>COCOAの改善にご協力ください</comment>
   </data>
   <data name="SendLogSetttingDescription1" xml:space="preserve">
-    <value>COCOAの改善のため、厚生労働省に接触情報を送信することを許可してください。</value>
-    <comment>COCOAの改善のため、厚生労働省に接触情報を送信することを許可してください。</comment>
+    <value>COCOAの改善のため、厚生労働省に情報を送信することを許可してください。</value>
+    <comment>COCOAの改善のため、厚生労働省に情報を送信することを許可してください。</comment>
   </data>
   <data name="SendLogSetttingDescription2" xml:space="preserve">
     <value>送信は匿名で行われます。送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含みません。</value>
@@ -1362,15 +1362,31 @@
     <value>COCOAの改善に協力する</value>
     <comment>COCOAの改善に協力する</comment>
   </data>
-  <data name="SendLogDisableSendLogDialogMessage" xml:space="preserve">
-    <value>改善への協力はCOCOAの『設定』からいつでも開始できます。</value>
-    <comment>改善への協力はCOCOAの『設定』からいつでも開始できます。</comment>
-  </data>
-  <data name="TelemetryDesignTitle" xml:space="preserve">
-    <value>送信する情報について</value>
-    <comment>送信する情報について</comment>
-  </data>
   
+  <data name="SendLogDetailTitle" xml:space="preserve">
+    <value>送信する情報の設定</value>
+    <comment>送信する情報の設定</comment>
+  </data>
+  <data name="SendLogDetailDescription" xml:space="preserve">
+    <value>COCOAは次の情報を送信します。送信を希望しない情報のチェックを外してください。</value>
+    <comment>COCOAは次の情報を送信します。送信を希望しない情報のチェックを外してください。</comment>
+  </data>
+  <data name="SendLogDetailEventExposureNotifiedTitle" xml:space="preserve">
+    <value>接触通知の表示</value>
+    <comment>接触通知の表示</comment>
+  </data>
+  <data name="SendLogDetailEventExposureNotifiedDescription1" xml:space="preserve">
+    <value>接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。</value>
+    <comment>接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。</comment>
+  </data>
+  <data name="SendLogDetailEventExposureNotifiedDescription2" xml:space="preserve">
+    <value>通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</value>
+    <comment>通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</comment>
+  </data>
+  <data name="SendLogDetailSaveSetting" xml:space="preserve">
+    <value>設定を保存</value>
+    <comment>設定を保存</comment>
+  </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
     <value>※日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</value>
