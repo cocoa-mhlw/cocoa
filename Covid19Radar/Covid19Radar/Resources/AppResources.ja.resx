@@ -1383,9 +1383,18 @@
     <value>通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</value>
     <comment>通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</comment>
   </data>
-  <data name="SendLogDetailSaveSetting" xml:space="preserve">
-    <value>設定を保存</value>
-    <comment>設定を保存</comment>
+
+  <data name="SettingsPageSendLogTitle" xml:space="preserve">
+    <value>COCOAの改善に協力する</value>
+    <comment>COCOAの改善に協力する</comment>
+  </data>
+  <data name="SettingsPageSendLogDescription" xml:space="preserve">
+    <value>COCOA改善のための匿名での情報送信を設定します。</value>
+    <comment>COCOA改善のための匿名での情報送信を設定します。</comment>
+  </data>
+  <data name="SettingsPageSendLogButton" xml:space="preserve">
+    <value>情報送信を設定</value>
+    <comment>情報送信を設定</comment>
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">

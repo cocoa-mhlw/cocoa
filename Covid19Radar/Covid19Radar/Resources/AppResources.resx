@@ -1447,11 +1447,11 @@ Note: this app does not collect users’ location information.</value>
   </data>
 
   <data name="SendLogSetttingTitle" xml:space="preserve">
-    <value>Telemetry data setting</value>
+    <value>Help improve COCOA</value>
     <comment>TODO:COCOAの改善にご協力ください</comment>
   </data>
   <data name="SendLogSetttingDescription1" xml:space="preserve">
-    <value>Help improve your COCOA experience by automatically sending telemetry data to MHLW.</value>
+    <value>To help improve your COCOA experience, please allow automatically sending telemetry data to Ministry of Health, Labour and Welfare.</value>
     <comment>TODO:COCOAの改善のため、厚生労働省に情報を送信することを許可してください。</comment>
   </data>
   <data name="SendLogSetttingDescription2" xml:space="preserve">
@@ -1476,24 +1476,37 @@ Note: this app does not collect users’ location information.</value>
     <comment>TODO:送信する情報の設定</comment>
   </data>
   <data name="SendLogDetailDescription" xml:space="preserve">
-    <value>COCOA will send the following data. Please uncheck any information you do not allow to send.</value>
+    <value>COCOA will send the following data. Please uncheck any data you do not allow to send.</value>
     <comment>TODO:COCOAは次の情報を送信します。送信を希望しない情報のチェックを外してください。</comment>
   </data>
   <data name="SendLogDetailEventExposureNotifiedTitle" xml:space="preserve">
-    <value>Exposure Notification Event</value>
+    <value>Close proximity notification has been displayed</value>
     <comment>TODO:接触通知の表示</comment>
   </data>
   <data name="SendLogDetailEventExposureNotifiedDescription1" xml:space="preserve">
-    <value>接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。</value>
+    <value>The data will be sent that close proximity notification has been displayed.</value>
     <comment>TODO:接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。</comment>
   </data>
   <data name="SendLogDetailEventExposureNotifiedDescription2" xml:space="preserve">
-    <value>通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</value>
+    <value>By collecting the number of proximity notifications, we use this data for the purpose of understanding how many contacts are occurring in Japan.</value>
     <comment>TODO:通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</comment>
   </data>
   <data name="SendLogDetailSaveSetting" xml:space="preserve">
     <value>Save</value>
     <comment>TODO:設定を保存</comment>
+  </data>
+
+  <data name="SettingsPageSendLogTitle" xml:space="preserve">
+    <value>Help improve COCOA</value>
+    <comment>TODO:OCOAの改善に協力する</comment>
+  </data>
+  <data name="SettingsPageSendLogDescription" xml:space="preserve">
+    <value>Send telemetry data to Ministry of Health, Labour and Welfare.</value>
+    <comment>TODO:COCOA改善のための匿名での情報送信を設定します。</comment>
+  </data>
+  <data name="SettingsPageSendLogButton" xml:space="preserve">
+    <value>Setting telemetry data</value>
+    <comment>情報送信を設定</comment>
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">

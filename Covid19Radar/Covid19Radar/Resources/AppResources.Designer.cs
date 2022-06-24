@@ -2117,6 +2117,24 @@ namespace Covid19Radar.Resources {
             }
         }
         
+        public static string SettingsPageSendLogTitle {
+            get {
+                return ResourceManager.GetString("SettingsPageSendLogTitle", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageSendLogDescription {
+            get {
+                return ResourceManager.GetString("SettingsPageSendLogDescription", resourceCulture);
+            }
+        }
+        
+        public static string SettingsPageSendLogButton {
+            get {
+                return ResourceManager.GetString("SettingsPageSendLogButton", resourceCulture);
+            }
+        }
+        
         public static string ExposuresPageToUtcDescription {
             get {
                 return ResourceManager.GetString("ExposuresPageToUtcDescription", resourceCulture);

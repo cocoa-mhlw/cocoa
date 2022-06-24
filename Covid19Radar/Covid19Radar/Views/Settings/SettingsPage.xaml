@@ -115,21 +115,21 @@
                     TabIndex="3"
                     Margin="15, 20, 15, 15"
                     Style="{StaticResource DefaultLabel}"
-                    Text="COCOAの改善に協力する" />
+                    Text="{x:Static resources:AppResources.SettingsPageSendLogTitle}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="4"
                     Margin="15, 0"
                     Style="{StaticResource DefaultLabelSmall}"
                     TextColor="{StaticResource SecondaryText}"
-                    Text="COCOA改善のための匿名での情報送信を設定します。" />
+                    Text="{x:Static resources:AppResources.SettingsPageSendLogDescription}" />
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="5"
                     Margin="20"
                     Command="{Binding OpenSendLogSettingPage}"
                     Style="{StaticResource DefaultButton}"
-                    Text="情報送信を設定" />
+                    Text="{x:Static resources:AppResources.SettingsPageSendLogButton}" />
 
                 <BoxView Style="{StaticResource DefaultLineStyle}" />
                 <StackLayout
