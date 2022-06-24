@@ -40,7 +40,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
-    packagesToPack: '**/*.csproj'
+    packagesToPack: 'Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj'
     packDestination: '$(Build.ArtifactStagingDirectory)'
 
 
