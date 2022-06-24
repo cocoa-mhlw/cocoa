@@ -62,12 +62,12 @@ namespace Covid19Radar.ViewModels
             this.closeApplicationService = closeApplicationService;
         }
 
-        public ICommand OpenSendLogSettingPage => new Command(async () =>
+        public ICommand OpenSendLogSettingDetailPage => new Command(async () =>
         {
             loggerService.StartMethod();
 
-            INavigationParameters navigationParams = SendLogSettingsPage.BuildNavigationParams(Destination.SettingsPage);
-            _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsPage.ToPath(), navigationParams);
+            INavigationParameters navigationParams = SendLogSettingsDetailPage.BuildNavigationParams(Destination.SettingsPage);
+            _ = await NavigationService.NavigateAsync(Destination.SendLogSettingsDetailPage.ToPath(), navigationParams);
 
             loggerService.EndMethod();
         });

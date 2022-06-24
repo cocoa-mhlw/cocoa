@@ -127,7 +127,7 @@
                     AutomationProperties.IsInAccessibleTree="True"
                     TabIndex="5"
                     Margin="20"
-                    Command="{Binding OpenSendLogSettingPage}"
+                    Command="{Binding OpenSendLogSettingDetailPage}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.SettingsPageSendLogButton}" />
 
