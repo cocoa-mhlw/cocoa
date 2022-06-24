@@ -2,6 +2,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using BackgroundTasks;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
@@ -20,7 +23,7 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Static Fields
 
-        private static readonly string identifier = AppInfo.PackageName + ".delete-old-logs";
+        private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".delete-old-logs";
 
         #endregion
 
@@ -48,12 +51,40 @@ namespace Covid19Radar.iOS.Services.Logs
         {
             loggerService.StartMethod();
 
-            _ = BGTaskScheduler.Shared.Register(identifier, null, task =>
-              {
-                  HandleAppRefresh((BGAppRefreshTask)task);
-              });
+            var result = BGTaskScheduler.Shared.Register(BGTASK_IDENTIFIER, null, task =>
+            {
+                loggerService.Info("Background task has been started.");
 
-            ScheduleAppRefresh();
+                ScheduleBgTask();
+
+                var cancellationTokenSource = new CancellationTokenSource();
+                task.ExpirationHandler = cancellationTokenSource.Cancel;
+
+                _ = Task.Run(() =>
+                {
+                    try
+                    {
+                        _logFileService.Rotate();
+                        task.SetTaskCompleted(true);
+                    }
+                    catch (OperationCanceledException exception)
+                    {
+                        loggerService.Exception($"Background task canceled.", exception);
+                        task.SetTaskCompleted(false);
+                    }
+                    catch (Exception exception)
+                    {
+                        loggerService.Exception($"Exception", exception);
+                        task.SetTaskCompleted(false);
+                    }
+                    finally
+                    {
+                        cancellationTokenSource.Dispose();
+                    }
+                }, cancellationTokenSource.Token);
+            });
+
+            ScheduleBgTask();
 
             loggerService.EndMethod();
         }
@@ -62,102 +93,32 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Other Private Methods
 
-        private void HandleAppRefresh(BGAppRefreshTask task)
-        {
-            try
-            {
-                loggerService.StartMethod();
-
-                ScheduleAppRefresh();
-
-                var queue = new NSOperationQueue();
-                queue.MaxConcurrentOperationCount = 1;
-
-                task.ExpirationHandler = () =>
-                {
-                    loggerService.Info("Task expired.");
-                    queue.CancelAllOperations();
-                };
-
-                var operation = new DeleteOldLogsOperation(loggerService, _logFileService);
-                operation.CompletionBlock = () =>
-                {
-                    loggerService.Info($"Operation completed. operation.IsCancelled: {operation.IsCancelled}");
-                    task.SetTaskCompleted(!operation.IsCancelled);
-                };
-
-                queue.AddOperation(operation);
-
-                loggerService.EndMethod();
-            }
-            catch
-            {
-                // do nothing
-            }
-        }
-
-        private void ScheduleAppRefresh()
+        private void ScheduleBgTask()
         {
             loggerService.StartMethod();
 
-            var request = new BGAppRefreshTaskRequest(identifier);
-            request.EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS); // Fetch no earlier than 1 day from now
-
-            loggerService.Info($"request.EarliestBeginDate: {request.EarliestBeginDate}");
-
-            _ = BGTaskScheduler.Shared.Submit(request, out var error);
-
-            if (error != null)
-            {
-                loggerService.Error($"Could not schedule app refresh. Error: {error}");
-            }
-
-            loggerService.EndMethod();
-        }
-
-        #endregion
-    }
-
-    class DeleteOldLogsOperation : NSOperation
-    {
-        #region Instance Fields
-
-        private readonly ILoggerService loggerService;
-        private readonly ILogFileService logFileService;
-
-        #endregion
-
-        #region Constructors
-
-        public DeleteOldLogsOperation(ILoggerService loggerService, ILogFileService logFileService)
-        {
-            this.loggerService = loggerService;
-            this.logFileService = logFileService;
-        }
-
-        #endregion
-
-        #region NSOperation Methods
-
-        public override void Main()
-        {
-            base.Main();
-
             try
             {
-                loggerService.StartMethod();
+                BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
+                {
+                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS)
+                };
 
-                logFileService.Rotate();
-
-                loggerService.Info("Periodic deletion of old logs.");
-                loggerService.EndMethod();
+                BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
+                if (error != null)
+                {
+                    NSErrorException exception = new NSErrorException(error);
+                    loggerService.Exception("BGTaskScheduler submit failed.", exception);
+                    throw exception;
+                }
             }
-            catch
+            finally
             {
-                // do nothing
+                loggerService.EndMethod();
             }
         }
 
         #endregion
     }
+
 }

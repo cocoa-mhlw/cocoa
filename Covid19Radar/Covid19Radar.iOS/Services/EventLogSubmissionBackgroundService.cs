@@ -16,7 +16,7 @@ namespace Covid19Radar.iOS.Services
 {
     public class EventLogSubmissionBackgroundService : AbsEventLogSubmissionBackgroundService
     {
-        private static readonly string IDENTIFIER = AppInfo.PackageName + ".eventlog-submission";
+        private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".eventlog-submission";
 
         private const double ONE_DAY_IN_SECONDS = 1 * 24 * 60 * 60;
 
@@ -36,77 +36,70 @@ namespace Covid19Radar.iOS.Services
         {
             _loggerService.StartMethod();
 
-            _ = BGTaskScheduler.Shared.Register(IDENTIFIER, null, task =>
+            var result = BGTaskScheduler.Shared.Register(BGTASK_IDENTIFIER, null, task =>
             {
-                HandleSendLogAsync((BGAppRefreshTask)task);
+                _loggerService.Info("Background task has been started.");
+
+                ScheduleBgTask();
+
+                var cancellationTokenSource = new CancellationTokenSource();
+                task.ExpirationHandler = cancellationTokenSource.Cancel;
+
+                _ = Task.Run(async () =>
+                {
+                    try
+                    {
+                        await _eventLogService.SendAllAsync(
+                            AppConstants.EventLogMaxRequestSizeInBytes,
+                            AppConstants.EventLogMaxRetry);
+                        task.SetTaskCompleted(true);
+                    }
+                    catch (OperationCanceledException exception)
+                    {
+                        _loggerService.Exception($"Background task canceled.", exception);
+                        task.SetTaskCompleted(false);
+                    }
+                    catch (Exception exception)
+                    {
+                        _loggerService.Exception($"Exception", exception);
+                        task.SetTaskCompleted(false);
+                    }
+                    finally
+                    {
+                        cancellationTokenSource.Dispose();
+                    }
+                }, cancellationTokenSource.Token);
             });
 
-            ScheduleSendEventLog();
+            ScheduleBgTask();
 
             _loggerService.EndMethod();
         }
 
-        private void HandleSendLogAsync(BGAppRefreshTask task)
+        private void ScheduleBgTask()
         {
             _loggerService.StartMethod();
 
-            ScheduleSendEventLog();
-
-            var cancellationTokenSource = new CancellationTokenSource();
-            task.ExpirationHandler = cancellationTokenSource.Cancel;
-
-            _ = Task.Run(async () =>
+            try
             {
-                _loggerService.Info("HandleSendLogAsync() Task.Run() start");
-                try
+                BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
-                    await _eventLogService.SendAllAsync(
-                        AppConstants.EventLogMaxRequestSizeInBytes,
-                        AppConstants.EventLogMaxRetry);
-                    task.SetTaskCompleted(true);
-                }
-                catch (OperationCanceledException exception)
+                    RequiresNetworkConnectivity = true,
+                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(HALF_DAY_IN_SECONDS)
+                };
+
+                BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
+                if (error != null)
                 {
-                    _loggerService.Exception($"Background task canceled.", exception);
-                    task.SetTaskCompleted(false);
+                    NSErrorException exception = new NSErrorException(error);
+                    _loggerService.Exception("BGTaskScheduler submit failed.", exception);
+                    throw exception;
                 }
-                catch (Exception exception)
-                {
-                    _loggerService.Exception($"Exception", exception);
-                    task.SetTaskCompleted(false);
-                }
-                finally
-                {
-                    cancellationTokenSource.Dispose();
-                    _loggerService.Info("HandleSendLogAsync() Task.Run() end");
-                }
-            });
-
-            _loggerService.EndMethod();
-        }
-
-        private void ScheduleSendEventLog()
-        {
-            _loggerService.StartMethod();
-
-            var bgTaskRequest = new BGProcessingTaskRequest(IDENTIFIER)
-            {
-                EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS),
-                RequiresNetworkConnectivity = true
-            };
-
-            _loggerService.Info($"request.EarliestBeginDate: {bgTaskRequest.EarliestBeginDate}");
-
-            _ = BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
-            if (error != null)
-            {
-                NSErrorException exception = new NSErrorException(error);
-                _loggerService.Exception("BGTaskScheduler submit failed.", exception);
-                throw exception;
             }
-
-            _loggerService.EndMethod();
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
     }
 }
-
