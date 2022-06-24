@@ -54,6 +54,8 @@ namespace Covid19Radar.ViewModels
                 _destination = parameters.GetValue<Destination>(SendLogSettingsDetailPage.DestinationKey);
             }
 
+            EnableExposureNotificationNotified = _sendEventLogStateRepository.GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_NOTIFIED) == SendEventLogState.Enable;
+            EnableExposureData = _sendEventLogStateRepository.GetSendEventLogState(ISendEventLogStateRepository.EVENT_TYPE_EXPOSURE_DATA) == SendEventLogState.Enable;
         }
 
         public Command OnClickSave => new Command(async () =>

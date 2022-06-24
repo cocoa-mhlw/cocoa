@@ -1368,8 +1368,8 @@
     <comment>送信する情報の設定</comment>
   </data>
   <data name="SendLogDetailDescription" xml:space="preserve">
-    <value>COCOAは次の情報を送信します。送信を希望しない情報のチェックを外してください。</value>
-    <comment>COCOAは次の情報を送信します。送信を希望しない情報のチェックを外してください。</comment>
+    <value>COCOAは次の情報を送信します。送信を許可する情報にチェックを入れてください。</value>
+    <comment>COCOAは次の情報を送信します。送信を許可する情報にチェックを入れてください。</comment>
   </data>
   <data name="SendLogDetailEventExposureNotifiedTitle" xml:space="preserve">
     <value>接触通知の表示</value>

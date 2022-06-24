@@ -1476,11 +1476,11 @@ Note: this app does not collect users’ location information.</value>
     <comment>TODO:送信する情報の設定</comment>
   </data>
   <data name="SendLogDetailDescription" xml:space="preserve">
-    <value>COCOA will send the following data. Please uncheck any data you do not allow to send.</value>
-    <comment>TODO:COCOAは次の情報を送信します。送信を希望しない情報のチェックを外してください。</comment>
+    <value>COCOA will send the following data. Please check data you allow to send.</value>
+    <comment>TODO:COCOAは次の情報を送信します。送信を許可する情報にチェックを入れてください。</comment>
   </data>
   <data name="SendLogDetailEventExposureNotifiedTitle" xml:space="preserve">
-    <value>Close proximity notification has been displayed</value>
+    <value>Close proximity notification displayed</value>
     <comment>TODO:接触通知の表示</comment>
   </data>
   <data name="SendLogDetailEventExposureNotifiedDescription1" xml:space="preserve">
@@ -1501,7 +1501,7 @@ Note: this app does not collect users’ location information.</value>
     <comment>TODO:OCOAの改善に協力する</comment>
   </data>
   <data name="SettingsPageSendLogDescription" xml:space="preserve">
-    <value>Send telemetry data to Ministry of Health, Labour and Welfare.</value>
+    <value>To help improve your COCOA experience, send telemetry data to Ministry of Health, Labour and Welfare.</value>
     <comment>TODO:COCOA改善のための匿名での情報送信を設定します。</comment>
   </data>
   <data name="SettingsPageSendLogButton" xml:space="preserve">
