@@ -71,6 +71,15 @@ namespace Covid19Radar.iOS.Services
                 }, cancellationTokenSource.Token);
             });
 
+            if (result)
+            {
+                _loggerService.Debug("BGTaskScheduler.Shared.Register succeeded.");
+            }
+            else
+            {
+                _loggerService.Info("BGTaskScheduler.Shared.Register failed.");
+            }
+
             ScheduleBgTask();
 
             _loggerService.EndMethod();
