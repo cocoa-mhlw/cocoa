@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using System.Threading.Tasks;
 
 namespace Covid19Radar.Background.Services
@@ -56,13 +57,16 @@ namespace Covid19Radar.Background.Services
 
             // Filename is inferable as batch number
             var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
-            //var blockBlob = cloudBlobContainer.GetBlockBlobReference(exportFileName);
             var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
 
             // Set the batch number and region as metadata
             blockBlob.Metadata[batchNumberMetadataKey] = model.BatchNum.ToString();
             blockBlob.Metadata[batchRegionMetadataKey] = model.Region;
 
+            if(blockBlob.Properties.ContentType != MediaTypeNames.Application.Zip)
+            {
+                blockBlob.Properties.ContentType = MediaTypeNames.Application.Zip;
+            }
             await blockBlob.UploadFromStreamAsync(s);
             Logger.LogInformation($" {nameof(WriteToBlobAsync)} upload {exportFileName}");
             await blockBlob.SetMetadataAsync();
@@ -121,6 +125,10 @@ namespace Covid19Radar.Background.Services
                     await writer.FlushAsync();
                     await stream.FlushAsync();
                     stream.Position = 0;
+                    if (blockBlob.Properties.ContentType != MediaTypeNames.Application.Json)
+                    {
+                        blockBlob.Properties.ContentType = MediaTypeNames.Application.Json;
+                    }
                     await blockBlob.UploadFromStreamAsync(stream);
                 }
             }

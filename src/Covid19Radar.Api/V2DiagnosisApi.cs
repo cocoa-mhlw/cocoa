@@ -23,8 +23,6 @@ namespace Covid19Radar.Api
     public class V2DiagnosisApi
     {
         private const string CHAFF_HEADER = "X-Chaff";
-
-        private readonly IDiagnosisRepository DiagnosisRepository;
         private readonly ITemporaryExposureKeyRepository TekRepository;
         private readonly IDeviceValidationService DeviceCheck;
         private readonly IVerificationService VerificationService;
@@ -34,14 +32,12 @@ namespace Covid19Radar.Api
 
         public V2DiagnosisApi(
             IConfiguration config,
-            IDiagnosisRepository diagnosisRepository,
             ITemporaryExposureKeyRepository tekRepository,
             IDeviceValidationService deviceCheck,
             IVerificationService verificationService,
             IValidationServerService validationServerService,
             ILogger<V2DiagnosisApi> logger)
         {
-            DiagnosisRepository = diagnosisRepository;
             TekRepository = tekRepository;
             DeviceCheck = deviceCheck;
             Logger = logger;
@@ -82,12 +78,12 @@ namespace Covid19Radar.Api
             }
 
             // validation device
-            Logger.LogInformation("regions: " + (diagnosis?.Regions != null && diagnosis.Regions.Count() != 0 ? string.Join(", ", diagnosis.Regions) : "Empty") + ", " +
+            Logger.LogInformation($"regions: {((diagnosis?.Regions != null) && (diagnosis.Regions.Any()) ? string.Join(", ", diagnosis.Regions) : "Empty")}, " +
                       $"platform: {diagnosis?.Platform}, " +
                       $"deviceVerificationPayload: {diagnosis?.DeviceVerificationPayload}, " +
                       $"appPackageName: {diagnosis?.AppPackageName}, " +
                       $"padding: {diagnosis?.Padding}");
-            if (false == await DeviceCheck.Validation(diagnosis.Platform, diagnosis, reqTime))
+            if (!await DeviceCheck.Validation(diagnosis.Platform, diagnosis, reqTime))
             {
                 Logger.LogInformation($"Invalid Device");
                 return new BadRequestErrorMessageResult("Invalid Device");

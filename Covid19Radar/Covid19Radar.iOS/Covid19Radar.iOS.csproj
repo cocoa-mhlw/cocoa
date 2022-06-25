@@ -150,6 +150,38 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_UITest|iPhoneSimulator'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\iPhoneSimulator\Debug_UITest\</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;ENABLE_TEST_CLOUD;USE_MOCK;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification --weak-framework=ExposureNotification</MtouchExtraArgs>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchArch>x86_64</MtouchArch>
+    <OptimizePNGs>false</OptimizePNGs>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_UITest|iPhone'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\iPhone\Debug_UITest\</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;USE_MOCK;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -238,6 +270,7 @@
     <Compile Include="Services\ExternalNavigationService.cs" />
     <None Include="EntitlementsDebug.plist" />
     <Compile Include="Services\LocalPathService.cs" />
+    <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -330,6 +363,20 @@
     <BundleResource Include="Resources\Base.lproj\exposure_check_page_head%403x.png" />
     <BundleResource Include="Resources\Base.lproj\splash_logo%402x.png" />
     <BundleResource Include="Resources\Base.lproj\splash_logo%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\Nocontact10%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\Nocontact10%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\Nocontact10%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\Nocontact10%403x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%402x.png" />
+    <BundleResource Include="Resources\zh-Hans.lproj\Nocontact10%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\tutorial_img_1%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\tutorial_img_1%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_1%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_1%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_2%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_2%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_3%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\img_number_3%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -352,7 +399,7 @@
       <Version>8.1.97</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>1.7.0</Version>
+      <Version>1.7.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
@@ -360,9 +407,9 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>5.0.0.2291</Version>
+      <Version>5.0.0.2337</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
       <Version>1.2.3-alpha01</Version>

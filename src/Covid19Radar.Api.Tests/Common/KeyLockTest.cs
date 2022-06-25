@@ -2,9 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-using Covid19Radar.Api;
 using Covid19Radar.Api.Common;
-using Microsoft.AspNetCore.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -36,7 +34,10 @@ namespace Covid19Radar.Api.Tests.Common
             var dic = Dictionary;
             dic.Clear();
             // action
-            using (var l = new KeyLock(uuid)) { }
+            using (var l = new KeyLock(uuid))
+            {
+                Assert.IsNotNull(l);
+            }
         }
 
         [TestMethod]
@@ -121,7 +122,7 @@ namespace Covid19Radar.Api.Tests.Common
             // Assert
             Assert.AreEqual(255, dic.Count);
 
-            foreach(var lockItem in lockItems.ToArray())
+            foreach (var lockItem in lockItems.ToArray())
             {
                 // dispose
                 lockItem.Dispose();

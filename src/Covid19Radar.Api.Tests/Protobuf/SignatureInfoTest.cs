@@ -18,6 +18,8 @@ namespace Covid19Radar.Api.Tests.Protobuf
         {
             // preparation
             var instance = new SignatureInfo();
+            // assert
+            Assert.IsNotNull(instance);
         }
 
         [TestMethod]

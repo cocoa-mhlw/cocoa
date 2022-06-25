@@ -30,6 +30,8 @@
             <Color x:Key="HomePageLink">#066AB9</Color>
             <Color x:Key="MenuIconColor">#066AB9</Color>
             <Color x:Key="LinkColor">#066AB9</Color>
+            <Color x:Key="CheckedRadioButtonBackground">#E8F7FF</Color>
+            <Color x:Key="DisabledRadioButtonBackground">#EEEEEE</Color>
 
             <!--  Icons  -->
             <x:String x:Key="IconProfile">&#xf2bd;</x:String>
@@ -276,16 +278,15 @@
                 <Setter Property="VerticalOptions" Value="Start" />
             </Style>
 
-            <Style x:Key="FrameCardViewStyle" TargetType="Frame">
+            <Style x:Key="ViewCellFrameStyle" TargetType="Frame">
                 <Setter Property="CornerRadius" Value="6" />
-                <Setter Property="Margin" Value="5" />
-                <Setter Property="Padding" Value="10" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-                <Setter Property="OutlineColor" Value="LightGray" />
+                <Setter Property="Margin" Value="20,5" />
+                <Setter Property="Padding" Value="10" />
                 <Setter Property="BorderColor" Value="LightGray" />
             </Style>
 
-            <Style x:Key="FrameCardViewStyle_Diabled" TargetType="Frame" BasedOn="{StaticResource FrameCardViewStyle}">
+            <Style x:Key="ViewCellFrameStyle_Diabled" TargetType="Frame" BasedOn="{StaticResource ViewCellFrameStyle}">
                 <Setter Property="Opacity" Value="0.5" />
             </Style>
 

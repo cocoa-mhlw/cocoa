@@ -20,7 +20,6 @@ namespace Covid19Radar.Api
     public class TemporaryExposureKeysApi
     {
         private readonly ITemporaryExposureKeyExportRepository TekExport;
-        private readonly ILogger<TemporaryExposureKeysApi> Logger;
         private readonly string ExportKeyUrl;
         private readonly string TekExportBlobStorageContainerPrefix;
         private readonly IValidationServerService ValidationServerService;
@@ -32,7 +31,6 @@ namespace Covid19Radar.Api
             ILogger<TemporaryExposureKeysApi> logger
             )
         {
-            Logger = logger;
             TekExport = tekExportRepository;
             ExportKeyUrl = config.ExportKeyUrl();
             TekExportBlobStorageContainerPrefix = config.TekExportBlobStorageContainerPrefix();

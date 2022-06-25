@@ -15,5 +15,7 @@ namespace Covid19Radar.Services
         Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request);
 
         Task<ApiResponse<LogStorageSas>> GetLogStorageSas();
+
+        Task<ApiResponse<string>> PutEventLog(V1EventLogRequest request);
     }
 }

@@ -26,7 +26,8 @@ namespace Covid19Radar.UnitTests.Services
         private readonly MockRepository mockRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IHttpClientService> mockHttpClientService;
-        private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
+
+        private readonly ReleaseServerConfigurationRepository _serverConfigurationRepository;
 
         #endregion
 
@@ -37,7 +38,7 @@ namespace Covid19Radar.UnitTests.Services
             mockRepository = new MockRepository(MockBehavior.Default);
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockHttpClientService = mockRepository.Create<IHttpClientService>();
-            mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
+            _serverConfigurationRepository = new ReleaseServerConfigurationRepository();
         }
 
         #endregion
@@ -49,7 +50,7 @@ namespace Covid19Radar.UnitTests.Services
             return new HttpDataService(
                 mockLoggerService.Object,
                 mockHttpClientService.Object,
-                mockServerConfigurationRepository.Object
+                _serverConfigurationRepository
                 );
         }
 
@@ -77,8 +78,6 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
-            mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
-                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
 
@@ -106,8 +105,6 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
-            mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
-                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
 
@@ -135,8 +132,6 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
-            mockServerConfigurationRepository.Setup(x => x.UserRegisterApiEndpoint)
-                .Returns(IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/register"));
 
             var unitUnderTest = CreateService();
 
@@ -173,8 +168,6 @@ namespace Covid19Radar.UnitTests.Services
             }));
 
             mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
-            mockServerConfigurationRepository.Setup(x => x.DiagnosisKeyRegisterApiUrls)
-                .Returns(new List<string>() { IServerConfigurationRepository.CombineAsUrl(AppSettings.Instance.ApiUrlBase, "api/v3/diagnosis") });
 
             var unitUnderTest = CreateService();
 
@@ -226,6 +219,78 @@ namespace Covid19Radar.UnitTests.Services
             Assert.Equal("padding", jsonContent["padding"].Value<string>());
 
             Assert.Null(jsonContent["userUuid"]);
+            Assert.Null(mockHttpClient.DefaultRequestHeaders.Authorization);
+        }
+
+        #endregion
+
+        #region PutEventLogTests
+
+        [Fact]
+        public async Task PutEventLogTests_Success()
+        {
+            HttpContent requestContent = null;
+            var mockHttpClient = new HttpClient(new MockHttpHandler((r, c) =>
+            {
+                var absoluteUri = r.RequestUri.AbsoluteUri;
+                if (absoluteUri.EndsWith("/api/v1/event_log"))
+                {
+                    requestContent = r.Content;
+                    var response = new HttpResponseMessage(HttpStatusCode.Created);
+                    response.Content = new StringContent("");
+                    return response;
+                }
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }));
+
+            mockHttpClientService.Setup(x => x.Create()).Returns(mockHttpClient);
+
+            var unitUnderTest = CreateService();
+
+            var request = new V1EventLogRequest()
+            {
+                IdempotencyKey = "05A6A158-E216-4599-B99E-3708D360FF2F",
+                Platform = "platform",
+                AppPackageName = "app-package-name",
+                DeviceVerificationPayload = "device-verification-payload",
+                EventLogs = new List<EventLog>()
+                {
+                    new EventLog()
+                    {
+                        HasConsent = true,
+                        Epoch = 1000,
+                        Type = "type",
+                        Subtype = "subtype",
+                        Content = "content"
+                    }
+                }
+            };
+
+            var result = await unitUnderTest.PutEventLog(request);
+
+            Assert.Equal((int)HttpStatusCode.Created, result.StatusCode);
+            Assert.NotNull(requestContent);
+
+            var stringContent = await requestContent.ReadAsStringAsync();
+            Assert.NotEmpty(stringContent);
+
+            var jsonContent = JsonConvert.DeserializeObject(stringContent) as JObject;
+            Assert.NotNull(jsonContent);
+
+            Assert.Equal("05A6A158-E216-4599-B99E-3708D360FF2F", jsonContent["idempotencyKey"].Value<string>());
+            Assert.Equal("platform", jsonContent["platform"].Value<string>());
+            Assert.Equal("app-package-name", jsonContent["appPackageName"].Value<string>());
+            Assert.Equal("device-verification-payload", jsonContent["deviceVerificationPayload"].Value<string>());
+
+            var eventLogs = jsonContent["eventLogs"] as JArray;
+            Assert.Single(eventLogs);
+
+            Assert.True(eventLogs[0]["hasConsent"].Value<bool>());
+            Assert.Equal(1000, eventLogs[0]["epoch"].Value<long>());
+            Assert.Equal("type", eventLogs[0]["type"].Value<string>());
+            Assert.Equal("subtype", eventLogs[0]["subtype"].Value<string>());
+            Assert.Equal("content", eventLogs[0]["content"].Value<string>());
+
             Assert.Null(mockHttpClient.DefaultRequestHeaders.Authorization);
         }
 

@@ -28,7 +28,7 @@ namespace Covid19Radar.Common
         /// <summary>
         /// Number of days covered from the date of diagnosis or onset
         /// </summary>
-        public const int DaysToSendTek = -3;
+        public const int DaysToSendTek = -15;
 
         /// <summary>
         /// Max Error Count
@@ -61,7 +61,7 @@ namespace Covid19Radar.Common
         /// DiagnosisApi version.
         /// (e.g. v2, v3)
         /// </summary>
-        public const string DiagnosisApiVersionCode = "v2";
+        public const string DiagnosisApiVersionCode = "v3";
 
         /// <summary>
         /// Number of day(s) that ExposureConfiguration file downloaded cache.
@@ -80,6 +80,16 @@ namespace Covid19Radar.Common
         /// Delay for error in TEK re-registration.
         /// </summary>
         public const int DelayForRegistrationErrorMillis = 5000;
+
+        /// <summary>
+        /// Maximum size of event log content to be sent.
+        /// </summary>
+        public const long EventLogMaxRequestSizeInBytes = 8 * 1024 * 1024; // 8 MiB
+
+        /// <summary>
+        /// Number of retries to send event log.
+        /// </summary>
+        public const int EventLogMaxRetry = 3;
 
         #region Other Private Methods
 

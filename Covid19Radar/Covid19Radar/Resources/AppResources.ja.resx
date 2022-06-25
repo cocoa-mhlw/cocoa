@@ -76,8 +76,8 @@
     <value>診断を提出します。</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
-    <value>設定</value>
-    <comment>設定</comment>
+    <value>このアプリについて</value>
+    <comment>このアプリについて</comment>
   </data>
   <data name="ButtonCancel" xml:space="preserve">
     <value>キャンセル</value>
@@ -140,12 +140,16 @@
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>使い方</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpMenuPageMenu" xml:space="preserve">
-    <value>使い方</value>
-    <comment>使い方</comment>
+    <value>Q&amp;A</value>
+    <comment>Q&amp;A</comment>
+  </data>
+  <data name="HelpMenuPageMenuReadText" xml:space="preserve">
+    <value>きゅーあんどえー</value>
+    <comment>Q&amp;A</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
     <value>接触の記録方法</value>
@@ -184,12 +188,12 @@
     <comment>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</comment>
   </data>
   <data name="HelpPage4ButtonText" xml:space="preserve">
-    <value>アプリの設定へ</value>
-    <comment>アプリの設定へ</comment>
+    <value>このアプリについてへ</value>
+    <comment>このアプリについてへ</comment>
   </data>
   <data name="HelpPage4Description1" xml:space="preserve">
-    <value>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</value>
-    <comment>メニューの設定から「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
+    <value>メニューのこのアプリについてから「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</value>
+    <comment>メニューのこのアプリについてから「アプリを初期化」を選択することで、保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻すことができます。</comment>
   </data>
   <data name="HelpPage4Description2" xml:space="preserve">
     <value>再度アプリの利用を開始するまで、接触の記録や通知は行われなくなります。</value>
@@ -295,12 +299,8 @@
     <comment>スコアは、受信した信号の強さと時間から算出しています。一般的な条件では1m以内・15分以上の接触で100以上になるように設定しています。</comment>
   </data>
   <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
-    <comment>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。。</comment>
-  </data>
-  <data name="LowRiskContactPageAnnotationDecription2" xml:space="preserve">
-    <value>※日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
-    <comment>※日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</value>
+    <comment>日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
   </data>
   <data name="NoRiskContactPageLabel" xml:space="preserve">
     <value>陽性登録者のスマートフォンからの信号を受信していません</value>
@@ -309,6 +309,10 @@
   <data name="NoRiskContactPageDescription" xml:space="preserve">
     <value>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</value>
     <comment>行動圏内には、陽性登録者はいなかったようです。引き続き感染予防に留意しながらお過ごしください。</comment>
+  </data>
+  <data name="ExportExposureData" xml:space="preserve">
+    <value>情報を保存</value>
+    <comment>情報を保存</comment>
   </data>
   <data name="TutorialPage3Title" xml:space="preserve">
     <value>利用規約</value>
@@ -327,8 +331,8 @@
     <comment>ホーム画面へ</comment>
   </data>
   <data name="TutorialPage6ButtonText2" xml:space="preserve">
-    <value>使い方を学ぶ</value>
-    <comment>使い方を学ぶ</comment>
+    <value>Q&amp;Aへ</value>
+    <comment>Q&amp;Aへ</comment>
   </data>
   <data name="HelpPage1MainTitle" xml:space="preserve">
     <value>端末の識別</value>
@@ -431,30 +435,34 @@
     <comment>次へ</comment>
   </data>
   <data name="TutorialPage1Description1" xml:space="preserve">
-    <value>本アプリをスマートフォンに設定した人どうしの接触を記録します。</value>
-    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+    <value>本アプリを匿名で利用する陽性登録者の行動データを元に、あなたの接触結果を表示します。</value>
+    <comment>本アプリを匿名で利用する陽性登録者の行動データを元に、あなたの接触結果を表示します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</value>
-    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <value>このアプリ内でできること</value>
+    <comment>このアプリ内でできること</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
-    <value>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</value>
-    <comment>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</comment>
+    <value>陽性登録者との接触結果を確認</value>
+    <comment>陽性登録者との接触結果を確認</comment>
   </data>
-  <data name="TutorialPage1Title1" xml:space="preserve">
-    <value>このアプリでできること</value>
-    <comment>このアプリでできること</comment>
+  <data name="TutorialPage1Description4" xml:space="preserve">
+    <value>接触の通知と適切な行動の確認</value>
+    <comment>接触の通知と適切な行動の確認</comment>
   </data>
-  <data name="TutorialPage1Title2" xml:space="preserve">
-    <value>このアプリでできること</value>
-    <comment>このアプリでできること</comment>
+  <data name="TutorialPage1Description5" xml:space="preserve">
+    <value>匿名で陽性登録</value>
+    <comment>匿名で陽性登録</comment>
+  </data>
+  <data name="TutorialPage1Title" xml:space="preserve">
+    <value>COCOAの機能</value>
+    <comment>COCOAの機能</comment>
   </data>
   <data name="TutorialPage4Button1" xml:space="preserve">
     <value>有効にする</value>
     <comment>有効にする</comment>
   </data>
-  <data name="TutorialPage4Button2" xml:space="preserve">
+  <data name="TutorialPage4Link" xml:space="preserve">
     <value>あとで設定する</value>
     <comment>あとで設定する</comment>
   </data>
@@ -462,9 +470,9 @@
     <value>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth（ブルートゥース）（※）通信を有効にしてください。</value>
     <comment>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth（ブルートゥース）（※）通信を有効にしてください。</comment>
   </data>
-  <data name="TutorialPage4Label" xml:space="preserve">
-    <value>技術的な詳細について</value>
-    <comment>技術的な詳細について</comment>
+  <data name="TutorialPage4Description2" xml:space="preserve">
+    <value>iPhoneをお使いの方は設定よりBluetoothをONに設定してください。</value>
+    <comment>iPhoneをお使いの方は設定よりBluetoothをONに設定してください。</comment>
   </data>
   <data name="TutorialPage4Title1" xml:space="preserve">
     <value>接触検知をご利用いただくために</value>
@@ -910,49 +918,25 @@
     <value>同意して陽性登録する</value>
     <comment>同意して陽性登録する</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_1" xml:space="preserve">
-    <value>陽性登録の前にお読みください</value>
-    <comment>陽性登録の前にお読みください</comment>
+  <data name="SubmitConsentPageDescription1" xml:space="preserve">
+    <value>陽性登録により、個人が特定されることはありません。</value>
+    <comment>陽性登録により、個人が特定されることはありません。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_2" xml:space="preserve">
-    <value>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</value>
-    <comment>・本アプリで陽性登録すると、スマートフォン内で日毎に生成された符号が、通知サーバーにアップロードされます</comment>
+  <data name="SubmitConsentPageDescription2" xml:space="preserve">
+    <value>接触があった方に接触検知の通知を送信します。</value>
+    <comment>接触があった方に接触検知の通知を送信します。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_3" xml:space="preserve">
-    <value>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</value>
-    <comment>・通知サーバーの符号情報から判定の結果、接触した人に通知が届きます</comment>
+  <data name="SubmitConsentPageDescription3" xml:space="preserve">
+    <value>陽性診断された場合、医療機関や保健所に登録されているメールアドレスや携帯電話番号に「処理番号」が通知されます。</value>
+    <comment>陽性診断された場合、医療機関や保健所に登録されているメールアドレスや携帯電話番号に「処理番号」が通知されます。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_4" xml:space="preserve">
-    <value>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</value>
-    <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  <data name="SubmitConsentPageDescription4" xml:space="preserve">
+    <value>処理番号をCOCOAに登録するとサーバーに送信されます。 正しい番号であるか照会し、正しければ登録が完了します。</value>
+    <comment>処理番号をCOCOAに登録するとサーバーに送信されます。 正しい番号であるか照会し、正しければ登録が完了します。</comment>
   </data>
-  <data name="SubmitConsentPageDescription1_5" xml:space="preserve">
-    <value>・感染拡大防止のため、登録にご協力をお願いします</value>
-    <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
-  </data>
-  <data name="SubmitConsentPageDescription1_6" xml:space="preserve">
-    <value>詳しくは以下をお読みください</value>
-    <comment>詳しくは以下をお読みください</comment>
-  </data>
-  <data name="SubmitConsentPageDescription6" xml:space="preserve">
-    <value>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</value>
-    <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
-  </data>
-  <data name="SubmitConsentPageDescription7" xml:space="preserve">
-    <value>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</value>
-    <comment>※新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</comment>
-  </data>
-  <data name="SubmitConsentPageDescription8" xml:space="preserve">
-    <value>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOA（※）の陽性登録に必要な「処理番号」が通知されます</value>
-    <comment>管理システムに陽性情報が報告されると、登録されている携帯電話番号またはメールアドレスに、COCOA（※）の陽性登録に必要な「処理番号」が通知されます</comment>
-  </data>
-  <data name="SubmitConsentPageDescription9" xml:space="preserve">
-    <value>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</value>
-    <comment>処理番号をCOCOAに登録すると、携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</comment>
-  </data>
-  <data name="SubmitConsentPageDescription10" xml:space="preserve">
-    <value>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</value>
-    <comment>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
+  <data name="SubmitConsentPageDescription5" xml:space="preserve">
+    <value>スマートフォン内で日毎に生成された符号が、サーバーにアップロードされます。 判定の結果、接触した人に通知が届きますが、個人が特定される情報が知られることはありません。</value>
+    <comment>スマートフォン内で日毎に生成された符号が、サーバーにアップロードされます。 判定の結果、接触した人に通知が届きますが、個人が特定される情報が知られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
     <value>陽性情報を登録</value>
@@ -1164,6 +1148,14 @@
     <value>陽性者との接触の可能性などの通知を受け取るには、設定からCOCOAの通知へのアクセスを「許可」してください。</value>
     <comment>陽性者との接触の可能性などの通知を受け取るには、設定からCOCOAの通知へのアクセスを「許可」してください。</comment>
   </data>
+  <data name="TemporarilyUnavailableWarningMessage" xml:space="preserve">
+    <value>アプリを再起動するか、しばらく経ってから再度ご確認ください。</value>
+    <comment>アプリを再起動するか、しばらく経ってから再度ご確認ください。</comment>
+  </data>
+  <data name="TemporarilyUnavailableWarningTitle" xml:space="preserve">
+    <value>一時的に利用できません</value>
+    <comment>一時的に利用できません</comment>
+  </data>
   <data name="TroubleshootingPageTitle" xml:space="preserve">
     <value>対処方法</value>
     <comment>対処方法</comment>
@@ -1347,8 +1339,12 @@
   </data>
 
   <data name="ExposuresPageToUtcDescription" xml:space="preserve">
-    <value>日時については、協定世界時（UTC）を設定されているタイムゾーンに変換して、期間として表示しています。</value>
-    <comment>日時については、協定世界時（UTC）をを設定されているタイムゾーンに変換して、期間として表示しています。</comment>
+    <value>※日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</value>
+    <comment>※日時については、協定世界時（UTC）を端末で設定されているタイムゾーン（{0}）に変換して、期間として表示しています。</comment>
+  </data>
+  <data name="ExposuresPageTimeDescription" xml:space="preserve">
+    <value>※接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</value>
+    <comment>※接触時間は合計です。複数の陽性登録者が近くにいた場合、大きな接触時間が表示される場合があります。</comment>
   </data>
   <data name="ExposuresPageFrom" xml:space="preserve">
     <value></value>
@@ -1371,10 +1367,6 @@
     <comment>yyyy年M月d日 tth時mm分</comment>
   </data>
 
-  <data name="NotContactPageTitle" xml:space="preserve">
-    <value>過去14日間の接触</value>
-    <comment>過去14日間の接触</comment>
-  </data>
 	<data name="NotContactPageLabel1" xml:space="preserve">
     <value>陽性者との接触は確認されませんでした</value>
     <comment>陽性者との接触は確認されませんでした</comment>
@@ -1383,9 +1375,9 @@
     <value>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</value>
     <comment>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</comment>
   </data>
-	<data name="NotContactPageButtonText" xml:space="preserve">
-    <value>アプリを周りの人に知らせる</value>
-    <comment>アプリを周りの人に知らせる</comment>
+  <data name="NotContactPagePictogramHelpText" xml:space="preserve">
+    <value>換気、咳エチケット、手洗い、密集回避、密接回避、密閉回避、のイラスト</value>
+    <comment>日本語のみ：換気、咳エチケット、手洗い、密集回避、密接回避、密閉回避、のイラスト</comment>
   </data>
 
   <data name="GeneralErrorTitle" xml:space="preserve">
@@ -1421,6 +1413,28 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   <data name="ToHomeButton" xml:space="preserve">
     <value>ホーム画面へ</value>
     <comment>ホーム画面へ</comment>
+  </data>
+
+  <data name="CircledDigitOneImageText" xml:space="preserve">
+    <value>1</value>
+    <comment>1</comment>
+  </data>
+  <data name="CircledDigitTwoImageText" xml:space="preserve">
+    <value>2</value>
+    <comment>2</comment>
+  </data>
+  <data name="CircledDigitThreeImageText" xml:space="preserve">
+    <value>3</value>
+    <comment>3</comment>
+  </data>
+
+  <data name="UserProfileNotSupportDialogTitle" xml:space="preserve">
+    <value>複数ユーザーはサポートしていません</value>
+    <comment>複数ユーザーはサポートしていません</comment>
+  </data>
+  <data name="UserProfileNotSupportDialogDescription" xml:space="preserve">
+    <value>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</value>
+    <comment>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
   </data>
 
 </root>

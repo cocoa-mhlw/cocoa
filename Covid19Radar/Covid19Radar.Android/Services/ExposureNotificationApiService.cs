@@ -47,9 +47,17 @@ namespace Covid19Radar.Droid.Services
                     apiException.Status.StartResolutionForResult(Platform.CurrentActivity, REQUEST_EN_START);
                     return false;
                 }
+                else if(apiException.StatusCode == CommonStatusCodes.ApiNotConnected)
+                {
+                    throw new ENException(ENException.Code_Android.FAILED_NOT_SUPPORTED,
+                        "StartExposureNotificationAsync ApiNotConnected");
+                }
                 else
                 {
-                    throw apiException;
+                    throw new AndroidGooglePlayServicesApiException(
+                        apiException.StatusCode,
+                        apiException.Message
+                        );
                 }
             }
         }
@@ -58,7 +66,18 @@ namespace Covid19Radar.Droid.Services
 
         public override async Task<IList<ExposureNotificationStatus>> GetStatusesAsync()
         {
-            return await Client.GetStatusesAsync();
+            try
+            {
+                return await Client.GetStatusesAsync();
+            }
+            catch(ApiException apiException)
+            {
+                throw new AndroidGooglePlayServicesApiException(
+                    apiException.StatusCode,
+                    apiException.Message
+                    );
+            }
+
         }
 
         public override async Task<List<TemporaryExposureKey>> GetTemporaryExposureKeyHistoryAsync()
@@ -77,7 +96,10 @@ namespace Covid19Radar.Droid.Services
                 }
                 else
                 {
-                    throw apiException;
+                    throw new AndroidGooglePlayServicesApiException(
+                        apiException.StatusCode,
+                        apiException.Message
+                        );
                 }
             }
         }
@@ -121,7 +143,10 @@ namespace Covid19Radar.Droid.Services
                 }
                 else
                 {
-                    throw apiException;
+                    throw new AndroidGooglePlayServicesApiException(
+                        apiException.StatusCode,
+                        apiException.Message
+                        );
                 }
             }
         }
@@ -142,7 +167,10 @@ namespace Covid19Radar.Droid.Services
                 }
                 else
                 {
-                    throw apiException;
+                    throw new AndroidGooglePlayServicesApiException(
+                        apiException.StatusCode,
+                        apiException.Message
+                        );
                 }
             }
         }

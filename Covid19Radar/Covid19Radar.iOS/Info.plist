@@ -55,6 +55,7 @@
 	<array>
 		<string>APP_PACKAGE_NAME.exposure-notification</string>
 		<string>APP_PACKAGE_NAME.delete-old-logs</string>
+		<string>APP_PACKAGE_NAME.eventlog-submission</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

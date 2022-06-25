@@ -18,6 +18,8 @@ namespace Covid19Radar.Api.Tests.Common.Models
         {
             // action
             var model = new TemporaryExposureKeyExportModel();
+            // assert
+            Assert.IsNotNull(model);
         }
 
         [TestMethod]

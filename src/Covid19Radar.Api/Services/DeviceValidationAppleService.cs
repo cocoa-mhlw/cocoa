@@ -84,29 +84,10 @@ namespace Covid19Radar.Api.Services
                 var response = await ClientApple.SendAsync(request);
                 if (!response.IsSuccessStatusCode)
                 {
-                    var responseBody = await response.Content.ReadAsStringAsync();
                     Logger.LogWarning($"iOS device check failed.\r\n{nameof(HttpRequestMessage)} : {request}\r\n{nameof(HttpResponseMessage)} : {response}");
                 }
 
-                //switch (response.StatusCode)
-                //{
-                //    // 200 OK:                  The transaction was successful
-                //    // 200 Bit State Not Found: The bit state wasn't found
-                //    case System.Net.HttpStatusCode.OK:
-                //        if (response.ReasonPhrase == "OK") return true;
-
-                //        break;
-                //    // 
-                //    default:
-                //        break;
-                //}
-                if (response.StatusCode != System.Net.HttpStatusCode.OK)
-                {
-                    // FIXME: When call iOS Device check, return error sometimes, Until the cause is known, ignored device check
-                    return true;
-                }
-
-                return true;
+                return (response.StatusCode == System.Net.HttpStatusCode.OK);
             }
             catch (Exception ex)
             {
@@ -130,37 +111,6 @@ namespace Covid19Radar.Api.Services
             };
             var cngKey = CngKey.Import(Convert.FromBase64String(p8FileContents), CngKeyBlobFormat.Pkcs8PrivateBlob);
             return Jose.JWT.Encode(payload, cngKey, Jose.JwsAlgorithm.ES256, headers);
-        }
-
-        static string CleanP8Key(string p8Contents)
-        {
-            // Remove whitespace
-            var tmp = Regex.Replace(p8Contents, "\\s+", string.Empty, RegexOptions.Singleline);
-
-            // Remove `---- BEGIN PRIVATE KEY ----` bits
-            tmp = Regex.Replace(tmp, "-{1,}.*?-{1,}", string.Empty, RegexOptions.Singleline);
-
-            return tmp;
-        }
-
-        static string Base64UrlEncode(byte[] data)
-        {
-            var base64 = Convert.ToBase64String(data, 0, data.Length);
-            var base64Url = new StringBuilder();
-
-            foreach (var c in base64)
-            {
-                if (c == '+')
-                    base64Url.Append('-');
-                else if (c == '/')
-                    base64Url.Append('_');
-                else if (c == '=')
-                    break;
-                else
-                    base64Url.Append(c);
-            }
-
-            return base64Url.ToString();
         }
 
     }

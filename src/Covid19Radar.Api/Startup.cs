@@ -7,11 +7,13 @@ using Covid19Radar.Api.Extensions;
 using Covid19Radar.Api.Services;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 [assembly: FunctionsStartup(typeof(Covid19Radar.Api.Startup))]
 
 namespace Covid19Radar.Api
 {
+    [ExcludeFromCodeCoverage]
     public class Startup : FunctionsStartup
     {
         public override void Configure(IFunctionsHostBuilder builder)
@@ -25,7 +27,6 @@ namespace Covid19Radar.Api
             builder.Services.AddSingleton<IAuthorizedAppRepository, ConfigAuthorizedAppRepository>();
             builder.Services.AddSingleton<IUserRepository, CosmosUserRepository>();
             builder.Services.AddSingleton<ISequenceRepository, CosmosSequenceRepository>();
-            builder.Services.AddSingleton<IDiagnosisRepository, CosmosDiagnosisRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyRepository, CosmosTemporaryExposureKeyRepository>();
             builder.Services.AddSingleton<ITemporaryExposureKeyExportRepository, CosmosTemporaryExposureKeyExportRepository>();
             builder.Services.AddSingleton<IVerificationService, CustomVerificationService>();

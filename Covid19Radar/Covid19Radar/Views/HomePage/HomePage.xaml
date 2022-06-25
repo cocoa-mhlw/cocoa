@@ -69,22 +69,21 @@
                                 Style="{StaticResource DefaultLabelCaption}"
                                 VerticalOptions="Center"
                                 Text="{x:Static resources:AppResources.HomePageENStatusActiveDescription}" />
-                            <ffimageloading:CachedImage
+                            <ImageButton
                                 x:Name="activeQuestionImage"
-                                AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
+                            AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
                                 AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextAndroid}"
-                                Aspect="AspectFit"
-                                Source="question_icon.png">
-                                <ffimageloading:CachedImage.IsVisible>
+                                Source="question_icon.png"
+                                Padding="5"
+                                BackgroundColor="Transparent"
+                                Command="{Binding Path=OnClickQuestionIcon}">
+                                <ImageButton.IsVisible>
                                     <OnPlatform
-                                        x:TypeArguments="x:Boolean"
-                                        Android="True"
-                                        iOS="False" />
-                                </ffimageloading:CachedImage.IsVisible>
-                                <ffimageloading:CachedImage.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=OnClickQuestionIcon}" />
-                                </ffimageloading:CachedImage.GestureRecognizers>
-                            </ffimageloading:CachedImage>
+                                    x:TypeArguments="x:Boolean"
+                                    Android="True"
+                                    iOS="False" />
+                                </ImageButton.IsVisible>
+                            </ImageButton>
                             <ImageButton
                                 x:Name="activeQuestionButton"
                                 AutomationProperties.IsInAccessibleTree="{Binding IsVisibleENStatusActiveLayout}"
