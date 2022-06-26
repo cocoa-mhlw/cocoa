@@ -114,7 +114,7 @@ namespace Covid19Radar.Droid
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("Failed to schedule LogPeriodicDeleteService", exception);
+                _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
             }
         }
 
