@@ -19,13 +19,13 @@ namespace Covid19Radar.Droid.Services.Migration
         };
 
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
-        private readonly AbsLogPeriodicDeleteService _logPeriodicDeleteService;
+        private readonly AbsDataMaintainanceBackgroundService _logPeriodicDeleteService;
 
         private readonly ILoggerService _loggerService;
 
         public WorkManagerMigrator(
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
-            AbsLogPeriodicDeleteService logPeriodicDeleteService,
+            AbsDataMaintainanceBackgroundService logPeriodicDeleteService,
             ILoggerService loggerService
             )
         {

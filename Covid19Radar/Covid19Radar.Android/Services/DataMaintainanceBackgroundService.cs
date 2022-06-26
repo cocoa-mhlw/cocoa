@@ -15,16 +15,17 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.Droid.Services.Logs
 {
-    public class LogPeriodicDeleteService : AbsLogPeriodicDeleteService
+    public class DataMaintainanceBackgroundService : AbsDataMaintainanceBackgroundService
     {
-        private const string CURRENT_WORK_NAME = "log_periodic_delete_worker_20220622";
+        private const string CURRENT_WORK_NAME = "data_maintainance_worker_20220626";
 
         private static readonly long INTERVAL_IN_HOURS = 24;
         private static readonly long BACKOFF_DELAY_IN_MINUTES = 60;
 
-        public LogPeriodicDeleteService(
+        public DataMaintainanceBackgroundService(
+            ILogFileService logFileService,
             ILoggerService loggerService
-            ) : base(loggerService)
+            ) : base(logFileService, loggerService)
         {
         }
 
@@ -61,8 +62,9 @@ namespace Covid19Radar.Droid.Services.Logs
     [Preserve]
     public class BackgroundWorker : Worker
     {
+        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceBackgroundService
+            => new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
         private Lazy<ILoggerService> _loggerService => new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
-        private Lazy<ILogFileService> _logFileService => new Lazy<ILogFileService>(() => ContainerLocator.Current.Resolve<ILogFileService>());
 
         public BackgroundWorker(Context context, WorkerParameters workerParameters)
             : base(context, workerParameters)
@@ -71,16 +73,14 @@ namespace Covid19Radar.Droid.Services.Logs
 
         public override Result DoWork()
         {
+            var dataMaintainanceBackgroundService = _dataMaintainanceBackgroundService.Value;
             var loggerService = _loggerService.Value;
-            var logFileService = _logFileService.Value;
 
             loggerService.StartMethod();
 
             try
             {
-                logFileService.Rotate();
-                loggerService.Info("Success: Periodic deletion of old logs.");
-
+                dataMaintainanceBackgroundService.ExecuteAsync().GetAwaiter().GetResult();
                 return Result.InvokeSuccess();
             }
             catch (IOException exception)

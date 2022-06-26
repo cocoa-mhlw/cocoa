@@ -69,12 +69,12 @@ namespace Covid19Radar.Droid.Services.Migration
     public class MigrationProccessService : IMigrationProcessService
     {
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
-        private readonly AbsLogPeriodicDeleteService _logPeriodicDeleteService;
+        private readonly AbsDataMaintainanceBackgroundService _logPeriodicDeleteService;
         private readonly ILoggerService _loggerService;
 
         public MigrationProccessService(
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
-            AbsLogPeriodicDeleteService logPeriodicDeleteService,
+            AbsDataMaintainanceBackgroundService logPeriodicDeleteService,
             ILoggerService loggerService
             )
         {

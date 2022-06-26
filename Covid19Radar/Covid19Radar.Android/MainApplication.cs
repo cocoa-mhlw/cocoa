@@ -54,8 +54,8 @@ namespace Covid19Radar.Droid
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
-        private Lazy<AbsLogPeriodicDeleteService> _logPeriodicDeleteService
-            = new Lazy<AbsLogPeriodicDeleteService>(() => ContainerLocator.Current.Resolve<AbsLogPeriodicDeleteService>());
+        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceService
+            = new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
 
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
@@ -110,7 +110,7 @@ namespace Covid19Radar.Droid
 
             try
             {
-                _logPeriodicDeleteService.Value.Schedule();
+                _dataMaintainanceService.Value.Schedule();
             }
             catch (Exception exception)
             {
@@ -131,7 +131,7 @@ namespace Covid19Radar.Droid
             // Services
             container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
             container.Register<ILocalPathService, LocalPathService>(Reuse.Singleton);
-            container.Register<AbsLogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
+            container.Register<AbsDataMaintainanceBackgroundService, DataMaintainanceBackgroundService>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, Services.SecureStorageService>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);

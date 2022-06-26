@@ -175,7 +175,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CloseApplicationService.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
-    <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
     <Compile Include="Services\SecureStorageService.cs" />
@@ -192,6 +191,7 @@
     <Compile Include="Services\IPlatformService.cs" />
     <Compile Include="Services\LocalPathService.cs" />
     <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
+    <Compile Include="Services\DataMaintainanceBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appcenter-pre-build.sh" />
@@ -601,7 +601,6 @@
   <ItemGroup>
     <Folder Include="Renderers\" />
     <Folder Include="Resources\xml\" />
-    <Folder Include="Services\Logs\" />
     <Folder Include="Resources\drawable-zh-xxhdpi\" />
     <Folder Include="Resources\drawable-zh-xhdpi\" />
     <Folder Include="Services\Migration\" />

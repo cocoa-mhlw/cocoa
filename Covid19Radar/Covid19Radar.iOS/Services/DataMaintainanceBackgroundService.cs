@@ -13,7 +13,7 @@ using Xamarin.Essentials;
 
 namespace Covid19Radar.iOS.Services.Logs
 {
-    public class LogPeriodicDeleteService : AbsLogPeriodicDeleteService
+    public class DataMaintainanceBackgroundService : AbsDataMaintainanceBackgroundService
     {
         #region Constants
 
@@ -23,24 +23,21 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Static Fields
 
-        private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".delete-old-logs";
+        private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".data-maintainance";
 
         #endregion
 
         #region Instance Fields
 
-        private readonly ILogFileService _logFileService;
-
         #endregion
 
         #region Constructors
 
-        public LogPeriodicDeleteService(
+        public DataMaintainanceBackgroundService(
             ILoggerService loggerService,
             ILogFileService logFileService
-            ) : base(loggerService)
+            ) : base(logFileService, loggerService)
         {
-            _logFileService = logFileService;
         }
 
         #endregion
@@ -60,11 +57,11 @@ namespace Covid19Radar.iOS.Services.Logs
                 var cancellationTokenSource = new CancellationTokenSource();
                 task.ExpirationHandler = cancellationTokenSource.Cancel;
 
-                _ = Task.Run(() =>
+                _ = Task.Run(async () =>
                 {
                     try
                     {
-                        _logFileService.Rotate();
+                        await ExecuteAsync();
                         task.SetTaskCompleted(true);
                     }
                     catch (OperationCanceledException exception)
@@ -108,7 +105,7 @@ namespace Covid19Radar.iOS.Services.Logs
 
             try
             {
-                BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
+                BGAppRefreshTaskRequest bgTaskRequest = new BGAppRefreshTaskRequest(BGTASK_IDENTIFIER)
                 {
                     EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS)
                 };
