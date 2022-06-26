@@ -25,7 +25,16 @@ namespace Covid19Radar.Services
 
         public async Task ExecuteAsync()
         {
-            _logFileService.Rotate();
+            loggerService.StartMethod();
+
+            try
+            {
+                _logFileService.Rotate();
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
         }
     }
 }
