@@ -19,18 +19,18 @@ namespace Covid19Radar.Droid.Services.Migration
         };
 
         private readonly AbsExposureDetectionBackgroundService _exposureDetectionBackgroundService;
-        private readonly AbsDataMaintainanceBackgroundService _logPeriodicDeleteService;
+        private readonly AbsDataMaintainanceBackgroundService _dataMaintainanceBackgroundService;
 
         private readonly ILoggerService _loggerService;
 
         public WorkManagerMigrator(
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
-            AbsDataMaintainanceBackgroundService logPeriodicDeleteService,
+            AbsDataMaintainanceBackgroundService dataMaintainanceBackgroundService,
             ILoggerService loggerService
             )
         {
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
-            _logPeriodicDeleteService = logPeriodicDeleteService;
+            _dataMaintainanceBackgroundService = dataMaintainanceBackgroundService;
             _loggerService = loggerService;
         }
 
@@ -42,7 +42,7 @@ namespace Covid19Radar.Droid.Services.Migration
             CancelOldWorks(workManager, OldWorkNames, _loggerService);
 
             _exposureDetectionBackgroundService.Schedule();
-            _logPeriodicDeleteService.Schedule();
+            _dataMaintainanceBackgroundService.Schedule();
 
             _loggerService.EndMethod();
 
