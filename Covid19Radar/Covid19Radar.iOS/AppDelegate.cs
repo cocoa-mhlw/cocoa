@@ -146,7 +146,7 @@ namespace Covid19Radar.iOS
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("Failed to schedule LogPeriodicDeleteService", exception);
+                _loggerService.Value.Exception("Failed to schedule DataMaintainanceService", exception);
             }
         }
 
