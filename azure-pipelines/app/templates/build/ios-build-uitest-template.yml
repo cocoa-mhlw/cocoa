@@ -33,7 +33,7 @@ steps:
     checkLatest: false # Optional
 
 - script: |
-    nuget restore Xamarin.TestCloud.Agent -Version 0.23.1
+    nuget restore Xamarin.TestCloud.Agent
   displayName: restore Xamarin.TestCloud.Agent
 
 
