@@ -28,7 +28,7 @@ steps:
     configuration: debug
 
 
-- script: |
+- bash: |
     dotnet add package Xamarin.TestCloud.Agent -v 0.23.1
   displayName: Install Xamarin.TestCloud.Agent
 
