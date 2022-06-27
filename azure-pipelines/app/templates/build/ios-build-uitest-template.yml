@@ -27,6 +27,14 @@ steps:
   parameters:
     configuration: debug
 
+- task: NuGetToolInstaller@1
+  inputs:
+    #versionSpec: # Optional
+    checkLatest: false # Optional
+
+- script: |
+    nuget install Xamarin.TestCloud.Agent -Version 0.23.1
+  displayName: Install Xamarin.TestCloud.Agent
 
 - task: Bash@3
   inputs:
