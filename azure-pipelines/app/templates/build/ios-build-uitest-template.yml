@@ -33,8 +33,10 @@ steps:
     checkLatest: false # Optional
 
 - script: |
-    dotnet add package Xamarin.TestCloud.Agent -Version 0.23.1
-  displayName: Install Xamarin.TestCloud.Agent
+    nuget restore Xamarin.TestCloud.Agent -Version 0.23.1
+  displayName: restore Xamarin.TestCloud.Agent
+
+
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj for not Debug_UITest'
