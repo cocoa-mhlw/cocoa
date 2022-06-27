@@ -29,7 +29,7 @@ steps:
 
 
 - script: |
-    dotnet add Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent -v 0.23.1
+    dotnet add package Xamarin.TestCloud.Agent -v 0.23.1
   displayName: Install Xamarin.TestCloud.Agent
 
 
