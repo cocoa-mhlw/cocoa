@@ -23,16 +23,16 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<ITermsUpdateService> mockTermsUpdateService;
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
+        private readonly Mock<ISplashNavigationService> mockSplashNavigationService;
 
         public ReAgreePrivacyPolicyPageViewModelTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
-            mockTermsUpdateService = mockRepository.Create<ITermsUpdateService>();
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
+            mockSplashNavigationService = mockRepository.Create<ISplashNavigationService>();
         }
 
         private ReAgreePrivacyPolicyPageViewModel CreateViewModel()
@@ -40,8 +40,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var vm = new ReAgreePrivacyPolicyPageViewModel(
                 mockNavigationService.Object,
                 mockLoggerService.Object,
-                mockTermsUpdateService.Object,
-                mockUserDataRepository.Object
+                mockUserDataRepository.Object,
+                mockSplashNavigationService.Object
                 );
             return vm;
         }
@@ -51,15 +51,12 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
 
-            var updateInfo = new TermsUpdateInfoModel
-            {
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = new DateTime(2020, 11, 02) }
-            };
+            var privacyPolicyDetail = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = new DateTime(2020, 11, 02) };
 
-            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.HomePage);
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyDetail);
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
-            Assert.Equal(updateInfo.PrivacyPolicy.Text, reAgreePrivacyPolicyPageViewModel.UpdateText);
+            Assert.Equal(privacyPolicyDetail.Text, reAgreePrivacyPolicyPageViewModel.UpdateText);
         }
 
         [Fact]
@@ -67,12 +64,9 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
 
-            var updateInfo = new TermsUpdateInfoModel
-            {
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = DateTime.Now }
-            };
+            var privacyPolicyDetail = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = new DateTime(2020, 11, 02) };
 
-            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.HomePage);
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyDetail);
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
             var actualCalls = 0;
@@ -97,37 +91,15 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         public void OnClickReAgreeCommandTests()
         {
             var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
-            var updateInfo = new TermsUpdateInfoModel
-            {
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = DateTime.Now }
-            };
+            var privacyPolicyDetail = new TermsUpdateInfoModel.Detail { Text = "test", UpdateDateTimeJst = new DateTime(2020, 11, 02) };
 
-            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.HomePage);
+            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyDetail);
             reAgreePrivacyPolicyPageViewModel.Initialize(param);
 
-            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.PrivacyPolicy.UpdateDateTimeUtc));
+            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, privacyPolicyDetail.UpdateDateTimeUtc));
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync(Destination.HomePage.ToPath(), param), Times.Once());
-        }
-
-        [Fact]
-        public void OnClickReAgreeCommandWithDestinationTest()
-        {
-            var reAgreePrivacyPolicyPageViewModel = CreateViewModel();
-
-            var updateInfo = new TermsUpdateInfoModel
-            {
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "", UpdateDateTimeJst = DateTime.Now }
-            };
-
-            var param = ReAgreePrivacyPolicyPage.BuildNavigationParams(updateInfo.PrivacyPolicy, Destination.ContactedNotifyPage);
-            reAgreePrivacyPolicyPageViewModel.Initialize(param);
-
-            mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, updateInfo.PrivacyPolicy.UpdateDateTimeUtc));
-            reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
-
-            mockNavigationService.Verify(x => x.NavigateAsync(Destination.ContactedNotifyPage.ToPath(), param), Times.Once());
+            mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Once());
         }
     }
 }

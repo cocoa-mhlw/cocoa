@@ -17,7 +17,7 @@ namespace Covid19Radar.UnitTests.Services
 {
     public class EventLogServiceTests
     {
-        private readonly MockRepository mockRepository;
+        private readonly MockRepository _mockRepository;
 
         private readonly Mock<ISendEventLogStateRepository> _sendEventLogStateRepository;
         private readonly Mock<IEventLogRepository> _eventLogRepository;
@@ -29,14 +29,14 @@ namespace Covid19Radar.UnitTests.Services
 
         public EventLogServiceTests()
         {
-            mockRepository = new MockRepository(MockBehavior.Default);
+            _mockRepository = new MockRepository(MockBehavior.Default);
 
-            _sendEventLogStateRepository = mockRepository.Create<ISendEventLogStateRepository>();
-            _eventLogRepository = mockRepository.Create<IEventLogRepository>();
-            _essentialsService = mockRepository.Create<IEssentialsService>();
-            _deviceVerifier = mockRepository.Create<IDeviceVerifier>();
-            _httpDataService = mockRepository.Create<IHttpDataService>();
-            _loggerService = mockRepository.Create<ILoggerService>();
+            _sendEventLogStateRepository = _mockRepository.Create<ISendEventLogStateRepository>();
+            _eventLogRepository = _mockRepository.Create<IEventLogRepository>();
+            _essentialsService = _mockRepository.Create<IEssentialsService>();
+            _deviceVerifier = _mockRepository.Create<IDeviceVerifier>();
+            _httpDataService = _mockRepository.Create<IHttpDataService>();
+            _loggerService = _mockRepository.Create<ILoggerService>();
         }
 
         private EventLogService CreateService()

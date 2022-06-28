@@ -50,10 +50,7 @@ namespace Covid19Radar.Repository
 
         SendEventLogState GetSendEventLogState(EventType eventType);
 
-        public static bool IsExistNotSetEventType(ISendEventLogStateRepository sendEventLogStateRepository)
-            => EventType.All
-                .Select(eventType => sendEventLogStateRepository.GetSendEventLogState(eventType))
-                .Any(state => state == SendEventLogState.NotSet);
+        bool IsExistNotSetEventType();
     }
 
     public class SendEventLogStateRepository : ISendEventLogStateRepository
@@ -153,6 +150,13 @@ namespace Covid19Radar.Repository
                 _loggerService.EndMethod();
 
             }
+        }
+
+        public bool IsExistNotSetEventType()
+        {
+            return EventType.All
+                .Select(eventType => GetSendEventLogState(eventType))
+                .Any(state => state == SendEventLogState.NotSet);
         }
     }
 }

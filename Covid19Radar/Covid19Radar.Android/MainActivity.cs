@@ -83,8 +83,6 @@ namespace Covid19Radar.Droid
             ToolbarResource = Resource.Layout.Toolbar;
             base.SetTheme(Resource.Style.MainTheme);
 
-            AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
-
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);

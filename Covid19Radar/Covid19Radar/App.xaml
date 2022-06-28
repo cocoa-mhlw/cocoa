@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
@@ -32,6 +32,7 @@
             <Color x:Key="LinkColor">#066AB9</Color>
             <Color x:Key="CheckedRadioButtonBackground">#E8F7FF</Color>
             <Color x:Key="DisabledRadioButtonBackground">#EEEEEE</Color>
+            <Color x:Key="CheckBoxColor">#066AB9</Color>
 
             <!--  Icons  -->
             <x:String x:Key="IconProfile">&#xf2bd;</x:String>
@@ -322,6 +323,10 @@
             </Style>
             <Style x:Key="AnnotationLabelDark" TargetType="Label" BasedOn="{StaticResource DefaultLabelSmall}">
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+            </Style>
+
+            <Style x:Key="DefaultCheckBox" TargetType="CheckBox">
+                <Setter Property="Color" Value="{StaticResource CheckBoxColor}" />
             </Style>
 
         </ResourceDictionary>

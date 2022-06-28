@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
@@ -70,11 +70,11 @@
                             Text="{x:Static resources:AppResources.TutorialPage4Button1}" />
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            AutomationProperties.Name="{Binding TutorialPage4LinkReadText}"
+                            AutomationProperties.Name="{Binding SetupLaerLinkReadText}"
                             HorizontalTextAlignment="Center"
                             Margin="0, 20, 0, 10"
                             Style="{StaticResource LinkLabelStyleMedium}"
-                            Text="{x:Static resources:AppResources.TutorialPage4Link}">
+                            Text="{x:Static resources:AppResources.SetupLaerLink}">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Path=OnClickDisable}" />
                             </Label.GestureRecognizers>

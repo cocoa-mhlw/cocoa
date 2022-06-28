@@ -46,6 +46,7 @@
     <Folder Include="Repository\" />
     <Folder Include="Common\" />
     <Folder Include="Files\" />
+    <Folder Include="ViewModels\Settings\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Files\" />
@@ -58,6 +59,7 @@
     <None Remove="Files\exposure_risk_configuration1.json" />
     <None Remove="Files\exposure_risk_configuration2.json" />
     <None Remove="Files\check_version1.json" />
+    <None Remove="ViewModels\Settings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\exposure_configuration1.json">

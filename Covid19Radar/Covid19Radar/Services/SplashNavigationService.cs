@@ -25,6 +25,7 @@ namespace Covid19Radar.Services
         private readonly IUserDataRepository _userDataRepository;
         private readonly ILoggerService _loggerService;
         private readonly ITermsUpdateService _termsUpdateService;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
 
         public Destination Destination { get; set; }
         public INavigationParameters DestinationPageParameters { get; set; }
@@ -35,12 +36,14 @@ namespace Covid19Radar.Services
             INavigationService navigationService,
             IUserDataRepository userDataRepository,
             ILoggerService loggerService,
-            ITermsUpdateService termsUpdateService)
+            ITermsUpdateService termsUpdateService,
+            ISendEventLogStateRepository sendEventLogStateRepository)
         {
             _navigationService = navigationService;
             _userDataRepository = userDataRepository;
             _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
         }
 
         public async Task Prepare()
@@ -78,6 +81,11 @@ namespace Covid19Radar.Services
                     {
                         name = $"/{nameof(ReAgreePrivacyPolicyPage)}";
                         parameters = ReAgreePrivacyPolicyPage.BuildNavigationParams(_termsUpdateInfoModel.PrivacyPolicy);
+                    }
+                    else if (_sendEventLogStateRepository.IsExistNotSetEventType())
+                    {
+                        name = $"/{nameof(EventLogCooperationPage)}";
+                        parameters = EventLogCooperationPage.BuildNavigationParams(EventLogCooperationPage.TransitionReason.Splash);
                     }
                     else
                     {

@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Prism.Ioc;
 using Covid19Radar.Repository;
+using AndroidX.AppCompat.App;
 
 namespace Covid19Radar.Droid
 {
@@ -72,6 +73,8 @@ namespace Covid19Radar.Droid
 
         public override void OnCreate()
         {
+            AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
+
             base.OnCreate();
 
             App.InitializeServiceLocator(RegisterPlatformTypes);

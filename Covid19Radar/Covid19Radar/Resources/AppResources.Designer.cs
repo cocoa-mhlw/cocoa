@@ -202,15 +202,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not Now.
-        /// </summary>
-        public static string ButtonNotNow {
-            get {
-                return ResourceManager.GetString("ButtonNotNow", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string ButtonOk {
@@ -522,6 +513,142 @@ namespace Covid19Radar.Resources {
         public static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - The information are sent anonymously..
+        /// </summary>
+        public static string EventLogCooperationPageBullets1 {
+            get {
+                return ResourceManager.GetString("EventLogCooperationPageBullets1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - The content of the information sent does not include any personally identifiable information about you or the positive registrants who have have been in contact with you..
+        /// </summary>
+        public static string EventLogCooperationPageBullets2 {
+            get {
+                return ResourceManager.GetString("EventLogCooperationPageBullets2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Anonymous information may be aggregated and published to help improve public health..
+        /// </summary>
+        public static string EventLogCooperationPageBullets3 {
+            get {
+                return ResourceManager.GetString("EventLogCooperationPageBullets3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - Anonymous information may be aggregated and published to help improve public health..
+        /// </summary>
+        public static string EventLogCooperationPageBullets4 {
+            get {
+                return ResourceManager.GetString("EventLogCooperationPageBullets4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please allow the Ministry of Health, Labor and Welfare to use the app information of the app to improve COCOA..
+        /// </summary>
+        public static string EventLogCooperationPageDescription1 {
+            get {
+                return ResourceManager.GetString("EventLogCooperationPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send information setting.
+        /// </summary>
+        public static string EventLogCooperationPageSendButton {
+            get {
+                return ResourceManager.GetString("EventLogCooperationPageSendButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please help us improve the COCOA app.
+        /// </summary>
+        public static string EventLogCooperationPageTitle {
+            get {
+                return ResourceManager.GetString("EventLogCooperationPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - The information are sent anonymously..
+        /// </summary>
+        public static string EventLogSettingPageBullets1 {
+            get {
+                return ResourceManager.GetString("EventLogSettingPageBullets1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to - The content of the information sent does not include any personally identifiable information about you or the positive registrants who have have been in contact with you..
+        /// </summary>
+        public static string EventLogSettingPageBullets2 {
+            get {
+                return ResourceManager.GetString("EventLogSettingPageBullets2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The app will send the following information to the Ministry of Health, Labor and Welfare. Please check the items that are allowed to be sent..
+        /// </summary>
+        public static string EventLogSettingPageDescription1 {
+            get {
+                return ResourceManager.GetString("EventLogSettingPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting was saved.
+        /// </summary>
+        public static string EventLogSettingPageSaveCompleteMessageTitle {
+            get {
+                return ResourceManager.GetString("EventLogSettingPageSaveCompleteMessageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In case a close contact hase been confirmed, or it is determined that there is a possibility of close a notification will be displayed. If there is no possibility of close contact, it will not.
+        ///By collecting the number of notifications, we can use it to understand how many close contacts are occurring in Japan..
+        /// </summary>
+        public static string EventLogSettingPageSettingDescription1 {
+            get {
+                return ResourceManager.GetString("EventLogSettingPageSettingDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save the setting.
+        /// </summary>
+        public static string EventLogSettingPageSettingSaveButton {
+            get {
+                return ResourceManager.GetString("EventLogSettingPageSettingSaveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display close contact notification.
+        /// </summary>
+        public static string EventLogSettingPageSettingTitle1 {
+            get {
+                return ResourceManager.GetString("EventLogSettingPageSettingTitle1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting for the information that will be sent.
+        /// </summary>
+        public static string EventLogSettingPageTitle {
+            get {
+                return ResourceManager.GetString("EventLogSettingPageTitle", resourceCulture);
             }
         }
         
@@ -2603,6 +2730,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set up later.
+        /// </summary>
+        public static string SetupLaerLink {
+            get {
+                return ResourceManager.GetString("SetupLaerLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string SmsAnnotationText {
@@ -3094,15 +3230,6 @@ namespace Covid19Radar.Resources {
         public static string TutorialPage4Description2 {
             get {
                 return ResourceManager.GetString("TutorialPage4Description2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Set up later.
-        /// </summary>
-        public static string TutorialPage4Link {
-            get {
-                return ResourceManager.GetString("TutorialPage4Link", resourceCulture);
             }
         }
         
