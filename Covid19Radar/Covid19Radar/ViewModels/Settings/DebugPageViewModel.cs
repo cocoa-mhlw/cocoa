@@ -297,19 +297,15 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickReAgreeTermsOfServicePage => new Command(async () =>
         {
-            var termsUpdateInfoModel = new TermsUpdateInfoModel
-            {
-                TermsOfService = new TermsUpdateInfoModel.Detail { Text = "DEBUG  利用規約の変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) },
-                PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) }
-            };
-            var navigationParams = ReAgreeTermsOfServicePage.BuildNavigationParams(termsUpdateInfoModel, Destination.HomePage);
+            var termsOfServiceDetail = new TermsUpdateInfoModel.Detail { Text = "DEBUG  利用規約の変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) };
+            var navigationParams = ReAgreeTermsOfServicePage.BuildNavigationParams(termsOfServiceDetail);
             _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreeTermsOfServicePage), navigationParams);
         });
 
         public Command OnClickReAgreePrivacyPolicyPage => new Command(async () =>
         {
             var privacyPolicyUpdated = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) };
-            var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyUpdated, Destination.HomePage);
+            var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyUpdated);
             _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), navigationParams);
         });
 
