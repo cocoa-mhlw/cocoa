@@ -53,7 +53,7 @@ namespace Covid19Radar.iOS
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
-        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceService
+        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceBackgroundService
             = new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
 
         private App? AppInstance
@@ -115,12 +115,12 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
-            ScheduleBackgroundTask();
+            ScheduleBackgroundTasks();
 
             return base.FinishedLaunching(app, launchOptions);
         }
 
-        private void ScheduleBackgroundTask()
+        private void ScheduleBackgroundTasks()
         {
             try
             {
@@ -142,11 +142,11 @@ namespace Covid19Radar.iOS
 
             try
             {
-                _dataMaintainanceService.Value.Schedule();
+                _dataMaintainanceBackgroundService.Value.Schedule();
             }
             catch (Exception exception)
             {
-                _loggerService.Value.Exception("Failed to schedule DataMaintainanceService", exception);
+                _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
             }
         }
 
