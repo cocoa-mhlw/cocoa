@@ -17,7 +17,7 @@ namespace Covid19Radar.Droid.Services.Logs
 {
     public class DataMaintainanceBackgroundService : AbsDataMaintainanceBackgroundService
     {
-        private const string CURRENT_WORK_NAME = "data_maintainance_worker_20220626";
+        private const string CURRENT_WORK_NAME = "data_maintainance_worker_20220628";
 
         private static readonly long INTERVAL_IN_HOURS = 24;
         private static readonly long BACKOFF_DELAY_IN_MINUTES = 60;
@@ -38,7 +38,7 @@ namespace Covid19Radar.Droid.Services.Logs
             PeriodicWorkRequest periodicWorkRequest = CreatePeriodicWorkRequest();
             workManager.EnqueueUniquePeriodicWork(
                 CURRENT_WORK_NAME,
-                ExistingPeriodicWorkPolicy.Replace,
+                ExistingPeriodicWorkPolicy.Keep,
                 periodicWorkRequest
                 );
 
