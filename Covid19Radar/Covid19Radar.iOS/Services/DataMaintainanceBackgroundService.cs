@@ -6,6 +6,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using BackgroundTasks;
+using Covid19Radar.Common;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Foundation;
@@ -17,7 +18,7 @@ namespace Covid19Radar.iOS.Services.Logs
     {
         #region Constants
 
-        private const double ONE_DAY_IN_SECONDS = 1 * 24 * 60 * 60;
+        private const int TASK_INTERVAL_IN_DAYS = 1;
 
         #endregion
 
@@ -29,15 +30,19 @@ namespace Covid19Radar.iOS.Services.Logs
 
         #region Instance Fields
 
+        private readonly IDateTimeUtility _dateTimeUtility;
+
         #endregion
 
         #region Constructors
 
         public DataMaintainanceBackgroundService(
             ILoggerService loggerService,
-            ILogFileService logFileService
+            ILogFileService logFileService,
+            IDateTimeUtility dateTimeUtility
             ) : base(logFileService, loggerService)
         {
+            _dateTimeUtility = dateTimeUtility;
         }
 
         #endregion
@@ -105,9 +110,12 @@ namespace Covid19Radar.iOS.Services.Logs
 
             try
             {
-                BGAppRefreshTaskRequest bgTaskRequest = new BGAppRefreshTaskRequest(BGTASK_IDENTIFIER)
+                DateTime tommorow = _dateTimeUtility.UtcNow.Date.AddDays(TASK_INTERVAL_IN_DAYS);
+                var interval = tommorow - _dateTimeUtility.UtcNow;
+
+                BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
-                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS)
+                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(interval.TotalSeconds)
                 };
 
                 BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);

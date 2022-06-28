@@ -16,20 +16,23 @@ namespace Covid19Radar.iOS.Services
 {
     public class EventLogSubmissionBackgroundService : AbsEventLogSubmissionBackgroundService
     {
-        private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".eventlog-submission";
+        private const int TASK_INTERVAL_IN_DAYS = 1;
 
-        private const double ONE_DAY_IN_SECONDS = 1 * 24 * 60 * 60;
+        private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".eventlog-submission";
 
         private readonly IEventLogService _eventLogService;
         private readonly ILoggerService _loggerService;
+        private readonly IDateTimeUtility _dateTimeUtility;
 
         public EventLogSubmissionBackgroundService(
             IEventLogService eventLogService,
-            ILoggerService loggerService
+            ILoggerService loggerService,
+            IDateTimeUtility dateTimeUtility
             ) : base()
         {
             _eventLogService = eventLogService;
             _loggerService = loggerService;
+            _dateTimeUtility = dateTimeUtility;
         }
 
         public override void Schedule()
@@ -91,10 +94,13 @@ namespace Covid19Radar.iOS.Services
 
             try
             {
+                DateTime tommorow = _dateTimeUtility.UtcNow.Date.AddDays(TASK_INTERVAL_IN_DAYS);
+                var interval = tommorow - _dateTimeUtility.UtcNow;
+
                 BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
                     RequiresNetworkConnectivity = true,
-                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(ONE_DAY_IN_SECONDS)
+                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(interval.TotalSeconds)
                 };
 
                 BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
