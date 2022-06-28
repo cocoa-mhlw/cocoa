@@ -229,17 +229,6 @@ namespace Covid19Radar
             container.Register<IDeviceInfoUtility, DeviceInfoUtility>(Reuse.Singleton);
         }
 
-        protected override void OnStart()
-        {
-            LogFileService.Rotate();
-        }
-
-        protected override void OnResume()
-        {
-            base.OnResume();
-            LogFileService.Rotate();
-        }
-
         protected override void OnSleep()
         {
             base.OnSleep();
