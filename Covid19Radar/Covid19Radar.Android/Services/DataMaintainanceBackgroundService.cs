@@ -3,11 +3,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
-using System.IO;
 using Android.Content;
 using Android.Runtime;
 using AndroidX.Work;
-using Covid19Radar.Common;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Java.Util.Concurrent;
@@ -23,15 +21,12 @@ namespace Covid19Radar.Droid.Services.Logs
         private static readonly long INTERVAL_IN_HOURS = 24;
         private static readonly long BACKOFF_DELAY_IN_MINUTES = 60;
 
-        private readonly IDateTimeUtility _dateTimeUtility;
-
         public DataMaintainanceBackgroundService(
             ILogFileService logFileService,
-            ILoggerService loggerService,
-            IDateTimeUtility dateTimeUtility
+            ILoggerService loggerService
             ) : base(logFileService, loggerService)
         {
-            _dateTimeUtility = dateTimeUtility;
+            // do nothing
         }
 
         public override void Schedule()
@@ -52,14 +47,10 @@ namespace Covid19Radar.Droid.Services.Logs
 
         private PeriodicWorkRequest CreatePeriodicWorkRequest()
         {
-            DateTime tommorow = _dateTimeUtility.UtcNow.Date.AddDays(1);
-            var interval = tommorow - _dateTimeUtility.UtcNow;
-
             var workRequestBuilder = new PeriodicWorkRequest.Builder(
                 typeof(BackgroundWorker),
                 INTERVAL_IN_HOURS, TimeUnit.Hours
                 )
-                .SetPeriodStartTime((long)interval.TotalSeconds, TimeUnit.Seconds)
                 .SetConstraints(new Constraints.Builder()
                    .SetRequiresBatteryNotLow(true)
                    .Build())

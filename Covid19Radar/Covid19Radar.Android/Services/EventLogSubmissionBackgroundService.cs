@@ -22,15 +22,12 @@ namespace Covid19Radar.Droid.Services
         private const long INTERVAL_IN_HOURS = 24;
         private const long BACKOFF_DELAY_IN_MINUTES = 60;
 
-        private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
 
         public EventLogSubmissionBackgroundService(
-            IDateTimeUtility dateTimeUtility,
             ILoggerService loggerService
             ) : base()
         {
-            _dateTimeUtility = dateTimeUtility;
             _loggerService = loggerService;
         }
 
@@ -52,14 +49,10 @@ namespace Covid19Radar.Droid.Services
 
         private PeriodicWorkRequest CreatePeriodicWorkRequest()
         {
-            DateTime tommorow = _dateTimeUtility.UtcNow.Date.AddDays(1);
-            var interval = tommorow - _dateTimeUtility.UtcNow;
-
             var workRequestBuilder = new PeriodicWorkRequest.Builder(
                 typeof(BackgroundWorker),
                 INTERVAL_IN_HOURS, TimeUnit.Hours
                 )
-                .SetPeriodStartTime((long)interval.TotalSeconds, TimeUnit.Seconds)
                 .SetConstraints(new Constraints.Builder()
                    .SetRequiresBatteryNotLow(true)
                    .SetRequiredNetworkType(NetworkType.Connected)
