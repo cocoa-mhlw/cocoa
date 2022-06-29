@@ -54,8 +54,8 @@
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
 		<string>APP_PACKAGE_NAME.exposure-notification</string>
-		<string>APP_PACKAGE_NAME.delete-old-logs</string>
 		<string>APP_PACKAGE_NAME.eventlog-submission</string>
+		<string>APP_PACKAGE_NAME.data-maintainance</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>
@@ -68,7 +68,6 @@
 	<string>LaunchScreen</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>fetch</string>
 		<string>processing</string>
 	</array>
 	<key>UIUserInterfaceStyle</key>

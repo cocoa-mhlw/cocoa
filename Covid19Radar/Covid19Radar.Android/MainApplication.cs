@@ -54,6 +54,9 @@ namespace Covid19Radar.Droid
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
+        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceService
+            = new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
+
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
@@ -95,6 +98,7 @@ namespace Covid19Radar.Droid
             {
                 _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
             }
+
             try
             {
                 _eventLogSubmissionBackgroundService.Value.Schedule();
@@ -102,6 +106,15 @@ namespace Covid19Radar.Droid
             catch (Exception exception)
             {
                 _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
+            }
+
+            try
+            {
+                _dataMaintainanceService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
             }
         }
 
@@ -118,7 +131,7 @@ namespace Covid19Radar.Droid
             // Services
             container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
             container.Register<ILocalPathService, LocalPathService>(Reuse.Singleton);
-            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
+            container.Register<AbsDataMaintainanceBackgroundService, DataMaintainanceBackgroundService>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, Services.SecureStorageService>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);

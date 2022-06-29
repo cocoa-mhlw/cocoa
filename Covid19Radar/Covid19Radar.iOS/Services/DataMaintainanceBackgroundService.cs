@@ -1,6 +1,6 @@
-﻿// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
 using System.Threading;
@@ -12,36 +12,50 @@ using Covid19Radar.Services.Logs;
 using Foundation;
 using Xamarin.Essentials;
 
-namespace Covid19Radar.iOS.Services
+namespace Covid19Radar.iOS.Services.Logs
 {
-    public class EventLogSubmissionBackgroundService : AbsEventLogSubmissionBackgroundService
+    public class DataMaintainanceBackgroundService : AbsDataMaintainanceBackgroundService
     {
+        #region Constants
+
         private const int TASK_INTERVAL_IN_DAYS = 1;
 
-        private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".eventlog-submission";
+        #endregion
 
-        private readonly IEventLogService _eventLogService;
-        private readonly ILoggerService _loggerService;
+        #region Static Fields
+
+        private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".data-maintainance";
+
+        #endregion
+
+        #region Instance Fields
+
         private readonly IDateTimeUtility _dateTimeUtility;
 
-        public EventLogSubmissionBackgroundService(
-            IEventLogService eventLogService,
+        #endregion
+
+        #region Constructors
+
+        public DataMaintainanceBackgroundService(
             ILoggerService loggerService,
+            ILogFileService logFileService,
             IDateTimeUtility dateTimeUtility
-            ) : base()
+            ) : base(logFileService, loggerService)
         {
-            _eventLogService = eventLogService;
-            _loggerService = loggerService;
             _dateTimeUtility = dateTimeUtility;
         }
 
+        #endregion
+
+        #region ILogPeriodicDeleteService Methods
+
         public override void Schedule()
         {
-            _loggerService.StartMethod();
+            loggerService.StartMethod();
 
             var result = BGTaskScheduler.Shared.Register(BGTASK_IDENTIFIER, null, task =>
             {
-                _loggerService.Info("Background task has been started.");
+                loggerService.Info("Background task has been started.");
 
                 DateTime nextDateTime = _dateTimeUtility.UtcNow.Date.AddDays(TASK_INTERVAL_IN_DAYS);
                 ScheduleBgTask(nextDateTime);
@@ -53,19 +67,17 @@ namespace Covid19Radar.iOS.Services
                 {
                     try
                     {
-                        await _eventLogService.SendAllAsync(
-                            AppConstants.EventLogMaxRequestSizeInBytes,
-                            AppConstants.EventLogMaxRetry);
+                        await ExecuteAsync();
                         task.SetTaskCompleted(true);
                     }
                     catch (OperationCanceledException exception)
                     {
-                        _loggerService.Exception($"Background task canceled.", exception);
+                        loggerService.Exception($"Background task canceled.", exception);
                         task.SetTaskCompleted(false);
                     }
                     catch (Exception exception)
                     {
-                        _loggerService.Exception($"Exception", exception);
+                        loggerService.Exception($"Exception", exception);
                         task.SetTaskCompleted(false);
                     }
                     finally
@@ -77,27 +89,30 @@ namespace Covid19Radar.iOS.Services
 
             if (result)
             {
-                _loggerService.Debug("BGTaskScheduler.Shared.Register succeeded.");
+                loggerService.Debug("BGTaskScheduler.Shared.Register succeeded.");
             }
             else
             {
-                _loggerService.Info("BGTaskScheduler.Shared.Register failed.");
+                loggerService.Info("BGTaskScheduler.Shared.Register failed.");
             }
 
             ScheduleBgTask(_dateTimeUtility.UtcNow);
 
-            _loggerService.EndMethod();
+            loggerService.EndMethod();
         }
+
+        #endregion
+
+        #region Other Private Methods
 
         private void ScheduleBgTask(DateTime nextDateTime)
         {
-            _loggerService.StartMethod();
+            loggerService.StartMethod();
 
             try
             {
                 BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
-                    RequiresNetworkConnectivity = true,
                     EarliestBeginDate = NSDate.FromTimeIntervalSince1970(nextDateTime.ToUnixEpoch())
                 };
 
@@ -105,14 +120,17 @@ namespace Covid19Radar.iOS.Services
                 if (error != null)
                 {
                     NSErrorException exception = new NSErrorException(error);
-                    _loggerService.Exception("BGTaskScheduler submit failed.", exception);
+                    loggerService.Exception("BGTaskScheduler submit failed.", exception);
                     throw exception;
                 }
             }
             finally
             {
-                _loggerService.EndMethod();
+                loggerService.EndMethod();
             }
         }
+
+        #endregion
     }
+
 }

@@ -53,6 +53,9 @@ namespace Covid19Radar.iOS
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
+        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceBackgroundService
+            = new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
+
         private App? AppInstance
         {
             get
@@ -112,12 +115,12 @@ namespace Covid19Radar.iOS
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 
-            ScheduleBackgroundTask();
+            ScheduleBackgroundTasks();
 
             return base.FinishedLaunching(app, launchOptions);
         }
 
-        private void ScheduleBackgroundTask()
+        private void ScheduleBackgroundTasks()
         {
             try
             {
@@ -127,6 +130,7 @@ namespace Covid19Radar.iOS
             {
                 _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
             }
+
             try
             {
                 _eventLogSubmissionBackgroundService.Value.Schedule();
@@ -134,6 +138,15 @@ namespace Covid19Radar.iOS
             catch (Exception exception)
             {
                 _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
+            }
+
+            try
+            {
+                _dataMaintainanceBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
             }
         }
 
@@ -256,7 +269,7 @@ namespace Covid19Radar.iOS
             // Services
             container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
             container.Register<ILocalPathService, LocalPathService>(Reuse.Singleton);
-            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
+            container.Register<AbsDataMaintainanceBackgroundService, DataMaintainanceBackgroundService>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, Services.SecureStorageService>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);

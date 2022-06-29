@@ -2,6 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Threading.Tasks;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
@@ -19,6 +20,7 @@ namespace Covid19Radar.ViewModels
         private readonly IUserDataService _userDataService;
         private readonly IMigrationService _migrationService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly ILogFileService _logFileService;
 
         public SplashPageViewModel(
             INavigationService navigationService,
@@ -26,7 +28,8 @@ namespace Covid19Radar.ViewModels
             ILoggerService loggerService,
             IUserDataRepository userDataRepository,
             IUserDataService userDataService,
-            IMigrationService migrationService
+            IMigrationService migrationService,
+            ILogFileService logFileService
             ) : base(navigationService)
         {
             _termsUpdateService = termsUpdateService;
@@ -34,6 +37,7 @@ namespace Covid19Radar.ViewModels
             _userDataRepository = userDataRepository;
             _userDataService = userDataService;
             _migrationService = migrationService;
+            _logFileService = logFileService;
         }
 
         public override async void OnNavigatedTo(INavigationParameters parameters)
@@ -43,6 +47,10 @@ namespace Covid19Radar.ViewModels
             base.OnNavigatedTo(parameters);
 
             await _migrationService.MigrateAsync();
+
+            await Task.Run(() => {
+                _logFileService.Rotate();
+            });
 
             var destination = Destination.HomePage;
             if (parameters.ContainsKey(SplashPage.DestinationKey))

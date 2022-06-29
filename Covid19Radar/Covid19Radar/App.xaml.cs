@@ -229,21 +229,6 @@ namespace Covid19Radar
             container.Register<IDeviceInfoUtility, DeviceInfoUtility>(Reuse.Singleton);
         }
 
-        protected override void OnStart()
-        {
-            // Initialize periodic log delete service
-            var logPeriodicDeleteService = Container.Resolve<ILogPeriodicDeleteService>();
-            logPeriodicDeleteService.Init();
-
-            LogFileService.Rotate();
-        }
-
-        protected override void OnResume()
-        {
-            base.OnResume();
-            LogFileService.Rotate();
-        }
-
         protected override void OnSleep()
         {
             base.OnSleep();
