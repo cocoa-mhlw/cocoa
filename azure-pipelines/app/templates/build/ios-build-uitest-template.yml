@@ -28,7 +28,11 @@ steps:
     configuration: debug
 
 - script: |
-    Install-Package Xamarin.TestCloud.Agent -Version 0.23.1
+    dotnet tool install -g
+  displayName: Install dotnet tool
+
+- script: |
+    dotnet add package Xamarin.TestCloud.Agent
   displayName: Install Xamarin.TestCloud.Agent
 
 - task: XamariniOS@2
