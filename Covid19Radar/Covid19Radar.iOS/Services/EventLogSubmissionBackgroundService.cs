@@ -43,7 +43,8 @@ namespace Covid19Radar.iOS.Services
             {
                 _loggerService.Info("Background task has been started.");
 
-                ScheduleBgTask();
+                DateTime nextDateTime = _dateTimeUtility.UtcNow.Date.AddDays(TASK_INTERVAL_IN_DAYS);
+                ScheduleBgTask(nextDateTime);
 
                 var cancellationTokenSource = new CancellationTokenSource();
                 task.ExpirationHandler = cancellationTokenSource.Cancel;
@@ -83,24 +84,21 @@ namespace Covid19Radar.iOS.Services
                 _loggerService.Info("BGTaskScheduler.Shared.Register failed.");
             }
 
-            ScheduleBgTask();
+            ScheduleBgTask(_dateTimeUtility.UtcNow);
 
             _loggerService.EndMethod();
         }
 
-        private void ScheduleBgTask()
+        private void ScheduleBgTask(DateTime nextDateTime)
         {
             _loggerService.StartMethod();
 
             try
             {
-                DateTime tommorow = _dateTimeUtility.UtcNow.Date.AddDays(TASK_INTERVAL_IN_DAYS);
-                var interval = tommorow - _dateTimeUtility.UtcNow;
-
                 BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
                     RequiresNetworkConnectivity = true,
-                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(interval.TotalSeconds)
+                    EarliestBeginDate = NSDate.FromTimeIntervalSince1970(nextDateTime.ToUnixEpoch())
                 };
 
                 BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
