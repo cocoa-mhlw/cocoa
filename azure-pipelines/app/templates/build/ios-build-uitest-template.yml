@@ -27,14 +27,6 @@ steps:
   parameters:
     configuration: debug
 
-- script: |
-    dotnet tool install -g
-  displayName: Install dotnet tool
-
-- script: |
-    dotnet add package Xamarin.TestCloud.Agent
-  displayName: Install Xamarin.TestCloud.Agent
-
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj for not Debug_UITest'
   inputs:
