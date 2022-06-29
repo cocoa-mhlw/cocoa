@@ -32,20 +32,6 @@ namespace CovidRadar.UITestV2
         }
 
         /// <summary>
-        /// tutorial実行.
-        /// </summary>
-        [Category("en-US")]
-        [Category("zh-CN")]
-        [Category("ko-KR")]
-        [OneTimeSetUp]
-        public override void OneTimeSetUp()
-        {
-            AppManager.StartApp();
-            TutorialPageFlow tutorialPageFlow = new TutorialPageFlow();
-            tutorialPageFlow.Tutorial();
-        }
-
-        /// <summary>
         /// 利用規約の確認
         /// 本テストは端末の設定言語に応じて、対応ケースが変わる
         /// 日本語:Case1に相当
@@ -61,6 +47,15 @@ namespace CovidRadar.UITestV2
              *  OSの設定 > 一般 > 言語と地域
              * 「編集」ボタンを押下し、「使用する言語の優先順序」内の項目を[前提]の言語以外を削除する
              */
+
+            // 端末言語取得
+            var cultureText = AppManager.GetCurrentCultureBackDoor();
+            if (cultureText != "ja-jp")
+            {
+                AppManager.StartApp();
+                TutorialPageFlow tutorialPageFlow = new TutorialPageFlow();
+                tutorialPageFlow.Tutorial();
+            }
 
             AppManager.DismissSpringboardAlerts();
 
@@ -78,9 +73,6 @@ namespace CovidRadar.UITestV2
             // S3 設定ページで、「利用規約」ボタンを押下
             TermsofservicePage termsofservicePage = settingsPage.OpenTermsofservicePage();
             termsofservicePage.AssertTermsofservicePage();
-
-            // 端末言語取得
-            var cultureText = AppManager.GetCurrentCultureBackDoor();
 
             // 比較単語を取得
             string comparisonText = (string)AppManager.Comparison(cultureText, "termofusehtml");

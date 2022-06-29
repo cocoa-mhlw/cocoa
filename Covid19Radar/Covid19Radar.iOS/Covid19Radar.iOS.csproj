@@ -423,6 +423,9 @@
     <PackageReference Include="Chino.iOS">
       <Version>1.0.0-rc11</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.TestCloud.Agent">
+      <Version>0.23.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Covid19Radar\Covid19Radar.csproj">
@@ -550,12 +553,7 @@
     <EmbeddedResource Include="fa-solid-900.otf" />
     <EmbeddedResource Include="Roboto-Regular.ttf" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\Logs\" />
-    <Folder Include="Renderers\" />
-    <Folder Include="Resources\zh-Hans.lproj\" />
-    <Folder Include="Services\Migration\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
