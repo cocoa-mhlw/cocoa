@@ -36,6 +36,8 @@ namespace CovidRadar.UITestV2
         public override void OneTimeSetUp()
         {
             AppManager.StartApp();
+            TutorialPageFlow tutorialPageFlow = new TutorialPageFlow();
+            tutorialPageFlow.Tutorial();
         }
 
         /// <summary>
@@ -55,16 +57,7 @@ namespace CovidRadar.UITestV2
              * 「編集」ボタンを押下し、「使用する言語の優先順序」内の項目を[前提]の言語以外を削除する
              */
 
-            // 端末言語取得
-            var cultureText = AppManager.GetCurrentCultureBackDoor();
-            if (cultureText != "ja-JP")
-            {
-                //AppManager.StartApp();
-                TutorialPageFlow tutorialPageFlow = new TutorialPageFlow();
-                tutorialPageFlow.Tutorial();
-            }
-
-            //AppManager.DismissSpringboardAlerts();
+            AppManager.DismissSpringboardAlerts();
 
             HomePage homePage = new HomePage();
             homePage.AssertHomePage();
@@ -80,6 +73,9 @@ namespace CovidRadar.UITestV2
             // S3 設定ページで、「利用規約」ボタンを押下
             TermsofservicePage termsofservicePage = settingsPage.OpenTermsofservicePage();
             termsofservicePage.AssertTermsofservicePage();
+
+            // 端末言語取得
+            var cultureText = AppManager.GetCurrentCultureBackDoor();
 
             // 比較単語を取得
             string comparisonText = (string)AppManager.Comparison(cultureText, "termofusehtml");

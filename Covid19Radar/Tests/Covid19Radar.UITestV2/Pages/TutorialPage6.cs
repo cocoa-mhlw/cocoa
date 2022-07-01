@@ -83,8 +83,6 @@ namespace CovidRadar.UITestV2
         public void OpenHomePage()
         {
             app.Tap(openHomePage);
-            AppManager.DismissSpringboardAlerts();
-            //return new HomePage();
         }
 
         /// <summary>
