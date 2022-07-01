@@ -31,6 +31,13 @@ namespace CovidRadar.UITestV2
         {
         }
 
+        /// <inheritdoc/>
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
+        {
+            AppManager.StartApp();
+        }
+
         /// <summary>
         /// 利用規約の確認
         /// 本テストは端末の設定言語に応じて、対応ケースが変わる
@@ -50,9 +57,9 @@ namespace CovidRadar.UITestV2
 
             // 端末言語取得
             var cultureText = AppManager.GetCurrentCultureBackDoor();
-            if (cultureText != "ja-jp")
+            if (cultureText != "ja-JP")
             {
-                AppManager.StartApp();
+                //AppManager.StartApp();
                 TutorialPageFlow tutorialPageFlow = new TutorialPageFlow();
                 tutorialPageFlow.Tutorial();
             }
