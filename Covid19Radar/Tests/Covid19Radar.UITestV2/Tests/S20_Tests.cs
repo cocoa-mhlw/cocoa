@@ -64,7 +64,7 @@ namespace CovidRadar.UITestV2
                 tutorialPageFlow.Tutorial();
             }
 
-            AppManager.DismissSpringboardAlerts();
+            //AppManager.DismissSpringboardAlerts();
 
             HomePage homePage = new HomePage();
             homePage.AssertHomePage();
