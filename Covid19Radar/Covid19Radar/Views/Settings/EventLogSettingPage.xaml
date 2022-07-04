@@ -12,11 +12,12 @@
         <StackLayout>
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
-                Margin="20"
+                IsVisible="{Binding IsVisibleTitleInContent}"
+                Margin="20,20,20,0"
                 Style="{StaticResource DefaultTitleLabel}"
                 Text="{x:Static resources:AppResources.EventLogSettingPageTitle}" />
             <ScrollView
-                Padding="20,0,20,20">
+                Padding="20">
                 <StackLayout
                     Spacing="20">
                     <StackLayout

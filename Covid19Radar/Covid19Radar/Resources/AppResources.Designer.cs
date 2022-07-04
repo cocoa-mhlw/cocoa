@@ -2647,6 +2647,33 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send information setting.
+        /// </summary>
+        public static string SettingsPageEventLogSendButton {
+            get {
+                return ResourceManager.GetString("SettingsPageEventLogSendButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please allow the Ministry of Health, Labor and Welfare to use the app information of the app to improve COCOA..
+        /// </summary>
+        public static string SettingsPageEventLogSettingDescription {
+            get {
+                return ResourceManager.GetString("SettingsPageEventLogSettingDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please help us improve the COCOA app.
+        /// </summary>
+        public static string SettingsPageEventLogSettingTitle {
+            get {
+                return ResourceManager.GetString("SettingsPageEventLogSettingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://github.com/cocoa-mhlw/cocoa/.
         /// </summary>
         public static string SettingsPageGitHubUrl {

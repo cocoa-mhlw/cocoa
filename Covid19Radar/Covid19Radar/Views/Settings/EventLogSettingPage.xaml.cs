@@ -35,11 +35,19 @@ namespace Covid19Radar.Views
 
         protected override bool OnBackButtonPressed()
         {
+            var backButtonEnabled = true;
             if (BindingContext is EventLogSettingPageViewModel vm)
             {
-                return vm.BackButtonEnabled;
+                backButtonEnabled = vm.BackButtonEnabled;
             }
-            return base.OnBackButtonPressed();
+            if (backButtonEnabled)
+            {
+                return base.OnBackButtonPressed();
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

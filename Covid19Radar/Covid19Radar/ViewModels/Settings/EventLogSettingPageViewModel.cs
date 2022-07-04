@@ -17,15 +17,26 @@ namespace Covid19Radar.ViewModels
     {
         private const bool ExposureNotifyIsCheckedDefault = false;
 
+        private bool _backButtonEnabled;
+        public bool BackButtonEnabled
+        {
+            get => _backButtonEnabled;
+            private set => SetProperty(ref _backButtonEnabled, value);
+        }
+
+        private bool _isVisibleTitleInContent;
+        public bool IsVisibleTitleInContent
+        {
+            get => _isVisibleTitleInContent;
+            private set => SetProperty(ref _isVisibleTitleInContent, value);
+        }
+
         private bool _exposureNotifyIsChecked;
         public bool ExposureNotifyIsChecked
         {
             get => _exposureNotifyIsChecked;
             set => SetProperty(ref _exposureNotifyIsChecked, value);
         }
-
-        public bool BackButtonEnabled
-            => _transitionReason == EventLogSettingPage.TransitionReason.Setting;
 
         private readonly ILoggerService _loggerService;
         private readonly IDialogService _dialogService;
@@ -59,6 +70,9 @@ namespace Covid19Radar.ViewModels
                 {
                     _transitionReason = parameters.GetValue<EventLogSettingPage.TransitionReason>(EventLogCooperationPage.TransitionReasonKey);
                 }
+
+                BackButtonEnabled = _transitionReason == EventLogSettingPage.TransitionReason.Setting;
+                IsVisibleTitleInContent = _transitionReason != EventLogSettingPage.TransitionReason.Setting;
 
                 SendEventLogState exposureNotifiedState = _sendEventLogStateRepository.GetSendEventLogState(EventType.ExposureNotified);
                 if (exposureNotifiedState == SendEventLogState.NotSet)

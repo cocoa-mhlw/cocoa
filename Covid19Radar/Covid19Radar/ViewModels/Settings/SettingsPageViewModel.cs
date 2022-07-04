@@ -10,7 +10,9 @@ using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Views;
 using Prism.Navigation;
+using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -46,11 +48,12 @@ namespace Covid19Radar.ViewModels
             IExposureConfigurationRepository exposureConfigurationRepository,
             ILogFileService logFileService,
             AbsExposureNotificationApiService exposureNotificationApiService,
-            ICloseApplicationService closeApplicationService
+            ICloseApplicationService closeApplicationService,
+            IEssentialsService essentialsService
             ) : base(navigationService)
         {
             Title = AppResources.SettingsPageTitle;
-            AppVer = AppInfo.VersionString;
+            AppVer = essentialsService.AppVersion;
             this.loggerService = loggerService;
             this.userDataRepository = userDataRepository;
             this.exposureDataRepository = exposureDataRepository;
@@ -59,6 +62,16 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.closeApplicationService = closeApplicationService;
         }
+
+        public IAsyncCommand OnEventLogSend => new AsyncCommand(async () =>
+        {
+            loggerService.StartMethod();
+
+            INavigationParameters navigatinParameters = EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Setting);
+            _ = await NavigationService.NavigateAsync(nameof(EventLogSettingPage), navigatinParameters);
+
+            loggerService.EndMethod();
+        });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
@@ -132,6 +145,5 @@ namespace Covid19Radar.ViewModels
 
             loggerService.EndMethod();
         });
-
     }
 }

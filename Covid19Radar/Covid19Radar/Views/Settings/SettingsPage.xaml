@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
@@ -51,6 +51,45 @@
                             Text="{Binding AppVer}" />
                     </Grid>
                 </Frame>
+                <BoxView Style="{StaticResource DefaultLineStyle}" />
+                <StackLayout
+                    Margin="15"
+                    Spacing="15">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SettingsPageEventLogSettingTitle}" />
+                    <StackLayout Spacing="10">
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            TextColor="{StaticResource SecondaryText}"
+                            Text="{x:Static resources:AppResources.SettingsPageEventLogSettingDescription}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource AnnotationLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                    <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                            <Label.Triggers>
+                                <DataTrigger
+                                    TargetType="Label"
+                                    Binding="{Binding Source={x:Static resources:AppResources.CocoaAnnotationText}}"
+                                    Value="">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </StackLayout>
+                    <Button
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Command="{Binding OnEventLogSend}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="{x:Static resources:AppResources.SettingsPageEventLogSendButton}" />
+                </StackLayout>
                 <BoxView Style="{StaticResource DefaultLineStyle}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
