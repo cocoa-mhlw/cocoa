@@ -27,12 +27,13 @@ steps:
   parameters:
     configuration: debug
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent -Version 0.23.1
-    displayName: Install Xamarin.TestCloud.Agent
+- script: |
+    nuget add ../whatever/lib/Xamarin.TestCloud.Agent.0.23.1.nupkg -Source ./packages
+  displayName: nuget add
+
+- script: |
+    dotnet add package Xamarin.TestCloud.Agent -s ./packages
+  displayName: Install Xamarin.TestCloud.Agent
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj for not Debug_UITest'
