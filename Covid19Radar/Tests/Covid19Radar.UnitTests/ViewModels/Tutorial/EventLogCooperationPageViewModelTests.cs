@@ -100,17 +100,10 @@ namespace Covid19Radar.UnitTests.ViewModels
         [Fact]
         public async Task OnClickSetLaterTests_Tutorial()
         {
-            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(It.IsAny<EventType>())).Returns(SendEventLogState.NotSet);
-
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogCooperationPage.BuildNavigationParams(EventLogCooperationPage.TransitionReason.Tutorial));
 
             await unitUnderTest.OnClickSetLater.ExecuteAsync();
-
-            foreach (var eventType in EventType.All)
-            {
-                _mockSendEventLogStateRepository.Verify(x => x.GetSendEventLogState(eventType), Times.Once());
-            }
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Once());
             _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Never());
@@ -119,17 +112,10 @@ namespace Covid19Radar.UnitTests.ViewModels
         [Fact]
         public async Task OnClickSetLaterTests_Splash()
         {
-            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(It.IsAny<EventType>())).Returns(SendEventLogState.NotSet);
-
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogCooperationPage.BuildNavigationParams(EventLogCooperationPage.TransitionReason.Splash));
 
             await unitUnderTest.OnClickSetLater.ExecuteAsync();
-
-            foreach (var eventType in EventType.All)
-            {
-                _mockSendEventLogStateRepository.Verify(x => x.GetSendEventLogState(eventType), Times.Once());
-            }
 
             _mockNavigationService.Verify(x => x.NavigateAsync(It.IsAny<string>()), Times.Never());
             _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Once());
@@ -138,17 +124,10 @@ namespace Covid19Radar.UnitTests.ViewModels
         [Fact]
         public async Task OnClickSetLaterTests_Exception()
         {
-            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(It.IsAny<EventType>())).Returns(SendEventLogState.NotSet);
-
             var unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogCooperationPage.BuildNavigationParams((EventLogCooperationPage.TransitionReason)99));
 
             await Assert.ThrowsAsync<ArgumentException>(() => unitUnderTest.OnClickSetLater.ExecuteAsync());
-
-            foreach (var eventType in EventType.All)
-            {
-                _mockSendEventLogStateRepository.Verify(x => x.GetSendEventLogState(eventType), Times.Once());
-            }
 
             _mockNavigationService.Verify(x => x.NavigateAsync(It.IsAny<string>()), Times.Never());
             _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Never());

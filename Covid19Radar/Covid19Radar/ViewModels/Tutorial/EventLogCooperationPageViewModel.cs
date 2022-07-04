@@ -86,14 +86,6 @@ namespace Covid19Radar.ViewModels
 
             try
             {
-                foreach (var eventType in EventType.All)
-                {
-                    if (_sendEventLogStateRepository.GetSendEventLogState(eventType) == SendEventLogState.NotSet)
-                    {
-                        _sendEventLogStateRepository.SetSendEventLogState(eventType, SendEventLogState.Disable);
-                    }
-                }
-
                 switch (_transitionReason)
                 {
                     case EventLogCooperationPage.TransitionReason.Tutorial:
