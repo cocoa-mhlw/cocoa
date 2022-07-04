@@ -87,14 +87,6 @@ namespace Covid19Radar.ViewModels
             {
                 _sendEventLogStateRepository.SetSendEventLogState(EventType.ExposureNotified, ExposureNotifyIsChecked ? SendEventLogState.Enable : SendEventLogState.Disable);
 
-                foreach (var eventType in EventType.All)
-                {
-                    if (_sendEventLogStateRepository.GetSendEventLogState(eventType) == SendEventLogState.NotSet)
-                    {
-                        _sendEventLogStateRepository.SetSendEventLogState(eventType, SendEventLogState.Disable);
-                    }
-                }
-
                 await _dialogService.ShowEventLogSaveCompletedAsync();
 
                 switch (_transitionReason)
