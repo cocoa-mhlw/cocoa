@@ -42,8 +42,8 @@ steps:
   displayName: nuget list source
 
 - script: |
-    nuget add ../whatever/lib/Xamarin.TestCloud.Agent.0.23.1.nupkg -Source ./packages
-  displayName: nuget add
+    nuget add /Users/runner/work/1/s/Xamarin.TestCloud.Agent.0.23.1.nupkg -Source ./packages
+  displayName: packages add
 
 - script: |
     dotnet add package Xamarin.TestCloud.Agent -s ./packages
