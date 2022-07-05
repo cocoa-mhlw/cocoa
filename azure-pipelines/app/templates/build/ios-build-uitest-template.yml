@@ -49,8 +49,8 @@ steps:
     installationPath: $(Agent.ToolsDirectory)/dotnet
 
 - script: |
-   dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent -s https://api.nuget.org/v3/index.json
- displayName: Install Xamarin.TestCloud.Agent
+    dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent -s https://api.nuget.org/v3/index.json
+  displayName: Install Xamarin.TestCloud.Agent
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj for not Debug_UITest'
