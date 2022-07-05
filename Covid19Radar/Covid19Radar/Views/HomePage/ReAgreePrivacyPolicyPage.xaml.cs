@@ -12,21 +12,14 @@ namespace Covid19Radar.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ReAgreePrivacyPolicyPage : ContentPage
     {
-        public const string UpdatePrivacyPolicyInfoKey = "updatePrivacyPolicyInfo";
-        public const string DestinationKey = "destination_reagree_privacy_policy";
+        public const string PrivacyPolicyDetailKey = "privacy_policy_detail";
 
         public static INavigationParameters BuildNavigationParams(
-            TermsUpdateInfoModel.Detail privacyPolicyInfo,
-            Destination destination,
-            INavigationParameters? baseParam = null
+            TermsUpdateInfoModel.Detail privatcyPolicyDetail
             )
         {
             var param = new NavigationParameters();
-            param.CopyFrom(baseParam);
-
-            param.Add(UpdatePrivacyPolicyInfoKey, privacyPolicyInfo);
-            param.Add(DestinationKey, destination);
-
+            param.Add(PrivacyPolicyDetailKey, privatcyPolicyDetail);
             return param;
         }
 

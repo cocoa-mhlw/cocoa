@@ -142,5 +142,96 @@ namespace Covid19Radar.UnitTests.Services
             mockUserDialogs.Verify(x => x.ConfirmAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
             mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
         }
+
+        [Fact]
+        public async Task ShowTemporarilyUnavailableWarningAsyncTest()
+        {
+            mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
+            mockEssentialsService.Setup(x => x.IsIos).Returns(false);
+
+            var unitUnderTest = CraeteDialogService();
+            await unitUnderTest.ShowTemporarilyUnavailableWarningAsync();
+
+            mockUserDialogs.Verify(x => x.ConfirmAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
+            mockUserDialogs.Verify(x => x.AlertAsync(
+                AppResources.TemporarilyUnavailableWarningMessage,
+                AppResources.TemporarilyUnavailableWarningTitle,
+                AppResources.ButtonOk,
+                null),
+                Times.Once());
+        }
+
+        [Fact]
+        public async Task ShowHomePageUnknownErrorWaringAsyncTest()
+        {
+            mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
+            mockEssentialsService.Setup(x => x.IsIos).Returns(false);
+
+            var unitUnderTest = CraeteDialogService();
+            await unitUnderTest.ShowHomePageUnknownErrorWaringAsync();
+
+            mockUserDialogs.Verify(x => x.ConfirmAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
+            mockUserDialogs.Verify(x => x.AlertAsync(
+                AppResources.HomePageDialogExceptionDescription,
+                AppResources.HomePageDialogExceptionTitle,
+                AppResources.ButtonOk,
+                null),
+                Times.Once());
+        }
+
+        [Fact]
+        public async Task ShowLocalNotificationOffWarningAsyncTest()
+        {
+            mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
+            mockEssentialsService.Setup(x => x.IsIos).Returns(false);
+
+            var unitUnderTest = CraeteDialogService();
+            await unitUnderTest.ShowLocalNotificationOffWarningAsync();
+
+            mockUserDialogs.Verify(x => x.ConfirmAsync(
+                AppResources.LocalNotificationOffWarningDialogMessage,
+                AppResources.LocalNotificationOffWarningDialogTitle,
+                AppResources.ToSettingsButton,
+                AppResources.ButtonCancel,
+                null),
+                Times.Once());
+            mockUserDialogs.Verify(x => x.AlertAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
+        }
+
+        [Fact]
+        public async Task ShowUserProfileNotSupportAsyncTest()
+        {
+            mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
+            mockEssentialsService.Setup(x => x.IsIos).Returns(false);
+
+            var unitUnderTest = CraeteDialogService();
+            await unitUnderTest.ShowUserProfileNotSupportAsync();
+
+            mockUserDialogs.Verify(x => x.ConfirmAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
+            mockUserDialogs.Verify(x => x.AlertAsync(
+                AppResources.UserProfileNotSupportDialogDescription,
+                AppResources.UserProfileNotSupportDialogTitle,
+                AppResources.ButtonOk,
+                null),
+                Times.Once());
+        }
+
+        [Fact]
+        public async Task ShowEventLogSaveCompletedAsyncTest()
+        {
+            mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
+            mockEssentialsService.Setup(x => x.IsIos).Returns(false);
+
+            var unitUnderTest = CraeteDialogService();
+            await unitUnderTest.ShowEventLogSaveCompletedAsync();
+
+            mockUserDialogs.Verify(x => x.ConfirmAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
+            mockUserDialogs.Verify(x => x.AlertAsync(
+                "",
+                AppResources.EventLogSettingPageSaveCompleteMessageTitle,
+                AppResources.ButtonOk,
+                null),
+                Times.Once());
+        }
     }
 }

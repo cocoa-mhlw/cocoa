@@ -17,7 +17,7 @@ namespace Covid19Radar.UnitTests.Services
 {
     public class EventLogServiceTests
     {
-        private readonly MockRepository mockRepository;
+        private readonly MockRepository _mockRepository;
 
         private readonly Mock<ISendEventLogStateRepository> _sendEventLogStateRepository;
         private readonly Mock<IEventLogRepository> _eventLogRepository;
@@ -29,14 +29,14 @@ namespace Covid19Radar.UnitTests.Services
 
         public EventLogServiceTests()
         {
-            mockRepository = new MockRepository(MockBehavior.Default);
+            _mockRepository = new MockRepository(MockBehavior.Default);
 
-            _sendEventLogStateRepository = mockRepository.Create<ISendEventLogStateRepository>();
-            _eventLogRepository = mockRepository.Create<IEventLogRepository>();
-            _essentialsService = mockRepository.Create<IEssentialsService>();
-            _deviceVerifier = mockRepository.Create<IDeviceVerifier>();
-            _httpDataService = mockRepository.Create<IHttpDataService>();
-            _loggerService = mockRepository.Create<ILoggerService>();
+            _sendEventLogStateRepository = _mockRepository.Create<ISendEventLogStateRepository>();
+            _eventLogRepository = _mockRepository.Create<IEventLogRepository>();
+            _essentialsService = _mockRepository.Create<IEssentialsService>();
+            _deviceVerifier = _mockRepository.Create<IDeviceVerifier>();
+            _httpDataService = _mockRepository.Create<IHttpDataService>();
+            _loggerService = _mockRepository.Create<ILoggerService>();
         }
 
         private EventLogService CreateService()
@@ -64,14 +64,6 @@ namespace Covid19Radar.UnitTests.Services
                 },
                 new EventLog()
                 {
-                    HasConsent = true,
-                    Epoch = 2,
-                    Type = EventType.ExposureData.Type,
-                    Subtype = EventType.ExposureData.SubType,
-                    Content = "{\"key\" : \"value3\"}",
-                },
-                new EventLog()
-                {
                     HasConsent = false,
                     Epoch = 1,
                     Type = EventType.ExposureNotified.Type,
@@ -94,9 +86,6 @@ namespace Covid19Radar.UnitTests.Services
             _sendEventLogStateRepository
                 .Setup(x => x.GetSendEventLogState(EventType.ExposureNotified))
                 .Returns(SendEventLogState.Enable);
-            _sendEventLogStateRepository
-                .Setup(x => x.GetSendEventLogState(EventType.ExposureData))
-                .Returns(SendEventLogState.Enable);
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
 
@@ -110,15 +99,12 @@ namespace Covid19Radar.UnitTests.Services
             _loggerService.Verify(x => x.Info("Event log send successful.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             _loggerService.Verify(x => x.Error(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
-            _httpDataService.Verify(x => x.PutEventLog(It.Is<V1EventLogRequest>(x => x.EventLogs.Count == 2)), Times.Once());
+            _httpDataService.Verify(x => x.PutEventLog(It.Is<V1EventLogRequest>(x => x.EventLogs.Count == 1)), Times.Once());
 
             _deviceVerifier.Verify(x => x.VerifyAsync(It.IsAny<V1EventLogRequest>()), Times.Once());
 
             Assert.True(dummyEventLogList[0].HasConsent);
             _eventLogRepository.Verify(x => x.RemoveAsync(dummyEventLogList[0]), Times.Once());
-
-            Assert.True(dummyEventLogList[1].HasConsent);
-            _eventLogRepository.Verify(x => x.RemoveAsync(dummyEventLogList[1]), Times.Once());
         }
 
         [Fact]
@@ -134,11 +120,6 @@ namespace Covid19Radar.UnitTests.Services
             _sendEventLogStateRepository
                 .Setup(x => x.GetSendEventLogState(EventType.ExposureNotified))
                 .Returns(SendEventLogState.Enable);
-
-            // Consent withdrawn
-            _sendEventLogStateRepository
-                .Setup(x => x.GetSendEventLogState(EventType.ExposureData))
-                .Returns(SendEventLogState.Disable);
 
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
@@ -180,9 +161,6 @@ namespace Covid19Radar.UnitTests.Services
             _sendEventLogStateRepository
                 .Setup(x => x.GetSendEventLogState(EventType.ExposureNotified))
                 .Returns(SendEventLogState.Enable);
-            _sendEventLogStateRepository
-                .Setup(x => x.GetSendEventLogState(EventType.ExposureData))
-                .Returns(SendEventLogState.Disable);
 
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
@@ -217,9 +195,6 @@ namespace Covid19Radar.UnitTests.Services
             _sendEventLogStateRepository
                 .Setup(x => x.GetSendEventLogState(EventType.ExposureNotified))
                 .Returns(SendEventLogState.Enable);
-            _sendEventLogStateRepository
-                .Setup(x => x.GetSendEventLogState(EventType.ExposureData))
-                .Returns(SendEventLogState.Disable);
 
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
@@ -255,9 +230,6 @@ namespace Covid19Radar.UnitTests.Services
             _sendEventLogStateRepository
                 .Setup(x => x.GetSendEventLogState(EventType.ExposureNotified))
                 .Returns(SendEventLogState.Enable);
-            _sendEventLogStateRepository
-                .Setup(x => x.GetSendEventLogState(EventType.ExposureData))
-                .Returns(SendEventLogState.Disable);
 
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
@@ -293,9 +265,6 @@ namespace Covid19Radar.UnitTests.Services
             _sendEventLogStateRepository
                 .Setup(x => x.GetSendEventLogState(EventType.ExposureNotified))
                 .Returns(SendEventLogState.Disable);
-            _sendEventLogStateRepository
-                .Setup(x => x.GetSendEventLogState(EventType.ExposureData))
-                .Returns(SendEventLogState.Disable);
 
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);
@@ -322,9 +291,6 @@ namespace Covid19Radar.UnitTests.Services
             _sendEventLogStateRepository
                 .Setup(x => x.GetSendEventLogState(EventType.ExposureNotified))
                 .Returns(SendEventLogState.Enable);
-            _sendEventLogStateRepository
-                .Setup(x => x.GetSendEventLogState(EventType.ExposureData))
-                .Returns(SendEventLogState.Disable);
 
             _eventLogRepository.Setup(x => x.GetLogsAsync(long.MaxValue))
                 .ReturnsAsync(dummyEventLogList);

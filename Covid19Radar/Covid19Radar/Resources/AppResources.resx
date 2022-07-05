@@ -154,9 +154,6 @@
     <value>Please check your network connection.</value>
     <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Not Now</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
     <comment>Tab Button</comment>
@@ -599,10 +596,6 @@
   <data name="TutorialPage4Button1" xml:space="preserve">
     <value>Turn on</value>
     <comment>有効にする</comment>
-  </data>
-  <data name="TutorialPage4Link" xml:space="preserve">
-    <value>Set up later</value>
-    <comment>あとで設定する</comment>
   </data>
   <data name="TutorialPage4Description" xml:space="preserve">
     <value>Please turn on Exposure Notifications function and Bluetooth to start recording close contacts with other users.</value>
@@ -1543,6 +1536,77 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>COCOA does not support multi-user usage.
 Please execute the app as an administrator (owner).</value>
     <comment>COCOAは複数ユーザーでの利用をサポートしていません。管理者（所有者）で実行してください。</comment>
+  </data>
+
+  <data name="SetupLaerLink" xml:space="preserve">
+    <value>Set up later</value>
+    <comment>あとで設定する</comment>
+  </data>
+
+  <data name="EventLogCooperationPageTitle" xml:space="preserve">
+    <value>Please help us improve the COCOA app</value>
+    <comment>アプリの改善に
+ご協力ください</comment>
+  </data>
+  <data name="EventLogCooperationPageDescription1" xml:space="preserve">
+    <value>Please allow the Ministry of Health, Labor and Welfare to use the app information of the app to improve COCOA.</value>
+    <comment>COCOA(※)の改善のため、厚生労働省にアプリの使用情報を送信することを許可してください。</comment>
+  </data>
+  <data name="EventLogCooperationPageBullets1" xml:space="preserve">
+    <value>- The information are sent anonymously.</value>
+    <comment>・送信は匿名で行われます。</comment>
+  </data>
+  <data name="EventLogCooperationPageBullets2" xml:space="preserve">
+    <value>- The content of the information sent does not include any personally identifiable information about you or the positive registrants who have have been in contact with you.</value>
+    <comment>・送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含まれません。</comment>
+  </data>
+  <data name="EventLogCooperationPageBullets3" xml:space="preserve">
+    <value>- Anonymous information may be aggregated and published to help improve public health.</value>
+    <comment>・公衆衛生の改善に寄与するため、匿名情報を集計して公開する場合があります。</comment>
+  </data>
+  <data name="EventLogCooperationPageBullets4" xml:space="preserve">
+    <value>- Anonymous information may be aggregated and published to help improve public health.</value>
+    <comment>・送信する情報の設定は、「このアプリについて」からいつでも変更することができます。</comment>
+  </data>
+  <data name="EventLogCooperationPageSendButton" xml:space="preserve">
+    <value>Send information setting</value>
+    <comment>送信情報を設定</comment>
+  </data>
+
+  <data name="EventLogSettingPageTitle" xml:space="preserve">
+    <value>Setting for the information that will be sent</value>
+    <comment>送信する情報の設定</comment>
+  </data>
+  <data name="EventLogSettingPageDescription1" xml:space="preserve">
+    <value>The app will send the following information to the Ministry of Health, Labor and Welfare. Please check the items that are allowed to be sent.</value>
+    <comment>アプリは次の情報を厚生労働省に送信します。送信を許可する項目にチェックを入れてください。</comment>
+  </data>
+  <data name="EventLogSettingPageBullets1" xml:space="preserve">
+    <value>- The information are sent anonymously.</value>
+    <comment>・送信は匿名で行われます。</comment>
+  </data>
+  <data name="EventLogSettingPageBullets2" xml:space="preserve">
+    <value>- The content of the information sent does not include any personally identifiable information about you or the positive registrants who have have been in contact with you.</value>
+    <comment>・送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含まれません。</comment>
+  </data>
+  <data name="EventLogSettingPageSettingTitle1" xml:space="preserve">
+    <value>Display close contact notification</value>
+    <comment>接触通知の表示</comment>
+  </data>
+  <data name="EventLogSettingPageSettingDescription1" xml:space="preserve">
+    <value>In case a close contact hase been confirmed, or it is determined that there is a possibility of close a notification will be displayed. If there is no possibility of close contact, it will not.
+By collecting the number of notifications, we can use it to understand how many close contacts are occurring in Japan.</value>
+    <comment>接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。
+通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</comment>
+  </data>
+  <data name="EventLogSettingPageSettingSaveButton" xml:space="preserve">
+    <value>Save the setting</value>
+    <comment>設定を保存</comment>
+  </data>
+
+  <data name="EventLogSettingPageSaveCompleteMessageTitle" xml:space="preserve">
+    <value>Setting was saved</value>
+    <comment>設定を保存しました</comment>
   </data>
 
 </root>

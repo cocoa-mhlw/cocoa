@@ -18,10 +18,9 @@ namespace Covid19Radar.ViewModels
     public class ReAgreeTermsOfServicePageViewModel : ViewModelBase
     {
         private readonly ILoggerService _loggerService;
-        private readonly ITermsUpdateService _termsUpdateService;
         private readonly IUserDataRepository _userDataRepository;
+        private readonly ISplashNavigationService _splashNavigationService;
 
-        private TermsUpdateInfoModel UpdateInfo;
         private DateTime UpdateDateTimeUtc { get; set; }
         private string _updateText;
         public string UpdateText
@@ -30,20 +29,18 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _updateText, value); }
         }
 
-        private INavigationParameters _navigationParameters;
-
         public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
 
         public ReAgreeTermsOfServicePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
-            ITermsUpdateService termsUpdateService,
-            IUserDataRepository userDataRepository
+            IUserDataRepository userDataRepository,
+            ISplashNavigationService splashNavigationService
             ) : base(navigationService)
         {
             _loggerService = loggerService;
-            _termsUpdateService = termsUpdateService;
             _userDataRepository = userDataRepository;
+            _splashNavigationService = splashNavigationService;
         }
 
         public Command OpenWebView => new Command(async () =>
@@ -62,21 +59,7 @@ namespace Covid19Radar.ViewModels
 
             _userDataRepository.SaveLastUpdateDate(TermsType.TermsOfService, UpdateDateTimeUtc);
 
-            Destination destination = Destination.HomePage;
-            if (_navigationParameters.ContainsKey(ReAgreeTermsOfServicePage.DestinationKey))
-            {
-                destination = _navigationParameters.GetValue<Destination>(ReAgreeTermsOfServicePage.DestinationKey);
-            }
-
-            if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, UpdateInfo))
-            {
-                var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(UpdateInfo.PrivacyPolicy, destination, _navigationParameters);
-                _ = await NavigationService.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), navigationParams);
-            }
-            else
-            {
-                _ = await NavigationService.NavigateAsync(destination.ToPath(), _navigationParameters);
-            }
+            _ = await _splashNavigationService.NavigateNextAsync();
 
             _loggerService.EndMethod();
         });
@@ -86,11 +69,9 @@ namespace Covid19Radar.ViewModels
             _loggerService.StartMethod();
 
             base.Initialize(parameters);
-            UpdateInfo = (TermsUpdateInfoModel) parameters[ReAgreeTermsOfServicePage.UpdateInfoKey];
-            UpdateDateTimeUtc = UpdateInfo.TermsOfService.UpdateDateTimeUtc;
-            UpdateText = UpdateInfo.TermsOfService.Text;
-
-            _navigationParameters = parameters;
+            var termsOfServiceDetail = (TermsUpdateInfoModel.Detail) parameters[ReAgreeTermsOfServicePage.TermsOfServiceDetailKey];
+            UpdateDateTimeUtc = termsOfServiceDetail.UpdateDateTimeUtc;
+            UpdateText = termsOfServiceDetail.Text;
 
             _loggerService.EndMethod();
         }

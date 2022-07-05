@@ -142,6 +142,7 @@ namespace Covid19Radar
             // Settings
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
+            containerRegistry.RegisterForNavigation<EventLogSettingPage>();
 
             // tutorial
             containerRegistry.RegisterForNavigation<TutorialPage1>();
@@ -150,6 +151,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage>();
             containerRegistry.RegisterForNavigation<TutorialPage4>();
             containerRegistry.RegisterForNavigation<TutorialPage6>();
+            containerRegistry.RegisterForNavigation<EventLogCooperationPage>();
 
             // Help
             containerRegistry.RegisterForNavigation<HelpMenuPage>();
@@ -188,7 +190,6 @@ namespace Covid19Radar
             container.Register<ILogUploadService, LogUploadService>(Reuse.Singleton);
             container.Register<IEssentialsService, EssentialsService>(Reuse.Singleton);
             container.Register<IUserDataService, UserDataService>(Reuse.Singleton);
-            container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
             container.Register<IHttpClientService, HttpClientService>(Reuse.Singleton);
             container.Register<IMigrationService, MigrationService>(Reuse.Singleton);
             container.Register<IExposureDataExportService, ExposureDataExportService>(Reuse.Singleton);
@@ -196,9 +197,11 @@ namespace Covid19Radar
 #if USE_MOCK
             container.Register<IHttpDataService, HttpDataServiceMock>(Reuse.Singleton);
             container.Register<IStorageService, StorageServiceMock>(Reuse.Singleton);
+            container.Register<ITermsUpdateService, TermsUpdateServiceMock>(Reuse.Singleton);
 #else
             container.Register<IHttpDataService, HttpDataService>(Reuse.Singleton);
             container.Register<IStorageService, StorageService>(Reuse.Singleton);
+            container.Register<ITermsUpdateService, TermsUpdateService>(Reuse.Singleton);
 #endif
 
 #if DEBUG
@@ -223,6 +226,8 @@ namespace Covid19Radar
             container.Register<ISendEventLogStateRepository, SendEventLogStateRepository>(Reuse.Singleton);
             container.Register<IEventLogRepository, EventLogRepository>(Reuse.Singleton);
             container.Register<IEventLogService, EventLogService>(Reuse.Singleton);
+
+            container.Register<ISplashNavigationService, SplashNavigationService>(Reuse.Singleton);
 
             // Utilities
             container.Register<IDateTimeUtility, DateTimeUtility>(Reuse.Singleton);

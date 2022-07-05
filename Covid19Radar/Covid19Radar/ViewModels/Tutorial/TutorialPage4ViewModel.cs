@@ -2,19 +2,21 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
+using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
     public class TutorialPage4ViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
-        public string TutorialPage4LinkReadText => $"{AppResources.TutorialPage4Link} {AppResources.Button}";
+        public string SetupLaterLinkReadText => $"{AppResources.SetupLaerLink} {AppResources.Button}";
 
         private readonly IDialogService dialogService;
         private readonly ILoggerService loggerService;
@@ -32,7 +34,7 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationApiService = exposureNotificationApiService;
         }
 
-        public Command OnClickEnable => new Command(async () =>
+        public IAsyncCommand OnClickEnable => new AsyncCommand(async () =>
         {
             loggerService.StartMethod();
 
@@ -41,7 +43,7 @@ namespace Covid19Radar.ViewModels
                 var success = await exposureNotificationApiService.StartExposureNotificationAsync();
                 if (success)
                 {
-                    await NavigationService.NavigateAsync(nameof(TutorialPage6));
+                    await NavigateNextPage();
                 }
             }
             catch (ENException exception)
@@ -53,7 +55,7 @@ namespace Covid19Radar.ViewModels
                     ShowStatuses();
                     return;
                 }
-                await NavigationService.NavigateAsync(nameof(TutorialPage6));
+                await NavigateNextPage();
             }
             finally
             {
@@ -70,10 +72,10 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        public Command OnClickDisable => new Command(async () =>
+        public IAsyncCommand OnClickDisable => new AsyncCommand(async () =>
         {
             loggerService.StartMethod();
-            await NavigationService.NavigateAsync(nameof(TutorialPage6));
+            await NavigateNextPage();
             loggerService.EndMethod();
         });
 
@@ -82,9 +84,16 @@ namespace Covid19Radar.ViewModels
             loggerService.StartMethod();
 
             await exposureNotificationApiService.StartExposureNotificationAsync();
-            await NavigationService.NavigateAsync(nameof(TutorialPage6));
+            await NavigateNextPage();
 
             loggerService.EndMethod();
+        }
+
+        public async Task NavigateNextPage()
+        {
+            INavigationParameters navigatinParameters =
+                EventLogCooperationPage.BuildNavigationParams(EventLogCooperationPage.TransitionReason.Tutorial);
+            await NavigationService.NavigateAsync(nameof(EventLogCooperationPage), navigatinParameters);
         }
     }
 }

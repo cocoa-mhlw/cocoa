@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    x:Class="Covid19Radar.Views.EventLogCooperationPage"
+    ios:Page.UseSafeArea="true"
+    Style="{StaticResource DefaultPageStyle}"
+    Title="{x:Static resources:AppResources.EventLogCooperationPageTitle}">
+    <ContentView>
+        <StackLayout>
+            <Label
+                AutomationProperties.IsInAccessibleTree="True"
+                Margin="20"
+                Style="{StaticResource DefaultTitleLabel}"
+                Text="{x:Static resources:AppResources.EventLogCooperationPageTitle}" />
+            <ScrollView
+                Padding="20,0,20,20"
+                VerticalOptions="FillAndExpand">
+                <StackLayout
+                    Spacing="20"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout
+                        Spacing="20"
+                        VerticalOptions="FillAndExpand">
+                        <Image
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Source="Improvement_img" />
+                        <StackLayout Spacing="10">
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.EventLogCooperationPageDescription1}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource AnnotationLabel}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.AnnotationSymbol}"/>
+                                        <Span Text="{x:Static resources:AppResources.CocoaAnnotationText}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                                <Label.Triggers>
+                                    <DataTrigger
+                                        TargetType="Label"
+                                        Binding="{Binding Source={x:Static resources:AppResources.CocoaAnnotationText}}"
+                                        Value="">
+                                        <Setter Property="IsVisible" Value="False" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout
+                            Spacing="5">
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.EventLogCooperationPageBullets1}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.EventLogCooperationPageBullets2}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.EventLogCooperationPageBullets3}" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.EventLogCooperationPageBullets4}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout
+                        Spacing="10">
+                        <Button
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Command="{Binding Path=OnClickSetting}"
+                            Style="{StaticResource DefaultButton}"
+                            Text="{x:Static resources:AppResources.EventLogCooperationPageSendButton}" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            AutomationProperties.Name="{Binding SetupLaterLinkReadText}"
+                            HorizontalOptions="CenterAndExpand"
+                            Style="{StaticResource LinkLabelStyleMedium}"
+                            Text="{x:Static resources:AppResources.SetupLaerLink}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=OnClickSetLater}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentView>
+</ContentPage>
+

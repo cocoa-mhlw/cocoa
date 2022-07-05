@@ -192,5 +192,44 @@ namespace Covid19Radar.UnitTests.Repository
                 "{\"DummyEventType0-DummyEventSubtype0\":-1,\"DummyEventType1-DummyEventSubtype1\":1}"
                 ), Times.Once());
         }
+
+        [Fact]
+        public void IsExistNotSetEventTypeTest_NotSet()
+        {
+            mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.SendEventLogState)).Returns(true);
+
+            mockPreferencesService.Setup(s => s.GetStringValue(PreferenceKey.SendEventLogState, It.IsAny<string>()))
+                .Returns($"{{ \"{EventType.ExposureNotified}\": {(int)SendEventLogState.NotSet} }}");
+
+            var sendEventLogStateRepository = CreateRepository();
+
+            Assert.True(sendEventLogStateRepository.IsExistNotSetEventType());
+        }
+
+        [Fact]
+        public void IsExistNotSetEventTypeTest_Disabled()
+        {
+            mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.SendEventLogState)).Returns(true);
+
+            mockPreferencesService.Setup(s => s.GetStringValue(PreferenceKey.SendEventLogState, It.IsAny<string>()))
+                .Returns($"{{ \"{EventType.ExposureNotified}\": {(int)SendEventLogState.Disable} }}");
+
+            var sendEventLogStateRepository = CreateRepository();
+
+            Assert.False(sendEventLogStateRepository.IsExistNotSetEventType());
+        }
+
+        [Fact]
+        public void IsExistNotSetEventTypeTest_Enabled()
+        {
+            mockPreferencesService.Setup(s => s.ContainsKey(PreferenceKey.SendEventLogState)).Returns(true);
+
+            mockPreferencesService.Setup(s => s.GetStringValue(PreferenceKey.SendEventLogState, It.IsAny<string>()))
+                .Returns($"{{ \"{EventType.ExposureNotified}\": {(int)SendEventLogState.Enable} }}");
+
+            var sendEventLogStateRepository = CreateRepository();
+
+            Assert.False(sendEventLogStateRepository.IsExistNotSetEventType());
+        }
     }
 }

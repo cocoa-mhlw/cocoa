@@ -12,21 +12,13 @@ namespace Covid19Radar.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ReAgreeTermsOfServicePage : ContentPage
     {
-        public const string UpdateInfoKey = "updateInfo";
-        public const string DestinationKey = "destination_reagree_term_of_service";
+        public const string TermsOfServiceDetailKey = "terms_of_service_detail";
 
         public static INavigationParameters BuildNavigationParams(
-            TermsUpdateInfoModel updateInfo,
-            Destination destination,
-            INavigationParameters? baseParam = null
-            )
+            TermsUpdateInfoModel.Detail termsOfServiceDetail)
         {
             var param = new NavigationParameters();
-            param.CopyFrom(baseParam);
-
-            param.Add(UpdateInfoKey, updateInfo);
-            param.Add(DestinationKey, destination);
-
+            param.Add(TermsOfServiceDetailKey, termsOfServiceDetail);
             return param;
         }
 
