@@ -16,7 +16,7 @@ namespace Covid19Radar.Services
         Destination Destination { get; set; }
         INavigationParameters DestinationPageParameters { get; set; }
         Task Prepare();
-        Task<INavigationResult> NavigateNextAsync();
+        Task<INavigationResult> NavigateNextAsync(bool isSetupLaterEventLog = false);
     }
 
     public class SplashNavigationService : ISplashNavigationService
@@ -59,7 +59,7 @@ namespace Covid19Radar.Services
             }
         }
 
-        public async Task<INavigationResult> NavigateNextAsync()
+        public async Task<INavigationResult> NavigateNextAsync(bool isSetupLaterEventLog = false)
         {
             _loggerService.StartMethod();
 
@@ -82,7 +82,7 @@ namespace Covid19Radar.Services
                         name = $"/{nameof(ReAgreePrivacyPolicyPage)}";
                         parameters = ReAgreePrivacyPolicyPage.BuildNavigationParams(_termsUpdateInfoModel.PrivacyPolicy);
                     }
-                    else if (_sendEventLogStateRepository.IsExistNotSetEventType())
+                    else if (!isSetupLaterEventLog && _sendEventLogStateRepository.IsExistNotSetEventType())
                     {
                         name = $"/{nameof(EventLogCooperationPage)}";
                         parameters = EventLogCooperationPage.BuildNavigationParams(EventLogCooperationPage.TransitionReason.Splash);

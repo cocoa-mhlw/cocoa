@@ -92,7 +92,7 @@ namespace Covid19Radar.ViewModels
                         _ = await NavigationService.NavigateAsync(nameof(TutorialPage6));
                         break;
                     case EventLogCooperationPage.TransitionReason.Splash:
-                        _ = await _splashNavigationService.NavigateNextAsync();
+                        _ = await _splashNavigationService.NavigateNextAsync(isSetupLaterEventLog: true);
                         break;
                     default:
                         throw new ArgumentException($"EventLogCooperationPage.TransitionReason is invalid. ({_transitionReason})");

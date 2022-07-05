@@ -99,7 +99,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.PrivacyPolicy, privacyPolicyDetail.UpdateDateTimeUtc));
             reAgreePrivacyPolicyPageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Once());
+            mockSplashNavigationService.Verify(x => x.NavigateNextAsync(false), Times.Once());
         }
     }
 }

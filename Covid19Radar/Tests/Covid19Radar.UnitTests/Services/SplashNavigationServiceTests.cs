@@ -179,6 +179,33 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
+        public async Task NavigateNextAsyncTest_EventLogSetupLager()
+        {
+            SplashNavigationService unitUnderTest = CreateService();
+
+            unitUnderTest.Destination = Destination.HomePage;
+            unitUnderTest.DestinationPageParameters = new NavigationParameters();
+
+            mockTermsUpdateService.Setup(x => x.GetTermsUpdateInfo()).ReturnsAsync(_termsUpdateInfoDefault);
+
+            await unitUnderTest.Prepare();
+            mockTermsUpdateService.Verify(x => x.GetTermsUpdateInfo(), Times.Once());
+
+            mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
+            mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.TermsOfService, _termsUpdateInfoDefault)).Returns(false);
+            mockTermsUpdateService.Setup(x => x.IsUpdated(TermsType.PrivacyPolicy, _termsUpdateInfoDefault)).Returns(false);
+            mockSendEventLogStateRepository.Setup(x => x.IsExistNotSetEventType()).Returns(true);
+
+            await unitUnderTest.NavigateNextAsync(true);
+
+            mockUserDataRepository.Verify(x => x.IsAllAgreed(), Times.Once());
+            mockTermsUpdateService.Verify(x => x.IsUpdated(TermsType.TermsOfService, _termsUpdateInfoDefault), Times.Once());
+            mockTermsUpdateService.Verify(x => x.IsUpdated(TermsType.PrivacyPolicy, _termsUpdateInfoDefault), Times.Once());
+            mockSendEventLogStateRepository.Verify(x => x.IsExistNotSetEventType(), Times.Never());
+            mockNavigatoinService.Verify(x => x.NavigateAsync(Destination.HomePage.ToPath(), It.IsAny<INavigationParameters>()), Times.Once());
+        }
+
+        [Fact]
         public async Task NavigateNextAsyncTest_Destination()
         {
             SplashNavigationService unitUnderTest = CreateService();

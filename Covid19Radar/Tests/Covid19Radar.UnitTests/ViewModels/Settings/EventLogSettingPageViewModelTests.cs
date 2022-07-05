@@ -174,7 +174,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             await unitUnderTest.OnClickSave.ExecuteAsync();
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Once());
-            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Never());
+            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(false), Times.Never());
             _mockNavigationService.Verify(x => x.GoBackAsync(), Times.Never());
         }
 
@@ -190,7 +190,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             await unitUnderTest.OnClickSave.ExecuteAsync();
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Never());
-            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Once());
+            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(false), Times.Once());
             _mockNavigationService.Verify(x => x.GoBackAsync(), Times.Never());
         }
 
@@ -206,7 +206,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             await unitUnderTest.OnClickSave.ExecuteAsync();
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Never());
-            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Never());
+            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(false), Times.Never());
             _mockNavigationService.Verify(x => x.GoBackAsync(), Times.Once());
         }
 
@@ -223,7 +223,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             await Assert.ThrowsAsync<ArgumentException>(() => unitUnderTest.OnClickSave.ExecuteAsync());
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Never());
-            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Never());
+            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(false), Times.Never());
             _mockNavigationService.Verify(x => x.GoBackAsync(), Times.Never());
         }
     }

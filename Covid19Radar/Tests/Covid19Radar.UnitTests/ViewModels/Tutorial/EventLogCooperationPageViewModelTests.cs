@@ -106,7 +106,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             await unitUnderTest.OnClickSetLater.ExecuteAsync();
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Once());
-            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Never());
+            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(It.IsAny<bool>()), Times.Never());
         }
 
         [Fact]
@@ -118,7 +118,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             await unitUnderTest.OnClickSetLater.ExecuteAsync();
 
             _mockNavigationService.Verify(x => x.NavigateAsync(It.IsAny<string>()), Times.Never());
-            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Once());
+            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(true), Times.Once());
         }
 
         [Fact]
@@ -130,7 +130,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             await Assert.ThrowsAsync<ArgumentException>(() => unitUnderTest.OnClickSetLater.ExecuteAsync());
 
             _mockNavigationService.Verify(x => x.NavigateAsync(It.IsAny<string>()), Times.Never());
-            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Never());
+            _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(It.IsAny<bool>()), Times.Never());
         }
     }
 }

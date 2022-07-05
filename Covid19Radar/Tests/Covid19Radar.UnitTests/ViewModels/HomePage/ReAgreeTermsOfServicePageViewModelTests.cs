@@ -97,7 +97,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockUserDataRepository.Setup(x => x.SaveLastUpdateDate(TermsType.TermsOfService, termsOfServiceDetail.UpdateDateTimeUtc));
             reAgreeTermsOfServicePageViewModel.OnClickReAgreeCommand.Execute(null);
 
-            mockSplashNavigationService.Verify(x => x.NavigateNextAsync(), Times.Once());
+            mockSplashNavigationService.Verify(x => x.NavigateNextAsync(false), Times.Once());
         }
     }
 }
