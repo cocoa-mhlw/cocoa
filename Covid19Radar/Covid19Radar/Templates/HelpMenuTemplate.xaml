@@ -19,7 +19,6 @@
             FontSize="Default"
             Text="{Binding Title}"
             LineBreakMode="WordWrap"
-            MaxLines="2"
             TextColor="{StaticResource NavBarText}"
             VerticalOptions="Center" />
         <Image
