@@ -38,8 +38,7 @@ steps:
   displayName: nuget Install
 
 - script: |
-    ls
-    cd /Users/runner/.dotnet/sdk/5.0.408/
+    cd /Users/runner/work/1/s/
     ls
   displayName: list segments
 
