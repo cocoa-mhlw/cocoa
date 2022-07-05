@@ -35,14 +35,10 @@ steps:
 
 - script: |
     nuget install Xamarin.TestCloud.Agent -Version 0.23.1
-  displayName: Install Xamarin.TestCloud.Agent
+  displayName: nuget Install
 
 - script: |
-    nuget add /Users/runner/work/1/s/Xamarin.TestCloud.Agent.0.23.1 -Source ./packages
-  displayName: packages add
-
-- script: |
-    dotnet add package Xamarin.TestCloud.Agent -s ./packages
+    dotnet add package Xamarin.TestCloud.Agent -s https://api.nuget.org/v3/index.json
   displayName: Install Xamarin.TestCloud.Agent
 
 - task: XamariniOS@2
