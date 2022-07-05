@@ -38,18 +38,7 @@ steps:
   displayName: nuget Install
 
 - script: |
-    mdfind Xamarin.iOS.CSharp.targets
-  displayName: mdfind
-
-- task: UseDotNet@2
-  displayName: 'Use .NET Core sdk'
-  inputs:
-    packageType: sdk
-    version: 6
-    installationPath: $(Agent.ToolsDirectory)/dotnet
-
-- script: |
-    dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent -s https://api.nuget.org/v3/index.json
+    dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent.0.23.1 -s https://api.nuget.org/v3-flatcontainer/xamarin.testcloud.agent/0.23.1/xamarin.testcloud.agent.0.23.1.nupkg
   displayName: Install Xamarin.TestCloud.Agent
 
 - task: XamariniOS@2
@@ -61,7 +50,7 @@ steps:
     signingIdentity: 'Apple Development'
     signingProvisioningProfileID: '$(iOS_ProvisioningProfileID_Development)'
     args: '/p:ArchiveOnBuild=true /p:DefineConstants=DEBUG=0'
-  condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'false'))
+  condition: and(succeeded(), eq( '${{ parameters.isDefineDebug }}', 'false'))
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj for Debug_UITest'
