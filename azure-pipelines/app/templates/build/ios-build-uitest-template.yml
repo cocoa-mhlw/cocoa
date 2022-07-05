@@ -38,9 +38,8 @@ steps:
   displayName: nuget Install
 
 - script: |
-    cd /Users/runner/work/1/s/
-    ls
-  displayName: list segments
+    mdfind Xamarin.iOS.CSharp.targets
+  displayName: mdfind
 
 #- script: |
 #    dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent -s https://api.nuget.org/v3/index.json
