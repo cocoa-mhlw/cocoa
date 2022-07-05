@@ -45,10 +45,10 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
-        public void SetupLaerLinkReadTextTest()
+        public void SetupLaterLinkReadTextTest()
         {
             var unitUnderTest = CreateViewModel();
-            Assert.Equal($"{AppResources.SetupLaerLink} {AppResources.Button}", unitUnderTest.SetupLaerLinkReadText);
+            Assert.Equal($"{AppResources.SetupLaerLink} {AppResources.Button}", unitUnderTest.SetupLaterLinkReadText);
         }
 
         [Fact]

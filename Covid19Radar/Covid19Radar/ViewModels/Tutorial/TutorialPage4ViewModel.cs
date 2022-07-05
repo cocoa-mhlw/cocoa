@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
 {
     public class TutorialPage4ViewModel : ViewModelBase, IExposureNotificationEventCallback
     {
-        public string SetupLaerLinkReadText => $"{AppResources.SetupLaerLink} {AppResources.Button}";
+        public string SetupLaterLinkReadText => $"{AppResources.SetupLaerLink} {AppResources.Button}";
 
         private readonly IDialogService dialogService;
         private readonly ILoggerService loggerService;

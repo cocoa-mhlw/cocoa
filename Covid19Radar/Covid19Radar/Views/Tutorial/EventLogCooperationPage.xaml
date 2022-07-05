@@ -83,7 +83,7 @@
                             Text="{x:Static resources:AppResources.EventLogCooperationPageSendButton}" />
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            AutomationProperties.Name="{Binding SetupLaerLinkReadText}"
+                            AutomationProperties.Name="{Binding SetupLaterLinkReadText}"
                             HorizontalOptions="CenterAndExpand"
                             Style="{StaticResource LinkLabelStyleMedium}"
                             Text="{x:Static resources:AppResources.SetupLaerLink}">

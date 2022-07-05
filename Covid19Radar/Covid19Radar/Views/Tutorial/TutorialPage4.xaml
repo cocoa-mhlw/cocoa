@@ -70,7 +70,7 @@
                             Text="{x:Static resources:AppResources.TutorialPage4Button1}" />
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
-                            AutomationProperties.Name="{Binding SetupLaerLinkReadText}"
+                            AutomationProperties.Name="{Binding SetupLaterLinkReadText}"
                             HorizontalTextAlignment="Center"
                             Margin="0, 20, 0, 10"
                             Style="{StaticResource LinkLabelStyleMedium}"

@@ -14,7 +14,7 @@ namespace Covid19Radar.ViewModels
 {
     public class EventLogCooperationPageViewModel : ViewModelBase
     {
-        public string SetupLaerLinkReadText => $"{Resources.AppResources.SetupLaerLink} {Resources.AppResources.Button}";
+        public string SetupLaterLinkReadText => $"{Resources.AppResources.SetupLaerLink} {Resources.AppResources.Button}";
 
         private readonly ILoggerService _loggerService;
         private readonly ISplashNavigationService _splashNavigationService;
