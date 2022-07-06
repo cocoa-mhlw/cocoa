@@ -3,19 +3,6 @@ parameters:
   type: boolean
   default: false
 
-steps:
-- script: |
-    dotnet --list-sdks
-  displayName: dotnet --list-sdks
-
-- script: |
-    dotnet --list-runtimes
-  displayName: dotnet --list-runtimes
-
-- script: |
-    dotnet --info
-  displayName: dotnet --info
-  
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
@@ -39,12 +26,25 @@ steps:
   parameters:
     configuration: debug
 
+- script: |
+    GET MSBuildExtensionsPath
+  displayName: GET
 
 - script: |
-    echo $(MSBuildExtensionsPath)
-  displayName: MSBuildExtensionsPath
+    SET MSBuildExtensionsPath="/Library/Frameworks/Xamarin.iOS.framework/Versions/15.6.0.3/lib/msbuild/"
+  displayName: SET
 
+  - task: NuGetToolInstaller@1
+  inputs:
+    #versionSpec: # Optional
+    checkLatest: false # Optional
+- script: |
+    nuget install Xamarin.TestCloud.Agent -Version 0.23.1
+  displayName: nuget Install
 
+- script: |
+    dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent.0.23.1 -s https://api.nuget.org/v3-flatcontainer/xamarin.testcloud.agent/0.23.1/xamarin.testcloud.agent.0.23.1.nupkg
+  displayName: Install Xamarin.TestCloud.Agent
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj for not Debug_UITest'
