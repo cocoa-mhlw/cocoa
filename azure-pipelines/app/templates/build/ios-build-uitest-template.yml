@@ -3,6 +3,7 @@ parameters:
   type: boolean
   default: false
 
+steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
@@ -34,7 +35,7 @@ parameters:
     SET MSBuildExtensionsPath="/Library/Frameworks/Xamarin.iOS.framework/Versions/15.6.0.3/lib/msbuild/"
   displayName: SET
 
-  - task: NuGetToolInstaller@1
+- task: NuGetToolInstaller@1
   inputs:
     #versionSpec: # Optional
     checkLatest: false # Optional
