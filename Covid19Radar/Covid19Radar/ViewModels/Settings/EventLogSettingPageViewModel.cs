@@ -3,11 +3,15 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Covid19Radar.Repository;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 
@@ -24,7 +28,7 @@ namespace Covid19Radar.ViewModels
             private set => SetProperty(ref _backButtonEnabled, value);
         }
 
-        private bool _isVisibleTitleInContent;
+        private bool _isVisibleTitleInContent = true;
         public bool IsVisibleTitleInContent
         {
             get => _isVisibleTitleInContent;
@@ -68,7 +72,7 @@ namespace Covid19Radar.ViewModels
             {
                 if (parameters.ContainsKey(EventLogSettingPage.TransitionReasonKey))
                 {
-                    _transitionReason = parameters.GetValue<EventLogSettingPage.TransitionReason>(EventLogCooperationPage.TransitionReasonKey);
+                    _transitionReason = parameters.GetValue<EventLogSettingPage.TransitionReason>(EventLogSettingPage.TransitionReasonKey);
                 }
 
                 BackButtonEnabled = _transitionReason == EventLogSettingPage.TransitionReason.Setting;
@@ -90,8 +94,25 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        public Command OnClickExposureNotifyCheckBoxLabel
-            => new Command(() => ExposureNotifyIsChecked = !ExposureNotifyIsChecked);
+        public Command OnExposureNotifyCheckedChanged => new Command(() => {
+            _ = Task.Run(async () =>
+            {
+                await Task.Delay(100);
+                SemanticExtensions.Announce(ExposureNotifyIsChecked ? AppResources.On : AppResources.Off);
+            });
+        });
+
+        public Command OnExposureNotifyAccessibilityFocused => new Command(() => {
+            var annouceText = new List<string> {
+                ExposureNotifyIsChecked ? AppResources.On : AppResources.Off,
+                AppResources.EventLogSettingPageSettingTitle1,
+                AppResources.CheckBox };
+            SemanticExtensions.Announce(string.Join(Environment.NewLine, annouceText));
+        });
+
+        public Command OnExposureNotifyTapped => new Command(() => {
+            ExposureNotifyIsChecked = !ExposureNotifyIsChecked;
+        });
 
         public IAsyncCommand OnClickSave => new AsyncCommand(async () =>
         {
@@ -125,4 +146,3 @@ namespace Covid19Radar.ViewModels
         });
     }
 }
-

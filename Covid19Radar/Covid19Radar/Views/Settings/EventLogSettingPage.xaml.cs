@@ -51,4 +51,3 @@ namespace Covid19Radar.Views
         }
     }
 }
-
