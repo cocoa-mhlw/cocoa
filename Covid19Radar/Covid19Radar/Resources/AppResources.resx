@@ -253,7 +253,7 @@
     <comment>アプリの改善に協力する</comment>
   </data>
   <data name="SettingsPageEventLogSettingDescription" xml:space="preserve">
-    <value>Please allow the Ministry of Health, Labor and Welfare to use the app information of the app to improve COCOA.</value>
+    <value>Please allow us to use the anonymous information of the app to improve COCOA.</value>
     <comment>匿名で送信する情報を設定することで、COCOA(※)の改善に協力できます。</comment>
   </data>
   <data name="SettingsPageEventLogSendButton" xml:space="preserve">

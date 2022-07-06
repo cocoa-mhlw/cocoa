@@ -2656,7 +2656,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please allow the Ministry of Health, Labor and Welfare to use the app information of the app to improve COCOA..
+        ///   Looks up a localized string similar to Please allow us to use the anonymous information of the app to improve COCOA..
         /// </summary>
         public static string SettingsPageEventLogSettingDescription {
             get {
