@@ -28,10 +28,6 @@ steps:
     configuration: debug
 
 - script: |
-    GET MSBuildExtensionsPath
-  displayName: GET
-
-- script: |
     SET MSBuildExtensionsPath="/Library/Frameworks/Xamarin.iOS.framework/Versions/15.6.0.3/lib/msbuild/"
   displayName: SET
 
