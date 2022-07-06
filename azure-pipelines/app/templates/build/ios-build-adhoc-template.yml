@@ -22,6 +22,21 @@ steps:
   parameters:
     configuration: release
 
+
+- script: |
+    dotnet --list-sdks
+  displayName: dotnet --list-sdks
+
+- script: |
+    dotnet --list-runtimes
+  displayName: dotnet --list-runtimes
+
+- script: |
+    dotnet --info
+  displayName: dotnet --info
+
+  
+
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj'
   inputs:
