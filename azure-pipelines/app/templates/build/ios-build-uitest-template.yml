@@ -29,16 +29,10 @@ steps:
 
 
 - script: |
-    dotnet --list-sdks
-  displayName: dotnet --list-sdks
+    echo $(MSBuildExtensionsPath)
+  displayName: MSBuildExtensionsPath
 
-- script: |
-    dotnet --list-runtimes
-  displayName: dotnet --list-runtimes
 
-- script: |
-    dotnet --info
-  displayName: dotnet --info
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj for not Debug_UITest'
