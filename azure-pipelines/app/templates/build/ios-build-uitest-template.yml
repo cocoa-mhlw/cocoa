@@ -28,18 +28,17 @@ steps:
     configuration: debug
 
 
-- task: NuGetToolInstaller@1
-  inputs:
-    #versionSpec: # Optional
-    checkLatest: false # Optional
+- script: |
+    dotnet --list-sdks
+  displayName: dotnet --list-sdks
 
 - script: |
-    nuget install Xamarin.TestCloud.Agent -Version 0.23.1
-  displayName: nuget Install
+    dotnet --list-runtimes
+  displayName: dotnet --list-runtimes
 
 - script: |
-    dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent.0.23.1 -s https://api.nuget.org/v3-flatcontainer/xamarin.testcloud.agent/0.23.1/xamarin.testcloud.agent.0.23.1.nupkg
-  displayName: Install Xamarin.TestCloud.Agent
+    dotnet --info
+  displayName: dotnet --info
 
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj for not Debug_UITest'
