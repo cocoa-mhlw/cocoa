@@ -71,6 +71,30 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
+        public void IsVisibleTitleInContentTest_Tutorial()
+        {
+            EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
+            unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Tutorial));
+            Assert.True(unitUnderTest.IsVisibleTitleInContent);
+        }
+
+        [Fact]
+        public void IsVisibleTitleInContentTest_Splash()
+        {
+            EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
+            unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Splash));
+            Assert.True(unitUnderTest.IsVisibleTitleInContent);
+        }
+
+        [Fact]
+        public void IsVisibleTitleInContentTest_Setting()
+        {
+            EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
+            unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Setting));
+            Assert.False(unitUnderTest.IsVisibleTitleInContent);
+        }
+
+        [Fact]
         public void InitializeTest_ExposureNotified_NotSet()
         {
             _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(EventType.ExposureNotified)).Returns(SendEventLogState.NotSet);

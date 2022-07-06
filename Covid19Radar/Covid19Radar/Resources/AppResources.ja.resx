@@ -483,6 +483,18 @@
     <value>ライセンス表記</value>
     <comment>ライセンス表記</comment>
   </data>
+  <data name="SettingsPageEventLogSettingTitle" xml:space="preserve">
+    <value>アプリの改善に協力する</value>
+    <comment>アプリの改善に協力する</comment>
+  </data>
+  <data name="SettingsPageEventLogSettingDescription" xml:space="preserve">
+    <value>匿名で送信する情報を設定することで、COCOA(※)の改善に協力できます。</value>
+    <comment>匿名で送信する情報を設定することで、COCOA(※)の改善に協力できます。</comment>
+  </data>
+  <data name="SettingsPageEventLogSendButton" xml:space="preserve">
+    <value>送信情報を設定</value>
+    <comment>送信情報を設定</comment>
+  </data>
   <data name="SettingsPageReinitializeLabel" xml:space="preserve">
     <value>アプリを初期化する</value>
     <comment>アプリを初期化する</comment>

@@ -248,6 +248,18 @@
     <value>Version</value>
     <comment>アプリバージョン</comment>
   </data>
+  <data name="SettingsPageEventLogSettingTitle" xml:space="preserve">
+    <value>Please help us improve the COCOA app</value>
+    <comment>アプリの改善に協力する</comment>
+  </data>
+  <data name="SettingsPageEventLogSettingDescription" xml:space="preserve">
+    <value>Please allow us to use the anonymous information of the app to improve COCOA.</value>
+    <comment>匿名で送信する情報を設定することで、COCOA(※)の改善に協力できます。</comment>
+  </data>
+  <data name="SettingsPageEventLogSendButton" xml:space="preserve">
+    <value>Send information setting</value>
+    <comment>送信情報を設定</comment>
+  </data>
   <data name="SettingsPageReinitializeLabel" xml:space="preserve">
     <value>Reinitialize the app</value>
     <comment>アプリを初期化する</comment>
