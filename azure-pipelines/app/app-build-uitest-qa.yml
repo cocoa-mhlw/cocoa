@@ -8,18 +8,6 @@ variables:
 - group: android-signing-dev
 - template: templates/variables/app-variables.yml
 
-- script: |
-    dotnet --list-sdks
-  displayName: dotnet --list-sdks
-
-- script: |
-    dotnet --list-runtimes
-  displayName: dotnet --list-runtimes
-
-- script: |
-    dotnet --info
-  displayName: dotnet --info
-
 jobs:
 - job: build_ios
   pool:

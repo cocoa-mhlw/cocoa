@@ -4,6 +4,18 @@ parameters:
   default: false
 
 steps:
+- script: |
+    dotnet --list-sdks
+  displayName: dotnet --list-sdks
+
+- script: |
+    dotnet --list-runtimes
+  displayName: dotnet --list-runtimes
+
+- script: |
+    dotnet --info
+  displayName: dotnet --info
+  
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
