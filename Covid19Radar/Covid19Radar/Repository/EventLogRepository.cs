@@ -26,6 +26,8 @@ namespace Covid19Radar.Repository
 
         public Task<bool> RemoveAsync(EventLog eventLog);
 
+        public Task RemoveAllAsync();
+
         public Task AddEventNotifiedAsync(
             long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
             );
@@ -268,6 +270,40 @@ namespace Covid19Radar.Repository
                 Content = content.ToJsonString(),
             };
             await AddAsyncInternal(eventLog, maxSize);
+        }
+
+        public async Task RemoveAllAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                RemoveAllAsyncInternal();
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private void RemoveAllAsyncInternal()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                if (Directory.Exists(_basePath))
+                {
+                    Directory.Delete(_basePath, true);
+                }
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
     }
 

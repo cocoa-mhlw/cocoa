@@ -32,6 +32,8 @@ namespace Covid19Radar.ViewModels
         private readonly IUserDataRepository userDataRepository;
         private readonly IExposureDataRepository exposureDataRepository;
         private readonly IExposureConfigurationRepository exposureConfigurationRepository;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
+        private readonly IEventLogRepository _eventLogRepository;
         private readonly ILogFileService logFileService;
         private readonly AbsExposureNotificationApiService exposureNotificationApiService;
         private readonly ICloseApplicationService closeApplicationService;
@@ -46,6 +48,8 @@ namespace Covid19Radar.ViewModels
             IUserDataRepository userDataRepository,
             IExposureDataRepository exposureDataRepository,
             IExposureConfigurationRepository exposureConfigurationRepository,
+            ISendEventLogStateRepository sendEventLogStateRepository,
+            IEventLogRepository eventLogRepository,
             ILogFileService logFileService,
             AbsExposureNotificationApiService exposureNotificationApiService,
             ICloseApplicationService closeApplicationService,
@@ -58,6 +62,8 @@ namespace Covid19Radar.ViewModels
             this.userDataRepository = userDataRepository;
             this.exposureDataRepository = exposureDataRepository;
             this.exposureConfigurationRepository = exposureConfigurationRepository;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
+            _eventLogRepository = eventLogRepository;
             this.logFileService = logFileService;
             this.exposureNotificationApiService = exposureNotificationApiService;
             this.closeApplicationService = closeApplicationService;
@@ -73,7 +79,7 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         });
 
-        public ICommand OnChangeResetData => new Command(async () =>
+        public IAsyncCommand OnChangeResetData => new AsyncCommand(async () =>
         {
             loggerService.StartMethod();
 
@@ -99,6 +105,9 @@ namespace Covid19Radar.ViewModels
                 userDataRepository.RemoveStartDate();
                 userDataRepository.RemoveAllUpdateDate();
                 userDataRepository.RemoveAllExposureNotificationStatus();
+
+                _sendEventLogStateRepository.RemoveAll();
+                await _eventLogRepository.RemoveAllAsync();
 
                 _ = logFileService.DeleteLogsDir();
 
