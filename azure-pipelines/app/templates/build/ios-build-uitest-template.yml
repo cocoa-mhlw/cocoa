@@ -28,7 +28,7 @@ steps:
   displayName: nuget Install
 
 - script: |
-    dotnet add $(Agent.BuildDirectory)/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent.0.23.1 -s https://api.nuget.org/v3-flatcontainer/xamarin.testcloud.agent/0.23.1/xamarin.testcloud.agent.0.23.1.nupkg
+    dotnet add /Users/runner/work/1/s/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent.0.23.1 -s https://api.nuget.org/v3-flatcontainer/xamarin.testcloud.agent/0.23.1/xamarin.testcloud.agent.0.23.1.nupkg
   displayName: Install Xamarin.TestCloud.Agent
 
 - template: setup/app-setup-xamarin-template.yml
