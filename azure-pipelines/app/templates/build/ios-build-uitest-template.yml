@@ -27,10 +27,6 @@ steps:
   parameters:
     configuration: debug
 
-- script: |
-    SET MSBuildExtensionsPath="/Library/Frameworks/Xamarin.iOS.framework/Versions/15.6.0.3/lib/msbuild/"
-  displayName: SET
-
 - task: NuGetToolInstaller@1
   inputs:
     #versionSpec: # Optional
