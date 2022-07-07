@@ -28,7 +28,11 @@ steps:
   displayName: nuget Install
 
 - script: |
-    nuget add xamarin.testcloud.agent.0.23.1.nupkg -Source /Users/runner/work/1/s/
+    ls
+  displayName: nuget Install
+
+- script: |
+    nuget add xamarin.testcloud.agent.0.23.1.nupkg -Source $Agent.BuildDirectory
   displayName: nuget add
 
 - template: setup/app-setup-xamarin-template.yml
