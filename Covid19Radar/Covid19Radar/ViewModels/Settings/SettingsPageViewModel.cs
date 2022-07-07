@@ -69,6 +69,22 @@ namespace Covid19Radar.ViewModels
             this.closeApplicationService = closeApplicationService;
         }
 
+        public override async void Initialize(INavigationParameters parameters)
+        {
+            loggerService.StartMethod();
+            base.Initialize(parameters);
+
+            try
+            {
+                bool isExistEventLogs = await _eventLogRepository.IsExist();
+                loggerService.Info($"isExistEventLogs: {isExistEventLogs}");
+            }
+            finally
+            {
+                loggerService.EndMethod();
+            }
+        }
+
         public IAsyncCommand OnEventLogSend => new AsyncCommand(async () =>
         {
             loggerService.StartMethod();

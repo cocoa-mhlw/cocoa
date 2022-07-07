@@ -31,6 +31,8 @@ namespace Covid19Radar.Repository
         public Task AddEventNotifiedAsync(
             long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
             );
+
+        public Task<bool> IsExist();
     }
 
     public class EventLogRepository : IEventLogRepository
@@ -299,6 +301,48 @@ namespace Covid19Radar.Repository
                 {
                     Directory.Delete(_basePath, true);
                 }
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task<bool> IsExist()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                return IsExistInternal();
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private bool IsExistInternal()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                if (!Directory.Exists(_basePath))
+                {
+                    return false;
+                }
+
+                string[] filesInDirectory = Directory.GetFiles(_basePath);
+                if (filesInDirectory.Length == 0)
+                {
+                    return false;
+                }
+
+                return true;
             }
             finally
             {
