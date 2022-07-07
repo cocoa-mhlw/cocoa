@@ -23,7 +23,6 @@ steps:
     nuget install Xamarin.TestCloud.Agent -Version 0.23.1
   displayName: nuget Install
 
-  displayName: Install Xamarin.TestCloud.Agent
 - template: setup/app-setup-variables-template.yml
 
 - template: setup/ios-setup-xamarin-template.yml
