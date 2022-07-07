@@ -22,12 +22,6 @@ steps:
   parameters:
     configuration: release
 
-
-- script: |
-    mdfind Xamarin.iOS.CSharp.targets
-  displayName: mdfind
- 
-
 - task: XamariniOS@2
   displayName: 'Build Covid19Radar.iOS.csproj'
   inputs:
