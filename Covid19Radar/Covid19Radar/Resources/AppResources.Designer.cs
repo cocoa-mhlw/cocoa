@@ -526,7 +526,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to - The content of the information sent does not include any personally identifiable information about you or the positive registrants who have have been in contact with you..
+        ///   Looks up a localized string similar to - The content of the information sent does not include any personally identifiable information about you or the positive registrants who have been in contact with you..
         /// </summary>
         public static string EventLogCooperationPageBullets2 {
             get {
@@ -544,7 +544,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to - Anonymous information may be aggregated and published to help improve public health..
+        ///   Looks up a localized string similar to - You can change the settings about the information to be sent at any time from &quot;About this app&quot;..
         /// </summary>
         public static string EventLogCooperationPageBullets4 {
             get {
@@ -589,7 +589,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to - The content of the information sent does not include any personally identifiable information about you or the positive registrants who have have been in contact with you..
+        ///   Looks up a localized string similar to - The content of the information sent does not include any personally identifiable information about you or the positive registrants who have been in contact with you..
         /// </summary>
         public static string EventLogSettingPageBullets2 {
             get {
@@ -616,7 +616,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In case a close contact hase been confirmed, or it is determined that there is a possibility of close a notification will be displayed. If there is no possibility of close contact, it will not.
+        ///   Looks up a localized string similar to In case a close contact has been confirmed, or it has been determined that there is a possibility of it a notification will be displayed. If there is no possibility of close contact, it will not.
         ///By collecting the number of notifications, we can use it to understand how many close contacts are occurring in Japan..
         /// </summary>
         public static string EventLogSettingPageSettingDescription1 {
