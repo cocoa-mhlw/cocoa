@@ -89,6 +89,17 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
+        public void InitializeTest()
+        {
+            _mockEventLogRepository.Setup(x => x.IsExist()).ReturnsAsync(true);
+
+            SettingsPageViewModel unitUnderTest = CreateViewModel();
+            unitUnderTest.Initialize(new NavigationParameters());
+
+            _mockLoggerService.Verify(x => x.Info("isExistEventLogs: True", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
+        }
+
+        [Fact]
         public async Task OnChangeResetDataTest_Ok()
         {
             _mockUserDialogs.Setup(x =>

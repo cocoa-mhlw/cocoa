@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
     - License, v. 2.0. If a copy of the MPL was not distributed with this
     - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
@@ -108,6 +108,14 @@
                         Command="{Binding Path=OnClickRemoveAllUpdateDate}"
                         Style="{StaticResource DefaultButton}"
                         Text="RemoveAllUpdateDate" />
+                    <Button
+                        Command="{Binding Path=OnClickAddEventNotifiedIfNeeded}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="AddEventNotified(If needed)" />
+                    <Button
+                        Command="{Binding Path=OnClickAddEventNotifiedForce}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="AddEventNotified(Force)" />
                     <Button
                         Command="{Binding Path=OnClickQuit}"
                         Style="{StaticResource DefaultButton}"
