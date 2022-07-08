@@ -62,7 +62,7 @@ namespace Covid19Radar.Repository
 
             using var sha = SHA256.Create();
             var textBytes = Encoding.UTF8.GetBytes(clearText);
-            string hash = Convert.ToBase64String(sha.ComputeHash(textBytes));
+            string hash = Convert.ToBase64String(sha.ComputeHash(textBytes)).TrimEnd('=').Replace('+', '-').Replace('/', '_');
 
             return $"{hash}{LOG_EXTENSION}";
         }
@@ -100,6 +100,7 @@ namespace Covid19Radar.Repository
                 }
 
                 await File.WriteAllTextAsync(filePath, serializedJson);
+                _loggerService.Info($"Write event log. filePath:{filePath}");
 
                 return true;
             }
