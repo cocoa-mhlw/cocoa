@@ -83,7 +83,7 @@ namespace Covid19Radar.Api.Models
         public string Subtype { get; set; }
 
         [JsonProperty("content")]
-        public string Content { get; set; }
+        public dynamic Content { get; set; }
 
         [JsonIgnore]
         public string Timestamp

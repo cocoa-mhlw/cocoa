@@ -24,7 +24,7 @@ namespace Covid19Radar.Api.Models
 
         public string Subtype { get; }
 
-        public string Content { get; }
+        public dynamic Content { get; }
 
         public string Timestamp { get; }
 
@@ -35,7 +35,7 @@ namespace Covid19Radar.Api.Models
             long epoch,
             string type,
             string subtype,
-            string content,
+            dynamic content,
             string timestamp
             )
         {
