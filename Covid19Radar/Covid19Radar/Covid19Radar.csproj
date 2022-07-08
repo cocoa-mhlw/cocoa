@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\CustomDatePicker.cs" />
+    <Compile Include="Controls\AccessibilityContentView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">

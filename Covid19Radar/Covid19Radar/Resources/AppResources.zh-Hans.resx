@@ -1518,4 +1518,17 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>設定を保存しました</comment>
   </data>
 
+  <data name="On" xml:space="preserve">
+    <value>打开</value>
+    <comment>オン</comment>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>关闭</value>
+    <comment>オフ</comment>
+  </data>
+  <data name="CheckBox" xml:space="preserve">
+    <value>复选框</value>
+    <comment>チェックボックス</comment>
+  </data>
+
 </root>

@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:controls="clr-namespace:Covid19Radar.Controls"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="Covid19Radar.Views.EventLogSettingPage"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource DefaultPageStyle}"
@@ -11,7 +16,6 @@
     <ContentView>
         <StackLayout>
             <Label
-                AutomationProperties.IsInAccessibleTree="True"
                 IsVisible="{Binding IsVisibleTitleInContent}"
                 Margin="20,20,20,0"
                 Style="{StaticResource DefaultTitleLabel}"
@@ -54,19 +58,34 @@
                                 Grid.Column="0"
                                 Style="{StaticResource DefaultCheckBox}"
                                 IsChecked="{Binding ExposureNotifyIsChecked}"
-                                VerticalOptions="Center" />
-                            <Label
-                                AutomationProperties.IsInAccessibleTree="True"
+                                VerticalOptions="Center">
+                                <CheckBox.Behaviors>
+                                    <xct:EventToCommandBehavior
+                                        EventName="CheckedChanged"
+                                        Command="{Binding OnExposureNotifyCheckedChanged}" />
+                                </CheckBox.Behaviors>
+                            </CheckBox>
+                            <controls:AccessibilityContentView
                                 Grid.Row="0"
                                 Grid.Column="1"
-                                Style="{StaticResource DefaultLabelBold}"
-                                Text="{x:Static resources:AppResources.EventLogSettingPageSettingTitle1}"
-                                HorizontalOptions="StartAndExpand"
-                                VerticalOptions="Center">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=OnClickExposureNotifyCheckBoxLabel}" />
-                                </Label.GestureRecognizers>
-                            </Label>
+                                HorizontalOptions="StartAndExpand">
+                                <controls:AccessibilityContentView.Behaviors>
+                                    <xct:EventToCommandBehavior
+                                        EventName="AccessibilityFocused"
+                                        Command="{Binding OnExposureNotifyAccessibilityFocused}" />
+                                </controls:AccessibilityContentView.Behaviors>
+                                <controls:AccessibilityContentView.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=OnExposureNotifyTapped}" />
+                                </controls:AccessibilityContentView.GestureRecognizers>
+                                <Label
+                                    x:Name="exposureNotifyIsCheckedLabel"
+                                    AutomationProperties.IsInAccessibleTree="False"
+                                    AutomationProperties.Name=""
+                                    Style="{StaticResource DefaultLabelBold}"
+                                    Text="{x:Static resources:AppResources.EventLogSettingPageSettingTitle1}"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center" />
+                            </controls:AccessibilityContentView>
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
                                 Grid.Row="1"
@@ -86,4 +105,3 @@
         </StackLayout>
     </ContentView>
 </ContentPage>
-

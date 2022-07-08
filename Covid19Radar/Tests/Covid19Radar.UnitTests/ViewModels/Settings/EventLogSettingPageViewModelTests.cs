@@ -128,7 +128,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
-        public void OnClickExposureNotifyCheckBoxLabelTest()
+        public void OnExposureNotifyTappedTest()
         {
             _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(EventType.ExposureNotified)).Returns(SendEventLogState.NotSet);
 
@@ -137,10 +137,10 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             Assert.False(unitUnderTest.ExposureNotifyIsChecked);
 
-            unitUnderTest.OnClickExposureNotifyCheckBoxLabel.Execute(null);
+            unitUnderTest.OnExposureNotifyTapped.Execute(null);
             Assert.True(unitUnderTest.ExposureNotifyIsChecked);
 
-            unitUnderTest.OnClickExposureNotifyCheckBoxLabel.Execute(null);
+            unitUnderTest.OnExposureNotifyTapped.Execute(null);
             Assert.False(unitUnderTest.ExposureNotifyIsChecked);
         }
 
@@ -152,7 +152,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Tutorial));
 
-            unitUnderTest.OnClickExposureNotifyCheckBoxLabel.Execute(null);
+            unitUnderTest.OnExposureNotifyTapped.Execute(null);
             await unitUnderTest.OnClickSave.ExecuteAsync();
 
             Assert.False(unitUnderTest.ExposureNotifyIsChecked);
@@ -173,7 +173,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Tutorial));
 
-            unitUnderTest.OnClickExposureNotifyCheckBoxLabel.Execute(null);
+            unitUnderTest.OnExposureNotifyTapped.Execute(null);
             await unitUnderTest.OnClickSave.ExecuteAsync();
 
             Assert.True(unitUnderTest.ExposureNotifyIsChecked);
@@ -194,7 +194,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Tutorial));
 
-            unitUnderTest.OnClickExposureNotifyCheckBoxLabel.Execute(null);
+            unitUnderTest.OnExposureNotifyTapped.Execute(null);
             await unitUnderTest.OnClickSave.ExecuteAsync();
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Once());
@@ -210,7 +210,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Splash));
 
-            unitUnderTest.OnClickExposureNotifyCheckBoxLabel.Execute(null);
+            unitUnderTest.OnExposureNotifyTapped.Execute(null);
             await unitUnderTest.OnClickSave.ExecuteAsync();
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Never());
@@ -226,7 +226,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Setting));
 
-            unitUnderTest.OnClickExposureNotifyCheckBoxLabel.Execute(null);
+            unitUnderTest.OnExposureNotifyTapped.Execute(null);
             await unitUnderTest.OnClickSave.ExecuteAsync();
 
             _mockNavigationService.Verify(x => x.NavigateAsync(nameof(TutorialPage6)), Times.Never());
@@ -242,7 +242,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams((EventLogSettingPage.TransitionReason)99));
 
-            unitUnderTest.OnClickExposureNotifyCheckBoxLabel.Execute(null);
+            unitUnderTest.OnExposureNotifyTapped.Execute(null);
 
             await Assert.ThrowsAsync<ArgumentException>(() => unitUnderTest.OnClickSave.ExecuteAsync());
 
