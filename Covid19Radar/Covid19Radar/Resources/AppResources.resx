@@ -1569,7 +1569,7 @@ Please execute the app as an administrator (owner).</value>
     <comment>・送信は匿名で行われます。</comment>
   </data>
   <data name="EventLogCooperationPageBullets2" xml:space="preserve">
-    <value>- The content of the information sent does not include any personally identifiable information about you or the positive registrants who have have been in contact with you.</value>
+    <value>- The content of the information sent does not include any personally identifiable information about you or the positive registrants who have been in contact with you.</value>
     <comment>・送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含まれません。</comment>
   </data>
   <data name="EventLogCooperationPageBullets3" xml:space="preserve">
@@ -1598,7 +1598,7 @@ Please execute the app as an administrator (owner).</value>
     <comment>・送信は匿名で行われます。</comment>
   </data>
   <data name="EventLogSettingPageBullets2" xml:space="preserve">
-    <value>- The content of the information sent does not include any personally identifiable information about you or the positive registrants who have have been in contact with you.</value>
+    <value>- The content of the information sent does not include any personally identifiable information about you or the positive registrants who have been in contact with you.</value>
     <comment>・送信内容に、あなたや、あなたと接触した陽性登録者を個人として特定できる情報は含まれません。</comment>
   </data>
   <data name="EventLogSettingPageSettingTitle1" xml:space="preserve">
@@ -1606,7 +1606,7 @@ Please execute the app as an administrator (owner).</value>
     <comment>接触通知の表示</comment>
   </data>
   <data name="EventLogSettingPageSettingDescription1" xml:space="preserve">
-    <value>In case a close contact hase been confirmed, or it is determined that there is a possibility of close a notification will be displayed. If there is no possibility of close contact, it will not.
+    <value>In case a close contact has been confirmed, or it has been determined that there is a possibility of it a notification will be displayed. If there is no possibility of close contact, it will not.
 By collecting the number of notifications, we can use it to understand how many close contacts are occurring in Japan.</value>
     <comment>接触確認の結果、接触の可能性があると判定して通知を表示したときに送信します。接触の可能性がない場合は送信しません。
 通知の発生数を収集することで、日本国内でどの程度の接触が発生しているかを把握する目的で使います。</comment>
