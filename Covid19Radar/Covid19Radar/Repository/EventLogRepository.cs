@@ -26,9 +26,13 @@ namespace Covid19Radar.Repository
 
         public Task<bool> RemoveAsync(EventLog eventLog);
 
+        public Task RemoveAllAsync();
+
         public Task AddEventNotifiedAsync(
             long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
             );
+
+        public Task<bool> IsExist();
     }
 
     public class EventLogRepository : IEventLogRepository
@@ -268,6 +272,82 @@ namespace Covid19Radar.Repository
                 Content = content.ToJsonString(),
             };
             await AddAsyncInternal(eventLog, maxSize);
+        }
+
+        public async Task RemoveAllAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                RemoveAllAsyncInternal();
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private void RemoveAllAsyncInternal()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                if (Directory.Exists(_basePath))
+                {
+                    Directory.Delete(_basePath, true);
+                }
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task<bool> IsExist()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                return IsExistInternal();
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private bool IsExistInternal()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                if (!Directory.Exists(_basePath))
+                {
+                    return false;
+                }
+
+                string[] filesInDirectory = Directory.GetFiles(_basePath);
+                if (filesInDirectory.Length == 0)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
     }
 

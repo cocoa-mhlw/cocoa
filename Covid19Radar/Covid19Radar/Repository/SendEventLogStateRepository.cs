@@ -49,6 +49,8 @@ namespace Covid19Radar.Repository
         SendEventLogState GetSendEventLogState(EventType eventType);
 
         bool IsExistNotSetEventType();
+
+        void RemoveAll();
     }
 
     public class SendEventLogStateRepository : ISendEventLogStateRepository
@@ -155,6 +157,11 @@ namespace Covid19Radar.Repository
             return EventType.All
                 .Select(eventType => GetSendEventLogState(eventType))
                 .Any(state => state == SendEventLogState.NotSet);
+        }
+
+        public void RemoveAll()
+        {
+            _preferencesService.RemoveValue(PreferenceKey.SendEventLogState);
         }
     }
 }

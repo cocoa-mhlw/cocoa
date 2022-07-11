@@ -231,5 +231,13 @@ namespace Covid19Radar.UnitTests.Repository
 
             Assert.False(sendEventLogStateRepository.IsExistNotSetEventType());
         }
+
+        [Fact]
+        public void RemoveAllTest()
+        {
+            var sendEventLogStateRepository = CreateRepository();
+            sendEventLogStateRepository.RemoveAll();
+            mockPreferencesService.Verify(x => x.RemoveValue(PreferenceKey.SendEventLogState), Times.Once());
+        }
     }
 }
