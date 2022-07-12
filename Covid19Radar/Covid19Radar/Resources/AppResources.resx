@@ -1586,7 +1586,7 @@ Please execute the app as an administrator (owner).</value>
   </data>
 
   <data name="EventLogSettingPageTitle" xml:space="preserve">
-    <value>Setting for the information that will be sent</value>
+    <value>Set info to be sent</value>
     <comment>送信する情報の設定</comment>
   </data>
   <data name="EventLogSettingPageDescription1" xml:space="preserve">
