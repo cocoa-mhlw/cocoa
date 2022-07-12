@@ -653,7 +653,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Setting for the information that will be sent.
+        ///   Looks up a localized string similar to Set info to be sent.
         /// </summary>
         public static string EventLogSettingPageTitle {
             get {
