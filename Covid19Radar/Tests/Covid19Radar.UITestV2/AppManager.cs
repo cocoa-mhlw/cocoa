@@ -135,7 +135,6 @@ namespace CovidRadar.UITestV2
             }
         }
 
-
         /// <summary>
         /// アプリを再起動する(スプラッシュ画面無し).
         /// </summary>
@@ -145,7 +144,6 @@ namespace CovidRadar.UITestV2
             {
                 app.Invoke("MoveTaskToBack");
             }
-
         }
 
         /// <summary>
@@ -157,7 +155,6 @@ namespace CovidRadar.UITestV2
             {
                 (App as Xamarin.UITest.iOS.iOSApp).DismissSpringboardAlerts();
             }
-
         }
 
         /// <summary>
@@ -174,11 +171,7 @@ namespace CovidRadar.UITestV2
             {
                 app.Invoke("FinishAndRemoveTask:", "UITest");
             }
-
         }
-
-
-        
 
         /// <summary>
         /// jsonから任意の値を取得する.
@@ -189,6 +182,8 @@ namespace CovidRadar.UITestV2
         public static JToken Comparison(string lang, string value)
         {
             StreamReader fileName = new StreamReader(lang + ".json");
+            var CurrentDirectory = Directory.GetCurrentDirectory();
+            Console.WriteLine(CurrentDirectory);
             string allLine = fileName.ReadToEnd();
             JObject jsonObj = JObject.Parse(allLine);
             return jsonObj[value]["value"];
