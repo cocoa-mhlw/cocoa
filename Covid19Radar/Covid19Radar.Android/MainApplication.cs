@@ -49,7 +49,7 @@ namespace Covid19Radar.Droid
         private readonly Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
             = new Lazy<AbsEventLogSubmissionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsEventLogSubmissionBackgroundService>());
 
-        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceService
+        private readonly Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceService
             = new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
 
         private Lazy<ILoggerService> _loggerService

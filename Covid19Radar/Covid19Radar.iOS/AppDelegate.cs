@@ -44,7 +44,7 @@ namespace Covid19Radar.iOS
         private readonly Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
             = new Lazy<AbsEventLogSubmissionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsEventLogSubmissionBackgroundService>());
 
-        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceBackgroundService
+        private readonly Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceBackgroundService
             = new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
 
         private Lazy<IExposureDetectionService> _exposureDetectionService

@@ -15,7 +15,7 @@ namespace Covid19Radar.Services
 
         private readonly IEventLogRepository _eventLogRepository;
 
-        public AbsDataMaintainanceBackgroundService(
+        protected AbsDataMaintainanceBackgroundService(
             ILoggerService loggerService,
             IEventLogRepository eventLogRepository)
         {
