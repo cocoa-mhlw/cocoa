@@ -117,6 +117,10 @@
                         Style="{StaticResource DefaultButton}"
                         Text="AddEventNotified(Force)" />
                     <Button
+                        Command="{Binding Path=OnClickRotateEventLogs}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Rotate of event logs" />
+                    <Button
                         Command="{Binding Path=OnClickQuit}"
                         Style="{StaticResource DefaultButton}"
                         Text="Quit" />

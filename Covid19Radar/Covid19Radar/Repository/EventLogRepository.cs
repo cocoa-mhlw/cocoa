@@ -20,19 +20,12 @@ namespace Covid19Radar.Repository
 {
     public interface IEventLogRepository
     {
-        public Task<List<EventLog>> GetLogsAsync(
-            long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
-            );
-
-        public Task<bool> RemoveAsync(EventLog eventLog);
-
-        public Task RemoveAllAsync();
-
-        public Task AddEventNotifiedAsync(
-            long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
-            );
-
-        public Task<bool> IsExist();
+        Task<List<EventLog>> GetLogsAsync(long maxSize = AppConstants.EventLogMaxRequestSizeInBytes);
+        Task<bool> RemoveAsync(EventLog eventLog);
+        Task RemoveAllAsync();
+        Task AddEventNotifiedAsync(long maxSize = AppConstants.EventLogMaxRequestSizeInBytes);
+        Task<bool> IsExist();
+        Task RotateAsync(long seconds);
     }
 
     public class EventLogRepository : IEventLogRepository
@@ -344,6 +337,77 @@ namespace Covid19Radar.Repository
                 }
 
                 return true;
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task RotateAsync(long seconds)
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                await RotateAsyncInternal(seconds);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task RotateAsyncInternal(long seconds)
+        {
+            _loggerService.StartMethod();
+            _loggerService.Info($"seconds: {seconds}");
+
+            try
+            {
+                if (!Directory.Exists(_basePath))
+                {
+                    return;
+                }
+
+                long utcNowEpoch = DateTime.UtcNow.ToUnixEpoch();
+                _loggerService.Info($"utcNowEpoch: {utcNowEpoch}");
+
+                string[] filesInDirectory = Directory.GetFiles(_basePath);
+                foreach (var file in filesInDirectory)
+                {
+                    _loggerService.Info($"file: {file}");
+
+                    long eventLogEpoch;
+                    try
+                    {
+                        string content = await File.ReadAllTextAsync(file);
+                        EventLog eventLog = JsonConvert.DeserializeObject<EventLog>(content);
+                        eventLogEpoch = eventLog.Epoch;
+                    }
+                    catch (Exception ex)
+                    {
+                        _loggerService.Exception("Failed read of event log content.", ex);
+                        File.Delete(file);
+                        continue;
+                    }
+
+                    _loggerService.Info($"eventLogEpoch: {eventLogEpoch}");
+
+                    if (eventLogEpoch < utcNowEpoch - seconds)
+                    {
+                        _loggerService.Info("Delete");
+                        File.Delete(file);
+                    }
+                    else
+                    {
+                        _loggerService.Info("Keep");
+                    }
+                }
             }
             finally
             {

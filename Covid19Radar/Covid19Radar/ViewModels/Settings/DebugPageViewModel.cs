@@ -329,6 +329,11 @@ namespace Covid19Radar.ViewModels
             await _eventLogRepository.AddEventNotifiedAsync();
         });
 
+        public IAsyncCommand OnClickRotateEventLogs => new AsyncCommand(async () =>
+        {
+            await _eventLogRepository.RotateAsync(AppConstants.EventLogFileExpiredSeconds);
+        });
+
         public Command OnClickQuit => new Command(() =>
         {
             Application.Current.Quit();
