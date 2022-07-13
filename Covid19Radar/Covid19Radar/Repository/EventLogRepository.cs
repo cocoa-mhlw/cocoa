@@ -15,6 +15,7 @@ using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Covid19Radar.Repository
 {
@@ -55,7 +56,7 @@ namespace Covid19Radar.Repository
 
         private string GetFileName(EventLog eventLog)
         {
-            var clearText = string.Join(".", eventLog.Epoch, eventLog.Type, eventLog.Subtype, eventLog.Content);
+            var clearText = string.Join(".", eventLog.Epoch, eventLog.Type, eventLog.Subtype, eventLog.Content.ToString(Formatting.None));
 
             using var sha = SHA256.Create();
             var textBytes = Encoding.UTF8.GetBytes(clearText);
@@ -263,7 +264,7 @@ namespace Covid19Radar.Repository
                 Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
                 Type = EventType.ExposureNotified.Type,
                 Subtype = EventType.ExposureNotified.SubType,
-                Content = content.ToJsonString(),
+                Content = JObject.FromObject(content),
             };
             await AddAsyncInternal(eventLog, maxSize);
         }

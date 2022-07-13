@@ -37,6 +37,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILocalNotificationService _localNotificationService;
         private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private readonly IEventLogRepository _eventLogRepository;
+        private readonly IEventLogService _eventLogService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -159,7 +160,8 @@ namespace Covid19Radar.ViewModels
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalNotificationService localNotificationService,
             ISendEventLogStateRepository sendEventLogStateRepository,
-            IEventLogRepository eventLogRepository
+            IEventLogRepository eventLogRepository,
+            IEventLogService eventLogService
             ) : base(navigationService)
         {
             Title = "Title:Debug";
@@ -174,6 +176,7 @@ namespace Covid19Radar.ViewModels
             _localNotificationService = localNotificationService;
             _sendEventLogStateRepository = sendEventLogStateRepository;
             _eventLogRepository = eventLogRepository;
+            _eventLogService = eventLogService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -327,6 +330,13 @@ namespace Covid19Radar.ViewModels
         public IAsyncCommand OnClickAddEventNotifiedForce => new AsyncCommand(async () =>
         {
             await _eventLogRepository.AddEventNotifiedAsync();
+        });
+
+        public IAsyncCommand OnClickSendEventLog => new AsyncCommand(async () =>
+        {
+            await _eventLogService.SendAllAsync(
+                AppConstants.EventLogMaxRequestSizeInBytes,
+                AppConstants.EventLogMaxRetry);
         });
 
         public IAsyncCommand OnClickRotateEventLogs => new AsyncCommand(async () =>

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using Covid19Radar.Common;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Covid19Radar.Model
 {
@@ -42,7 +43,7 @@ namespace Covid19Radar.Model
         public string Subtype { get; set; }
 
         [JsonProperty("content")]
-        public string Content { get; set; }
+        public JToken Content { get; set; }
 
         [JsonIgnore]
         public string Timestamp

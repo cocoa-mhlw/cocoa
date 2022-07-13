@@ -155,7 +155,8 @@ namespace Covid19Radar.Services
                 await serverConfigurationRepository.LoadAsync();
 
                 string url = serverConfigurationRepository.EventLogApiEndpoint;
-                var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+                string requestBody = JsonConvert.SerializeObject(request);
+                var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
 
                 HttpResponseMessage response = await apiClient.PutAsync(url, content);
                 string responseContent = await response.Content.ReadAsStringAsync();
