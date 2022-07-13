@@ -165,7 +165,7 @@
       <Version>1.0.0-rc11</Version>
     </PackageReference>
     <PackageReference Include="System.IdentityModel.Tokens.Jwt">
-      <Version>6.20.0</Version>
+      <Version>6.21.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
