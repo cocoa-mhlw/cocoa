@@ -36,6 +36,7 @@ namespace Covid19Radar.Repository
         private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
+        private readonly IBackupAttributeService _backupAttributeService;
 
         private readonly string _basePath;
 
@@ -43,13 +44,15 @@ namespace Covid19Radar.Repository
             ISendEventLogStateRepository sendEventLogStateRepository,
             IDateTimeUtility dateTimeUtility,
             ILocalPathService localPathService,
-            ILoggerService loggerService
+            ILoggerService loggerService,
+            IBackupAttributeService backupAttributeService
             )
         {
             _sendEventLogStateRepository = sendEventLogStateRepository;
             _dateTimeUtility = dateTimeUtility;
             _basePath = localPathService.EventLogDirPath;
             _loggerService = loggerService;
+            _backupAttributeService = backupAttributeService;
         }
 
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
@@ -99,6 +102,8 @@ namespace Covid19Radar.Repository
 
                 await File.WriteAllTextAsync(filePath, serializedJson);
                 _loggerService.Info($"Write event log. filePath:{filePath}");
+
+                _backupAttributeService.SetSkipBackupAttributeToEventLogDir();
 
                 return true;
             }

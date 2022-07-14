@@ -36,6 +36,7 @@ namespace Covid19Radar
 
         private ILoggerService LoggerService;
         private ILogFileService LogFileService;
+        private IBackupAttributeService BackupAttributeService;
 
         private IEventLogRepository EventLogRepository { get; set; }
 
@@ -56,6 +57,8 @@ namespace Covid19Radar
             LoggerService.StartMethod();
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.SetSkipBackupAttributeToLogDir();
+            BackupAttributeService = Container.Resolve<IBackupAttributeService>();
+            BackupAttributeService.SetSkipBackupAttributeToEventLogDir();
 
             EventLogRepository = Container.Resolve<IEventLogRepository>();
 

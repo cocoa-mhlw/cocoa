@@ -7,5 +7,6 @@ namespace Covid19Radar.Services.Logs
     public interface IBackupAttributeService
     {
         void SetSkipBackupAttributeToLogDir();
+        void SetSkipBackupAttributeToEventLogDir();
     }
 }

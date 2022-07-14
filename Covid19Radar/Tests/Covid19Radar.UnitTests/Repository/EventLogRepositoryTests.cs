@@ -24,6 +24,7 @@ namespace Covid19Radar.UnitTests.Repository
         private readonly Mock<IDateTimeUtility> _mockDateTimeUtility;
         private readonly Mock<ILocalPathService> _mockLocalPathService;
         private readonly Mock<ILoggerService> _mockLoggerService;
+        private readonly Mock<IBackupAttributeService> _mockBackupAttributeService;
 
         public EventLogRepositoryTests()
         {
@@ -32,6 +33,7 @@ namespace Covid19Radar.UnitTests.Repository
             _mockDateTimeUtility = _mockRepository.Create<IDateTimeUtility>();
             _mockLocalPathService = _mockRepository.Create<ILocalPathService>();
             _mockLoggerService = _mockRepository.Create<ILoggerService>();
+            _mockBackupAttributeService = _mockRepository.Create<IBackupAttributeService>();
         }
 
         private EventLogRepository CreateRepository()
@@ -40,7 +42,8 @@ namespace Covid19Radar.UnitTests.Repository
                 _mockSendEventLogStateRepository.Object,
                 _mockDateTimeUtility.Object,
                 _mockLocalPathService.Object,
-                _mockLoggerService.Object);
+                _mockLoggerService.Object,
+                _mockBackupAttributeService.Object);
         }
 
         [Fact]
