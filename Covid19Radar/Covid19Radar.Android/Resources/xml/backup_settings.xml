@@ -5,4 +5,5 @@
 
 <full-backup-content>
     <exclude domain="file" path="logs" />
+    <exclude domain="file" path="event_log_queue" />
 </full-backup-content>

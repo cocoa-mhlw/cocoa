@@ -12,5 +12,10 @@ namespace Covid19Radar.Droid.Services.Logs
         {
             // Skip backup in `AndroidManifest.xml`
         }
+
+        public void SetSkipBackupAttributeToEventLogDir()
+        {
+            // Skip backup in `AndroidManifest.xml`
+        }
     }
 }
