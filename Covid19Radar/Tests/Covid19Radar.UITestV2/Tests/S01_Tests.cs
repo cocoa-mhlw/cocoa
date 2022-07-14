@@ -54,6 +54,7 @@ namespace CovidRadar.UITestV2
             exposureCheckPage.AssertExposureCheckPage();
         }
 
+
         /// <summary>
         /// 濃厚接触1回(日本語).
         /// </summary>
