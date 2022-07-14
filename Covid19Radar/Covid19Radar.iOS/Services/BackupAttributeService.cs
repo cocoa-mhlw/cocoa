@@ -33,7 +33,7 @@ namespace Covid19Radar.iOS.Services.Logs
         {
             var dirPath = localPathService.EventLogDirPath;
             var url = NSUrl.FromFilename(dirPath);
-            _ = url.SetResource(NSUrl.IsExcludedFromBackupKey, NSNumber.FromBoolean(false));
+            _ = url.SetResource(NSUrl.IsExcludedFromBackupKey, NSNumber.FromBoolean(true));
         }
     }
 }
