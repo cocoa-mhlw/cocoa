@@ -7,7 +7,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>CovidRadar.UITestV2</RootNamespace>
     <AssemblyName>CovidRadar.UITestV2</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
