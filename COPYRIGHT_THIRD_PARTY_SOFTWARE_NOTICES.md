@@ -1,8 +1,8 @@
 # LICENSE Copyright / THIRD PARTY SOFTWARE NOTICES
 Do Not Translate or Localize.
 This file incorporates components from the projects listed below.
-COVID-19Radar community licenses these components to you under COVID-19Radar community's software licensing terms, except that components licensed under open source licenses requiring that such components remain under their original license are being made available to you by COVID-19Radar community under their original licensing terms.
-The original copyright notices and the licenses under which COVID-19Radar community received such components are set forth below for informational purposes.
+COCOA Team licenses these components to you under COCOA Team's software licensing terms, except that components licensed under open source licenses requiring that such components remain under their original license are being made available to you by COCOA Team under their original licensing terms.
+The original copyright notices and the licenses under which COCOA Team received such components are set forth below for informational purposes.
 
 ---
 ## COVID-19Radar
