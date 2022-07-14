@@ -261,7 +261,7 @@ namespace Covid19Radar.UnitTests.Services
                         Epoch = 1000,
                         Type = "type",
                         Subtype = "subtype",
-                        Content = "content"
+                        Content = JObject.FromObject(new { key = 2000 })
                     }
                 }
             };
@@ -289,7 +289,7 @@ namespace Covid19Radar.UnitTests.Services
             Assert.Equal(1000, eventLogs[0]["epoch"].Value<long>());
             Assert.Equal("type", eventLogs[0]["type"].Value<string>());
             Assert.Equal("subtype", eventLogs[0]["subtype"].Value<string>());
-            Assert.Equal("content", eventLogs[0]["content"].Value<string>());
+            Assert.Equal("{\"key\":2000}", eventLogs[0]["content"].Value<JToken>().ToString(Formatting.None));
 
             Assert.Null(mockHttpClient.DefaultRequestHeaders.Authorization);
         }

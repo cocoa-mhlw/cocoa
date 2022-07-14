@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using Covid19Radar.Model;
+using Newtonsoft.Json;
 
 namespace Covid19Radar.Common
 {
@@ -50,7 +51,7 @@ namespace Covid19Radar.Common
                 => string.Join(",", eventLogs.Select(log => GetClearText(log)));
 
             static string GetClearText(EventLog log)
-                => string.Join(".", log.HasConsent, log.Epoch, log.Type, log.Subtype, log.Content);
+                => string.Join(".", log.HasConsent, log.Epoch, log.Type, log.Subtype, log.Content.ToString(Formatting.None));
         }
 
         #endregion

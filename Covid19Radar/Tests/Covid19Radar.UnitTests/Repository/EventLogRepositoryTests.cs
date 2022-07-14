@@ -12,6 +12,7 @@ using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Moq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Xunit;
 
 namespace Covid19Radar.UnitTests.Repository
@@ -180,7 +181,7 @@ namespace Covid19Radar.UnitTests.Repository
             long epoch = 0,
             string type = "type",
             string subType = "sub-type",
-            string content = "content")
+            string content = "\"content\"")
         {
             EventLog eventLog = new EventLog
             {
@@ -188,7 +189,7 @@ namespace Covid19Radar.UnitTests.Repository
                 Epoch = epoch,
                 Type = type,
                 Subtype = subType,
-                Content = content
+                Content = JToken.Parse(content)
             };
             string eventLogContent = JsonConvert.SerializeObject(eventLog);
             await File.WriteAllTextAsync(Path.Combine(basePath, fileName), eventLogContent);
