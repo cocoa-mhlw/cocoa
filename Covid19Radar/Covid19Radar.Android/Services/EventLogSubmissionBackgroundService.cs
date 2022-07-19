@@ -96,7 +96,7 @@ namespace Covid19Radar.Droid.Services
                             AppConstants.EventLogMaxRequestSizeInBytes,
                             AppConstants.EventLogMaxRetry);
 
-                        loggerService.Info("Start event log submission background work.");
+                        loggerService.Info("Complete event log submission background work.");
                     });
                     return Result.InvokeSuccess();
                 }
