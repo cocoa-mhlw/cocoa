@@ -181,9 +181,9 @@ namespace CovidRadar.UITestV2
         /// <returns>jsonファイル中の"value"に対応する値.</returns>
         public static JToken Comparison(string lang, string value)
         {
-            StreamReader fileName = new StreamReader(lang + ".json");
-            var CurrentDirectory = Directory.GetCurrentDirectory();
-            Console.WriteLine(CurrentDirectory);
+            string dir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            dir = dir.Replace("\\bin\\Debug_UITest", "");
+            StreamReader fileName = new StreamReader(dir + @"\" + lang + ".json") ;
             string allLine = fileName.ReadToEnd();
             JObject jsonObj = JObject.Parse(allLine);
             return jsonObj[value]["value"];
