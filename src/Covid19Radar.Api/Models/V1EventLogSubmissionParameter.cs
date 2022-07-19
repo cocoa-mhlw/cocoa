@@ -84,7 +84,7 @@ namespace Covid19Radar.Api.Models
         public string Subtype { get; set; }
 
         [JsonProperty("content")]
-        public dynamic Content { get; set; }
+        public JToken Content { get; set; }
 
         [JsonIgnore]
         public string Timestamp
@@ -94,7 +94,7 @@ namespace Covid19Radar.Api.Models
 
         public string ClearText
         {
-            get => string.Join(".", HasConsent, Epoch, Type, Subtype, (Content as JObject).ToString(Formatting.None));
+            get => string.Join(".", HasConsent, Epoch, Type, Subtype, Content.ToString(Formatting.None));
         }
         
     }
