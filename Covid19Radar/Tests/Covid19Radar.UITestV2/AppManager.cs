@@ -183,7 +183,7 @@ namespace CovidRadar.UITestV2
         {
             string dir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             dir = dir.Replace("\\bin\\Debug_UITest", string.Empty);
-            StreamReader fileName = new StreamReader(dir + @"\\" + lang + ".json");
+            StreamReader fileName = new StreamReader(dir + @"/" + lang + ".json");
             string allLine = fileName.ReadToEnd();
             JObject jsonObj = JObject.Parse(allLine);
             return jsonObj[value]["value"];
