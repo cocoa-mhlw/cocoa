@@ -17,18 +17,15 @@ namespace Covid19Radar.iOS.Services
 {
     public class DataMaintainanceBackgroundService : AbsDataMaintainanceBackgroundService
     {
-        private const int TASK_INTERVAL_IN_DAYS = 1;
+        private const double BGTASK_INTERVAL = 24 * 60 * 60; // one day
         private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".data-maintainance";
-
-        private readonly IDateTimeUtility _dateTimeUtility;
 
         public DataMaintainanceBackgroundService(
             ILoggerService loggerService,
-            IEventLogRepository eventLogRepository,
-            IDateTimeUtility dateTimeUtility
-            ) : base(loggerService, eventLogRepository)
+            ILogFileService logFileService,
+            IEventLogRepository eventLogRepository
+            ) : base(loggerService, logFileService, eventLogRepository)
         {
-            _dateTimeUtility = dateTimeUtility;
         }
 
         public override void Schedule()
@@ -39,14 +36,15 @@ namespace Covid19Radar.iOS.Services
             {
                 LoggerService.Info("Background task has been started.");
 
-                DateTime nextDateTime = _dateTimeUtility.UtcNow.Date.AddDays(TASK_INTERVAL_IN_DAYS);
-                ScheduleBgTask(nextDateTime);
+                ScheduleBgTask();
 
                 var cancellationTokenSource = new CancellationTokenSource();
                 task.ExpirationHandler = cancellationTokenSource.Cancel;
 
                 _ = Task.Run(async () =>
                 {
+                    LoggerService.Info("Task.Run() start");
+
                     try
                     {
                         await ExecuteAsync();
@@ -65,25 +63,26 @@ namespace Covid19Radar.iOS.Services
                     finally
                     {
                         cancellationTokenSource.Dispose();
+                        LoggerService.Info("Task.Run() end");
                     }
                 }, cancellationTokenSource.Token);
             });
 
             if (result)
             {
-                LoggerService.Debug("BGTaskScheduler.Shared.Register succeeded.");
+                LoggerService.Info("BGTaskScheduler.Shared.Register succeeded.");
             }
             else
             {
-                LoggerService.Info("BGTaskScheduler.Shared.Register failed.");
+                LoggerService.Error("BGTaskScheduler.Shared.Register failed.");
             }
 
-            ScheduleBgTask(_dateTimeUtility.UtcNow);
+            ScheduleBgTask();
 
             LoggerService.EndMethod();
         }
 
-        private void ScheduleBgTask(DateTime nextDateTime)
+        private void ScheduleBgTask()
         {
             LoggerService.StartMethod();
 
@@ -91,8 +90,10 @@ namespace Covid19Radar.iOS.Services
             {
                 BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
-                    EarliestBeginDate = NSDate.FromTimeIntervalSince1970(nextDateTime.ToUnixEpoch())
+                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(BGTASK_INTERVAL),
                 };
+
+                LoggerService.Info($"request.EarliestBeginDate: {bgTaskRequest.EarliestBeginDate}");
 
                 BGTaskScheduler.Shared.Submit(bgTaskRequest, out var error);
                 if (error != null)
