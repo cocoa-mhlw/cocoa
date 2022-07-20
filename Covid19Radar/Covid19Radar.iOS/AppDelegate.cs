@@ -44,6 +44,9 @@ namespace Covid19Radar.iOS
         private readonly Lazy<AbsEventLogSubmissionBackgroundService> _eventLogSubmissionBackgroundService
             = new Lazy<AbsEventLogSubmissionBackgroundService>(() => ContainerLocator.Current.Resolve<AbsEventLogSubmissionBackgroundService>());
 
+        private readonly Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceBackgroundService
+            = new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
+
         private Lazy<IExposureDetectionService> _exposureDetectionService
             = new Lazy<IExposureDetectionService>(() => ContainerLocator.Current.Resolve<IExposureDetectionService>());
 
@@ -127,6 +130,7 @@ namespace Covid19Radar.iOS
             {
                 _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
             }
+
             try
             {
                 _eventLogSubmissionBackgroundService.Value.Schedule();
@@ -134,6 +138,15 @@ namespace Covid19Radar.iOS
             catch (Exception exception)
             {
                 _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
+            }
+
+            try
+            {
+                _dataMaintainanceBackgroundService.Value.Schedule();
+            }
+            catch (Exception exception)
+            {
+                _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
             }
         }
 
@@ -274,6 +287,7 @@ namespace Covid19Radar.iOS
 #endif
             container.Register<IExternalNavigationService, ExternalNavigationService>(Reuse.Singleton);
             container.Register<AbsEventLogSubmissionBackgroundService, EventLogSubmissionBackgroundService>(Reuse.Singleton);
+            container.Register<AbsDataMaintainanceBackgroundService, DataMaintainanceBackgroundService>(Reuse.Singleton);
         }
 
         public Task<ExposureConfiguration> GetExposureConfigurationAsync()

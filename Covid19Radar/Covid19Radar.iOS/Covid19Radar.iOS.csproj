@@ -272,6 +272,7 @@
     <Compile Include="Services\LocalPathService.cs" />
     <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
     <Compile Include="Renderers\AccessibilityContentViewRenderer.cs" />
+    <Compile Include="Services\DataMaintainanceBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -543,12 +544,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Base.lproj\HeaderLogo%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="fa-brands-400.otf" />
-    <EmbeddedResource Include="fa-regular-400.otf" />
-    <EmbeddedResource Include="fa-solid-900.otf" />
-    <EmbeddedResource Include="Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\Logs\" />

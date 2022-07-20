@@ -11,6 +11,7 @@ using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Moq;
+using Newtonsoft.Json.Linq;
 using Xunit;
 
 namespace Covid19Radar.UnitTests.Services
@@ -60,7 +61,7 @@ namespace Covid19Radar.UnitTests.Services
                     Epoch = 1,
                     Type = EventType.ExposureNotified.Type,
                     Subtype = EventType.ExposureNotified.SubType,
-                    Content = "{\"key\" : \"value2\"}",
+                    Content = JObject.FromObject(new { key = "value2" }),
                 },
                 new EventLog()
                 {
@@ -68,7 +69,7 @@ namespace Covid19Radar.UnitTests.Services
                     Epoch = 1,
                     Type = EventType.ExposureNotified.Type,
                     Subtype = EventType.ExposureNotified.SubType,
-                    Content = "{\"key\" : \"value1\"}",
+                    Content = JObject.FromObject(new { key = "value1" }),
                 }
             };
         }

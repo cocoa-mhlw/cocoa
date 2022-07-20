@@ -18,6 +18,7 @@ using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
 using Prism.Navigation;
+using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -34,6 +35,9 @@ namespace Covid19Radar.ViewModels
         private readonly ICloseApplicationService _closeApplicationService;
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILocalNotificationService _localNotificationService;
+        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
+        private readonly IEventLogRepository _eventLogRepository;
+        private readonly IEventLogService _eventLogService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -154,7 +158,10 @@ namespace Covid19Radar.ViewModels
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             ICloseApplicationService closeApplicationService,
             IServerConfigurationRepository serverConfigurationRepository,
-            ILocalNotificationService localNotificationService
+            ILocalNotificationService localNotificationService,
+            ISendEventLogStateRepository sendEventLogStateRepository,
+            IEventLogRepository eventLogRepository,
+            IEventLogService eventLogService
             ) : base(navigationService)
         {
             Title = "Title:Debug";
@@ -167,6 +174,9 @@ namespace Covid19Radar.ViewModels
             _closeApplicationService = closeApplicationService;
             _serverConfigurationRepository = serverConfigurationRepository;
             _localNotificationService = localNotificationService;
+            _sendEventLogStateRepository = sendEventLogStateRepository;
+            _eventLogRepository = eventLogRepository;
+            _eventLogService = eventLogService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -307,6 +317,31 @@ namespace Covid19Radar.ViewModels
             var privacyPolicyUpdated = new TermsUpdateInfoModel.Detail { Text = "DEBUG プライバシーポリシーの変更", UpdateDateTimeJst = new DateTime(2022, 03, 14) };
             var navigationParams = ReAgreePrivacyPolicyPage.BuildNavigationParams(privacyPolicyUpdated);
             _ = await NavigationService.NavigateAsync("/" + nameof(ReAgreePrivacyPolicyPage), navigationParams);
+        });
+
+        public IAsyncCommand OnClickAddEventNotifiedIfNeeded => new AsyncCommand(async () =>
+        {
+            if (_sendEventLogStateRepository.GetSendEventLogState(EventType.ExposureNotified) == SendEventLogState.Enable)
+            {
+                await _eventLogRepository.AddEventNotifiedAsync();
+            }
+        });
+
+        public IAsyncCommand OnClickAddEventNotifiedForce => new AsyncCommand(async () =>
+        {
+            await _eventLogRepository.AddEventNotifiedAsync();
+        });
+
+        public IAsyncCommand OnClickSendEventLog => new AsyncCommand(async () =>
+        {
+            await _eventLogService.SendAllAsync(
+                AppConstants.EventLogMaxRequestSizeInBytes,
+                AppConstants.EventLogMaxRetry);
+        });
+
+        public IAsyncCommand OnClickRotateEventLogs => new AsyncCommand(async () =>
+        {
+            await _eventLogRepository.RotateAsync(AppConstants.EventLogFileExpiredSeconds);
         });
 
         public Command OnClickQuit => new Command(() =>

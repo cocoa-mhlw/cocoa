@@ -15,20 +15,18 @@ using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Covid19Radar.Repository
 {
     public interface IEventLogRepository
     {
-        public Task<List<EventLog>> GetLogsAsync(
-            long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
-            );
-
-        public Task<bool> RemoveAsync(EventLog eventLog);
-
-        public Task AddEventNotifiedAsync(
-            long maxSize = AppConstants.EventLogMaxRequestSizeInBytes
-            );
+        Task<List<EventLog>> GetLogsAsync(long maxSize = AppConstants.EventLogMaxRequestSizeInBytes);
+        Task<bool> RemoveAsync(EventLog eventLog);
+        Task RemoveAllAsync();
+        Task AddEventNotifiedAsync(long maxSize = AppConstants.EventLogMaxRequestSizeInBytes);
+        Task<bool> IsExist();
+        Task RotateAsync(long seconds);
     }
 
     public class EventLogRepository : IEventLogRepository
@@ -38,6 +36,7 @@ namespace Covid19Radar.Repository
         private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILoggerService _loggerService;
+        private readonly IBackupAttributeService _backupAttributeService;
 
         private readonly string _basePath;
 
@@ -45,24 +44,26 @@ namespace Covid19Radar.Repository
             ISendEventLogStateRepository sendEventLogStateRepository,
             IDateTimeUtility dateTimeUtility,
             ILocalPathService localPathService,
-            ILoggerService loggerService
+            ILoggerService loggerService,
+            IBackupAttributeService backupAttributeService
             )
         {
             _sendEventLogStateRepository = sendEventLogStateRepository;
             _dateTimeUtility = dateTimeUtility;
             _basePath = localPathService.EventLogDirPath;
             _loggerService = loggerService;
+            _backupAttributeService = backupAttributeService;
         }
 
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
         private string GetFileName(EventLog eventLog)
         {
-            var clearText = string.Join(".", eventLog.Epoch, eventLog.Type, eventLog.Subtype, eventLog.Content);
+            var clearText = string.Join(".", eventLog.Epoch, eventLog.Type, eventLog.Subtype, eventLog.Content.ToString(Formatting.None));
 
             using var sha = SHA256.Create();
             var textBytes = Encoding.UTF8.GetBytes(clearText);
-            string hash = Convert.ToBase64String(sha.ComputeHash(textBytes));
+            string hash = Convert.ToBase64String(sha.ComputeHash(textBytes)).TrimEnd('=').Replace('+', '-').Replace('/', '_');
 
             return $"{hash}{LOG_EXTENSION}";
         }
@@ -100,6 +101,9 @@ namespace Covid19Radar.Repository
                 }
 
                 await File.WriteAllTextAsync(filePath, serializedJson);
+                _loggerService.Info($"Write event log. filePath:{filePath}");
+
+                _backupAttributeService.SetSkipBackupAttributeToEventLogDir();
 
                 return true;
             }
@@ -265,9 +269,156 @@ namespace Covid19Radar.Repository
                 Epoch = _dateTimeUtility.UtcNow.ToUnixEpoch(),
                 Type = EventType.ExposureNotified.Type,
                 Subtype = EventType.ExposureNotified.SubType,
-                Content = content.ToJsonString(),
+                Content = JObject.FromObject(content),
             };
             await AddAsyncInternal(eventLog, maxSize);
+        }
+
+        public async Task RemoveAllAsync()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                RemoveAllAsyncInternal();
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private void RemoveAllAsyncInternal()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                if (Directory.Exists(_basePath))
+                {
+                    Directory.Delete(_basePath, true);
+                }
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task<bool> IsExist()
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                return IsExistInternal();
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private bool IsExistInternal()
+        {
+            _loggerService.StartMethod();
+            try
+            {
+                if (!Directory.Exists(_basePath))
+                {
+                    return false;
+                }
+
+                string[] filesInDirectory = Directory.GetFiles(_basePath);
+                if (filesInDirectory.Length == 0)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
+        public async Task RotateAsync(long seconds)
+        {
+            _loggerService.StartMethod();
+
+            await _semaphore.WaitAsync();
+
+            try
+            {
+                await RotateAsyncInternal(seconds);
+            }
+            finally
+            {
+                _semaphore.Release();
+
+                _loggerService.EndMethod();
+            }
+        }
+
+        private async Task RotateAsyncInternal(long seconds)
+        {
+            _loggerService.StartMethod();
+            _loggerService.Info($"seconds: {seconds}");
+
+            try
+            {
+                if (!Directory.Exists(_basePath))
+                {
+                    return;
+                }
+
+                long utcNowEpoch = DateTime.UtcNow.ToUnixEpoch();
+                _loggerService.Info($"utcNowEpoch: {utcNowEpoch}");
+
+                string[] filesInDirectory = Directory.GetFiles(_basePath);
+                foreach (var file in filesInDirectory)
+                {
+                    _loggerService.Info($"file: {file}");
+
+                    long eventLogEpoch;
+                    try
+                    {
+                        string content = await File.ReadAllTextAsync(file);
+                        EventLog eventLog = JsonConvert.DeserializeObject<EventLog>(content);
+                        eventLogEpoch = eventLog.Epoch;
+                    }
+                    catch (Exception ex)
+                    {
+                        _loggerService.Exception("Failed read of event log content.", ex);
+                        File.Delete(file);
+                        continue;
+                    }
+
+                    _loggerService.Info($"eventLogEpoch: {eventLogEpoch}");
+
+                    if (eventLogEpoch < utcNowEpoch - seconds)
+                    {
+                        _loggerService.Info("Delete");
+                        File.Delete(file);
+                    }
+                    else
+                    {
+                        _loggerService.Info("Keep");
+                    }
+                }
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
         }
     }
 

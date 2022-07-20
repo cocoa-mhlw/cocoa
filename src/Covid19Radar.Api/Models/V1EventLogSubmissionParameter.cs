@@ -56,7 +56,7 @@ namespace Covid19Radar.Api.Models
         [JsonIgnore]
         public string ClearText
         {
-            get => string.Join("|", AppPackageName, KeysTextForDeviceVerification);
+            get => string.Join("|", IdempotencyKey, AppPackageName, KeysTextForDeviceVerification);
         }
             
 

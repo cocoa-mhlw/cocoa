@@ -56,13 +56,7 @@
 		<string>APP_PACKAGE_NAME.exposure-notification</string>
 		<string>APP_PACKAGE_NAME.delete-old-logs</string>
 		<string>APP_PACKAGE_NAME.eventlog-submission</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>fa-brands-400.otf</string>
-		<string>fa-regular-400.otf</string>
-		<string>fa-solid-900.otf</string>
-		<string>Roboto-Regular.ttf</string>
+		<string>APP_PACKAGE_NAME.data-maintainance</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

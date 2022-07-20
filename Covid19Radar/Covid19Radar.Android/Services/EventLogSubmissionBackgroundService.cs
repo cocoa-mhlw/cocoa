@@ -3,10 +3,12 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using System;
+using System.Threading.Tasks;
 using Android.Content;
 using Android.Runtime;
 using AndroidX.Work;
 using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Java.Util.Concurrent;
@@ -66,6 +68,7 @@ namespace Covid19Radar.Droid.Services
         {
             private Lazy<ILoggerService> _loggerService => new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
             private Lazy<IEventLogService> _eventLogService => new Lazy<IEventLogService>(() => ContainerLocator.Current.Resolve<IEventLogService>());
+            private Lazy<IEventLogRepository> _eventLogRepository => new Lazy<IEventLogRepository>(() => ContainerLocator.Current.Resolve<IEventLogRepository>());
 
             public BackgroundWorker(Context context, WorkerParameters workerParams) : base(context, workerParams)
             {
@@ -76,14 +79,25 @@ namespace Covid19Radar.Droid.Services
             {
                 var loggerService = _loggerService.Value;
                 var eventLogService = _eventLogService.Value;
+                var eventLogRepository = _eventLogRepository.Value;
 
                 loggerService.StartMethod();
 
                 try
                 {
-                    eventLogService.SendAllAsync(
-                        AppConstants.EventLogMaxRequestSizeInBytes,
-                        AppConstants.EventLogMaxRetry);
+                    _ = Task.Run(async () =>
+                    {
+                        loggerService.Info("Start event log submission background work.");
+
+                        await eventLogRepository.RotateAsync(
+                            AppConstants.EventLogFileExpiredSeconds);
+
+                        await eventLogService.SendAllAsync(
+                            AppConstants.EventLogMaxRequestSizeInBytes,
+                            AppConstants.EventLogMaxRetry);
+
+                        loggerService.Info("Complete event log submission background work.");
+                    });
                     return Result.InvokeSuccess();
                 }
                 catch (Exception exception)

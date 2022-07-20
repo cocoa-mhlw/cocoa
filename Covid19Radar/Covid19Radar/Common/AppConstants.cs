@@ -91,6 +91,11 @@ namespace Covid19Radar.Common
         /// </summary>
         public const int EventLogMaxRetry = 3;
 
+        /// <summary>
+        /// Event log file expiration date. (seconds)
+        /// </summary>
+        public const int EventLogFileExpiredSeconds = 14 * 24 * 60 * 60; // 14 days
+
         #region Other Private Methods
 
         private static TimeZoneInfo JstTimeZoneInfo()

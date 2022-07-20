@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using BackgroundTasks;
 using Covid19Radar.Common;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Foundation;
@@ -21,14 +22,17 @@ namespace Covid19Radar.iOS.Services
         private const double ONE_DAY_IN_SECONDS = 1 * 24 * 60 * 60;
 
         private readonly IEventLogService _eventLogService;
+        private readonly IEventLogRepository _eventLogRepository;
         private readonly ILoggerService _loggerService;
 
         public EventLogSubmissionBackgroundService(
             IEventLogService eventLogService,
+            IEventLogRepository eventLogRepository,
             ILoggerService loggerService
             ) : base()
         {
             _eventLogService = eventLogService;
+            _eventLogRepository = eventLogRepository;
             _loggerService = loggerService;
         }
 
@@ -60,6 +64,9 @@ namespace Covid19Radar.iOS.Services
                 _loggerService.Info("HandleSendLogAsync() Task.Run() start");
                 try
                 {
+                    await _eventLogRepository.RotateAsync(
+                        AppConstants.EventLogFileExpiredSeconds);
+
                     await _eventLogService.SendAllAsync(
                         AppConstants.EventLogMaxRequestSizeInBytes,
                         AppConstants.EventLogMaxRetry);

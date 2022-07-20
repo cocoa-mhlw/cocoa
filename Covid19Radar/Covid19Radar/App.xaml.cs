@@ -36,6 +36,9 @@ namespace Covid19Radar
 
         private ILoggerService LoggerService;
         private ILogFileService LogFileService;
+        private IBackupAttributeService BackupAttributeService;
+
+        private IEventLogRepository EventLogRepository { get; set; }
 
         /*
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -54,6 +57,10 @@ namespace Covid19Radar
             LoggerService.StartMethod();
             LogFileService = Container.Resolve<ILogFileService>();
             LogFileService.SetSkipBackupAttributeToLogDir();
+            BackupAttributeService = Container.Resolve<IBackupAttributeService>();
+            BackupAttributeService.SetSkipBackupAttributeToEventLogDir();
+
+            EventLogRepository = Container.Resolve<IEventLogRepository>();
 
             LogUnobservedTaskExceptions();
 
@@ -234,19 +241,25 @@ namespace Covid19Radar
             container.Register<IDeviceInfoUtility, DeviceInfoUtility>(Reuse.Singleton);
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
             // Initialize periodic log delete service
             var logPeriodicDeleteService = Container.Resolve<ILogPeriodicDeleteService>();
             logPeriodicDeleteService.Init();
 
             LogFileService.Rotate();
+
+            await EventLogRepository.RotateAsync(
+                AppConstants.EventLogFileExpiredSeconds);
         }
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
             base.OnResume();
             LogFileService.Rotate();
+
+            await EventLogRepository.RotateAsync(
+                AppConstants.EventLogFileExpiredSeconds);
         }
 
         protected override void OnSleep()
