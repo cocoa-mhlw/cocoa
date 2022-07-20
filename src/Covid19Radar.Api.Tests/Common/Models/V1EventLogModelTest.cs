@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System.IO;
+using System.Text.RegularExpressions;
 using Covid19Radar.Api.Models;
 using Covid19Radar.UnitTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -34,8 +35,7 @@ namespace Covid19Radar.Api.Tests.Models
 
             V1EventLogSubmissionParameter eventLogRequest = JsonConvert.DeserializeObject<V1EventLogSubmissionParameter>(eventLogsText);
             string clearText = eventLogRequest.ClearText;
-
-            Assert.AreEqual(expectedClearText, clearText);
+            Assert.AreEqual(Regex.Replace(expectedClearText, @"[\r\n]+$", ""), clearText);
         }
     }
 }
