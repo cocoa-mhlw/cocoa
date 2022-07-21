@@ -1,25 +1,25 @@
 {
-  "idempotency_key": "E09585E4-A6A9-4E4A-84C3-0FB8B23B2498",
+  "idempotencyKey": "E09585E4-A6A9-4E4A-84C3-0FB8B23B2498",
   "platform": "Android",
   "appPackageName": "jp.go.mhlw.covid19radar",
   "deviceVerificationPayload": "dummy value",
-  "event_logs": [
+  "eventLogs": [
     {
-      "has_consent": true,
+      "hasConsent": true,
       "epoch": 1640256881,
       "type": "ExposureNotification",
       "subtype": "ExposureData",
       "content": "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam"
     },
     {
-      "has_consent": true,
+      "hasConsent": true,
       "epoch": 1640257311,
       "type": "ExposureNotification",
       "subtype": "ExposureData",
       "content": "Aenean sit amet dui blandit, faucibus neque sollicitudin, sollicitudin nisi. Vivamus mattis felis vitae lorem ultrices interdum. Nam massa orci, hendrerit in mauris at, ultricies eleifend tortor. Etiam neque dolor, tincidunt a scelerisque id, commodo at purus. Mauris ac ultrices quam. Aliquam elementum diam venenatis orci tempor finibus. Donec ultricies interdum tortor, vitae imperdiet orci porta ac."
     },
     {
-      "has_consent": true,
+      "hasConsent": true,
       "epoch": 1640258212,
       "type": "ExposureNotification",
       "subtype": "ExposureData",
