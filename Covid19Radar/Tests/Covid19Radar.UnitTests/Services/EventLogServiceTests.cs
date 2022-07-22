@@ -92,6 +92,9 @@ namespace Covid19Radar.UnitTests.Services
 
             _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
 
+            _essentialsService.SetupGet(x => x.Platform).Returns("TestPlatform");
+            _essentialsService.SetupGet(x => x.AppPackageName).Returns("test.package.name");
+
             // Test Case
             var unitUnderTest = CreateService();
             await unitUnderTest.SendAllAsync(long.MaxValue, 1);
@@ -100,7 +103,13 @@ namespace Covid19Radar.UnitTests.Services
             _loggerService.Verify(x => x.Info("Event log send successful.", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Once());
             _loggerService.Verify(x => x.Error(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>()), Times.Never());
 
-            _httpDataService.Verify(x => x.PutEventLog(It.Is<V1EventLogRequest>(x => x.EventLogs.Count == 1)), Times.Once());
+            _httpDataService.Verify(x => x.PutEventLog(
+                It.Is<V1EventLogRequest>(x =>
+                    x.EventLogs.Count == 1 &&
+                    x.Platform == "testplatform" &&
+                    x.AppPackageName == "test.package.name"
+                )),
+                Times.Once());
 
             _deviceVerifier.Verify(x => x.VerifyAsync(It.IsAny<V1EventLogRequest>()), Times.Once());
 
@@ -126,6 +135,9 @@ namespace Covid19Radar.UnitTests.Services
                 .ReturnsAsync(dummyEventLogList);
 
             _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
+
+            _essentialsService.SetupGet(x => x.Platform).Returns("TestPlatform");
+            _essentialsService.SetupGet(x => x.AppPackageName).Returns("test.package.name");
 
             // Test Case
             var unitUnderTest = CreateService();
@@ -168,6 +180,9 @@ namespace Covid19Radar.UnitTests.Services
 
             _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
 
+            _essentialsService.SetupGet(x => x.Platform).Returns("TestPlatform");
+            _essentialsService.SetupGet(x => x.AppPackageName).Returns("test.package.name");
+
             // Test Case
             var unitUnderTest = CreateService();
             await unitUnderTest.SendAllAsync(long.MaxValue, 3);
@@ -201,6 +216,9 @@ namespace Covid19Radar.UnitTests.Services
                 .ReturnsAsync(dummyEventLogList);
 
             _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
+
+            _essentialsService.SetupGet(x => x.Platform).Returns("TestPlatform");
+            _essentialsService.SetupGet(x => x.AppPackageName).Returns("test.package.name");
 
             // Test Case
             var unitUnderTest = CreateService();
@@ -237,6 +255,9 @@ namespace Covid19Radar.UnitTests.Services
 
             _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
 
+            _essentialsService.SetupGet(x => x.Platform).Returns("TestPlatform");
+            _essentialsService.SetupGet(x => x.AppPackageName).Returns("test.package.name");
+
             // Test Case
             var unitUnderTest = CreateService();
             await unitUnderTest.SendAllAsync(long.MaxValue, 3);
@@ -272,6 +293,9 @@ namespace Covid19Radar.UnitTests.Services
 
             _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(false);
 
+            _essentialsService.SetupGet(x => x.Platform).Returns("TestPlatform");
+            _essentialsService.SetupGet(x => x.AppPackageName).Returns("test.package.name");
+
             // Test Case
             var unitUnderTest = CreateService();
             await unitUnderTest.SendAllAsync(long.MaxValue, 1);
@@ -297,6 +321,9 @@ namespace Covid19Radar.UnitTests.Services
                 .ReturnsAsync(dummyEventLogList);
 
             _deviceVerifier.Setup(x => x.IsErrorPayload(It.IsAny<string>())).Returns(true);
+
+            _essentialsService.SetupGet(x => x.Platform).Returns("TestPlatform");
+            _essentialsService.SetupGet(x => x.AppPackageName).Returns("test.package.name");
 
             // Test Case
             var unitUnderTest = CreateService();
