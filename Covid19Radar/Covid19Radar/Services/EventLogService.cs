@@ -139,7 +139,7 @@ namespace Covid19Radar.Services
                 var request = new V1EventLogRequest()
                 {
                     IdempotencyKey = idempotencyKey,
-                    Platform = _essentialsService.Platform,
+                    Platform = _essentialsService.Platform.ToLowerInvariant(),
                     AppPackageName = _essentialsService.AppPackageName,
                     EventLogs = eventLogList,
                 };
