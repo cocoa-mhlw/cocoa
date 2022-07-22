@@ -6,6 +6,7 @@ using System;
 using System.Linq;
 using Covid19Radar.Api.Common;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Covid19Radar.Api.Models
 {
@@ -83,7 +84,7 @@ namespace Covid19Radar.Api.Models
         public string Subtype { get; set; }
 
         [JsonProperty("content")]
-        public string Content { get; set; }
+        public JToken Content { get; set; }
 
         [JsonIgnore]
         public string Timestamp
@@ -93,7 +94,7 @@ namespace Covid19Radar.Api.Models
 
         public string ClearText
         {
-            get => string.Join(".", HasConsent, Epoch, Type, Subtype, Content);
+            get => string.Join(".", HasConsent, Epoch, Type, Subtype, Content.ToString(Formatting.None));
         }
         
     }
