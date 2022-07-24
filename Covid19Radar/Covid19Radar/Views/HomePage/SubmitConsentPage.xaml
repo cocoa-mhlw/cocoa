@@ -65,10 +65,26 @@
                     Aspect="AspectFit"
                     VerticalOptions="Start"
                     Source="img_number_1.png" />
-                <Label
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.SubmitConsentPageDescription3}" />
+
+                <StackLayout
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SubmitConsentPageDescription3}" />
+
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Margin="0, 0, 0, 0"
+                        HorizontalOptions="Start"
+                        Style="{StaticResource LinkLabelStyleMedium}"
+                        Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
+                        <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
             </StackLayout>
             <StackLayout
                 Orientation="Horizontal"
