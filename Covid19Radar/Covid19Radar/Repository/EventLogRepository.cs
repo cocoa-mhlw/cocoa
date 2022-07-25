@@ -145,6 +145,12 @@ namespace Covid19Radar.Repository
                 long currentSize = 0;
                 var resultList = new List<EventLog>();
 
+                if (!Directory.Exists(_basePath))
+                {
+                    _loggerService.Info("Event log directory not found.");
+                    return resultList;
+                }
+
                 string[] files = Directory.GetFiles(_basePath)
                     .Where(file => file.EndsWith(LOG_EXTENSION))
                     .ToArray();

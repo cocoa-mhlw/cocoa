@@ -3,6 +3,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
@@ -44,6 +45,86 @@ namespace Covid19Radar.UnitTests.Repository
                 _mockLocalPathService.Object,
                 _mockLoggerService.Object,
                 _mockBackupAttributeService.Object);
+        }
+
+        [Fact]
+        public async Task GetLogsAsyncTest_NoDir()
+        {
+            string eventLogsTempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "test_eventlogs");
+
+            _mockLocalPathService.SetupGet(x => x.EventLogDirPath).Returns(eventLogsTempPath);
+
+            EventLogRepository unitUnderTest = CreateRepository();
+            List<EventLog> result = await unitUnderTest.GetLogsAsync(long.MaxValue);
+
+            Assert.Empty(result);
+        }
+
+        [Fact]
+        public async Task GetLogsAsyncTest_Empty()
+        {
+            string eventLogsTempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "test_eventlogs");
+            Directory.CreateDirectory(eventLogsTempPath);
+
+            _mockLocalPathService.SetupGet(x => x.EventLogDirPath).Returns(eventLogsTempPath);
+
+            EventLogRepository unitUnderTest = CreateRepository();
+            List<EventLog> result = await unitUnderTest.GetLogsAsync(long.MaxValue);
+
+            Assert.Empty(result);
+
+            Directory.Delete(eventLogsTempPath, true);
+        }
+
+        [Fact]
+        public async Task GetLogsAsyncTest_Success()
+        {
+            string eventLogsTempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "test_eventlogs");
+            Directory.CreateDirectory(eventLogsTempPath);
+
+            DateTime now = DateTime.UtcNow;
+            await WriteEventLog(
+                eventLogsTempPath,
+                "test-01.log",
+                true,
+                now.ToUnixEpoch(),
+                "test-type-01",
+                "test-subtype-01",
+                "{\"test-key\":1234}");
+
+            _mockLocalPathService.SetupGet(x => x.EventLogDirPath).Returns(eventLogsTempPath);
+
+            EventLogRepository unitUnderTest = CreateRepository();
+            List<EventLog> result = await unitUnderTest.GetLogsAsync(long.MaxValue);
+
+            Assert.Single(result);
+            Assert.True(result[0].HasConsent);
+            Assert.Equal(now.ToUnixEpoch(), result[0].Epoch);
+            Assert.Equal("test-type-01", result[0].Type);
+            Assert.Equal("test-subtype-01", result[0].Subtype);
+            Assert.Equal(1234, result[0].Content["test-key"]);
+            Assert.True(File.Exists(Path.Combine(eventLogsTempPath, "test-01.log")));
+
+            Directory.Delete(eventLogsTempPath, true);
+        }
+
+        [Fact]
+        public async Task GetLogsAsyncTest_Expection()
+        {
+            string eventLogsTempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "test_eventlogs");
+            Directory.CreateDirectory(eventLogsTempPath);
+
+            await File.WriteAllTextAsync(Path.Combine(eventLogsTempPath, "test-error.log"), "json-parse-error-content");
+
+            _mockLocalPathService.SetupGet(x => x.EventLogDirPath).Returns(eventLogsTempPath);
+
+            EventLogRepository unitUnderTest = CreateRepository();
+            List<EventLog> result = await unitUnderTest.GetLogsAsync(long.MaxValue);
+
+            Assert.Empty(result);
+            Assert.False(File.Exists(Path.Combine(eventLogsTempPath, "test-error.log")));
+
+            Directory.Delete(eventLogsTempPath, true);
         }
 
         [Fact]
