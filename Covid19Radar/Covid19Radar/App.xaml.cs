@@ -243,10 +243,6 @@ namespace Covid19Radar
 
         protected override async void OnStart()
         {
-            // Initialize periodic log delete service
-            var logPeriodicDeleteService = Container.Resolve<ILogPeriodicDeleteService>();
-            logPeriodicDeleteService.Init();
-
             LogFileService.Rotate();
 
             await EventLogRepository.RotateAsync(

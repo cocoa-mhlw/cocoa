@@ -19,7 +19,7 @@ namespace Covid19Radar.Droid.Services
 {
     public class EventLogSubmissionBackgroundService : AbsEventLogSubmissionBackgroundService
     {
-        private const string CURRENT_WORK_NAME = "eventlog_submission_worker_20220112";
+        private const string CURRENT_WORK_NAME = "eventlog_submission_worker_20220628";
 
         private const long INTERVAL_IN_HOURS = 24;
         private const long BACKOFF_DELAY_IN_MINUTES = 60;
@@ -42,14 +42,14 @@ namespace Covid19Radar.Droid.Services
             PeriodicWorkRequest periodicWorkRequest = CreatePeriodicWorkRequest();
             workManager.EnqueueUniquePeriodicWork(
                 CURRENT_WORK_NAME,
-                ExistingPeriodicWorkPolicy.Replace,
+                ExistingPeriodicWorkPolicy.Keep,
                 periodicWorkRequest
                 );
 
             _loggerService.EndMethod();
         }
 
-        private static PeriodicWorkRequest CreatePeriodicWorkRequest()
+        private PeriodicWorkRequest CreatePeriodicWorkRequest()
         {
             var workRequestBuilder = new PeriodicWorkRequest.Builder(
                 typeof(BackgroundWorker),

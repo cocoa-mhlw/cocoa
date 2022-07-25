@@ -24,8 +24,9 @@ namespace Covid19Radar.Droid.Services
 
         public DataMaintainanceBackgroundService(
             ILoggerService loggerService,
+            ILogFileService logFileService,
             IEventLogRepository eventLogRepository
-            ) : base(loggerService, eventLogRepository)
+            ) : base(loggerService, logFileService, eventLogRepository)
         {
             // do nothing
         }
@@ -49,7 +50,7 @@ namespace Covid19Radar.Droid.Services
         private PeriodicWorkRequest CreatePeriodicWorkRequest()
         {
             var workRequestBuilder = new PeriodicWorkRequest.Builder(
-                typeof(DataMaintainanceBackgroundWorker),
+                typeof(BackgroundWorker),
                 INTERVAL_IN_HOURS, TimeUnit.Hours
                 )
                 .SetConstraints(new Constraints.Builder()
@@ -58,49 +59,49 @@ namespace Covid19Radar.Droid.Services
                 .SetBackoffCriteria(BackoffPolicy.Linear, BACKOFF_DELAY_IN_MINUTES, TimeUnit.Minutes);
             return workRequestBuilder.Build();
         }
-    }
 
-    [Preserve]
-    public class DataMaintainanceBackgroundWorker : Worker
-    {
-        private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceBackgroundService
-            => new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
-        private Lazy<ILoggerService> _loggerService => new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
-
-        public DataMaintainanceBackgroundWorker(Context context, WorkerParameters workerParameters)
-            : base(context, workerParameters)
+        [Preserve]
+        public class BackgroundWorker : Worker
         {
-            // do nothing
-        }
+            private Lazy<AbsDataMaintainanceBackgroundService> _dataMaintainanceBackgroundService
+                => new Lazy<AbsDataMaintainanceBackgroundService>(() => ContainerLocator.Current.Resolve<AbsDataMaintainanceBackgroundService>());
+            private Lazy<ILoggerService> _loggerService => new Lazy<ILoggerService>(() => ContainerLocator.Current.Resolve<ILoggerService>());
 
-        public override Result DoWork()
-        {
-            var dataMaintainanceBackgroundService = _dataMaintainanceBackgroundService.Value;
-            var loggerService = _loggerService.Value;
-
-            loggerService.StartMethod();
-
-            try
+            public BackgroundWorker(Context context, WorkerParameters workerParameters)
+                : base(context, workerParameters)
             {
-                dataMaintainanceBackgroundService.ExecuteAsync().GetAwaiter().GetResult();
-                return Result.InvokeSuccess();
+                // do nothing
             }
-            catch (Exception exception)
-            {
-                loggerService.Exception("Exception", exception);
-                return Result.InvokeFailure();
-            }
-            finally
-            {
-                loggerService.EndMethod();
-            }
-        }
 
-        public override void OnStopped()
-        {
-            base.OnStopped();
+            public override Result DoWork()
+            {
+                var dataMaintainanceBackgroundService = _dataMaintainanceBackgroundService.Value;
+                var loggerService = _loggerService.Value;
 
-            _loggerService.Value.Warning("OnStopped");
+                loggerService.StartMethod();
+
+                try
+                {
+                    dataMaintainanceBackgroundService.ExecuteAsync().GetAwaiter().GetResult();
+                    return Result.InvokeSuccess();
+                }
+                catch (Exception exception)
+                {
+                    loggerService.Exception("Exception", exception);
+                    return Result.InvokeFailure();
+                }
+                finally
+                {
+                    loggerService.EndMethod();
+                }
+            }
+
+            public override void OnStopped()
+            {
+                base.OnStopped();
+
+                _loggerService.Value.Warning("OnStopped");
+            }
         }
     }
 }

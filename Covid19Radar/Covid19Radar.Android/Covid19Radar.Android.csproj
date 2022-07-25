@@ -175,7 +175,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CloseApplicationService.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
-    <Compile Include="Services\Logs\LogPeriodicDeleteService.cs" />
     <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\PreferencesService.cs" />
     <Compile Include="Services\SecureStorageService.cs" />
@@ -611,7 +610,6 @@
   <ItemGroup>
     <Folder Include="Renderers\" />
     <Folder Include="Resources\xml\" />
-    <Folder Include="Services\Logs\" />
     <Folder Include="Resources\drawable-zh-xxhdpi\" />
     <Folder Include="Resources\drawable-zh-xhdpi\" />
     <Folder Include="Services\Migration\" />

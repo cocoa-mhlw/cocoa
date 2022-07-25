@@ -134,7 +134,6 @@ namespace Covid19Radar.Droid
             // Services
             container.Register<IBackupAttributeService, BackupAttributeService>(Reuse.Singleton);
             container.Register<ILocalPathService, LocalPathService>(Reuse.Singleton);
-            container.Register<ILogPeriodicDeleteService, LogPeriodicDeleteService>(Reuse.Singleton);
             container.Register<ISecureStorageDependencyService, Services.SecureStorageService>(Reuse.Singleton);
             container.Register<IPreferencesService, PreferencesService>(Reuse.Singleton);
             container.Register<IApplicationPropertyService, ApplicationPropertyService>(Reuse.Singleton);
