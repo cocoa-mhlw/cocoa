@@ -266,7 +266,7 @@ namespace Covid19Radar.Repository
 
             var content = new EventContentExposureNotified()
             {
-                NotifiedTimeInMillis = _dateTimeUtility.UtcNow.Ticks
+                NotifiedTimeInMillis = _dateTimeUtility.UtcNow.ToUnixEpochMillis()
             };
 
             var eventLog = new EventLog()

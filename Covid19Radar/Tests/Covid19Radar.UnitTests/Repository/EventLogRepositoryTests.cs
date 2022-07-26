@@ -22,7 +22,6 @@ namespace Covid19Radar.UnitTests.Repository
     {
         private readonly MockRepository _mockRepository;
         private readonly Mock<ISendEventLogStateRepository> _mockSendEventLogStateRepository;
-        private readonly Mock<IDateTimeUtility> _mockDateTimeUtility;
         private readonly Mock<ILocalPathService> _mockLocalPathService;
         private readonly Mock<ILoggerService> _mockLoggerService;
         private readonly Mock<IBackupAttributeService> _mockBackupAttributeService;
@@ -31,7 +30,6 @@ namespace Covid19Radar.UnitTests.Repository
         {
             _mockRepository = new MockRepository(MockBehavior.Default);
             _mockSendEventLogStateRepository = _mockRepository.Create<ISendEventLogStateRepository>();
-            _mockDateTimeUtility = _mockRepository.Create<IDateTimeUtility>();
             _mockLocalPathService = _mockRepository.Create<ILocalPathService>();
             _mockLoggerService = _mockRepository.Create<ILoggerService>();
             _mockBackupAttributeService = _mockRepository.Create<IBackupAttributeService>();
@@ -41,7 +39,7 @@ namespace Covid19Radar.UnitTests.Repository
         {
             return new EventLogRepository(
                 _mockSendEventLogStateRepository.Object,
-                _mockDateTimeUtility.Object,
+                new DateTimeUtility(),
                 _mockLocalPathService.Object,
                 _mockLoggerService.Object,
                 _mockBackupAttributeService.Object);
@@ -123,6 +121,120 @@ namespace Covid19Radar.UnitTests.Repository
 
             Assert.Empty(result);
             Assert.False(File.Exists(Path.Combine(eventLogsTempPath, "test-error.log")));
+
+            Directory.Delete(eventLogsTempPath, true);
+        }
+
+        [Fact]
+        public async Task AddEventNotifiedAsyncTest_Success_Enable()
+        {
+            string eventLogsTempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "test_eventlogs");
+
+            _mockLocalPathService.SetupGet(x => x.EventLogDirPath).Returns(eventLogsTempPath);
+            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(EventType.ExposureNotified)).Returns(SendEventLogState.Enable);
+
+            long utcNowEpochMillisecoundsFrom = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            EventLogRepository unitUnderTest = CreateRepository();
+            await unitUnderTest.AddEventNotifiedAsync(long.MaxValue);
+
+            long utcNowEpochMillisecoundsTo = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            _mockBackupAttributeService.Verify(x => x.SetSkipBackupAttributeToEventLogDir(), Times.Once());
+
+            Assert.True(Directory.Exists(eventLogsTempPath));
+
+            string[] files = Directory.GetFiles(eventLogsTempPath);
+            Assert.Single(files);
+
+            string content = File.ReadAllText(files[0]);
+            Assert.NotEmpty(content);
+
+            JObject json = JToken.Parse(content) as JObject;
+            Assert.NotNull(json);
+
+            Assert.Equal(JTokenType.Boolean, json.GetValue("hasConsent").Type);
+            Assert.True(json.GetValue("hasConsent").Value<bool>());
+
+            Assert.Equal(JTokenType.Integer, json.GetValue("epoch").Type);
+            Assert.InRange(
+                json.GetValue("epoch").Value<long>(),
+                utcNowEpochMillisecoundsFrom / 1000,
+                utcNowEpochMillisecoundsTo / 1000);
+
+            Assert.Equal(JTokenType.String, json.GetValue("type").Type);
+            Assert.Equal(EventType.ExposureNotified.Type, json.GetValue("type").Value<string>());
+
+            Assert.Equal(JTokenType.String, json.GetValue("subtype").Type);
+            Assert.Equal(EventType.ExposureNotified.SubType, json.GetValue("subtype").Value<string>());
+
+            Assert.Equal(JTokenType.Object, json.GetValue("content").Type);
+
+            JObject jsonContent = json.GetValue("content") as JObject;
+            Assert.NotNull(jsonContent);
+
+            Assert.Equal(JTokenType.Integer, jsonContent.GetValue("notifiedTimeInMillis").Type);
+            Assert.InRange(
+                jsonContent.GetValue("notifiedTimeInMillis").Value<long>(),
+                utcNowEpochMillisecoundsFrom,
+                utcNowEpochMillisecoundsTo);
+
+            Directory.Delete(eventLogsTempPath, true);
+        }
+
+        [Fact]
+        public async Task AddEventNotifiedAsyncTest_Success_Disable()
+        {
+            string eventLogsTempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "test_eventlogs");
+
+            _mockLocalPathService.SetupGet(x => x.EventLogDirPath).Returns(eventLogsTempPath);
+            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(EventType.ExposureNotified)).Returns(SendEventLogState.Disable);
+
+            long utcNowEpochMillisecoundsFrom = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            EventLogRepository unitUnderTest = CreateRepository();
+            await unitUnderTest.AddEventNotifiedAsync(long.MaxValue);
+
+            long utcNowEpochMillisecoundsTo = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+            _mockBackupAttributeService.Verify(x => x.SetSkipBackupAttributeToEventLogDir(), Times.Once());
+
+            Assert.True(Directory.Exists(eventLogsTempPath));
+
+            string[] files = Directory.GetFiles(eventLogsTempPath);
+            Assert.Single(files);
+
+            string content = File.ReadAllText(files[0]);
+            Assert.NotEmpty(content);
+
+            JObject json = JToken.Parse(content) as JObject;
+            Assert.NotNull(json);
+
+            Assert.Equal(JTokenType.Boolean, json.GetValue("hasConsent").Type);
+            Assert.False(json.GetValue("hasConsent").Value<bool>());
+
+            Assert.Equal(JTokenType.Integer, json.GetValue("epoch").Type);
+            Assert.InRange(
+                json.GetValue("epoch").Value<long>(),
+                utcNowEpochMillisecoundsFrom / 1000,
+                utcNowEpochMillisecoundsTo / 1000);
+
+            Assert.Equal(JTokenType.String, json.GetValue("type").Type);
+            Assert.Equal(EventType.ExposureNotified.Type, json.GetValue("type").Value<string>());
+
+            Assert.Equal(JTokenType.String, json.GetValue("subtype").Type);
+            Assert.Equal(EventType.ExposureNotified.SubType, json.GetValue("subtype").Value<string>());
+
+            Assert.Equal(JTokenType.Object, json.GetValue("content").Type);
+
+            JObject jsonContent = json.GetValue("content") as JObject;
+            Assert.NotNull(jsonContent);
+
+            Assert.Equal(JTokenType.Integer, jsonContent.GetValue("notifiedTimeInMillis").Type);
+            Assert.InRange(
+                jsonContent.GetValue("notifiedTimeInMillis").Value<long>(),
+                utcNowEpochMillisecoundsFrom,
+                utcNowEpochMillisecoundsTo);
 
             Directory.Delete(eventLogsTempPath, true);
         }
