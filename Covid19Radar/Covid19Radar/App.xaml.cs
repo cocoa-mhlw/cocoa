@@ -39,6 +39,7 @@ namespace Covid19Radar
         private IBackupAttributeService BackupAttributeService;
 
         private IEventLogRepository EventLogRepository { get; set; }
+        private IEventLogService EventLogService { get; set; }
 
         /*
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -61,6 +62,7 @@ namespace Covid19Radar
             BackupAttributeService.SetSkipBackupAttributeToEventLogDir();
 
             EventLogRepository = Container.Resolve<IEventLogRepository>();
+            EventLogService = Container.Resolve<IEventLogService>();
 
             LogUnobservedTaskExceptions();
 
@@ -243,19 +245,14 @@ namespace Covid19Radar
 
         protected override async void OnStart()
         {
-            LogFileService.Rotate();
-
-            await EventLogRepository.RotateAsync(
-                AppConstants.EventLogFileExpiredSeconds);
+            base.OnStart();
+            await ExecuteBackgroundTask();
         }
 
         protected override async void OnResume()
         {
             base.OnResume();
-            LogFileService.Rotate();
-
-            await EventLogRepository.RotateAsync(
-                AppConstants.EventLogFileExpiredSeconds);
+            await ExecuteBackgroundTask();
         }
 
         protected override void OnSleep()
@@ -269,6 +266,31 @@ namespace Covid19Radar
             {
                 // maybe think local only logger
             };
+        }
+
+        private async Task ExecuteBackgroundTask()
+        {
+            LoggerService.StartMethod();
+
+            try
+            {
+                LogFileService.Rotate();
+
+                await EventLogRepository.RotateAsync(
+                    AppConstants.EventLogFileExpiredSeconds);
+
+                await EventLogService.SendAllAsync(
+                    AppConstants.EventLogMaxRequestSizeInBytes,
+                    AppConstants.EventLogMaxRetry);
+            }
+            catch (Exception ex)
+            {
+                LoggerService.Exception("Failed to manually execute background task", ex);
+            }
+            finally
+            {
+                LoggerService.EndMethod();
+            }
         }
     }
 }
