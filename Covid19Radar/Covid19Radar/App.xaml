@@ -324,10 +324,6 @@
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
             </Style>
 
-            <Style x:Key="DefaultCheckBox" TargetType="CheckBox">
-                <Setter Property="Color" Value="{StaticResource CheckBoxColor}" />
-            </Style>
-
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

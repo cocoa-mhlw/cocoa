@@ -7,8 +7,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:controls="clr-namespace:Covid19Radar.Controls"
-    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     x:Class="Covid19Radar.Views.EventLogSettingPage"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource DefaultPageStyle}"
@@ -41,59 +39,28 @@
                                 Style="{StaticResource DefaultLabel}"
                                 Text="{x:Static resources:AppResources.EventLogSettingPageBullets2}" />
                         </StackLayout>
-                        <Grid
-                            RowSpacing="5"
-                            ColumnSpacing="5">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <CheckBox
-                                AutomationProperties.IsInAccessibleTree="False"
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource DefaultCheckBox}"
-                                IsChecked="{Binding ExposureNotifyIsChecked}"
-                                VerticalOptions="Center">
-                                <CheckBox.Behaviors>
-                                    <xct:EventToCommandBehavior
-                                        EventName="CheckedChanged"
-                                        Command="{Binding OnExposureNotifyCheckedChanged}" />
-                                </CheckBox.Behaviors>
-                            </CheckBox>
-                            <controls:AccessibilityContentView
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                HorizontalOptions="StartAndExpand">
-                                <controls:AccessibilityContentView.Behaviors>
-                                    <xct:EventToCommandBehavior
-                                        EventName="AccessibilityFocused"
-                                        Command="{Binding OnExposureNotifyAccessibilityFocused}" />
-                                </controls:AccessibilityContentView.Behaviors>
-                                <controls:AccessibilityContentView.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=OnExposureNotifyTapped}" />
-                                </controls:AccessibilityContentView.GestureRecognizers>
-                                <Label
-                                    x:Name="exposureNotifyIsCheckedLabel"
-                                    AutomationProperties.IsInAccessibleTree="False"
-                                    AutomationProperties.Name=""
-                                    Style="{StaticResource DefaultLabelBold}"
-                                    Text="{x:Static resources:AppResources.EventLogSettingPageSettingTitle1}"
-                                    HorizontalOptions="StartAndExpand"
-                                    VerticalOptions="Center" />
-                            </controls:AccessibilityContentView>
+
+
+                        <StackLayout
+                            Orientation="Horizontal"
+                            Spacing="5">
                             <Label
                                 AutomationProperties.IsInAccessibleTree="True"
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                Style="{StaticResource DefaultLabelSmall}"
-                                TextColor="{StaticResource SecondaryText}"
-                                Text="{x:Static resources:AppResources.EventLogSettingPageSettingDescription1}" />
-                        </Grid>
+                                Style="{StaticResource DefaultLabelBold}"
+                                Text="{x:Static resources:AppResources.EventLogSettingPageSettingTitle1}"
+                                VerticalOptions="Center" />
+                            <Switch
+                                AutomationProperties.IsInAccessibleTree="True"
+                                IsToggled="{Binding ExposureNotifyIsToggled}"
+                                HorizontalOptions="EndAndExpand"
+                                VerticalOptions="Center">
+                            </Switch>
+                        </StackLayout>
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabelSmall}"
+                            TextColor="{StaticResource SecondaryText}"
+                            Text="{x:Static resources:AppResources.EventLogSettingPageSettingDescription1}" />
                         <Button
                             AutomationProperties.IsInAccessibleTree="True"
                             Command="{Binding Path=OnClickSave}"

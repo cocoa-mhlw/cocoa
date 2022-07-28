@@ -3,23 +3,18 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Covid19Radar.Repository;
-using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
-using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.CommunityToolkit.ObjectModel;
-using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
     public class EventLogSettingPageViewModel : ViewModelBase
     {
-        private const bool ExposureNotifyIsCheckedDefault = false;
+        private const bool ExposureNotifyIsToggledDefault = false;
 
         private bool _backButtonEnabled;
         public bool BackButtonEnabled
@@ -35,11 +30,11 @@ namespace Covid19Radar.ViewModels
             private set => SetProperty(ref _isVisibleTitleInContent, value);
         }
 
-        private bool _exposureNotifyIsChecked;
-        public bool ExposureNotifyIsChecked
+        private bool _exposureNotifyIsToggled;
+        public bool ExposureNotifyIsToggled
         {
-            get => _exposureNotifyIsChecked;
-            set => SetProperty(ref _exposureNotifyIsChecked, value);
+            get => _exposureNotifyIsToggled;
+            set => SetProperty(ref _exposureNotifyIsToggled, value);
         }
 
         private readonly ILoggerService _loggerService;
@@ -81,11 +76,11 @@ namespace Covid19Radar.ViewModels
                 SendEventLogState exposureNotifiedState = _sendEventLogStateRepository.GetSendEventLogState(EventType.ExposureNotified);
                 if (exposureNotifiedState == SendEventLogState.NotSet)
                 {
-                    ExposureNotifyIsChecked = ExposureNotifyIsCheckedDefault;
+                    ExposureNotifyIsToggled = ExposureNotifyIsToggledDefault;
                 }
                 else
                 {
-                    ExposureNotifyIsChecked = exposureNotifiedState == SendEventLogState.Enable;
+                    ExposureNotifyIsToggled = exposureNotifiedState == SendEventLogState.Enable;
                 }
             }
             finally
@@ -94,33 +89,13 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        public Command OnExposureNotifyCheckedChanged => new Command(() => {
-            _ = Task.Run(async () =>
-            {
-                await Task.Delay(100);
-                SemanticExtensions.Announce(ExposureNotifyIsChecked ? AppResources.On : AppResources.Off);
-            });
-        });
-
-        public Command OnExposureNotifyAccessibilityFocused => new Command(() => {
-            var annouceText = new List<string> {
-                ExposureNotifyIsChecked ? AppResources.On : AppResources.Off,
-                AppResources.EventLogSettingPageSettingTitle1,
-                AppResources.CheckBox };
-            SemanticExtensions.Announce(string.Join(Environment.NewLine, annouceText));
-        });
-
-        public Command OnExposureNotifyTapped => new Command(() => {
-            ExposureNotifyIsChecked = !ExposureNotifyIsChecked;
-        });
-
         public IAsyncCommand OnClickSave => new AsyncCommand(async () =>
         {
             _loggerService.StartMethod();
 
             try
             {
-                _sendEventLogStateRepository.SetSendEventLogState(EventType.ExposureNotified, ExposureNotifyIsChecked ? SendEventLogState.Enable : SendEventLogState.Disable);
+                _sendEventLogStateRepository.SetSendEventLogState(EventType.ExposureNotified, ExposureNotifyIsToggled ? SendEventLogState.Enable : SendEventLogState.Disable);
 
                 await _dialogService.ShowEventLogSaveCompletedAsync();
 

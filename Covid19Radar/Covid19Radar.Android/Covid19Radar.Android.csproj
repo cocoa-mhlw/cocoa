@@ -191,7 +191,6 @@
     <Compile Include="Services\IPlatformService.cs" />
     <Compile Include="Services\LocalPathService.cs" />
     <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
-    <Compile Include="Renderers\AccessibilityContentViewRenderer.cs" />
     <Compile Include="Services\DataMaintainanceBackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>

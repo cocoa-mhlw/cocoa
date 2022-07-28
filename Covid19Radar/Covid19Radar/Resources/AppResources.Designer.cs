@@ -247,15 +247,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CheckBox.
-        /// </summary>
-        public static string CheckBox {
-            get {
-                return ResourceManager.GetString("CheckBox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Check Settings.
         /// </summary>
         public static string CheckSettingsDialogTitle {
@@ -2301,24 +2292,6 @@ namespace Covid19Radar.Resources {
         public static string NotifyOthersLearnMoreUrl {
             get {
                 return ResourceManager.GetString("NotifyOthersLearnMoreUrl", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Off.
-        /// </summary>
-        public static string Off {
-            get {
-                return ResourceManager.GetString("Off", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to On.
-        /// </summary>
-        public static string On {
-            get {
-                return ResourceManager.GetString("On", resourceCulture);
             }
         }
         
