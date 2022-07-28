@@ -121,6 +121,15 @@ namespace Covid19Radar.iOS
             // https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/3180427-register
             ScheduleBackgroundTasks();
 
+            try
+            {
+                LoggingPendingTaskRequests();
+            }
+            catch (Exception ex)
+            {
+                _loggerService.Value.Exception("Failure get pending task requests", ex);
+            }
+
             return base.FinishedLaunching(app, launchOptions);
         }
 
@@ -166,7 +175,8 @@ namespace Covid19Radar.iOS
                 _loggerService.Value.Info($"Pending task count: {pendingTaskRequests.Length}");
                 foreach (var pendingTaskRequest in pendingTaskRequests)
                 {
-                    _loggerService.Value.Info($"Identifier: {pendingTaskRequest.Identifier}, EarliestBeginDate: {pendingTaskRequest.EarliestBeginDate}");
+                    string identifier = pendingTaskRequest.Identifier.Split(".")?.Last();
+                    _loggerService.Value.Info($"Identifier: {identifier}, EarliestBeginDate: {pendingTaskRequest.EarliestBeginDate}");
                 }
             });
         }
