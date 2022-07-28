@@ -7,11 +7,12 @@ variables:
 - group: ios-signing-development
 - group: android-signing-dev
 - template: templates/variables/app-variables.yml
+- template: templates/variables/app-build-variables.yml
 
 jobs:
 - job: build_ios
   pool:
-    vmImage: 'macOS-11'
+    vmImage: '$(IosAppBuildAgent)'
   variables:
   - template: templates/variables/ios-build-environment-variables.yml
   steps:
@@ -21,7 +22,7 @@ jobs:
 
 - job: build_android
   pool:
-    vmImage: 'macOS-11'
+    vmImage: '$(AndroidAppBuildAgent)'
   variables:
   - template: templates/variables/android-build-environment-variables.yml
   steps:

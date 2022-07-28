@@ -29,7 +29,8 @@ namespace Covid19Radar.Droid
         MainLauncher = true,
         LaunchMode = LaunchMode.SingleTop,
         ScreenOrientation = ScreenOrientation.Portrait,
-        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+        Exported = true
         )]
     [IntentFilter(
         new[] { Intent.ActionView },
