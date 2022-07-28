@@ -1621,17 +1621,4 @@ By collecting the number of notifications, we can use it to understand how many 
     <comment>設定を保存しました</comment>
   </data>
 
-  <data name="On" xml:space="preserve">
-    <value>On</value>
-    <comment>オン</comment>
-  </data>
-  <data name="Off" xml:space="preserve">
-    <value>Off</value>
-    <comment>オフ</comment>
-  </data>
-  <data name="CheckBox" xml:space="preserve">
-    <value>CheckBox</value>
-    <comment>チェックボックス</comment>
-  </data>
-
 </root>
