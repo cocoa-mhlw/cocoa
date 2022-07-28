@@ -130,7 +130,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         [Fact]
         public async Task OnClickSaveTest_ExposureNotified_Disable()
         {
-            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(EventType.ExposureNotified)).Returns(SendEventLogState.Enable);
+            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(EventType.ExposureNotified)).Returns(SendEventLogState.Disable);
 
             EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Tutorial));
@@ -150,7 +150,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         [Fact]
         public async Task OnClickSaveTest_ExposureNotified_Enable()
         {
-            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(EventType.ExposureNotified)).Returns(SendEventLogState.Disable);
+            _mockSendEventLogStateRepository.Setup(x => x.GetSendEventLogState(EventType.ExposureNotified)).Returns(SendEventLogState.Enable);
 
             EventLogSettingPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(EventLogSettingPage.BuildNavigationParams(EventLogSettingPage.TransitionReason.Tutorial));
