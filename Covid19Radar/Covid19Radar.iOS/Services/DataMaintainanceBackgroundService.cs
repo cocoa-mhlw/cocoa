@@ -17,7 +17,7 @@ namespace Covid19Radar.iOS.Services
 {
     public class DataMaintainanceBackgroundService : AbsDataMaintainanceBackgroundService
     {
-        private const double BGTASK_INTERVAL = 6 * 60 * 60;
+        private const double BGTASK_INTERVAL = 1 * 60 * 60;
         private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".data-maintainance";
 
         public DataMaintainanceBackgroundService(

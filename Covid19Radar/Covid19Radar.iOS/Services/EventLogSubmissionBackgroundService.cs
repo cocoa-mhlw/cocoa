@@ -17,7 +17,7 @@ namespace Covid19Radar.iOS.Services
 {
     public class EventLogSubmissionBackgroundService : AbsEventLogSubmissionBackgroundService
     {
-        private const double BGTASK_INTERVAL = 12 * 60 * 60;
+        private const double BGTASK_INTERVAL = 3 * 60 * 60;
         private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".eventlog-submission";
 
         private readonly IEventLogService _eventLogService;
