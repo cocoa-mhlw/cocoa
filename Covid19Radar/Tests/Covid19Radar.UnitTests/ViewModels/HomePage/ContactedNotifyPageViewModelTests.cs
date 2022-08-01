@@ -26,7 +26,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly MockRepository mockRepository;
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<ILoggerService> mockLoggerService;
-        private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
         private readonly CultureInfo originalAppResourceCalture;
@@ -46,7 +45,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
-            mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
         }
 
@@ -64,8 +62,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     mockNavigationService.Object,
                     mockLoggerService.Object,
                     mockExposureDataRepository.Object,
-                    mockExposureRiskCalculationService.Object,
-                    mockExposureRiskCalculationConfigurationRepository.Object
+                    mockExposureRiskCalculationService.Object
                 );
         }
 
@@ -103,9 +100,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                         }
                     }
                 }));
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
-                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -147,9 +141,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                         }
                     }
                 }));
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
-                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureRiskCalculationService
                 .Setup(x => x.CalcRiskLevel(It.IsAny<DailySummary>(), It.IsAny<List<ExposureWindow>>(), It.IsAny<V1ExposureRiskCalculationConfiguration>()))
                 .Returns(RiskLevel.High);
@@ -195,35 +186,12 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                         }
                     }
                 }));
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
-                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
 
             var contactedNotifyViewModel = CreateViewModel();
             contactedNotifyViewModel.Initialize(new NavigationParameters());
 
             Assert.Empty(contactedNotifyViewModel.ExposureDurationInMinutes);
             Assert.Equal("2 件", contactedNotifyViewModel.ExposureCount);
-        }
-
-        [Fact]
-        public void OnClickExposuresTest_Initialize_Exception()
-        {
-
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(true))
-                .Throws(new HttpRequestException());
-
-            var contactedNotifyViewModel = CreateViewModel();
-            contactedNotifyViewModel.Initialize(new NavigationParameters());
-
-            mockLoggerService
-                .Verify(x => x.Exception(
-                    "Failed to Initialize",
-                    It.IsAny<Exception>(),
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    It.IsAny<int>()), Times.Once);
         }
     }
 }

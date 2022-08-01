@@ -27,7 +27,6 @@ namespace Covid19Radar.ViewModels
     {
         private readonly ILoggerService _loggerService;
         private readonly IExposureDataRepository _exposureDataRepository;
-        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
         private readonly ILocalPathService _localPathService;
         private readonly IExposureDataExportService _exposureDataExportService;
@@ -74,7 +73,6 @@ namespace Covid19Radar.ViewModels
             ILocalPathService localPathService,
             IExposureDataExportService exposureDataExportService,
             IUserDataRepository userDataRepository,
-            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IDateTimeUtility dateTimeUtility
             ) : base(navigationService)
         {
@@ -84,7 +82,6 @@ namespace Covid19Radar.ViewModels
             _localPathService = localPathService;
             _exposureDataExportService = exposureDataExportService;
             _userDataRepository = userDataRepository;
-            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _dateTimeUtility = dateTimeUtility;
 
             ExposureCheckScores = new ObservableCollection<ExposureCheckScoreModel>();
@@ -94,7 +91,7 @@ namespace Covid19Radar.ViewModels
                 );
         }
 
-        public override async void Initialize(INavigationParameters parameters)
+        public override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
 
@@ -102,12 +99,6 @@ namespace Covid19Radar.ViewModels
 
             _exposureRiskCalculationConfiguration
                 = parameters.GetValue<V1ExposureRiskCalculationConfiguration>(ExposureCheckPage.ExposureRiskCalculationConfigurationKey);
-
-            if (_exposureRiskCalculationConfiguration is null)
-            {
-                _exposureRiskCalculationConfiguration
-                    = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
-            }
 
             _loggerService.Info(_exposureRiskCalculationConfiguration.ToString());
 

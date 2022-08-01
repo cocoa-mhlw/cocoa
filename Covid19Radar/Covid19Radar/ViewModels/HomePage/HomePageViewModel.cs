@@ -172,8 +172,6 @@ namespace Covid19Radar.ViewModels
 
             // Load necessary files asynchronous
             _ = exposureConfigurationRepository.GetExposureConfigurationAsync();
-            _ = exposureRiskCalculationConfigurationRepository
-                .GetExposureRiskCalculationConfigurationAsync(preferCache: false);
 
             await localNotificationService.PrepareAsync();
 
@@ -284,7 +282,9 @@ namespace Covid19Radar.ViewModels
 
                 if (hasHighRiskExposure)
                 {
-                    await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
+                    INavigationParameters navigaitonParameters
+                        = ContactedNotifyPage.BuildNavigationParams(exposureRiskCalculationConfiguration);
+                    await NavigationService.NavigateAsync(nameof(ContactedNotifyPage), navigaitonParameters);
                     return;
                 }
                 else

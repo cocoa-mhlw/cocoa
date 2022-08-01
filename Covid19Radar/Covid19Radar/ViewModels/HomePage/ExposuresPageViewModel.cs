@@ -4,10 +4,12 @@
 
 using Chino;
 using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Views;
 using Prism.Navigation;
 using System;
 using System.Collections.ObjectModel;
@@ -21,12 +23,13 @@ namespace Covid19Radar.ViewModels
     public class ExposuresPageViewModel : ViewModelBase
     {
         private readonly IExposureDataRepository _exposureDataRepository;
-        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
         private readonly ILoggerService _loggerService;
 
         private readonly ILocalPathService _localPathService;
         private readonly IExposureDataExportService _exposureDataExportService;
+
+        private V1ExposureRiskCalculationConfiguration _exposureRiskCalculationConfiguration;
 
         public ObservableCollection<ExposureSummary> Exposures { get; set; }
 
@@ -40,7 +43,6 @@ namespace Covid19Radar.ViewModels
         public ExposuresPageViewModel(
             INavigationService navigationService,
             IExposureDataRepository exposureDataRepository,
-            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository,
             IExposureRiskCalculationService exposureRiskCalculationService,
             ILocalPathService localPathService,
             IExposureDataExportService exposureDataExportService,
@@ -48,7 +50,6 @@ namespace Covid19Radar.ViewModels
             ) : base(navigationService)
         {
             _exposureDataRepository = exposureDataRepository;
-            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
             _localPathService = localPathService;
             _exposureDataExportService = exposureDataExportService;
@@ -62,13 +63,25 @@ namespace Covid19Radar.ViewModels
                 );
         }
 
+        public override void Initialize(INavigationParameters parameters)
+        {
+            base.Initialize(parameters);
+            _loggerService.StartMethod();
+
+            try
+            {
+                _exposureRiskCalculationConfiguration =
+                    parameters.GetValue<V1ExposureRiskCalculationConfiguration>(ExposuresPage.ExposureRiskCalculationConfigurationKey);
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+        }
+
         public async Task InitExposures()
         {
             var exposures = new ObservableCollection<ExposureSummary>();
-
-            var exposureRiskCalculationConfiguration
-                = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: false);
-            _loggerService.Info(exposureRiskCalculationConfiguration.ToString());
 
             var dailySummaryList
                 = await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays);
@@ -95,7 +108,7 @@ namespace Covid19Radar.ViewModels
                     RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(
                         dailySummary,
                         ew.ToList(),
-                        exposureRiskCalculationConfiguration
+                        _exposureRiskCalculationConfiguration
                         );
                     if (riskLevel < RiskLevel.High)
                     {
