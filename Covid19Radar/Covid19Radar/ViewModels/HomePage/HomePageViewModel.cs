@@ -16,6 +16,7 @@ using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using Xamarin.CommunityToolkit.Extensions;
 
 namespace Covid19Radar.ViewModels
 {
@@ -329,7 +330,7 @@ namespace Covid19Radar.ViewModels
             loggerService.EndMethod();
         });
 
-        public Command OnClickQuestionIcon => new Command(() =>
+        public Command OnClickQuestionIcon => new Command<Label>((dateLabel) =>
         {
             loggerService.StartMethod();
 
@@ -337,6 +338,14 @@ namespace Covid19Radar.ViewModels
                 AppResources.LatestConfirmationDateExplanationDialogText,
                 null,
                 AppResources.ButtonClose);
+
+            if (Device.RuntimePlatform == Device.iOS && dateLabel != null)
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    SemanticExtensions.SetSemanticFocus(dateLabel);
+                });
+            }
 
             loggerService.EndMethod();
         });
