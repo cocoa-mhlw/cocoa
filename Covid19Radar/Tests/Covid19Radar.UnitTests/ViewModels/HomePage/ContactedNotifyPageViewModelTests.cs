@@ -83,7 +83,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new DailySummary()
                     {
-                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365
                     }
                 }));
             mockExposureDataRepository
@@ -92,7 +92,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new ExposureWindow()
                     {
-                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365,
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365,
                         ScanInstances = new List<ScanInstance>() {
                             new ScanInstance()
                             {
@@ -124,7 +124,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new DailySummary()
                     {
-                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365
                     }
                 }));
             mockExposureDataRepository
@@ -133,7 +133,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new ExposureWindow()
                     {
-                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365,
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365,
                         ScanInstances = new List<ScanInstance>() {
                             new ScanInstance()
                             {
@@ -169,7 +169,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new DailySummary()
                     {
-                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365
                     }
                 }));
             mockExposureDataRepository
@@ -178,7 +178,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new ExposureWindow()
                     {
-                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365,
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365,
                         ScanInstances = new List<ScanInstance>() {
                             new ScanInstance()
                             {
@@ -211,7 +211,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new DailySummary()
                     {
-                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365
                     }
                 }));
             mockExposureDataRepository
@@ -220,7 +220,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 {
                     new ExposureWindow()
                     {
-                        DateMillisSinceEpoch = 1000l * 60 * 60 * 24 * 365,
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365,
                         ScanInstances = new List<ScanInstance>() {
                             new ScanInstance()
                             {

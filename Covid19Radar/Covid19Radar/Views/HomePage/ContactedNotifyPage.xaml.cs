@@ -15,15 +15,10 @@ namespace Covid19Radar.Views
         public const string ExposureRiskCalculationConfigurationKey = "contacted_notify_page.exposure_risk_calculation_configuration";
 
         public static INavigationParameters BuildNavigationParams(
-            V1ExposureRiskCalculationConfiguration exposureRiskCalculationConfiguration,
-            INavigationParameters? baseParam = null
-            )
+            V1ExposureRiskCalculationConfiguration exposureRiskCalculationConfiguration)
         {
             var param = new NavigationParameters();
-            param.CopyFrom(baseParam);
-
             param.Add(ExposureRiskCalculationConfigurationKey, exposureRiskCalculationConfiguration);
-
             return param;
         }
 
