@@ -76,7 +76,8 @@
                                 Source="question_icon.png"
                                 Padding="5"
                                 BackgroundColor="Transparent"
-                                Command="{Binding Path=OnClickQuestionIcon}">
+                                Command="{Binding Path=OnClickQuestionIcon}"
+                                CommandParameter="{x:Reference activeConfirmationDateLabel}">
                                 <ImageButton.IsVisible>
                                     <OnPlatform
                                     x:TypeArguments="x:Boolean"
@@ -90,7 +91,8 @@
                                 AutomationProperties.Name="{x:Static resources:AppResources.HomePageQuestionIconAccessibilityTextiOS}"
                                 Aspect="AspectFit"
                                 Source="question_icon.png"
-                                Command="{Binding Path=OnClickQuestionIcon}">
+                                Command="{Binding Path=OnClickQuestionIcon}"
+                                CommandParameter="{x:Reference activeConfirmationDateLabel}">
                                 <ImageButton.IsVisible>
                                     <OnPlatform
                                         x:TypeArguments="x:Boolean"
