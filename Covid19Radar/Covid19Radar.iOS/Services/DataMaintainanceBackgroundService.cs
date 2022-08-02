@@ -34,20 +34,30 @@ namespace Covid19Radar.iOS.Services
 
             var result = BGTaskScheduler.Shared.Register(BGTASK_IDENTIFIER, null, task =>
             {
-                LoggerService.Info("Background task has been started.");
+                Console.WriteLine($"[DataMaintainanceBackgroundService] Background task has been started.");
+                Console.WriteLine($"[DataMaintainanceBackgroundService] ${LoggerService}");
+
+                Console.WriteLine($"[DataMaintainanceBackgroundService] ScheduleBgTask() call start");
 
                 ScheduleBgTask();
+
+                Console.WriteLine($"[DataMaintainanceBackgroundService] ScheduleBgTask() call end");
 
                 var cancellationTokenSource = new CancellationTokenSource();
                 task.ExpirationHandler = cancellationTokenSource.Cancel;
 
+                Console.WriteLine($"[DataMaintainanceBackgroundService] Task.Run() call");
+
                 _ = Task.Run(async () =>
                 {
+                    Console.WriteLine($"[DataMaintainanceBackgroundService] Task.Run() run start");
                     LoggerService.Info("Task.Run() start");
 
                     try
                     {
+                        Console.WriteLine($"[DataMaintainanceBackgroundService] ExecuteAsync() call start");
                         await ExecuteAsync();
+                        Console.WriteLine($"[DataMaintainanceBackgroundService] ExecuteAsync() call end");
                         task.SetTaskCompleted(true);
                     }
                     catch (OperationCanceledException exception)
