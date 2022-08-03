@@ -31,7 +31,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<ILocalPathService> mockLocalPathService;
         private readonly Mock<IExposureDataExportService> mockExposureDataExportService;
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
-        private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
         private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
 
         public ExposureCheckPageViewModelTests()
@@ -44,7 +43,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockLocalPathService = mockRepository.Create<ILocalPathService>();
             mockExposureDataExportService = mockRepository.Create<IExposureDataExportService>();
             mockUserDataRepository = mockRepository.Create<IUserDataRepository>();
-            mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
         }
 
@@ -60,7 +58,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                 mockLocalPathService.Object,
                 mockExposureDataExportService.Object,
                 mockUserDataRepository.Object,
-                mockExposureRiskCalculationConfigurationRepository.Object,
                 mockDateTimeUtility.Object
                 );
         }

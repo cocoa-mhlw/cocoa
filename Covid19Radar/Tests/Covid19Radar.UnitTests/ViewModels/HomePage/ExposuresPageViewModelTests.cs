@@ -25,7 +25,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<INavigationService> mockNavigationService;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
-        private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
         private readonly Mock<ILocalPathService> mockLocalPathService;
         private readonly Mock<IExposureDataExportService> mockExposureDataExportService;
         private readonly Mock<ILoggerService> mockLoggerService;
@@ -36,7 +35,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockNavigationService = mockRepository.Create<INavigationService>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
             mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
-            mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
             mockLocalPathService = mockRepository.Create<ILocalPathService>();
             mockExposureDataExportService = mockRepository.Create<IExposureDataExportService>();
             mockLoggerService = mockRepository.Create<ILoggerService>();
@@ -47,7 +45,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             return new ExposuresPageViewModel(
                 mockNavigationService.Object,
                 mockExposureDataRepository.Object,
-                mockExposureRiskCalculationConfigurationRepository.Object,
                 mockExposureRiskCalculationService.Object,
                 mockLocalPathService.Object,
                 mockExposureDataExportService.Object,
@@ -68,9 +65,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             List<DailySummary> dummyDailySummaryList = new List<DailySummary>();
             List<ExposureWindow> dummyExposureWindowList = new List<ExposureWindow>();
 
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
-                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays)).Returns(dummyList);
             mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays)).Returns(Task.FromResult(dummyDailySummaryList));
             mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays)).Returns(Task.FromResult(dummyExposureWindowList));
@@ -95,9 +89,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             List<DailySummary> dummyDailySummaryList = new List<DailySummary>();
             List<ExposureWindow> dummyExposureWindowList = new List<ExposureWindow>();
 
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
-                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays)).Returns(testList);
             mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays)).Returns(Task.FromResult(dummyDailySummaryList));
             mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays)).Returns(Task.FromResult(dummyExposureWindowList));
@@ -119,9 +110,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             List<DailySummary> dummyDailySummaryList = new List<DailySummary>();
             List<ExposureWindow> dummyExposureWindowList = new List<ExposureWindow>();
 
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
-                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays)).Returns(testList);
             mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays)).Returns(Task.FromResult(dummyDailySummaryList));
             mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays)).Returns(Task.FromResult(dummyExposureWindowList));
@@ -147,9 +135,6 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             List<DailySummary> dummyDailySummaryList = new List<DailySummary>();
             List<ExposureWindow> dummyExposureWindowList = new List<ExposureWindow>();
 
-            mockExposureRiskCalculationConfigurationRepository
-                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(It.IsAny<bool>()))
-                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
             mockExposureDataRepository.Setup(x => x.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays)).Returns(testList);
             mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays)).Returns(Task.FromResult(dummyDailySummaryList));
             mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays)).Returns(Task.FromResult(dummyExposureWindowList));

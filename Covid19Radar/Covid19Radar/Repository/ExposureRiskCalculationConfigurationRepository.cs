@@ -147,6 +147,15 @@ namespace Covid19Radar.Repository
             {
                 _loggerService.Exception("HttpRequestException.", exception);
             }
+            catch (TaskCanceledException exception)
+            {
+                _loggerService.Exception("TaskCanceledException.", exception);
+            }
+            catch (Exception exception)
+            {
+                // Catch android timeout (Java.IO.IOException)
+                _loggerService.Exception("Exception.", exception);
+            }
 
             if (newExposureRiskCalculationConfiguration is null)
             {

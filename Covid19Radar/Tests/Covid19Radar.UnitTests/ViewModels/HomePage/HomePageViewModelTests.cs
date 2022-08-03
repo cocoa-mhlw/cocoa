@@ -534,7 +534,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             homePageViewModel.OnClickExposures.Execute(null);
 
             mockNavigationService
-                .Verify(x => x.NavigateAsync("ContactedNotifyPage"), Times.Once());
+                .Verify(x => x.NavigateAsync("ContactedNotifyPage", It.IsAny<INavigationParameters>()), Times.Once());
         }
 
         [Theory]

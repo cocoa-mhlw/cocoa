@@ -13,6 +13,9 @@ using System.Linq;
 using Covid19Radar.Services;
 using Chino;
 using System;
+using Covid19Radar.Model;
+using Covid19Radar.Views;
+using Xamarin.CommunityToolkit.ObjectModel;
 
 namespace Covid19Radar.ViewModels
 {
@@ -22,7 +25,7 @@ namespace Covid19Radar.ViewModels
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
 
-        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
+        private V1ExposureRiskCalculationConfiguration _exposureRiskCalculationConfiguration;
 
         private string _exposureDurationInMinutes = "";
         public string ExposureDurationInMinutes
@@ -42,13 +45,12 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
-            IExposureRiskCalculationService exposureRiskCalculationService,
-            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository) : base(navigationService)
+            IExposureRiskCalculationService exposureRiskCalculationService
+            ) : base(navigationService)
         {
             this.loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
-            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
 
             Title = AppResources.TitileUserStatusSettings;
         }
@@ -61,9 +63,8 @@ namespace Covid19Radar.ViewModels
             {
                 loggerService.StartMethod();
 
-                var exposureRiskCalculationConfiguration
-                    = await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
-                loggerService.Info(exposureRiskCalculationConfiguration.ToString());
+                _exposureRiskCalculationConfiguration =
+                    parameters.GetValue<V1ExposureRiskCalculationConfiguration>(ContactedNotifyPage.ExposureRiskCalculationConfigurationKey);
 
                 var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
@@ -89,7 +90,7 @@ namespace Covid19Radar.ViewModels
 
                     var dailySummary = dailySummaryMap[ew.Key];
 
-                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList(), exposureRiskCalculationConfiguration);
+                    RiskLevel riskLevel = _exposureRiskCalculationService.CalcRiskLevel(dailySummary, ew.ToList(), _exposureRiskCalculationConfiguration);
                     if (riskLevel >= RiskLevel.High)
                     {
                         exposureDurationInSec += ew.Sum(e => e.ScanInstances.Sum(s => s.SecondsSinceLastScan));
@@ -137,6 +138,17 @@ namespace Covid19Radar.ViewModels
                 loggerService.EndMethod();
             }
         }
+
+        public IAsyncCommand OnExposureList => new AsyncCommand(async () =>
+        {
+            loggerService.StartMethod();
+
+            INavigationParameters navigaitonParameters
+                = ExposuresPage.BuildNavigationParams(_exposureRiskCalculationConfiguration);
+            await NavigationService.NavigateAsync(nameof(ExposuresPage), navigaitonParameters);
+
+            loggerService.EndMethod();
+        });
 
         public Command OnClickByForm => new Command(async () =>
         {
