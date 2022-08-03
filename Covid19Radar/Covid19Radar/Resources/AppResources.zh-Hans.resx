@@ -1021,6 +1021,10 @@
     <value>如要登记阳性信息，请选择有无症状并输入受理编号。</value>
     <comment>陽性情報を登録するために、症状の有無を選択し、処理番号を入力してください。</comment>
   </data>
+  <data name="HowToReceiveProcessingNumberPageExplanationAppLink" xml:space="preserve">
+    <value>如要登记阳性信息，请选择有无症状。</value>
+    <comment>陽性情報を登録するために、症状の有無を選択してください。</comment>
+  </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
     <value>受理编号将通过SMS或电子邮件发送至检查/诊断时申告的联系方式。 您不必自己申请。</value>
     <comment>処理番号は、検査・診断時に申告していただいた連絡先にSMS（※）またはメールで送信されます。ご自身で請求いただく必要はありません。</comment>

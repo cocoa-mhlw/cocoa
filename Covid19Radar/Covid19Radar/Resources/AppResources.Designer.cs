@@ -1565,6 +1565,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to In order to register test positive results, select the presence or absence of symptoms..
+        /// </summary>
+        public static string HowToReceiveProcessingNumberPageExplanationAppLink {
+            get {
+                return ResourceManager.GetString("HowToReceiveProcessingNumberPageExplanationAppLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Get processing number.
         /// </summary>
         public static string HowToReceiveProcessingNumberPageTitle {

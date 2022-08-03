@@ -29,7 +29,7 @@
                 AutomationProperties.IsInAccessibleTree="True"
                 Margin="0, 0, 0, 15"
                 Style="{StaticResource DefaultLabel}"
-                Text="{x:Static resources:AppResources.HowToReceiveProcessingNumberPageExplanation}" />
+                Text="{Binding PageExplanation}" />
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
                 Margin="0, 0, 0, 10"

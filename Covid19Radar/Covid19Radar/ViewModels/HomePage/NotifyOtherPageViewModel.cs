@@ -122,6 +122,16 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref _diagnosisDate, value);
         }
 
+        private string _pageExplanation;
+        public string PageExplanation
+        {
+            get { return _pageExplanation; }
+            set
+            {
+                SetProperty(ref _pageExplanation, value);
+            }
+        }
+
         private int errorCount { get; set; }
 
         // TODO: Save and use for revoke operation.
@@ -160,6 +170,11 @@ namespace Covid19Radar.ViewModels
                 IsProcessingNumberReadOnly = true;
                 IsConsentLinkVisible = true;
                 IsInqueryTelephoneNumberVisible = true;
+                PageExplanation = AppResources.HowToReceiveProcessingNumberPageExplanationAppLink;
+            }
+            else
+            {
+                PageExplanation = AppResources.HowToReceiveProcessingNumberPageExplanation;
             }
         }
 
