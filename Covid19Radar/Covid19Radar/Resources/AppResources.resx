@@ -1113,6 +1113,14 @@ Tap the button below to open the settings screen and follow the steps to enable 
     <value>Get processing number</value>
     <comment>処理番号の取得方法</comment>
   </data>
+  <data name="HowToReceiveProcessingNumberPageExplanation" xml:space="preserve">
+    <value>In order to register test positive results, select the presence or absence of symptoms and input the processing number.</value>
+    <comment>陽性情報を登録するために、症状の有無を選択し、処理番号を入力してください。</comment>
+  </data>
+  <data name="HowToReceiveProcessingNumberPageExplanationAppLink" xml:space="preserve">
+    <value>In order to register test positive results, select the presence or absence of symptoms.</value>
+    <comment>陽性情報を登録するために、症状の有無を選択してください。</comment>
+  </data>
   <data name="HowToReceiveProcessingNumberPageDescription1" xml:space="preserve">
     <value>The processing number will be sent via SMS or email to the contact information you provided at the time of test / diagnosis.
 You do not have to request it yourself.</value>
