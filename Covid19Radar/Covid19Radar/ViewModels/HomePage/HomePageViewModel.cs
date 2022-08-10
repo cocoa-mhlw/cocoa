@@ -458,6 +458,7 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = false;
                 IsVisibleENStatusStoppedLayout = true;
+                IsVisibleLocalNotificationOffWarningLayout = false;
             }
             else if (!canConfirmExposure)
             {
@@ -465,6 +466,7 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusActiveLayout = false;
                 IsVisibleENStatusUnconfirmedLayout = true;
                 IsVisibleENStatusStoppedLayout = false;
+                IsVisibleLocalNotificationOffWarningLayout = false;
 
                 var isMaxPerDayExposureDetectionAPILimitReached = _userDataRepository.IsMaxPerDayExposureDetectionAPILimitReached();
                 EnStatusUnconfirmedDescription1 = isMaxPerDayExposureDetectionAPILimitReached
@@ -478,6 +480,7 @@ namespace Covid19Radar.ViewModels
                 IsVisibleENStatusActiveLayout = true;
                 IsVisibleENStatusUnconfirmedLayout = false;
                 IsVisibleENStatusStoppedLayout = false;
+                IsVisibleLocalNotificationOffWarningLayout = await localNotificationService.IsWarnedLocalNotificationOffAsync();
 
                 var latestUtcDate = _userDataRepository.GetLastConfirmedDate();
                 if (latestUtcDate == null)
@@ -497,8 +500,6 @@ namespace Covid19Radar.ViewModels
                     }
                 }
             }
-
-            IsVisibleLocalNotificationOffWarningLayout = await localNotificationService.IsWarnedLocalNotificationOffAsync();
 
             loggerService.EndMethod();
         }
