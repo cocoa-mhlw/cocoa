@@ -60,34 +60,9 @@ namespace Covid19Radar.Background.Services
             var metaData = new Dictionary<string, string> {
                 {batchNumberMetadataKey, model.BatchNum.ToString()},
                 {batchRegionMetadataKey, model.Region}
-            };
+            };      
 
-            BlobHttpHeaders headers;
-            if (await blob.ExistsAsync())
-            {
-                BlobProperties blobProperties = await blob.GetPropertiesAsync();
-                headers = new BlobHttpHeaders
-                {
-                    ContentType = MediaTypeNames.Application.Zip,
-                    // Populate remaining headers with 
-                    // the pre-existing properties
-                    CacheControl = blobProperties.CacheControl,
-                    ContentDisposition = blobProperties.ContentDisposition,
-                    ContentEncoding = blobProperties.ContentEncoding,
-                    ContentHash = blobProperties.ContentHash
-                };
-            }
-            else
-            {
-                headers = new BlobHttpHeaders
-                {
-                    ContentType = MediaTypeNames.Application.Zip,
-                };
-            }
-           
-
-            await blob.SetHttpHeadersAsync(headers);
-            await blob.UploadAsync(s);
+            await blob.UploadAsync(s, new BlobHttpHeaders { ContentType = MediaTypeNames.Application.Zip });
             Logger.LogInformation($" {nameof(WriteToBlobAsync)} upload {exportFileName}");
             await blob.SetMetadataAsync(metaData);
             Logger.LogInformation($" {nameof(WriteToBlobAsync)} set metadata {exportFileName}");
@@ -138,28 +113,6 @@ namespace Covid19Radar.Background.Services
                     filesJson = JsonConvert.SerializeObject(files);
                 }
 
-                BlobHttpHeaders headers;
-                if (await blob.ExistsAsync())
-                {
-                    BlobProperties blobProperties = await blob.GetPropertiesAsync();
-                    headers = new BlobHttpHeaders
-                    {
-                        ContentType = MediaTypeNames.Application.Json,
-                        // Populate remaining headers with 
-                        // the pre-existing properties
-                        CacheControl = blobProperties.CacheControl,
-                        ContentDisposition = blobProperties.ContentDisposition,
-                        ContentEncoding = blobProperties.ContentEncoding,
-                        ContentHash = blobProperties.ContentHash
-                    };
-                }
-                else
-                {
-                    headers = new BlobHttpHeaders
-                    {
-                        ContentType = MediaTypeNames.Application.Json,
-                    };
-                }
 
                 using (var stream = new MemoryStream())
                 using (var writer = new StreamWriter(stream))
@@ -168,8 +121,7 @@ namespace Covid19Radar.Background.Services
                     await writer.FlushAsync();
                     await stream.FlushAsync();
                     stream.Position = 0;
-                    await blob.SetHttpHeadersAsync(headers);
-                    await blob.UploadAsync(stream);
+                    await blob.UploadAsync(stream, new BlobHttpHeaders { ContentType = MediaTypeNames.Application.Json });
                 }
             }
 
