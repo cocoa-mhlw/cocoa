@@ -61,19 +61,31 @@ namespace Covid19Radar.Background.Services
                 {batchNumberMetadataKey, model.BatchNum.ToString()},
                 {batchRegionMetadataKey, model.Region}
             };
-            
-            BlobProperties blobProperties = await blob.GetPropertiesAsync();
 
-            var headers = new BlobHttpHeaders
+            BlobHttpHeaders headers;
+            if (await blob.ExistsAsync())
             {
-                ContentType = MediaTypeNames.Application.Zip,
-                // Populate remaining headers with 
-                // the pre-existing properties
-                CacheControl = blobProperties.CacheControl,
-                ContentDisposition = blobProperties.ContentDisposition,
-                ContentEncoding = blobProperties.ContentEncoding,
-                ContentHash = blobProperties.ContentHash
-            };
+                BlobProperties blobProperties = await blob.GetPropertiesAsync();
+                headers = new BlobHttpHeaders
+                {
+                    ContentType = MediaTypeNames.Application.Zip,
+                    // Populate remaining headers with 
+                    // the pre-existing properties
+                    CacheControl = blobProperties.CacheControl,
+                    ContentDisposition = blobProperties.ContentDisposition,
+                    ContentEncoding = blobProperties.ContentEncoding,
+                    ContentHash = blobProperties.ContentHash
+                };
+            }
+            else
+            {
+                headers = new BlobHttpHeaders
+                {
+                    ContentType = MediaTypeNames.Application.Zip,
+                };
+            }
+           
+
             await blob.SetHttpHeadersAsync(headers);
             await blob.UploadAsync(s);
             Logger.LogInformation($" {nameof(WriteToBlobAsync)} upload {exportFileName}");
@@ -126,18 +138,28 @@ namespace Covid19Radar.Background.Services
                     filesJson = JsonConvert.SerializeObject(files);
                 }
 
-                BlobProperties blobProperties = await blob.GetPropertiesAsync();
-
-                var headers = new BlobHttpHeaders
+                BlobHttpHeaders headers;
+                if (await blob.ExistsAsync())
                 {
-                    ContentType = MediaTypeNames.Application.Json,
-                    // Populate remaining headers with 
-                    // the pre-existing properties
-                    CacheControl = blobProperties.CacheControl,
-                    ContentDisposition = blobProperties.ContentDisposition,
-                    ContentEncoding = blobProperties.ContentEncoding,
-                    ContentHash = blobProperties.ContentHash
-                };
+                    BlobProperties blobProperties = await blob.GetPropertiesAsync();
+                    headers = new BlobHttpHeaders
+                    {
+                        ContentType = MediaTypeNames.Application.Json,
+                        // Populate remaining headers with 
+                        // the pre-existing properties
+                        CacheControl = blobProperties.CacheControl,
+                        ContentDisposition = blobProperties.ContentDisposition,
+                        ContentEncoding = blobProperties.ContentEncoding,
+                        ContentHash = blobProperties.ContentHash
+                    };
+                }
+                else
+                {
+                    headers = new BlobHttpHeaders
+                    {
+                        ContentType = MediaTypeNames.Application.Json,
+                    };
+                }
 
                 using (var stream = new MemoryStream())
                 using (var writer = new StreamWriter(stream))
