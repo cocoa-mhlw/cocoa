@@ -5,8 +5,7 @@
 using Covid19Radar.Api.Models;
 using Covid19Radar.Background.Models;
 using Covid19Radar.Background.Protobuf;
-using Microsoft.Azure.Storage;
-using Microsoft.Azure.Storage.Blob;
+using Azure.Storage.Blobs;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -15,6 +14,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using Azure.Storage.Blobs.Models;
 
 namespace Covid19Radar.Background.Services
 {
@@ -27,8 +27,7 @@ namespace Covid19Radar.Background.Services
         public readonly string TekExportKeyUrl;
         public readonly string TekExportBlobStorageConnectionString;
         public readonly string TekExportBlobStorageContainerPrefix;
-        public readonly CloudStorageAccount StorageAccount;
-        public readonly CloudBlobClient BlobClient;
+        public readonly BlobServiceClient BlobServiceClient;
         public readonly ILogger<TemporaryExposureKeyBlobService> Logger;
 
         public TemporaryExposureKeyBlobService(
@@ -40,8 +39,7 @@ namespace Covid19Radar.Background.Services
             TekExportKeyUrl = config.TekExportKeyUrl();
             TekExportBlobStorageConnectionString = config.TekExportBlobStorage();
             TekExportBlobStorageContainerPrefix = config.TekExportBlobStorageContainerPrefix();
-            StorageAccount = CloudStorageAccount.Parse(TekExportBlobStorageConnectionString);
-            BlobClient = StorageAccount.CreateCloudBlobClient();
+            BlobServiceClient = new BlobServiceClient(TekExportBlobStorageConnectionString);
         }
 
         public async Task WriteToBlobAsync(Stream s, TemporaryExposureKeyExportModel model, TemporaryExposureKeyExport bin, TEKSignatureList sig)
@@ -51,25 +49,22 @@ namespace Covid19Radar.Background.Services
             if (model.Uploaded) return;
             //  write to blob storage
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
-            var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
-            await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
-            var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{model.Region}".ToLower());
-
+            var blobContainerClient = BlobServiceClient.GetBlobContainerClient(blobContainerName);
+            await blobContainerClient.CreateIfNotExistsAsync(PublicAccessType.BlobContainer);
+            var blobNamePrefix = $"{model.Region}".ToLower();
             // Filename is inferable as batch number
-            var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
-            var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
+            var exportFileName = $"{blobNamePrefix}/{model.BatchNum}{fileNameSuffix}";
+            var blob = blobContainerClient.GetBlobClient(exportFileName);
 
             // Set the batch number and region as metadata
-            blockBlob.Metadata[batchNumberMetadataKey] = model.BatchNum.ToString();
-            blockBlob.Metadata[batchRegionMetadataKey] = model.Region;
+            var metaData = new Dictionary<string, string> {
+                {batchNumberMetadataKey, model.BatchNum.ToString()},
+                {batchRegionMetadataKey, model.Region}
+            };      
 
-            if(blockBlob.Properties.ContentType != MediaTypeNames.Application.Zip)
-            {
-                blockBlob.Properties.ContentType = MediaTypeNames.Application.Zip;
-            }
-            await blockBlob.UploadFromStreamAsync(s);
+            await blob.UploadAsync(s, new BlobHttpHeaders { ContentType = MediaTypeNames.Application.Zip });
             Logger.LogInformation($" {nameof(WriteToBlobAsync)} upload {exportFileName}");
-            await blockBlob.SetMetadataAsync();
+            await blob.SetMetadataAsync(metaData);
             Logger.LogInformation($" {nameof(WriteToBlobAsync)} set metadata {exportFileName}");
             // set upload
             model.Uploaded = true;
@@ -79,30 +74,29 @@ namespace Covid19Radar.Background.Services
         {
             Logger.LogInformation($"start {nameof(DeleteAsync)}");
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
-            var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
-            await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
-            var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{model.Region}".ToLower());
+            var blobContainerClient = BlobServiceClient.GetBlobContainerClient(blobContainerName);
+            await blobContainerClient.CreateIfNotExistsAsync(PublicAccessType.BlobContainer);
+            var blobNamePrefix = $"{model.Region}".ToLower();
+            var exportFileName = $"{blobNamePrefix}/{model.BatchNum}{fileNameSuffix}";
+            var blob = blobContainerClient.GetBlobClient(exportFileName);
 
-            // Filename is inferable as batch number
-            var exportFileName = $"{model.BatchNum}{fileNameSuffix}";
-            var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
-
-            await blockBlob.DeleteIfExistsAsync();
+            await blob.DeleteIfExistsAsync();
         }
 
         public async Task WriteFilesJsonAsync(IEnumerable<TemporaryExposureKeyExportModel> models, string[] supportRegions)
         {
             Logger.LogInformation($"start {nameof(WriteFilesJsonAsync)}");
             var blobContainerName = $"{TekExportBlobStorageContainerPrefix}".ToLower();
-            var cloudBlobContainer = BlobClient.GetContainerReference(blobContainerName);
-            await cloudBlobContainer.CreateIfNotExistsAsync(BlobContainerPublicAccessType.Blob, new BlobRequestOptions(), new OperationContext());
+            var blobContainerClient = BlobServiceClient.GetBlobContainerClient(blobContainerName);
+            await blobContainerClient.CreateIfNotExistsAsync(PublicAccessType.BlobContainer);
 
             var postedGroupedRegions = models.GroupBy(_ => _.Region);
+
             foreach (var region in supportRegions)
             {
-                var blobDirectory = cloudBlobContainer.GetDirectoryReference($"{region}".ToLower());
-                var exportFileName = "list.json";
-                var blockBlob = blobDirectory.GetBlockBlobReference(exportFileName);
+                var blobNamePrefix = $"{region}".ToLower();
+                var exportFileName = $"{blobNamePrefix}/list.json";
+                var blob = blobContainerClient.GetBlobClient(exportFileName);
 
                 var grp = postedGroupedRegions?.FirstOrDefault(_ => _.Key == region);
 
@@ -118,6 +112,8 @@ namespace Covid19Radar.Background.Services
 
                     filesJson = JsonConvert.SerializeObject(files);
                 }
+
+
                 using (var stream = new MemoryStream())
                 using (var writer = new StreamWriter(stream))
                 {
@@ -125,11 +121,7 @@ namespace Covid19Radar.Background.Services
                     await writer.FlushAsync();
                     await stream.FlushAsync();
                     stream.Position = 0;
-                    if (blockBlob.Properties.ContentType != MediaTypeNames.Application.Json)
-                    {
-                        blockBlob.Properties.ContentType = MediaTypeNames.Application.Json;
-                    }
-                    await blockBlob.UploadFromStreamAsync(stream);
+                    await blob.UploadAsync(stream, new BlobHttpHeaders { ContentType = MediaTypeNames.Application.Json });
                 }
             }
 
