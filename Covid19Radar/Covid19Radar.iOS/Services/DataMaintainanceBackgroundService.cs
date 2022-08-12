@@ -17,15 +17,19 @@ namespace Covid19Radar.iOS.Services
 {
     public class DataMaintainanceBackgroundService : AbsDataMaintainanceBackgroundService
     {
-        private const double BGTASK_INTERVAL = 24 * 60 * 60; // one day
+        private const int TASK_INTERVAL_IN_HOURS = 24;
         private static readonly string BGTASK_IDENTIFIER = AppInfo.PackageName + ".data-maintainance";
+
+        private readonly IDateTimeUtility _dateTimeUtility;
 
         public DataMaintainanceBackgroundService(
             ILoggerService loggerService,
             ILogFileService logFileService,
-            IEventLogRepository eventLogRepository
+            IEventLogRepository eventLogRepository,
+            IDateTimeUtility dateTimeUtility
             ) : base(loggerService, logFileService, eventLogRepository)
         {
+            _dateTimeUtility = dateTimeUtility;
         }
 
         public override void Schedule()
@@ -36,7 +40,8 @@ namespace Covid19Radar.iOS.Services
             {
                 LoggerService.Info("Background task has been started.");
 
-                ScheduleBgTask();
+                DateTime nextDateTime = _dateTimeUtility.UtcNow.Date.AddHours(TASK_INTERVAL_IN_HOURS);
+                ScheduleBgTask(nextDateTime);
 
                 var cancellationTokenSource = new CancellationTokenSource();
                 task.ExpirationHandler = cancellationTokenSource.Cancel;
@@ -77,12 +82,12 @@ namespace Covid19Radar.iOS.Services
                 LoggerService.Error("BGTaskScheduler.Shared.Register failed.");
             }
 
-            ScheduleBgTask();
+            ScheduleBgTask(_dateTimeUtility.UtcNow);
 
             LoggerService.EndMethod();
         }
 
-        private void ScheduleBgTask()
+        private void ScheduleBgTask(DateTime nextDateTime)
         {
             LoggerService.StartMethod();
 
@@ -90,7 +95,7 @@ namespace Covid19Radar.iOS.Services
             {
                 BGProcessingTaskRequest bgTaskRequest = new BGProcessingTaskRequest(BGTASK_IDENTIFIER)
                 {
-                    EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(BGTASK_INTERVAL),
+                    EarliestBeginDate = NSDate.FromTimeIntervalSince1970(nextDateTime.ToUnixEpoch())
                 };
 
                 LoggerService.Info($"request.EarliestBeginDate: {bgTaskRequest.EarliestBeginDate}");
