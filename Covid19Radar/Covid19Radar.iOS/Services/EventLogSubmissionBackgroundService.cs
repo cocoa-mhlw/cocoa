@@ -46,7 +46,7 @@ namespace Covid19Radar.iOS.Services
             {
                 _loggerService.Info("Background task has been started.");
 
-                DateTime nextDateTime = _dateTimeUtility.UtcNow.Date.AddHours(TASK_INTERVAL_IN_HOURS);
+                DateTime nextDateTime = _dateTimeUtility.UtcNow.AddHours(TASK_INTERVAL_IN_HOURS);
                 ScheduleBgTask(nextDateTime);
 
                 var cancellationTokenSource = new CancellationTokenSource();
