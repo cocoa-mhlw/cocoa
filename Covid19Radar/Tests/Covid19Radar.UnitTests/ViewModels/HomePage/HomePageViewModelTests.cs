@@ -228,6 +228,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             Assert.False(homePageViewModel.IsVisibleENStatusActiveLayout);
             Assert.True(homePageViewModel.IsVisibleENStatusUnconfirmedLayout);
             Assert.False(homePageViewModel.IsVisibleENStatusStoppedLayout);
+            Assert.False(homePageViewModel.IsVisibleLocalNotificationOffWarningLayout);
             Assert.Equal(AppResources.HomePageENStatusUnconfirmedDescription1, homePageViewModel.EnStatusUnconfirmedDescription1);
             Assert.Equal(AppResources.HomePageENStatusUnconfirmedDescription2, homePageViewModel.EnStatusUnconfirmedDescription2);
             Assert.True(homePageViewModel.IsVisibleUnconfirmedTroubleshootingButton);
@@ -254,6 +255,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             Assert.False(homePageViewModel.IsVisibleENStatusActiveLayout);
             Assert.True(homePageViewModel.IsVisibleENStatusUnconfirmedLayout);
             Assert.False(homePageViewModel.IsVisibleENStatusStoppedLayout);
+            Assert.False(homePageViewModel.IsVisibleLocalNotificationOffWarningLayout);
             Assert.Equal(AppResources.HomePageExposureDetectionAPILimitReachedDescription1, homePageViewModel.EnStatusUnconfirmedDescription1);
             Assert.Equal(AppResources.HomePageExposureDetectionAPILimitReachedDescription2, homePageViewModel.EnStatusUnconfirmedDescription2);
             Assert.False(homePageViewModel.IsVisibleUnconfirmedTroubleshootingButton);
@@ -277,6 +279,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             Assert.False(homePageViewModel.IsVisibleENStatusActiveLayout);
             Assert.False(homePageViewModel.IsVisibleENStatusUnconfirmedLayout);
             Assert.True(homePageViewModel.IsVisibleENStatusStoppedLayout);
+            Assert.False(homePageViewModel.IsVisibleLocalNotificationOffWarningLayout);
         }
 
         [Fact]
@@ -328,13 +331,16 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
-        public void UpdateView_LocalNotificationOffWarning_Hidden()
+        public void UpdateView_ENStatus_Active_LocalNotificationOffWarning_Hidden()
         {
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync())
                 .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
+            mockPreferenceService
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
+                .Returns(true);
             mockLocalNotificationService
                 .Setup(x => x.IsWarnedLocalNotificationOffAsync())
                 .ReturnsAsync(false);
@@ -345,13 +351,16 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
-        public void UpdateView_LocalNotificationOffWarning_Shown()
+        public void UpdateView_ENStatus_Active_LocalNotificationOffWarning_Shown()
         {
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync())
                 .Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.ACTIVATED } as IList<int>));
+            mockPreferenceService
+                .Setup(x => x.GetBoolValue("CanConfirmExposure", true))
+                .Returns(true);
             mockLocalNotificationService
                 .Setup(x => x.IsWarnedLocalNotificationOffAsync())
                 .ReturnsAsync(true);
