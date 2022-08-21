@@ -29,6 +29,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private readonly Mock<ILoggerService> mockLoggerService;
         private readonly Mock<IExposureRiskCalculationService> mockExposureRiskCalculationService;
         private readonly Mock<IExposureDataRepository> mockExposureDataRepository;
+        private readonly Mock<IExposureRiskCalculationConfigurationRepository> mockExposureRiskCalculationConfigurationRepository;
         private readonly CultureInfo originalAppResourceCalture;
         private readonly CultureInfo originalThreadCalture;
         private readonly CultureInfo originalThreadUICalture;
@@ -47,6 +48,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             mockLoggerService = mockRepository.Create<ILoggerService>();
             mockExposureRiskCalculationService = mockRepository.Create<IExposureRiskCalculationService>();
             mockExposureDataRepository = mockRepository.Create<IExposureDataRepository>();
+            mockExposureRiskCalculationConfigurationRepository = mockRepository.Create<IExposureRiskCalculationConfigurationRepository>();
         }
 
         public void Dispose()
@@ -63,7 +65,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
                     mockNavigationService.Object,
                     mockLoggerService.Object,
                     mockExposureDataRepository.Object,
-                    mockExposureRiskCalculationService.Object
+                    mockExposureRiskCalculationService.Object,
+                    mockExposureRiskCalculationConfigurationRepository.Object
                 );
         }
 
@@ -193,6 +196,51 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
 
             Assert.Empty(contactedNotifyViewModel.ExposureDurationInMinutes);
             Assert.Equal("2 件", contactedNotifyViewModel.ExposureCount);
+        }
+
+        [Fact]
+        public void OnClickExposuresTest_Initialize_NavigationParameter_NotSet()
+        {
+            mockExposureDataRepository
+                .Setup(x => x.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays))
+                .Returns(new List<UserExposureInfo>()
+                {
+                    new UserExposureInfo(),
+                    new UserExposureInfo()
+                });
+            mockExposureDataRepository
+                .Setup(x => x.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays))
+                .Returns(Task.FromResult(new List<DailySummary>()
+                {
+                    new DailySummary()
+                    {
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365
+                    }
+                }));
+            mockExposureDataRepository
+                .Setup(x => x.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays))
+                .Returns(Task.FromResult(new List<ExposureWindow>()
+                {
+                    new ExposureWindow()
+                    {
+                        DateMillisSinceEpoch = 1000L * 60 * 60 * 24 * 365,
+                        ScanInstances = new List<ScanInstance>() {
+                            new ScanInstance()
+                            {
+                                SecondsSinceLastScan = 60
+                            }
+                        }
+                    }
+                }));
+
+            mockExposureRiskCalculationConfigurationRepository
+                .Setup(x => x.GetExposureRiskCalculationConfigurationAsync(true))
+                .ReturnsAsync(new V1ExposureRiskCalculationConfiguration());
+
+            var contactedNotifyViewModel = CreateViewModel();
+            contactedNotifyViewModel.Initialize(new NavigationParameters());
+
+            mockExposureRiskCalculationConfigurationRepository.Verify(x => x.GetExposureRiskCalculationConfigurationAsync(true), Times.Once());
         }
 
         [Fact]
