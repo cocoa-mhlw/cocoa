@@ -1,0 +1,9 @@
+{ 
+  "privacypolicyhtml" : { "value" : "接触确认应用程序隐私保护方针"},
+  "termofusehtml" : { "value" : "接触确认应用程序使用规则"},
+  "ExposureNotificationHandler1ErrorMessage" : { "value" : "受理编号错误或者失效"},
+  "HelpPage4Title" : { "value" : "应用初始化"},
+  "ButtonRegister" : { "value" : "登记"},
+  "ButtonCancel" : { "value" : "取消"},
+  "ExposureNotificationHandler2ErrorMessage": { "value": "无法连接到登记服务中心" }
+}

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CEE44A2-B36B-4F82-9900-F8B87D556DA0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CovidRadar.UITestV2</RootNamespace>
+    <AssemblyName>CovidRadar.UITestV2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>UITestV2.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_Mock|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_UITest|AnyCPU'">
+    <OutputPath>bin\Debug_UITest\</OutputPath>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>UITestV2.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v10.0\Mono.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="StyleCop.Analyzers">
+      <Version>1.1.118</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>6.15.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.UITest" Version="3.2.8" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+    <PackageReference Include="Xamarin.UITest.POP">
+      <Version>1.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppManager.cs" />
+    <Compile Include="BasePage.cs" />
+    <Compile Include="BaseTestFixture.cs" />
+    <Compile Include="Pages\ManageUserDataPage.cs" />
+    <Compile Include="Pages\ManageExposureDataPage.cs" />
+    <Compile Include="Pages\SubmitDiagnosisKeysCompletePage.cs" />
+    <Compile Include="Pages\ReAgreeTermsOfServicePage.cs" />
+    <Compile Include="Pages\ReAgreePrivacyPolicyPage.cs" />
+    <Compile Include="Pages\ExposureCheckPageTitle.cs" />
+    <Compile Include="Pages\DebugPage.cs" />
+    <Compile Include="Pages\NotContactPage.cs" />
+    <Compile Include="Pages\ContactedNotifyPage.cs" />
+    <Compile Include="Pages\HelpMenuPage.cs" />
+    <Compile Include="Pages\LicenseAgreementPage.cs" />
+    <Compile Include="Pages\HelpPage1.cs" />
+    <Compile Include="Pages\HelpPage2.cs" />
+    <Compile Include="Pages\HelpPage3.cs" />
+    <Compile Include="Pages\HelpPage4.cs" />
+    <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Pages\HowToReceiveProcessingNumberPage.cs" />
+    <Compile Include="Pages\InqueryPage.cs" />
+    <Compile Include="Pages\MenuPage.cs" />
+    <Compile Include="Pages\NotifyOtherPage.cs" />
+    <Compile Include="Pages\PrivacyPolicyPage.cs" />
+    <Compile Include="Pages\PrivacyPolicyPage2.cs" />
+    <Compile Include="Pages\SendLogCompletePage.cs" />
+    <Compile Include="Pages\SendLogConfirmationPage.cs" />
+    <Compile Include="Pages\SettingsPage.cs" />
+    <Compile Include="Pages\SubmitConsentPage.cs" />
+    <Compile Include="Pages\TermsofservicePage.cs" />
+    <Compile Include="Pages\TutorialPage1.cs" />
+    <Compile Include="Pages\TutorialPage2.cs" />
+    <Compile Include="Pages\TutorialPage3.cs" />
+    <Compile Include="Pages\TutorialPage4.cs" />
+    <Compile Include="Pages\EventLogCooperationPage.cs" />
+    <Compile Include="Pages\EventLogSettingPage.cs" />
+    <Compile Include="Pages\TutorialPage6.cs" />
+    <Compile Include="Pages\TutorialPageFlow.cs" />
+    <Compile Include="Pages\WebAccessibilityPolicyPage.cs" />
+    <Compile Include="PlatformQuery.cs" />
+    <Compile Include="Tests\S05_Tests.cs" />
+    <Compile Include="Tests\S08_Tests.cs" />
+    <Compile Include="Tests\S10_Tests.cs" />
+    <Compile Include="Tests\S11_Tests.cs" />
+    <Compile Include="Tests\S36_Tests.cs" />
+    <Compile Include="Tests\S35_Tests.cs" />
+    <Compile Include="Tests\S12_Tests.cs" />
+    <Compile Include="Tests\S13_Tests.cs" />
+    <Compile Include="Tests\S14_Tests.cs" />
+    <Compile Include="Tests\S19_Tests.cs" />
+    <Compile Include="Tests\S20_Tests.cs" />
+    <Compile Include="Tests\S21_Tests.cs" />
+    <Compile Include="Tests\S24_Tests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UITestv2.editorconfig" />
+    <None Include="UITestV2.ruleset" />
+    <None Include="zh-CN.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="en-US.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ja-JP.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

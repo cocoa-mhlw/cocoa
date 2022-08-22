@@ -1,0 +1,10 @@
+{
+  "privacypolicyhtml": { "value": "接触確認アプリケーションプライバシーポリシー" },
+  "termofusehtml": { "value": "接触確認アプリケーション利用規約" },
+  "ExposureNotificationHandler1ErrorMessage": { "value": "処理番号が誤っているか、有効期限が切れています" },
+  "NotifyOtherPageDialogSubmittedTitle": { "value": "登録が完了しました" },
+  "NotifyOtherPageDiagReturnHomeTitle": { "value": "登録回数の上限に達しました" },
+  "ButtonRegister": { "value": "登録" },
+  "ButtonCancel": { "value": "キャンセル" },
+  "ExposureNotificationHandler2ErrorMessage": { "value": "センターに接続できません" }
+}

@@ -1,0 +1,29 @@
+name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+# NOTE: CI/PR triggers should be set in the Classic Editor
+
+variables:
+- group: app-settings-qa
+- group: ios-signing-development
+- group: android-signing-dev
+- template: templates/variables/app-variables.yml
+- template: templates/variables/app-build-variables.yml
+
+jobs:
+- job: build_ios
+  pool:
+    vmImage: '$(IosAppBuildAgent)'
+  variables:
+  - template: templates/variables/ios-build-environment-variables.yml
+  steps:
+  - template: templates/build/ios-build-uitest-template.yml
+    parameters:
+      isDefineDebug: true
+
+- job: build_android
+  pool:
+    vmImage: '$(AndroidAppBuildAgent)'
+  variables:
+  - template: templates/variables/android-build-environment-variables.yml
+  steps:
+  - template: templates/build/android-build-uitest-template.yml
