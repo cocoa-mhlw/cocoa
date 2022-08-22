@@ -271,6 +271,7 @@
     <Compile Include="Services\LocalPathService.cs" />
     <Compile Include="Services\EventLogSubmissionBackgroundService.cs" />
     <Compile Include="Services\DataMaintainanceBackgroundService.cs" />
+    <Compile Include="Services\Migration\BGTaskMigrator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
