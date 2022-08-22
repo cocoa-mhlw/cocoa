@@ -153,7 +153,7 @@
       <Version>19.7.2-eap-alpha04</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.SafetyNet">
-      <Version>118.0.1.1</Version>
+      <Version>118.0.1.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Core">
       <Version>1.8.0.1</Version>
