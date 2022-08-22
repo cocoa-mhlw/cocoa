@@ -170,6 +170,7 @@
                 </Label.Triggers>
             </Label>
             <Label
+                x:Name="OpenHowToReceiveProcessingNumberPage"
                 AutomationProperties.IsInAccessibleTree="{Binding IsHowToObtainProcessingNumberVisible}"
                 AutomationProperties.Name="{Binding HowToReceiveProcessingNumberReadText}"
                 Margin="0, 0, 0, 0"

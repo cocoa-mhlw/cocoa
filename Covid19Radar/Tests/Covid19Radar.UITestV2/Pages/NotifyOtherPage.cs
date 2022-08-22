@@ -63,6 +63,11 @@ namespace CovidRadar.UITestV2
         private static readonly string NotifyOtherPageTitleScrollView = "NotifyOtherPageTitleScrollView";
 
         /// <summary>
+        /// 陽性番号入力フォーム.
+        /// </summary>
+        private static readonly string OpenHowToReceiveProcessingNumberPage = "OpenHowToReceiveProcessingNumberPage";
+
+        /// <summary>
         /// 登録ボタン.
         /// </summary>
         private static readonly string SubmitConsentPageBtn = "SubmitConsentPageBtn";
@@ -161,7 +166,8 @@ namespace CovidRadar.UITestV2
         {
             if (ischecked == true)
             {
-                app.Tap(openHowToReceiveProcessingNumberBtnCheckedRadioBtn);
+                app.ScrollDownTo(OpenHowToReceiveProcessingNumberPage, NotifyOtherPageTitleScrollView);
+                app.Tap(OpenHowToReceiveProcessingNumberPage);
             }
             else
             {

@@ -23,6 +23,7 @@ namespace Covid19Radar.Views
             NotifyOtherPageTitleScrollView.AutomationId = "NotifyOtherPageTitleScrollView";
             NotifyOtherPageTitleEntry.AutomationId = "NotifyOtherPageTitleEntry";
             SubmitConsentPageBtn.AutomationId = "SubmitConsentPageBtn";
+            OpenHowToReceiveProcessingNumberPage.AutomationId = "OpenHowToReceiveProcessingNumberPage";
 #endif
         }
 
