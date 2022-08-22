@@ -4,6 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <ContentPage
+    x:Name="ManageUserDataPageTitle"
     x:Class="Covid19Radar.Views.ManageUserDataPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -33,6 +34,7 @@
                 />
 
             <Button
+                x:Name="ManageUserDataPageReset"
                 Command="{Binding OnClickResetDayOfUse}"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultButton}"
@@ -40,6 +42,7 @@
                 VerticalOptions="Start" />
 
             <Button
+                x:Name="ManageUserDataPage1day"
                 Command="{Binding OnClickSetDayOfUse1}"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultButton}"
@@ -47,6 +50,7 @@
                 VerticalOptions="Start" />
 
             <Button
+                x:Name="ManageUserDataPage14day"
                 Command="{Binding OnClickSetDayOfUse14}"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultButton}"
@@ -54,6 +58,7 @@
                 VerticalOptions="Start" />
 
             <Button
+                x:Name="ManageUserDataPage15day"
                 Command="{Binding OnClickSetDayOfUse15}"
                 HorizontalOptions="Center"
                 Style="{StaticResource DefaultButton}"

@@ -13,6 +13,10 @@ namespace Covid19Radar.Views
         public WebAccessibilityPolicyPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            WebAccessibilityPolicyPageTitle.AutomationId = "WebAccessibilityPolicyPageTitle";
+#endif
         }
     }
 }

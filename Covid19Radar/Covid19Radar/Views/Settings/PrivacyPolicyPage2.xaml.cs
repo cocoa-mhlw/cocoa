@@ -14,6 +14,10 @@ namespace Covid19Radar.Views
         public PrivacyPolicyPage2()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            PrivacyPolicyPage2Title.AutomationId = "PrivacyPolicyPage2Title";
+#endif
         }
     }
 }

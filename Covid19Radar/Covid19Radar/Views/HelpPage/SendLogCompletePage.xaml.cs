@@ -14,6 +14,10 @@ namespace Covid19Radar.Views
         public SendLogCompletePage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            SendLogCompletePageTitle.AutomationId = "SendLogCompletePageTitle";
+#endif
         }
 
         protected override bool OnBackButtonPressed()

@@ -15,6 +15,10 @@ namespace Covid19Radar.Views
         public HelpMenuPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            HelpMenuPageTitle.AutomationId = "HelpMenuPageTitle";
+#endif
         }
 
         protected override void OnAppearing()

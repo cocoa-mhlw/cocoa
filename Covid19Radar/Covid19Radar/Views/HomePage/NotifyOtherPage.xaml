@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <ContentPage
+    x:Name="NotifyOtherPageTitle"
     x:Class="Covid19Radar.Views.NotifyOtherPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -22,8 +23,9 @@
         https://github.com/xamarin/Xamarin.Forms/issues/13597
     -->
     <ContentView>
-    <ScrollView>
-        <StackLayout
+    <ScrollView
+            x:Name="NotifyOtherPageTitleScrollView">
+            <StackLayout
             Padding="15,15,15,20">
             <Label
                 AutomationProperties.IsInAccessibleTree="True"
@@ -210,6 +212,7 @@
                         CornerRadius="5"
                         HasShadow="False">
                         <Entry
+                            x:Name="NotifyOtherPageTitleEntry"
                             AutomationProperties.IsInAccessibleTree="True"
                             CharacterSpacing="5"
                             Keyboard="Numeric"
@@ -268,6 +271,7 @@
             </StackLayout>
 
             <Button
+                x:Name="SubmitConsentPageBtn"
                 AutomationProperties.IsInAccessibleTree="True"
                 Command="{Binding Path=OnClickRegister}"
                 IsEnabled="{Binding IsNextButtonEnabled}"

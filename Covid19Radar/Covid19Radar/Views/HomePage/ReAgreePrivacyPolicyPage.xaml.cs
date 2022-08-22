@@ -26,6 +26,10 @@ namespace Covid19Radar.Views
         public ReAgreePrivacyPolicyPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            ReAgreePrivacyPolicyPageTitle.AutomationId = "ReAgreePrivacyPolicyPageTitle";
+#endif
         }
     }
 }

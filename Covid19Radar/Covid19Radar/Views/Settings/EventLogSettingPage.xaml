@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <ContentPage
+    x:Name="EventLogSettingPageTitle"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
@@ -50,6 +51,7 @@
                                 Text="{x:Static resources:AppResources.EventLogSettingPageSettingTitle1}"
                                 VerticalOptions="Center" />
                             <Switch
+                                x:Name="EventLogSettingPageCheckBox"
                                 AutomationProperties.IsInAccessibleTree="True"
                                 IsToggled="{Binding ExposureNotifyIsToggled}"
                                 HorizontalOptions="EndAndExpand"
@@ -62,6 +64,7 @@
                             TextColor="{StaticResource SecondaryText}"
                             Text="{x:Static resources:AppResources.EventLogSettingPageSettingDescription1}" />
                         <Button
+                            x:Name="EventLogSettingPageBtn"
                             AutomationProperties.IsInAccessibleTree="True"
                             Command="{Binding Path=OnClickSave}"
                             Style="{StaticResource DefaultButton}"

@@ -16,6 +16,16 @@ namespace Covid19Radar.Views
         public SettingsPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            SettingsPageTitle.AutomationId = "SettingsPageTitle";
+            SettingsPageTitleScrollView.AutomationId = "SettingsPageTitleScrollView";
+            OpenLicenseAgreementPageTitle.AutomationId = "OpenLicenseAgreementPageTitle";
+            OpenTermsofservicePageTitle.AutomationId = "OpenTermsofservicePageTitle";
+            OpenPrivacyPolicyPageTitle.AutomationId = "OpenPrivacyPolicyPageTitle";
+            OpenWebAccessibilityPolicyPageTitle.AutomationId = "OpenWebAccessibilityPolicyPageTitle";
+            OpenGitHub.AutomationId = "OpenGitHub";
+#endif
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters)

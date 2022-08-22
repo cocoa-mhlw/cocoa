@@ -29,6 +29,13 @@ namespace Covid19Radar.Views
         public EventLogCooperationPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            EventLogCooperationPageTitle.AutomationId = "EventLogCooperationPageTitle";
+            EventLogCooperationPageScrollView.AutomationId = "EventLogCooperationPageScrollView";
+            EventLogCooperationPageBtn1.AutomationId = "EventLogCooperationPageBtn1";
+            EventLogCooperationPageBtn2.AutomationId = "EventLogCooperationPageBtn2";
+#endif
         }
 
         protected override bool OnBackButtonPressed()

@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <ContentPage
+    x:Name="TutorialPage4Title"
     x:Class="Covid19Radar.Views.TutorialPage4"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -27,7 +28,8 @@
             Margin="0,0,0,20"
             Style="{StaticResource DefaultTitleLabel}"
             Text="{x:Static resources:AppResources.TutorialPage4Title2}" />
-        <ScrollView Grid.Row="1">
+        <ScrollView Grid.Row="1"
+                    x:Name="TutorialPage4ScrollView">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -64,11 +66,13 @@
                 <Grid Grid.Row="1">
                     <StackLayout>
                         <Button
+                            x:Name="OpenEventLogCooperationPageButton"
                             AutomationProperties.IsInAccessibleTree="True"
                             Command="{Binding Path=OnClickEnable}"
                             Style="{StaticResource DefaultButton}"
                             Text="{x:Static resources:AppResources.TutorialPage4Button1}" />
                         <Label
+                            x:Name="OpenEventLogCooperationPageButton2"
                             AutomationProperties.IsInAccessibleTree="True"
                             AutomationProperties.Name="{Binding SetupLaterLinkReadText}"
                             HorizontalTextAlignment="Center"

@@ -13,6 +13,10 @@ namespace Covid19Radar.Views
         public TutorialPage6()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            TutorialPage6Title.AutomationId = "TutorialPage6Title";
+#endif
         }
     }
 }

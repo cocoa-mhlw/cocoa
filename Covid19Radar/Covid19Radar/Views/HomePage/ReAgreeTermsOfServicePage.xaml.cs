@@ -25,6 +25,10 @@ namespace Covid19Radar.Views
         public ReAgreeTermsOfServicePage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            ReAgreeTermsOfServicePageTitle.AutomationId = "ReAgreeTermsOfServicePageTitle";
+#endif
         }
     }
 }

@@ -13,6 +13,10 @@ namespace Covid19Radar.Views
         public HowToReceiveProcessingNumberPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            HowToReceiveProcessingNumberPageTitle.AutomationId = "HowToReceiveProcessingNumberPageTitle";
+#endif
         }
     }
 }

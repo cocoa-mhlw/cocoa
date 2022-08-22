@@ -37,6 +37,10 @@ namespace Covid19Radar.Views
         public HomePage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            HomePageTitle.AutomationId = "HomePageTitle";
+#endif
             activeLayoutOrderView.ViewOrder = new List<View> {
                 activeStateLabel,
                 activeDescriptionLabel,

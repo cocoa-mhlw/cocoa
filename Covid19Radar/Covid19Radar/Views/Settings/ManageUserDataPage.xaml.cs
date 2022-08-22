@@ -11,6 +11,14 @@ namespace Covid19Radar.Views
         public ManageUserDataPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            ManageUserDataPageTitle.AutomationId = "ManageUserDataPageTitle";
+            ManageUserDataPageReset.AutomationId = "ManageUserDataPageReset";
+            ManageUserDataPage1day.AutomationId = "ManageUserDataPage1day";
+            ManageUserDataPage14day.AutomationId = "ManageUserDataPage14day";
+            ManageUserDataPage15day.AutomationId = "ManageUserDataPage15day";
+#endif
         }
     }
 }

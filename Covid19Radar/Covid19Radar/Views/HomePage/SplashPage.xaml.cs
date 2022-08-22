@@ -29,6 +29,10 @@ namespace Covid19Radar.Views
         public SplashPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            SplashPageTitle.AutomationId = "SplashPageTitle";
+#endif
         }
     }
 }

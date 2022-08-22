@@ -13,6 +13,10 @@ namespace Covid19Radar.Views
         public HowToEnableExposureNotificationsPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            HowToEnableExposureNotificationsPageTitle.AutomationId = "HowToEnableExposureNotificationsPageTitle";
+#endif
         }
     }
 }

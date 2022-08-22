@@ -13,6 +13,13 @@ namespace Covid19Radar.Views
         public TutorialPage4()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            TutorialPage4Title.AutomationId = "TutorialPage4Title";
+            TutorialPage4ScrollView.AutomationId = "TutorialPage4ScrollView";
+            OpenEventLogCooperationPageButton.AutomationId = "OpenEventLogCooperationPageButton";
+            OpenEventLogCooperationPageButton2.AutomationId = "OpenEventLogCooperationPageButton2";
+#endif
         }
     }
 }

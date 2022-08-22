@@ -31,6 +31,12 @@ namespace Covid19Radar.Views
         public EventLogSettingPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            EventLogSettingPageTitle.AutomationId = "EventLogSettingPageTitle";
+            EventLogSettingPageBtn.AutomationId = "EventLogSettingPageBtn";
+            EventLogSettingPageCheckBox.AutomationId = "EventLogSettingPageCheckBox";
+#endif
         }
 
         protected override bool OnBackButtonPressed()

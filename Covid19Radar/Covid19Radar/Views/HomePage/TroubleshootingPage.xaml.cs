@@ -13,6 +13,10 @@ namespace Covid19Radar.Views
         public TroubleshootingPage()
         {
             InitializeComponent();
+
+#if ENABLE_TEST_CLOUD
+            TroubleshootingPageTitle.AutomationId = "TroubleshootingPageTitle";
+#endif
         }
     }
 }

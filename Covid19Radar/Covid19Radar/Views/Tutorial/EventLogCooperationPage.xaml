@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <ContentPage
+    x:Name="EventLogCooperationPageTitle"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
@@ -20,7 +21,8 @@
                 Text="{x:Static resources:AppResources.EventLogCooperationPageTitle}" />
             <ScrollView
                 Padding="20,0,20,20"
-                VerticalOptions="FillAndExpand">
+                VerticalOptions="FillAndExpand"
+                x:Name="EventLogCooperationPageScrollView">
                 <StackLayout
                     Spacing="20"
                     VerticalOptions="FillAndExpand">
@@ -77,11 +79,13 @@
                     <StackLayout
                         Spacing="10">
                         <Button
+                            x:Name="EventLogCooperationPageBtn1"
                             AutomationProperties.IsInAccessibleTree="True"
                             Command="{Binding Path=OnClickSetting}"
                             Style="{StaticResource DefaultButton}"
                             Text="{x:Static resources:AppResources.EventLogCooperationPageSendButton}" />
                         <Label
+                            x:Name="EventLogCooperationPageBtn2"
                             AutomationProperties.IsInAccessibleTree="True"
                             AutomationProperties.Name="{Binding SetupLaterLinkReadText}"
                             HorizontalOptions="CenterAndExpand"

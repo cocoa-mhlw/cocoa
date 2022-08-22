@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
     - License, v. 2.0. If a copy of the MPL was not distributed with this
     - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <ContentPage
+    x:Name="DebugPageTitle"
     x:Class="Covid19Radar.Views.DebugPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -20,7 +21,8 @@
         https://github.com/xamarin/Xamarin.Forms/issues/13597
     -->
     <ContentView>
-    <ScrollView>
+    <ScrollView
+        x:Name="DebugPageScrollView">
         <StackLayout
             Padding="15"
             BackgroundColor="#EEEEEE"
@@ -77,10 +79,12 @@
                         Style="{StaticResource DefaultButton}"
                         Text="ShowExposureNotification" />
                     <Button
+                        x:Name="ManageExposureDataPage"
                         Command="{prism:NavigateTo 'ManageExposureDataPage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="Manage ExposureData" />
                     <Button
+                        x:Name="ManageUserDataPage"
                         Command="{prism:NavigateTo 'ManageUserDataPage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="Manage UserData" />
@@ -213,6 +217,7 @@
                     Style="{StaticResource DefaultButton}"
                     Text="PrivacyPolicyPage2" />
                 <Button
+                    x:Name="ContactedNotifyPage"
                     Command="{prism:NavigateTo 'InqueryPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="InqueryPage" />
@@ -225,10 +230,12 @@
                     Style="{StaticResource DefaultButton}"
                     Text="NotifyOtherPage" />
                  <Button
+                    x:Name="ReAgreePrivacyPolicyPage"
                     Command="{prism:NavigateTo 'ExposureCheckPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="ExposureCheckPage" />
                 <Button
+                    x:Name="ReAgreeTermsOfServicePage"
                     Command="{prism:NavigateTo 'ContactedNotifyPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="ContactedNotifyPage" />
