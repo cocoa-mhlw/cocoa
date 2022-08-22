@@ -24,6 +24,7 @@ namespace Covid19Radar.ViewModels
         private readonly ILoggerService loggerService;
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IExposureRiskCalculationService _exposureRiskCalculationService;
+        private readonly IExposureRiskCalculationConfigurationRepository _exposureRiskCalculationConfigurationRepository;
 
         private V1ExposureRiskCalculationConfiguration _exposureRiskCalculationConfiguration;
 
@@ -45,12 +46,14 @@ namespace Covid19Radar.ViewModels
             INavigationService navigationService,
             ILoggerService loggerService,
             IExposureDataRepository exposureDataRepository,
-            IExposureRiskCalculationService exposureRiskCalculationService
+            IExposureRiskCalculationService exposureRiskCalculationService,
+            IExposureRiskCalculationConfigurationRepository exposureRiskCalculationConfigurationRepository
             ) : base(navigationService)
         {
             this.loggerService = loggerService;
             _exposureDataRepository = exposureDataRepository;
             _exposureRiskCalculationService = exposureRiskCalculationService;
+            _exposureRiskCalculationConfigurationRepository = exposureRiskCalculationConfigurationRepository;
 
             Title = AppResources.TitileUserStatusSettings;
         }
@@ -65,6 +68,12 @@ namespace Covid19Radar.ViewModels
 
                 _exposureRiskCalculationConfiguration =
                     parameters.GetValue<V1ExposureRiskCalculationConfiguration>(ContactedNotifyPage.ExposureRiskCalculationConfigurationKey);
+                if (_exposureRiskCalculationConfiguration is null)
+                {
+                    // When transitioned from a exposure notification, it is not passed as a parameter, so it is retrieved.
+                    _exposureRiskCalculationConfiguration =
+                        await _exposureRiskCalculationConfigurationRepository.GetExposureRiskCalculationConfigurationAsync(preferCache: true);
+                }
 
                 var userExposureInformationList = _exposureDataRepository.GetExposureInformationList(AppConstants.TermOfExposureRecordValidityInDays);
 
