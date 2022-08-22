@@ -2,8 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using System.Collections.ObjectModel;
 using Covid19Radar.Model;
+using Covid19Radar.Resources;
 using Covid19Radar.Views;
 using Prism.Commands;
 using Prism.Navigation;
@@ -25,31 +27,35 @@ namespace Covid19Radar.ViewModels
 
         public HelpMenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Title = Resources.AppResources.HelpMenuPageTitle;
+            Title = AppResources.HelpMenuPageTitle;
             MenuItems = new ObservableCollection<MainMenuModel>();
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage1),
-                Title = Resources.AppResources.HelpMenuPageLabel1
+                Title = AppResources.HelpMenuPageLabel1,
+                ReadText = $"{AppResources.HelpMenuPageLabel1} {AppResources.Button}"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage2),
-                Title = Resources.AppResources.HelpMenuPageLabel2
+                Title = AppResources.HelpMenuPageLabel2,
+                ReadText = $"{AppResources.HelpMenuPageLabel2} {AppResources.Button}"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage3),
-                Title = Resources.AppResources.HelpMenuPageLabel3
+                Title = AppResources.HelpMenuPageLabel3,
+                ReadText = $"{AppResources.HelpMenuPageLabel3} {AppResources.Button}"
             });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf105",
                 PageName = nameof(HelpPage4),
-                Title = Resources.AppResources.HelpMenuPageLabel4
+                Title = AppResources.HelpMenuPageLabel4,
+                ReadText = $"{AppResources.HelpMenuPageLabel4} {AppResources.Button}"
             });
 
             NavigateCommand = new DelegateCommand(Navigate);
