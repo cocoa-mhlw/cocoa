@@ -1,0 +1,385 @@
+<!doctype html><html lang=en dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Exposure Notification API v2へのバージョンアップに関する技術的な検討内容について #  COCOA v2.0.0からは、利用するExposure Notification API(以下EN)がv2に切り替えられている。 ENv2は、従前のv1と比べて、濃厚接触の可能性を判定する方式が大きく変更されたため、パラメータを最初から設定しなおす必要がある。 そのため、検証専門チームによる実機での計測も行い、その結果も踏まえてパラメータを設計したが、その経緯をまとめたものが本文書である。
+なお、当初はv2.0.0では、ENv2の機能を活用した新しい機能も実装する予定だったが、v2.1.0以降に先送りとなってしまったため本文書では取り扱わない。 検討の経緯は、github discussions EN v2を搭載するCOCOAで実現したい機能について #532 を参照のこと。
+Exposure Notification v1とv2の違い #  複数の条件を元に、接触内容や想定されるリスクに応じた内容の接触通知を出せるようになる。
+ リスクを判定するスコア設定の柔軟性が上がる  V1…時間・電波強度ともに設定は8段階の値からの選択方式のため、1つの状態しか接触判定できないスコア設計となる V2…時間・電波強度ともに具体的な値で設定でき、複数の状態を接触判定できるようなスコア設計が可能   発症日からの経過日数でリスクの有無を判定できるようになる  V1…Exposure Notification側の設定項目がなく、アプリ側での対応が必要 V2…発症日（あるいは検体採取日）から◯日目という形で指定可能   接触に関する詳しい情報を踏まえて、接触通知の内容を変えることが出来る  V1…通知はOS側が出し、接触に関する情報も得られないため、どのような接触でも同じ接触通知となる V2…接触に関する詳細な情報（接触時間・電波強度等）が得られ、それを元にリスクに応じた通知をアプリ側で出せる    本ドキュメントでは、根幹に関わる内容である1点目について検討を行った。 なお、2点目については、処理を行う箇所が変わるだけで設定する内容（発症2日前～10日後）は変わらないため、詳細な検討は不要。 また、3点目については、github discussions #532 で議論を行っている。
+距離・時間の判定方法が変わることによる影響 #  v1は、定義に当てはまる接触の回数を数えるが、v2は、接触時間に重み付けをして合計値を返し、その値(リスクスコア)が閾値を超えているかどうかで判定を行う。
+ v1では、15分間連続して条件を満たすと接触判定するため、例②のような、一瞬電波強度が弱まるような状態は接触にならない v2では、平均の電波強度別に接触の時間に係数を掛けてスコア判定するため、例②のような状況でも接触と判定する。  ※図では1分毎の電波強度を示しているが、v2では厳密には5分間までの平均値で返されることがある
+ENのリスクスコアとは、「接触」時に一定の値を超えるよう設計された数字 #  具体的なパラメータ値(リスクスコアの計算方法と閾値)の検討に入る前に、リスクスコアの意味について確認する。
+ リスク「スコア」という名前からは、なにか「リスクの大きさに比例する」ものを想像しがちであり、距離・時間と比例する関係にさせないといけないと考えがちである  例：「距離が半分ならスコアは2倍になる」「距離が10分の1ならばスコアは10倍」など   しかし、COCOAは、濃厚接触の可能性の「有無」だけを判断するものであり、その目的を踏まえると、距離が1m以内であれば、どのような距離でも15分間接触しなければ閾値を超えないようにスコアを設計しなければならない そのため、「1m以内であれば閾値を超える」「1mを越えれば閾値を大きく下回る」ような計算をする必要がある  背景知識：電波強度と距離の関係 #  パラメータ値を設計するにあたり、電波強度と距離の関係を知っておく必要があるため、ここで他の研究結果を確認する。">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="ENv2バージョンアップに関する技術的な検討内容">
+<meta property="og:description" content="Exposure Notification API v2へのバージョンアップに関する技術的な検討内容について #  COCOA v2.0.0からは、利用するExposure Notification API(以下EN)がv2に切り替えられている。 ENv2は、従前のv1と比べて、濃厚接触の可能性を判定する方式が大きく変更されたため、パラメータを最初から設定しなおす必要がある。 そのため、検証専門チームによる実機での計測も行い、その結果も踏まえてパラメータを設計したが、その経緯をまとめたものが本文書である。
+なお、当初はv2.0.0では、ENv2の機能を活用した新しい機能も実装する予定だったが、v2.1.0以降に先送りとなってしまったため本文書では取り扱わない。 検討の経緯は、github discussions EN v2を搭載するCOCOAで実現したい機能について #532 を参照のこと。
+Exposure Notification v1とv2の違い #  複数の条件を元に、接触内容や想定されるリスクに応じた内容の接触通知を出せるようになる。
+ リスクを判定するスコア設定の柔軟性が上がる  V1…時間・電波強度ともに設定は8段階の値からの選択方式のため、1つの状態しか接触判定できないスコア設計となる V2…時間・電波強度ともに具体的な値で設定でき、複数の状態を接触判定できるようなスコア設計が可能   発症日からの経過日数でリスクの有無を判定できるようになる  V1…Exposure Notification側の設定項目がなく、アプリ側での対応が必要 V2…発症日（あるいは検体採取日）から◯日目という形で指定可能   接触に関する詳しい情報を踏まえて、接触通知の内容を変えることが出来る  V1…通知はOS側が出し、接触に関する情報も得られないため、どのような接触でも同じ接触通知となる V2…接触に関する詳細な情報（接触時間・電波強度等）が得られ、それを元にリスクに応じた通知をアプリ側で出せる    本ドキュメントでは、根幹に関わる内容である1点目について検討を行った。 なお、2点目については、処理を行う箇所が変わるだけで設定する内容（発症2日前～10日後）は変わらないため、詳細な検討は不要。 また、3点目については、github discussions #532 で議論を行っている。
+距離・時間の判定方法が変わることによる影響 #  v1は、定義に当てはまる接触の回数を数えるが、v2は、接触時間に重み付けをして合計値を返し、その値(リスクスコア)が閾値を超えているかどうかで判定を行う。
+ v1では、15分間連続して条件を満たすと接触判定するため、例②のような、一瞬電波強度が弱まるような状態は接触にならない v2では、平均の電波強度別に接触の時間に係数を掛けてスコア判定するため、例②のような状況でも接触と判定する。  ※図では1分毎の電波強度を示しているが、v2では厳密には5分間までの平均値で返されることがある
+ENのリスクスコアとは、「接触」時に一定の値を超えるよう設計された数字 #  具体的なパラメータ値(リスクスコアの計算方法と閾値)の検討に入る前に、リスクスコアの意味について確認する。
+ リスク「スコア」という名前からは、なにか「リスクの大きさに比例する」ものを想像しがちであり、距離・時間と比例する関係にさせないといけないと考えがちである  例：「距離が半分ならスコアは2倍になる」「距離が10分の1ならばスコアは10倍」など   しかし、COCOAは、濃厚接触の可能性の「有無」だけを判断するものであり、その目的を踏まえると、距離が1m以内であれば、どのような距離でも15分間接触しなければ閾値を超えないようにスコアを設計しなければならない そのため、「1m以内であれば閾値を超える」「1mを越えれば閾値を大きく下回る」ような計算をする必要がある  背景知識：電波強度と距離の関係 #  パラメータ値を設計するにあたり、電波強度と距離の関係を知っておく必要があるため、ここで他の研究結果を確認する。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cocoa-mhlw.github.io/cocoa/docs/appendix/design_for_upgrading_to_env2/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2022-08-24T01:27:58+09:00">
+<title>ENv2バージョンアップに関する技術的な検討内容 | COCOA Open Source Project</title>
+<link rel=manifest href=/cocoa/manifest.json>
+<link rel=icon href=/cocoa/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/cocoa/book.min.8599444fcc48ee6b435b5b62c955ab7d914fa1e2a453df90c4b97cc9769665d1.css integrity="sha256-hZlET8xI7mtDW1tiyVWrfZFPoeKkU9+QxLl8yXaWZdE=" crossorigin=anonymous>
+<script defer src=/cocoa/flexsearch.min.js></script>
+<script defer src=/cocoa/en.search.min.be43fc899e10fcedd0758d45c44b70a4167ad253518863b6edd2eb0d2935436f.js integrity="sha256-vkP8iZ4Q/O3QdY1FxEtwpBZ60lNRiGO27dLrDSk1Q28=" crossorigin=anonymous></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/cocoa/><span>COCOA Open Source Project</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/operation_policy/>デジタル庁 GitHub運用方針</a>
+</li>
+<li>
+<span>Developments</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/branches/>ブランチ構成</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/how_to_build/>ビルド方法</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/maintainance_oss_licenses/>ライセンスの取り扱い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/development/multi_language/>多言語対応</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Contributions</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/open_beta_version/>接触確認アプリ（COCOA) オープンβ版について</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/guidelines/>貢献についてのガイドライン</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/handling_pullreqeust/>Pull Requestが取り込まれるまで</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors/>Contoributors</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/contribution/contributors_covid19radars/>COVID-19Radar Contoributors</a>
+</li>
+</ul>
+</li>
+<li>
+<span>Appendix</span>
+<ul>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/design_for_upgrading_to_env2/ class=active>ENv2バージョンアップに関する技術的な検討内容</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/ios_local_notification/>iOS版の通知許可に関するお願い</a>
+</li>
+<li>
+<a href=https://cocoa-mhlw.github.io/cocoa/docs/appendix/preference_specification/>設定ファイルの仕様</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<a href=https://github.com/cocoa-mhlw/cocoa target=_blank rel=noopener>
+GitHubリポジトリ
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/cocoa/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>ENv2バージョンアップに関する技術的な検討内容</strong>
+<label for=toc-control>
+<img src=/cocoa/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#exposure-notification-api-v2へのバージョンアップに関する技術的な検討内容について>Exposure Notification API v2へのバージョンアップに関する技術的な検討内容について</a>
+<ul>
+<li><a href=#exposure-notification-v1とv2の違い>Exposure Notification v1とv2の違い</a></li>
+<li><a href=#距離時間の判定方法が変わることによる影響>距離・時間の判定方法が変わることによる影響</a></li>
+<li><a href=#enのリスクスコアとは接触時に一定の値を超えるよう設計された数字>ENのリスクスコアとは、「接触」時に一定の値を超えるよう設計された数字</a></li>
+<li><a href=#背景知識電波強度と距離の関係>背景知識：電波強度と距離の関係</a></li>
+<li><a href=#パラメータ値の設計>パラメータ値の設計</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h2 id=exposure-notification-api-v2へのバージョンアップに関する技術的な検討内容について>
+Exposure Notification API v2へのバージョンアップに関する技術的な検討内容について
+<a class=anchor href=#exposure-notification-api-v2%e3%81%b8%e3%81%ae%e3%83%90%e3%83%bc%e3%82%b8%e3%83%a7%e3%83%b3%e3%82%a2%e3%83%83%e3%83%97%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e6%8a%80%e8%a1%93%e7%9a%84%e3%81%aa%e6%a4%9c%e8%a8%8e%e5%86%85%e5%ae%b9%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6>#</a>
+</h2>
+<p>COCOA v2.0.0からは、利用するExposure Notification API(以下EN)がv2に切り替えられている。
+ENv2は、従前のv1と比べて、濃厚接触の可能性を判定する方式が大きく変更されたため、パラメータを最初から設定しなおす必要がある。
+そのため、検証専門チームによる実機での計測も行い、その結果も踏まえてパラメータを設計したが、その経緯をまとめたものが本文書である。</p>
+<p>なお、当初はv2.0.0では、ENv2の機能を活用した新しい機能も実装する予定だったが、v2.1.0以降に先送りとなってしまったため本文書では取り扱わない。
+検討の経緯は、github discussions <a href=https://github.com/cocoa-mhlw/cocoa/discussions/532>EN v2を搭載するCOCOAで実現したい機能について #532</a> を参照のこと。</p>
+<h3 id=exposure-notification-v1とv2の違い>
+Exposure Notification v1とv2の違い
+<a class=anchor href=#exposure-notification-v1%e3%81%a8v2%e3%81%ae%e9%81%95%e3%81%84>#</a>
+</h3>
+<p>複数の条件を元に、接触内容や想定されるリスクに応じた内容の接触通知を出せるようになる。</p>
+<ul>
+<li>リスクを判定するスコア設定の柔軟性が上がる
+<ul>
+<li>V1…時間・電波強度ともに設定は8段階の値からの選択方式のため、1つの状態しか接触判定できないスコア設計となる</li>
+<li>V2…時間・電波強度ともに具体的な値で設定でき、複数の状態を接触判定できるようなスコア設計が可能</li>
+</ul>
+</li>
+<li>発症日からの経過日数でリスクの有無を判定できるようになる
+<ul>
+<li>V1…Exposure Notification側の設定項目がなく、アプリ側での対応が必要</li>
+<li>V2…発症日（あるいは検体採取日）から◯日目という形で指定可能</li>
+</ul>
+</li>
+<li>接触に関する詳しい情報を踏まえて、接触通知の内容を変えることが出来る
+<ul>
+<li>V1…通知はOS側が出し、接触に関する情報も得られないため、どのような接触でも同じ接触通知となる</li>
+<li>V2…接触に関する詳細な情報（接触時間・電波強度等）が得られ、それを元にリスクに応じた通知をアプリ側で出せる</li>
+</ul>
+</li>
+</ul>
+<p>本ドキュメントでは、根幹に関わる内容である1点目について検討を行った。
+なお、2点目については、処理を行う箇所が変わるだけで設定する内容（発症2日前～10日後）は変わらないため、詳細な検討は不要。
+また、3点目については、github discussions <a href=https://github.com/cocoa-mhlw/cocoa/discussions/532>#532</a> で議論を行っている。</p>
+<h3 id=距離時間の判定方法が変わることによる影響>
+距離・時間の判定方法が変わることによる影響
+<a class=anchor href=#%e8%b7%9d%e9%9b%a2%e6%99%82%e9%96%93%e3%81%ae%e5%88%a4%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%8c%e5%a4%89%e3%82%8f%e3%82%8b%e3%81%93%e3%81%a8%e3%81%ab%e3%82%88%e3%82%8b%e5%bd%b1%e9%9f%bf>#</a>
+</h3>
+<p>v1は、定義に当てはまる接触の回数を数えるが、v2は、接触時間に重み付けをして合計値を返し、その値(リスクスコア)が閾値を超えているかどうかで判定を行う。</p>
+<ul>
+<li>v1では、15分間連続して条件を満たすと接触判定するため、例②のような、一瞬電波強度が弱まるような状態は接触にならない</li>
+<li>v2では、平均の電波強度別に接触の時間に係数を掛けてスコア判定するため、例②のような状況でも接触と判定する。</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig1.png alt=ENv1とv2の接触判定の違い></p>
+<p>※図では1分毎の電波強度を示しているが、v2では厳密には5分間までの平均値で返されることがある</p>
+<h3 id=enのリスクスコアとは接触時に一定の値を超えるよう設計された数字>
+ENのリスクスコアとは、「接触」時に一定の値を超えるよう設計された数字
+<a class=anchor href=#en%e3%81%ae%e3%83%aa%e3%82%b9%e3%82%af%e3%82%b9%e3%82%b3%e3%82%a2%e3%81%a8%e3%81%af%e6%8e%a5%e8%a7%a6%e6%99%82%e3%81%ab%e4%b8%80%e5%ae%9a%e3%81%ae%e5%80%a4%e3%82%92%e8%b6%85%e3%81%88%e3%82%8b%e3%82%88%e3%81%86%e8%a8%ad%e8%a8%88%e3%81%95%e3%82%8c%e3%81%9f%e6%95%b0%e5%ad%97>#</a>
+</h3>
+<p>具体的なパラメータ値(リスクスコアの計算方法と閾値)の検討に入る前に、リスクスコアの意味について確認する。</p>
+<ul>
+<li>リスク「スコア」という名前からは、なにか「リスクの大きさに比例する」ものを想像しがちであり、距離・時間と比例する関係にさせないといけないと考えがちである
+<ul>
+<li>例：「距離が半分ならスコアは2倍になる」「距離が10分の1ならばスコアは10倍」など</li>
+</ul>
+</li>
+<li>しかし、COCOAは、濃厚接触の可能性の「有無」だけを判断するものであり、その目的を踏まえると、距離が1m以内であれば、どのような距離でも15分間接触しなければ閾値を超えないようにスコアを設計しなければならない</li>
+<li>そのため、「1m以内であれば閾値を超える」「1mを越えれば閾値を大きく下回る」ような計算をする必要がある</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig2.png alt=設計すべきリスクスコアの形></p>
+<h3 id=背景知識電波強度と距離の関係>
+背景知識：電波強度と距離の関係
+<a class=anchor href=#%e8%83%8c%e6%99%af%e7%9f%a5%e8%ad%98%e9%9b%bb%e6%b3%a2%e5%bc%b7%e5%ba%a6%e3%81%a8%e8%b7%9d%e9%9b%a2%e3%81%ae%e9%96%a2%e4%bf%82>#</a>
+</h3>
+<p>パラメータ値を設計するにあたり、電波強度と距離の関係を知っておく必要があるため、ここで他の研究結果を確認する。</p>
+<h4 id=同じ距離の電波強度には大きな差がある>
+同じ距離の電波強度には大きな差がある
+<a class=anchor href=#%e5%90%8c%e3%81%98%e8%b7%9d%e9%9b%a2%e3%81%ae%e9%9b%bb%e6%b3%a2%e5%bc%b7%e5%ba%a6%e3%81%ab%e3%81%af%e5%a4%a7%e3%81%8d%e3%81%aa%e5%b7%ae%e3%81%8c%e3%81%82%e3%82%8b>#</a>
+</h4>
+<p>同じ距離でも電波強度には大きな揺らぎがあり、1回の測定では正確な距離を測ることはできないことが知られている。</p>
+<ul>
+<li>電波強度と距離の関係は、MITによる測定結果を基に、チューリング研究所・オックスフォード大の論文で、正規分布に沿った電力の揺らぎがあることが示されている。
+<ul>
+<li>Source: <a href=https://arxiv.org/pdf/2007.05057.pdf>https://arxiv.org/pdf/2007.05057.pdf</a></li>
+<li>論文内Figure 4のキャプションに <code>This results in a Gaussian process with µ(d) = 0.21 log(d) + 3.92 and σ2 = 0.33. RSSI samples are then generated at each time step from log-normal(µ(d), σ2)</code> と近似式が示されている</li>
+<li>Googleからも、この論文を用いたパラメータ設計シミュレーターを案内されており、信用に足る論文と考えた</li>
+</ul>
+</li>
+<li>通常、正規分布に沿った揺らぎは綺麗な山型を描くが、電波強度を示す単位 dB は、電力を「10を底とする常用対数」で変換したもののため、より緩やかな曲線を描くことが分かる</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig3.png alt=距離別の、その電波強度になる可能性の分布></p>
+<h4 id=多数の測定で電波強度のブレを減らす>
+多数の測定で電波強度のブレを減らす
+<a class=anchor href=#%e5%a4%9a%e6%95%b0%e3%81%ae%e6%b8%ac%e5%ae%9a%e3%81%a7%e9%9b%bb%e6%b3%a2%e5%bc%b7%e5%ba%a6%e3%81%ae%e3%83%96%e3%83%ac%e3%82%92%e6%b8%9b%e3%82%89%e3%81%99>#</a>
+</h4>
+<p>しかし、電波強度を多数測定することで誤差を減らし、望ましい数値に近づけることが出来ることもわかる。</p>
+<ul>
+<li>電波強度は正規分布に従っているため、複数回測定をしていくことで誤差の少ない値を得られる
+<ul>
+<li>下図左は、Excel上でシミュレーションを行ったもので、5000回の測定を、5回単位/50回単位/100回単位で平均を取ると徐々に数値のばらつきが減ることを示している</li>
+<li>Exposure Notificationは、Bluetooth Low Energyの信号（Advertising）を200msおきにスキャンする。測定結果は、1～5分間のScanInstanceごとに平均値を返すため、 約5回/秒 × 60～300秒 = 300回～1500回測定される</li>
+<li>安全をとって、測定頻度・測定時間ともに半分と見込み、830msおきスキャン × 30秒 = 約37回測定されると考える</li>
+<li>標準誤差は、標準偏差をサンプル数の平方根で除した数字となるため、特定の距離における電波強度の分布は、下図右のように、かなり山が明確な分布になる</li>
+</ul>
+</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig4.png alt=電波強度を多数測定することによる確率分布の変化></p>
+<h3 id=パラメータ値の設計>
+パラメータ値の設計
+<a class=anchor href=#%e3%83%91%e3%83%a9%e3%83%a1%e3%83%bc%e3%82%bf%e5%80%a4%e3%81%ae%e8%a8%ad%e8%a8%88>#</a>
+</h3>
+<p>前述の研究成果を踏まえた、ENv2のパラメータ設計の過程を説明する</p>
+<h4 id=距離別の電波強度の分布>
+距離別の電波強度の分布
+<a class=anchor href=#%e8%b7%9d%e9%9b%a2%e5%88%a5%e3%81%ae%e9%9b%bb%e6%b3%a2%e5%bc%b7%e5%ba%a6%e3%81%ae%e5%88%86%e5%b8%83>#</a>
+</h4>
+<p>前述の正規分布・標準誤差を前提に計算すると、電波強度が取り得る範囲が以下の様に図示できる。
+（濃い色は±σなので、約6割の測定結果がこの範囲に入ると考えられる）</p>
+<p><img src=/cocoa/appendix/upgrading_v2_fig5.png alt=距離別の電波強度の分布></p>
+<p>この理論値が正しいかどうか、特定の距離で実機のExposure Notificationが出力する電波強度を測定し、理論値との乖離が少ないことを確認した。</p>
+<ul>
+<li>実機で計測を行う場合には、Exposure Notificatoinが出力する電波強度を測定する必要がある
+<ul>
+<li>機種ごとに異なる電波送信強度・感度の差異を吸収するために、Exposure Notification APIは内部でキャリブレーションを行い、調整後の数値のみを使って濃厚接触の可能性の判定を行うため</li>
+</ul>
+</li>
+<li>そのため、検証専門チームに依頼し、デバッグ版のCOCOAを用いて、合計110回・9000分以上の接触を作り、その状況下における電波強度の分布を測定した。</li>
+<li>測定に用いた機種には偏りがあるため、2021年12月末時点での、COCOA利用ユーザ数・端末別利用台数を元にした端末メーカー別シェアを踏まえた重み付けを行ったのが以下の2つのグラフ
+<ul>
+<li>理論値（オレンジの面グラフ）と、距離1.0mにおける測定結果は極めてよく一致した</li>
+<li>距離2.0mにおいては、より強い電波強度が得られやすかった</li>
+</ul>
+</li>
+<li>端末の相互関係（端末の画面を正対させる／机上に横並びにする／カバンにしまう）を変えたときの電波強度の変化は、1.0m/2.0mともにあまり見られなかった</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig6.png alt=パラメータ設計のための実機計測結果></p>
+<h4 id=en電波強度で判定可能な距離の区分>
+EN電波強度で判定可能な距離の区分
+<a class=anchor href=#en%e9%9b%bb%e6%b3%a2%e5%bc%b7%e5%ba%a6%e3%81%a7%e5%88%a4%e5%ae%9a%e5%8f%af%e8%83%bd%e3%81%aa%e8%b7%9d%e9%9b%a2%e3%81%ae%e5%8c%ba%e5%88%86>#</a>
+</h4>
+<p>電波強度別の重み付けを柔軟に変えることで、特異度を極力上げないようにしつつ感度を上げることを目指した。</p>
+<ul>
+<li>電波強度には揺らぎがあるため、特定の強度より弱い電波を全部無視してしまうと見落としが増える（感度が落ちる）
+<ul>
+<li>例：1.5mを判定しようとしたとき-60dBを閾値にすると22%を見落とす（下図の灰色部分）</li>
+</ul>
+</li>
+<li>特定の強度より弱い電波を（全部無視するのではなく）何割引かの時間として処理することで、単純に閾値を下げるよりも誤検知の増加を抑えながら見落としを減らすことができる
+<ul>
+<li>例：-65dBを閾値にすると見落としは5%だが、誤検知も84%に達してしまう。-60dB～-64dBの時間に0.5を掛けると、誤検知を70%に押さえながら、見落としを13%まで減らすことができる</li>
+</ul>
+</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig7.png alt=電波強度別の重み付けを変える効果（イメージ）></p>
+<p>電波強度が取り得る範囲から、1.0m/1.5m/2.0mの重なりが大きく、 2.0mを含まないように1.0m以内を判定する難しさが分かるが、電波強度をうまく区分し、重み付けを行うことで、1.0m以下や、2.0m以下を判断することを狙った。</p>
+<ul>
+<li>①…1.5m未満であることがかなり確実な範囲</li>
+<li>②…1.0mも2.0mもあり得る距離　（※実測結果より、ここでは2.0mの距離がある可能性が高い）</li>
+<li>③…1.0mは越えるが、1.5m/2.0m/3.0mのいずれかを取り得る距離</li>
+<li>④…2.0m以上であることがかなり確実な範囲</li>
+<li>⇒①の重み付けを最も強くし、②にやや弱い重み付けをすることで1.0m以下を判断。③・④の差を設けると同時に2.0mの距離も判断できる。</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig8.png alt=距離別の電波強度の分布の活用イメージ></p>
+<h4 id=パラメータ値attenuation-weight-閾値当初案の設定>
+パラメータ値(Attenuation, Weight, 閾値)当初案の設定
+<a class=anchor href=#%e3%83%91%e3%83%a9%e3%83%a1%e3%83%bc%e3%82%bf%e5%80%a4attenuation-weight-%e9%96%be%e5%80%a4%e5%bd%93%e5%88%9d%e6%a1%88%e3%81%ae%e8%a8%ad%e5%ae%9a>#</a>
+</h4>
+<p>(この設計時点では、ENv2の新機能を利用した機能拡張も想定していたため)将来的な2.0mの判定も加味して、以下のAttenuation, Weight案を設計、パラメータ検証を行った</p>
+<ul>
+<li>1.0m以内であることが確実な距離のウエイトを最大（250%）に設定する</li>
+<li>1.0mも2.0mもあり得る距離は、ウエイトを約半分（130%）に設定し、閾値となる値のウエイトはこの130%を想定したものにする
+<ul>
+<li>1.0m以上の場合は、これより低いウエイトの結果が多数入ることでこの閾値を下回るようになる</li>
+</ul>
+</li>
+<li>1.5m/2.0m/3.0mのいずれかを取り得る距離は、更に約半分にしたウエイト（60%）とすることで、リスクスコアや接触時間の合計の情報と合わせ、将来的に接触通知を出す距離を2.0mまで伸ばしたときの影響範囲を把握出来るようにする</li>
+<li>閾値は、900秒(=15分)に130%をかけ、1170とした。</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig9.png alt="パラメータ値(Attenuation, Weight, 閾値)当初案"></p>
+<h4 id=実測値による当初案パラメータ検証と修正>
+実測値による当初案パラメータ検証と修正
+<a class=anchor href=#%e5%ae%9f%e6%b8%ac%e5%80%a4%e3%81%ab%e3%82%88%e3%82%8b%e5%bd%93%e5%88%9d%e6%a1%88%e3%83%91%e3%83%a9%e3%83%a1%e3%83%bc%e3%82%bf%e6%a4%9c%e8%a8%bc%e3%81%a8%e4%bf%ae%e6%ad%a3>#</a>
+</h4>
+<p>短時間の測定では電波強度が弱く計測される傾向が見られ、特にiPhone全般がその傾向が強かったことから、当初案のパラメータ値の修正が必要となった。</p>
+<ul>
+<li>前述のパラメータを元に、1m・15分の接触を40回以上試験したところ、接触通知の発生率は想定を大きく下回ったが、その理由は、長時間計測の時に比べて、電波強度が弱くでる傾向が強いことにあった</li>
+<li>試験回数に占める成功率（通知発生率）は23%、ただしOSのシェアを加味すると成功率は13%に止まった</li>
+<li>これは、iPhone同士の接触で-59dBというスコアが多く出る傾向が強かったため</li>
+<li>また、より短距離（0.5m未満など）に設置したときの電波強度を想定すると、8分で閾値を超え、過剰に反応することも予想された。</li>
+<li>これを踏まえて、とくにiPhoneが関係する接触通知を確実に発生させるよう、パラメータの修正を行った</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig10.png alt=パラメータ検証のための実機計測結果></p>
+<h4 id=最終的なパラメータ値attenuation-weight-閾値>
+最終的なパラメータ値(Attenuation, Weight, 閾値)
+<a class=anchor href=#%e6%9c%80%e7%b5%82%e7%9a%84%e3%81%aa%e3%83%91%e3%83%a9%e3%83%a1%e3%83%bc%e3%82%bf%e5%80%a4attenuation-weight-%e9%96%be%e5%80%a4>#</a>
+</h4>
+<p>1m・15分の接触を72%（OSのシェアを加味した割合）検知できることが期待されるパラメータを本番パラメータと設定した。</p>
+<ul>
+<li>ごく短距離の時に短時間で閾値を超える問題を無くすため、最も距離が近いAttenuationのウエイトを落としつつ、実データと突き合わせながら、閾値・ウエイトを変更し、成功率が高くなるパラメータを探った。</li>
+<li>試行錯誤の末、下表のようなパラメータを設定し、パラメータ検証時の電波強度・時間に当てはめたところ、OSのシェアを加味した成功率（検知率）が72%となることが推定された
+<ul>
+<li>iPhone同士の接触の検知率は83%、Android/iOSの接触の検知率は64%、Android同士の接触の検知率は54%と推定</li>
+<li>期せずして、1番低い閾値（-65dB）は、ENv1での閾値（-63dB）と非常に近い値となった</li>
+<li>閾値は、当初の1170よりも、1350に変更する方が検知率などをよい状態にすることができた</li>
+</ul>
+</li>
+<li>上記パラメータでは15分未満の接触で閾値を超えるケースがあるため、スコア判定後に総信号受信時間のチェックも追加した</li>
+<li>当初のパラメータ設計で目指した、1.0m/2.0mの接触を区別した判定は行えないパラメータだが、接触通知の確実な発生を優先して、このパラメータを本番パラメータとした</li>
+</ul>
+<p><img src=/cocoa/appendix/upgrading_v2_fig11.png alt="パラメータ値(Attenuation, Weight, 閾値)修正後"></p>
+<p>※補足…最終的に設定したパラメータで近距離のウエイトを100%としたことについて</p>
+<p>修正後の設定値では、電波強度が45dBより強い接触だけの場合では、15分の接触では、900秒×100%=900となり、接触通知の閾値を超えないのでは、という懸念があるが、以下の理由から、そのような接触は起こりえないと考えた。</p>
+<ul>
+<li>45dBより強い電波だけになるのは、スマホを隣りに並べたり、スマホを重ねたりする状況。</li>
+<li>その状況を作るには、「2,3m離れた所から走って近寄り、端末が重なるくらいの距離で15分接触し、直後に2,3m以上離れたところへ走って逃げる」ような行動が必要だが、日常生活ではそのような状況は考えにくい
+<ul>
+<li>あり得るシチュエーションは賀詞交換会の名刺交換だが、会話は大抵短時間であり、交換前は徐々に距離を縮めるはずであり、</li>
+</ul>
+</li>
+<li>普通の接触であれば、その距離となる前後に1.0mの距離をとる時間があり、46dB～59dBになる時間が相応にあるので、ウエイトが高い接触時間があることで、結果として閾値は超えると考えられる</li>
+</ul>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#exposure-notification-api-v2へのバージョンアップに関する技術的な検討内容について>Exposure Notification API v2へのバージョンアップに関する技術的な検討内容について</a>
+<ul>
+<li><a href=#exposure-notification-v1とv2の違い>Exposure Notification v1とv2の違い</a></li>
+<li><a href=#距離時間の判定方法が変わることによる影響>距離・時間の判定方法が変わることによる影響</a></li>
+<li><a href=#enのリスクスコアとは接触時に一定の値を超えるよう設計された数字>ENのリスクスコアとは、「接触」時に一定の値を超えるよう設計された数字</a></li>
+<li><a href=#背景知識電波強度と距離の関係>背景知識：電波強度と距離の関係</a></li>
+<li><a href=#パラメータ値の設計>パラメータ値の設計</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>
