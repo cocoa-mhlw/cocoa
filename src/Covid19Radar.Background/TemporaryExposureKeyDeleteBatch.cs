@@ -1,4 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+﻿/* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
@@ -26,7 +26,7 @@ namespace Covid19Radar.Background
         /// <param name="log">logger</param>
         /// <returns></returns>
         [FunctionName("TemporaryExposureKeyDeleteBatch")]
-        public async Task Run([TimerTrigger("0 45 14 * * *")] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("%DeleteBatchSchedule%")] TimerInfo myTimer, ILogger log)
         //public async Task Run([TimerTrigger("0 * * * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"{nameof(TemporaryExposureKeyDeleteBatch)} Timer trigger function executed at: {DateTime.Now}");
