@@ -42,6 +42,14 @@ namespace Covid19Radar.Services
                 AppResources.ButtonCancel);
         }
 
+        public async Task ShowBluetoothSettingErrorAsync()
+        {
+            await AlertAsync(
+                AppResources.BluetoothSettingErrorDialogMessage,
+                AppResources.BluetoothSettingErrorDialogTitle,
+                AppResources.ButtonOk);
+        }
+
         public async Task<bool> ShowLocationOffWarningAsync()
         {
             if (_essentialsService.IsIos)

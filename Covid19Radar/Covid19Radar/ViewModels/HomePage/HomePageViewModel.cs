@@ -372,7 +372,10 @@ namespace Covid19Radar.ViewModels
                     bool isOK = await dialogService.ShowBluetoothOffWarningAsync();
                     if (isOK)
                     {
-                        externalNavigationService.NavigateBluetoothSettings();
+                        if (!externalNavigationService.NavigateBluetoothSettings())
+                        {
+                            await dialogService.ShowBluetoothSettingErrorAsync();
+                        }
                     }
                 }
                 else if (

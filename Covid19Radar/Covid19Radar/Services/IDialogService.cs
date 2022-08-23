@@ -10,6 +10,7 @@ namespace Covid19Radar.Services
     {
         Task<bool> ShowExposureNotificationOffWarningAsync();
         Task<bool> ShowBluetoothOffWarningAsync();
+        Task ShowBluetoothSettingErrorAsync();
         Task<bool> ShowLocationOffWarningAsync();
         Task ShowTemporarilyUnavailableWarningAsync();
         Task ShowHomePageUnknownErrorWaringAsync();

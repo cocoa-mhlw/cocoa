@@ -41,7 +41,7 @@ namespace Covid19Radar.iOS.Services
             }
         }
 
-        public void NavigateBluetoothSettings() => throw new PlatformNotSupportedException();
+        public bool NavigateBluetoothSettings() => throw new PlatformNotSupportedException();
         public void NavigateLocationSettings() => throw new PlatformNotSupportedException();
     }
 }

@@ -7,7 +7,7 @@ namespace Covid19Radar.Services
     public interface IExternalNavigationService
     {
         void NavigateAppSettings();
-        void NavigateBluetoothSettings();
+        bool NavigateBluetoothSettings();
         void NavigateLocationSettings();
     }
 }

@@ -1143,6 +1143,14 @@
     <value>接触記録のため、Bluetooth設定をオンにしてください。</value>
     <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>
   </data>
+  <data name="BluetoothSettingErrorDialogTitle" xml:space="preserve">
+    <value>設定画面を表示できません</value>
+    <comment>設定画面を表示できません</comment>
+  </data>
+  <data name="BluetoothSettingErrorDialogMessage" xml:space="preserve">
+    <value>COCOAから設定画面を開けませんでした。端末の設定からBluetoothを有効にしてください。</value>
+    <comment>COCOAから設定画面を開けませんでした。端末の設定からBluetoothを有効にしてください。</comment>
+  </data>
   <data name="LocationOffWarningDialogMessage" xml:space="preserve">
     <value>お使いのOSでは、接触通知を機能させるため、位置情報をオンに設定する必要があります。位置情報設定をオンにするか、Android11以上に更新してください。
 なお、本アプリで利用者の位置情報を収集することはありません。</value>

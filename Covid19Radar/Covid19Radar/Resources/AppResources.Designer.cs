@@ -157,6 +157,24 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to COCOA settings cannot be displayed. Please enable Bluetooth in your device’s setting..
+        /// </summary>
+        public static string BluetoothSettingErrorDialogMessage {
+            get {
+                return ResourceManager.GetString("BluetoothSettingErrorDialogMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings cannot be displayed.
+        /// </summary>
+        public static string BluetoothSettingErrorDialogTitle {
+            get {
+                return ResourceManager.GetString("BluetoothSettingErrorDialogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to button.
         /// </summary>
         public static string Button {
