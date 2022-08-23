@@ -1256,7 +1256,7 @@ You do not have to request it yourself.</value>
     <comment>設定画面を表示できません</comment>
   </data>
   <data name="BluetoothSettingErrorDialogMessage" xml:space="preserve">
-    <value>COCOA settings cannot be displayed. Please enable Bluetooth in your device’s setting.</value>
+    <value>COCOA cannot open Bluetooth settings. Please enable Bluetooth in your device's settings.</value>
     <comment>COCOAから設定画面を開けませんでした。端末の設定からBluetoothを有効にしてください。</comment>
   </data>
   <data name="LocationOffWarningDialogMessage" xml:space="preserve">
