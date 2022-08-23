@@ -32,6 +32,7 @@ namespace CovidRadar.UITestV2
         /// 戻るボタンを使用した遷移確認.
         /// </summary>
         [Test]
+        [Ignore("Ignore a test")]
         public void Case01_Test()
         {
             HomePage homePage = new HomePage();

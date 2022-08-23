@@ -47,9 +47,9 @@ namespace CovidRadar.UITestV2
         private static readonly string ButtonRenderer = "ButtonRenderer";
 
         /// <summary>
-        /// ?マーク.
+        /// Androidボタン.
         /// </summary>
-        private static readonly string CachedImageFastRenderer = "CachedImageFastRenderer";
+        private static readonly string ImageButtonRenderer = "ImageButtonRenderer";
 
         private readonly Query openMenuPage;
         private readonly Query backBtn;
@@ -71,7 +71,7 @@ namespace CovidRadar.UITestV2
                 openNotContactPage = x => x.Marked(HomePageTitle).Class(ButtonRenderer).Index(0); // 陽性者との接触結果を確認
                 openSubmitConsentPage = x => x.Marked(HomePageTitle).Class(ButtonRenderer).Index(1); // 陽性情報の登録
                 openSubmitConsentPageENoff = x => x.Marked(HomePageTitle).Class(ButtonRenderer).Index(2); // 陽性情報の登録(接触通知OFF)
-                openQuestionMark = x => x.Marked(HomePageTitle).Class(CachedImageFastRenderer).Index(2); // ?マーク
+                openQuestionMark = x => x.Marked(HomePageTitle).Class(ImageButtonRenderer).Index(0); // ?マーク
             }
 
             if (OniOS)

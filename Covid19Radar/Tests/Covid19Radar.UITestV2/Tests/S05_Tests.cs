@@ -43,6 +43,7 @@ namespace CovidRadar.UITestV2
         /// 使い方→陽性登録.
         /// </summary>
         [Test]
+        [Ignore("Ignore a test")]
         public void Case01_Test()
         {
             HomePage homePage = new HomePage();

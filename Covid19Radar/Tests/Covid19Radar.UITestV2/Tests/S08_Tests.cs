@@ -30,6 +30,17 @@ namespace CovidRadar.UITestV2
         }
 
         /// <summary>
+        /// tutorial実行.
+        /// </summary>
+        [OneTimeSetUp]
+        public override void OneTimeSetUp()
+        {
+            AppManager.StartApp();
+            TutorialPageFlow tutorialPageFlow = new TutorialPageFlow();
+            tutorialPageFlow.Tutorial();
+        }
+
+        /// <summary>
         /// (Blootooth設定、端末のEN、位置情報)全部オン、BG復帰【動作中】.
         /// </summary>
         // TODO:課題No.71に依存するため、解決次第要修正
@@ -63,7 +74,7 @@ namespace CovidRadar.UITestV2
             // S1 ホーム画面に「動作中」と表示されていること
             HomePage home = new HomePage();
             home.AssertHomePage();
-
+            //app.Repl();
             // S2 「動作中」の下部の？ボタン押下
             home.OpenQuestionMark();
             home.AssertHomePage();
