@@ -5,7 +5,7 @@ steps:
 
 - template: setup/app-setup-xamarin-template.yml
   parameters:
-    configuration: Debug_Mock
+    configuration: Debug_UITest
 
 - task: DownloadSecureFile@1
   name: androidKeystore
@@ -18,7 +18,7 @@ steps:
   inputs:
     projectFile: Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj
     outputDirectory: '$(Build.BinariesDirectory)/Debug'
-    configuration: Debug_Mock
+    configuration: Debug_UITest
     msbuildArguments: /p:EmbedAssembliesIntoApk=True /p:AndroidPackageFormat=aab /t:PackageForAndroid /t:SignAndroidPackage /p:AndroidKeyStore=True /p:AndroidSigningKeyStore=$(androidKeystore.secureFilePath) /p:AndroidSigningStorePass=$(Android_KeystorePassword) /p:AndroidSigningKeyAlias=$(Android_KeyAlias) /p:AndroidSigningKeyPass=$(Android_KeyPassword)
 
 - bash: |
