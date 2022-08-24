@@ -3,9 +3,16 @@ steps:
 
 - template: setup/app-setup-variables-template.yml
 
-- template: setup/app-setup-xamarin-template.yml
+- template: setup/app-setup-xamarin-uitest-template.yml
   parameters:
-    configuration: Debug_UITest
+    configuration: debug
+
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: Covid19Radar.sln
+    feedsToUse: config
+    nugetConfigPath: DevOpsNuget.config
 
 - task: DownloadSecureFile@1
   name: androidKeystore
