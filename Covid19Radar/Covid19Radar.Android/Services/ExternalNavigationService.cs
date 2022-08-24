@@ -42,7 +42,7 @@ namespace Covid19Radar.Droid.Services
             }
         }
 
-        public void NavigateBluetoothSettings()
+        public bool NavigateBluetoothSettings()
         {
             _loggerService.StartMethod();
             try
@@ -54,11 +54,13 @@ namespace Covid19Radar.Droid.Services
             catch (Exception ex)
             {
                 _loggerService.Exception("Failed navigate to bluetooth settings", ex);
+                return false;
             }
             finally
             {
                 _loggerService.EndMethod();
             }
+            return true;
         }
 
         public void NavigateLocationSettings()

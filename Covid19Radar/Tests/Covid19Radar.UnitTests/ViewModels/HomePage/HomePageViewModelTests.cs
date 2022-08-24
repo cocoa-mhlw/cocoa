@@ -427,18 +427,36 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
-        public void OnClickCheckStopReasonCommandTest_StoppedReason_BluetoothOff_OK()
+        public void OnClickCheckStopReasonCommandTest_StoppedReason_BluetoothOff_OK_Success()
         {
             var homePageViewModel = CreateViewModel();
 
             mockExposureNotificationApiService
                 .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED } as IList<int>));
             mockDialogService.Setup(x => x.ShowBluetoothOffWarningAsync()).ReturnsAsync(true);
+            mockExternalNavigationService.Setup(x => x.NavigateBluetoothSettings()).Returns(true);
 
             homePageViewModel.OnClickCheckStopReason.Execute(null);
 
             mockDialogService.Verify(x => x.ShowBluetoothOffWarningAsync(), Times.Once());
             mockExternalNavigationService.Verify(x => x.NavigateBluetoothSettings(), Times.Once());
+        }
+
+        [Fact]
+        public void OnClickCheckStopReasonCommandTest_StoppedReason_BluetoothOff_OK_Failure()
+        {
+            var homePageViewModel = CreateViewModel();
+
+            mockExposureNotificationApiService
+                .Setup(x => x.GetStatusCodesAsync()).Returns(Task.FromResult(new List<int>() { ExposureNotificationStatus.Code_Android.BLUETOOTH_DISABLED } as IList<int>));
+            mockDialogService.Setup(x => x.ShowBluetoothOffWarningAsync()).ReturnsAsync(true);
+            mockExternalNavigationService.Setup(x => x.NavigateBluetoothSettings()).Returns(false);
+
+            homePageViewModel.OnClickCheckStopReason.Execute(null);
+
+            mockDialogService.Verify(x => x.ShowBluetoothOffWarningAsync(), Times.Once());
+            mockExternalNavigationService.Verify(x => x.NavigateBluetoothSettings(), Times.Once());
+            mockDialogService.Verify(x => x.ShowBluetoothSettingErrorAsync(), Times.Once());
         }
 
         [Fact]

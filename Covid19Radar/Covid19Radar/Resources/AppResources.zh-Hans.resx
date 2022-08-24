@@ -1154,6 +1154,14 @@
     <value>为记录接触情况，请打开蓝牙。</value>
     <comment>接触記録のため、Bluetooth設定をオンにしてください。</comment>
   </data>
+  <data name="BluetoothSettingErrorDialogTitle" xml:space="preserve">
+    <value>无法显示设置画面</value>
+    <comment>設定画面を表示できません</comment>
+  </data>
+  <data name="BluetoothSettingErrorDialogMessage" xml:space="preserve">
+    <value>COCOA无法打开设置画面。请从手机设置中启用蓝牙。</value>
+    <comment>COCOAから設定画面を開けませんでした。端末の設定からBluetoothを有効にしてください。</comment>
+  </data>
   <data name="LocationOffWarningDialogMessage" xml:space="preserve">
     <value>您所使用的操作系统，只有打开GPS后才能使用接触通知的功能。请打开GPS，或将操作系统更新到Android 11以上的版本。
 此外，本APP不会收集用户的位置信息。</value>

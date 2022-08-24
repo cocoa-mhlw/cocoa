@@ -131,6 +131,20 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
+        public async Task ShowBluetoothSettingErrorAsyncTest()
+        {
+            var unitUnderTest = CraeteDialogService();
+            await unitUnderTest.ShowBluetoothSettingErrorAsync();
+
+            mockUserDialogs.Verify(x => x.AlertAsync(
+                AppResources.BluetoothSettingErrorDialogMessage,
+                AppResources.BluetoothSettingErrorDialogTitle,
+                AppResources.ButtonOk,
+                null),
+                Times.Once());
+        }
+
+        [Fact]
         public void ShowLocationOffWarningTest_Ios()
         {
             mockEssentialsService.Setup(x => x.IsAndroid).Returns(false);
