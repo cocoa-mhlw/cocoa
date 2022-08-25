@@ -40,6 +40,7 @@
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     Style="{StaticResource LinkLabelStyleMedium}"
+                    HorizontalOptions="Start"
                     Text="{x:Static resources:AppResources.ReAgreeTermsOfServiceTextLink}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding Path=OpenWebView}" />
