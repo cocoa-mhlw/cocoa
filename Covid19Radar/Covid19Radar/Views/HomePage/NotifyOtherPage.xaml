@@ -258,6 +258,7 @@
                         AutomationProperties.IsInAccessibleTree="{Binding IsConsentLinkVisible}"
                         Margin="0, 0, 0, 5"
                         Style="{StaticResource LinkLabelStyleMedium}"
+                        HorizontalOptions="Start"
                         Text="{x:Static resources:AppResources.ConfirmAgreement}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Path=OnShowConsentPageClicked}" />
@@ -299,6 +300,7 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="{Binding IsInqueryTelephoneNumberVisible}"
                         Style="{StaticResource LinkLabelStyleLarge}"
+                        HorizontalOptions="Start"
                         Text="{Binding InqueryTelephoneNumber}">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Path=OnInqueryTelephoneNumberClicked}" />
