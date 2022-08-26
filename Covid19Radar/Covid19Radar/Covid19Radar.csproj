@@ -48,8 +48,10 @@
     <None Remove="Resources\Fonts\fa-solid-900.otf" />
     <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+    <None Remove="settings.json" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="settings.json" />
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-solid-900.otf" />
