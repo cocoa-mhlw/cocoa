@@ -1,0 +1,107 @@
+parameters:
+- name: isDefineDebug
+  type: boolean
+  default: false
+
+steps:
+- task: InstallAppleCertificate@2
+  displayName: 'Install an Apple certificate'
+  inputs:
+    certSecureFile: '$(iOS_CertificateFileName)'
+    certPwd: '$(iOS_CertificatePassword)'
+
+- task: InstallAppleProvisioningProfile@1
+  displayName: 'Install an Apple provisioning profile'
+  inputs:
+    provProfileSecureFile: '$(iOS_ProvisioningProfileFileName_Development)'
+
+- template: setup/ios-setup-variables-template.yml
+  parameters:
+    configuration: debug
+
+- template: setup/app-setup-variables-template.yml
+
+- template: setup/ios-setup-xamarin-template.yml
+  
+- template: setup/app-setup-xamarin-uitest-template.yml
+  parameters:
+    configuration: debug
+
+- script: |
+    ## Workaround
+    DOTNET_VERSION=`dotnet --version`
+    ln -s /Library/Frameworks/Mono.framework/External/xbuild/Xamarin /Users/runner/.dotnet/sdk/$DOTNET_VERSION/Xamarin
+    ## Add Xamarin.TestCloud.Agent package
+    dotnet add $(System.DefaultWorkingDirectory)/Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj package Xamarin.TestCloud.Agent -n
+  displayName: Add Xamarin.TestCloud.Agent
+
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: Covid19Radar.sln
+    feedsToUse: config
+    nugetConfigPath: DevOpsNuget.config
+
+- task: XamariniOS@2
+  displayName: 'Build Covid19Radar.iOS.csproj for not Debug_UITest'
+  inputs:
+    solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
+    configuration: Debug_UITest
+    packageApp: false
+    signingIdentity: 'Apple Development'
+    signingProvisioningProfileID: '$(iOS_ProvisioningProfileID_Development)'
+    args: '/p:ArchiveOnBuild=true /p:DefineConstants=DEBUG=0'
+  condition: and(succeeded(), eq( '${{ parameters.isDefineDebug }}', 'false'))
+
+- task: XamariniOS@2
+  displayName: 'Build Covid19Radar.iOS.csproj for Debug_UITest'
+  inputs:
+    solutionFile: Covid19Radar/Covid19Radar.iOS/Covid19Radar.iOS.csproj
+    configuration: Debug_UITest
+    packageApp: false
+    signingIdentity: 'Apple Development'
+    signingProvisioningProfileID: '$(iOS_ProvisioningProfileID_Development)'
+    args: '/p:ArchiveOnBuild=true'
+  condition: and(succeeded(), eq('${{ parameters.isDefineDebug }}', 'true'))
+
+- bash: |
+    XCARCHIVE_PATH=`find ~/Library/Developer/Xcode/Archives -name "*.xcarchive" | head -1`
+    echo "$XCARCHIVE_PATH"
+    echo "##vso[task.setvariable variable=xcarchivePath;]$XCARCHIVE_PATH"
+  displayName: Set Archive Path
+
+- script: |
+    EXPORT_OPTIONS=./Covid19Radar/Covid19Radar.iOS/ExportOptions/Development.plist
+    plutil -insert 'provisioningProfiles' -json '{"$(APP_PACKAGE_NAME)":"$(iOS_ProfileName_Development)"}' $EXPORT_OPTIONS
+    plutil -insert 'teamID' -string '$(iOS_TeamId)' $EXPORT_OPTIONS
+  displayName: Edit ExportOptions
+
+- script: |
+    EXPORT_OPTIONS=./Covid19Radar/Covid19Radar.iOS/ExportOptions/Development.plist
+    xcodebuild -exportArchive -archivePath "$(xcarchivePath)" -exportPath ./Covid19Radar/Covid19Radar.iOS/ipa/ -exportOptionsPlist $EXPORT_OPTIONS
+  displayName: Export from xcarchive to ipa
+
+- task: CopyFiles@2
+  displayName: 'Copy IPA to: Build.ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: ./Covid19Radar/Covid19Radar.iOS/ipa
+    Contents: '*.ipa'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    cp -r "$(xcarchivePath)" "$(Build.ArtifactStagingDirectory)"
+  displayName: "Copy archve to: Build.ArtifactStagingDirectory"
+
+- script: |
+    cd $(Build.ArtifactStagingDirectory)
+    IPA_FILE=`find *.ipa | head -1`
+    mv "$IPA_FILE" covid19radar_uitest_$(Environment)_v$(AppVersion)_$(buildVersion).ipa
+    ARCHIVE_FILE=`find *.xcarchive | head -1`
+    mv "$ARCHIVE_FILE" covid19radar_uitest_$(Environment)_v$(AppVersion)_$(buildVersion).xcarchive
+    ls -la
+  displayName: 'Change archive name'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish IPA and symbols'
+  inputs:
+    ArtifactName: 'ios_uitest_$(Environment)_v$(AppVersion)_$(buildVersion)'

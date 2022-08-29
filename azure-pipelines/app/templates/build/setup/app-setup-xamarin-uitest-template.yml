@@ -1,0 +1,19 @@
+parameters:
+- name: configuration
+  type: string
+
+steps:
+- script: |
+    sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh $(XamarinSymlinkVersion)
+    ls -l /Library/Frameworks/Mono.framework/Versions/
+    ls -l /Library/Frameworks/Xamarin.iOS.framework/Versions/
+    ls -l /Library/Frameworks/Xamarin.Android.framework/Versions/
+    mono --version
+    msbuild -version
+  displayName: 'Select Xamarin SDK $(XamarinSymlinkVersion)'
+
+- script: |
+    cp -f $(System.DefaultWorkingDirectory)/TempNugetFeed/Release/*.nupkg $(System.DefaultWorkingDirectory)/TempNugetFeed/
+    ls -l $(System.DefaultWorkingDirectory)/TempNugetFeed/
+  displayName: 'Copy NuGet packages for release'
+  condition: and(succeeded(), eq('${{ parameters.configuration }}', 'release'))

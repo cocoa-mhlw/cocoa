@@ -151,4 +151,9 @@
     <Compile Remove="Views/Settings/EditServerConfigurationPage.xaml.cs" />
     <EmbeddedResource Remove="Views/Settings/EditServerConfigurationPage.xaml" />
   </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'!='Debug_UITest'">
+    <Compile Remove="Common/PlatformCulture.cs" />
+    <Compile Remove="Common/TranslateExtension.cs" />
+    <Compile Remove="Services/ILocalizeService.cs" />
+  </ItemGroup>
 </Project>

@@ -85,6 +85,12 @@ namespace Covid19Radar.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary launchOptions)
         {
+
+#if ENABLE_TEST_CLOUD
+            Xamarin.Calabash.Start();
+#endif
+
+
             NSUrlCache.SharedCache.RemoveAllCachedResponses();
 
             UIView.AppearanceWhenContainedIn(new [] { typeof(UIAlertController) }).TintColor = new UIColor((nfloat)0x06 / 0xFF, (nfloat)0x6A / 0xFF, (nfloat)0xB9 / 0xFF, 1.0f);
@@ -375,6 +381,26 @@ namespace Covid19Radar.iOS
             _loggerService.Value.Exception("ENExcepiton occurred", exception);
             return Task.CompletedTask;
         }
+
+#if ENABLE_TEST_CLOUD
+        [Export("GetCurrentCulture:")]
+        public NSString GetCurrentCulture(NSString value)
+        {
+            System.Globalization.CultureInfo culture = DependencyService.Get<ILocalizeService>().GetCurrentCultureInfo();
+
+            return new NSString(culture.ToString());
+        }
+
+        [Export("FinishAndRemoveTask:")]
+        public void FinishAndRemoveTask(UIApplication application)
+        {
+            nint taskID = UIApplication.SharedApplication.BeginBackgroundTask(() => { });
+            new Task(() => {
+                UIApplication.SharedApplication.EndBackgroundTask(taskID);
+            }).Start();
+        }
+#endif
+
     }
 }
 

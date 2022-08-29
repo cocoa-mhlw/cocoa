@@ -200,6 +200,9 @@
     <AndroidAsset Include="Assets\Roboto-Regular.ttf" />
     <AndroidAsset Include="Assets\license.html" />
   </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Debug_UITest'">
+    <Compile Include="Services\LocalizeService.cs" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
