@@ -136,7 +136,7 @@ namespace Covid19Radar.Api.Services
             catch (ArgumentException)
             {
                 // Signature validation failed.
-                Logger.LogError("ignature validation failed");
+                Logger.LogError("Signature validation failed");
                 throw;
             }
 
