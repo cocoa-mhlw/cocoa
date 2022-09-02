@@ -112,7 +112,8 @@ namespace Covid19Radar.Api.Services
             catch (ArgumentException)
             {
                 // The token is not in a valid JWS format.
-                return null;
+                Logger.LogError("The token is not in a valid JWS format");
+                throw;
             }
 
             // We just want to validate the authenticity of the certificate.
@@ -135,7 +136,7 @@ namespace Covid19Radar.Api.Services
             catch (ArgumentException)
             {
                 // Signature validation failed.
-                Logger.LogError("The token is not in a valid JWS format");
+                Logger.LogError("ignature validation failed");
                 throw;
             }
 
