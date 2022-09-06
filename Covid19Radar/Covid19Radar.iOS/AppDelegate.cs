@@ -121,15 +121,6 @@ namespace Covid19Radar.iOS
             // https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/3180427-register
             ScheduleBackgroundTasks();
 
-            try
-            {
-                LoggingPendingTaskRequests();
-            }
-            catch (Exception ex)
-            {
-                _loggerService.Value.Exception("Failure get pending task requests", ex);
-            }
-
             return base.FinishedLaunching(app, launchOptions);
         }
 
@@ -165,20 +156,6 @@ namespace Covid19Radar.iOS
             }
 
             _loggerService.Value.EndMethod();
-        }
-
-        private void LoggingPendingTaskRequests()
-        {
-            _loggerService.Value.Info($"Get pending task requests");
-            BGTaskScheduler.Shared.GetPending(pendingTaskRequests =>
-            {
-                _loggerService.Value.Info($"Pending task count: {pendingTaskRequests.Length}");
-                foreach (var pendingTaskRequest in pendingTaskRequests)
-                {
-                    string identifier = pendingTaskRequest.Identifier.Split(".")?.Last();
-                    _loggerService.Value.Info($"Identifier: {identifier}, EarliestBeginDate: {pendingTaskRequest.EarliestBeginDate}");
-                }
-            });
         }
 
         private bool IsUniversalLinks(NSDictionary launchOptions)
@@ -293,15 +270,6 @@ namespace Covid19Radar.iOS
         {
             base.OnActivated(uiApplication);
             MessagingCenter.Send((object)this, AppConstants.IosOnActivatedMessage);
-
-            try
-            {
-                LoggingPendingTaskRequests();
-            }
-            catch (Exception ex)
-            {
-                _loggerService.Value.Exception("Failure get pending task requests", ex);
-            }
         }
 
         private void RegisterPlatformTypes(IContainer container)
