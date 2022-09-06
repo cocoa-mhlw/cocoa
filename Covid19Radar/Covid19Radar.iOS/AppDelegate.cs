@@ -301,48 +301,6 @@ namespace Covid19Radar.iOS
         {
             return _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
         }
-
-        public Task DiagnosisKeysDataMappingAppliedAsync()
-        {
-            _exposureDetectionService.Value.DiagnosisKeysDataMappingApplied();
-            return Task.CompletedTask;
-        }
-
-        public async Task PreExposureDetectedAsync(ExposureConfiguration exposureConfiguration)
-        {
-            long enVersion = await GetEnClient().GetVersionAsync();
-            _exposureDetectionService.Value.PreExposureDetected(exposureConfiguration, enVersion);
-        }
-
-        public async Task ExposureDetectedAsync(IList<DailySummary> dailySummaries, IList<ExposureWindow> exposureWindows, ExposureConfiguration exposureConfiguration)
-        {
-            long enVersion = await GetEnClient().GetVersionAsync();
-            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, dailySummaries, exposureWindows);
-        }
-
-        public async Task ExposureDetectedAsync(ExposureSummary exposureSummary, IList<ExposureInformation> exposureInformations, ExposureConfiguration exposureConfiguration)
-        {
-            long enVersion = await GetEnClient().GetVersionAsync();
-            await _exposureDetectionService.Value.ExposureDetectedAsync(exposureConfiguration, enVersion, exposureSummary, exposureInformations);
-        }
-
-        public async Task ExposureNotDetectedAsync(ExposureConfiguration exposureConfiguration)
-        {
-            long enVersion = await GetEnClient().GetVersionAsync();
-            await _exposureDetectionService.Value.ExposureNotDetectedAsync(exposureConfiguration, enVersion);
-        }
-
-        public Task ExceptionOccurredAsync(ENException exception)
-        {
-            _loggerService.Value.Exception($"ENExcepiton occurred, Code:{exception.Code}, Message:{exception.Message}", exception);
-            return Task.CompletedTask;
-        }
-
-        public Task ExceptionOccurredAsync(Exception exception)
-        {
-            _loggerService.Value.Exception("ENExcepiton occurred", exception);
-            return Task.CompletedTask;
-        }
     }
 }
 
