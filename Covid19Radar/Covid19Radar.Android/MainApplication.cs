@@ -104,15 +104,6 @@ namespace Covid19Radar.Droid
 
             try
             {
-                _eventLogSubmissionBackgroundService.Value.Schedule();
-            }
-            catch (Exception exception)
-            {
-                _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
-            }
-
-            try
-            {
                 _dataMaintainanceService.Value.Schedule();
             }
             catch (Exception exception)

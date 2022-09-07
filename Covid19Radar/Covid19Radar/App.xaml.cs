@@ -278,10 +278,6 @@ namespace Covid19Radar
 
                 await EventLogRepository.RotateAsync(
                     AppConstants.EventLogFileExpiredSeconds);
-
-                await EventLogService.SendAllAsync(
-                    AppConstants.EventLogMaxRequestSizeInBytes,
-                    AppConstants.EventLogMaxRetry);
             }
             catch (Exception ex)
             {

@@ -139,15 +139,6 @@ namespace Covid19Radar.iOS
 
             try
             {
-                _eventLogSubmissionBackgroundService.Value.Schedule();
-            }
-            catch (Exception exception)
-            {
-                _loggerService.Value.Exception("Failed to schedule EventLogSubmissionBackgroundService", exception);
-            }
-
-            try
-            {
                 _dataMaintainanceBackgroundService.Value.Schedule();
             }
             catch (Exception exception)
