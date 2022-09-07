@@ -55,7 +55,6 @@ namespace Covid19Radar.UnitTests.ViewModels
                 Times.Once()
             );
 
-            _mockSplashNavigationService.Verify(x => x.Prepare(), Times.Once());
             _mockSplashNavigationService.Verify(x => x.NavigateNextAsync(false), Times.Once());
         }
     }

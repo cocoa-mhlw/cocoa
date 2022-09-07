@@ -30,7 +30,7 @@ namespace Covid19Radar.Services
         public Destination Destination { get; set; }
         public INavigationParameters DestinationPageParameters { get; set; }
 
-        private TermsUpdateInfoModel _termsUpdateInfoModel;
+        private TermsUpdateInfoModel _termsUpdateInfoModel = new TermsUpdateInfoModel();
 
         public SplashNavigationService(
             INavigationService navigationService,
