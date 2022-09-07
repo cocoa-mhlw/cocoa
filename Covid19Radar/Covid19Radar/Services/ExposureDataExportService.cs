@@ -53,7 +53,6 @@ namespace Covid19Radar.Services
                 long enVersion = await _exposureNotificationApiService.GetVersionAsync();
                 List<DailySummary> dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync();
                 List<ExposureWindow> exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync();
-                ExposureConfiguration exposureConfiguration = await _exposureConfigurationRepository.GetExposureConfigurationAsync();
 
                 var exposureData = new ExposureData(
                     _essentialsService.Platform,
@@ -64,8 +63,7 @@ namespace Covid19Radar.Services
                     _essentialsService.BuildNumber,
                     enVersion.ToString(),
                     dailySummaryList,
-                    exposureWindowList,
-                    exposureConfiguration
+                    exposureWindowList
                     );
 
                 string exposureDataJson = JsonConvert.SerializeObject(exposureData, Formatting.Indented);
