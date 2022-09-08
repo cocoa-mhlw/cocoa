@@ -54,9 +54,6 @@ namespace Covid19Radar.iOS.Services
 
                     try
                     {
-                        await _eventLogRepository.RotateAsync(
-                            AppConstants.EventLogFileExpiredSeconds);
-
                         await _eventLogService.SendAllAsync(
                             AppConstants.EventLogMaxRequestSizeInBytes,
                             AppConstants.EventLogMaxRetry);

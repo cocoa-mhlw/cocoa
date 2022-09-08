@@ -24,9 +24,8 @@ namespace Covid19Radar.Droid.Services
 
         public DataMaintainanceBackgroundService(
             ILoggerService loggerService,
-            ILogFileService logFileService,
-            IEventLogRepository eventLogRepository
-            ) : base(loggerService, logFileService, eventLogRepository)
+            ILogFileService logFileService
+            ) : base(loggerService, logFileService)
         {
             // do nothing
         }
@@ -82,7 +81,7 @@ namespace Covid19Radar.Droid.Services
 
                 try
                 {
-                    dataMaintainanceBackgroundService.ExecuteAsync().GetAwaiter().GetResult();
+                    dataMaintainanceBackgroundService.Execute();
                     return Result.InvokeSuccess();
                 }
                 catch (Exception exception)

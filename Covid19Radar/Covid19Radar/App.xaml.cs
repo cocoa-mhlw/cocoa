@@ -243,16 +243,16 @@ namespace Covid19Radar
             container.Register<IDeviceInfoUtility, DeviceInfoUtility>(Reuse.Singleton);
         }
 
-        protected override async void OnStart()
+        protected override void OnStart()
         {
             base.OnStart();
-            await ExecuteBackgroundTask();
+            ExecuteBackgroundTask();
         }
 
-        protected override async void OnResume()
+        protected override void OnResume()
         {
             base.OnResume();
-            await ExecuteBackgroundTask();
+            ExecuteBackgroundTask();
         }
 
         protected override void OnSleep()
@@ -268,7 +268,7 @@ namespace Covid19Radar
             };
         }
 
-        private async Task ExecuteBackgroundTask()
+        private void ExecuteBackgroundTask()
         {
             LoggerService.StartMethod();
 
@@ -276,8 +276,6 @@ namespace Covid19Radar
             {
                 LogFileService.Rotate();
 
-                await EventLogRepository.RotateAsync(
-                    AppConstants.EventLogFileExpiredSeconds);
             }
             catch (Exception ex)
             {

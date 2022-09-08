@@ -14,30 +14,24 @@ namespace Covid19Radar.Services
         protected ILoggerService LoggerService { get; private set; }
 
         private readonly ILogFileService _logFileService;
-        private readonly IEventLogRepository _eventLogRepository;
 
         protected AbsDataMaintainanceBackgroundService(
             ILoggerService loggerService,
-            ILogFileService logFileService,
-            IEventLogRepository eventLogRepository)
+            ILogFileService logFileService)
         {
             LoggerService = loggerService;
             _logFileService = logFileService;
-            _eventLogRepository = eventLogRepository;
         }
 
         public abstract void Schedule();
 
-        public async Task ExecuteAsync()
+        public void Execute()
         {
             LoggerService.StartMethod();
 
             try
             {
                 _logFileService.Rotate();
-
-                await _eventLogRepository.RotateAsync(
-                    AppConstants.EventLogFileExpiredSeconds);
             }
             finally
             {

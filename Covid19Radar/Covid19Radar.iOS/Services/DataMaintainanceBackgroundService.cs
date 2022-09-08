@@ -22,9 +22,8 @@ namespace Covid19Radar.iOS.Services
 
         public DataMaintainanceBackgroundService(
             ILoggerService loggerService,
-            ILogFileService logFileService,
-            IEventLogRepository eventLogRepository
-            ) : base(loggerService, logFileService, eventLogRepository)
+            ILogFileService logFileService
+            ) : base(loggerService, logFileService)
         {
         }
 
@@ -41,13 +40,13 @@ namespace Covid19Radar.iOS.Services
                 var cancellationTokenSource = new CancellationTokenSource();
                 task.ExpirationHandler = cancellationTokenSource.Cancel;
 
-                _ = Task.Run(async () =>
+                _ = Task.Run(() =>
                 {
                     LoggerService.Info("Task.Run() start");
 
                     try
                     {
-                        await ExecuteAsync();
+                        Execute();
                         task.SetTaskCompleted(true);
                     }
                     catch (OperationCanceledException exception)

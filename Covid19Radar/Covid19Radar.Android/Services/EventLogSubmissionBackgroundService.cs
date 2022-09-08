@@ -89,9 +89,6 @@ namespace Covid19Radar.Droid.Services
                     {
                         loggerService.Info("Start event log submission background work.");
 
-                        await eventLogRepository.RotateAsync(
-                            AppConstants.EventLogFileExpiredSeconds);
-
                         await eventLogService.SendAllAsync(
                             AppConstants.EventLogMaxRequestSizeInBytes,
                             AppConstants.EventLogMaxRetry);
