@@ -46,7 +46,6 @@ namespace Covid19Radar.Droid.Services.Migration
 
             _exposureDetectionBackgroundService.Schedule();
             _dataMaintainanceBackgroundService.Schedule();
-            _eventLogSubmissionBackgroundService.Schedule();
 
             _loggerService.EndMethod();
 
