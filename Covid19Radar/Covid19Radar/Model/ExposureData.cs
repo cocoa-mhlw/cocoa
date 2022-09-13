@@ -37,9 +37,6 @@ namespace Covid19Radar.Model
         [JsonProperty("exposure_windows")]
         public readonly List<ExposureWindow> ExposureWindowList;
 
-        [JsonProperty("exposure_configuration")]
-        public readonly ExposureConfiguration ExposureConfiguration;
-
         public ExposureData(
             string platform,
             string platformVersion,
@@ -49,8 +46,7 @@ namespace Covid19Radar.Model
             string buildNumber,
             string enVersion,
             List<DailySummary> dailySummaryList,
-            List<ExposureWindow> exposureWindowList,
-            ExposureConfiguration exposureConfiguration
+            List<ExposureWindow> exposureWindowList
             )
         {
             Platform = platform;
@@ -62,7 +58,6 @@ namespace Covid19Radar.Model
             EnVersion = enVersion;
             DailySummaryList = dailySummaryList;
             ExposureWindowList = exposureWindowList;
-            ExposureConfiguration = exposureConfiguration;
         }
     }
 }

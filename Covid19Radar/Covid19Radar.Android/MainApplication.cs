@@ -149,7 +149,7 @@ namespace Covid19Radar.Droid
 
         public Task<ExposureConfiguration> GetExposureConfigurationAsync()
         {
-            return _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
+            return Task.FromResult(new ExposureConfiguration());
         }
 
         public async Task PreExposureDetectedAsync(ExposureConfiguration exposureConfiguration)

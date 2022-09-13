@@ -290,7 +290,7 @@ namespace Covid19Radar.iOS
 
         public Task<ExposureConfiguration> GetExposureConfigurationAsync()
         {
-            return _exposureConfigurationRepository.Value.GetExposureConfigurationAsync();
+            return Task.FromResult(new ExposureConfiguration());
         }
 
         public Task DiagnosisKeysDataMappingAppliedAsync()
