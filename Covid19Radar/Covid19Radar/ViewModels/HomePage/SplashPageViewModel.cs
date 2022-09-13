@@ -46,7 +46,6 @@ namespace Covid19Radar.ViewModels
             _splashNavigatoinService.Destination = destination;
             _splashNavigatoinService.DestinationPageParameters = parameters;
 
-            await _splashNavigatoinService.Prepare();
             await _splashNavigatoinService.NavigateNextAsync();
 
             _loggerService.EndMethod();
