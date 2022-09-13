@@ -68,7 +68,7 @@ namespace Covid19Radar.iOS.Services
                 {
                     try
                     {
-                        await ExposureDetectionAsync(cancellationTokenSource);
+
                         task.SetTaskCompleted(true);
                     }
                     catch (OperationCanceledException exception)

@@ -105,7 +105,7 @@ namespace Covid19Radar.Droid.Services
 
             try
             {
-                backgroundService.ExposureDetectionAsync().GetAwaiter().GetResult();
+
                 return Result.InvokeSuccess();
             }
             catch (IOException exception)
