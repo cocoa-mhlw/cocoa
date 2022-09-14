@@ -15,7 +15,6 @@ namespace Covid19Radar.Services
     {
         Destination Destination { get; set; }
         INavigationParameters DestinationPageParameters { get; set; }
-        Task Prepare();
         Task<INavigationResult> NavigateNextAsync(bool isSetupLaterEventLog = false);
     }
 
@@ -24,39 +23,18 @@ namespace Covid19Radar.Services
         private readonly INavigationService _navigationService;
         private readonly IUserDataRepository _userDataRepository;
         private readonly ILoggerService _loggerService;
-        private readonly ITermsUpdateService _termsUpdateService;
-        private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
 
         public Destination Destination { get; set; }
         public INavigationParameters DestinationPageParameters { get; set; }
 
-        private TermsUpdateInfoModel _termsUpdateInfoModel = new TermsUpdateInfoModel();
-
         public SplashNavigationService(
             INavigationService navigationService,
             IUserDataRepository userDataRepository,
-            ILoggerService loggerService,
-            ITermsUpdateService termsUpdateService,
-            ISendEventLogStateRepository sendEventLogStateRepository)
+            ILoggerService loggerService)
         {
             _navigationService = navigationService;
             _userDataRepository = userDataRepository;
-            _termsUpdateService = termsUpdateService;
             _loggerService = loggerService;
-            _sendEventLogStateRepository = sendEventLogStateRepository;
-        }
-
-        public async Task Prepare()
-        {
-            _loggerService.StartMethod();
-            try
-            {
-                _termsUpdateInfoModel = await _termsUpdateService.GetTermsUpdateInfo();
-            }
-            finally
-            {
-                _loggerService.EndMethod();
-            }
         }
 
         public async Task<INavigationResult> NavigateNextAsync(bool isSetupLaterEventLog = false)
@@ -72,26 +50,8 @@ namespace Covid19Radar.Services
                 {
                     _loggerService.Info("Is all agreed");
 
-                    if (_termsUpdateService.IsUpdated(TermsType.TermsOfService, _termsUpdateInfoModel))
-                    {
-                        name = $"/{nameof(ReAgreeTermsOfServicePage)}";
-                        parameters = ReAgreeTermsOfServicePage.BuildNavigationParams(_termsUpdateInfoModel.TermsOfService);
-                    }
-                    else if (_termsUpdateService.IsUpdated(TermsType.PrivacyPolicy, _termsUpdateInfoModel))
-                    {
-                        name = $"/{nameof(ReAgreePrivacyPolicyPage)}";
-                        parameters = ReAgreePrivacyPolicyPage.BuildNavigationParams(_termsUpdateInfoModel.PrivacyPolicy);
-                    }
-                    else if (!isSetupLaterEventLog && _sendEventLogStateRepository.IsExistNotSetEventType())
-                    {
-                        name = $"/{nameof(EventLogCooperationPage)}";
-                        parameters = EventLogCooperationPage.BuildNavigationParams(EventLogCooperationPage.TransitionReason.Splash);
-                    }
-                    else
-                    {
-                        name = Destination.ToPath();
-                        parameters = DestinationPageParameters;
-                    }
+                    name = Destination.ToPath();
+                    parameters = DestinationPageParameters;
                 }
                 else
                 {
