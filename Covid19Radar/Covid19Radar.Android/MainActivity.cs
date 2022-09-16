@@ -122,12 +122,12 @@ namespace Covid19Radar.Droid
                 else
                 {
                     _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
-                    await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters());
+                    await AppInstance?.NavigateToSplashAsync(Destination.EndOfServiceNotice, new NavigationParameters());
                 }
             }
             else if (intent.HasExtra(EXTRA_KEY_DESTINATION))
             {
-                int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.HomePage);
+                int ordinal = intent.GetIntExtra(EXTRA_KEY_DESTINATION, (int)Destination.EndOfServiceNotice);
                 var destination = (Destination)Enum.ToObject(typeof(Destination), ordinal);
 
                 _loggerService.Value.Info($"Intent has destination: {destination}");
@@ -137,7 +137,7 @@ namespace Covid19Radar.Droid
             }
             else
             {
-                await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters());
+                await AppInstance?.NavigateToSplashAsync(Destination.EndOfServiceNotice, new NavigationParameters());
             }
 
             _loggerService.Value.EndMethod();

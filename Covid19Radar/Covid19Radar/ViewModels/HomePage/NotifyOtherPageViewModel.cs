@@ -240,7 +240,7 @@ namespace Covid19Radar.ViewModels
                         AppResources.NotifyOtherPageDialogReturnHomeTitle,
                         AppResources.ButtonOk
                     );
-                    await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
+                    //await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
 
                     loggerService.Error($"Exceeded the number of trials.");
                     return;

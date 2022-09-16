@@ -36,7 +36,7 @@ namespace Covid19Radar.ViewModels
 
             await _migrationService.MigrateAsync();
 
-            Destination destination = Destination.HomePage;
+            Destination destination = Destination.EndOfServiceNotice;
             if (parameters.ContainsKey(SplashPage.DestinationKey))
             {
                 destination = parameters.GetValue<Destination>(SplashPage.DestinationKey);
