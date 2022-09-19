@@ -22,12 +22,6 @@ namespace Covid19Radar.UnitTests.Services
         private readonly Mock<IUserDataRepository> mockUserDataRepository;
         private readonly Mock<ILoggerService> mockLoggerService;
 
-        private readonly TermsUpdateInfoModel _termsUpdateInfoDefault = new TermsUpdateInfoModel
-        {
-            TermsOfService = new TermsUpdateInfoModel.Detail { Text = "Test: Terms of service", UpdateDateTimeJst = DateTime.Now },
-            PrivacyPolicy = new TermsUpdateInfoModel.Detail { Text = "Test: Privacy policy", UpdateDateTimeJst = DateTime.Now }
-        };
-
         public SplashNavigationServiceTests()
         {
             mockRepository = new MockRepository(MockBehavior.Default);
@@ -45,11 +39,11 @@ namespace Covid19Radar.UnitTests.Services
         }
 
         [Fact]
-        public async Task NavigateNextAsyncTest_Tutorial()
+        public async Task NavigateNextAsyncTest_EndOfServicePage()
         {
             SplashNavigationService unitUnderTest = CreateService();
 
-            unitUnderTest.Destination = Destination.HomePage;
+            unitUnderTest.Destination = Destination.EndOfServiceNotice;
             unitUnderTest.DestinationPageParameters = new NavigationParameters();
 
             mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(false);
@@ -57,7 +51,7 @@ namespace Covid19Radar.UnitTests.Services
             await unitUnderTest.NavigateNextAsync();
 
             mockUserDataRepository.Verify(x => x.IsAllAgreed(), Times.Once());
-            mockNavigatoinService.Verify(x => x.NavigateAsync("/TutorialPage1", It.IsAny<INavigationParameters>()), Times.Once());
+            mockNavigatoinService.Verify(x => x.NavigateAsync("/EndOfServicePage", It.IsAny<INavigationParameters>()), Times.Once());
         }
 
         [Fact]
@@ -65,7 +59,7 @@ namespace Covid19Radar.UnitTests.Services
         {
             SplashNavigationService unitUnderTest = CreateService();
 
-            unitUnderTest.Destination = Destination.HomePage;
+            unitUnderTest.Destination = Destination.EndOfServiceNotice;
             unitUnderTest.DestinationPageParameters = new NavigationParameters { { "test-key", "test-value" } };
 
             mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
@@ -74,7 +68,7 @@ namespace Covid19Radar.UnitTests.Services
 
             mockUserDataRepository.Verify(x => x.IsAllAgreed(), Times.Once());
             mockNavigatoinService.Verify(x => x.NavigateAsync(
-                Destination.HomePage.ToPath(),
+                Destination.EndOfServiceNotice.ToPath(),
                 It.Is<INavigationParameters>(x =>
                     x.ContainsKey("test-key") &&
                     x.GetValue<string>("test-key") == "test-value")),

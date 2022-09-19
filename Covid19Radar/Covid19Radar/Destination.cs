@@ -2,7 +2,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+using System;
 using Covid19Radar.Views;
+using Covid19Radar.Views.EndOfService;
 using Xamarin.Forms;
 
 namespace Covid19Radar
@@ -10,26 +12,25 @@ namespace Covid19Radar
     public enum Destination : int
     {
         SplashPage,
-        HomePage,
         ContactedNotifyPage,
         NotifyOtherPage,
+        EndOfServiceNotice,
+        EndOfService,
     }
 
     public static class DestinationExtensions
     {
         private static string SplashPagePath = "/" + nameof(SplashPage);
-        private static string HomePagePath => "/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage);
-        private static string ContactedNotifyPagePath => HomePagePath + "/" + nameof(ContactedNotifyPage);
-        private static string NotifyOtherPagePath => HomePagePath + "/" + nameof(NotifyOtherPage);
+        private static string EndOfServiceNoticePath => $"/{nameof(MenuPage)}/{nameof(NavigationPage)}/{nameof(EndOfServiceNoticePage)}";
+        private static string EndOfServicePath => $"/{nameof(EndOfServicePage)}";
 
         public static string ToPath(this Destination destination)
         {
             return destination switch
             {
                 Destination.SplashPage => SplashPagePath,
-                Destination.HomePage => HomePagePath,
-                Destination.ContactedNotifyPage => ContactedNotifyPagePath,
-                Destination.NotifyOtherPage => NotifyOtherPagePath,
+                Destination.EndOfServiceNotice => EndOfServiceNoticePath,
+                Destination.EndOfService => EndOfServicePath,
                 _ => throw new System.NotImplementedException()
             };
         }

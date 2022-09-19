@@ -112,7 +112,7 @@ namespace Covid19Radar.iOS
 
             if (!IsUniversalLinks(launchOptions) && !IsLocalNotification(launchOptions))
             {
-                InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters()));
+                InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.EndOfServiceNotice, new NavigationParameters()));
             }
 
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
@@ -247,7 +247,7 @@ namespace Covid19Radar.iOS
                     else
                     {
                         _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
-                        InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.HomePage, new NavigationParameters()));
+                        InvokeOnMainThread(async () => await AppInstance?.NavigateToSplashAsync(Destination.EndOfServiceNotice, new NavigationParameters()));
                     }
                 }
             }

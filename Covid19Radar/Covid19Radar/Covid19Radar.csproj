@@ -28,6 +28,7 @@
     <None Remove="Controls\**" />
     <None Remove="ViewModels\ExposureCheckPage\" />
     <None Remove="Polly" />
+    <None Remove="Views\EndOfService\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -141,6 +142,7 @@
     <Folder Include="Controls\" />
     <Folder Include="Services\Migration\" />
     <Folder Include="Repository\" />
+    <Folder Include="Views\EndOfService\" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)'=='Release'">
     <Compile Remove="ViewModels/Settings/DebugPageViewModel.cs" />

@@ -17,7 +17,7 @@ namespace Covid19Radar.ViewModels
 
         public Command OnToHomeButton => new Command(async () =>
         {
-            _ = await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
+            //_ = await NavigationService.NavigateAsync(Destination.HomePage.ToPath());
         });
     }
 }

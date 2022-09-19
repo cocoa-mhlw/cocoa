@@ -17,6 +17,8 @@ using Covid19Radar.Common;
 using Covid19Radar.Services.Migration;
 using Covid19Radar.Repository;
 using DryIoc;
+using Covid19Radar.Views.EndOfService;
+using Covid19Radar.Model;
 
 /*
  * Our mission...is
@@ -187,6 +189,10 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<HowToReceiveProcessingNumberPage>();
             containerRegistry.RegisterForNavigation<WebAccessibilityPolicyPage>();
             containerRegistry.RegisterForNavigation<TroubleshootingPage>();
+
+            // End of service
+            containerRegistry.RegisterForNavigation<EndOfServiceNoticePage>();
+            containerRegistry.RegisterForNavigation<EndOfServicePage>();
         }
 
         private static void RegisterCommonTypes(IContainer container)

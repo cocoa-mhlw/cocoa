@@ -55,7 +55,7 @@ namespace Covid19Radar.Services
                 }
                 else
                 {
-                    name = $"/{nameof(TutorialPage1)}";
+                    name = Destination.EndOfService.ToPath();
                     parameters = null;
                 }
 
