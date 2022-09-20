@@ -15,6 +15,7 @@ using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 
@@ -60,60 +61,7 @@ namespace Covid19Radar.Api
                 return validateResult.ErrorActionResult;
             }
 
-            var diagnosis = JsonConvert.DeserializeObject<V2DiagnosisSubmissionParameter>(requestBody);
-            var reqTime = DateTimeOffset.UtcNow;
-
-            // payload valid
-            if (!diagnosis.IsValid())
-            {
-                Logger.LogInformation($"Invalid parameter");
-                return new BadRequestErrorMessageResult("Invalid parameter");
-            }
-
-            // validation support region
-            if (!diagnosis.Regions.Any(_ => SupportRegions.Contains(_)))
-            {
-                Logger.LogInformation($"Regions not supported.");
-                return new BadRequestErrorMessageResult("Regions not supported.");
-            }
-
-            // validation device
-            Logger.LogInformation($"regions: {((diagnosis?.Regions != null) && (diagnosis.Regions.Any()) ? string.Join(", ", diagnosis.Regions) : "Empty")}, " +
-                      $"platform: {diagnosis?.Platform}, " +
-                      $"deviceVerificationPayload: {diagnosis?.DeviceVerificationPayload}, " +
-                      $"appPackageName: {diagnosis?.AppPackageName}, " +
-                      $"padding: {diagnosis?.Padding}");
-            if (!await DeviceCheck.Validation(diagnosis.Platform, diagnosis, reqTime))
-            {
-                Logger.LogInformation($"Invalid Device");
-                return new BadRequestErrorMessageResult("Invalid Device");
-            }
-
-            // Check Chaff request for production
-            // https://google.github.io/exposure-notifications-server/server_functional_requirements.html
-            if (req.Headers?.ContainsKey(CHAFF_HEADER) ?? false)
-            {
-                return new NoContentResult();
-            }
-
-
-            // validatetion VerificationPayload
-            var verificationResult = await VerificationService.VerificationAsync(diagnosis.VerificationPayload);
-            if (verificationResult != 200)
-            {
-                return new ObjectResult("Bad VerificationPayload") { StatusCode = verificationResult };
-            }
-
-            var timestamp = DateTimeOffset.UtcNow;
-            var keys = diagnosis.Keys.Select(_ => _.ToModel(diagnosis, (ulong)timestamp.ToUnixTimeSeconds())).ToArray();
-
-
-            foreach (var k in keys)
-            {
-                await TekRepository.UpsertAsync(k);
-            }
-
-            return new NoContentResult();
+            return new StatusCodeResult((int)HttpStatusCode.NotAcceptable);
         }
     }
 }
