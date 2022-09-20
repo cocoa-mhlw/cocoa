@@ -110,20 +110,7 @@ namespace Covid19Radar.Droid
             {
                 _loggerService.Value.Info("Intent has data.");
 
-                var processingNumber = intent.Data.GetQueryParameter(AppConstants.LinkQueryKeyProcessingNumber);
-
-                if (processingNumber != null && Validator.IsValidProcessingNumber(processingNumber))
-                {
-                    _loggerService.Value.Info("ProcessingNumber is valid.");
-
-                    var navigationParameters = NotifyOtherPage.BuildNavigationParams(processingNumber);
-                    await AppInstance?.NavigateToSplashAsync(Destination.NotifyOtherPage, navigationParameters);
-                }
-                else
-                {
-                    _loggerService.Value.Error("Failed to navigate NotifyOtherPage with invalid processingNumber");
-                    await AppInstance?.NavigateToSplashAsync(Destination.EndOfServiceNotice, new NavigationParameters());
-                }
+                await AppInstance?.NavigateToSplashAsync(Destination.EndOfServiceNotice, new NavigationParameters());
             }
             else if (intent.HasExtra(EXTRA_KEY_DESTINATION))
             {

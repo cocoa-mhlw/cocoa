@@ -13,7 +13,6 @@ namespace Covid19Radar
     {
         SplashPage,
         ContactedNotifyPage,
-        NotifyOtherPage,
         EndOfServiceNotice,
         EndOfService,
     }
