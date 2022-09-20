@@ -44,16 +44,16 @@ namespace Covid19Radar.Api.Tests
         }
 
         [DataTestMethod]
-        [DataRow(true, true, "NotSupportRegion", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
-        [DataRow(true, true, "NotSupportRegion", "xxxxx", "", false, HttpStatusCode.BadRequest)]
-        [DataRow(false, false, "Region1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
-        [DataRow(true, false, "Region1", "xxxxx", "ios", false, HttpStatusCode.BadRequest)]
-        [DataRow(true, true, "Region1", "xxxxx", "ios", false, HttpStatusCode.NoContent)]
-        [DataRow(true, true, "NotSupportRegion", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
-        [DataRow(true, true, "NotSupportRegion", "xxxxx", "", true, HttpStatusCode.BadRequest)]
-        [DataRow(false, false, "Region1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
-        [DataRow(true, false, "Region1", "xxxxx", "ios", true, HttpStatusCode.BadRequest)]
-        [DataRow(true, true, "Region1", "xxxxx", "ios", true, HttpStatusCode.NoContent)]
+        [DataRow(true, true, "NotSupportRegion", "xxxxx", "ios", false, HttpStatusCode.NotAcceptable)]
+        [DataRow(true, true, "NotSupportRegion", "xxxxx", "", false, HttpStatusCode.NotAcceptable)]
+        [DataRow(false, false, "Region1", "xxxxx", "ios", false, HttpStatusCode.NotAcceptable)]
+        [DataRow(true, false, "Region1", "xxxxx", "ios", false, HttpStatusCode.NotAcceptable)]
+        [DataRow(true, true, "Region1", "xxxxx", "ios", false, HttpStatusCode.NotAcceptable)]
+        [DataRow(true, true, "NotSupportRegion", "xxxxx", "ios", true, HttpStatusCode.NotAcceptable)]
+        [DataRow(true, true, "NotSupportRegion", "xxxxx", "", true, HttpStatusCode.NotAcceptable)]
+        [DataRow(false, false, "Region1", "xxxxx", "ios", true, HttpStatusCode.NotAcceptable)]
+        [DataRow(true, false, "Region1", "xxxxx", "ios", true, HttpStatusCode.NotAcceptable)]
+        [DataRow(true, true, "Region1", "xxxxx", "ios", true, HttpStatusCode.NotAcceptable)]
         public async Task RunAsyncMethod(bool isValid,
                                          bool isValidDevice,
                                          string region,

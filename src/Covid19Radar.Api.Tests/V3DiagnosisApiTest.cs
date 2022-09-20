@@ -166,7 +166,7 @@ namespace Covid19Radar.Api.Tests
         }
 
         [DataTestMethod]
-        [DataRow(true, true, "Region1", "xxxxx", "ios", true, HttpStatusCode.OK)]
+        [DataRow(true, true, "Region1", "xxxxx", "ios", true, HttpStatusCode.NotAcceptable)]
         public async Task SetDaysSinceOnsetOfSymptomsTest(bool isValid,
                                          bool isValidDevice,
                                          string region,
@@ -284,6 +284,10 @@ namespace Covid19Radar.Api.Tests
                 Assert.AreEqual(6, resultParameter.Keys[14].DaysSinceOnsetOfSymptoms);
                 Assert.AreEqual(7, resultParameter.Keys[15].DaysSinceOnsetOfSymptoms);
                 Assert.AreEqual(8, resultParameter.Keys[16].DaysSinceOnsetOfSymptoms);
+            }
+            else if(result is StatusCodeResult statucCodeResult)
+            {
+                Assert.AreEqual((int)HttpStatusCode.NotAcceptable, statucCodeResult.StatusCode);
             }
             else
             {
