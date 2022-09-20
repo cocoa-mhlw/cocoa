@@ -29,7 +29,7 @@ namespace Covid19Radar.Api.Tests
         }
 
         [TestMethod]
-        public async Task RunAsyncMethod()
+        public void RunAsyncMethod()
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
@@ -48,12 +48,12 @@ namespace Covid19Radar.Api.Tests
             config.Setup(_ => _["AzureFrontDoorId"]).Returns("3a1f9e76-f8c9-4000-b4e0-9bb08abe9fe5");
 
             // action
-            await registerApi.RunAsync(context.Object.Request);
+            registerApi.RunAsync(context.Object.Request);
             // assert
         }
 
         [TestMethod]
-        public async Task RunAsyncMethodOnErrorValidationServer()
+        public void RunAsyncMethodOnErrorValidationServer()
         {
             // preparation
             var userRepo = new Mock<IUserRepository>();
@@ -66,7 +66,7 @@ namespace Covid19Radar.Api.Tests
             var context = new Mock<HttpContext>();
 
             // action
-            var result = await registerApi.RunAsync(context.Object.Request);
+            var result = registerApi.RunAsync(context.Object.Request);
             // assert
             Assert.AreEqual(IValidationServerService.ValidateResult.Error.ErrorActionResult, result);
         }

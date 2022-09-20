@@ -38,7 +38,7 @@ namespace Covid19Radar.Api
         }
 
         [FunctionName(nameof(RegisterApi))]
-        public async Task<IActionResult> RunAsync(
+        public IActionResult RunAsync(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "register")] HttpRequest req)
         {
             Logger.LogInformation("C# HTTP trigger function processed a request.");
@@ -50,12 +50,7 @@ namespace Covid19Radar.Api
                 return validateResult.ErrorActionResult;
             }
 
-            // UserUuid
-            var userUuid = Guid.NewGuid().ToString("N")
-                + DateTime.UtcNow.Ticks.ToString();
-
-            // save to DB
-            return await Register(userUuid);
+            return new OkResult();
         }
 
         private async Task<IActionResult> Register(string userUuid)
