@@ -13,7 +13,7 @@ parameters:
 - name: image
   displayName: Pool Image
   type: string
-  default: windows-2019
+  default: windows-2022
   values:
   - windows-latest
   - windows-2022
@@ -43,11 +43,6 @@ stages:
     jobs:
     - job:
       steps:
-      - task: VisualStudioTestPlatformInstaller@1
-        displayName: 'Visual Studio Test Platform Installer'
-        inputs:
-          versionSelector: specificVersion
-          testPlatformVersion: 16.6.1
       - task: DotNetCoreCLI@2 
         displayName: 'dotnet restore'
         inputs:
@@ -65,48 +60,54 @@ stages:
         inputs:
           command: test
           projects: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Api.Tests/*.Tests.csproj'
-          arguments: '--logger trx --settings $(System.DefaultWorkingDirectory)/Covid19Radar.Functions.runsettings --collect:"XPlat Code Coverage"'
+          arguments: '--configuration ${{ parameters.configuration }} --logger trx --no-build --settings $(System.DefaultWorkingDirectory)/Covid19Radar.Functions.runsettings --collect:"XPlat Code Coverage"'
       - task: PublishTestResults@2
         inputs:
           testResultsFormat: 'VSTest'
           testResultsFiles: '**/*.trx'
           mergeTestResults: true
-      - task: DotNetCoreCLI@2
-        displayName: 'dotnet Install ReportGenerator tool'
-        inputs:
-          command: custom
-          custom: tool
-          arguments: 'install --tool-path . dotnet-reportgenerator-globaltool'
-      - task: BatchScript@1
-        displayName: 'Create reports'
-        inputs:
-          filename: ./reportgenerator
-          arguments: '-reports:$(Agent.TempDirectory)/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"Cobertura"'
       - task: PublishCodeCoverageResults@1
-        displayName: 'Publish code coverage from $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml  '
+        displayName: 'Publish code coverage from $(Agent.TempDirectory)/*/coverage.cobertura.xml'
         inputs:
           codeCoverageTool: Cobertura
-          summaryFileLocation: '$(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml  '
-          pathToSources: '$(System.DefaultWorkingDirectory)'
-          reportDirectory: '$(Build.SourcesDirectory)/coverlet/reports/'
+          summaryFileLocation: '$(Agent.TempDirectory)/*/coverage.cobertura.xml'
+          reportDirectory: '$(Build.SourcesDirectory)/TestResults/Coverage/Reports'
+      - task: DotNetCoreCLI@2
+        displayName: 'publish Api'
+        inputs:
+         command: publish
+         projects: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Api/Covid19Radar.Api.csproj'
+         arguments: '--configuration ${{ parameters.configuration }} --no-build --output $(System.DefaultWorkingDirectory)/publish_output/Api'
+         publishWebProjects: false
+         zipAfterPublish: false
+         modifyOutputPath: false
+      - task: DotNetCoreCLI@2
+        displayName: 'publish BackGround'
+        inputs:
+         command: publish
+         projects: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Background/Covid19Radar.Background.csproj'
+         arguments: '--configuration ${{ parameters.configuration }} --no-build --output $(System.DefaultWorkingDirectory)/publish_output/Background'
+         publishWebProjects: false
+         zipAfterPublish: false
+         modifyOutputPath: false
       - task: ArchiveFiles@2
         displayName: 'Archive Api'
         inputs:
-          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Api/bin/Release/netcoreapp3.1/'
+          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/publish_output/Api'
           includeRootFolder: false
+          archiveType: 'zip'
           archiveFile: '$(Build.ArtifactStagingDirectory)/Api.zip'
+          replaceExistingArchive: true
       - task: ArchiveFiles@2
         displayName: 'Archive Background'
         inputs:
-          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Background/bin/Release/netcoreapp3.1/'
+          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/publish_output/Background'
           includeRootFolder: false
+          archiveType: 'zip'
           archiveFile: '$(Build.ArtifactStagingDirectory)/Background.zip'
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish Artifact: drop'
-      - task: PublishBuildArtifacts@1
-        inputs:
-          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-          ArtifactName: 'drop'
+          replaceExistingArchive: true
+      - publish: $(Build.ArtifactStagingDirectory)
+        artifact: drop 
   - stage: deploy
     dependsOn:
     - build_and_unit_test
