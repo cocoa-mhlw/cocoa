@@ -50,7 +50,13 @@ namespace Covid19Radar.Api
                 return validateResult.ErrorActionResult;
             }
 
-            return new OkResult();
+            return new OkObjectResult(new RegisterResultModel()
+            {
+                // set dummy infos
+                UserUuid = DUMMY_UUID,
+                Secret = DUMMY_SECRET,
+                JumpConsistentSeed = 0,
+            });
         }
 
         private async Task<IActionResult> Register(string userUuid)
