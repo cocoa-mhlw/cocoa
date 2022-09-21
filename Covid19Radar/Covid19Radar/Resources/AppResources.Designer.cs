@@ -526,6 +526,42 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string EndOfServicePageDescription1 {
+            get {
+                return ResourceManager.GetString("EndOfServicePageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string EndOfServicePageDescription2 {
+            get {
+                return ResourceManager.GetString("EndOfServicePageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string EndOfServicePageTextLink {
+            get {
+                return ResourceManager.GetString("EndOfServicePageTextLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string EndOfServicePageTitle {
+            get {
+                return ResourceManager.GetString("EndOfServicePageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string Error {

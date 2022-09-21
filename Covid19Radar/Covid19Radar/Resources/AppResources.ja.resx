@@ -1529,5 +1529,20 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>設定を保存しました</value>
     <comment>設定を保存しました</comment>
   </data>
-
+  <data name="EndOfServicePageTitle" xml:space="preserve">
+    <value>サービス終了のお知らせ</value>
+    <comment>サービス終了のお知らせ</comment>
+  </data>
+  <data name="EndOfServicePageDescription1" xml:space="preserve">
+    <value>接触確認アプリ「COCOA」は2022年◯月◯日をもってサービスを終了します。</value>
+    <comment>接触確認アプリ「COCOA」は2022年◯月◯日をもってサービスを終了します。</comment>
+  </data>
+  <data name="EndOfServicePageDescription2" xml:space="preserve">
+    <value>ご利用ありがとうございました。</value>
+    <comment>ご利用ありがとうございました。</comment>
+  </data>
+  <data name="EndOfServicePageTextLink" xml:space="preserve">
+    <value>詳細を確認する</value>
+    <comment>詳細を確認する</comment>
+  </data>
 </root>
