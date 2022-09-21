@@ -13,11 +13,10 @@ parameters:
 - name: image
   displayName: Pool Image
   type: string
-  default: windows-2019
+  default: windows-2022
   values:
   - windows-latest
   - windows-2022
-  - windows-2019
   - ubuntu-latest
   - ubuntu-20.04
   - ubuntu-18.04
