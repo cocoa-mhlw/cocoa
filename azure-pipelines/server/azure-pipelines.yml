@@ -92,13 +92,13 @@ stages:
       - task: ArchiveFiles@2
         displayName: 'Archive Api'
         inputs:
-          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Api/bin/Release/netcoreapp3.1/'
+          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Api/bin/Release/net6.0/'
           includeRootFolder: false
           archiveFile: '$(Build.ArtifactStagingDirectory)/Api.zip'
       - task: ArchiveFiles@2
         displayName: 'Archive Background'
         inputs:
-          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Background/bin/Release/netcoreapp3.1/'
+          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src/Covid19Radar.Background/bin/Release/net6.0/'
           includeRootFolder: false
           archiveFile: '$(Build.ArtifactStagingDirectory)/Background.zip'
       - task: PublishBuildArtifacts@1
