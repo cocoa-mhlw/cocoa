@@ -36,7 +36,8 @@ namespace Covid19Radar.iOS.Services
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalPathService localPathService,
-            IDateTimeUtility dateTimeUtility
+            IDateTimeUtility dateTimeUtility,
+            ILocalNotificationService localNotificationService
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
@@ -45,7 +46,8 @@ namespace Covid19Radar.iOS.Services
                 userDataRepository,
                 serverConfigurationRepository,
                 localPathService,
-                dateTimeUtility
+                dateTimeUtility,
+                localNotificationService
                 )
         {
             _loggerService = loggerService;
@@ -68,7 +70,7 @@ namespace Covid19Radar.iOS.Services
                 {
                     try
                     {
-
+                        await ShowEndOfServiceNotificationAync();
                         task.SetTaskCompleted(true);
                     }
                     catch (OperationCanceledException exception)

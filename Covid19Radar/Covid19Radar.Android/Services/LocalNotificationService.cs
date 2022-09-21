@@ -58,35 +58,6 @@ namespace Covid19Radar.Droid.Services
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task ShowExposureNotificationAsync()
         {
-            _loggerService.StartMethod();
-
-            Intent intent = MainActivity.NewIntent(Platform.AppContext, Destination.ContactedNotifyPage);
-            intent.AddFlags(ActivityFlags.ClearTask);
-
-            PendingIntent pendingIntent = PendingIntent.GetActivity(
-                Platform.AppContext,
-                REQUEST_CODE,
-                intent,
-                PendingIntentFlags.CancelCurrent | PendingIntentFlags.Immutable
-                );
-
-            var notification = new NotificationCompat
-                .Builder(Platform.AppContext, NOTIFICATION_CHANNEL_ID)
-                .SetStyle(new NotificationCompat.BigTextStyle())
-                .SetSmallIcon(Resource.Drawable.ic_notification)
-                .SetContentTitle(AppResources.LocalExposureNotificationTitle)
-                .SetContentText(AppResources.LocalExposureNotificationContent)
-                .SetVisibility(NotificationCompat.VisibilitySecret)
-                .SetContentIntent(pendingIntent)
-                .SetLocalOnly(true)
-                .SetAutoCancel(true)
-                .Build();
-
-            var nm = NotificationManagerCompat.From(Platform.AppContext);
-            nm.Notify(NOTIFICATION_ID_EXPOSURE, notification);
-
-            _loggerService.Info("Local exposure notification shown.");
-            _loggerService.EndMethod();
         }
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
 
@@ -110,5 +81,40 @@ namespace Covid19Radar.Droid.Services
             return false;
         }
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+
+        public async Task ShowEndOfServiceNoticationAsync()
+        {
+            _loggerService.StartMethod();
+
+            Intent intent = MainActivity.NewIntent(Platform.AppContext, Destination.EndOfServiceNotice);
+            intent.AddFlags(ActivityFlags.ClearTask);
+
+            PendingIntent pendingIntent = PendingIntent.GetActivity(
+                Platform.AppContext,
+                REQUEST_CODE,
+                intent,
+                PendingIntentFlags.CancelCurrent | PendingIntentFlags.Immutable
+                );
+
+            var notification = new NotificationCompat
+                .Builder(Platform.AppContext, NOTIFICATION_CHANNEL_ID)
+                .SetStyle(new NotificationCompat.BigTextStyle())
+                .SetSmallIcon(Resource.Drawable.ic_notification)
+                .SetContentTitle(AppResources.EndOfServiceNotificationTitle)
+                .SetContentText(AppResources.EndOfServiceNotificationContent)
+                .SetVisibility(NotificationCompat.VisibilitySecret)
+                .SetContentIntent(pendingIntent)
+                .SetLocalOnly(true)
+                .SetAutoCancel(true)
+                .Build();
+
+            var nm = NotificationManagerCompat.From(Platform.AppContext);
+            nm.Notify(NOTIFICATION_ID_EXPOSURE, notification);
+
+            await Task.CompletedTask;
+
+            _loggerService.Info("End-of-service notification shown.");
+            _loggerService.EndMethod();
+        }
     }
 }

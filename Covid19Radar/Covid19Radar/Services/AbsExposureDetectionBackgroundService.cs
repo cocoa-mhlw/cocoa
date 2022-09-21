@@ -28,6 +28,7 @@ namespace Covid19Radar.Services
         private readonly IServerConfigurationRepository _serverConfigurationRepository;
         private readonly ILocalPathService _localPathService;
         private readonly IDateTimeUtility _dateTimeUtility;
+        private readonly ILocalNotificationService _localNotificationService;
 
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
@@ -39,7 +40,8 @@ namespace Covid19Radar.Services
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalPathService localPathService,
-            IDateTimeUtility dateTimeUtility
+            IDateTimeUtility dateTimeUtility,
+            ILocalNotificationService localNotificationService
             )
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
@@ -50,6 +52,7 @@ namespace Covid19Radar.Services
             _serverConfigurationRepository = serverConfigurationRepository;
             _localPathService = localPathService;
             _dateTimeUtility = dateTimeUtility;
+            _localNotificationService = localNotificationService;
         }
 
         public abstract void Schedule();
@@ -236,6 +239,16 @@ namespace Covid19Radar.Services
         private bool CheckMaxPerDayExposureDetectionAPILimitReached(ENException ex)
         {
             return ex.Code == ENException.Code_iOS.RateLimited || ex.Code == ENException.Code_Android.FAILED_RATE_LIMITED;
+        }
+
+        public virtual async Task ShowEndOfServiceNotificationAync(CancellationTokenSource cancellationTokenSource = null)
+        {
+            _loggerService.StartMethod();
+            if (_userDataRepository.IsAllAgreed())
+            {
+                await _localNotificationService.ShowEndOfServiceNoticationAsync();
+            }
+            _loggerService.EndMethod();
         }
     }
 }

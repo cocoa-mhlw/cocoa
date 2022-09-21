@@ -104,7 +104,7 @@ namespace Covid19Radar.iOS
             _notificationCenterDelegate.OnRecieved += async (UserNotificationCenterDelegate sender, UNNotificationResponse response) =>
             {
                 var navigationParameters = new NavigationParameters();
-                await AppInstance?.NavigateToSplashAsync(Destination.ContactedNotifyPage, navigationParameters);
+                await AppInstance?.NavigateToSplashAsync(Destination.EndOfServiceNotice, navigationParameters);
             };
             UNUserNotificationCenter.Current.Delegate = _notificationCenterDelegate;
 

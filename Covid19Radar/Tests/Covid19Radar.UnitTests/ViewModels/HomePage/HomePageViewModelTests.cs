@@ -81,7 +81,8 @@ namespace Covid19Radar.UnitTests.ViewModels
                 userDataRepository,
                 mockServerConfigurationRepository.Object,
                 mockLocalPathService.Object,
-                mockDateTimeUtility.Object
+                mockDateTimeUtility.Object,
+                mockLocalNotificationService.Object
                 );
             exposureDataRepository = new ExposureDataRepository(
                     mockSecureStorageService.Object,
