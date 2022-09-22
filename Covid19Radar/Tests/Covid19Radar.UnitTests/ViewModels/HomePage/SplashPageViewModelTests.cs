@@ -20,6 +20,7 @@ namespace Covid19Radar.UnitTests.ViewModels
         private readonly Mock<ILoggerService> _mockLoggerService;
         private readonly Mock<IMigrationService> _mockMigrationService;
         private readonly Mock<ISplashNavigationService> _mockSplashNavigationService;
+        private readonly Mock<ILocalNotificationService> _mockLocalNotificationService;
 
         public SplashPageViewModelTests()
         {
@@ -28,6 +29,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             _mockLoggerService = _mockRepository.Create<ILoggerService>();
             _mockMigrationService = _mockRepository.Create<IMigrationService>();
             _mockSplashNavigationService = _mockRepository.Create<ISplashNavigationService>();
+            _mockLocalNotificationService = _mockRepository.Create<ILocalNotificationService>();
         }
 
         public SplashPageViewModel CreateViewModel()
@@ -36,7 +38,8 @@ namespace Covid19Radar.UnitTests.ViewModels
                 _mockNavigationService.Object,
                 _mockLoggerService.Object,
                 _mockMigrationService.Object,
-                _mockSplashNavigationService.Object
+                _mockSplashNavigationService.Object,
+                _mockLocalNotificationService.Object
             );
         }
 
@@ -44,11 +47,11 @@ namespace Covid19Radar.UnitTests.ViewModels
         public void OnNavigatedToTest()
         {
             SplashPageViewModel unitUnderTest = CreateViewModel();
-            unitUnderTest.OnNavigatedTo(SplashPage.BuildNavigationParams(Destination.ContactedNotifyPage, new NavigationParameters { { "test-key", "test-value" } }));
+            unitUnderTest.OnNavigatedTo(SplashPage.BuildNavigationParams(Destination.EndOfServiceNotice, new NavigationParameters { { "test-key", "test-value" } }));
 
             _mockMigrationService.Verify(x => x.MigrateAsync(), Times.Once());
 
-            _mockSplashNavigationService.VerifySet(x => x.Destination = Destination.ContactedNotifyPage, Times.Once());
+            _mockSplashNavigationService.VerifySet(x => x.Destination = Destination.EndOfServiceNotice, Times.Once());
             _mockSplashNavigationService.VerifySet(x =>
                 x.DestinationPageParameters = It.Is<INavigationParameters>(x =>
                     x.ContainsKey("test-key") && x.GetValue<string>("test-key") == "test-value"),

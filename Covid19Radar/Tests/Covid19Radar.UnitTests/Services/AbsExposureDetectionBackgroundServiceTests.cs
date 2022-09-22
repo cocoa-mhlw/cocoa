@@ -32,6 +32,7 @@ namespace Covid19Radar.UnitTests.Services
         private readonly Mock<IServerConfigurationRepository> mockServerConfigurationRepository;
         private readonly Mock<ILocalPathService> mockLocalPathService;
         private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
+        private readonly Mock<ILocalNotificationService> mockLocalNotificationService;
 
         #endregion
 
@@ -48,6 +49,7 @@ namespace Covid19Radar.UnitTests.Services
             mockServerConfigurationRepository = mockRepository.Create<IServerConfigurationRepository>();
             mockLocalPathService = mockRepository.Create<ILocalPathService>();
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
+            mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
         }
 
         #endregion
@@ -79,7 +81,8 @@ namespace Covid19Radar.UnitTests.Services
                 mockUserDataRepository.Object,
                 mockServerConfigurationRepository.Object,
                 mockLocalPathService.Object,
-                mockDateTimeUtility.Object
+                mockDateTimeUtility.Object,
+                mockLocalNotificationService.Object
                 );
         }
 
@@ -517,7 +520,8 @@ namespace Covid19Radar.UnitTests.Services
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalPathService localPathService,
-            IDateTimeUtility dateTimeUtility
+            IDateTimeUtility dateTimeUtility,
+            ILocalNotificationService localNotificationService
         ) : base(
             diagnosisKeyRepository,
             exposureNotificationApiService,
@@ -526,7 +530,8 @@ namespace Covid19Radar.UnitTests.Services
             userDataRepository,
             serverConfigurationRepository,
             localPathService,
-            dateTimeUtility
+            dateTimeUtility,
+            localNotificationService
         )
         {
 
@@ -536,6 +541,11 @@ namespace Covid19Radar.UnitTests.Services
         public override void Schedule()
         {
             throw new NotImplementedException();
+        }
+
+        public override async Task ShowEndOfServiceNotificationAync(CancellationTokenSource cancellationTokenSource = null)
+        {
+            await Task.CompletedTask;
         }
     }
     #endregion

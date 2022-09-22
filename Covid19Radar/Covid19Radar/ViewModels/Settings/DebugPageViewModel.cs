@@ -226,6 +226,11 @@ namespace Covid19Radar.ViewModels
             await _localNotificationService.ShowExposureNotificationAsync();
         });
 
+        public Command OnClickShowEndOfServiceNotification => new Command(async () =>
+        {
+            await _localNotificationService.ShowEndOfServiceNoticationAsync();
+        });
+
         public Command OnClickExportExposureWindow => new Command(async () =>
         {
             var exposureWindows = await _exposureDataRepository.GetExposureWindowsAsync();

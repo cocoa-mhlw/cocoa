@@ -32,15 +32,13 @@ namespace Covid19Radar.iOS.Services
 
             _loggerService.EndMethod();
         }
+
+
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
 
         public async Task ShowExposureNotificationAsync()
         {
-            _loggerService.StartMethod();
-
-            await ScheduleLocalNotificationAsync();
-
-            _loggerService.EndMethod();
+            await Task.CompletedTask;
         }
 
         private void AskPermissionForUserNotification()
@@ -51,35 +49,6 @@ namespace Covid19Radar.iOS.Services
             {
                 _loggerService.Info($"Ask permission for user notification: {granted}");
             });
-
-            _loggerService.EndMethod();
-        }
-
-        private async Task ScheduleLocalNotificationAsync()
-        {
-            _loggerService.StartMethod();
-
-            try
-            {
-                var settings = await UNUserNotificationCenter.Current.GetNotificationSettingsAsync();
-                if (settings.AuthorizationStatus != UNAuthorizationStatus.Authorized)
-                {
-                    throw new Exception($"UserNotification is not authorized: {settings.AuthorizationStatus}");
-                }
-
-                var content = new UNMutableNotificationContent();
-
-                content.Title = AppResources.LocalExposureNotificationTitle;
-                content.Body = AppResources.LocalExposureNotificationContent;
-
-                var request = UNNotificationRequest.FromIdentifier(NOTIFICATION_ID, content, null);
-                var notificationCenter = UNUserNotificationCenter.Current;
-                await notificationCenter.AddNotificationRequestAsync(request);
-            }
-            catch (Exception e)
-            {
-                _loggerService.Exception("Exception occurred", e);
-            }
 
             _loggerService.EndMethod();
         }
@@ -112,5 +81,42 @@ namespace Covid19Radar.iOS.Services
 
             return settings.AuthorizationStatus == UNAuthorizationStatus.Denied;
         }
+
+        public async Task ShowEndOfServiceNoticationAsync()
+        {
+            _loggerService.StartMethod();
+            await ScheduleEndOfServiceNoticationAsync();
+            _loggerService.EndMethod();
+        }
+
+        private async Task ScheduleEndOfServiceNoticationAsync()
+        {
+            _loggerService.StartMethod();
+
+            try
+            {
+                var settings = await UNUserNotificationCenter.Current.GetNotificationSettingsAsync();
+                if (settings.AuthorizationStatus != UNAuthorizationStatus.Authorized)
+                {
+                    throw new Exception($"UserNotification is not authorized: {settings.AuthorizationStatus}");
+                }
+
+                var content = new UNMutableNotificationContent();
+
+                content.Title = AppResources.EndOfServiceNotificationTitle;
+                content.Body = AppResources.EndOfServiceNotificationContent;
+
+                var request = UNNotificationRequest.FromIdentifier(NOTIFICATION_ID, content, null);
+                var notificationCenter = UNUserNotificationCenter.Current;
+                await notificationCenter.AddNotificationRequestAsync(request);
+            }
+            catch (Exception e)
+            {
+                _loggerService.Exception("Exception occurred", e);
+            }
+
+            _loggerService.EndMethod();
+        }
+
     }
 }

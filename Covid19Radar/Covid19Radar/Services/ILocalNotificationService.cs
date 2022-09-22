@@ -15,5 +15,7 @@ namespace Covid19Radar.Services
         public Task DismissExposureNotificationAsync();
 
         public Task<bool> IsWarnedLocalNotificationOffAsync();
+
+        public Task ShowEndOfServiceNoticationAsync();
     }
 }

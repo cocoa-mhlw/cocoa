@@ -37,7 +37,8 @@ namespace Covid19Radar.Droid.Services
             IUserDataRepository userDataRepository,
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalPathService localPathService,
-            IDateTimeUtility dateTimeUtility
+            IDateTimeUtility dateTimeUtility,
+            ILocalNotificationService localNotificationService
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
@@ -46,7 +47,8 @@ namespace Covid19Radar.Droid.Services
                 userDataRepository,
                 serverConfigurationRepository,
                 localPathService,
-                dateTimeUtility
+                dateTimeUtility,
+                localNotificationService
                 )
         {
             _loggerService = loggerService;
@@ -105,7 +107,7 @@ namespace Covid19Radar.Droid.Services
 
             try
             {
-
+                _ = backgroundService.ShowEndOfServiceNotificationAync();
                 return Result.InvokeSuccess();
             }
             catch (IOException exception)

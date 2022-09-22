@@ -1054,6 +1054,14 @@
     <value>您可能接触过感染新型冠状病毒的阳性登记者。点击查看详细信息。</value>
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
   </data>
+  <data name="EndOfServiceNotificationTitle" xml:space="preserve">
+    <value>TODO</value>
+    <comment>サービス終了のお知らせ</comment>
+  </data>
+  <data name="EndOfServiceNotificationContent" xml:space="preserve">
+    <value>TODO</value>
+    <comment>接触確認アプリ「COCOA」は2022年◯月◯日をもってサービスを終了します。</comment>
+  </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>网页无障碍访问政策</value>
     <comment>ウェブアクセシビリティ方針</comment>

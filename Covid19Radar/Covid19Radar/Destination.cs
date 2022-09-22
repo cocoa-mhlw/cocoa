@@ -12,7 +12,6 @@ namespace Covid19Radar
     public enum Destination : int
     {
         SplashPage,
-        ContactedNotifyPage,
         EndOfServiceNotice,
         EndOfService,
     }
