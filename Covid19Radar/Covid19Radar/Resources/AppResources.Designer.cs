@@ -3009,6 +3009,51 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string TerminationOfUsePageDescription1 {
+            get {
+                return ResourceManager.GetString("TerminationOfUsePageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string TerminationOfUsePageDescription2 {
+            get {
+                return ResourceManager.GetString("TerminationOfUsePageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string TerminationOfUsePageDescription3 {
+            get {
+                return ResourceManager.GetString("TerminationOfUsePageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string TerminationOfUsePageTerminationButton {
+            get {
+                return ResourceManager.GetString("TerminationOfUsePageTerminationButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string TerminationOfUsePageTitle {
+            get {
+                return ResourceManager.GetString("TerminationOfUsePageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Terms of Use.
         /// </summary>
         public static string TermsofservicePageTitle {
