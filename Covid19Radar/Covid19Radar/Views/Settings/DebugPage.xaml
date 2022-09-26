@@ -256,6 +256,10 @@
                     Command="{prism:NavigateTo 'SplashPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="SplashPage" />
+                <Button
+                    Command="{prism:NavigateTo 'TerminationOfUsePage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="TerminationOfUsePage" />
                 </StackLayout>
             </Frame>
         </StackLayout>
