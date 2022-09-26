@@ -106,10 +106,6 @@
     <value>分享感染信息，并向他人发送匿名通知</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>初始化应用</value>
-    <comment>アプリを初期化</comment>
-  </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>隐私政策</value>
   </data>
@@ -146,14 +142,6 @@
     <comment>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</comment>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>Q&amp;A</value>
-    <comment>Q&amp;A</comment>
-  </data>
-  <data name="HelpMenuPageMenu" xml:space="preserve">
-    <value>Q&amp;A</value>
-    <comment>Q&amp;A</comment>
-  </data>
-  <data name="HelpMenuPageMenuReadText" xml:space="preserve">
     <value>Q&amp;A</value>
     <comment>Q&amp;A</comment>
   </data>
@@ -244,26 +232,6 @@
   <data name="SettingsPageLicenseButton" xml:space="preserve">
     <value>许可证表示</value>
     <comment>ライセンス表記</comment>
-  </data>
-  <data name="SettingsPageEventLogSettingTitle" xml:space="preserve">
-    <value>请协助改进应用</value>
-    <comment>アプリの改善に協力する</comment>
-  </data>
-  <data name="SettingsPageEventLogSettingDescription" xml:space="preserve">
-    <value>通过设置匿名发送信息来协助改进COCOA。</value>
-    <comment>匿名で送信する情報を設定することで、COCOA(※)の改善に協力できます。</comment>
-  </data>
-  <data name="SettingsPageEventLogSendButton" xml:space="preserve">
-    <value>发送信息设置</value>
-    <comment>送信情報を設定</comment>
-  </data>
-  <data name="SettingsPageReinitializeLabel" xml:space="preserve">
-    <value>初始化应用</value>
-    <comment>アプリを初期化する</comment>
-  </data>
-  <data name="SettingsPageReinitializeDescription" xml:space="preserve">
-    <value>删除过去14天的接触履历并回到初始状态。接触通知将不再表示直到再次使用应用。</value>
-    <comment>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</comment>
   </data>
   <data name="HelpMenuPageLabel1" xml:space="preserve">
     <value>如何记录密切接触</value>
@@ -529,10 +497,6 @@
     <value>同意内容</value>
     <comment>同意内容</comment>
   </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>应用版本</value>
-    <comment>アプリバージョン</comment>
-  </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
     <value>蓝牙已关闭。请启用设备的蓝牙。</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
@@ -561,10 +525,6 @@
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>启用通知</value>
-  </data>
-  <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>有关该应用的信息</value>
-    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>天</value>
@@ -725,10 +685,6 @@
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>提交反馈后，请与我们分享运行信息，以帮助我们改进COCOA</value>
     <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
-  </data>
-  <data name="InqueryPageButton1" xml:space="preserve">
-    <value>帮助</value>
-    <comment>よくある質問</comment>
   </data>
   <data name="InqueryPageButton2" xml:space="preserve">
     <value>反馈</value>

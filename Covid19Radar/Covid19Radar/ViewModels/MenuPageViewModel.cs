@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using Covid19Radar.Model;
 using Covid19Radar.Views;
 using Xamarin.Forms.Internals;
+using Covid19Radar.Views.EndOfService;
 
 namespace Covid19Radar.ViewModels
 {
@@ -36,7 +37,7 @@ namespace Covid19Radar.ViewModels
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf965",
-                PageName = nameof(HomePage),
+                PageName = nameof(EndOfServiceNoticePage),
                 Title = Resources.AppResources.HomePageTitle,
                 IconColor = MenuIconColorDefault,
                 TextColor = MenuTextColorDefault,
@@ -61,15 +62,6 @@ namespace Covid19Radar.ViewModels
                 IconColor = MenuIconColorDefault,
                 TextColor = MenuTextColorDefault,
                 ReadText = $"{Resources.AppResources.InqueryPageTitle_Menu} {Resources.AppResources.Button}"
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0eb",
-                PageName = nameof(HelpMenuPage),
-                Title = Resources.AppResources.HelpMenuPageMenu,
-                IconColor = MenuIconColorDefault,
-                TextColor = MenuTextColorDefault,
-                ReadText = $"{Resources.AppResources.HelpMenuPageMenuReadText} {Resources.AppResources.Button}"
             });
 #if DEBUG
             MenuItems.Add(new MainMenuModel()

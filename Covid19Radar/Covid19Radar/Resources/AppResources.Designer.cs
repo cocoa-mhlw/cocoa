@@ -238,15 +238,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Reinitialize the app.
-        /// </summary>
-        public static string ButtonReset {
-            get {
-                return ResourceManager.GetString("ButtonReset", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Return to registration.
         /// </summary>
         public static string ButtonReturnToRegistration {
@@ -1043,24 +1034,6 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Q&amp;A.
         /// </summary>
-        public static string HelpMenuPageMenu {
-            get {
-                return ResourceManager.GetString("HelpMenuPageMenu", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Q&amp;A.
-        /// </summary>
-        public static string HelpMenuPageMenuReadText {
-            get {
-                return ResourceManager.GetString("HelpMenuPageMenuReadText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Q&amp;A.
-        /// </summary>
         public static string HelpMenuPageTitle {
             get {
                 return ResourceManager.GetString("HelpMenuPageTitle", resourceCulture);
@@ -1664,15 +1637,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FAQ.
-        /// </summary>
-        public static string InqueryPageButton1 {
-            get {
-                return ResourceManager.GetString("InqueryPageButton1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Inquiry.
         /// </summary>
         public static string InqueryPageButton2 {
@@ -1705,15 +1669,6 @@ namespace Covid19Radar.Resources {
         public static string InqueryPageDescription2 {
             get {
                 return ResourceManager.GetString("InqueryPageDescription2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Information about this app.
-        /// </summary>
-        public static string InqueryPageDescription3 {
-            get {
-                return ResourceManager.GetString("InqueryPageDescription3", resourceCulture);
             }
         }
         
@@ -2737,33 +2692,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Send information setting.
-        /// </summary>
-        public static string SettingsPageEventLogSendButton {
-            get {
-                return ResourceManager.GetString("SettingsPageEventLogSendButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please allow us to use the anonymous information of the app to improve COCOA..
-        /// </summary>
-        public static string SettingsPageEventLogSettingDescription {
-            get {
-                return ResourceManager.GetString("SettingsPageEventLogSettingDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please help us improve the COCOA app.
-        /// </summary>
-        public static string SettingsPageEventLogSettingTitle {
-            get {
-                return ResourceManager.GetString("SettingsPageEventLogSettingTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://github.com/cocoa-mhlw/cocoa/.
         /// </summary>
         public static string SettingsPageGitHubUrl {
@@ -2807,24 +2735,6 @@ namespace Covid19Radar.Resources {
         public static string SettingsPageOthers {
             get {
                 return ResourceManager.GetString("SettingsPageOthers", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This process will delete saved contact history of the last 14 days and restore the app to its initial state. Contact notification will not work until you start using this app again..
-        /// </summary>
-        public static string SettingsPageReinitializeDescription {
-            get {
-                return ResourceManager.GetString("SettingsPageReinitializeDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reinitialize the app.
-        /// </summary>
-        public static string SettingsPageReinitializeLabel {
-            get {
-                return ResourceManager.GetString("SettingsPageReinitializeLabel", resourceCulture);
             }
         }
         
@@ -3519,15 +3429,6 @@ namespace Covid19Radar.Resources {
         public static string UserProfileNotSupportDialogTitle {
             get {
                 return ResourceManager.GetString("UserProfileNotSupportDialogTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Version.
-        /// </summary>
-        public static string VersionText {
-            get {
-                return ResourceManager.GetString("VersionText", resourceCulture);
             }
         }
         

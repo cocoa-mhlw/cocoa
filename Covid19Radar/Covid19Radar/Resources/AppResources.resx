@@ -196,10 +196,6 @@
   <data name="ButtonCancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>Reinitialize the app</value>
-    <comment>アプリを初期化</comment>
-  </data>
   <data name="ButtonRegister" xml:space="preserve">
     <value>Register</value>
     <comment>登録</comment>
@@ -244,30 +240,6 @@
     <value>Close the app</value>
     <comment>アプリを終了します。</comment>
   </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>Version</value>
-    <comment>アプリバージョン</comment>
-  </data>
-  <data name="SettingsPageEventLogSettingTitle" xml:space="preserve">
-    <value>Please help us improve the COCOA app</value>
-    <comment>アプリの改善に協力する</comment>
-  </data>
-  <data name="SettingsPageEventLogSettingDescription" xml:space="preserve">
-    <value>Please allow us to use the anonymous information of the app to improve COCOA.</value>
-    <comment>匿名で送信する情報を設定することで、COCOA(※)の改善に協力できます。</comment>
-  </data>
-  <data name="SettingsPageEventLogSendButton" xml:space="preserve">
-    <value>Send information setting</value>
-    <comment>送信情報を設定</comment>
-  </data>
-  <data name="SettingsPageReinitializeLabel" xml:space="preserve">
-    <value>Reinitialize the app</value>
-    <comment>アプリを初期化する</comment>
-  </data>
-  <data name="SettingsPageReinitializeDescription" xml:space="preserve">
-    <value>This process will delete saved contact history of the last 14 days and restore the app to its initial state. Contact notification will not work until you start using this app again.</value>
-    <comment>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</comment>
-  </data>
   <data name="ButtonReturnToRegistration" xml:space="preserve">
     <value>Return to registration</value>
   </data>
@@ -278,14 +250,6 @@
     <value>Would you like to register positively later?</value>
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
-    <value>Q&amp;A</value>
-    <comment>Q&amp;A</comment>
-  </data>
-  <data name="HelpMenuPageMenu" xml:space="preserve">
-    <value>Q&amp;A</value>
-    <comment>Q&amp;A</comment>
-  </data>
-  <data name="HelpMenuPageMenuReadText" xml:space="preserve">
     <value>Q&amp;A</value>
     <comment>Q&amp;A</comment>
   </data>
@@ -674,10 +638,6 @@
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>Notifications enabled</value>
   </data>
-  <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>Information about this app</value>
-    <comment>接触確認アプリに関する情報</comment>
-  </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>days</value>
     <comment>X日</comment>
@@ -836,10 +796,6 @@
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>After making an inquiry, please share with us the operating information to help us improve the COCOA app.</value>
     <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
-  </data>
-  <data name="InqueryPageButton1" xml:space="preserve">
-    <value>FAQ</value>
-    <comment>よくある質問</comment>
   </data>
   <data name="InqueryPageButton2" xml:space="preserve">
     <value>Inquiry</value>

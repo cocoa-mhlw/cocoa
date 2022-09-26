@@ -23,7 +23,6 @@ namespace Covid19Radar.ViewModels
 
         private readonly IEssentialsService essentialsService;
 
-        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
         public Func<string, string, string[], Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
 
         public InqueryPageViewModel(
@@ -40,16 +39,6 @@ namespace Covid19Radar.ViewModels
             this.logPathService = logPathService;
             this.essentialsService = essentialsService;
         }
-
-        public Command OnClickQuestionCommand => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html";
-            await BrowserOpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-
-            loggerService.EndMethod();
-        });
 
         public Command OnClickSendLogCommand => new Command(async () =>
         {
@@ -147,16 +136,6 @@ namespace Covid19Radar.ViewModels
                 loggerService.Exception("Exception", ex);
                 loggerService.EndMethod();
             }
-        });
-
-        public Command OnClickAboutAppCommand => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html";
-            await BrowserOpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-
-            loggerService.EndMethod();
         });
 
         private string CreateInquiryMailBody()
