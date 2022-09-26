@@ -537,8 +537,12 @@ namespace Covid19Radar.UnitTests.Services
 
         }
 
-
         public override void Schedule()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Cancel()
         {
             throw new NotImplementedException();
         }

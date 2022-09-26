@@ -82,6 +82,12 @@ namespace Covid19Radar.Droid.Services
                 .SetBackoffCriteria(BackoffPolicy.Linear, BACKOFF_DELAY_IN_MINUTES, TimeUnit.Minutes);
             return workRequestBuilder.Build();
         }
+
+        public override void Cancel()
+        {
+            WorkManager workManager = WorkManager.GetInstance(Platform.AppContext);
+            workManager.CancelUniqueWork(CURRENT_WORK_NAME);
+        }
     }
 
     [Preserve]

@@ -24,6 +24,7 @@ namespace Covid19Radar.Services
         }
 
         public abstract void Schedule();
+        public abstract void Cancel();
 
         public void Execute()
         {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using AndroidX.Work;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Services.Migration;
@@ -75,18 +76,21 @@ namespace Covid19Radar.Droid.Services.Migration
         private readonly AbsEventLogSubmissionBackgroundService _eventLogSubmissionBackgroundService;
 
         private readonly ILoggerService _loggerService;
+        private readonly IUserDataRepository _userDataRepository;
 
         public MigrationProccessService(
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             AbsDataMaintainanceBackgroundService dataMaintainanceBackgroundService,
             AbsEventLogSubmissionBackgroundService eventLogSubmissionBackgroundService,
-            ILoggerService loggerService
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository
             )
         {
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             _dataMaintainanceBackgroundService = dataMaintainanceBackgroundService;
             _eventLogSubmissionBackgroundService = eventLogSubmissionBackgroundService;
             _loggerService = loggerService;
+            _userDataRepository = userDataRepository;
         }
 
         public async Task SetupAsync()
@@ -97,7 +101,8 @@ namespace Covid19Radar.Droid.Services.Migration
                 _exposureDetectionBackgroundService,
                 _dataMaintainanceBackgroundService,
                 _eventLogSubmissionBackgroundService,
-                _loggerService
+                _loggerService,
+                _userDataRepository
                 ).ExecuteAsync();
 
             _loggerService.EndMethod();

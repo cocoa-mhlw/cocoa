@@ -59,6 +59,12 @@ namespace Covid19Radar.Droid.Services
             return workRequestBuilder.Build();
         }
 
+        public override void Cancel()
+        {
+            WorkManager workManager = WorkManager.GetInstance(Platform.AppContext);
+            workManager.CancelUniqueWork(CURRENT_WORK_NAME);
+        }
+
         [Preserve]
         public class BackgroundWorker : Worker
         {

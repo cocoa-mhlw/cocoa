@@ -58,6 +58,9 @@ namespace Covid19Radar.Droid
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
+        private Lazy<IUserDataRepository> _userDataRepository
+            = new Lazy<IUserDataRepository>(() => ContainerLocator.Current.Resolve<IUserDataRepository>());
+
         public MainApplication(IntPtr handle, JniHandleOwnership transfer) : base(handle, transfer)
         {
         }
@@ -93,22 +96,25 @@ namespace Covid19Radar.Droid
 
         private void ScheduleBackgroundTasks()
         {
-            try
+            if (_userDataRepository.Value.IsAllAgreed())
             {
-                _exposureDetectionBackgroundService.Value.Schedule();
-            }
-            catch (Exception exception)
-            {
-                _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
-            }
+                try
+                {
+                    _exposureDetectionBackgroundService.Value.Schedule();
+                }
+                catch (Exception exception)
+                {
+                    _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
+                }
 
-            try
-            {
-                _dataMaintainanceService.Value.Schedule();
-            }
-            catch (Exception exception)
-            {
-                _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
+                try
+                {
+                    _dataMaintainanceService.Value.Schedule();
+                }
+                catch (Exception exception)
+                {
+                    _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
+                }
             }
         }
 

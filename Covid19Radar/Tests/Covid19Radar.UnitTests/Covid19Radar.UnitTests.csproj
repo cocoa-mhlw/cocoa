@@ -47,6 +47,7 @@
     <Folder Include="Common\" />
     <Folder Include="Files\" />
     <Folder Include="ViewModels\Settings\" />
+    <Folder Include="ViewModels\EndOfService\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Files\" />
@@ -60,6 +61,7 @@
     <None Remove="Files\exposure_risk_configuration2.json" />
     <None Remove="Files\check_version1.json" />
     <None Remove="ViewModels\Settings\" />
+    <None Remove="ViewModels\EndOfService\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\exposure_configuration1.json">

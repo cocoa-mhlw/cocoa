@@ -129,5 +129,9 @@ namespace Covid19Radar.iOS.Services
             }
         }
 
+        public override void Cancel()
+        {
+            BGTaskScheduler.Shared.Cancel(BGTASK_IDENTIFIER);
+        }
     }
 }
