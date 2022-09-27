@@ -97,10 +97,6 @@
     <value>陽性情報の登録と他者への匿名通知へ</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
-  <data name="ButtonReset" xml:space="preserve">
-    <value>アプリを初期化</value>
-    <comment>アプリを初期化</comment>
-  </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>プライバシーポリシー</value>
   </data>
@@ -138,14 +134,6 @@
   </data>
   <data name="HelpMenuPageTitle" xml:space="preserve">
     <value>Q&amp;A</value>
-    <comment>Q&amp;A</comment>
-  </data>
-  <data name="HelpMenuPageMenu" xml:space="preserve">
-    <value>Q&amp;A</value>
-    <comment>Q&amp;A</comment>
-  </data>
-  <data name="HelpMenuPageMenuReadText" xml:space="preserve">
-    <value>きゅーあんどえー</value>
     <comment>Q&amp;A</comment>
   </data>
   <data name="HelpPage1Title" xml:space="preserve">
@@ -483,26 +471,6 @@
     <value>ライセンス表記</value>
     <comment>ライセンス表記</comment>
   </data>
-  <data name="SettingsPageEventLogSettingTitle" xml:space="preserve">
-    <value>アプリの改善に協力する</value>
-    <comment>アプリの改善に協力する</comment>
-  </data>
-  <data name="SettingsPageEventLogSettingDescription" xml:space="preserve">
-    <value>匿名で送信する情報を設定することで、COCOA(※)の改善に協力できます。</value>
-    <comment>匿名で送信する情報を設定することで、COCOA(※)の改善に協力できます。</comment>
-  </data>
-  <data name="SettingsPageEventLogSendButton" xml:space="preserve">
-    <value>送信情報を設定</value>
-    <comment>送信情報を設定</comment>
-  </data>
-  <data name="SettingsPageReinitializeLabel" xml:space="preserve">
-    <value>アプリを初期化する</value>
-    <comment>アプリを初期化する</comment>
-  </data>
-  <data name="SettingsPageReinitializeDescription" xml:space="preserve">
-    <value>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</value>
-    <comment>保存されている過去14日間の接触履歴を削除して、アプリを初期状態に戻します。再度アプリの利用を開始するまで、接触通知は行われなくなります。</comment>
-  </data>
   <data name="HomePageDescription0" xml:space="preserve">
     <value>利用開始から</value>
     <comment>利用開始から</comment>
@@ -518,10 +486,6 @@
   <data name="SubmitConsentPageTitleDeepLink" xml:space="preserve">
     <value>同意内容</value>
     <comment>同意内容</comment>
-  </data>
-  <data name="VersionText" xml:space="preserve">
-    <value>アプリバージョン</value>
-    <comment>アプリバージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
     <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
@@ -559,10 +523,6 @@
   </data>
   <data name="LocalNotificationPermittedTitle" xml:space="preserve">
     <value>通知を有効にしました</value>
-  </data>
-  <data name="InqueryPageDescription3" xml:space="preserve">
-    <value>接触確認アプリに関する情報</value>
-    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>日</value>
@@ -723,10 +683,6 @@
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>お問い合わせ後、動作情報を送信していただくことにより、COCOA（※）の改善に役立ちます。</value>
     <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOA（※）の改善に役立ちます。</comment>
-  </data>
-  <data name="InqueryPageButton1" xml:space="preserve">
-    <value>よくある質問</value>
-    <comment>よくある質問</comment>
   </data>
   <data name="InqueryPageButton2" xml:space="preserve">
     <value>メールでお問い合わせ</value>
@@ -1575,4 +1531,24 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>利用を終了する</comment>
   </data>
 
+  <data name="EndOfServiceNoticePageTitle" xml:space="preserve">
+    <value>サービス終了のお知らせ</value>
+    <comment>サービス終了のお知らせ</comment>
+  </data>
+  <data name="EndOfServiceNoticePageDescription1" xml:space="preserve">
+    <value>新型コロナウイルス感染症の全数把握の見直しに伴い、2022年◯月◯日をもって接触確認アプリ「COCOA」は機能を停止しました。</value>
+    <comment>新型コロナウイルス感染症の全数把握の見直しに伴い、2022年◯月◯日をもって接触確認アプリ「COCOA」は機能を停止しました。</comment>
+  </data>
+  <data name="EndOfServiceNoticePageDescription2" xml:space="preserve">
+    <value>アプリの利用終了手続きとアンケートへのご協力をお願いします。</value>
+    <comment>アプリの利用終了手続きとアンケートへのご協力をお願いします。</comment>
+  </data>
+  <data name="EndOfServiceNoticePageTextLink" xml:space="preserve">
+    <value>詳細を確認する</value>
+    <comment>詳細を確認する</comment>
+  </data>
+  <data name="EndOfServiceNoticePageButton" xml:space="preserve">
+    <value>利用終了手続きへ</value>
+    <comment>利用終了手続きへ</comment>
+  </data>
 </root>

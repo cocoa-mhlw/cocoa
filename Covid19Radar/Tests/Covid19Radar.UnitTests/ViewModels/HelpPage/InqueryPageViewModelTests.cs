@@ -53,30 +53,6 @@ namespace Covid19Radar.UnitTests.ViewModels
         }
 
         [Fact]
-        public void OnClickQuestionCommandTests()
-        {
-            var unitUnderTest = CreateViewModel();
-            unitUnderTest.Initialize(new NavigationParameters());
-
-            var actualCalls = 0;
-            string actualUri = default;
-            BrowserLaunchMode actualLaunchMode = default;
-            unitUnderTest.BrowserOpenAsync = (uri, launchMode) =>
-            {
-                actualCalls++;
-                actualUri = uri;
-                actualLaunchMode = launchMode;
-                return Task.CompletedTask;
-            };
-
-            unitUnderTest.OnClickQuestionCommand.Execute(null);
-
-            Assert.Equal(1, actualCalls);
-            Assert.Equal("https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html", actualUri);
-            Assert.Equal(BrowserLaunchMode.SystemPreferred, actualLaunchMode);
-        }
-
-        [Fact]
         public void OnClickSendLogCommandTests()
         {
             mockLogFileService.Setup(x => x.CreateZipFile(It.IsAny<string>()))
@@ -185,30 +161,6 @@ namespace Covid19Radar.UnitTests.ViewModels
             unitUnderTest.OnClickEmailCommand.Execute(null);
 
             Assert.Equal(1, actualCalls);
-        }
-
-        [Fact]
-        public void OnClickAboutAppCommandTests()
-        {
-            var unitUnderTest = CreateViewModel();
-            unitUnderTest.Initialize(new NavigationParameters());
-
-            var actualCalls = 0;
-            string actualUri = default;
-            BrowserLaunchMode actualLaunchMode = default;
-            unitUnderTest.BrowserOpenAsync = (uri, launchMode) =>
-            {
-                actualCalls++;
-                actualUri = uri;
-                actualLaunchMode = launchMode;
-                return Task.CompletedTask;
-            };
-
-            unitUnderTest.OnClickAboutAppCommand.Execute(null);
-
-            Assert.Equal(1, actualCalls);
-            Assert.Equal("https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html", actualUri);
-            Assert.Equal(BrowserLaunchMode.SystemPreferred, actualLaunchMode);
         }
     }
 }

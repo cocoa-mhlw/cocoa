@@ -26,14 +26,6 @@
             BackgroundColor="{StaticResource Background}"
             Spacing="0">
             <Frame Padding="10" HasShadow="False">
-                <Button
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Command="{Binding Path=OnClickQuestionCommand}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.InqueryPageButton1}" />
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
                 <StackLayout Spacing="10">
                     <Button
                         AutomationProperties.IsInAccessibleTree="True"
@@ -74,22 +66,6 @@
                         Command="{Binding Path=OnClickSendLogCommand}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.InqueryPageButton3}" />
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickAboutAppCommand}" />
-                </Frame.GestureRecognizers>
-                <StackLayout Spacing="0">
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabelSmall}"
-                        Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource LinkLabelStyleSmall}"
-                        Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html" />
                 </StackLayout>
             </Frame>
             <BoxView Style="{StaticResource DefaultLineStyle}" />
