@@ -1,10 +1,57 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Covid19Radar.Views.EndOfService.EndOfServiceNoticePage">
-    <ContentPage.Content>
-        <Label Text="EndOfServiceNoticePage" />
-    </ContentPage.Content>
+    x:Class="Covid19Radar.Views.EndOfService.EndOfServiceNoticePage"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    Title="{x:Static resources:AppResources.EndOfServiceNoticePageTitle}"
+    ios:Page.UseSafeArea="true"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    NavigationPage.TitleIconImageSource="HeaderLogo.png"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ContentView>
+        <ScrollView>
+            <StackLayout
+                Margin="20"
+                Spacing="20">
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.EndOfServiceNoticePageTitle}" />
+                <Label
+                    Margin="0, 10, 0, 0"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    HorizontalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.EndOfServiceNoticePageDescription1}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    HorizontalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.EndOfServiceNoticePageDescription2}" />
+                <Label
+                    Margin="0, 20, 0, 0"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource LinkLabelStyleMedium}"
+                    HorizontalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.EndOfServiceNoticePageTextLink}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Path=OpenWebView}" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.EndOfServiceNoticePageButton}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
 </ContentPage>
 
