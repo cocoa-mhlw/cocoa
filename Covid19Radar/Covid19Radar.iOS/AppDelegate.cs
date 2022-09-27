@@ -57,6 +57,9 @@ namespace Covid19Radar.iOS
         private Lazy<IExposureConfigurationRepository> _exposureConfigurationRepository
             = new Lazy<IExposureConfigurationRepository>(() => ContainerLocator.Current.Resolve<IExposureConfigurationRepository>());
 
+        private Lazy<IUserDataRepository> _userDataRepositiry
+            = new Lazy<IUserDataRepository>(() => ContainerLocator.Current.Resolve<IUserDataRepository>());
+
         private App? AppInstance
         {
             get
@@ -128,22 +131,25 @@ namespace Covid19Radar.iOS
         {
             _loggerService.Value.StartMethod();
 
-            try
+            if (_userDataRepositiry.Value.IsAllAgreed())
             {
-                _exposureDetectionBackgroundService.Value.Schedule();
-            }
-            catch (Exception exception)
-            {
-                _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
-            }
+                try
+                {
+                    _exposureDetectionBackgroundService.Value.Schedule();
+                }
+                catch (Exception exception)
+                {
+                    _loggerService.Value.Exception("Failed to schedule ExposureDetectionBackgroundService", exception);
+                }
 
-            try
-            {
-                _dataMaintainanceBackgroundService.Value.Schedule();
-            }
-            catch (Exception exception)
-            {
-                _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
+                try
+                {
+                    _dataMaintainanceBackgroundService.Value.Schedule();
+                }
+                catch (Exception exception)
+                {
+                    _loggerService.Value.Exception("Failed to schedule DataMaintainanceBackgroundService", exception);
+                }
             }
 
             _loggerService.Value.EndMethod();

@@ -4,6 +4,7 @@
 
 using System.Threading.Tasks;
 using AndroidX.Work;
+using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 
@@ -23,18 +24,21 @@ namespace Covid19Radar.Droid.Services.Migration
         private readonly AbsEventLogSubmissionBackgroundService _eventLogSubmissionBackgroundService;
 
         private readonly ILoggerService _loggerService;
+        private readonly IUserDataRepository _userDataRepository;
 
         public WorkManagerMigrator(
             AbsExposureDetectionBackgroundService exposureDetectionBackgroundService,
             AbsDataMaintainanceBackgroundService dataMaintainanceBackgroundService,
             AbsEventLogSubmissionBackgroundService eventLogSubmissionBackgroundService,
-            ILoggerService loggerService
+            ILoggerService loggerService,
+            IUserDataRepository userDataRepository
             )
         {
             _exposureDetectionBackgroundService = exposureDetectionBackgroundService;
             _dataMaintainanceBackgroundService = dataMaintainanceBackgroundService;
             _eventLogSubmissionBackgroundService = eventLogSubmissionBackgroundService;
             _loggerService = loggerService;
+            _userDataRepository = userDataRepository;
         }
 
         internal Task ExecuteAsync()
@@ -44,8 +48,11 @@ namespace Covid19Radar.Droid.Services.Migration
             var workManager = WorkManager.GetInstance(Xamarin.Essentials.Platform.AppContext);
             CancelOldWorks(workManager, OldWorkNames, _loggerService);
 
-            _exposureDetectionBackgroundService.Schedule();
-            _dataMaintainanceBackgroundService.Schedule();
+            if (_userDataRepository.IsAllAgreed())
+            {
+                _exposureDetectionBackgroundService.Schedule();
+                _dataMaintainanceBackgroundService.Schedule();
+            }
 
             _loggerService.EndMethod();
 

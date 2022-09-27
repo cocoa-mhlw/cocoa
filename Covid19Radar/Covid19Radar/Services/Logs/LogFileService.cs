@@ -166,19 +166,14 @@ namespace Covid19Radar.Services.Logs
 
         public bool DeleteLogsDir()
         {
-            loggerService.StartMethod();
             try
             {
                 var logsDirPath = logPathService.LogsDirPath;
                 Directory.Delete(logsDirPath, true);
-                loggerService.Info("Deleted all log files.");
-                loggerService.EndMethod();
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
-                loggerService.Exception("Failed to Delete all log files.", ex);
-                loggerService.EndMethod();
                 return false;
             }
         }

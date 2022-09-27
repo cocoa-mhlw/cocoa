@@ -7,5 +7,6 @@ namespace Covid19Radar.Services
     public abstract class AbsEventLogSubmissionBackgroundService : IBackgroundService
     {
         public abstract void Schedule();
+        public abstract void Cancel();
     }
 }
