@@ -101,7 +101,15 @@ namespace Covid19Radar.ViewModels
             string regionString = string.Join(",", AppSettings.Instance.SupportedRegions);
             string lastProcessTekTimestampsStr = string.Join("\n  ", lastProcessTekTimestampList.Select(lptt => lptt.ToString()));
 
-            var exposureNotificationStatus = await _exposureNotificationApiService.IsEnabledAsync();
+            string exposureNotificationStatus = "";
+            try
+            {
+                exposureNotificationStatus = $"{await _exposureNotificationApiService.IsEnabledAsync()}";
+            }
+            catch (Exception ex)
+            {
+                exposureNotificationStatus = ex.Message;
+            }
 
             var dailySummaryCount = (await _exposureDataRepository.GetDailySummariesAsync(AppConstants.TermOfExposureRecordValidityInDays)).Count();
             var exposureWindowCount = (await _exposureDataRepository.GetExposureWindowsAsync(AppConstants.TermOfExposureRecordValidityInDays)).Count();

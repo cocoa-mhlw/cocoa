@@ -114,6 +114,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
             _mockSendEventLogStateRepository.Verify(x => x.RemoveAll(), Times.Once());
             _mockEventLogRepository.Verify(x => x.RemoveAllAsync(), Times.Once());
             _mockLogFileService.Verify(x => x.DeleteLogsDir(), Times.Once());
+            _mockNavigationService.Verify(x => x.NavigateAsync("/TerminationOfUseCompletePage"), Times.Once());
         }
     }
 }

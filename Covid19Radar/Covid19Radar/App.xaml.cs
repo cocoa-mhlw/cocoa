@@ -194,6 +194,7 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<EndOfServiceNoticePage>();
             containerRegistry.RegisterForNavigation<EndOfServicePage>();
             containerRegistry.RegisterForNavigation<TerminationOfUsePage>();
+            containerRegistry.RegisterForNavigation<TerminationOfUseCompletePage>();
         }
 
         private static void RegisterCommonTypes(IContainer container)
