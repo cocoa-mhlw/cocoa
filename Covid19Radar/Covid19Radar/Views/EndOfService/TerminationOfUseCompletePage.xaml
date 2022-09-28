@@ -5,12 +5,12 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Covid19Radar.Views.EndOfService.TerminationOfUsePage"
+    x:Class="Covid19Radar.Views.EndOfService.TerminationOfUseCompletePage"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     xmlns:endofservice="clr-namespace:Covid19Radar.ViewModels.EndOfService"
-    x:DataType="endofservice:TerminationOfUsePageViewModel"
-    Title="{x:Static resources:AppResources.TerminationOfUsePageTitle}"
+    x:DataType="endofservice:TerminationOfUseCompletePageViewModel"
+    Title="{x:Static resources:AppResources.TerminationOfUseCompletePageTitle}"
     ios:Page.UseSafeArea="true"
     Style="{StaticResource DefaultPageStyle}"
     Visual="Material">
@@ -21,21 +21,16 @@
                 Padding="20">
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.TerminationOfUsePageDescription1}" />
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.TerminationOfUseCompletePageTitle}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.TerminationOfUsePageDescription2}" />
+                    Text="{x:Static resources:AppResources.TerminationOfUseCompletePageDescription1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.TerminationOfUsePageDescription3}" />
-                <Button
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Command="{Binding Path=OnTerminationButton}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.TerminationOfUsePageTerminationButton}" />
+                    Text="{x:Static resources:AppResources.TerminationOfUseCompletePageDescription2}" />
             </StackLayout>
         </ScrollView>
     </ContentView>

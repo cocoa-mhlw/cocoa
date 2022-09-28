@@ -1638,6 +1638,19 @@ By collecting the number of notifications, we can use it to understand how many 
     <comment>利用を終了する</comment>
   </data>
 
+  <data name="TerminationOfUseCompletePageTitle" xml:space="preserve">
+    <value>TODO</value>
+    <comment>終了手続きが完了しました</comment>
+  </data>
+  <data name="TerminationOfUseCompletePageDescription1" xml:space="preserve">
+    <value>TODO</value>
+    <comment>COCOAの利用を終了しました。アプリをアンインストールしてください。</comment>
+  </data>
+  <data name="TerminationOfUseCompletePageDescription2" xml:space="preserve">
+    <value>TODO</value>
+    <comment>これまでのご利用、本当にありがとうございました。これからも感染予防に気をつけてお過ごしください。</comment>
+  </data>
+
   <data name="EndOfServiceNoticePageTitle" xml:space="preserve">
     <value>TODO</value>
     <comment>サービス終了のお知らせ</comment>

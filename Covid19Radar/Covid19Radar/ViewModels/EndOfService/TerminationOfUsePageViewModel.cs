@@ -9,6 +9,7 @@ using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Views.EndOfService;
 using Prism.Navigation;
 using Xamarin.CommunityToolkit.ObjectModel;
 
@@ -85,6 +86,9 @@ namespace Covid19Radar.ViewModels.EndOfService
                 _ = _logFileService.DeleteLogsDir();
 
                 UserDialogs.Instance.HideLoading();
+
+                // Navigate to complete page
+                await NavigationService.NavigateAsync($"/{nameof(TerminationOfUseCompletePage)}");
             }
             catch (Exception ex)
             {
@@ -100,9 +104,9 @@ namespace Covid19Radar.ViewModels.EndOfService
             {
                 _ = await _absExposureNotificationApiService.StopExposureNotificationAsync();
             }
-            catch (ENException exception)
+            catch (Exception ex)
             {
-                _loggerService.Exception("ENException", exception);
+                _loggerService.Exception("Failed to stop of exposure notification", ex);
             }
             finally
             {
