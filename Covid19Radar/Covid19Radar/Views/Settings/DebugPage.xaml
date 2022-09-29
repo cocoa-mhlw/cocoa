@@ -260,6 +260,10 @@
                     Command="{prism:NavigateTo 'TerminationOfUsePage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="TerminationOfUsePage" />
+                <Button
+                    Command="{prism:NavigateTo 'SurveyRequestPage'}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="SurveyRequestPage" />
                 </StackLayout>
             </Frame>
         </StackLayout>

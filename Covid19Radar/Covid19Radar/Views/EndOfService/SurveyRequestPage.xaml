@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:endofservice="clr-namespace:Covid19Radar.ViewModels.EndOfService"
+    x:Class="Covid19Radar.Views.EndOfService.SurveyRequestPage"
+    x:DataType="endofservice:SurveyRequestPageViewModel"
+    Title="{x:Static resources:AppResources.SurveyRequestPageTitle}"
+    ios:Page.UseSafeArea="true"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ContentView>
+        <ScrollView>
+            <StackLayout
+                Spacing="20"
+                Padding="20">
+                <StackLayout
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageRequestCooperationTitle}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageRequestCooperationDescription1}" />
+                </StackLayout>
+                <StackLayout
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPagePurposeTitle}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPagePurposeDescription1}" />
+                </StackLayout>
+                <StackLayout
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList1}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList2}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList3}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelSmall}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList4}" />
+                </StackLayout>
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.SurveyRequestPageToAnswerButton}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding SkipAnswerButtonReadText}"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource LinkLabelStyleMedium}"
+                    Text="{x:Static resources:AppResources.SurveyRequestPageSkipAnswerButton}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{prism:NavigateTo 'TerminationOfUsePage'}" />
+                    </Label.GestureRecognizers>
+                 </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
+</ContentPage>
+

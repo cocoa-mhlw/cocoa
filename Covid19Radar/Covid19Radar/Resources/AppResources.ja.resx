@@ -1565,4 +1565,49 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>利用終了手続きへ</value>
     <comment>利用終了手続きへ</comment>
   </data>
+
+  <data name="SurveyRequestPageTitle" xml:space="preserve">
+    <value>調査協力のお願い</value>
+    <comment>調査協力のお願い</comment>
+  </data>
+  <data name="SurveyRequestPageRequestCooperationTitle" xml:space="preserve">
+    <value>COCOA利用調査協力のお願い</value>
+    <comment>COCOA利用調査協力のお願い</comment>
+  </data>
+  <data name="SurveyRequestPageRequestCooperationDescription1" xml:space="preserve">
+    <value>接触確認アプリ『COCOA』利用終了のアンケート、および接触情報の提供にご協力ください。</value>
+    <comment>接触確認アプリ『COCOA』利用終了のアンケート、および接触情報の提供にご協力ください。</comment>
+  </data>
+  <data name="SurveyRequestPagePurposeTitle" xml:space="preserve">
+    <value>調査目的</value>
+    <comment>調査目的</comment>
+  </data>
+  <data name="SurveyRequestPagePurposeDescription1" xml:space="preserve">
+    <value>～～～～～～～～～～～～～～</value>
+    <comment>～～～～～～～～～～～～～～</comment>
+  </data>
+  <data name="SurveyRequestPageBulletedList1" xml:space="preserve">
+    <value>・送信される情報は全て匿名です。</value>
+    <comment>・送信される情報は全て匿名です。</comment>
+  </data>
+  <data name="SurveyRequestPageBulletedList2" xml:space="preserve">
+    <value>・送信内容に、個人を特定可能な情報を含みません。</value>
+    <comment>・送信内容に、個人を特定可能な情報を含みません。</comment>
+  </data>
+  <data name="SurveyRequestPageBulletedList3" xml:space="preserve">
+    <value>・送信内容に、あなたやあなたと接触した陽性登録者を個人として特定可能な情報は含みません。</value>
+    <comment>・送信内容に、あなたやあなたと接触した陽性登録者を個人として特定可能な情報は含みません。</comment>
+  </data>
+  <data name="SurveyRequestPageBulletedList4" xml:space="preserve">
+    <value>・公衆衛生の改善に寄与するため、匿名情報を集計して公開する場合があります。</value>
+    <comment>・公衆衛生の改善に寄与するため、匿名情報を集計して公開する場合があります。</comment>
+  </data>
+  <data name="SurveyRequestPageToAnswerButton" xml:space="preserve">
+    <value>回答画面へ</value>
+    <comment>回答画面へ</comment>
+  </data>
+  <data name="SurveyRequestPageSkipAnswerButton" xml:space="preserve">
+    <value>調査協力をスキップする</value>
+    <comment>調査協力をスキップする</comment>
+  </data>
 </root>
