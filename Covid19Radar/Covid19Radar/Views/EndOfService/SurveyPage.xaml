@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+    xmlns:models="clr-namespace:Covid19Radar.Model"
+    xmlns:endofservice="clr-namespace:Covid19Radar.ViewModels.EndOfService"
+    x:Class="Covid19Radar.Views.EndOfService.SurveyPage"
+    x:DataType="endofservice:SurveyPageViewModel"
+    Title="{x:Static resources:AppResources.SurveyPageTitle}"
+    ios:Page.UseSafeArea="true"
+    Style="{StaticResource DefaultPageStyle}"
+    Visual="Material">
+    <ContentView>
+        <ScrollView>
+            <StackLayout
+                Spacing="20"
+                Padding="20">
+                <StackLayout
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyPageQuestionnaire}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyPageQ1Text}" />
+                    <Picker
+                        AutomationProperties.IsInAccessibleTree="True"
+                        ItemDisplayBinding="{Binding Text}"
+                        SelectedIndex="{Binding SelectedIndexQ1}">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type models:SurveyAnswerPickerItem}">
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPagePleaseSelect}" Value="0" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A1}" Value="1" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A2}" Value="2" />
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyPageQ2Text}" />
+                    <Picker
+                        AutomationProperties.IsInAccessibleTree="True"
+                        SelectedIndex="{Binding SelectedIndexQ2}"
+                        ItemDisplayBinding="{Binding Text}">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type models:SurveyAnswerPickerItem}">
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPagePleaseSelect}" Value="0" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ2A1}" Value="1" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ2A2}" Value="2" />
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyPageQuestion3}" />
+                    <DatePicker
+                        AutomationProperties.IsInAccessibleTree="True"
+                        MinimumDate="{Binding MimimumStartDate}"
+                        MaximumDate="{x:Static x:DateTime.Now}"
+                        Format="d"
+                        Date="{Binding Q3Answer}"/>
+                </StackLayout>
+                <StackLayout
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionTitle}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionDescription}" />
+                </StackLayout>
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionSwitch}" />
+                    <Switch
+                        AutomationProperties.IsInAccessibleTree="True"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="Center" />
+                </StackLayout>
+                <Button
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Command="{Binding Path=OnToTerminationOfUsePageButton}"
+                    IsEnabled="{Binding IsTerminationOfUsePageButtonEnabled}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.SurveyPageToTerminationOfUsePageButton}" />
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
+</ContentPage>
+

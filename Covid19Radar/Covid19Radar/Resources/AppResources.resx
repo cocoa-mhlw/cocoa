@@ -1716,4 +1716,65 @@ By collecting the number of notifications, we can use it to understand how many 
     <value>TODO</value>
     <comment>調査協力をスキップする</comment>
   </data>
+
+  <data name="SurveyPageTitle" xml:space="preserve">
+    <value>TODO</value>
+    <comment>利用調査</comment>
+  </data>
+  <data name="SurveyPageQuestionnaire" xml:space="preserve">
+    <value>TODO</value>
+    <comment>アンケート</comment>
+  </data>
+  <data name="SurveyPageQ1Text" xml:space="preserve">
+    <value>TODO</value>
+    <comment>Q1：年代</comment>
+  </data>
+  <data name="SurveyPageQ2Text" xml:space="preserve">
+    <value>TODO</value>
+    <comment>Q2：日常的な通勤通学の有無</comment>
+  </data>
+  <data name="SurveyPageQuestion3" xml:space="preserve">
+    <value>TODO</value>
+    <comment>Q3：アプリ利用開始日</comment>
+  </data>
+  <data name="SurveyPageExposureDataProvisionTitle" xml:space="preserve">
+    <value>TODO</value>
+    <comment>接触情報提供のお願い</comment>
+  </data>
+  <data name="SurveyPageExposureDataProvisionDescription" xml:space="preserve">
+    <value>TODO</value>
+    <comment>保存している接触情報を添付してよろしいですか。送信を許可する場合はチェックを入れてください。</comment>
+  </data>
+  <data name="SurveyPageExposureDataProvisionSwitch" xml:space="preserve">
+    <value>TODO</value>
+    <comment>接触情報の提供</comment>
+  </data>
+  <data name="SurveyPagePleaseSelect" xml:space="preserve">
+    <value>TODO</value>
+    <comment>選択してください</comment>
+  </data>
+  <data name="SurveyPageQ1A1" xml:space="preserve">
+    <value>TODO</value>
+    <comment>〜9歳</comment>
+  </data>
+  <data name="SurveyPageQ1A2" xml:space="preserve">
+    <value>TODO</value>
+    <comment>10歳〜19歳</comment>
+  </data>
+  <data name="SurveyPageQ1A3" xml:space="preserve">
+    <value>TODO</value>
+    <comment>20歳〜29歳</comment>
+  </data>
+  <data name="SurveyPageQ2A1" xml:space="preserve">
+    <value>有り</value>
+    <comment>有り</comment>
+  </data>
+  <data name="SurveyPageQ2A2" xml:space="preserve">
+    <value>TODO</value>
+    <comment>無し</comment>
+  </data>
+  <data name="SurveyPageToTerminationOfUsePageButton" xml:space="preserve">
+    <value>TODO</value>
+    <comment>利用終了の確認へ</comment>
+  </data>
 </root>

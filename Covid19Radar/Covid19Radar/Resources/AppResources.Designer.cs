@@ -2948,6 +2948,141 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TODO.
         /// </summary>
+        public static string SurveyPageExposureDataProvisionDescription {
+            get {
+                return ResourceManager.GetString("SurveyPageExposureDataProvisionDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageExposureDataProvisionSwitch {
+            get {
+                return ResourceManager.GetString("SurveyPageExposureDataProvisionSwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageExposureDataProvisionTitle {
+            get {
+                return ResourceManager.GetString("SurveyPageExposureDataProvisionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPagePleaseSelect {
+            get {
+                return ResourceManager.GetString("SurveyPagePleaseSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageQ1A1 {
+            get {
+                return ResourceManager.GetString("SurveyPageQ1A1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageQ1A2 {
+            get {
+                return ResourceManager.GetString("SurveyPageQ1A2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageQ1A3 {
+            get {
+                return ResourceManager.GetString("SurveyPageQ1A3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageQ1Text {
+            get {
+                return ResourceManager.GetString("SurveyPageQ1Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 有り.
+        /// </summary>
+        public static string SurveyPageQ2A1 {
+            get {
+                return ResourceManager.GetString("SurveyPageQ2A1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageQ2A2 {
+            get {
+                return ResourceManager.GetString("SurveyPageQ2A2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageQ2Text {
+            get {
+                return ResourceManager.GetString("SurveyPageQ2Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageQuestion3 {
+            get {
+                return ResourceManager.GetString("SurveyPageQuestion3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageQuestionnaire {
+            get {
+                return ResourceManager.GetString("SurveyPageQuestionnaire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageTitle {
+            get {
+                return ResourceManager.GetString("SurveyPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageToTerminationOfUsePageButton {
+            get {
+                return ResourceManager.GetString("SurveyPageToTerminationOfUsePageButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
         public static string SurveyRequestPageBulletedList1 {
             get {
                 return ResourceManager.GetString("SurveyRequestPageBulletedList1", resourceCulture);
