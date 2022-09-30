@@ -2,6 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 using System;
+using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views.EndOfService;
@@ -16,7 +17,7 @@ namespace Covid19Radar.ViewModels.EndOfService
 
         private readonly ILoggerService _loggerService;
 
-        private readonly long FullStopDateTime = new DateTime(2023, 4, 1, 0, 0, 0).ToUnixEpoch();
+        private readonly long FullStopDateTime = TimeZoneInfo.ConvertTime(new DateTime(2023, 4, 1, 0, 0, 0), AppConstants.TIMEZONE_JST).ToUnixEpoch();
 
         public EndOfServiceNoticePageViewModel(
             INavigationService navigationService,
@@ -30,7 +31,7 @@ namespace Covid19Radar.ViewModels.EndOfService
         {
             _loggerService.StartMethod();
 
-            if (FullStopDateTime <= DateTime.Now.ToUnixEpoch())
+            if (FullStopDateTime <= Utils.JstNow().ToUnixEpoch())
             {
                 await NavigationService.NavigateAsync(nameof(SurveyRequestPage));
             }
