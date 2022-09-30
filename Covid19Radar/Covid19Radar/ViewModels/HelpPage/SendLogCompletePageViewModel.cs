@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
+using Covid19Radar.Views.EndOfService;
 using Prism.Navigation;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -71,7 +72,7 @@ namespace Covid19Radar.ViewModels
 
         private async Task NavigateToHomeAsync()
         {
-            _ = await NavigationService.NavigateAsync($"/{nameof(MenuPage)}/{nameof(NavigationPage)}/{nameof(HomePage)}");
+            _ = await NavigationService.NavigateAsync($"/{nameof(MenuPage)}/{nameof(NavigationPage)}/{nameof(EndOfServiceNoticePage)}");
         }
     }
 }
