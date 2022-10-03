@@ -91,7 +91,7 @@ namespace Covid19Radar.UnitTests.ViewModels
 
             unitUnderTest.OnClickHomeCommand.Execute(null);
 
-            mockNavigationService.Verify(x => x.NavigateAsync("/MenuPage/NavigationPage/HomePage"), Times.Once());
+            mockNavigationService.Verify(x => x.NavigateAsync("/MenuPage/NavigationPage/EndOfServiceNoticePage"), Times.Once());
         }
     }
 }
