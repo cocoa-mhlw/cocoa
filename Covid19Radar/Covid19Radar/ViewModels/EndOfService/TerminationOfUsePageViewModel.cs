@@ -5,6 +5,7 @@ using System;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Chino;
+using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -19,6 +20,9 @@ namespace Covid19Radar.ViewModels.EndOfService
     {
         private readonly ILoggerService _loggerService;
         private readonly ILogFileService _logFileService;
+        private readonly ISurveyService _surveyService;
+        private readonly IDialogService _dialogService;
+
         private readonly IUserDataRepository _userDataRepository;
         private readonly IEventLogRepository _eventLogRepository;
         private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
@@ -29,10 +33,14 @@ namespace Covid19Radar.ViewModels.EndOfService
         private readonly AbsExposureDetectionBackgroundService _absExposureDetectionBackgroundService;
         private readonly AbsDataMaintainanceBackgroundService _absDataMaintainanceBackgroundService;
 
+        private SurveyContent _surveyContent = null;
+
         public TerminationOfUsePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
             ILogFileService logFileService,
+            ISurveyService surveyService,
+            IDialogService dialogService,
             IUserDataRepository userDataRepository,
             IEventLogRepository eventLogRepository,
             ISendEventLogStateRepository sendEventLogStateRepository,
@@ -45,6 +53,9 @@ namespace Covid19Radar.ViewModels.EndOfService
         {
             _loggerService = loggerService;
             _logFileService = logFileService;
+            _surveyService = surveyService;
+            _dialogService = dialogService;
+
             _userDataRepository = userDataRepository;
             _eventLogRepository = eventLogRepository;
             _sendEventLogStateRepository = sendEventLogStateRepository;
@@ -56,11 +67,32 @@ namespace Covid19Radar.ViewModels.EndOfService
             _absDataMaintainanceBackgroundService = absDataMaintainanceBackgroundService;
         }
 
+        public override void Initialize(INavigationParameters parameters)
+        {
+            base.Initialize(parameters);
+
+            if (parameters.ContainsKey(TerminationOfUsePage.NavigationParameterNameSurveyContent))
+            {
+                _surveyContent = parameters.GetValue<SurveyContent>(TerminationOfUsePage.NavigationParameterNameSurveyContent);
+            }
+        }
+
         public IAsyncCommand OnTerminationButton => new AsyncCommand(async () =>
         {
+            UserDialogs.Instance.ShowLoading(AppResources.LoadingTextDeleting);
+
             try
             {
-                UserDialogs.Instance.ShowLoading(AppResources.LoadingTextDeleting);
+                // Submit survey content if needed
+                if (_surveyContent != null)
+                {
+                    if (!await _surveyService.SubmitSurvey(_surveyContent))
+                    {
+                        await _dialogService.ShowNetworkConnectionErrorAsync();
+                        _loggerService.Error("Failed submit survey");
+                        return;
+                    }
+                }
 
                 // Stop exposure notifications
                 await StopExposureNotificationAsync();
@@ -84,16 +116,18 @@ namespace Covid19Radar.ViewModels.EndOfService
                 await _eventLogRepository.RemoveAllAsync();
 
                 _ = _logFileService.DeleteLogsDir();
-
-                UserDialogs.Instance.HideLoading();
-
-                // Navigate to complete page
-                await NavigationService.NavigateAsync($"/{nameof(TerminationOfUseCompletePage)}");
             }
             catch (Exception ex)
             {
                 _loggerService.Exception("Failed termination of use", ex);
             }
+            finally
+            {
+                UserDialogs.Instance.HideLoading();
+            }
+
+            // Navigate to complete page
+            await NavigationService.NavigateAsync($"/{nameof(TerminationOfUseCompletePage)}");
         });
 
         private async Task StopExposureNotificationAsync()

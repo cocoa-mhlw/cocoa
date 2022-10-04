@@ -17,7 +17,8 @@ namespace Covid19Radar.Services
 {
     public interface IEventLogService
     {
-        public Task SendAllAsync(long maxSize, int maxRetry);
+        Task SendAllAsync(long maxSize, int maxRetry);
+        Task<bool> SendAsync(EventLog eventLog);
     }
 
     public class EventLogService : IEventLogService
@@ -183,6 +184,12 @@ namespace Covid19Radar.Services
 
             _loggerService.Error("Send event log failure");
             return false;
+        }
+
+        public async Task<bool> SendAsync(EventLog eventLog)
+        {
+            string idempotencyKey = Guid.NewGuid().ToString();
+            return await SendAsync(idempotencyKey, new List<EventLog> { eventLog });
         }
     }
 }

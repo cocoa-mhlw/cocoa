@@ -22,6 +22,7 @@ namespace Covid19Radar.Repository
     public class EventType
     {
         public static readonly EventType ExposureNotified = new EventType("ExposureNotification", "ExposureNotified");
+        public static readonly EventType Survey = new EventType("survey", "survey");
 
         public static readonly EventType[] All = new EventType[] {
             ExposureNotified

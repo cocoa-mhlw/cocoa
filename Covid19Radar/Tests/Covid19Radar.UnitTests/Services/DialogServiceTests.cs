@@ -247,5 +247,23 @@ namespace Covid19Radar.UnitTests.Services
                 null),
                 Times.Once());
         }
+
+        [Fact]
+        public async Task ShowNetworkConnectionErrorAsyncTest()
+        {
+            mockEssentialsService.Setup(x => x.IsAndroid).Returns(true);
+            mockEssentialsService.Setup(x => x.IsIos).Returns(false);
+
+            var unitUnderTest = CraeteDialogService();
+            await unitUnderTest.ShowNetworkConnectionErrorAsync();
+
+            mockUserDialogs.Verify(x => x.ConfirmAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), null), Times.Never());
+            mockUserDialogs.Verify(x => x.AlertAsync(
+                AppResources.DialogNetworkConnectionError,
+                AppResources.DialogNetworkConnectionErrorTitle,
+                AppResources.ButtonOk,
+                null),
+                Times.Once());
+        }
     }
 }

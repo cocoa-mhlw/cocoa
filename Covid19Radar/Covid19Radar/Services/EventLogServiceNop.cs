@@ -15,5 +15,10 @@ namespace Covid19Radar.Services
             // do nothing
             return Task.FromResult(new List<EventLog>());
         }
+
+        public Task<bool> SendAsync(EventLog eventLog)
+        {
+            return Task.FromResult(true);
+        }
     }
 }

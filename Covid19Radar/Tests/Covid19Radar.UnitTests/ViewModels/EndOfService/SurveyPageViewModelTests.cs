@@ -4,9 +4,12 @@
 using System;
 using System.Reflection;
 using System.Threading.Tasks;
+using Covid19Radar.Model;
 using Covid19Radar.Repository;
+using Covid19Radar.Services;
 using Covid19Radar.UnitTests.Mocks;
 using Covid19Radar.ViewModels.EndOfService;
+using Covid19Radar.Views.EndOfService;
 using Moq;
 using Prism.Navigation;
 using Xunit;
@@ -17,12 +20,14 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
     {
         private readonly MockRepository _mockRepository;
         private readonly Mock<INavigationService> _mockNavigationService;
+        private readonly Mock<ISurveyService> _mockSurveyService;
         private readonly Mock<IUserDataRepository> _mockUserDataRepository;
 
         public SurveyPageViewModelTests()
         {
             _mockRepository = new MockRepository(MockBehavior.Default);
             _mockNavigationService = _mockRepository.Create<INavigationService>();
+            _mockSurveyService = _mockRepository.Create<ISurveyService>();
             _mockUserDataRepository = _mockRepository.Create<IUserDataRepository>();
 
             MockTimeZoneInfo.SetJstLocalTimeZone();
@@ -37,6 +42,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
         {
             return new SurveyPageViewModel(
                 _mockNavigationService.Object,
+                _mockSurveyService.Object,
                 _mockUserDataRepository.Object
                 );
         }
@@ -100,14 +106,33 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
         [Fact]
         public async Task OnToTerminationOfUsePageButtonTests()
         {
+            var testSurveyContent = new SurveyContent { Q1 = 1, Q2 = 2, Q3 = 1640962800 };
+            _mockSurveyService.Setup(x =>
+                x.BuildSurveyContent(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<DateTime>(), It.IsAny<bool>())
+            )
+            .ReturnsAsync(testSurveyContent);
+
             SurveyPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
+
+            unitUnderTest.SelectedItemQ1 = new SurveyAnswerPickerItem { Value = 1 };
+            unitUnderTest.SelectedItemQ2 = new SurveyAnswerPickerItem { Value = 2 };
+            unitUnderTest.Q3Answer = new DateTimeOffset(2022, 1, 1, 0, 0, 0, new TimeSpan(9, 0, 0)).DateTime;
+            unitUnderTest.IsExposureDataProvision = true;
+
             await unitUnderTest.OnToTerminationOfUsePageButton.ExecuteAsync();
 
-            _mockNavigationService.Verify(
-                x => x.NavigateAsync("TerminationOfUsePage",
-                It.Is<INavigationParameters>(x => x.Count == 0)),
+            _mockSurveyService.Verify(
+                x => x.BuildSurveyContent(
+                    1, 2, It.Is<DateTime>(x => x.Year == 2022 && x.Month == 1 && x.Day == 1), true
+                ),
                 Times.Once());
+            _mockNavigationService.Verify(
+                x => x.NavigateAsync(
+                    "TerminationOfUsePage",
+                    It.Is<INavigationParameters>(x => x[TerminationOfUsePage.NavigationParameterNameSurveyContent].Equals(testSurveyContent))),
+                Times.Once()
+            );
         }
     }
 }
