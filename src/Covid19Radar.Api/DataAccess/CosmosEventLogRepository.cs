@@ -27,7 +27,7 @@ namespace Covid19Radar.Api.DataAccess
         public async Task UpsertAsync(EventLogModel eventLog)
         {
             PartitionKey? pk = null;
-            if(eventLog.PartitionKey is null)
+            if(eventLog.PartitionKey is not null)
             {
                 pk = new PartitionKey(eventLog.PartitionKey);
             }        
