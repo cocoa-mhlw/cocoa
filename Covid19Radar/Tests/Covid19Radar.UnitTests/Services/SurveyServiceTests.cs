@@ -64,8 +64,8 @@ namespace Covid19Radar.UnitTests.Services
             Assert.Equal(2, result.Q2);
             Assert.Equal(1640962800, result.Q3);
             Assert.Equal("1234", result.ExposureData.EnVersion);
-            Assert.Equal(1, result.ExposureData.DailySummaryList.Count);
-            Assert.Equal(1, result.ExposureData.ExposureWindowList.Count);
+            Assert.Single(result.ExposureData.DailySummaryList);
+            Assert.Single(result.ExposureData.ExposureWindowList);
 
             _mockExposureNotificationApiService.Verify(x => x.GetVersionAsync(), Times.Once());
             _mockExposureDataRepository.Verify(x => x.GetDailySummariesAsync(), Times.Once());

@@ -84,14 +84,11 @@ namespace Covid19Radar.ViewModels.EndOfService
             try
             {
                 // Submit survey content if needed
-                if (_surveyContent != null)
+                if (_surveyContent != null && !await _surveyService.SubmitSurvey(_surveyContent))
                 {
-                    if (!await _surveyService.SubmitSurvey(_surveyContent))
-                    {
-                        await _dialogService.ShowNetworkConnectionErrorAsync();
-                        _loggerService.Error("Failed submit survey");
-                        return;
-                    }
+                    await _dialogService.ShowNetworkConnectionErrorAsync();
+                    _loggerService.Error("Failed submit survey");
+                    return;
                 }
 
                 // Stop exposure notifications
