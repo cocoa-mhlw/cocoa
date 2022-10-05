@@ -27,6 +27,11 @@ namespace Covid19Radar.Common
             return dateTimes;
         }
 
+        public static bool IsCurrentUICultureJaJp()
+        {
+            return "ja-JP".Equals(System.Globalization.CultureInfo.CurrentUICulture.Name);
+        }
+
         #endregion
 
     }

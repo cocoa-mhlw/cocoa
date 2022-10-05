@@ -17,7 +17,7 @@ namespace Covid19Radar.ViewModels.EndOfService
 
         private readonly ILoggerService _loggerService;
 
-        private readonly long FullStopDateTime = TimeZoneInfo.ConvertTime(new DateTime(2023, 4, 1, 0, 0, 0), AppConstants.TIMEZONE_JST).ToUnixEpoch();
+        private readonly long FullStopDateTime = TimeZoneInfo.ConvertTime(new DateTime(2022, 12, 31, 0, 0, 0), AppConstants.TIMEZONE_JST).ToUnixEpoch();
 
         public EndOfServiceNoticePageViewModel(
             INavigationService navigationService,
@@ -31,7 +31,7 @@ namespace Covid19Radar.ViewModels.EndOfService
         {
             _loggerService.StartMethod();
 
-            if (FullStopDateTime <= Utils.JstNow().ToUnixEpoch())
+            if (Utils.JstNow().ToUnixEpoch() <= FullStopDateTime && Utils.IsCurrentUICultureJaJp())
             {
                 await NavigationService.NavigateAsync(nameof(SurveyRequestPage));
             }
