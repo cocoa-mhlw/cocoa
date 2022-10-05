@@ -63,6 +63,7 @@
                 </StackLayout>
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
+                    Command="{prism:NavigateTo 'SurveyPage'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.SurveyRequestPageToAnswerButton}" />
                 <Label
