@@ -33,7 +33,8 @@
                     <Picker
                         AutomationProperties.IsInAccessibleTree="True"
                         ItemDisplayBinding="{Binding Text}"
-                        SelectedIndex="{Binding SelectedIndexQ1}">
+                        SelectedIndex="{Binding SelectedIndexQ1}"
+                        SelectedItem="{Binding SelectedItemQ1}">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type models:SurveyAnswerPickerItem}">
                                 <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPagePleaseSelect}" Value="0" />
@@ -48,8 +49,9 @@
                         Text="{x:Static resources:AppResources.SurveyPageQ2Text}" />
                     <Picker
                         AutomationProperties.IsInAccessibleTree="True"
+                        ItemDisplayBinding="{Binding Text}"
                         SelectedIndex="{Binding SelectedIndexQ2}"
-                        ItemDisplayBinding="{Binding Text}">
+                        SelectedItem="{Binding SelectedItemQ2}">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type models:SurveyAnswerPickerItem}">
                                 <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPagePleaseSelect}" Value="0" />
@@ -86,10 +88,14 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabelBold}"
-                        Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionSwitch}" />
+                        Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionSwitch}"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center" />
                     <Switch
                         AutomationProperties.IsInAccessibleTree="True"
-                        HorizontalOptions="EndAndExpand"
+                        IsToggled="{Binding IsExposureDataProvision}"
+                        HorizontalOptions="End"
                         VerticalOptions="Center" />
                 </StackLayout>
                 <Button

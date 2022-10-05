@@ -17,5 +17,6 @@ namespace Covid19Radar.Services
         Task<bool> ShowLocalNotificationOffWarningAsync();
         Task ShowUserProfileNotSupportAsync();
         Task ShowEventLogSaveCompletedAsync();
+        Task ShowNetworkConnectionErrorAsync();
     }
 }
