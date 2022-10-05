@@ -9,6 +9,7 @@ using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.UnitTests.Mocks;
 using Moq;
 using Newtonsoft.Json.Linq;
 using Prism.Navigation;
@@ -16,7 +17,7 @@ using Xunit;
 
 namespace Covid19Radar.UnitTests.Services
 {
-    public class SurveyServiceTests
+    public class SurveyServiceTests : IDisposable
     {
         private readonly MockRepository _mockRepository;
         private readonly Mock<IEventLogService> _mockEventLogService;
@@ -31,6 +32,13 @@ namespace Covid19Radar.UnitTests.Services
 
             Mock<ILoggerService> mockLoggerService = _mockRepository.Create<ILoggerService>();
             _mockExposureNotificationApiService = new Mock<AbsExposureNotificationApiService>(mockLoggerService.Object);
+
+            MockTimeZoneInfo.SetJstLocalTimeZone();
+        }
+
+        public void Dispose()
+        {
+            MockTimeZoneInfo.ClearLocalTimeZone();
         }
 
         private SurveyService CreateService()
