@@ -9,10 +9,12 @@ namespace Covid19Radar.Common
     public interface IDateTimeUtility
     {
         public DateTime UtcNow { get; }
+        public DateTime JstNow { get; }
     }
 
     public class DateTimeUtility : IDateTimeUtility
     {
         public DateTime UtcNow => DateTime.UtcNow;
+        public DateTime JstNow => Utils.JstNow();
     }
 }

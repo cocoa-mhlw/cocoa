@@ -68,6 +68,8 @@ namespace Covid19Radar.UnitTests.ViewModels
             mockEssentialsService = mockRepository.Create<IEssentialsService>();
             mockExternalNavigationService = mockRepository.Create<IExternalNavigationService>();
 
+            Mock<IEndOfServiceNotificationService> mockEndOfServiceNotificationService = mockRepository.Create<IEndOfServiceNotificationService>();
+
             userDataRepository = new UserDataRepository(
                     mockPreferenceService.Object,
                     mockDateTimeUtility.Object,
@@ -82,7 +84,8 @@ namespace Covid19Radar.UnitTests.ViewModels
                 mockServerConfigurationRepository.Object,
                 mockLocalPathService.Object,
                 mockDateTimeUtility.Object,
-                mockLocalNotificationService.Object
+                mockLocalNotificationService.Object,
+                mockEndOfServiceNotificationService.Object
                 );
             exposureDataRepository = new ExposureDataRepository(
                     mockSecureStorageService.Object,

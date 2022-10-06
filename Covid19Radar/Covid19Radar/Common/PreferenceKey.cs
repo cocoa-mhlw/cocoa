@@ -24,6 +24,9 @@ namespace Covid19Radar.Common
         public const string DailySummaries = "DailySummaries";
         public const string ExposureWindows = "ExposureWindows";
 
+        public const string EndOfServiceNotificationNextSchedule = "EndOfServiceNotificationNextSchedule";
+        public const string EndOfServiceNotificationCount = "EndOfServiceNotificationCount";
+
         // for ExposureConfigurationRepository
         public const string IsDiagnosisKeysDataMappingConfigurationUpdated = "IsDiagnosisKeysDataMappingConfigurationUpdated";
         public const string ExposureConfigurationDownloadedEpoch = "ExposureConfigurationDownloadedEpoch";

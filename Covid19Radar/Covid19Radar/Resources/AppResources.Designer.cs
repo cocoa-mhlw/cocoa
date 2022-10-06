@@ -562,7 +562,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to COCOA service is no longer available since ○ 2022. Please open the app to complete the termination procedure..
         /// </summary>
         public static string EndOfServiceNotificationContent {
             get {

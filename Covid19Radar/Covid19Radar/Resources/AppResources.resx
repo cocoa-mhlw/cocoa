@@ -1112,8 +1112,8 @@ You do not have to request it yourself.</value>
     <comment>サービス終了のお知らせ</comment>
   </data>
   <data name="EndOfServiceNotificationContent" xml:space="preserve">
-    <value>TODO</value>
-    <comment>接触確認アプリ「COCOA」は2022年◯月◯日をもってサービスを終了します。</comment>
+    <value>COCOA service is no longer available since ○ 2022. Please open the app to complete the termination procedure.</value>
+    <comment>2022年◯月をもってCOCOAは機能を停止しました。アプリを開いて機能停止手続きを行ってください。</comment>
   </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>Web accessibility policy</value>

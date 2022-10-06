@@ -33,6 +33,7 @@ namespace Covid19Radar.UnitTests.Services
         private readonly Mock<ILocalPathService> mockLocalPathService;
         private readonly Mock<IDateTimeUtility> mockDateTimeUtility;
         private readonly Mock<ILocalNotificationService> mockLocalNotificationService;
+        private readonly Mock<IEndOfServiceNotificationService> mockEndOfServiceNotificationService;
 
         #endregion
 
@@ -50,6 +51,7 @@ namespace Covid19Radar.UnitTests.Services
             mockLocalPathService = mockRepository.Create<ILocalPathService>();
             mockDateTimeUtility = mockRepository.Create<IDateTimeUtility>();
             mockLocalNotificationService = mockRepository.Create<ILocalNotificationService>();
+            mockEndOfServiceNotificationService = mockRepository.Create<IEndOfServiceNotificationService>();
         }
 
         #endregion
@@ -82,7 +84,8 @@ namespace Covid19Radar.UnitTests.Services
                 mockServerConfigurationRepository.Object,
                 mockLocalPathService.Object,
                 mockDateTimeUtility.Object,
-                mockLocalNotificationService.Object
+                mockLocalNotificationService.Object,
+                mockEndOfServiceNotificationService.Object
                 );
         }
 
@@ -521,7 +524,8 @@ namespace Covid19Radar.UnitTests.Services
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalPathService localPathService,
             IDateTimeUtility dateTimeUtility,
-            ILocalNotificationService localNotificationService
+            ILocalNotificationService localNotificationService,
+            IEndOfServiceNotificationService endOfServiceNotificationService
         ) : base(
             diagnosisKeyRepository,
             exposureNotificationApiService,
@@ -531,7 +535,8 @@ namespace Covid19Radar.UnitTests.Services
             serverConfigurationRepository,
             localPathService,
             dateTimeUtility,
-            localNotificationService
+            localNotificationService,
+            endOfServiceNotificationService
         )
         {
 
