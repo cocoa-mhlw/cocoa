@@ -13,18 +13,24 @@ using Covid19Radar.Views.EndOfService;
 using Moq;
 using Prism.Navigation;
 using Xunit;
+using Xunit.Abstractions;
+using Xunit.Sdk;
 
 namespace Covid19Radar.UnitTests.ViewModels.EndOfService
 {
     public class SurveyPageViewModelTests : IDisposable
     {
+        private readonly ITestOutputHelper _testOutputHelper;
+
         private readonly MockRepository _mockRepository;
         private readonly Mock<INavigationService> _mockNavigationService;
         private readonly Mock<ISurveyService> _mockSurveyService;
         private readonly Mock<IUserDataRepository> _mockUserDataRepository;
 
-        public SurveyPageViewModelTests()
+        public SurveyPageViewModelTests(ITestOutputHelper testOutputHelper)
         {
+            _testOutputHelper = testOutputHelper;
+
             _mockRepository = new MockRepository(MockBehavior.Default);
             _mockNavigationService = _mockRepository.Create<INavigationService>();
             _mockSurveyService = _mockRepository.Create<ISurveyService>();
@@ -79,10 +85,15 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
             SurveyPageViewModel unitUnderTest = CreateViewModel();
             unitUnderTest.Initialize(new NavigationParameters());
 
+            _testOutputHelper.WriteLine($"TimeZoneInfo.Local: {TimeZoneInfo.Local}");
+
             DateTime testStartDateLocal = unitUnderTest.Q3Answer;
-            Assert.Equal(expectedYear, unitUnderTest.Q3Answer.Year);
-            Assert.Equal(expectedMonth, unitUnderTest.Q3Answer.Month);
-            Assert.Equal(expectedDay, unitUnderTest.Q3Answer.Day);
+            if (MockTimeZoneInfo.IsJst())
+            {
+                Assert.Equal(expectedYear, unitUnderTest.Q3Answer.Year);
+                Assert.Equal(expectedMonth, unitUnderTest.Q3Answer.Month);
+                Assert.Equal(expectedDay, unitUnderTest.Q3Answer.Day);
+            }
         }
 
         [Theory]
