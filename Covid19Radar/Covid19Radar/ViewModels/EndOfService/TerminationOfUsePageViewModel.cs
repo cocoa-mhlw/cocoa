@@ -35,6 +35,13 @@ namespace Covid19Radar.ViewModels.EndOfService
 
         private SurveyContent _surveyContent = null;
 
+        private string _description1;
+        public string Description1
+        {
+            get { return _description1; }
+            set { SetProperty(ref _description1, value); }
+        }
+
         public TerminationOfUsePageViewModel(
             INavigationService navigationService,
             ILoggerService loggerService,
@@ -65,6 +72,12 @@ namespace Covid19Radar.ViewModels.EndOfService
             _absExposureNotificationApiService = absExposureNotificationApiService;
             _absExposureDetectionBackgroundService = absExposureDetectionBackgroundService;
             _absDataMaintainanceBackgroundService = absDataMaintainanceBackgroundService;
+
+            var daysOfUse = _userDataRepository.GetDaysOfUse();
+            Description1 = string.Format(
+                AppResources.TerminationOfUsePageDescription1,
+                daysOfUse
+                );
         }
 
         public override void Initialize(INavigationParameters parameters)

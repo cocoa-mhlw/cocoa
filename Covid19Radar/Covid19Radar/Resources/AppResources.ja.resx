@@ -1511,24 +1511,20 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
 
   <data name="TerminationOfUsePageTitle" xml:space="preserve">
-    <value>利用終了の確認</value>
-    <comment>利用終了の確認</comment>
+    <value>機能停止の確認</value>
+    <comment>機能停止の確認</comment>
   </data>
   <data name="TerminationOfUsePageDescription1" xml:space="preserve">
-    <value>COCOAのご利用ありがとうございました。</value>
-    <comment>COCOAのご利用ありがとうございました。</comment>
+    <value>利用開始から{0}日間のアプリのご利用ありがとうございました。</value>
+    <comment>利用開始から{0}日間のアプリのご利用ありがとうございました。</comment>
   </data>
   <data name="TerminationOfUsePageDescription2" xml:space="preserve">
-    <value>利用終了手続きにより、接触通知APIが停止します。また、保存されているデータはすべて削除します。</value>
-    <comment>利用終了手続きにより、接触通知APIが停止します。また、保存されているデータはすべて削除します。</comment>
-  </data>
-  <data name="TerminationOfUsePageDescription3" xml:space="preserve">
-    <value>なお利用調査にご協力いただいた方の回答結果は、利用終了時に送信されます。</value>
-    <comment>なお利用調査にご協力いただいた方の回答結果は、利用終了時に送信されます。</comment>
+    <value>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</value>
+    <comment>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</comment>
   </data>
   <data name="TerminationOfUsePageTerminationButton" xml:space="preserve">
-    <value>利用を終了する</value>
-    <comment>利用を終了する</comment>
+    <value>機能を停止する</value>
+    <comment>機能を停止する</comment>
   </data>
 
   <data name="TerminationOfUseCompletePageTitle" xml:space="preserve">

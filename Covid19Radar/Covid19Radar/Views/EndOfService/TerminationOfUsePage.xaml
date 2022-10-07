@@ -22,15 +22,11 @@
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.TerminationOfUsePageDescription1}" />
+                    Text="{Binding Description1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.TerminationOfUsePageDescription2}" />
-                <Label
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.TerminationOfUsePageDescription3}" />
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
                     Command="{Binding Path=OnTerminationButton}"
