@@ -1528,17 +1528,26 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
 
   <data name="TerminationOfUseCompletePageTitle" xml:space="preserve">
-    <value>終了手続きが完了しました</value>
-    <comment>終了手続きが完了しました</comment>
+    <value>機能停止処理が完了しました</value>
+    <comment>機能停止処理が完了しました</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription1" xml:space="preserve">
-    <value>COCOAの利用を終了しました。アプリをアンインストールしてください。</value>
-    <comment>COCOAの利用を終了しました。アプリをアンインストールしてください。</comment>
+    <value>アプリの機能を停止しました。
+これまでのご利用、本当にありがとうございました。
+アプリをアンインストールしてください。</value>
+    <comment>アプリの機能を停止しました。これまでのご利用、本当にありがとうございました。アプリをアンインストールしてください。</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription2" xml:space="preserve">
-    <value>これまでのご利用、本当にありがとうございました。
-これからも感染予防に気をつけてお過ごしください。</value>
-    <comment>これまでのご利用、本当にありがとうございました。これからも感染予防に気をつけてお過ごしください。</comment>
+    <value>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</value>
+    <comment>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</comment>
+  </data>
+  <data name="TerminationOfUseCompletePageDescription3" xml:space="preserve">
+    <value>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</value>
+    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
+  </data>
+  <data name="TerminationOfUseCompletePageTextLink" xml:space="preserve">
+    <value>詳細を確認する</value>
+    <comment>詳細を確認する</comment>
   </data>
 
   <data name="EndOfServiceNoticePageTitle" xml:space="preserve">

@@ -29,8 +29,23 @@
                     Text="{x:Static resources:AppResources.TerminationOfUseCompletePageDescription1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource DefaultLabel}"
+                    Style="{StaticResource GreenDefaultLabel}"
                     Text="{x:Static resources:AppResources.TerminationOfUseCompletePageDescription2}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.TerminationOfUseCompletePageDescription3}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding CheckDetailsLinkReadText}"
+                    Margin="0, 20, 0, 0"
+                    Style="{StaticResource LinkLabelStyleMedium}"
+                    HorizontalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.TerminationOfUseCompletePageTextLink}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Path=OpenWebView}" />
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </ScrollView>
     </ContentView>
