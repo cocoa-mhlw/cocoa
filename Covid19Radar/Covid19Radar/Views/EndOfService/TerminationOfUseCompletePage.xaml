@@ -29,7 +29,7 @@
                     Text="{x:Static resources:AppResources.TerminationOfUseCompletePageDescription1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource GreenDefaultLabel}"
+                    Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.TerminationOfUseCompletePageDescription2}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"

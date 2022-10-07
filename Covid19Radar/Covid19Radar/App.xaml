@@ -33,7 +33,6 @@
             <Color x:Key="CheckedRadioButtonBackground">#E8F7FF</Color>
             <Color x:Key="DisabledRadioButtonBackground">#EEEEEE</Color>
             <Color x:Key="CheckBoxColor">#066AB9</Color>
-            <Color x:Key="GreenTextColor">#70AD47</Color>
 
             <!--  Icons  -->
             <x:String x:Key="IconProfile">&#xf2bd;</x:String>
@@ -198,10 +197,6 @@
                 <Setter Property="TextColor" Value="{StaticResource HomePageLink}" />
                 <Setter Property="FontSize" Value="Body" />
                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-            </Style>
-
-            <Style x:Key="GreenDefaultLabel" TargetType="Label" BasedOn="{StaticResource DefaultLabel}">
-                <Setter Property="TextColor" Value="{StaticResource GreenTextColor}" />
             </Style>
 
             <Style x:Key="DefaultWebView" TargetType="WebView">

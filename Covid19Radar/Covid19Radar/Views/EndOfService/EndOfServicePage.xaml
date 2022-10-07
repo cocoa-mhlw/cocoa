@@ -32,7 +32,7 @@
                     Text="{x:Static resources:AppResources.EndOfServicePageDescription1}" />
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource GreenDefaultLabel}"
+                    Style="{StaticResource DefaultLabel}"
                     HorizontalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.EndOfServicePageDescription2}" />
                 <Label

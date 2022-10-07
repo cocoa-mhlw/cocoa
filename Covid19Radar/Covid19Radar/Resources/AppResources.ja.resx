@@ -1523,10 +1523,6 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>利用開始から{0}日間のアプリのご利用ありがとうございました。</value>
     <comment>利用開始から{0}日間のアプリのご利用ありがとうございました。</comment>
   </data>
-  <data name="TerminationOfUsePageDescription2" xml:space="preserve">
-    <value>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</value>
-    <comment>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</comment>
-  </data>
   <data name="TerminationOfUsePageTerminationButton" xml:space="preserve">
     <value>機能を停止する</value>
     <comment>機能を停止する</comment>
@@ -1538,9 +1534,9 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription1" xml:space="preserve">
     <value>アプリの機能を停止しました。
-これまでのご利用、本当にありがとうございました。
+これまでご利用いただき、ありがとうございました。
 アプリをアンインストールしてください。</value>
-    <comment>アプリの機能を停止しました。これまでのご利用、本当にありがとうございました。アプリをアンインストールしてください。</comment>
+    <comment>アプリの機能を停止しました。これまでご利用いただき、ありがとうございました。アプリをアンインストールしてください。</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription2" xml:space="preserve">
     <value>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</value>
@@ -1560,12 +1556,12 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription1" xml:space="preserve">
-    <value>全数届出の見直しに伴い、2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</value>
-    <comment>全数届出の見直しに伴い、2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
+    <value>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</value>
+    <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription2" xml:space="preserve">
-    <value>アプリの機能停止に関する手続きをお願いします。</value>
-    <comment>アプリの機能停止に関する手続きをお願いします。</comment>
+    <value>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</value>
+    <comment>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription3" xml:space="preserve">
     <value>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</value>

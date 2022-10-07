@@ -3272,15 +3272,6 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TODO.
         /// </summary>
-        public static string TerminationOfUsePageDescription2 {
-            get {
-                return ResourceManager.GetString("TerminationOfUsePageDescription2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TODO.
-        /// </summary>
         public static string TerminationOfUsePageTerminationButton {
             get {
                 return ResourceManager.GetString("TerminationOfUsePageTerminationButton", resourceCulture);
