@@ -1499,15 +1499,19 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="EndOfServicePageTitle" xml:space="preserve">
     <value>TODO</value>
-    <comment>サービス終了のお知らせ</comment>
+    <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServicePageDescription1" xml:space="preserve">
     <value>TODO</value>
-    <comment>接触確認アプリ「COCOA」は2022年◯月◯日をもってサービスを終了します。</comment>
+    <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。ご利用ありがとうございました。</comment>
   </data>
   <data name="EndOfServicePageDescription2" xml:space="preserve">
     <value>TODO</value>
-    <comment>ご利用ありがとうございました。</comment>
+    <comment>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</comment>
+  </data>
+  <data name="EndOfServicePageDescription3" xml:space="preserve">
+    <value>TODO</value>
+    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServicePageTextLink" xml:space="preserve">
     <value>TODO</value>
