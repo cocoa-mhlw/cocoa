@@ -1546,24 +1546,28 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
 
   <data name="EndOfServiceNoticePageTitle" xml:space="preserve">
-    <value>サービス終了のお知らせ</value>
-    <comment>サービス終了のお知らせ</comment>
+    <value>機能停止のお知らせ</value>
+    <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription1" xml:space="preserve">
-    <value>新型コロナウイルス感染症の全数把握の見直しに伴い、2022年◯月◯日をもって接触確認アプリ「COCOA」は機能を停止しました。</value>
-    <comment>新型コロナウイルス感染症の全数把握の見直しに伴い、2022年◯月◯日をもって接触確認アプリ「COCOA」は機能を停止しました。</comment>
+    <value>全数届出の見直しに伴い、2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</value>
+    <comment>全数届出の見直しに伴い、2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription2" xml:space="preserve">
-    <value>アプリの利用終了手続きとアンケートへのご協力をお願いします。</value>
-    <comment>アプリの利用終了手続きとアンケートへのご協力をお願いします。</comment>
+    <value>アプリの機能停止に関する手続きをお願いします。</value>
+    <comment>アプリの機能停止に関する手続きをお願いします。</comment>
+  </data>
+  <data name="EndOfServiceNoticePageDescription3" xml:space="preserve">
+    <value>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</value>
+    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServiceNoticePageTextLink" xml:space="preserve">
     <value>詳細を確認する</value>
     <comment>詳細を確認する</comment>
   </data>
   <data name="EndOfServiceNoticePageButton" xml:space="preserve">
-    <value>利用終了手続きへ</value>
-    <comment>利用終了手続きへ</comment>
+    <value>機能停止手続きへ</value>
+    <comment>機能停止手続きへ</comment>
   </data>
 
   <data name="SurveyRequestPageTitle" xml:space="preserve">
