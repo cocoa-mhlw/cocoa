@@ -44,7 +44,6 @@ namespace Covid19Radar.UnitTests.Services
         {
             DateTime testNowUtc = DateTime.UtcNow;
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(false);
 
@@ -59,7 +58,6 @@ namespace Covid19Radar.UnitTests.Services
         {
             DateTime testNowUtc = new DateTimeOffset(2023, 1, 1, 0, 0, 0, new TimeSpan(9, 0, 0)).UtcDateTime;
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
 
@@ -75,7 +73,6 @@ namespace Covid19Radar.UnitTests.Services
         {
             DateTime testNowUtc = new DateTimeOffset(2022, 12, 31, 23, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
 
@@ -91,7 +88,6 @@ namespace Covid19Radar.UnitTests.Services
         {
             DateTime testNowUtc = new DateTimeOffset(2022, 12, 31, 23, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(2);
@@ -108,7 +104,6 @@ namespace Covid19Radar.UnitTests.Services
         {
             DateTime testNowUtc = new DateTimeOffset(2022, 12, 31, 23, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(1);
@@ -125,7 +120,6 @@ namespace Covid19Radar.UnitTests.Services
         {
             DateTime testNowUtc = new DateTimeOffset(2022, 12, 31, 23, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(0);
@@ -146,7 +140,6 @@ namespace Covid19Radar.UnitTests.Services
             DateTime testSchedule = new DateTimeOffset(2022, 10, 3, 12, 0, 0, new TimeSpan(9, 0, 0)).UtcDateTime;
 
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(0);
@@ -167,7 +160,6 @@ namespace Covid19Radar.UnitTests.Services
             DateTime testSchedule = new DateTimeOffset(2022, 10, 3, 0, 0, 0, new TimeSpan(9, 0, 0)).UtcDateTime;
 
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(0);
@@ -187,7 +179,6 @@ namespace Covid19Radar.UnitTests.Services
             DateTime testSchedule = new DateTimeOffset(2022, 10, 3, 0, 0, 0, new TimeSpan(9, 0, 0)).UtcDateTime;
 
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(0);
@@ -209,7 +200,6 @@ namespace Covid19Radar.UnitTests.Services
             DateTime testSchedule = new DateTimeOffset(2022, 10, 2, 20, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
 
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(0);
@@ -231,7 +221,6 @@ namespace Covid19Radar.UnitTests.Services
             DateTime testSchedule = new DateTimeOffset(2022, 10, 2, 20, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
 
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(0);
@@ -251,7 +240,6 @@ namespace Covid19Radar.UnitTests.Services
             DateTime testSchedule = new DateTimeOffset(2022, 10, 2, 20, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
 
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(0);
@@ -274,7 +262,6 @@ namespace Covid19Radar.UnitTests.Services
             DateTime testSchedule = new DateTimeOffset(2022, 10, 2, 20, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
 
             _mockDateTimeUtility.SetupGet(x => x.UtcNow).Returns(testNowUtc);
-            _mockDateTimeUtility.SetupGet(x => x.JstNow).Returns(TimeZoneInfo.ConvertTimeFromUtc(testNowUtc, AppConstants.TIMEZONE_JST));
 
             _mockUserDataRepository.Setup(x => x.IsAllAgreed()).Returns(true);
             _mockUserDataRepository.Setup(x => x.GetEndOfServiceNotificationCount()).Returns(1);

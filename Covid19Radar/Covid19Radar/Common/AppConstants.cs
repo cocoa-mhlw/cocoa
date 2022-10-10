@@ -19,7 +19,7 @@ namespace Covid19Radar.Common
         /// Survey end date. (2023/01/01 00:00 JST 以降は調査期間外)
         /// </summary>
         public static readonly DateTime SURVEY_END_DATE_UTC
-            = new DateTimeOffset(2023, 1, 1, 0, 0, 0, new TimeSpan(9, 0, 0)).UtcDateTime;
+            = new DateTimeOffset(2022, 12, 31, 23, 59, 59, new TimeSpan(9, 0, 0)).UtcDateTime;
 
         /// <summary>
         /// Japan Standard Time (JST), UTC +9

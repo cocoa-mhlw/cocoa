@@ -45,7 +45,7 @@ namespace Covid19Radar.Services
             try
             {
                 DateTime utcNow = _dateTimeUtility.UtcNow;
-                DateTime jstNow = _dateTimeUtility.JstNow;
+                DateTime jstNow = TimeZoneInfo.ConvertTimeFromUtc(utcNow, AppConstants.TIMEZONE_JST);
 
                 if (!_userDataRepository.IsAllAgreed())
                 {
@@ -53,8 +53,7 @@ namespace Covid19Radar.Services
                     return;
                 }
 
-                DateTime endDateUtc = AppConstants.SURVEY_END_DATE_UTC;
-                if (endDateUtc.CompareTo(utcNow) <= 0)
+                if (utcNow.CompareTo(AppConstants.SURVEY_END_DATE_UTC) > 0)
                 {
                     _loggerService.Info("No notification (Survey end)");
                     return;
@@ -72,7 +71,7 @@ namespace Covid19Radar.Services
                 {
                     nextSchedule = GetNextSchedule(ScheduleDays[endOfServiceNotificationCount], utcNow);
                     _userDataRepository.SetEndOfServiceNotificationNextSchedule((DateTime)nextSchedule);
-                    _loggerService.Info($"No notification (First schedule) {nextSchedule}");
+                    _loggerService.Info($"No notification (First schedule) {nextSchedule}(UTC)");
                     return;
                 }
 
@@ -95,7 +94,7 @@ namespace Covid19Radar.Services
                 {
                     nextSchedule = GetNextSchedule(ScheduleDays[endOfServiceNotificationCount], (DateTime)nextSchedule);
                     _userDataRepository.SetEndOfServiceNotificationNextSchedule((DateTime)nextSchedule);
-                    _loggerService.Info($"Set next schedule. {nextSchedule}");
+                    _loggerService.Info($"Set next schedule. {nextSchedule}(UTC)");
                 }
 
                 _loggerService.Info("Show notification.");
@@ -110,14 +109,14 @@ namespace Covid19Radar.Services
         private DateTime GetNextSchedule(int days, DateTime baseDateTimeUtc)
         {
             DateTime baseDateTimeJst = TimeZoneInfo.ConvertTimeFromUtc(baseDateTimeUtc, AppConstants.TIMEZONE_JST);
-            DateTime nextScheduleDate = baseDateTimeJst.Date.AddDays(days);
+            DateTime nextScheduleDateJst = baseDateTimeJst.Date.AddDays(days);
 
             var random = new Random();
             int seconds = random.Next(9 * 60 * 60, 21 * 60 * 60 - 1);
 
-            DateTime nexeScheculeDateTime = nextScheduleDate.AddSeconds(seconds);
+            DateTime nexeScheculeDateTimeJst = nextScheduleDateJst.AddSeconds(seconds);
 
-            return TimeZoneInfo.ConvertTimeToUtc(nexeScheculeDateTime, AppConstants.TIMEZONE_JST);
+            return TimeZoneInfo.ConvertTimeToUtc(nexeScheculeDateTimeJst, AppConstants.TIMEZONE_JST);
         }
     }
 }
