@@ -1007,10 +1007,6 @@
     <value>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</value>
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
   </data>
-  <data name="EndOfServiceNotificationTitle" xml:space="preserve">
-    <value>サービス終了のお知らせ</value>
-    <comment>サービス終了のお知らせ</comment>
-  </data>
   <data name="EndOfServiceNotificationContent" xml:space="preserve">
     <value>2022年◯月をもってCOCOAは機能を停止しました。アプリを開いて機能停止手続きを行ってください。</value>
     <comment>2022年◯月をもってCOCOAは機能を停止しました。アプリを開いて機能停止手続きを行ってください。</comment>
