@@ -67,7 +67,8 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
                 _mockRepository.Create<IServerConfigurationRepository>().Object,
                 _mockRepository.Create<ILocalPathService>().Object,
                 _mockRepository.Create<IDateTimeUtility>().Object,
-                _mockRepository.Create<ILocalNotificationService>().Object);
+                _mockRepository.Create<ILocalNotificationService>().Object,
+                _mockRepository.Create<IEndOfServiceNotificationService>().Object);
             _mockAbsDataMaintainanceBackgroundService = new Mock<AbsDataMaintainanceBackgroundService>(
                 _mockLoggerService.Object,
                 _mockLogFileService.Object);
@@ -119,10 +120,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
             _mockExposureDataRepository.Verify(x => x.RemoveDailySummariesAsync(), Times.Once());
             _mockExposureDataRepository.Verify(x => x.RemoveExposureWindowsAsync(), Times.Once());
             _mockExposureDataRepository.Verify(x => x.RemoveExposureInformation(), Times.Once());
-            _mockUserDataRepository.Verify(x => x.RemoveLastProcessDiagnosisKeyTimestampAsync(), Times.Once());
-            _mockUserDataRepository.Verify(x => x.RemoveStartDate(), Times.Once());
-            _mockUserDataRepository.Verify(x => x.RemoveAllUpdateDate(), Times.Once());
-            _mockUserDataRepository.Verify(x => x.RemoveAllExposureNotificationStatus(), Times.Once());
+            _mockUserDataRepository.Verify(x => x.RemoveAll(), Times.Once());
             _mockExposureConfigurationRepository.Verify(x => x.RemoveExposureConfigurationAsync(), Times.Once());
             _mockSendEventLogStateRepository.Verify(x => x.RemoveAll(), Times.Once());
             _mockEventLogRepository.Verify(x => x.RemoveAllAsync(), Times.Once());
@@ -157,10 +155,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
             _mockExposureDataRepository.Verify(x => x.RemoveDailySummariesAsync(), Times.Once());
             _mockExposureDataRepository.Verify(x => x.RemoveExposureWindowsAsync(), Times.Once());
             _mockExposureDataRepository.Verify(x => x.RemoveExposureInformation(), Times.Once());
-            _mockUserDataRepository.Verify(x => x.RemoveLastProcessDiagnosisKeyTimestampAsync(), Times.Once());
-            _mockUserDataRepository.Verify(x => x.RemoveStartDate(), Times.Once());
-            _mockUserDataRepository.Verify(x => x.RemoveAllUpdateDate(), Times.Once());
-            _mockUserDataRepository.Verify(x => x.RemoveAllExposureNotificationStatus(), Times.Once());
+            _mockUserDataRepository.Verify(x => x.RemoveAll(), Times.Once());
             _mockExposureConfigurationRepository.Verify(x => x.RemoveExposureConfigurationAsync(), Times.Once());
             _mockSendEventLogStateRepository.Verify(x => x.RemoveAll(), Times.Once());
             _mockEventLogRepository.Verify(x => x.RemoveAllAsync(), Times.Once());
@@ -195,10 +190,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
             _mockExposureDataRepository.Verify(x => x.RemoveDailySummariesAsync(), Times.Never());
             _mockExposureDataRepository.Verify(x => x.RemoveExposureWindowsAsync(), Times.Never());
             _mockExposureDataRepository.Verify(x => x.RemoveExposureInformation(), Times.Never());
-            _mockUserDataRepository.Verify(x => x.RemoveLastProcessDiagnosisKeyTimestampAsync(), Times.Never());
-            _mockUserDataRepository.Verify(x => x.RemoveStartDate(), Times.Never());
-            _mockUserDataRepository.Verify(x => x.RemoveAllUpdateDate(), Times.Never());
-            _mockUserDataRepository.Verify(x => x.RemoveAllExposureNotificationStatus(), Times.Never());
+            _mockUserDataRepository.Verify(x => x.RemoveAll(), Times.Never());
             _mockExposureConfigurationRepository.Verify(x => x.RemoveExposureConfigurationAsync(), Times.Never());
             _mockSendEventLogStateRepository.Verify(x => x.RemoveAll(), Times.Never());
             _mockEventLogRepository.Verify(x => x.RemoveAllAsync(), Times.Never());

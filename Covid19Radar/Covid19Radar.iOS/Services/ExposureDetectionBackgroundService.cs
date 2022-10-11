@@ -37,7 +37,8 @@ namespace Covid19Radar.iOS.Services
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalPathService localPathService,
             IDateTimeUtility dateTimeUtility,
-            ILocalNotificationService localNotificationService
+            ILocalNotificationService localNotificationService,
+            IEndOfServiceNotificationService endOfServiceNotificationService
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
@@ -47,7 +48,8 @@ namespace Covid19Radar.iOS.Services
                 serverConfigurationRepository,
                 localPathService,
                 dateTimeUtility,
-                localNotificationService
+                localNotificationService,
+                endOfServiceNotificationService
                 )
         {
             _loggerService = loggerService;

@@ -19,6 +19,11 @@ namespace Covid19Radar.UnitTests.Mocks
             TimeZoneInfo.ClearCachedData();
         }
 
+        public static bool IsJst()
+        {
+            return TimeZoneInfo.Local.BaseUtcOffset.Hours == 9 && TimeZoneInfo.Local.BaseUtcOffset.Minutes == 0;
+        }
+
         private static void SetLocalTimeZone(TimeZoneInfo timeZoneInfo)
         {
             FieldInfo cachedDataFieldInfo = typeof(TimeZoneInfo).GetField(

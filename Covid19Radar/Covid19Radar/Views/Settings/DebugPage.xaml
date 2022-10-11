@@ -79,7 +79,15 @@
                     <Button
                         Command="{Binding Path=OnClickShowEndOfServiceNotification}"
                         Style="{StaticResource DefaultButton}"
+                        Text="ShowEndOfServiceNotification(Force)" />
+                    <Button
+                        Command="{Binding Path=OnClickShowEndOfServiceNotification2}"
+                        Style="{StaticResource DefaultButton}"
                         Text="ShowEndOfServiceNotification" />
+                    <Button
+                        Command="{Binding Path=OnClickRemoveEndOfServiceInformation}"
+                        Style="{StaticResource DefaultButton}"
+                        Text="Remove end of service information" />
                     <Button
                         Command="{prism:NavigateTo 'ManageExposureDataPage'}"
                         Style="{StaticResource DefaultButton}"

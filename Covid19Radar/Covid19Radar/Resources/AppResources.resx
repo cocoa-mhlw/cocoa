@@ -1107,13 +1107,9 @@ You do not have to request it yourself.</value>
     <value>It is possible you have been in close proximity to a user who tested positive for COVID-19. Tap for more details.</value>
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
   </data>
-  <data name="EndOfServiceNotificationTitle" xml:space="preserve">
-    <value>TODO</value>
-    <comment>サービス終了のお知らせ</comment>
-  </data>
   <data name="EndOfServiceNotificationContent" xml:space="preserve">
-    <value>TODO</value>
-    <comment>接触確認アプリ「COCOA」は2022年◯月◯日をもってサービスを終了します。</comment>
+    <value>COCOA service is no longer available since ○ 2022. Please open the app to complete the termination procedure.</value>
+    <comment>2022年◯月をもってCOCOAは機能を停止しました。アプリを開いて機能停止手続きを行ってください。</comment>
   </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>Web accessibility policy</value>

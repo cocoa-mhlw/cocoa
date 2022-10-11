@@ -14,18 +14,24 @@ using Moq;
 using Newtonsoft.Json.Linq;
 using Prism.Navigation;
 using Xunit;
+using Xunit.Abstractions;
+using Xunit.Sdk;
 
 namespace Covid19Radar.UnitTests.Services
 {
     public class SurveyServiceTests : IDisposable
     {
+        private readonly ITestOutputHelper _testOutputHelper;
+
         private readonly MockRepository _mockRepository;
         private readonly Mock<IEventLogService> _mockEventLogService;
         private readonly Mock<IExposureDataRepository> _mockExposureDataRepository;
         private readonly Mock<AbsExposureNotificationApiService> _mockExposureNotificationApiService;
 
-        public SurveyServiceTests()
+        public SurveyServiceTests(ITestOutputHelper testOutputHelper)
         {
+            _testOutputHelper = testOutputHelper;
+
             _mockRepository = new MockRepository(MockBehavior.Default);
             _mockEventLogService = _mockRepository.Create<IEventLogService>();
             _mockExposureDataRepository = _mockRepository.Create<IExposureDataRepository>();
@@ -60,9 +66,14 @@ namespace Covid19Radar.UnitTests.Services
             SurveyService unitUnderTest = CreateService();
             SurveyContent result = await unitUnderTest.BuildSurveyContent(1, 2, new DateTimeOffset(2022, 1, 1, 0, 0, 0, new TimeSpan(9, 0, 0)).DateTime, true);
 
+            _testOutputHelper.WriteLine($"TimeZoneInfo.Local: {TimeZoneInfo.Local}");
+
             Assert.Equal(1, result.Q1);
             Assert.Equal(2, result.Q2);
-            Assert.Equal(1640962800, result.Q3);
+            if (MockTimeZoneInfo.IsJst())
+            {
+                Assert.Equal(1640962800, result.Q3);
+            }
             Assert.Equal("1234", result.ExposureData.EnVersion);
             Assert.Single(result.ExposureData.DailySummaryList);
             Assert.Single(result.ExposureData.ExposureWindowList);
@@ -78,9 +89,14 @@ namespace Covid19Radar.UnitTests.Services
             SurveyService unitUnderTest = CreateService();
             SurveyContent result = await unitUnderTest.BuildSurveyContent(1, 2, new DateTimeOffset(2022, 1, 1, 0, 0, 0, new TimeSpan(9, 0, 0)).DateTime, false);
 
+            _testOutputHelper.WriteLine($"TimeZoneInfo.Local: {TimeZoneInfo.Local}");
+
             Assert.Equal(1, result.Q1);
             Assert.Equal(2, result.Q2);
-            Assert.Equal(1640962800, result.Q3);
+            if (MockTimeZoneInfo.IsJst())
+            {
+                Assert.Equal(1640962800, result.Q3);
+            }
             Assert.Null(result.ExposureData);
 
             _mockExposureNotificationApiService.Verify(x => x.GetVersionAsync(), Times.Never());

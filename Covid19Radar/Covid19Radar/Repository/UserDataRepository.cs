@@ -43,6 +43,18 @@ namespace Covid19Radar.Repository
         Task<long> GetLastProcessDiagnosisKeyTimestampAsync(string region);
         Task SetLastProcessDiagnosisKeyTimestampAsync(string region, long timestamp);
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
+
+        // for End of service
+        void SetEndOfServiceNotificationNextSchedule(DateTime nextSchedule);
+        DateTime? GetEndOfServiceNotificationNextSchedule();
+
+        void SetEndOfServiceNotificationCount(int count);
+        int GetEndOfServiceNotificationCount();
+
+        void RemoveAllOfEndOfServiceInformation();
+
+        // Remove all
+        void RemoveAll();
     }
 
     public class UserDataRepository : IUserDataRepository
@@ -260,6 +272,57 @@ namespace Covid19Radar.Repository
             _preferencesService.RemoveValue(PreferenceKey.CanConfirmExposure);
             _preferencesService.RemoveValue(PreferenceKey.LastConfirmedDateTimeEpoch);
             _loggerService.EndMethod();
+        }
+
+        public void SetEndOfServiceNotificationNextSchedule(DateTime nextSchedule)
+        {
+            _loggerService.StartMethod();
+            _preferencesService.SetLongValue(PreferenceKey.EndOfServiceNotificationNextSchedule, nextSchedule.ToUnixEpoch());
+            _loggerService.EndMethod();
+        }
+
+        public DateTime? GetEndOfServiceNotificationNextSchedule()
+        {
+            _loggerService.StartMethod();
+            DateTime? nextSchedule = null;
+            try
+            {
+                if (_preferencesService.ContainsKey(PreferenceKey.EndOfServiceNotificationNextSchedule))
+                {
+                    long epoch = _preferencesService.GetLongValue(PreferenceKey.EndOfServiceNotificationNextSchedule, 0L);
+                    nextSchedule = DateTime.UnixEpoch.AddSeconds(epoch);
+                }
+            }
+            finally
+            {
+                _loggerService.EndMethod();
+            }
+            return nextSchedule;
+        }
+
+        public void SetEndOfServiceNotificationCount(int count)
+        {
+            _preferencesService.SetIntValue(PreferenceKey.EndOfServiceNotificationCount, count);
+        }
+
+        public int GetEndOfServiceNotificationCount()
+        {
+            return _preferencesService.GetIntValue(PreferenceKey.EndOfServiceNotificationCount, 0);
+        }
+
+        public void RemoveAllOfEndOfServiceInformation()
+        {
+            _preferencesService.RemoveValue(PreferenceKey.EndOfServiceNotificationNextSchedule);
+            _preferencesService.RemoveValue(PreferenceKey.EndOfServiceNotificationCount);
+        }
+
+        public void RemoveAll()
+        {
+            RemoveLastProcessDiagnosisKeyTimestampAsync();
+            RemoveStartDate();
+            RemoveAllUpdateDate();
+            RemoveAllExposureNotificationStatus();
+            RemoveAllOfEndOfServiceInformation();
         }
     }
 }

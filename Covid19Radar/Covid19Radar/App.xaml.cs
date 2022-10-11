@@ -253,6 +253,7 @@ namespace Covid19Radar
             container.Register<IDeviceInfoUtility, DeviceInfoUtility>(Reuse.Singleton);
 
             // End of service
+            container.Register<IEndOfServiceNotificationService, EndOfServiceNotificationService>(Reuse.Singleton);
             container.Register<ISurveyService, SurveyService>(Reuse.Singleton);
         }
 

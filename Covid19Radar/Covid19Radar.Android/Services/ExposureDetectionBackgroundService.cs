@@ -38,7 +38,8 @@ namespace Covid19Radar.Droid.Services
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalPathService localPathService,
             IDateTimeUtility dateTimeUtility,
-            ILocalNotificationService localNotificationService
+            ILocalNotificationService localNotificationService,
+            IEndOfServiceNotificationService endOfServiceNotificationService
             ) : base(
                 diagnosisKeyRepository,
                 exposureNotificationApiService,
@@ -48,7 +49,8 @@ namespace Covid19Radar.Droid.Services
                 serverConfigurationRepository,
                 localPathService,
                 dateTimeUtility,
-                localNotificationService
+                localNotificationService,
+                endOfServiceNotificationService
                 )
         {
             _loggerService = loggerService;

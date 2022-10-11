@@ -115,12 +115,9 @@ namespace Covid19Radar.ViewModels.EndOfService
                 await _exposureDataRepository.RemoveDailySummariesAsync();
                 await _exposureDataRepository.RemoveExposureWindowsAsync();
                 _exposureDataRepository.RemoveExposureInformation();
-                await _userDataRepository.RemoveLastProcessDiagnosisKeyTimestampAsync();
                 await _exposureConfigurationRepository.RemoveExposureConfigurationAsync();
 
-                _userDataRepository.RemoveStartDate();
-                _userDataRepository.RemoveAllUpdateDate();
-                _userDataRepository.RemoveAllExposureNotificationStatus();
+                _userDataRepository.RemoveAll();
 
                 _sendEventLogStateRepository.RemoveAll();
                 await _eventLogRepository.RemoveAllAsync();

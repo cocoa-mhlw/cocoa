@@ -29,6 +29,7 @@ namespace Covid19Radar.Services
         private readonly ILocalPathService _localPathService;
         private readonly IDateTimeUtility _dateTimeUtility;
         private readonly ILocalNotificationService _localNotificationService;
+        private readonly IEndOfServiceNotificationService _endOfServiceNotificationService;
 
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
@@ -41,7 +42,8 @@ namespace Covid19Radar.Services
             IServerConfigurationRepository serverConfigurationRepository,
             ILocalPathService localPathService,
             IDateTimeUtility dateTimeUtility,
-            ILocalNotificationService localNotificationService
+            ILocalNotificationService localNotificationService,
+            IEndOfServiceNotificationService endOfServiceNotificationService
             )
         {
             _diagnosisKeyRepository = diagnosisKeyRepository;
@@ -53,6 +55,7 @@ namespace Covid19Radar.Services
             _localPathService = localPathService;
             _dateTimeUtility = dateTimeUtility;
             _localNotificationService = localNotificationService;
+            _endOfServiceNotificationService = endOfServiceNotificationService;
         }
 
         public abstract void Schedule();
@@ -243,13 +246,6 @@ namespace Covid19Radar.Services
         }
 
         public virtual async Task ShowEndOfServiceNotificationAync(CancellationTokenSource cancellationTokenSource = null)
-        {
-            _loggerService.StartMethod();
-            if (_userDataRepository.IsAllAgreed())
-            {
-                await _localNotificationService.ShowEndOfServiceNoticationAsync();
-            }
-            _loggerService.EndMethod();
-        }
+            => await _endOfServiceNotificationService.ShowNotificationAsync(cancellationTokenSource);
     }
 }

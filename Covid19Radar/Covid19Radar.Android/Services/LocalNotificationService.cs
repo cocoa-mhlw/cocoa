@@ -100,7 +100,6 @@ namespace Covid19Radar.Droid.Services
                 .Builder(Platform.AppContext, NOTIFICATION_CHANNEL_ID)
                 .SetStyle(new NotificationCompat.BigTextStyle())
                 .SetSmallIcon(Resource.Drawable.ic_notification)
-                .SetContentTitle(AppResources.EndOfServiceNotificationTitle)
                 .SetContentText(AppResources.EndOfServiceNotificationContent)
                 .SetVisibility(NotificationCompat.VisibilitySecret)
                 .SetContentIntent(pendingIntent)

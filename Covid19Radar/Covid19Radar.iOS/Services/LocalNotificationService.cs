@@ -103,7 +103,6 @@ namespace Covid19Radar.iOS.Services
 
                 var content = new UNMutableNotificationContent();
 
-                content.Title = AppResources.EndOfServiceNotificationTitle;
                 content.Body = AppResources.EndOfServiceNotificationContent;
 
                 var request = UNNotificationRequest.FromIdentifier(NOTIFICATION_ID, content, null);

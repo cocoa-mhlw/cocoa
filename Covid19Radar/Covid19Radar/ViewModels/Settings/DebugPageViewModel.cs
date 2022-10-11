@@ -38,6 +38,7 @@ namespace Covid19Radar.ViewModels
         private readonly ISendEventLogStateRepository _sendEventLogStateRepository;
         private readonly IEventLogRepository _eventLogRepository;
         private readonly IEventLogService _eventLogService;
+        private readonly IEndOfServiceNotificationService _endOfServiceNotificationService;
 
         private string _debugInfo;
         public string DebugInfo
@@ -169,7 +170,8 @@ namespace Covid19Radar.ViewModels
             ILocalNotificationService localNotificationService,
             ISendEventLogStateRepository sendEventLogStateRepository,
             IEventLogRepository eventLogRepository,
-            IEventLogService eventLogService
+            IEventLogService eventLogService,
+            IEndOfServiceNotificationService endOfServiceNotificationService
             ) : base(navigationService)
         {
             Title = "Title:Debug";
@@ -185,6 +187,7 @@ namespace Covid19Radar.ViewModels
             _sendEventLogStateRepository = sendEventLogStateRepository;
             _eventLogRepository = eventLogRepository;
             _eventLogService = eventLogService;
+            _endOfServiceNotificationService = endOfServiceNotificationService;
         }
 
         public override async void Initialize(INavigationParameters parameters)
@@ -237,6 +240,16 @@ namespace Covid19Radar.ViewModels
         public Command OnClickShowEndOfServiceNotification => new Command(async () =>
         {
             await _localNotificationService.ShowEndOfServiceNoticationAsync();
+        });
+
+        public Command OnClickShowEndOfServiceNotification2 => new Command(async () =>
+        {
+            await _endOfServiceNotificationService.ShowNotificationAsync();
+        });
+
+        public Command OnClickRemoveEndOfServiceInformation => new Command(() =>
+        {
+            _userDataRepository.RemoveAllOfEndOfServiceInformation();
         });
 
         public Command OnClickExportExposureWindow => new Command(async () =>
