@@ -1499,15 +1499,19 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="EndOfServicePageTitle" xml:space="preserve">
     <value>TODO</value>
-    <comment>サービス終了のお知らせ</comment>
+    <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServicePageDescription1" xml:space="preserve">
     <value>TODO</value>
-    <comment>接触確認アプリ「COCOA」は2022年◯月◯日をもってサービスを終了します。</comment>
+    <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。ご利用ありがとうございました。</comment>
   </data>
   <data name="EndOfServicePageDescription2" xml:space="preserve">
     <value>TODO</value>
-    <comment>ご利用ありがとうございました。</comment>
+    <comment>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</comment>
+  </data>
+  <data name="EndOfServicePageDescription3" xml:space="preserve">
+    <value>TODO</value>
+    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServicePageTextLink" xml:space="preserve">
     <value>TODO</value>
@@ -1516,49 +1520,53 @@ COCOAのソースコードは次のURLから入手できます。</comment>
 
   <data name="TerminationOfUsePageTitle" xml:space="preserve">
     <value>TODO</value>
-    <comment>利用終了の確認</comment>
+    <comment>機能停止の確認</comment>
   </data>
   <data name="TerminationOfUsePageDescription1" xml:space="preserve">
     <value>TODO</value>
-    <comment>COCOAのご利用ありがとうございました。</comment>
-  </data>
-  <data name="TerminationOfUsePageDescription2" xml:space="preserve">
-    <value>TODO</value>
-    <comment>利用終了手続きにより、接触通知APIが停止します。また、保存されているデータはすべて削除します。</comment>
-  </data>
-  <data name="TerminationOfUsePageDescription3" xml:space="preserve">
-    <value>TODO</value>
-    <comment>なお利用調査にご協力いただいた方の回答結果は、利用終了時に送信されます。</comment>
+    <comment>利用開始から{0}日間のアプリのご利用ありがとうございました。</comment>
   </data>
   <data name="TerminationOfUsePageTerminationButton" xml:space="preserve">
     <value>TODO</value>
-    <comment>利用を終了する</comment>
+    <comment>機能を停止する</comment>
   </data>
 
   <data name="TerminationOfUseCompletePageTitle" xml:space="preserve">
     <value>TODO</value>
-    <comment>終了手続きが完了しました</comment>
+    <comment>機能停止処理が完了しました</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription1" xml:space="preserve">
     <value>TODO</value>
-    <comment>COCOAの利用を終了しました。アプリをアンインストールしてください。</comment>
+    <comment>アプリの機能を停止しました。これまでご利用いただき、ありがとうございました。アプリをアンインストールしてください。</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription2" xml:space="preserve">
     <value>TODO</value>
-    <comment>これまでのご利用、本当にありがとうございました。これからも感染予防に気をつけてお過ごしください。</comment>
+    <comment>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</comment>
+  </data>
+  <data name="TerminationOfUseCompletePageDescription3" xml:space="preserve">
+    <value>TODO</value>
+    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
+  </data>
+  <data name="TerminationOfUseCompletePageTextLink" xml:space="preserve">
+    <value>TODO</value>
+    <comment>詳細を確認する</comment>
   </data>
 
   <data name="EndOfServiceNoticePageTitle" xml:space="preserve">
     <value>TODO</value>
-    <comment>サービス終了のお知らせ</comment>
+    <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription1" xml:space="preserve">
     <value>TODO</value>
-    <comment>新型コロナウイルス感染症の全数把握の見直しに伴い、2022年◯月◯日をもって接触確認アプリ「COCOA」は機能を停止しました。</comment>
+    <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription2" xml:space="preserve">
     <value>TODO</value>
-    <comment>アプリの利用終了手続きとアンケートへのご協力をお願いします。</comment>
+    <comment>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</comment>
+  </data>
+  <data name="EndOfServiceNoticePageDescription3" xml:space="preserve">
+    <value>TODO</value>
+    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServiceNoticePageTextLink" xml:space="preserve">
     <value>TODO</value>
@@ -1566,7 +1574,7 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="EndOfServiceNoticePageButton" xml:space="preserve">
     <value>TODO</value>
-    <comment>利用終了手続きへ</comment>
+    <comment>機能停止手続きへ</comment>
   </data>
 
   <data name="SurveyRequestPageTitle" xml:space="preserve">

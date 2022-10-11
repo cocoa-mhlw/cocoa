@@ -36,8 +36,14 @@
                     HorizontalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.EndOfServicePageDescription2}" />
                 <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    HorizontalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.EndOfServicePageDescription3}" />
+                <Label
                     Margin="0, 10, 0, 0"
                     AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding CheckDetailsLinkReadText}"
                     Style="{StaticResource LinkLabelStyleMedium}"
                     HorizontalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.EndOfServicePageTextLink}">

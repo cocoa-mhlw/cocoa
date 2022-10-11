@@ -546,6 +546,15 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TODO.
         /// </summary>
+        public static string EndOfServiceNoticePageDescription3 {
+            get {
+                return ResourceManager.GetString("EndOfServiceNoticePageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
         public static string EndOfServiceNoticePageTextLink {
             get {
                 return ResourceManager.GetString("EndOfServiceNoticePageTextLink", resourceCulture);
@@ -594,6 +603,15 @@ namespace Covid19Radar.Resources {
         public static string EndOfServicePageDescription2 {
             get {
                 return ResourceManager.GetString("EndOfServicePageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string EndOfServicePageDescription3 {
+            get {
+                return ResourceManager.GetString("EndOfServicePageDescription3", resourceCulture);
             }
         }
         
@@ -3218,6 +3236,24 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TODO.
         /// </summary>
+        public static string TerminationOfUseCompletePageDescription3 {
+            get {
+                return ResourceManager.GetString("TerminationOfUseCompletePageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string TerminationOfUseCompletePageTextLink {
+            get {
+                return ResourceManager.GetString("TerminationOfUseCompletePageTextLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
         public static string TerminationOfUseCompletePageTitle {
             get {
                 return ResourceManager.GetString("TerminationOfUseCompletePageTitle", resourceCulture);
@@ -3230,24 +3266,6 @@ namespace Covid19Radar.Resources {
         public static string TerminationOfUsePageDescription1 {
             get {
                 return ResourceManager.GetString("TerminationOfUsePageDescription1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TODO.
-        /// </summary>
-        public static string TerminationOfUsePageDescription2 {
-            get {
-                return ResourceManager.GetString("TerminationOfUsePageDescription2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to TODO.
-        /// </summary>
-        public static string TerminationOfUsePageDescription3 {
-            get {
-                return ResourceManager.GetString("TerminationOfUsePageDescription3", resourceCulture);
             }
         }
         
