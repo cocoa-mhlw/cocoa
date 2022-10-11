@@ -45,7 +45,7 @@ namespace Covid19Radar.Repository
         Task RemoveLastProcessDiagnosisKeyTimestampAsync();
 
         // for End of service
-        void SetEndOfServiceNotificationNextSchedule(DateTime nextScheduleDateTime);
+        void SetEndOfServiceNotificationNextSchedule(DateTime nextSchedule);
         DateTime? GetEndOfServiceNotificationNextSchedule();
 
         void SetEndOfServiceNotificationCount(int count);
@@ -307,7 +307,7 @@ namespace Covid19Radar.Repository
 
         public int GetEndOfServiceNotificationCount()
         {
-            return _preferencesService.GetIntValue(PreferenceKey.EndOfServiceNotificationCount, 0); ;
+            return _preferencesService.GetIntValue(PreferenceKey.EndOfServiceNotificationCount, 0);
         }
 
         public void RemoveAllOfEndOfServiceInformation()

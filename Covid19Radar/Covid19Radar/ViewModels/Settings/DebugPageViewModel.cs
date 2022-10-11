@@ -247,7 +247,7 @@ namespace Covid19Radar.ViewModels
             await _endOfServiceNotificationService.ShowNotificationAsync();
         });
 
-        public Command OnClickRemoveEndOfServiceInformation => new Command(async () =>
+        public Command OnClickRemoveEndOfServiceInformation => new Command(() =>
         {
             _userDataRepository.RemoveAllOfEndOfServiceInformation();
         });
