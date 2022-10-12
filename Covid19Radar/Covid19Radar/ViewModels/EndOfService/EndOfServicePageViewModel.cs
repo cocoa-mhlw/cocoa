@@ -4,6 +4,8 @@
 using System;
 using Covid19Radar.Resources;
 using Prism.Navigation;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels.EndOfService
 {
@@ -14,6 +16,12 @@ namespace Covid19Radar.ViewModels.EndOfService
         public EndOfServicePageViewModel(INavigationService navigationService) : base(navigationService)
         {
         }
+
+        public Command CheckDetailsCommand => new Command(async () =>
+        {
+            var uri = "https://www.mhlw.go.jp/cocoa/yousei.html";
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        });
     }
 }
 

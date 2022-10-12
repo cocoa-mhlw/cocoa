@@ -7,6 +7,7 @@ using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views.EndOfService;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels.EndOfService
@@ -26,6 +27,16 @@ namespace Covid19Radar.ViewModels.EndOfService
         {
             _loggerService = loggerService;
         }
+
+        public Command CheckDetailsCommand => new Command(async () =>
+        {
+            _loggerService.StartMethod();
+
+            var uri = "https://www.mhlw.go.jp/cocoa/yousei.html";
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+
+            _loggerService.EndMethod();
+        });
 
         public Command OnTerminationProcedureButton => new Command(async () =>
         {
