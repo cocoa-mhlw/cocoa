@@ -193,5 +193,12 @@ namespace Covid19Radar.UnitTests.Repository
             Assert.Equal(result, newConfiguration);
         }
 
+        [Fact]
+        public void CreateDefaultConfigurationTests()
+        {
+            V1ExposureRiskCalculationConfiguration configuration = ExposureRiskCalculationConfigurationRepository.CreateDefaultConfiguration();
+            Assert.Equal(1350.0, configuration.DailySummary_DaySummary_ScoreSum.Value);
+            Assert.Equal(V1ExposureRiskCalculationConfiguration.Threshold.OPERATION_GREATER_EQUAL, configuration.DailySummary_DaySummary_ScoreSum.Op);
+        }
     }
 }

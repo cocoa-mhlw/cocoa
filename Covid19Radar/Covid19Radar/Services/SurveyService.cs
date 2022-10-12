@@ -2,12 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 using System;
-using Chino;
 using Covid19Radar.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Covid19Radar.Repository;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace Covid19Radar.Services
 {
@@ -21,17 +21,14 @@ namespace Covid19Radar.Services
     {
         private readonly IEventLogService _eventLogService;
         private readonly IExposureDataRepository _exposureDataRepository;
-        private readonly AbsExposureNotificationApiService _exposureNotificationApiService;
 
         public SurveyService(
             IEventLogService eventLogService,
-            IExposureDataRepository exposureDataRepository,
-            AbsExposureNotificationApiService exposureNotificationApiService
+            IExposureDataRepository exposureDataRepository
             )
         {
             _eventLogService = eventLogService;
             _exposureDataRepository = exposureDataRepository;
-            _exposureNotificationApiService = exposureNotificationApiService;
         }
 
         public async Task<SurveyContent> BuildSurveyContent(int q1, int q2, DateTime q3, bool isExposureDataProvision)
@@ -50,15 +47,25 @@ namespace Covid19Radar.Services
         {
             try
             {
-                long enVersion = await _exposureNotificationApiService.GetVersionAsync();
-                List<DailySummary> dailySummaryList = await _exposureDataRepository.GetDailySummariesAsync();
-                List<ExposureWindow> exposureWindowList = await _exposureDataRepository.GetExposureWindowsAsync();
+                V1ExposureRiskCalculationConfiguration riskConfiguration
+                    = ExposureRiskCalculationConfigurationRepository.CreateDefaultConfiguration();
+
+                List<Chino.DailySummary> chinoDailySummaryList
+                    = await _exposureDataRepository.GetDailySummariesAsync();
+
+                List<SurveyExposureData.DailySummary> dailySummaryList
+                    = chinoDailySummaryList
+                    .Select(
+                        item => new SurveyExposureData.DailySummary
+                        {
+                            DateMillisSinceEpoch = item.DateMillisSinceEpoch,
+                            ExposureDetected = riskConfiguration.DailySummary_DaySummary_ScoreSum.Cond(item.DaySummary.MaximumScore) ? 1 : 0
+                        })
+                    .ToList();
 
                 var exposureData = new SurveyExposureData
                 {
-                    EnVersion = enVersion.ToString(),
                     DailySummaryList = dailySummaryList,
-                    ExposureWindowList = exposureWindowList
                 };
 
                 return exposureData;
