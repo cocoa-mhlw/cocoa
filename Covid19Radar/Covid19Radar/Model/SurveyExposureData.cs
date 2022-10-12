@@ -10,14 +10,17 @@ namespace Covid19Radar.Model
 {
     public class SurveyExposureData
     {
-        [JsonProperty("en_version")]
-        public string EnVersion { get; set; }
-
         [JsonProperty("daily_summaries")]
         public List<DailySummary> DailySummaryList { get; set; }
 
-        [JsonProperty("exposure_windows")]
-        public List<ExposureWindow> ExposureWindowList { get; set; }
+        public class DailySummary
+        {
+            [JsonProperty("DateMillisSinceEpoch")]
+            public long DateMillisSinceEpoch { get; set; }
+
+            [JsonProperty("ExposureDetected")]
+            public int ExposureDetected { get; set; }
+        }
     }
 }
 

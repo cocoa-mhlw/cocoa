@@ -86,6 +86,7 @@ namespace Covid19Radar.ViewModels
                     DateMillisSinceEpoch = GetDateTimeUnixEpochInMillis(-1),
                     DaySummary = new ExposureSummaryData()
                     {
+                        MaximumScore = 1,
                         ScoreSum = 1
                     }
                 },
@@ -94,6 +95,7 @@ namespace Covid19Radar.ViewModels
                     DateMillisSinceEpoch = GetDateTimeUnixEpochInMillis(-2),
                     DaySummary = new ExposureSummaryData()
                     {
+                        MaximumScore = config.DailySummary_DaySummary_ScoreSum.Value - 1,
                         ScoreSum = config.DailySummary_DaySummary_ScoreSum.Value - 1
                     }
                 },
@@ -141,6 +143,7 @@ namespace Covid19Radar.ViewModels
                     DateMillisSinceEpoch = GetDateTimeUnixEpochInMillis(-1),
                     DaySummary = new ExposureSummaryData()
                     {
+                        MaximumScore = config.DailySummary_DaySummary_ScoreSum.Value,
                         ScoreSum = config.DailySummary_DaySummary_ScoreSum.Value
                     }
                 },
@@ -149,6 +152,7 @@ namespace Covid19Radar.ViewModels
                     DateMillisSinceEpoch = GetDateTimeUnixEpochInMillis(-2),
                     DaySummary = new ExposureSummaryData()
                     {
+                        MaximumScore = config.DailySummary_DaySummary_ScoreSum.Value + 1,
                         ScoreSum = config.DailySummary_DaySummary_ScoreSum.Value + 1
                     }
                 },

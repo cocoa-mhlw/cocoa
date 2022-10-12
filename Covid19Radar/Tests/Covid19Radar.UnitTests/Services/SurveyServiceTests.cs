@@ -3,19 +3,17 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Chino;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Services;
-using Covid19Radar.Services.Logs;
 using Covid19Radar.UnitTests.Mocks;
 using Moq;
 using Newtonsoft.Json.Linq;
-using Prism.Navigation;
 using Xunit;
 using Xunit.Abstractions;
-using Xunit.Sdk;
 
 namespace Covid19Radar.UnitTests.Services
 {
@@ -26,7 +24,6 @@ namespace Covid19Radar.UnitTests.Services
         private readonly MockRepository _mockRepository;
         private readonly Mock<IEventLogService> _mockEventLogService;
         private readonly Mock<IExposureDataRepository> _mockExposureDataRepository;
-        private readonly Mock<AbsExposureNotificationApiService> _mockExposureNotificationApiService;
 
         public SurveyServiceTests(ITestOutputHelper testOutputHelper)
         {
@@ -35,9 +32,6 @@ namespace Covid19Radar.UnitTests.Services
             _mockRepository = new MockRepository(MockBehavior.Default);
             _mockEventLogService = _mockRepository.Create<IEventLogService>();
             _mockExposureDataRepository = _mockRepository.Create<IExposureDataRepository>();
-
-            Mock<ILoggerService> mockLoggerService = _mockRepository.Create<ILoggerService>();
-            _mockExposureNotificationApiService = new Mock<AbsExposureNotificationApiService>(mockLoggerService.Object);
 
             MockTimeZoneInfo.SetJstLocalTimeZone();
         }
@@ -51,17 +45,25 @@ namespace Covid19Radar.UnitTests.Services
         {
             return new SurveyService(
                 _mockEventLogService.Object,
-                _mockExposureDataRepository.Object,
-                _mockExposureNotificationApiService.Object
-            );
+                _mockExposureDataRepository.Object
+                );
         }
 
         [Fact]
         public async Task BuildSurveyContentTests_HasExposureDataProvision()
         {
-            _mockExposureNotificationApiService.Setup(x => x.GetVersionAsync()).ReturnsAsync(1234);
-            _mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync()).ReturnsAsync(new List<DailySummary> { new DailySummary() });
-            _mockExposureDataRepository.Setup(x => x.GetExposureWindowsAsync()).ReturnsAsync(new List<ExposureWindow> { new ExposureWindow() });
+            _mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync()).ReturnsAsync(
+                new List<DailySummary>
+                {
+                    new DailySummary
+                    {
+                        DateMillisSinceEpoch = 1640962800,
+                        DaySummary = new ExposureSummaryData
+                        {
+                            MaximumScore = 1350.0
+                        }
+                    }
+                });
 
             SurveyService unitUnderTest = CreateService();
             SurveyContent result = await unitUnderTest.BuildSurveyContent(1, 2, new DateTimeOffset(2022, 1, 1, 0, 0, 0, new TimeSpan(9, 0, 0)).DateTime, true);
@@ -74,13 +76,9 @@ namespace Covid19Radar.UnitTests.Services
             {
                 Assert.Equal(1640962800, result.Q3);
             }
-            Assert.Equal("1234", result.ExposureData.EnVersion);
             Assert.Single(result.ExposureData.DailySummaryList);
-            Assert.Single(result.ExposureData.ExposureWindowList);
 
-            _mockExposureNotificationApiService.Verify(x => x.GetVersionAsync(), Times.Once());
             _mockExposureDataRepository.Verify(x => x.GetDailySummariesAsync(), Times.Once());
-            _mockExposureDataRepository.Verify(x => x.GetExposureWindowsAsync(), Times.Once());
         }
 
         [Fact]
@@ -99,9 +97,44 @@ namespace Covid19Radar.UnitTests.Services
             }
             Assert.Null(result.ExposureData);
 
-            _mockExposureNotificationApiService.Verify(x => x.GetVersionAsync(), Times.Never());
             _mockExposureDataRepository.Verify(x => x.GetDailySummariesAsync(), Times.Never());
-            _mockExposureDataRepository.Verify(x => x.GetExposureWindowsAsync(), Times.Never());
+        }
+
+        [Fact]
+        public async Task BuildSurveyContentTests_DailySummary()
+        {
+            _mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync()).ReturnsAsync(
+                new List<DailySummary>
+                {
+                    new DailySummary
+                    {
+                        DateMillisSinceEpoch = 1640962800,
+                        DaySummary = new ExposureSummaryData
+                        {
+                            MaximumScore = 1350.0
+                        }
+                    },
+                    new DailySummary
+                    {
+                        DateMillisSinceEpoch = 1640962801,
+                        DaySummary = new ExposureSummaryData
+                        {
+                            MaximumScore = 1349.0
+                        }
+                    }
+                });
+
+            SurveyService unitUnderTest = CreateService();
+            SurveyContent result = await unitUnderTest.BuildSurveyContent(1, 2, new DateTimeOffset(2022, 1, 1, 0, 0, 0, new TimeSpan(9, 0, 0)).DateTime, true);
+
+            List<SurveyExposureData.DailySummary> dailySummaryList = result.ExposureData.DailySummaryList;
+            Assert.Equal(2, dailySummaryList.Count);
+            Assert.Equal(1640962800, dailySummaryList[0].DateMillisSinceEpoch);
+            Assert.Equal(1, dailySummaryList[0].ExposureDetected);
+            Assert.Equal(1640962801, dailySummaryList[1].DateMillisSinceEpoch);
+            Assert.Equal(0, dailySummaryList[1].ExposureDetected);
+
+            _mockExposureDataRepository.Verify(x => x.GetDailySummariesAsync(), Times.Once());
         }
 
         [Fact]
