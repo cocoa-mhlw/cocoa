@@ -18,19 +18,16 @@
     <ContentView>
         <ScrollView>
             <StackLayout
-                Spacing="20"
+                Spacing="30"
                 Padding="20">
-                <StackLayout
-                    Spacing="5">
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabelBold}"
-                        Text="{x:Static resources:AppResources.SurveyRequestPageRequestCooperationTitle}" />
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.SurveyRequestPageRequestCooperationDescription1}" />
-                </StackLayout>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultTitleLabel}"
+                    Text="{x:Static resources:AppResources.SurveyRequestPageRequestCooperationTitle}" />
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.SurveyRequestPageRequestCooperationDescription1}" />
                 <StackLayout
                     Spacing="5">
                     <Label
@@ -46,21 +43,66 @@
                     Spacing="5">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabelSmall}"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationTitle}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationBulletedList1}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationBulletedList2}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationBulletedList3}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationBulletedList4}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationAnnotationText1}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationAnnotationText2}" />
+                </StackLayout>
+                <StackLayout
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationHandlingTitle}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList1}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabelSmall}"
+                        Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList2}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabelSmall}"
+                        Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList3}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabelSmall}"
+                        Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList4}" />
                 </StackLayout>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding CheckDetailsButtonReadText}"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource LinkLabelStyleMedium}"
+                    Text="{x:Static resources:AppResources.SurveyRequestPageCheckDetailsButton}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CheckDetailsCommand}" />
+                    </Label.GestureRecognizers>
+                 </Label>
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
                     Command="{prism:NavigateTo 'SurveyPage'}"
