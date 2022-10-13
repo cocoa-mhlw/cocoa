@@ -4,11 +4,14 @@
 using System;
 using Covid19Radar.Resources;
 using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels.EndOfService
 {
     public class SurveyRequestPageViewModel : ViewModelBase
     {
+        public string CheckDetailsButtonReadText => $"{AppResources.SurveyRequestPageCheckDetailsButton} {AppResources.Button}";
+
         public string SkipAnswerButtonReadText => $"{AppResources.SurveyRequestPageSkipAnswerButton} {AppResources.Button}";
 
         public SurveyRequestPageViewModel(
@@ -16,6 +19,10 @@ namespace Covid19Radar.ViewModels.EndOfService
             ) : base(navigationService)
         {
         }
+
+        public Command CheckDetailsCommand => new Command(() =>
+        {
+        });
     }
 }
 
