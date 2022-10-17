@@ -1763,7 +1763,7 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
   <data name="SurveyPageQuestionnaire" xml:space="preserve">
     <value>TODO</value>
-    <comment>アンケート</comment>
+    <comment>利用者に関するアンケート</comment>
   </data>
   <data name="SurveyPageQ1Text" xml:space="preserve">
     <value>TODO</value>
@@ -1771,23 +1771,31 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
   <data name="SurveyPageQ2Text" xml:space="preserve">
     <value>TODO</value>
-    <comment>Q2：日常的な通勤通学の有無</comment>
+    <comment>Q2：週に1回以上の通勤通学の有無</comment>
   </data>
-  <data name="SurveyPageQuestion3" xml:space="preserve">
+  <data name="SurveyPageQ2Description" xml:space="preserve">
     <value>TODO</value>
-    <comment>Q3：アプリ利用開始日</comment>
+    <comment>（公共交通機関とは、鉄道・電車・乗り合いバスのことです）</comment>
   </data>
   <data name="SurveyPageExposureDataProvisionTitle" xml:space="preserve">
     <value>TODO</value>
-    <comment>接触情報提供のお願い</comment>
+    <comment>接触通知発生回数の調査</comment>
   </data>
   <data name="SurveyPageExposureDataProvisionDescription" xml:space="preserve">
     <value>TODO</value>
-    <comment>保存している接触情報を添付してよろしいですか。送信を許可する場合はチェックを入れてください。</comment>
+    <comment>2022年4月7日以降の接触通知発生回数（個人情報は含まれません）を添付してよろしいですか。送信を許可する場合はチェックを入れてください。</comment>
+  </data>
+  <data name="SurveyPageAppStartDateSwitch" xml:space="preserve">
+    <value>TODO</value>
+    <comment>アプリ利用開始日</comment>
+  </data>
+  <data name="SurveyPageAppStartDateText" xml:space="preserve">
+    <value>TODO</value>
+    <comment>（{0}）</comment>
   </data>
   <data name="SurveyPageExposureDataProvisionSwitch" xml:space="preserve">
     <value>TODO</value>
-    <comment>接触情報の提供</comment>
+    <comment>接触通知発生回数</comment>
   </data>
   <data name="SurveyPagePleaseSelect" xml:space="preserve">
     <value>TODO</value>
@@ -1813,8 +1821,12 @@ By collecting the number of notifications, we can use it to understand how many 
     <value>TODO</value>
     <comment>無し</comment>
   </data>
+  <data name="SurveyPageDescription" xml:space="preserve">
+    <value>TODO</value>
+    <comment>回答を確定した後、利用を終了することで回答が送信されます。一度送信された調査への回答の訂正・取り消しはできませんので、ご注意ください。</comment>
+  </data>
   <data name="SurveyPageToTerminationOfUsePageButton" xml:space="preserve">
     <value>TODO</value>
-    <comment>利用終了の確認へ</comment>
+    <comment>回答を確定する</comment>
   </data>
 </root>
