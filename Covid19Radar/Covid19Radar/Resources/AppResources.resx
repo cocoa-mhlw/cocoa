@@ -1631,23 +1631,23 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
 
   <data name="TerminationOfUseCompletePageTitle" xml:space="preserve">
-    <value>TODO</value>
+    <value>End to Functionality of COCOA Completed​</value>
     <comment>機能停止処理が完了しました</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription1" xml:space="preserve">
-    <value>TODO</value>
+    <value>You have ended functionality of the app. Thank you for using the app up to now. Please uninstall the app.​</value>
     <comment>アプリの機能を停止しました。これまでご利用いただき、ありがとうございました。アプリをアンインストールしてください。</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription2" xml:space="preserve">
-    <value>TODO</value>
+    <value>Please continue to take the basic measures to prevent the spread of COVID-19. These measures include appropriately wearing a mask, washing your hands, avoiding the three Cs (close-contact settings, crowded places and closed spaces) and ventilating.​</value>
     <comment>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription3" xml:space="preserve">
-    <value>TODO</value>
+    <value>In addition, please see the Ministry of Health, Labour and Welfare’s website for details concerning the end to functionality of the app.</value>
     <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="TerminationOfUseCompletePageTextLink" xml:space="preserve">
-    <value>TODO</value>
+    <value>Check the Details​</value>
     <comment>詳細を確認する</comment>
   </data>
 

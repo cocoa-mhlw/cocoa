@@ -3315,7 +3315,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to You have ended functionality of the app. Thank you for using the app up to now. Please uninstall the app.​.
         /// </summary>
         public static string TerminationOfUseCompletePageDescription1 {
             get {
@@ -3324,7 +3324,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Please continue to take the basic measures to prevent the spread of COVID-19. These measures include appropriately wearing a mask, washing your hands, avoiding the three Cs (close-contact settings, crowded places and closed spaces) and ventilating.​.
         /// </summary>
         public static string TerminationOfUseCompletePageDescription2 {
             get {
@@ -3333,7 +3333,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to In addition, please see the Ministry of Health, Labour and Welfare’s website for details concerning the end to functionality of the app..
         /// </summary>
         public static string TerminationOfUseCompletePageDescription3 {
             get {
@@ -3342,7 +3342,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Check the Details​.
         /// </summary>
         public static string TerminationOfUseCompletePageTextLink {
             get {
@@ -3351,7 +3351,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to End to Functionality of COCOA Completed​.
         /// </summary>
         public static string TerminationOfUseCompletePageTitle {
             get {
