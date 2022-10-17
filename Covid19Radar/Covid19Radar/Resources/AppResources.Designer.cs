@@ -580,7 +580,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Functionality of the COCOA contact-confirming app ended in XX 2022. Thank you for using the app.​.
         /// </summary>
         public static string EndOfServicePageDescription1 {
             get {
@@ -589,7 +589,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Please continue to take the basic measures to prevent the spread of COVID-19. These measures include appropriately wearing a mask, washing your hands, avoiding the three Cs (close-contact settings, crowded places and closed spaces) and ventilating.​.
         /// </summary>
         public static string EndOfServicePageDescription2 {
             get {
@@ -598,7 +598,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to In addition, please see the following website for details concerning the end to functionality of the app..
         /// </summary>
         public static string EndOfServicePageDescription3 {
             get {
@@ -607,7 +607,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Check .
         /// </summary>
         public static string EndOfServicePageTextLink {
             get {
@@ -616,7 +616,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Notification of the End to Functionality of COCOA​.
         /// </summary>
         public static string EndOfServicePageTitle {
             get {

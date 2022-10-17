@@ -1494,23 +1494,24 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>設定を保存しました</comment>
   </data>
   <data name="EndOfServicePageTitle" xml:space="preserve">
-    <value>TODO</value>
+    <value>功能关停通知​</value>
     <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServicePageDescription1" xml:space="preserve">
-    <value>TODO</value>
+    <value>从2022年◯月起，​接触确认APP COCOA的功能已关停。​
+感谢您的使用。​</value>
     <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。ご利用ありがとうございました。</comment>
   </data>
   <data name="EndOfServicePageDescription2" xml:space="preserve">
-    <value>TODO</value>
+    <value>为防止疫情扩散，烦请您继续严格执行“恰当佩戴口罩”“勤洗手”“避免三密（密接、密集、密闭）”“勤通风”等基本防疫措施。​</value>
     <comment>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</comment>
   </data>
   <data name="EndOfServicePageDescription3" xml:space="preserve">
-    <value>TODO</value>
+    <value>关于APP功能关停的其他详细信息，请您浏览以下网站。​</value>
     <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServicePageTextLink" xml:space="preserve">
-    <value>TODO</value>
+    <value>确认详情​</value>
     <comment>詳細を確認する</comment>
   </data>
 
