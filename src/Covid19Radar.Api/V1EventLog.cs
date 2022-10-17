@@ -139,6 +139,7 @@ namespace Covid19Radar.Api
                         )
                     {
                         id = id,
+                        PartitionKey = id,
                         Created = timestamp,
                     };
                     await _eventLogRepository.UpsertAsync(eventLogModel);
