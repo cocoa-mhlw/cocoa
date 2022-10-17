@@ -13,7 +13,7 @@ namespace Covid19Radar.Services
 {
     public interface ISurveyService
     {
-        Task<SurveyContent> BuildSurveyContent(int q1, int q2, DateTime q3, bool isExposureDataProvision);
+        Task<SurveyContent> BuildSurveyContent(int q1, int q2, bool isAppStartDate, bool isExposureDataProvision);
         Task<bool> SubmitSurvey(SurveyContent surveyContent);
     }
 
@@ -21,23 +21,26 @@ namespace Covid19Radar.Services
     {
         private readonly IEventLogService _eventLogService;
         private readonly IExposureDataRepository _exposureDataRepository;
+        private readonly IUserDataRepository _userDataRepository;
 
         public SurveyService(
             IEventLogService eventLogService,
-            IExposureDataRepository exposureDataRepository
+            IExposureDataRepository exposureDataRepository,
+            IUserDataRepository userDataRepository
             )
         {
             _eventLogService = eventLogService;
             _exposureDataRepository = exposureDataRepository;
+            _userDataRepository = userDataRepository;
         }
 
-        public async Task<SurveyContent> BuildSurveyContent(int q1, int q2, DateTime q3, bool isExposureDataProvision)
+        public async Task<SurveyContent> BuildSurveyContent(int q1, int q2, bool isAppStartDate, bool isExposureDataProvision)
         {
             var surveyContent = new SurveyContent
             {
                 Q1 = q1,
                 Q2 = q2,
-                Q3 = q3.ToUnixEpoch(),
+                StartDate = isAppStartDate ? (long?)_userDataRepository.GetStartDate().ToUnixEpoch() : null,
                 ExposureData = isExposureDataProvision ? await GetExopsureData() : null
             };
             return surveyContent;

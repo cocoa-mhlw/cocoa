@@ -18,17 +18,17 @@
     <ContentView>
         <ScrollView>
             <StackLayout
-                Spacing="20"
+                Spacing="30"
                 Padding="20">
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabelBold}"
+                    Text="{x:Static resources:AppResources.SurveyPageQuestionnaire}" />
                 <StackLayout
                     Spacing="5">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabelBold}"
-                        Text="{x:Static resources:AppResources.SurveyPageQuestionnaire}" />
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyPageQ1Text}" />
                     <Picker
                         AutomationProperties.IsInAccessibleTree="True"
@@ -43,9 +43,12 @@
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
+                </StackLayout>
+                <StackLayout
+                    Spacing="5">
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabel}"
+                        Style="{StaticResource DefaultLabelBold}"
                         Text="{x:Static resources:AppResources.SurveyPageQ2Text}" />
                     <Picker
                         AutomationProperties.IsInAccessibleTree="True"
@@ -63,13 +66,8 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabel}"
-                        Text="{x:Static resources:AppResources.SurveyPageQuestion3}" />
-                    <DatePicker
-                        AutomationProperties.IsInAccessibleTree="True"
-                        MinimumDate="{Binding MimimumStartDate}"
-                        MaximumDate="{x:Static x:DateTime.Now}"
-                        Format="d"
-                        Date="{Binding Q3Answer}"/>
+                        TextColor="{StaticResource SecondaryText}"
+                        Text="{x:Static resources:AppResources.SurveyPageQ2Description}" />
                 </StackLayout>
                 <StackLayout
                     Spacing="5">
@@ -81,6 +79,31 @@
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionDescription}" />
+                </StackLayout>
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="5">
+                    <StackLayout>
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabelBold}"
+                            Text="{x:Static resources:AppResources.SurveyPageAppStartDateSwitch}"
+                            HorizontalOptions="StartAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalOptions="Center" />
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabelBold}"
+                            Text="{Binding AppStartDateText}"
+                            HorizontalOptions="StartAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+                    <Switch
+                        AutomationProperties.IsInAccessibleTree="True"
+                        IsToggled="{Binding IsAppStartDate}"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="Center" />
                 </StackLayout>
                 <StackLayout
                     Orientation="Horizontal"
@@ -98,6 +121,10 @@
                         HorizontalOptions="End"
                         VerticalOptions="Center" />
                 </StackLayout>
+                <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.SurveyPageDescription}" />
                 <Button
                     AutomationProperties.IsInAccessibleTree="True"
                     Command="{Binding Path=OnToTerminationOfUsePageButton}"

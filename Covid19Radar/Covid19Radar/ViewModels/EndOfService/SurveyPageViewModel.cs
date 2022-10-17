@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views.EndOfService;
@@ -19,9 +20,6 @@ namespace Covid19Radar.ViewModels.EndOfService
     {
         private void IsTerminationOfUsePageButtonEnabledChanged()
             => OnPropertyChanged(new PropertyChangedEventArgs(nameof(IsTerminationOfUsePageButtonEnabled)));
-
-        public DateTime MimimumStartDate
-            => AppConstants.COCOA_FIRST_RELEASE_DATE.ToLocalTime();
 
         private int _selectedIndexQ1;
         public int SelectedIndexQ1
@@ -63,17 +61,18 @@ namespace Covid19Radar.ViewModels.EndOfService
             set => SetProperty(ref _selectedItemQ2, value);
         }
 
-        private DateTime _q3Answer;
-        public DateTime Q3Answer
+        private string _appStartDateText;
+        public string AppStartDateText
         {
-            get => _q3Answer;
-            set
-            {
-                if (SetProperty(ref _q3Answer, value))
-                {
-                    IsTerminationOfUsePageButtonEnabledChanged();
-                }
-            }
+            get => _appStartDateText;
+            set => SetProperty(ref _appStartDateText, value);
+        }
+
+        private bool _isAppStartDate;
+        public bool IsAppStartDate
+        {
+            get => _isAppStartDate;
+            set => SetProperty(ref _isAppStartDate, value);
         }
 
         private bool _isExposureDataProvision;
@@ -84,7 +83,7 @@ namespace Covid19Radar.ViewModels.EndOfService
         }
 
         public bool IsTerminationOfUsePageButtonEnabled
-            => _selectedIndexQ1 > 0 && _selectedIndexQ2 > 0 && _q3Answer != null;
+            => _selectedIndexQ1 > 0 && _selectedIndexQ2 > 0;
 
         private readonly IUserDataRepository _userDataRepository;
         private readonly ISurveyService _surveyService;
@@ -108,8 +107,13 @@ namespace Covid19Radar.ViewModels.EndOfService
             SelectedIndexQ2 = 0;
 
             DateTime startDate = _userDataRepository.GetStartDate();
-            Q3Answer = startDate.ToLocalTime();
 
+            AppStartDateText = string.Format(
+                AppResources.SurveyPageAppStartDateText,
+                startDate.ToLocalTime().ToString("yyyy年MM月dd日")
+                );
+
+            IsAppStartDate = false;
             IsExposureDataProvision = false;
         }
 
@@ -118,7 +122,7 @@ namespace Covid19Radar.ViewModels.EndOfService
             SurveyContent surveyContent = await _surveyService.BuildSurveyContent(
                 SelectedItemQ1.Value,
                 SelectedItemQ2.Value,
-                Q3Answer,
+                IsAppStartDate,
                 IsExposureDataProvision);
 
             var navigationParameters = TerminationOfUsePage.BuildNavigationParams(surveyContent);

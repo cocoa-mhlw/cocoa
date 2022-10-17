@@ -15,8 +15,8 @@ namespace Covid19Radar.Model
         [JsonProperty("q2")]
         public int Q2 { get; set; }
 
-        [JsonProperty("q3")]
-        public long Q3 { get; set; }
+        [JsonProperty("start_date")]
+        public long? StartDate { get; set; }
 
         [JsonProperty("exposure_data")]
         public SurveyExposureData ExposureData { get; set; }

@@ -131,7 +131,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
         [Fact]
         public async Task OnTerminationButtonTests_ExistSurveyContent_SubmitSuccess()
         {
-            var testSurveyContent = new SurveyContent { Q1 = 1, Q2 = 2, Q3 = 1640962800, ExposureData = null };
+            var testSurveyContent = new SurveyContent { Q1 = 1, Q2 = 2, StartDate = 1640962800, ExposureData = null };
 
             var testNavigationParameters = new NavigationParameters();
             testNavigationParameters.Add(TerminationOfUsePage.NavigationParameterNameSurveyContent, testSurveyContent);
@@ -145,7 +145,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
             _mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             _mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
 
-            _mockSurveyService.Verify(x => x.SubmitSurvey(It.Is<SurveyContent>(x => x.Q1 == 1 && x.Q2 == 2 && x.Q3 == 1640962800 && x.ExposureData == null)), Times.Once());
+            _mockSurveyService.Verify(x => x.SubmitSurvey(It.Is<SurveyContent>(x => x.Q1 == 1 && x.Q2 == 2 && x.StartDate == 1640962800 && x.ExposureData == null)), Times.Once());
             _mockDialogService.Verify(x => x.ShowNetworkConnectionErrorAsync(), Times.Never());
 
             //_mockAbsExposureNotificationApiService.Verify(x => x.StopExposureNotificationAsync(), Times.Once());
@@ -166,7 +166,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
         [Fact]
         public async Task OnTerminationButtonTests_ExistSurveyContent_SubmitFailure()
         {
-            var testSurveyContent = new SurveyContent { Q1 = 1, Q2 = 2, Q3 = 1640962800, ExposureData = null };
+            var testSurveyContent = new SurveyContent { Q1 = 1, Q2 = 2, StartDate = 1640962800, ExposureData = null };
 
             var testNavigationParameters = new NavigationParameters();
             testNavigationParameters.Add(TerminationOfUsePage.NavigationParameterNameSurveyContent, testSurveyContent);
@@ -180,7 +180,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
             _mockUserDialogs.Verify(x => x.ShowLoading(It.IsAny<string>(), null), Times.Once());
             _mockUserDialogs.Verify(x => x.HideLoading(), Times.Once());
 
-            _mockSurveyService.Verify(x => x.SubmitSurvey(It.Is<SurveyContent>(x => x.Q1 == 1 && x.Q2 == 2 && x.Q3 == 1640962800 && x.ExposureData == null)), Times.Once());
+            _mockSurveyService.Verify(x => x.SubmitSurvey(It.Is<SurveyContent>(x => x.Q1 == 1 && x.Q2 == 2 && x.StartDate == 1640962800 && x.ExposureData == null)), Times.Once());
             _mockDialogService.Verify(x => x.ShowNetworkConnectionErrorAsync(), Times.Once());
 
             //_mockAbsExposureNotificationApiService.Verify(x => x.StopExposureNotificationAsync(), Times.Never());

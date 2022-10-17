@@ -2957,6 +2957,33 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TODO.
         /// </summary>
+        public static string SurveyPageAppStartDateSwitch {
+            get {
+                return ResourceManager.GetString("SurveyPageAppStartDateSwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageAppStartDateText {
+            get {
+                return ResourceManager.GetString("SurveyPageAppStartDateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
+        public static string SurveyPageDescription {
+            get {
+                return ResourceManager.GetString("SurveyPageDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TODO.
+        /// </summary>
         public static string SurveyPageExposureDataProvisionDescription {
             get {
                 return ResourceManager.GetString("SurveyPageExposureDataProvisionDescription", resourceCulture);
@@ -3047,18 +3074,18 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to TODO.
         /// </summary>
-        public static string SurveyPageQ2Text {
+        public static string SurveyPageQ2Description {
             get {
-                return ResourceManager.GetString("SurveyPageQ2Text", resourceCulture);
+                return ResourceManager.GetString("SurveyPageQ2Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to TODO.
         /// </summary>
-        public static string SurveyPageQuestion3 {
+        public static string SurveyPageQ2Text {
             get {
-                return ResourceManager.GetString("SurveyPageQuestion3", resourceCulture);
+                return ResourceManager.GetString("SurveyPageQ2Text", resourceCulture);
             }
         }
         
