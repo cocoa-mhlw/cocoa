@@ -517,7 +517,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Procedures for the End to Functionality of COCOA.
         /// </summary>
         public static string EndOfServiceNoticePageButton {
             get {
@@ -526,7 +526,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to We ended functionality of the COCOA contact-confirming app in XX 2022 after reviewing all reports..
         /// </summary>
         public static string EndOfServiceNoticePageDescription1 {
             get {
@@ -535,7 +535,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to The app and smartphone contact notification will stop by ending their functionality. In addition, all data stored in the app will be deleted..
         /// </summary>
         public static string EndOfServiceNoticePageDescription2 {
             get {
@@ -544,7 +544,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to In addition, please see the following website for details concerning the end to functionality of the app..
         /// </summary>
         public static string EndOfServiceNoticePageDescription3 {
             get {
@@ -553,7 +553,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Check the Details.
         /// </summary>
         public static string EndOfServiceNoticePageTextLink {
             get {
@@ -562,7 +562,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Notification of the End to Functionality of COCOA.
         /// </summary>
         public static string EndOfServiceNoticePageTitle {
             get {
@@ -580,7 +580,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Functionality of the COCOA contact-confirming app ended in XX 2022. Thank you for using the app.​.
         /// </summary>
         public static string EndOfServicePageDescription1 {
             get {
@@ -589,7 +589,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Please continue to take the basic measures to prevent the spread of COVID-19. These measures include appropriately wearing a mask, washing your hands, avoiding the three Cs (close-contact settings, crowded places and closed spaces) and ventilating.​.
         /// </summary>
         public static string EndOfServicePageDescription2 {
             get {
@@ -598,7 +598,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to In addition, please see the following website for details concerning the end to functionality of the app..
         /// </summary>
         public static string EndOfServicePageDescription3 {
             get {
@@ -607,7 +607,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Check .
         /// </summary>
         public static string EndOfServicePageTextLink {
             get {
@@ -616,7 +616,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Notification of the End to Functionality of COCOA​.
         /// </summary>
         public static string EndOfServicePageTitle {
             get {
@@ -3315,7 +3315,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to You have ended functionality of the app. Thank you for using the app up to now. Please uninstall the app.​.
         /// </summary>
         public static string TerminationOfUseCompletePageDescription1 {
             get {
@@ -3324,7 +3324,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Please continue to take the basic measures to prevent the spread of COVID-19. These measures include appropriately wearing a mask, washing your hands, avoiding the three Cs (close-contact settings, crowded places and closed spaces) and ventilating.​.
         /// </summary>
         public static string TerminationOfUseCompletePageDescription2 {
             get {
@@ -3333,7 +3333,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to In addition, please see the Ministry of Health, Labour and Welfare’s website for details concerning the end to functionality of the app..
         /// </summary>
         public static string TerminationOfUseCompletePageDescription3 {
             get {
@@ -3342,7 +3342,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Check the Details​.
         /// </summary>
         public static string TerminationOfUseCompletePageTextLink {
             get {
@@ -3351,7 +3351,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to End to Functionality of COCOA Completed​.
         /// </summary>
         public static string TerminationOfUseCompletePageTitle {
             get {
@@ -3360,7 +3360,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Thank you for using the app for {0} days from when you started using it.​.
         /// </summary>
         public static string TerminationOfUsePageDescription1 {
             get {
@@ -3369,7 +3369,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to End Functionality of COCOA​.
         /// </summary>
         public static string TerminationOfUsePageTerminationButton {
             get {
@@ -3378,7 +3378,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Confirmation of the End to Functionality of COCOA​.
         /// </summary>
         public static string TerminationOfUsePageTitle {
             get {

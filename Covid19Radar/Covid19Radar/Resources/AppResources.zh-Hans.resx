@@ -1494,82 +1494,85 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>設定を保存しました</comment>
   </data>
   <data name="EndOfServicePageTitle" xml:space="preserve">
-    <value>TODO</value>
+    <value>功能关停通知​</value>
     <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServicePageDescription1" xml:space="preserve">
-    <value>TODO</value>
+    <value>从2022年◯月起，​接触确认APP COCOA的功能已关停。​
+感谢您的使用。​</value>
     <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。ご利用ありがとうございました。</comment>
   </data>
   <data name="EndOfServicePageDescription2" xml:space="preserve">
-    <value>TODO</value>
+    <value>为防止疫情扩散，烦请您继续严格执行“恰当佩戴口罩”“勤洗手”“避免三密（密接、密集、密闭）”“勤通风”等基本防疫措施。​</value>
     <comment>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</comment>
   </data>
   <data name="EndOfServicePageDescription3" xml:space="preserve">
-    <value>TODO</value>
+    <value>关于APP功能关停的其他详细信息，请您浏览以下网站。​</value>
     <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServicePageTextLink" xml:space="preserve">
-    <value>TODO</value>
+    <value>确认详情​</value>
     <comment>詳細を確認する</comment>
   </data>
 
   <data name="TerminationOfUsePageTitle" xml:space="preserve">
-    <value>TODO</value>
+    <value>确认功能关停​</value>
     <comment>機能停止の確認</comment>
   </data>
   <data name="TerminationOfUsePageDescription1" xml:space="preserve">
-    <value>TODO</value>
+    <value>从开始使用本APP时算起，您共使用了{0}天，非常感谢</value>
     <comment>利用開始から{0}日間のアプリのご利用ありがとうございました。</comment>
   </data>
   <data name="TerminationOfUsePageTerminationButton" xml:space="preserve">
-    <value>TODO</value>
+    <value>关停APP功能​</value>
     <comment>機能を停止する</comment>
   </data>
 
   <data name="TerminationOfUseCompletePageTitle" xml:space="preserve">
-    <value>TODO</value>
+    <value>功能已成功关停​</value>
     <comment>機能停止処理が完了しました</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription1" xml:space="preserve">
-    <value>TODO</value>
+    <value>APP功能已关停。​
+感谢您的使用。​
+烦请您卸载本APP。</value>
     <comment>アプリの機能を停止しました。これまでご利用いただき、ありがとうございました。アプリをアンインストールしてください。</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription2" xml:space="preserve">
-    <value>TODO</value>
+    <value>为防止疫情扩散，烦请您继续严格执行“恰当佩戴口罩”“勤洗手”“避免三密（密接、密集、密闭）”“勤通风”等基本防疫措施。</value>
     <comment>感染拡大防止のため、引き続き「適切なマスクの着用」「手洗い」「３密（密接・密集・密閉）回避」「換気」など基本的な感染対策の継続をお願いします。</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription3" xml:space="preserve">
-    <value>TODO</value>
+    <value>关于APP功能关停的其他详细信息，请浏览厚生劳动省的官方网站。</value>
     <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="TerminationOfUseCompletePageTextLink" xml:space="preserve">
-    <value>TODO</value>
+    <value>确认详情​</value>
     <comment>詳細を確認する</comment>
   </data>
 
   <data name="EndOfServiceNoticePageTitle" xml:space="preserve">
-    <value>TODO</value>
+    <value>关于功能关停的通知​</value>
     <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription1" xml:space="preserve">
-    <value>TODO</value>
+    <value>由于应报尽报政策的变动，从2022年○月起，接触确认APP COCOA的功能已关停。​</value>
     <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription2" xml:space="preserve">
-    <value>TODO</value>
+    <value>因决定关停功能处理，APP与智能手机接触通知系统将正式停止。此外，APP内所保存的数据也将全部删除。</value>
     <comment>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription3" xml:space="preserve">
-    <value>TODO</value>
+    <value>关于APP功能关停的其他详细信息，请您浏览以下网站。</value>
     <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServiceNoticePageTextLink" xml:space="preserve">
-    <value>TODO</value>
+    <value>确认详情​</value>
     <comment>詳細を確認する</comment>
   </data>
   <data name="EndOfServiceNoticePageButton" xml:space="preserve">
-    <value>TODO</value>
+    <value>办理功能关停手续​</value>
     <comment>機能停止手続きへ</comment>
   </data>
 
