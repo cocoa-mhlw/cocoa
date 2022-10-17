@@ -40,7 +40,7 @@ namespace Covid19Radar.Services
             {
                 Q1 = q1,
                 Q2 = q2,
-                StartDate = isAppStartDate ? (long?)_userDataRepository.GetStartDate().ToLocalTime().ToUnixEpoch() : null,
+                StartDate = isAppStartDate ? (long?)_userDataRepository.GetStartDate().ToUnixEpoch() : null,
                 ExposureData = isExposureDataProvision ? await GetExopsureData() : null
             };
             return surveyContent;

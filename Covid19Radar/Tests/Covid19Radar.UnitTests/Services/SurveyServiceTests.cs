@@ -66,7 +66,7 @@ namespace Covid19Radar.UnitTests.Services
                         }
                     }
                 });
-            _mockUserDataRepository.Setup(x => x.GetStartDate()).Returns(new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Local));
+            _mockUserDataRepository.Setup(x => x.GetStartDate()).Returns(new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc));
 
             SurveyService unitUnderTest = CreateService();
             SurveyContent result = await unitUnderTest.BuildSurveyContent(1, 2, true, true);
@@ -77,7 +77,7 @@ namespace Covid19Radar.UnitTests.Services
             Assert.Equal(2, result.Q2);
             if (MockTimeZoneInfo.IsJst())
             {
-                Assert.Equal(1640962800, result.StartDate);
+                Assert.Equal(1640995200, result.StartDate);
             }
             Assert.Single(result.ExposureData.DailySummaryList);
 
@@ -125,7 +125,7 @@ namespace Covid19Radar.UnitTests.Services
                         }
                     }
                 });
-            _mockUserDataRepository.Setup(x => x.GetStartDate()).Returns(new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Local));
+            _mockUserDataRepository.Setup(x => x.GetStartDate()).Returns(new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc));
 
             SurveyService unitUnderTest = CreateService();
             SurveyContent result = await unitUnderTest.BuildSurveyContent(1, 2, true, true);
