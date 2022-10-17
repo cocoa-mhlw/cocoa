@@ -32,8 +32,7 @@ namespace Covid19Radar.ViewModels.EndOfService
         {
             _loggerService.StartMethod();
 
-            var uri = "https://www.mhlw.go.jp/cocoa/yousei.html";
-            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync(AppConstants.EndOfServiceCheckDetailsUrl, BrowserLaunchMode.SystemPreferred);
 
             _loggerService.EndMethod();
         });
