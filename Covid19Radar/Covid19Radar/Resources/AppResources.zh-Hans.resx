@@ -1515,15 +1515,15 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
 
   <data name="TerminationOfUsePageTitle" xml:space="preserve">
-    <value>TODO</value>
+    <value>确认功能关停​</value>
     <comment>機能停止の確認</comment>
   </data>
   <data name="TerminationOfUsePageDescription1" xml:space="preserve">
-    <value>TODO</value>
+    <value>从开始使用本APP时算起，您共使用了{0}天，非常感谢</value>
     <comment>利用開始から{0}日間のアプリのご利用ありがとうございました。</comment>
   </data>
   <data name="TerminationOfUsePageTerminationButton" xml:space="preserve">
-    <value>TODO</value>
+    <value>关停APP功能​</value>
     <comment>機能を停止する</comment>
   </data>
 

@@ -3360,7 +3360,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Thank you for using the app for {0} days from when you started using it.​.
         /// </summary>
         public static string TerminationOfUsePageDescription1 {
             get {
@@ -3369,7 +3369,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to End Functionality of COCOA​.
         /// </summary>
         public static string TerminationOfUsePageTerminationButton {
             get {
@@ -3378,7 +3378,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to Confirmation of the End to Functionality of COCOA​.
         /// </summary>
         public static string TerminationOfUsePageTitle {
             get {

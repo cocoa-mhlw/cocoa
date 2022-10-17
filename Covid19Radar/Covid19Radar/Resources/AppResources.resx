@@ -1618,15 +1618,15 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
 
   <data name="TerminationOfUsePageTitle" xml:space="preserve">
-    <value>TODO</value>
+    <value>Confirmation of the End to Functionality of COCOA​</value>
     <comment>機能停止の確認</comment>
   </data>
   <data name="TerminationOfUsePageDescription1" xml:space="preserve">
-    <value>TODO</value>
+    <value>Thank you for using the app for {0} days from when you started using it.​</value>
     <comment>利用開始から{0}日間のアプリのご利用ありがとうございました。</comment>
   </data>
   <data name="TerminationOfUsePageTerminationButton" xml:space="preserve">
-    <value>TODO</value>
+    <value>End Functionality of COCOA​</value>
     <comment>機能を停止する</comment>
   </data>
 
