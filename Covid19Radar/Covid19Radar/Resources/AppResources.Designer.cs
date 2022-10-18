@@ -3333,7 +3333,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In addition, please see the Ministry of Health, Labour and Welfare’s website for details concerning the end to functionality of the app..
+        ///   Looks up a localized string similar to In addition, please see the following website for details concerning the end to functionality of the app..
         /// </summary>
         public static string TerminationOfUseCompletePageDescription3 {
             get {
