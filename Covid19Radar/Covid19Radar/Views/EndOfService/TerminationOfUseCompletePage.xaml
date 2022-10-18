@@ -43,7 +43,7 @@
                     HorizontalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.TerminationOfUseCompletePageTextLink}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Path=OpenWebView}" />
+                        <TapGestureRecognizer Command="{Binding Path=CheckDetailsCommand}" />
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>
