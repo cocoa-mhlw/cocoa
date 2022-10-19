@@ -1011,8 +1011,8 @@
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
   </data>
   <data name="EndOfServiceNotificationContent" xml:space="preserve">
-    <value>COCOA已于2022年○月停止运作。请打开应用来完成功能终止手续。</value>
-    <comment>2022年◯月をもってCOCOAは機能を停止しました。アプリを開いて機能停止手続きを行ってください。</comment>
+    <value>COCOA已于2022年11月停止运作。请打开应用来完成功能终止手续。</value>
+    <comment>2022年11月をもってCOCOAは機能を停止しました。アプリを開いて機能停止手続きを行ってください。</comment>
   </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>网页无障碍访问政策</value>
@@ -1498,9 +1498,9 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServicePageDescription1" xml:space="preserve">
-    <value>从2022年◯月起，​接触确认APP COCOA的功能已关停。​
+    <value>从2022年11月起，​接触确认APP COCOA的功能已关停。​
 感谢您的使用。​</value>
-    <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。ご利用ありがとうございました。</comment>
+    <comment>2022年11月をもって接触確認アプリCOCOAは機能を停止しました。ご利用ありがとうございました。</comment>
   </data>
   <data name="EndOfServicePageDescription2" xml:space="preserve">
     <value>为防止疫情扩散，烦请您继续严格执行“恰当佩戴口罩”“勤洗手”“避免三密（密接、密集、密闭）”“勤通风”等基本防疫措施。​</value>
@@ -1556,8 +1556,8 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription1" xml:space="preserve">
-    <value>由于应报尽报政策的变动，从2022年○月起，接触确认APP COCOA的功能已关停。​</value>
-    <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
+    <value>由于应报尽报政策的变动，从2022年11月起，接触确认APP COCOA的功能已关停。​</value>
+    <comment>2022年11月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription2" xml:space="preserve">
     <value>因决定关停功能处理，APP与智能手机接触通知系统将正式停止。此外，APP内所保存的数据也将全部删除。</value>
