@@ -1108,8 +1108,8 @@ You do not have to request it yourself.</value>
     <comment>新型コロナウイルス感染症の陽性登録者と接触した可能性があります。タップして詳細を確認してください。</comment>
   </data>
   <data name="EndOfServiceNotificationContent" xml:space="preserve">
-    <value>COCOA service is no longer available since ○ 2022. Please open the app to complete the termination procedure.</value>
-    <comment>2022年◯月をもってCOCOAは機能を停止しました。アプリを開いて機能停止手続きを行ってください。</comment>
+    <value>COCOA service is no longer available since November 2022. Please open the app to complete the termination procedure.</value>
+    <comment>2022年11月をもってCOCOAは機能を停止しました。アプリを開いて機能停止手続きを行ってください。</comment>
   </data>
   <data name="WebAccessibilityPolicyPageTitle" xml:space="preserve">
     <value>Web accessibility policy</value>
@@ -1601,8 +1601,8 @@ By collecting the number of notifications, we can use it to understand how many 
     <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServicePageDescription1" xml:space="preserve">
-    <value>Functionality of the COCOA contact-confirming app ended in XX 2022. Thank you for using the app.​</value>
-    <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。ご利用ありがとうございました。</comment>
+    <value>Functionality of the COCOA contact-confirming app ended in November 2022. Thank you for using the app.​</value>
+    <comment>2022年11月をもって接触確認アプリCOCOAは機能を停止しました。ご利用ありがとうございました。</comment>
   </data>
   <data name="EndOfServicePageDescription2" xml:space="preserve">
     <value>Please continue to take the basic measures to prevent the spread of COVID-19. These measures include appropriately wearing a mask, washing your hands, avoiding the three Cs (close-contact settings, crowded places and closed spaces) and ventilating.​</value>
@@ -1656,8 +1656,8 @@ By collecting the number of notifications, we can use it to understand how many 
     <comment>機能停止のお知らせ</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription1" xml:space="preserve">
-    <value>We ended functionality of the COCOA contact-confirming app in XX 2022 after reviewing all reports.</value>
-    <comment>2022年◯月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
+    <value>We ended functionality of the COCOA contact-confirming app in November 2022 after reviewing all reports.</value>
+    <comment>2022年11月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription2" xml:space="preserve">
     <value>The app and smartphone contact notification will stop by ending their functionality. In addition, all data stored in the app will be deleted.</value>

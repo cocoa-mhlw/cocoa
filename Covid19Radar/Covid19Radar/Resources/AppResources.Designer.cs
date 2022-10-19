@@ -526,7 +526,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to We ended functionality of the COCOA contact-confirming app in XX 2022 after reviewing all reports..
+        ///   Looks up a localized string similar to We ended functionality of the COCOA contact-confirming app in November 2022 after reviewing all reports..
         /// </summary>
         public static string EndOfServiceNoticePageDescription1 {
             get {
@@ -571,7 +571,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to COCOA service is no longer available since ○ 2022. Please open the app to complete the termination procedure..
+        ///   Looks up a localized string similar to COCOA service is no longer available since November 2022. Please open the app to complete the termination procedure..
         /// </summary>
         public static string EndOfServiceNotificationContent {
             get {
@@ -580,7 +580,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Functionality of the COCOA contact-confirming app ended in XX 2022. Thank you for using the app.​.
+        ///   Looks up a localized string similar to Functionality of the COCOA contact-confirming app ended in November 2022. Thank you for using the app.​.
         /// </summary>
         public static string EndOfServicePageDescription1 {
             get {
