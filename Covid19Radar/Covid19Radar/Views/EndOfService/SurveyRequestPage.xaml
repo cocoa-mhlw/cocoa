@@ -97,6 +97,7 @@
                     AutomationProperties.IsInAccessibleTree="True"
                     AutomationProperties.Name="{Binding CheckDetailsButtonReadText}"
                     HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
                     Style="{StaticResource LinkLabelStyleMedium}"
                     Text="{x:Static resources:AppResources.SurveyRequestPageCheckDetailsButton}">
                     <Label.GestureRecognizers>
@@ -112,6 +113,7 @@
                     AutomationProperties.IsInAccessibleTree="True"
                     AutomationProperties.Name="{Binding SkipAnswerButtonReadText}"
                     HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
                     Style="{StaticResource LinkLabelStyleMedium}"
                     Text="{x:Static resources:AppResources.SurveyRequestPageSkipAnswerButton}">
                     <Label.GestureRecognizers>

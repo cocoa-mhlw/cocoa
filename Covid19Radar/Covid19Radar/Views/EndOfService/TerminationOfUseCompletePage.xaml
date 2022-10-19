@@ -40,6 +40,7 @@
                     AutomationProperties.Name="{Binding CheckDetailsLinkReadText}"
                     Margin="0, 20, 0, 0"
                     Style="{StaticResource LinkLabelStyleMedium}"
+                    HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.TerminationOfUseCompletePageTextLink}">
                     <Label.GestureRecognizers>

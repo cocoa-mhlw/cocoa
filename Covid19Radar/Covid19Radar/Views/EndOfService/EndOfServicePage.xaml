@@ -42,6 +42,7 @@
                     AutomationProperties.IsInAccessibleTree="True"
                     AutomationProperties.Name="{Binding CheckDetailsLinkReadText}"
                     Style="{StaticResource LinkLabelStyleMedium}"
+                    HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     Text="{x:Static resources:AppResources.EndOfServicePageTextLink}">
                     <Label.GestureRecognizers>
