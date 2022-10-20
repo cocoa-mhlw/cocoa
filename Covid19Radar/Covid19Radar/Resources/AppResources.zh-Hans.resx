@@ -1508,7 +1508,7 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="EndOfServicePageDescription3" xml:space="preserve">
     <value>关于APP功能关停的其他详细信息，请您浏览以下网站。​</value>
-    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
+    <comment>その他、アプリの機能停止に関する詳細は以下のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServicePageTextLink" xml:space="preserve">
     <value>确认详情​</value>
@@ -1565,7 +1565,7 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription3" xml:space="preserve">
     <value>关于APP功能关停的其他详细信息，请您浏览以下网站。</value>
-    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
+    <comment>その他、アプリの機能停止に関する詳細は以下のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServiceNoticePageTextLink" xml:space="preserve">
     <value>确认详情​</value>

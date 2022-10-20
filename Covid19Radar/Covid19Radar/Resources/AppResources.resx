@@ -1610,7 +1610,7 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
   <data name="EndOfServicePageDescription3" xml:space="preserve">
     <value>In addition, please see the following website for details concerning the end to functionality of the app.</value>
-    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
+    <comment>その他、アプリの機能停止に関する詳細は以下のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServicePageTextLink" xml:space="preserve">
     <value>Check the Details</value>
@@ -1665,7 +1665,7 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
   <data name="EndOfServiceNoticePageDescription3" xml:space="preserve">
     <value>In addition, please see the following website for details concerning the end to functionality of the app.</value>
-    <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
+    <comment>その他、アプリの機能停止に関する詳細は以下のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServiceNoticePageTextLink" xml:space="preserve">
     <value>Check the Details</value>
