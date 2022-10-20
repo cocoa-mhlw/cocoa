@@ -517,7 +517,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Procedures for the End to Functionality of COCOA.
+        ///   Looks up a localized string similar to COCOA ending procedure.
         /// </summary>
         public static string EndOfServiceNoticePageButton {
             get {
@@ -3450,7 +3450,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Confirmation of the End to Functionality of COCOA​.
+        ///   Looks up a localized string similar to Confirm to end COCOA.
         /// </summary>
         public static string TerminationOfUsePageTitle {
             get {
