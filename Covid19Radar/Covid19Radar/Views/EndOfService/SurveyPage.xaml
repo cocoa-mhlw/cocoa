@@ -40,6 +40,14 @@
                                 <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPagePleaseSelect}" Value="0" />
                                 <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A1}" Value="1" />
                                 <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A2}" Value="2" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A3}" Value="3" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A4}" Value="4" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A5}" Value="5" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A6}" Value="6" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A7}" Value="7" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A8}" Value="8" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ1A9}" Value="9" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageNotAnswer}" Value="-1" />
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
@@ -60,6 +68,8 @@
                                 <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPagePleaseSelect}" Value="0" />
                                 <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ2A1}" Value="1" />
                                 <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ2A2}" Value="2" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageQ2A3}" Value="3" />
+                                <models:SurveyAnswerPickerItem Text="{x:Static resources:AppResources.SurveyPageNotAnswer}" Value="-1" />
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>

@@ -1699,25 +1699,57 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>選択してください</value>
     <comment>選択してください</comment>
   </data>
+  <data name="SurveyPageNotAnswer" xml:space="preserve">
+    <value>回答しない</value>
+    <comment>回答しない</comment>
+  </data>
   <data name="SurveyPageQ1A1" xml:space="preserve">
-    <value>〜9歳</value>
-    <comment>〜9歳</comment>
+    <value>14歳以下</value>
+    <comment>14歳以下</comment>
   </data>
   <data name="SurveyPageQ1A2" xml:space="preserve">
-    <value>10歳〜19歳</value>
-    <comment>10歳〜19歳</comment>
+    <value>15-19歳</value>
+    <comment>15-19歳</comment>
   </data>
   <data name="SurveyPageQ1A3" xml:space="preserve">
-    <value>20歳〜29歳</value>
-    <comment>20歳〜29歳</comment>
+    <value>20-24歳</value>
+    <comment>20-24歳</comment>
+  </data>
+  <data name="SurveyPageQ1A4" xml:space="preserve">
+    <value>25-29歳</value>
+    <comment>25-29歳</comment>
+  </data>
+  <data name="SurveyPageQ1A5" xml:space="preserve">
+    <value>30-39歳</value>
+    <comment>30-39歳</comment>
+  </data>
+  <data name="SurveyPageQ1A6" xml:space="preserve">
+    <value>40-49歳</value>
+    <comment>40-49歳</comment>
+  </data>
+  <data name="SurveyPageQ1A7" xml:space="preserve">
+    <value>50-59歳</value>
+    <comment>50-59歳</comment>
+  </data>
+  <data name="SurveyPageQ1A8" xml:space="preserve">
+    <value>60-69歳</value>
+    <comment>60-69歳</comment>
+  </data>
+  <data name="SurveyPageQ1A9" xml:space="preserve">
+    <value>70歳以上</value>
+    <comment>70歳以上</comment>
   </data>
   <data name="SurveyPageQ2A1" xml:space="preserve">
-    <value>有り</value>
-    <comment>有り</comment>
+    <value>通勤・通学をしていない</value>
+    <comment>通勤・通学をしていない</comment>
   </data>
   <data name="SurveyPageQ2A2" xml:space="preserve">
-    <value>無し</value>
-    <comment>無し</comment>
+    <value>公共交通機関以外のみで通勤通学</value>
+    <comment>公共交通機関以外のみで通勤通学</comment>
+  </data>
+  <data name="SurveyPageQ2A3" xml:space="preserve">
+    <value>公共交通機関を利用して通勤通学</value>
+    <comment>公共交通機関を利用して通勤通学</comment>
   </data>
   <data name="SurveyPageDescription" xml:space="preserve">
     <value>回答を確定した後、利用を終了することで回答が送信されます。

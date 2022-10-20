@@ -38,8 +38,8 @@ namespace Covid19Radar.Services
         {
             var surveyContent = new SurveyContent
             {
-                Q1 = q1,
-                Q2 = q2,
+                Q1 = q1 > 0 ? (int?)q1 : null,
+                Q2 = q2 > 0 ? (int?)q2 : null,
                 StartDate = isAppStartDate ? (long?)_userDataRepository.GetStartDate().ToUnixEpoch() : null,
                 ExposureData = isExposureDataProvision ? await GetExopsureData() : null
             };
