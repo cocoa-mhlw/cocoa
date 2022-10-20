@@ -1613,7 +1613,7 @@ By collecting the number of notifications, we can use it to understand how many 
     <comment>その他、アプリの機能停止に関する詳細は厚生労働省のサイトをご覧下さい。</comment>
   </data>
   <data name="EndOfServicePageTextLink" xml:space="preserve">
-    <value>Check </value>
+    <value>Check the Details</value>
     <comment>詳細を確認する</comment>
   </data>
 

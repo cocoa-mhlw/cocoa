@@ -607,7 +607,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check .
+        ///   Looks up a localized string similar to Check the Details.
         /// </summary>
         public static string EndOfServicePageTextLink {
             get {
