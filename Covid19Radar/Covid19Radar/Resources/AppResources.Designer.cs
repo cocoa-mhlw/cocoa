@@ -2955,7 +2955,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageAppStartDateSwitch {
             get {
@@ -2964,7 +2964,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageAppStartDateText {
             get {
@@ -2973,7 +2973,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageDescription {
             get {
@@ -2982,7 +2982,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageExposureDataProvisionDescription {
             get {
@@ -2991,7 +2991,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageExposureDataProvisionSwitch {
             get {
@@ -3000,7 +3000,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageExposureDataProvisionTitle {
             get {
@@ -3009,7 +3009,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageNotAnswer {
             get {
@@ -3018,7 +3018,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPagePleaseSelect {
             get {
@@ -3027,7 +3027,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A1 {
             get {
@@ -3036,7 +3036,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A2 {
             get {
@@ -3045,7 +3045,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A3 {
             get {
@@ -3054,7 +3054,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A4 {
             get {
@@ -3063,7 +3063,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A5 {
             get {
@@ -3072,7 +3072,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A6 {
             get {
@@ -3081,7 +3081,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A7 {
             get {
@@ -3090,7 +3090,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A8 {
             get {
@@ -3099,7 +3099,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1A9 {
             get {
@@ -3108,7 +3108,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ1Text {
             get {
@@ -3117,7 +3117,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ2A1 {
             get {
@@ -3126,7 +3126,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ2A2 {
             get {
@@ -3135,7 +3135,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ2A3 {
             get {
@@ -3144,7 +3144,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ2Description {
             get {
@@ -3153,7 +3153,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQ2Text {
             get {
@@ -3162,7 +3162,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageQuestionnaire {
             get {
@@ -3171,7 +3171,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageTitle {
             get {
@@ -3180,7 +3180,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyPageToTerminationOfUsePageButton {
             get {
@@ -3189,7 +3189,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageBulletedList1 {
             get {
@@ -3198,7 +3198,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageBulletedList2 {
             get {
@@ -3207,7 +3207,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageBulletedList3 {
             get {
@@ -3216,7 +3216,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageBulletedList4 {
             get {
@@ -3225,7 +3225,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageCheckDetailsButton {
             get {
@@ -3234,7 +3234,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPagePurposeDescription1 {
             get {
@@ -3243,7 +3243,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPagePurposeTitle {
             get {
@@ -3252,7 +3252,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageRequestCooperationDescription1 {
             get {
@@ -3261,7 +3261,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageRequestCooperationTitle {
             get {
@@ -3270,7 +3270,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSendInformationAnnotationText1 {
             get {
@@ -3279,7 +3279,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSendInformationAnnotationText2 {
             get {
@@ -3288,7 +3288,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSendInformationBulletedList1 {
             get {
@@ -3297,7 +3297,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSendInformationBulletedList2 {
             get {
@@ -3306,7 +3306,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSendInformationBulletedList3 {
             get {
@@ -3315,7 +3315,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSendInformationBulletedList4 {
             get {
@@ -3324,7 +3324,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSendInformationHandlingTitle {
             get {
@@ -3333,7 +3333,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSendInformationTitle {
             get {
@@ -3342,7 +3342,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageSkipAnswerButton {
             get {
@@ -3351,7 +3351,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageTitle {
             get {
@@ -3360,7 +3360,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TODO.
+        ///   Looks up a localized string similar to .
         /// </summary>
         public static string SurveyRequestPageToAnswerButton {
             get {

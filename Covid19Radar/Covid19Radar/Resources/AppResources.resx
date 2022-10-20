@@ -1677,188 +1677,188 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
 
   <data name="SurveyRequestPageTitle" xml:space="preserve">
-    <value>TODO</value>
-    <comment>調査協力のお願い</comment>
+    <value></value>
+    <comment>日本語のみ：調査協力のお願い</comment>
   </data>
   <data name="SurveyRequestPageRequestCooperationTitle" xml:space="preserve">
-    <value>TODO</value>
-    <comment>アプリ利用状況調査への協力のお願い</comment>
+    <value></value>
+    <comment>日本語のみ：アプリ利用状況調査への協力のお願い</comment>
   </data>
   <data name="SurveyRequestPageRequestCooperationDescription1" xml:space="preserve">
-    <value>TODO</value>
-    <comment>今後のデジタル技術を活用した感染症対策に活かすため、接触確認アプリCOCOAの利用状況に関する調査にご協力ください。</comment>
+    <value></value>
+    <comment>日本語のみ：今後のデジタル技術を活用した感染症対策に活かすため、接触確認アプリCOCOAの利用状況に関する調査にご協力ください。</comment>
   </data>
   <data name="SurveyRequestPagePurposeTitle" xml:space="preserve">
-    <value>TODO</value>
-    <comment>調査目的</comment>
+    <value></value>
+    <comment>日本語のみ：調査目的</comment>
   </data>
   <data name="SurveyRequestPageSendInformationBulletedList1" xml:space="preserve">
-    <value>TODO</value>
-    <comment>・利用者の年代</comment>
+    <value></value>
+    <comment>日本語のみ：・利用者の年代</comment>
   </data>
   <data name="SurveyRequestPageSendInformationBulletedList2" xml:space="preserve">
-    <value>TODO</value>
-    <comment>・利用者の通勤通学の有無</comment>
+    <value></value>
+    <comment>日本語のみ：・利用者の通勤通学の有無</comment>
   </data>
   <data name="SurveyRequestPageSendInformationBulletedList3" xml:space="preserve">
-    <value>TODO</value>
-    <comment>・アプリ利用開始日</comment>
+    <value></value>
+    <comment>日本語のみ：・アプリ利用開始日</comment>
   </data>
   <data name="SurveyRequestPageSendInformationBulletedList4" xml:space="preserve">
-    <value>TODO</value>
-    <comment>・接触通知発生回数（日次）</comment>
+    <value></value>
+    <comment>日本語のみ：・接触通知発生回数（日次）</comment>
   </data>
   <data name="SurveyRequestPageSendInformationAnnotationText1" xml:space="preserve">
-    <value>TODO</value>
-    <comment>※2022年4月7日以降に陽性登録者の接触符号を受信した日付と、各々の日付における接触判定の有無</comment>
+    <value></value>
+    <comment>日本語のみ：※2022年4月7日以降に陽性登録者の接触符号を受信した日付と、各々の日付における接触判定の有無</comment>
   </data>
   <data name="SurveyRequestPageSendInformationAnnotationText2" xml:space="preserve">
-    <value>TODO</value>
-    <comment>※送信を望まない項目は回答しないことが可能です</comment>
+    <value></value>
+    <comment>日本語のみ：※送信を望まない項目は回答しないことが可能です</comment>
   </data>
   <data name="SurveyRequestPageSendInformationHandlingTitle" xml:space="preserve">
-    <value>TODO</value>
-    <comment>送信された情報の取り扱い</comment>
+    <value></value>
+    <comment>日本語のみ：送信された情報の取り扱い</comment>
   </data>
   <data name="SurveyRequestPagePurposeDescription1" xml:space="preserve">
-    <value>TODO</value>
-    <comment>本アプリは、プライバシーに最大限配慮した仕組みであるため、その利用状況を把握できていませんでした。今後のデジタル技術を活用した感染症対策には、アプリの利用状況を把握することが欠かせません。特に重要な情報である、どのような方に利用頂いたか、どの程度接触通知が発生していたかを把握するため、利用終了前に利用状況調査への協力をお願いいたします。</comment>
+    <value></value>
+    <comment>日本語のみ：本アプリは、プライバシーに最大限配慮した仕組みであるため、その利用状況を把握できていませんでした。今後のデジタル技術を活用した感染症対策には、アプリの利用状況を把握することが欠かせません。特に重要な情報である、どのような方に利用頂いたか、どの程度接触通知が発生していたかを把握するため、利用終了前に利用状況調査への協力をお願いいたします。</comment>
   </data>
   <data name="SurveyRequestPageSendInformationTitle" xml:space="preserve">
-    <value>TODO</value>
-    <comment>送信される情報</comment>
+    <value></value>
+    <comment>日本語のみ：送信される情報</comment>
   </data>
   <data name="SurveyRequestPageBulletedList1" xml:space="preserve">
-    <value>TODO</value>
-    <comment>・送信される情報は全て匿名です。</comment>
+    <value></value>
+    <comment>日本語のみ：・送信される情報は全て匿名です。</comment>
   </data>
   <data name="SurveyRequestPageBulletedList2" xml:space="preserve">
-    <value>TODO</value>
-    <comment>・送信内容に、個人を特定可能な情報を含みません。</comment>
+    <value></value>
+    <comment>日本語のみ：・送信内容に、個人を特定可能な情報を含みません。</comment>
   </data>
   <data name="SurveyRequestPageBulletedList3" xml:space="preserve">
-    <value>TODO</value>
-    <comment>・送信内容に、あなたやあなたと接触した陽性登録者を個人として特定可能な情報は含みません。</comment>
+    <value></value>
+    <comment>日本語のみ：・送信内容に、あなたやあなたと接触した陽性登録者を個人として特定可能な情報は含みません。</comment>
   </data>
   <data name="SurveyRequestPageBulletedList4" xml:space="preserve">
-    <value>TODO</value>
-    <comment>・公衆衛生の改善に寄与するため、匿名情報を集計して公開する場合があります。</comment>
+    <value></value>
+    <comment>日本語のみ：・公衆衛生の改善に寄与するため、匿名情報を集計して公開する場合があります。</comment>
   </data>
   <data name="SurveyRequestPageCheckDetailsButton" xml:space="preserve">
-    <value>TODO</value>
-    <comment>プライバシーポリシーと調査の詳細を確認する</comment>
+    <value></value>
+    <comment>日本語のみ：プライバシーポリシーと調査の詳細を確認する</comment>
   </data>
   <data name="SurveyRequestPageToAnswerButton" xml:space="preserve">
-    <value>TODO</value>
-    <comment>回答画面へ</comment>
+    <value></value>
+    <comment>日本語のみ：回答画面へ</comment>
   </data>
   <data name="SurveyRequestPageSkipAnswerButton" xml:space="preserve">
-    <value>TODO</value>
-    <comment>調査協力をスキップする</comment>
+    <value></value>
+    <comment>日本語のみ：調査協力をスキップする</comment>
   </data>
 
   <data name="SurveyPageTitle" xml:space="preserve">
-    <value>TODO</value>
-    <comment>利用調査</comment>
+    <value></value>
+    <comment>日本語のみ：利用調査</comment>
   </data>
   <data name="SurveyPageQuestionnaire" xml:space="preserve">
-    <value>TODO</value>
-    <comment>利用者に関するアンケート</comment>
+    <value></value>
+    <comment>日本語のみ：利用者に関するアンケート</comment>
   </data>
   <data name="SurveyPageQ1Text" xml:space="preserve">
-    <value>TODO</value>
-    <comment>Q1：年代</comment>
+    <value></value>
+    <comment>日本語のみ：Q1：年代</comment>
   </data>
   <data name="SurveyPageQ2Text" xml:space="preserve">
-    <value>TODO</value>
-    <comment>Q2：週に1回以上の通勤通学の有無</comment>
+    <value></value>
+    <comment>日本語のみ：Q2：週に1回以上の通勤通学の有無</comment>
   </data>
   <data name="SurveyPageQ2Description" xml:space="preserve">
-    <value>TODO</value>
-    <comment>（公共交通機関とは、鉄道・電車・乗り合いバスのことです）</comment>
+    <value></value>
+    <comment>日本語のみ：（公共交通機関とは、鉄道・電車・乗り合いバスのことです）</comment>
   </data>
   <data name="SurveyPageExposureDataProvisionTitle" xml:space="preserve">
-    <value>TODO</value>
-    <comment>接触通知発生回数の調査</comment>
+    <value></value>
+    <comment>日本語のみ：接触通知発生回数の調査</comment>
   </data>
   <data name="SurveyPageExposureDataProvisionDescription" xml:space="preserve">
-    <value>TODO</value>
-    <comment>2022年4月7日以降の接触通知発生回数（個人情報は含まれません）を添付してよろしいですか。送信を許可する場合はチェックを入れてください。</comment>
+    <value></value>
+    <comment>日本語のみ：2022年4月7日以降の接触通知発生回数（個人情報は含まれません）を添付してよろしいですか。送信を許可する場合はチェックを入れてください。</comment>
   </data>
   <data name="SurveyPageAppStartDateSwitch" xml:space="preserve">
-    <value>TODO</value>
-    <comment>アプリ利用開始日</comment>
+    <value></value>
+    <comment>日本語のみ：アプリ利用開始日</comment>
   </data>
   <data name="SurveyPageAppStartDateText" xml:space="preserve">
-    <value>TODO</value>
-    <comment>（{0}）</comment>
+    <value></value>
+    <comment>日本語のみ：（{0}）</comment>
   </data>
   <data name="SurveyPageExposureDataProvisionSwitch" xml:space="preserve">
-    <value>TODO</value>
-    <comment>接触通知発生回数</comment>
+    <value></value>
+    <comment>日本語のみ：接触通知発生回数</comment>
   </data>
   <data name="SurveyPagePleaseSelect" xml:space="preserve">
-    <value>TODO</value>
-    <comment>選択してください</comment>
+    <value></value>
+    <comment>日本語のみ：選択してください</comment>
   </data>
   <data name="SurveyPageNotAnswer" xml:space="preserve">
-    <value>TODO</value>
-    <comment>回答しない</comment>
+    <value></value>
+    <comment>日本語のみ：回答しない</comment>
   </data>
   <data name="SurveyPageQ1A1" xml:space="preserve">
-    <value>TODO</value>
-    <comment>14歳以下</comment>
+    <value></value>
+    <comment>日本語のみ：14歳以下</comment>
   </data>
   <data name="SurveyPageQ1A2" xml:space="preserve">
-    <value>TODO</value>
-    <comment>15-19歳</comment>
+    <value></value>
+    <comment>日本語のみ：15-19歳</comment>
   </data>
   <data name="SurveyPageQ1A3" xml:space="preserve">
-    <value>TODO</value>
-    <comment>20-24歳</comment>
+    <value></value>
+    <comment>日本語のみ：20-24歳</comment>
   </data>
   <data name="SurveyPageQ1A4" xml:space="preserve">
-    <value>TODO</value>
-    <comment>25-29歳</comment>
+    <value></value>
+    <comment>日本語のみ：25-29歳</comment>
   </data>
   <data name="SurveyPageQ1A5" xml:space="preserve">
-    <value>TODO</value>
-    <comment>30-39歳</comment>
+    <value></value>
+    <comment>日本語のみ：30-39歳</comment>
   </data>
   <data name="SurveyPageQ1A6" xml:space="preserve">
-    <value>TODO</value>
-    <comment>40-49歳</comment>
+    <value></value>
+    <comment>日本語のみ：40-49歳</comment>
   </data>
   <data name="SurveyPageQ1A7" xml:space="preserve">
-    <value>TODO</value>
-    <comment>50-59歳</comment>
+    <value></value>
+    <comment>日本語のみ：50-59歳</comment>
   </data>
   <data name="SurveyPageQ1A8" xml:space="preserve">
-    <value>TODO</value>
-    <comment>60-69歳</comment>
+    <value></value>
+    <comment>日本語のみ：60-69歳</comment>
   </data>
   <data name="SurveyPageQ1A9" xml:space="preserve">
-    <value>TODO</value>
-    <comment>70歳以上</comment>
+    <value></value>
+    <comment>日本語のみ：70歳以上</comment>
   </data>
   <data name="SurveyPageQ2A1" xml:space="preserve">
-    <value>TODO</value>
-    <comment>通勤・通学をしていない</comment>
+    <value></value>
+    <comment>日本語のみ：通勤・通学をしていない</comment>
   </data>
   <data name="SurveyPageQ2A2" xml:space="preserve">
-    <value>TODO</value>
-    <comment>公共交通機関以外のみで通勤通学</comment>
+    <value></value>
+    <comment>日本語のみ：公共交通機関以外のみで通勤通学</comment>
   </data>
   <data name="SurveyPageQ2A3" xml:space="preserve">
-    <value>TODO</value>
-    <comment>公共交通機関を利用して通勤通学</comment>
+    <value></value>
+    <comment>日本語のみ：公共交通機関を利用して通勤通学</comment>
   </data>
   <data name="SurveyPageDescription" xml:space="preserve">
-    <value>TODO</value>
-    <comment>回答を確定した後、利用を終了することで回答が送信されます。一度送信された調査への回答の訂正・取り消しはできませんので、ご注意ください。</comment>
+    <value></value>
+    <comment>日本語のみ：回答を確定した後、利用を終了することで回答が送信されます。一度送信された調査への回答の訂正・取り消しはできませんので、ご注意ください。</comment>
   </data>
   <data name="SurveyPageToTerminationOfUsePageButton" xml:space="preserve">
-    <value>TODO</value>
-    <comment>回答を確定する</comment>
+    <value></value>
+    <comment>日本語のみ：回答を確定する</comment>
   </data>
 </root>
