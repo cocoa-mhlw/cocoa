@@ -89,12 +89,12 @@ namespace Covid19Radar.UnitTests.Services
         public async Task BuildSurveyContentTests_HasNotStartDate_HasNotExposureDataProvision()
         {
             SurveyService unitUnderTest = CreateService();
-            SurveyContent result = await unitUnderTest.BuildSurveyContent(1, 2, false, false);
+            SurveyContent result = await unitUnderTest.BuildSurveyContent(-1, -1, false, false);
 
             _testOutputHelper.WriteLine($"TimeZoneInfo.Local: {TimeZoneInfo.Local}");
 
-            Assert.Equal(1, result.Q1);
-            Assert.Equal(2, result.Q2);
+            Assert.Null(result.Q1);
+            Assert.Null(result.Q2);
             Assert.Null(result.StartDate);
             Assert.Null(result.ExposureData);
 

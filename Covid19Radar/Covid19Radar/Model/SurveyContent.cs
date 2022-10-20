@@ -10,10 +10,10 @@ namespace Covid19Radar.Model
     public class SurveyContent
     {
         [JsonProperty("q1")]
-        public int Q1 { get; set; }
+        public int? Q1 { get; set; }
 
         [JsonProperty("q2")]
-        public int Q2 { get; set; }
+        public int? Q2 { get; set; }
 
         [JsonProperty("start_date")]
         public long? StartDate { get; set; }

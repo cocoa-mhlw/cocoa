@@ -1701,25 +1701,57 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>TODO</value>
     <comment>選択してください</comment>
   </data>
+  <data name="SurveyPageNotAnswer" xml:space="preserve">
+    <value>TODO</value>
+    <comment>回答しない</comment>
+  </data>
   <data name="SurveyPageQ1A1" xml:space="preserve">
     <value>TODO</value>
-    <comment>〜9歳</comment>
+    <comment>14歳以下</comment>
   </data>
   <data name="SurveyPageQ1A2" xml:space="preserve">
     <value>TODO</value>
-    <comment>10歳〜19歳</comment>
+    <comment>15-19歳</comment>
   </data>
   <data name="SurveyPageQ1A3" xml:space="preserve">
     <value>TODO</value>
-    <comment>20歳〜29歳</comment>
+    <comment>20-24歳</comment>
+  </data>
+  <data name="SurveyPageQ1A4" xml:space="preserve">
+    <value>TODO</value>
+    <comment>25-29歳</comment>
+  </data>
+  <data name="SurveyPageQ1A5" xml:space="preserve">
+    <value>TODO</value>
+    <comment>30-39歳</comment>
+  </data>
+  <data name="SurveyPageQ1A6" xml:space="preserve">
+    <value>TODO</value>
+    <comment>40-49歳</comment>
+  </data>
+  <data name="SurveyPageQ1A7" xml:space="preserve">
+    <value>TODO</value>
+    <comment>50-59歳</comment>
+  </data>
+  <data name="SurveyPageQ1A8" xml:space="preserve">
+    <value>TODO</value>
+    <comment>60-69歳</comment>
+  </data>
+  <data name="SurveyPageQ1A9" xml:space="preserve">
+    <value>TODO</value>
+    <comment>70歳以上</comment>
   </data>
   <data name="SurveyPageQ2A1" xml:space="preserve">
-    <value>有り</value>
-    <comment>有り</comment>
+    <value>TODO</value>
+    <comment>通勤・通学をしていない</comment>
   </data>
   <data name="SurveyPageQ2A2" xml:space="preserve">
     <value>TODO</value>
-    <comment>無し</comment>
+    <comment>公共交通機関以外のみで通勤通学</comment>
+  </data>
+  <data name="SurveyPageQ2A3" xml:space="preserve">
+    <value>TODO</value>
+    <comment>公共交通機関を利用して通勤通学</comment>
   </data>
   <data name="SurveyPageDescription" xml:space="preserve">
     <value>TODO</value>

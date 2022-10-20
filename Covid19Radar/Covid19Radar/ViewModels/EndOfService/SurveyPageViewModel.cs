@@ -3,13 +3,10 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 using System;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Repository;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
-using Covid19Radar.Services.Logs;
 using Covid19Radar.Views.EndOfService;
 using Prism.Navigation;
 using Xamarin.CommunityToolkit.ObjectModel;
@@ -83,7 +80,7 @@ namespace Covid19Radar.ViewModels.EndOfService
         }
 
         public bool IsTerminationOfUsePageButtonEnabled
-            => _selectedIndexQ1 > 0 && _selectedIndexQ2 > 0;
+            => _selectedIndexQ1 != 0 && _selectedIndexQ2 != 0;
 
         private readonly IUserDataRepository _userDataRepository;
         private readonly ISurveyService _surveyService;
