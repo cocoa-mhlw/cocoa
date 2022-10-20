@@ -39,7 +39,7 @@ namespace Covid19Radar.ViewModels.EndOfService
         {
             _loggerService.StartMethod();
 
-            if (Utils.JstNow().ToUnixEpoch() <= AppConstants.SURVEY_END_DATE_UTC.ToUnixEpoch() && Utils.IsCurrentUICultureJaJp())
+            if (DateTime.UtcNow.ToUnixEpoch() <= AppConstants.SURVEY_END_DATE_UTC.ToUnixEpoch() && Utils.IsCurrentUICultureJaJp())
             {
                 await NavigationService.NavigateAsync(nameof(SurveyRequestPage));
             }
