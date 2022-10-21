@@ -1586,7 +1586,7 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="SurveyRequestPageRequestCooperationDescription1" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：今後のデジタル技術を活用した感染症対策に活かすため、接触確認アプリCOCOAの利用状況に関する調査にご協力ください。</comment>
+    <comment>日本語のみ：今後のデジタル技術を活用した感染症対策に活かすため、接触確認アプリCOCOAの利用状況に関する調査にご協力ください。本調査への回答の有無やその内容によって、利用者個人が利益や不利益をうけることはありません。</comment>
   </data>
   <data name="SurveyRequestPagePurposeTitle" xml:space="preserve">
     <value></value>
@@ -1594,7 +1594,11 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="SurveyRequestPagePurposeDescription1" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：本アプリは、プライバシーに最大限配慮した仕組みであるため、その利用状況を把握できていませんでした。今後のデジタル技術を活用した感染症対策には、アプリの利用状況を把握することが欠かせません。特に重要な情報である、どのような方に利用頂いたか、どの程度接触通知が発生していたかを把握するため、利用終了前に利用状況調査への協力をお願いいたします。</comment>
+    <comment>日本語のみ：COCOAはプライバシーに最大限配慮しており、利用者への注意喚起状況「接触通知が発生した回数」を運営者が把握できていませんでした。アプリの利用終了前に、「接触通知が発生した回数」の調査へご協力をお願いいたします。</comment>
+  </data>
+  <data name="SurveyRequestPageSendInformationTitle" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：送信される情報</comment>
   </data>
   <data name="SurveyRequestPageSendInformationBulletedList1" xml:space="preserve">
     <value></value>
@@ -1610,7 +1614,7 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="SurveyRequestPageSendInformationBulletedList4" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：・接触通知発生回数（日次）</comment>
+    <comment>日本語のみ：・接触通知発生回数（日次）※</comment>
   </data>
   <data name="SurveyRequestPageSendInformationAnnotationText1" xml:space="preserve">
     <value></value>
@@ -1618,31 +1622,55 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
   <data name="SurveyRequestPageSendInformationAnnotationText2" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：※送信を望まない項目は回答しないことが可能です</comment>
+    <comment>日本語のみ：※陽性登録件数の減少前の接触通知回数を調べるため、送信対象期間には、15日以上前が含まれます。通常はプライバシー保護と潜伏期間等を考慮して15日以上前の接触通知発生回数を無効化していますが、情報提供にご協力いただける場合に限り、回答送信時だけ有効化して送信いたします</comment>
+  </data>
+  <data name="SurveyRequestPageSendInformationAnnotationText3" xml:space="preserve">
+    <value></value>
+    <comment>※送信を望まない項目は回答しないことが可能です</comment>
+  </data>
+  <data name="SurveyRequestPageNotSendInformationTitle" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：送信しない情報</comment>
+  </data>
+  <data name="SurveyRequestPageNotSendInformationBulletedList1" xml:space="preserve">
+    <value></value>
+    <comment>・アプリを利用している個人や端末を特定可能な情報</comment>
+  </data>
+  <data name="SurveyRequestPageNotSendInformationBulletedList2" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：・接触した陽性登録者を個人として特定可能な情報</comment>
+  </data>
+  <data name="SurveyRequestPageNotSendInformationBulletedList3" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：・接触有無の詳細な照合結果</comment>
+  </data>
+  <data name="SurveyRequestPageNotSendInformationAnnotation1" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：※アプリを利用している個人や端末を特定可能な情報を送信しないため、調査への回答を送信いただいたあとは、その回答の訂正・取り消しはできません</comment>
   </data>
   <data name="SurveyRequestPageSendInformationHandlingTitle" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：送信された情報の取り扱い</comment>
   </data>
-  <data name="SurveyRequestPageSendInformationTitle" xml:space="preserve">
-    <value></value>
-    <comment>日本語のみ：送信される情報</comment>
-  </data>
   <data name="SurveyRequestPageBulletedList1" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：・送信される情報は全て匿名です。</comment>
+    <comment>日本語のみ：・送信される情報は全て匿名です</comment>
   </data>
   <data name="SurveyRequestPageBulletedList2" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：・送信内容に、個人を特定可能な情報を含みません。</comment>
+    <comment>日本語のみ：・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取り扱います</comment>
   </data>
   <data name="SurveyRequestPageBulletedList3" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：・送信内容に、あなたやあなたと接触した陽性登録者を個人として特定可能な情報は含みません。</comment>
+    <comment>日本語のみ：・送信された情報は、接触確認アプリにおける本調査への回答の送信直後に端末内から削除されます</comment>
   </data>
   <data name="SurveyRequestPageBulletedList4" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：・公衆衛生の改善に寄与するため、匿名情報を集計して公開する場合があります。</comment>
+    <comment>日本語のみ：・感染症対策の改善に寄与するため、匿名情報の集計結果を公開する場合があります</comment>
+  </data>
+  <data name="SurveyRequestPageBulletedList5" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：・COCOAに関する総括報告が行われてから2年間は保持し、その後消去します</comment>
   </data>
   <data name="SurveyRequestPageCheckDetailsButton" xml:space="preserve">
     <value></value>

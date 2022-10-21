@@ -47,6 +47,10 @@
                         Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationTitle}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationAnnotationText3}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationBulletedList1}" />
                     <Label
@@ -75,6 +79,29 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageNotSendInformationTitle}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageNotSendInformationBulletedList1}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageNotSendInformationBulletedList2}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageNotSendInformationBulletedList3}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource AnnotationLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageNotSendInformationAnnotation1}" />
+                </StackLayout>
+                <StackLayout
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelBold}"
                         Text="{x:Static resources:AppResources.SurveyRequestPageSendInformationHandlingTitle}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
@@ -92,6 +119,10 @@
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList4}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyRequestPageBulletedList5}" />
                 </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
