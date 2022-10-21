@@ -67,8 +67,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
 
             Assert.Equal(0, unitUnderTest.SelectedIndexQ1);
             Assert.Equal(0, unitUnderTest.SelectedIndexQ2);
-            Assert.Equal(string.Format(AppResources.SurveyPageAppStartDateText, testNow.ToLocalTime().ToString("yyyy年MM月dd日")),
-                unitUnderTest.AppStartDateText);
+            Assert.Equal(testNow.ToString("d"), unitUnderTest.AppStartDate);
         }
 
         
@@ -92,8 +91,8 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
 
             if (MockTimeZoneInfo.IsJst())
             {
-                var expectedText = string.Format("{0}年{1}月{2}日", expectedYear, expectedMonth, expectedDay);
-                Assert.Equal(expectedText, unitUnderTest.AppStartDateText);
+                var expectedText = string.Format("{0}/{1}/{2}", expectedYear, expectedMonth, expectedDay);
+                Assert.Equal(expectedText, unitUnderTest.AppStartDate);
             }
         }
 
