@@ -58,11 +58,11 @@ namespace Covid19Radar.ViewModels.EndOfService
             set => SetProperty(ref _selectedItemQ2, value);
         }
 
-        private string _appStartDateText;
-        public string AppStartDateText
+        private string _appStartDate;
+        public string AppStartDate
         {
-            get => _appStartDateText;
-            set => SetProperty(ref _appStartDateText, value);
+            get => _appStartDate;
+            set => SetProperty(ref _appStartDate, value);
         }
 
         private bool _isAppStartDate;
@@ -103,12 +103,7 @@ namespace Covid19Radar.ViewModels.EndOfService
             SelectedIndexQ1 = 0;
             SelectedIndexQ2 = 0;
 
-            DateTime startDate = _userDataRepository.GetStartDate();
-
-            AppStartDateText = string.Format(
-                AppResources.SurveyPageAppStartDateText,
-                startDate.ToLocalTime().ToString("yyyy年MM月dd日")
-                );
+            AppStartDate = _userDataRepository.GetStartDate().ToString("d");
 
             IsAppStartDate = false;
             IsExposureDataProvision = false;

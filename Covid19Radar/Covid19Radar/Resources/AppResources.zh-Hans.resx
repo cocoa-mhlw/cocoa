@@ -1677,6 +1677,22 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value></value>
     <comment>日本語のみ：（公共交通機関とは、鉄道・電車・乗り合いバスのことです）</comment>
   </data>
+  <data name="SurveyPageAppStartDateTitle" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：アプリ利用開始日の調査</comment>
+  </data>
+  <data name="SurveyPageAppStartDateDescription" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：アプリの利用開始日を添付してよろしいですか。送信を許可する場合はチェックを入れてください。</comment>
+  </data>
+  <data name="SurveyPageAppStartDateText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：あなたのアプリ利用開始日</comment>
+  </data>
+  <data name="SurveyPageSwitchText" xml:space="preserve">
+    <value></value>
+    <comment>日本語のみ：送信を許可する</comment>
+  </data>
   <data name="SurveyPageExposureDataProvisionTitle" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：接触通知発生回数の調査</comment>
@@ -1684,18 +1700,6 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   <data name="SurveyPageExposureDataProvisionDescription" xml:space="preserve">
     <value></value>
     <comment>日本語のみ：2022年4月7日以降の接触通知発生回数（個人情報は含まれません）を添付してよろしいですか。送信を許可する場合はチェックを入れてください。</comment>
-  </data>
-  <data name="SurveyPageAppStartDateSwitch" xml:space="preserve">
-    <value></value>
-    <comment>日本語のみ：アプリ利用開始日</comment>
-  </data>
-  <data name="SurveyPageAppStartDateText" xml:space="preserve">
-    <value></value>
-    <comment>日本語のみ：（{0}）</comment>
-  </data>
-  <data name="SurveyPageExposureDataProvisionSwitch" xml:space="preserve">
-    <value></value>
-    <comment>日本語のみ：接触通知発生回数</comment>
   </data>
   <data name="SurveyPagePleaseSelect" xml:space="preserve">
     <value></value>

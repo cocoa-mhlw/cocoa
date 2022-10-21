@@ -84,52 +84,74 @@
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabelBold}"
+                        Text="{x:Static resources:AppResources.SurveyPageAppStartDateTitle}" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.SurveyPageAppStartDateDescription}" />
+                    <Frame
+                        HasShadow="False"
+                        Padding="10"
+                        CornerRadius="10"
+                        Margin="0, 5"
+                        BackgroundColor="#EEEEEE">
+                        <StackLayout>
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabel}"
+                                Text="{x:Static resources:AppResources.SurveyPageAppStartDateText}"
+                                HorizontalOptions="Center" />
+                            <Label
+                                AutomationProperties.IsInAccessibleTree="True"
+                                Style="{StaticResource DefaultLabelBold}"
+                                Text="{Binding AppStartDate}"
+                                HorizontalOptions="Center" />
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Spacing="5">
+                        <Label
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Style="{StaticResource DefaultLabelBold}"
+                            Text="{x:Static resources:AppResources.SurveyPageSwitchText}"
+                            HorizontalOptions="StartAndExpand"
+                            HorizontalTextAlignment="Start"
+                            VerticalOptions="Center" />
+                        <Switch
+                            AutomationProperties.IsInAccessibleTree="True"
+                            IsToggled="{Binding IsAppStartDate}"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    Spacing="5">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabelBold}"
                         Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionTitle}" />
                     <Label
                         AutomationProperties.IsInAccessibleTree="True"
                         Style="{StaticResource DefaultLabel}"
                         Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionDescription}" />
-                </StackLayout>
-                <StackLayout
-                    Orientation="Horizontal"
-                    Spacing="5">
-                    <StackLayout>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Spacing="5"
+                        Margin="0, 5, 0, 0">
                         <Label
                             AutomationProperties.IsInAccessibleTree="True"
                             Style="{StaticResource DefaultLabelBold}"
-                            Text="{x:Static resources:AppResources.SurveyPageAppStartDateSwitch}"
+                            Text="{x:Static resources:AppResources.SurveyPageSwitchText}"
                             HorizontalOptions="StartAndExpand"
                             HorizontalTextAlignment="Start"
                             VerticalOptions="Center" />
-                        <Label
+                        <Switch
                             AutomationProperties.IsInAccessibleTree="True"
-                            Style="{StaticResource DefaultLabelBold}"
-                            Text="{Binding AppStartDateText}"
-                            HorizontalOptions="StartAndExpand"
-                            HorizontalTextAlignment="Start"
+                            IsToggled="{Binding IsExposureDataProvision}"
+                            HorizontalOptions="End"
                             VerticalOptions="Center" />
                     </StackLayout>
-                    <Switch
-                        AutomationProperties.IsInAccessibleTree="True"
-                        IsToggled="{Binding IsAppStartDate}"
-                        HorizontalOptions="EndAndExpand"
-                        VerticalOptions="Center" />
-                </StackLayout>
-                <StackLayout
-                    Orientation="Horizontal"
-                    Spacing="5">
-                    <Label
-                        AutomationProperties.IsInAccessibleTree="True"
-                        Style="{StaticResource DefaultLabelBold}"
-                        Text="{x:Static resources:AppResources.SurveyPageExposureDataProvisionSwitch}"
-                        HorizontalOptions="StartAndExpand"
-                        HorizontalTextAlignment="Start"
-                        VerticalOptions="Center" />
-                    <Switch
-                        AutomationProperties.IsInAccessibleTree="True"
-                        IsToggled="{Binding IsExposureDataProvision}"
-                        HorizontalOptions="End"
-                        VerticalOptions="Center" />
                 </StackLayout>
                 <Label
                     AutomationProperties.IsInAccessibleTree="True"
