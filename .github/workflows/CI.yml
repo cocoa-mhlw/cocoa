@@ -21,7 +21,7 @@ on:
 jobs:
   build_ios:
     name: Build-iOS
-    runs-on: macos-latest
+    runs-on: macos-11
     strategy:
       matrix:
         Configuration: [Debug, Debug_Mock, Release]
@@ -35,7 +35,7 @@ jobs:
         xamarin-ios-version: 15 # specify version in '<major>' format
         xamarin-mac-version: latest # specify 'latest' keyword to pick up the latest available version
         xamarin-android-version: 12 # specify full version; it is not recomended option because your pipeline can be broken suddenly in future
-        xcode-version: 13 # set the latest available Xcode 13
+        xcode-version: 13.0 # set the latest available Xcode 13.0
     - name: Prepare settings.json
       run: mv -f ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings_template.json ${{ github.workspace }}/Covid19Radar/Covid19Radar/settings.json
     - name: Workaround macos-latest(20220614.2) issue
@@ -63,7 +63,7 @@ jobs:
       run: msbuild ${{ github.workspace }}/Covid19Radar/Covid19Radar.Android/Covid19Radar.Android.csproj /restore /t:Build /p:Configuration=${{ matrix.Configuration }}
   test:
     name: Test
-    runs-on: macos-latest # Tests must be executed on macOs. If don't, tests will fail.
+    runs-on: macos-12 # Tests must be executed on macOs. If don't, tests will fail.
     needs: [build_ios, build_android]
     steps:
     - name: Checkout

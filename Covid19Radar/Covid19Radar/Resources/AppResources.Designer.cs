@@ -3227,9 +3227,63 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        public static string SurveyRequestPageBulletedList5 {
+            get {
+                return ResourceManager.GetString("SurveyRequestPageBulletedList5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         public static string SurveyRequestPageCheckDetailsButton {
             get {
                 return ResourceManager.GetString("SurveyRequestPageCheckDetailsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SurveyRequestPageNotSendInformationAnnotation1 {
+            get {
+                return ResourceManager.GetString("SurveyRequestPageNotSendInformationAnnotation1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SurveyRequestPageNotSendInformationBulletedList1 {
+            get {
+                return ResourceManager.GetString("SurveyRequestPageNotSendInformationBulletedList1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SurveyRequestPageNotSendInformationBulletedList2 {
+            get {
+                return ResourceManager.GetString("SurveyRequestPageNotSendInformationBulletedList2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SurveyRequestPageNotSendInformationBulletedList3 {
+            get {
+                return ResourceManager.GetString("SurveyRequestPageNotSendInformationBulletedList3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SurveyRequestPageNotSendInformationTitle {
+            get {
+                return ResourceManager.GetString("SurveyRequestPageNotSendInformationTitle", resourceCulture);
             }
         }
         
@@ -3284,6 +3338,15 @@ namespace Covid19Radar.Resources {
         public static string SurveyRequestPageSendInformationAnnotationText2 {
             get {
                 return ResourceManager.GetString("SurveyRequestPageSendInformationAnnotationText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SurveyRequestPageSendInformationAnnotationText3 {
+            get {
+                return ResourceManager.GetString("SurveyRequestPageSendInformationAnnotationText3", resourceCulture);
             }
         }
         
