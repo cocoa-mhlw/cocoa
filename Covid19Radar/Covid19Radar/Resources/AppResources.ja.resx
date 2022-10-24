@@ -1647,16 +1647,16 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>※アプリを利用している個人や端末を特定可能な情報を送信しないため、調査への回答を送信いただいたあとは、その回答の訂正・取り消しはできません</comment>
   </data>
   <data name="SurveyRequestPageSendInformationHandlingTitle" xml:space="preserve">
-    <value>送信された情報の取り扱い</value>
-    <comment>送信された情報の取り扱い</comment>
+    <value>送信された情報の取りあつかい</value>
+    <comment>送信された情報の取りあつかい</comment>
   </data>
   <data name="SurveyRequestPageBulletedList1" xml:space="preserve">
     <value>・送信される情報は全て匿名です</value>
     <comment>・送信される情報は全て匿名です</comment>
   </data>
   <data name="SurveyRequestPageBulletedList2" xml:space="preserve">
-    <value>・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取り扱います</value>
-    <comment>・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取り扱います</comment>
+    <value>・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取りあつかいます</value>
+    <comment>・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取りあつかいます</comment>
   </data>
   <data name="SurveyRequestPageBulletedList3" xml:space="preserve">
     <value>・送信された情報は、接触確認アプリにおける本調査への回答の送信直後に端末内から削除されます</value>
