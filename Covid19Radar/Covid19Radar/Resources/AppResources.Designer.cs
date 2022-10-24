@@ -2957,9 +2957,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        public static string SurveyPageAppStartDateSwitch {
+        public static string SurveyPageAppStartDateDescription {
             get {
-                return ResourceManager.GetString("SurveyPageAppStartDateSwitch", resourceCulture);
+                return ResourceManager.GetString("SurveyPageAppStartDateDescription", resourceCulture);
             }
         }
         
@@ -2969,6 +2969,15 @@ namespace Covid19Radar.Resources {
         public static string SurveyPageAppStartDateText {
             get {
                 return ResourceManager.GetString("SurveyPageAppStartDateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SurveyPageAppStartDateTitle {
+            get {
+                return ResourceManager.GetString("SurveyPageAppStartDateTitle", resourceCulture);
             }
         }
         
@@ -2987,15 +2996,6 @@ namespace Covid19Radar.Resources {
         public static string SurveyPageExposureDataProvisionDescription {
             get {
                 return ResourceManager.GetString("SurveyPageExposureDataProvisionDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string SurveyPageExposureDataProvisionSwitch {
-            get {
-                return ResourceManager.GetString("SurveyPageExposureDataProvisionSwitch", resourceCulture);
             }
         }
         
@@ -3167,6 +3167,15 @@ namespace Covid19Radar.Resources {
         public static string SurveyPageQuestionnaire {
             get {
                 return ResourceManager.GetString("SurveyPageQuestionnaire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string SurveyPageSwitchText {
+            get {
+                return ResourceManager.GetString("SurveyPageSwitchText", resourceCulture);
             }
         }
         
