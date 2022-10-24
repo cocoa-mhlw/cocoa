@@ -1750,7 +1750,7 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
   <data name="SurveyRequestPageSendInformationHandlingTitle" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：送信された情報の取り扱い</comment>
+    <comment>日本語のみ：送信された情報の取りあつかい</comment>
   </data>
   <data name="SurveyRequestPageBulletedList1" xml:space="preserve">
     <value></value>
@@ -1758,7 +1758,7 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
   <data name="SurveyRequestPageBulletedList2" xml:space="preserve">
     <value></value>
-    <comment>日本語のみ：・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取り扱います</comment>
+    <comment>日本語のみ：・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取りあつかいます</comment>
   </data>
   <data name="SurveyRequestPageBulletedList3" xml:space="preserve">
     <value></value>
