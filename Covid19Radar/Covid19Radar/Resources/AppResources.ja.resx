@@ -1615,8 +1615,8 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>・接触通知発生回数（日次）※</comment>
   </data>
   <data name="SurveyRequestPageSendInformationAnnotationText1" xml:space="preserve">
-    <value>※2022年4月7日以降に陽性登録者の接触符号を受信した日付と、各々の日付における接触判定の有無</value>
-    <comment>※2022年4月7日以降に陽性登録者の接触符号を受信した日付と、各々の日付における接触判定の有無</comment>
+    <value>※2022年4月7日以降の、陽性登録者の信号を受信した日付と、各々の日付における接触判定の有無</value>
+    <comment>※2022年4月7日以降の、陽性登録者の信号を受信した日付と、各々の日付における接触判定の有無</comment>
   </data>
   <data name="SurveyRequestPageSendInformationAnnotationText2" xml:space="preserve">
     <value>※陽性登録件数の減少前の接触通知回数を調べるため、送信対象期間には、15日以上前が含まれます。通常はプライバシー保護と潜伏期間等を考慮して15日以上前の接触通知発生回数を無効化していますが、情報提供にご協力いただける場合に限り、回答送信時だけ有効化して送信いたします</value>
@@ -1655,8 +1655,8 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <comment>・送信される情報は全て匿名です</comment>
   </data>
   <data name="SurveyRequestPageBulletedList2" xml:space="preserve">
-    <value>・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取りあつかいます</value>
-    <comment>・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取りあつかいます</comment>
+    <value>・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取りあつかい、調査目的以外には使用致しません</value>
+    <comment>・送信された情報は、デジタル庁・厚生労働省および業務委託先のみが取りあつかい、調査目的以外には使用致しません</comment>
   </data>
   <data name="SurveyRequestPageBulletedList3" xml:space="preserve">
     <value>・送信された情報は、接触確認アプリにおける本調査への回答の送信直後に端末内から削除されます</value>
