@@ -1525,8 +1525,8 @@ COCOAのソースコードは次のURLから入手できます。</comment>
   </data>
 
   <data name="TerminationOfUseCompletePageTitle" xml:space="preserve">
-    <value>機能停止処理が完了しました</value>
-    <comment>機能停止処理が完了しました</comment>
+    <value>機能停止の手続きが完了しました</value>
+    <comment>機能停止の手続きが完了しました</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription1" xml:space="preserve">
     <value>アプリの機能を停止しました。

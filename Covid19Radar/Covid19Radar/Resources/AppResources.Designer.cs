@@ -3505,7 +3505,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to End to Functionality of COCOA Completed​.
+        ///   Looks up a localized string similar to Function deactivation procedure completed.
         /// </summary>
         public static string TerminationOfUseCompletePageTitle {
             get {

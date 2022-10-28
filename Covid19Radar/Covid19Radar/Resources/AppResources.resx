@@ -1631,8 +1631,8 @@ By collecting the number of notifications, we can use it to understand how many 
   </data>
 
   <data name="TerminationOfUseCompletePageTitle" xml:space="preserve">
-    <value>End to Functionality of COCOA Completed​</value>
-    <comment>機能停止処理が完了しました</comment>
+    <value>Function deactivation procedure completed</value>
+    <comment>機能停止の手続きが完了しました</comment>
   </data>
   <data name="TerminationOfUseCompletePageDescription1" xml:space="preserve">
     <value>You have ended functionality of the app. Thank you for using the app up to now. Please uninstall the app.​</value>
