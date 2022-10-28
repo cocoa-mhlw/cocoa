@@ -38,6 +38,10 @@
                     Style="{StaticResource DefaultLabel}"
                     Text="{x:Static resources:AppResources.EndOfServiceNoticePageDescription3}" />
                 <Label
+                    AutomationProperties.IsInAccessibleTree="True"
+                    Style="{StaticResource DefaultLabel}"
+                    Text="{x:Static resources:AppResources.EndOfServiceNoticePageDescription4}" />
+                <Label
                     Margin="0, 20, 0, 0"
                     AutomationProperties.IsInAccessibleTree="True"
                     AutomationProperties.Name="{Binding CheckDetailsLinkReadText}"

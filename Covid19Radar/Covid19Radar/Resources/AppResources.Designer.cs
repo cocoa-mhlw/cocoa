@@ -535,7 +535,8 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The app and smartphone contact notification will stop by ending their functionality. In addition, all data stored in the app will be deleted..
+        ///   Looks up a localized string similar to The following procedure is required to end COCOA&apos;s functions.
+        ///Please tap the below button to start the procedure..
         /// </summary>
         public static string EndOfServiceNoticePageDescription2 {
             get {
@@ -544,11 +545,20 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In addition, please see the following website for details concerning the end to functionality of the app..
+        ///   Looks up a localized string similar to The app and smartphone contact notification will stop by ending their functionality. In addition, all data stored in the app will be deleted..
         /// </summary>
         public static string EndOfServiceNoticePageDescription3 {
             get {
                 return ResourceManager.GetString("EndOfServiceNoticePageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In addition, please see the following website for details concerning the end to functionality of the app..
+        /// </summary>
+        public static string EndOfServiceNoticePageDescription4 {
+            get {
+                return ResourceManager.GetString("EndOfServiceNoticePageDescription4", resourceCulture);
             }
         }
         

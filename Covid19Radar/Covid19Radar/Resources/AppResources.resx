@@ -1660,10 +1660,15 @@ By collecting the number of notifications, we can use it to understand how many 
     <comment>2022年11月をもって接触確認アプリCOCOAは機能を停止しました。</comment>
   </data>
   <data name="EndOfServiceNoticePageDescription2" xml:space="preserve">
+    <value>The following procedure is required to end COCOA's functions.
+Please tap the below button to start the procedure.</value>
+    <comment>アプリの機能停止には以下の手続きが必要です。以下のボタンより機能停止を行ってください。</comment>
+  </data>
+  <data name="EndOfServiceNoticePageDescription3" xml:space="preserve">
     <value>The app and smartphone contact notification will stop by ending their functionality. In addition, all data stored in the app will be deleted.</value>
     <comment>機能停止処理により、アプリとスマートフォンの接触通知システムが停止します。また、アプリ内に保存されているデータをすべて削除します。</comment>
   </data>
-  <data name="EndOfServiceNoticePageDescription3" xml:space="preserve">
+  <data name="EndOfServiceNoticePageDescription4" xml:space="preserve">
     <value>In addition, please see the following website for details concerning the end to functionality of the app.</value>
     <comment>その他、アプリの機能停止に関する詳細は以下のサイトをご覧下さい。</comment>
   </data>
