@@ -67,11 +67,10 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
 
             Assert.Equal(0, unitUnderTest.SelectedIndexQ1);
             Assert.Equal(0, unitUnderTest.SelectedIndexQ2);
-            Assert.Equal(testNow.ToString("d"), unitUnderTest.AppStartDate);
+            Assert.Equal(testNow.ToString("yyyy年MM月dd日"), unitUnderTest.AppStartDate);
         }
 
-        
-        [Theory(Skip = "An error occurs because the English text is TODO")]
+        [Theory]
         [InlineData(2021, 12, 31, 14, 59, 59, 2021, 12, 31)]
         [InlineData(2021, 12, 31, 15, 0, 0, 2022, 1, 1)]
         [InlineData(2022, 1, 1, 0, 0, 0, 2022, 1, 1)]
@@ -91,7 +90,7 @@ namespace Covid19Radar.UnitTests.ViewModels.EndOfService
 
             if (MockTimeZoneInfo.IsJst())
             {
-                var expectedText = string.Format("{0}/{1}/{2}", expectedYear, expectedMonth, expectedDay);
+                var expectedText = string.Format("{0}年{1}月{2}日", expectedYear, expectedMonth.ToString("D2"), expectedDay.ToString("D2"));
                 Assert.Equal(expectedText, unitUnderTest.AppStartDate);
             }
         }

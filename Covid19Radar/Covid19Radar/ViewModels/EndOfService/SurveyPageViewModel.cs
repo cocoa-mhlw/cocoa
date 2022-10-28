@@ -103,7 +103,7 @@ namespace Covid19Radar.ViewModels.EndOfService
             SelectedIndexQ1 = 0;
             SelectedIndexQ2 = 0;
 
-            AppStartDate = _userDataRepository.GetStartDate().ToString("d");
+            AppStartDate = _userDataRepository.GetStartDate().ToLocalTime().ToString("yyyy年MM月dd日");
 
             IsAppStartDate = false;
             IsExposureDataProvision = false;
