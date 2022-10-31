@@ -19,6 +19,8 @@ namespace Covid19Radar.Services
 
     public class SurveyService : ISurveyService
     {
+        private const long FromDateMillisEpoch = 1649289600000; // 2022/04/07 00:00:00 UTC
+
         private readonly IEventLogService _eventLogService;
         private readonly IExposureDataRepository _exposureDataRepository;
         private readonly IUserDataRepository _userDataRepository;
@@ -58,6 +60,7 @@ namespace Covid19Radar.Services
 
                 List<SurveyExposureData.DailySummary> dailySummaryList
                     = chinoDailySummaryList
+                    .Where(item => item.DateMillisSinceEpoch >= FromDateMillisEpoch)
                     .Select(
                         item => new SurveyExposureData.DailySummary
                         {
