@@ -59,7 +59,7 @@ namespace Covid19Radar.UnitTests.Services
                 {
                     new DailySummary
                     {
-                        DateMillisSinceEpoch = 1640962800,
+                        DateMillisSinceEpoch = 1649289600000,
                         DaySummary = new ExposureSummaryData
                         {
                             MaximumScore = 1350.0
@@ -110,7 +110,7 @@ namespace Covid19Radar.UnitTests.Services
                 {
                     new DailySummary
                     {
-                        DateMillisSinceEpoch = 1640962800,
+                        DateMillisSinceEpoch = 1649289600000,
                         DaySummary = new ExposureSummaryData
                         {
                             MaximumScore = 1350.0
@@ -118,7 +118,7 @@ namespace Covid19Radar.UnitTests.Services
                     },
                     new DailySummary
                     {
-                        DateMillisSinceEpoch = 1640962801,
+                        DateMillisSinceEpoch = 1649376000000,
                         DaySummary = new ExposureSummaryData
                         {
                             MaximumScore = 1349.0
@@ -132,10 +132,46 @@ namespace Covid19Radar.UnitTests.Services
 
             List<SurveyExposureData.DailySummary> dailySummaryList = result.ExposureData.DailySummaryList;
             Assert.Equal(2, dailySummaryList.Count);
-            Assert.Equal(1640962800, dailySummaryList[0].DateMillisSinceEpoch);
+            Assert.Equal(1649289600000, dailySummaryList[0].DateMillisSinceEpoch);
             Assert.Equal(1, dailySummaryList[0].ExposureDetected);
-            Assert.Equal(1640962801, dailySummaryList[1].DateMillisSinceEpoch);
+            Assert.Equal(1649376000000, dailySummaryList[1].DateMillisSinceEpoch);
             Assert.Equal(0, dailySummaryList[1].ExposureDetected);
+
+            _mockExposureDataRepository.Verify(x => x.GetDailySummariesAsync(), Times.Once());
+        }
+
+        [Fact]
+        public async Task BuildSurveyContentTests_DateMillisSinceEpochFilter()
+        {
+            _mockExposureDataRepository.Setup(x => x.GetDailySummariesAsync()).ReturnsAsync(
+                new List<DailySummary>
+                {
+                    new DailySummary
+                    {
+                        DateMillisSinceEpoch = 1649289599999, // 2022-04-06 23:59:59.999 UTC
+                        DaySummary = new ExposureSummaryData
+                        {
+                            MaximumScore = 1350.0
+                        }
+                    },
+                    new DailySummary
+                    {
+                        DateMillisSinceEpoch = 1649289600000, // 2022-04-07 00:00:00 UTC
+                        DaySummary = new ExposureSummaryData
+                        {
+                            MaximumScore = 1349.0
+                        }
+                    }
+                });
+            _mockUserDataRepository.Setup(x => x.GetStartDate()).Returns(new DateTime(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc));
+
+            SurveyService unitUnderTest = CreateService();
+            SurveyContent result = await unitUnderTest.BuildSurveyContent(1, 2, true, true);
+
+            List<SurveyExposureData.DailySummary> dailySummaryList = result.ExposureData.DailySummaryList;
+            Assert.Single(dailySummaryList);
+            Assert.Equal(1649289600000, dailySummaryList[0].DateMillisSinceEpoch);
+            Assert.Equal(0, dailySummaryList[0].ExposureDetected);
 
             _mockExposureDataRepository.Verify(x => x.GetDailySummariesAsync(), Times.Once());
         }
