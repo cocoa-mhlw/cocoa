@@ -40,11 +40,25 @@
             <StackLayout
                 Orientation="Horizontal"
                 Spacing="10">
-                <Label
-                    AutomationProperties.IsInAccessibleTree="True"
-                    Style="{StaticResource DefaultLabel}"
-                    Text="{x:Static resources:AppResources.HelpPage3Description2}"
-                    VerticalTextAlignment="Center" />
+                <StackLayout
+                    Orientation="Vertical"
+                    Spacing="10">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Style="{StaticResource DefaultLabel}"
+                        Text="{x:Static resources:AppResources.HelpPage3Description2}"
+                        VerticalTextAlignment="Center" />
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="True"
+                        Margin="0, 0, 0, 0"
+                        HorizontalOptions="Start"
+                        Style="{StaticResource LinkLabelStyleMedium}"
+                        Text="{x:Static resources:AppResources.NotifyOtherPageLabel}">
+                        <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{prism:NavigateTo 'HowToReceiveProcessingNumberPage'}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
                 <ffimageloading:CachedImage
                     AutomationProperties.IsInAccessibleTree="False"
                     WidthRequest="100"

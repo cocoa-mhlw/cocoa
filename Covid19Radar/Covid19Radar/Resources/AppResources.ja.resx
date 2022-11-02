@@ -213,8 +213,8 @@
     <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
-    <value>保健所等公的機関から登録用の「処理番号」が発行されます。</value>
-    <comment>保健所等公的機関から登録用の「処理番号」が発行されます。</comment>
+    <value>医療機関や保健所に登録されているメールアドレスや携帯電話番号に処理番号が通知されます。</value>
+    <comment>医療機関や保健所に登録されているメールアドレスや携帯電話番号に処理番号が通知されます。</comment>
   </data>
   <data name="HelpPage3Description3" xml:space="preserve">
     <value>本アプリを用いて処理番号の登録を行います。</value>
