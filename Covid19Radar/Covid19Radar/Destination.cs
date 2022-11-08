@@ -20,7 +20,7 @@ namespace Covid19Radar
     {
         private static string SplashPagePath = "/" + nameof(SplashPage);
         private static string EndOfServiceNoticePath => $"/{nameof(MenuPage)}/{nameof(NavigationPage)}/{nameof(EndOfServiceNoticePage)}";
-        private static string EndOfServicePath => $"/{nameof(EndOfServicePage)}";
+        private static string EndOfServicePath => $"/{nameof(NavigationPage)}/{nameof(EndOfServicePage)}";
 
         public static string ToPath(this Destination destination)
         {

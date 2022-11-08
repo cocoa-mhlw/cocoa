@@ -11,6 +11,7 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
     Title="{x:Static resources:AppResources.EndOfServicePageTitle}"
+    NavigationPage.HasNavigationBar="False"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -47,6 +48,18 @@
                     Text="{x:Static resources:AppResources.EndOfServicePageTextLink}">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding Path=CheckDetailsCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label
+                    Margin="0, 10, 0, 0"
+                    AutomationProperties.IsInAccessibleTree="True"
+                    AutomationProperties.Name="{Binding AboutAppLinkReadText}"
+                    Style="{StaticResource LinkLabelStyleMedium}"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="{x:Static resources:AppResources.EndOfServicePageAboutAppTextLink}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Path=AboutAppCommand}" />
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>

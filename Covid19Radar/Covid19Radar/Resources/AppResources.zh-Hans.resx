@@ -1514,6 +1514,10 @@ COCOAのソースコードは次のURLから入手できます。</comment>
     <value>确认详情​</value>
     <comment>詳細を確認する</comment>
   </data>
+  <data name="EndOfServicePageAboutAppTextLink" xml:space="preserve">
+    <value>关于本应用</value>
+    <comment>このアプリについて</comment>
+  </data>
 
   <data name="TerminationOfUsePageTitle" xml:space="preserve">
     <value>确认功能关停​</value>

@@ -590,6 +590,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About this app.
+        /// </summary>
+        public static string EndOfServicePageAboutAppTextLink {
+            get {
+                return ResourceManager.GetString("EndOfServicePageAboutAppTextLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Functionality of the COCOA contact-confirming app ended in November 2022. Thank you for using the app.​.
         /// </summary>
         public static string EndOfServicePageDescription1 {
