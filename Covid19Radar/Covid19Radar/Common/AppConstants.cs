@@ -103,7 +103,7 @@ namespace Covid19Radar.Common
         public const int EventLogFileExpiredSeconds = 14 * 24 * 60 * 60; // 14 days
 
         public const string EndOfServiceCheckDetailsUrl = "https://www.mhlw.go.jp/cocoa/yousei.html";
-        public const string SurveyDetailsUrl = "https://www.digital.go.jp/";
+        public const string SurveyDetailsUrl = "https://www.digital.go.jp/policies/cocoa/";
 
         #region Other Private Methods
 
