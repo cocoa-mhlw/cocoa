@@ -51,7 +51,7 @@ namespace Covid19Radar.UnitTests.Services
             await unitUnderTest.NavigateNextAsync();
 
             mockUserDataRepository.Verify(x => x.IsAllAgreed(), Times.Once());
-            mockNavigatoinService.Verify(x => x.NavigateAsync("/EndOfServicePage", It.IsAny<INavigationParameters>()), Times.Once());
+            mockNavigatoinService.Verify(x => x.NavigateAsync("/NavigationPage/EndOfServicePage", It.IsAny<INavigationParameters>()), Times.Once());
         }
 
         [Fact]
