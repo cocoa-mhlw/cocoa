@@ -178,6 +178,27 @@ namespace Covid19Radar.ViewModels
             }
         }
 
+        public override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // EN Enabled Check
+            var isEnEnabled = await exposureNotificationApiService.IsEnabledAsync();
+
+            if (!isEnEnabled)
+            {
+                loggerService.Warning($"Exposure notification is not enabled or activated.");
+
+                await UserDialogs.Instance.AlertAsync(
+                   AppResources.NotifyOtherPageDiag6Message,
+                   AppResources.NotifyOtherPageDiag6Title,
+                   AppResources.ButtonOk
+                );
+                await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                return;
+            }
+        }
+
         public Command OnInqueryTelephoneNumberClicked => new Command(() =>
         {
             loggerService.StartMethod();
